@@ -141,10 +141,10 @@
         const toolOk = activeTool === 'all' || c.tool === activeTool;
         const typeOk = activeType === 'all' || c.type === activeType;
         const q = searchQ.toLowerCase();
-        const searchOk = \!q || c.title.toLowerCase().includes(q) || c.tool.toLowerCase().includes(q) || c.type.toLowerCase().includes(q);
+        const searchOk = !q || c.title.toLowerCase().includes(q) || c.tool.toLowerCase().includes(q) || c.type.toLowerCase().includes(q);
         return toolOk && typeOk && searchOk;
       });
-      count.textContent = filtered.length + ' article' + (filtered.length \!== 1 ? 's' : '');
+      count.textContent = filtered.length + ' article' + (filtered.length !== 1 ? 's' : '');
       if (filtered.length === 0) {
         grid.innerHTML = '';
         noResults.style.display = 'block';

@@ -1,4 +1,4 @@
-<\!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,179 +14,247 @@
   <meta property="og:site_name" content="AIBuilder Marketplace">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"B2B AI Tools Reviews & Comparisons 2026","url":"https://aibuildermarketplace.com/b2b/","isPartOf":{"@type":"WebSite","name":"AIBuilder Marketplace","url":"https://aibuildermarketplace.com"}}</script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; margin: 0; padding: 0; line-height: 1.6; }
+    *,*::before,*::after{box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0d1117;color:#c9d1d9;margin:0;padding:0;line-height:1.6}
 
     /* NAV */
-    .topnav { background: #161b22; border-bottom: 1px solid #30363d; padding: 14px 24px; display: flex; align-items: center; gap: 16px; font-size: 0.88em; }
-    .topnav a { color: #8b949e; text-decoration: none; }
-    .topnav a:hover { color: #58a6ff; }
-    .topnav .sep { color: #30363d; }
-    .topnav .current { color: #e6edf3; }
+    .topnav{background:#161b22;border-bottom:1px solid #30363d;padding:14px 24px;font-size:.88em;display:flex;gap:16px;align-items:center}
+    .topnav a{color:#8b949e;text-decoration:none}.topnav a:hover{color:#58a6ff}.topnav .sep{color:#30363d}.topnav .current{color:#e6edf3}
 
     /* HERO */
-    .hero { background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2744 100%); padding: 60px 24px 50px; text-align: center; border-bottom: 1px solid #30363d; }
-    .hero h1 { color: #e6edf3; font-size: clamp(1.8em, 4vw, 2.8em); font-weight: 800; margin: 0 0 14px; }
-    .hero h1 span { color: #58a6ff; }
-    .hero p { color: #8b949e; font-size: 1.05em; max-width: 520px; margin: 0 auto 0; }
-    .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 32px; flex-wrap: wrap; }
-    .stat { text-align: center; }
-    .stat .num { font-size: 2em; font-weight: 800; color: #58a6ff; display: block; }
-    .stat .lbl { font-size: 0.82em; color: #6e7681; }
+    .hero{background:linear-gradient(135deg,#0d1117 0%,#161b22 60%,#1a2744 100%);padding:60px 24px 50px;text-align:center;border-bottom:1px solid #30363d}
+    .hero h1{color:#e6edf3;font-size:clamp(1.8em,4vw,2.8em);font-weight:800;margin:0 0 14px}.hero h1 span{color:#58a6ff}
+    .hero p{color:#8b949e;font-size:1.05em;max-width:520px;margin:0 auto}
+    .hero-stats{display:flex;justify-content:center;gap:40px;margin-top:32px;flex-wrap:wrap}
+    .stat .num{font-size:2em;font-weight:800;color:#58a6ff;display:block}.stat .lbl{font-size:.82em;color:#6e7681}
+
+    /* TOOLS SECTION */
+    .tools-section{max-width:1100px;margin:0 auto;padding:40px 24px 20px}
+    .section-label{font-size:.78em;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#58a6ff;margin-bottom:8px}
+    .section-title{font-size:clamp(1.3em,2.5vw,1.8em);font-weight:800;color:#e6edf3;margin:0 0 6px}
+    .section-sub{color:#8b949e;font-size:.92em;margin:0 0 24px}
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+    .tool-card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:18px;transition:border-color .2s}
+    .tool-card:hover{border-color:#388bfd}
+    .tool-card-header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+    .tool-icon{font-size:1.8em;flex-shrink:0}
+    .tool-name{font-weight:700;color:#e6edf3;font-size:1em}
+    .tool-tagline{font-size:.78em;color:#58a6ff;margin-top:1px}
+    .tool-desc{margin:0;font-size:.85em;color:#8b949e;line-height:1.5}
+    .tool-filter-btn{background:transparent;border:1px solid #30363d;color:#8b949e;padding:6px 12px;border-radius:6px;font-size:.8em;cursor:pointer;font-family:inherit;transition:all .15s;width:100%;text-align:left}
+    .tool-filter-btn:hover{border-color:#388bfd;color:#388bfd}
+    .tool-filter-btn.active{background:#388bfd;border-color:#388bfd;color:#fff;font-weight:600}
 
     /* FILTERS */
-    .filters-wrap { background: #161b22; border-bottom: 1px solid #30363d; padding: 16px 24px; position: sticky; top: 0; z-index: 10; }
-    .filters-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .filter-label { font-size: 0.78em; color: #6e7681; margin-right: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-    .filter-btn { background: transparent; border: 1px solid #30363d; color: #8b949e; padding: 6px 14px; border-radius: 20px; font-size: 0.82em; cursor: pointer; transition: all 0.15s; font-family: inherit; }
-    .filter-btn:hover { border-color: #58a6ff; color: #58a6ff; }
-    .filter-btn.active { background: #58a6ff; border-color: #58a6ff; color: #0d1117; font-weight: 700; }
-    .filter-sep { width: 1px; height: 20px; background: #30363d; margin: 0 4px; }
+    .filters-wrap{background:#161b22;border-bottom:1px solid #30363d;padding:14px 24px;position:sticky;top:0;z-index:10}
+    .filters-inner{max-width:1100px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .filter-label{font-size:.78em;color:#6e7681;margin-right:4px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+    .filter-btn{background:transparent;border:1px solid #30363d;color:#8b949e;padding:6px 14px;border-radius:20px;font-size:.82em;cursor:pointer;transition:all .15s;font-family:inherit}
+    .filter-btn:hover{border-color:#58a6ff;color:#58a6ff}.filter-btn.active{background:#58a6ff;border-color:#58a6ff;color:#0d1117;font-weight:700}
+    .filter-sep{width:1px;height:20px;background:#30363d;margin:0 4px}
 
     /* SEARCH */
-    .search-wrap { max-width: 1100px; margin: 0 auto; padding: 20px 24px 0; }
-    .search-box { width: 100%; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px 16px; color: #e6edf3; font-size: 0.95em; font-family: inherit; outline: none; transition: border-color 0.2s; }
-    .search-box::placeholder { color: #6e7681; }
-    .search-box:focus { border-color: #58a6ff; }
+    .search-wrap{max-width:1100px;margin:0 auto;padding:20px 24px 0}
+    .search-box{width:100%;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px 16px;color:#e6edf3;font-size:.95em;font-family:inherit;outline:none;transition:border-color .2s}
+    .search-box::placeholder{color:#6e7681}.search-box:focus{border-color:#58a6ff}
 
     /* GRID */
-    .container { max-width: 1100px; margin: 0 auto; padding: 24px 24px 60px; }
-    .results-count { font-size: 0.85em; color: #6e7681; margin-bottom: 16px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-    .card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 20px; text-decoration: none; display: block; transition: border-color 0.2s, transform 0.15s; }
-    .card:hover { border-color: #388bfd; transform: translateY(-2px); }
-    .card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .card-icon { font-size: 1.4em; }
-    .card-tag { font-size: 0.72em; font-weight: 700; padding: 2px 9px; border-radius: 12px; color: #fff; }
-    .card h3 { margin: 0 0 6px; color: #e6edf3; font-size: 0.98em; font-weight: 600; }
-    .card p { margin: 0; color: #8b949e; font-size: 0.85em; line-height: 1.5; }
-    .card-arrow { margin-top: 12px; font-size: 0.82em; color: #388bfd; }
+    .container{max-width:1100px;margin:0 auto;padding:20px 24px 60px}
+    .results-count{font-size:.85em;color:#6e7681;margin-bottom:16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+    .card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:20px;text-decoration:none;display:block;transition:border-color .2s,transform .15s}
+    .card:hover{border-color:#388bfd;transform:translateY(-2px)}
+    .card-top{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+    .card-icon{font-size:1.3em}
+    .card-tag{font-size:.72em;font-weight:700;padding:2px 9px;border-radius:12px;color:#fff}
+    .card-lang{font-size:.72em;padding:2px 8px;border-radius:12px;background:rgba(255,255,255,0.07);color:#8b949e;border:1px solid #30363d}
+    .card h3{margin:0 0 6px;color:#e6edf3;font-size:.98em;font-weight:600}
+    .card p{margin:0;color:#8b949e;font-size:.85em;line-height:1.5}
+    .card-arrow{margin-top:12px;font-size:.82em;color:#388bfd}
+    .no-results{text-align:center;padding:60px 20px;color:#6e7681}
+    .no-results .emoji{font-size:3em;display:block;margin-bottom:12px}
 
-    .no-results { text-align: center; padding: 60px 20px; color: #6e7681; }
-    .no-results .emoji { font-size: 3em; display: block; margin-bottom: 12px; }
-
-    /* FOOTER */
-    footer { background: #161b22; border-top: 1px solid #30363d; text-align: center; padding: 32px 20px; color: #6e7681; font-size: 0.85em; }
-    footer a { color: #58a6ff; text-decoration: none; }
+    footer{background:#161b22;border-top:1px solid #30363d;text-align:center;padding:32px 20px;color:#6e7681;font-size:.85em}
+    footer a{color:#58a6ff;text-decoration:none}
   </style>
 </head>
 <body>
-
-  <nav class="topnav" aria-label="Breadcrumb">
-    <a href="/">AIBuilder Marketplace</a>
-    <span class="sep">›</span>
-    <span class="current">B2B Knowledge Base</span>
-  </nav>
+  <nav class="topnav"><a href="/">AIBuilder Marketplace</a><span class="sep">›</span><span class="current">B2B Knowledge Base</span></nav>
 
   <section class="hero">
     <h1>B2B AI Knowledge Base <span>2026</span></h1>
-    <p>Expert reviews, ROI analyses and head-to-head comparisons of the tools that actually move the needle.</p>
+    <p>Expert reviews, ROI analyses and comparisons — in 6 languages — of the tools that actually move the needle.</p>
     <div class="hero-stats">
-      <div class="stat"><span class="num">40</span><span class="lbl">Articles</span></div>
-      <div class="stat"><span class="num">6</span><span class="lbl">Tools Reviewed</span></div>
+      <div class="stat"><span class="num">47</span><span class="lbl">Articles</span></div>
+      <div class="stat"><span class="num">7</span><span class="lbl">Tools Reviewed</span></div>
+      <div class="stat"><span class="num">6</span><span class="lbl">Languages</span></div>
       <div class="stat"><span class="num">Daily</span><span class="lbl">Updated</span></div>
     </div>
   </section>
 
+  <!-- TOOLS OVERVIEW -->
+  <div class="tools-section">
+    <div class="section-label">Our Affiliate Tools</div>
+    <h2 class="section-title">What We Review</h2>
+    <p class="section-sub">Every tool is personally tested and reviewed. We only promote what we use and trust.</p>
+    <div class="tools-grid" id="tools-grid">
+      <div class="tool-card">
+      <div class="tool-card-header">
+        <span class="tool-icon">🟢</span>
+        <div>
+          <div class="tool-name">Kinsta</div>
+          <div class="tool-tagline">Premium managed WordPress hosting</div>
+        </div>
+      </div>
+      <p class="tool-desc">Lightning-fast, secure and scalable hosting built for growing businesses. Used by 120,000+ companies worldwide.</p>
+      <button class="tool-filter-btn filter-btn" onclick="setTool(this, 'Kinsta')"style="margin-top:10px;">View Kinsta articles →</button>
+    </div><div class="tool-card">
+      <div class="tool-card-header">
+        <span class="tool-icon">🎬</span>
+        <div>
+          <div class="tool-name">Synthesia</div>
+          <div class="tool-tagline">AI video with realistic avatars</div>
+        </div>
+      </div>
+      <p class="tool-desc">Turn text into professional videos in minutes. 140+ AI avatars, 120+ languages. No camera or studio needed.</p>
+      <button class="tool-filter-btn filter-btn" onclick="setTool(this, 'Synthesia')"style="margin-top:10px;">View Synthesia articles →</button>
+    </div><div class="tool-card">
+      <div class="tool-card-header">
+        <span class="tool-icon">🎥</span>
+        <div>
+          <div class="tool-name">InVideo</div>
+          <div class="tool-tagline">AI-powered video editor</div>
+        </div>
+      </div>
+      <p class="tool-desc">Create stunning marketing videos without editing skills. 5,000+ templates, stock footage and auto-subtitles.</p>
+      <button class="tool-filter-btn filter-btn" onclick="setTool(this, 'InVideo')"style="margin-top:10px;">View InVideo articles →</button>
+    </div><div class="tool-card">
+      <div class="tool-card-header">
+        <span class="tool-icon">💻</span>
+        <div>
+          <div class="tool-name">Replit</div>
+          <div class="tool-tagline">AI coding platform in the cloud</div>
+        </div>
+      </div>
+      <p class="tool-desc">Build and deploy full-stack apps from your browser. AI pair programmer included. Zero setup, instant deployment.</p>
+      <button class="tool-filter-btn filter-btn" onclick="setTool(this, 'Replit')"style="margin-top:10px;">View Replit articles →</button>
+    </div><div class="tool-card">
+      <div class="tool-card-header">
+        <span class="tool-icon">₿</span>
+        <div>
+          <div class="tool-name">Bitvavo</div>
+          <div class="tool-tagline">European crypto exchange</div>
+        </div>
+      </div>
+      <p class="tool-desc">Buy, sell and trade 300+ cryptocurrencies with Europe's lowest fees. Regulated, secure and beginner-friendly.</p>
+      <button class="tool-filter-btn filter-btn" onclick="setTool(this, 'Bitvavo')"style="margin-top:10px;">View Bitvavo articles →</button>
+    </div><div class="tool-card">
+      <div class="tool-card-header">
+        <span class="tool-icon">🎯</span>
+        <div>
+          <div class="tool-name">Clay</div>
+          <div class="tool-tagline">B2B data enrichment & outreach</div>
+        </div>
+      </div>
+      <p class="tool-desc">Find leads, enrich data from 75+ sources and automate personalised outreach. Turn data into pipeline.</p>
+      <button class="tool-filter-btn filter-btn" onclick="setTool(this, 'Clay')"style="margin-top:10px;">View Clay articles →</button>
+    </div><div class="tool-card">
+      <div class="tool-card-header">
+        <span class="tool-icon">🎙️</span>
+        <div>
+          <div class="tool-name">Murf</div>
+          <div class="tool-tagline">AI voice generator</div>
+        </div>
+      </div>
+      <p class="tool-desc">Create professional voiceovers in 120+ voices and 20+ languages. Perfect for videos, podcasts and e-learning.</p>
+      <button class="tool-filter-btn filter-btn" onclick="setTool(this, 'Murf')"style="margin-top:10px;">View Murf articles →</button>
+    </div>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
   <div class="filters-wrap">
     <div class="filters-inner">
       <span class="filter-label">Tool:</span>
-      <button class="filter-btn active" onclick="filterTool(this, 'all')">All</button>
-      <button class="filter-btn" onclick="filterTool(this, 'Kinsta')">🟢 Kinsta</button>
-      <button class="filter-btn" onclick="filterTool(this, 'Synthesia')">🎬 Synthesia</button>
-      <button class="filter-btn" onclick="filterTool(this, 'InVideo')">🎥 InVideo</button>
-      <button class="filter-btn" onclick="filterTool(this, 'Replit')">💻 Replit</button>
-      <button class="filter-btn" onclick="filterTool(this, 'Bitvavo')">₿ Bitvavo</button>
-      <button class="filter-btn" onclick="filterTool(this, 'Clay')">🎯 Clay</button>
+      <button class="filter-btn active" onclick="setTool(this,'all')">All</button>
+      <button class="filter-btn" onclick="setTool(this,'Kinsta')">🟢 Kinsta</button>
+      <button class="filter-btn" onclick="setTool(this,'Synthesia')">🎬 Synthesia</button>
+      <button class="filter-btn" onclick="setTool(this,'InVideo')">🎥 InVideo</button>
+      <button class="filter-btn" onclick="setTool(this,'Replit')">💻 Replit</button>
+      <button class="filter-btn" onclick="setTool(this,'Bitvavo')">₿ Bitvavo</button>
+      <button class="filter-btn" onclick="setTool(this,'Clay')">🎯 Clay</button>
+      <button class="filter-btn" onclick="setTool(this,'Murf')">🎙️ Murf</button>
       <div class="filter-sep"></div>
       <span class="filter-label">Type:</span>
-      <button class="filter-btn" onclick="filterType(this, 'all')">All</button>
-      <button class="filter-btn" onclick="filterType(this, 'Review')">Review</button>
-      <button class="filter-btn" onclick="filterType(this, 'Comparison')">Comparison</button>
-      <button class="filter-btn" onclick="filterType(this, 'ROI')">ROI</button>
-      <button class="filter-btn" onclick="filterType(this, 'Automation')">Automation</button>
-      <button class="filter-btn" onclick="filterType(this, 'Scale-Up')">Scale-Up</button>
+      <button class="filter-btn" onclick="setType(this,'all')">All</button>
+      <button class="filter-btn" onclick="setType(this,'Review')">Review</button>
+      <button class="filter-btn" onclick="setType(this,'Comparison')">Comparison</button>
+      <button class="filter-btn" onclick="setType(this,'ROI')">ROI</button>
+      <button class="filter-btn" onclick="setType(this,'Automation')">Automation</button>
+      <button class="filter-btn" onclick="setType(this,'Scale-Up')">Scale-Up</button>
+      <div class="filter-sep"></div>
+      <span class="filter-label">Taal:</span>
+      <button class="filter-btn" onclick="setLang(this,'all')">All</button>
+      <button class="filter-btn" onclick="setLang(this,'English')">🇬🇧 EN</button>
+      <button class="filter-btn" onclick="setLang(this,'Dutch')">🇳🇱 NL</button>
+      <button class="filter-btn" onclick="setLang(this,'German')">🇩🇪 DE</button>
+      <button class="filter-btn" onclick="setLang(this,'French')">🇫🇷 FR</button>
+      <button class="filter-btn" onclick="setLang(this,'Spanish')">🇪🇸 ES</button>
+      <button class="filter-btn" onclick="setLang(this,'Portuguese')">🇵🇹 PT</button>
     </div>
   </div>
 
   <div class="search-wrap">
-    <input class="search-box" type="text" placeholder="Search reviews, tools or topics..." oninput="filterSearch(this.value)">
+    <input class="search-box" type="text" placeholder="Search articles, tools or topics..." oninput="filterSearch(this.value)">
   </div>
 
   <div class="container">
     <div class="results-count" id="count"></div>
     <div class="grid" id="grid"></div>
-    <div class="no-results" id="no-results" style="display:none;">
-      <span class="emoji">🔍</span>
-      No results found. Try a different filter or search term.
-    </div>
+    <div class="no-results" id="no-results" style="display:none"><span class="emoji">🔍</span>No results found. Try a different filter.</div>
   </div>
 
   <footer>
-    <p><a href="/">AIBuilder Marketplace</a> &nbsp;·&nbsp; <a href="/terms/">Terms</a> &nbsp;·&nbsp; <a href="mailto:felix@theweekly2pctedge.com">Contact</a></p>
+    <p><a href="/">AIBuilder Marketplace</a> · <a href="/terms/">Terms</a> · <a href="mailto:felix@theweekly2pctedge.com">Contact</a></p>
   </footer>
 
   <script>
-    const CARDS = [{"slug": "synthesia-vs-replit-fr", "tool": "Synthesia", "type": "Comparison", "title": "Synthesia vs Replit", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "\ud83c\udfac", "color": "#6639ba"}, {"slug": "synthesia-vs-invideo-du", "tool": "Synthesia", "type": "Comparison", "title": "Synthesia vs Invideo", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "\ud83c\udfac", "color": "#6639ba"}, {"slug": "synthesia-ultimate-review-2026", "tool": "Synthesia", "type": "Review", "title": "Synthesia Ultimate Review", "desc": "Complete Synthesia review for B2B founders. Features, pricing, pros and cons.", "icon": "\ud83c\udfac", "color": "#1a7f4e"}, {"slug": "synthesia-scale-up", "tool": "Synthesia", "type": "Scale-Up", "title": "Synthesia Scale Up", "desc": "How to scale your business operations using Synthesia effectively.", "icon": "\ud83c\udfac", "color": "#be185d"}, {"slug": "synthesia-roi", "tool": "Synthesia", "type": "ROI", "title": "Synthesia ROI", "desc": "Real ROI numbers for Synthesia. Is it worth the investment for your team?", "icon": "\ud83c\udfac", "color": "#b45309"}, {"slug": "synthesia-hosting", "tool": "Synthesia", "type": "Hosting", "title": "Synthesia Hosting", "desc": "Best practices for Synthesia hosting, setup and optimization.", "icon": "\ud83c\udfac", "color": "#0369a1"}, {"slug": "synthesia-founder-secrets", "tool": "Synthesia", "type": "Secrets", "title": "Synthesia Founder Secrets", "desc": "Advanced Synthesia strategies that top founders use to get ahead.", "icon": "\ud83c\udfac", "color": "#7c3aed"}, {"slug": "synthesia-automation-en", "tool": "Synthesia", "type": "Automation", "title": "Synthesia Automation", "desc": "Automate your Synthesia workflows to save time and scale faster.", "icon": "\ud83c\udfac", "color": "#0f766e"}, {"slug": "synthesia-automation", "tool": "Synthesia", "type": "Automation", "title": "Synthesia Automation", "desc": "Automate your Synthesia workflows to save time and scale faster.", "icon": "\ud83c\udfac", "color": "#0f766e"}, {"slug": "replit-vs-synthesia-en", "tool": "Replit", "type": "Comparison", "title": "Replit vs Synthesia", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "\ud83d\udcbb", "color": "#6639ba"}, {"slug": "replit-vs-kinsta-po", "tool": "Replit", "type": "Comparison", "title": "Replit vs Kinsta", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "\ud83d\udcbb", "color": "#6639ba"}, {"slug": "replit-scale-up", "tool": "Replit", "type": "Scale-Up", "title": "Replit Scale Up", "desc": "How to scale your business operations using Replit effectively.", "icon": "\ud83d\udcbb", "color": "#be185d"}, {"slug": "replit-roi", "tool": "Replit", "type": "ROI", "title": "Replit ROI", "desc": "Real ROI numbers for Replit. Is it worth the investment for your team?", "icon": "\ud83d\udcbb", "color": "#b45309"}, {"slug": "replit-efficiency-du", "tool": "Replit", "type": "Efficiency", "title": "Replit Efficiency", "desc": "Maximize your Replit efficiency with expert workflows and best practices.", "icon": "\ud83d\udcbb", "color": "#0369a1"}, {"slug": "replit-automation", "tool": "Replit", "type": "Automation", "title": "Replit Automation", "desc": "Automate your Replit workflows to save time and scale faster.", "icon": "\ud83d\udcbb", "color": "#0f766e"}, {"slug": "kinsta-vs-synthesia-fr", "tool": "Kinsta", "type": "Comparison", "title": "Kinsta vs Synthesia", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "\ud83d\udfe2", "color": "#6639ba"}, {"slug": "kinsta-vs-bitvavo-po", "tool": "Kinsta", "type": "Comparison", "title": "Kinsta vs Bitvavo", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "\ud83d\udfe2", "color": "#6639ba"}, {"slug": "kinsta-ultimate-review-2026", "tool": "Kinsta", "type": "Review", "title": "Kinsta Ultimate Review", "desc": "Complete Kinsta review for B2B founders. Features, pricing, pros and cons.", "icon": "\ud83d\udfe2", "color": "#1a7f4e"}, {"slug": "kinsta-scale-up-en", "tool": "Kinsta", "type": "Scale-Up", "title": "Kinsta Scale Up", "desc": "How to scale your business operations using Kinsta effectively.", "icon": "\ud83d\udfe2", "color": "#be185d"}, {"slug": "kinsta-scale-up", "tool": "Kinsta", "type": "Scale-Up", "title": "Kinsta Scale Up", "desc": "How to scale your business operations using Kinsta effectively.", "icon": "\ud83d\udfe2", "color": "#be185d"}, {"slug": "kinsta-roi", "tool": "Kinsta", "type": "ROI", "title": "Kinsta ROI", "desc": "Real ROI numbers for Kinsta. Is it worth the investment for your team?", "icon": "\ud83d\udfe2", "color": "#b45309"}, {"slug": "kinsta-founder-secrets", "tool": "Kinsta", "type": "Secrets", "title": "Kinsta Founder Secrets", "desc": "Advanced Kinsta strategies that top founders use to get ahead.", "icon": "\ud83d\udfe2", "color": "#7c3aed"}, {"slug": "kinsta-efficiency-sp", "tool": "Kinsta", "type": "Efficiency", "title": "Kinsta Efficiency", "desc": "Maximize your Kinsta efficiency with expert workflows and best practices.", "icon": "\ud83d\udfe2", "color": "#0369a1"}, {"slug": "kinsta-efficiency", "tool": "Kinsta", "type": "Efficiency", "title": "Kinsta Efficiency", "desc": "Maximize your Kinsta efficiency with expert workflows and best practices.", "icon": "\ud83d\udfe2", "color": "#0369a1"}, {"slug": "kinsta-automation", "tool": "Kinsta", "type": "Automation", "title": "Kinsta Automation", "desc": "Automate your Kinsta workflows to save time and scale faster.", "icon": "\ud83d\udfe2", "color": "#0f766e"}, {"slug": "invideo-vs-replit-en", "tool": "InVideo", "type": "Comparison", "title": "Invideo vs Replit", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "\ud83c\udfa5", "color": "#6639ba"}, {"slug": "invideo-scale-up", "tool": "InVideo", "type": "Scale-Up", "title": "Invideo Scale Up", "desc": "How to scale your business operations using InVideo effectively.", "icon": "\ud83c\udfa5", "color": "#be185d"}, {"slug": "invideo-roi", "tool": "InVideo", "type": "ROI", "title": "Invideo ROI", "desc": "Real ROI numbers for InVideo. Is it worth the investment for your team?", "icon": "\ud83c\udfa5", "color": "#b45309"}, {"slug": "invideo-hosting", "tool": "InVideo", "type": "Hosting", "title": "Invideo Hosting", "desc": "Best practices for InVideo hosting, setup and optimization.", "icon": "\ud83c\udfa5", "color": "#0369a1"}, {"slug": "invideo-efficiency-ge", "tool": "InVideo", "type": "Efficiency", "title": "Invideo Efficiency", "desc": "Maximize your InVideo efficiency with expert workflows and best practices.", "icon": "\ud83c\udfa5", "color": "#0369a1"}, {"slug": "invideo-efficiency", "tool": "InVideo", "type": "Efficiency", "title": "Invideo Efficiency", "desc": "Maximize your InVideo efficiency with expert workflows and best practices.", "icon": "\ud83c\udfa5", "color": "#0369a1"}, {"slug": "clay-roi-du", "tool": "Clay", "type": "ROI", "title": "Clay ROI", "desc": "Real ROI numbers for Clay. Is it worth the investment for your team?", "icon": "\ud83c\udfaf", "color": "#b45309"}, {"slug": "bitvavo-ultimate-review-2026", "tool": "Bitvavo", "type": "Review", "title": "Bitvavo Ultimate Review", "desc": "Complete Bitvavo review for B2B founders. Features, pricing, pros and cons.", "icon": "\u20bf", "color": "#1a7f4e"}, {"slug": "bitvavo-scale-up-po", "tool": "Bitvavo", "type": "Scale-Up", "title": "Bitvavo Scale Up", "desc": "How to scale your business operations using Bitvavo effectively.", "icon": "\u20bf", "color": "#be185d"}, {"slug": "bitvavo-scale-up", "tool": "Bitvavo", "type": "Scale-Up", "title": "Bitvavo Scale Up", "desc": "How to scale your business operations using Bitvavo effectively.", "icon": "\u20bf", "color": "#be185d"}, {"slug": "bitvavo-roi", "tool": "Bitvavo", "type": "ROI", "title": "Bitvavo ROI", "desc": "Real ROI numbers for Bitvavo. Is it worth the investment for your team?", "icon": "\u20bf", "color": "#b45309"}, {"slug": "bitvavo-pricing-fr", "tool": "Bitvavo", "type": "Pricing", "title": "Bitvavo Pricing", "desc": "All Bitvavo pricing plans compared. Find the right plan for your budget.", "icon": "\u20bf", "color": "#b45309"}, {"slug": "bitvavo-founder-secrets", "tool": "Bitvavo", "type": "Secrets", "title": "Bitvavo Founder Secrets", "desc": "Advanced Bitvavo strategies that top founders use to get ahead.", "icon": "\u20bf", "color": "#7c3aed"}, {"slug": "bitvavo-efficiency", "tool": "Bitvavo", "type": "Efficiency", "title": "Bitvavo Efficiency", "desc": "Maximize your Bitvavo efficiency with expert workflows and best practices.", "icon": "\u20bf", "color": "#0369a1"}, {"slug": "bitvavo-automation", "tool": "Bitvavo", "type": "Automation", "title": "Bitvavo Automation", "desc": "Automate your Bitvavo workflows to save time and scale faster.", "icon": "\u20bf", "color": "#0f766e"}];
-    let activeTool = 'all';
-    let activeType = 'all';
-    let searchQ = '';
+    const CARDS = [{"slug": "synthesia-vs-replit-fr", "tool": "Synthesia", "type": "Comparison", "title": "Synthesia vs Replit", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🎬", "color": "#6639ba", "lang": "French", "lang_flag": "🇫🇷"}, {"slug": "synthesia-vs-kinsta-du", "tool": "Synthesia", "type": "Comparison", "title": "Synthesia vs Kinsta", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🎬", "color": "#6639ba", "lang": "Dutch", "lang_flag": "🇳🇱"}, {"slug": "synthesia-vs-invideo-du", "tool": "Synthesia", "type": "Comparison", "title": "Synthesia vs Invideo", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🎬", "color": "#6639ba", "lang": "Dutch", "lang_flag": "🇳🇱"}, {"slug": "synthesia-vs-bitvavo-sp", "tool": "Synthesia", "type": "Comparison", "title": "Synthesia vs Bitvavo", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🎬", "color": "#6639ba", "lang": "Spanish", "lang_flag": "🇪🇸"}, {"slug": "synthesia-ultimate-review-2026", "tool": "Synthesia", "type": "Review", "title": "Synthesia Ultimate Review", "desc": "Complete Synthesia review for B2B founders. Features, pricing, pros and cons.", "icon": "🎬", "color": "#1a7f4e", "lang": "English", "lang_flag": "🌐"}, {"slug": "synthesia-scale-up", "tool": "Synthesia", "type": "Scale-Up", "title": "Synthesia Scale Up", "desc": "How to scale your business operations using Synthesia effectively.", "icon": "🎬", "color": "#be185d", "lang": "English", "lang_flag": "🌐"}, {"slug": "synthesia-roi", "tool": "Synthesia", "type": "ROI", "title": "Synthesia ROI", "desc": "Real ROI numbers for Synthesia. Is it worth the investment for your team?", "icon": "🎬", "color": "#b45309", "lang": "English", "lang_flag": "🌐"}, {"slug": "synthesia-hosting", "tool": "Synthesia", "type": "Hosting", "title": "Synthesia Hosting", "desc": "Best practices for Synthesia hosting, setup and optimization.", "icon": "🎬", "color": "#0369a1", "lang": "English", "lang_flag": "🌐"}, {"slug": "synthesia-founder-secrets", "tool": "Synthesia", "type": "Secrets", "title": "Synthesia Founder Secrets", "desc": "Advanced Synthesia strategies that top founders use to get ahead.", "icon": "🎬", "color": "#7c3aed", "lang": "English", "lang_flag": "🌐"}, {"slug": "synthesia-automation-en", "tool": "Synthesia", "type": "Automation", "title": "Synthesia Automation", "desc": "Automate your Synthesia workflows to save time and scale faster.", "icon": "🎬", "color": "#0f766e", "lang": "English", "lang_flag": "🇬🇧"}, {"slug": "synthesia-automation", "tool": "Synthesia", "type": "Automation", "title": "Synthesia Automation", "desc": "Automate your Synthesia workflows to save time and scale faster.", "icon": "🎬", "color": "#0f766e", "lang": "English", "lang_flag": "🌐"}, {"slug": "replit-vs-synthesia-en", "tool": "Replit", "type": "Comparison", "title": "Replit vs Synthesia", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "💻", "color": "#6639ba", "lang": "English", "lang_flag": "🇬🇧"}, {"slug": "replit-vs-kinsta-sp", "tool": "Replit", "type": "Comparison", "title": "Replit vs Kinsta", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "💻", "color": "#6639ba", "lang": "Spanish", "lang_flag": "🇪🇸"}, {"slug": "replit-vs-kinsta-po", "tool": "Replit", "type": "Comparison", "title": "Replit vs Kinsta", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "💻", "color": "#6639ba", "lang": "Portuguese", "lang_flag": "🇵🇹"}, {"slug": "replit-scale-up", "tool": "Replit", "type": "Scale-Up", "title": "Replit Scale Up", "desc": "How to scale your business operations using Replit effectively.", "icon": "💻", "color": "#be185d", "lang": "English", "lang_flag": "🌐"}, {"slug": "replit-roi-en", "tool": "Replit", "type": "ROI", "title": "Replit ROI", "desc": "Real ROI numbers for Replit. Is it worth the investment for your team?", "icon": "💻", "color": "#b45309", "lang": "English", "lang_flag": "🇬🇧"}, {"slug": "replit-roi", "tool": "Replit", "type": "ROI", "title": "Replit ROI", "desc": "Real ROI numbers for Replit. Is it worth the investment for your team?", "icon": "💻", "color": "#b45309", "lang": "English", "lang_flag": "🌐"}, {"slug": "replit-efficiency-du", "tool": "Replit", "type": "Efficiency", "title": "Replit Efficiency", "desc": "Maximize your Replit efficiency with expert workflows and best practices.", "icon": "💻", "color": "#0369a1", "lang": "Dutch", "lang_flag": "🇳🇱"}, {"slug": "replit-automation", "tool": "Replit", "type": "Automation", "title": "Replit Automation", "desc": "Automate your Replit workflows to save time and scale faster.", "icon": "💻", "color": "#0f766e", "lang": "English", "lang_flag": "🌐"}, {"slug": "kinsta-vs-synthesia-fr", "tool": "Kinsta", "type": "Comparison", "title": "Kinsta vs Synthesia", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🟢", "color": "#6639ba", "lang": "French", "lang_flag": "🇫🇷"}, {"slug": "kinsta-vs-bitvavo-po", "tool": "Kinsta", "type": "Comparison", "title": "Kinsta vs Bitvavo", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🟢", "color": "#6639ba", "lang": "Portuguese", "lang_flag": "🇵🇹"}, {"slug": "kinsta-vs-bitvavo-du", "tool": "Kinsta", "type": "Comparison", "title": "Kinsta vs Bitvavo", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🟢", "color": "#6639ba", "lang": "Dutch", "lang_flag": "🇳🇱"}, {"slug": "kinsta-ultimate-review-2026", "tool": "Kinsta", "type": "Review", "title": "Kinsta Ultimate Review", "desc": "Complete Kinsta review for B2B founders. Features, pricing, pros and cons.", "icon": "🟢", "color": "#1a7f4e", "lang": "English", "lang_flag": "🌐"}, {"slug": "kinsta-scale-up-en", "tool": "Kinsta", "type": "Scale-Up", "title": "Kinsta Scale Up", "desc": "How to scale your business operations using Kinsta effectively.", "icon": "🟢", "color": "#be185d", "lang": "English", "lang_flag": "🇬🇧"}, {"slug": "kinsta-scale-up", "tool": "Kinsta", "type": "Scale-Up", "title": "Kinsta Scale Up", "desc": "How to scale your business operations using Kinsta effectively.", "icon": "🟢", "color": "#be185d", "lang": "English", "lang_flag": "🌐"}, {"slug": "kinsta-roi", "tool": "Kinsta", "type": "ROI", "title": "Kinsta ROI", "desc": "Real ROI numbers for Kinsta. Is it worth the investment for your team?", "icon": "🟢", "color": "#b45309", "lang": "English", "lang_flag": "🌐"}, {"slug": "kinsta-founder-secrets", "tool": "Kinsta", "type": "Secrets", "title": "Kinsta Founder Secrets", "desc": "Advanced Kinsta strategies that top founders use to get ahead.", "icon": "🟢", "color": "#7c3aed", "lang": "English", "lang_flag": "🌐"}, {"slug": "kinsta-efficiency-sp", "tool": "Kinsta", "type": "Efficiency", "title": "Kinsta Efficiency", "desc": "Maximize your Kinsta efficiency with expert workflows and best practices.", "icon": "🟢", "color": "#0369a1", "lang": "Spanish", "lang_flag": "🇪🇸"}, {"slug": "kinsta-efficiency", "tool": "Kinsta", "type": "Efficiency", "title": "Kinsta Efficiency", "desc": "Maximize your Kinsta efficiency with expert workflows and best practices.", "icon": "🟢", "color": "#0369a1", "lang": "English", "lang_flag": "🌐"}, {"slug": "kinsta-automation", "tool": "Kinsta", "type": "Automation", "title": "Kinsta Automation", "desc": "Automate your Kinsta workflows to save time and scale faster.", "icon": "🟢", "color": "#0f766e", "lang": "English", "lang_flag": "🌐"}, {"slug": "invideo-vs-replit-sp", "tool": "InVideo", "type": "Comparison", "title": "Invideo vs Replit", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🎥", "color": "#6639ba", "lang": "Spanish", "lang_flag": "🇪🇸"}, {"slug": "invideo-vs-replit-en", "tool": "InVideo", "type": "Comparison", "title": "Invideo vs Replit", "desc": "Head-to-head comparison. Which tool delivers better ROI for your business?", "icon": "🎥", "color": "#6639ba", "lang": "English", "lang_flag": "🇬🇧"}, {"slug": "invideo-scale-up", "tool": "InVideo", "type": "Scale-Up", "title": "Invideo Scale Up", "desc": "How to scale your business operations using InVideo effectively.", "icon": "🎥", "color": "#be185d", "lang": "English", "lang_flag": "🌐"}, {"slug": "invideo-roi", "tool": "InVideo", "type": "ROI", "title": "Invideo ROI", "desc": "Real ROI numbers for InVideo. Is it worth the investment for your team?", "icon": "🎥", "color": "#b45309", "lang": "English", "lang_flag": "🌐"}, {"slug": "invideo-hosting", "tool": "InVideo", "type": "Hosting", "title": "Invideo Hosting", "desc": "Best practices for InVideo hosting, setup and optimization.", "icon": "🎥", "color": "#0369a1", "lang": "English", "lang_flag": "🌐"}, {"slug": "invideo-efficiency-ge", "tool": "InVideo", "type": "Efficiency", "title": "Invideo Efficiency", "desc": "Maximize your InVideo efficiency with expert workflows and best practices.", "icon": "🎥", "color": "#0369a1", "lang": "German", "lang_flag": "🇩🇪"}, {"slug": "invideo-efficiency", "tool": "InVideo", "type": "Efficiency", "title": "Invideo Efficiency", "desc": "Maximize your InVideo efficiency with expert workflows and best practices.", "icon": "🎥", "color": "#0369a1", "lang": "English", "lang_flag": "🌐"}, {"slug": "clay-roi-du", "tool": "Clay", "type": "ROI", "title": "Clay ROI", "desc": "Real ROI numbers for Clay. Is it worth the investment for your team?", "icon": "🎯", "color": "#b45309", "lang": "Dutch", "lang_flag": "🇳🇱"}, {"slug": "bitvavo-ultimate-review-2026", "tool": "Bitvavo", "type": "Review", "title": "Bitvavo Ultimate Review", "desc": "Complete Bitvavo review for B2B founders. Features, pricing, pros and cons.", "icon": "₿", "color": "#1a7f4e", "lang": "English", "lang_flag": "🌐"}, {"slug": "bitvavo-scale-up-po", "tool": "Bitvavo", "type": "Scale-Up", "title": "Bitvavo Scale Up", "desc": "How to scale your business operations using Bitvavo effectively.", "icon": "₿", "color": "#be185d", "lang": "Portuguese", "lang_flag": "🇵🇹"}, {"slug": "bitvavo-scale-up-ge", "tool": "Bitvavo", "type": "Scale-Up", "title": "Bitvavo Scale Up", "desc": "How to scale your business operations using Bitvavo effectively.", "icon": "₿", "color": "#be185d", "lang": "German", "lang_flag": "🇩🇪"}, {"slug": "bitvavo-scale-up", "tool": "Bitvavo", "type": "Scale-Up", "title": "Bitvavo Scale Up", "desc": "How to scale your business operations using Bitvavo effectively.", "icon": "₿", "color": "#be185d", "lang": "English", "lang_flag": "🌐"}, {"slug": "bitvavo-roi", "tool": "Bitvavo", "type": "ROI", "title": "Bitvavo ROI", "desc": "Real ROI numbers for Bitvavo. Is it worth the investment for your team?", "icon": "₿", "color": "#b45309", "lang": "English", "lang_flag": "🌐"}, {"slug": "bitvavo-pricing-fr", "tool": "Bitvavo", "type": "Pricing", "title": "Bitvavo Pricing", "desc": "All Bitvavo pricing plans compared. Find the right plan for your budget.", "icon": "₿", "color": "#b45309", "lang": "French", "lang_flag": "🇫🇷"}, {"slug": "bitvavo-founder-secrets", "tool": "Bitvavo", "type": "Secrets", "title": "Bitvavo Founder Secrets", "desc": "Advanced Bitvavo strategies that top founders use to get ahead.", "icon": "₿", "color": "#7c3aed", "lang": "English", "lang_flag": "🌐"}, {"slug": "bitvavo-efficiency", "tool": "Bitvavo", "type": "Efficiency", "title": "Bitvavo Efficiency", "desc": "Maximize your Bitvavo efficiency with expert workflows and best practices.", "icon": "₿", "color": "#0369a1", "lang": "English", "lang_flag": "🌐"}, {"slug": "bitvavo-automation", "tool": "Bitvavo", "type": "Automation", "title": "Bitvavo Automation", "desc": "Automate your Bitvavo workflows to save time and scale faster.", "icon": "₿", "color": "#0f766e", "lang": "English", "lang_flag": "🌐"}];
+    let activeTool='all', activeType='all', activeLang='all', searchQ='';
 
     function render() {
-      const grid = document.getElementById('grid');
-      const count = document.getElementById('count');
-      const noResults = document.getElementById('no-results');
-      const filtered = CARDS.filter(c => {
-        const toolOk = activeTool === 'all' || c.tool === activeTool;
-        const typeOk = activeType === 'all' || c.type === activeType;
-        const q = searchQ.toLowerCase();
-        const searchOk = \!q || c.title.toLowerCase().includes(q) || c.tool.toLowerCase().includes(q) || c.type.toLowerCase().includes(q);
-        return toolOk && typeOk && searchOk;
+      const grid=document.getElementById('grid'), count=document.getElementById('count'), nr=document.getElementById('no-results');
+      const f=CARDS.filter(c=>{
+        const t=activeTool==='all'||c.tool===activeTool;
+        const y=activeType==='all'||c.type===activeType;
+        const l=activeLang==='all'||c.lang===activeLang;
+        const q=searchQ.toLowerCase();
+        const s=\!q||c.title.toLowerCase().includes(q)||c.tool.toLowerCase().includes(q)||c.type.toLowerCase().includes(q)||c.lang.toLowerCase().includes(q);
+        return t&&y&&l&&s;
       });
-      count.textContent = filtered.length + ' article' + (filtered.length \!== 1 ? 's' : '');
-      if (filtered.length === 0) {
-        grid.innerHTML = '';
-        noResults.style.display = 'block';
-      } else {
-        noResults.style.display = 'none';
-        grid.innerHTML = filtered.map(c => `
-          <a class="card" href="/b2b/${c.slug}/">
-            <div class="card-top">
-              <span class="card-icon">${c.icon}</span>
-              <span class="card-tag" style="background:${c.color}">${c.type}</span>
-            </div>
-            <h3>${c.title}</h3>
-            <p>${c.desc}</p>
-            <div class="card-arrow">Read more →</div>
-          </a>`).join('');
-      }
+      count.textContent=f.length+' article'+(f.length\!==1?'s':'');
+      if(\!f.length){grid.innerHTML='';nr.style.display='block';}
+      else{nr.style.display='none';grid.innerHTML=f.map(c=>`<a class="card" href="/b2b/${c.slug}/"><div class="card-top"><span class="card-icon">${c.icon}</span><span class="card-tag" style="background:${c.color}">${c.type}</span><span class="card-lang">${c.lang_flag} ${c.lang}</span></div><h3>${c.title}</h3><p>${c.desc}</p><div class="card-arrow">Read more →</div></a>`).join('');}
     }
 
-    function filterTool(btn, tool) {
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        if (['all','Kinsta','Synthesia','InVideo','Replit','Bitvavo','Clay'].includes(b.textContent.replace(/[^a-zA-Z]/g,''))) b.classList.remove('active');
-      });
-      // simpler: just manage tool buttons
-      const toolBtns = Array.from(document.querySelectorAll('.filter-btn')).filter(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes('filterTool'));
-      toolBtns.forEach(b => b.classList.remove('active'));
+    function setTool(btn,tool) {
+      document.querySelectorAll('.filter-btn').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('setTool'))b.classList.remove('active');});
+      document.querySelectorAll('.tool-filter-btn').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
-      activeTool = tool;
+      activeTool=tool;
+      if(tool\!=='all') document.querySelectorAll('.tool-filter-btn').forEach(b=>{if(b.textContent.includes(tool))b.classList.add('active');});
       render();
+      document.getElementById('grid').scrollIntoView({behavior:'smooth',block:'start'});
     }
-
-    function filterType(btn, type) {
-      const typeBtns = Array.from(document.querySelectorAll('.filter-btn')).filter(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes('filterType'));
-      typeBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeType = type;
-      render();
+    function setType(btn,type) {
+      document.querySelectorAll('.filter-btn').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('setType'))b.classList.remove('active');});
+      btn.classList.add('active'); activeType=type; render();
     }
-
-    function filterSearch(q) {
-      searchQ = q;
-      render();
+    function setLang(btn,lang) {
+      document.querySelectorAll('.filter-btn').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('setLang'))b.classList.remove('active');});
+      btn.classList.add('active'); activeLang=lang; render();
     }
-
+    function filterSearch(q) { searchQ=q; render(); }
     render();
   </script>
 </body>

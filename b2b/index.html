@@ -229,11 +229,11 @@
         const y=activeType==='all'||c.type===activeType;
         const l=activeLang==='all'||c.lang===activeLang;
         const q=searchQ.toLowerCase();
-        const s=\!q||c.title.toLowerCase().includes(q)||c.tool.toLowerCase().includes(q)||c.type.toLowerCase().includes(q)||c.lang.toLowerCase().includes(q);
+        const s=!q||c.title.toLowerCase().includes(q)||c.tool.toLowerCase().includes(q)||c.type.toLowerCase().includes(q)||c.lang.toLowerCase().includes(q);
         return t&&y&&l&&s;
       });
-      count.textContent=f.length+' article'+(f.length\!==1?'s':'');
-      if(\!f.length){grid.innerHTML='';nr.style.display='block';}
+      count.textContent=f.length+' article'+(f.length!==1?'s':'');
+      if(!f.length){grid.innerHTML='';nr.style.display='block';}
       else{nr.style.display='none';grid.innerHTML=f.map(c=>`<a class="card" href="/b2b/${c.slug}/"><div class="card-top"><span class="card-icon">${c.icon}</span><span class="card-tag" style="background:${c.color}">${c.type}</span><span class="card-lang">${c.lang_flag} ${c.lang}</span></div><h3>${c.title}</h3><p>${c.desc}</p><div class="card-arrow">Read more →</div></a>`).join('');}
     }
 
@@ -242,7 +242,7 @@
       document.querySelectorAll('.tool-filter-btn').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
       activeTool=tool;
-      if(tool\!=='all') document.querySelectorAll('.tool-filter-btn').forEach(b=>{if(b.textContent.includes(tool))b.classList.add('active');});
+      if(tool!=='all') document.querySelectorAll('.tool-filter-btn').forEach(b=>{if(b.textContent.includes(tool))b.classList.add('active');});
       render();
       document.getElementById('grid').scrollIntoView({behavior:'smooth',block:'start'});
     }

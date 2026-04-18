@@ -143,6 +143,18 @@ html = """<!DOCTYPE html>
     <div class="grid" id="grid"></div>
     <div class="no-results" id="no-results" style="display:none"><span style="font-size:3em;display:block;margin-bottom:12px">🔍</span>No results found.</div>
   </div>
+  <div style="max-width:600px;margin:40px auto;padding:30px;background:linear-gradient(135deg,#161b22,#1a2744);border:1px solid #30363d;border-radius:12px;text-align:center">
+    <h3 style="color:#e6edf3;margin:0 0 8px;font-size:1.3em">Get weekly AI tool insights</h3>
+    <p style="color:#8b949e;margin:0 0 20px;font-size:.9em">Join founders who get our best AI tool deals, comparisons and tips every week. Free.</p>
+    <form action="https://formsubmit.co/thaoendaan@gmail.com" method="POST" style="display:flex;gap:8px;max-width:420px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+      <input type="hidden" name="_subject" value="New B2B subscriber!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://aibuildermarketplace.com/b2b/">
+      <input type="email" name="email" placeholder="you@company.com" required style="flex:1;min-width:200px;padding:12px 16px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:#e6edf3;font-size:.95em;outline:none">
+      <button type="submit" style="background:#58a6ff;color:#0d1117;border:none;padding:12px 24px;border-radius:8px;font-weight:800;font-size:.95em;cursor:pointer;white-space:nowrap">Subscribe</button>
+    </form>
+    <p style="color:#6e7681;font-size:.75em;margin:12px 0 0">No spam. Unsubscribe anytime.</p>
+  </div>
   <footer><p><a href="/">AIBuilder Marketplace</a> · <a href="/b2b/">B2B Reviews</a> · <a href="mailto:felix@theweekly2pctedge.com">Contact</a></p></footer>
   <script>
     const CARDS = """ + cards_json + """;

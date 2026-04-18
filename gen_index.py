@@ -8,8 +8,14 @@ REPO_ROOT = "/root/felix_hq/repos/aibuildermarketplace"
 DOMAIN = "https://aibuildermarketplace.com"
 
 lang_codes = ['-en', '-fr', '-du', '-po', '-ge', '-sp']
+lang_flags = {'-en':'🇬🇧','-fr':'🇫🇷','-du':'🇳🇱','-po':'🇵🇹','-ge':'🇩🇪','-sp':'🇪🇸'}
 tool_icons = {'Kinsta':'🟢','Synthesia':'🎬','InVideo':'🎥','Replit':'💻','Bitvavo':'₿','Clay':'🎯','Murf':'🎙️','Other':'🔧'}
 tag_colors = {'Review':'#1a7f4e','Comparison':'#6639ba','ROI':'#b45309','Efficiency':'#0369a1','Automation':'#0f766e','Scale-Up':'#be185d','Secrets':'#7c3aed','Hosting':'#0369a1','Pricing':'#b45309','Guide':'#374151'}
+
+def get_lang(slug):
+    for lc, flag in lang_flags.items():
+        if slug.endswith(lc): return flag
+    return '🇬🇧'
 
 def clean_title(slug):
     s = slug
@@ -46,7 +52,7 @@ folders = sorted([f.name for f in os.scandir(REPO_B2B) if f.is_dir() and f.name 
 n = len(folders)
 date_str = datetime.now().strftime("%Y-%m-%d")
 
-cards = [{'slug':f,'tool':get_tool(f),'type':get_type(f),'title':clean_title(f),'desc':get_desc(f),'icon':tool_icons.get(get_tool(f),'🔧'),'color':tag_colors.get(get_type(f),'#374151')} for f in folders]
+cards = [{'slug':f,'tool':get_tool(f),'type':get_type(f),'title':clean_title(f),'desc':get_desc(f),'icon':tool_icons.get(get_tool(f),'🔧'),'color':tag_colors.get(get_type(f),'#374151'),'lang':get_lang(f)} for f in folders]
 cards_json = json.dumps(cards, ensure_ascii=False)
 
 # Bouw HTML — let op: geen bash heredoc, dus gewone ! werkt hier prima
@@ -94,6 +100,7 @@ html = """<!DOCTYPE html>
     .card-icon{font-size:1.4em}.card-tag{font-size:.72em;font-weight:700;padding:2px 9px;border-radius:12px;color:#fff}
     .card h3{margin:0 0 6px;color:#e6edf3;font-size:.98em;font-weight:600}
     .card p{margin:0;color:#8b949e;font-size:.85em;line-height:1.5}
+    .card-lang{margin-left:auto;font-size:1.1em}
     .card-arrow{margin-top:12px;font-size:.82em;color:#388bfd}
     .no-results{text-align:center;padding:60px 20px;color:#6e7681}
     footer{background:#161b22;border-top:1px solid #30363d;text-align:center;padding:32px 20px;color:#6e7681;font-size:.85em}
@@ -151,7 +158,7 @@ html = """<!DOCTYPE html>
       });
       count.textContent = f.length + ' article' + (f.length !== 1 ? 's' : '');
       if (!f.length) { grid.innerHTML=''; nr.style.display='block'; }
-      else { nr.style.display='none'; grid.innerHTML=f.map(c=>`<a class="card" href="/b2b/${c.slug}/"><div class="card-top"><span class="card-icon">${c.icon}</span><span class="card-tag" style="background:${c.color}">${c.type}</span></div><h3>${c.title}</h3><p>${c.desc}</p><div class="card-arrow">Read more →</div></a>`).join(''); }
+      else { nr.style.display='none'; grid.innerHTML=f.map(c=>`<a class="card" href="/b2b/${c.slug}/"><div class="card-top"><span class="card-icon">${c.icon}</span><span class="card-tag" style="background:${c.color}">${c.type}</span><span class="card-lang">${c.lang}</span></div><h3>${c.title}</h3><p>${c.desc}</p><div class="card-arrow">Read more →</div></a>`).join(''); }
     }
     function filterTool(btn,tool) { document.querySelectorAll('.filter-btn').forEach(b=>{ if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('filterTool')) b.classList.remove('active'); }); btn.classList.add('active'); activeTool=tool; render(); }
     function filterType(btn,type) { document.querySelectorAll('.filter-btn').forEach(b=>{ if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('filterType')) b.classList.remove('active'); }); btn.classList.add('active'); activeType=type; render(); }

@@ -417,15 +417,18 @@ def send_startup_message():
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     log(f"Victor 5.0 gestart — Model: {MODEL}")
+
+    # Reset Telegram polling state — voorkomt 409 conflicts
+    try:
+        bot.delete_webhook(drop_pending_updates=True)
+        time.sleep(2)
+    except Exception as e:
+        log(f"Webhook reset: {e}")
+
     send_startup_message()
 
     # Start proactieve monitoring in achtergrond
     t = threading.Thread(target=proactive_loop, daemon=True)
     t.start()
 
-    while True:
-        try:
-            bot.infinity_polling(timeout=30, long_polling_timeout=20)
-        except Exception as e:
-            log(f"Polling error: {e}")
-            time.sleep(10)
+    bot.infinity_polling(timeout=30, long_polling_timeout=20)

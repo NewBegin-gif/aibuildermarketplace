@@ -118,6 +118,7 @@ COMMANDO: cd /root/felix_hq/repos/aibuildermarketplace && git add -A && git comm
 5. Keep responses concise. No padding, no filler.
 6. When reporting metrics, use exact numbers from real data.
 7. Respond in the operator's language (Dutch or English based on input).
+8. CRITICAL: Only use COMMANDO: when the user explicitly asks for a technical action or status check. Social/casual messages ("hoe gaat het", "goedemorgen", "wat kan je", etc.) get a normal conversational reply — NO commands. Use your judgment: if it's clearly smalltalk or a question about your capabilities, respond conversationally without any COMMANDO: lines.
 
 ## OPERATOR
 Daniel — founder, based in Vietnam. Managing a 25k portfolio.
@@ -317,15 +318,16 @@ def handle_message(message):
         combined = "\n".join(all_output)[:1000]
         history.append({"role": "user", "content": f"[Command outputs]:\n{combined}"})
 
-        # Victor analyseert de output automatisch
-        if len(commands) > 0:
+        # Victor analyseert de output — maar alleen als er iets fout ging
+        error_keywords = ["error", "failed", "rejected", "fatal", "permission denied", "not found"]
+        has_error = any(kw in combined.lower() for kw in error_keywords)
+        if has_error:
             bot.send_chat_action(message.chat.id, 'typing')
             followup = ask_victor(
-                f"Ik heb de commando's uitgevoerd. Output:\n{combined}\n\nAnalyseer het resultaat. Als er iets fout ging, fix het. Als alles goed ging, bevestig kort.",
+                f"Command output:\n{combined}\n\nEr lijkt iets fout te zijn gegaan. Analyseer en fix het indien mogelijk.",
                 history
             )
             if "COMMANDO:" in followup:
-                # Victor wil nog meer uitvoeren
                 for part in followup.split("COMMANDO:")[1:]:
                     cmd2 = part.split("\n")[0].strip().strip('`')
                     if cmd2:

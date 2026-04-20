@@ -273,14 +273,14 @@ def build_article_html(title, content, brand1, slug, schema_json, internal_links
 </div>"""
 
     # Footer met alle affiliate links — donker thema
-    taglines = {{'Kinsta':'Premium hosting','Synthesia':'AI video','InVideo':'Video creation','Replit':'AI coding','Bitvavo':'Crypto exchange','Murf':'AI voice'}}
+    taglines = {'Kinsta':'Premium hosting','Synthesia':'AI video','InVideo':'Video creation','Replit':'AI coding','Bitvavo':'Crypto exchange','Murf':'AI voice'}
     footer_links = "".join([
-        f"<li style='margin:6px 0'><a href='{{link}}' rel='nofollow sponsored' target='_blank' style='color:#58a6ff;text-decoration:none;font-weight:700'>{{brand}}</a> — {{taglines.get(brand, 'AI tool')}}</li>"
+        f"<li style='margin:6px 0'><a href='{link}' rel='nofollow sponsored' target='_blank' style='color:#58a6ff;text-decoration:none;font-weight:700'>{brand}</a> — {taglines.get(brand, 'AI tool')}</li>"
         for brand, link in VAULT.items()
     ])
     footer = f"""<div style='margin-top:50px;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:10px;'>
   <h3 style='color:#e6edf3;margin-top:0;'>More AI Tools for Founders:</h3>
-  <ul style='list-style:none;padding:0;'>{{footer_links}}</ul>
+  <ul style='list-style:none;padding:0;'>{footer_links}</ul>
 </div>"""
 
     # Breadcrumb structured data

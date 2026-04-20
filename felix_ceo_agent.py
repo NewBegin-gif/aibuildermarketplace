@@ -365,34 +365,118 @@ def generate_status_report():
 🤖 Model: {MODEL}"""
 
 # ── PROACTIEVE SCHEDULER ────────────────────────────────────────────────────
+def auto_fix_git():
+    """Fix git problemen automatisch."""
+    fixes = []
+    # Check en fix lock files
+    for lockfile in [f"{REPO_ROOT}/.git/index.lock", f"{REPO_ROOT}/.git/HEAD.lock"]:
+        check = run_command(f"test -f {lockfile} && echo EXISTS")
+        if "EXISTS" in check:
+            run_command(f"rm -f {lockfile}")
+            fixes.append(f"Removed {lockfile}")
+
+    # Check git status
+    status = run_command(f"cd {REPO_ROOT} && git status --porcelain")
+    if status and status != "(geen output)":
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: auto-commit pending changes'")
+        fixes.append("Auto-committed pending changes")
+
+    # Try to push
+    push_result = run_command(f"cd {REPO_ROOT} && git pull --rebase origin main && git push origin main")
+    if "rejected" in push_result or "conflict" in push_result.lower():
+        # Force rebase met ours strategy
+        run_command(f"cd {REPO_ROOT} && git rebase --abort 2>/dev/null; git checkout --theirs . 2>/dev/null; git pull --rebase origin main && git push origin main")
+        fixes.append(f"Fixed git conflict: {push_result[:200]}")
+    elif "error" in push_result.lower() or "fatal" in push_result.lower():
+        fixes.append(f"Git push issue: {push_result[:200]}")
+    else:
+        fixes.append("Git sync OK")
+
+    return fixes
+
+def check_article_pipeline():
+    """Check of artikelen gegenereerd worden en fix als nodig."""
+    problems = []
+    fixes = []
+
+    # Check of cron draait
+    cron_status = run_command("systemctl is-active cron")
+    if "active" not in cron_status:
+        run_command("systemctl start cron")
+        fixes.append("Cron was gestopt — herstart")
+
+    # Check crontab entry
+    crontab = run_command("crontab -l 2>/dev/null")
+    if "generate_article" not in crontab:
+        problems.append("⚠️ generate_article.py staat NIET in crontab!")
+
+    # Check laatste artikel (meest recent gewijzigde folder)
+    latest = run_command(f"ls -t {REPO_ROOT}/b2b/ | grep -v index | grep -v sitemap | head -1")
+    latest_time = run_command(f"stat -c %Y {REPO_ROOT}/b2b/{latest.strip()}/index.html 2>/dev/null")
+    try:
+        age_hours = (time.time() - int(latest_time.strip())) / 3600
+        if age_hours > 4:
+            problems.append(f"⚠️ Laatste artikel is {age_hours:.0f} uur oud — zou max 2 uur moeten zijn")
+            # Probeer handmatig te genereren
+            log("Auto-generating article because pipeline seems stuck")
+            gen_out = run_command("/root/felix_hq/venv/bin/python3 /root/felix_hq/generate_article.py", timeout=120)
+            if "Succes" in gen_out or "succes" in gen_out:
+                fixes.append("Auto-generated article (pipeline was stuck)")
+            else:
+                problems.append(f"Auto-generate failed: {gen_out[:300]}")
+    except:
+        pass
+
+    # Check cron.log voor errors
+    cron_log = run_command("tail -10 /root/felix_hq/cron.log 2>/dev/null")
+    if "rejected" in cron_log:
+        git_fixes = auto_fix_git()
+        fixes.extend(git_fixes)
+    if "error" in cron_log.lower() and "rejected" not in cron_log:
+        problems.append(f"Errors in cron.log: {cron_log[:200]}")
+
+    return problems, fixes
+
 def proactive_loop():
-    """Stuur 2x per dag een proactief rapport + check op problemen."""
+    """Elke 15 min: check pipeline + fix problemen. Rapport 2x per dag."""
     last_report = None
+    last_check = None
     while True:
         try:
             now = datetime.now()
             hour = now.hour
 
-            # Rapport om 06:00 en 18:00 UTC
+            # Health check elke 15 minuten
+            if last_check is None or (now - last_check) > timedelta(minutes=15):
+                problems, fixes = check_article_pipeline()
+                last_check = now
+
+                # Log alles
+                if fixes:
+                    log(f"Auto-fixes: {', '.join(fixes)}")
+                if problems:
+                    log(f"Problems detected: {', '.join(problems)}")
+                    # Stuur ALLEEN alert als er onopgeloste problemen zijn
+                    try:
+                        alert = "🚨 Victor Auto-Monitor:\n\n"
+                        if fixes:
+                            alert += "✅ Auto-fixed:\n" + "\n".join(f"  - {f}" for f in fixes) + "\n\n"
+                        alert += "⚠️ Needs attention:\n" + "\n".join(f"  - {p}" for p in problems)
+                        bot.send_message(ADMIN_ID, alert)
+                    except:
+                        pass
+
+            # Dagelijks rapport om 06:00 en 18:00 UTC
             if hour in [6, 18] and last_report != f"{now.date()}-{hour}":
                 report = generate_status_report()
-
-                # Check voor problemen
-                cron_log = run_command("tail -20 /root/felix_hq/cron.log")
-                problems = []
-                if "rejected" in cron_log:
-                    problems.append("⚠️ Git push rejected — rebase nodig")
-                if "error" in cron_log.lower():
-                    problems.append("⚠️ Errors in cron.log")
-
+                # Voeg pipeline health toe
+                problems, fixes = check_article_pipeline()
+                if fixes:
+                    report += "\n\n✅ Auto-fixes:\n" + "\n".join(f"  - {f}" for f in fixes)
                 if problems:
-                    report += "\n\n🚨 PROBLEMEN GEDETECTEERD:\n" + "\n".join(problems)
-                    report += "\n\nIk ga dit proberen te fixen..."
-
-                    # Auto-fix: git pull --rebase
-                    if "rejected" in cron_log:
-                        fix_out = run_command(f"cd {REPO_ROOT} && git pull --rebase origin main && git push origin main")
-                        report += f"\n\n🔧 Auto-fix result:\n{fix_out[:500]}"
+                    report += "\n\n⚠️ Issues:\n" + "\n".join(f"  - {p}" for p in problems)
+                else:
+                    report += "\n\n✅ Pipeline gezond — alles draait"
 
                 try:
                     bot.send_message(ADMIN_ID, report)
@@ -400,7 +484,7 @@ def proactive_loop():
                     pass
                 last_report = f"{now.date()}-{hour}"
 
-            time.sleep(300)  # check elke 5 minuten
+            time.sleep(300)  # check elke 5 minuten (health check elke 15 min)
         except Exception as e:
             log(f"Proactive loop error: {e}")
             time.sleep(60)

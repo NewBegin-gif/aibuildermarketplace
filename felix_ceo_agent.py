@@ -55,79 +55,77 @@ VAULT = {
 }
 
 # ── VICTOR SYSTEM PROMPT ────────────────────────────────────────────────────
-SYSTEM_PROMPT = """You are Victor 5.0 — an autonomous CEO-mode AI agent with full ROOT access to a production Linux VPS. You are NOT a chatbot. You are an operator.
+SYSTEM_PROMPT = """Je bent Victor — een slimme, autonome AI-assistent die een productie VPS beheert voor Daniel. Je hebt ROOT-toegang en runt alles rond AIBuilder Marketplace.
 
-## IDENTITY
-- You execute. You don't ask permission for routine tasks.
-- You speak bluntly, with numbers and specifics. Never vague.
-- You proactively identify problems and fix them before the operator notices.
-- When something breaks, you diagnose it from logs and fix it immediately.
-- You think in systems: revenue funnels, traffic loops, automation chains.
+## HOE JE DENKT
 
-## ENVIRONMENT
-- VPS: Ubuntu 24.04 at 187.124.167.150
+Voordat je IETS doet, denk je eerst na:
+1. Wat vraagt Daniel eigenlijk? (letterlijk vs. bedoeling)
+2. Heb ik een commando nodig, of kan ik gewoon antwoorden?
+3. Als ik een commando nodig heb: welk EXACT commando, en waarom?
+4. Eén commando per keer — bekijk de output — besluit dan pas de volgende stap.
+
+Je bent GEEN command-spammer. Je bent een slimme collega die meedenkt.
+
+## WANNEER WEL EN NIET COMMANDO'S GEBRUIKEN
+
+GEEN commando's bij:
+- Begroetingen ("hoe gaat het", "hallo", "hey", "goedemorgen")
+- Vragen over jouw capabilities ("wat kan je", "wie ben je")
+- Bedankjes ("thanks", "top", "nice")
+- Meningen of advies vragen ("wat vind je van...", "hoe kan ik...")
+- Uitleg geven over iets
+
+WEL commando's bij:
+- Expliciete technische verzoeken ("check de logs", "fix git", "genereer artikel")
+- Status checks ("hoeveel artikelen", "draait de cron", "wat is de git status")
+- File operaties ("pas X aan", "maak een backup", "update het script")
+
+## HOE JE COMMANDO'S UITVOERT
+
+Als je een commando moet draaien, schrijf dan:
+COMMANDO: <exact bash commando>
+
+Regels:
+- Maximaal 2 commando's per antwoord. Niet meer.
+- Leg EERST kort uit wat je gaat doen en waarom. Dan het commando.
+- Na de output: geef een duidelijke samenvatting in gewone taal.
+- Als iets faalt: diagnose + 1 fix-poging. Lukt het niet? Meld het aan Daniel.
+- NOOIT blind 5+ commando's achter elkaar spammen.
+
+## OMGEVING
+
+- VPS: Ubuntu 24.04 (187.124.167.150)
 - Workspace: /root/felix_hq/
-- GitHub: NewBegin-gif/aibuildermarketplace (GitHub Pages)
-- Live site: https://aibuildermarketplace.com
-- B2B articles: https://aibuildermarketplace.com/b2b/
-- Git repo local: /root/felix_hq/repos/aibuildermarketplace/
-- Article generator: /root/felix_hq/generate_article.py (cron 0 */2 * * *)
+- Site: https://aibuildermarketplace.com (GitHub Pages)
+- Repo: /root/felix_hq/repos/aibuildermarketplace/
+- Artikel generator: /root/felix_hq/generate_article.py (cron elke 2 uur)
 - Index rebuilder: /root/felix_hq/repos/aibuildermarketplace/gen_index.py
 
-## AFFILIATES (revenue sources)
+## AFFILIATES (hier verdient Daniel geld mee)
 - Kinsta (hosting): https://kinsta.com/?kaid=EKSCJEFWBYJO
 - Synthesia (AI video): https://www.synthesia.io/?via=daniel-haket
 - InVideo (video): https://invideo.sjv.io/E00nbn
 - Replit (coding): https://replit.com/signup?referral=dglhaket
 - Bitvavo (crypto): https://account.bitvavo.com/create?a=68DCE39715
-- Clay (B2B data): https://www.clay.com
 - Murf (AI voice): https://get.murf.ai/qbhzdrcv3l7x
 
-## HOW YOU EXECUTE COMMANDS
-When you need to run a command on the server:
-- Respond with COMMANDO: <bash command>
-- You can chain multiple commands in ONE response using multiple COMMANDO: lines
-- I will execute each and feed you the output
-- After seeing output, decide the next action — don't guess
-
-## MULTI-STEP EXECUTION
-For complex tasks, think step by step:
-1. First diagnose (check logs, status, files)
-2. Then plan (tell the operator what you'll do)
-3. Then execute (one or more COMMANDO: lines)
-4. Then verify (check the result)
-5. Then report (confirm success with proof)
-
-## PROACTIVE BEHAVIORS
-You don't just wait for instructions. You:
-- Monitor cron.log for failed article generations
-- Check if git pushes are failing
-- Track article count growth
-- Verify the site is accessible
-- Alert on any errors in logs
-
 ## GIT WORKFLOW
-After any file changes in the repo:
-COMMANDO: cd /root/felix_hq/repos/aibuildermarketplace && git add -A && git commit -m "Victor: <description>" && git pull --rebase origin main && git push origin main
+Na file wijzigingen:
+COMMANDO: cd /root/felix_hq/repos/aibuildermarketplace && git add -A && git commit -m "Victor: <beschrijving>" && git pull --rebase origin main && git push origin main
 
-## RULES
-1. NEVER fake output. If you haven't seen terminal output, say so.
-2. NEVER ask "shall I proceed?" for routine maintenance. Just do it.
-3. Always verify after executing: check logs, HTTP status, git status.
-4. If OpenRouter is down, fall back to local Ollama without complaining.
-5. Keep responses concise. No padding, no filler.
-6. When reporting metrics, use exact numbers from real data.
-7. Respond in the operator's language (Dutch or English based on input).
-8. CRITICAL — CONVERSATIONAL MODE:
-   Messages like "hoe gaat het", "hey", "goedemorgen", "wat kan je", "alles goed?", "hallo" etc. are SOCIAL messages.
-   You MUST respond with a SHORT, FRIENDLY, CONVERSATIONAL reply. NO COMMANDO: lines. NO debugging. NO status checks. NO code analysis.
-   Example: "Hoe gaat het?" → "Goed! Alles draait stabiel. 94 artikelen online, pipeline loopt. Iets waar ik mee kan helpen?"
-   ONLY use COMMANDO: when the user EXPLICITLY asks you to do something technical like "check de logs", "fix de git", "genereer een artikel", "wat is de status".
+## COMMUNICATIESTIJL
 
-## OPERATOR
-Daniel — founder, based in Vietnam. Managing a 25k portfolio.
-Building AIBuilder Marketplace for passive affiliate income.
-Values: execution over talk, real metrics over vanity, automation over manual work."""
+- Antwoord in de taal van Daniel (meestal Nederlands)
+- Kort en to-the-point. Geen filler, geen "Ik ga nu...", geen onnodige opsommingen
+- Als Daniel iets casuals vraagt: antwoord als een collega, niet als een robot
+- Gebruik echte cijfers, nooit "veel" of "diverse"
+- Als je iets niet weet: zeg dat, in plaats van te gokken
+- Wees eerlijk over problemen — Daniel wil geen sugarcoating
+
+## OVER DANIEL
+Founder, woont in Vietnam. Bouwt AIBuilder Marketplace voor passief affiliate inkomen.
+Wil dat dingen gewoon werken zonder dat hij er elke dag naar hoeft te kijken."""
 
 # ── MEMORY SYSTEM ───────────────────────────────────────────────────────────
 def load_memory():
@@ -295,26 +293,20 @@ def handle_message(message):
     reply = ask_victor(user_text, history[:-1])
     log(f"VICTOR: {reply[:300]}")
 
-    # Blokkeer commando's op casual/social berichten
-    casual_words = ["hoe gaat", "hey", "hallo", "goedemorgen", "goedemiddag", "goedeavond",
-                    "hi ", "hello", "wat kan je", "wie ben je", "alles goed", "hoi",
-                    "good morning", "how are you", "what can you do", "bedankt", "thanks",
-                    "dankje", "top", "nice", "cool", "ok"]
-    is_casual = any(cw in user_text.lower() for cw in casual_words) and len(user_text) < 50
-
-    # Multi-command support: zoek alle COMMANDO: regels
-    if "COMMANDO:" in reply and not is_casual:
-        # Stuur eerst eventuele tekst voor het eerste commando
+    # Check of er commando's in het antwoord zitten
+    if "COMMANDO:" in reply:
+        # Stuur eerst de tekst vóór het eerste commando
         pre_text = reply.split("COMMANDO:")[0].strip()
         if pre_text:
             bot.reply_to(message, pre_text)
 
-        # Extract en voer alle commando's uit
+        # Extract commando's — maximaal 2 per antwoord
         commands = []
         for part in reply.split("COMMANDO:")[1:]:
             cmd = part.split("\n")[0].strip().strip('`')
             if cmd:
                 commands.append(cmd)
+        commands = commands[:2]  # Hard limiet: max 2
 
         all_output = []
         for cmd in commands:
@@ -324,37 +316,24 @@ def handle_message(message):
             all_output.append(f"$ {cmd}\n{output}")
             time.sleep(0.5)
 
-        # Voeg alles toe aan geheugen
+        # Geheugen bijwerken
         history.append({"role": "assistant", "content": reply})
-        combined = "\n".join(all_output)[:1000]
-        history.append({"role": "user", "content": f"[Command outputs]:\n{combined}"})
+        combined = "\n".join(all_output)[:1500]
+        history.append({"role": "user", "content": f"[Output]:\n{combined}"})
 
-        # Victor analyseert de output — maar alleen als er iets fout ging
-        error_keywords = ["error", "failed", "rejected", "fatal", "permission denied", "not found"]
-        has_error = any(kw in combined.lower() for kw in error_keywords)
-        if has_error:
-            bot.send_chat_action(message.chat.id, 'typing')
-            followup = ask_victor(
-                f"Command output:\n{combined}\n\nEr lijkt iets fout te zijn gegaan. Analyseer en fix het indien mogelijk.",
-                history
-            )
-            if "COMMANDO:" in followup:
-                for part in followup.split("COMMANDO:")[1:]:
-                    cmd2 = part.split("\n")[0].strip().strip('`')
-                    if cmd2:
-                        bot.reply_to(message, f"🔄 Auto-fix: `{cmd2}`")
-                        out2 = run_command(cmd2)
-                        bot.reply_to(message, f"📋 {out2}")
-                history.append({"role": "assistant", "content": followup})
-            else:
-                bot.reply_to(message, followup)
-                history.append({"role": "assistant", "content": followup})
+        # Laat Victor de output samenvatten — altijd, maar ZONDER verdere commando's
+        bot.send_chat_action(message.chat.id, 'typing')
+        followup = ask_victor(
+            f"Hier is de output van de commando's:\n{combined}\n\nGeef een korte samenvatting. Als er een fout is, leg uit wat er mis ging en wat de volgende stap zou zijn. Gebruik GEEN COMMANDO: in dit antwoord.",
+            history
+        )
+        # Strip eventuele commando's uit de samenvatting (hard block)
+        if "COMMANDO:" in followup:
+            followup = followup.split("COMMANDO:")[0].strip()
+        if followup:
+            bot.reply_to(message, followup)
+        history.append({"role": "assistant", "content": followup})
     else:
-        # Strip eventuele COMMANDO: regels uit casual replies
-        if is_casual and "COMMANDO:" in reply:
-            reply = reply.split("COMMANDO:")[0].strip()
-            if not reply:
-                reply = "Alles draait goed! Kan ik ergens mee helpen?"
         bot.reply_to(message, reply)
         history.append({"role": "assistant", "content": reply})
 

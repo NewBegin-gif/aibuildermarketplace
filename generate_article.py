@@ -340,127 +340,206 @@ def build_article_html(title, content, brand1, slug, schema_json, internal_links
 </html>"""
 
 
-def main():
-    mode = random.choice(["Review", "Versus", "Pricing", "Alternative"])
-    lang = random.choice(LANGUAGES)
-    lang_code = lang[:2].lower()
+COMPETITORS = {
+    "Kinsta": ["Cloudways", "WP Engine", "SiteGround", "Flywheel", "Hostinger", "DigitalOcean"],
+    "Synthesia": ["HeyGen", "Colossyan", "D-ID", "Pictory", "Loom", "Descript"],
+    "Invideo": ["Canva Video", "Kapwing", "FlexClip", "Lumen5", "Veed.io", "CapCut"],
+    "Replit": ["GitHub Codespaces", "CodeSandbox", "Glitch", "Railway", "Vercel", "Render"],
+    "Bitvavo": ["Binance", "Kraken", "Coinbase", "KuCoin", "Bybit", "MEXC"],
+    "Murf": ["ElevenLabs", "Play.ht", "Speechify", "WellSaid Labs", "Resemble AI", "Replica Studios"],
+}
 
-    brand1 = random.choice(list(VAULT.keys()))
+# Long-tail SEO topics per brand — elke entry genereert een uniek artikel
+TOPICS = {
+    "Kinsta": [
+        "migration-guide", "wordpress-speed", "woocommerce-hosting", "staging-environment",
+        "managed-hosting-benefits", "cdn-performance", "security-features", "developer-tools",
+        "agency-hosting", "multisite-setup", "php-performance", "backup-restore",
+        "uptime-monitoring", "support-quality", "enterprise-wordpress", "cost-savings",
+        "free-trial-review", "devkinsta-local", "application-hosting", "database-hosting",
+    ],
+    "Synthesia": [
+        "training-videos", "sales-enablement", "onboarding-videos", "multilingual-video",
+        "avatar-customization", "enterprise-video", "marketing-videos", "explainer-videos",
+        "video-localization", "api-integration", "template-library", "brand-kit",
+        "compliance-training", "product-demos", "internal-comms", "video-analytics",
+        "ai-avatar-quality", "script-to-video", "team-collaboration", "video-personalization",
+    ],
+    "Invideo": [
+        "social-media-video", "youtube-creation", "ad-creation", "template-editing",
+        "text-to-video", "brand-videos", "tutorial-creation", "video-ads-roi",
+        "content-repurposing", "batch-video-creation", "stock-footage", "voiceover-sync",
+        "instagram-reels", "tiktok-videos", "linkedin-video", "ecommerce-video",
+        "team-workflow", "export-quality", "mobile-editing", "ai-script-generator",
+    ],
+    "Replit": [
+        "ai-coding-assistant", "team-collaboration", "deployment-guide", "bounties-freelancing",
+        "education-coding", "prototype-mvp", "database-integration", "api-development",
+        "mobile-coding", "version-control", "ghostwriter-ai", "startup-stack",
+        "fullstack-apps", "python-projects", "javascript-hosting", "hackathon-tool",
+        "pair-programming", "code-review", "student-discount", "enterprise-security",
+    ],
+    "Bitvavo": [
+        "beginner-crypto-guide", "staking-rewards", "trading-fees-comparison", "euro-deposits",
+        "security-audit", "mobile-app-review", "portfolio-tracking", "tax-reporting",
+        "limit-orders-guide", "altcoin-selection", "withdrawal-guide", "api-trading",
+        "institutional-trading", "crypto-savings", "defi-integration", "dutch-crypto-regulation",
+        "customer-support-review", "two-factor-security", "recurring-buys", "crypto-portfolio-2026",
+    ],
+    "Murf": [
+        "voiceover-production", "elearning-narration", "podcast-intro", "youtube-voiceover",
+        "commercial-voice", "audiobook-creation", "ivr-phone-system", "voice-cloning",
+        "multilingual-voiceover", "voice-quality-test", "enterprise-tts", "api-voice-generation",
+        "advertising-voice", "documentary-narration", "app-voice-integration", "voice-branding",
+        "studio-vs-ai-voice", "accessibility-audio", "presentation-voiceover", "dubbing-localization",
+    ],
+}
 
-    # Concurrenten per tool voor vergelijkingsartikelen
-    COMPETITORS = {
-        "Kinsta": ["Cloudways", "WP Engine", "SiteGround", "Flywheel"],
-        "Synthesia": ["HeyGen", "Colossyan", "D-ID", "Pictory"],
-        "InVideo": ["Canva Video", "Kapwing", "FlexClip", "Lumen5"],
-        "Replit": ["GitHub Codespaces", "CodeSandbox", "Glitch", "Railway"],
-        "Bitvavo": ["Binance", "Kraken", "Coinbase", "KuCoin"],
-        "Murf": ["ElevenLabs", "Play.ht", "Speechify", "WellSaid Labs"],
-    }
 
-    if mode == "Versus":
-        # Mix: soms intern (tool vs tool), soms extern (tool vs concurrent)
-        if random.random() < 0.5 and brand1 in COMPETITORS:
-            brand2 = random.choice(COMPETITORS[brand1])
-            title = f"{brand1} vs {brand2}"
-            slug = f"{brand1.lower()}-vs-{brand2.lower().replace(' ', '-').replace('.', '')}-{lang_code}"
-        else:
-            brand2 = random.choice([b for b in VAULT.keys() if b != brand1])
-            title = f"{brand1} vs {brand2}"
-            slug = f"{brand1.lower()}-vs-{brand2.lower()}-{lang_code}"
-        prompt = f"""Write an in-depth B2B comparison between {brand1} and {brand2} for startup founders and SaaS businesses. Language: {lang}. Use HTML tags only (no <html>, <head>, <body>).
+def generate_topic(existing_folders):
+    """Genereer een uniek topic dat nog niet bestaat."""
+    brands = list(VAULT.keys())
+    random.shuffle(brands)
 
-Structure the article as follows:
-1. A compelling headline that includes both tool names
-2. A quick verdict table in HTML comparing: Pricing (actual monthly costs), Best For, Key Strength, Biggest Weakness
-3. Detailed comparison sections: Features, Pricing Tiers, Performance, Customer Support
-4. A clear "Our Recommendation" section explaining which tool is better for which use case
-5. A FAQ section with 3-4 common questions founders ask
+    for _ in range(50):  # max 50 pogingen
+        brand = random.choice(brands)
+        mode = random.choice(["Review", "Versus", "Pricing", "Alternative"])
+        lang = random.choice(LANGUAGES)
+        lang_code = lang[:2].lower()
 
-Use specific numbers, pricing tiers, and real feature comparisons. Avoid generic statements like "it's great" — use data and specifics."""
-
-    elif mode == "Pricing":
-        title = f"{brand1} Pricing Breakdown"
-        slug = f"{brand1.lower()}-pricing-{lang_code}"
-        prompt = f"""Write a comprehensive pricing guide for {brand1} aimed at B2B founders evaluating their budget. Language: {lang}. Use HTML tags only (no <html>, <head>, <body>).
+        if mode == "Review" and brand in TOPICS:
+            # Kies een specifiek long-tail topic
+            available = [t for t in TOPICS[brand]
+                         if f"{brand.lower()}-{t}-{lang_code}" not in existing_folders]
+            if not available:
+                continue
+            tag = random.choice(available)
+            slug = f"{brand.lower()}-{tag}-{lang_code}"
+            title = f"{brand}: {tag.replace('-', ' ').title()} Guide"
+            prompt = f"""Write a detailed, expert-level article about {brand} focusing specifically on "{tag.replace('-', ' ')}" for B2B founders and SaaS businesses. Language: {lang}. Use HTML tags only (no <html>, <head>, <body>).
 
 Structure:
-1. Headline: "{brand1} Pricing in 2026: Complete Guide for Founders"
-2. Quick pricing overview table with ALL tiers (Free/Starter/Pro/Enterprise), monthly and annual costs
+1. A specific, benefit-driven headline (e.g. "How {brand} {tag.replace('-', ' ').title()} Can Save Founders 10+ Hours/Week")
+2. The exact problem this solves — be specific about the pain point
+3. Step-by-step guide or detailed feature breakdown with concrete examples
+4. Pricing: which plan do you need for this specific feature?
+5. Real-world use case with numbers and results
+6. Pros and Cons (be honest about limitations)
+7. Verdict and recommendation
+
+Write like an experienced founder, not a marketer. Use specific numbers, real examples, and avoid generic phrases."""
+
+        elif mode == "Versus":
+            if random.random() < 0.5 and brand in COMPETITORS:
+                brand2 = random.choice(COMPETITORS[brand])
+                slug = f"{brand.lower()}-vs-{brand2.lower().replace(' ', '-').replace('.', '')}-{lang_code}"
+            else:
+                brand2 = random.choice([b for b in brands if b != brand])
+                slug = f"{brand.lower()}-vs-{brand2.lower()}-{lang_code}"
+            if slug in existing_folders:
+                continue
+            title = f"{brand} vs {brand2}"
+            prompt = f"""Write an in-depth comparison: {brand} vs {brand2} for startup founders. Language: {lang}. Use HTML tags only (no <html>, <head>, <body>).
+
+Structure:
+1. Compelling headline with both tool names
+2. Quick verdict table: Pricing, Best For, Key Strength, Biggest Weakness
+3. Detailed comparison: Features, Pricing Tiers, Performance, Support
+4. "Our Recommendation" — which tool for which use case
+5. FAQ with 3-4 common questions
+
+Use real pricing numbers and specific feature comparisons. No generic praise."""
+
+        elif mode == "Pricing":
+            slug = f"{brand.lower()}-pricing-{lang_code}"
+            if slug in existing_folders:
+                # Try pricing-breakdown variant
+                slug = f"{brand.lower()}-pricing-breakdown-{lang_code}"
+            if slug in existing_folders:
+                slug = f"{brand.lower()}-cost-analysis-{lang_code}"
+            if slug in existing_folders:
+                continue
+            title = f"{brand} Pricing Guide 2026"
+            prompt = f"""Write a comprehensive pricing guide for {brand} for B2B founders evaluating their budget. Language: {lang}. Use HTML tags only (no <html>, <head>, <body>).
+
+Structure:
+1. Headline: "{brand} Pricing in 2026: Complete Guide"
+2. Quick pricing table: ALL tiers with monthly/annual costs
 3. What each plan includes — specific features per tier
-4. Hidden costs and extras that founders should know about
-5. ROI calculation: "If you pay X/month, here's what you need to earn back"
-6. Comparison with 2 alternatives and their pricing
-7. Our verdict: which plan is best for startups vs scale-ups vs enterprise
+4. Hidden costs founders should know about
+5. ROI calculation: "If you pay X/month, here's the breakeven"
+6. Comparison with 2 cheaper alternatives
+7. Verdict: best plan for startups vs scale-ups vs enterprise
 
-Include actual pricing numbers. If exact prices are unknown, use realistic estimates based on the tool category. Founders searching for pricing are ready to buy — make the article genuinely helpful."""
+Include real pricing numbers. Founders searching pricing are ready to buy."""
 
-    elif mode == "Alternative":
-        if brand1 in COMPETITORS and COMPETITORS[brand1]:
-            alt = random.choice(COMPETITORS[brand1])
-            title = f"Best {brand1} Alternatives"
-            slug = f"{brand1.lower()}-alternatives-{lang_code}"
-            prompt = f"""Write a "Best {brand1} Alternatives in 2026" article for B2B founders. Language: {lang}. Use HTML tags only (no <html>, <head>, <body>).
+        elif mode == "Alternative":
+            slug = f"{brand.lower()}-alternatives-{lang_code}"
+            if slug in existing_folders:
+                slug = f"best-{brand.lower()}-alternatives-{lang_code}"
+            if slug in existing_folders:
+                slug = f"{brand.lower()}-competitors-{lang_code}"
+            if slug in existing_folders:
+                continue
+            alt = random.choice(COMPETITORS.get(brand, ["competitor"]))
+            title = f"Best {brand} Alternatives 2026"
+            prompt = f"""Write "Best {brand} Alternatives in 2026" for B2B founders. Language: {lang}. Use HTML tags only (no <html>, <head>, <body>).
 
 Structure:
-1. Headline: "5 Best {brand1} Alternatives for Founders in 2026"
-2. Why founders look for alternatives (pricing, features, limitations)
-3. For each alternative (include {alt} and 3-4 others):
-   - Quick overview and what makes it different
-   - Pricing comparison vs {brand1}
-   - Pros and Cons
-   - Best for (specific use case)
-4. Comparison table: all alternatives vs {brand1} on pricing, key features, rating
-5. Final verdict: when to stick with {brand1} vs switch
+1. Headline: "5 Best {brand} Alternatives for Founders in 2026"
+2. Why founders look for alternatives
+3. Each alternative ({alt} + 3-4 others): overview, pricing vs {brand}, pros/cons, best for
+4. Comparison table: all alternatives vs {brand}
+5. Final verdict: when to stay vs switch
 
-Focus on genuine pros and cons. Founders trust honest reviews, not sales pitches."""
+Honest pros and cons only. Founders trust real reviews, not sales pitches."""
+
         else:
-            mode = "Review"
+            continue
 
-    if mode == "Review":
-        tag = random.choice(["Automation", "ROI", "Scale-up", "Efficiency", "Starter Guide", "Advanced Tips"])
-        title = f"{brand1}: {tag} Guide"
-        slug = f"{brand1.lower()}-{tag.lower().replace(' ', '-')}-{lang_code}"
-        prompt = f"""Write a detailed B2B review of {brand1} focusing on {tag} for startup founders. Language: {lang}. Use HTML tags only (no <html>, <head>, <body>).
+        return brand, mode, slug, title, prompt, lang, lang_code
 
-Structure:
-1. A specific, benefit-driven headline (not generic — e.g. "How {brand1} Saved Us 12 Hours/Week on {tag}")
-2. The problem this tool solves — be specific about the pain point
-3. Key features relevant to {tag} with concrete examples
-4. Pricing overview (mention actual tiers and costs)
-5. Real-world use case: "Here's how a [type of business] would use {brand1} for {tag}"
-6. Pros and Cons list (be honest — mention real weaknesses)
-7. Verdict with a clear recommendation
+    return None, None, None, None, None, None, None
 
-Use specific numbers, time savings, and ROI estimates. Avoid generic AI-speak like "in today's digital landscape" or "streamline your workflow". Write like an experienced founder sharing real advice."""
 
-    path = f"{REPO_B2B}/{slug}"
+def main():
     existing_folders = get_existing_folders()
+    brand, mode, slug, title, prompt, lang, lang_code = generate_topic(existing_folders)
 
-    print(f"🚀 Victor 4.6 [{mode}]: {title} in {lang}...")
-
-    if slug in existing_folders:
-        print(f"⚠️ Map '{slug}' bestaat al. Gestopt.")
+    if not slug:
+        print("⚠️ Geen uniek topic gevonden na 50 pogingen. Alle combinaties bestaan al.")
         return
 
-    print("⏳ Ollama schrijft het artikel én de Pinterest briefing...")
+    path = f"{REPO_B2B}/{slug}"
+    print(f"🚀 Victor 5.0 [{mode}]: {title} in {lang}...")
 
-    client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+    # Gebruik OpenRouter (Claude) als beschikbaar, anders Ollama
+    openrouter_key = os.getenv("OPENROUTER_KEY", "")
+    if not openrouter_key:
+        env_path = "/root/felix_hq/.env"
+        if os.path.exists(env_path):
+            for line in open(env_path):
+                if line.startswith("OPENROUTER_KEY="):
+                    openrouter_key = line.strip().split("=", 1)[1].strip().strip('"').strip("'")
+
+    if openrouter_key:
+        client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=openrouter_key)
+        model = "anthropic/claude-sonnet-4"
+        print("🧠 Schrijven met Claude Sonnet...")
+    else:
+        client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+        model = "gemma4"
+        print("🧠 Schrijven met lokale Ollama...")
 
     try:
         res = client.chat.completions.create(
-            model="gemma4",
-            messages=[{"role": "user", "content": prompt}]
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=4000
         )
         content = res.choices[0].message.content.replace("```html", "").replace("```", "")
 
-        pin_prompt = f"Create a short Pinterest Pin brief for an article about {title} in {lang}. Include a catchy Title, a Description with 3 hashtags, and a detailed Image Prompt for Midjourney or DALL-E (minimalist, B2B aesthetic)."
-        pin_res = client.chat.completions.create(
-            model="gemma4",
-            messages=[{"role": "user", "content": pin_prompt}]
-        )
-        pin_brief = pin_res.choices[0].message.content
-
-        # Schema structured data (Review)
+        # Schema structured data
         schema = {
             "@context": "https://schema.org",
             "@type": "Article",
@@ -470,12 +549,12 @@ Use specific numbers, time savings, and ROI estimates. Avoid generic AI-speak li
             "publisher": {"@type": "Organization", "name": "AIBuilder Marketplace"},
             "datePublished": datetime.now().strftime("%Y-%m-%d"),
             "dateModified": datetime.now().strftime("%Y-%m-%d"),
-            "itemReviewed": {"@type": "SoftwareApplication", "name": brand1},
+            "itemReviewed": {"@type": "SoftwareApplication", "name": brand},
             "reviewRating": {"@type": "Rating", "ratingValue": "4.9"}
         }
         schema_json = f"<script type='application/ld+json'>\n{json.dumps(schema, indent=2)}\n</script>"
 
-        # Interne links naar bestaande artikelen
+        # Interne links
         internal_links_html = ""
         if len(existing_folders) > 3:
             random_links = random.sample(existing_folders, 3)
@@ -483,30 +562,25 @@ Use specific numbers, time savings, and ROI estimates. Avoid generic AI-speak li
                 f"<li><a href='/b2b/{r}/'>{r.replace('-', ' ').title()}</a></li>"
                 for r in random_links
             ])
-            internal_links_html = f"<div style='margin-top:30px;padding-top:20px;border-top:1px solid #eee;'><h4>🔗 Read more B2B Insights:</h4><ul>{li_links}</ul></div>"
+            internal_links_html = f"<div style='margin-top:30px;padding-top:20px;border-top:1px solid #eee;'><h4>Read more B2B Insights:</h4><ul>{li_links}</ul></div>"
 
-        # Bouw volledige SEO-geoptimaliseerde HTML pagina
-        full_html = build_article_html(title, content, brand1, slug, schema_json, internal_links_html)
+        full_html = build_article_html(title, content, brand, slug, schema_json, internal_links_html)
 
         os.makedirs(path, exist_ok=True)
-
         with open(f"{path}/index.html", "w") as f:
             f.write(full_html)
 
-        with open(f"{path}/pinterest_brief.txt", "w") as f:
-            f.write(pin_brief)
-
-        # Update index en beide sitemaps
+        # Update index en sitemaps
         new_folders = get_existing_folders()
         rebuild_index(new_folders)
         build_sitemap(new_folders)
 
         subprocess.run(["git", "add", "."], cwd=REPO_ROOT)
-        subprocess.run(["git", "commit", "-m", f"🚀 Victor 4.6: {title} ({lang_code})"], cwd=REPO_ROOT)
+        subprocess.run(["git", "commit", "-m", f"Victor 5.0: {title} ({lang_code})"], cwd=REPO_ROOT)
         subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=REPO_ROOT)
         subprocess.run(["git", "push", "origin", "main"], cwd=REPO_ROOT)
 
-        print(f"✅ Succes! {title} is live met volledige SEO-optimalisatie.")
+        print(f"✅ Succes! {title} is live.")
 
     except Exception as e:
         print(f"❌ Fout: {e}")

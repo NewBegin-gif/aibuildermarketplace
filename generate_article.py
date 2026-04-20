@@ -198,8 +198,8 @@ def rebuild_index(folders):
         const s=\!q||c.title.toLowerCase().includes(q)||c.tool.toLowerCase().includes(q)||c.type.toLowerCase().includes(q);
         return t&&y&&s;
       }});
-      count.textContent=f.length+' article'+(f.length\!==1?'s':'');
-      if(\!f.length){{grid.innerHTML='';nr.style.display='block';}}
+      count.textContent=f.length+' article'+(f.length!==1?'s':'');
+      if(!f.length){{grid.innerHTML='';nr.style.display='block';}}
       else{{nr.style.display='none';grid.innerHTML=f.map(c=>`<a class="card" href="/b2b/${{c.slug}}/"><div class="card-top"><span class="card-icon">${{c.icon}}</span><span class="card-tag" style="background:${{c.color}}">${{c.type}}</span></div><h3>${{c.title}}</h3><p>${{c.desc}}</p><div class="card-arrow">Read more →</div></a>`).join('');}}
     }}
     function filterTool(btn,tool){{document.querySelectorAll('.filter-btn').forEach(b=>{{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes('filterTool'))b.classList.remove('active');}});btn.classList.add('active');activeTool=tool;render();}}

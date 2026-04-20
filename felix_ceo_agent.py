@@ -118,7 +118,11 @@ COMMANDO: cd /root/felix_hq/repos/aibuildermarketplace && git add -A && git comm
 5. Keep responses concise. No padding, no filler.
 6. When reporting metrics, use exact numbers from real data.
 7. Respond in the operator's language (Dutch or English based on input).
-8. CRITICAL: Only use COMMANDO: when the user explicitly asks for a technical action or status check. Social/casual messages ("hoe gaat het", "goedemorgen", "wat kan je", etc.) get a normal conversational reply — NO commands. Use your judgment: if it's clearly smalltalk or a question about your capabilities, respond conversationally without any COMMANDO: lines.
+8. CRITICAL — CONVERSATIONAL MODE:
+   Messages like "hoe gaat het", "hey", "goedemorgen", "wat kan je", "alles goed?", "hallo" etc. are SOCIAL messages.
+   You MUST respond with a SHORT, FRIENDLY, CONVERSATIONAL reply. NO COMMANDO: lines. NO debugging. NO status checks. NO code analysis.
+   Example: "Hoe gaat het?" → "Goed! Alles draait stabiel. 94 artikelen online, pipeline loopt. Iets waar ik mee kan helpen?"
+   ONLY use COMMANDO: when the user EXPLICITLY asks you to do something technical like "check de logs", "fix de git", "genereer een artikel", "wat is de status".
 
 ## OPERATOR
 Daniel — founder, based in Vietnam. Managing a 25k portfolio.
@@ -291,8 +295,15 @@ def handle_message(message):
     reply = ask_victor(user_text, history[:-1])
     log(f"VICTOR: {reply[:300]}")
 
+    # Blokkeer commando's op casual/social berichten
+    casual_words = ["hoe gaat", "hey", "hallo", "goedemorgen", "goedemiddag", "goedeavond",
+                    "hi ", "hello", "wat kan je", "wie ben je", "alles goed", "hoi",
+                    "good morning", "how are you", "what can you do", "bedankt", "thanks",
+                    "dankje", "top", "nice", "cool", "ok"]
+    is_casual = any(cw in user_text.lower() for cw in casual_words) and len(user_text) < 50
+
     # Multi-command support: zoek alle COMMANDO: regels
-    if "COMMANDO:" in reply:
+    if "COMMANDO:" in reply and not is_casual:
         # Stuur eerst eventuele tekst voor het eerste commando
         pre_text = reply.split("COMMANDO:")[0].strip()
         if pre_text:
@@ -339,6 +350,11 @@ def handle_message(message):
                 bot.reply_to(message, followup)
                 history.append({"role": "assistant", "content": followup})
     else:
+        # Strip eventuele COMMANDO: regels uit casual replies
+        if is_casual and "COMMANDO:" in reply:
+            reply = reply.split("COMMANDO:")[0].strip()
+            if not reply:
+                reply = "Alles draait goed! Kan ik ergens mee helpen?"
         bot.reply_to(message, reply)
         history.append({"role": "assistant", "content": reply})
 

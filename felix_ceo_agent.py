@@ -485,27 +485,40 @@ def handle_message(message):
     history = load_memory()
     history.append({"role": "user", "content": user_text})
 
-    reply = ask_victor(user_text, history[:-1])
-    log(f"VICTOR: {reply[:300]}")
+    # Auto-continue loop: Victor blijft doorgaan zolang er commando's nodig zijn
+    MAX_ROUNDS = 8  # veiligheidsgrens
+    current_input = user_text
+    round_num = 0
 
-    # Check of er commando's in het antwoord zitten
-    if "COMMANDO:" in reply:
-        # Stuur eerst de tekst vóór het eerste commando
+    while round_num < MAX_ROUNDS:
+        round_num += 1
+
+        if round_num == 1:
+            reply = ask_victor(current_input, history[:-1])
+        else:
+            bot.send_chat_action(message.chat.id, 'typing')
+            reply = ask_victor(current_input, history)
+
+        log(f"VICTOR [ronde {round_num}]: {reply[:300]}")
+
+        if "COMMANDO:" not in reply:
+            # Geen commando's meer → stuur antwoord en stop
+            bot.reply_to(message, reply)
+            history.append({"role": "assistant", "content": reply})
+            break
+
+        # Er zijn commando's — voer ze uit
         pre_text = reply.split("COMMANDO:")[0].strip()
         if pre_text:
             bot.reply_to(message, pre_text)
 
-        # Extract commando's — maximaal 2 per antwoord
-        commands = []
-        for part in reply.split("COMMANDO:")[1:]:
-            cmd = part.split("\n")[0].strip().strip('`')
-            if cmd:
-                commands.append(cmd)
-        commands = commands[:2]  # Hard limiet: max 2
+        commands = [p.split("\n")[0].strip().strip('`')
+                    for p in reply.split("COMMANDO:")[1:]
+                    if p.split("\n")[0].strip()][:2]
 
         all_output = []
         for cmd in commands:
-            bot.reply_to(message, f"🛠 `{cmd}`")
+            bot.reply_to(message, f"🛠 [{round_num}] `{cmd}`")
             output = run_command(cmd)
             bot.reply_to(message, f"📋 {output}")
             all_output.append(f"$ {cmd}\n{output}")
@@ -514,23 +527,22 @@ def handle_message(message):
         # Geheugen bijwerken
         history.append({"role": "assistant", "content": reply})
         combined = "\n".join(all_output)[:1500]
-        history.append({"role": "user", "content": f"[Output]:\n{combined}"})
+        history.append({"role": "user", "content": f"[Output ronde {round_num}]:\n{combined}"})
 
-        # Laat Victor de output samenvatten — altijd, maar ZONDER verdere commando's
-        bot.send_chat_action(message.chat.id, 'typing')
-        followup = ask_victor(
-            f"Hier is de output van de commando's:\n{combined}\n\nGeef een korte samenvatting. Als er een fout is, leg uit wat er mis ging en wat de volgende stap zou zijn. Gebruik GEEN COMMANDO: in dit antwoord.",
-            history
-        )
-        # Strip eventuele commando's uit de samenvatting (hard block)
-        if "COMMANDO:" in followup:
-            followup = followup.split("COMMANDO:")[0].strip()
-        if followup:
-            bot.reply_to(message, followup)
-        history.append({"role": "assistant", "content": followup})
+        # Vraag Victor: klaar, of moet je door?
+        current_input = f"""Output van ronde {round_num}:\n{combined}
+
+Analyseer dit resultaat. Je hebt drie opties:
+1. Als alles GELUKT is: geef een korte bevestiging. Geen COMMANDO:.
+2. Als er een FOUT is die je kunt fixen: leg kort uit wat je gaat doen en gebruik COMMANDO: voor de fix.
+3. Als je meer info nodig hebt om verder te gaan: gebruik COMMANDO: om die info op te halen.
+
+Ga door tot het probleem ECHT opgelost is. Geef tussen elke stap een korte status update."""
+
     else:
-        bot.reply_to(message, reply)
-        history.append({"role": "assistant", "content": reply})
+        # Veiligheidsgrens bereikt
+        bot.reply_to(message, f"⚠️ {MAX_ROUNDS} rondes uitgevoerd. Ik stop hier om een oneindige loop te voorkomen. Stuur me een bericht als ik verder moet gaan.")
+        history.append({"role": "assistant", "content": f"Gestopt na {MAX_ROUNDS} rondes."})
 
     save_memory(history)
 

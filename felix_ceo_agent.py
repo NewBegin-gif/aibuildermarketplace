@@ -16,6 +16,8 @@ import time
 import os
 import json
 import threading
+import urllib.request
+import re
 from datetime import datetime, timedelta
 from openai import OpenAI
 
@@ -450,28 +452,140 @@ def cmd_fix(message):
 
     save_memory(history)
 
+@bot.message_handler(commands=['uptime'])
+def cmd_uptime(message):
+    if message.from_user.id != ADMIN_ID:
+        return
+    results = check_uptime()
+    lines = []
+    for name, status, detail in results:
+        icon = "✅" if status == "OK" else "⚠️" if status == "WARN" else "🔴"
+        lines.append(f"{icon} {name}: {detail}")
+    bot.reply_to(message, "🌐 Uptime Check:\n" + "\n".join(lines))
+
+@bot.message_handler(commands=['linkcheck'])
+def cmd_linkcheck(message):
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔗 Affiliate links checken...")
+    results = check_affiliate_links()
+    bot.reply_to(message, "🔗 Affiliate Link Health:\n" + "\n".join(results))
+
+@bot.message_handler(commands=['quality'])
+def cmd_quality(message):
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "📝 Artikelkwaliteit analyseren...")
+    issues = check_article_quality()
+    worst = find_worst_articles(5)
+    worst_text = "\n".join([f"  {name}: {size//1024}KB" for name, size in worst])
+    if issues:
+        bot.reply_to(message, f"📝 Kwaliteitsrapport:\n\n{chr(10).join(issues)}\n\n📉 Kleinste artikelen:\n{worst_text}")
+    else:
+        bot.reply_to(message, f"✅ Alle artikelen zien er goed uit!\n\n📉 Kleinste artikelen:\n{worst_text}")
+
+@bot.message_handler(commands=['optimize'])
+def cmd_optimize(message):
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔧 Interne links optimaliseren...")
+    fixed = optimize_internal_links()
+    if fixed > 0:
+        # Commit en push
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: add internal links to {fixed} articles' && git pull --rebase origin main && git push origin main")
+        bot.reply_to(message, f"✅ Interne links toegevoegd aan {fixed} artikelen en gepusht!")
+    else:
+        bot.reply_to(message, "✅ Alle artikelen hebben al interne links.")
+
+@bot.message_handler(commands=['improve'])
+def cmd_improve(message):
+    """Verbeter het slechtste artikel met Claude."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔍 Slechtste artikel zoeken en verbeteren...")
+    worst = find_worst_articles(1)
+    if not worst:
+        bot.reply_to(message, "Geen artikelen gevonden.")
+        return
+
+    folder, size = worst[0]
+    article_path = f"{REPO_ROOT}/b2b/{folder}/index.html"
+    try:
+        with open(article_path, 'r', encoding='utf-8') as f:
+            old_html = f.read()
+    except:
+        bot.reply_to(message, f"Kan {folder} niet lezen.")
+        return
+
+    # Detecteer brand
+    brand = folder.split('-')[0].capitalize()
+    if brand == "Invideo":
+        brand = "InVideo"
+
+    bot.reply_to(message, f"📝 Verbeteren: {folder} ({size//1024}KB)\nSchrijven met Claude...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    improve_prompt = f"""Dit artikel over {brand} is te kort/slecht ({size} bytes). Herschrijf het VOLLEDIG als een uitgebreid, SEO-geoptimaliseerd artikel.
+
+Originele slug: {folder}
+Brand: {brand}
+
+Schrijf minimaal 2000 woorden. Gebruik HTML tags (geen <html>, <head>, <body>). Structuur:
+1. Pakkende H1 headline
+2. Intro met het probleem dat {brand} oplost
+3. Gedetailleerde feature review met concrete voorbeelden
+4. Pricing overzicht met tiers
+5. Echte use case met cijfers
+6. Pros & Cons
+7. FAQ (4-5 vragen)
+8. Conclusie met duidelijke aanbeveling
+
+Schrijf als een ervaren founder, niet als een AI. Gebruik specifieke cijfers en voorbeelden."""
+
+    try:
+        res = client.chat.completions.create(
+            model=MODEL, messages=[{"role": "user", "content": improve_prompt}], max_tokens=4000
+        )
+        new_content = res.choices[0].message.content.replace("```html", "").replace("```", "")
+
+        # Bouw nieuwe pagina met de bestaande template-structuur
+        # Behoud meta tags en scripts van het origineel als die er zijn
+        with open(article_path, 'w', encoding='utf-8') as f:
+            f.write(old_html.split('</head>')[0] + '</head><body style="background:#0d1117;color:#e6edf3;font-family:system-ui;max-width:800px;margin:0 auto;padding:20px;">' + new_content + '</body></html>' if '</head>' in old_html else new_content)
+
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: improved {folder}' && git pull --rebase origin main && git push origin main")
+        new_size = os.path.getsize(article_path)
+        bot.reply_to(message, f"✅ {folder} verbeterd!\n{size//1024}KB → {new_size//1024}KB")
+    except Exception as e:
+        bot.reply_to(message, f"❌ Fout bij verbeteren: {e}")
+
 @bot.message_handler(commands=['help'])
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor — Commando's:
+    bot.reply_to(message, """Victor Ultra — Commando's:
 
-📊 Status & Monitoring:
+📊 Monitoring:
 /status — Systeem status
 /logs — Cron output
+/uptime — Website bereikbaarheid
 /articles — Artikel overzicht
+
+🔍 Analyse:
 /seo — SEO gezondheidscheck
-/revenue — Affiliate link check
+/revenue — Affiliate link rapport
+/linkcheck — Test alle affiliate URLs
+/quality — Artikelkwaliteit analyse
+/strategy — AI strategisch advies
 
 🚀 Actie:
 /generate — Genereer een artikel
-/fix <probleem> — Los een probleem op (stopt niet tot het werkt)
+/improve — Verbeter het slechtste artikel
+/optimize — Voeg interne links toe
+/fix <probleem> — Los op (stopt niet tot het werkt)
 /write <taak> — Schrijf code of scripts
 
-🧠 Strategie:
-/strategy — Strategisch advies op basis van data
-
-Of stuur gewoon een bericht — ik denk mee, schrijf code, geef feedback, en los problemen op.""")
+Of stuur gewoon een bericht — ik denk mee en pak door.""")
 
 @bot.message_handler(func=lambda m: True)
 def handle_message(message):
@@ -565,6 +679,134 @@ def generate_status_report():
 📦 Git: {git_status}
 ⚙️ Cron: {cron_status or 'Geen recente output'}
 🤖 Model: {MODEL}"""
+
+# ── MONITORING & OPTIMALISATIE ──────────────────────────────────────────────
+def check_uptime():
+    """Ping de website en check of hij online is."""
+    urls = [
+        ("Homepage", "https://aibuildermarketplace.com/"),
+        ("B2B pagina", "https://aibuildermarketplace.com/b2b/"),
+    ]
+    results = []
+    for name, url in urls:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Victor-Monitor/1.0"})
+            resp = urllib.request.urlopen(req, timeout=10)
+            code = resp.getcode()
+            if code == 200:
+                results.append((name, "OK", code))
+            else:
+                results.append((name, "WARN", code))
+        except Exception as e:
+            results.append((name, "DOWN", str(e)[:100]))
+    return results
+
+
+def check_affiliate_links():
+    """Check of alle affiliate URLs nog werken."""
+    results = []
+    for brand, url in VAULT.items():
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Victor-LinkCheck/1.0"})
+            resp = urllib.request.urlopen(req, timeout=10)
+            code = resp.getcode()
+            results.append(f"  {brand}: {'✅' if code < 400 else '❌'} ({code})")
+        except Exception as e:
+            results.append(f"  {brand}: ⚠️ ({str(e)[:50]})")
+    return results
+
+
+def check_article_quality():
+    """Analyseer artikelkwaliteit: lengte, meta tags, interne links."""
+    issues = []
+    b2b_path = f"{REPO_ROOT}/b2b"
+
+    for folder in os.listdir(b2b_path):
+        article_path = os.path.join(b2b_path, folder, "index.html")
+        if not os.path.isfile(article_path):
+            continue
+        try:
+            with open(article_path, 'r', encoding='utf-8') as f:
+                html = f.read()
+            size = len(html)
+            has_meta_desc = 'meta name="description"' in html or "meta name='description'" in html
+            has_og = 'og:image' in html
+            has_affiliate = 'nofollow sponsored' in html
+            has_internal = '/b2b/' in html and 'Read more' in html
+
+            # Te kort artikel (< 3KB is waarschijnlijk leeg of broken)
+            if size < 3000:
+                issues.append(f"  ⚠️ {folder}: te kort ({size} bytes)")
+            # Geen meta description
+            if not has_meta_desc:
+                issues.append(f"  📝 {folder}: geen meta description")
+            # Geen affiliate link
+            if not has_affiliate:
+                issues.append(f"  💰 {folder}: geen affiliate link")
+        except:
+            pass
+
+    return issues[:20]  # max 20 issues tonen
+
+
+def optimize_internal_links():
+    """Voeg interne links toe aan artikelen die er geen hebben."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    folders = [f for f in os.listdir(b2b_path) if os.path.isdir(os.path.join(b2b_path, f))
+               and f not in ['sitemap.xml']]
+    fixed = 0
+
+    for folder in folders:
+        article_path = os.path.join(b2b_path, folder, "index.html")
+        if not os.path.isfile(article_path):
+            continue
+        try:
+            with open(article_path, 'r', encoding='utf-8') as f:
+                html = f.read()
+
+            # Check of er al interne links zijn
+            if 'Read more B2B Insights' in html or 'read-more-links' in html:
+                continue
+
+            # Vind gerelateerde artikelen (zelfde tool)
+            tool = folder.split('-')[0].lower()
+            related = [f for f in folders if f.lower().startswith(tool) and f != folder][:3]
+            if not related:
+                related = [f for f in folders if f != folder][:3]
+
+            links_html = "".join([
+                f"<li><a href='/b2b/{r}/' style='color:#58a6ff;text-decoration:none'>{r.replace('-', ' ').title()}</a></li>"
+                for r in related
+            ])
+            internal_block = f"""<div id='read-more-links' style='margin-top:30px;padding:20px;background:#161b22;border:1px solid #30363d;border-radius:10px;'>
+<h4 style='color:#e6edf3;margin-top:0;'>Read more B2B Insights:</h4>
+<ul style='list-style:none;padding:0;'>{links_html}</ul>
+</div>"""
+
+            # Voeg toe voor </body>
+            if '</body>' in html:
+                html = html.replace('</body>', f"{internal_block}\n</body>")
+                with open(article_path, 'w', encoding='utf-8') as f:
+                    f.write(html)
+                fixed += 1
+        except:
+            pass
+
+    return fixed
+
+
+def find_worst_articles(n=5):
+    """Vind de N slechtste artikelen op basis van grootte."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    articles = []
+    for folder in os.listdir(b2b_path):
+        article_path = os.path.join(b2b_path, folder, "index.html")
+        if os.path.isfile(article_path):
+            size = os.path.getsize(article_path)
+            articles.append((folder, size))
+    articles.sort(key=lambda x: x[1])
+    return articles[:n]
+
 
 # ── PROACTIEVE SCHEDULER ────────────────────────────────────────────────────
 def auto_fix_git():

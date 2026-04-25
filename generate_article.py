@@ -296,6 +296,13 @@ def build_article_html(title, content, brand1, slug, schema_json, internal_links
 
     og_image = f"{DOMAIN}/assets/og-default.png"
 
+    # Brand kleuren voor accent
+    brand_colors = {{
+        'Kinsta': '#8b5cf6', 'Synthesia': '#3b82f6', 'InVideo': '#a78bfa',
+        'Invideo': '#a78bfa', 'Replit': '#f59e0b', 'Bitvavo': '#10b981', 'Murf': '#ec4899'
+    }}
+    accent = brand_colors.get(brand1, '#3b82f6')
+
     return f"""<!DOCTYPE html>
 <html lang="{html_lang}">
 <head>
@@ -322,20 +329,83 @@ def build_article_html(title, content, brand1, slug, schema_json, internal_links
   <script type="application/ld+json">
   {breadcrumb_schema}
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {{ font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }}
-    nav.breadcrumb {{ font-size: 0.9em; color: #666; margin-bottom: 20px; }}
-    nav.breadcrumb a {{ color: #2980b9; text-decoration: none; }}
+    *,*::before,*::after{{box-sizing:border-box}}
+    :root{{--bg:#0a0e17;--bg2:#111827;--card:#1a1f2e;--border:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--muted:#64748b;--accent:{accent};}}
+    body{{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;line-height:1.8}}
+    a{{color:var(--accent);text-decoration:none}}
+    a:hover{{opacity:.85}}
+
+    .topnav{{background:rgba(10,14,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}}
+    .topnav-inner{{max-width:800px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}}
+    .topnav-logo{{font-weight:800;font-size:.95rem;color:var(--text)}}
+    .topnav-logo span{{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}}
+    .topnav-links a{{color:var(--text2);font-size:.85rem;font-weight:500;margin-left:20px}}
+    .topnav-links a:hover{{color:var(--text)}}
+
+    .breadcrumb{{max-width:800px;margin:24px auto 0;padding:0 24px;font-size:.82rem;color:var(--muted)}}
+    .breadcrumb a{{color:var(--text2)}}
+
+    .article-header{{max-width:800px;margin:0 auto;padding:32px 24px 0}}
+    .article-header h1{{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.2;margin:0 0 16px;letter-spacing:-.02em}}
+    .article-meta{{display:flex;gap:16px;align-items:center;color:var(--muted);font-size:.82rem;margin-bottom:32px;flex-wrap:wrap}}
+    .article-meta .tag{{background:rgba(59,130,246,.1);color:var(--accent);padding:4px 12px;border-radius:20px;font-weight:600;font-size:.75rem;border:1px solid rgba(59,130,246,.15)}}
+
+    .article-body{{max-width:800px;margin:0 auto;padding:0 24px}}
+    .article-body h2{{color:var(--text);font-size:1.4rem;font-weight:700;margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}}
+    .article-body h3{{color:var(--text);font-size:1.1rem;font-weight:600;margin:28px 0 12px}}
+    .article-body p{{color:var(--text2);margin:0 0 16px;font-size:.95rem}}
+    .article-body ul,.article-body ol{{color:var(--text2);padding-left:24px;margin:0 0 16px}}
+    .article-body li{{margin:6px 0;font-size:.95rem}}
+    .article-body strong{{color:var(--text)}}
+    .article-body blockquote{{border-left:3px solid var(--accent);margin:24px 0;padding:16px 20px;background:var(--card);border-radius:0 8px 8px 0;color:var(--text2);font-style:italic}}
+    .article-body table{{width:100%;border-collapse:collapse;margin:24px 0;font-size:.9rem}}
+    .article-body th{{background:var(--card);color:var(--text);padding:12px 16px;text-align:left;font-weight:600;border:1px solid var(--border)}}
+    .article-body td{{padding:10px 16px;border:1px solid var(--border);color:var(--text2)}}
+    .article-body tr:hover td{{background:var(--card)}}
+    .article-body code{{background:var(--card);color:var(--accent);padding:2px 8px;border-radius:4px;font-size:.88em}}
+    .article-body pre{{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}}
+    .article-body pre code{{background:none;padding:0}}
+    .article-body img{{max-width:100%;border-radius:8px;margin:16px 0}}
+
+    .article-footer{{max-width:800px;margin:0 auto;padding:40px 24px 60px}}
+    footer{{background:var(--bg2);border-top:1px solid var(--border);padding:32px 24px;text-align:center;color:var(--muted);font-size:.82rem;margin-top:40px}}
+    footer a{{color:var(--text2)}}
+
+    @media(max-width:640px){{
+      .topnav-links{{display:none}}
+      .article-header h1{{font-size:1.5rem}}
+    }}
   </style>
 </head>
 <body>
+  <nav class="topnav"><div class="topnav-inner">
+    <a href="/" class="topnav-logo"><span>AIBuilder</span> Marketplace</a>
+    <div class="topnav-links"><a href="/b2b/">All Reviews</a><a href="/">Home</a></div>
+  </div></nav>
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a> &rsaquo; <a href="/b2b/">B2B Reviews</a> &rsaquo; {title}
   </nav>
-  {content}
-  {main_cta}
-  {internal_links_html}
-  {footer}
+  <header class="article-header">
+    <h1>{title}</h1>
+    <div class="article-meta">
+      <span class="tag">{brand1}</span>
+      <span>{date_str}</span>
+      <span>AIBuilder Marketplace</span>
+    </div>
+  </header>
+  <article class="article-body">
+    {content}
+    {main_cta}
+    {internal_links_html}
+  </article>
+  <div class="article-footer">{footer}</div>
+  <footer>
+    <p>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a>. Some links are affiliate links. <a href="/terms/">Terms</a></p>
+  </footer>
 </body>
 </html>"""
 

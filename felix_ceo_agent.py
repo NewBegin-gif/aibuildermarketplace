@@ -122,6 +122,25 @@ Regels:
 - Revenue optimalisatie ideeën
 - Prioriteiten stellen: wat heeft de meeste impact?
 
+**Web Design & UI:**
+- Professionele landing pages bouwen (dark mode, glassmorphism, gradients)
+- Volledige website redesigns met moderne CSS (CSS variables, grid, flexbox, animations)
+- Responsive design (mobile-first, tablet, desktop)
+- SEO-geoptimaliseerde HTML (structured data, Open Graph, meta tags)
+- Conversion-optimalisatie: CTA plaatsing, trust signals, social proof
+- Design systeem: consistent kleuren, typography, spacing
+- Performance: geen frameworks nodig, pure HTML/CSS/JS is sneller
+
+Wanneer je een pagina/website bouwt:
+1. Gebruik ALTIJD het dark theme (--bg-primary:#0a0e17, --accent:#3b82f6) consistent met de rest van de site
+2. Google Fonts (Inter) voor typography
+3. CSS variables voor theming
+4. Scroll animations met IntersectionObserver
+5. Mobile-responsive met media queries
+6. Structured data (JSON-LD) voor SEO
+7. Affiliate links met rel="nofollow sponsored"
+8. Maak de HTML COMPLEET en professioneel — geen placeholder tekst
+
 ## PERSISTENCE — DIT IS CRUCIAAL
 
 Als iets niet werkt:
@@ -559,6 +578,107 @@ Schrijf als een ervaren founder, niet als een AI. Gebruik specifieke cijfers en 
     except Exception as e:
         bot.reply_to(message, f"❌ Fout bij verbeteren: {e}")
 
+@bot.message_handler(commands=['redesign'])
+def cmd_redesign(message):
+    """Redesign een pagina van de website met professioneel design."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    if len(parts) < 2:
+        bot.reply_to(message, "Gebruik: /redesign <pagina>\n\nVoorbeelden:\n/redesign homepage\n/redesign b2b\n/redesign terms\n/redesign nieuw: /over-ons pagina")
+        return
+
+    target = parts[1].strip().lower()
+    bot.reply_to(message, f"🎨 Redesigning: {target}\nIk bouw een professionele pagina met modern design...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    # Bepaal welk bestand
+    if target in ['homepage', 'home', 'index', 'landingpage', 'landing']:
+        file_path = f"{REPO_ROOT}/index.html"
+        page_desc = "de homepage/landing page van AIBuilder Marketplace"
+    elif target in ['b2b', 'reviews', 'artikelen']:
+        file_path = f"{REPO_ROOT}/b2b/index.html"
+        page_desc = "de B2B reviews overzichtspagina"
+    elif target.startswith('nieuw:') or target.startswith('new:'):
+        page_name = target.split(':', 1)[1].strip()
+        slug = re.sub(r'[^a-z0-9-]', '', page_name.replace(' ', '-'))
+        os.makedirs(f"{REPO_ROOT}/{slug}", exist_ok=True)
+        file_path = f"{REPO_ROOT}/{slug}/index.html"
+        page_desc = f"een nieuwe pagina: {page_name}"
+    else:
+        file_path = f"{REPO_ROOT}/{target}/index.html"
+        page_desc = f"de {target} pagina"
+
+    # Lees huidige versie als die bestaat
+    old_html = ""
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                old_html = f.read()[:2000]
+        except:
+            pass
+
+    design_prompt = f"""Ontwerp een COMPLETE, professionele HTML pagina voor {page_desc} van AIBuilder Marketplace.
+
+Website: aibuildermarketplace.com (GitHub Pages, static HTML)
+Doel: AI tool reviews en affiliate marketing voor 6 tools (Kinsta, Synthesia, InVideo, Replit, Bitvavo, Murf)
+
+DESIGN REQUIREMENTS:
+- Dark theme: background #0a0e17, cards #1a1f2e, borders #1e293b
+- Accent kleuren: blue #3b82f6, purple #a78bfa, green #10b981, pink #ec4899
+- Font: Inter via Google Fonts
+- CSS variables voor alle kleuren
+- Fully responsive (mobile + tablet + desktop)
+- Scroll animations met IntersectionObserver
+- Sticky/glass navigation bar
+- Gradient accents en hover effecten
+- Structured data (JSON-LD)
+- Open Graph meta tags
+- Affiliate links: rel="nofollow sponsored"
+
+AFFILIATES:
+- Kinsta: https://kinsta.com/?kaid=EKSCJEFWBYJO
+- Synthesia: https://www.synthesia.io/?via=daniel-haket
+- InVideo: https://invideo.sjv.io/E00nbn
+- Replit: https://replit.com/signup?referral=dglhaket
+- Bitvavo: https://account.bitvavo.com/create?a=68DCE39715
+- Murf: https://get.murf.ai/qbhzdrcv3l7x
+
+{'Huidige versie (ter referentie):' + chr(10) + old_html[:1000] if old_html else 'Nieuwe pagina — begin from scratch.'}
+
+Lever ALLEEN de complete HTML op. Geen uitleg, geen markdown code blocks. Start met <!DOCTYPE html> en eindig met </html>.
+De pagina moet er professioneel uitzien, als een echte SaaS website, niet als een hobby project."""
+
+    try:
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[{"role": "user", "content": design_prompt}],
+            max_tokens=8000
+        )
+        new_html = res.choices[0].message.content.strip()
+        # Clean up als er markdown code blocks omheen zitten
+        if new_html.startswith("```"):
+            new_html = new_html.split("\n", 1)[1] if "\n" in new_html else new_html
+        if new_html.endswith("```"):
+            new_html = new_html.rsplit("```", 1)[0]
+        new_html = new_html.strip()
+        if not new_html.startswith("<!DOCTYPE") and not new_html.startswith("<html"):
+            # Probeer de HTML te extracten
+            start = new_html.find("<!DOCTYPE")
+            if start == -1:
+                start = new_html.find("<html")
+            if start >= 0:
+                new_html = new_html[start:]
+
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_html)
+
+        # Git commit en push
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: redesign {target}' && git pull --rebase origin main && git push origin main")
+        bot.reply_to(message, f"✅ {target} is herontworpen en live!\n🌐 Check: https://aibuildermarketplace.com/{'' if 'index' in file_path.split('/')[-2] or file_path == f'{REPO_ROOT}/index.html' else target + '/'}")
+    except Exception as e:
+        bot.reply_to(message, f"❌ Fout bij redesign: {e}")
+
 @bot.message_handler(commands=['help'])
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
@@ -584,6 +704,12 @@ def cmd_help(message):
 /optimize — Voeg interne links toe
 /fix <probleem> — Los op (stopt niet tot het werkt)
 /write <taak> — Schrijf code of scripts
+
+🎨 Design:
+/redesign <pagina> — Bouw professionele pagina
+  Voorbeelden: /redesign homepage
+               /redesign b2b
+               /redesign nieuw: over-ons
 
 Of stuur gewoon een bericht — ik denk mee en pak door.""")
 

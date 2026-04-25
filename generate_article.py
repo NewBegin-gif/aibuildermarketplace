@@ -397,12 +397,24 @@ TOPICS = {
 
 
 def generate_topic(existing_folders):
-    """Genereer een uniek topic dat nog niet bestaat."""
-    brands = list(VAULT.keys())
-    random.shuffle(brands)
+    """Genereer een uniek topic dat nog niet bestaat. Prioriteit: tools met minste artikelen."""
+    # Tel artikelen per brand — tools met minder krijgen meer kans
+    brand_counts = {}
+    for brand in VAULT.keys():
+        brand_counts[brand] = len([f for f in existing_folders if f.lower().startswith(brand.lower())])
+
+    # Maak gewogen lijst: minder artikelen = meer kans
+    if brand_counts:
+        max_count = max(brand_counts.values()) + 1
+        weighted_brands = []
+        for brand, count in brand_counts.items():
+            weight = max(1, max_count - count)  # hoe minder artikelen, hoe hoger het gewicht
+            weighted_brands.extend([brand] * weight)
+    else:
+        weighted_brands = list(VAULT.keys())
 
     for _ in range(50):  # max 50 pogingen
-        brand = random.choice(brands)
+        brand = random.choice(weighted_brands)
         mode = random.choice(["Review", "Versus", "Pricing", "Alternative"])
         lang = random.choice(LANGUAGES)
         lang_code = lang[:2].lower()

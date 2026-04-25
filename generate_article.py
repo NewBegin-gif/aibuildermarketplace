@@ -582,9 +582,15 @@ def main():
         with open(f"{path}/index.html", "w") as f:
             f.write(full_html)
 
-        # Update index en sitemaps
+        # Update index via gen_index.py (betrouwbaarder dan inline rebuild)
         new_folders = get_existing_folders()
-        rebuild_index(new_folders)
+        gen_index_path = os.path.join(REPO_ROOT, "gen_index.py")
+        if os.path.exists(gen_index_path):
+            subprocess.run(["python3", gen_index_path], cwd=REPO_ROOT)
+            print("✅ Index geüpdatet via gen_index.py")
+        else:
+            rebuild_index(new_folders)
+            print("⚠️ gen_index.py niet gevonden, inline rebuild gebruikt")
         build_sitemap(new_folders)
 
         subprocess.run(["git", "add", "."], cwd=REPO_ROOT)

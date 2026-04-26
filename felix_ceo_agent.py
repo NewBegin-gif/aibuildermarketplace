@@ -176,6 +176,28 @@ Je stopt NOOIT na "het lukt niet". Je bent een engineer — je lost het op.
 Na file wijzigingen:
 COMMANDO: cd /root/felix_hq/repos/aibuildermarketplace && git add -A && git commit -m "Victor: <beschrijving>" && git pull --rebase origin main && git push origin main
 
+## SELF-LEARNING & RESEARCH
+
+Je hebt een zelflerend systeem:
+- Je onthoudt ELKE fout en de oplossing → je maakt dezelfde fout NOOIT twee keer
+- Je slaat werkende oplossingen op als herbruikbare patronen
+- Je scant regelmatig het web voor competitor info en SEO trends
+- Je analyseert je eigen prestaties en stelt verbeteringen voor
+- Je kunt meerdere bestanden tegelijk aanpassen voor complexe refactors
+
+Gebruik /brain om je geleerde kennis te zien, /research voor web scans, /diagnose voor self-analyse.
+
+## MULTI-FILE CODING
+
+Als je complexe taken krijgt die meerdere bestanden raken:
+1. Plan EERST welke bestanden je moet aanpassen
+2. Lees elk bestand met cat
+3. Maak ALLE wijzigingen
+4. Test het resultaat
+5. Commit alles in één keer
+
+Je kunt Python scripts schrijven die meerdere bestanden tegelijk bewerken — gebruik dit voor bulk operations.
+
 ## COMMUNICATIESTIJL
 
 - Nederlands tenzij Daniel Engels praat
@@ -203,45 +225,312 @@ def save_memory(messages):
     with open(MEM_FILE, "w") as f:
         json.dump(messages[-30:], f)
 
+SKILLS_FILE = "/root/felix_hq/victor_skills.json"
+RESEARCH_FILE = "/root/felix_hq/victor_research.json"
+
 def load_long_memory():
     if os.path.exists(LONG_MEM):
         try:
             return json.load(open(LONG_MEM))
         except:
             pass
-    return {"facts": [], "decisions": [], "errors": []}
+    return {"facts": [], "decisions": [], "errors": [], "wins": [], "patterns": []}
 
 def save_long_memory(mem):
     mem["facts"] = mem["facts"][-50:]
     mem["decisions"] = mem["decisions"][-30:]
-    mem["errors"] = mem["errors"][-20:]
+    mem["errors"] = mem["errors"][-30:]
+    mem["wins"] = mem.get("wins", [])[-30:]
+    mem["patterns"] = mem.get("patterns", [])[-20:]
     with open(LONG_MEM, "w") as f:
         json.dump(mem, f, indent=2)
 
+def load_skills():
+    """Laad Victor's geleerde vaardigheden en oplossingen."""
+    if os.path.exists(SKILLS_FILE):
+        try:
+            return json.load(open(SKILLS_FILE))
+        except:
+            pass
+    return {"solutions": {}, "code_patterns": [], "avoided": []}
+
+def save_skills(skills):
+    skills["code_patterns"] = skills.get("code_patterns", [])[-50:]
+    skills["avoided"] = skills.get("avoided", [])[-30:]
+    with open(SKILLS_FILE, "w") as f:
+        json.dump(skills, f, indent=2)
+
+def load_research():
+    """Laad web research resultaten."""
+    if os.path.exists(RESEARCH_FILE):
+        try:
+            return json.load(open(RESEARCH_FILE))
+        except:
+            pass
+    return {"competitors": [], "seo_insights": [], "trends": [], "last_scan": None}
+
+def save_research(data):
+    data["competitors"] = data.get("competitors", [])[-20:]
+    data["seo_insights"] = data.get("seo_insights", [])[-20:]
+    data["trends"] = data.get("trends", [])[-15:]
+    with open(RESEARCH_FILE, "w") as f:
+        json.dump(data, f, indent=2)
+
 def extract_learnings(user_text, victor_reply):
-    """Sla belangrijke feiten en beslissingen op in lange-termijn geheugen."""
+    """SELF-LEARNING: analyseer elke interactie en sla patronen op."""
     long_mem = load_long_memory()
+    skills = load_skills()
     ts = datetime.now().strftime("%Y-%m-%d %H:%M")
 
+    # Expliciete instructies onthouden
     keywords = ["onthoud", "remember", "belangrijk", "important", "besluit", "decision",
                 "voortaan", "from now on", "altijd", "always", "nooit", "never"]
     if any(kw in user_text.lower() for kw in keywords):
         long_mem["facts"].append({"time": ts, "fact": user_text})
-        save_long_memory(long_mem)
 
-    if "error" in victor_reply.lower() or "failed" in victor_reply.lower():
-        long_mem["errors"].append({"time": ts, "error": victor_reply[:200]})
-        save_long_memory(long_mem)
+    # FOUTEN LEREN: sla error + context op zodat Victor het niet herhaalt
+    if "error" in victor_reply.lower() or "failed" in victor_reply.lower() or "❌" in victor_reply:
+        error_entry = {"time": ts, "error": victor_reply[:300], "context": user_text[:200]}
+        long_mem["errors"].append(error_entry)
+
+        # Zoek een patroon: als dezelfde fout vaker voorkomt, sla op als "avoided"
+        error_sig = victor_reply[:80].lower()
+        error_count = sum(1 for e in long_mem["errors"] if error_sig[:40] in e.get("error", "").lower())
+        if error_count >= 2:
+            skills["avoided"].append({
+                "time": ts,
+                "pattern": error_sig,
+                "lesson": f"Deze fout kwam {error_count}x voor. Vermijd deze aanpak."
+            })
+            save_skills(skills)
+
+    # SUCCESSEN LEREN: als een fix werkt, sla de oplossing op
+    success_words = ["opgelost", "gelukt", "succes", "fixed", "✅", "werkt", "done", "klaar"]
+    if any(w in victor_reply.lower() for w in success_words):
+        long_mem.setdefault("wins", []).append({"time": ts, "win": victor_reply[:200], "task": user_text[:200]})
+
+        # Sla als herbruikbare oplossing op als er een COMMANDO in zat
+        if "COMMANDO:" in victor_reply:
+            cmds = [p.split("\n")[0].strip().strip('`') for p in victor_reply.split("COMMANDO:")[1:]]
+            if cmds:
+                # Gebruik de eerste paar woorden van de taak als key
+                task_key = re.sub(r'[^a-z0-9 ]', '', user_text.lower())[:60].strip()
+                skills["solutions"][task_key] = {
+                    "time": ts, "commands": cmds[:3], "description": victor_reply[:150]
+                }
+                save_skills(skills)
+
+    # CODE PATRONEN LEREN: als Victor code schrijft, sla het patroon op
+    code_indicators = ["def ", "function ", "class ", "import ", "#!/"]
+    if any(ind in victor_reply for ind in code_indicators):
+        # Extract de eerste functie/class definitie
+        for line in victor_reply.split("\n"):
+            if any(line.strip().startswith(ind) for ind in ["def ", "function ", "class "]):
+                skills.setdefault("code_patterns", []).append({
+                    "time": ts, "pattern": line.strip()[:100], "context": user_text[:100]
+                })
+                save_skills(skills)
+                break
+
+    save_long_memory(long_mem)
 
 def get_long_memory_context():
-    """Geeft lange-termijn context als string voor het systeem prompt."""
+    """Geeft ALLE context voor Victor: geheugen + skills + research."""
     long_mem = load_long_memory()
+    skills = load_skills()
+    research = load_research()
     parts = []
+
     if long_mem["facts"]:
         parts.append("OPERATOR FACTS:\n" + "\n".join(f"- {f['fact']}" for f in long_mem["facts"][-10:]))
+
+    if long_mem.get("wins"):
+        parts.append("RECENT SUCCESSEN (herhaal wat werkt):\n" + "\n".join(
+            f"- [{w['time']}] {w['win'][:100]}" for w in long_mem["wins"][-5:]))
+
     if long_mem["errors"]:
-        parts.append("RECENT ERRORS:\n" + "\n".join(f"- [{e['time']}] {e['error']}" for e in long_mem["errors"][-5:]))
+        parts.append("RECENTE FOUTEN (vermijd deze):\n" + "\n".join(
+            f"- [{e['time']}] {e['error'][:100]}" for e in long_mem["errors"][-5:]))
+
+    if skills.get("avoided"):
+        parts.append("GELEERDE LESSEN (DOE DIT NIET):\n" + "\n".join(
+            f"- {a['lesson']}" for a in skills["avoided"][-5:]))
+
+    if skills.get("solutions"):
+        recent = sorted(skills["solutions"].items(), key=lambda x: x[1].get("time", ""), reverse=True)[:5]
+        if recent:
+            parts.append("BEKENDE OPLOSSINGEN:\n" + "\n".join(
+                f"- '{k}': {v['description'][:80]}" for k, v in recent))
+
+    if research.get("seo_insights"):
+        parts.append("SEO RESEARCH:\n" + "\n".join(
+            f"- {i['insight'][:100]}" for i in research["seo_insights"][-3:]))
+
+    if research.get("competitors"):
+        parts.append("COMPETITOR INTEL:\n" + "\n".join(
+            f"- {c['finding'][:100]}" for c in research["competitors"][-3:]))
+
     return "\n\n".join(parts) if parts else ""
+
+
+# ── WEB RESEARCH MODULE ────────────────────────────────────────────────────
+def web_research_scan():
+    """Scan het web voor competitor data, SEO trends, en affiliate insights."""
+    research = load_research()
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M")
+    findings = []
+
+    # 1. Check eigen site ranking signalen
+    try:
+        req = urllib.request.Request(
+            "https://aibuildermarketplace.com/b2b/",
+            headers={"User-Agent": "Victor-Research/1.0"}
+        )
+        resp = urllib.request.urlopen(req, timeout=15)
+        html = resp.read().decode('utf-8', errors='replace')
+        article_count = html.count('class="card"')
+        findings.append(f"Site heeft {article_count} artikel-cards op b2b index")
+    except Exception as e:
+        findings.append(f"Site check failed: {str(e)[:80]}")
+
+    # 2. Check competitor sites voor ideeen
+    competitor_urls = {
+        "G2 AI tools": "https://www.g2.com/categories/ai-tools",
+        "Capterra AI": "https://www.capterra.com/artificial-intelligence-software/",
+    }
+    for name, url in competitor_urls.items():
+        try:
+            req = urllib.request.Request(url, headers={
+                "User-Agent": "Mozilla/5.0 (compatible; research bot)"
+            })
+            resp = urllib.request.urlopen(req, timeout=15)
+            content_length = len(resp.read())
+            research["competitors"].append({
+                "time": ts, "source": name,
+                "finding": f"{name} pagina is {content_length//1024}KB — actieve markt"
+            })
+        except:
+            pass
+
+    # 3. Check affiliate programma pagina's voor updates
+    for brand, url in VAULT.items():
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Victor-Research/1.0"})
+            resp = urllib.request.urlopen(req, timeout=10)
+            code = resp.getcode()
+            page_size = len(resp.read())
+            if page_size > 0:
+                research["seo_insights"].append({
+                    "time": ts,
+                    "insight": f"{brand} landing page: {code}, {page_size//1024}KB — link werkt"
+                })
+        except Exception as e:
+            research["seo_insights"].append({
+                "time": ts,
+                "insight": f"⚠️ {brand} affiliate link probleem: {str(e)[:60]}"
+            })
+
+    research["last_scan"] = ts
+    save_research(research)
+    return findings
+
+
+def auto_improve_articles():
+    """Victor verbetert proactief de slechtste artikelen zonder dat Daniel het vraagt."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    worst = find_worst_articles(3)
+    improved = []
+
+    for folder, size in worst:
+        if size > 5000:  # Alleen echt slechte artikelen (<5KB)
+            continue
+
+        article_path = os.path.join(b2b_path, folder, "index.html")
+        try:
+            with open(article_path, 'r', encoding='utf-8') as f:
+                old_html = f.read()
+        except:
+            continue
+
+        brand = folder.split('-')[0].capitalize()
+        if brand == 'Invideo':
+            brand = 'InVideo'
+        if brand.lower() not in ['kinsta', 'synthesia', 'invideo', 'replit', 'bitvavo', 'murf']:
+            continue
+
+        try:
+            prompt = f"""Herschrijf dit artikel over {brand} VOLLEDIG. Het is nu maar {size} bytes.
+
+Slug: {folder}
+Schrijf minimaal 1500 woorden. HTML tags (geen html/head/body wrapper).
+Structuur: H1 headline, intro, features met cijfers, pricing, use case, pros/cons, FAQ (4 vragen), conclusie.
+Schrijf als een ervaren founder. Specifieke cijfers, geen vage claims."""
+
+            res = client.chat.completions.create(
+                model=MODEL, messages=[{"role": "user", "content": prompt}], max_tokens=4000
+            )
+            new_content = res.choices[0].message.content.replace("```html", "").replace("```", "").strip()
+
+            # Gebruik fix_articles.py logica om de HTML proper te wrappen
+            fix_script = "/root/felix_hq/fix_articles.py"
+            if os.path.exists(fix_script):
+                # Schrijf de nieuwe content, dan restyle met fix_articles
+                with open(article_path, 'w', encoding='utf-8') as f:
+                    f.write(old_html.split('</head>')[0] + '</head><body>' + new_content + '</body></html>' if '</head>' in old_html else new_content)
+                run_command(f"python3 {fix_script}", timeout=120)
+            else:
+                with open(article_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+
+            new_size = os.path.getsize(article_path)
+            improved.append(f"{folder}: {size//1024}KB → {new_size//1024}KB")
+            log(f"Auto-improved: {folder}")
+        except Exception as e:
+            log(f"Auto-improve error {folder}: {e}")
+
+    if improved:
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: auto-improved {len(improved)} articles' && git push origin main")
+
+    return improved
+
+
+def self_diagnose():
+    """Victor analyseert zijn eigen prestaties en stelt verbeteringen voor."""
+    long_mem = load_long_memory()
+    skills = load_skills()
+
+    error_count = len(long_mem.get("errors", []))
+    win_count = len(long_mem.get("wins", []))
+    solution_count = len(skills.get("solutions", {}))
+    avoided_count = len(skills.get("avoided", []))
+
+    # Analyseer error patronen
+    recent_errors = long_mem.get("errors", [])[-10:]
+    error_types = {}
+    for e in recent_errors:
+        err_text = e.get("error", "")[:50].lower()
+        for key in ["git", "push", "permission", "timeout", "api", "html", "syntax"]:
+            if key in err_text:
+                error_types[key] = error_types.get(key, 0) + 1
+
+    report = f"""🧠 Victor Self-Diagnose
+━━━━━━━━━━━━━━━━━━━━━━
+📊 Statistieken:
+  Successen: {win_count}
+  Fouten: {error_count}
+  Geleerde oplossingen: {solution_count}
+  Vermijdpatronen: {avoided_count}
+  Success rate: {win_count*100//(win_count+error_count) if (win_count+error_count) > 0 else 0}%
+
+🔍 Meest voorkomende fout-types:"""
+
+    for etype, count in sorted(error_types.items(), key=lambda x: -x[1]):
+        report += f"\n  - {etype}: {count}x"
+
+    if not error_types:
+        report += "\n  Geen patronen gevonden"
+
+    return report
 
 def log(text):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -455,8 +744,119 @@ def cmd_write(message):
     task = parts[1]
     history = load_memory()
     reply = ask_victor(f"Daniel wil dat je code schrijft. Taak: {task}\n\nSchrijf de volledige code. Gebruik COMMANDO: om het bestand aan te maken met cat/tee. Leg kort uit wat de code doet.", history)
-    # Handle als normaal bericht (kan commando's bevatten)
-    handle_victor_reply(message, reply, history)
+
+    # Handle commando's als die er zijn
+    if "COMMANDO:" in reply:
+        pre_text = reply.split("COMMANDO:")[0].strip()
+        if pre_text:
+            bot.reply_to(message, pre_text)
+        commands = [p.split("\n")[0].strip().strip('`')
+                    for p in reply.split("COMMANDO:")[1:]
+                    if p.split("\n")[0].strip()][:2]
+        for cmd in commands:
+            bot.reply_to(message, f"🛠 `{cmd}`")
+            out = run_command(cmd, timeout=90)
+            bot.reply_to(message, f"📋 {out}")
+    else:
+        bot.reply_to(message, reply)
+    history.append({"role": "assistant", "content": reply})
+    save_memory(history)
+
+
+@bot.message_handler(commands=['multifile'])
+def cmd_multifile(message):
+    """Complex multi-file refactor: Victor past meerdere bestanden tegelijk aan."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    if len(parts) < 2:
+        bot.reply_to(message, "Gebruik: /multifile <beschrijving van de refactor>\n\nBijv:\n/multifile voeg structured data toe aan alle artikelen\n/multifile maak een nieuwe pagina met nav + footer die matcht met index.html\n/multifile refactor generate_article.py: split in modules")
+        return
+
+    task = parts[1]
+    bot.reply_to(message, f"🏗️ Multi-file taak gestart: {task}\n\nIk maak eerst een plan, dan voer ik alles stap voor stap uit.")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    history = load_memory()
+
+    # Stap 1: Laat Victor een plan maken
+    plan_prompt = f"""COMPLEXE MULTI-FILE TAAK: {task}
+
+Maak een gedetailleerd plan:
+1. Welke bestanden moeten worden aangepast? (lijst met paden)
+2. Wat moet er in elk bestand veranderen?
+3. In welke volgorde?
+4. Hoe test je of het werkt?
+
+Gebruik COMMANDO: om eerst de relevante bestanden te bekijken (ls, cat, head).
+Max 2 COMMANDO: regels om informatie te verzamelen."""
+
+    reply = ask_victor(plan_prompt, history)
+    history.append({"role": "assistant", "content": reply})
+
+    # Voer het plan uit via de auto-continue loop
+    if "COMMANDO:" in reply:
+        pre_text = reply.split("COMMANDO:")[0].strip()
+        if pre_text:
+            bot.reply_to(message, pre_text)
+
+        commands = [p.split("\n")[0].strip().strip('`')
+                    for p in reply.split("COMMANDO:")[1:]
+                    if p.split("\n")[0].strip()][:2]
+        all_output = []
+        for cmd in commands:
+            bot.reply_to(message, f"🛠 `{cmd}`")
+            out = run_command(cmd)
+            bot.reply_to(message, f"📋 {out}")
+            all_output.append(f"$ {cmd}\n{out}")
+            time.sleep(0.5)
+
+        combined = "\n".join(all_output)[:2000]
+        history.append({"role": "user", "content": f"[Verkenning output]:\n{combined}"})
+
+        # Auto-continue: laat Victor het plan uitvoeren
+        MAX_ROUNDS = 20
+        for round_num in range(2, MAX_ROUNDS + 1):
+            bot.send_chat_action(message.chat.id, 'typing')
+
+            continue_prompt = f"""Output van stap {round_num - 1}:
+{combined}
+
+Ga verder met het multi-file plan. Voer de volgende stap uit.
+Als je klaar bent met ALLE bestanden: geef een samenvatting en commit alles.
+Gebruik max 2 COMMANDO: regels per stap."""
+
+            reply = ask_victor(continue_prompt, history)
+            history.append({"role": "assistant", "content": reply})
+            log(f"MULTIFILE [stap {round_num}]: {reply[:300]}")
+
+            if "COMMANDO:" not in reply:
+                bot.reply_to(message, reply)
+                break
+
+            pre_text = reply.split("COMMANDO:")[0].strip()
+            if pre_text:
+                bot.reply_to(message, pre_text)
+
+            commands = [p.split("\n")[0].strip().strip('`')
+                        for p in reply.split("COMMANDO:")[1:]
+                        if p.split("\n")[0].strip()][:2]
+            all_output = []
+            for cmd in commands:
+                bot.reply_to(message, f"🛠 [{round_num}] `{cmd}`")
+                out = run_command(cmd, timeout=90)
+                bot.reply_to(message, f"📋 {out}")
+                all_output.append(f"$ {cmd}\n{out}")
+                time.sleep(0.5)
+
+            combined = "\n".join(all_output)[:2000]
+            history.append({"role": "user", "content": f"[Stap {round_num} output]:\n{combined}"})
+        else:
+            bot.reply_to(message, f"⚠️ {MAX_ROUNDS} stappen uitgevoerd. Stuur een bericht als ik verder moet.")
+    else:
+        bot.reply_to(message, reply)
+
+    save_memory(history)
 
 @bot.message_handler(commands=['fix'])
 def cmd_fix(message):
@@ -724,6 +1124,116 @@ De pagina moet er professioneel uitzien, als een echte SaaS website, niet als ee
     except Exception as e:
         bot.reply_to(message, f"❌ Fout bij redesign: {e}")
 
+@bot.message_handler(commands=['research'])
+def cmd_research(message):
+    """Trigger web research scan: competitors, affiliate links, SEO trends."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔬 Web research scan gestart...\nIk check de site, competitors, en affiliate links.")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    try:
+        findings = web_research_scan()
+        research = load_research()
+        report = "🔬 Web Research Resultaten\n━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+        if findings:
+            report += "📊 Site Check:\n" + "\n".join(f"  - {f}" for f in findings) + "\n\n"
+
+        if research.get("seo_insights"):
+            recent = research["seo_insights"][-6:]
+            report += "🔗 Affiliate Link Status:\n" + "\n".join(f"  - {i['insight']}" for i in recent) + "\n\n"
+
+        if research.get("competitors"):
+            recent = research["competitors"][-3:]
+            report += "🏆 Competitor Intel:\n" + "\n".join(f"  - {c['finding']}" for c in recent) + "\n\n"
+
+        report += f"⏰ Laatste scan: {research.get('last_scan', 'nooit')}"
+        bot.reply_to(message, report)
+    except Exception as e:
+        bot.reply_to(message, f"❌ Research scan error: {e}")
+
+
+@bot.message_handler(commands=['diagnose'])
+def cmd_diagnose(message):
+    """Victor analyseert zijn eigen prestaties."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    report = self_diagnose()
+
+    # Voeg aanbevelingen toe via Claude
+    try:
+        advice_prompt = f"""Op basis van deze self-diagnose, geef 3 concrete verbeteracties (max 100 woorden):
+
+{report}"""
+        advice = ask_victor(advice_prompt, [])
+        report += f"\n\n💡 Aanbevelingen:\n{advice}"
+    except:
+        pass
+
+    bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['brain'])
+def cmd_brain(message):
+    """Toon Victor's geleerde kennis: skills, patronen, vermijdingen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+
+    skills = load_skills()
+    long_mem = load_long_memory()
+    research = load_research()
+
+    report = "🧠 Victor's Brain — Geleerde Kennis\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Oplossingen
+    solutions = skills.get("solutions", {})
+    report += f"📚 Opgeslagen oplossingen: {len(solutions)}\n"
+    for key, val in list(solutions.items())[-5:]:
+        report += f"  - {key[:40]}: {val.get('description', '')[:60]}\n"
+
+    # Vermijdpatronen
+    avoided = skills.get("avoided", [])
+    report += f"\n🚫 Vermijdpatronen: {len(avoided)}\n"
+    for a in avoided[-5:]:
+        report += f"  - {a.get('lesson', '')[:80]}\n"
+
+    # Code patronen
+    patterns = skills.get("code_patterns", [])
+    report += f"\n💻 Geleerde code patronen: {len(patterns)}\n"
+    for p in patterns[-5:]:
+        report += f"  - {p.get('pattern', '')[:60]}\n"
+
+    # Geheugen stats
+    report += f"\n📊 Geheugen:\n"
+    report += f"  Facts: {len(long_mem.get('facts', []))}\n"
+    report += f"  Wins: {len(long_mem.get('wins', []))}\n"
+    report += f"  Errors: {len(long_mem.get('errors', []))}\n"
+    report += f"  Research scans: {'ja' if research.get('last_scan') else 'nee'}\n"
+
+    bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['autofix'])
+def cmd_autofix(message):
+    """Auto-improve de slechtste artikelen zonder tussenkomst."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔄 Auto-improve gestart... Ik zoek de slechtste artikelen en herschrijf ze.")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    try:
+        improved = auto_improve_articles()
+        if improved:
+            bot.reply_to(message, f"✅ {len(improved)} artikelen verbeterd:\n" + "\n".join(f"  - {i}" for i in improved))
+        else:
+            bot.reply_to(message, "✅ Alle artikelen zijn al van goede kwaliteit (>5KB). Geen verbetering nodig.")
+    except Exception as e:
+        bot.reply_to(message, f"❌ Auto-improve error: {e}")
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -773,18 +1283,23 @@ def cmd_help(message):
 /quality — Artikelkwaliteit analyse
 /strategy — AI strategisch advies
 
+🧠 Self-Learning:
+/brain — Toon geleerde kennis & patronen
+/diagnose — Self-analyse: prestaties + verbeterpunten
+/research — Web scan: competitors, SEO, affiliate links
+
 🚀 Actie:
 /generate — Genereer een artikel
 /improve — Verbeter het slechtste artikel
+/autofix — Auto-improve slechtste artikelen (batch)
 /optimize — Voeg interne links toe
 /fix <probleem> — Los op (stopt niet tot het werkt)
 /write <taak> — Schrijf code of scripts
+/multifile <taak> — Complex: meerdere bestanden tegelijk
 
 🎨 Design:
 /redesign <pagina> — Bouw professionele pagina
-/restyle [n] — Upgrade n artikelen naar dark theme (default 10)
-  Voorbeelden: /redesign homepage
-               /restyle 20
+/restyle — Alle artikelen naar dark theme + SVG logos
 
 Of stuur gewoon een bericht — ik denk mee en pak door.""")
 
@@ -1000,7 +1515,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 5.0 — Status Report
+    return f"""📊 Victor 6.0 Ultra — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -1240,10 +1755,13 @@ Geef:
 
 
 def proactive_loop():
-    """Elke 15 min: check pipeline + fix problemen. Rapport 2x per dag + wekelijks strategie."""
+    """Elke 15 min: check pipeline + fix problemen. Rapport 2x per dag + wekelijks strategie.
+    Extra: dagelijkse web research en wekelijkse auto-improve."""
     last_report = None
     last_check = None
     last_weekly = None
+    last_research = None
+    last_auto_improve = None
     while True:
         try:
             now = datetime.now()
@@ -1268,6 +1786,40 @@ def proactive_loop():
                     except:
                         pass
 
+            # Web research scan: elke dag om 03:00 UTC (stil, geen notificatie tenzij problemen)
+            if hour == 3 and last_research != str(now.date()):
+                try:
+                    log("Starting daily web research scan...")
+                    findings = web_research_scan()
+                    last_research = str(now.date())
+                    log(f"Research scan done: {len(findings)} findings")
+
+                    # Alleen notificeren als er affiliate link problemen zijn
+                    research = load_research()
+                    broken = [i for i in research.get("seo_insights", [])[-6:]
+                              if "⚠️" in i.get("insight", "")]
+                    if broken:
+                        alert = "🔬 Research Alert — Affiliate Link Problemen:\n"
+                        alert += "\n".join(f"  - {b['insight']}" for b in broken)
+                        bot.send_message(ADMIN_ID, alert)
+                except Exception as e:
+                    log(f"Research scan error: {e}")
+
+            # Auto-improve: woensdag en zaterdag om 04:00 UTC
+            if weekday in [2, 5] and hour == 4 and last_auto_improve != str(now.date()):
+                try:
+                    log("Starting auto-improve cycle...")
+                    improved = auto_improve_articles()
+                    last_auto_improve = str(now.date())
+                    if improved:
+                        report = f"🔄 Auto-Improve Resultaten:\n" + "\n".join(f"  - {i}" for i in improved)
+                        bot.send_message(ADMIN_ID, report)
+                        log(f"Auto-improved {len(improved)} articles")
+                    else:
+                        log("Auto-improve: no articles needed improvement")
+                except Exception as e:
+                    log(f"Auto-improve error: {e}")
+
             # Dagelijks rapport om 06:00 en 18:00 UTC
             if hour in [6, 18] and last_report != f"{now.date()}-{hour}":
                 report = generate_status_report()
@@ -1279,6 +1831,14 @@ def proactive_loop():
                 else:
                     report += "\n\n✅ Pipeline gezond — alles draait"
 
+                # Voeg brain stats toe aan avondrapport
+                if hour == 18:
+                    skills = load_skills()
+                    long_mem = load_long_memory()
+                    report += f"\n\n🧠 Brain: {len(skills.get('solutions', {}))} oplossingen, "
+                    report += f"{len(long_mem.get('wins', []))} wins, "
+                    report += f"{len(skills.get('avoided', []))} vermijdpatronen"
+
                 try:
                     bot.send_message(ADMIN_ID, report)
                 except:
@@ -1289,7 +1849,9 @@ def proactive_loop():
             if weekday == 0 and hour == 8 and last_weekly != str(now.date()):
                 try:
                     strategy = generate_weekly_strategy()
-                    bot.send_message(ADMIN_ID, f"📈 Wekelijks Strategie Rapport\n━━━━━━━━━━━━━━━━━━━━━\n\n{strategy}")
+                    # Voeg self-diagnose toe aan wekelijks rapport
+                    diagnose = self_diagnose()
+                    bot.send_message(ADMIN_ID, f"📈 Wekelijks Strategie Rapport\n━━━━━━━━━━━━━━━━━━━━━\n\n{strategy}\n\n{diagnose}")
                     last_weekly = str(now.date())
                 except:
                     pass
@@ -1303,14 +1865,14 @@ def proactive_loop():
 def send_startup_message():
     try:
         report = generate_status_report()
-        bot.send_message(ADMIN_ID, f"🚀 Victor Ultra online!\n\n{report}\n\nNieuw: /fix /write /seo /revenue /strategy")
+        bot.send_message(ADMIN_ID, f"🚀 Victor Ultra 6.0 online!\n\n{report}\n\n🧠 Self-learning: /brain /diagnose /research\n🏗️ Multi-file: /multifile /write\n📊 /seo /revenue /strategy /autofix")
         log("Startup message sent")
     except Exception as e:
         log(f"Startup error: {e}")
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 5.0 gestart — Model: {MODEL}")
+    log(f"Victor 6.0 Ultra gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

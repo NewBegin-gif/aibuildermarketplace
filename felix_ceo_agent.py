@@ -30,6 +30,10 @@ LOG_FILE  = "/root/felix_hq/victor.log"
 MEM_FILE  = "/root/felix_hq/victor_memory.json"
 LONG_MEM  = "/root/felix_hq/victor_long_memory.json"
 REPO_ROOT = "/root/felix_hq/repos/aibuildermarketplace"
+TASKS_FILE = "/root/felix_hq/victor_tasks.json"
+GSC_CREDENTIALS = "/root/felix_hq/gsc_credentials.json"
+GSC_DATA_FILE = "/root/felix_hq/victor_gsc_data.json"
+OG_IMAGE_DIR = "/root/felix_hq/repos/aibuildermarketplace/img"
 
 # ── LLM SETUP ───────────────────────────────────────────────────────────────
 OPENROUTER_KEY = os.getenv("OPENROUTER_KEY", "")
@@ -531,6 +535,573 @@ def self_diagnose():
         report += "\n  Geen patronen gevonden"
 
     return report
+
+# ── MODULE 1: GOOGLE SEARCH CONSOLE ────────────────────────────────────────
+def setup_gsc():
+    """Instructies voor GSC setup. Eenmalig nodig."""
+    return """🔧 Google Search Console Setup:
+
+1. Ga naar https://console.cloud.google.com/
+2. Maak een project aan (of gebruik bestaand)
+3. Enable de "Google Search Console API"
+4. Maak een Service Account aan (IAM → Service Accounts)
+5. Download de JSON credentials
+6. Upload naar VPS: scp credentials.json root@187.124.167.150:/root/felix_hq/gsc_credentials.json
+7. Ga naar Google Search Console → Settings → Users → voeg het service account email toe als "Full" user
+
+Stuur me het credentials bestand via Telegram of zet het op de VPS, dan activeer ik het automatisch."""
+
+
+def fetch_gsc_data(days=28):
+    """Haal zoekprestatie data op uit Google Search Console."""
+    if not os.path.exists(GSC_CREDENTIALS):
+        return None, "GSC credentials niet gevonden. Gebruik /gsc setup"
+
+    try:
+        # Dynamisch importeren zodat het niet crasht als google libs niet installed zijn
+        from google.oauth2 import service_account
+        from googleapiclient.discovery import build
+
+        credentials = service_account.Credentials.from_service_account_file(
+            GSC_CREDENTIALS,
+            scopes=['https://www.googleapis.com/auth/webmasters.readonly']
+        )
+        service = build('searchconsole', 'v1', credentials=credentials)
+
+        end_date = datetime.now().strftime('%Y-%m-%d')
+        start_date = (datetime.now() - timedelta(days=days)).strftime('%Y-%m-%d')
+
+        # Top pagina's
+        response = service.searchanalytics().query(
+            siteUrl='https://aibuildermarketplace.com/',
+            body={
+                'startDate': start_date,
+                'endDate': end_date,
+                'dimensions': ['page'],
+                'rowLimit': 50,
+                'dimensionFilterGroups': []
+            }
+        ).execute()
+
+        pages = []
+        for row in response.get('rows', []):
+            pages.append({
+                'page': row['keys'][0],
+                'clicks': row.get('clicks', 0),
+                'impressions': row.get('impressions', 0),
+                'ctr': round(row.get('ctr', 0) * 100, 1),
+                'position': round(row.get('position', 0), 1)
+            })
+
+        # Top queries
+        q_response = service.searchanalytics().query(
+            siteUrl='https://aibuildermarketplace.com/',
+            body={
+                'startDate': start_date,
+                'endDate': end_date,
+                'dimensions': ['query'],
+                'rowLimit': 30
+            }
+        ).execute()
+
+        queries = []
+        for row in q_response.get('rows', []):
+            queries.append({
+                'query': row['keys'][0],
+                'clicks': row.get('clicks', 0),
+                'impressions': row.get('impressions', 0),
+                'ctr': round(row.get('ctr', 0) * 100, 1),
+                'position': round(row.get('position', 0), 1)
+            })
+
+        data = {
+            'pages': sorted(pages, key=lambda x: -x['clicks']),
+            'queries': sorted(queries, key=lambda x: -x['impressions']),
+            'period': f"{start_date} — {end_date}",
+            'fetched_at': datetime.now().strftime('%Y-%m-%d %H:%M')
+        }
+
+        # Cache opslaan
+        with open(GSC_DATA_FILE, 'w') as f:
+            json.dump(data, f, indent=2)
+
+        return data, None
+
+    except ImportError:
+        return None, "Google API libraries niet geïnstalleerd. Run: pip install google-auth google-api-python-client"
+    except Exception as e:
+        return None, f"GSC error: {str(e)[:200]}"
+
+
+def get_gsc_insights():
+    """Analyseer GSC data voor actionable insights."""
+    # Probeer eerst cached data
+    if os.path.exists(GSC_DATA_FILE):
+        try:
+            with open(GSC_DATA_FILE) as f:
+                data = json.load(f)
+        except:
+            data = None
+    else:
+        data = None
+
+    if not data:
+        data, err = fetch_gsc_data()
+        if err:
+            return err
+
+    insights = []
+
+    # Pagina's met hoge impressies maar lage CTR → titel/description verbeteren
+    for p in data.get('pages', []):
+        if p['impressions'] > 50 and p['ctr'] < 2.0:
+            slug = p['page'].split('/b2b/')[-1].rstrip('/') if '/b2b/' in p['page'] else p['page']
+            insights.append(f"📈 {slug}: {p['impressions']} impressies maar {p['ctr']}% CTR → verbeter titel/meta")
+
+    # Pagina's met goede positie maar weinig clicks → bijna ranking
+    for p in data.get('pages', []):
+        if 5 < p['position'] < 15 and p['clicks'] < 5:
+            slug = p['page'].split('/b2b/')[-1].rstrip('/') if '/b2b/' in p['page'] else p['page']
+            insights.append(f"🎯 {slug}: positie {p['position']} — klein zetje nodig voor pagina 1")
+
+    # Top queries waar we content voor moeten maken
+    existing_slugs = set()
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if os.path.isdir(b2b_path):
+        existing_slugs = {f.lower() for f in os.listdir(b2b_path)}
+
+    for q in data.get('queries', []):
+        query_slug = q['query'].lower().replace(' ', '-')
+        has_content = any(query_slug[:10] in s for s in existing_slugs)
+        if not has_content and q['impressions'] > 20:
+            insights.append(f"🆕 Query '{q['query']}' ({q['impressions']} impressies) — geen matching artikel!")
+
+    return insights[:15]
+
+
+# ── MODULE 2: AUTO SITEMAP REBUILD ─────────────────────────────────────────
+def rebuild_sitemap():
+    """Genereer een verse sitemap.xml op basis van alle bestaande artikelen."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    sitemap_path = f"{REPO_ROOT}/sitemap.xml"
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    urls = []
+
+    # Homepage
+    urls.append(('https://aibuildermarketplace.com/', today, '1.0', 'weekly'))
+
+    # B2B index
+    urls.append(('https://aibuildermarketplace.com/b2b/', today, '0.9', 'daily'))
+
+    # Alle artikelen
+    if os.path.isdir(b2b_path):
+        for folder in sorted(os.listdir(b2b_path)):
+            article_path = os.path.join(b2b_path, folder, "index.html")
+            if os.path.isfile(article_path):
+                # Gebruik file modification time als lastmod
+                mtime = os.path.getmtime(article_path)
+                lastmod = datetime.fromtimestamp(mtime).strftime('%Y-%m-%d')
+                urls.append((
+                    f'https://aibuildermarketplace.com/b2b/{folder}/',
+                    lastmod, '0.7', 'monthly'
+                ))
+
+    # Genereer XML
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    for loc, lastmod, priority, changefreq in urls:
+        xml += f'  <url>\n'
+        xml += f'    <loc>{loc}</loc>\n'
+        xml += f'    <lastmod>{lastmod}</lastmod>\n'
+        xml += f'    <priority>{priority}</priority>\n'
+        xml += f'    <changefreq>{changefreq}</changefreq>\n'
+        xml += f'  </url>\n'
+    xml += '</urlset>\n'
+
+    with open(sitemap_path, 'w', encoding='utf-8') as f:
+        f.write(xml)
+
+    return len(urls)
+
+
+def rebuild_robots_txt():
+    """Zorg dat robots.txt correct verwijst naar de sitemap."""
+    robots_path = f"{REPO_ROOT}/robots.txt"
+    content = """User-agent: *
+Allow: /
+
+Sitemap: https://aibuildermarketplace.com/sitemap.xml
+"""
+    with open(robots_path, 'w') as f:
+        f.write(content)
+
+
+# ── MODULE 3: OG IMAGE GENERATOR ──────────────────────────────────────────
+def generate_og_image(title, brand, output_path):
+    """Genereer een professionele OG image (1200x630) met Pillow."""
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        return False, "Pillow niet geïnstalleerd. Run: pip install Pillow"
+
+    brand_colors = {
+        'kinsta': (139, 92, 246),    # purple
+        'synthesia': (59, 130, 246), # blue
+        'invideo': (167, 139, 250),  # light purple
+        'replit': (245, 158, 11),    # amber
+        'bitvavo': (16, 185, 129),   # green
+        'murf': (236, 72, 153),      # pink
+    }
+
+    accent = brand_colors.get(brand.lower(), (59, 130, 246))
+    width, height = 1200, 630
+
+    # Achtergrond
+    img = Image.new('RGB', (width, height), (10, 14, 23))
+    draw = ImageDraw.Draw(img)
+
+    # Gradient top accent bar
+    for y in range(6):
+        draw.rectangle([(0, y), (width, y)], fill=accent)
+
+    # Bottom gradient glow
+    for y in range(80):
+        alpha = int(255 * (1 - y / 80) * 0.15)
+        color = tuple(min(255, c + alpha) for c in (10, 14, 23))
+        draw.rectangle([(0, height - 80 + y), (width, height - 80 + y)], fill=color)
+
+    # Tekst — probeer system fonts
+    title_size = 52 if len(title) < 50 else 40 if len(title) < 70 else 32
+    try:
+        # Probeer beschikbare fonts
+        for font_path in [
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+            "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+            "/usr/share/fonts/TTF/DejaVuSans-Bold.ttf",
+        ]:
+            if os.path.exists(font_path):
+                title_font = ImageFont.truetype(font_path, title_size)
+                brand_font = ImageFont.truetype(font_path, 28)
+                site_font = ImageFont.truetype(font_path, 20)
+                break
+        else:
+            title_font = ImageFont.load_default()
+            brand_font = title_font
+            site_font = title_font
+    except:
+        title_font = ImageFont.load_default()
+        brand_font = title_font
+        site_font = title_font
+
+    # Brand badge
+    badge_text = brand.upper()
+    draw.rounded_rectangle([(50, 50), (50 + len(badge_text) * 18 + 30, 95)],
+                           radius=8, fill=accent)
+    draw.text((65, 55), badge_text, fill=(255, 255, 255), font=brand_font)
+
+    # Title — word wrap
+    words = title.split()
+    lines = []
+    current_line = ""
+    max_width = width - 120
+
+    for word in words:
+        test_line = f"{current_line} {word}".strip()
+        try:
+            bbox = draw.textbbox((0, 0), test_line, font=title_font)
+            w = bbox[2] - bbox[0]
+        except:
+            w = len(test_line) * title_size * 0.6
+        if w <= max_width:
+            current_line = test_line
+        else:
+            if current_line:
+                lines.append(current_line)
+            current_line = word
+    if current_line:
+        lines.append(current_line)
+
+    y_start = 140
+    for i, line in enumerate(lines[:4]):
+        draw.text((60, y_start + i * (title_size + 12)), line,
+                  fill=(230, 237, 243), font=title_font)
+
+    # Site naam onderaan
+    draw.text((60, height - 60), "aibuildermarketplace.com",
+              fill=(100, 120, 140), font=site_font)
+
+    # Opslaan
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    img.save(output_path, 'PNG', quality=85)
+    return True, output_path
+
+
+def generate_all_og_images():
+    """Genereer OG images voor alle artikelen die er geen hebben."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    generated = 0
+    errors = 0
+
+    for folder in os.listdir(b2b_path):
+        article_path = os.path.join(b2b_path, folder, "index.html")
+        if not os.path.isfile(article_path):
+            continue
+
+        og_path = os.path.join(OG_IMAGE_DIR, f"{folder}.png")
+        if os.path.exists(og_path):
+            continue  # Al gemaakt
+
+        try:
+            with open(article_path, 'r', encoding='utf-8') as f:
+                html = f.read()
+
+            # Extract title
+            title_match = re.search(r'<title>(.*?)</title>', html)
+            title = title_match.group(1) if title_match else folder.replace('-', ' ').title()
+            title = title.split('|')[0].split('—')[0].strip()
+
+            # Detect brand
+            brand = folder.split('-')[0].capitalize()
+            if brand.lower() == 'invideo':
+                brand = 'InVideo'
+
+            ok, result = generate_og_image(title, brand, og_path)
+            if ok:
+                generated += 1
+
+                # Voeg og:image meta tag toe aan artikel als die er niet is
+                if 'og:image' not in html:
+                    og_url = f"https://aibuildermarketplace.com/img/{folder}.png"
+                    og_tags = f'<meta property="og:image" content="{og_url}">\n'
+                    og_tags += f'<meta property="og:image:width" content="1200">\n'
+                    og_tags += f'<meta property="og:image:height" content="630">\n'
+                    og_tags += f'<meta name="twitter:card" content="summary_large_image">\n'
+                    og_tags += f'<meta name="twitter:image" content="{og_url}">\n'
+
+                    if '</head>' in html:
+                        html = html.replace('</head>', f'{og_tags}</head>')
+                        with open(article_path, 'w', encoding='utf-8') as f:
+                            f.write(html)
+        except Exception as e:
+            errors += 1
+            log(f"OG image error {folder}: {e}")
+
+    return generated, errors
+
+
+# ── MODULE 4: TASK PERSISTENCE — CRASH RECOVERY ───────────────────────────
+def save_task(task_id, task_type, description, state="running", data=None):
+    """Sla lopende taak op zodat Victor na crash verder kan."""
+    tasks = load_tasks()
+    tasks[task_id] = {
+        "type": task_type,
+        "description": description,
+        "state": state,
+        "data": data or {},
+        "started_at": datetime.now().strftime('%Y-%m-%d %H:%M'),
+        "updated_at": datetime.now().strftime('%Y-%m-%d %H:%M')
+    }
+    with open(TASKS_FILE, 'w') as f:
+        json.dump(tasks, f, indent=2)
+
+
+def load_tasks():
+    if os.path.exists(TASKS_FILE):
+        try:
+            return json.load(open(TASKS_FILE))
+        except:
+            pass
+    return {}
+
+
+def complete_task(task_id):
+    """Markeer taak als voltooid."""
+    tasks = load_tasks()
+    if task_id in tasks:
+        tasks[task_id]["state"] = "completed"
+        tasks[task_id]["completed_at"] = datetime.now().strftime('%Y-%m-%d %H:%M')
+        with open(TASKS_FILE, 'w') as f:
+            json.dump(tasks, f, indent=2)
+
+
+def fail_task(task_id, reason=""):
+    """Markeer taak als gefaald."""
+    tasks = load_tasks()
+    if task_id in tasks:
+        tasks[task_id]["state"] = "failed"
+        tasks[task_id]["error"] = reason
+        with open(TASKS_FILE, 'w') as f:
+            json.dump(tasks, f, indent=2)
+
+
+def check_interrupted_tasks():
+    """Check of er taken zijn die niet zijn afgemaakt (na crash/restart)."""
+    tasks = load_tasks()
+    interrupted = []
+    for tid, task in tasks.items():
+        if task.get("state") == "running":
+            interrupted.append((tid, task))
+    return interrupted
+
+
+def resume_interrupted_tasks():
+    """Probeer afgebroken taken te hervatten na restart."""
+    interrupted = check_interrupted_tasks()
+    resumed = []
+
+    for tid, task in interrupted:
+        task_type = task.get("type", "")
+        desc = task.get("description", "")
+
+        if task_type == "restyle":
+            # Restyle kan gewoon opnieuw
+            try:
+                fix_script = "/root/felix_hq/fix_articles.py"
+                if os.path.exists(fix_script):
+                    run_command(f"cd {REPO_ROOT} && python3 {fix_script}", timeout=120)
+                    run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: resumed restyle after restart' && git push origin main")
+                    complete_task(tid)
+                    resumed.append(f"Restyle hervat en voltooid")
+            except:
+                fail_task(tid, "Restyle hervatting mislukt")
+
+        elif task_type == "og_images":
+            try:
+                gen, err = generate_all_og_images()
+                if gen > 0:
+                    run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: resumed OG image generation ({gen} images)' && git push origin main")
+                complete_task(tid)
+                resumed.append(f"OG images hervat: {gen} gegenereerd")
+            except:
+                fail_task(tid, "OG image hervatting mislukt")
+
+        elif task_type == "sitemap":
+            try:
+                count = rebuild_sitemap()
+                rebuild_robots_txt()
+                run_command(f"cd {REPO_ROOT} && git add sitemap.xml robots.txt && git commit -m 'Victor: rebuilt sitemap ({count} URLs)' && git push origin main")
+                complete_task(tid)
+                resumed.append(f"Sitemap rebuild hervat: {count} URLs")
+            except:
+                fail_task(tid, "Sitemap hervatting mislukt")
+        else:
+            # Onbekend type → markeer als gefaald
+            fail_task(tid, f"Kan taak type '{task_type}' niet hervatten")
+            resumed.append(f"Taak '{desc}' kon niet hervat worden")
+
+    return resumed
+
+
+# ── MODULE 5: KEYWORD-DRIVEN ARTIKEL STRATEGIE ────────────────────────────
+def analyze_content_gaps():
+    """Analyseer welke keywords/topics missen op basis van GSC data + competitor analyse."""
+    gaps = []
+
+    # 1. Check GSC data voor queries zonder matching content
+    if os.path.exists(GSC_DATA_FILE):
+        try:
+            with open(GSC_DATA_FILE) as f:
+                gsc = json.load(f)
+
+            existing_slugs = set()
+            b2b_path = f"{REPO_ROOT}/b2b"
+            if os.path.isdir(b2b_path):
+                existing_slugs = {f.lower() for f in os.listdir(b2b_path)}
+
+            for q in gsc.get('queries', []):
+                query = q['query'].lower()
+                # Check of we content hebben voor deze query
+                query_words = set(query.split())
+                has_match = False
+                for slug in existing_slugs:
+                    slug_words = set(slug.split('-'))
+                    if len(query_words & slug_words) >= 2:
+                        has_match = True
+                        break
+                if not has_match and q['impressions'] > 10:
+                    gaps.append({
+                        'type': 'gsc_gap',
+                        'keyword': q['query'],
+                        'impressions': q['impressions'],
+                        'priority': q['impressions'],  # Meer impressies = hogere prioriteit
+                        'reason': f"Query met {q['impressions']} impressies maar geen matching artikel"
+                    })
+        except:
+            pass
+
+    # 2. Analyseer welke tools te weinig content hebben
+    brand_targets = {
+        'kinsta': 40, 'synthesia': 35, 'invideo': 30,
+        'replit': 25, 'bitvavo': 25, 'murf': 25
+    }
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if os.path.isdir(b2b_path):
+        for brand, target in brand_targets.items():
+            count = sum(1 for f in os.listdir(b2b_path) if f.lower().startswith(brand))
+            if count < target:
+                gaps.append({
+                    'type': 'brand_gap',
+                    'keyword': brand,
+                    'current': count,
+                    'target': target,
+                    'priority': (target - count) * 10,
+                    'reason': f"{brand.capitalize()}: {count}/{target} artikelen — {target - count} nodig"
+                })
+
+    # 3. Standaard high-value topic templates per brand
+    high_value_templates = {
+        'kinsta': ['kinsta-vs-{competitor}', 'kinsta-{usecase}-hosting', 'kinsta-pricing-{year}'],
+        'synthesia': ['synthesia-vs-{competitor}', 'synthesia-{usecase}', 'ai-video-{topic}'],
+        'invideo': ['invideo-vs-{competitor}', 'invideo-{usecase}', 'video-editing-{topic}'],
+        'replit': ['replit-vs-{competitor}', 'replit-{usecase}', 'online-coding-{topic}'],
+        'bitvavo': ['bitvavo-vs-{competitor}', 'bitvavo-{crypto}', 'crypto-trading-{topic}'],
+        'murf': ['murf-vs-{competitor}', 'murf-{usecase}', 'ai-voice-{topic}'],
+    }
+
+    competitors = {
+        'kinsta': ['siteground', 'cloudways', 'wpengine', 'bluehost'],
+        'synthesia': ['heygen', 'runway', 'descript', 'pictory'],
+        'invideo': ['canva', 'capcut', 'filmora', 'animoto'],
+        'replit': ['github-codespaces', 'stackblitz', 'codesandbox', 'gitpod'],
+        'bitvavo': ['binance', 'coinbase', 'kraken', 'bybit'],
+        'murf': ['elevenlabs', 'play-ht', 'speechify', 'wellsaid'],
+    }
+
+    if os.path.isdir(b2b_path):
+        existing = {f.lower() for f in os.listdir(b2b_path)}
+        for brand, comps in competitors.items():
+            for comp in comps:
+                slug = f"{brand}-vs-{comp}"
+                if slug not in existing:
+                    gaps.append({
+                        'type': 'comparison',
+                        'keyword': f"{brand} vs {comp}",
+                        'suggested_slug': slug,
+                        'priority': 25,  # Comparison articles convert well
+                        'reason': f"Vergelijkingsartikel {brand.capitalize()} vs {comp.capitalize()} mist"
+                    })
+
+    # Sorteer op prioriteit
+    gaps.sort(key=lambda x: -x.get('priority', 0))
+    return gaps[:20]
+
+
+def suggest_next_articles(n=5):
+    """Stel de N meest impactvolle artikelen voor om te schrijven."""
+    gaps = analyze_content_gaps()
+    suggestions = []
+
+    for gap in gaps[:n]:
+        if gap['type'] == 'gsc_gap':
+            suggestions.append(f"🎯 [{gap['impressions']} impressies] Schrijf over: '{gap['keyword']}'")
+        elif gap['type'] == 'brand_gap':
+            suggestions.append(f"📊 {gap['reason']}")
+        elif gap['type'] == 'comparison':
+            suggestions.append(f"⚔️ {gap['keyword'].title()} — vergelijkingsartikel (hoge conversie)")
+
+    return suggestions
+
 
 def log(text):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -1234,6 +1805,117 @@ def cmd_autofix(message):
         bot.reply_to(message, f"❌ Auto-improve error: {e}")
 
 
+@bot.message_handler(commands=['gsc'])
+def cmd_gsc(message):
+    """Google Search Console data ophalen en analyseren."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    subcmd = parts[1].strip().lower() if len(parts) > 1 else "report"
+
+    if subcmd == "setup":
+        bot.reply_to(message, setup_gsc())
+        return
+
+    if subcmd == "fetch":
+        bot.reply_to(message, "📊 GSC data ophalen...")
+        bot.send_chat_action(message.chat.id, 'typing')
+        data, err = fetch_gsc_data()
+        if err:
+            bot.reply_to(message, f"❌ {err}")
+            return
+        report = f"📊 GSC Data ({data['period']})\n━━━━━━━━━━━━━━━━━━━━\n\n"
+        report += f"📈 Top pagina's (clicks):\n"
+        for p in data['pages'][:10]:
+            report += f"  {p['clicks']} clicks | {p['impressions']} imp | pos {p['position']} | {p['page'].split('/')[-2] if '/b2b/' in p['page'] else p['page'][-30:]}\n"
+        report += f"\n🔍 Top queries:\n"
+        for q in data['queries'][:10]:
+            report += f"  {q['impressions']} imp | {q['clicks']} clicks | pos {q['position']} | {q['query']}\n"
+        bot.reply_to(message, report)
+        return
+
+    # Default: insights
+    bot.reply_to(message, "🔍 GSC insights analyseren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+    insights = get_gsc_insights()
+    if isinstance(insights, str):
+        bot.reply_to(message, insights)
+    elif insights:
+        report = "🔍 GSC Insights\n━━━━━━━━━━━━━━━━━━━━\n\n" + "\n".join(insights)
+        bot.reply_to(message, report)
+    else:
+        bot.reply_to(message, "✅ Geen urgente content gaps gevonden. Gebruik /gsc fetch voor ruwe data.")
+
+
+@bot.message_handler(commands=['sitemap'])
+def cmd_sitemap(message):
+    """Rebuild sitemap.xml en robots.txt."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🗺️ Sitemap rebuilden...")
+
+    save_task("sitemap_rebuild", "sitemap", "Sitemap + robots.txt rebuild")
+    count = rebuild_sitemap()
+    rebuild_robots_txt()
+    run_command(f"cd {REPO_ROOT} && git add sitemap.xml robots.txt && git commit -m 'Victor: rebuilt sitemap ({count} URLs)' && git push origin main")
+    complete_task("sitemap_rebuild")
+    bot.reply_to(message, f"✅ Sitemap gerebuild met {count} URLs + robots.txt bijgewerkt en gepusht!")
+
+
+@bot.message_handler(commands=['ogimages'])
+def cmd_ogimages(message):
+    """Genereer OG images voor alle artikelen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🖼️ OG images genereren voor alle artikelen...\nDit kan even duren.")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    save_task("og_images", "og_images", "OG images genereren")
+    generated, errors = generate_all_og_images()
+    if generated > 0:
+        # Rebuild sitemap want artikelen zijn gewijzigd
+        rebuild_sitemap()
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: generated {generated} OG images' && git push origin main")
+    complete_task("og_images")
+    bot.reply_to(message, f"🖼️ OG Images Rapport:\n  ✅ Gegenereerd: {generated}\n  ❌ Errors: {errors}\n  📦 Gepusht naar GitHub")
+
+
+@bot.message_handler(commands=['keywords'])
+def cmd_keywords(message):
+    """Toon keyword gaps en suggesties voor nieuwe artikelen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔑 Content gaps analyseren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    suggestions = suggest_next_articles(10)
+    if suggestions:
+        report = "🔑 Top Artikel Suggesties (hoogste impact eerst)\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        for i, s in enumerate(suggestions, 1):
+            report += f"{i}. {s}\n"
+        report += "\nGebruik /generate om het top-artikel te schrijven."
+        bot.reply_to(message, report)
+    else:
+        bot.reply_to(message, "✅ Goede coverage! Geen urgente content gaps gevonden.")
+
+
+@bot.message_handler(commands=['tasks'])
+def cmd_tasks(message):
+    """Toon lopende en afgebroken taken."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    tasks = load_tasks()
+    if not tasks:
+        bot.reply_to(message, "📋 Geen taken in het systeem.")
+        return
+
+    report = "📋 Taak Overzicht\n━━━━━━━━━━━━━━━━━━━━\n\n"
+    for tid, task in sorted(tasks.items(), key=lambda x: x[1].get('updated_at', ''), reverse=True)[:10]:
+        icon = {"running": "🔄", "completed": "✅", "failed": "❌"}.get(task['state'], "❓")
+        report += f"{icon} {task['description'][:50]} ({task['state']})\n   {task.get('started_at', '?')}\n"
+    bot.reply_to(message, report)
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -1268,13 +1950,14 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor Ultra — Commando's:
+    bot.reply_to(message, """Victor 6.0 Ultra — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
 /logs — Cron output
 /uptime — Website bereikbaarheid
 /articles — Artikel overzicht
+/tasks — Lopende/afgebroken taken
 
 🔍 Analyse:
 /seo — SEO gezondheidscheck
@@ -1285,22 +1968,29 @@ def cmd_help(message):
 
 🧠 Self-Learning:
 /brain — Toon geleerde kennis & patronen
-/diagnose — Self-analyse: prestaties + verbeterpunten
-/research — Web scan: competitors, SEO, affiliate links
+/diagnose — Self-analyse + verbeterpunten
+/research — Web scan: competitors, affiliate links
+
+📈 SEO & Data:
+/gsc [setup|fetch] — Google Search Console data
+/keywords — Content gaps + artikel suggesties
+/sitemap — Rebuild sitemap.xml
+/ogimages — Genereer OG images voor social sharing
 
 🚀 Actie:
 /generate — Genereer een artikel
 /improve — Verbeter het slechtste artikel
-/autofix — Auto-improve slechtste artikelen (batch)
+/autofix — Auto-improve slechtste artikelen
 /optimize — Voeg interne links toe
 /fix <probleem> — Los op (stopt niet tot het werkt)
 /write <taak> — Schrijf code of scripts
-/multifile <taak> — Complex: meerdere bestanden tegelijk
+/multifile <taak> — Complex: meerdere bestanden
 
 🎨 Design:
 /redesign <pagina> — Bouw professionele pagina
-/restyle — Alle artikelen naar dark theme + SVG logos
+/restyle — Dark theme + SVG logos (alle artikelen)
 
+📸 Stuur een foto of document — ik analyseer het met AI vision.
 Of stuur gewoon een bericht — ik denk mee en pak door.""")
 
 @bot.message_handler(content_types=['photo'])
@@ -1805,6 +2495,16 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Research scan error: {e}")
 
+            # Sitemap rebuild: elke dag om 02:00 UTC (na artikel generatie)
+            if hour == 2 and last_research != str(now.date()) + "-sitemap":
+                try:
+                    count = rebuild_sitemap()
+                    rebuild_robots_txt()
+                    run_command(f"cd {REPO_ROOT} && git add sitemap.xml robots.txt && git commit -m 'Victor: daily sitemap rebuild ({count} URLs)' && git push origin main")
+                    log(f"Daily sitemap rebuild: {count} URLs")
+                except Exception as e:
+                    log(f"Sitemap rebuild error: {e}")
+
             # Auto-improve: woensdag en zaterdag om 04:00 UTC
             if weekday in [2, 5] and hour == 4 and last_auto_improve != str(now.date()):
                 try:
@@ -1865,7 +2565,22 @@ def proactive_loop():
 def send_startup_message():
     try:
         report = generate_status_report()
-        bot.send_message(ADMIN_ID, f"🚀 Victor Ultra 6.0 online!\n\n{report}\n\n🧠 Self-learning: /brain /diagnose /research\n🏗️ Multi-file: /multifile /write\n📊 /seo /revenue /strategy /autofix")
+
+        # Check for interrupted tasks
+        interrupted = check_interrupted_tasks()
+        resume_text = ""
+        if interrupted:
+            resumed = resume_interrupted_tasks()
+            if resumed:
+                resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
+
+        bot.send_message(ADMIN_ID,
+            f"🚀 Victor 6.0 Ultra online!\n\n{report}"
+            f"\n\n🧠 Self-learning: /brain /diagnose /research"
+            f"\n📈 SEO: /gsc /keywords /sitemap /ogimages"
+            f"\n🏗️ Code: /multifile /write /fix"
+            f"\n📊 /seo /revenue /strategy /autofix"
+            f"{resume_text}")
         log("Startup message sent")
     except Exception as e:
         log(f"Startup error: {e}")

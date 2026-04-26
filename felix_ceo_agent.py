@@ -18,6 +18,8 @@ import json
 import threading
 import urllib.request
 import re
+import base64
+import tempfile
 from datetime import datetime, timedelta
 from openai import OpenAI
 
@@ -292,6 +294,49 @@ def ask_victor(user_input, history):
             return res.choices[0].message.content.strip()
         except Exception as e2:
             return f"❌ Beide LLMs onbereikbaar. OpenRouter: {e} | Ollama: {e2}"
+
+
+def ask_victor_with_image(user_text, image_base64, mime_type, history):
+    """Stuur een vraag met afbeelding naar Victor (Claude vision)."""
+    long_ctx = get_long_memory_context()
+    full_prompt = SYSTEM_PROMPT
+    if long_ctx:
+        full_prompt += f"\n\n## LONG-TERM MEMORY\n{long_ctx}"
+
+    messages = [{"role": "system", "content": full_prompt}]
+    messages += history[-14:]
+
+    # Multimodal message: tekst + afbeelding
+    content = []
+    if user_text:
+        content.append({"type": "text", "text": user_text})
+    content.append({
+        "type": "image_url",
+        "image_url": {"url": f"data:{mime_type};base64,{image_base64}"}
+    })
+    messages.append({"role": "user", "content": content})
+
+    try:
+        res = client.chat.completions.create(
+            model=MODEL, messages=messages, max_tokens=2048, temperature=0.2,
+        )
+        reply = res.choices[0].message.content.strip()
+        extract_learnings(user_text or "[afbeelding]", reply)
+        return reply
+    except Exception as e:
+        log(f"Vision error: {e}")
+        return f"❌ Kon afbeelding niet analyseren: {e}"
+
+
+def download_telegram_file(file_id):
+    """Download een bestand van Telegram en retourneer (bytes, file_path)."""
+    try:
+        file_info = bot.get_file(file_id)
+        downloaded = bot.download_file(file_info.file_path)
+        return downloaded, file_info.file_path
+    except Exception as e:
+        log(f"Download error: {e}")
+        return None, None
 
 # ── TELEGRAM BOT ─────────────────────────────────────────────────────────────
 bot = telebot.TeleBot(TOKEN, parse_mode=None)
@@ -742,6 +787,136 @@ def cmd_help(message):
                /restyle 20
 
 Of stuur gewoon een bericht — ik denk mee en pak door.""")
+
+@bot.message_handler(content_types=['photo'])
+def handle_photo(message):
+    """Verwerk foto's: download, stuur naar Claude vision, en reageer."""
+    if message.from_user.id != ADMIN_ID:
+        return
+
+    bot.send_chat_action(message.chat.id, 'typing')
+    caption = message.caption or "Wat zie je op deze afbeelding? Analyseer het en geef feedback."
+    log(f"USER PHOTO: {caption}")
+
+    # Pak de grootste versie van de foto
+    photo = message.photo[-1]  # Laatste = hoogste resolutie
+    file_data, file_path = download_telegram_file(photo.file_id)
+    if not file_data:
+        bot.reply_to(message, "❌ Kon de foto niet downloaden.")
+        return
+
+    # Base64 encode voor Claude vision
+    img_base64 = base64.b64encode(file_data).decode('utf-8')
+    mime_type = "image/jpeg"
+
+    history = load_memory()
+    history.append({"role": "user", "content": f"[Foto gestuurd] {caption}"})
+
+    reply = ask_victor_with_image(caption, img_base64, mime_type, history[:-1])
+    log(f"VICTOR (photo): {reply[:300]}")
+
+    # Als Victor commando's wil uitvoeren, doe dat
+    if "COMMANDO:" in reply:
+        pre_text = reply.split("COMMANDO:")[0].strip()
+        if pre_text:
+            bot.reply_to(message, pre_text)
+
+        commands = [p.split("\n")[0].strip().strip('`')
+                    for p in reply.split("COMMANDO:")[1:]
+                    if p.split("\n")[0].strip()][:2]
+        for cmd in commands:
+            bot.reply_to(message, f"🛠 `{cmd}`")
+            out = run_command(cmd)
+            bot.reply_to(message, f"📋 {out}")
+    else:
+        bot.reply_to(message, reply)
+
+    history.append({"role": "assistant", "content": reply})
+    save_memory(history)
+
+
+@bot.message_handler(content_types=['document'])
+def handle_document(message):
+    """Verwerk documenten: download, lees inhoud, stuur naar Victor."""
+    if message.from_user.id != ADMIN_ID:
+        return
+
+    bot.send_chat_action(message.chat.id, 'typing')
+    doc = message.document
+    caption = message.caption or f"Ik stuur je dit bestand: {doc.file_name}. Analyseer het."
+    log(f"USER DOC: {doc.file_name} ({doc.file_size} bytes) - {caption}")
+
+    file_data, file_path = download_telegram_file(doc.file_id)
+    if not file_data:
+        bot.reply_to(message, "❌ Kon het bestand niet downloaden.")
+        return
+
+    fname = doc.file_name or "bestand"
+    ext = os.path.splitext(fname)[1].lower()
+
+    # Afbeeldingen → vision
+    if ext in ['.png', '.jpg', '.jpeg', '.gif', '.webp']:
+        img_base64 = base64.b64encode(file_data).decode('utf-8')
+        mime_map = {'.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
+                    '.gif': 'image/gif', '.webp': 'image/webp'}
+        mime = mime_map.get(ext, 'image/jpeg')
+
+        history = load_memory()
+        history.append({"role": "user", "content": f"[Afbeelding: {fname}] {caption}"})
+        reply = ask_victor_with_image(caption, img_base64, mime, history[:-1])
+        bot.reply_to(message, reply)
+        history.append({"role": "assistant", "content": reply})
+        save_memory(history)
+        return
+
+    # Tekstbestanden → lees inhoud en stuur naar Victor
+    text_content = None
+    if ext in ['.txt', '.py', '.js', '.html', '.css', '.json', '.md', '.csv', '.xml',
+               '.yaml', '.yml', '.sh', '.bash', '.env', '.conf', '.ini', '.log', '.sql']:
+        try:
+            text_content = file_data.decode('utf-8', errors='replace')[:8000]
+        except:
+            text_content = None
+
+    # Sla bestand op in /root/felix_hq/uploads/
+    upload_dir = "/root/felix_hq/uploads"
+    os.makedirs(upload_dir, exist_ok=True)
+    save_path = os.path.join(upload_dir, fname)
+    with open(save_path, 'wb') as f:
+        f.write(file_data)
+
+    history = load_memory()
+
+    if text_content:
+        user_msg = f"[Bestand: {fname}]\n{caption}\n\n--- INHOUD ---\n{text_content}"
+    else:
+        user_msg = f"[Bestand: {fname}, {doc.file_size} bytes, opgeslagen als {save_path}]\n{caption}"
+
+    history.append({"role": "user", "content": user_msg})
+    bot.reply_to(message, f"📁 {fname} ontvangen ({doc.file_size} bytes). Ik analyseer het...")
+
+    reply = ask_victor(user_msg, history[:-1])
+    log(f"VICTOR (doc): {reply[:300]}")
+
+    # Voer commando's uit als Victor dat wil
+    if "COMMANDO:" in reply:
+        pre_text = reply.split("COMMANDO:")[0].strip()
+        if pre_text:
+            bot.reply_to(message, pre_text)
+
+        commands = [p.split("\n")[0].strip().strip('`')
+                    for p in reply.split("COMMANDO:")[1:]
+                    if p.split("\n")[0].strip()][:2]
+        for cmd in commands:
+            bot.reply_to(message, f"🛠 `{cmd}`")
+            out = run_command(cmd)
+            bot.reply_to(message, f"📋 {out}")
+    else:
+        bot.reply_to(message, reply)
+
+    history.append({"role": "assistant", "content": reply})
+    save_memory(history)
+
 
 @bot.message_handler(func=lambda m: True)
 def handle_message(message):

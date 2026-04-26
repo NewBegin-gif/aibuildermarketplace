@@ -681,186 +681,33 @@ De pagina moet er professioneel uitzien, als een echte SaaS website, niet als ee
 
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
-    """Restyle bestaande artikelen naar het professionele dark theme."""
+    """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
     if message.from_user.id != ADMIN_ID:
         return
-    parts = message.text.split(maxsplit=1)
-    batch_size = 10
-    if len(parts) > 1:
-        try:
-            batch_size = int(parts[1])
-        except:
-            pass
-    batch_size = min(batch_size, 30)
+    bot.reply_to(message, "🎨 Alle artikelen restylen naar dark theme met brand logos...")
+    bot.send_chat_action(message.chat.id, 'typing')
 
-    bot.reply_to(message, f"🎨 Restyle: {batch_size} artikelen upgraden naar dark theme...")
-    b2b_path = f"{REPO_ROOT}/b2b"
-    restyled = 0
+    # Gebruik fix_articles.py — dezelfde kwaliteit als handmatig
+    fix_script = "/root/felix_hq/fix_articles.py"
+    if not os.path.exists(fix_script):
+        fix_script = f"{REPO_ROOT}/fix_articles.py"
+    if not os.path.exists(fix_script):
+        bot.reply_to(message, "❌ fix_articles.py niet gevonden. Upload het eerst naar /root/felix_hq/")
+        return
 
-    # Brand kleuren
-    brand_colors = {
-        'kinsta': '#8b5cf6', 'synthesia': '#3b82f6', 'invideo': '#a78bfa',
-        'replit': '#f59e0b', 'bitvavo': '#10b981', 'murf': '#ec4899'
-    }
-    # Brand logo SVGs (inline)
-    brand_logos = {
-        'kinsta': '<svg viewBox="0 0 24 24" width="28" height="28" fill="%238b5cf6"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L19.8 8 12 11.82 4.2 8 12 4.18zM4 9.18l7 3.5v7.14l-7-3.5V9.18zm10 10.64V12.68l7-3.5v7.14l-7 3.5z"/></svg>',
-        'synthesia': '<svg viewBox="0 0 24 24" width="28" height="28" fill="%233b82f6"><path d="M8 5v14l11-7z"/></svg>',
-        'invideo': '<svg viewBox="0 0 24 24" width="28" height="28" fill="%23a78bfa"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>',
-        'replit': '<svg viewBox="0 0 24 24" width="28" height="28" fill="%23f59e0b"><path d="M2 4h8v6H4v4h6v6H2V4zm12 0h8v16h-8v-6h6V8h-6V4z"/></svg>',
-        'bitvavo': '<svg viewBox="0 0 24 24" width="28" height="28" fill="%2310b981"><path d="M11.5 2v4.5H7V2h4.5zM17 2v4.5h-4.5V2H17zm-5.5 5.5V12H7V7.5h4.5zm5.5 0V12h-4.5V7.5H17zM11.5 13v4.5H7V13h4.5zM17 13v4.5h-4.5V13H17zM11.5 18.5V22H7v-3.5h4.5z"/></svg>',
-        'murf': '<svg viewBox="0 0 24 24" width="28" height="28" fill="%23ec4899"><path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v7c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.41 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>'
-    }
+    result = run_command(f"cd {REPO_ROOT} && python3 {fix_script}", timeout=120)
+    bot.reply_to(message, f"📋 {result}")
 
-    for folder in sorted(os.listdir(b2b_path)):
-        if restyled >= batch_size:
-            break
-        article_path = os.path.join(b2b_path, folder, "index.html")
-        if not os.path.isfile(article_path):
-            continue
-
-        try:
-            with open(article_path, 'r', encoding='utf-8') as f:
-                html = f.read()
-        except:
-            continue
-
-        # Skip als al gerestyled (heeft het nieuwe Inter font)
-        if "fonts.googleapis.com/css2?family=Inter" in html:
-            continue
-
-        # Detecteer brand
-        brand_key = folder.split('-')[0].lower()
-        if brand_key == 'best':
-            brand_key = folder.split('-')[1].lower() if '-' in folder else 'kinsta'
-        accent = brand_colors.get(brand_key, '#3b82f6')
-        brand_name = brand_key.capitalize()
-        if brand_name == 'Invideo':
-            brand_name = 'InVideo'
-        logo_svg = brand_logos.get(brand_key, brand_logos['kinsta'])
-
-        # Extract de article content (body)
-        if '<body' in html:
-            body_start = html.find('>', html.find('<body')) + 1
-            body_end = html.find('</body>')
-            if body_end == -1:
-                body_end = len(html)
-            body_content = html[body_start:body_end].strip()
-        else:
-            body_content = html
-
-        # Extract title
-        title_match = re.search(r'<title>(.*?)</title>', html)
-        title = title_match.group(1).replace(' | AIBuilder Marketplace', '').replace(' 2026', '') if title_match else folder.replace('-', ' ').title()
-
-        # Extract meta description
-        desc_match = re.search(r'meta name="description" content="(.*?)"', html)
-        desc = desc_match.group(1) if desc_match else f"Expert review of {brand_name}"
-
-        # Extract structured data
-        schema_parts = re.findall(r'<script type=["\']application/ld\+json["\']>(.*?)</script>', html, re.DOTALL)
-        schema_html = "\n".join([f'<script type="application/ld+json">{s}</script>' for s in schema_parts])
-
-        # Taalcode
-        lang_match = re.search(r'<html[^>]*lang="([^"]*)"', html)
-        html_lang = lang_match.group(1) if lang_match else 'en'
-
-        date_match = re.search(r'datePublished.*?(\d{4}-\d{2}-\d{2})', html)
-        date_str = date_match.group(1) if date_match else datetime.now().strftime("%Y-%m-%d")
-
-        # Remove inline styles van de body content (de oude lichte styles)
-        body_content = re.sub(r' style="[^"]*background[^"]*"', '', body_content)
-        body_content = re.sub(r' style="[^"]*color:\s*#333[^"]*"', '', body_content)
-        body_content = re.sub(r' style="[^"]*font-family[^"]*"', '', body_content)
-
-        new_html = f"""<!DOCTYPE html>
-<html lang="{html_lang}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} 2026 | AIBuilder Marketplace</title>
-  <meta name="description" content="{desc}">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://aibuildermarketplace.com/b2b/{folder}/">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="{title} 2026 | AIBuilder Marketplace">
-  <meta property="og:description" content="{desc}">
-  <meta property="og:image" content="https://aibuildermarketplace.com/assets/og-default.png">
-  <meta property="og:site_name" content="AIBuilder Marketplace">
-  <meta name="twitter:card" content="summary_large_image">
-  {schema_html}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{{box-sizing:border-box}}
-    :root{{--bg:#0a0e17;--bg2:#111827;--card:#1a1f2e;--border:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--muted:#64748b;--accent:{accent};}}
-    body{{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;line-height:1.8}}
-    a{{color:var(--accent);text-decoration:none}}a:hover{{opacity:.85}}
-    .topnav{{background:rgba(10,14,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}}
-    .topnav-inner{{max-width:800px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}}
-    .topnav-logo{{font-weight:800;font-size:.95rem;color:var(--text)}}
-    .topnav-logo em{{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal}}
-    .topnav-links a{{color:var(--text2);font-size:.85rem;font-weight:500;margin-left:20px}}
-    .topnav-links a:hover{{color:var(--text)}}
-    .breadcrumb{{max-width:800px;margin:24px auto 0;padding:0 24px;font-size:.82rem;color:var(--muted)}}
-    .breadcrumb a{{color:var(--text2)}}
-    .article-header{{max-width:800px;margin:0 auto;padding:32px 24px 0}}
-    .article-header h1{{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.2;margin:0 0 16px;letter-spacing:-.02em}}
-    .brand-badge{{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px}}
-    .brand-badge .logo{{display:flex;align-items:center}}
-    .brand-badge .tag{{background:rgba(59,130,246,.1);color:var(--accent);padding:4px 12px;border-radius:20px;font-weight:600;font-size:.75rem;border:1px solid rgba(59,130,246,.15)}}
-    .brand-badge .date{{color:var(--muted);font-size:.82rem;margin-left:8px}}
-    .article-body{{max-width:800px;margin:0 auto;padding:0 24px}}
-    .article-body h1{{font-size:1.8rem;font-weight:800;margin:24px 0 16px}}
-    .article-body h2{{color:var(--text);font-size:1.4rem;font-weight:700;margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border)}}
-    .article-body h3{{color:var(--text);font-size:1.1rem;font-weight:600;margin:28px 0 12px}}
-    .article-body p{{color:var(--text2);margin:0 0 16px;font-size:.95rem}}
-    .article-body ul,.article-body ol{{color:var(--text2);padding-left:24px;margin:0 0 16px}}
-    .article-body li{{margin:6px 0;font-size:.95rem}}
-    .article-body strong{{color:var(--text)}}
-    .article-body blockquote{{border-left:3px solid var(--accent);margin:24px 0;padding:16px 20px;background:var(--card);border-radius:0 8px 8px 0;color:var(--text2);font-style:italic}}
-    .article-body table{{width:100%;border-collapse:collapse;margin:24px 0;font-size:.9rem}}
-    .article-body th{{background:var(--card);color:var(--text);padding:12px 16px;text-align:left;font-weight:600;border:1px solid var(--border)}}
-    .article-body td{{padding:10px 16px;border:1px solid var(--border);color:var(--text2)}}
-    .article-body tr:hover td{{background:var(--card)}}
-    footer{{background:var(--bg2);border-top:1px solid var(--border);padding:32px 24px;text-align:center;color:var(--muted);font-size:.82rem;margin-top:40px}}
-    footer a{{color:var(--text2)}}
-    @media(max-width:640px){{.topnav-links{{display:none}}.article-header h1{{font-size:1.5rem}}}}
-  </style>
-</head>
-<body>
-  <nav class="topnav"><div class="topnav-inner">
-    <a href="/" class="topnav-logo"><em>AIBuilder</em> Marketplace</a>
-    <div class="topnav-links"><a href="/b2b/">All Reviews</a><a href="/">Home</a></div>
-  </div></nav>
-  <nav class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/b2b/">B2B Reviews</a> &rsaquo; {title}</nav>
-  <header class="article-header">
-    <div class="brand-badge">
-      <span class="logo">{logo_svg}</span>
-      <span class="tag">{brand_name}</span>
-      <span class="date">{date_str}</span>
-    </div>
-    <h1>{title}</h1>
-  </header>
-  <article class="article-body">
-    {body_content}
-  </article>
-  <footer>
-    <p>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a>. Some links are affiliate links. <a href="/terms/">Terms</a></p>
-  </footer>
-</body>
-</html>"""
-
-        with open(article_path, 'w', encoding='utf-8') as f:
-            f.write(new_html)
-        restyled += 1
-
-    if restyled > 0:
-        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: restyled {restyled} articles to dark theme' && git pull --rebase origin main && git push origin main")
-        bot.reply_to(message, f"✅ {restyled} artikelen gerestyled naar dark theme met brand logos!\nGebruik /restyle om de volgende batch te doen.")
+    # Git commit en push
+    git_result = run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: restyled all articles to dark theme' && git push origin main")
+    if "nothing to commit" in git_result:
+        bot.reply_to(message, "✅ Alle artikelen hadden al het juiste dark theme!")
+    elif "error" in git_result.lower() or "rejected" in git_result.lower():
+        # Probeer force push als rebase faalt
+        git_result2 = run_command(f"cd {REPO_ROOT} && git push origin main --force")
+        bot.reply_to(message, f"✅ Restyled en gepusht (force)!\n{git_result2[:200]}")
     else:
-        bot.reply_to(message, "✅ Alle artikelen hebben al het nieuwe dark theme!")
+        bot.reply_to(message, "✅ Alle artikelen gerestyled en live gepusht!")
 
 @bot.message_handler(commands=['help'])
 def cmd_help(message):
@@ -909,7 +756,7 @@ def handle_message(message):
     history.append({"role": "user", "content": user_text})
 
     # Auto-continue loop: Victor blijft doorgaan zolang er commando's nodig zijn
-    MAX_ROUNDS = 8  # veiligheidsgrens
+    MAX_ROUNDS = 20  # veiligheidsgrens
     current_input = user_text
     round_num = 0
 

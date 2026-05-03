@@ -2620,7 +2620,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 6.0 Ultra — Commando's:
+    bot.reply_to(message, """Victor 7.0 Growth — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -2880,7 +2880,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 6.0 Ultra — Status Report
+    return f"""📊 Victor 7.0 Growth — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -3265,7 +3265,7 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 6.0 Ultra online!\n\n{report}"
+            f"🚀 Victor 7.0 Growth online!\n\n{report}"
             f"\n\n🧠 Self-learning: /brain /diagnose /research"
             f"\n📈 SEO: /gsc /keywords /sitemap /ogimages"
             f"\n🏗️ Code: /multifile /write /fix"
@@ -3277,7 +3277,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 6.0 Ultra gestart — Model: {MODEL}")
+    log(f"Victor 7.0 Growth gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

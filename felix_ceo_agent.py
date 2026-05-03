@@ -1103,7 +1103,607 @@ def suggest_next_articles(n=5):
     return suggestions
 
 
-# ── MODULE 6: AUTONOMOUS GROWTH ENGINE ─────────────────────────────────────
+# ── MODULE 6: COMPETITOR DOMINATION ENGINE ─────────────────────────────────
+COMPETITORS_FILE = "/root/felix_hq/victor_competitors.json"
+CLUSTERS_FILE = "/root/felix_hq/victor_clusters.json"
+BATTLES_FILE = "/root/felix_hq/victor_battles.json"
+
+def load_competitor_data():
+    if os.path.exists(COMPETITORS_FILE):
+        try:
+            return json.load(open(COMPETITORS_FILE))
+        except:
+            pass
+    return {"sites": {}, "their_content": [], "our_wins": [], "last_crawl": None}
+
+def save_competitor_data(data):
+    data["their_content"] = data.get("their_content", [])[-200:]
+    data["our_wins"] = data.get("our_wins", [])[-50:]
+    with open(COMPETITORS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_clusters():
+    if os.path.exists(CLUSTERS_FILE):
+        try:
+            return json.load(open(CLUSTERS_FILE))
+        except:
+            pass
+    return {"pillars": {}, "clusters": {}, "internal_links_map": {}}
+
+def save_clusters(data):
+    with open(CLUSTERS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_battles():
+    if os.path.exists(BATTLES_FILE):
+        try:
+            return json.load(open(BATTLES_FILE))
+        except:
+            pass
+    return {"active": [], "won": [], "lost": []}
+
+def save_battles(data):
+    data["won"] = data.get("won", [])[-50:]
+    data["lost"] = data.get("lost", [])[-50:]
+    with open(BATTLES_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+# Competitor sites per niche
+COMPETITOR_SITES = {
+    'kinsta': [
+        'https://www.elegantthemes.com/blog/?s=kinsta',
+        'https://www.websiteplanet.com/?s=kinsta',
+    ],
+    'synthesia': [
+        'https://www.elegantthemes.com/blog/?s=synthesia',
+        'https://zapier.com/blog/?q=synthesia',
+    ],
+    'invideo': [
+        'https://zapier.com/blog/?q=invideo',
+    ],
+    'replit': [
+        'https://dev.to/search?q=replit',
+    ],
+    'bitvavo': [
+        'https://www.bitcoinmagazine.nl/?s=bitvavo',
+    ],
+    'murf': [
+        'https://zapier.com/blog/?q=murf+ai',
+    ],
+}
+
+
+def crawl_competitor_page(url, timeout=15):
+    """Crawl een pagina en extract titel, headings, en woordcount."""
+    try:
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        })
+        resp = urllib.request.urlopen(req, timeout=timeout)
+        html = resp.read().decode('utf-8', errors='replace')
+
+        # Extract titles van artikelen op de pagina
+        articles = []
+        # Zoek naar links met titels
+        link_pattern = re.findall(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>([^<]{15,120})</a>', html)
+        for href, title in link_pattern:
+            title = title.strip()
+            # Filter op relevante links (skip navigatie, footers etc)
+            skip_words = ['menu', 'nav', 'footer', 'cookie', 'privacy', 'login', 'sign', 'cart']
+            if any(w in title.lower() for w in skip_words):
+                continue
+            if any(w in title.lower() for w in ['review', 'vs', 'alternative', 'pricing', 'guide', 'how', 'best', 'top']):
+                articles.append({
+                    'title': re.sub(r'<[^>]+>', '', title).strip(),
+                    'url': href if href.startswith('http') else '',
+                    'type': 'review' if 'review' in title.lower()
+                            else 'comparison' if 'vs' in title.lower()
+                            else 'alternative' if 'alternative' in title.lower()
+                            else 'guide'
+                })
+
+        return articles[:20]
+    except Exception as e:
+        log(f"Crawl error {url}: {e}")
+        return []
+
+
+def full_competitor_scan():
+    """Scan alle competitor sites en verzamel hun content."""
+    comp_data = load_competitor_data()
+    ts = datetime.now().strftime('%Y-%m-%d %H:%M')
+    all_findings = []
+
+    for brand, urls in COMPETITOR_SITES.items():
+        brand_articles = []
+        for url in urls:
+            articles = crawl_competitor_page(url)
+            for art in articles:
+                art['brand'] = brand
+                art['source_url'] = url
+                art['found_at'] = ts
+                brand_articles.append(art)
+
+        if brand_articles:
+            comp_data["sites"][brand] = {
+                "last_scan": ts,
+                "article_count": len(brand_articles),
+                "types": {}
+            }
+            for art in brand_articles:
+                t = art.get('type', 'other')
+                comp_data["sites"][brand]["types"][t] = comp_data["sites"][brand]["types"].get(t, 0) + 1
+
+            all_findings.extend(brand_articles)
+
+    # Sla nieuwe content op (vermijd duplicaten)
+    existing_titles = {c.get('title', '').lower() for c in comp_data.get("their_content", [])}
+    new_content = [a for a in all_findings if a.get('title', '').lower() not in existing_titles]
+    comp_data["their_content"].extend(new_content)
+    comp_data["last_crawl"] = ts
+
+    save_competitor_data(comp_data)
+    return new_content
+
+
+def find_skyscraper_targets():
+    """Vind competitor artikelen waar wij een beter artikel voor kunnen schrijven."""
+    comp_data = load_competitor_data()
+    b2b_path = f"{REPO_ROOT}/b2b"
+    our_slugs = set()
+    if os.path.isdir(b2b_path):
+        our_slugs = {f.lower() for f in os.listdir(b2b_path)}
+
+    targets = []
+    for article in comp_data.get("their_content", []):
+        title = article.get('title', '').lower()
+        brand = article.get('brand', '')
+
+        # Maak een slug van hun titel
+        potential_slug = re.sub(r'[^a-z0-9\s-]', '', title).strip().replace(' ', '-')[:60]
+
+        # Check of wij al iets vergelijkbaars hebben
+        has_similar = False
+        title_words = set(title.split())
+        for slug in our_slugs:
+            slug_words = set(slug.split('-'))
+            overlap = len(title_words & slug_words)
+            if overlap >= 3:
+                has_similar = True
+                break
+
+        if not has_similar:
+            # Prioriteit op basis van type
+            priority = {'comparison': 90, 'alternative': 85, 'review': 70, 'guide': 60}
+            targets.append({
+                'competitor_title': article.get('title', ''),
+                'brand': brand,
+                'type': article.get('type', 'guide'),
+                'priority': priority.get(article.get('type', 'guide'), 50),
+                'suggested_slug': f"{brand}-{potential_slug}"[:70],
+                'source': article.get('url', '')
+            })
+
+    targets.sort(key=lambda x: -x['priority'])
+    return targets[:15]
+
+
+def write_skyscraper_article(target):
+    """Schrijf een artikel dat BETER is dan de concurrent."""
+    brand = target['brand'].capitalize()
+    if brand.lower() == 'invideo':
+        brand = 'InVideo'
+    comp_title = target['competitor_title']
+    article_type = target['type']
+    slug = target['suggested_slug']
+
+    # Bepaal affiliate link
+    aff_link = VAULT.get(brand, VAULT.get(brand.capitalize(), ''))
+
+    type_instructions = {
+        'comparison': f"""Schrijf een UITGEBREID vergelijkingsartikel. Structuur:
+- Intro: welk probleem lossen beide tools op?
+- Feature-voor-feature vergelijkingstabel (min 10 features)
+- Pricing vergelijking met concrete bedragen
+- Echte use cases: wanneer kies je tool A vs B?
+- Performance/snelheid vergelijking als relevant
+- Pros & cons per tool
+- Eindoordeel met duidelijke aanbeveling
+- FAQ (5 vragen)""",
+        'alternative': f"""Schrijf een UITGEBREID alternatieven-artikel. Structuur:
+- Intro: waarom zoeken mensen alternatieven?
+- Top 5-7 alternatieven met per alternatief: features, pricing, pros/cons
+- Vergelijkingstabel
+- Voor wie is welk alternatief het best?
+- Onze aanbeveling
+- FAQ (5 vragen)""",
+        'review': f"""Schrijf een DIEPGAANDE review. Structuur:
+- Intro: wat is {brand} en voor wie?
+- Hands-on ervaring: wat viel op?
+- Alle features in detail (met concrete voorbeelden)
+- Pricing breakdown per tier
+- Performance tests/resultaten
+- Pros & cons (eerlijk)
+- Vergelijking met 2-3 concurrenten
+- Conclusie: is het de investering waard?
+- FAQ (5 vragen)""",
+        'guide': f"""Schrijf een COMPLETE how-to guide. Structuur:
+- Intro: wat ga je leren?
+- Stap-voor-stap uitleg met concrete voorbeelden
+- Tips en best practices
+- Veelgemaakte fouten
+- Geavanceerde technieken
+- Conclusie
+- FAQ (5 vragen)"""
+    }
+
+    prompt = f"""SKYSCRAPER OPDRACHT: Schrijf een artikel dat BETER is dan dit competitor artikel: "{comp_title}"
+
+Brand: {brand}
+Type: {article_type}
+Affiliate link: {aff_link}
+
+{type_instructions.get(article_type, type_instructions['guide'])}
+
+REGELS:
+- Minimaal 2500 woorden
+- Meer detail, meer data, meer voorbeelden dan de concurrent
+- Concrete cijfers en pricing (geen vage claims)
+- Schrijf als een ervaren founder, niet als AI
+- HTML content alleen (geen <html>/<head>/<body> tags)
+- Interne links naar /b2b/ waar relevant
+- rel="nofollow sponsored" op affiliate links"""
+
+    try:
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=6000
+        )
+        content = res.choices[0].message.content.replace("```html", "").replace("```", "").strip()
+
+        # Maak het artikel aan
+        article_dir = f"{REPO_ROOT}/b2b/{slug}"
+        article_path = f"{article_dir}/index.html"
+        os.makedirs(article_dir, exist_ok=True)
+
+        with open(article_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+
+        # Restyle met fix_articles.py
+        fix_script = "/root/felix_hq/fix_articles.py"
+        if os.path.exists(fix_script):
+            run_command(f"cd {REPO_ROOT} && python3 {fix_script}", timeout=120)
+
+        return True, slug
+    except Exception as e:
+        return False, str(e)
+
+
+def build_topic_clusters():
+    """Bouw topical authority clusters: pillar pages + supporting articles."""
+    clusters = load_clusters()
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return clusters
+
+    all_articles = [f for f in os.listdir(b2b_path) if os.path.isdir(os.path.join(b2b_path, f))]
+
+    # Definieer pillar topics per brand
+    pillar_topics = {
+        'kinsta': {
+            'pillar': 'kinsta-review',
+            'cluster_keywords': ['hosting', 'wordpress', 'performance', 'pricing', 'vs', 'migration', 'speed', 'cdn', 'staging'],
+            'display': 'Kinsta Web Hosting'
+        },
+        'synthesia': {
+            'pillar': 'synthesia-review',
+            'cluster_keywords': ['ai-video', 'avatar', 'text-to-video', 'vs', 'alternative', 'pricing', 'template', 'enterprise'],
+            'display': 'Synthesia AI Video'
+        },
+        'invideo': {
+            'pillar': 'invideo-review',
+            'cluster_keywords': ['video-editor', 'template', 'vs', 'alternative', 'pricing', 'tutorial', 'youtube'],
+            'display': 'InVideo Video Creation'
+        },
+        'replit': {
+            'pillar': 'replit-review',
+            'cluster_keywords': ['coding', 'ide', 'vs', 'alternative', 'ai', 'deploy', 'collaboration', 'pricing'],
+            'display': 'Replit Online IDE'
+        },
+        'bitvavo': {
+            'pillar': 'bitvavo-review',
+            'cluster_keywords': ['crypto', 'trading', 'vs', 'fees', 'alternative', 'bitcoin', 'staking', 'api'],
+            'display': 'Bitvavo Crypto Trading'
+        },
+        'murf': {
+            'pillar': 'murf-review',
+            'cluster_keywords': ['voice', 'text-to-speech', 'vs', 'alternative', 'pricing', 'ai-voice', 'voiceover'],
+            'display': 'Murf AI Voice'
+        },
+    }
+
+    for brand, config in pillar_topics.items():
+        # Vind alle artikelen in dit cluster
+        brand_articles = [a for a in all_articles if a.lower().startswith(brand)]
+        cluster_articles = []
+
+        for article in brand_articles:
+            relevance = sum(1 for kw in config['cluster_keywords'] if kw in article.lower())
+            cluster_articles.append({
+                'slug': article,
+                'relevance': relevance,
+                'is_pillar': article == config['pillar']
+            })
+
+        cluster_articles.sort(key=lambda x: (-x['is_pillar'], -x['relevance']))
+
+        clusters["pillars"][brand] = {
+            'pillar_slug': config['pillar'],
+            'display_name': config['display'],
+            'total_articles': len(brand_articles),
+            'cluster_size': len(cluster_articles),
+            'articles': [a['slug'] for a in cluster_articles]
+        }
+
+        # Bouw internal links map: elk artikel linkt naar pillar + 2-3 gerelateerde
+        for article in cluster_articles:
+            slug = article['slug']
+            links_to = []
+            # Link naar pillar (als het niet de pillar zelf is)
+            if not article['is_pillar'] and config['pillar'] in [a.lower() for a in all_articles]:
+                links_to.append(config['pillar'])
+            # Link naar 2-3 gerelateerde artikelen
+            related = [a['slug'] for a in cluster_articles
+                       if a['slug'] != slug and not a['is_pillar']][:3]
+            links_to.extend(related)
+            clusters["internal_links_map"][slug] = links_to
+
+    save_clusters(clusters)
+    return clusters
+
+
+def apply_cluster_internal_links():
+    """Voeg strategische interne links toe op basis van topic clusters."""
+    clusters = load_clusters()
+    links_map = clusters.get("internal_links_map", {})
+    b2b_path = f"{REPO_ROOT}/b2b"
+    fixed = 0
+
+    for slug, link_targets in links_map.items():
+        article_path = os.path.join(b2b_path, slug, "index.html")
+        if not os.path.isfile(article_path):
+            continue
+
+        try:
+            with open(article_path, 'r', encoding='utf-8') as f:
+                html = f.read()
+
+            # Skip als er al cluster links zijn
+            if 'cluster-links' in html:
+                continue
+
+            # Bouw links block
+            links_html = ""
+            for target in link_targets[:4]:
+                display = target.replace('-', ' ').title()
+                links_html += f'<li><a href="/b2b/{target}/" style="color:#3b82f6;text-decoration:none;transition:color 0.2s">{display}</a></li>\n'
+
+            if not links_html:
+                continue
+
+            # Bepaal pillar info
+            brand = slug.split('-')[0].lower()
+            pillar_info = clusters.get("pillars", {}).get(brand, {})
+            cluster_name = pillar_info.get('display_name', brand.capitalize())
+
+            cluster_block = f"""<div id="cluster-links" style="margin-top:30px;padding:24px;background:linear-gradient(135deg,#1a1f2e,#1e293b);border:1px solid #2d3748;border-radius:12px;">
+<h4 style="color:#e6edf3;margin-top:0;font-size:16px;">🔗 Meer over {cluster_name}:</h4>
+<ul style="list-style:none;padding:0;margin:0;">{links_html}</ul>
+</div>"""
+
+            if '</body>' in html:
+                html = html.replace('</body>', f"{cluster_block}\n</body>")
+                with open(article_path, 'w', encoding='utf-8') as f:
+                    f.write(html)
+                fixed += 1
+        except:
+            pass
+
+    return fixed
+
+
+def update_ranking_battles():
+    """Track ranking battles: vergelijk onze positie vs concurrenten per keyword."""
+    if not os.path.exists(GSC_DATA_FILE):
+        return []
+
+    try:
+        with open(GSC_DATA_FILE) as f:
+            gsc = json.load(f)
+    except:
+        return []
+
+    battles = load_battles()
+    ts = datetime.now().strftime('%Y-%m-%d')
+    updates = []
+
+    for page in gsc.get('pages', []):
+        slug = page['page'].split('/b2b/')[-1].rstrip('/') if '/b2b/' in page['page'] else ''
+        if not slug:
+            continue
+
+        position = page.get('position', 99)
+        clicks = page.get('clicks', 0)
+        impressions = page.get('impressions', 0)
+
+        # Check of er al een battle is voor dit slug
+        existing = None
+        for b in battles.get("active", []):
+            if b.get("slug") == slug:
+                existing = b
+                break
+
+        if existing:
+            old_pos = existing.get("best_position", 99)
+            existing["current_position"] = position
+            existing["clicks"] = clicks
+            existing["impressions"] = impressions
+            existing["last_check"] = ts
+
+            # Track positie history
+            existing.setdefault("position_history", []).append({"date": ts, "pos": position})
+            existing["position_history"] = existing["position_history"][-30:]
+
+            if position < old_pos:
+                existing["best_position"] = position
+                if position <= 3 and old_pos > 3:
+                    # TOP 3! Dit is een WIN
+                    existing["status"] = "winning"
+                    battles["won"].append({
+                        "slug": slug, "position": position,
+                        "from": old_pos, "date": ts
+                    })
+                    updates.append(f"🏆 {slug} in TOP {position}! (was #{old_pos})")
+                elif position <= 10 and old_pos > 10:
+                    updates.append(f"📈 {slug} op PAGINA 1! Positie {position} (was #{old_pos})")
+
+            elif position > old_pos + 5:
+                existing["status"] = "declining"
+                updates.append(f"📉 {slug} gedaald: #{position} (was #{old_pos}) — actie nodig")
+        else:
+            # Nieuwe battle
+            battles["active"].append({
+                "slug": slug,
+                "current_position": position,
+                "best_position": position,
+                "start_position": position,
+                "clicks": clicks,
+                "impressions": impressions,
+                "started_at": ts,
+                "last_check": ts,
+                "status": "tracking",
+                "position_history": [{"date": ts, "pos": position}]
+            })
+
+    # Beperk actieve battles tot top 100
+    battles["active"] = sorted(battles["active"],
+        key=lambda x: x.get("impressions", 0), reverse=True)[:100]
+
+    save_battles(battles)
+    return updates
+
+
+def generate_competitor_report():
+    """Volledig competitor intelligence rapport."""
+    comp_data = load_competitor_data()
+    battles = load_battles()
+    clusters = load_clusters()
+
+    report = "🕵️ Competitor Intelligence Report\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Laatste crawl
+    report += f"🕐 Laatste scan: {comp_data.get('last_crawl', 'nooit')}\n\n"
+
+    # Per brand: wat hebben concurrenten?
+    if comp_data.get("sites"):
+        report += "📊 Competitor Content per Brand:\n"
+        for brand, info in comp_data["sites"].items():
+            types = info.get("types", {})
+            type_str = ", ".join(f"{v}x {k}" for k, v in types.items())
+            report += f"  {brand.capitalize()}: {info.get('article_count', 0)} artikelen ({type_str})\n"
+        report += "\n"
+
+    # Skyscraper targets
+    targets = find_skyscraper_targets()
+    if targets:
+        report += f"🎯 Skyscraper Targets ({len(targets)}):\n"
+        for t in targets[:5]:
+            report += f"  ⚔️ [{t['type']}] {t['competitor_title'][:60]}\n"
+        report += "\n"
+
+    # Ranking battles
+    winning = [b for b in battles.get("active", []) if b.get("status") == "winning"]
+    declining = [b for b in battles.get("active", []) if b.get("status") == "declining"]
+    top10 = [b for b in battles.get("active", []) if b.get("current_position", 99) <= 10]
+
+    report += f"⚔️ Ranking Battles:\n"
+    report += f"  Pagina 1: {len(top10)} artikelen\n"
+    report += f"  Stijgend: {len(winning)}\n"
+    report += f"  Dalend: {len(declining)}\n"
+    if battles.get("won"):
+        report += f"  🏆 Totaal gewonnen: {len(battles['won'])}\n"
+    report += "\n"
+
+    # Topic clusters
+    if clusters.get("pillars"):
+        report += "🏗️ Topic Clusters:\n"
+        for brand, info in clusters["pillars"].items():
+            report += f"  {info['display_name']}: {info['total_articles']} artikelen\n"
+
+    return report
+
+
+def autonomous_competitor_cycle():
+    """Dagelijkse autonome competitor cyclus."""
+    actions = []
+    ts = datetime.now().strftime('%Y-%m-%d')
+
+    # 1. Crawl competitors
+    new_content = full_competitor_scan()
+    if new_content:
+        actions.append(f"Competitor scan: {len(new_content)} nieuwe artikelen gevonden")
+
+    # 2. Update topic clusters
+    clusters = build_topic_clusters()
+    pillar_count = len(clusters.get("pillars", {}))
+    actions.append(f"Topic clusters bijgewerkt: {pillar_count} pillars")
+
+    # 3. Update ranking battles (als GSC data er is)
+    battle_updates = update_ranking_battles()
+    actions.extend(battle_updates)
+
+    # 4. Vind skyscraper targets
+    targets = find_skyscraper_targets()
+    if targets:
+        actions.append(f"Skyscraper targets: {len(targets)} gevonden")
+
+        # Auto-write het #1 target (1x per week max)
+        growth = load_growth_data()
+        last_skyscraper = None
+        for a in growth.get("growth_actions", []):
+            if "skyscraper" in str(a).lower():
+                last_skyscraper = a.get("time", "")
+
+        days_since = 999
+        if last_skyscraper:
+            try:
+                last_date = datetime.strptime(last_skyscraper[:10], '%Y-%m-%d')
+                days_since = (datetime.now() - last_date).days
+            except:
+                pass
+
+        if days_since >= 7 and targets:
+            top_target = targets[0]
+            ok, result = write_skyscraper_article(top_target)
+            if ok:
+                run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor Domination: skyscraper {result}' && git push origin main")
+                actions.append(f"🔥 Skyscraper geschreven: {result} (beter dan: {top_target['competitor_title'][:40]})")
+                growth["growth_actions"].append({"time": ts, "type": "skyscraper", "slug": result})
+                save_growth_data(growth)
+
+    # 5. Apply cluster internal links (1x per week)
+    if datetime.now().weekday() == 3:  # Donderdag
+        fixed = apply_cluster_internal_links()
+        if fixed > 0:
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: cluster internal links ({fixed} articles)' && git push origin main")
+            actions.append(f"Cluster links: {fixed} artikelen bijgewerkt")
+
+    return actions
+
+
+# ── MODULE 7: AUTONOMOUS GROWTH ENGINE ─────────────────────────────────────
 GROWTH_FILE = "/root/felix_hq/victor_growth.json"
 AB_TESTS_FILE = "/root/felix_hq/victor_ab_tests.json"
 
@@ -2368,6 +2968,162 @@ def cmd_autofix(message):
         bot.reply_to(message, f"❌ Auto-improve error: {e}")
 
 
+@bot.message_handler(commands=['spy'])
+def cmd_spy(message):
+    """Competitor intelligence: crawl, analyseer, en domineer."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    subcmd = parts[1].strip().lower() if len(parts) > 1 else "report"
+
+    if subcmd == "scan" or subcmd == "crawl":
+        bot.reply_to(message, "🕵️ Competitor sites crawlen...")
+        bot.send_chat_action(message.chat.id, 'typing')
+        new_content = full_competitor_scan()
+        if new_content:
+            report = f"🕵️ Scan Resultaten: {len(new_content)} nieuwe artikelen gevonden\n\n"
+            for art in new_content[:10]:
+                report += f"  [{art['type']}] {art['brand'].capitalize()}: {art['title'][:60]}\n"
+            bot.reply_to(message, report)
+        else:
+            bot.reply_to(message, "✅ Geen nieuwe competitor content gevonden.")
+        return
+
+    if subcmd == "targets":
+        bot.reply_to(message, "🎯 Skyscraper targets zoeken...")
+        bot.send_chat_action(message.chat.id, 'typing')
+        targets = find_skyscraper_targets()
+        if targets:
+            report = f"🎯 Top Skyscraper Targets:\n\n"
+            for i, t in enumerate(targets[:10], 1):
+                report += f"{i}. [{t['type']}] {t['competitor_title'][:55]}\n   → Slug: {t['suggested_slug']}\n"
+            report += "\nGebruik /skyscraper <nummer> om het #1 target te overtreffen."
+            bot.reply_to(message, report)
+        else:
+            bot.reply_to(message, "✅ We dekken alles wat concurrenten hebben! Goed bezig.")
+        return
+
+    # Default: full report
+    bot.reply_to(message, "🕵️ Competitor rapport genereren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+    report = generate_competitor_report()
+    if len(report) > 4000:
+        bot.reply_to(message, report[:4000])
+        bot.reply_to(message, report[4000:])
+    else:
+        bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['skyscraper'])
+def cmd_skyscraper(message):
+    """Schrijf een artikel dat beter is dan de concurrent."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔥 Skyscraper artikel schrijven...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    targets = find_skyscraper_targets()
+    if not targets:
+        bot.reply_to(message, "Geen skyscraper targets gevonden. Gebruik eerst /spy scan.")
+        return
+
+    target = targets[0]
+    bot.reply_to(message, f"✍️ Overtreffen: \"{target['competitor_title'][:60]}\"\nBrand: {target['brand'].capitalize()}\nType: {target['type']}\n\nDit kan 1-2 minuten duren...")
+
+    ok, result = write_skyscraper_article(target)
+    if ok:
+        rebuild_sitemap()
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor Domination: {result}' && git push origin main")
+        bot.reply_to(message, f"🔥 Skyscraper LIVE!\n\n📄 {result}\n🌐 https://aibuildermarketplace.com/b2b/{result}/\n\n💪 Beter dan: \"{target['competitor_title'][:50]}\"")
+    else:
+        bot.reply_to(message, f"❌ Skyscraper mislukt: {result}")
+
+
+@bot.message_handler(commands=['clusters'])
+def cmd_clusters(message):
+    """Toon en bouw topic authority clusters."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    subcmd = parts[1].strip().lower() if len(parts) > 1 else "show"
+
+    if subcmd == "build":
+        bot.reply_to(message, "🏗️ Topic clusters bouwen + interne links toevoegen...")
+        bot.send_chat_action(message.chat.id, 'typing')
+        clusters = build_topic_clusters()
+        fixed = apply_cluster_internal_links()
+        if fixed > 0:
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: cluster links ({fixed} articles)' && git push origin main")
+        report = f"🏗️ Clusters gebouwd!\n\n"
+        for brand, info in clusters.get("pillars", {}).items():
+            report += f"📦 {info['display_name']}: {info['total_articles']} artikelen\n"
+            report += f"   Pillar: {info['pillar_slug']}\n"
+        report += f"\n🔗 Interne links toegevoegd aan {fixed} artikelen"
+        bot.reply_to(message, report)
+        return
+
+    # Show clusters
+    clusters = load_clusters()
+    if not clusters.get("pillars"):
+        clusters = build_topic_clusters()
+
+    report = "🏗️ Topic Authority Clusters\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    for brand, info in clusters.get("pillars", {}).items():
+        report += f"📦 {info['display_name']}\n"
+        report += f"   Pillar: {info['pillar_slug']}\n"
+        report += f"   Artikelen: {info['total_articles']}\n"
+        articles = info.get('articles', [])[:5]
+        for a in articles:
+            report += f"   → {a}\n"
+        report += "\n"
+    report += "Gebruik /clusters build om interne links toe te voegen."
+    bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['battles'])
+def cmd_battles(message):
+    """Toon ranking battles: welke artikelen stijgen/dalen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    battles = load_battles()
+    if not battles.get("active"):
+        bot.reply_to(message, "⚔️ Nog geen ranking battles. Data komt zodra GSC snapshots beschikbaar zijn.")
+        return
+
+    report = "⚔️ Ranking Battles\n━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Top 10 artikelen
+    top10 = [b for b in battles["active"] if b.get("current_position", 99) <= 10]
+    if top10:
+        report += f"🏆 Pagina 1 ({len(top10)} artikelen):\n"
+        for b in sorted(top10, key=lambda x: x['current_position'])[:10]:
+            trend = "📈" if b['current_position'] < b.get('start_position', 99) else "➡️"
+            report += f"  {trend} #{b['current_position']:.0f} {b['slug'][:40]} ({b.get('clicks', 0)} clicks)\n"
+        report += "\n"
+
+    # Stijgers
+    rising = [b for b in battles["active"]
+              if b.get("current_position", 99) < b.get("start_position", 99)]
+    if rising:
+        report += f"📈 Stijgers ({len(rising)}):\n"
+        for b in sorted(rising, key=lambda x: x['start_position'] - x['current_position'], reverse=True)[:5]:
+            report += f"  #{b['current_position']:.0f} ← #{b['start_position']:.0f} {b['slug'][:35]}\n"
+        report += "\n"
+
+    # Dalers
+    declining = [b for b in battles["active"] if b.get("status") == "declining"]
+    if declining:
+        report += f"📉 Actie nodig ({len(declining)}):\n"
+        for b in declining[:5]:
+            report += f"  #{b['current_position']:.0f} {b['slug'][:40]} — verbeter content!\n"
+
+    # Wins
+    if battles.get("won"):
+        report += f"\n🏆 Gewonnen battles: {len(battles['won'])}\n"
+
+    bot.reply_to(message, report)
+
+
 @bot.message_handler(commands=['growth'])
 def cmd_growth(message):
     """Volledig groeirapport: trends, winnaars, A/B tests, actieplan."""
@@ -2620,7 +3376,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 7.0 Growth — Commando's:
+    bot.reply_to(message, """Victor 8.0 Domination — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -2651,6 +3407,12 @@ def cmd_help(message):
 /growth — Volledig groeirapport met trends
 /abtest [slug] — Start/bekijk A/B tests op titels
 /plan — Data-driven content planning
+
+🕵️ Competitor Domination:
+/spy [scan|targets] — Competitor intelligence
+/skyscraper — Schrijf beter artikel dan concurrent
+/clusters [build] — Topic authority clusters
+/battles — Ranking battles tracker
 
 🚀 Actie:
 /generate — Genereer een artikel
@@ -2880,7 +3642,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 7.0 Growth — Status Report
+    return f"""📊 Victor 8.0 Domination — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -3220,6 +3982,22 @@ def proactive_loop():
                     pass
                 last_report = f"{now.date()}-{hour}"
 
+            # 🕵️ COMPETITOR DOMINATION: dagelijkse cyclus om 04:30 UTC
+            if hour == 4 and last_auto_improve != str(now.date()) + "-competitor":
+                try:
+                    log("Starting competitor domination cycle...")
+                    comp_actions = autonomous_competitor_cycle()
+                    if comp_actions:
+                        comp_report = "🕵️ Competitor Domination — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        comp_report += "\n".join(f"  ✅ {a}" for a in comp_actions)
+                        # Alleen melden als er iets interessants is (niet routine scans)
+                        interesting = [a for a in comp_actions if any(w in a for w in ['🏆', '📈', '📉', '🔥', 'geschreven'])]
+                        if interesting:
+                            bot.send_message(ADMIN_ID, comp_report)
+                        log(f"Competitor cycle done: {len(comp_actions)} actions")
+                except Exception as e:
+                    log(f"Competitor cycle error: {e}")
+
             # 🚀 GROWTH ENGINE: dagelijkse cyclus om 05:00 UTC
             if hour == 5 and last_auto_improve != str(now.date()) + "-growth":
                 try:
@@ -3265,7 +4043,7 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 7.0 Growth online!\n\n{report}"
+            f"🚀 Victor 8.0 Domination online!\n\n{report}"
             f"\n\n🧠 Self-learning: /brain /diagnose /research"
             f"\n📈 SEO: /gsc /keywords /sitemap /ogimages"
             f"\n🏗️ Code: /multifile /write /fix"
@@ -3277,7 +4055,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 7.0 Growth gestart — Model: {MODEL}")
+    log(f"Victor 8.0 Domination gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

@@ -1703,7 +1703,569 @@ def autonomous_competitor_cycle():
     return actions
 
 
-# ── MODULE 7: AUTONOMOUS GROWTH ENGINE ─────────────────────────────────────
+# ── MODULE 7: REVENUE INTELLIGENCE ENGINE ──────────────────────────────────
+REVENUE_FILE = "/root/felix_hq/victor_revenue.json"
+FUNNELS_FILE = "/root/felix_hq/victor_funnels.json"
+
+# Geschatte commissie per tool (conservatief)
+COMMISSION_RATES = {
+    'kinsta': {'per_signup': 75, 'recurring_monthly': 10, 'currency': '€', 'est_ctr': 0.03},
+    'synthesia': {'per_signup': 20, 'recurring_monthly': 0, 'currency': '€', 'est_ctr': 0.025},
+    'invideo': {'per_signup': 15, 'recurring_monthly': 0, 'currency': '€', 'est_ctr': 0.02},
+    'replit': {'per_signup': 10, 'recurring_monthly': 0, 'currency': '€', 'est_ctr': 0.02},
+    'bitvavo': {'per_signup': 5, 'recurring_monthly': 0, 'currency': '€', 'est_ctr': 0.035},
+    'murf': {'per_signup': 12, 'recurring_monthly': 0, 'currency': '€', 'est_ctr': 0.02},
+}
+
+def load_revenue_data():
+    if os.path.exists(REVENUE_FILE):
+        try:
+            return json.load(open(REVENUE_FILE))
+        except:
+            pass
+    return {"estimates": {}, "daily_snapshots": [], "top_earners": [], "roi_scores": {}}
+
+def save_revenue_data(data):
+    data["daily_snapshots"] = data.get("daily_snapshots", [])[-90:]
+    data["top_earners"] = data.get("top_earners", [])[-50:]
+    with open(REVENUE_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_funnels():
+    if os.path.exists(FUNNELS_FILE):
+        try:
+            return json.load(open(FUNNELS_FILE))
+        except:
+            pass
+    return {"funnels": {}, "link_map": {}}
+
+def save_funnels(data):
+    with open(FUNNELS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+def calculate_article_revenue():
+    """Bereken geschatte maandelijkse revenue per artikel op basis van GSC data."""
+    if not os.path.exists(GSC_DATA_FILE):
+        return {}
+
+    try:
+        with open(GSC_DATA_FILE) as f:
+            gsc = json.load(f)
+    except:
+        return {}
+
+    revenue = load_revenue_data()
+    estimates = {}
+
+    for page in gsc.get('pages', []):
+        slug = page['page'].split('/b2b/')[-1].rstrip('/') if '/b2b/' in page['page'] else ''
+        if not slug:
+            continue
+
+        brand = slug.split('-')[0].lower()
+        if brand == 'invideo':
+            brand = 'invideo'
+
+        commission = COMMISSION_RATES.get(brand)
+        if not commission:
+            continue
+
+        clicks = page.get('clicks', 0)
+        impressions = page.get('impressions', 0)
+        position = page.get('position', 99)
+
+        # Revenue formule: clicks × affiliate_ctr × commissie
+        est_ctr = commission['est_ctr']
+        # Positie 1-3 heeft hogere affiliate CTR
+        if position <= 3:
+            est_ctr *= 1.5
+        elif position <= 5:
+            est_ctr *= 1.2
+        elif position > 20:
+            est_ctr *= 0.5
+
+        monthly_signups = clicks * est_ctr
+        monthly_revenue = monthly_signups * commission['per_signup']
+        recurring = monthly_signups * commission['recurring_monthly'] * 12  # Jaarlijkse recurring
+
+        estimates[slug] = {
+            'brand': brand,
+            'clicks': clicks,
+            'impressions': impressions,
+            'position': position,
+            'est_monthly_signups': round(monthly_signups, 2),
+            'est_monthly_revenue': round(monthly_revenue, 2),
+            'est_yearly_recurring': round(recurring, 2),
+            'currency': commission['currency'],
+            'roi_potential': 'HIGH' if monthly_revenue > 10 else 'MEDIUM' if monthly_revenue > 2 else 'LOW'
+        }
+
+    # Sorteer op revenue
+    revenue["estimates"] = dict(sorted(estimates.items(), key=lambda x: -x[1]['est_monthly_revenue']))
+    revenue["top_earners"] = [
+        {"slug": k, "revenue": v['est_monthly_revenue'], "brand": v['brand']}
+        for k, v in sorted(estimates.items(), key=lambda x: -x[1]['est_monthly_revenue'])[:20]
+    ]
+
+    # Snapshot
+    total_monthly = sum(v['est_monthly_revenue'] for v in estimates.values())
+    revenue["daily_snapshots"].append({
+        "date": datetime.now().strftime('%Y-%m-%d'),
+        "total_monthly_estimate": round(total_monthly, 2),
+        "article_count": len(estimates),
+        "top_brand": max(
+            {b: sum(v['est_monthly_revenue'] for v in estimates.values() if v['brand'] == b)
+             for b in set(v['brand'] for v in estimates.values())}.items(),
+            key=lambda x: x[1]
+        )[0] if estimates else 'none'
+    })
+
+    save_revenue_data(revenue)
+    return estimates
+
+
+def calculate_roi_scores():
+    """Bereken ROI score voor elke mogelijke actie."""
+    revenue = load_revenue_data()
+    estimates = revenue.get("estimates", {})
+    roi = {}
+
+    # 1. Bestaande artikelen verbeteren (hoog impressies, lage positie)
+    for slug, data in estimates.items():
+        if data['impressions'] > 50 and data['position'] > 5:
+            # Als we naar top 3 stijgen: hoeveel extra revenue?
+            current_rev = data['est_monthly_revenue']
+            potential_clicks = data['impressions'] * 0.10  # ~10% CTR in top 3
+            commission = COMMISSION_RATES.get(data['brand'], {})
+            potential_rev = potential_clicks * commission.get('est_ctr', 0.02) * commission.get('per_signup', 10)
+            uplift = potential_rev - current_rev
+            if uplift > 0:
+                roi[f"improve_{slug}"] = {
+                    'action': f"Verbeter '{slug}' naar top 3",
+                    'type': 'improve',
+                    'slug': slug,
+                    'current_revenue': round(current_rev, 2),
+                    'potential_revenue': round(potential_rev, 2),
+                    'uplift': round(uplift, 2),
+                    'effort_hours': 1,
+                    'roi_per_hour': round(uplift, 2),
+                    'priority': uplift
+                }
+
+    # 2. Nieuwe artikelen schrijven
+    gaps = analyze_content_gaps()
+    for gap in gaps[:10]:
+        brand = gap.get('keyword', '').split('-')[0].split(' ')[0].lower()
+        commission = COMMISSION_RATES.get(brand, {})
+        if commission:
+            # Schat revenue van nieuw artikel
+            est_monthly_clicks = 20  # Conservatief voor nieuw artikel
+            est_rev = est_monthly_clicks * commission.get('est_ctr', 0.02) * commission.get('per_signup', 10)
+            roi[f"write_{gap.get('keyword', '')[:40]}"] = {
+                'action': f"Schrijf '{gap.get('keyword', '')}'",
+                'type': 'write',
+                'potential_revenue': round(est_rev, 2),
+                'effort_hours': 0.5,  # Victor schrijft automatisch
+                'roi_per_hour': round(est_rev / 0.5, 2),
+                'priority': est_rev * (2 if gap.get('type') == 'comparison' else 1)
+            }
+
+    # 3. A/B tests op hoge-impressie artikelen
+    for slug, data in estimates.items():
+        if data['impressions'] > 100 and data['position'] <= 10:
+            potential_uplift = data['est_monthly_revenue'] * 0.3  # 30% CTR verbetering
+            roi[f"abtest_{slug}"] = {
+                'action': f"A/B test titel '{slug}'",
+                'type': 'abtest',
+                'current_revenue': data['est_monthly_revenue'],
+                'potential_uplift': round(potential_uplift, 2),
+                'effort_hours': 0.1,
+                'roi_per_hour': round(potential_uplift / 0.1, 2),
+                'priority': potential_uplift
+            }
+
+    # Sorteer op ROI per uur
+    revenue["roi_scores"] = dict(sorted(roi.items(), key=lambda x: -x[1].get('roi_per_hour', 0)))
+    save_revenue_data(revenue)
+    return roi
+
+
+def build_conversion_funnels():
+    """Bouw conversion funnels: awareness → comparison → review → CTA."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return {}
+
+    all_articles = {f.lower(): f for f in os.listdir(b2b_path) if os.path.isdir(os.path.join(b2b_path, f))}
+    funnels_data = load_funnels()
+
+    for brand in ['kinsta', 'synthesia', 'invideo', 'replit', 'bitvavo', 'murf']:
+        brand_articles = {k: v for k, v in all_articles.items() if k.startswith(brand)}
+
+        # Categoriseer artikelen per funnel stage
+        stages = {
+            'awareness': [],    # "what is", "how to", guides
+            'consideration': [],  # "vs", "alternatives", "comparison"
+            'decision': [],     # "review", "pricing", "best"
+        }
+
+        for slug in brand_articles:
+            if any(w in slug for w in ['vs', 'alternative', 'comparison', 'vergelijk']):
+                stages['consideration'].append(slug)
+            elif any(w in slug for w in ['review', 'pricing', 'best', 'top']):
+                stages['decision'].append(slug)
+            else:
+                stages['awareness'].append(slug)
+
+        # Bouw funnel links: awareness → consideration → decision
+        funnel = {
+            'brand': brand,
+            'stages': stages,
+            'total': len(brand_articles),
+            'gaps': []
+        }
+
+        if not stages['consideration']:
+            funnel['gaps'].append(f"Geen vergelijkingsartikelen voor {brand.capitalize()}")
+        if not stages['decision']:
+            funnel['gaps'].append(f"Geen review/pricing artikelen voor {brand.capitalize()}")
+
+        funnels_data["funnels"][brand] = funnel
+
+        # Link map: elk artikel wijst naar de volgende funnel stage
+        for slug in stages['awareness']:
+            next_stage = stages['consideration'][:2] if stages['consideration'] else stages['decision'][:2]
+            funnels_data["link_map"][slug] = next_stage
+
+        for slug in stages['consideration']:
+            next_stage = stages['decision'][:2] if stages['decision'] else [f"{brand}-review"]
+            funnels_data["link_map"][slug] = next_stage
+
+    save_funnels(funnels_data)
+    return funnels_data
+
+
+def apply_funnel_links():
+    """Voeg funnel links toe aan artikelen: leid bezoekers naar conversie."""
+    funnels = load_funnels()
+    link_map = funnels.get("link_map", {})
+    b2b_path = f"{REPO_ROOT}/b2b"
+    fixed = 0
+
+    for slug, targets in link_map.items():
+        article_path = os.path.join(b2b_path, slug, "index.html")
+        if not os.path.isfile(article_path) or not targets:
+            continue
+
+        try:
+            with open(article_path, 'r', encoding='utf-8') as f:
+                html = f.read()
+
+            if 'funnel-links' in html:
+                continue
+
+            links = ""
+            for target in targets[:3]:
+                display = target.replace('-', ' ').title()
+                links += f'<a href="/b2b/{target}/" style="display:inline-block;padding:8px 16px;margin:4px;background:#1e293b;color:#3b82f6;border-radius:8px;text-decoration:none;font-size:14px;transition:background 0.2s">{display} →</a>\n'
+
+            funnel_block = f"""<div id="funnel-links" style="margin-top:24px;padding:20px;background:linear-gradient(135deg,#0f1729,#1a1f2e);border:1px solid #2d3748;border-radius:12px;text-align:center;">
+<p style="color:#94a3b8;font-size:14px;margin-bottom:12px;">📖 Lees ook:</p>
+{links}
+</div>"""
+
+            if '</body>' in html:
+                html = html.replace('</body>', f"{funnel_block}\n</body>")
+                with open(article_path, 'w', encoding='utf-8') as f:
+                    f.write(html)
+                fixed += 1
+        except:
+            pass
+
+    return fixed
+
+
+def generate_revenue_report():
+    """Volledig revenue intelligence rapport."""
+    estimates = calculate_article_revenue()
+    roi = calculate_roi_scores()
+    revenue = load_revenue_data()
+
+    report = "💰 Revenue Intelligence Report\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Totaal geschatte revenue
+    total = sum(v['est_monthly_revenue'] for v in estimates.values())
+    report += f"💶 Geschatte maandelijkse revenue: €{total:.2f}\n"
+    report += f"💶 Geschatte jaarlijkse revenue: €{total * 12:.2f}\n\n"
+
+    # Revenue per brand
+    brand_totals = {}
+    for slug, data in estimates.items():
+        b = data['brand']
+        brand_totals[b] = brand_totals.get(b, 0) + data['est_monthly_revenue']
+
+    report += "📊 Revenue per Brand:\n"
+    for brand, rev in sorted(brand_totals.items(), key=lambda x: -x[1]):
+        bar = "█" * max(1, int(rev / max(brand_totals.values()) * 15)) if brand_totals else ""
+        report += f"  {brand.capitalize():12s} €{rev:>7.2f}/m {bar}\n"
+    report += "\n"
+
+    # Top earners
+    top = revenue.get("top_earners", [])[:5]
+    if top:
+        report += "🏆 Top 5 Artikelen (geschat):\n"
+        for i, t in enumerate(top, 1):
+            report += f"  {i}. €{t['revenue']:.2f}/m — {t['slug'][:45]}\n"
+        report += "\n"
+
+    # Top ROI acties
+    top_roi = list(roi.values())[:5]
+    if top_roi:
+        report += "🎯 Hoogste ROI Acties:\n"
+        for r in top_roi:
+            report += f"  €{r.get('roi_per_hour', 0):.0f}/uur — {r['action'][:50]}\n"
+        report += "\n"
+
+    # Trend
+    snapshots = revenue.get("daily_snapshots", [])
+    if len(snapshots) >= 2:
+        latest = snapshots[-1].get("total_monthly_estimate", 0)
+        prev = snapshots[-2].get("total_monthly_estimate", 0)
+        diff = latest - prev
+        trend = "📈" if diff > 0 else "📉" if diff < 0 else "➡️"
+        report += f"{trend} Trend: €{diff:+.2f}/maand vs gisteren\n"
+
+    return report
+
+
+def generate_admin_dashboard():
+    """Genereer een live admin dashboard als HTML pagina."""
+    revenue = load_revenue_data()
+    battles = load_battles()
+    growth = load_growth_data()
+    ab = load_ab_tests()
+    comp_data = load_competitor_data()
+    clusters = load_clusters()
+
+    estimates = revenue.get("estimates", {})
+    total_monthly = sum(v.get('est_monthly_revenue', 0) for v in estimates.values())
+    total_articles = len(estimates)
+
+    # Revenue per brand
+    brand_rev = {}
+    for slug, data in estimates.items():
+        b = data.get('brand', '')
+        brand_rev[b] = brand_rev.get(b, 0) + data.get('est_monthly_revenue', 0)
+
+    brand_cards = ""
+    brand_colors = {'kinsta': '#8b5cf6', 'synthesia': '#3b82f6', 'invideo': '#a78bfa',
+                    'replit': '#f59e0b', 'bitvavo': '#10b981', 'murf': '#ec4899'}
+
+    for brand in ['kinsta', 'synthesia', 'invideo', 'replit', 'bitvavo', 'murf']:
+        rev = brand_rev.get(brand, 0)
+        color = brand_colors.get(brand, '#3b82f6')
+        count = sum(1 for s, d in estimates.items() if d.get('brand') == brand)
+        brand_cards += f"""<div style="background:#1a1f2e;border-radius:12px;padding:20px;border-top:3px solid {color}">
+<h3 style="color:{color};margin:0 0 8px 0;font-size:16px">{brand.capitalize()}</h3>
+<div style="font-size:28px;font-weight:700;color:#e6edf3">€{rev:.2f}<span style="font-size:14px;color:#64748b">/m</span></div>
+<div style="color:#64748b;font-size:13px;margin-top:4px">{count} artikelen</div>
+</div>"""
+
+    # Top earners tabel
+    top_rows = ""
+    for i, (slug, data) in enumerate(list(estimates.items())[:10], 1):
+        color = brand_colors.get(data.get('brand', ''), '#3b82f6')
+        pos = data.get('position', 99)
+        pos_color = '#10b981' if pos <= 3 else '#f59e0b' if pos <= 10 else '#ef4444'
+        top_rows += f"""<tr style="border-bottom:1px solid #1e293b">
+<td style="padding:10px;color:#64748b">{i}</td>
+<td style="padding:10px"><span style="color:{color}">●</span> <span style="color:#e6edf3">{slug[:40]}</span></td>
+<td style="padding:10px;color:#e6edf3;font-weight:600">€{data.get('est_monthly_revenue', 0):.2f}</td>
+<td style="padding:10px;color:{pos_color}">#{pos:.0f}</td>
+<td style="padding:10px;color:#64748b">{data.get('clicks', 0)}</td>
+</tr>"""
+
+    # Battles
+    top10_count = sum(1 for b in battles.get("active", []) if b.get("current_position", 99) <= 10)
+    rising_count = sum(1 for b in battles.get("active", [])
+                       if b.get("current_position", 99) < b.get("start_position", 99))
+    won_count = len(battles.get("won", []))
+
+    # Revenue snapshots voor chart
+    snapshots = revenue.get("daily_snapshots", [])[-30:]
+    chart_labels = [s.get('date', '')[5:] for s in snapshots]
+    chart_values = [s.get('total_monthly_estimate', 0) for s in snapshots]
+
+    chart_js = ""
+    if chart_values:
+        max_val = max(chart_values) if chart_values else 1
+        bars = ""
+        for i, (label, val) in enumerate(zip(chart_labels, chart_values)):
+            height = max(4, int(val / max_val * 120))
+            bars += f"""<div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:20px">
+<div style="width:100%;max-width:24px;height:{height}px;background:linear-gradient(to top,#3b82f6,#8b5cf6);border-radius:4px 4px 0 0"></div>
+<div style="font-size:9px;color:#64748b;margin-top:4px;transform:rotate(-45deg)">{label}</div>
+</div>"""
+        chart_js = f"""<div style="display:flex;align-items:flex-end;height:160px;gap:2px;padding:10px 0">{bars}</div>"""
+
+    # AB tests
+    ab_section = ""
+    for test in ab.get("active", []):
+        ab_section += f"""<div style="background:#1e293b;padding:12px;border-radius:8px;margin-bottom:8px">
+<span style="color:#f59e0b">🔬</span> <span style="color:#e6edf3">{test.get('slug', '')}</span>
+<span style="color:#64748b"> — variant {test.get('current_variant', '?').upper()}</span>
+</div>"""
+    if not ab_section:
+        ab_section = '<div style="color:#64748b;padding:12px">Geen actieve tests. Gebruik /abtest om te starten.</div>'
+
+    ts = datetime.now().strftime('%Y-%m-%d %H:%M UTC')
+
+    html = f"""<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Victor Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{{margin:0;padding:0;box-sizing:border-box}}
+body{{background:#0a0e17;color:#e6edf3;font-family:'Inter',sans-serif;padding:20px}}
+.container{{max-width:1200px;margin:0 auto}}
+.header{{text-align:center;padding:30px 0;border-bottom:1px solid #1e293b;margin-bottom:30px}}
+.header h1{{font-size:28px;font-weight:800;background:linear-gradient(135deg,#3b82f6,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}}
+.header .subtitle{{color:#64748b;margin-top:8px;font-size:14px}}
+.stats-row{{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:30px}}
+.stat-card{{background:#1a1f2e;border-radius:12px;padding:20px;text-align:center}}
+.stat-card .value{{font-size:32px;font-weight:700;color:#e6edf3}}
+.stat-card .label{{color:#64748b;font-size:13px;margin-top:4px}}
+.section{{margin-bottom:30px}}
+.section h2{{font-size:18px;font-weight:600;margin-bottom:16px;color:#e6edf3;display:flex;align-items:center;gap:8px}}
+.brand-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}}
+table{{width:100%;border-collapse:collapse;background:#111827;border-radius:12px;overflow:hidden}}
+th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;border-bottom:1px solid #1e293b}}
+.chart-container{{background:#111827;border-radius:12px;padding:20px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>Victor Command Center</h1>
+<div class="subtitle">AIBuilder Marketplace — Revenue Intelligence Dashboard</div>
+<div style="color:#475569;font-size:12px;margin-top:4px">Laatste update: {ts}</div>
+</div>
+
+<div class="stats-row">
+<div class="stat-card">
+<div class="value" style="color:#10b981">€{total_monthly:.0f}</div>
+<div class="label">Geschatte Revenue/maand</div>
+</div>
+<div class="stat-card">
+<div class="value">{total_articles}</div>
+<div class="label">Getrackte Artikelen</div>
+</div>
+<div class="stat-card">
+<div class="value" style="color:#3b82f6">{top10_count}</div>
+<div class="label">Pagina 1 Rankings</div>
+</div>
+<div class="stat-card">
+<div class="value" style="color:#f59e0b">{rising_count}</div>
+<div class="label">Stijgende Artikelen</div>
+</div>
+<div class="stat-card">
+<div class="value" style="color:#8b5cf6">{won_count}</div>
+<div class="label">Ranking Battles Gewonnen</div>
+</div>
+</div>
+
+<div class="section">
+<h2>💰 Revenue per Brand</h2>
+<div class="brand-grid">{brand_cards}</div>
+</div>
+
+<div class="section">
+<h2>📈 Revenue Trend (30 dagen)</h2>
+<div class="chart-container">{chart_js if chart_js else '<div style="color:#64748b;padding:20px">Nog geen data. Revenue snapshots worden dagelijks genomen.</div>'}</div>
+</div>
+
+<div class="section">
+<h2>🏆 Top Earning Artikelen</h2>
+<table>
+<tr><th>#</th><th>Artikel</th><th>€/maand</th><th>Positie</th><th>Clicks</th></tr>
+{top_rows if top_rows else '<tr><td colspan="5" style="padding:20px;color:#64748b;text-align:center">Nog geen data. Gebruik /gsc fetch om te starten.</td></tr>'}
+</table>
+</div>
+
+<div class="section">
+<h2>🔬 A/B Tests</h2>
+{ab_section}
+</div>
+
+<div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
+Victor 9.0 Revenue Intelligence — Powered by Claude AI<br>
+Automatisch bijgewerkt via /dashboard
+</div>
+
+</div>
+</body>
+</html>"""
+
+    return html
+
+
+def generate_social_content(slug):
+    """Genereer social media content van een artikel."""
+    article_path = f"{REPO_ROOT}/b2b/{slug}/index.html"
+    if not os.path.isfile(article_path):
+        return None
+
+    try:
+        with open(article_path, 'r', encoding='utf-8') as f:
+            html = f.read()
+
+        title_match = re.search(r'<title>(.*?)</title>', html)
+        title = title_match.group(1) if title_match else slug.replace('-', ' ').title()
+
+        brand = slug.split('-')[0].capitalize()
+        if brand.lower() == 'invideo':
+            brand = 'InVideo'
+        aff_link = VAULT.get(brand, '')
+        url = f"https://aibuildermarketplace.com/b2b/{slug}/"
+
+        prompt = f"""Maak social media content voor dit artikel:
+Titel: {title}
+URL: {url}
+Brand: {brand}
+Affiliate: {aff_link}
+
+Genereer EXACT dit format:
+
+TWITTER/X:
+[Tweet max 280 chars, met emoji, URL, en 2-3 relevante hashtags]
+
+LINKEDIN:
+[LinkedIn post, 3-4 zinnen, professioneel maar engaging, met URL]
+
+EMAIL SUBJECT:
+[Pakkende email onderwerp regel]
+
+EMAIL SNIPPET:
+[2-3 zinnen teaser voor in een newsletter, met CTA naar het artikel]
+
+YOUTUBE SCRIPT INTRO:
+[30 seconden intro script voor een video over dit onderwerp, voor Synthesia]"""
+
+        res = client.chat.completions.create(
+            model=MODEL, messages=[{"role": "user", "content": prompt}], max_tokens=1000
+        )
+        return res.choices[0].message.content.strip()
+    except Exception as e:
+        return f"Error: {e}"
+
+
+# ── MODULE 8: AUTONOMOUS GROWTH ENGINE ─────────────────────────────────────
 GROWTH_FILE = "/root/felix_hq/victor_growth.json"
 AB_TESTS_FILE = "/root/felix_hq/victor_ab_tests.json"
 
@@ -2419,11 +2981,11 @@ def cmd_seo(message):
         checks.append(f"  {brand}: {count.strip()} artikelen")
     bot.reply_to(message, "📊 SEO Rapport:\n" + "\n".join(checks))
 
-@bot.message_handler(commands=['revenue'])
-def cmd_revenue(message):
+@bot.message_handler(commands=['affcheck'])
+def cmd_affcheck(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, "💰 Revenue check...")
+    bot.reply_to(message, "💰 Affiliate link check...")
     checks = []
     # Check of alle affiliate links correct zijn
     for brand, url in VAULT.items():
@@ -2968,6 +3530,128 @@ def cmd_autofix(message):
         bot.reply_to(message, f"❌ Auto-improve error: {e}")
 
 
+@bot.message_handler(commands=['revenue'])
+def cmd_revenue_intel(message):
+    """Revenue intelligence: geschatte earnings, ROI scores, trends."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "💰 Revenue intelligence berekenen...")
+    bot.send_chat_action(message.chat.id, 'typing')
+    report = generate_revenue_report()
+    if len(report) > 4000:
+        bot.reply_to(message, report[:4000])
+        bot.reply_to(message, report[4000:])
+    else:
+        bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['roi'])
+def cmd_roi(message):
+    """Toon hoogste ROI acties: wat levert het meeste op per uur?"""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🎯 ROI scores berekenen...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    roi = calculate_roi_scores()
+    if not roi:
+        bot.reply_to(message, "Nog geen data. Gebruik eerst /gsc fetch.")
+        return
+
+    report = "🎯 ROI Prioritering — Hoogste Waarde Eerst\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    for i, (key, data) in enumerate(list(roi.items())[:10], 1):
+        report += f"{i}. €{data.get('roi_per_hour', 0):.0f}/uur — {data['action'][:50]}\n"
+
+    report += "\n💡 Focus op de bovenste acties voor maximale revenue impact."
+    bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['funnels'])
+def cmd_funnels(message):
+    """Bouw en toon conversion funnels."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    subcmd = parts[1].strip().lower() if len(parts) > 1 else "show"
+
+    if subcmd == "build":
+        bot.reply_to(message, "🔄 Conversion funnels bouwen + links toevoegen...")
+        bot.send_chat_action(message.chat.id, 'typing')
+        funnels = build_conversion_funnels()
+        fixed = apply_funnel_links()
+        if fixed > 0:
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: funnel links ({fixed} articles)' && git push origin main")
+        report = "🔄 Funnels Gebouwd!\n\n"
+        for brand, info in funnels.get("funnels", {}).items():
+            stages = info.get('stages', {})
+            report += f"📦 {brand.capitalize()}: {len(stages.get('awareness', []))} awareness → {len(stages.get('consideration', []))} consideration → {len(stages.get('decision', []))} decision\n"
+            if info.get('gaps'):
+                for gap in info['gaps']:
+                    report += f"   ⚠️ {gap}\n"
+        report += f"\n🔗 Funnel links toegevoegd aan {fixed} artikelen"
+        bot.reply_to(message, report)
+        return
+
+    funnels = build_conversion_funnels()
+    report = "🔄 Conversion Funnels\n━━━━━━━━━━━━━━━━━━━━\n\n"
+    for brand, info in funnels.get("funnels", {}).items():
+        stages = info.get('stages', {})
+        report += f"📦 {brand.capitalize()} ({info.get('total', 0)} artikelen):\n"
+        report += f"   👁️ Awareness: {len(stages.get('awareness', []))}\n"
+        report += f"   🤔 Consideration: {len(stages.get('consideration', []))}\n"
+        report += f"   ✅ Decision: {len(stages.get('decision', []))}\n"
+    report += "\nGebruik /funnels build om funnel links toe te voegen."
+    bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['dashboard'])
+def cmd_dashboard(message):
+    """Genereer en deploy het live admin dashboard."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "📊 Dashboard genereren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    # Zorg dat revenue data actueel is
+    calculate_article_revenue()
+
+    html = generate_admin_dashboard()
+    dashboard_dir = f"{REPO_ROOT}/admin"
+    os.makedirs(dashboard_dir, exist_ok=True)
+    with open(f"{dashboard_dir}/index.html", 'w', encoding='utf-8') as f:
+        f.write(html)
+
+    run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: dashboard update' && git push origin main")
+    bot.reply_to(message, "📊 Dashboard LIVE!\n\n🌐 https://aibuildermarketplace.com/admin/\n\n(noindex/nofollow — alleen voor jou)")
+
+
+@bot.message_handler(commands=['social'])
+def cmd_social(message):
+    """Genereer social media content voor een artikel."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    if len(parts) < 2:
+        # Gebruik het best presterende artikel
+        revenue = load_revenue_data()
+        top = revenue.get("top_earners", [])
+        if top:
+            slug = top[0]['slug']
+        else:
+            bot.reply_to(message, "Gebruik: /social <artikel-slug>\nBijv: /social kinsta-review")
+            return
+    else:
+        slug = parts[1].strip()
+
+    bot.reply_to(message, f"📱 Social content genereren voor {slug}...")
+    bot.send_chat_action(message.chat.id, 'typing')
+    content = generate_social_content(slug)
+    if content:
+        bot.reply_to(message, content)
+    else:
+        bot.reply_to(message, f"❌ Artikel '{slug}' niet gevonden.")
+
+
 @bot.message_handler(commands=['spy'])
 def cmd_spy(message):
     """Competitor intelligence: crawl, analyseer, en domineer."""
@@ -3376,7 +4060,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 8.0 Domination — Commando's:
+    bot.reply_to(message, """Victor 9.0 Revenue Intelligence — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -3387,7 +4071,7 @@ def cmd_help(message):
 
 🔍 Analyse:
 /seo — SEO gezondheidscheck
-/revenue — Affiliate link rapport
+/affcheck — Affiliate link check
 /linkcheck — Test alle affiliate URLs
 /quality — Artikelkwaliteit analyse
 /strategy — AI strategisch advies
@@ -3401,34 +4085,41 @@ def cmd_help(message):
 /gsc [setup|fetch] — Google Search Console data
 /keywords — Content gaps + artikel suggesties
 /sitemap — Rebuild sitemap.xml
-/ogimages — Genereer OG images voor social sharing
+/ogimages — OG images voor social sharing
+
+💰 Revenue Intelligence:
+/revenue — Revenue rapport + geschatte earnings
+/roi — Hoogste ROI acties
+/funnels [build] — Conversion funnels
+/dashboard — Live admin dashboard genereren
+/social [slug] — Social media content genereren
 
 🚀 Growth Engine:
-/growth — Volledig groeirapport met trends
-/abtest [slug] — Start/bekijk A/B tests op titels
+/growth — Groeirapport met trends
+/abtest [slug] — A/B tests op titels
 /plan — Data-driven content planning
 
 🕵️ Competitor Domination:
 /spy [scan|targets] — Competitor intelligence
-/skyscraper — Schrijf beter artikel dan concurrent
+/skyscraper — Overtref de concurrent
 /clusters [build] — Topic authority clusters
 /battles — Ranking battles tracker
 
-🚀 Actie:
+🛠️ Actie:
 /generate — Genereer een artikel
 /improve — Verbeter het slechtste artikel
-/autofix — Auto-improve slechtste artikelen
-/optimize — Voeg interne links toe
-/fix <probleem> — Los op (stopt niet tot het werkt)
-/write <taak> — Schrijf code of scripts
-/multifile <taak> — Complex: meerdere bestanden
+/autofix — Auto-improve batch
+/optimize — Interne links
+/fix <probleem> — Los op tot het werkt
+/write <taak> — Schrijf code
+/multifile <taak> — Multi-file refactor
 
 🎨 Design:
-/redesign <pagina> — Bouw professionele pagina
-/restyle — Dark theme + SVG logos (alle artikelen)
+/redesign <pagina> — Professionele pagina
+/restyle — Dark theme + SVG logos
 
-📸 Stuur een foto of document — ik analyseer het met AI vision.
-Of stuur gewoon een bericht — ik denk mee en pak door.""")
+📸 Foto/document → AI vision analyse
+Of stuur een bericht — ik pak het op.""")
 
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
@@ -3642,7 +4333,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 8.0 Domination — Status Report
+    return f"""📊 Victor 9.0 Revenue — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -3982,6 +4673,24 @@ def proactive_loop():
                     pass
                 last_report = f"{now.date()}-{hour}"
 
+            # 💰 REVENUE INTELLIGENCE: dagelijks om 04:00 UTC
+            if hour == 4 and last_auto_improve != str(now.date()) + "-revenue":
+                try:
+                    log("Revenue intelligence cycle...")
+                    estimates = calculate_article_revenue()
+                    roi = calculate_roi_scores()
+                    build_conversion_funnels()
+                    # Update dashboard
+                    dashboard_html = generate_admin_dashboard()
+                    dashboard_dir = f"{REPO_ROOT}/admin"
+                    os.makedirs(dashboard_dir, exist_ok=True)
+                    with open(f"{dashboard_dir}/index.html", 'w', encoding='utf-8') as f:
+                        f.write(dashboard_html)
+                    run_command(f"cd {REPO_ROOT} && git add admin/ && git diff --cached --quiet || git commit -m 'Victor: dashboard update' && git push origin main")
+                    log(f"Revenue cycle done: {len(estimates)} articles tracked")
+                except Exception as e:
+                    log(f"Revenue cycle error: {e}")
+
             # 🕵️ COMPETITOR DOMINATION: dagelijkse cyclus om 04:30 UTC
             if hour == 4 and last_auto_improve != str(now.date()) + "-competitor":
                 try:
@@ -4043,7 +4752,7 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 8.0 Domination online!\n\n{report}"
+            f"🚀 Victor 9.0 Revenue online!\n\n{report}"
             f"\n\n🧠 Self-learning: /brain /diagnose /research"
             f"\n📈 SEO: /gsc /keywords /sitemap /ogimages"
             f"\n🏗️ Code: /multifile /write /fix"
@@ -4055,7 +4764,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 8.0 Domination gestart — Model: {MODEL}")
+    log(f"Victor 9.0 Revenue gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

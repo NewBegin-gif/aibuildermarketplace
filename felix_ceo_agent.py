@@ -1103,6 +1103,569 @@ def suggest_next_articles(n=5):
     return suggestions
 
 
+# ── MODULE 6: AUTONOMOUS GROWTH ENGINE ─────────────────────────────────────
+GROWTH_FILE = "/root/felix_hq/victor_growth.json"
+AB_TESTS_FILE = "/root/felix_hq/victor_ab_tests.json"
+
+def load_growth_data():
+    if os.path.exists(GROWTH_FILE):
+        try:
+            return json.load(open(GROWTH_FILE))
+        except:
+            pass
+    return {"daily_snapshots": [], "winning_patterns": [], "growth_actions": []}
+
+def save_growth_data(data):
+    data["daily_snapshots"] = data.get("daily_snapshots", [])[-90:]  # 3 maanden history
+    data["winning_patterns"] = data.get("winning_patterns", [])[-50:]
+    data["growth_actions"] = data.get("growth_actions", [])[-100:]
+    with open(GROWTH_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_ab_tests():
+    if os.path.exists(AB_TESTS_FILE):
+        try:
+            return json.load(open(AB_TESTS_FILE))
+        except:
+            pass
+    return {"active": [], "completed": [], "learnings": []}
+
+def save_ab_tests(data):
+    data["completed"] = data.get("completed", [])[-30:]
+    data["learnings"] = data.get("learnings", [])[-20:]
+    with open(AB_TESTS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+def take_growth_snapshot():
+    """Neem een dagelijks snapshot van alle key metrics."""
+    growth = load_growth_data()
+    ts = datetime.now().strftime('%Y-%m-%d')
+
+    # Check of we vandaag al een snapshot hebben
+    if growth["daily_snapshots"] and growth["daily_snapshots"][-1].get("date") == ts:
+        return None  # Al gedaan
+
+    snapshot = {"date": ts}
+
+    # Artikel stats
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if os.path.isdir(b2b_path):
+        folders = [f for f in os.listdir(b2b_path) if os.path.isdir(os.path.join(b2b_path, f))]
+        snapshot["total_articles"] = len(folders)
+        snapshot["per_brand"] = {}
+        for brand in ['kinsta', 'synthesia', 'invideo', 'replit', 'bitvavo', 'murf']:
+            snapshot["per_brand"][brand] = sum(1 for f in folders if f.lower().startswith(brand))
+
+        # Gemiddelde artikel grootte
+        sizes = []
+        for f in folders:
+            p = os.path.join(b2b_path, f, "index.html")
+            if os.path.isfile(p):
+                sizes.append(os.path.getsize(p))
+        snapshot["avg_article_size"] = sum(sizes) // len(sizes) if sizes else 0
+        snapshot["smallest_article"] = min(sizes) if sizes else 0
+
+    # GSC data als beschikbaar
+    if os.path.exists(GSC_DATA_FILE):
+        try:
+            with open(GSC_DATA_FILE) as f:
+                gsc = json.load(f)
+            total_clicks = sum(p.get('clicks', 0) for p in gsc.get('pages', []))
+            total_impressions = sum(p.get('impressions', 0) for p in gsc.get('pages', []))
+            avg_position = 0
+            positions = [p['position'] for p in gsc.get('pages', []) if p.get('position')]
+            if positions:
+                avg_position = round(sum(positions) / len(positions), 1)
+            snapshot["total_clicks"] = total_clicks
+            snapshot["total_impressions"] = total_impressions
+            snapshot["avg_position"] = avg_position
+            snapshot["top_page"] = gsc['pages'][0]['page'].split('/')[-2] if gsc.get('pages') else "n/a"
+        except:
+            pass
+
+    growth["daily_snapshots"].append(snapshot)
+    save_growth_data(growth)
+    return snapshot
+
+
+def analyze_growth_trends():
+    """Analyseer groeitrends over de laatste 7/30 dagen."""
+    growth = load_growth_data()
+    snapshots = growth.get("daily_snapshots", [])
+
+    if len(snapshots) < 2:
+        return "Nog niet genoeg data. Snapshots worden dagelijks genomen."
+
+    latest = snapshots[-1]
+    report = "📈 Growth Trends\n━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Vergelijk met 7 dagen geleden
+    week_ago = None
+    for s in reversed(snapshots[:-1]):
+        try:
+            s_date = datetime.strptime(s['date'], '%Y-%m-%d')
+            l_date = datetime.strptime(latest['date'], '%Y-%m-%d')
+            if (l_date - s_date).days >= 6:
+                week_ago = s
+                break
+        except:
+            continue
+
+    report += f"📊 Vandaag: {latest.get('total_articles', '?')} artikelen\n"
+
+    if week_ago:
+        article_growth = latest.get('total_articles', 0) - week_ago.get('total_articles', 0)
+        report += f"📈 Week groei: +{article_growth} artikelen\n"
+
+        if 'total_clicks' in latest and 'total_clicks' in week_ago:
+            click_growth = latest['total_clicks'] - week_ago['total_clicks']
+            imp_growth = latest.get('total_impressions', 0) - week_ago.get('total_impressions', 0)
+            report += f"🖱️ Clicks: {latest['total_clicks']} ({'+' if click_growth >= 0 else ''}{click_growth})\n"
+            report += f"👁️ Impressies: {latest['total_impressions']} ({'+' if imp_growth >= 0 else ''}{imp_growth})\n"
+            report += f"📍 Gem. positie: {latest.get('avg_position', '?')}\n"
+
+    # Vergelijk met 30 dagen geleden
+    month_ago = None
+    for s in reversed(snapshots[:-1]):
+        try:
+            s_date = datetime.strptime(s['date'], '%Y-%m-%d')
+            l_date = datetime.strptime(latest['date'], '%Y-%m-%d')
+            if (l_date - s_date).days >= 28:
+                month_ago = s
+                break
+        except:
+            continue
+
+    if month_ago:
+        month_articles = latest.get('total_articles', 0) - month_ago.get('total_articles', 0)
+        report += f"\n📅 Maand groei: +{month_articles} artikelen\n"
+        if 'total_clicks' in latest and 'total_clicks' in month_ago:
+            month_clicks = latest['total_clicks'] - month_ago['total_clicks']
+            report += f"🖱️ Click groei (30d): {'+' if month_clicks >= 0 else ''}{month_clicks}\n"
+
+    return report
+
+
+def identify_winning_patterns():
+    """Analyseer GSC data om te bepalen welke content het best presteert."""
+    if not os.path.exists(GSC_DATA_FILE):
+        return []
+
+    try:
+        with open(GSC_DATA_FILE) as f:
+            gsc = json.load(f)
+    except:
+        return []
+
+    growth = load_growth_data()
+    patterns = []
+
+    top_pages = sorted(gsc.get('pages', []), key=lambda x: -x.get('clicks', 0))[:20]
+
+    # Analyseer wat top-pagina's gemeen hebben
+    brand_performance = {}
+    for p in top_pages:
+        url = p['page']
+        slug = url.split('/b2b/')[-1].rstrip('/') if '/b2b/' in url else ''
+        if not slug:
+            continue
+
+        brand = slug.split('-')[0].lower()
+        if brand not in brand_performance:
+            brand_performance[brand] = {'clicks': 0, 'impressions': 0, 'count': 0, 'slugs': []}
+        brand_performance[brand]['clicks'] += p.get('clicks', 0)
+        brand_performance[brand]['impressions'] += p.get('impressions', 0)
+        brand_performance[brand]['count'] += 1
+        brand_performance[brand]['slugs'].append(slug)
+
+    # Welk brand presteert het best per artikel?
+    for brand, data in sorted(brand_performance.items(), key=lambda x: -x[1]['clicks']):
+        if data['count'] > 0:
+            avg_clicks = data['clicks'] / data['count']
+            patterns.append({
+                'type': 'brand_winner',
+                'brand': brand,
+                'avg_clicks': round(avg_clicks, 1),
+                'total_clicks': data['clicks'],
+                'top_slugs': data['slugs'][:3],
+                'insight': f"{brand.capitalize()}: {avg_clicks:.0f} clicks/artikel gemiddeld"
+            })
+
+    # Welke title-patronen werken? (vs, review, pricing, how-to)
+    pattern_types = {'vs': [], 'review': [], 'pricing': [], 'how': [], 'best': [], 'alternative': []}
+    for p in gsc.get('pages', []):
+        slug = p['page'].split('/b2b/')[-1].rstrip('/') if '/b2b/' in p['page'] else ''
+        for pt in pattern_types:
+            if pt in slug.lower():
+                pattern_types[pt].append(p.get('clicks', 0))
+
+    for pt, clicks_list in pattern_types.items():
+        if clicks_list:
+            avg = sum(clicks_list) / len(clicks_list)
+            patterns.append({
+                'type': 'content_pattern',
+                'pattern': pt,
+                'avg_clicks': round(avg, 1),
+                'count': len(clicks_list),
+                'insight': f"'{pt}' artikelen: gem. {avg:.0f} clicks ({len(clicks_list)} artikelen)"
+            })
+
+    # Sla winning patterns op
+    growth["winning_patterns"] = patterns
+    save_growth_data(growth)
+
+    return patterns
+
+
+def create_ab_test(slug, variant_a_title, variant_b_title):
+    """Start een A/B test op een artikel titel."""
+    ab = load_ab_tests()
+
+    # Check of er al een test loopt voor dit artikel
+    for test in ab.get("active", []):
+        if test.get("slug") == slug:
+            return None, f"Er loopt al een A/B test voor {slug}"
+
+    test = {
+        "id": f"ab_{slug}_{datetime.now().strftime('%Y%m%d')}",
+        "slug": slug,
+        "variant_a": {"title": variant_a_title, "days_active": 0, "clicks": 0, "impressions": 0},
+        "variant_b": {"title": variant_b_title, "days_active": 0, "clicks": 0, "impressions": 0},
+        "current_variant": "a",
+        "started_at": datetime.now().strftime('%Y-%m-%d'),
+        "switch_every_days": 3,
+        "min_impressions": 50,
+        "status": "running"
+    }
+
+    # Zet variant A live
+    article_path = f"{REPO_ROOT}/b2b/{slug}/index.html"
+    if os.path.isfile(article_path):
+        _set_article_title(article_path, variant_a_title)
+        ab["active"].append(test)
+        save_ab_tests(ab)
+        return test, None
+    else:
+        return None, f"Artikel {slug} niet gevonden"
+
+
+def _set_article_title(article_path, new_title):
+    """Verander de title en h1 van een artikel."""
+    try:
+        with open(article_path, 'r', encoding='utf-8') as f:
+            html = f.read()
+
+        # Update <title>
+        html = re.sub(r'<title>.*?</title>', f'<title>{new_title}</title>', html)
+        # Update eerste <h1>
+        html = re.sub(r'<h1[^>]*>.*?</h1>', f'<h1>{new_title}</h1>', html, count=1)
+        # Update og:title
+        html = re.sub(r'content="[^"]*"(\s*(?:/>|>)\s*<!--\s*og:title)', f'content="{new_title}"\\1', html)
+        html = re.sub(r'(property="og:title"\s+content=")[^"]*"', f'\\1{new_title}"', html)
+
+        with open(article_path, 'w', encoding='utf-8') as f:
+            f.write(html)
+        return True
+    except:
+        return False
+
+
+def check_ab_tests():
+    """Check alle actieve A/B tests en wissel varianten als nodig."""
+    ab = load_ab_tests()
+    if not ab.get("active"):
+        return []
+
+    actions = []
+    now = datetime.now()
+
+    for test in ab["active"][:]:  # Copy list to allow removal
+        slug = test["slug"]
+        started = datetime.strptime(test["started_at"], '%Y-%m-%d')
+        days_running = (now - started).days
+        switch_days = test.get("switch_every_days", 3)
+        current = test["current_variant"]
+
+        # Haal GSC data voor dit artikel
+        if os.path.exists(GSC_DATA_FILE):
+            try:
+                with open(GSC_DATA_FILE) as f:
+                    gsc = json.load(f)
+                for p in gsc.get('pages', []):
+                    if slug in p.get('page', ''):
+                        variant_key = f"variant_{current}"
+                        test[variant_key]["clicks"] = p.get('clicks', 0)
+                        test[variant_key]["impressions"] = p.get('impressions', 0)
+                        test[variant_key]["days_active"] += 1
+                        break
+            except:
+                pass
+
+        # Wissel variant als het tijd is
+        if days_running > 0 and days_running % switch_days == 0:
+            new_variant = "b" if current == "a" else "a"
+            new_title = test[f"variant_{new_variant}"]["title"]
+            article_path = f"{REPO_ROOT}/b2b/{slug}/index.html"
+            if _set_article_title(article_path, new_title):
+                test["current_variant"] = new_variant
+                actions.append(f"🔄 {slug}: switched naar variant {new_variant.upper()}")
+
+        # Bepaal winnaar na voldoende data
+        min_imp = test.get("min_impressions", 50)
+        a = test["variant_a"]
+        b = test["variant_b"]
+
+        if a.get("impressions", 0) >= min_imp and b.get("impressions", 0) >= min_imp:
+            ctr_a = (a["clicks"] / a["impressions"] * 100) if a["impressions"] > 0 else 0
+            ctr_b = (b["clicks"] / b["impressions"] * 100) if b["impressions"] > 0 else 0
+
+            winner = "a" if ctr_a >= ctr_b else "b"
+            winner_data = test[f"variant_{winner}"]
+            loser = "b" if winner == "a" else "a"
+            loser_data = test[f"variant_{loser}"]
+
+            # Pas winnende titel toe
+            article_path = f"{REPO_ROOT}/b2b/{slug}/index.html"
+            _set_article_title(article_path, winner_data["title"])
+
+            # Sla learning op
+            winner_ctr = (winner_data["clicks"] / winner_data["impressions"] * 100) if winner_data["impressions"] > 0 else 0
+            loser_ctr = (loser_data["clicks"] / loser_data["impressions"] * 100) if loser_data["impressions"] > 0 else 0
+
+            learning = {
+                "slug": slug,
+                "winner_title": winner_data["title"],
+                "loser_title": loser_data["title"],
+                "winner_ctr": round(winner_ctr, 2),
+                "loser_ctr": round(loser_ctr, 2),
+                "improvement": round(winner_ctr - loser_ctr, 2),
+                "date": now.strftime('%Y-%m-%d')
+            }
+            ab["learnings"].append(learning)
+
+            # Verplaats naar completed
+            test["status"] = "completed"
+            test["winner"] = winner
+            ab["completed"].append(test)
+            ab["active"].remove(test)
+
+            actions.append(f"🏆 A/B test klaar: {slug} — Variant {winner.upper()} wint! CTR {winner_ctr:.1f}% vs {loser_ctr:.1f}%")
+
+    save_ab_tests(ab)
+    return actions
+
+
+def smart_article_planner():
+    """Data-driven planning: welke artikelen schrijven voor maximale groei."""
+    plan = []
+    growth = load_growth_data()
+    patterns = growth.get("winning_patterns", [])
+
+    # 1. Welk brand presteert het best? → schrijf daar meer van
+    brand_winners = [p for p in patterns if p['type'] == 'brand_winner']
+    brand_winners.sort(key=lambda x: -x.get('avg_clicks', 0))
+
+    if brand_winners:
+        top_brand = brand_winners[0]['brand']
+        plan.append({
+            'priority': 'HIGH',
+            'action': f"Schrijf meer {top_brand.capitalize()} artikelen — beste performer ({brand_winners[0]['avg_clicks']} clicks/artikel)",
+            'brand': top_brand
+        })
+
+    # 2. Welk content-type werkt? → meer daarvan
+    content_winners = [p for p in patterns if p['type'] == 'content_pattern']
+    content_winners.sort(key=lambda x: -x.get('avg_clicks', 0))
+
+    if content_winners:
+        top_pattern = content_winners[0]['pattern']
+        plan.append({
+            'priority': 'HIGH',
+            'action': f"Focus op '{top_pattern}' artikelen — gem. {content_winners[0]['avg_clicks']} clicks",
+            'pattern': top_pattern
+        })
+
+    # 3. Content gaps uit GSC
+    gaps = analyze_content_gaps()
+    gsc_gaps = [g for g in gaps if g['type'] == 'gsc_gap'][:3]
+    for gap in gsc_gaps:
+        plan.append({
+            'priority': 'MEDIUM',
+            'action': f"Nieuw artikel voor '{gap['keyword']}' ({gap['impressions']} impressies, geen content)",
+            'keyword': gap['keyword']
+        })
+
+    # 4. Vergelijkingsartikelen (hoge conversie)
+    comparison_gaps = [g for g in gaps if g['type'] == 'comparison'][:3]
+    for gap in comparison_gaps:
+        plan.append({
+            'priority': 'MEDIUM',
+            'action': f"VS artikel: {gap['keyword']} (vergelijkingen converteren goed)",
+            'slug': gap.get('suggested_slug', '')
+        })
+
+    # 5. A/B test suggesties voor bestaande artikelen
+    if os.path.exists(GSC_DATA_FILE):
+        try:
+            with open(GSC_DATA_FILE) as f:
+                gsc = json.load(f)
+            # Artikelen met veel impressies maar lage CTR → A/B test kandidaten
+            for p in gsc.get('pages', []):
+                if p.get('impressions', 0) > 100 and p.get('ctr', 0) < 2.0:
+                    slug = p['page'].split('/b2b/')[-1].rstrip('/')
+                    if slug and '/' not in slug:
+                        plan.append({
+                            'priority': 'MEDIUM',
+                            'action': f"A/B test titel van '{slug}' — {p['impressions']} imp maar {p['ctr']}% CTR",
+                            'slug': slug
+                        })
+                        break  # Max 1 A/B test suggestie
+        except:
+            pass
+
+    return plan
+
+
+def generate_growth_report():
+    """Volledig dagelijks groeirapport met trends, winnaars, en acties."""
+    report = "🚀 Victor Growth Report\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+    report += f"📅 {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
+
+    # 1. Snapshot
+    snapshot = take_growth_snapshot()
+    if snapshot:
+        report += f"📊 Snapshot: {snapshot.get('total_articles', '?')} artikelen\n"
+        if 'total_clicks' in snapshot:
+            report += f"🖱️ Clicks: {snapshot['total_clicks']} | Impressies: {snapshot['total_impressions']}\n"
+            report += f"📍 Gem. positie: {snapshot.get('avg_position', '?')}\n"
+        report += "\n"
+
+    # 2. Trends
+    trends = analyze_growth_trends()
+    if isinstance(trends, str) and "Nog niet" not in trends:
+        report += trends + "\n"
+
+    # 3. Winning patterns
+    patterns = identify_winning_patterns()
+    if patterns:
+        report += "🏆 Top Performers:\n"
+        for p in patterns[:5]:
+            report += f"  - {p['insight']}\n"
+        report += "\n"
+
+    # 4. A/B tests
+    ab = load_ab_tests()
+    if ab.get("active"):
+        report += f"🔬 Actieve A/B tests: {len(ab['active'])}\n"
+        for test in ab["active"]:
+            report += f"  - {test['slug']}: variant {test['current_variant'].upper()} actief\n"
+        report += "\n"
+
+    if ab.get("learnings") and ab["learnings"][-1:]:
+        latest = ab["learnings"][-1]
+        report += f"💡 Laatste A/B learning: '{latest['winner_title'][:40]}' wint met {latest['improvement']}% meer CTR\n\n"
+
+    # 5. Actieplan
+    plan = smart_article_planner()
+    if plan:
+        report += "📋 Actieplan (data-driven):\n"
+        for item in plan[:5]:
+            icon = "🔴" if item['priority'] == 'HIGH' else "🟡"
+            report += f"  {icon} {item['action']}\n"
+
+    return report
+
+
+def autonomous_growth_cycle():
+    """De kern van de growth engine: analyseer → plan → schrijf → meet → herhaal."""
+    actions_taken = []
+    ts = datetime.now().strftime('%Y-%m-%d %H:%M')
+
+    # 1. Neem een snapshot
+    snapshot = take_growth_snapshot()
+    if snapshot:
+        actions_taken.append(f"Snapshot genomen: {snapshot.get('total_articles', '?')} artikelen")
+
+    # 2. Ververs GSC data (als credentials aanwezig)
+    if os.path.exists(GSC_CREDENTIALS):
+        try:
+            data, err = fetch_gsc_data()
+            if data:
+                actions_taken.append(f"GSC data vernieuwd: {len(data.get('pages', []))} pagina's")
+        except:
+            pass
+
+    # 3. Analyseer winnaars
+    patterns = identify_winning_patterns()
+    if patterns:
+        actions_taken.append(f"Winning patterns: {len(patterns)} gevonden")
+
+    # 4. Check A/B tests
+    ab_actions = check_ab_tests()
+    actions_taken.extend(ab_actions)
+
+    # 5. Rebuild sitemap
+    try:
+        count = rebuild_sitemap()
+        rebuild_robots_txt()
+        actions_taken.append(f"Sitemap rebuild: {count} URLs")
+    except:
+        pass
+
+    # 6. Smart planning
+    plan = smart_article_planner()
+    if plan:
+        # Sla het plan op zodat Victor het kan gebruiken
+        growth = load_growth_data()
+        growth["growth_actions"].append({
+            "time": ts,
+            "plan": [p['action'] for p in plan[:5]],
+            "patterns_used": len(patterns)
+        })
+        save_growth_data(growth)
+        actions_taken.append(f"Growth plan bijgewerkt: {len(plan)} acties")
+
+    # 7. Auto-write: schrijf het #1 gesuggereerde artikel als het een comparison is
+    if plan:
+        top = plan[0]
+        if top.get('slug') and 'vs' in top.get('slug', ''):
+            slug = top['slug']
+            article_path = f"{REPO_ROOT}/b2b/{slug}/index.html"
+            if not os.path.exists(article_path):
+                try:
+                    brand = slug.split('-')[0].capitalize()
+                    competitor = slug.split('-vs-')[-1].replace('-', ' ').title() if '-vs-' in slug else ''
+                    prompt = f"""Schrijf een uitgebreid vergelijkingsartikel: {brand} vs {competitor}.
+Minimaal 2000 woorden HTML. Structuur: intro, feature vergelijking (tabel), pricing, use cases, pros/cons per tool, verdict, FAQ.
+Eerlijk en objectief. Affiliate link voor {brand}: {VAULT.get(brand, VAULT.get(brand.capitalize(), ''))}
+Schrijf als een ervaren founder. Geen <html>/<head>/<body> tags, alleen de content HTML."""
+
+                    res = client.chat.completions.create(
+                        model=MODEL, messages=[{"role": "user", "content": prompt}], max_tokens=4000
+                    )
+                    new_content = res.choices[0].message.content.replace("```html", "").replace("```", "").strip()
+
+                    os.makedirs(os.path.dirname(article_path), exist_ok=True)
+                    with open(article_path, 'w', encoding='utf-8') as f:
+                        f.write(new_content)
+
+                    # Restyle met fix_articles.py als beschikbaar
+                    fix_script = "/root/felix_hq/fix_articles.py"
+                    if os.path.exists(fix_script):
+                        run_command(f"cd {REPO_ROOT} && python3 {fix_script}", timeout=120)
+
+                    run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor Growth: auto-wrote {slug}' && git push origin main")
+                    actions_taken.append(f"Auto-geschreven: {slug} (data-driven!)")
+                except Exception as e:
+                    log(f"Growth auto-write error: {e}")
+
+    # Git push alle wijzigingen
+    run_command(f"cd {REPO_ROOT} && git add -A && git diff --cached --quiet || git commit -m 'Victor Growth: daily cycle' && git push origin main")
+
+    return actions_taken
+
+
 def log(text):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(LOG_FILE, "a") as f:
@@ -1805,6 +2368,113 @@ def cmd_autofix(message):
         bot.reply_to(message, f"❌ Auto-improve error: {e}")
 
 
+@bot.message_handler(commands=['growth'])
+def cmd_growth(message):
+    """Volledig groeirapport: trends, winnaars, A/B tests, actieplan."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "📈 Growth rapport genereren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+    report = generate_growth_report()
+    # Split als te lang voor Telegram (max 4096 chars)
+    if len(report) > 4000:
+        bot.reply_to(message, report[:4000])
+        bot.reply_to(message, report[4000:])
+    else:
+        bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['abtest'])
+def cmd_abtest(message):
+    """Start of bekijk A/B tests op artikel titels."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    if len(parts) < 2 or parts[1].strip().lower() == "status":
+        # Toon status
+        ab = load_ab_tests()
+        report = "🔬 A/B Test Status\n━━━━━━━━━━━━━━━━━━━━\n\n"
+        if ab.get("active"):
+            report += f"Actief ({len(ab['active'])}):\n"
+            for t in ab["active"]:
+                report += f"  📊 {t['slug']}: variant {t['current_variant'].upper()}\n"
+                report += f"     A: {t['variant_a']['title'][:50]}\n"
+                report += f"     B: {t['variant_b']['title'][:50]}\n"
+        else:
+            report += "Geen actieve tests.\n"
+
+        if ab.get("learnings"):
+            report += f"\n💡 Learnings ({len(ab['learnings'])}):\n"
+            for l in ab["learnings"][-3:]:
+                report += f"  ✅ {l['slug']}: +{l['improvement']}% CTR\n"
+
+        report += "\nGebruik: /abtest <slug>\nVictor genereert dan 2 titel-varianten en start de test."
+        bot.reply_to(message, report)
+        return
+
+    # Start nieuwe test
+    slug = parts[1].strip()
+    article_path = f"{REPO_ROOT}/b2b/{slug}/index.html"
+    if not os.path.isfile(article_path):
+        bot.reply_to(message, f"❌ Artikel '{slug}' niet gevonden.")
+        return
+
+    bot.reply_to(message, f"🔬 A/B test voorbereiden voor {slug}...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    # Lees huidige titel
+    try:
+        with open(article_path, 'r', encoding='utf-8') as f:
+            html = f.read()
+        title_match = re.search(r'<title>(.*?)</title>', html)
+        current_title = title_match.group(1) if title_match else slug.replace('-', ' ').title()
+    except:
+        current_title = slug.replace('-', ' ').title()
+
+    # Laat Claude een alternatieve titel genereren
+    prompt = f"""Huidige artikel titel: "{current_title}"
+Slug: {slug}
+
+Genereer 1 alternatieve titel die waarschijnlijk een hogere CTR in Google heeft.
+Gebruik een van deze bewezen patronen: vraag-formaat, nummer-lijst, "how to", power words (Ultimate, Complete, Best).
+Max 60 karakters. Alleen de titel, geen uitleg."""
+
+    try:
+        res = client.chat.completions.create(
+            model=MODEL, messages=[{"role": "user", "content": prompt}], max_tokens=100
+        )
+        alt_title = res.choices[0].message.content.strip().strip('"').strip("'")
+
+        test, err = create_ab_test(slug, current_title, alt_title)
+        if err:
+            bot.reply_to(message, f"❌ {err}")
+        else:
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: A/B test started for {slug}' && git push origin main")
+            bot.reply_to(message, f"🔬 A/B Test Gestart!\n\n📊 {slug}:\n  A: {current_title}\n  B: {alt_title}\n\nWissel elke {test['switch_every_days']} dagen. Winnaar na {test['min_impressions']} impressies per variant.")
+    except Exception as e:
+        bot.reply_to(message, f"❌ Kon geen alternatieve titel genereren: {e}")
+
+
+@bot.message_handler(commands=['plan'])
+def cmd_plan(message):
+    """Smart article planner: data-driven content planning."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "📋 Smart content plan genereren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    plan = smart_article_planner()
+    if plan:
+        report = "📋 Data-Driven Content Plan\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        for i, item in enumerate(plan, 1):
+            icon = "🔴" if item['priority'] == 'HIGH' else "🟡"
+            report += f"{i}. {icon} {item['action']}\n"
+        report += "\n💡 Gebaseerd op GSC data, winning patterns, en content gaps."
+        bot.reply_to(message, report)
+    else:
+        bot.reply_to(message, "📋 Geen data beschikbaar voor planning. Gebruik eerst /gsc fetch en /research.")
+
+
 @bot.message_handler(commands=['gsc'])
 def cmd_gsc(message):
     """Google Search Console data ophalen en analyseren."""
@@ -1976,6 +2646,11 @@ def cmd_help(message):
 /keywords — Content gaps + artikel suggesties
 /sitemap — Rebuild sitemap.xml
 /ogimages — Genereer OG images voor social sharing
+
+🚀 Growth Engine:
+/growth — Volledig groeirapport met trends
+/abtest [slug] — Start/bekijk A/B tests op titels
+/plan — Data-driven content planning
 
 🚀 Actie:
 /generate — Genereer een artikel
@@ -2545,13 +3220,28 @@ def proactive_loop():
                     pass
                 last_report = f"{now.date()}-{hour}"
 
+            # 🚀 GROWTH ENGINE: dagelijkse cyclus om 05:00 UTC
+            if hour == 5 and last_auto_improve != str(now.date()) + "-growth":
+                try:
+                    log("Starting autonomous growth cycle...")
+                    actions = autonomous_growth_cycle()
+                    if actions:
+                        growth_report = "🚀 Growth Engine — Dagelijkse Cyclus\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        growth_report += "\n".join(f"  ✅ {a}" for a in actions)
+                        bot.send_message(ADMIN_ID, growth_report)
+                        log(f"Growth cycle done: {len(actions)} actions")
+                except Exception as e:
+                    log(f"Growth cycle error: {e}")
+
             # Wekelijks strategierapport: maandag 08:00 UTC
             if weekday == 0 and hour == 8 and last_weekly != str(now.date()):
                 try:
                     strategy = generate_weekly_strategy()
-                    # Voeg self-diagnose toe aan wekelijks rapport
                     diagnose = self_diagnose()
-                    bot.send_message(ADMIN_ID, f"📈 Wekelijks Strategie Rapport\n━━━━━━━━━━━━━━━━━━━━━\n\n{strategy}\n\n{diagnose}")
+                    growth = generate_growth_report()
+                    bot.send_message(ADMIN_ID, f"📈 Wekelijks Strategie + Growth Rapport\n━━━━━━━━━━━━━━━━━━━━━\n\n{strategy}\n\n{diagnose}")
+                    # Growth rapport apart (kan lang zijn)
+                    bot.send_message(ADMIN_ID, growth)
                     last_weekly = str(now.date())
                 except:
                     pass

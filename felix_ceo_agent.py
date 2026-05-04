@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 10.0 Autopilot — Powered by Claude AI<br>
+Victor 11.0 Domination Matrix — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -3505,6 +3505,1111 @@ def download_telegram_file(file_id):
         log(f"Download error: {e}")
         return None, None
 
+# ── MODULE 10: DOMINATION MATRIX ENGINE ─────────────────────────────────────
+PROGRAMMATIC_FILE = "/root/felix_hq/victor_programmatic.json"
+SCHEMA_FILE = "/root/felix_hq/victor_schema.json"
+SYNDICATION_FILE = "/root/felix_hq/victor_syndication.json"
+LINKGRAPH_FILE = "/root/felix_hq/victor_linkgraph.json"
+SERP_FILE = "/root/felix_hq/victor_serp.json"
+
+def load_programmatic():
+    if os.path.exists(PROGRAMMATIC_FILE):
+        try:
+            return json.load(open(PROGRAMMATIC_FILE))
+        except:
+            pass
+    return {"generated_pages": [], "templates": [], "stats": {}}
+
+def save_programmatic(data):
+    data["generated_pages"] = data.get("generated_pages", [])[-500:]
+    with open(PROGRAMMATIC_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_schema_data():
+    if os.path.exists(SCHEMA_FILE):
+        try:
+            return json.load(open(SCHEMA_FILE))
+        except:
+            pass
+    return {"articles_with_schema": [], "schema_types": {}, "stats": {}}
+
+def save_schema_data(data):
+    with open(SCHEMA_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_syndication():
+    if os.path.exists(SYNDICATION_FILE):
+        try:
+            return json.load(open(SYNDICATION_FILE))
+        except:
+            pass
+    return {"syndicated": [], "platforms": {}, "backlinks_gained": []}
+
+def save_syndication(data):
+    data["syndicated"] = data.get("syndicated", [])[-200:]
+    with open(SYNDICATION_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_linkgraph():
+    if os.path.exists(LINKGRAPH_FILE):
+        try:
+            return json.load(open(LINKGRAPH_FILE))
+        except:
+            pass
+    return {"pages": {}, "link_scores": {}, "recommendations": [], "last_scan": None}
+
+def save_linkgraph(data):
+    data["recommendations"] = data.get("recommendations", [])[-100:]
+    with open(LINKGRAPH_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_serp_data():
+    if os.path.exists(SERP_FILE):
+        try:
+            return json.load(open(SERP_FILE))
+        except:
+            pass
+    return {"tracking": {}, "alerts": [], "history": [], "daily_snapshots": []}
+
+def save_serp_data(data):
+    data["alerts"] = data.get("alerts", [])[-100:]
+    data["history"] = data.get("history", [])[-90:]
+    data["daily_snapshots"] = data.get("daily_snapshots", [])[-90:]
+    with open(SERP_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+# ── 10A: PROGRAMMATIC SEO ENGINE ──────────────────────────────────────────
+
+# Template types voor mass page generation
+PROGRAMMATIC_TEMPLATES = {
+    "vs": {
+        "pattern": "{brand_a}-vs-{brand_b}",
+        "title": "{Brand_A} vs {Brand_B}: Welke is Beter in {year}?",
+        "prompt_template": """Schrijf een professioneel vergelijkingsartikel: {Brand_A} vs {Brand_B}.
+
+Structuur:
+1. Korte intro (2 zinnen)
+2. Quick verdict tabel (features, pricing, ease of use, rating)
+3. {Brand_A} - Sterke punten (3-4 bullets)
+4. {Brand_B} - Sterke punten (3-4 bullets)
+5. Head-to-head vergelijking per categorie (features, pricing, support, integrations)
+6. Conclusie: wie kiest wat
+
+BELANGRIJK:
+- Gebruik affiliate links waar beschikbaar
+- Wees eerlijk en objectief
+- Focus op waarde voor de lezer
+- 1500-2500 woorden
+- Dark theme HTML met professionele styling"""
+    },
+    "alternatives": {
+        "pattern": "beste-{brand}-alternatieven",
+        "title": "Top 5 {Brand} Alternatieven in {year}",
+        "prompt_template": """Schrijf een artikel over de top 5 alternatieven voor {Brand}.
+
+Structuur:
+1. Intro: waarom mensen alternatieven zoeken (2 zinnen)
+2. Quick comparison tabel
+3. Per alternatief: naam, sterke punten, pricing, voor wie
+4. Conclusie: welk alternatief past bij welk type gebruiker
+
+BELANGRIJK: Gebruik affiliate links, 1500-2500 woorden, dark theme HTML"""
+    },
+    "pricing": {
+        "pattern": "{brand}-pricing-kosten",
+        "title": "{Brand} Pricing & Kosten: Compleet Overzicht {year}",
+        "prompt_template": """Schrijf een uitgebreid pricing artikel over {Brand}.
+
+Structuur:
+1. Intro: wat kost {Brand}?
+2. Pricing tabel (alle plans)
+3. Hidden costs / extras
+4. Is het de prijs waard? (ROI analyse)
+5. Goedkopere alternatieven
+6. Conclusie + beste deal tips
+
+BELANGRIJK: Actuele prijzen, affiliate link, 1200-2000 woorden, dark theme HTML"""
+    },
+    "usecase": {
+        "pattern": "beste-ai-tools-voor-{usecase}",
+        "title": "Beste AI Tools voor {Usecase} in {year}",
+        "prompt_template": """Schrijf een roundup artikel: Beste AI Tools voor {Usecase}.
+
+Structuur:
+1. Intro: waarom AI tools voor {usecase}
+2. Top 5-7 tools met korte review per tool
+3. Vergelijkingstabel (prijs, features, rating)
+4. Welke tool voor welk budget/niveau
+5. Conclusie
+
+BELANGRIJK: Include onze affiliate brands waar relevant, 1500-2500 woorden, dark theme HTML"""
+    }
+}
+
+# Use cases voor roundup artikelen
+USE_CASES = [
+    "video-maken", "presentaties", "website-bouwen", "voice-over",
+    "content-creatie", "social-media", "email-marketing", "seo",
+    "e-commerce", "freelancers", "startups", "onderwijs",
+    "podcast", "muziek-productie", "grafisch-ontwerp", "copywriting"
+]
+
+
+def generate_programmatic_combinations():
+    """Genereer alle mogelijke pagina-combinaties uit templates."""
+    brands = list(VAULT.keys())
+    combinations = []
+
+    # VS combinaties (elke brand vs elke andere)
+    for i, a in enumerate(brands):
+        for b in brands[i+1:]:
+            slug = f"{a.lower()}-vs-{b.lower()}"
+            combinations.append({
+                "type": "vs",
+                "slug": slug,
+                "brand_a": a,
+                "brand_b": b,
+                "title": PROGRAMMATIC_TEMPLATES["vs"]["title"].format(
+                    Brand_A=a, Brand_B=b, year=datetime.now().year
+                )
+            })
+
+    # Alternatives per brand
+    for brand in brands:
+        slug = f"beste-{brand.lower()}-alternatieven"
+        combinations.append({
+            "type": "alternatives",
+            "slug": slug,
+            "brand": brand,
+            "title": PROGRAMMATIC_TEMPLATES["alternatives"]["title"].format(
+                Brand=brand, year=datetime.now().year
+            )
+        })
+
+    # Pricing per brand
+    for brand in brands:
+        slug = f"{brand.lower()}-pricing-kosten"
+        combinations.append({
+            "type": "pricing",
+            "slug": slug,
+            "brand": brand,
+            "title": PROGRAMMATIC_TEMPLATES["pricing"]["title"].format(
+                Brand=brand, year=datetime.now().year
+            )
+        })
+
+    # Use case roundups
+    for uc in USE_CASES:
+        slug = f"beste-ai-tools-voor-{uc}"
+        uc_display = uc.replace("-", " ").title()
+        combinations.append({
+            "type": "usecase",
+            "slug": slug,
+            "usecase": uc,
+            "title": PROGRAMMATIC_TEMPLATES["usecase"]["title"].format(
+                Usecase=uc_display, year=datetime.now().year
+            )
+        })
+
+    return combinations
+
+
+def generate_programmatic_page(combo):
+    """Genereer een enkele programmatic SEO pagina."""
+    template = PROGRAMMATIC_TEMPLATES.get(combo["type"])
+    if not template:
+        return None
+
+    # Check of pagina al bestaat
+    b2b_path = f"{REPO_ROOT}/b2b"
+    target_file = f"{b2b_path}/{combo['slug']}.html"
+    if os.path.exists(target_file):
+        return None  # Al gemaakt
+
+    # Build prompt
+    if combo["type"] == "vs":
+        prompt = template["prompt_template"].format(
+            Brand_A=combo["brand_a"], Brand_B=combo["brand_b"]
+        )
+        # Add affiliate links
+        links_info = []
+        for brand in [combo["brand_a"], combo["brand_b"]]:
+            if brand in VAULT:
+                links_info.append(f"Affiliate link {brand}: {VAULT[brand]}")
+        if links_info:
+            prompt += "\n\nAffiliate links:\n" + "\n".join(links_info)
+
+    elif combo["type"] == "alternatives":
+        prompt = template["prompt_template"].format(Brand=combo["brand"])
+        # Add all affiliate links als alternatieven
+        links_info = [f"{b}: {url}" for b, url in VAULT.items() if b != combo["brand"]]
+        prompt += "\n\nBeschikbare affiliate links:\n" + "\n".join(links_info)
+
+    elif combo["type"] == "pricing":
+        prompt = template["prompt_template"].format(Brand=combo["brand"])
+        if combo["brand"] in VAULT:
+            prompt += f"\n\nAffiliate link: {VAULT[combo['brand']]}"
+
+    elif combo["type"] == "usecase":
+        uc_display = combo["usecase"].replace("-", " ").title()
+        prompt = template["prompt_template"].format(Usecase=uc_display)
+        links_info = [f"{b}: {url}" for b, url in VAULT.items()]
+        prompt += "\n\nBeschikbare affiliate links:\n" + "\n".join(links_info)
+
+    else:
+        return None
+
+    # Generate met Claude
+    try:
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": "Je bent een SEO content expert. Schrijf complete, professionele HTML artikelen met dark theme styling. Gebruik moderne, schone HTML met inline CSS."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=4000,
+            temperature=0.7
+        )
+        html_content = res.choices[0].message.content.strip()
+
+        # Extract HTML als het in code blocks zit
+        if "```html" in html_content:
+            html_content = html_content.split("```html")[1].split("```")[0].strip()
+        elif "```" in html_content:
+            html_content = html_content.split("```")[1].split("```")[0].strip()
+
+        # Schrijf bestand
+        os.makedirs(b2b_path, exist_ok=True)
+        with open(target_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+
+        # Track
+        prog = load_programmatic()
+        prog["generated_pages"].append({
+            "slug": combo["slug"],
+            "type": combo["type"],
+            "title": combo["title"],
+            "date": str(datetime.now().date()),
+            "file": target_file
+        })
+        prog["stats"][combo["type"]] = prog["stats"].get(combo["type"], 0) + 1
+        save_programmatic(prog)
+
+        return combo["slug"]
+    except Exception as e:
+        log(f"Programmatic generation error for {combo['slug']}: {e}")
+        return None
+
+
+def programmatic_batch(max_pages=3):
+    """Genereer een batch programmatic pagina's (max per keer om API te sparen)."""
+    combos = generate_programmatic_combinations()
+    b2b_path = f"{REPO_ROOT}/b2b"
+
+    # Filter bestaande
+    new_combos = []
+    for c in combos:
+        if not os.path.exists(f"{b2b_path}/{c['slug']}.html"):
+            new_combos.append(c)
+
+    if not new_combos:
+        return [], len(combos)
+
+    # Prioriteer op type: vs > alternatives > pricing > usecase
+    priority = {"vs": 1, "alternatives": 2, "pricing": 3, "usecase": 4}
+    new_combos.sort(key=lambda x: priority.get(x["type"], 5))
+
+    generated = []
+    for combo in new_combos[:max_pages]:
+        slug = generate_programmatic_page(combo)
+        if slug:
+            generated.append(slug)
+            time.sleep(2)  # Rate limiting
+
+    # Git push als er pagina's zijn gegenereerd
+    if generated:
+        try:
+            rebuild_sitemap()
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: {len(generated)} programmatic SEO pages' && git push origin main")
+        except:
+            pass
+
+    return generated, len(combos)
+
+
+# ── 10B: SCHEMA MARKUP ENGINE ─────────────────────────────────────────────
+
+SCHEMA_TEMPLATES = {
+    "article": '''<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{title}",
+  "author": {{"@type": "Organization", "name": "AI Builder Marketplace"}},
+  "publisher": {{"@type": "Organization", "name": "AI Builder Marketplace", "url": "https://aibuildermarketplace.com"}},
+  "datePublished": "{date}",
+  "dateModified": "{modified}",
+  "description": "{description}",
+  "mainEntityOfPage": "{url}"
+}}
+</script>''',
+
+    "faq": '''<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{faq_items}]
+}}
+</script>''',
+
+    "product_review": '''<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {{"@type": "SoftwareApplication", "name": "{product}", "applicationCategory": "AI Tool"}},
+  "author": {{"@type": "Organization", "name": "AI Builder Marketplace"}},
+  "reviewRating": {{"@type": "Rating", "ratingValue": "{rating}", "bestRating": "5"}},
+  "reviewBody": "{review_summary}"
+}}
+</script>''',
+
+    "comparison": '''<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{title}",
+  "description": "{description}",
+  "speakable": {{"@type": "SpeakableSpecification", "cssSelector": ["h1", ".verdict"]}},
+  "mainEntity": {{
+    "@type": "ItemList",
+    "itemListElement": [{items}]
+  }}
+}}
+</script>''',
+
+    "howto": '''<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{title}",
+  "description": "{description}",
+  "step": [{steps}]
+}}
+</script>'''
+}
+
+
+def detect_article_type(filename, content):
+    """Detecteer het type artikel voor juiste schema markup."""
+    slug = filename.replace('.html', '').lower()
+    content_lower = content.lower()
+
+    if 'vs' in slug or 'versus' in slug:
+        return "comparison"
+    elif 'alternative' in slug:
+        return "comparison"
+    elif 'review' in slug or 'review' in content_lower[:500]:
+        return "product_review"
+    elif 'pricing' in slug or 'kosten' in slug:
+        return "product_review"
+    elif 'how' in slug or 'tutorial' in slug or 'guide' in slug:
+        return "howto"
+    else:
+        return "article"
+
+
+def generate_faq_schema(content, slug):
+    """Genereer FAQ schema via Claude AI analyse."""
+    try:
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": "Genereer 3-5 FAQ vragen en antwoorden gebaseerd op dit artikel. Antwoord ALLEEN in JSON format: [{\"q\": \"vraag\", \"a\": \"antwoord\"}]"},
+                {"role": "user", "content": content[:3000]}
+            ],
+            max_tokens=1000,
+            temperature=0.5
+        )
+        faq_text = res.choices[0].message.content.strip()
+        if "```json" in faq_text:
+            faq_text = faq_text.split("```json")[1].split("```")[0]
+        elif "```" in faq_text:
+            faq_text = faq_text.split("```")[1].split("```")[0]
+        faqs = json.loads(faq_text)
+
+        items = []
+        for faq in faqs:
+            items.append(f'{{"@type":"Question","name":"{faq["q"]}","acceptedAnswer":{{"@type":"Answer","text":"{faq["a"]}"}}}}')
+
+        return SCHEMA_TEMPLATES["faq"].format(faq_items=",".join(items))
+    except Exception as e:
+        log(f"FAQ schema generation error for {slug}: {e}")
+        return ""
+
+
+def add_schema_to_article(filepath):
+    """Voeg schema markup toe aan een enkel artikel."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Skip als er al schema in zit
+        if 'application/ld+json' in content:
+            return None
+
+        filename = os.path.basename(filepath)
+        slug = filename.replace('.html', '')
+        article_type = detect_article_type(filename, content)
+
+        schemas = []
+        url = f"https://aibuildermarketplace.com/b2b/{slug}.html"
+        today = str(datetime.now().date())
+
+        # Extract title
+        title_match = re.search(r'<title>(.*?)</title>', content)
+        title = title_match.group(1) if title_match else slug.replace('-', ' ').title()
+
+        # Extract description (eerste 160 chars tekst)
+        text_only = re.sub(r'<[^>]+>', '', content)
+        text_only = re.sub(r'\s+', ' ', text_only).strip()
+        description = text_only[:160].rsplit(' ', 1)[0] + "..."
+
+        # Basis Article schema altijd toevoegen
+        schemas.append(SCHEMA_TEMPLATES["article"].format(
+            title=title, date=today, modified=today,
+            description=description, url=url
+        ))
+
+        # Type-specifiek schema
+        if article_type == "product_review":
+            brand = None
+            for b in VAULT:
+                if b.lower() in slug:
+                    brand = b
+                    break
+            if brand:
+                schemas.append(SCHEMA_TEMPLATES["product_review"].format(
+                    product=brand, rating="4.5",
+                    review_summary=description
+                ))
+
+        elif article_type == "comparison":
+            # Extract vergeleken items
+            brands_in_slug = [b for b in VAULT if b.lower() in slug]
+            items = []
+            for i, brand in enumerate(brands_in_slug, 1):
+                items.append(f'{{"@type":"ListItem","position":{i},"name":"{brand}"}}')
+            if items:
+                schemas.append(SCHEMA_TEMPLATES["comparison"].format(
+                    title=title, description=description,
+                    items=",".join(items)
+                ))
+
+        # FAQ schema via AI (voor alle types)
+        faq_schema = generate_faq_schema(content, slug)
+        if faq_schema:
+            schemas.append(faq_schema)
+
+        # Inject schemas voor </head>
+        schema_block = "\n".join(schemas)
+        if '</head>' in content:
+            content = content.replace('</head>', f'\n{schema_block}\n</head>')
+        else:
+            content = schema_block + "\n" + content
+
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+
+        # Track
+        sd = load_schema_data()
+        sd["articles_with_schema"].append({
+            "slug": slug,
+            "type": article_type,
+            "schemas": [s.split('"@type"')[1].split('"')[1] if '"@type"' in s else "unknown" for s in schemas],
+            "date": today
+        })
+        sd["articles_with_schema"] = sd["articles_with_schema"][-200:]
+        sd["schema_types"][article_type] = sd["schema_types"].get(article_type, 0) + 1
+        save_schema_data(sd)
+
+        return slug
+    except Exception as e:
+        log(f"Schema injection error for {filepath}: {e}")
+        return None
+
+
+def schema_batch(max_articles=5):
+    """Voeg schema markup toe aan artikelen die het nog niet hebben."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return [], 0
+
+    files = [f for f in os.listdir(b2b_path) if f.endswith('.html')]
+    processed = []
+
+    for f in files[:max_articles * 3]:  # Check meer, skip bestaande
+        if len(processed) >= max_articles:
+            break
+        filepath = os.path.join(b2b_path, f)
+        result = add_schema_to_article(filepath)
+        if result:
+            processed.append(result)
+            time.sleep(1)
+
+    if processed:
+        try:
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: schema markup for {len(processed)} articles' && git push origin main")
+        except:
+            pass
+
+    return processed, len(files)
+
+
+# ── 10C: MULTI-CHANNEL SYNDICATIE ─────────────────────────────────────────
+
+def generate_syndication_variants(slug):
+    """Genereer content varianten voor verschillende platformen."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    filepath = f"{b2b_path}/{slug}.html"
+
+    if not os.path.exists(filepath):
+        return {}
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Extract tekst
+    text_only = re.sub(r'<[^>]+>', '', content)
+    text_only = re.sub(r'\s+', ' ', text_only).strip()
+
+    variants = {}
+
+    try:
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": """Je bent een content specialist. Genereer platform-specifieke varianten.
+Antwoord in JSON:
+{
+    "devto": "Markdown artikel (500-800 woorden, technische focus, met frontmatter: title, tags, canonical_url)",
+    "medium": "Markdown artikel (600-1000 woorden, storytelling, eerste persoon)",
+    "reddit": "Reddit post (200-400 woorden, casual, waarde-gericht, geen promotie-toon)",
+    "linkedin": "LinkedIn post (150-250 woorden, professioneel, met emoji bullets)"
+}"""},
+                {"role": "user", "content": f"Origineel artikel ({slug}):\n\n{text_only[:3000]}\n\nCanonical URL: https://aibuildermarketplace.com/b2b/{slug}.html"}
+            ],
+            max_tokens=4000,
+            temperature=0.7
+        )
+        result = res.choices[0].message.content.strip()
+        if "```json" in result:
+            result = result.split("```json")[1].split("```")[0]
+        elif "```" in result:
+            result = result.split("```")[1].split("```")[0]
+        variants = json.loads(result)
+    except Exception as e:
+        log(f"Syndication variant error for {slug}: {e}")
+
+    return variants
+
+
+def syndication_cycle(max_articles=2):
+    """Genereer syndication content voor recente artikelen."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return []
+
+    synd = load_syndication()
+    already_done = {s["slug"] for s in synd.get("syndicated", [])}
+
+    files = sorted(
+        [f for f in os.listdir(b2b_path) if f.endswith('.html')],
+        key=lambda f: os.path.getmtime(os.path.join(b2b_path, f)),
+        reverse=True
+    )
+
+    results = []
+    syndication_dir = f"{REPO_ROOT}/syndication"
+    os.makedirs(syndication_dir, exist_ok=True)
+
+    for f in files:
+        if len(results) >= max_articles:
+            break
+        slug = f.replace('.html', '')
+        if slug in already_done:
+            continue
+
+        variants = generate_syndication_variants(slug)
+        if not variants:
+            continue
+
+        # Sla varianten op als bestanden
+        saved = []
+        for platform, content in variants.items():
+            ext = "md" if platform in ["devto", "medium"] else "txt"
+            outfile = f"{syndication_dir}/{slug}_{platform}.{ext}"
+            with open(outfile, 'w', encoding='utf-8') as fout:
+                fout.write(content)
+            saved.append(platform)
+
+        synd["syndicated"].append({
+            "slug": slug,
+            "platforms": saved,
+            "date": str(datetime.now().date())
+        })
+
+        for p in saved:
+            synd["platforms"][p] = synd["platforms"].get(p, 0) + 1
+
+        results.append(f"{slug} → {', '.join(saved)}")
+        time.sleep(2)
+
+    save_syndication(synd)
+
+    if results:
+        try:
+            run_command(f"cd {REPO_ROOT} && git add syndication/ && git commit -m 'Victor: syndication content for {len(results)} articles' && git push origin main")
+        except:
+            pass
+
+    return results
+
+
+# ── 10D: SMART INTERNAL LINK GRAPH ───────────────────────────────────────
+
+def scan_internal_links():
+    """Scan alle artikelen en bouw een link graph."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return {}
+
+    files = [f for f in os.listdir(b2b_path) if f.endswith('.html')]
+    graph = {}  # slug -> {outgoing: [], incoming: [], score: 0}
+
+    # Stap 1: Scan alle links
+    for f in files:
+        slug = f.replace('.html', '')
+        filepath = os.path.join(b2b_path, f)
+        try:
+            with open(filepath, 'r', encoding='utf-8') as fh:
+                content = fh.read()
+        except:
+            continue
+
+        # Find interne links
+        internal_links = re.findall(r'href="(?:\.\/|\/b2b\/)?([^"]+?)\.html"', content)
+        # Also check for relative links
+        internal_links += re.findall(r'href="([^"]*?)"[^>]*>.*?</a>', content)
+        internal_links = [l.replace('.html', '').split('/')[-1] for l in internal_links
+                         if 'b2b' in l or (not l.startswith('http') and not l.startswith('#') and not l.startswith('mailto'))]
+
+        graph[slug] = {
+            "outgoing": list(set(internal_links)),
+            "incoming": [],
+            "word_count": len(re.sub(r'<[^>]+>', '', content).split()),
+            "has_affiliate": any(url in content for url in VAULT.values()),
+            "score": 0
+        }
+
+    # Stap 2: Bereken incoming links
+    for slug, data in graph.items():
+        for target in data["outgoing"]:
+            if target in graph:
+                graph[target]["incoming"].append(slug)
+
+    # Stap 3: Bereken link scores (simpele PageRank-achtig)
+    total_pages = len(graph) or 1
+    for slug, data in graph.items():
+        incoming_count = len(data["incoming"])
+        outgoing_count = len(data["outgoing"])
+        has_affiliate = data["has_affiliate"]
+
+        # Score: meer incoming = beter, geld-pagina's moeten meer incoming krijgen
+        score = incoming_count * 10
+        if has_affiliate:
+            score += 20  # Money pages zijn belangrijker
+        if outgoing_count == 0:
+            score -= 10  # Dead-end pagina's moeten links krijgen
+        if incoming_count == 0:
+            score -= 15  # Orphan pagina's zijn slecht
+
+        graph[slug]["score"] = max(0, score)
+
+    return graph
+
+
+def generate_link_recommendations():
+    """Genereer aanbevelingen voor interne links."""
+    graph = scan_internal_links()
+    if not graph:
+        return []
+
+    recommendations = []
+
+    # Vind orphan pages (geen incoming links)
+    orphans = [slug for slug, data in graph.items() if not data["incoming"]]
+    for slug in orphans:
+        # Vind gerelateerde pagina's op basis van slug-woorden
+        words = slug.split('-')
+        related = []
+        for other_slug in graph:
+            if other_slug != slug:
+                other_words = other_slug.split('-')
+                overlap = set(words) & set(other_words)
+                if overlap - {'vs', 'de', 'het', 'en', 'voor', 'met', 'best', 'beste', 'top'}:
+                    related.append(other_slug)
+
+        if related:
+            recommendations.append({
+                "type": "orphan",
+                "target": slug,
+                "action": f"Voeg link naar '{slug}' toe vanuit: {', '.join(related[:3])}",
+                "priority": "high",
+                "from_pages": related[:3]
+            })
+
+    # Vind money pages met te weinig incoming links
+    for slug, data in graph.items():
+        if data["has_affiliate"] and len(data["incoming"]) < 3:
+            recommendations.append({
+                "type": "money_page",
+                "target": slug,
+                "action": f"Money page '{slug}' heeft maar {len(data['incoming'])} incoming links, moet 3+",
+                "priority": "high",
+                "current_incoming": len(data["incoming"])
+            })
+
+    # Vind dead-end pages (geen outgoing links)
+    dead_ends = [slug for slug, data in graph.items() if not data["outgoing"]]
+    for slug in dead_ends:
+        recommendations.append({
+            "type": "dead_end",
+            "target": slug,
+            "action": f"Dead-end pagina '{slug}' — voeg 2-3 interne links toe",
+            "priority": "medium"
+        })
+
+    # Sorteer op prioriteit
+    prio_map = {"high": 0, "medium": 1, "low": 2}
+    recommendations.sort(key=lambda r: prio_map.get(r["priority"], 2))
+
+    # Save
+    lg = load_linkgraph()
+    lg["pages"] = {slug: {"in": len(d["incoming"]), "out": len(d["outgoing"]), "score": d["score"]}
+                   for slug, d in graph.items()}
+    lg["link_scores"] = {slug: d["score"] for slug, d in graph.items()}
+    lg["recommendations"] = recommendations
+    lg["last_scan"] = str(datetime.now())
+    save_linkgraph(lg)
+
+    return recommendations
+
+
+def auto_fix_internal_links(max_fixes=3):
+    """Automatisch interne links toevoegen waar ze missen."""
+    recommendations = generate_link_recommendations()
+    if not recommendations:
+        return []
+
+    b2b_path = f"{REPO_ROOT}/b2b"
+    fixed = []
+
+    for rec in recommendations[:max_fixes]:
+        if rec["type"] == "orphan" and rec.get("from_pages"):
+            # Voeg link toe naar orphan vanuit gerelateerde pagina's
+            target_slug = rec["target"]
+            for source_slug in rec["from_pages"][:1]:  # Max 1 per fix
+                source_file = f"{b2b_path}/{source_slug}.html"
+                if not os.path.exists(source_file):
+                    continue
+
+                try:
+                    with open(source_file, 'r', encoding='utf-8') as f:
+                        content = f.read()
+
+                    # Check of link al bestaat
+                    if target_slug in content:
+                        continue
+
+                    # Voeg link toe voor </body> of aan eind
+                    link_html = f'\n<p style="margin-top:20px;padding:15px;background:#1a1a2e;border-radius:8px;border-left:3px solid #6c63ff;">Lees ook: <a href="./{target_slug}.html" style="color:#6c63ff;">{target_slug.replace("-", " ").title()}</a></p>\n'
+
+                    if '</body>' in content:
+                        content = content.replace('</body>', f'{link_html}</body>')
+                    else:
+                        content += link_html
+
+                    with open(source_file, 'w', encoding='utf-8') as f:
+                        f.write(content)
+
+                    fixed.append(f"{source_slug} → {target_slug}")
+                except Exception as e:
+                    log(f"Link fix error: {e}")
+
+        elif rec["type"] == "dead_end":
+            # Voeg relevante links toe aan dead-end pagina's
+            target_file = f"{b2b_path}/{rec['target']}.html"
+            if not os.path.exists(target_file):
+                continue
+
+            try:
+                with open(target_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+
+                # Vind gerelateerde pagina's
+                target_words = rec["target"].split('-')
+                all_files = [f.replace('.html', '') for f in os.listdir(b2b_path) if f.endswith('.html')]
+                related = []
+                for slug in all_files:
+                    if slug != rec["target"]:
+                        overlap = set(target_words) & set(slug.split('-'))
+                        if overlap - {'vs', 'de', 'het', 'en', 'voor', 'met', 'best', 'beste'}:
+                            related.append(slug)
+
+                if related:
+                    links_html = '\n<div style="margin-top:30px;padding:20px;background:#1a1a2e;border-radius:8px;">\n<h3 style="color:#6c63ff;">Gerelateerde artikelen</h3>\n'
+                    for r in related[:3]:
+                        links_html += f'<p><a href="./{r}.html" style="color:#e0e0ff;">{r.replace("-", " ").title()}</a></p>\n'
+                    links_html += '</div>\n'
+
+                    if '</body>' in content:
+                        content = content.replace('</body>', f'{links_html}</body>')
+                    else:
+                        content += links_html
+
+                    with open(target_file, 'w', encoding='utf-8') as f:
+                        f.write(content)
+
+                    fixed.append(f"{rec['target']} ← {len(related[:3])} links added")
+            except Exception as e:
+                log(f"Dead-end fix error: {e}")
+
+    if fixed:
+        try:
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: auto-fixed {len(fixed)} internal links' && git push origin main")
+        except:
+            pass
+
+    return fixed
+
+
+# ── 10E: REAL-TIME SERP TRACKER ──────────────────────────────────────────
+
+def update_serp_tracking():
+    """Update SERP posities vanuit GSC data en detecteer veranderingen."""
+    serp = load_serp_data()
+    alerts = []
+
+    if not os.path.exists(GSC_DATA_FILE):
+        return alerts
+
+    try:
+        with open(GSC_DATA_FILE) as f:
+            gsc = json.load(f)
+    except:
+        return alerts
+
+    pages = gsc.get("pages", [])
+    queries = gsc.get("queries", [])
+    today = str(datetime.now().date())
+
+    # Update tracking per pagina
+    tracking = serp.get("tracking", {})
+    for page in pages:
+        url = page.get("page", "")
+        slug = url.split('/')[-1].replace('.html', '') if '/' in url else url
+        position = page.get("position", 0)
+        clicks = page.get("clicks", 0)
+        impressions = page.get("impressions", 0)
+
+        if slug not in tracking:
+            tracking[slug] = {
+                "positions": [],
+                "best_position": position,
+                "worst_position": position,
+                "trend": "new"
+            }
+
+        hist = tracking[slug]
+        hist["positions"].append({"date": today, "pos": position, "clicks": clicks, "impr": impressions})
+        hist["positions"] = hist["positions"][-30:]  # 30 dagen history
+
+        # Update best/worst
+        if position < hist.get("best_position", 100):
+            hist["best_position"] = position
+        if position > hist.get("worst_position", 0):
+            hist["worst_position"] = position
+
+        # Trend detectie
+        positions_list = [p["pos"] for p in hist["positions"]]
+        if len(positions_list) >= 3:
+            recent_avg = sum(positions_list[-3:]) / 3
+            older_avg = sum(positions_list[:3]) / 3 if len(positions_list) >= 6 else recent_avg
+
+            if recent_avg < older_avg - 5:
+                hist["trend"] = "rising"
+            elif recent_avg > older_avg + 5:
+                hist["trend"] = "falling"
+            else:
+                hist["trend"] = "stable"
+
+        # Alerts
+        if len(positions_list) >= 2:
+            change = positions_list[-1] - positions_list[-2]
+            if change <= -5:
+                alert = f"📈 {slug}: +{abs(change)} posities omhoog! (nu #{positions_list[-1]:.0f})"
+                alerts.append(alert)
+            elif change >= 5:
+                alert = f"📉 {slug}: -{change} posities omlaag! (nu #{positions_list[-1]:.0f})"
+                alerts.append(alert)
+
+            # Page 1 entry alert
+            if positions_list[-1] <= 10 and positions_list[-2] > 10:
+                alert = f"🏆 {slug}: PAGINA 1 bereikt! (positie #{positions_list[-1]:.0f})"
+                alerts.append(alert)
+                # Trigger chain reaction
+                try:
+                    trigger_chain_reaction(slug, "page1")
+                except:
+                    pass
+
+            # Page 1 verloren alert
+            if positions_list[-1] > 10 and positions_list[-2] <= 10:
+                alert = f"⚠️ {slug}: Pagina 1 VERLOREN (nu #{positions_list[-1]:.0f})"
+                alerts.append(alert)
+
+    serp["tracking"] = tracking
+    serp["alerts"].extend([{"alert": a, "date": today} for a in alerts])
+
+    # Dagelijkse snapshot
+    total_pages = len(tracking)
+    page1_count = sum(1 for s, d in tracking.items()
+                      if d["positions"] and d["positions"][-1]["pos"] <= 10)
+    top3_count = sum(1 for s, d in tracking.items()
+                     if d["positions"] and d["positions"][-1]["pos"] <= 3)
+    rising = sum(1 for s, d in tracking.items() if d.get("trend") == "rising")
+    falling = sum(1 for s, d in tracking.items() if d.get("trend") == "falling")
+
+    serp["daily_snapshots"].append({
+        "date": today,
+        "total": total_pages,
+        "page1": page1_count,
+        "top3": top3_count,
+        "rising": rising,
+        "falling": falling
+    })
+
+    save_serp_data(serp)
+    return alerts
+
+
+def generate_serp_report():
+    """Genereer een volledig SERP tracking rapport."""
+    serp = load_serp_data()
+    tracking = serp.get("tracking", {})
+
+    msg = "📊 SERP Tracker — Positie Rapport\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    if not tracking:
+        msg += "Nog geen tracking data. Run /gsc fetch eerst.\n"
+        return msg
+
+    # Summary
+    total = len(tracking)
+    page1 = sum(1 for s, d in tracking.items()
+                if d["positions"] and d["positions"][-1]["pos"] <= 10)
+    top3 = sum(1 for s, d in tracking.items()
+               if d["positions"] and d["positions"][-1]["pos"] <= 3)
+
+    msg += f"📈 Totaal getrackt: {total} pagina's\n"
+    msg += f"🥇 Pagina 1: {page1} ({page1/total*100:.0f}%)\n"
+    msg += f"🏆 Top 3: {top3}\n\n"
+
+    # Rising stars
+    rising = [(s, d) for s, d in tracking.items() if d.get("trend") == "rising"]
+    if rising:
+        msg += "🚀 Stijgers:\n"
+        for slug, data in sorted(rising, key=lambda x: x[1]["positions"][-1]["pos"])[:5]:
+            pos = data["positions"][-1]["pos"]
+            msg += f"  ↑ {slug[:35]}: #{pos:.0f}\n"
+
+    # Falling
+    falling = [(s, d) for s, d in tracking.items() if d.get("trend") == "falling"]
+    if falling:
+        msg += "\n📉 Dalers:\n"
+        for slug, data in sorted(falling, key=lambda x: x[1]["positions"][-1]["pos"])[:5]:
+            pos = data["positions"][-1]["pos"]
+            msg += f"  ↓ {slug[:35]}: #{pos:.0f}\n"
+
+    # Recent alerts
+    alerts = serp.get("alerts", [])[-5:]
+    if alerts:
+        msg += "\n🔔 Recente Alerts:\n"
+        for a in alerts:
+            msg += f"  {a['alert']}\n"
+
+    # Trend over time
+    snapshots = serp.get("daily_snapshots", [])
+    if len(snapshots) >= 2:
+        first = snapshots[0]
+        last = snapshots[-1]
+        msg += f"\n📊 Trend ({first['date']} → {last['date']}):\n"
+        msg += f"  Pagina 1: {first.get('page1', 0)} → {last.get('page1', 0)}\n"
+        msg += f"  Top 3: {first.get('top3', 0)} → {last.get('top3', 0)}\n"
+
+    return msg
+
+
+def domination_matrix_cycle():
+    """Volledige Domination Matrix cyclus — draait dagelijks."""
+    actions = []
+
+    # 1. SERP tracking update
+    try:
+        alerts = update_serp_tracking()
+        if alerts:
+            actions.extend(alerts)
+        actions.append(f"📊 SERP tracking bijgewerkt")
+    except Exception as e:
+        log(f"SERP tracking error: {e}")
+
+    # 2. Schema markup batch (max 2 per dag)
+    try:
+        schema_done, total = schema_batch(max_articles=2)
+        if schema_done:
+            actions.append(f"🏷️ Schema markup toegevoegd aan {len(schema_done)} artikelen")
+    except Exception as e:
+        log(f"Schema batch error: {e}")
+
+    # 3. Internal link fixes (max 2 per dag)
+    try:
+        link_fixes = auto_fix_internal_links(max_fixes=2)
+        if link_fixes:
+            actions.append(f"🔗 {len(link_fixes)} interne links gefixed")
+    except Exception as e:
+        log(f"Link fix error: {e}")
+
+    # 4. Programmatic SEO (max 1 per dag — API sparen)
+    try:
+        prog_done, total_possible = programmatic_batch(max_pages=1)
+        if prog_done:
+            actions.append(f"🏭 {len(prog_done)} programmatic pagina's gegenereerd ({total_possible} totaal mogelijk)")
+    except Exception as e:
+        log(f"Programmatic batch error: {e}")
+
+    # 5. Syndication (1x per week, alleen op dinsdag)
+    if datetime.now().weekday() == 1:  # Dinsdag
+        try:
+            synd_results = syndication_cycle(max_articles=1)
+            if synd_results:
+                actions.append(f"📢 Syndication content voor {len(synd_results)} artikelen")
+        except Exception as e:
+            log(f"Syndication error: {e}")
+
+    return actions
+
+
 # ── TELEGRAM BOT ─────────────────────────────────────────────────────────────
 bot = telebot.TeleBot(TOKEN, parse_mode=None)
 
@@ -4761,6 +5866,201 @@ def cmd_briefing(message):
     bot.reply_to(message, briefing)
 
 
+@bot.message_handler(commands=['programmatic'])
+def cmd_programmatic(message):
+    """Programmatic SEO: genereer mass pages."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "status"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "generate":
+        bot.reply_to(message, "🏭 Programmatic pagina's genereren...")
+        generated, total = programmatic_batch(max_pages=3)
+        if generated:
+            msg = f"🏭 Programmatic SEO — {len(generated)} pagina's gegenereerd!\n\n"
+            msg += "\n".join(f"  ✅ {s}" for s in generated)
+            msg += f"\n\n📊 Nog {total - len(generated)} combinaties mogelijk"
+        else:
+            msg = f"🏭 Alle {total} combinaties zijn al gegenereerd! 🎉"
+        bot.reply_to(message, msg)
+    else:
+        combos = generate_programmatic_combinations()
+        b2b_path = f"{REPO_ROOT}/b2b"
+        existing = sum(1 for c in combos if os.path.exists(f"{b2b_path}/{c['slug']}.html"))
+        prog = load_programmatic()
+
+        msg = f"🏭 Programmatic SEO Status\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"📊 Totaal combinaties: {len(combos)}\n"
+        msg += f"✅ Gegenereerd: {existing}\n"
+        msg += f"📝 Te doen: {len(combos) - existing}\n\n"
+
+        by_type = {}
+        for c in combos:
+            by_type[c["type"]] = by_type.get(c["type"], 0) + 1
+        msg += "📋 Per type:\n"
+        for t, count in by_type.items():
+            done = prog.get("stats", {}).get(t, 0)
+            msg += f"  {t}: {done}/{count}\n"
+
+        msg += f"\nGebruik /programmatic generate om 3 pagina's te genereren."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['schema'])
+def cmd_schema(message):
+    """Schema markup toevoegen aan artikelen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "status"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "add":
+        bot.reply_to(message, "🏷️ Schema markup toevoegen...")
+        done, total = schema_batch(max_articles=5)
+        if done:
+            msg = f"🏷️ Schema toegevoegd aan {len(done)} artikelen:\n\n"
+            msg += "\n".join(f"  ✅ {s}" for s in done)
+        else:
+            msg = f"🏷️ Alle {total} artikelen hebben al schema markup!"
+        bot.reply_to(message, msg)
+    else:
+        sd = load_schema_data()
+        msg = f"🏷️ Schema Markup Status\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"✅ Artikelen met schema: {len(sd.get('articles_with_schema', []))}\n"
+        types = sd.get("schema_types", {})
+        if types:
+            msg += "\n📋 Per type:\n"
+            for t, count in types.items():
+                msg += f"  {t}: {count}\n"
+        msg += f"\nGebruik /schema add om schema toe te voegen."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['syndicate'])
+def cmd_syndicate(message):
+    """Multi-channel syndicatie."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if len(parts) > 1 and parts[1] == "run":
+        bot.reply_to(message, "📢 Syndication content genereren...")
+        results = syndication_cycle(max_articles=2)
+        if results:
+            msg = f"📢 Syndication — {len(results)} artikelen verwerkt:\n\n"
+            msg += "\n".join(f"  ✅ {r}" for r in results)
+        else:
+            msg = "📢 Geen nieuwe artikelen om te syndiceren."
+        bot.reply_to(message, msg)
+    else:
+        synd = load_syndication()
+        msg = f"📢 Multi-Channel Syndicatie\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"📊 Gesyndiceerd: {len(synd.get('syndicated', []))} artikelen\n"
+        platforms = synd.get("platforms", {})
+        if platforms:
+            msg += "\n📋 Per platform:\n"
+            for p, count in platforms.items():
+                msg += f"  {p}: {count}\n"
+        msg += f"\nGebruik /syndicate run om content te genereren."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['linkgraph'])
+def cmd_linkgraph(message):
+    """Internal link graph analyse."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "scan"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "fix":
+        bot.reply_to(message, "🔗 Interne links fixen...")
+        fixed = auto_fix_internal_links(max_fixes=5)
+        if fixed:
+            msg = f"🔗 {len(fixed)} link fixes toegepast:\n\n"
+            msg += "\n".join(f"  ✅ {f}" for f in fixed)
+        else:
+            msg = "🔗 Geen link problemen gevonden!"
+        bot.reply_to(message, msg)
+    else:
+        bot.reply_to(message, "🔗 Link graph scannen...")
+        recs = generate_link_recommendations()
+        lg = load_linkgraph()
+        pages = lg.get("pages", {})
+
+        msg = f"🔗 Internal Link Graph\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"📊 Totaal pagina's: {len(pages)}\n"
+
+        orphans = sum(1 for p, d in pages.items() if d.get("in", 0) == 0)
+        dead_ends = sum(1 for p, d in pages.items() if d.get("out", 0) == 0)
+        msg += f"🚨 Orphan pagina's (geen incoming): {orphans}\n"
+        msg += f"🔚 Dead-end pagina's (geen outgoing): {dead_ends}\n\n"
+
+        # Top scored pages
+        sorted_pages = sorted(pages.items(), key=lambda x: x[1].get("score", 0), reverse=True)
+        if sorted_pages:
+            msg += "🏆 Sterkste pagina's:\n"
+            for slug, data in sorted_pages[:5]:
+                msg += f"  {slug[:30]}: score {data['score']} (in:{data['in']} out:{data['out']})\n"
+
+        if recs:
+            msg += f"\n⚠️ {len(recs)} aanbevelingen:\n"
+            for r in recs[:5]:
+                msg += f"  - {r['action'][:60]}\n"
+
+        msg += f"\nGebruik /linkgraph fix om problemen automatisch op te lossen."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['serp'])
+def cmd_serp(message):
+    """SERP positie tracking."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "report"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "update":
+        bot.reply_to(message, "📊 SERP posities updaten...")
+        alerts = update_serp_tracking()
+        if alerts:
+            msg = "📊 SERP Updates:\n\n" + "\n".join(f"  {a}" for a in alerts)
+        else:
+            msg = "📊 SERP tracking bijgewerkt — geen grote veranderingen."
+        bot.reply_to(message, msg)
+    else:
+        report = generate_serp_report()
+        bot.reply_to(message, report)
+
+
+@bot.message_handler(commands=['domination'])
+def cmd_domination(message):
+    """Volledige Domination Matrix cyclus."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔥 Domination Matrix cyclus starten...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    actions = domination_matrix_cycle()
+    if actions:
+        msg = "🔥 Domination Matrix — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "\n".join(f"  ✅ {a}" for a in actions)
+    else:
+        msg = "🔥 Domination Matrix: geen acties nodig."
+    bot.reply_to(message, msg)
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -4795,7 +6095,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 10.0 Autopilot — Commando's:
+    bot.reply_to(message, """Victor 11.0 Domination Matrix — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -4845,6 +6145,14 @@ def cmd_help(message):
 /predict <keyword> [brand] — Ranking voorspelling
 /sprint [plan|run] — Wekelijkse sprint
 /briefing — Dagelijks ochtend briefing
+
+🔥 Domination Matrix:
+/programmatic [generate] — Mass page generation
+/schema [add] — Rich snippets toevoegen
+/syndicate [run] — Multi-channel content
+/linkgraph [fix] — Internal link analyse
+/serp [update] — Positie tracking & alerts
+/domination — Volledige cyclus draaien
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -5074,7 +6382,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 10.0 Autopilot — Status Report
+    return f"""📊 Victor 11.0 Domination Matrix — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -5475,6 +6783,23 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Autopilot cycle error: {e}")
 
+            # 🔥 DOMINATION MATRIX: dagelijkse cyclus om 07:00 UTC
+            if hour == 7 and weekday != 0 and last_auto_improve != str(now.date()) + "-domination":
+                try:
+                    log("Starting domination matrix cycle...")
+                    dom_actions = domination_matrix_cycle()
+                    last_auto_improve = str(now.date()) + "-domination"
+                    if dom_actions:
+                        dom_report = "🔥 Domination Matrix — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        dom_report += "\n".join(f"  ✅ {a}" for a in dom_actions)
+                        # Alleen melden als er interessante acties zijn
+                        interesting = [a for a in dom_actions if any(w in a for w in ['📈', '📉', '🏆', '🏷️', '🔗', '🏭', '📢'])]
+                        if interesting:
+                            bot.send_message(ADMIN_ID, dom_report)
+                        log(f"Domination matrix done: {len(dom_actions)} actions")
+                except Exception as e:
+                    log(f"Domination matrix error: {e}")
+
             # ☀️ DAILY BRIEFING: elke dag om 08:00 UTC
             if hour == 8 and weekday != 0 and last_auto_improve != str(now.date()) + "-briefing":
                 try:
@@ -5535,8 +6860,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 10.0 Autopilot online!\n\n{report}"
-            f"\n\n🤖 Autopilot: /autopilot /predict /sprint /briefing"
+            f"🚀 Victor 11.0 Domination Matrix online!\n\n{report}"
+            f"\n\n🔥 Domination: /domination /programmatic /schema /serp"
+            f"\n🤖 Autopilot: /autopilot /predict /sprint /briefing"
             f"\n🧠 Self-learning: /brain /diagnose /research"
             f"\n📈 SEO: /gsc /keywords /sitemap /ogimages"
             f"\n🏗️ Code: /multifile /write /fix"
@@ -5548,7 +6874,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 10.0 Autopilot gestart — Model: {MODEL}")
+    log(f"Victor 11.0 Domination Matrix gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 9.0 Revenue Intelligence — Powered by Claude AI<br>
+Victor 10.0 Autopilot — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -2265,7 +2265,589 @@ YOUTUBE SCRIPT INTRO:
         return f"Error: {e}"
 
 
-# ── MODULE 8: AUTONOMOUS GROWTH ENGINE ─────────────────────────────────────
+# ── MODULE 8: VICTOR AUTOPILOT ENGINE ──────────────────────────────────────
+AUTOPILOT_FILE = "/root/felix_hq/victor_autopilot.json"
+SPRINT_FILE = "/root/felix_hq/victor_sprint.json"
+
+def load_autopilot():
+    if os.path.exists(AUTOPILOT_FILE):
+        try:
+            return json.load(open(AUTOPILOT_FILE))
+        except:
+            pass
+    return {"predictions": [], "chains_triggered": [], "recycled": [], "briefings": []}
+
+def save_autopilot(data):
+    data["predictions"] = data.get("predictions", [])[-100:]
+    data["chains_triggered"] = data.get("chains_triggered", [])[-50:]
+    data["recycled"] = data.get("recycled", [])[-50:]
+    data["briefings"] = data.get("briefings", [])[-30:]
+    with open(AUTOPILOT_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_sprint():
+    if os.path.exists(SPRINT_FILE):
+        try:
+            return json.load(open(SPRINT_FILE))
+        except:
+            pass
+    return {"current_week": None, "planned_tasks": [], "completed_tasks": [], "history": []}
+
+def save_sprint(data):
+    data["history"] = data.get("history", [])[-12:]
+    with open(SPRINT_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+def predict_ranking_success(slug_or_keyword, brand):
+    """Voorspel de kans dat een artikel op pagina 1 komt."""
+    score = 50  # Basis score
+    factors = []
+
+    # Factor 1: Historisch succes van dit brand
+    if os.path.exists(GSC_DATA_FILE):
+        try:
+            with open(GSC_DATA_FILE) as f:
+                gsc = json.load(f)
+            brand_pages = [p for p in gsc.get('pages', [])
+                           if brand.lower() in p.get('page', '').lower()]
+            if brand_pages:
+                avg_pos = sum(p.get('position', 50) for p in brand_pages) / len(brand_pages)
+                top10_pct = sum(1 for p in brand_pages if p.get('position', 99) <= 10) / len(brand_pages) * 100
+                if top10_pct > 30:
+                    score += 15
+                    factors.append(f"Brand {brand} rankt goed ({top10_pct:.0f}% pagina 1)")
+                elif top10_pct > 10:
+                    score += 8
+                    factors.append(f"Brand {brand} heeft enige rankings ({top10_pct:.0f}%)")
+                else:
+                    score -= 5
+                    factors.append(f"Brand {brand} rankt moeilijk ({top10_pct:.0f}%)")
+        except:
+            pass
+
+    # Factor 2: Content type (vergelijkingen en reviews ranken beter)
+    keyword = slug_or_keyword.lower()
+    if 'vs' in keyword or 'versus' in keyword:
+        score += 15
+        factors.append("'vs' artikelen ranken goed (laag competition)")
+    elif 'alternative' in keyword:
+        score += 12
+        factors.append("Alternatieven-artikelen hebben goede kans")
+    elif 'review' in keyword:
+        score += 10
+        factors.append("Reviews ranken redelijk")
+    elif 'pricing' in keyword or 'kosten' in keyword:
+        score += 8
+        factors.append("Pricing artikelen trekken kopers")
+    elif 'how' in keyword or 'tutorial' in keyword or 'guide' in keyword:
+        score += 5
+        factors.append("How-to's hebben breed publiek")
+
+    # Factor 3: Concurrentie check (hebben we al vergelijkbare content?)
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if os.path.isdir(b2b_path):
+        existing = os.listdir(b2b_path)
+        similar = sum(1 for e in existing if brand.lower() in e.lower())
+        if similar > 30:
+            score += 10
+            factors.append(f"Sterke topical authority ({similar} artikelen)")
+        elif similar > 15:
+            score += 5
+            factors.append(f"Groeiende authority ({similar} artikelen)")
+        else:
+            score -= 5
+            factors.append(f"Weinig authority nog ({similar} artikelen)")
+
+    # Factor 4: Keyword in bestaande GSC queries (er is al vraag)
+    if os.path.exists(GSC_DATA_FILE):
+        try:
+            with open(GSC_DATA_FILE) as f:
+                gsc = json.load(f)
+            keyword_words = set(keyword.replace('-', ' ').split())
+            for q in gsc.get('queries', []):
+                query_words = set(q['query'].lower().split())
+                if len(keyword_words & query_words) >= 2:
+                    score += 10
+                    factors.append(f"Keyword al in GSC queries ({q['impressions']} imp)")
+                    break
+        except:
+            pass
+
+    # Factor 5: Commissie waarde (hogere commissie = meer moeite waard)
+    commission = COMMISSION_RATES.get(brand.lower(), {})
+    if commission.get('per_signup', 0) >= 50:
+        score += 10
+        factors.append(f"Hoge commissie (€{commission['per_signup']}/signup)")
+    elif commission.get('per_signup', 0) >= 15:
+        score += 5
+        factors.append(f"Gemiddelde commissie (€{commission['per_signup']}/signup)")
+
+    # Cap tussen 5 en 95
+    score = max(5, min(95, score))
+
+    # Sla voorspelling op
+    autopilot = load_autopilot()
+    autopilot["predictions"].append({
+        "keyword": slug_or_keyword,
+        "brand": brand,
+        "score": score,
+        "factors": factors,
+        "date": datetime.now().strftime('%Y-%m-%d')
+    })
+    save_autopilot(autopilot)
+
+    return score, factors
+
+
+def trigger_chain_reaction(slug, event_type="page1"):
+    """Trigger een ketting van acties wanneer een artikel een milestone bereikt."""
+    autopilot = load_autopilot()
+    actions_taken = []
+    ts = datetime.now().strftime('%Y-%m-%d %H:%M')
+
+    brand = slug.split('-')[0].lower()
+    if brand == 'invideo':
+        brand = 'invideo'
+
+    if event_type == "page1":
+        # 1. Schrijf 2 supporting cluster artikelen
+        clusters = load_clusters()
+        pillar = clusters.get("pillars", {}).get(brand, {})
+        existing = set(pillar.get("articles", []))
+
+        competitors_for_brand = {
+            'kinsta': ['siteground', 'cloudways', 'wpengine'],
+            'synthesia': ['heygen', 'runway', 'descript'],
+            'invideo': ['canva', 'capcut', 'filmora'],
+            'replit': ['github-codespaces', 'stackblitz', 'gitpod'],
+            'bitvavo': ['binance', 'coinbase', 'kraken'],
+            'murf': ['elevenlabs', 'play-ht', 'speechify'],
+        }
+
+        comps = competitors_for_brand.get(brand, [])
+        written = 0
+        for comp in comps[:2]:
+            new_slug = f"{brand}-vs-{comp}"
+            if new_slug not in existing and not os.path.exists(f"{REPO_ROOT}/b2b/{new_slug}/index.html"):
+                # Voorspel eerst
+                pred_score, _ = predict_ranking_success(new_slug, brand)
+                if pred_score >= 50:
+                    target = {
+                        'competitor_title': f"{brand.capitalize()} vs {comp.capitalize()}",
+                        'brand': brand,
+                        'type': 'comparison',
+                        'suggested_slug': new_slug
+                    }
+                    ok, result = write_skyscraper_article(target)
+                    if ok:
+                        written += 1
+                        actions_taken.append(f"Cluster artikel geschreven: {new_slug} (score: {pred_score}%)")
+                if written >= 2:
+                    break
+
+        # 2. Genereer social content
+        try:
+            social = generate_social_content(slug)
+            if social:
+                actions_taken.append("Social media content gegenereerd")
+        except:
+            pass
+
+        # 3. Upgrade CTA in het winning artikel
+        article_path = f"{REPO_ROOT}/b2b/{slug}/index.html"
+        if os.path.isfile(article_path):
+            try:
+                with open(article_path, 'r', encoding='utf-8') as f:
+                    html = f.read()
+
+                aff_link = VAULT.get(brand.capitalize(), VAULT.get(brand, ''))
+                if aff_link and 'chain-cta' not in html:
+                    brand_cap = brand.capitalize()
+                    if brand == 'invideo':
+                        brand_cap = 'InVideo'
+                    cta = f"""<div id="chain-cta" style="margin:30px 0;padding:28px;background:linear-gradient(135deg,#1a1f2e,#0f172a);border:2px solid #3b82f6;border-radius:16px;text-align:center">
+<p style="font-size:20px;font-weight:700;color:#e6edf3;margin-bottom:12px">🏆 #{brand_cap} — Lezer Favoriet</p>
+<p style="color:#94a3b8;margin-bottom:20px">Dit artikel staat in de TOP van Google. Sluit je aan bij duizenden die al gekozen hebben.</p>
+<a href="{aff_link}" rel="nofollow sponsored" style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:16px">Start Gratis met {brand_cap} →</a>
+</div>"""
+                    if '</body>' in html:
+                        html = html.replace('</body>', f"{cta}\n</body>")
+                        with open(article_path, 'w', encoding='utf-8') as f:
+                            f.write(html)
+                        actions_taken.append("Premium CTA toegevoegd aan winning artikel")
+            except:
+                pass
+
+        # 4. Git push alles
+        if actions_taken:
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor Chain Reaction: {slug} hit page 1' && git push origin main")
+
+    autopilot["chains_triggered"].append({
+        "slug": slug, "event": event_type, "actions": actions_taken, "date": ts
+    })
+    save_autopilot(autopilot)
+    return actions_taken
+
+
+def recycle_old_content():
+    """Detecteer en ververs artikelen die oud zijn en dalende rankings hebben."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return []
+
+    battles = load_battles()
+    recycled = []
+    now = time.time()
+    three_months = 90 * 24 * 3600
+
+    # Vind artikelen die oud zijn EN dalende rankings hebben
+    declining = {b['slug']: b for b in battles.get("active", []) if b.get("status") == "declining"}
+
+    for folder in os.listdir(b2b_path):
+        article_path = os.path.join(b2b_path, folder, "index.html")
+        if not os.path.isfile(article_path):
+            continue
+
+        mtime = os.path.getmtime(article_path)
+        age_days = (now - mtime) / 86400
+
+        # Alleen recyclen als >90 dagen oud EN dalende ranking
+        if age_days < 90:
+            continue
+        if folder not in declining:
+            continue
+
+        battle = declining[folder]
+        brand = folder.split('-')[0].capitalize()
+        if brand.lower() == 'invideo':
+            brand = 'InVideo'
+
+        try:
+            with open(article_path, 'r', encoding='utf-8') as f:
+                old_html = f.read()
+
+            old_size = len(old_html)
+
+            # Herschrijf met Claude
+            prompt = f"""Dit artikel over {brand} is {age_days:.0f} dagen oud en daalt in Google (positie {battle.get('current_position', '?')}).
+Herschrijf het VOLLEDIG met verse informatie voor 2026.
+
+Slug: {folder}
+Huidige grootte: {old_size} bytes
+
+Schrijf minimaal 2000 woorden. Update alle pricing, features, en vergelijkingen naar 2026.
+Voeg toe: verse statistieken, nieuwe features, recente reviews.
+HTML content alleen (geen <html>/<head>/<body> tags).
+Schrijf als een ervaren founder met actuele kennis."""
+
+            res = client.chat.completions.create(
+                model=MODEL, messages=[{"role": "user", "content": prompt}], max_tokens=5000
+            )
+            new_content = res.choices[0].message.content.replace("```html", "").replace("```", "").strip()
+
+            # Bewaar de head sectie
+            if '</head>' in old_html:
+                head = old_html.split('</head>')[0] + '</head>'
+                new_html = head + '<body>' + new_content + '</body></html>'
+            else:
+                new_html = new_content
+
+            with open(article_path, 'w', encoding='utf-8') as f:
+                f.write(new_html)
+
+            # Restyle
+            fix_script = "/root/felix_hq/fix_articles.py"
+            if os.path.exists(fix_script):
+                run_command(f"cd {REPO_ROOT} && python3 {fix_script}", timeout=120)
+
+            new_size = os.path.getsize(article_path)
+            recycled.append(f"{folder}: {old_size//1024}KB → {new_size//1024}KB ({age_days:.0f} dagen oud, was #{battle.get('current_position', '?')})")
+            log(f"Recycled: {folder}")
+        except Exception as e:
+            log(f"Recycle error {folder}: {e}")
+
+        # Max 2 per cyclus (API kosten)
+        if len(recycled) >= 2:
+            break
+
+    if recycled:
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor Autopilot: recycled {len(recycled)} articles' && git push origin main")
+
+    autopilot = load_autopilot()
+    autopilot["recycled"].extend([{"article": r, "date": datetime.now().strftime('%Y-%m-%d')} for r in recycled])
+    save_autopilot(autopilot)
+
+    return recycled
+
+
+def plan_weekly_sprint():
+    """Maandag: plan de hele week automatisch."""
+    sprint = load_sprint()
+    week_id = datetime.now().strftime('%Y-W%W')
+
+    if sprint.get("current_week") == week_id:
+        return sprint  # Al gepland
+
+    # Archiveer vorige sprint
+    if sprint.get("current_week"):
+        sprint["history"].append({
+            "week": sprint["current_week"],
+            "planned": len(sprint.get("planned_tasks", [])),
+            "completed": len(sprint.get("completed_tasks", []))
+        })
+
+    # Plan nieuwe sprint
+    tasks = []
+
+    # 1. ROI-gebaseerde taken
+    roi = calculate_roi_scores()
+    for key, data in list(roi.items())[:3]:
+        tasks.append({
+            "task": data['action'],
+            "type": data['type'],
+            "priority": "HIGH",
+            "est_roi": f"€{data.get('roi_per_hour', 0):.0f}/uur",
+            "status": "planned"
+        })
+
+    # 2. Content recycling check
+    battles = load_battles()
+    declining = [b for b in battles.get("active", []) if b.get("status") == "declining"]
+    if declining:
+        tasks.append({
+            "task": f"Recycle {min(len(declining), 2)} dalende artikelen",
+            "type": "recycle",
+            "priority": "MEDIUM",
+            "status": "planned"
+        })
+
+    # 3. Skyscraper targets
+    targets = find_skyscraper_targets()
+    if targets:
+        target = targets[0]
+        pred_score, _ = predict_ranking_success(target['suggested_slug'], target['brand'])
+        tasks.append({
+            "task": f"Skyscraper: {target['competitor_title'][:50]} (score: {pred_score}%)",
+            "type": "skyscraper",
+            "priority": "HIGH" if pred_score >= 70 else "MEDIUM",
+            "status": "planned"
+        })
+
+    # 4. Cluster links updaten
+    tasks.append({
+        "task": "Topic cluster links bijwerken",
+        "type": "clusters",
+        "priority": "LOW",
+        "status": "planned"
+    })
+
+    # 5. Dashboard updaten
+    tasks.append({
+        "task": "Admin dashboard refreshen",
+        "type": "dashboard",
+        "priority": "LOW",
+        "status": "planned"
+    })
+
+    sprint["current_week"] = week_id
+    sprint["planned_tasks"] = tasks
+    sprint["completed_tasks"] = []
+    save_sprint(sprint)
+
+    return sprint
+
+
+def execute_sprint_tasks():
+    """Voer geplande sprint taken uit (1 per cyclus)."""
+    sprint = load_sprint()
+    if not sprint.get("planned_tasks"):
+        return None
+
+    # Pak de eerste niet-uitgevoerde taak
+    for task in sprint["planned_tasks"]:
+        if task.get("status") != "planned":
+            continue
+
+        task["status"] = "running"
+        save_sprint(sprint)
+        result = None
+
+        try:
+            if task["type"] == "recycle":
+                recycled = recycle_old_content()
+                result = f"Recycled: {len(recycled)} artikelen" if recycled else "Geen artikelen om te recyclen"
+
+            elif task["type"] == "skyscraper":
+                targets = find_skyscraper_targets()
+                if targets:
+                    ok, res = write_skyscraper_article(targets[0])
+                    result = f"Skyscraper geschreven: {res}" if ok else f"Mislukt: {res}"
+                else:
+                    result = "Geen targets"
+
+            elif task["type"] == "clusters":
+                clusters = build_topic_clusters()
+                fixed = apply_cluster_internal_links()
+                if fixed > 0:
+                    run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor Sprint: cluster links' && git push origin main")
+                result = f"Cluster links: {fixed} artikelen"
+
+            elif task["type"] == "dashboard":
+                calculate_article_revenue()
+                html = generate_admin_dashboard()
+                dashboard_dir = f"{REPO_ROOT}/admin"
+                os.makedirs(dashboard_dir, exist_ok=True)
+                with open(f"{dashboard_dir}/index.html", 'w', encoding='utf-8') as f:
+                    f.write(html)
+                run_command(f"cd {REPO_ROOT} && git add admin/ && git diff --cached --quiet || git commit -m 'Victor Sprint: dashboard' && git push origin main")
+                result = "Dashboard bijgewerkt"
+
+            elif task["type"] == "improve":
+                slug = task.get("task", "").split("'")[1] if "'" in task.get("task", "") else ""
+                if slug:
+                    # Verbeter specifiek artikel
+                    article_path = f"{REPO_ROOT}/b2b/{slug}/index.html"
+                    if os.path.isfile(article_path):
+                        with open(article_path, 'r', encoding='utf-8') as f:
+                            old = f.read()
+                        brand = slug.split('-')[0].capitalize()
+                        prompt = f"Herschrijf dit {brand} artikel VOLLEDIG en beter. Min 2000 woorden. HTML alleen.\nSlug: {slug}"
+                        res = client.chat.completions.create(
+                            model=MODEL, messages=[{"role": "user", "content": prompt}], max_tokens=5000
+                        )
+                        new_content = res.choices[0].message.content.replace("```html", "").replace("```", "").strip()
+                        with open(article_path, 'w', encoding='utf-8') as f:
+                            f.write(new_content)
+                        fix_script = "/root/felix_hq/fix_articles.py"
+                        if os.path.exists(fix_script):
+                            run_command(f"cd {REPO_ROOT} && python3 {fix_script}", timeout=120)
+                        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor Sprint: improved {slug}' && git push origin main")
+                        result = f"Verbeterd: {slug}"
+
+            task["status"] = "done"
+            task["result"] = result or "Uitgevoerd"
+            sprint["completed_tasks"].append(task)
+
+        except Exception as e:
+            task["status"] = "failed"
+            task["result"] = str(e)[:100]
+            log(f"Sprint task error: {e}")
+
+        save_sprint(sprint)
+        return task
+
+    return None
+
+
+def generate_daily_briefing():
+    """Genereer de ochtend briefing voor Daniel."""
+    autopilot = load_autopilot()
+    revenue = load_revenue_data()
+    battles = load_battles()
+    sprint = load_sprint()
+
+    briefing = "☀️ Goedemorgen Daniel!\n━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Gisteren samenvatting
+    snapshots = revenue.get("daily_snapshots", [])
+    if len(snapshots) >= 2:
+        today = snapshots[-1]
+        yesterday = snapshots[-2]
+        click_diff = today.get('total_clicks', 0) - yesterday.get('total_clicks', 0)
+        rev = today.get('total_monthly_estimate', 0)
+        briefing += f"📊 Gisteren:\n"
+        briefing += f"  💶 Geschatte revenue: €{rev:.2f}/maand\n"
+        if click_diff != 0:
+            briefing += f"  🖱️ Clicks: {'+' if click_diff >= 0 else ''}{click_diff}\n"
+        briefing += f"  📄 Artikelen: {today.get('article_count', '?')}\n\n"
+
+    # Ranking updates
+    winning = [b for b in battles.get("active", [])
+               if b.get("current_position", 99) < b.get("start_position", 99)]
+    if winning:
+        best = min(winning, key=lambda x: x.get("current_position", 99))
+        briefing += f"📈 Beste stijger: {best['slug'][:30]} → #{best['current_position']:.0f}\n"
+
+    top3 = [b for b in battles.get("active", []) if b.get("current_position", 99) <= 3]
+    if top3:
+        briefing += f"🏆 In TOP 3: {len(top3)} artikelen\n"
+    briefing += "\n"
+
+    # Chain reactions
+    recent_chains = [c for c in autopilot.get("chains_triggered", [])
+                     if c.get("date", "")[:10] == (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')]
+    if recent_chains:
+        briefing += f"⚡ Chain reactions gisteren: {len(recent_chains)}\n"
+        for c in recent_chains[:2]:
+            briefing += f"  - {c['slug']}: {len(c.get('actions', []))} acties\n"
+        briefing += "\n"
+
+    # Vandaag ga ik...
+    briefing += "📋 Vandaag ga ik:\n"
+    if sprint.get("planned_tasks"):
+        pending = [t for t in sprint["planned_tasks"] if t.get("status") == "planned"]
+        for t in pending[:3]:
+            icon = "🔴" if t.get("priority") == "HIGH" else "🟡" if t.get("priority") == "MEDIUM" else "⚪"
+            briefing += f"  {icon} {t['task'][:55]}\n"
+    else:
+        briefing += "  Sprint plannen voor deze week\n"
+
+    # Sprint voortgang
+    if sprint.get("planned_tasks"):
+        total = len(sprint["planned_tasks"])
+        done = sum(1 for t in sprint["planned_tasks"] if t.get("status") == "done")
+        briefing += f"\n📊 Sprint: {done}/{total} taken klaar"
+
+    autopilot["briefings"].append({"date": datetime.now().strftime('%Y-%m-%d'), "briefing": briefing[:500]})
+    save_autopilot(autopilot)
+
+    return briefing
+
+
+def autopilot_cycle():
+    """De complete autopilot cyclus: predict → chain → recycle → sprint → brief."""
+    actions = []
+
+    # 1. Check for chain reaction triggers (artikelen die net pagina 1 bereikten)
+    battles = load_battles()
+    autopilot = load_autopilot()
+    triggered_slugs = {c['slug'] for c in autopilot.get("chains_triggered", [])}
+
+    for battle in battles.get("active", []):
+        slug = battle.get("slug", "")
+        pos = battle.get("current_position", 99)
+        start_pos = battle.get("start_position", 99)
+
+        # Chain reaction als: net pagina 1 bereikt EN nog niet getriggered
+        if pos <= 10 and start_pos > 10 and slug not in triggered_slugs:
+            chain_actions = trigger_chain_reaction(slug, "page1")
+            if chain_actions:
+                actions.append(f"⚡ Chain reaction voor {slug}: {len(chain_actions)} acties")
+                try:
+                    bot.send_message(ADMIN_ID,
+                        f"⚡ Chain Reaction Triggered!\n\n"
+                        f"📄 {slug} bereikt PAGINA 1 (#{pos:.0f})!\n\n"
+                        f"Automatische acties:\n" +
+                        "\n".join(f"  ✅ {a}" for a in chain_actions))
+                except:
+                    pass
+
+    # 2. Execute sprint task (1 per cyclus)
+    task = execute_sprint_tasks()
+    if task:
+        actions.append(f"Sprint: {task.get('task', '')[:40]} → {task.get('result', '')[:40]}")
+
+    # 3. Content recycling (alleen als het dinsdag of vrijdag is)
+    if datetime.now().weekday() in [1, 4]:
+        recycled = recycle_old_content()
+        if recycled:
+            actions.append(f"Recycled: {len(recycled)} artikelen")
+
+    return actions
+
+
+# ── MODULE 9: AUTONOMOUS GROWTH ENGINE ─────────────────────────────────────
 GROWTH_FILE = "/root/felix_hq/victor_growth.json"
 AB_TESTS_FILE = "/root/felix_hq/victor_ab_tests.json"
 
@@ -4026,6 +4608,159 @@ def cmd_tasks(message):
     bot.reply_to(message, report)
 
 
+@bot.message_handler(commands=['autopilot'])
+def cmd_autopilot(message):
+    """Autopilot status: sprint, chain reactions, predictions."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🤖 Autopilot status ophalen...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    ap = load_autopilot()
+    sprint = load_sprint()
+
+    msg = "🤖 Victor Autopilot Engine\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Chain reactions
+    chains = ap.get("chain_reactions", [])
+    if chains:
+        msg += f"⚡ Chain Reactions ({len(chains)} triggers):\n"
+        for c in chains[-5:]:
+            msg += f"  - {c.get('slug', '?')}: {c.get('event', '?')} → {len(c.get('actions', []))} acties\n"
+    else:
+        msg += "⚡ Chain Reactions: nog geen triggers\n"
+
+    # Sprint
+    msg += f"\n📋 Sprint: {sprint.get('current_week', 'niet actief')}\n"
+    planned = sprint.get("planned_tasks", [])
+    completed = sprint.get("completed_tasks", [])
+    msg += f"  Gepland: {len(planned)} | Gedaan: {len(completed)}\n"
+    if planned:
+        for t in planned[:3]:
+            msg += f"  → {t.get('type', '?')}: {t.get('target', '?')[:40]} (prio {t.get('priority', '?')})\n"
+
+    # Recycled
+    recycled = ap.get("recycled_articles", [])
+    msg += f"\n♻️ Gerecycled: {len(recycled)} artikelen\n"
+
+    # Predictions
+    predictions = ap.get("predictions", [])
+    if predictions:
+        msg += f"\n🎯 Laatste Voorspellingen:\n"
+        for p in predictions[-5:]:
+            msg += f"  - {p.get('keyword', '?')[:35]}: {p.get('score', '?')}% kans\n"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['predict'])
+def cmd_predict(message):
+    """Voorspel ranking succes voor een keyword/brand."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=2)
+    if len(parts) < 2:
+        bot.reply_to(message, "Gebruik: /predict <keyword> [brand]\nVoorbeeld: /predict synthesia-review Synthesia")
+        return
+
+    keyword = parts[1]
+    brand = parts[2] if len(parts) > 2 else keyword.split('-')[0].capitalize()
+
+    bot.send_chat_action(message.chat.id, 'typing')
+    score, factors = predict_ranking_success(keyword, brand)
+
+    # Save prediction
+    ap = load_autopilot()
+    ap.setdefault("predictions", []).append({
+        "keyword": keyword,
+        "brand": brand,
+        "score": score,
+        "factors": factors,
+        "date": str(datetime.now().date())
+    })
+    ap["predictions"] = ap["predictions"][-50:]
+    save_autopilot(ap)
+
+    emoji = "🟢" if score >= 70 else "🟡" if score >= 40 else "🔴"
+    msg = f"🎯 Ranking Voorspelling: {keyword}\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    msg += f"{emoji} Score: {score}/100\n\n"
+    msg += "📊 Factoren:\n"
+    for f in factors:
+        msg += f"  - {f}\n"
+
+    if score >= 70:
+        msg += "\n✅ Sterke kans op pagina 1! Ga ervoor."
+    elif score >= 40:
+        msg += "\n⚠️ Kan lukken, maar vergt extra effort (clusters, backlinks)."
+    else:
+        msg += "\n❌ Lastig. Overweeg een niche-variatie of ander keyword."
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['sprint'])
+def cmd_sprint(message):
+    """Sprint status of plan nieuwe sprint."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "status"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "plan":
+        bot.reply_to(message, "📋 Nieuwe sprint plannen...")
+        plan_weekly_sprint()
+        sprint = load_sprint()
+        msg = f"📋 Sprint {sprint['current_week']} — Gepland!\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        for i, t in enumerate(sprint.get("planned_tasks", []), 1):
+            msg += f"{i}. [{t['type']}] {t['target'][:45]} (prio: {t['priority']})\n"
+        bot.reply_to(message, msg)
+
+    elif action == "run":
+        bot.reply_to(message, "⚡ Sprint taak uitvoeren...")
+        result = execute_sprint_tasks()
+        bot.reply_to(message, f"📋 Sprint Resultaat:\n\n{result}")
+
+    else:
+        sprint = load_sprint()
+        msg = f"📋 Sprint Status: {sprint.get('current_week', 'niet actief')}\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        planned = sprint.get("planned_tasks", [])
+        completed = sprint.get("completed_tasks", [])
+        msg += f"📌 Gepland: {len(planned)} taken\n"
+        msg += f"✅ Gedaan: {len(completed)} taken\n\n"
+
+        if planned:
+            msg += "📌 Te doen:\n"
+            for t in planned[:5]:
+                msg += f"  → [{t['type']}] {t['target'][:40]} (prio: {t['priority']})\n"
+
+        if completed:
+            msg += "\n✅ Afgerond:\n"
+            for t in completed[-5:]:
+                msg += f"  ✓ [{t['type']}] {t['target'][:40]}\n"
+
+        # Sprint history
+        history = sprint.get("history", [])
+        if history:
+            msg += f"\n📈 Vorige sprints: {len(history)} weken"
+            last = history[-1]
+            msg += f"\n  Laatste: {last.get('week', '?')} — {last.get('completed', 0)}/{last.get('planned', 0)} taken"
+
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['briefing'])
+def cmd_briefing(message):
+    """Dagelijks briefing rapport."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "☀️ Briefing genereren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+    briefing = generate_daily_briefing()
+    bot.reply_to(message, briefing)
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -4060,7 +4795,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 9.0 Revenue Intelligence — Commando's:
+    bot.reply_to(message, """Victor 10.0 Autopilot — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -4104,6 +4839,12 @@ def cmd_help(message):
 /skyscraper — Overtref de concurrent
 /clusters [build] — Topic authority clusters
 /battles — Ranking battles tracker
+
+🤖 Autopilot Engine:
+/autopilot — Autopilot status & chain reactions
+/predict <keyword> [brand] — Ranking voorspelling
+/sprint [plan|run] — Wekelijkse sprint
+/briefing — Dagelijks ochtend briefing
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -4333,7 +5074,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 9.0 Revenue — Status Report
+    return f"""📊 Victor 10.0 Autopilot — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -4720,6 +5461,48 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Growth cycle error: {e}")
 
+            # 🤖 AUTOPILOT ENGINE: dagelijkse cyclus om 06:30 UTC
+            if hour == 6 and now.minute >= 30 and last_auto_improve != str(now.date()) + "-autopilot":
+                try:
+                    log("Starting autopilot cycle...")
+                    ap_actions = autopilot_cycle()
+                    last_auto_improve = str(now.date()) + "-autopilot"  # Prevent re-run
+                    if ap_actions:
+                        ap_report = "🤖 Autopilot Engine — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        ap_report += "\n".join(f"  ✅ {a}" for a in ap_actions)
+                        bot.send_message(ADMIN_ID, ap_report)
+                        log(f"Autopilot cycle done: {len(ap_actions)} actions")
+                except Exception as e:
+                    log(f"Autopilot cycle error: {e}")
+
+            # ☀️ DAILY BRIEFING: elke dag om 08:00 UTC
+            if hour == 8 and weekday != 0 and last_auto_improve != str(now.date()) + "-briefing":
+                try:
+                    log("Generating daily briefing...")
+                    briefing = generate_daily_briefing()
+                    bot.send_message(ADMIN_ID, briefing)
+                    last_auto_improve = str(now.date()) + "-briefing"
+                    log("Daily briefing sent")
+                except Exception as e:
+                    log(f"Daily briefing error: {e}")
+
+            # 📋 WEEKLY SPRINT PLANNING: maandag 07:00 UTC
+            if weekday == 0 and hour == 7 and last_weekly != str(now.date()) + "-sprint":
+                try:
+                    log("Planning weekly sprint...")
+                    plan_weekly_sprint()
+                    sprint = load_sprint()
+                    planned = sprint.get("planned_tasks", [])
+                    sprint_msg = f"📋 Sprint {sprint['current_week']} — Gepland!\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                    sprint_msg += f"📌 {len(planned)} taken gepland:\n"
+                    for i, t in enumerate(planned[:7], 1):
+                        sprint_msg += f"  {i}. [{t['type']}] {t['target'][:40]} (prio: {t['priority']})\n"
+                    bot.send_message(ADMIN_ID, sprint_msg)
+                    last_weekly = str(now.date()) + "-sprint"
+                    log(f"Sprint planned: {len(planned)} tasks")
+                except Exception as e:
+                    log(f"Sprint planning error: {e}")
+
             # Wekelijks strategierapport: maandag 08:00 UTC
             if weekday == 0 and hour == 8 and last_weekly != str(now.date()):
                 try:
@@ -4752,8 +5535,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 9.0 Revenue online!\n\n{report}"
-            f"\n\n🧠 Self-learning: /brain /diagnose /research"
+            f"🚀 Victor 10.0 Autopilot online!\n\n{report}"
+            f"\n\n🤖 Autopilot: /autopilot /predict /sprint /briefing"
+            f"\n🧠 Self-learning: /brain /diagnose /research"
             f"\n📈 SEO: /gsc /keywords /sitemap /ogimages"
             f"\n🏗️ Code: /multifile /write /fix"
             f"\n📊 /seo /revenue /strategy /autofix"
@@ -4764,7 +5548,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 9.0 Revenue gestart — Model: {MODEL}")
+    log(f"Victor 10.0 Autopilot gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

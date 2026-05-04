@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 12.0 Neural Command Center — Powered by Claude AI<br>
+Victor 13.0 Hive Mind — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -5277,7 +5277,9 @@ def build_main_dashboard_keyboard():
         [("🤖 Autopilot", "dash_autopilot"), ("🔥 Domination", "dash_domination")],
         [("🏷️ Schema", "dash_schema"), ("🔗 Links", "dash_links")],
         [("🧠 Brain", "dash_brain"), ("☀️ Briefing", "dash_briefing")],
-        [("🔧 Audit", "dash_audit"), ("🌍 Translate", "dash_translate")]
+        [("🔧 Audit", "dash_audit"), ("🌍 Translate", "dash_translate")],
+        [("📊 Scorecard", "dash_scorecard"), ("🏆 Leaderboard", "dash_leaderboard")],
+        [("🧬 DNA", "dash_dna"), ("🔗 Backlinks", "dash_backlinks")]
     ])
 
 
@@ -5509,6 +5511,905 @@ def neural_command_cycle():
                 actions.append(f"🌍 {len(translated)} artikelen vertaald naar Engels")
         except Exception as e:
             log(f"Translation error: {e}")
+
+    return actions
+
+
+# ── MODULE 12: HIVE MIND ENGINE ─────────────────────────────────────────────
+CONVERSION_FILE = "/root/felix_hq/victor_conversions.json"
+BACKLINKS_FILE = "/root/felix_hq/victor_backlinks.json"
+DNA_FILE = "/root/felix_hq/victor_dna.json"
+AB2_FILE = "/root/felix_hq/victor_ab2.json"
+
+def load_conversions():
+    if os.path.exists(CONVERSION_FILE):
+        try:
+            return json.load(open(CONVERSION_FILE))
+        except:
+            pass
+    return {"articles": {}, "winning_patterns": [], "conversion_log": [], "top_performers": []}
+
+def save_conversions(data):
+    data["conversion_log"] = data.get("conversion_log", [])[-200:]
+    data["winning_patterns"] = data.get("winning_patterns", [])[-50:]
+    with open(CONVERSION_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_backlinks():
+    if os.path.exists(BACKLINKS_FILE):
+        try:
+            return json.load(open(BACKLINKS_FILE))
+        except:
+            pass
+    return {"opportunities": [], "outreach_sent": [], "backlinks_found": [], "stats": {}}
+
+def save_backlinks(data):
+    data["opportunities"] = data.get("opportunities", [])[-200:]
+    data["outreach_sent"] = data.get("outreach_sent", [])[-100:]
+    with open(BACKLINKS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_dna():
+    if os.path.exists(DNA_FILE):
+        try:
+            return json.load(open(DNA_FILE))
+        except:
+            pass
+    return {"blueprint": {}, "article_scores": {}, "recommendations": [], "last_analysis": None}
+
+def save_dna(data):
+    data["recommendations"] = data.get("recommendations", [])[-50:]
+    with open(DNA_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_ab2():
+    if os.path.exists(AB2_FILE):
+        try:
+            return json.load(open(AB2_FILE))
+        except:
+            pass
+    return {"tests": [], "completed": [], "insights": []}
+
+def save_ab2(data):
+    data["completed"] = data.get("completed", [])[-50:]
+    data["insights"] = data.get("insights", [])[-30:]
+    with open(AB2_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+# ── 12A: CONVERSION INTELLIGENCE ────────────────────────────────────────
+
+def analyze_article_conversions():
+    """Analyseer welke artikelen het beste converteren op basis van GSC + affiliate data."""
+    conv = load_conversions()
+
+    # Haal GSC data op
+    gsc_data = {}
+    if os.path.exists(GSC_DATA_FILE):
+        try:
+            with open(GSC_DATA_FILE) as f:
+                gsc_data = json.load(f)
+        except:
+            pass
+
+    # Haal revenue data op
+    rev_data = {}
+    if os.path.exists(REVENUE_FILE):
+        try:
+            with open(REVENUE_FILE) as f:
+                rev_data = json.load(f)
+        except:
+            pass
+
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return conv
+
+    articles = {}
+    for f in os.listdir(b2b_path):
+        if not f.endswith('.html'):
+            continue
+        slug = f.replace('.html', '')
+        filepath = os.path.join(b2b_path, f)
+
+        try:
+            with open(filepath, 'r', encoding='utf-8') as fh:
+                content = fh.read()
+        except:
+            continue
+
+        # Content metrics
+        text = re.sub(r'<[^>]+>', '', content)
+        words = text.split()
+        word_count = len(words)
+
+        # Affiliate links count
+        aff_count = sum(1 for url in VAULT.values() if url in content)
+
+        # CTA count (buttons, call-to-action links)
+        cta_patterns = re.findall(r'(try|start|sign.?up|get.?started|probeer|begin|aanmelden|koop)', content, re.IGNORECASE)
+        cta_count = len(cta_patterns)
+
+        # Headings structure
+        h2_count = len(re.findall(r'<h2', content, re.IGNORECASE))
+        h3_count = len(re.findall(r'<h3', content, re.IGNORECASE))
+
+        # Images
+        img_count = len(re.findall(r'<img', content, re.IGNORECASE))
+
+        # Internal links
+        internal_links = len(re.findall(r'href="[^"]*\.html"', content))
+
+        # Lists (bullet points)
+        list_items = len(re.findall(r'<li', content, re.IGNORECASE))
+
+        # Tables
+        table_count = len(re.findall(r'<table', content, re.IGNORECASE))
+
+        # GSC performance
+        clicks = 0
+        impressions = 0
+        position = 100
+        ctr = 0
+        for page in gsc_data.get("pages", []):
+            if slug in page.get("page", ""):
+                clicks = page.get("clicks", 0)
+                impressions = page.get("impressions", 0)
+                position = page.get("position", 100)
+                ctr = page.get("ctr", 0)
+                break
+
+        # Revenue estimate
+        est_revenue = 0
+        for brand, rates in COMMISSION_RATES.items():
+            if brand.lower() in slug:
+                est_revenue = clicks * rates.get("est_ctr", 0.02) * rates.get("per_signup", 10)
+                break
+
+        # Conversion score (composite metric)
+        conv_score = 0
+        conv_score += min(clicks * 2, 40)  # Max 40 pts from clicks
+        conv_score += min(ctr * 500, 20)   # Max 20 pts from CTR
+        conv_score += min(est_revenue, 20)  # Max 20 pts from revenue
+        conv_score += 5 if aff_count >= 2 else 0  # Affiliate link bonus
+        conv_score += 5 if cta_count >= 3 else 0   # CTA bonus
+        conv_score += 5 if table_count >= 1 else 0  # Table bonus
+        conv_score += 5 if h2_count >= 3 else 0     # Structure bonus
+
+        articles[slug] = {
+            "word_count": word_count,
+            "aff_links": aff_count,
+            "cta_count": cta_count,
+            "h2_count": h2_count,
+            "h3_count": h3_count,
+            "img_count": img_count,
+            "internal_links": internal_links,
+            "list_items": list_items,
+            "table_count": table_count,
+            "clicks": clicks,
+            "impressions": impressions,
+            "position": round(position, 1),
+            "ctr": round(ctr, 4),
+            "est_revenue": round(est_revenue, 2),
+            "conv_score": round(conv_score, 1),
+            "date": str(datetime.now().date())
+        }
+
+    conv["articles"] = articles
+
+    # Identify top performers
+    sorted_articles = sorted(articles.items(), key=lambda x: x[1]["conv_score"], reverse=True)
+    conv["top_performers"] = [
+        {"slug": slug, "score": data["conv_score"], "clicks": data["clicks"], "revenue": data["est_revenue"]}
+        for slug, data in sorted_articles[:10]
+    ]
+
+    # Extract winning patterns
+    if len(sorted_articles) >= 5:
+        top5 = [data for _, data in sorted_articles[:5]]
+        bottom5 = [data for _, data in sorted_articles[-5:]]
+
+        patterns = []
+        # Compare averages
+        for metric in ["word_count", "aff_links", "cta_count", "h2_count", "table_count", "img_count", "list_items"]:
+            top_avg = sum(a[metric] for a in top5) / 5
+            bot_avg = sum(a[metric] for a in bottom5) / 5
+            if top_avg > bot_avg * 1.3:
+                patterns.append({
+                    "metric": metric,
+                    "top_avg": round(top_avg, 1),
+                    "bottom_avg": round(bot_avg, 1),
+                    "insight": f"Top artikelen hebben {top_avg:.0f} {metric} vs {bot_avg:.0f} bij slechtste"
+                })
+
+        conv["winning_patterns"] = patterns
+
+    conv["conversion_log"].append({
+        "date": str(datetime.now().date()),
+        "total_articles": len(articles),
+        "avg_score": round(sum(a["conv_score"] for a in articles.values()) / max(len(articles), 1), 1)
+    })
+
+    save_conversions(conv)
+    return conv
+
+
+# ── 12B: BACKLINK HUNTER ────────────────────────────────────────────────
+
+BACKLINK_SEARCH_QUERIES = [
+    "beste AI tools lijst",
+    "AI tool vergelijking",
+    "AI software resources",
+    "top AI tools for business",
+    "best AI tools list 2026",
+    "AI tool comparison",
+    "AI software directory",
+    "AI tools roundup",
+    "synthesia alternatives list",
+    "kinsta alternatives list",
+    "replit alternatives",
+    "video AI tools resources"
+]
+
+
+def hunt_backlink_opportunities():
+    """Zoek backlink kansen: resource pages, broken links, mentions."""
+    bl = load_backlinks()
+    opportunities = []
+    already_found = {o.get("url", "") for o in bl.get("opportunities", [])}
+
+    for query in BACKLINK_SEARCH_QUERIES[:4]:  # Max 4 per scan
+        try:
+            search_url = f"https://www.google.com/search?q={urllib.request.quote(query)}"
+            req = urllib.request.Request(search_url, headers={
+                'User-Agent': 'Mozilla/5.0 (compatible; VictorBot/13.0)'
+            })
+
+            try:
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    html = response.read().decode('utf-8', errors='ignore')
+
+                # Extract URLs
+                urls = re.findall(r'href="(https?://[^"]+)"', html)
+                # Filter out Google's own URLs
+                external_urls = [u for u in urls
+                                if 'google.' not in u and 'gstatic' not in u
+                                and 'youtube.' not in u and u not in already_found
+                                and 'aibuildermarketplace' not in u][:5]
+
+                for url in external_urls:
+                    # Classify opportunity type
+                    opp_type = "resource_page"
+                    if 'alternative' in query or 'vs' in query:
+                        opp_type = "comparison_mention"
+                    elif 'list' in query or 'top' in query or 'best' in query:
+                        opp_type = "listicle"
+
+                    opportunities.append({
+                        "url": url,
+                        "type": opp_type,
+                        "query": query,
+                        "date": str(datetime.now().date()),
+                        "status": "found"
+                    })
+
+            except:
+                pass
+
+            time.sleep(3)
+        except Exception as e:
+            log(f"Backlink hunt error for {query}: {e}")
+
+    if opportunities:
+        bl["opportunities"].extend(opportunities)
+        bl["stats"]["total_found"] = len(bl["opportunities"])
+        bl["stats"]["last_hunt"] = str(datetime.now().date())
+        save_backlinks(bl)
+
+    return opportunities
+
+
+def generate_outreach_email(opportunity):
+    """Genereer een outreach email voor een backlink kans."""
+    try:
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": """Je bent een outreach specialist voor AI Builder Marketplace (aibuildermarketplace.com).
+Schrijf een korte, persoonlijke outreach email in het Engels.
+De email moet:
+- Kort zijn (max 150 woorden)
+- Waarde bieden (niet alleen om een link vragen)
+- Relevant zijn voor hun content
+- Professioneel maar warm
+- Een specifieke pagina van ons suggereren die waarde toevoegt
+
+Antwoord ALLEEN met de email tekst (subject + body), geen uitleg."""},
+                {"role": "user", "content": f"""Genereer een outreach email voor:
+URL: {opportunity['url']}
+Type: {opportunity['type']}
+Zoekterm: {opportunity['query']}
+
+Onze relevante pagina's:
+- https://aibuildermarketplace.com/b2b.html (AI tools overzicht)
+- https://aibuildermarketplace.com (homepage)"""}
+            ],
+            max_tokens=500,
+            temperature=0.7
+        )
+        return res.choices[0].message.content.strip()
+    except Exception as e:
+        log(f"Outreach email error: {e}")
+        return None
+
+
+def backlink_batch():
+    """Zoek nieuwe backlink kansen en genereer outreach emails."""
+    opportunities = hunt_backlink_opportunities()
+
+    # Genereer outreach voor de beste kansen (max 2 per batch)
+    bl = load_backlinks()
+    new_outreach = []
+    unemailed = [o for o in bl.get("opportunities", []) if o.get("status") == "found"]
+
+    for opp in unemailed[:2]:
+        email = generate_outreach_email(opp)
+        if email:
+            opp["status"] = "email_ready"
+            opp["outreach_email"] = email
+            new_outreach.append({
+                "url": opp["url"],
+                "email": email,
+                "date": str(datetime.now().date())
+            })
+
+    if new_outreach:
+        bl["outreach_sent"].extend(new_outreach)
+        save_backlinks(bl)
+
+    return len(opportunities), len(new_outreach)
+
+
+# ── 12C: CONTENT DNA ANALYZER ───────────────────────────────────────────
+
+def analyze_content_dna():
+    """Analyseer de DNA van top-performende artikelen om een blueprint te maken."""
+    conv = load_conversions()
+    articles = conv.get("articles", {})
+
+    if len(articles) < 5:
+        # Eerst conversion analyse draaien
+        conv = analyze_article_conversions()
+        articles = conv.get("articles", {})
+
+    if len(articles) < 3:
+        return None
+
+    # Sorteer op conversion score
+    sorted_arts = sorted(articles.items(), key=lambda x: x[1].get("conv_score", 0), reverse=True)
+    top_articles = dict(sorted_arts[:max(3, len(sorted_arts) // 4)])  # Top 25%
+    all_articles = dict(sorted_arts)
+
+    # Bereken blueprint (ideale waarden)
+    blueprint = {}
+    metrics = ["word_count", "aff_links", "cta_count", "h2_count", "h3_count",
+               "img_count", "internal_links", "list_items", "table_count"]
+
+    for metric in metrics:
+        top_values = [a[metric] for a in top_articles.values()]
+        all_values = [a[metric] for a in all_articles.values()]
+
+        blueprint[metric] = {
+            "ideal": round(sum(top_values) / len(top_values), 1),
+            "average": round(sum(all_values) / len(all_values), 1),
+            "min_top": min(top_values),
+            "max_top": max(top_values)
+        }
+
+    # AI analyse van top content voor kwalitatieve inzichten
+    top_slugs = list(top_articles.keys())[:3]
+    b2b_path = f"{REPO_ROOT}/b2b"
+    content_samples = []
+    for slug in top_slugs:
+        filepath = f"{b2b_path}/{slug}.html"
+        if os.path.exists(filepath):
+            with open(filepath, 'r', encoding='utf-8') as f:
+                text = re.sub(r'<[^>]+>', '', f.read())
+                content_samples.append(f"--- {slug} ---\n{text[:1000]}")
+
+    qualitative = {}
+    if content_samples:
+        try:
+            res = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": """Analyseer deze top-performende artikelen en extract het "DNA" — de patronen die ze succesvol maken.
+Antwoord in JSON:
+{
+    "tone": "beschrijving van de schrijfstijl",
+    "intro_pattern": "hoe beginnen de intros",
+    "cta_style": "hoe worden CTAs gepresenteerd",
+    "structure_pattern": "gemeenschappelijke structuur",
+    "unique_elements": ["element1", "element2"],
+    "recommendations": ["tip1", "tip2", "tip3"]
+}"""
+                    },
+                    {"role": "user", "content": "\n\n".join(content_samples)}
+                ],
+                max_tokens=1000,
+                temperature=0.5
+            )
+            result = res.choices[0].message.content.strip()
+            if "```json" in result:
+                result = result.split("```json")[1].split("```")[0]
+            elif "```" in result:
+                result = result.split("```")[1].split("```")[0]
+            qualitative = json.loads(result)
+        except Exception as e:
+            log(f"DNA qualitative analysis error: {e}")
+
+    # Score elk artikel tegen de blueprint
+    article_scores = {}
+    for slug, data in all_articles.items():
+        score = 0
+        total_checks = 0
+        for metric in metrics:
+            ideal = blueprint[metric]["ideal"]
+            actual = data.get(metric, 0)
+            if ideal > 0:
+                ratio = min(actual / ideal, 2.0)  # Cap at 200%
+                if 0.7 <= ratio <= 1.5:
+                    score += 1  # Within sweet spot
+                total_checks += 1
+        dna_match = round((score / max(total_checks, 1)) * 100, 1)
+        article_scores[slug] = dna_match
+
+    # Save
+    dna = load_dna()
+    dna["blueprint"] = blueprint
+    dna["blueprint"]["qualitative"] = qualitative
+    dna["article_scores"] = article_scores
+    dna["last_analysis"] = str(datetime.now())
+
+    # Generate recommendations for worst DNA matches
+    worst = sorted(article_scores.items(), key=lambda x: x[1])[:5]
+    dna["recommendations"] = []
+    for slug, match_pct in worst:
+        art = all_articles.get(slug, {})
+        tips = []
+        for metric in metrics:
+            ideal = blueprint[metric]["ideal"]
+            actual = art.get(metric, 0)
+            if ideal > 0 and actual < ideal * 0.5:
+                tips.append(f"{metric}: {actual} → ideaal {ideal:.0f}")
+        dna["recommendations"].append({
+            "slug": slug,
+            "dna_match": match_pct,
+            "improvements": tips[:3],
+            "date": str(datetime.now().date())
+        })
+
+    save_dna(dna)
+    return dna
+
+
+def apply_dna_to_article(slug):
+    """Verbeter een artikel zodat het beter matcht met de winning DNA blueprint."""
+    dna = load_dna()
+    blueprint = dna.get("blueprint", {})
+    if not blueprint:
+        analyze_content_dna()
+        dna = load_dna()
+        blueprint = dna.get("blueprint", {})
+
+    if not blueprint:
+        return None
+
+    filepath = f"{REPO_ROOT}/b2b/{slug}.html"
+    if not os.path.exists(filepath):
+        return None
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Build improvement prompt
+    qual = blueprint.get("qualitative", {})
+    prompt = f"""Verbeter dit artikel zodat het matcht met ons bewezen winnende content DNA.
+
+Blueprint (ideale waarden):
+- Woordenaantal: {blueprint.get('word_count', {}).get('ideal', 2000):.0f}
+- H2 headings: {blueprint.get('h2_count', {}).get('ideal', 5):.0f}
+- H3 headings: {blueprint.get('h3_count', {}).get('ideal', 3):.0f}
+- Affiliate links: {blueprint.get('aff_links', {}).get('ideal', 2):.0f}
+- CTAs: {blueprint.get('cta_count', {}).get('ideal', 4):.0f}
+- Tabellen: {blueprint.get('table_count', {}).get('ideal', 1):.0f}
+- Lijsten: {blueprint.get('list_items', {}).get('ideal', 8):.0f}
+- Interne links: {blueprint.get('internal_links', {}).get('ideal', 3):.0f}
+- Afbeeldingen: {blueprint.get('img_count', {}).get('ideal', 2):.0f}
+
+Kwalitatieve stijl:
+- Tone: {qual.get('tone', 'professioneel en informatief')}
+- Intro: {qual.get('intro_pattern', 'kort en krachtig')}
+- CTA stijl: {qual.get('cta_style', 'duidelijke buttons')}
+
+Beschikbare affiliate links:
+{chr(10).join(f'{b}: {u}' for b, u in VAULT.items())}
+
+Behoud de bestaande content maar verbeter structuur, voeg ontbrekende elementen toe (tabellen, CTAs, headings), en match de toon.
+Geef de VOLLEDIGE verbeterde HTML terug."""
+
+    try:
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": "Je bent een content optimalisatie expert. Verbeter artikelen om te matchen met een bewezen winning formula. Behoud dark theme HTML styling."},
+                {"role": "user", "content": f"{prompt}\n\nHuidig artikel:\n{content[:5000]}"}
+            ],
+            max_tokens=4000,
+            temperature=0.5
+        )
+        improved = res.choices[0].message.content.strip()
+
+        if "```html" in improved:
+            improved = improved.split("```html")[1].split("```")[0].strip()
+        elif "```" in improved:
+            improved = improved.split("```")[1].split("```")[0].strip()
+
+        if len(improved) > 500:  # Sanity check
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(improved)
+            run_command(f"cd {REPO_ROOT} && git add b2b/{slug}.html && git commit -m 'Victor: DNA-optimized {slug}' && git push origin main")
+            return slug
+    except Exception as e:
+        log(f"DNA apply error for {slug}: {e}")
+
+    return None
+
+
+# ── 12D: A/B TESTING ENGINE 2.0 ─────────────────────────────────────────
+
+AB2_TEST_TYPES = {
+    "cta_text": {
+        "variants": [
+            {"label": "A: Direct", "pattern": "Probeer Nu", "replacement": "Start Gratis"},
+            {"label": "B: Urgency", "pattern": "Probeer Nu", "replacement": "Probeer Nu — Gratis Trial"}
+        ]
+    },
+    "cta_color": {
+        "variants": [
+            {"label": "A: Purple", "style_from": "#6c63ff", "style_to": "#6c63ff"},
+            {"label": "B: Green", "style_from": "#6c63ff", "style_to": "#00c853"},
+            {"label": "C: Orange", "style_from": "#6c63ff", "style_to": "#ff6d00"}
+        ]
+    },
+    "intro_style": {
+        "variants": [
+            {"label": "A: Question", "type": "question_intro"},
+            {"label": "B: Statistic", "type": "stat_intro"}
+        ]
+    }
+}
+
+
+def create_ab2_test(slug, test_type="cta_color"):
+    """Maak een nieuwe A/B test aan voor een artikel."""
+    ab2 = load_ab2()
+
+    # Check of er al een test loopt voor dit artikel
+    active = [t for t in ab2["tests"] if t["slug"] == slug and t["status"] == "active"]
+    if active:
+        return None, "Er loopt al een test voor dit artikel"
+
+    filepath = f"{REPO_ROOT}/b2b/{slug}.html"
+    if not os.path.exists(filepath):
+        return None, "Artikel niet gevonden"
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        original_content = f.read()
+
+    test = {
+        "id": f"ab2_{slug}_{test_type}_{int(time.time())}",
+        "slug": slug,
+        "type": test_type,
+        "status": "active",
+        "start_date": str(datetime.now().date()),
+        "current_variant": 0,
+        "original_content": original_content[:100],  # Just a reference
+        "variants_data": [],
+        "results": {},
+        "days_per_variant": 3
+    }
+
+    # Genereer varianten
+    config = AB2_TEST_TYPES.get(test_type, {})
+    variants = config.get("variants", [])
+
+    if test_type == "cta_color":
+        for v in variants:
+            variant_content = original_content.replace(
+                v["style_from"], v["style_to"]
+            )
+            test["variants_data"].append({
+                "label": v["label"],
+                "applied": False,
+                "clicks": 0,
+                "impressions": 0
+            })
+    elif test_type == "cta_text":
+        for v in variants:
+            test["variants_data"].append({
+                "label": v["label"],
+                "pattern": v["pattern"],
+                "replacement": v["replacement"],
+                "applied": False,
+                "clicks": 0,
+                "impressions": 0
+            })
+
+    # Apply first variant
+    if test_type == "cta_color" and variants:
+        new_content = original_content.replace(
+            variants[0]["style_from"], variants[0]["style_to"]
+        )
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        test["variants_data"][0]["applied"] = True
+        run_command(f"cd {REPO_ROOT} && git add b2b/{slug}.html && git commit -m 'Victor: A/B test {test_type} variant A for {slug}' && git push origin main")
+
+    ab2["tests"].append(test)
+    save_ab2(ab2)
+    return test, None
+
+
+def check_ab2_tests():
+    """Check en roteer actieve A/B tests."""
+    ab2 = load_ab2()
+    actions = []
+
+    for test in ab2["tests"]:
+        if test["status"] != "active":
+            continue
+
+        start = datetime.strptime(test["start_date"], "%Y-%m-%d")
+        days_active = (datetime.now() - start).days
+        days_per = test.get("days_per_variant", 3)
+        current_v = test.get("current_variant", 0)
+        total_variants = len(test.get("variants_data", []))
+
+        if total_variants == 0:
+            continue
+
+        # Update met GSC data
+        if os.path.exists(GSC_DATA_FILE):
+            try:
+                with open(GSC_DATA_FILE) as f:
+                    gsc = json.load(f)
+                for page in gsc.get("pages", []):
+                    if test["slug"] in page.get("page", ""):
+                        test["variants_data"][current_v]["clicks"] = page.get("clicks", 0)
+                        test["variants_data"][current_v]["impressions"] = page.get("impressions", 0)
+                        break
+            except:
+                pass
+
+        # Roteer naar volgende variant
+        expected_v = min(days_active // days_per, total_variants - 1)
+        if expected_v > current_v and expected_v < total_variants:
+            test["current_variant"] = expected_v
+            slug = test["slug"]
+            filepath = f"{REPO_ROOT}/b2b/{slug}.html"
+
+            if test["type"] == "cta_color" and os.path.exists(filepath):
+                config = AB2_TEST_TYPES["cta_color"]
+                variants = config["variants"]
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                # Reset naar origineel en apply nieuwe variant
+                for v in variants:
+                    content = content.replace(v["style_to"], variants[0]["style_from"])
+                content = content.replace(variants[0]["style_from"], variants[expected_v]["style_to"])
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                run_command(f"cd {REPO_ROOT} && git add b2b/{slug}.html && git commit -m 'Victor: A/B rotating to variant {expected_v} for {slug}' && git push origin main")
+                actions.append(f"🔄 A/B {slug}: variant {variants[expected_v]['label']}")
+
+        # Check of test klaar is
+        if days_active >= days_per * total_variants:
+            # Bepaal winnaar
+            best_v = max(range(total_variants),
+                        key=lambda i: test["variants_data"][i].get("clicks", 0))
+            winner = test["variants_data"][best_v]
+
+            test["status"] = "completed"
+            test["winner"] = best_v
+            test["end_date"] = str(datetime.now().date())
+
+            ab2["completed"].append({
+                "slug": test["slug"],
+                "type": test["type"],
+                "winner": winner.get("label", f"Variant {best_v}"),
+                "clicks": winner.get("clicks", 0),
+                "date": str(datetime.now().date())
+            })
+
+            ab2["insights"].append({
+                "insight": f"{test['slug']}: {winner.get('label', '?')} won met {winner.get('clicks', 0)} clicks",
+                "date": str(datetime.now().date())
+            })
+
+            actions.append(f"🏆 A/B {test['slug']}: {winner.get('label', '?')} wint!")
+
+    save_ab2(ab2)
+    return actions
+
+
+# ── 12E: TELEGRAM COMMAND CENTER (VISUAL REPORTS) ────────────────────────
+
+def generate_ascii_bar(value, max_value, width=15):
+    """Genereer een ASCII progress bar."""
+    if max_value == 0:
+        return "░" * width
+    filled = int((value / max_value) * width)
+    filled = min(filled, width)
+    return "█" * filled + "░" * (width - filled)
+
+
+def generate_scorecard():
+    """Genereer een visueel scorecard rapport."""
+    # Gather all data
+    conv = load_conversions()
+    serp = load_serp_data()
+    healing = load_healing()
+    dna = load_dna()
+    prog = load_programmatic()
+    trans = load_translations()
+    audit = load_audit()
+    bl = load_backlinks()
+
+    # Count articles
+    b2b_path = f"{REPO_ROOT}/b2b"
+    article_count = len([f for f in os.listdir(b2b_path) if f.endswith('.html')]) if os.path.isdir(b2b_path) else 0
+
+    en_path = f"{REPO_ROOT}/en"
+    en_count = len([f for f in os.listdir(en_path) if f.endswith('.html')]) if os.path.isdir(en_path) else 0
+
+    # SERP stats
+    tracking = serp.get("tracking", {})
+    page1 = sum(1 for s, d in tracking.items() if d.get("positions") and d["positions"][-1]["pos"] <= 10)
+    top3 = sum(1 for s, d in tracking.items() if d.get("positions") and d["positions"][-1]["pos"] <= 3)
+
+    # Audit score
+    audits = audit.get("audits", [])
+    audit_score = audits[-1].get("score", 0) if audits else 0
+
+    # Revenue
+    total_rev = sum(a.get("est_revenue", 0) for a in conv.get("articles", {}).values())
+
+    # DNA match average
+    dna_scores = dna.get("article_scores", {})
+    avg_dna = round(sum(dna_scores.values()) / max(len(dna_scores), 1), 1) if dna_scores else 0
+
+    # Build visual report
+    msg = "📊 VICTOR SCORECARD\n"
+    msg += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Content
+    msg += f"📝 Content:     {article_count} artikelen\n"
+    msg += f"   {generate_ascii_bar(article_count, 100)} {article_count}/100\n"
+    msg += f"🌍 EN versies:  {en_count}\n"
+    msg += f"   {generate_ascii_bar(en_count, article_count)} {en_count}/{article_count}\n\n"
+
+    # Rankings
+    total_tracked = len(tracking)
+    msg += f"📈 Rankings:\n"
+    msg += f"   Pagina 1: {generate_ascii_bar(page1, max(total_tracked,1))} {page1}/{total_tracked}\n"
+    msg += f"   Top 3:    {generate_ascii_bar(top3, max(total_tracked,1))} {top3}/{total_tracked}\n\n"
+
+    # Health
+    msg += f"🏥 Site Health:\n"
+    msg += f"   SEO Score:  {generate_ascii_bar(audit_score, 100)} {audit_score}/100\n"
+    msg += f"   DNA Match:  {generate_ascii_bar(avg_dna, 100)} {avg_dna}%\n\n"
+
+    # Revenue
+    msg += f"💰 Revenue:     €{total_rev:.0f}/maand (geschat)\n"
+    msg += f"   {generate_ascii_bar(total_rev, 500)}\n\n"
+
+    # Activity
+    prog_count = len(prog.get("generated_pages", []))
+    bl_count = len(bl.get("opportunities", []))
+    heal_fixes = healing.get("stats", {}).get("total_fixes", 0)
+
+    msg += f"⚡ Activiteit:\n"
+    msg += f"   Programmatic: {prog_count} pagina's\n"
+    msg += f"   Backlinks:    {bl_count} kansen\n"
+    msg += f"   Auto-fixes:   {heal_fixes} fixes\n"
+
+    msg += f"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+    msg += f"🕐 {datetime.now().strftime('%d/%m/%Y %H:%M')} UTC"
+
+    return msg
+
+
+def generate_leaderboard():
+    """Genereer een wekelijks artikel leaderboard."""
+    conv = load_conversions()
+    articles = conv.get("articles", {})
+
+    if not articles:
+        return "📊 Nog geen data voor leaderboard. Run /conversions eerst."
+
+    sorted_arts = sorted(articles.items(), key=lambda x: x[1].get("conv_score", 0), reverse=True)
+
+    msg = "🏆 ARTIKEL LEADERBOARD\n"
+    msg += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    medals = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
+    max_score = sorted_arts[0][1]["conv_score"] if sorted_arts else 1
+
+    for i, (slug, data) in enumerate(sorted_arts[:10]):
+        medal = medals[i] if i < len(medals) else f"  "
+        bar = generate_ascii_bar(data["conv_score"], max_score, 10)
+        clicks = data.get("clicks", 0)
+        rev = data.get("est_revenue", 0)
+        msg += f"{medal} {slug[:25]}\n"
+        msg += f"   {bar} {data['conv_score']:.0f}pts | {clicks}↗ | €{rev:.0f}\n"
+
+    # Bottom 3 (need work)
+    if len(sorted_arts) > 5:
+        msg += f"\n📉 Verbetering nodig:\n"
+        for slug, data in sorted_arts[-3:]:
+            msg += f"  ⚠️ {slug[:30]}: {data['conv_score']:.0f}pts\n"
+
+    return msg
+
+
+def hive_mind_cycle():
+    """Volledige Hive Mind cyclus — draait dagelijks."""
+    actions = []
+
+    # 1. Conversion intelligence update
+    try:
+        conv = analyze_article_conversions()
+        top = conv.get("top_performers", [])
+        if top:
+            actions.append(f"📊 Conversions: top performer is {top[0]['slug'][:25]} ({top[0]['score']:.0f}pts)")
+    except Exception as e:
+        log(f"Conversion analysis error: {e}")
+
+    # 2. Content DNA analyse (1x per week op maandag)
+    if datetime.now().weekday() == 0:
+        try:
+            dna = analyze_content_dna()
+            if dna:
+                scores = dna.get("article_scores", {})
+                avg = sum(scores.values()) / max(len(scores), 1)
+                actions.append(f"🧬 DNA analyse: gem. match {avg:.0f}%")
+
+                # Auto-improve slechtste DNA match
+                worst = sorted(scores.items(), key=lambda x: x[1])
+                if worst and worst[0][1] < 40:
+                    improved = apply_dna_to_article(worst[0][0])
+                    if improved:
+                        actions.append(f"🧬 DNA-optimized: {improved}")
+        except Exception as e:
+            log(f"DNA analysis error: {e}")
+
+    # 3. A/B test management
+    try:
+        ab_actions = check_ab2_tests()
+        if ab_actions:
+            actions.extend(ab_actions)
+    except Exception as e:
+        log(f"A/B test error: {e}")
+
+    # 4. Backlink hunting (2x per week: dinsdag en vrijdag)
+    if datetime.now().weekday() in [1, 4]:
+        try:
+            found, emails = backlink_batch()
+            if found:
+                actions.append(f"🔗 Backlinks: {found} kansen, {emails} outreach emails")
+        except Exception as e:
+            log(f"Backlink hunt error: {e}")
 
     return actions
 
@@ -7158,9 +8059,220 @@ def cmd_panel(message):
     keyboard = build_main_dashboard_keyboard()
     bot.send_message(
         message.chat.id,
-        "🧠 Victor 12.0 Neural Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
+        "🧠 Victor 13.0 Hive Mind — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
         reply_markup=keyboard
     )
+
+
+@bot.message_handler(commands=['conversions'])
+def cmd_conversions(message):
+    """Conversion intelligence analyse."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "📊 Conversion analyse draaien...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    conv = analyze_article_conversions()
+    top = conv.get("top_performers", [])
+    patterns = conv.get("winning_patterns", [])
+
+    msg = "📊 Conversion Intelligence\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    msg += f"📈 Totaal geanalyseerd: {len(conv.get('articles', {}))} artikelen\n\n"
+
+    if top:
+        msg += "🏆 Top Performers:\n"
+        for i, t in enumerate(top[:5], 1):
+            msg += f"  {i}. {t['slug'][:30]}: {t['score']:.0f}pts | {t['clicks']}↗ | €{t['revenue']:.0f}\n"
+
+    if patterns:
+        msg += "\n🧬 Winnende Patronen:\n"
+        for p in patterns[:5]:
+            msg += f"  - {p['insight']}\n"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['dna'])
+def cmd_dna(message):
+    """Content DNA analyse."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "analyze"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action.startswith("apply "):
+        slug = action.replace("apply ", "").strip()
+        bot.reply_to(message, f"🧬 DNA toepassen op {slug}...")
+        result = apply_dna_to_article(slug)
+        if result:
+            bot.reply_to(message, f"✅ {slug} geoptimaliseerd met winning DNA!")
+        else:
+            bot.reply_to(message, f"❌ Kon DNA niet toepassen op {slug}")
+    else:
+        bot.reply_to(message, "🧬 Content DNA analyseren...")
+        dna = analyze_content_dna()
+
+        if not dna:
+            bot.reply_to(message, "❌ Te weinig artikelen voor DNA analyse (min 5)")
+            return
+
+        blueprint = dna.get("blueprint", {})
+        qual = blueprint.get("qualitative", {})
+        scores = dna.get("article_scores", {})
+
+        msg = "🧬 Content DNA Blueprint\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "📐 Ideale Metrics:\n"
+        for metric in ["word_count", "h2_count", "cta_count", "aff_links", "table_count", "list_items"]:
+            if metric in blueprint:
+                msg += f"  {metric}: {blueprint[metric]['ideal']:.0f} (gem: {blueprint[metric]['average']:.0f})\n"
+
+        if qual:
+            msg += f"\n📝 Stijl:\n"
+            if qual.get("tone"):
+                msg += f"  Toon: {qual['tone'][:60]}\n"
+            if qual.get("cta_style"):
+                msg += f"  CTA: {qual['cta_style'][:60]}\n"
+
+        if scores:
+            avg = sum(scores.values()) / len(scores)
+            msg += f"\n📊 DNA Match: gem. {avg:.0f}%"
+            worst = sorted(scores.items(), key=lambda x: x[1])[:3]
+            msg += "\n\n⚠️ Laagste match:\n"
+            for slug, score in worst:
+                msg += f"  {slug[:30]}: {score:.0f}%\n"
+            msg += f"\nGebruik /dna apply <slug> om te verbeteren"
+
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['backlinks'])
+def cmd_backlinks(message):
+    """Backlink Hunter."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "status"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "hunt":
+        bot.reply_to(message, "🔗 Backlink kansen jagen...")
+        found, emails = backlink_batch()
+        msg = f"🔗 Backlink Hunt Resultaat\n\n"
+        msg += f"🔍 Nieuwe kansen: {found}\n"
+        msg += f"📧 Outreach emails: {emails}\n"
+        bot.reply_to(message, msg)
+    elif action == "outreach":
+        bl = load_backlinks()
+        ready = [o for o in bl.get("opportunities", []) if o.get("outreach_email")]
+        if ready:
+            msg = "📧 Klaar om te versturen:\n\n"
+            for o in ready[-3:]:
+                msg += f"🌐 {o['url'][:50]}\n"
+                msg += f"📧 {o['outreach_email'][:200]}\n\n"
+        else:
+            msg = "Nog geen outreach emails klaar. Gebruik /backlinks hunt"
+        bot.reply_to(message, msg)
+    else:
+        bl = load_backlinks()
+        msg = f"🔗 Backlink Hunter Status\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"🔍 Kansen gevonden: {len(bl.get('opportunities', []))}\n"
+        msg += f"📧 Outreach verstuurd: {len(bl.get('outreach_sent', []))}\n"
+        msg += f"🕐 Laatste hunt: {bl.get('stats', {}).get('last_hunt', 'nooit')}\n"
+        msg += f"\nGebruik /backlinks hunt of /backlinks outreach"
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['ab2'])
+def cmd_ab2(message):
+    """A/B Testing Engine 2.0."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=2)
+    action = parts[1] if len(parts) > 1 else "status"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "create" and len(parts) > 2:
+        slug = parts[2]
+        bot.reply_to(message, f"🧪 A/B test starten voor {slug}...")
+        test, error = create_ab2_test(slug, "cta_color")
+        if test:
+            msg = f"✅ A/B Test gestart!\n"
+            msg += f"  Artikel: {slug}\n"
+            msg += f"  Type: CTA kleuren\n"
+            msg += f"  Varianten: {len(test['variants_data'])}\n"
+            msg += f"  Duur: {test['days_per_variant'] * len(test['variants_data'])} dagen"
+        else:
+            msg = f"❌ {error}"
+        bot.reply_to(message, msg)
+    elif action == "check":
+        actions = check_ab2_tests()
+        if actions:
+            msg = "🧪 A/B Test Updates:\n\n" + "\n".join(f"  {a}" for a in actions)
+        else:
+            msg = "🧪 Geen A/B test updates."
+        bot.reply_to(message, msg)
+    else:
+        ab2 = load_ab2()
+        active = [t for t in ab2["tests"] if t["status"] == "active"]
+        completed = ab2.get("completed", [])
+
+        msg = f"🧪 A/B Testing 2.0\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"🔄 Actieve tests: {len(active)}\n"
+        msg += f"✅ Afgerond: {len(completed)}\n"
+
+        if active:
+            msg += "\n📋 Actief:\n"
+            for t in active:
+                msg += f"  🧪 {t['slug']}: {t['type']} (variant {t['current_variant']+1}/{len(t['variants_data'])})\n"
+
+        if completed:
+            msg += "\n🏆 Laatste winnaars:\n"
+            for c in completed[-3:]:
+                msg += f"  ✓ {c['slug']}: {c['winner']} ({c['clicks']} clicks)\n"
+
+        msg += f"\nGebruik /ab2 create <slug> of /ab2 check"
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['scorecard'])
+def cmd_scorecard(message):
+    """Visueel scorecard rapport."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+    scorecard = generate_scorecard()
+    bot.reply_to(message, scorecard)
+
+
+@bot.message_handler(commands=['leaderboard'])
+def cmd_leaderboard(message):
+    """Artikel leaderboard."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+    lb = generate_leaderboard()
+    bot.reply_to(message, lb)
+
+
+@bot.message_handler(commands=['hivemind'])
+def cmd_hivemind(message):
+    """Volledige Hive Mind cyclus."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🧠 Hive Mind activeren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    actions = hive_mind_cycle()
+    if actions:
+        msg = "🧠 Hive Mind — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "\n".join(f"  ✅ {a}" for a in actions)
+    else:
+        msg = "🧠 Hive Mind: alles up-to-date."
+    bot.reply_to(message, msg)
 
 
 @bot.message_handler(commands=['restyle'])
@@ -7197,7 +8309,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 12.0 Neural Command Center — Commando's:
+    bot.reply_to(message, """Victor 13.0 Hive Mind — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -7263,6 +8375,15 @@ def cmd_help(message):
 /heal — Self-healing check
 /neural — Volledige neural cyclus
 /panel — Interactief dashboard met buttons
+
+🧠 Hive Mind:
+/conversions — Conversion intelligence analyse
+/dna [apply slug] — Content DNA blueprint
+/backlinks [hunt|outreach] — Backlink kansen jagen
+/ab2 [create slug|check] — A/B Testing 2.0
+/scorecard — Visueel ASCII scorecard
+/leaderboard — Artikel ranking leaderboard
+/hivemind — Volledige Hive Mind cyclus
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -7492,6 +8613,26 @@ def handle_callback(call):
             msg = f"🌍 Vertaald: {len(trans.get('translated', []))} artikelen naar Engels"
             bot.send_message(chat_id, msg)
 
+        elif data == "dash_scorecard":
+            scorecard = generate_scorecard()
+            bot.send_message(chat_id, scorecard)
+
+        elif data == "dash_leaderboard":
+            lb = generate_leaderboard()
+            bot.send_message(chat_id, lb)
+
+        elif data == "dash_dna":
+            dna = load_dna()
+            scores = dna.get("article_scores", {})
+            avg = sum(scores.values()) / max(len(scores), 1) if scores else 0
+            msg = f"🧬 DNA Match: gem. {avg:.0f}% | {len(scores)} artikelen geanalyseerd"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_backlinks":
+            bl = load_backlinks()
+            msg = f"🔗 Backlinks: {len(bl.get('opportunities', []))} kansen, {len(bl.get('outreach_sent', []))} outreach"
+            bot.send_message(chat_id, msg)
+
         elif data == "act_generate":
             bot.send_message(chat_id, "📝 Gebruik /generate om een artikel te genereren")
 
@@ -7613,7 +8754,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 12.0 Neural Command Center — Status Report
+    return f"""📊 Victor 13.0 Hive Mind — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -8046,6 +9187,34 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Neural cycle error: {e}")
 
+            # 🧠 HIVE MIND: dagelijkse cyclus om 08:30 UTC
+            if hour == 8 and now.minute >= 30 and last_auto_improve != str(now.date()) + "-hivemind":
+                try:
+                    log("Starting hive mind cycle...")
+                    hive_actions = hive_mind_cycle()
+                    last_auto_improve = str(now.date()) + "-hivemind"
+                    if hive_actions:
+                        hive_report = "🧠 Hive Mind — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        hive_report += "\n".join(f"  ✅ {a}" for a in hive_actions)
+                        interesting = [a for a in hive_actions if any(w in a for w in ['🏆', '🧬', '🔗', '📊'])]
+                        if interesting:
+                            bot.send_message(ADMIN_ID, hive_report)
+                        log(f"Hive mind done: {len(hive_actions)} actions")
+                except Exception as e:
+                    log(f"Hive mind error: {e}")
+
+            # Wekelijks scorecard: vrijdag 17:00 UTC
+            if weekday == 4 and hour == 17 and last_auto_improve != str(now.date()) + "-scorecard":
+                try:
+                    scorecard = generate_scorecard()
+                    bot.send_message(ADMIN_ID, scorecard)
+                    leaderboard = generate_leaderboard()
+                    bot.send_message(ADMIN_ID, leaderboard)
+                    last_auto_improve = str(now.date()) + "-scorecard"
+                    log("Weekly scorecard sent")
+                except Exception as e:
+                    log(f"Scorecard error: {e}")
+
             # 🔥 DOMINATION MATRIX: dagelijkse cyclus om 07:00 UTC
             if hour == 7 and weekday != 0 and last_auto_improve != str(now.date()) + "-domination":
                 try:
@@ -8123,8 +9292,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 12.0 Neural Command Center online!\n\n{report}"
-            f"\n\n🧠 Neural: /panel /audit /trends /translate /heal"
+            f"🚀 Victor 13.0 Hive Mind online!\n\n{report}"
+            f"\n\n🧠 Hive Mind: /scorecard /conversions /dna /backlinks"
+            f"\n🧠 Neural: /panel /audit /trends /translate /heal"
             f"\n🔥 Domination: /domination /programmatic /schema /serp"
             f"\n🤖 Autopilot: /autopilot /predict /sprint /briefing"
             f"\n🧠 Self-learning: /brain /diagnose /research"
@@ -8138,7 +9308,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 12.0 Neural Command Center gestart — Model: {MODEL}")
+    log(f"Victor 13.0 Hive Mind gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

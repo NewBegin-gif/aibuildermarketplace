@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 13.0 Hive Mind — Powered by Claude AI<br>
+Victor 14.0 Omniscience — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -6414,6 +6414,828 @@ def hive_mind_cycle():
     return actions
 
 
+# ── MODULE 13: OMNISCIENCE ENGINE ───────────────────────────────────────────
+VALIDATOR_FILE = "/root/felix_hq/victor_validator.json"
+FRESHNESS_FILE = "/root/felix_hq/victor_freshness.json"
+JOURNEY_FILE = "/root/felix_hq/victor_journey.json"
+DIGEST_FILE = "/root/felix_hq/victor_digest.json"
+ROIGATE_FILE = "/root/felix_hq/victor_roigate.json"
+
+def load_validator():
+    if os.path.exists(VALIDATOR_FILE):
+        try: return json.load(open(VALIDATOR_FILE))
+        except: pass
+    return {"checks": [], "failures": [], "last_check": None, "stats": {"total_checks": 0, "total_failures": 0}}
+
+def save_validator(data):
+    data["checks"] = data.get("checks", [])[-100:]
+    data["failures"] = data.get("failures", [])[-50:]
+    with open(VALIDATOR_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_freshness():
+    if os.path.exists(FRESHNESS_FILE):
+        try: return json.load(open(FRESHNESS_FILE))
+        except: pass
+    return {"articles": {}, "outdated": [], "auto_updated": [], "last_scan": None}
+
+def save_freshness(data):
+    data["outdated"] = data.get("outdated", [])[-100:]
+    data["auto_updated"] = data.get("auto_updated", [])[-100:]
+    with open(FRESHNESS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_journey():
+    if os.path.exists(JOURNEY_FILE):
+        try: return json.load(open(JOURNEY_FILE))
+        except: pass
+    return {"map": {}, "gaps": [], "coverage": {}, "last_analysis": None}
+
+def save_journey(data):
+    data["gaps"] = data.get("gaps", [])[-50:]
+    with open(JOURNEY_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_digest():
+    if os.path.exists(DIGEST_FILE):
+        try: return json.load(open(DIGEST_FILE))
+        except: pass
+    return {"pending_items": [], "sent_digests": [], "settings": {"min_priority": 3}}
+
+def save_digest(data):
+    data["pending_items"] = data.get("pending_items", [])[-200:]
+    data["sent_digests"] = data.get("sent_digests", [])[-30:]
+    with open(DIGEST_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_roigate():
+    if os.path.exists(ROIGATE_FILE):
+        try: return json.load(open(ROIGATE_FILE))
+        except: pass
+    return {"evaluations": [], "approved": [], "rejected": [], "threshold": 30}
+
+def save_roigate(data):
+    data["evaluations"] = data.get("evaluations", [])[-200:]
+    data["approved"] = data.get("approved", [])[-100:]
+    data["rejected"] = data.get("rejected", [])[-100:]
+    with open(ROIGATE_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+# ── 13A: LIVE SITE VALIDATOR ────────────────────────────────────────────
+
+def validate_live_page(slug):
+    """Fetch en valideer een live pagina op aibuildermarketplace.com."""
+    url = f"https://aibuildermarketplace.com/b2b/{slug}.html"
+    issues = []
+
+    try:
+        req = urllib.request.Request(url, headers={
+            'User-Agent': 'VictorBot/14.0 SiteValidator'
+        })
+        start = time.time()
+        with urllib.request.urlopen(req, timeout=15) as response:
+            status = response.status
+            load_time = time.time() - start
+            content = response.read().decode('utf-8', errors='ignore')
+
+            # 1. Status code
+            if status != 200:
+                issues.append({"type": "http_error", "detail": f"HTTP {status}", "severity": "critical"})
+
+            # 2. Load time
+            if load_time > 5:
+                issues.append({"type": "slow", "detail": f"Laadtijd {load_time:.1f}s", "severity": "high"})
+            elif load_time > 3:
+                issues.append({"type": "slow", "detail": f"Laadtijd {load_time:.1f}s", "severity": "medium"})
+
+            # 3. Empty page
+            if len(content) < 200:
+                issues.append({"type": "empty", "detail": f"Pagina bijna leeg ({len(content)} bytes)", "severity": "critical"})
+
+            # 4. Affiliate links werken
+            for brand, aff_url in VAULT.items():
+                if brand.lower() in slug and aff_url not in content:
+                    issues.append({"type": "missing_affiliate", "detail": f"Affiliate link {brand} ontbreekt", "severity": "high"})
+
+            # 5. Title present
+            if '<title>' not in content.lower():
+                issues.append({"type": "no_title", "detail": "Geen title tag op live pagina", "severity": "high"})
+
+            # 6. Content check — niet alleen boilerplate
+            text = re.sub(r'<[^>]+>', '', content)
+            if len(text.split()) < 100:
+                issues.append({"type": "thin_content", "detail": f"Slechts {len(text.split())} woorden live", "severity": "high"})
+
+            # 7. Broken images
+            img_srcs = re.findall(r'<img[^>]*src="([^"]+)"', content, re.IGNORECASE)
+            for src in img_srcs[:5]:  # Check max 5
+                if src.startswith('http'):
+                    try:
+                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/14.0'})
+                        with urllib.request.urlopen(img_req, timeout=5) as img_resp:
+                            if img_resp.status >= 400:
+                                issues.append({"type": "broken_image", "detail": f"Broken image: {src[:50]}", "severity": "medium"})
+                    except:
+                        issues.append({"type": "broken_image", "detail": f"Image onbereikbaar: {src[:50]}", "severity": "medium"})
+
+            return {"url": url, "status": status, "load_time": round(load_time, 2),
+                    "size": len(content), "issues": issues, "ok": len(issues) == 0}
+
+    except urllib.error.HTTPError as e:
+        return {"url": url, "status": e.code, "load_time": 0, "size": 0,
+                "issues": [{"type": "http_error", "detail": f"HTTP {e.code}", "severity": "critical"}], "ok": False}
+    except Exception as e:
+        return {"url": url, "status": 0, "load_time": 0, "size": 0,
+                "issues": [{"type": "unreachable", "detail": f"Niet bereikbaar: {str(e)[:80]}", "severity": "critical"}], "ok": False}
+
+
+def validate_full_site(max_pages=20):
+    """Valideer alle live pagina's op de site."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return []
+
+    files = [f.replace('.html', '') for f in os.listdir(b2b_path) if f.endswith('.html')]
+    val = load_validator()
+    results = []
+    failures = []
+
+    for slug in files[:max_pages]:
+        result = validate_live_page(slug)
+        results.append(result)
+        if not result["ok"]:
+            failures.append({
+                "slug": slug,
+                "issues": result["issues"],
+                "date": str(datetime.now())
+            })
+        time.sleep(1)  # Rate limiting
+
+    # Also validate main pages
+    for main_page in ["", "b2b.html"]:
+        url = f"https://aibuildermarketplace.com/{main_page}"
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/14.0'})
+            start = time.time()
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                load_time = time.time() - start
+                results.append({"url": url, "status": resp.status, "load_time": round(load_time, 2),
+                               "size": len(resp.read()), "issues": [], "ok": resp.status == 200})
+        except Exception as e:
+            results.append({"url": url, "status": 0, "load_time": 0, "size": 0,
+                           "issues": [{"type": "error", "detail": str(e)[:80]}], "ok": False})
+
+    val["checks"].append({
+        "date": str(datetime.now()),
+        "total": len(results),
+        "passed": sum(1 for r in results if r["ok"]),
+        "failed": sum(1 for r in results if not r["ok"])
+    })
+    val["failures"].extend(failures)
+    val["last_check"] = str(datetime.now())
+    val["stats"]["total_checks"] = val["stats"].get("total_checks", 0) + len(results)
+    val["stats"]["total_failures"] = val["stats"].get("total_failures", 0) + len(failures)
+    save_validator(val)
+
+    return results
+
+
+# ── 13B: CONTENT FRESHNESS ENGINE ───────────────────────────────────────
+
+# Zaken die snel verouderen in AI tool artikelen
+FRESHNESS_SIGNALS = {
+    "pricing": {
+        "patterns": [r'\$\d+', r'€\d+', r'\d+\s*(per|/)\s*(month|maand|jaar|year)', r'free\s*plan', r'gratis\s*plan'],
+        "max_age_days": 60,
+        "severity": "high"
+    },
+    "features": {
+        "patterns": [r'nieuw[e]?\s*feature', r'recent(ly)?\s*(added|toegevoegd)', r'just\s*launched', r'net\s*gelanceerd'],
+        "max_age_days": 90,
+        "severity": "medium"
+    },
+    "comparisons": {
+        "patterns": [r'in\s*202[0-5]', r'anno\s*202[0-5]', r'as\s*of\s*202[0-5]'],
+        "max_age_days": 180,
+        "severity": "high"
+    },
+    "statistics": {
+        "patterns": [r'\d+\s*miljoen\s*gebruikers', r'\d+\s*million\s*users', r'\d+%\s*(van|of|markt)'],
+        "max_age_days": 120,
+        "severity": "medium"
+    }
+}
+
+
+def scan_article_freshness(slug):
+    """Scan een enkel artikel op verouderde informatie."""
+    filepath = f"{REPO_ROOT}/b2b/{slug}.html"
+    if not os.path.exists(filepath):
+        return None
+
+    file_mtime = os.path.getmtime(filepath)
+    file_age_days = (time.time() - file_mtime) / 86400
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    text = re.sub(r'<[^>]+>', '', content).lower()
+    outdated_signals = []
+
+    for signal_type, config in FRESHNESS_SIGNALS.items():
+        for pattern in config["patterns"]:
+            matches = re.findall(pattern, text, re.IGNORECASE)
+            if matches and file_age_days > config["max_age_days"]:
+                outdated_signals.append({
+                    "type": signal_type,
+                    "matches": matches[:3],
+                    "severity": config["severity"],
+                    "age_days": round(file_age_days),
+                    "max_age": config["max_age_days"]
+                })
+
+    # Check for year references
+    current_year = datetime.now().year
+    old_years = re.findall(r'20(?:2[0-4]|1\d)', text)
+    if old_years:
+        outdated_signals.append({
+            "type": "old_year",
+            "matches": list(set(old_years)),
+            "severity": "high",
+            "detail": f"Verwijst naar {', '.join(set(old_years))} (nu {current_year})"
+        })
+
+    freshness_score = 100
+    for signal in outdated_signals:
+        if signal["severity"] == "critical":
+            freshness_score -= 25
+        elif signal["severity"] == "high":
+            freshness_score -= 15
+        elif signal["severity"] == "medium":
+            freshness_score -= 8
+    freshness_score = max(0, freshness_score)
+
+    return {
+        "slug": slug,
+        "age_days": round(file_age_days),
+        "freshness_score": freshness_score,
+        "signals": outdated_signals,
+        "needs_update": freshness_score < 60
+    }
+
+
+def auto_refresh_article(slug):
+    """Automatisch een verouderd artikel updaten met actuele informatie."""
+    filepath = f"{REPO_ROOT}/b2b/{slug}.html"
+    if not os.path.exists(filepath):
+        return None
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    current_year = datetime.now().year
+
+    # Stap 1: Simpele jaar-updates
+    content_updated = content
+    for old_year in range(2020, current_year):
+        content_updated = content_updated.replace(str(old_year), str(current_year))
+
+    # Stap 2: AI-gestuurde content refresh
+    try:
+        text = re.sub(r'<[^>]+>', '', content)[:3000]
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": f"""Je bent een content freshness expert. Dit artikel is verouderd.
+Update het met actuele informatie voor {current_year}:
+- Update alle jaartallen naar {current_year}
+- Als er prijzen staan die oud lijken, markeer ze met [PRIJS CHECK NODIG]
+- Update verouderde features of claims
+- Behoud de volledige HTML structuur en styling
+- Geef de VOLLEDIGE bijgewerkte HTML terug"""},
+                {"role": "user", "content": content_updated[:5000]}
+            ],
+            max_tokens=4000,
+            temperature=0.3
+        )
+        refreshed = res.choices[0].message.content.strip()
+        if "```html" in refreshed:
+            refreshed = refreshed.split("```html")[1].split("```")[0].strip()
+        elif "```" in refreshed:
+            refreshed = refreshed.split("```")[1].split("```")[0].strip()
+
+        if len(refreshed) > 500:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(refreshed)
+
+            run_command(f"cd {REPO_ROOT} && git add b2b/{slug}.html && git commit -m 'Victor: freshness update {slug}' && git push origin main")
+
+            fresh = load_freshness()
+            fresh["auto_updated"].append({"slug": slug, "date": str(datetime.now().date())})
+            save_freshness(fresh)
+
+            return slug
+    except Exception as e:
+        log(f"Freshness update error for {slug}: {e}")
+
+    return None
+
+
+def freshness_scan_batch(max_articles=10):
+    """Scan alle artikelen op versheid en update de meest verouderde."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return [], []
+
+    files = [f.replace('.html', '') for f in os.listdir(b2b_path) if f.endswith('.html')]
+    fresh = load_freshness()
+    results = []
+
+    for slug in files[:max_articles * 2]:
+        result = scan_article_freshness(slug)
+        if result:
+            results.append(result)
+            fresh["articles"][slug] = {
+                "freshness_score": result["freshness_score"],
+                "age_days": result["age_days"],
+                "needs_update": result["needs_update"],
+                "date": str(datetime.now().date())
+            }
+
+    # Sort by freshness (lowest first)
+    results.sort(key=lambda x: x["freshness_score"])
+    outdated = [r for r in results if r["needs_update"]]
+    fresh["outdated"] = [{"slug": r["slug"], "score": r["freshness_score"], "signals": len(r["signals"])} for r in outdated]
+    fresh["last_scan"] = str(datetime.now())
+    save_freshness(fresh)
+
+    # Auto-update de 2 meest verouderde
+    updated = []
+    for r in outdated[:2]:
+        result = auto_refresh_article(r["slug"])
+        if result:
+            updated.append(result)
+            time.sleep(2)
+
+    return outdated, updated
+
+
+# ── 13C: BUYER JOURNEY MAPPER ───────────────────────────────────────────
+
+JOURNEY_STAGES = {
+    "awareness": {
+        "signals": ["wat is", "what is", "uitleg", "introductie", "guide", "tutorial", "how to", "hoe werkt", "begrip"],
+        "description": "Lezer ontdekt het probleem/tool voor het eerst"
+    },
+    "consideration": {
+        "signals": ["vs", "versus", "vergelijk", "compare", "alternative", "alternatief", "review", "top", "beste", "best"],
+        "description": "Lezer vergelijkt opties en overweegt keuzes"
+    },
+    "decision": {
+        "signals": ["pricing", "kosten", "prijs", "kopen", "buy", "aanmelden", "signup", "kortingscode", "discount", "deal", "trial"],
+        "description": "Lezer is klaar om te kopen/aan te melden"
+    }
+}
+
+
+def map_buyer_journey():
+    """Map alle artikelen naar buyer journey stages en vind gaten."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return {}
+
+    files = [f.replace('.html', '') for f in os.listdir(b2b_path) if f.endswith('.html')]
+    journey = load_journey()
+    journey_map = {}  # brand -> {stage: [slugs]}
+    coverage = {}
+
+    # Map elk artikel naar een stage
+    article_stages = {}
+    for slug in files:
+        slug_lower = slug.lower()
+        detected_stage = "awareness"  # Default
+
+        for stage, config in JOURNEY_STAGES.items():
+            for signal in config["signals"]:
+                if signal in slug_lower:
+                    detected_stage = stage
+                    break
+
+        # Detect brand
+        detected_brand = "general"
+        for brand in VAULT:
+            if brand.lower() in slug_lower:
+                detected_brand = brand
+                break
+
+        article_stages[slug] = {"stage": detected_stage, "brand": detected_brand}
+
+        if detected_brand not in journey_map:
+            journey_map[detected_brand] = {"awareness": [], "consideration": [], "decision": []}
+        journey_map[detected_brand][detected_stage].append(slug)
+
+    # Analyseer gaten
+    gaps = []
+    for brand in VAULT:
+        if brand not in journey_map:
+            journey_map[brand] = {"awareness": [], "consideration": [], "decision": []}
+
+        brand_map = journey_map[brand]
+        total = sum(len(v) for v in brand_map.values())
+
+        coverage[brand] = {
+            "awareness": len(brand_map["awareness"]),
+            "consideration": len(brand_map["consideration"]),
+            "decision": len(brand_map["decision"]),
+            "total": total,
+            "complete": all(len(v) > 0 for v in brand_map.values())
+        }
+
+        # Vind ontbrekende stages
+        for stage in ["awareness", "consideration", "decision"]:
+            if not brand_map[stage]:
+                # Genereer artikel suggestie per stage
+                if stage == "awareness":
+                    suggestion = f"wat-is-{brand.lower()}-uitleg"
+                    title = f"Wat is {brand}? Complete Uitleg & Guide"
+                elif stage == "consideration":
+                    suggestion = f"beste-{brand.lower()}-alternatieven"
+                    title = f"Beste {brand} Alternatieven: Top 5 Vergeleken"
+                else:
+                    suggestion = f"{brand.lower()}-pricing-kosten"
+                    title = f"{brand} Pricing & Kosten: Compleet Overzicht"
+
+                gaps.append({
+                    "brand": brand,
+                    "missing_stage": stage,
+                    "suggested_slug": suggestion,
+                    "suggested_title": title,
+                    "priority": "high" if stage == "decision" else "medium",
+                    "reason": f"{brand} mist {stage} content — potentiële conversies gaan verloren"
+                })
+
+    journey["map"] = {brand: {stage: slugs for stage, slugs in stages.items()}
+                      for brand, stages in journey_map.items() if brand in VAULT}
+    journey["gaps"] = gaps
+    journey["coverage"] = coverage
+    journey["article_stages"] = article_stages
+    journey["last_analysis"] = str(datetime.now())
+    save_journey(journey)
+
+    return journey
+
+
+def auto_fill_journey_gap(max_articles=1):
+    """Schrijf automatisch artikelen om journey gaten te vullen."""
+    journey = load_journey()
+    gaps = journey.get("gaps", [])
+
+    if not gaps:
+        journey = map_buyer_journey()
+        gaps = journey.get("gaps", [])
+
+    if not gaps:
+        return []
+
+    # Prioriteer: decision > consideration > awareness
+    priority_order = {"decision": 0, "consideration": 1, "awareness": 2}
+    gaps.sort(key=lambda g: priority_order.get(g.get("missing_stage", ""), 3))
+
+    written = []
+    for gap in gaps[:max_articles]:
+        slug = gap["suggested_slug"]
+        filepath = f"{REPO_ROOT}/b2b/{slug}.html"
+        if os.path.exists(filepath):
+            continue
+
+        brand = gap["brand"]
+        stage = gap["missing_stage"]
+        title = gap["suggested_title"]
+
+        stage_prompt = {
+            "awareness": f"Schrijf een informatief artikel dat uitlegt wat {brand} is, hoe het werkt, en voor wie het geschikt is. Focus op educatie, niet verkoop.",
+            "consideration": f"Schrijf een vergelijkingsartikel: {brand} vs de top alternatieven. Objectief, eerlijk, met voor- en nadelen per optie.",
+            "decision": f"Schrijf een pricing/kosten artikel over {brand}. Alle plans, verborgen kosten, ROI analyse, en de beste deal tips. Focus op het helpen van de lezer om een beslissing te nemen."
+        }
+
+        aff_info = f"Affiliate link {brand}: {VAULT.get(brand, 'N/A')}\n"
+        aff_info += "\n".join([f"{b}: {u}" for b, u in VAULT.items() if b != brand])
+
+        try:
+            res = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": "Je bent een SEO content expert. Schrijf complete HTML artikelen met dark theme styling. Professioneel, informatief, 2000+ woorden."},
+                    {"role": "user", "content": f"Titel: {title}\n\n{stage_prompt[stage]}\n\nAffiliate links:\n{aff_info}\n\nDark theme HTML, 2000-3000 woorden."}
+                ],
+                max_tokens=4000,
+                temperature=0.7
+            )
+            html = res.choices[0].message.content.strip()
+            if "```html" in html:
+                html = html.split("```html")[1].split("```")[0].strip()
+            elif "```" in html:
+                html = html.split("```")[1].split("```")[0].strip()
+
+            os.makedirs(f"{REPO_ROOT}/b2b", exist_ok=True)
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(html)
+
+            # Schema toevoegen
+            try:
+                add_schema_to_article(filepath)
+            except:
+                pass
+
+            written.append(f"{slug} ({brand} {stage})")
+            time.sleep(2)
+        except Exception as e:
+            log(f"Journey gap fill error: {e}")
+
+    if written:
+        try:
+            rebuild_sitemap()
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: journey gap fill — {len(written)} articles' && git push origin main")
+        except:
+            pass
+
+    return written
+
+
+# ── 13D: SMART DIGEST SYSTEM ────────────────────────────────────────────
+
+def add_digest_item(category, message, priority=5, data=None):
+    """Voeg een item toe aan de dagelijkse digest. Priority: 1=laag, 10=kritiek."""
+    digest = load_digest()
+    digest["pending_items"].append({
+        "category": category,
+        "message": message,
+        "priority": priority,
+        "data": data or {},
+        "time": str(datetime.now())
+    })
+    save_digest(digest)
+
+
+def generate_smart_digest():
+    """Genereer één intelligente dagelijkse digest van alle activiteit."""
+    digest = load_digest()
+    items = digest.get("pending_items", [])
+
+    if not items:
+        return None
+
+    # Sorteer op prioriteit (hoogste eerst)
+    items.sort(key=lambda x: x.get("priority", 5), reverse=True)
+
+    # Groepeer per categorie
+    categories = {}
+    for item in items:
+        cat = item.get("category", "overig")
+        if cat not in categories:
+            categories[cat] = []
+        categories[cat].append(item)
+
+    # Bouw digest
+    msg = f"📋 VICTOR DAILY DIGEST\n"
+    msg += f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+    msg += f"📅 {datetime.now().strftime('%A %d %B %Y')}\n\n"
+
+    # Priority items eerst
+    critical = [i for i in items if i.get("priority", 0) >= 8]
+    if critical:
+        msg += "🚨 ACTIE VEREIST:\n"
+        for item in critical[:5]:
+            msg += f"  ❗ {item['message']}\n"
+        msg += "\n"
+
+    # Category summaries
+    category_emojis = {
+        "seo": "📈", "revenue": "💰", "content": "📝", "technical": "🔧",
+        "competitor": "🕵️", "growth": "🚀", "healing": "🏥", "backlinks": "🔗",
+        "freshness": "🔄", "journey": "🗺️", "overig": "📌"
+    }
+
+    for cat, cat_items in categories.items():
+        emoji = category_emojis.get(cat, "📌")
+        msg += f"{emoji} {cat.upper()} ({len(cat_items)}):\n"
+        for item in cat_items[:3]:
+            prio_dot = "🔴" if item["priority"] >= 8 else "🟡" if item["priority"] >= 5 else "🟢"
+            msg += f"  {prio_dot} {item['message'][:70]}\n"
+        if len(cat_items) > 3:
+            msg += f"  ... en {len(cat_items) - 3} meer\n"
+        msg += "\n"
+
+    # Summary stats
+    msg += f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+    msg += f"📊 Totaal: {len(items)} items | "
+    msg += f"🔴 {len([i for i in items if i['priority'] >= 8])} kritiek | "
+    msg += f"🟡 {len([i for i in items if 5 <= i['priority'] < 8])} medium | "
+    msg += f"🟢 {len([i for i in items if i['priority'] < 5])} laag"
+
+    # Clear pending items
+    digest["pending_items"] = []
+    digest["sent_digests"].append({
+        "date": str(datetime.now()),
+        "items_count": len(items),
+        "critical_count": len(critical)
+    })
+    save_digest(digest)
+
+    return msg
+
+
+# ── 13E: ROI GATE ───────────────────────────────────────────────────────
+
+def evaluate_article_roi(keyword, brand=None):
+    """Evalueer de ROI van een artikel VOORDAT het geschreven wordt."""
+    roi = load_roigate()
+
+    score = 0
+    factors = []
+    estimates = {}
+
+    # 1. Keyword competition analyse
+    keyword_lower = keyword.lower()
+
+    # High-value keyword types
+    if 'vs' in keyword_lower:
+        score += 20
+        factors.append("VS-artikel: laag concurrentie, hoog koopintentie")
+    elif 'alternative' in keyword_lower or 'alternatief' in keyword_lower:
+        score += 18
+        factors.append("Alternatieven: hoge koopintentie")
+    elif 'pricing' in keyword_lower or 'kosten' in keyword_lower:
+        score += 22
+        factors.append("Pricing: hoogste koopintentie, dichtbij conversie")
+    elif 'review' in keyword_lower:
+        score += 15
+        factors.append("Review: goede koopintentie")
+    elif 'how' in keyword_lower or 'tutorial' in keyword_lower or 'hoe' in keyword_lower:
+        score += 8
+        factors.append("How-to: breed publiek maar lage koopintentie")
+    else:
+        score += 5
+        factors.append("Informatief: onzeker conversie-potentieel")
+
+    # 2. Brand commission value
+    if brand and brand in COMMISSION_RATES:
+        rates = COMMISSION_RATES[brand]
+        commission = rates.get("per_signup", 0)
+        if commission >= 50:
+            score += 25
+            factors.append(f"Hoge commissie: €{commission}/signup")
+        elif commission >= 15:
+            score += 15
+            factors.append(f"Gemiddelde commissie: €{commission}/signup")
+        else:
+            score += 8
+            factors.append(f"Lage commissie: €{commission}/signup")
+        estimates["commission_per_signup"] = commission
+    elif brand:
+        for b, rates in COMMISSION_RATES.items():
+            if b.lower() in keyword_lower:
+                commission = rates.get("per_signup", 0)
+                score += min(commission, 25)
+                factors.append(f"Commissie {b}: €{commission}/signup")
+                estimates["commission_per_signup"] = commission
+                brand = b
+                break
+
+    # 3. Existing coverage check
+    b2b_path = f"{REPO_ROOT}/b2b"
+    similar_exists = False
+    if os.path.isdir(b2b_path):
+        for f in os.listdir(b2b_path):
+            f_slug = f.replace('.html', '').lower()
+            keywords = keyword_lower.replace('-', ' ').split()
+            overlap = sum(1 for w in keywords if w in f_slug)
+            if overlap >= len(keywords) * 0.7:
+                similar_exists = True
+                score -= 10
+                factors.append(f"⚠️ Vergelijkbaar artikel bestaat: {f_slug[:30]}")
+                break
+
+    if not similar_exists:
+        score += 10
+        factors.append("Nieuw topic — geen overlap")
+
+    # 4. GSC data (als beschikbaar)
+    if os.path.exists(GSC_DATA_FILE):
+        try:
+            with open(GSC_DATA_FILE) as f:
+                gsc = json.load(f)
+            # Check of we al impressions hebben voor gerelateerde queries
+            relevant_queries = [q for q in gsc.get("queries", [])
+                               if any(w in q.get("query", "").lower() for w in keyword_lower.split('-'))]
+            if relevant_queries:
+                total_impr = sum(q.get("impressions", 0) for q in relevant_queries)
+                if total_impr > 100:
+                    score += 10
+                    factors.append(f"GSC data: {total_impr} impressions voor gerelateerde queries")
+                    estimates["existing_impressions"] = total_impr
+        except:
+            pass
+
+    # 5. Ranking prediction (use existing function)
+    try:
+        pred_score, pred_factors = predict_ranking_success(keyword, brand or keyword.split('-')[0].title())
+        ranking_bonus = pred_score // 10
+        score += ranking_bonus
+        factors.append(f"Ranking voorspelling: {pred_score}/100")
+        estimates["ranking_prediction"] = pred_score
+    except:
+        pass
+
+    # Revenue estimate
+    est_monthly_clicks = 50 if score > 60 else 20 if score > 40 else 5
+    est_ctr = COMMISSION_RATES.get(brand, {}).get("est_ctr", 0.02) if brand else 0.015
+    est_commission = estimates.get("commission_per_signup", 10)
+    est_monthly_revenue = est_monthly_clicks * est_ctr * est_commission
+
+    estimates["monthly_clicks"] = est_monthly_clicks
+    estimates["affiliate_ctr"] = est_ctr
+    estimates["monthly_revenue"] = round(est_monthly_revenue, 2)
+    estimates["yearly_revenue"] = round(est_monthly_revenue * 12, 2)
+    estimates["time_to_rank_months"] = 2 if score > 60 else 4 if score > 40 else 8
+
+    # Final evaluation
+    threshold = roi.get("threshold", 30)
+    approved = score >= threshold
+
+    evaluation = {
+        "keyword": keyword,
+        "brand": brand,
+        "score": score,
+        "factors": factors,
+        "estimates": estimates,
+        "approved": approved,
+        "date": str(datetime.now()),
+        "threshold": threshold
+    }
+
+    roi["evaluations"].append(evaluation)
+    if approved:
+        roi["approved"].append({"keyword": keyword, "score": score, "date": str(datetime.now().date())})
+    else:
+        roi["rejected"].append({"keyword": keyword, "score": score, "date": str(datetime.now().date()),
+                                "reason": "Score onder threshold"})
+    save_roigate(roi)
+
+    return evaluation
+
+
+def omniscience_cycle():
+    """Volledige Omniscience cyclus — draait dagelijks."""
+    actions = []
+
+    # 1. Live site validatie (steekproef)
+    try:
+        results = validate_full_site(max_pages=5)
+        passed = sum(1 for r in results if r["ok"])
+        failed = sum(1 for r in results if not r["ok"])
+        if failed:
+            actions.append(f"🔍 Site validatie: {failed} pagina's met problemen")
+            add_digest_item("technical", f"Site validatie: {failed}/{len(results)} pagina's falen", priority=8 if failed > 2 else 6)
+        else:
+            actions.append(f"✅ Site validatie: alle {passed} pagina's OK")
+    except Exception as e:
+        log(f"Validator error: {e}")
+
+    # 2. Freshness scan
+    try:
+        outdated, updated = freshness_scan_batch(max_articles=10)
+        if outdated:
+            actions.append(f"🔄 Freshness: {len(outdated)} verouderde artikelen, {len(updated)} auto-updated")
+            if len(outdated) > 3:
+                add_digest_item("freshness", f"{len(outdated)} artikelen verouderd — {len(updated)} auto-updated", priority=6)
+        else:
+            actions.append("✅ Alle content is up-to-date")
+    except Exception as e:
+        log(f"Freshness error: {e}")
+
+    # 3. Buyer journey analyse (1x per week op donderdag)
+    if datetime.now().weekday() == 3:
+        try:
+            journey = map_buyer_journey()
+            gaps = journey.get("gaps", [])
+            if gaps:
+                actions.append(f"🗺️ Journey: {len(gaps)} gaten in buyer journey")
+                add_digest_item("journey", f"Buyer journey: {len(gaps)} gaten gevonden", priority=7)
+
+                # Auto-fill 1 gap
+                filled = auto_fill_journey_gap(max_articles=1)
+                if filled:
+                    actions.append(f"🗺️ Journey gap gevuld: {', '.join(filled)}")
+            else:
+                actions.append("✅ Buyer journey compleet voor alle brands")
+        except Exception as e:
+            log(f"Journey error: {e}")
+
+    return actions
+
+
 # ── TELEGRAM BOT ─────────────────────────────────────────────────────────────
 bot = telebot.TeleBot(TOKEN, parse_mode=None)
 
@@ -8059,7 +8881,7 @@ def cmd_panel(message):
     keyboard = build_main_dashboard_keyboard()
     bot.send_message(
         message.chat.id,
-        "🧠 Victor 13.0 Hive Mind — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
+        "🧠 Victor 14.0 Omniscience — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
         reply_markup=keyboard
     )
 
@@ -8275,6 +9097,191 @@ def cmd_hivemind(message):
     bot.reply_to(message, msg)
 
 
+@bot.message_handler(commands=['validate'])
+def cmd_validate(message):
+    """Live site validatie."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔍 Live site valideren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    results = validate_full_site(max_pages=15)
+    passed = sum(1 for r in results if r["ok"])
+    failed = sum(1 for r in results if not r["ok"])
+
+    msg = f"🔍 Live Site Validatie\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    msg += f"✅ OK: {passed}\n❌ Problemen: {failed}\n📊 Totaal: {len(results)}\n\n"
+
+    if failed:
+        msg += "⚠️ Problemen:\n"
+        for r in results:
+            if not r["ok"]:
+                slug = r["url"].split("/")[-1].replace(".html", "")
+                issues = ", ".join(i["detail"][:30] for i in r["issues"][:2])
+                msg += f"  ❌ {slug[:25]}: {issues}\n"
+
+    # Avg load time
+    load_times = [r["load_time"] for r in results if r["load_time"] > 0]
+    if load_times:
+        avg = sum(load_times) / len(load_times)
+        msg += f"\n⚡ Gem. laadtijd: {avg:.2f}s"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['freshness'])
+def cmd_freshness(message):
+    """Content freshness scan."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "scan"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "update":
+        bot.reply_to(message, "🔄 Verouderde content updaten...")
+        outdated, updated = freshness_scan_batch(max_articles=15)
+        if updated:
+            msg = f"🔄 {len(updated)} artikelen bijgewerkt:\n\n" + "\n".join(f"  ✅ {u}" for u in updated)
+        else:
+            msg = "✅ Geen artikelen hoeven geüpdatet te worden."
+        bot.reply_to(message, msg)
+    else:
+        bot.reply_to(message, "🔄 Freshness scan draaien...")
+        outdated, updated = freshness_scan_batch(max_articles=20)
+        fresh = load_freshness()
+
+        msg = f"🔄 Content Freshness\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"📊 Gescand: {len(fresh.get('articles', {}))} artikelen\n"
+        msg += f"⚠️ Verouderd: {len(outdated)}\n"
+        msg += f"✅ Auto-updated: {len(updated)}\n"
+
+        if outdated:
+            msg += "\n📉 Meest verouderd:\n"
+            for o in outdated[:5]:
+                msg += f"  ⚠️ {o['slug'][:30]}: score {o['freshness_score']}/100 ({o['age_days']}d oud)\n"
+
+        msg += f"\nGebruik /freshness update om te fixen."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['journey'])
+def cmd_journey(message):
+    """Buyer journey mapping."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "map"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "fill":
+        bot.reply_to(message, "🗺️ Journey gaten vullen...")
+        filled = auto_fill_journey_gap(max_articles=2)
+        if filled:
+            msg = f"🗺️ {len(filled)} journey artikelen geschreven:\n\n" + "\n".join(f"  ✅ {f}" for f in filled)
+        else:
+            msg = "✅ Alle journey gaten zijn al gevuld!"
+        bot.reply_to(message, msg)
+    else:
+        bot.reply_to(message, "🗺️ Buyer journey analyseren...")
+        journey = map_buyer_journey()
+        coverage = journey.get("coverage", {})
+        gaps = journey.get("gaps", [])
+
+        msg = f"🗺️ Buyer Journey Map\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        for brand, cov in coverage.items():
+            if brand not in VAULT:
+                continue
+            status = "✅" if cov["complete"] else "⚠️"
+            msg += f"{status} {brand}:\n"
+            msg += f"   Awareness: {'✅' if cov['awareness'] else '❌'} ({cov['awareness']})"
+            msg += f"  Consider: {'✅' if cov['consideration'] else '❌'} ({cov['consideration']})"
+            msg += f"  Decision: {'✅' if cov['decision'] else '❌'} ({cov['decision']})\n"
+
+        if gaps:
+            msg += f"\n🚨 {len(gaps)} gaten:\n"
+            for g in gaps[:5]:
+                msg += f"  ❌ {g['brand']} → {g['missing_stage']}: {g['suggested_title'][:40]}\n"
+            msg += f"\nGebruik /journey fill om gaten te vullen."
+
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['roigate'])
+def cmd_roigate(message):
+    """ROI Gate — evalueer artikel voordat je schrijft."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=2)
+
+    if len(parts) < 2:
+        roi = load_roigate()
+        msg = f"🎯 ROI Gate\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"✅ Goedgekeurd: {len(roi.get('approved', []))}\n"
+        msg += f"❌ Afgewezen: {len(roi.get('rejected', []))}\n"
+        msg += f"📊 Threshold: {roi.get('threshold', 30)} punten\n"
+        msg += f"\nGebruik /roigate <keyword> [brand]"
+        bot.reply_to(message, msg)
+        return
+
+    keyword = parts[1]
+    brand = parts[2] if len(parts) > 2 else None
+
+    bot.send_chat_action(message.chat.id, 'typing')
+    evaluation = evaluate_article_roi(keyword, brand)
+
+    emoji = "✅" if evaluation["approved"] else "❌"
+    msg = f"🎯 ROI Gate — {keyword}\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    msg += f"{emoji} Score: {evaluation['score']}/{evaluation['threshold']} threshold\n"
+    msg += f"{'✅ GOEDGEKEURD — schrijven!' if evaluation['approved'] else '❌ AFGEWEZEN — niet rendabel'}\n\n"
+
+    msg += "📊 Factoren:\n"
+    for f in evaluation["factors"]:
+        msg += f"  - {f}\n"
+
+    est = evaluation.get("estimates", {})
+    if est:
+        msg += f"\n💰 Schatting:\n"
+        msg += f"  Clicks/maand: ~{est.get('monthly_clicks', '?')}\n"
+        msg += f"  Revenue/maand: €{est.get('monthly_revenue', 0):.2f}\n"
+        msg += f"  Revenue/jaar: €{est.get('yearly_revenue', 0):.2f}\n"
+        msg += f"  Tijd tot ranking: ~{est.get('time_to_rank_months', '?')} maanden"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['digest'])
+def cmd_digest(message):
+    """Smart daily digest."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+    digest = generate_smart_digest()
+    if digest:
+        bot.reply_to(message, digest)
+    else:
+        bot.reply_to(message, "📋 Geen digest items — alles rustig!")
+
+
+@bot.message_handler(commands=['omniscience'])
+def cmd_omniscience(message):
+    """Volledige Omniscience cyclus."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "👁️ Omniscience cyclus activeren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    actions = omniscience_cycle()
+    if actions:
+        msg = "👁️ Omniscience — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "\n".join(f"  ✅ {a}" for a in actions)
+    else:
+        msg = "👁️ Omniscience: alles optimaal."
+    bot.reply_to(message, msg)
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -8309,7 +9316,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 13.0 Hive Mind — Commando's:
+    bot.reply_to(message, """Victor 14.0 Omniscience — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -8384,6 +9391,14 @@ def cmd_help(message):
 /scorecard — Visueel ASCII scorecard
 /leaderboard — Artikel ranking leaderboard
 /hivemind — Volledige Hive Mind cyclus
+
+👁️ Omniscience:
+/validate — Live site validatie
+/freshness [update] — Content versheid check
+/journey [fill] — Buyer journey mapping
+/roigate <keyword> [brand] — ROI voorspelling
+/digest — Smart daily digest
+/omniscience — Volledige Omniscience cyclus
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -8754,7 +9769,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 13.0 Hive Mind — Status Report
+    return f"""📊 Victor 14.0 Omniscience — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -9215,6 +10230,32 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Scorecard error: {e}")
 
+            # 👁️ OMNISCIENCE: dagelijkse cyclus om 09:00 UTC
+            if hour == 9 and last_auto_improve != str(now.date()) + "-omniscience":
+                try:
+                    log("Starting omniscience cycle...")
+                    omni_actions = omniscience_cycle()
+                    last_auto_improve = str(now.date()) + "-omniscience"
+                    if omni_actions:
+                        # Voeg alles toe aan digest in plaats van losse berichten
+                        for action in omni_actions:
+                            prio = 8 if any(w in action for w in ['🚨', '❌', 'problemen']) else 5
+                            add_digest_item("omniscience", action, priority=prio)
+                        log(f"Omniscience done: {len(omni_actions)} actions")
+                except Exception as e:
+                    log(f"Omniscience error: {e}")
+
+            # 📋 SMART DIGEST: dagelijks om 09:30 UTC (verzamelt alles van de ochtend)
+            if hour == 9 and now.minute >= 30 and last_auto_improve != str(now.date()) + "-digest":
+                try:
+                    digest_msg = generate_smart_digest()
+                    if digest_msg:
+                        bot.send_message(ADMIN_ID, digest_msg)
+                        log("Daily digest sent")
+                    last_auto_improve = str(now.date()) + "-digest"
+                except Exception as e:
+                    log(f"Digest error: {e}")
+
             # 🔥 DOMINATION MATRIX: dagelijkse cyclus om 07:00 UTC
             if hour == 7 and weekday != 0 and last_auto_improve != str(now.date()) + "-domination":
                 try:
@@ -9292,8 +10333,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 13.0 Hive Mind online!\n\n{report}"
-            f"\n\n🧠 Hive Mind: /scorecard /conversions /dna /backlinks"
+            f"🚀 Victor 14.0 Omniscience online!\n\n{report}"
+            f"\n\n👁️ Omniscience: /validate /freshness /journey /roigate"
+            f"\n🧠 Hive Mind: /scorecard /conversions /dna /backlinks"
             f"\n🧠 Neural: /panel /audit /trends /translate /heal"
             f"\n🔥 Domination: /domination /programmatic /schema /serp"
             f"\n🤖 Autopilot: /autopilot /predict /sprint /briefing"
@@ -9308,7 +10350,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 13.0 Hive Mind gestart — Model: {MODEL}")
+    log(f"Victor 14.0 Omniscience gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

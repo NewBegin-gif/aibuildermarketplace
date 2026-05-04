@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 11.0 Domination Matrix — Powered by Claude AI<br>
+Victor 12.0 Neural Command Center — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -4610,6 +4610,909 @@ def domination_matrix_cycle():
     return actions
 
 
+# ── MODULE 11: NEURAL COMMAND CENTER ────────────────────────────────────────
+AUDIT_FILE = "/root/felix_hq/victor_audit.json"
+TRENDS_FILE = "/root/felix_hq/victor_trends.json"
+TRANSLATIONS_FILE = "/root/felix_hq/victor_translations.json"
+HEALING_FILE = "/root/felix_hq/victor_healing.json"
+
+def load_audit():
+    if os.path.exists(AUDIT_FILE):
+        try:
+            return json.load(open(AUDIT_FILE))
+        except:
+            pass
+    return {"audits": [], "issues": [], "fixes": [], "scores": {}}
+
+def save_audit(data):
+    data["audits"] = data.get("audits", [])[-30:]
+    data["issues"] = data.get("issues", [])[-200:]
+    data["fixes"] = data.get("fixes", [])[-100:]
+    with open(AUDIT_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_trends():
+    if os.path.exists(TRENDS_FILE):
+        try:
+            return json.load(open(TRENDS_FILE))
+        except:
+            pass
+    return {"detected": [], "articles_written": [], "sources": [], "last_scan": None}
+
+def save_trends(data):
+    data["detected"] = data.get("detected", [])[-100:]
+    data["articles_written"] = data.get("articles_written", [])[-50:]
+    with open(TRENDS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_translations():
+    if os.path.exists(TRANSLATIONS_FILE):
+        try:
+            return json.load(open(TRANSLATIONS_FILE))
+        except:
+            pass
+    return {"translated": [], "stats": {}, "hreflang_added": []}
+
+def save_translations(data):
+    data["translated"] = data.get("translated", [])[-200:]
+    with open(TRANSLATIONS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_healing():
+    if os.path.exists(HEALING_FILE):
+        try:
+            return json.load(open(HEALING_FILE))
+        except:
+            pass
+    return {"incidents": [], "auto_fixes": [], "uptime_checks": [], "stats": {"total_fixes": 0, "total_incidents": 0}}
+
+def save_healing(data):
+    data["incidents"] = data.get("incidents", [])[-100:]
+    data["auto_fixes"] = data.get("auto_fixes", [])[-100:]
+    data["uptime_checks"] = data.get("uptime_checks", [])[-48:]
+    with open(HEALING_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+# ── 11A: TECHNICAL SEO AUDITOR ───────────────────────────────────────────
+
+def audit_page_technical(filepath):
+    """Technische SEO audit van een enkele pagina."""
+    issues = []
+    slug = os.path.basename(filepath).replace('.html', '')
+
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+    except Exception as e:
+        return [{"type": "error", "issue": f"Kan {slug} niet lezen: {e}", "severity": "critical"}]
+
+    file_size = len(content.encode('utf-8'))
+
+    # 1. Title tag check
+    title_match = re.search(r'<title>(.*?)</title>', content, re.IGNORECASE)
+    if not title_match:
+        issues.append({"type": "missing_title", "issue": f"{slug}: Geen <title> tag", "severity": "critical", "auto_fixable": True})
+    elif len(title_match.group(1)) > 60:
+        issues.append({"type": "title_long", "issue": f"{slug}: Title te lang ({len(title_match.group(1))} chars, max 60)", "severity": "medium", "auto_fixable": True})
+    elif len(title_match.group(1)) < 20:
+        issues.append({"type": "title_short", "issue": f"{slug}: Title te kort ({len(title_match.group(1))} chars)", "severity": "medium", "auto_fixable": True})
+
+    # 2. Meta description check
+    meta_desc = re.search(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']', content, re.IGNORECASE)
+    if not meta_desc:
+        issues.append({"type": "missing_meta_desc", "issue": f"{slug}: Geen meta description", "severity": "high", "auto_fixable": True})
+    elif len(meta_desc.group(1)) > 160:
+        issues.append({"type": "meta_desc_long", "issue": f"{slug}: Meta description te lang ({len(meta_desc.group(1))} chars)", "severity": "low", "auto_fixable": True})
+
+    # 3. H1 check
+    h1_matches = re.findall(r'<h1[^>]*>(.*?)</h1>', content, re.IGNORECASE | re.DOTALL)
+    if not h1_matches:
+        issues.append({"type": "missing_h1", "issue": f"{slug}: Geen H1 tag", "severity": "high", "auto_fixable": False})
+    elif len(h1_matches) > 1:
+        issues.append({"type": "multiple_h1", "issue": f"{slug}: {len(h1_matches)} H1 tags (moet 1 zijn)", "severity": "medium", "auto_fixable": False})
+
+    # 4. Image alt tags
+    imgs = re.findall(r'<img[^>]*>', content, re.IGNORECASE)
+    imgs_no_alt = [i for i in imgs if 'alt=' not in i.lower() or 'alt=""' in i.lower()]
+    if imgs_no_alt:
+        issues.append({"type": "missing_alt", "issue": f"{slug}: {len(imgs_no_alt)}/{len(imgs)} images zonder alt tag", "severity": "medium", "auto_fixable": True})
+
+    # 5. File size check (groot = traag)
+    if file_size > 100000:  # >100KB
+        issues.append({"type": "large_file", "issue": f"{slug}: Bestand te groot ({file_size//1024}KB)", "severity": "medium", "auto_fixable": False})
+
+    # 6. Mobile viewport check
+    if '<meta name="viewport"' not in content and "<meta name='viewport'" not in content:
+        issues.append({"type": "no_viewport", "issue": f"{slug}: Geen viewport meta tag (slecht voor mobiel)", "severity": "high", "auto_fixable": True})
+
+    # 7. Canonical URL check
+    if 'rel="canonical"' not in content and "rel='canonical'" not in content:
+        issues.append({"type": "no_canonical", "issue": f"{slug}: Geen canonical URL", "severity": "medium", "auto_fixable": True})
+
+    # 8. Open Graph tags
+    if 'og:title' not in content:
+        issues.append({"type": "no_og", "issue": f"{slug}: Geen Open Graph tags", "severity": "low", "auto_fixable": True})
+
+    # 9. Broken internal links
+    internal_links = re.findall(r'href="\.?/?([^"]*?\.html)"', content)
+    b2b_path = os.path.dirname(filepath)
+    for link in internal_links:
+        link_file = os.path.join(b2b_path, os.path.basename(link))
+        if not os.path.exists(link_file):
+            issues.append({"type": "broken_link", "issue": f"{slug}: Broken link naar {link}", "severity": "high", "auto_fixable": True})
+
+    # 10. HTTPS check op externe links
+    http_links = re.findall(r'href="(http://[^"]+)"', content)
+    if http_links:
+        issues.append({"type": "http_links", "issue": f"{slug}: {len(http_links)} onveilige HTTP links", "severity": "medium", "auto_fixable": True})
+
+    return issues
+
+
+def auto_fix_technical_issues(issues, filepath):
+    """Automatisch technische SEO problemen fixen."""
+    if not issues:
+        return []
+
+    fixable = [i for i in issues if i.get("auto_fixable")]
+    if not fixable:
+        return []
+
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+    except:
+        return []
+
+    slug = os.path.basename(filepath).replace('.html', '')
+    title_text = slug.replace('-', ' ').title()
+    fixed = []
+
+    for issue in fixable:
+        itype = issue["type"]
+
+        if itype == "no_viewport":
+            viewport_tag = '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+            if '<head>' in content:
+                content = content.replace('<head>', f'<head>\n{viewport_tag}')
+            elif '<html' in content:
+                content = content.replace('<html', f'{viewport_tag}\n<html')
+            else:
+                content = viewport_tag + '\n' + content
+            fixed.append(f"{slug}: viewport tag toegevoegd")
+
+        elif itype == "no_canonical":
+            canonical = f'<link rel="canonical" href="https://aibuildermarketplace.com/b2b/{slug}.html">'
+            if '</head>' in content:
+                content = content.replace('</head>', f'{canonical}\n</head>')
+            else:
+                content = canonical + '\n' + content
+            fixed.append(f"{slug}: canonical URL toegevoegd")
+
+        elif itype == "missing_meta_desc":
+            # Genereer meta description van content
+            text_only = re.sub(r'<[^>]+>', '', content)
+            text_only = re.sub(r'\s+', ' ', text_only).strip()
+            desc = text_only[:155].rsplit(' ', 1)[0] + "..."
+            desc = desc.replace('"', "'")
+            meta_tag = f'<meta name="description" content="{desc}">'
+            if '</head>' in content:
+                content = content.replace('</head>', f'{meta_tag}\n</head>')
+            elif '<head>' in content:
+                content = content.replace('<head>', f'<head>\n{meta_tag}')
+            else:
+                content = meta_tag + '\n' + content
+            fixed.append(f"{slug}: meta description toegevoegd")
+
+        elif itype == "missing_title":
+            title_tag = f'<title>{title_text} — AI Builder Marketplace</title>'
+            if '<head>' in content:
+                content = content.replace('<head>', f'<head>\n{title_tag}')
+            else:
+                content = title_tag + '\n' + content
+            fixed.append(f"{slug}: title tag toegevoegd")
+
+        elif itype == "title_long":
+            # Verkort title
+            title_match = re.search(r'<title>(.*?)</title>', content)
+            if title_match:
+                old_title = title_match.group(1)
+                new_title = old_title[:57] + "..."
+                content = content.replace(f'<title>{old_title}</title>', f'<title>{new_title}</title>')
+                fixed.append(f"{slug}: title verkort")
+
+        elif itype == "no_og":
+            og_tags = f'''<meta property="og:title" content="{title_text}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aibuildermarketplace.com/b2b/{slug}.html">
+<meta property="og:site_name" content="AI Builder Marketplace">'''
+            if '</head>' in content:
+                content = content.replace('</head>', f'{og_tags}\n</head>')
+            fixed.append(f"{slug}: Open Graph tags toegevoegd")
+
+        elif itype == "missing_alt":
+            # Voeg alt tags toe aan images zonder alt
+            def add_alt(match):
+                img_tag = match.group(0)
+                if 'alt=' not in img_tag.lower() or 'alt=""' in img_tag.lower():
+                    # Probeer src te gebruiken voor alt text
+                    src_match = re.search(r'src="([^"]*)"', img_tag)
+                    alt_text = title_text if not src_match else os.path.basename(src_match.group(1)).replace('-', ' ').replace('.', ' ').rsplit(' ', 1)[0]
+                    if 'alt=""' in img_tag:
+                        return img_tag.replace('alt=""', f'alt="{alt_text}"')
+                    else:
+                        return img_tag.replace('<img', f'<img alt="{alt_text}"')
+                return img_tag
+            content = re.sub(r'<img[^>]*>', add_alt, content, flags=re.IGNORECASE)
+            fixed.append(f"{slug}: alt tags toegevoegd")
+
+        elif itype == "http_links":
+            # Upgrade HTTP naar HTTPS
+            content = re.sub(r'href="http://', 'href="https://', content)
+            fixed.append(f"{slug}: HTTP links geupgraded naar HTTPS")
+
+        elif itype == "broken_link":
+            # Verwijder broken links (vervang met tekst)
+            broken_href = issue["issue"].split("naar ")[-1] if "naar " in issue["issue"] else ""
+            if broken_href:
+                content = re.sub(
+                    rf'<a[^>]*href="[^"]*{re.escape(os.path.basename(broken_href))}"[^>]*>(.*?)</a>',
+                    r'\1', content, flags=re.IGNORECASE
+                )
+                fixed.append(f"{slug}: broken link verwijderd")
+
+    if fixed:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+
+    return fixed
+
+
+def full_site_audit():
+    """Voer een volledige technische SEO audit uit op alle pagina's."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if not os.path.isdir(b2b_path):
+        return {"total_pages": 0, "issues": [], "score": 0}
+
+    files = [f for f in os.listdir(b2b_path) if f.endswith('.html')]
+    all_issues = []
+    all_fixes = []
+
+    for f in files:
+        filepath = os.path.join(b2b_path, f)
+        issues = audit_page_technical(filepath)
+        if issues:
+            all_issues.extend(issues)
+            # Auto-fix wat kan
+            fixes = auto_fix_technical_issues(issues, filepath)
+            all_fixes.extend(fixes)
+
+    # Also audit index.html and b2b.html
+    for root_file in ['index.html', 'b2b.html']:
+        root_path = f"{REPO_ROOT}/{root_file}"
+        if os.path.exists(root_path):
+            issues = audit_page_technical(root_path)
+            if issues:
+                all_issues.extend(issues)
+                fixes = auto_fix_technical_issues(issues, root_path)
+                all_fixes.extend(fixes)
+
+    # Calculate health score
+    total_pages = len(files) + 2  # +index +b2b
+    critical = sum(1 for i in all_issues if i.get("severity") == "critical")
+    high = sum(1 for i in all_issues if i.get("severity") == "high")
+    medium = sum(1 for i in all_issues if i.get("severity") == "medium")
+    low = sum(1 for i in all_issues if i.get("severity") == "low")
+
+    # Score: start at 100, deduct per issue
+    score = max(0, 100 - (critical * 15) - (high * 8) - (medium * 3) - (low * 1))
+
+    # Git push fixes
+    if all_fixes:
+        try:
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: auto-fixed {len(all_fixes)} technical SEO issues' && git push origin main")
+        except:
+            pass
+
+    # Save audit results
+    audit = load_audit()
+    audit["audits"].append({
+        "date": str(datetime.now()),
+        "total_pages": total_pages,
+        "issues_found": len(all_issues),
+        "auto_fixed": len(all_fixes),
+        "score": score
+    })
+    audit["issues"] = all_issues
+    audit["fixes"].extend([{"fix": f, "date": str(datetime.now().date())} for f in all_fixes])
+    audit["scores"][str(datetime.now().date())] = score
+    save_audit(audit)
+
+    return {
+        "total_pages": total_pages,
+        "issues": all_issues,
+        "fixes": all_fixes,
+        "score": score,
+        "critical": critical,
+        "high": high,
+        "medium": medium,
+        "low": low
+    }
+
+
+# ── 11B: TREND RADAR ────────────────────────────────────────────────────
+
+AI_TREND_KEYWORDS = [
+    "AI tool launch", "new AI startup", "AI acquisition",
+    "ChatGPT update", "Claude update", "Gemini update",
+    "AI video generator", "AI voice clone", "AI website builder",
+    "AI coding tool", "text to video AI", "AI image generator 2026",
+    "best AI tools", "AI productivity", "AI for business",
+    "synthesia alternative", "invideo alternative", "replit alternative",
+    "kinsta vs", "murf ai", "bitvavo crypto",
+    "AI automation", "no-code AI", "AI SaaS tools"
+]
+
+
+def scan_trending_topics():
+    """Scan het web voor trending AI topics."""
+    trends = load_trends()
+    detected = []
+
+    for keyword in AI_TREND_KEYWORDS[:8]:  # Max 8 per scan (rate limiting)
+        try:
+            # Gebruik een simpele web search via urllib
+            search_url = f"https://www.google.com/search?q={urllib.request.quote(keyword)}&tbs=qdr:w"  # Laatste week
+            req = urllib.request.Request(search_url, headers={
+                'User-Agent': 'Mozilla/5.0 (compatible; VictorBot/12.0)'
+            })
+
+            try:
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    html = response.read().decode('utf-8', errors='ignore')
+
+                # Extract titels uit zoekresultaten
+                titles = re.findall(r'<h3[^>]*>(.*?)</h3>', html)
+                titles = [re.sub(r'<[^>]+>', '', t) for t in titles[:5]]
+
+                if titles:
+                    detected.append({
+                        "keyword": keyword,
+                        "results": titles[:3],
+                        "date": str(datetime.now().date())
+                    })
+            except:
+                pass
+
+            time.sleep(2)  # Rate limiting
+        except Exception as e:
+            log(f"Trend scan error for {keyword}: {e}")
+
+    # Analyseer trends met Claude
+    if detected:
+        try:
+            trend_summary = "\n".join([
+                f"Keyword: {d['keyword']}\nResults: {', '.join(d['results'][:2])}"
+                for d in detected[:5]
+            ])
+
+            res = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": """Je bent een AI trend analist. Analyseer deze zoekresultaten en identificeer:
+1. Hot trending topics (nieuwe tools, updates, verschuivingen)
+2. Content kansen (artikelen die we SNEL moeten schrijven)
+3. Seizoensgebonden patronen
+
+Antwoord in JSON:
+{"hot_topics": [{"topic": "...", "urgency": "high/medium/low", "article_idea": "..."}], "opportunities": ["..."], "patterns": ["..."]}"""
+                    },
+                    {"role": "user", "content": trend_summary}
+                ],
+                max_tokens=1500,
+                temperature=0.5
+            )
+            analysis = res.choices[0].message.content.strip()
+            if "```json" in analysis:
+                analysis = analysis.split("```json")[1].split("```")[0]
+            elif "```" in analysis:
+                analysis = analysis.split("```")[1].split("```")[0]
+            trend_data = json.loads(analysis)
+
+            # Save
+            trends["detected"].extend(detected)
+            trends["last_scan"] = str(datetime.now())
+            if "hot_topics" in trend_data:
+                for topic in trend_data["hot_topics"]:
+                    topic["detected_date"] = str(datetime.now().date())
+                trends["detected"].extend([{
+                    "keyword": t.get("topic", ""),
+                    "urgency": t.get("urgency", "medium"),
+                    "article_idea": t.get("article_idea", ""),
+                    "date": str(datetime.now().date()),
+                    "source": "ai_analysis"
+                } for t in trend_data.get("hot_topics", [])])
+
+            save_trends(trends)
+            return trend_data
+
+        except Exception as e:
+            log(f"Trend analysis error: {e}")
+            trends["detected"].extend(detected)
+            save_trends(trends)
+
+    return {"hot_topics": [], "opportunities": [], "patterns": []}
+
+
+def auto_write_trend_article():
+    """Schrijf automatisch een artikel over een trending topic."""
+    trends = load_trends()
+    hot = [t for t in trends.get("detected", [])
+           if t.get("urgency") == "high" and t.get("article_idea")
+           and t.get("source") == "ai_analysis"]
+
+    # Filter al geschreven
+    written_topics = {a.get("topic", "") for a in trends.get("articles_written", [])}
+    new_hot = [t for t in hot if t.get("article_idea", "") not in written_topics]
+
+    if not new_hot:
+        return None
+
+    topic = new_hot[0]
+    article_idea = topic.get("article_idea", topic.get("keyword", "AI trend"))
+
+    try:
+        # Genereer slug
+        slug = re.sub(r'[^a-z0-9-]', '', article_idea.lower().replace(' ', '-'))[:60]
+
+        # Check of het al bestaat
+        target = f"{REPO_ROOT}/b2b/{slug}.html"
+        if os.path.exists(target):
+            return None
+
+        # Zoek relevante affiliate links
+        aff_info = "\n".join([f"{b}: {url}" for b, url in VAULT.items()])
+
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": "Je bent een SEO content expert voor AI Builder Marketplace. Schrijf complete HTML artikelen met dark theme styling (donkere achtergrond, lichte tekst). Gebruik professionele, informatieve toon."},
+                {"role": "user", "content": f"""Schrijf een trending artikel over: {article_idea}
+
+Dit is een HOT topic nu. Focus op:
+- Wat is er nieuw/veranderd
+- Waarom dit belangrijk is
+- Praktische tips voor gebruikers
+- Vergelijking met alternatieven
+
+Beschikbare affiliate links (gebruik waar relevant):
+{aff_info}
+
+2000-3000 woorden, complete HTML met dark theme, SEO geoptimaliseerd."""}
+            ],
+            max_tokens=4000,
+            temperature=0.7
+        )
+        html_content = res.choices[0].message.content.strip()
+
+        if "```html" in html_content:
+            html_content = html_content.split("```html")[1].split("```")[0].strip()
+        elif "```" in html_content:
+            html_content = html_content.split("```")[1].split("```")[0].strip()
+
+        os.makedirs(f"{REPO_ROOT}/b2b", exist_ok=True)
+        with open(target, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+
+        # Schema markup toevoegen
+        add_schema_to_article(target)
+
+        trends["articles_written"].append({
+            "topic": article_idea,
+            "slug": slug,
+            "date": str(datetime.now().date()),
+            "urgency": topic.get("urgency", "high")
+        })
+        save_trends(trends)
+
+        # Git push
+        rebuild_sitemap()
+        run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: trending article — {slug}' && git push origin main")
+
+        return slug
+    except Exception as e:
+        log(f"Trend article error: {e}")
+        return None
+
+
+# ── 11C: MULTI-LANGUAGE EXPANSION ────────────────────────────────────────
+
+def translate_article_to_english(slug):
+    """Vertaal een Nederlands artikel naar Engels met SEO-optimalisatie."""
+    nl_path = f"{REPO_ROOT}/b2b/{slug}.html"
+    en_dir = f"{REPO_ROOT}/en"
+    en_path = f"{en_dir}/{slug}.html"
+
+    if not os.path.exists(nl_path):
+        return None
+    if os.path.exists(en_path):
+        return None  # Al vertaald
+
+    try:
+        with open(nl_path, 'r', encoding='utf-8') as f:
+            nl_content = f.read()
+
+        # Vertaal via Claude
+        res = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": """Je bent een professionele vertaler en SEO expert. Vertaal dit Nederlandse HTML artikel naar Engels.
+
+Regels:
+- Behoud EXACT dezelfde HTML structuur en styling
+- Vertaal alle tekst naar vloeiend, native Engels
+- Optimaliseer de title en meta description voor Engelse SEO
+- Behoud alle links, images, en affiliate URLs ongewijzigd
+- Voeg hreflang tags toe in de <head>:
+  <link rel="alternate" hreflang="nl" href="https://aibuildermarketplace.com/b2b/{slug}.html">
+  <link rel="alternate" hreflang="en" href="https://aibuildermarketplace.com/en/{slug}.html">
+- Vertaal NIET: brand namen, URLs, code snippets"""},
+                {"role": "user", "content": nl_content[:6000]}
+            ],
+            max_tokens=4000,
+            temperature=0.3
+        )
+        en_content = res.choices[0].message.content.strip()
+
+        if "```html" in en_content:
+            en_content = en_content.split("```html")[1].split("```")[0].strip()
+        elif "```" in en_content:
+            en_content = en_content.split("```")[1].split("```")[0].strip()
+
+        # Ensure hreflang is present
+        if 'hreflang' not in en_content:
+            hreflang = f'<link rel="alternate" hreflang="nl" href="https://aibuildermarketplace.com/b2b/{slug}.html">\n'
+            hreflang += f'<link rel="alternate" hreflang="en" href="https://aibuildermarketplace.com/en/{slug}.html">'
+            if '</head>' in en_content:
+                en_content = en_content.replace('</head>', f'{hreflang}\n</head>')
+
+        os.makedirs(en_dir, exist_ok=True)
+        with open(en_path, 'w', encoding='utf-8') as f:
+            f.write(en_content)
+
+        # Voeg ook hreflang toe aan het NL artikel
+        if 'hreflang' not in nl_content:
+            hreflang_nl = f'<link rel="alternate" hreflang="nl" href="https://aibuildermarketplace.com/b2b/{slug}.html">\n'
+            hreflang_nl += f'<link rel="alternate" hreflang="en" href="https://aibuildermarketplace.com/en/{slug}.html">'
+            if '</head>' in nl_content:
+                nl_content = nl_content.replace('</head>', f'{hreflang_nl}\n</head>')
+                with open(nl_path, 'w', encoding='utf-8') as f:
+                    f.write(nl_content)
+
+        # Track
+        trans = load_translations()
+        trans["translated"].append({
+            "slug": slug,
+            "date": str(datetime.now().date()),
+            "nl_path": f"b2b/{slug}.html",
+            "en_path": f"en/{slug}.html"
+        })
+        trans["hreflang_added"].append(slug)
+        trans["stats"]["total"] = len(trans["translated"])
+        save_translations(trans)
+
+        return slug
+    except Exception as e:
+        log(f"Translation error for {slug}: {e}")
+        return None
+
+
+def translation_batch(max_articles=2):
+    """Vertaal een batch artikelen naar Engels — prioriteit op high-revenue."""
+    b2b_path = f"{REPO_ROOT}/b2b"
+    en_path = f"{REPO_ROOT}/en"
+
+    if not os.path.isdir(b2b_path):
+        return []
+
+    files = [f.replace('.html', '') for f in os.listdir(b2b_path) if f.endswith('.html')]
+    already = set()
+    if os.path.isdir(en_path):
+        already = {f.replace('.html', '') for f in os.listdir(en_path) if f.endswith('.html')}
+
+    to_translate = [s for s in files if s not in already]
+
+    # Prioriteer op affiliate content (money pages eerst)
+    def priority_score(slug):
+        score = 0
+        for brand in VAULT:
+            if brand.lower() in slug:
+                score += 10
+        if 'vs' in slug:
+            score += 5
+        if 'review' in slug:
+            score += 4
+        if 'pricing' in slug or 'alternative' in slug:
+            score += 3
+        return score
+
+    to_translate.sort(key=priority_score, reverse=True)
+
+    translated = []
+    for slug in to_translate[:max_articles]:
+        result = translate_article_to_english(slug)
+        if result:
+            translated.append(result)
+            time.sleep(2)
+
+    if translated:
+        try:
+            rebuild_sitemap()
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: {len(translated)} EN translations + hreflang' && git push origin main")
+        except:
+            pass
+
+    return translated
+
+
+# ── 11D: INTERACTIVE TELEGRAM PANELS ─────────────────────────────────────
+
+def build_inline_keyboard(buttons):
+    """Bouw een Telegram InlineKeyboardMarkup."""
+    markup = telebot.types.InlineKeyboardMarkup(row_width=2)
+    for row in buttons:
+        btn_row = []
+        for text, callback_data in row:
+            btn_row.append(telebot.types.InlineKeyboardButton(text, callback_data=callback_data))
+        markup.row(*btn_row)
+    return markup
+
+
+def build_main_dashboard_keyboard():
+    """Hoofdmenu inline keyboard."""
+    return build_inline_keyboard([
+        [("📊 Status", "dash_status"), ("📈 SERP", "dash_serp")],
+        [("💰 Revenue", "dash_revenue"), ("🕵️ Competitors", "dash_competitors")],
+        [("🤖 Autopilot", "dash_autopilot"), ("🔥 Domination", "dash_domination")],
+        [("🏷️ Schema", "dash_schema"), ("🔗 Links", "dash_links")],
+        [("🧠 Brain", "dash_brain"), ("☀️ Briefing", "dash_briefing")],
+        [("🔧 Audit", "dash_audit"), ("🌍 Translate", "dash_translate")]
+    ])
+
+
+def build_action_keyboard():
+    """Snelle acties keyboard."""
+    return build_inline_keyboard([
+        [("📝 Genereer Artikel", "act_generate"), ("🏭 Programmatic", "act_programmatic")],
+        [("🔄 Improve", "act_improve"), ("🎯 Sprint Run", "act_sprint")],
+        [("🔥 Full Domination", "act_domination"), ("📋 Help", "act_help")]
+    ])
+
+
+# ── 11E: SELF-HEALING SYSTEM ────────────────────────────────────────────
+
+def self_healing_check():
+    """Volledige self-healing check: detecteer en fix problemen automatisch."""
+    healing = load_healing()
+    incidents = []
+    auto_fixes = []
+
+    # 1. Website uptime check
+    try:
+        req = urllib.request.Request(
+            "https://aibuildermarketplace.com",
+            headers={'User-Agent': 'VictorBot/12.0 HealthCheck'}
+        )
+        start = time.time()
+        with urllib.request.urlopen(req, timeout=15) as response:
+            status = response.status
+            response_time = time.time() - start
+            healing["uptime_checks"].append({
+                "time": str(datetime.now()),
+                "status": status,
+                "response_time": round(response_time, 2)
+            })
+
+            if response_time > 5:
+                incidents.append({
+                    "type": "slow_response",
+                    "detail": f"Site is traag: {response_time:.1f}s",
+                    "severity": "medium",
+                    "time": str(datetime.now())
+                })
+
+            if status != 200:
+                incidents.append({
+                    "type": "http_error",
+                    "detail": f"Site returned {status}",
+                    "severity": "critical",
+                    "time": str(datetime.now())
+                })
+    except Exception as e:
+        incidents.append({
+            "type": "site_down",
+            "detail": f"Site niet bereikbaar: {e}",
+            "severity": "critical",
+            "time": str(datetime.now())
+        })
+
+    # 2. Git repo health check
+    git_status = run_command(f"cd {REPO_ROOT} && git status --porcelain")
+    if "HEAD detached" in git_status:
+        # Auto-fix: checkout main
+        run_command(f"cd {REPO_ROOT} && git checkout main")
+        auto_fixes.append("Git HEAD was detached — checkout main")
+
+    # 3. Check for .lock files
+    lock_file = f"{REPO_ROOT}/.git/HEAD.lock"
+    if os.path.exists(lock_file):
+        try:
+            os.remove(lock_file)
+            auto_fixes.append("Stale git HEAD.lock verwijderd")
+        except:
+            pass
+
+    index_lock = f"{REPO_ROOT}/.git/index.lock"
+    if os.path.exists(index_lock):
+        try:
+            os.remove(index_lock)
+            auto_fixes.append("Stale git index.lock verwijderd")
+        except:
+            pass
+
+    # 4. Check disk space
+    disk_check = run_command("df -h /root | tail -1")
+    if disk_check:
+        parts = disk_check.split()
+        if len(parts) >= 5:
+            use_pct = parts[4].replace('%', '')
+            try:
+                if int(use_pct) > 90:
+                    incidents.append({
+                        "type": "disk_full",
+                        "detail": f"Disk {use_pct}% vol!",
+                        "severity": "critical",
+                        "time": str(datetime.now())
+                    })
+                    # Auto-fix: cleanup logs
+                    run_command("find /root/felix_hq -name '*.log' -size +10M -exec truncate -s 1M {} \\;")
+                    auto_fixes.append("Grote log files opgeruimd")
+            except:
+                pass
+
+    # 5. Check of alle HTML files valid zijn (niet leeg / corrupt)
+    b2b_path = f"{REPO_ROOT}/b2b"
+    if os.path.isdir(b2b_path):
+        for f in os.listdir(b2b_path):
+            if f.endswith('.html'):
+                filepath = os.path.join(b2b_path, f)
+                try:
+                    size = os.path.getsize(filepath)
+                    if size == 0:
+                        incidents.append({
+                            "type": "empty_file",
+                            "detail": f"Leeg bestand: {f}",
+                            "severity": "high",
+                            "time": str(datetime.now())
+                        })
+                    elif size < 100:
+                        incidents.append({
+                            "type": "corrupt_file",
+                            "detail": f"Waarschijnlijk corrupt: {f} ({size} bytes)",
+                            "severity": "high",
+                            "time": str(datetime.now())
+                        })
+                except:
+                    pass
+
+    # 6. Check API health (OpenRouter)
+    try:
+        test_res = client.chat.completions.create(
+            model=MODEL,
+            messages=[{"role": "user", "content": "ping"}],
+            max_tokens=5
+        )
+        if not test_res.choices:
+            incidents.append({
+                "type": "api_error",
+                "detail": "OpenRouter API returned empty response",
+                "severity": "high",
+                "time": str(datetime.now())
+            })
+    except Exception as e:
+        incidents.append({
+            "type": "api_error",
+            "detail": f"OpenRouter API error: {str(e)[:100]}",
+            "severity": "critical",
+            "time": str(datetime.now())
+        })
+
+    # 7. Memory/process check
+    mem_check = run_command("free -m | grep Mem")
+    if mem_check:
+        parts = mem_check.split()
+        if len(parts) >= 4:
+            try:
+                total = int(parts[1])
+                used = int(parts[2])
+                pct = (used / total) * 100
+                if pct > 90:
+                    incidents.append({
+                        "type": "memory_high",
+                        "detail": f"RAM gebruik {pct:.0f}% ({used}MB/{total}MB)",
+                        "severity": "high",
+                        "time": str(datetime.now())
+                    })
+            except:
+                pass
+
+    # Save results
+    healing["incidents"].extend(incidents)
+    healing["auto_fixes"].extend([{"fix": f, "time": str(datetime.now())} for f in auto_fixes])
+    healing["stats"]["total_fixes"] = healing["stats"].get("total_fixes", 0) + len(auto_fixes)
+    healing["stats"]["total_incidents"] = healing["stats"].get("total_incidents", 0) + len(incidents)
+    save_healing(healing)
+
+    return incidents, auto_fixes
+
+
+def neural_command_cycle():
+    """Volledige Neural Command Center cyclus — draait dagelijks."""
+    actions = []
+
+    # 1. Self-healing check
+    try:
+        incidents, fixes = self_healing_check()
+        if fixes:
+            actions.append(f"🔧 Self-healing: {len(fixes)} auto-fixes")
+        if incidents:
+            critical = [i for i in incidents if i.get("severity") == "critical"]
+            if critical:
+                actions.append(f"🚨 {len(critical)} kritieke problemen gedetecteerd!")
+            else:
+                actions.append(f"⚠️ {len(incidents)} issues gevonden")
+        else:
+            actions.append("✅ Systeem gezond")
+    except Exception as e:
+        log(f"Self-healing error: {e}")
+
+    # 2. Technical SEO audit (1x per week op woensdag)
+    if datetime.now().weekday() == 2:
+        try:
+            result = full_site_audit()
+            actions.append(f"🔍 SEO Audit: score {result['score']}/100, {len(result.get('fixes', []))} auto-fixes")
+        except Exception as e:
+            log(f"Audit error: {e}")
+
+    # 3. Trend radar scan
+    try:
+        trend_data = scan_trending_topics()
+        hot = trend_data.get("hot_topics", [])
+        if hot:
+            high_urgency = [t for t in hot if t.get("urgency") == "high"]
+            actions.append(f"📡 Trend Radar: {len(hot)} topics, {len(high_urgency)} urgent")
+
+            # Auto-write trend article als er high urgency is
+            if high_urgency:
+                written = auto_write_trend_article()
+                if written:
+                    actions.append(f"🔥 Trending artikel geschreven: {written}")
+    except Exception as e:
+        log(f"Trend radar error: {e}")
+
+    # 4. Translation batch (1x per week op donderdag)
+    if datetime.now().weekday() == 3:
+        try:
+            translated = translation_batch(max_articles=2)
+            if translated:
+                actions.append(f"🌍 {len(translated)} artikelen vertaald naar Engels")
+        except Exception as e:
+            log(f"Translation error: {e}")
+
+    return actions
+
+
 # ── TELEGRAM BOT ─────────────────────────────────────────────────────────────
 bot = telebot.TeleBot(TOKEN, parse_mode=None)
 
@@ -6061,6 +6964,205 @@ def cmd_domination(message):
     bot.reply_to(message, msg)
 
 
+@bot.message_handler(commands=['audit'])
+def cmd_audit(message):
+    """Technische SEO audit."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔍 Volledige technische SEO audit starten...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    result = full_site_audit()
+    score = result["score"]
+    emoji = "🟢" if score >= 80 else "🟡" if score >= 50 else "🔴"
+
+    msg = f"🔍 Technical SEO Audit\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    msg += f"{emoji} Health Score: {score}/100\n"
+    msg += f"📄 Pagina's gescand: {result['total_pages']}\n\n"
+    msg += f"🚨 Kritiek: {result['critical']}\n"
+    msg += f"⚠️ Hoog: {result['high']}\n"
+    msg += f"📋 Medium: {result['medium']}\n"
+    msg += f"ℹ️ Laag: {result['low']}\n"
+    msg += f"\n✅ Auto-gefixed: {len(result.get('fixes', []))}\n"
+
+    if result.get("fixes"):
+        msg += "\n🔧 Fixes:\n"
+        for fix in result["fixes"][:8]:
+            msg += f"  ✓ {fix}\n"
+
+    # Top issues (niet gefixed)
+    unfixed = [i for i in result.get("issues", []) if not i.get("auto_fixable")]
+    if unfixed:
+        msg += "\n⚠️ Handmatig nodig:\n"
+        for i in unfixed[:5]:
+            msg += f"  - {i['issue'][:60]}\n"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['trends'])
+def cmd_trends(message):
+    """Trend Radar — trending AI topics."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+    action = parts[1] if len(parts) > 1 else "status"
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if action == "scan":
+        bot.reply_to(message, "📡 Trend Radar scannen...")
+        trend_data = scan_trending_topics()
+        hot = trend_data.get("hot_topics", [])
+        opps = trend_data.get("opportunities", [])
+
+        msg = f"📡 Trend Radar — Scan Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        if hot:
+            msg += "🔥 Hot Topics:\n"
+            for t in hot[:5]:
+                urgency_emoji = "🔴" if t.get("urgency") == "high" else "🟡" if t.get("urgency") == "medium" else "🟢"
+                msg += f"  {urgency_emoji} {t.get('topic', '?')}\n"
+                if t.get("article_idea"):
+                    msg += f"    → Artikel: {t['article_idea'][:50]}\n"
+        else:
+            msg += "Geen nieuwe hot topics gevonden.\n"
+
+        if opps:
+            msg += "\n💡 Kansen:\n"
+            for o in opps[:3]:
+                msg += f"  - {o}\n"
+
+        bot.reply_to(message, msg)
+
+    elif action == "write":
+        bot.reply_to(message, "🔥 Trending artikel schrijven...")
+        slug = auto_write_trend_article()
+        if slug:
+            bot.reply_to(message, f"✅ Trending artikel geschreven en live: {slug}")
+        else:
+            bot.reply_to(message, "❌ Geen urgent trending topics om over te schrijven.")
+
+    else:
+        trends = load_trends()
+        msg = f"📡 Trend Radar Status\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"📊 Gedetecteerde trends: {len(trends.get('detected', []))}\n"
+        msg += f"📝 Artikelen geschreven: {len(trends.get('articles_written', []))}\n"
+        msg += f"🕐 Laatste scan: {trends.get('last_scan', 'nooit')}\n"
+
+        recent = [t for t in trends.get("detected", [])[-10:]
+                  if t.get("source") == "ai_analysis"]
+        if recent:
+            msg += "\n🔥 Recente topics:\n"
+            for t in recent[:5]:
+                msg += f"  - {t.get('keyword', '?')}: {t.get('article_idea', '')[:40]}\n"
+
+        msg += "\nGebruik /trends scan of /trends write"
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['translate'])
+def cmd_translate(message):
+    """Vertaal artikelen naar Engels."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.split(maxsplit=1)
+
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if len(parts) > 1 and parts[1] == "run":
+        bot.reply_to(message, "🌍 Artikelen vertalen naar Engels...")
+        translated = translation_batch(max_articles=3)
+        if translated:
+            msg = f"🌍 {len(translated)} artikelen vertaald!\n\n"
+            msg += "\n".join(f"  ✅ {s}" for s in translated)
+        else:
+            msg = "🌍 Geen nieuwe artikelen om te vertalen."
+        bot.reply_to(message, msg)
+    else:
+        trans = load_translations()
+        en_path = f"{REPO_ROOT}/en"
+        en_count = len(os.listdir(en_path)) if os.path.isdir(en_path) else 0
+        b2b_path = f"{REPO_ROOT}/b2b"
+        nl_count = len([f for f in os.listdir(b2b_path) if f.endswith('.html')]) if os.path.isdir(b2b_path) else 0
+
+        msg = f"🌍 Multi-Language Status\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"🇳🇱 Nederlands: {nl_count} artikelen\n"
+        msg += f"🇬🇧 Engels: {en_count} artikelen\n"
+        msg += f"📊 Vertaald: {en_count}/{nl_count} ({en_count/nl_count*100:.0f}%)\n" if nl_count > 0 else ""
+        msg += f"\nGebruik /translate run om te starten."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['heal'])
+def cmd_heal(message):
+    """Self-healing status en handmatige check."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔧 Self-healing check uitvoeren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    incidents, fixes = self_healing_check()
+    healing = load_healing()
+
+    msg = f"🔧 Self-Healing System\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    if not incidents and not fixes:
+        msg += "✅ Alles gezond! Geen problemen gedetecteerd.\n"
+    else:
+        if fixes:
+            msg += f"🔧 Auto-fixes ({len(fixes)}):\n"
+            for f in fixes:
+                msg += f"  ✓ {f}\n"
+
+        if incidents:
+            msg += f"\n⚠️ Incidenten ({len(incidents)}):\n"
+            for i in incidents:
+                sev = {"critical": "🔴", "high": "🟠", "medium": "🟡", "low": "🟢"}.get(i["severity"], "⚪")
+                msg += f"  {sev} {i['detail']}\n"
+
+    # Uptime stats
+    checks = healing.get("uptime_checks", [])
+    if checks:
+        avg_time = sum(c.get("response_time", 0) for c in checks) / len(checks)
+        msg += f"\n📈 Uptime: {len(checks)} checks, gem. {avg_time:.2f}s"
+
+    # Totaal stats
+    stats = healing.get("stats", {})
+    msg += f"\n📊 Totaal: {stats.get('total_fixes', 0)} fixes, {stats.get('total_incidents', 0)} incidenten"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['neural'])
+def cmd_neural(message):
+    """Volledige Neural Command Center cyclus."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🧠 Neural Command Center activeren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    actions = neural_command_cycle()
+    if actions:
+        msg = "🧠 Neural Command Center — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "\n".join(f"  ✅ {a}" for a in actions)
+    else:
+        msg = "🧠 Neural Command Center: alles stabiel."
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['panel'])
+def cmd_panel(message):
+    """Interactief dashboard panel met inline buttons."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    keyboard = build_main_dashboard_keyboard()
+    bot.send_message(
+        message.chat.id,
+        "🧠 Victor 12.0 Neural Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
+        reply_markup=keyboard
+    )
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -6095,7 +7197,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 11.0 Domination Matrix — Commando's:
+    bot.reply_to(message, """Victor 12.0 Neural Command Center — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -6153,6 +7255,14 @@ def cmd_help(message):
 /linkgraph [fix] — Internal link analyse
 /serp [update] — Positie tracking & alerts
 /domination — Volledige cyclus draaien
+
+🧠 Neural Command Center:
+/audit — Technische SEO audit + auto-fix
+/trends [scan|write] — Trending AI topics
+/translate [run] — Artikelen naar Engels
+/heal — Self-healing check
+/neural — Volledige neural cyclus
+/panel — Interactief dashboard met buttons
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -6300,6 +7410,127 @@ def handle_document(message):
     save_memory(history)
 
 
+@bot.callback_query_handler(func=lambda call: True)
+def handle_callback(call):
+    """Handle inline keyboard button presses."""
+    if call.from_user.id != ADMIN_ID:
+        return
+
+    data = call.data
+    chat_id = call.message.chat.id
+
+    try:
+        bot.answer_callback_query(call.id, "⏳ Even laden...")
+
+        if data == "dash_status":
+            report = generate_status_report()
+            bot.send_message(chat_id, report)
+
+        elif data == "dash_serp":
+            report = generate_serp_report()
+            bot.send_message(chat_id, report)
+
+        elif data == "dash_revenue":
+            estimates = calculate_article_revenue()
+            report = generate_revenue_report()
+            bot.send_message(chat_id, report)
+
+        elif data == "dash_competitors":
+            comps = load_competitors()
+            msg = f"🕵️ Competitors: {len(comps.get('scans', []))} scans, "
+            msg += f"{len(comps.get('skyscraper_targets', []))} targets"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_autopilot":
+            ap = load_autopilot()
+            msg = f"🤖 Autopilot: {len(ap.get('chain_reactions', []))} chains, "
+            msg += f"{len(ap.get('recycled_articles', []))} recycled"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_domination":
+            prog = load_programmatic()
+            sd = load_schema_data()
+            lg = load_linkgraph()
+            msg = f"🔥 Domination Matrix:\n"
+            msg += f"  🏭 Programmatic: {len(prog.get('generated_pages', []))} pages\n"
+            msg += f"  🏷️ Schema: {len(sd.get('articles_with_schema', []))} articles\n"
+            msg += f"  🔗 Link graph: {len(lg.get('pages', {}))} pages gescand"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_schema":
+            sd = load_schema_data()
+            msg = f"🏷️ Schema: {len(sd.get('articles_with_schema', []))} artikelen met markup"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_links":
+            lg = load_linkgraph()
+            recs = lg.get("recommendations", [])
+            msg = f"🔗 Link Graph: {len(lg.get('pages', {}))} pages, {len(recs)} aanbevelingen"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_brain":
+            skills = load_skills()
+            msg = f"🧠 Brain: {len(skills.get('solutions', {}))} oplossingen geleerd"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_briefing":
+            briefing = generate_daily_briefing()
+            bot.send_message(chat_id, briefing)
+
+        elif data == "dash_audit":
+            audit = load_audit()
+            audits = audit.get("audits", [])
+            if audits:
+                last = audits[-1]
+                msg = f"🔍 Laatste audit: score {last.get('score', '?')}/100, {last.get('auto_fixed', 0)} fixes"
+            else:
+                msg = "🔍 Nog geen audit gedaan. Gebruik /audit"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_translate":
+            trans = load_translations()
+            msg = f"🌍 Vertaald: {len(trans.get('translated', []))} artikelen naar Engels"
+            bot.send_message(chat_id, msg)
+
+        elif data == "act_generate":
+            bot.send_message(chat_id, "📝 Gebruik /generate om een artikel te genereren")
+
+        elif data == "act_programmatic":
+            bot.send_message(chat_id, "🏭 Programmatic pagina genereren...")
+            generated, total = programmatic_batch(max_pages=1)
+            if generated:
+                bot.send_message(chat_id, f"✅ Gegenereerd: {', '.join(generated)}")
+            else:
+                bot.send_message(chat_id, f"Alle {total} combinaties zijn al gemaakt!")
+
+        elif data == "act_improve":
+            bot.send_message(chat_id, "🔄 Slechtste artikel verbeteren...")
+            improved = auto_improve_articles()
+            if improved:
+                bot.send_message(chat_id, f"✅ Verbeterd: {', '.join(improved)}")
+            else:
+                bot.send_message(chat_id, "Alle artikelen scoren goed!")
+
+        elif data == "act_sprint":
+            result = execute_sprint_tasks()
+            bot.send_message(chat_id, f"🎯 Sprint: {result}")
+
+        elif data == "act_domination":
+            bot.send_message(chat_id, "🔥 Domination Matrix draait...")
+            actions = domination_matrix_cycle()
+            if actions:
+                bot.send_message(chat_id, "🔥 " + "\n".join(actions))
+            else:
+                bot.send_message(chat_id, "Geen acties nodig.")
+
+        elif data == "act_help":
+            keyboard = build_action_keyboard()
+            bot.send_message(chat_id, "⚡ Snelle Acties:", reply_markup=keyboard)
+
+    except Exception as e:
+        bot.send_message(chat_id, f"❌ Error: {str(e)[:200]}")
+
+
 @bot.message_handler(func=lambda m: True)
 def handle_message(message):
     if message.from_user.id != ADMIN_ID:
@@ -6382,7 +7613,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 11.0 Domination Matrix — Status Report
+    return f"""📊 Victor 12.0 Neural Command Center — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -6783,6 +8014,38 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Autopilot cycle error: {e}")
 
+            # 🧠 NEURAL COMMAND CENTER: self-healing elke 6 uur + dagelijkse cyclus 07:30 UTC
+            if hour in [0, 6, 12, 18] and last_auto_improve != str(now.date()) + f"-heal-{hour}":
+                try:
+                    incidents, fixes = self_healing_check()
+                    last_auto_improve = str(now.date()) + f"-heal-{hour}"
+                    if incidents:
+                        critical = [i for i in incidents if i.get("severity") == "critical"]
+                        if critical:
+                            heal_msg = "🚨 Self-Healing Alert!\n\n"
+                            heal_msg += "\n".join(f"  🔴 {i['detail']}" for i in critical)
+                            if fixes:
+                                heal_msg += "\n\n🔧 Auto-fixes:\n" + "\n".join(f"  ✓ {f}" for f in fixes)
+                            bot.send_message(ADMIN_ID, heal_msg)
+                    log(f"Self-healing: {len(incidents)} incidents, {len(fixes)} fixes")
+                except Exception as e:
+                    log(f"Self-healing error: {e}")
+
+            if hour == 7 and now.minute >= 30 and last_auto_improve != str(now.date()) + "-neural":
+                try:
+                    log("Starting neural command center cycle...")
+                    neural_actions = neural_command_cycle()
+                    last_auto_improve = str(now.date()) + "-neural"
+                    if neural_actions:
+                        neural_report = "🧠 Neural Command Center — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        neural_report += "\n".join(f"  ✅ {a}" for a in neural_actions)
+                        interesting = [a for a in neural_actions if any(w in a for w in ['🚨', '🔥', '🌍', '📡', '🔍'])]
+                        if interesting:
+                            bot.send_message(ADMIN_ID, neural_report)
+                        log(f"Neural cycle done: {len(neural_actions)} actions")
+                except Exception as e:
+                    log(f"Neural cycle error: {e}")
+
             # 🔥 DOMINATION MATRIX: dagelijkse cyclus om 07:00 UTC
             if hour == 7 and weekday != 0 and last_auto_improve != str(now.date()) + "-domination":
                 try:
@@ -6860,8 +8123,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 11.0 Domination Matrix online!\n\n{report}"
-            f"\n\n🔥 Domination: /domination /programmatic /schema /serp"
+            f"🚀 Victor 12.0 Neural Command Center online!\n\n{report}"
+            f"\n\n🧠 Neural: /panel /audit /trends /translate /heal"
+            f"\n🔥 Domination: /domination /programmatic /schema /serp"
             f"\n🤖 Autopilot: /autopilot /predict /sprint /briefing"
             f"\n🧠 Self-learning: /brain /diagnose /research"
             f"\n📈 SEO: /gsc /keywords /sitemap /ogimages"
@@ -6874,7 +8138,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 11.0 Domination Matrix gestart — Model: {MODEL}")
+    log(f"Victor 12.0 Neural Command Center gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

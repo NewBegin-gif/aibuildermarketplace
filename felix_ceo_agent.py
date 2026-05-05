@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 14.0 Omniscience — Powered by Claude AI<br>
+Victor 15.0 Skynet — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -5279,7 +5279,9 @@ def build_main_dashboard_keyboard():
         [("🧠 Brain", "dash_brain"), ("☀️ Briefing", "dash_briefing")],
         [("🔧 Audit", "dash_audit"), ("🌍 Translate", "dash_translate")],
         [("📊 Scorecard", "dash_scorecard"), ("🏆 Leaderboard", "dash_leaderboard")],
-        [("🧬 DNA", "dash_dna"), ("🔗 Backlinks", "dash_backlinks")]
+        [("🧬 DNA", "dash_dna"), ("🔗 Backlinks", "dash_backlinks")],
+        [("📅 Calendar", "dash_calendar"), ("🏛️ Palace", "dash_palace")],
+        [("📧 Outreach", "dash_outreach"), ("🛰️ Skynet", "dash_skynet")]
     ])
 
 
@@ -6491,7 +6493,7 @@ def validate_live_page(slug):
 
     try:
         req = urllib.request.Request(url, headers={
-            'User-Agent': 'VictorBot/14.0 SiteValidator'
+            'User-Agent': 'VictorBot/15.0 SiteValidator'
         })
         start = time.time()
         with urllib.request.urlopen(req, timeout=15) as response:
@@ -6532,7 +6534,7 @@ def validate_live_page(slug):
             for src in img_srcs[:5]:  # Check max 5
                 if src.startswith('http'):
                     try:
-                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/14.0'})
+                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/15.0'})
                         with urllib.request.urlopen(img_req, timeout=5) as img_resp:
                             if img_resp.status >= 400:
                                 issues.append({"type": "broken_image", "detail": f"Broken image: {src[:50]}", "severity": "medium"})
@@ -6576,7 +6578,7 @@ def validate_full_site(max_pages=20):
     for main_page in ["", "b2b.html"]:
         url = f"https://aibuildermarketplace.com/{main_page}"
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/14.0'})
+            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/15.0'})
             start = time.time()
             with urllib.request.urlopen(req, timeout=15) as resp:
                 load_time = time.time() - start
@@ -7232,6 +7234,879 @@ def omniscience_cycle():
                 actions.append("✅ Buyer journey compleet voor alle brands")
         except Exception as e:
             log(f"Journey error: {e}")
+
+    return actions
+
+
+# ── MODULE 14: SKYNET PROTOCOL ──────────────────────────────────────────────
+CALENDAR_FILE = "/root/felix_hq/victor_calendar.json"
+PALACE_FILE = "/root/felix_hq/victor_palace.json"
+OUTREACH_FILE = "/root/felix_hq/victor_outreach.json"
+API_LOG_FILE = "/root/felix_hq/victor_api.log"
+API_PORT = 5151
+
+def load_calendar():
+    if os.path.exists(CALENDAR_FILE):
+        try: return json.load(open(CALENDAR_FILE))
+        except: pass
+    return {"planned": [], "executed": [], "queue": [], "settings": {"max_daily": 3, "auto_execute": True}}
+
+def save_calendar(data):
+    data["planned"] = data.get("planned", [])[-200:]
+    data["executed"] = data.get("executed", [])[-200:]
+    with open(CALENDAR_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_palace():
+    if os.path.exists(PALACE_FILE):
+        try: return json.load(open(PALACE_FILE))
+        except: pass
+    return {"seasonal_patterns": {}, "brand_trends": {}, "content_performance": {},
+            "quarterly_insights": [], "strategic_memory": [], "last_update": None}
+
+def save_palace(data):
+    data["quarterly_insights"] = data.get("quarterly_insights", [])[-20:]
+    data["strategic_memory"] = data.get("strategic_memory", [])[-50:]
+    with open(PALACE_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def load_outreach():
+    if os.path.exists(OUTREACH_FILE):
+        try: return json.load(open(OUTREACH_FILE))
+        except: pass
+    return {"campaigns": [], "sent": [], "responses": [], "stats": {"total_sent": 0, "responses": 0, "links_gained": 0}}
+
+def save_outreach(data):
+    data["campaigns"] = data.get("campaigns", [])[-100:]
+    data["sent"] = data.get("sent", [])[-200:]
+    with open(OUTREACH_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+# ── 14A: VICTOR API SERVER ──────────────────────────────────────────────
+
+def api_log(msg):
+    """Log API events."""
+    try:
+        with open(API_LOG_FILE, 'a') as f:
+            f.write(f"[{datetime.now().isoformat()}] {msg}\n")
+    except:
+        pass
+
+
+def start_api_server():
+    """Start een lightweight HTTP API server voor webhooks."""
+    from http.server import HTTPServer, BaseHTTPRequestHandler
+    import json as json_mod
+
+    class VictorAPIHandler(BaseHTTPRequestHandler):
+        def log_message(self, format, *args):
+            api_log(f"HTTP {args[0] if args else ''}")
+
+        def _send_json(self, code, data):
+            self.send_response(code)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.end_headers()
+            self.wfile.write(json_mod.dumps(data).encode())
+
+        def do_GET(self):
+            path = self.path.split('?')[0]
+
+            if path == '/api/health':
+                self._send_json(200, {
+                    "status": "online",
+                    "version": "15.0",
+                    "uptime": "active",
+                    "model": MODEL,
+                    "timestamp": datetime.now().isoformat()
+                })
+
+            elif path == '/api/stats':
+                b2b_path = f"{REPO_ROOT}/b2b"
+                article_count = len([f for f in os.listdir(b2b_path) if f.endswith('.html')]) if os.path.isdir(b2b_path) else 0
+                en_path = f"{REPO_ROOT}/en"
+                en_count = len([f for f in os.listdir(en_path) if f.endswith('.html')]) if os.path.isdir(en_path) else 0
+
+                serp = load_serp_data()
+                tracking = serp.get("tracking", {})
+                page1 = sum(1 for s, d in tracking.items() if d.get("positions") and d["positions"][-1]["pos"] <= 10)
+
+                conv = load_conversions()
+                total_rev = sum(a.get("est_revenue", 0) for a in conv.get("articles", {}).values())
+
+                self._send_json(200, {
+                    "articles": {"nl": article_count, "en": en_count},
+                    "rankings": {"tracked": len(tracking), "page1": page1},
+                    "revenue": {"estimated_monthly": round(total_rev, 2)},
+                    "timestamp": datetime.now().isoformat()
+                })
+
+            elif path == '/api/serp':
+                serp = load_serp_data()
+                tracking = serp.get("tracking", {})
+                data = {}
+                for slug, d in tracking.items():
+                    if d.get("positions"):
+                        last = d["positions"][-1]
+                        data[slug] = {"position": last["pos"], "clicks": last.get("clicks", 0),
+                                     "trend": d.get("trend", "unknown")}
+                self._send_json(200, data)
+
+            elif path == '/api/calendar':
+                cal = load_calendar()
+                self._send_json(200, cal)
+
+            elif path == '/api/palace':
+                palace = load_palace()
+                self._send_json(200, {
+                    "seasonal_patterns": palace.get("seasonal_patterns", {}),
+                    "brand_trends": palace.get("brand_trends", {}),
+                    "strategic_memory": palace.get("strategic_memory", [])[-5:]
+                })
+
+            else:
+                self._send_json(404, {"error": "Not found", "endpoints": [
+                    "/api/health", "/api/stats", "/api/serp", "/api/calendar", "/api/palace"
+                ]})
+
+        def do_POST(self):
+            path = self.path.split('?')[0]
+            content_len = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_len).decode('utf-8', errors='ignore') if content_len else '{}'
+
+            try:
+                payload = json_mod.loads(body) if body else {}
+            except:
+                payload = {}
+
+            if path == '/api/webhook/github':
+                # GitHub deploy webhook → auto validate
+                api_log(f"GitHub webhook received: {payload.get('ref', 'unknown')}")
+                try:
+                    # Trigger validatie na deploy
+                    threading.Thread(target=self._post_deploy_validate, daemon=True).start()
+                    self._send_json(200, {"status": "accepted", "action": "post_deploy_validation_started"})
+                except Exception as e:
+                    self._send_json(500, {"error": str(e)})
+
+            elif path == '/api/webhook/uptime':
+                # Externe uptime monitor webhook
+                api_log(f"Uptime webhook: {payload}")
+                status = payload.get("status", "unknown")
+                if status in ["down", "error"]:
+                    try:
+                        bot.send_message(ADMIN_ID, f"🚨 Uptime Alert: Site is {status}!")
+                        add_digest_item("technical", f"Uptime alert: site {status}", priority=10)
+                    except:
+                        pass
+                self._send_json(200, {"status": "received"})
+
+            elif path == '/api/trigger':
+                # Trigger een specifieke actie
+                action = payload.get("action", "")
+                api_log(f"Trigger: {action}")
+                if action == "validate":
+                    threading.Thread(target=self._post_deploy_validate, daemon=True).start()
+                    self._send_json(200, {"status": "validation_started"})
+                elif action == "digest":
+                    digest = generate_smart_digest()
+                    self._send_json(200, {"digest": digest or "No items"})
+                elif action == "scorecard":
+                    sc = generate_scorecard()
+                    self._send_json(200, {"scorecard": sc})
+                else:
+                    self._send_json(400, {"error": f"Unknown action: {action}"})
+
+            else:
+                self._send_json(404, {"error": "Not found"})
+
+        def _post_deploy_validate(self):
+            """Na een deploy, wacht even en valideer dan de site."""
+            time.sleep(30)  # Wacht tot GitHub Pages updated
+            try:
+                results = validate_full_site(max_pages=10)
+                failed = [r for r in results if not r["ok"]]
+                if failed:
+                    msg = f"🚨 Post-Deploy Validatie — {len(failed)} problemen!\n\n"
+                    for r in failed[:5]:
+                        slug = r["url"].split("/")[-1]
+                        issues = ", ".join(i["detail"][:30] for i in r["issues"][:2])
+                        msg += f"  ❌ {slug}: {issues}\n"
+                    bot.send_message(ADMIN_ID, msg)
+                    add_digest_item("technical", f"Deploy validatie: {len(failed)} problemen", priority=8)
+                else:
+                    api_log(f"Post-deploy validation passed: {len(results)} pages OK")
+            except Exception as e:
+                api_log(f"Post-deploy validation error: {e}")
+
+    try:
+        server = HTTPServer(('0.0.0.0', API_PORT), VictorAPIHandler)
+        server.timeout = 5
+        api_log(f"API server starting on port {API_PORT}")
+
+        while True:
+            server.handle_request()
+    except Exception as e:
+        api_log(f"API server error: {e}")
+
+
+# ── 14B: EMAIL OUTREACH SYSTEM ──────────────────────────────────────────
+
+def send_outreach_email(to_email, subject, body, campaign_id=None):
+    """Verstuur een outreach email via SMTP."""
+    import smtplib
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
+
+    # SMTP config uit env
+    smtp_host = os.getenv("SMTP_HOST", "")
+    smtp_port = int(os.getenv("SMTP_PORT", "587"))
+    smtp_user = os.getenv("SMTP_USER", "")
+    smtp_pass = os.getenv("SMTP_PASS", "")
+    from_email = os.getenv("SMTP_FROM", smtp_user)
+
+    if not smtp_host or not smtp_user:
+        return False, "SMTP niet geconfigureerd. Set SMTP_HOST, SMTP_USER, SMTP_PASS in .env"
+
+    try:
+        msg = MIMEMultipart()
+        msg['From'] = f"AI Builder Marketplace <{from_email}>"
+        msg['To'] = to_email
+        msg['Subject'] = subject
+        msg.attach(MIMEText(body, 'plain'))
+
+        with smtplib.SMTP(smtp_host, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_pass)
+            server.send_message(msg)
+
+        # Track
+        outreach = load_outreach()
+        outreach["sent"].append({
+            "to": to_email,
+            "subject": subject,
+            "campaign_id": campaign_id,
+            "date": str(datetime.now()),
+            "status": "sent"
+        })
+        outreach["stats"]["total_sent"] = outreach["stats"].get("total_sent", 0) + 1
+        save_outreach(outreach)
+
+        return True, "Email verstuurd"
+    except Exception as e:
+        return False, str(e)
+
+
+def run_outreach_campaign(max_emails=3):
+    """Voer een outreach campagne uit: stuur emails naar gevonden kansen."""
+    bl = load_backlinks()
+    outreach = load_outreach()
+
+    # Vind kansen met emails klaar maar nog niet verstuurd
+    ready = [o for o in bl.get("opportunities", [])
+             if o.get("outreach_email") and o.get("status") == "email_ready"]
+
+    already_sent = {s["to"] for s in outreach.get("sent", [])}
+    sent_count = 0
+    results = []
+
+    for opp in ready[:max_emails]:
+        # Extract email uit URL (simpele heuristiek)
+        domain = ""
+        try:
+            domain = opp["url"].split("//")[1].split("/")[0]
+        except:
+            continue
+
+        # Genereer contact email (common patterns)
+        contact_emails = [
+            f"hello@{domain}",
+            f"contact@{domain}",
+            f"info@{domain}"
+        ]
+
+        for email in contact_emails:
+            if email in already_sent:
+                continue
+
+            # Parse subject en body uit gegenereerde email
+            email_content = opp["outreach_email"]
+            lines = email_content.strip().split('\n')
+            subject = lines[0].replace("Subject:", "").strip() if lines else f"Content collaboration — AI Builder Marketplace"
+            body = '\n'.join(lines[1:]).strip() if len(lines) > 1 else email_content
+
+            success, msg = send_outreach_email(email, subject, body, campaign_id=opp.get("url"))
+            if success:
+                opp["status"] = "email_sent"
+                sent_count += 1
+                results.append(f"✉️ {domain}: verstuurd")
+            else:
+                results.append(f"❌ {domain}: {msg[:50]}")
+
+            break  # 1 email per domein
+
+    if sent_count:
+        save_backlinks(bl)
+
+    return results
+
+
+# ── 14C: UNIFIED CONTENT CALENDAR ───────────────────────────────────────
+
+def generate_content_calendar():
+    """Genereer een intelligent content kalender op basis van alle data bronnen."""
+    cal = load_calendar()
+    today = datetime.now()
+    planned = []
+
+    # Bron 1: Journey gaten (hoogste prioriteit)
+    try:
+        journey = load_journey()
+        for gap in journey.get("gaps", [])[:3]:
+            planned.append({
+                "type": "journey_gap",
+                "slug": gap["suggested_slug"],
+                "title": gap["suggested_title"],
+                "brand": gap["brand"],
+                "stage": gap["missing_stage"],
+                "priority": 9 if gap["missing_stage"] == "decision" else 7,
+                "source": "buyer_journey",
+                "scheduled_date": str((today + timedelta(days=len(planned) + 1)).date()),
+                "reason": gap["reason"]
+            })
+    except:
+        pass
+
+    # Bron 2: Trending topics (hoge urgentie)
+    try:
+        trends = load_trends()
+        hot = [t for t in trends.get("detected", [])
+               if t.get("urgency") == "high" and t.get("article_idea")
+               and t.get("source") == "ai_analysis"]
+        written = {a["topic"] for a in trends.get("articles_written", [])}
+        for t in hot[:2]:
+            if t.get("article_idea", "") not in written:
+                slug = re.sub(r'[^a-z0-9-]', '', t["article_idea"].lower().replace(' ', '-'))[:50]
+                planned.append({
+                    "type": "trending",
+                    "slug": slug,
+                    "title": t["article_idea"],
+                    "priority": 8,
+                    "source": "trend_radar",
+                    "scheduled_date": str((today + timedelta(days=1)).date()),
+                    "reason": f"Trending topic: {t.get('keyword', 'AI')}"
+                })
+    except:
+        pass
+
+    # Bron 3: Freshness updates (medium prioriteit)
+    try:
+        fresh = load_freshness()
+        outdated = fresh.get("outdated", [])
+        for o in outdated[:2]:
+            planned.append({
+                "type": "freshness_update",
+                "slug": o["slug"],
+                "title": f"Update: {o['slug'].replace('-', ' ').title()}",
+                "priority": 6,
+                "source": "freshness_engine",
+                "scheduled_date": str((today + timedelta(days=len(planned) + 2)).date()),
+                "reason": f"Freshness score: {o.get('score', '?')}/100"
+            })
+    except:
+        pass
+
+    # Bron 4: Programmatic SEO (bulk)
+    try:
+        combos = generate_programmatic_combinations()
+        b2b_path = f"{REPO_ROOT}/b2b"
+        new_combos = [c for c in combos if not os.path.exists(f"{b2b_path}/{c['slug']}.html")]
+        for c in new_combos[:2]:
+            planned.append({
+                "type": "programmatic",
+                "slug": c["slug"],
+                "title": c["title"],
+                "brand": c.get("brand_a", c.get("brand", "")),
+                "priority": 5,
+                "source": "programmatic_seo",
+                "scheduled_date": str((today + timedelta(days=len(planned) + 3)).date()),
+                "reason": f"Programmatic: {c['type']} template"
+            })
+    except:
+        pass
+
+    # Bron 5: ROI Gate evaluatie op alle planned items
+    roi_filtered = []
+    for item in planned:
+        try:
+            brand = item.get("brand", item["slug"].split('-')[0].title())
+            evaluation = evaluate_article_roi(item["slug"], brand)
+            item["roi_score"] = evaluation["score"]
+            item["roi_approved"] = evaluation["approved"]
+            item["est_revenue"] = evaluation.get("estimates", {}).get("monthly_revenue", 0)
+            if evaluation["approved"] or item["priority"] >= 8:
+                roi_filtered.append(item)
+        except:
+            roi_filtered.append(item)
+
+    # Sorteer op prioriteit + ROI
+    roi_filtered.sort(key=lambda x: (x.get("priority", 0) * 2 + x.get("roi_score", 0)), reverse=True)
+
+    # Memory Palace insights toepassen
+    try:
+        palace = load_palace()
+        current_month = today.strftime("%B").lower()
+        seasonal = palace.get("seasonal_patterns", {}).get(current_month, {})
+        if seasonal.get("best_content_type"):
+            # Boost items die matchen met seizoenspatronen
+            for item in roi_filtered:
+                if seasonal["best_content_type"] in item.get("type", ""):
+                    item["priority"] += 1
+    except:
+        pass
+
+    # Save
+    cal["planned"] = roi_filtered[:14]  # Max 2 weken vooruit
+    cal["queue"] = [item["slug"] for item in roi_filtered[:14]]
+    save_calendar(cal)
+
+    return cal
+
+
+def execute_calendar_item():
+    """Voer het eerstvolgende item uit de content calendar uit."""
+    cal = load_calendar()
+    planned = cal.get("planned", [])
+
+    if not planned:
+        generate_content_calendar()
+        cal = load_calendar()
+        planned = cal.get("planned", [])
+
+    if not planned:
+        return None, "Geen items in calendar"
+
+    # Pak het item met hoogste prioriteit dat nog niet is uitgevoerd
+    executed_slugs = {e["slug"] for e in cal.get("executed", [])}
+    next_item = None
+    for item in planned:
+        if item["slug"] not in executed_slugs:
+            next_item = item
+            break
+
+    if not next_item:
+        return None, "Alle items zijn al uitgevoerd"
+
+    slug = next_item["slug"]
+    item_type = next_item["type"]
+    result = None
+
+    if item_type == "freshness_update":
+        result = auto_refresh_article(slug)
+    elif item_type == "journey_gap":
+        filled = auto_fill_journey_gap(max_articles=1)
+        result = filled[0] if filled else None
+    elif item_type == "trending":
+        result = auto_write_trend_article()
+    elif item_type == "programmatic":
+        combo = None
+        for c in generate_programmatic_combinations():
+            if c["slug"] == slug:
+                combo = c
+                break
+        if combo:
+            result = generate_programmatic_page(combo)
+    else:
+        # Default: schrijf via Claude
+        try:
+            aff_info = "\n".join(f"{b}: {u}" for b, u in VAULT.items())
+            res = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": "Schrijf een professioneel SEO artikel. Dark theme HTML, 2000+ woorden."},
+                    {"role": "user", "content": f"Titel: {next_item['title']}\n\nAffiliate links:\n{aff_info}"}
+                ],
+                max_tokens=4000, temperature=0.7
+            )
+            html = res.choices[0].message.content.strip()
+            if "```html" in html:
+                html = html.split("```html")[1].split("```")[0].strip()
+            elif "```" in html:
+                html = html.split("```")[1].split("```")[0].strip()
+            filepath = f"{REPO_ROOT}/b2b/{slug}.html"
+            os.makedirs(f"{REPO_ROOT}/b2b", exist_ok=True)
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(html)
+            try:
+                add_schema_to_article(filepath)
+            except: pass
+            rebuild_sitemap()
+            run_command(f"cd {REPO_ROOT} && git add -A && git commit -m 'Victor: calendar — {slug}' && git push origin main")
+            result = slug
+        except Exception as e:
+            log(f"Calendar execute error: {e}")
+
+    if result:
+        cal["executed"].append({
+            "slug": slug,
+            "type": item_type,
+            "title": next_item.get("title", ""),
+            "date": str(datetime.now()),
+            "priority": next_item.get("priority", 0)
+        })
+        # Remove from planned
+        cal["planned"] = [p for p in cal["planned"] if p["slug"] != slug]
+        save_calendar(cal)
+
+    return result, next_item
+
+
+# ── 14D: LIVE DASHBOARD V2 ──────────────────────────────────────────────
+
+def generate_dashboard_v2():
+    """Genereer een real-time dashboard met Chart.js en live data."""
+    # Gather data
+    b2b_path = f"{REPO_ROOT}/b2b"
+    article_count = len([f for f in os.listdir(b2b_path) if f.endswith('.html')]) if os.path.isdir(b2b_path) else 0
+    en_path = f"{REPO_ROOT}/en"
+    en_count = len([f for f in os.listdir(en_path) if f.endswith('.html')]) if os.path.isdir(en_path) else 0
+
+    serp = load_serp_data()
+    tracking = serp.get("tracking", {})
+    snapshots = serp.get("daily_snapshots", [])[-30:]
+
+    conv = load_conversions()
+    top_performers = conv.get("top_performers", [])[:10]
+
+    audit = load_audit()
+    audit_scores = audit.get("scores", {})
+
+    cal = load_calendar()
+    palace = load_palace()
+
+    healing = load_healing()
+    uptime_checks = healing.get("uptime_checks", [])[-24:]
+
+    # SERP chart data
+    serp_dates = [s.get("date", "") for s in snapshots]
+    serp_page1 = [s.get("page1", 0) for s in snapshots]
+    serp_top3 = [s.get("top3", 0) for s in snapshots]
+
+    # Uptime chart data
+    uptime_times = [c.get("time", "")[-8:-3] for c in uptime_checks]
+    uptime_values = [c.get("response_time", 0) for c in uptime_checks]
+
+    # Top performers data
+    tp_labels = [t.get("slug", "")[:20] for t in top_performers]
+    tp_scores = [t.get("score", 0) for t in top_performers]
+
+    # Audit score history
+    audit_dates = list(audit_scores.keys())[-14:]
+    audit_vals = [audit_scores[d] for d in audit_dates]
+
+    dashboard_html = f"""<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor 15.0 Skynet — Command Center</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+* {{ margin: 0; padding: 0; box-sizing: border-box; }}
+body {{ background: #0a0a1a; color: #e0e0ff; font-family: 'Segoe UI', sans-serif; padding: 20px; }}
+.grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto; }}
+.card {{ background: #12122a; border-radius: 12px; padding: 20px; border: 1px solid #2a2a4a; }}
+.card h3 {{ color: #6c63ff; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }}
+.stat {{ font-size: 36px; font-weight: bold; color: #fff; }}
+.stat-label {{ font-size: 12px; color: #888; margin-top: 4px; }}
+.stat-row {{ display: flex; justify-content: space-between; margin-bottom: 15px; }}
+.stat-box {{ text-align: center; }}
+.header {{ text-align: center; padding: 20px 0 30px; }}
+.header h1 {{ font-size: 28px; color: #6c63ff; }}
+.header p {{ color: #666; margin-top: 5px; }}
+.mini-stat {{ display: inline-block; background: #1a1a3a; padding: 8px 16px; border-radius: 20px; margin: 5px; font-size: 13px; }}
+canvas {{ max-height: 200px; }}
+.planned {{ list-style: none; padding: 0; }}
+.planned li {{ padding: 8px 0; border-bottom: 1px solid #1a1a3a; font-size: 13px; }}
+.planned .prio {{ color: #6c63ff; font-weight: bold; }}
+.badge {{ display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; }}
+.badge-ok {{ background: #1a3a1a; color: #4caf50; }}
+.badge-warn {{ background: #3a3a1a; color: #ff9800; }}
+.badge-err {{ background: #3a1a1a; color: #f44336; }}
+.refresh {{ position: fixed; bottom: 20px; right: 20px; background: #6c63ff; color: #fff; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-size: 14px; }}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Victor 15.0 Skynet — Command Center</h1>
+<p>Real-time dashboard | Last update: {datetime.now().strftime('%d/%m/%Y %H:%M')} UTC</p>
+<div style="margin-top:15px;">
+<span class="mini-stat">📝 {article_count} NL</span>
+<span class="mini-stat">🌍 {en_count} EN</span>
+<span class="mini-stat">📈 {sum(1 for s,d in tracking.items() if d.get('positions') and d['positions'][-1]['pos']<=10)} Pagina 1</span>
+<span class="mini-stat">💰 €{sum(a.get('est_revenue',0) for a in conv.get('articles',{}).values()):.0f}/mo</span>
+</div>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>📈 SERP Posities (30 dagen)</h3>
+<canvas id="serpChart"></canvas>
+</div>
+<div class="card">
+<h3>🏆 Top Performers</h3>
+<canvas id="performersChart"></canvas>
+</div>
+<div class="card">
+<h3>⚡ Response Time (24h)</h3>
+<canvas id="uptimeChart"></canvas>
+</div>
+<div class="card">
+<h3>🔍 SEO Health Score</h3>
+<canvas id="auditChart"></canvas>
+</div>
+<div class="card">
+<h3>📋 Content Calendar</h3>
+<ul class="planned">
+{''.join(f'<li><span class="prio">[{p.get("priority",0)}]</span> <span class="badge badge-{"ok" if p.get("roi_approved") else "warn"}">{p["type"]}</span> {p.get("title","")[:45]} <span style="color:#666;float:right">{p.get("scheduled_date","")}</span></li>' for p in cal.get("planned",[])[:7]) or '<li style="color:#666">Geen items gepland</li>'}
+</ul>
+</div>
+<div class="card">
+<h3>🧠 Memory Palace</h3>
+<div style="font-size:13px;color:#aaa;">
+{'<br>'.join(f'💡 {m.get("insight","")[:60]}' for m in palace.get("strategic_memory",[])[-5:]) or 'Nog geen strategische inzichten'}
+</div>
+</div>
+</div>
+
+<button class="refresh" onclick="location.reload()">🔄 Refresh</button>
+
+<script>
+const chartDefaults = {{ responsive: true, maintainAspectRatio: false, plugins: {{ legend: {{ labels: {{ color: '#888' }} }} }}, scales: {{ x: {{ ticks: {{ color: '#666' }} }}, y: {{ ticks: {{ color: '#666' }} }} }} }};
+
+new Chart(document.getElementById('serpChart'), {{
+type: 'line',
+data: {{
+labels: {json.dumps(serp_dates[-14:])},
+datasets: [
+{{ label: 'Pagina 1', data: {json.dumps(serp_page1[-14:])}, borderColor: '#6c63ff', tension: 0.3, fill: false }},
+{{ label: 'Top 3', data: {json.dumps(serp_top3[-14:])}, borderColor: '#4caf50', tension: 0.3, fill: false }}
+]
+}},
+options: chartDefaults
+}});
+
+new Chart(document.getElementById('performersChart'), {{
+type: 'bar',
+data: {{
+labels: {json.dumps(tp_labels)},
+datasets: [{{ label: 'Score', data: {json.dumps(tp_scores)}, backgroundColor: '#6c63ff' }}]
+}},
+options: {{ ...chartDefaults, indexAxis: 'y' }}
+}});
+
+new Chart(document.getElementById('uptimeChart'), {{
+type: 'line',
+data: {{
+labels: {json.dumps(uptime_times)},
+datasets: [{{ label: 'Response (s)', data: {json.dumps(uptime_values)}, borderColor: '#ff9800', tension: 0.3, fill: true, backgroundColor: 'rgba(255,152,0,0.1)' }}]
+}},
+options: chartDefaults
+}});
+
+new Chart(document.getElementById('auditChart'), {{
+type: 'line',
+data: {{
+labels: {json.dumps(audit_dates)},
+datasets: [{{ label: 'Health Score', data: {json.dumps(audit_vals)}, borderColor: '#4caf50', tension: 0.3, fill: true, backgroundColor: 'rgba(76,175,80,0.1)' }}]
+}},
+options: chartDefaults
+}});
+</script>
+</body>
+</html>"""
+
+    # Save dashboard
+    dashboard_dir = f"{REPO_ROOT}/admin"
+    os.makedirs(dashboard_dir, exist_ok=True)
+    with open(f"{dashboard_dir}/index.html", 'w', encoding='utf-8') as f:
+        f.write(dashboard_html)
+
+    run_command(f"cd {REPO_ROOT} && git add admin/ && git diff --cached --quiet || git commit -m 'Victor: dashboard v2 update' && git push origin main")
+
+    return dashboard_html
+
+
+# ── 14E: VICTOR MEMORY PALACE ───────────────────────────────────────────
+
+def update_memory_palace():
+    """Update het langetermijn strategisch geheugen met maand/kwartaal patronen."""
+    palace = load_palace()
+    today = datetime.now()
+    current_month = today.strftime("%B").lower()
+    current_quarter = f"Q{(today.month - 1) // 3 + 1}_{today.year}"
+
+    # 1. Seizoenspatronen: welke content types werken deze maand
+    conv = load_conversions()
+    articles = conv.get("articles", {})
+
+    if articles:
+        # Groepeer per type
+        type_performance = {}
+        for slug, data in articles.items():
+            art_type = "general"
+            if 'vs' in slug: art_type = "comparison"
+            elif 'alternative' in slug: art_type = "alternatives"
+            elif 'pricing' in slug or 'kosten' in slug: art_type = "pricing"
+            elif 'review' in slug: art_type = "review"
+            elif 'how' in slug or 'tutorial' in slug: art_type = "howto"
+
+            if art_type not in type_performance:
+                type_performance[art_type] = {"total_score": 0, "count": 0, "total_clicks": 0}
+            type_performance[art_type]["total_score"] += data.get("conv_score", 0)
+            type_performance[art_type]["count"] += 1
+            type_performance[art_type]["total_clicks"] += data.get("clicks", 0)
+
+        # Best performing type
+        best_type = max(type_performance.items(),
+                       key=lambda x: x[1]["total_score"] / max(x[1]["count"], 1),
+                       default=("general", {}))
+
+        palace["seasonal_patterns"][current_month] = {
+            "best_content_type": best_type[0],
+            "avg_score": round(best_type[1].get("total_score", 0) / max(best_type[1].get("count", 1), 1), 1),
+            "total_clicks": sum(tp.get("total_clicks", 0) for tp in type_performance.values()),
+            "updated": str(today.date())
+        }
+
+    # 2. Brand trends: welke brands groeien/dalen
+    serp = load_serp_data()
+    tracking = serp.get("tracking", {})
+
+    brand_perf = {}
+    for brand in VAULT:
+        brand_lower = brand.lower()
+        brand_pages = {slug: data for slug, data in tracking.items() if brand_lower in slug}
+
+        if brand_pages:
+            avg_pos = sum(
+                d["positions"][-1]["pos"]
+                for d in brand_pages.values()
+                if d.get("positions")
+            ) / max(len(brand_pages), 1)
+
+            rising = sum(1 for d in brand_pages.values() if d.get("trend") == "rising")
+            falling = sum(1 for d in brand_pages.values() if d.get("trend") == "falling")
+
+            trend = "growing" if rising > falling else "declining" if falling > rising else "stable"
+
+            brand_perf[brand] = {
+                "avg_position": round(avg_pos, 1),
+                "pages": len(brand_pages),
+                "trend": trend,
+                "rising": rising,
+                "falling": falling,
+                "updated": str(today.date())
+            }
+
+    palace["brand_trends"] = brand_perf
+
+    # 3. Kwartaal inzichten via Claude AI
+    if articles and brand_perf:
+        try:
+            data_summary = f"""
+Maand: {current_month}, Kwartaal: {current_quarter}
+Totaal artikelen: {len(articles)}
+Beste content type: {best_type[0] if articles else 'unknown'}
+
+Brand performance:
+{chr(10).join(f'  {b}: pos {d["avg_position"]}, trend {d["trend"]}' for b, d in brand_perf.items())}
+
+Top 5 artikelen:
+{chr(10).join(f'  {slug}: {data.get("conv_score",0):.0f}pts, {data.get("clicks",0)} clicks' for slug, data in sorted(articles.items(), key=lambda x: x[1].get("conv_score",0), reverse=True)[:5])}"""
+
+            res = client.chat.completions.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": "Je bent een strategisch SEO analist. Geef 3-5 korte strategische inzichten op basis van deze data. Focus op actiegerichte tips. Antwoord als JSON array: [{\"insight\": \"...\", \"action\": \"...\", \"priority\": \"high/medium/low\"}]"},
+                    {"role": "user", "content": data_summary}
+                ],
+                max_tokens=800,
+                temperature=0.5
+            )
+            result = res.choices[0].message.content.strip()
+            if "```json" in result:
+                result = result.split("```json")[1].split("```")[0]
+            elif "```" in result:
+                result = result.split("```")[1].split("```")[0]
+            insights = json.loads(result)
+
+            for ins in insights:
+                ins["quarter"] = current_quarter
+                ins["date"] = str(today.date())
+
+            palace["strategic_memory"].extend(insights)
+            palace["quarterly_insights"].append({
+                "quarter": current_quarter,
+                "insights_count": len(insights),
+                "date": str(today.date())
+            })
+
+        except Exception as e:
+            log(f"Memory Palace insight error: {e}")
+
+    palace["last_update"] = str(today)
+    save_palace(palace)
+    return palace
+
+
+def skynet_cycle():
+    """Volledige Skynet Protocol cyclus."""
+    actions = []
+
+    # 1. Content Calendar update
+    try:
+        cal = generate_content_calendar()
+        planned = cal.get("planned", [])
+        actions.append(f"📋 Calendar: {len(planned)} items gepland")
+
+        # Execute 1 item als auto_execute aan staat
+        if cal.get("settings", {}).get("auto_execute"):
+            result, item = execute_calendar_item()
+            if result:
+                actions.append(f"📝 Calendar executed: {result}")
+                add_digest_item("content", f"Nieuw artikel: {result}", priority=6)
+    except Exception as e:
+        log(f"Calendar error: {e}")
+
+    # 2. Memory Palace update (1x per week op zondag)
+    if datetime.now().weekday() == 6:
+        try:
+            palace = update_memory_palace()
+            insights = palace.get("strategic_memory", [])
+            if insights:
+                actions.append(f"🧠 Memory Palace: {len(insights)} strategische inzichten")
+        except Exception as e:
+            log(f"Memory Palace error: {e}")
+
+    # 3. Dashboard v2 update
+    try:
+        generate_dashboard_v2()
+        actions.append("📊 Dashboard v2 bijgewerkt")
+    except Exception as e:
+        log(f"Dashboard error: {e}")
+
+    # 4. Outreach campaign (1x per week op woensdag)
+    if datetime.now().weekday() == 2:
+        try:
+            results = run_outreach_campaign(max_emails=2)
+            if results:
+                actions.append(f"📧 Outreach: {len(results)} emails")
+                for r in results:
+                    add_digest_item("backlinks", r, priority=5)
+        except Exception as e:
+            log(f"Outreach error: {e}")
 
     return actions
 
@@ -8881,7 +9756,7 @@ def cmd_panel(message):
     keyboard = build_main_dashboard_keyboard()
     bot.send_message(
         message.chat.id,
-        "🧠 Victor 14.0 Omniscience — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
+        "🧠 Victor 15.0 Skynet — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
         reply_markup=keyboard
     )
 
@@ -9282,6 +10157,209 @@ def cmd_omniscience(message):
     bot.reply_to(message, msg)
 
 
+@bot.message_handler(commands=['calendar'])
+def cmd_calendar(message):
+    """Toon en genereer content calendar."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    if len(parts) > 1 and parts[1] == "generate":
+        bot.send_chat_action(message.chat.id, 'typing')
+        bot.reply_to(message, "📅 Content calendar genereren...")
+        calendar = generate_content_calendar()
+        if calendar:
+            items = calendar.get("items", [])
+            msg = "📅 Content Calendar — Gegenereerd\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            for i, item in enumerate(items[:10], 1):
+                status_emoji = "✅" if item.get("status") == "done" else "⏳"
+                msg += f"{i}. {status_emoji} [{item.get('type', '?')}] {item.get('title', '?')[:50]}\n"
+                msg += f"   ROI: {item.get('roi_score', '?')} | Brand: {item.get('brand', '?')}\n"
+            msg += f"\n📊 Totaal: {len(items)} items gepland"
+            bot.reply_to(message, msg)
+        else:
+            bot.reply_to(message, "📅 Kon geen calendar items genereren.")
+    else:
+        try:
+            cal = json.loads(open(CALENDAR_FILE).read()) if os.path.exists(CALENDAR_FILE) else {}
+        except:
+            cal = {}
+        items = cal.get("items", [])
+        if items:
+            msg = "📅 Content Calendar\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            pending = [i for i in items if i.get("status") != "done"]
+            done = [i for i in items if i.get("status") == "done"]
+            for i, item in enumerate(pending[:8], 1):
+                msg += f"{i}. ⏳ [{item.get('type', '?')}] {item.get('title', '?')[:50]}\n"
+                msg += f"   ROI: {item.get('roi_score', '?')} | Brand: {item.get('brand', '?')}\n"
+            msg += f"\n📊 Pending: {len(pending)} | Done: {len(done)} | Totaal: {len(items)}"
+        else:
+            msg = "📅 Calendar is leeg. Gebruik /calendar generate om te plannen."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['calexec'])
+def cmd_calexec(message):
+    """Voer het volgende calendar item uit."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+    bot.reply_to(message, "📅 Volgend calendar item uitvoeren...")
+    result = execute_calendar_item()
+    if result:
+        bot.reply_to(message, f"✅ {result}")
+    else:
+        bot.reply_to(message, "📅 Geen pending items in de calendar. Gebruik /calendar generate")
+
+
+@bot.message_handler(commands=['outreach'])
+def cmd_outreach(message):
+    """Email outreach campagne."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    if len(parts) > 1 and parts[1] == "run":
+        bot.send_chat_action(message.chat.id, 'typing')
+        bot.reply_to(message, "📧 Outreach campagne starten...")
+        results = run_outreach_campaign(max_emails=3)
+        if results:
+            msg = "📧 Outreach — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            for r in results:
+                emoji = "✅" if r.get("success") else "❌"
+                msg += f"{emoji} {r.get('to', '?')} — {r.get('campaign', '?')}\n"
+            bot.reply_to(message, msg)
+        else:
+            bot.reply_to(message, "📧 Geen outreach campagnes beschikbaar.")
+    else:
+        try:
+            out = json.loads(open(OUTREACH_FILE).read()) if os.path.exists(OUTREACH_FILE) else {}
+        except:
+            out = {}
+        campaigns = out.get("campaigns", [])
+        sent = out.get("sent", [])
+        msg = f"📧 Outreach Status\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"📋 Campagnes: {len(campaigns)}\n"
+        msg += f"📤 Verstuurd: {len(sent)}\n"
+        if sent:
+            last = sent[-1]
+            msg += f"\n📧 Laatste: {last.get('to', '?')} ({last.get('date', '?')})"
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['palace'])
+def cmd_palace(message):
+    """Victor Memory Palace — strategisch geheugen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    if len(parts) > 1 and parts[1] == "update":
+        bot.send_chat_action(message.chat.id, 'typing')
+        bot.reply_to(message, "🏛️ Memory Palace updaten...")
+        update_memory_palace()
+        bot.reply_to(message, "✅ Memory Palace bijgewerkt!")
+
+    try:
+        palace = json.loads(open(PALACE_FILE).read()) if os.path.exists(PALACE_FILE) else {}
+    except:
+        palace = {}
+
+    msg = "🏛️ Victor Memory Palace\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    # Seasonal patterns
+    seasons = palace.get("seasonal_patterns", {})
+    if seasons:
+        msg += "📅 Seizoenspatronen:\n"
+        for month, data in list(seasons.items())[:3]:
+            msg += f"  {month}: {data.get('top_topic', '?')} (clicks: {data.get('avg_clicks', '?')})\n"
+        msg += "\n"
+
+    # Brand trends
+    trends = palace.get("brand_trends", {})
+    if trends:
+        msg += "📈 Brand Trends:\n"
+        for brand, data in list(trends.items())[:4]:
+            direction = "📈" if data.get("trend") == "up" else "📉" if data.get("trend") == "down" else "➡️"
+            msg += f"  {direction} {brand}: {data.get('note', '?')}\n"
+        msg += "\n"
+
+    # Strategic insights
+    insights = palace.get("quarterly_insights", [])
+    if insights:
+        msg += "🧠 Laatste Inzichten:\n"
+        for ins in insights[-3:]:
+            msg += f"  💡 {ins[:80]}\n"
+
+    if not seasons and not trends and not insights:
+        msg += "Leeg. Gebruik /palace update om te vullen."
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['dashboardv2'])
+def cmd_dashboardv2(message):
+    """Dashboard V2 met Chart.js."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+    bot.reply_to(message, "📊 Dashboard V2 genereren...")
+
+    html_path = generate_dashboard_v2()
+    if html_path and os.path.exists(html_path):
+        with open(html_path, 'rb') as f:
+            bot.send_document(message.chat.id, f, caption="📊 Victor Dashboard V2 — Open in browser")
+    else:
+        bot.reply_to(message, "❌ Dashboard V2 kon niet worden gegenereerd.")
+
+
+@bot.message_handler(commands=['skynet'])
+def cmd_skynet(message):
+    """Volledige Skynet Protocol cyclus."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🛰️ Skynet Protocol activeren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    actions = skynet_cycle()
+    if actions:
+        msg = "🛰️ Skynet Protocol — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "\n".join(f"  ✅ {a}" for a in actions)
+    else:
+        msg = "🛰️ Skynet: alles draait optimaal."
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['api'])
+def cmd_api(message):
+    """API server status."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    msg = f"🌐 Victor API Server\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    msg += f"📡 Port: {API_PORT}\n"
+    msg += f"🔗 Endpoints:\n"
+    msg += f"  GET /api/health — Healthcheck\n"
+    msg += f"  GET /api/stats — Statistieken\n"
+    msg += f"  GET /api/serp — SERP data\n"
+    msg += f"  GET /api/calendar — Content calendar\n"
+    msg += f"  GET /api/palace — Memory Palace\n"
+    msg += f"  POST /api/webhook/github — GitHub webhook\n"
+    msg += f"  POST /api/webhook/uptime — Uptime alerts\n"
+    msg += f"  POST /api/trigger — Remote trigger\n\n"
+
+    # Check if API log exists
+    if os.path.exists(API_LOG_FILE):
+        try:
+            with open(API_LOG_FILE) as f:
+                lines = f.readlines()[-5:]
+            msg += "📋 Laatste requests:\n"
+            for line in lines:
+                msg += f"  {line.strip()}\n"
+        except:
+            pass
+    else:
+        msg += "📋 Nog geen requests ontvangen."
+
+    bot.reply_to(message, msg)
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -9316,7 +10394,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 14.0 Omniscience — Commando's:
+    bot.reply_to(message, """Victor 15.0 Skynet — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -9399,6 +10477,15 @@ def cmd_help(message):
 /roigate <keyword> [brand] — ROI voorspelling
 /digest — Smart daily digest
 /omniscience — Volledige Omniscience cyclus
+
+🛰️ Skynet Protocol:
+/calendar [generate] — Content calendar beheren
+/calexec — Volgend calendar item uitvoeren
+/outreach [run] — Email outreach campagnes
+/palace [update] — Memory Palace strategisch geheugen
+/dashboardv2 — Chart.js dashboard V2
+/api — API server status & endpoints
+/skynet — Volledige Skynet cyclus
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -9648,6 +10735,47 @@ def handle_callback(call):
             msg = f"🔗 Backlinks: {len(bl.get('opportunities', []))} kansen, {len(bl.get('outreach_sent', []))} outreach"
             bot.send_message(chat_id, msg)
 
+        elif data == "dash_calendar":
+            try:
+                cal = json.loads(open(CALENDAR_FILE).read()) if os.path.exists(CALENDAR_FILE) else {}
+            except:
+                cal = {}
+            items = cal.get("items", [])
+            pending = [i for i in items if i.get("status") != "done"]
+            msg = f"📅 Calendar: {len(pending)} pending, {len(items)} totaal"
+            if pending:
+                next_item = pending[0]
+                msg += f"\n▶️ Volgende: [{next_item.get('type', '?')}] {next_item.get('title', '?')[:40]}"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_palace":
+            try:
+                palace = json.loads(open(PALACE_FILE).read()) if os.path.exists(PALACE_FILE) else {}
+            except:
+                palace = {}
+            seasons = len(palace.get("seasonal_patterns", {}))
+            brands = len(palace.get("brand_trends", {}))
+            insights = len(palace.get("quarterly_insights", []))
+            msg = f"🏛️ Memory Palace: {seasons} seizoenen, {brands} brands, {insights} inzichten"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_outreach":
+            try:
+                out = json.loads(open(OUTREACH_FILE).read()) if os.path.exists(OUTREACH_FILE) else {}
+            except:
+                out = {}
+            msg = f"📧 Outreach: {len(out.get('campaigns', []))} campagnes, {len(out.get('sent', []))} verstuurd"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_skynet":
+            bot.send_message(chat_id, "🛰️ Skynet cyclus starten...")
+            actions = skynet_cycle()
+            if actions:
+                msg = "🛰️ " + "\n".join(actions[:5])
+            else:
+                msg = "🛰️ Skynet: alles optimaal."
+            bot.send_message(chat_id, msg)
+
         elif data == "act_generate":
             bot.send_message(chat_id, "📝 Gebruik /generate om een artikel te genereren")
 
@@ -9769,7 +10897,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 14.0 Omniscience — Status Report
+    return f"""📊 Victor 15.0 Skynet — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -10256,6 +11384,20 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Digest error: {e}")
 
+            # 🛰️ SKYNET PROTOCOL: dagelijks om 10:00 UTC (calendar + palace + dashboard + outreach)
+            if hour == 10 and now.minute < 15 and last_auto_improve != str(now.date()) + "-skynet":
+                try:
+                    log("Starting Skynet Protocol cycle...")
+                    skynet_actions = skynet_cycle()
+                    last_auto_improve = str(now.date()) + "-skynet"
+                    if skynet_actions:
+                        skynet_report = "🛰️ Skynet Protocol — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        skynet_report += "\n".join(f"  ✅ {a}" for a in skynet_actions)
+                        bot.send_message(ADMIN_ID, skynet_report)
+                    log(f"Skynet cycle done: {len(skynet_actions)} actions")
+                except Exception as e:
+                    log(f"Skynet cycle error: {e}")
+
             # 🔥 DOMINATION MATRIX: dagelijkse cyclus om 07:00 UTC
             if hour == 7 and weekday != 0 and last_auto_improve != str(now.date()) + "-domination":
                 try:
@@ -10333,8 +11475,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 14.0 Omniscience online!\n\n{report}"
-            f"\n\n👁️ Omniscience: /validate /freshness /journey /roigate"
+            f"🚀 Victor 15.0 Skynet online!\n\n{report}"
+            f"\n\n🛰️ Skynet: /calendar /calexec /outreach /palace /dashboardv2 /api /skynet"
+            f"\n👁️ Omniscience: /validate /freshness /journey /roigate /digest"
             f"\n🧠 Hive Mind: /scorecard /conversions /dna /backlinks"
             f"\n🧠 Neural: /panel /audit /trends /translate /heal"
             f"\n🔥 Domination: /domination /programmatic /schema /serp"
@@ -10350,7 +11493,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 14.0 Omniscience gestart — Model: {MODEL}")
+    log(f"Victor 15.0 Skynet gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:
@@ -10360,6 +11503,11 @@ if __name__ == "__main__":
         log(f"Webhook reset: {e}")
 
     send_startup_message()
+
+    # Start Victor API server in achtergrond
+    api_thread = threading.Thread(target=start_api_server, daemon=True)
+    api_thread.start()
+    log(f"API server gestart op port {API_PORT}")
 
     # Start proactieve monitoring in achtergrond
     t = threading.Thread(target=proactive_loop, daemon=True)

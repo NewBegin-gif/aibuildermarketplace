@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 15.0 Skynet — Powered by Claude AI<br>
+Victor 16.0 Quantum — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -5281,7 +5281,9 @@ def build_main_dashboard_keyboard():
         [("📊 Scorecard", "dash_scorecard"), ("🏆 Leaderboard", "dash_leaderboard")],
         [("🧬 DNA", "dash_dna"), ("🔗 Backlinks", "dash_backlinks")],
         [("📅 Calendar", "dash_calendar"), ("🏛️ Palace", "dash_palace")],
-        [("📧 Outreach", "dash_outreach"), ("🛰️ Skynet", "dash_skynet")]
+        [("📧 Outreach", "dash_outreach"), ("🛰️ Skynet", "dash_skynet")],
+        [("💰 Revenue2", "dash_revenue2"), ("🏛️ Authority", "dash_authority")],
+        [("🔮 Predict", "dash_predict"), ("🔮 Quantum", "dash_quantum")]
     ])
 
 
@@ -6493,7 +6495,7 @@ def validate_live_page(slug):
 
     try:
         req = urllib.request.Request(url, headers={
-            'User-Agent': 'VictorBot/15.0 SiteValidator'
+            'User-Agent': 'VictorBot/16.0 SiteValidator'
         })
         start = time.time()
         with urllib.request.urlopen(req, timeout=15) as response:
@@ -6534,7 +6536,7 @@ def validate_live_page(slug):
             for src in img_srcs[:5]:  # Check max 5
                 if src.startswith('http'):
                     try:
-                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/15.0'})
+                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/16.0'})
                         with urllib.request.urlopen(img_req, timeout=5) as img_resp:
                             if img_resp.status >= 400:
                                 issues.append({"type": "broken_image", "detail": f"Broken image: {src[:50]}", "severity": "medium"})
@@ -6578,7 +6580,7 @@ def validate_full_site(max_pages=20):
     for main_page in ["", "b2b.html"]:
         url = f"https://aibuildermarketplace.com/{main_page}"
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/15.0'})
+            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/16.0'})
             start = time.time()
             with urllib.request.urlopen(req, timeout=15) as resp:
                 load_time = time.time() - start
@@ -7810,7 +7812,7 @@ def generate_dashboard_v2():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Victor 15.0 Skynet — Command Center</title>
+<title>Victor 16.0 Quantum — Command Center</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
 * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -7839,7 +7841,7 @@ canvas {{ max-height: 200px; }}
 </head>
 <body>
 <div class="header">
-<h1>Victor 15.0 Skynet — Command Center</h1>
+<h1>Victor 16.0 Quantum — Command Center</h1>
 <p>Real-time dashboard | Last update: {datetime.now().strftime('%d/%m/%Y %H:%M')} UTC</p>
 <div style="margin-top:15px;">
 <span class="mini-stat">📝 {article_count} NL</span>
@@ -8107,6 +8109,902 @@ def skynet_cycle():
                     add_digest_item("backlinks", r, priority=5)
         except Exception as e:
             log(f"Outreach error: {e}")
+
+    return actions
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MODULE 15: QUANTUM CORE — Revenue Radar, Social Swarm, Predictive Engine,
+#            Authority Builder, Victor Live Portal
+# ══════════════════════════════════════════════════════════════════════════════
+
+REVENUE_RADAR_FILE = "/root/felix_hq/victor_revenue_radar.json"
+SOCIAL_SWARM_FILE = "/root/felix_hq/victor_social_swarm.json"
+PREDICTIONS_FILE = "/root/felix_hq/victor_predictions.json"
+AUTHORITY_FILE = "/root/felix_hq/victor_authority.json"
+PORTAL_DIR = "/root/felix_hq/portal"
+
+# ── 15A: REVENUE RADAR ──────────────────────────────────────────────────────
+
+def load_revenue_radar():
+    try:
+        if os.path.exists(REVENUE_RADAR_FILE):
+            return json.loads(open(REVENUE_RADAR_FILE).read())
+    except:
+        pass
+    return {"tracked": {}, "forecasts": {}, "alerts": [], "optimizations": []}
+
+def save_revenue_radar(data):
+    with open(REVENUE_RADAR_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def track_revenue_per_article():
+    """Track commissie-potentieel per artikel op basis van GSC clicks + affiliate links."""
+    radar = load_revenue_radar()
+    gsc = load_gsc_data()
+
+    pages = gsc.get("pages", {})
+    tracked = radar.get("tracked", {})
+
+    for url, data in pages.items():
+        slug = url.split("/")[-1].replace(".html", "") if "/" in url else url
+        clicks = data.get("clicks", 0)
+        impressions = data.get("impressions", 0)
+
+        # Detect which brand this article promotes
+        brand_match = None
+        for brand in VAULT.keys():
+            if brand.lower() in slug.lower():
+                brand_match = brand
+                break
+
+        if brand_match:
+            commission = {"Kinsta": 75, "Synthesia": 20, "InVideo": 15,
+                         "Replit": 10, "Murf": 12, "Bitvavo": 5}.get(brand_match, 10)
+
+            # Estimate monthly revenue: clicks * estimated CTR to affiliate * conversion rate
+            est_affiliate_ctr = 0.12  # 12% click through to affiliate
+            est_conversion = 0.03    # 3% conversion rate
+            monthly_revenue = clicks * est_affiliate_ctr * est_conversion * commission
+
+            tracked[slug] = {
+                "brand": brand_match,
+                "clicks": clicks,
+                "impressions": impressions,
+                "commission": commission,
+                "est_monthly_revenue": round(monthly_revenue, 2),
+                "est_yearly_revenue": round(monthly_revenue * 12, 2),
+                "last_updated": datetime.now().isoformat()
+            }
+
+    radar["tracked"] = tracked
+    save_revenue_radar(radar)
+    return tracked
+
+def revenue_forecast():
+    """Forecast revenue trends op basis van historische data + Memory Palace seizoenspatronen."""
+    radar = load_revenue_radar()
+    tracked = radar.get("tracked", {})
+
+    try:
+        palace = json.loads(open(PALACE_FILE).read()) if os.path.exists(PALACE_FILE) else {}
+    except:
+        palace = {}
+
+    current_month = datetime.now().strftime("%B")
+    seasonal = palace.get("seasonal_patterns", {}).get(current_month, {})
+
+    total_monthly = sum(t.get("est_monthly_revenue", 0) for t in tracked.values())
+    total_yearly = sum(t.get("est_yearly_revenue", 0) for t in tracked.values())
+
+    # Top performers
+    top_articles = sorted(tracked.items(), key=lambda x: x[1].get("est_monthly_revenue", 0), reverse=True)[:5]
+
+    # Brand breakdown
+    brand_revenue = {}
+    for slug, data in tracked.items():
+        brand = data.get("brand", "Unknown")
+        brand_revenue[brand] = brand_revenue.get(brand, 0) + data.get("est_monthly_revenue", 0)
+
+    forecast = {
+        "total_monthly": round(total_monthly, 2),
+        "total_yearly": round(total_yearly, 2),
+        "top_articles": [(s, d.get("est_monthly_revenue", 0)) for s, d in top_articles],
+        "brand_breakdown": brand_revenue,
+        "seasonal_factor": seasonal.get("multiplier", 1.0),
+        "generated": datetime.now().isoformat()
+    }
+
+    radar["forecasts"] = forecast
+    save_revenue_radar(radar)
+    return forecast
+
+def revenue_money_alerts():
+    """Detecteer significante veranderingen in artikel performance."""
+    radar = load_revenue_radar()
+    tracked = radar.get("tracked", {})
+    gsc = load_gsc_data()
+    pages = gsc.get("pages", {})
+
+    alerts = []
+    for slug, data in tracked.items():
+        prev_clicks = data.get("prev_clicks", data.get("clicks", 0))
+        current_clicks = data.get("clicks", 0)
+
+        if prev_clicks > 0:
+            change_pct = ((current_clicks - prev_clicks) / prev_clicks) * 100
+
+            if change_pct > 50:
+                alerts.append({
+                    "type": "spike",
+                    "slug": slug,
+                    "brand": data.get("brand", "?"),
+                    "change": f"+{change_pct:.0f}%",
+                    "revenue_impact": f"+€{data.get('est_monthly_revenue', 0) * (change_pct/100):.2f}/mo",
+                    "date": datetime.now().isoformat()
+                })
+            elif change_pct < -30:
+                alerts.append({
+                    "type": "drop",
+                    "slug": slug,
+                    "brand": data.get("brand", "?"),
+                    "change": f"{change_pct:.0f}%",
+                    "revenue_impact": f"-€{abs(data.get('est_monthly_revenue', 0) * (change_pct/100)):.2f}/mo",
+                    "date": datetime.now().isoformat()
+                })
+
+        # Store current as prev for next check
+        data["prev_clicks"] = current_clicks
+
+    radar["alerts"] = (radar.get("alerts", []) + alerts)[-50:]
+    save_revenue_radar(radar)
+    return alerts
+
+def optimize_affiliate_links():
+    """Analyseer welke affiliate placements het best converteren."""
+    radar = load_revenue_radar()
+    tracked = radar.get("tracked", {})
+
+    optimizations = []
+    for slug, data in tracked.items():
+        clicks = data.get("clicks", 0)
+        revenue = data.get("est_monthly_revenue", 0)
+
+        # High traffic, low revenue = needs better CTA placement
+        if clicks > 50 and revenue < 5:
+            optimizations.append({
+                "slug": slug,
+                "issue": "high_traffic_low_conversion",
+                "suggestion": f"Voeg prominentere CTA toe + vergelijkingstabel",
+                "potential": f"+€{clicks * 0.12 * 0.05 * data.get('commission', 10):.2f}/mo"
+            })
+
+        # Low traffic, high commission = needs SEO boost
+        if clicks < 20 and data.get("commission", 0) >= 50:
+            optimizations.append({
+                "slug": slug,
+                "issue": "high_value_low_traffic",
+                "suggestion": f"SEO boost nodig: meer internal links + content update",
+                "potential": f"+€{50 * 0.12 * 0.03 * data.get('commission', 10):.2f}/mo bij 50 clicks"
+            })
+
+    radar["optimizations"] = optimizations
+    save_revenue_radar(radar)
+    return optimizations
+
+# ── 15B: SOCIAL SWARM ───────────────────────────────────────────────────────
+
+def load_social_swarm():
+    try:
+        if os.path.exists(SOCIAL_SWARM_FILE):
+            return json.loads(open(SOCIAL_SWARM_FILE).read())
+    except:
+        pass
+    return {"posts": [], "schedule": [], "engagement": {}, "repurposed": []}
+
+def save_social_swarm(data):
+    with open(SOCIAL_SWARM_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def generate_social_posts(slug=None):
+    """Genereer social media posts voor een artikel (Twitter thread + LinkedIn + Reddit)."""
+    swarm = load_social_swarm()
+
+    # Pick article to promote
+    if not slug:
+        # Pick highest-revenue article not recently promoted
+        radar = load_revenue_radar()
+        tracked = radar.get("tracked", {})
+        recent_slugs = [p.get("slug") for p in swarm.get("posts", [])[-20:]]
+        candidates = [(s, d) for s, d in tracked.items() if s not in recent_slugs]
+        if candidates:
+            candidates.sort(key=lambda x: x[1].get("est_monthly_revenue", 0), reverse=True)
+            slug = candidates[0][0]
+
+    if not slug:
+        return None
+
+    # Read article content
+    article_path = os.path.join(REPO_ROOT, "b2b", f"{slug}.html")
+    if not os.path.exists(article_path):
+        article_path = os.path.join(REPO_ROOT, f"{slug}.html")
+
+    article_content = ""
+    if os.path.exists(article_path):
+        try:
+            with open(article_path) as f:
+                article_content = f.read()[:3000]
+        except:
+            pass
+
+    prompt = f"""Genereer social media content voor dit artikel: {slug}
+URL: https://aibuildermarketplace.com/b2b/{slug}.html
+
+Artikel excerpt: {article_content[:1500]}
+
+Genereer exact dit format (JSON):
+{{
+    "twitter_thread": ["Tweet 1 (hook, max 280 chars)", "Tweet 2 (value)", "Tweet 3 (CTA met link)"],
+    "linkedin_post": "LinkedIn post (professioneel, 150-200 woorden, met emoji, eindig met CTA)",
+    "reddit_title": "Reddit post title (value-first, geen spam)",
+    "reddit_body": "Reddit post body (helpful, niet promotional, subtiele link)",
+    "hashtags": ["#tag1", "#tag2", "#tag3"]
+}}
+
+Schrijf in het Engels. Wees helpful en niet te salesy."""
+
+    try:
+        response = ask_victor(prompt, [])
+        # Parse JSON from response
+        json_match = response[response.find("{"):response.rfind("}")+1]
+        posts_data = json.loads(json_match)
+        posts_data["slug"] = slug
+        posts_data["generated"] = datetime.now().isoformat()
+        posts_data["status"] = "pending"
+
+        swarm["posts"].append(posts_data)
+        save_social_swarm(swarm)
+        return posts_data
+    except Exception as e:
+        log(f"Social post generation error: {e}")
+        return None
+
+def repurpose_content(slug):
+    """1 artikel → 5 content pieces: thread, post, newsletter, quote graphic text, hook."""
+    prompt = f"""Repurpose dit artikel ({slug}) naar 5 content formats.
+URL: https://aibuildermarketplace.com/b2b/{slug}.html
+
+Genereer JSON:
+{{
+    "twitter_hook": "Killer opening tweet (max 280 chars)",
+    "linkedin_carousel_slides": ["Slide 1: Hook", "Slide 2: Problem", "Slide 3: Solution", "Slide 4: Proof", "Slide 5: CTA"],
+    "newsletter_snippet": "2-3 zinnen voor een newsletter (engaging, cliffhanger)",
+    "quote_graphic_text": "1 krachtige quote/statistiek uit het artikel (max 15 woorden)",
+    "video_script_hook": "Eerste 10 seconden van een video script (attention-grabbing)"
+}}
+
+Engels, punchy, geen fluff."""
+
+    try:
+        response = ask_victor(prompt, [])
+        json_match = response[response.find("{"):response.rfind("}")+1]
+        repurposed = json.loads(json_match)
+        repurposed["slug"] = slug
+        repurposed["date"] = datetime.now().isoformat()
+
+        swarm = load_social_swarm()
+        swarm["repurposed"].append(repurposed)
+        save_social_swarm(swarm)
+        return repurposed
+    except Exception as e:
+        log(f"Repurpose error: {e}")
+        return None
+
+def get_best_post_times():
+    """Analyseer engagement data voor optimale post tijden."""
+    swarm = load_social_swarm()
+    engagement = swarm.get("engagement", {})
+
+    # Default best times based on general social media research
+    best_times = {
+        "twitter": {"best_days": ["Tuesday", "Wednesday", "Thursday"], "best_hours": [9, 12, 17]},
+        "linkedin": {"best_days": ["Tuesday", "Wednesday", "Thursday"], "best_hours": [8, 10, 12]},
+        "reddit": {"best_days": ["Monday", "Wednesday", "Friday"], "best_hours": [6, 8, 13]}
+    }
+
+    # Override with actual data if available
+    if engagement:
+        for platform, data in engagement.items():
+            if data.get("best_hour"):
+                best_times[platform]["best_hours"] = [data["best_hour"]]
+
+    return best_times
+
+# ── 15C: PREDICTIVE ENGINE ──────────────────────────────────────────────────
+
+def load_predictions():
+    try:
+        if os.path.exists(PREDICTIONS_FILE):
+            return json.loads(open(PREDICTIONS_FILE).read())
+    except:
+        pass
+    return {"seasonal_peaks": {}, "write_now_alerts": [], "competitor_gaps": [], "content_timing": []}
+
+def save_predictions(data):
+    with open(PREDICTIONS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def analyze_seasonal_patterns():
+    """Analyseer GSC data voor seizoensgebonden keyword patronen."""
+    predictions = load_predictions()
+    gsc = load_gsc_data()
+    pages = gsc.get("pages", {})
+
+    try:
+        palace = json.loads(open(PALACE_FILE).read()) if os.path.exists(PALACE_FILE) else {}
+    except:
+        palace = {}
+
+    seasonal_peaks = {}
+    current_month = datetime.now().month
+
+    # Analyze which keywords peak in which months based on impressions patterns
+    for url, data in pages.items():
+        slug = url.split("/")[-1].replace(".html", "") if "/" in url else url
+        impressions = data.get("impressions", 0)
+        clicks = data.get("clicks", 0)
+
+        # Categorize by likely peak season
+        if any(w in slug.lower() for w in ["pricing", "cost", "budget"]):
+            # Budget content peaks in Q1 (planning season) and Q4 (renewal)
+            peak_months = [1, 2, 10, 11]
+        elif any(w in slug.lower() for w in ["alternative", "vs", "compare"]):
+            # Comparison content peaks when tools renew (Q1, Q3)
+            peak_months = [1, 2, 3, 7, 8, 9]
+        elif any(w in slug.lower() for w in ["review", "best"]):
+            # Review content peaks year-round but especially Q4
+            peak_months = [9, 10, 11, 12]
+        else:
+            peak_months = [current_month]  # Steady traffic
+
+        for month in peak_months:
+            month_name = datetime(2024, month, 1).strftime("%B")
+            if month_name not in seasonal_peaks:
+                seasonal_peaks[month_name] = []
+            seasonal_peaks[month_name].append({
+                "slug": slug,
+                "current_clicks": clicks,
+                "current_impressions": impressions
+            })
+
+    predictions["seasonal_peaks"] = seasonal_peaks
+    save_predictions(predictions)
+    return seasonal_peaks
+
+def generate_write_now_alerts():
+    """Detecteer trending topics die NU geschreven moeten worden."""
+    predictions = load_predictions()
+
+    try:
+        trends_data = json.loads(open("/root/felix_hq/victor_trends.json").read()) if os.path.exists("/root/felix_hq/victor_trends.json") else {}
+    except:
+        trends_data = {}
+
+    alerts = []
+    trending = trends_data.get("trending", [])
+
+    for trend in trending[:10]:
+        topic = trend.get("topic", "") if isinstance(trend, dict) else str(trend)
+
+        # Check if we already have content for this
+        existing = False
+        articles_dir = os.path.join(REPO_ROOT, "b2b")
+        if os.path.isdir(articles_dir):
+            for f in os.listdir(articles_dir):
+                if any(word in f.lower() for word in topic.lower().split()[:2]):
+                    existing = True
+                    break
+
+        if not existing and topic:
+            # Check relevance to our brands
+            brand_match = None
+            for brand in VAULT.keys():
+                if brand.lower() in topic.lower():
+                    brand_match = brand
+                    break
+
+            alerts.append({
+                "topic": topic,
+                "urgency": "HIGH" if brand_match else "MEDIUM",
+                "brand": brand_match,
+                "reason": f"Trending + {'direct brand match' if brand_match else 'niche relevant'}",
+                "suggested_slug": topic.lower().replace(" ", "-")[:50],
+                "detected": datetime.now().isoformat()
+            })
+
+    predictions["write_now_alerts"] = alerts
+    save_predictions(predictions)
+    return alerts
+
+def predict_competitor_moves():
+    """Voorspel welke content concurrenten gaan maken op basis van hun patronen."""
+    predictions = load_predictions()
+
+    try:
+        comp_data = json.loads(open("/root/felix_hq/victor_competitors.json").read()) if os.path.exists("/root/felix_hq/victor_competitors.json") else {}
+    except:
+        comp_data = {}
+
+    gaps = []
+    competitors = comp_data.get("targets", [])
+
+    for comp in competitors[:5]:
+        comp_name = comp.get("name", "") if isinstance(comp, dict) else str(comp)
+        comp_articles = comp.get("articles", []) if isinstance(comp, dict) else []
+
+        # Predict based on patterns
+        if comp_articles:
+            recent_topics = [a.get("topic", "") for a in comp_articles[-5:] if isinstance(a, dict)]
+            if recent_topics:
+                gaps.append({
+                    "competitor": comp_name,
+                    "predicted_topics": recent_topics[:3],
+                    "our_opportunity": "Write these FIRST to rank before them",
+                    "confidence": "MEDIUM"
+                })
+
+    predictions["competitor_gaps"] = gaps
+    save_predictions(predictions)
+    return gaps
+
+def generate_content_timing_plan():
+    """Genereer optimale timing voor content publicatie."""
+    predictions = load_predictions()
+    seasonal = predictions.get("seasonal_peaks", {})
+
+    current_month = datetime.now().month
+    next_months = [(current_month + i - 1) % 12 + 1 for i in range(1, 4)]
+
+    timing_plan = []
+    for month_num in next_months:
+        month_name = datetime(2024, month_num, 1).strftime("%B")
+        peak_content = seasonal.get(month_name, [])
+
+        if peak_content:
+            timing_plan.append({
+                "month": month_name,
+                "write_before": datetime(2024, (month_num - 2) % 12 + 1, 15).strftime("%B 15"),
+                "topics_count": len(peak_content),
+                "top_topics": [p.get("slug", "?") for p in peak_content[:3]]
+            })
+
+    predictions["content_timing"] = timing_plan
+    save_predictions(predictions)
+    return timing_plan
+
+# ── 15D: AUTHORITY BUILDER ──────────────────────────────────────────────────
+
+def load_authority():
+    try:
+        if os.path.exists(AUTHORITY_FILE):
+            return json.loads(open(AUTHORITY_FILE).read())
+    except:
+        pass
+    return {"clusters": {}, "pillar_pages": [], "internal_links": {}, "authority_scores": {}}
+
+def save_authority(data):
+    with open(AUTHORITY_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def build_topic_clusters():
+    """Detecteer en bouw topic clusters uit bestaande content."""
+    authority = load_authority()
+
+    articles_dir = os.path.join(REPO_ROOT, "b2b")
+    if not os.path.isdir(articles_dir):
+        return {}
+
+    files = [f for f in os.listdir(articles_dir) if f.endswith('.html')]
+
+    # Group articles by brand/topic
+    clusters = {}
+    for fname in files:
+        slug = fname.replace(".html", "")
+
+        # Detect cluster based on brand
+        for brand in VAULT.keys():
+            if brand.lower() in slug.lower():
+                if brand not in clusters:
+                    clusters[brand] = {"pillar": None, "supporting": [], "gaps": []}
+                clusters[brand]["supporting"].append(slug)
+                break
+        else:
+            # Non-brand articles - group by type
+            if "vs" in slug or "alternative" in slug:
+                cluster_name = "Comparisons"
+            elif "pricing" in slug or "cost" in slug:
+                cluster_name = "Pricing"
+            elif "review" in slug or "best" in slug:
+                cluster_name = "Reviews"
+            else:
+                cluster_name = "General"
+
+            if cluster_name not in clusters:
+                clusters[cluster_name] = {"pillar": None, "supporting": [], "gaps": []}
+            clusters[cluster_name]["supporting"].append(slug)
+
+    # Identify pillar pages (longest/most authoritative per cluster)
+    for cluster_name, data in clusters.items():
+        if data["supporting"]:
+            # The article with most generic name is likely the pillar
+            best_pillar = min(data["supporting"], key=len)
+            data["pillar"] = best_pillar
+
+            # Identify gaps
+            if cluster_name in VAULT:
+                expected_types = ["review", "pricing", "alternatives", "vs", "features", "tutorial"]
+                existing_types = []
+                for s in data["supporting"]:
+                    for t in expected_types:
+                        if t in s.lower():
+                            existing_types.append(t)
+
+                data["gaps"] = [t for t in expected_types if t not in existing_types]
+
+    authority["clusters"] = clusters
+    save_authority(authority)
+    return clusters
+
+def simulate_pagerank():
+    """Simuleer PageRank om te bepalen welke pagina's het meeste SEO-juice doorgeven."""
+    authority = load_authority()
+
+    try:
+        link_data = json.loads(open("/root/felix_hq/victor_linkgraph.json").read()) if os.path.exists("/root/felix_hq/victor_linkgraph.json") else {}
+    except:
+        link_data = {}
+
+    internal_links = link_data.get("links", {})
+    if not internal_links:
+        # Build from filesystem
+        articles_dir = os.path.join(REPO_ROOT, "b2b")
+        if os.path.isdir(articles_dir):
+            for fname in os.listdir(articles_dir):
+                if fname.endswith('.html'):
+                    slug = fname.replace(".html", "")
+                    try:
+                        with open(os.path.join(articles_dir, fname)) as f:
+                            content = f.read()
+                        # Count internal links
+                        links_out = content.count('href="/b2b/') + content.count('href="../b2b/')
+                        internal_links[slug] = {"outgoing": links_out}
+                    except:
+                        pass
+
+    # Simple PageRank simulation
+    pages = list(internal_links.keys())
+    if not pages:
+        return {}
+
+    n = len(pages)
+    scores = {p: 1.0 / n for p in pages}
+
+    # Iterate PageRank
+    damping = 0.85
+    for _ in range(10):
+        new_scores = {}
+        for page in pages:
+            # Base score
+            rank = (1 - damping) / n
+            # Add contribution from pages linking to this one
+            outgoing = internal_links.get(page, {}).get("outgoing", 1)
+            for other_page in pages:
+                if other_page != page:
+                    other_out = max(internal_links.get(other_page, {}).get("outgoing", 1), 1)
+                    rank += damping * scores[other_page] / other_out / n
+            new_scores[page] = rank
+        scores = new_scores
+
+    # Normalize to 0-100
+    max_score = max(scores.values()) if scores else 1
+    authority_scores = {p: round((s / max_score) * 100, 1) for p, s in scores.items()}
+
+    authority["authority_scores"] = authority_scores
+    authority["internal_links"] = internal_links
+    save_authority(authority)
+    return authority_scores
+
+def find_link_opportunities():
+    """Vind waar interne links moeten worden toegevoegd voor maximale SEO impact."""
+    authority = load_authority()
+    scores = authority.get("authority_scores", {})
+    clusters = authority.get("clusters", {})
+
+    opportunities = []
+
+    # High authority pages that don't link to related content
+    for cluster_name, data in clusters.items():
+        pillar = data.get("pillar")
+        supporting = data.get("supporting", [])
+
+        if pillar and len(supporting) > 1:
+            pillar_score = scores.get(pillar, 0)
+            for article in supporting:
+                if article != pillar:
+                    article_score = scores.get(article, 0)
+                    if article_score < pillar_score * 0.5:
+                        opportunities.append({
+                            "from": pillar,
+                            "to": article,
+                            "reason": f"Pillar ({pillar_score:.0f}) → Supporting ({article_score:.0f})",
+                            "impact": "HIGH"
+                        })
+
+    return opportunities[:20]
+
+def calculate_cluster_authority():
+    """Bereken authority score per topic cluster."""
+    authority = load_authority()
+    clusters = authority.get("clusters", {})
+    scores = authority.get("authority_scores", {})
+    gsc = load_gsc_data()
+    pages = gsc.get("pages", {})
+
+    cluster_scores = {}
+    for cluster_name, data in clusters.items():
+        supporting = data.get("supporting", [])
+        if not supporting:
+            continue
+
+        # Average PageRank score
+        avg_pr = sum(scores.get(s, 0) for s in supporting) / len(supporting)
+
+        # Total traffic
+        total_clicks = 0
+        for s in supporting:
+            for url, pdata in pages.items():
+                if s in url:
+                    total_clicks += pdata.get("clicks", 0)
+
+        # Completeness (fewer gaps = higher score)
+        gaps = len(data.get("gaps", []))
+        completeness = max(0, 100 - gaps * 15)
+
+        cluster_scores[cluster_name] = {
+            "authority_score": round((avg_pr * 0.4 + completeness * 0.3 + min(total_clicks, 100) * 0.3), 1),
+            "articles": len(supporting),
+            "avg_pagerank": round(avg_pr, 1),
+            "total_clicks": total_clicks,
+            "completeness": completeness,
+            "gaps": data.get("gaps", [])
+        }
+
+    authority["cluster_scores"] = cluster_scores
+    save_authority(authority)
+    return cluster_scores
+
+# ── 15E: VICTOR LIVE PORTAL ─────────────────────────────────────────────────
+
+def generate_live_portal():
+    """Genereer een real-time web portal met alle Victor data."""
+    os.makedirs(PORTAL_DIR, exist_ok=True)
+
+    # Collect all data
+    radar = load_revenue_radar()
+    authority = load_authority()
+    predictions = load_predictions()
+    swarm = load_social_swarm()
+    gsc = load_gsc_data()
+
+    forecast = radar.get("forecasts", {})
+    cluster_scores = authority.get("cluster_scores", {})
+    alerts = radar.get("alerts", [])[-10:]
+
+    # Generate portal HTML
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor 16.0 Quantum Core — Live Portal</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{ background: #0a0a0f; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; padding: 20px; }}
+        .grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto; }}
+        .card {{ background: #1a1a2e; border-radius: 12px; padding: 24px; border: 1px solid #2a2a4a; }}
+        .card h2 {{ color: #00d4ff; margin-bottom: 16px; font-size: 1.1rem; }}
+        .metric {{ font-size: 2rem; font-weight: bold; color: #fff; }}
+        .metric-label {{ color: #888; font-size: 0.85rem; margin-top: 4px; }}
+        .alert {{ padding: 8px 12px; margin: 4px 0; border-radius: 6px; font-size: 0.85rem; }}
+        .alert-spike {{ background: #1a3a1a; border-left: 3px solid #00ff88; }}
+        .alert-drop {{ background: #3a1a1a; border-left: 3px solid #ff4444; }}
+        .bar {{ height: 8px; border-radius: 4px; margin: 4px 0; }}
+        .progress {{ display: flex; align-items: center; margin: 8px 0; }}
+        .progress-label {{ width: 100px; font-size: 0.8rem; color: #aaa; }}
+        .progress-bar {{ flex: 1; height: 6px; background: #2a2a4a; border-radius: 3px; overflow: hidden; }}
+        .progress-fill {{ height: 100%; background: linear-gradient(90deg, #00d4ff, #7b2ff7); border-radius: 3px; }}
+        header {{ text-align: center; margin-bottom: 30px; }}
+        header h1 {{ font-size: 1.8rem; background: linear-gradient(90deg, #00d4ff, #7b2ff7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }}
+        header p {{ color: #666; margin-top: 8px; }}
+        .ticker {{ background: #111; padding: 10px; border-radius: 8px; margin-bottom: 20px; text-align: center; overflow: hidden; }}
+        .ticker span {{ color: #00ff88; font-weight: bold; margin: 0 20px; }}
+        canvas {{ max-height: 200px; }}
+        table {{ width: 100%; border-collapse: collapse; font-size: 0.85rem; }}
+        th, td {{ padding: 8px; text-align: left; border-bottom: 1px solid #2a2a4a; }}
+        th {{ color: #00d4ff; }}
+        .badge {{ display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; }}
+        .badge-high {{ background: #1a3a1a; color: #00ff88; }}
+        .badge-med {{ background: #3a3a1a; color: #ffaa00; }}
+        @media (max-width: 768px) {{ .grid {{ grid-template-columns: 1fr; }} }}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Victor 16.0 Quantum Core</h1>
+        <p>Live Portal — Updated {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}</p>
+    </header>
+
+    <div class="ticker">
+        <span>💰 €{forecast.get('total_monthly', 0):.2f}/mo</span>
+        <span>📈 €{forecast.get('total_yearly', 0):.2f}/yr</span>
+        <span>📊 {len(gsc.get('pages', {}))} pages tracked</span>
+        <span>🏗️ {sum(len(c.get('supporting', [])) for c in authority.get('clusters', {}).values())} articles</span>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>💰 Revenue Radar</h2>
+            <div class="metric">€{forecast.get('total_monthly', 0):.2f}</div>
+            <div class="metric-label">Estimated Monthly Revenue</div>
+            <canvas id="revenueChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h2>🚨 Money Alerts</h2>
+            {''.join(f'<div class="alert alert-{a.get("type", "spike")}">{"📈" if a.get("type") == "spike" else "📉"} {a.get("slug", "?")[:30]} — {a.get("change", "?")} ({a.get("revenue_impact", "?")})</div>' for a in alerts[-5:])}
+            {('<div style="color:#666;margin-top:10px;">Geen recente alerts</div>' if not alerts else '')}
+        </div>
+
+        <div class="card">
+            <h2>🏛️ Authority Clusters</h2>
+            {''.join(f'<div class="progress"><span class="progress-label">{name[:12]}</span><div class="progress-bar"><div class="progress-fill" style="width:{data.get("authority_score", 0)}%"></div></div><span style="margin-left:8px;font-size:0.8rem;">{data.get("authority_score", 0)}</span></div>' for name, data in list(cluster_scores.items())[:8])}
+        </div>
+
+        <div class="card">
+            <h2>🔮 Predictions</h2>
+            <table>
+                <tr><th>Alert</th><th>Topic</th><th>Urgency</th></tr>
+                {''.join(f'<tr><td>⚡</td><td>{a.get("topic", "?")[:35]}</td><td><span class="badge badge-{"high" if a.get("urgency") == "HIGH" else "med"}">{a.get("urgency", "?")}</span></td></tr>' for a in predictions.get("write_now_alerts", [])[:5])}
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>📱 Social Swarm</h2>
+            <div class="metric">{len(swarm.get('posts', []))}</div>
+            <div class="metric-label">Posts Generated</div>
+            <div style="margin-top:12px;color:#888;">
+                Repurposed: {len(swarm.get('repurposed', []))} articles<br>
+                Scheduled: {len(swarm.get('schedule', []))} posts
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 Brand Revenue Breakdown</h2>
+            <canvas id="brandChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Revenue by brand chart
+        const brandData = {json.dumps(forecast.get('brand_breakdown', {}))};
+        new Chart(document.getElementById('brandChart'), {{
+            type: 'doughnut',
+            data: {{
+                labels: Object.keys(brandData),
+                datasets: [{{ data: Object.values(brandData), backgroundColor: ['#00d4ff', '#7b2ff7', '#00ff88', '#ff6b6b', '#ffa500', '#ff69b4'] }}]
+            }},
+            options: {{ responsive: true, plugins: {{ legend: {{ position: 'bottom', labels: {{ color: '#aaa' }} }} }} }}
+        }});
+
+        // Revenue trend (mock with top articles)
+        const topArticles = {json.dumps([a[0][:15] for a in forecast.get('top_articles', [])])};
+        const topRevenue = {json.dumps([a[1] for a in forecast.get('top_articles', [])])};
+        new Chart(document.getElementById('revenueChart'), {{
+            type: 'bar',
+            data: {{
+                labels: topArticles,
+                datasets: [{{ label: '€/month', data: topRevenue, backgroundColor: '#7b2ff7' }}]
+            }},
+            options: {{ responsive: true, scales: {{ y: {{ ticks: {{ color: '#888' }} }}, x: {{ ticks: {{ color: '#888' }} }} }}, plugins: {{ legend: {{ display: false }} }} }}
+        }});
+    </script>
+</body>
+</html>"""
+
+    portal_path = os.path.join(PORTAL_DIR, "index.html")
+    with open(portal_path, 'w') as f:
+        f.write(html)
+
+    log(f"Live portal generated: {portal_path}")
+    return portal_path
+
+# ── 15F: QUANTUM CORE ORCHESTRATOR ─────────────────────────────────────────
+
+def quantum_cycle():
+    """Volledige Quantum Core cyclus: revenue + predictions + authority + social + portal."""
+    actions = []
+
+    # Revenue Radar
+    try:
+        tracked = track_revenue_per_article()
+        if tracked:
+            actions.append(f"💰 Revenue: {len(tracked)} artikelen getracked")
+        forecast = revenue_forecast()
+        if forecast:
+            actions.append(f"📊 Forecast: €{forecast.get('total_monthly', 0):.2f}/maand geschat")
+        alerts = revenue_money_alerts()
+        if alerts:
+            actions.append(f"🚨 {len(alerts)} money alerts gedetecteerd")
+            for alert in alerts[:3]:
+                if alert.get("type") == "spike":
+                    bot.send_message(ADMIN_ID, f"💰 MONEY ALERT: {alert['slug']} {alert['change']} — {alert['revenue_impact']}")
+        optimizations = optimize_affiliate_links()
+        if optimizations:
+            actions.append(f"🔧 {len(optimizations)} affiliate optimalisaties gevonden")
+    except Exception as e:
+        log(f"Revenue radar error: {e}")
+
+    # Predictive Engine
+    try:
+        seasonal = analyze_seasonal_patterns()
+        if seasonal:
+            actions.append(f"📅 Seizoensanalyse: {len(seasonal)} maanden geanalyseerd")
+        write_alerts = generate_write_now_alerts()
+        if write_alerts:
+            actions.append(f"⚡ {len(write_alerts)} write-now alerts")
+            for wa in write_alerts[:2]:
+                if wa.get("urgency") == "HIGH":
+                    add_digest_item("predictions", f"WRITE NOW: {wa['topic']} ({wa['brand']})", priority=9)
+        timing = generate_content_timing_plan()
+        if timing:
+            actions.append(f"🗓️ Content timing: {len(timing)} maanden gepland")
+    except Exception as e:
+        log(f"Predictive engine error: {e}")
+
+    # Authority Builder
+    try:
+        clusters = build_topic_clusters()
+        if clusters:
+            actions.append(f"🏛️ {len(clusters)} topic clusters geïdentificeerd")
+        pagerank = simulate_pagerank()
+        if pagerank:
+            actions.append(f"📊 PageRank: {len(pagerank)} pagina's gescoord")
+        cluster_auth = calculate_cluster_authority()
+        if cluster_auth:
+            top_cluster = max(cluster_auth.items(), key=lambda x: x[1].get("authority_score", 0))
+            actions.append(f"👑 Top cluster: {top_cluster[0]} (score: {top_cluster[1].get('authority_score', 0)})")
+        link_opps = find_link_opportunities()
+        if link_opps:
+            actions.append(f"🔗 {len(link_opps)} link opportunities gevonden")
+    except Exception as e:
+        log(f"Authority builder error: {e}")
+
+    # Social Swarm (generate 1 post per cycle)
+    try:
+        post = generate_social_posts()
+        if post:
+            actions.append(f"📱 Social post gegenereerd voor: {post.get('slug', '?')}")
+    except Exception as e:
+        log(f"Social swarm error: {e}")
+
+    # Live Portal
+    try:
+        portal_path = generate_live_portal()
+        if portal_path:
+            actions.append(f"🌐 Live portal updated: {portal_path}")
+    except Exception as e:
+        log(f"Portal error: {e}")
 
     return actions
 
@@ -9756,7 +10654,7 @@ def cmd_panel(message):
     keyboard = build_main_dashboard_keyboard()
     bot.send_message(
         message.chat.id,
-        "🧠 Victor 15.0 Skynet — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
+        "🧠 Victor 16.0 Quantum — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
         reply_markup=keyboard
     )
 
@@ -10360,6 +11258,216 @@ def cmd_api(message):
     bot.reply_to(message, msg)
 
 
+@bot.message_handler(commands=['revenue2'])
+def cmd_revenue2(message):
+    """Revenue Radar — geavanceerde revenue tracking."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    tracked = track_revenue_per_article()
+    forecast = revenue_forecast()
+
+    msg = "💰 Revenue Radar\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    msg += f"📊 Geschatte maandelijkse revenue: €{forecast.get('total_monthly', 0):.2f}\n"
+    msg += f"📈 Geschatte jaarlijkse revenue: €{forecast.get('total_yearly', 0):.2f}\n\n"
+
+    # Top articles
+    top = forecast.get("top_articles", [])[:5]
+    if top:
+        msg += "🏆 Top Earners:\n"
+        for i, (slug, rev) in enumerate(top, 1):
+            msg += f"  {i}. {slug[:35]} — €{rev:.2f}/mo\n"
+
+    # Brand breakdown
+    brands = forecast.get("brand_breakdown", {})
+    if brands:
+        msg += "\n💼 Per Brand:\n"
+        for brand, rev in sorted(brands.items(), key=lambda x: x[1], reverse=True):
+            msg += f"  {brand}: €{rev:.2f}/mo\n"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['alerts'])
+def cmd_alerts(message):
+    """Money alerts — significante traffic veranderingen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    alerts = revenue_money_alerts()
+    radar = load_revenue_radar()
+    all_alerts = radar.get("alerts", [])[-10:]
+
+    if all_alerts:
+        msg = "🚨 Money Alerts\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        for a in all_alerts:
+            emoji = "📈" if a.get("type") == "spike" else "📉"
+            msg += f"{emoji} {a.get('slug', '?')[:30]}\n"
+            msg += f"   {a.get('change', '?')} | Impact: {a.get('revenue_impact', '?')}\n\n"
+    else:
+        msg = "🚨 Geen recente money alerts. Alles stabiel!"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['social2'])
+def cmd_social2(message):
+    """Social Swarm — genereer multi-platform content."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    slug = parts[1] if len(parts) > 1 else None
+
+    bot.send_chat_action(message.chat.id, 'typing')
+    bot.reply_to(message, "📱 Social posts genereren...")
+
+    posts = generate_social_posts(slug)
+    if posts:
+        msg = f"📱 Social Swarm — {posts.get('slug', '?')}\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "🐦 Twitter Thread:\n"
+        for i, tweet in enumerate(posts.get("twitter_thread", []), 1):
+            msg += f"  {i}. {tweet[:100]}\n"
+        msg += f"\n💼 LinkedIn:\n  {posts.get('linkedin_post', '')[:200]}...\n"
+        msg += f"\n🔴 Reddit: {posts.get('reddit_title', '')[:80]}\n"
+        msg += f"\n#️⃣ {' '.join(posts.get('hashtags', []))}"
+        bot.reply_to(message, msg)
+    else:
+        bot.reply_to(message, "📱 Kon geen social posts genereren. Check of er artikelen zijn.")
+
+
+@bot.message_handler(commands=['repurpose'])
+def cmd_repurpose(message):
+    """Content repurposing — 1 artikel → 5 formats."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    if len(parts) < 2:
+        bot.reply_to(message, "Gebruik: /repurpose <slug>")
+        return
+
+    slug = parts[1]
+    bot.send_chat_action(message.chat.id, 'typing')
+    bot.reply_to(message, f"🔄 {slug} repurposen naar 5 formats...")
+
+    result = repurpose_content(slug)
+    if result:
+        msg = f"🔄 Repurposed: {slug}\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"🐦 Hook: {result.get('twitter_hook', '?')[:100]}\n\n"
+        msg += "📱 Carousel slides:\n"
+        for s in result.get("linkedin_carousel_slides", [])[:5]:
+            msg += f"  • {s[:60]}\n"
+        msg += f"\n📧 Newsletter: {result.get('newsletter_snippet', '?')[:120]}\n"
+        msg += f"\n🎬 Video hook: {result.get('video_script_hook', '?')[:100]}"
+        bot.reply_to(message, msg)
+    else:
+        bot.reply_to(message, "❌ Kon content niet repurposen.")
+
+
+@bot.message_handler(commands=['predict2'])
+def cmd_predict2(message):
+    """Predictive Engine — seizoenspatronen + write-now alerts."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    seasonal = analyze_seasonal_patterns()
+    write_alerts = generate_write_now_alerts()
+    timing = generate_content_timing_plan()
+
+    msg = "🔮 Predictive Engine\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    if write_alerts:
+        msg += "⚡ WRITE NOW Alerts:\n"
+        for a in write_alerts[:5]:
+            emoji = "🔴" if a.get("urgency") == "HIGH" else "🟡"
+            msg += f"  {emoji} {a.get('topic', '?')[:40]}"
+            if a.get("brand"):
+                msg += f" [{a['brand']}]"
+            msg += "\n"
+        msg += "\n"
+
+    if timing:
+        msg += "🗓️ Content Timing Plan:\n"
+        for t in timing[:3]:
+            msg += f"  📅 {t.get('month', '?')}: {t.get('topics_count', 0)} topics (write by {t.get('write_before', '?')})\n"
+        msg += "\n"
+
+    current_month = datetime.now().strftime("%B")
+    month_peaks = seasonal.get(current_month, [])
+    if month_peaks:
+        msg += f"📈 Deze maand ({current_month}) peaks: {len(month_peaks)} keywords"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['authority'])
+def cmd_authority(message):
+    """Authority Builder — topic clusters + PageRank."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    clusters = build_topic_clusters()
+    cluster_auth = calculate_cluster_authority()
+
+    msg = "🏛️ Authority Builder\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    if cluster_auth:
+        msg += "📊 Cluster Scores:\n"
+        sorted_clusters = sorted(cluster_auth.items(), key=lambda x: x[1].get("authority_score", 0), reverse=True)
+        for name, data in sorted_clusters[:8]:
+            score = data.get("authority_score", 0)
+            bar = "█" * int(score / 10) + "░" * (10 - int(score / 10))
+            msg += f"  {bar} {name} ({score})\n"
+            msg += f"    📄 {data.get('articles', 0)} articles | 👁️ {data.get('total_clicks', 0)} clicks\n"
+            if data.get("gaps"):
+                msg += f"    ❌ Gaps: {', '.join(data['gaps'][:3])}\n"
+
+    # Link opportunities
+    link_opps = find_link_opportunities()
+    if link_opps:
+        msg += f"\n🔗 Top Link Opportunities ({len(link_opps)}):\n"
+        for opp in link_opps[:3]:
+            msg += f"  {opp['from'][:20]} → {opp['to'][:20]} ({opp['impact']})\n"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['portal'])
+def cmd_portal(message):
+    """Victor Live Portal genereren."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+    bot.reply_to(message, "🌐 Live Portal genereren...")
+
+    portal_path = generate_live_portal()
+    if portal_path and os.path.exists(portal_path):
+        with open(portal_path, 'rb') as f:
+            bot.send_document(message.chat.id, f, caption="🌐 Victor Live Portal — Open in browser\n\nOf host via: python3 -m http.server 8080 --directory /root/felix_hq/portal")
+    else:
+        bot.reply_to(message, "❌ Portal kon niet worden gegenereerd.")
+
+
+@bot.message_handler(commands=['quantum'])
+def cmd_quantum(message):
+    """Volledige Quantum Core cyclus."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🔮 Quantum Core activeren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    actions = quantum_cycle()
+    if actions:
+        msg = "🔮 Quantum Core — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "\n".join(f"  ✅ {a}" for a in actions)
+    else:
+        msg = "🔮 Quantum Core: alles optimaal."
+    bot.reply_to(message, msg)
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -10394,7 +11502,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 15.0 Skynet — Commando's:
+    bot.reply_to(message, """Victor 16.0 Quantum — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -10486,6 +11594,16 @@ def cmd_help(message):
 /dashboardv2 — Chart.js dashboard V2
 /api — API server status & endpoints
 /skynet — Volledige Skynet cyclus
+
+🔮 Quantum Core:
+/revenue2 — Revenue Radar geavanceerde tracking
+/alerts — Money alerts (traffic spikes/drops)
+/social2 [slug] — Social Swarm multi-platform posts
+/repurpose <slug> — 1 artikel → 5 content formats
+/predict2 — Predictive Engine seizoenspatronen
+/authority — Topic clusters + PageRank simulatie
+/portal — Live web portal genereren
+/quantum — Volledige Quantum Core cyclus
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -10776,6 +11894,37 @@ def handle_callback(call):
                 msg = "🛰️ Skynet: alles optimaal."
             bot.send_message(chat_id, msg)
 
+        elif data == "dash_revenue2":
+            tracked = track_revenue_per_article()
+            forecast = revenue_forecast()
+            msg = f"💰 Revenue Radar: €{forecast.get('total_monthly', 0):.2f}/mo | {len(tracked)} artikelen"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_authority":
+            cluster_auth = calculate_cluster_authority()
+            if cluster_auth:
+                top = max(cluster_auth.items(), key=lambda x: x[1].get("authority_score", 0))
+                msg = f"🏛️ Authority: {len(cluster_auth)} clusters | Top: {top[0]} ({top[1].get('authority_score', 0)})"
+            else:
+                msg = "🏛️ Authority: nog geen clusters. Gebruik /authority"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_predict":
+            write_alerts = generate_write_now_alerts()
+            msg = f"🔮 Predictions: {len(write_alerts)} write-now alerts"
+            if write_alerts:
+                msg += f"\n⚡ Top: {write_alerts[0].get('topic', '?')[:40]}"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_quantum":
+            bot.send_message(chat_id, "🔮 Quantum Core cyclus starten...")
+            actions = quantum_cycle()
+            if actions:
+                msg = "🔮 " + "\n".join(actions[:5])
+            else:
+                msg = "🔮 Quantum: alles optimaal."
+            bot.send_message(chat_id, msg)
+
         elif data == "act_generate":
             bot.send_message(chat_id, "📝 Gebruik /generate om een artikel te genereren")
 
@@ -10897,7 +12046,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 15.0 Skynet — Status Report
+    return f"""📊 Victor 16.0 Quantum — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -11398,6 +12547,20 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Skynet cycle error: {e}")
 
+            # 🔮 QUANTUM CORE: dagelijks om 11:00 UTC (revenue + predictions + authority + social + portal)
+            if hour == 11 and now.minute < 15 and last_auto_improve != str(now.date()) + "-quantum":
+                try:
+                    log("Starting Quantum Core cycle...")
+                    quantum_actions = quantum_cycle()
+                    last_auto_improve = str(now.date()) + "-quantum"
+                    if quantum_actions:
+                        quantum_report = "🔮 Quantum Core — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        quantum_report += "\n".join(f"  ✅ {a}" for a in quantum_actions)
+                        bot.send_message(ADMIN_ID, quantum_report)
+                    log(f"Quantum cycle done: {len(quantum_actions)} actions")
+                except Exception as e:
+                    log(f"Quantum cycle error: {e}")
+
             # 🔥 DOMINATION MATRIX: dagelijkse cyclus om 07:00 UTC
             if hour == 7 and weekday != 0 and last_auto_improve != str(now.date()) + "-domination":
                 try:
@@ -11475,8 +12638,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 15.0 Skynet online!\n\n{report}"
-            f"\n\n🛰️ Skynet: /calendar /calexec /outreach /palace /dashboardv2 /api /skynet"
+            f"🚀 Victor 16.0 Quantum online!\n\n{report}"
+            f"\n\n🔮 Quantum: /revenue2 /alerts /social2 /predict2 /authority /portal /quantum"
+            f"\n🛰️ Skynet: /calendar /calexec /outreach /palace /dashboardv2 /api /skynet"
             f"\n👁️ Omniscience: /validate /freshness /journey /roigate /digest"
             f"\n🧠 Hive Mind: /scorecard /conversions /dna /backlinks"
             f"\n🧠 Neural: /panel /audit /trends /translate /heal"
@@ -11493,7 +12657,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 15.0 Skynet gestart — Model: {MODEL}")
+    log(f"Victor 16.0 Quantum gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 16.0 Quantum — Powered by Claude AI<br>
+Victor 17.0 Omega — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -5283,7 +5283,9 @@ def build_main_dashboard_keyboard():
         [("📅 Calendar", "dash_calendar"), ("🏛️ Palace", "dash_palace")],
         [("📧 Outreach", "dash_outreach"), ("🛰️ Skynet", "dash_skynet")],
         [("💰 Revenue2", "dash_revenue2"), ("🏛️ Authority", "dash_authority")],
-        [("🔮 Predict", "dash_predict"), ("🔮 Quantum", "dash_quantum")]
+        [("🔮 Predict", "dash_predict"), ("🔮 Quantum", "dash_quantum")],
+        [("💉 Monetize", "dash_monetize"), ("🏰 E-E-A-T", "dash_eeat")],
+        [("⚔️ War Room", "dash_warroom"), ("🌀 Omega", "dash_omega")]
     ])
 
 
@@ -6495,7 +6497,7 @@ def validate_live_page(slug):
 
     try:
         req = urllib.request.Request(url, headers={
-            'User-Agent': 'VictorBot/16.0 SiteValidator'
+            'User-Agent': 'VictorBot/17.0 SiteValidator'
         })
         start = time.time()
         with urllib.request.urlopen(req, timeout=15) as response:
@@ -6536,7 +6538,7 @@ def validate_live_page(slug):
             for src in img_srcs[:5]:  # Check max 5
                 if src.startswith('http'):
                     try:
-                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/16.0'})
+                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/17.0'})
                         with urllib.request.urlopen(img_req, timeout=5) as img_resp:
                             if img_resp.status >= 400:
                                 issues.append({"type": "broken_image", "detail": f"Broken image: {src[:50]}", "severity": "medium"})
@@ -6580,7 +6582,7 @@ def validate_full_site(max_pages=20):
     for main_page in ["", "b2b.html"]:
         url = f"https://aibuildermarketplace.com/{main_page}"
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/16.0'})
+            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/17.0'})
             start = time.time()
             with urllib.request.urlopen(req, timeout=15) as resp:
                 load_time = time.time() - start
@@ -7812,7 +7814,7 @@ def generate_dashboard_v2():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Victor 16.0 Quantum — Command Center</title>
+<title>Victor 17.0 Omega — Command Center</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
 * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -7841,7 +7843,7 @@ canvas {{ max-height: 200px; }}
 </head>
 <body>
 <div class="header">
-<h1>Victor 16.0 Quantum — Command Center</h1>
+<h1>Victor 17.0 Omega — Command Center</h1>
 <p>Real-time dashboard | Last update: {datetime.now().strftime('%d/%m/%Y %H:%M')} UTC</p>
 <div style="margin-top:15px;">
 <span class="mini-stat">📝 {article_count} NL</span>
@@ -8806,7 +8808,7 @@ def generate_live_portal():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor 16.0 Quantum Core — Live Portal</title>
+    <title>Victor 17.0 Omega Core — Live Portal</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -8841,7 +8843,7 @@ def generate_live_portal():
 </head>
 <body>
     <header>
-        <h1>Victor 16.0 Quantum Core</h1>
+        <h1>Victor 17.0 Omega Core</h1>
         <p>Live Portal — Updated {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}</p>
     </header>
 
@@ -9005,6 +9007,850 @@ def quantum_cycle():
             actions.append(f"🌐 Live portal updated: {portal_path}")
     except Exception as e:
         log(f"Portal error: {e}")
+
+    return actions
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MODULE 16: OMEGA PROTOCOL — Auto-Monetize, Content Fortress, Viral Loops,
+#            Self-Evolution, War Room
+# ══════════════════════════════════════════════════════════════════════════════
+
+MONETIZE_FILE = "/root/felix_hq/victor_monetize.json"
+FORTRESS_FILE = "/root/felix_hq/victor_fortress.json"
+VIRAL_FILE = "/root/felix_hq/victor_viral.json"
+EVOLUTION_FILE = "/root/felix_hq/victor_evolution.json"
+WARROOM_FILE = "/root/felix_hq/victor_warroom.json"
+
+# ── 16A: AUTO-MONETIZE ENGINE ───────────────────────────────────────────────
+
+def load_monetize():
+    try:
+        if os.path.exists(MONETIZE_FILE):
+            return json.loads(open(MONETIZE_FILE).read())
+    except:
+        pass
+    return {"scans": [], "injections": [], "cta_tests": {}, "commission_optimizer": {}}
+
+def save_monetize(data):
+    with open(MONETIZE_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def scan_missed_affiliate_opportunities():
+    """Scan alle artikelen op gemiste affiliate kansen."""
+    monetize = load_monetize()
+    articles_dir = os.path.join(REPO_ROOT, "b2b")
+    if not os.path.isdir(articles_dir):
+        return []
+
+    opportunities = []
+    brand_keywords = {
+        "Kinsta": ["kinsta", "hosting", "wordpress hosting", "managed hosting"],
+        "Synthesia": ["synthesia", "ai video", "video generator", "avatar video"],
+        "InVideo": ["invideo", "video editor", "video maker", "online video"],
+        "Replit": ["replit", "online ide", "code editor", "coding platform"],
+        "Murf": ["murf", "ai voice", "voiceover", "text to speech"],
+        "Bitvavo": ["bitvavo", "crypto", "bitcoin", "exchange"]
+    }
+
+    for fname in os.listdir(articles_dir):
+        if not fname.endswith('.html'):
+            continue
+        slug = fname.replace(".html", "")
+
+        try:
+            with open(os.path.join(articles_dir, fname)) as f:
+                content = f.read().lower()
+        except:
+            continue
+
+        for brand, keywords in brand_keywords.items():
+            affiliate_url = VAULT.get(brand, "")
+            # Check if brand is mentioned but affiliate link is missing
+            brand_mentioned = any(kw in content for kw in keywords)
+            has_affiliate = affiliate_url.lower() in content if affiliate_url else False
+
+            if brand_mentioned and not has_affiliate and brand.lower() not in slug.lower():
+                mention_count = sum(content.count(kw) for kw in keywords)
+                if mention_count >= 2:
+                    opportunities.append({
+                        "slug": slug,
+                        "brand": brand,
+                        "mentions": mention_count,
+                        "affiliate_url": affiliate_url,
+                        "potential_revenue": mention_count * 0.5,  # rough estimate
+                        "action": f"Add {brand} affiliate link ({mention_count} mentions without link)"
+                    })
+
+    monetize["scans"] = opportunities
+    monetize["last_scan"] = datetime.now().isoformat()
+    save_monetize(monetize)
+    return opportunities
+
+def inject_affiliate_links(slug=None, dry_run=True):
+    """Voeg affiliate links toe op logische plekken in artikelen."""
+    opportunities = scan_missed_affiliate_opportunities()
+    if slug:
+        opportunities = [o for o in opportunities if o["slug"] == slug]
+
+    injections = []
+    for opp in opportunities[:5]:
+        article_path = os.path.join(REPO_ROOT, "b2b", f"{opp['slug']}.html")
+        if not os.path.exists(article_path):
+            continue
+
+        try:
+            with open(article_path) as f:
+                content = f.read()
+        except:
+            continue
+
+        brand = opp["brand"]
+        affiliate_url = opp["affiliate_url"]
+
+        if not dry_run and affiliate_url:
+            # Find first mention of brand without a link and wrap it
+            import re
+            # Simple injection: find brand name not already in a link
+            pattern = rf'(?<!href="[^"]*?)(?<!>)({re.escape(brand)})(?!</a>)'
+            replacement = f'<a href="{affiliate_url}" target="_blank" rel="nofollow sponsored">{brand}</a>'
+
+            new_content, count = re.subn(pattern, replacement, content, count=1)
+            if count > 0:
+                with open(article_path, 'w') as f:
+                    f.write(new_content)
+                injections.append({
+                    "slug": opp["slug"],
+                    "brand": brand,
+                    "action": "injected",
+                    "date": datetime.now().isoformat()
+                })
+        else:
+            injections.append({
+                "slug": opp["slug"],
+                "brand": brand,
+                "action": "dry_run",
+                "suggestion": f"Add link to {brand} ({opp['mentions']} mentions)"
+            })
+
+    monetize = load_monetize()
+    monetize["injections"] = (monetize.get("injections", []) + injections)[-100:]
+    save_monetize(monetize)
+    return injections
+
+def optimize_commissions():
+    """Analyseer welke brands het best converteren en optimaliseer focus."""
+    radar = load_revenue_radar()
+    tracked = radar.get("tracked", {})
+
+    brand_performance = {}
+    for slug, data in tracked.items():
+        brand = data.get("brand")
+        if brand:
+            if brand not in brand_performance:
+                brand_performance[brand] = {"articles": 0, "total_clicks": 0, "total_revenue": 0, "commission": data.get("commission", 0)}
+            brand_performance[brand]["articles"] += 1
+            brand_performance[brand]["total_clicks"] += data.get("clicks", 0)
+            brand_performance[brand]["total_revenue"] += data.get("est_monthly_revenue", 0)
+
+    # Calculate efficiency: revenue per article
+    for brand, perf in brand_performance.items():
+        perf["revenue_per_article"] = perf["total_revenue"] / max(perf["articles"], 1)
+        perf["clicks_per_article"] = perf["total_clicks"] / max(perf["articles"], 1)
+        perf["efficiency_score"] = (perf["revenue_per_article"] * 0.6 + perf["clicks_per_article"] * 0.4)
+
+    # Recommendations
+    sorted_brands = sorted(brand_performance.items(), key=lambda x: x[1]["efficiency_score"], reverse=True)
+
+    recommendations = []
+    for brand, perf in sorted_brands:
+        if perf["efficiency_score"] > 5:
+            recommendations.append(f"📈 MEER {brand} content — €{perf['revenue_per_article']:.2f}/artikel, top performer")
+        elif perf["efficiency_score"] < 1 and perf["articles"] > 3:
+            recommendations.append(f"📉 MINDER {brand} — lage conversie ondanks {perf['articles']} artikelen")
+
+    monetize = load_monetize()
+    monetize["commission_optimizer"] = {"brands": brand_performance, "recommendations": recommendations, "date": datetime.now().isoformat()}
+    save_monetize(monetize)
+    return {"brands": brand_performance, "recommendations": recommendations}
+
+# ── 16B: CONTENT FORTRESS (E-E-A-T) ────────────────────────────────────────
+
+def load_fortress():
+    try:
+        if os.path.exists(FORTRESS_FILE):
+            return json.loads(open(FORTRESS_FILE).read())
+    except:
+        pass
+    return {"eeat_scores": {}, "trust_signals": [], "fact_checks": [], "experience_markers": []}
+
+def save_fortress(data):
+    with open(FORTRESS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def score_eeat(slug=None):
+    """Score artikelen op E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)."""
+    fortress = load_fortress()
+    articles_dir = os.path.join(REPO_ROOT, "b2b")
+    if not os.path.isdir(articles_dir):
+        return {}
+
+    files = [f"{slug}.html"] if slug else [f for f in os.listdir(articles_dir) if f.endswith('.html')]
+    eeat_scores = fortress.get("eeat_scores", {})
+
+    for fname in files[:20]:
+        article_slug = fname.replace(".html", "")
+        try:
+            with open(os.path.join(articles_dir, fname)) as f:
+                content = f.read().lower()
+        except:
+            continue
+
+        # Experience signals
+        experience_keywords = ["i tested", "i tried", "in my experience", "after using", "i've been using",
+                             "hands-on", "my review", "i found that", "when i", "personally"]
+        experience_score = min(sum(1 for kw in experience_keywords if kw in content) * 15, 100)
+
+        # Expertise signals
+        expertise_keywords = ["according to", "research shows", "data indicates", "study found",
+                            "statistics", "benchmark", "compared to", "analysis", "methodology"]
+        expertise_score = min(sum(1 for kw in expertise_keywords if kw in content) * 12, 100)
+
+        # Authority signals
+        authority_signals = ["author" in content, "about" in content and "years" in content,
+                           "expert" in content, "certified" in content, "published" in content]
+        authority_score = min(sum(1 for s in authority_signals if s) * 20, 100)
+
+        # Trust signals
+        trust_keywords = ["updated" in content, "last modified" in content, "verified" in content,
+                        "source:" in content or "sources:" in content, "disclaimer" in content,
+                        "affiliate" in content and "disclosure" in content]
+        trust_score = min(sum(1 for s in trust_keywords if s) * 18, 100)
+
+        overall = (experience_score * 0.3 + expertise_score * 0.25 + authority_score * 0.2 + trust_score * 0.25)
+
+        eeat_scores[article_slug] = {
+            "experience": experience_score,
+            "expertise": expertise_score,
+            "authority": authority_score,
+            "trust": trust_score,
+            "overall": round(overall, 1),
+            "grade": "A" if overall >= 80 else "B" if overall >= 60 else "C" if overall >= 40 else "D",
+            "scanned": datetime.now().isoformat()
+        }
+
+    fortress["eeat_scores"] = eeat_scores
+    save_fortress(fortress)
+    return eeat_scores
+
+def generate_trust_signals(slug):
+    """Genereer trust signals die aan een artikel moeten worden toegevoegd."""
+    fortress = load_fortress()
+    eeat = fortress.get("eeat_scores", {}).get(slug, {})
+
+    suggestions = []
+
+    if eeat.get("experience", 0) < 50:
+        suggestions.append({
+            "type": "experience",
+            "action": "Add first-person experience paragraph",
+            "example": "After testing [tool] for 3 months on our own projects, here's what we found...",
+            "impact": "HIGH"
+        })
+
+    if eeat.get("trust", 0) < 50:
+        suggestions.append({
+            "type": "trust",
+            "action": "Add update date + affiliate disclosure",
+            "example": "Last updated: [date] | This article contains affiliate links (full disclosure)",
+            "impact": "HIGH"
+        })
+
+    if eeat.get("expertise", 0) < 50:
+        suggestions.append({
+            "type": "expertise",
+            "action": "Add data/statistics + methodology",
+            "example": "Based on our analysis of [X] tools across [Y] criteria...",
+            "impact": "MEDIUM"
+        })
+
+    if eeat.get("authority", 0) < 50:
+        suggestions.append({
+            "type": "authority",
+            "action": "Add author bio + credentials",
+            "example": "Written by [name], who has [X] years experience with AI tools",
+            "impact": "MEDIUM"
+        })
+
+    fortress["trust_signals"] = suggestions
+    save_fortress(fortress)
+    return suggestions
+
+def fact_check_articles():
+    """Detecteer verouderde claims in artikelen."""
+    fortress = load_fortress()
+    articles_dir = os.path.join(REPO_ROOT, "b2b")
+    if not os.path.isdir(articles_dir):
+        return []
+
+    outdated = []
+    current_year = datetime.now().year
+
+    for fname in os.listdir(articles_dir):
+        if not fname.endswith('.html'):
+            continue
+        slug = fname.replace(".html", "")
+
+        try:
+            with open(os.path.join(articles_dir, fname)) as f:
+                content = f.read()
+        except:
+            continue
+
+        # Check for outdated year references
+        for year in range(2020, current_year - 1):
+            if str(year) in content and f"founded in {year}" not in content.lower():
+                outdated.append({
+                    "slug": slug,
+                    "issue": f"Contains reference to {year} — may be outdated",
+                    "severity": "HIGH" if year < current_year - 2 else "MEDIUM"
+                })
+                break
+
+        # Check for outdated pricing claims
+        if "pricing" in slug.lower() or "cost" in slug.lower():
+            # Pricing articles older than 3 months need refresh
+            try:
+                mtime = os.path.getmtime(os.path.join(articles_dir, fname))
+                age_days = (datetime.now() - datetime.fromtimestamp(mtime)).days
+                if age_days > 90:
+                    outdated.append({
+                        "slug": slug,
+                        "issue": f"Pricing article is {age_days} days old — needs refresh",
+                        "severity": "HIGH"
+                    })
+            except:
+                pass
+
+    fortress["fact_checks"] = outdated
+    save_fortress(fortress)
+    return outdated
+
+# ── 16C: VIRAL LOOP GENERATOR ──────────────────────────────────────────────
+
+def load_viral():
+    try:
+        if os.path.exists(VIRAL_FILE):
+            return json.loads(open(VIRAL_FILE).read())
+    except:
+        pass
+    return {"tables": [], "stat_cards": [], "link_magnets": [], "embeddables": []}
+
+def save_viral(data):
+    with open(VIRAL_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def generate_comparison_table(brands=None):
+    """Genereer een embeddable vergelijkingstabel met affiliate links."""
+    if not brands:
+        brands = list(VAULT.keys())
+
+    prompt = f"""Maak een HTML vergelijkingstabel voor deze AI tools: {', '.join(brands)}
+
+De tabel moet bevatten:
+- Tool naam (met affiliate link)
+- Prijs (starting price)
+- Beste voor (1 zin)
+- Score (uit 5 sterren)
+- Uniek voordeel
+
+Format: pure HTML tabel, dark theme (background #1a1a2e, text #e0e0e0, header #00d4ff).
+Affiliate URLs: {json.dumps({b: VAULT[b] for b in brands if b in VAULT})}
+
+Maak het compact, visueel aantrekkelijk, mobile-friendly. Voeg rel="nofollow sponsored" toe aan affiliate links."""
+
+    try:
+        response = ask_victor(prompt, [])
+        table_html = response[response.find("<"):response.rfind(">")+1] if "<" in response else response
+
+        viral = load_viral()
+        viral["tables"].append({
+            "brands": brands,
+            "html": table_html,
+            "generated": datetime.now().isoformat()
+        })
+        save_viral(viral)
+        return table_html
+    except Exception as e:
+        log(f"Comparison table error: {e}")
+        return None
+
+def generate_stat_cards(slug):
+    """Genereer shareable stat cards/quotes uit een artikel."""
+    article_path = os.path.join(REPO_ROOT, "b2b", f"{slug}.html")
+    if not os.path.exists(article_path):
+        return []
+
+    try:
+        with open(article_path) as f:
+            content = f.read()[:3000]
+    except:
+        return []
+
+    prompt = f"""Uit dit artikel ({slug}), genereer 3 "stat cards" — korte, shareable quotes/statistieken.
+
+Artikel: {content[:2000]}
+
+Format (JSON array):
+[
+    {{"text": "Korte impactvolle stat of quote (max 20 woorden)", "type": "statistic|quote|insight", "visual_suggestion": "achtergrond kleur/style suggestie"}},
+    ...
+]
+
+Maak ze punchy, deelbaar op social media, en relevant voor AI/tech professionals."""
+
+    try:
+        response = ask_victor(prompt, [])
+        json_match = response[response.find("["):response.rfind("]")+1]
+        cards = json.loads(json_match)
+
+        viral = load_viral()
+        viral["stat_cards"].append({"slug": slug, "cards": cards, "date": datetime.now().isoformat()})
+        save_viral(viral)
+        return cards
+    except Exception as e:
+        log(f"Stat cards error: {e}")
+        return []
+
+def generate_link_magnet_ideas():
+    """Genereer ideeën voor gratis tools/calculators die backlinks trekken."""
+    prompt = """Genereer 5 ideeën voor gratis online tools/calculators die relevant zijn voor AI Builder Marketplace
+(een site die AI tools vergelijkt voor bedrijven: video AI, hosting, crypto, voice AI, coding).
+
+Elke tool moet:
+1. Makkelijk te bouwen zijn (1 HTML pagina met JS)
+2. Waarde bieden die mensen willen linken/delen
+3. Subtiel naar affiliate content verwijzen
+
+Format (JSON):
+[
+    {"name": "Tool naam", "description": "Wat het doet", "seo_value": "Welke keywords het target", "build_complexity": "LOW|MEDIUM", "backlink_potential": "HIGH|MEDIUM"},
+    ...
+]"""
+
+    try:
+        response = ask_victor(prompt, [])
+        json_match = response[response.find("["):response.rfind("]")+1]
+        magnets = json.loads(json_match)
+
+        viral = load_viral()
+        viral["link_magnets"] = magnets
+        save_viral(viral)
+        return magnets
+    except Exception as e:
+        log(f"Link magnet ideas error: {e}")
+        return []
+
+# ── 16D: SELF-EVOLUTION CORE ───────────────────────────────────────────────
+
+def load_evolution():
+    try:
+        if os.path.exists(EVOLUTION_FILE):
+            return json.loads(open(EVOLUTION_FILE).read())
+    except:
+        pass
+    return {"performance_log": [], "tuning_history": [], "proposals": [], "weekly_journal": []}
+
+def save_evolution(data):
+    with open(EVOLUTION_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def analyze_cycle_performance():
+    """Analyseer welke Victor cycles het meeste opleveren."""
+    evolution = load_evolution()
+
+    # Read log file for cycle timing/results
+    log_data = []
+    if os.path.exists(LOG_FILE):
+        try:
+            with open(LOG_FILE) as f:
+                lines = f.readlines()[-500:]
+            for line in lines:
+                if "cycle done" in line.lower() or "error" in line.lower():
+                    log_data.append(line.strip())
+        except:
+            pass
+
+    # Analyze which modules produce results
+    module_performance = {
+        "domination": {"runs": 0, "errors": 0, "actions": 0},
+        "skynet": {"runs": 0, "errors": 0, "actions": 0},
+        "quantum": {"runs": 0, "errors": 0, "actions": 0},
+        "omniscience": {"runs": 0, "errors": 0, "actions": 0},
+        "neural": {"runs": 0, "errors": 0, "actions": 0},
+    }
+
+    for line in log_data:
+        for module in module_performance:
+            if module in line.lower():
+                if "error" in line.lower():
+                    module_performance[module]["errors"] += 1
+                elif "done" in line.lower():
+                    module_performance[module]["runs"] += 1
+                    # Extract action count if present
+                    import re
+                    match = re.search(r'(\d+)\s*actions', line)
+                    if match:
+                        module_performance[module]["actions"] += int(match.group(1))
+
+    # Calculate efficiency
+    for module, perf in module_performance.items():
+        perf["efficiency"] = perf["actions"] / max(perf["runs"], 1)
+        perf["error_rate"] = perf["errors"] / max(perf["runs"] + perf["errors"], 1) * 100
+
+    evolution["performance_log"].append({
+        "date": datetime.now().isoformat(),
+        "modules": module_performance
+    })
+    # Keep last 30 entries
+    evolution["performance_log"] = evolution["performance_log"][-30:]
+    save_evolution(evolution)
+    return module_performance
+
+def auto_tune_parameters():
+    """Auto-tune Victor's parameters op basis van resultaten."""
+    evolution = load_evolution()
+    perf_log = evolution.get("performance_log", [])
+
+    tunings = []
+
+    if len(perf_log) >= 3:
+        # Check recent error rates
+        recent = perf_log[-3:]
+        for module_name in ["domination", "skynet", "quantum", "omniscience"]:
+            avg_errors = sum(p["modules"].get(module_name, {}).get("error_rate", 0) for p in recent) / 3
+            if avg_errors > 50:
+                tunings.append({
+                    "module": module_name,
+                    "issue": f"High error rate ({avg_errors:.0f}%)",
+                    "suggestion": f"Reduce frequency or add more error handling for {module_name}",
+                    "auto_action": "reduce_frequency"
+                })
+
+            avg_efficiency = sum(p["modules"].get(module_name, {}).get("efficiency", 0) for p in recent) / 3
+            if avg_efficiency < 1 and module_name != "quantum":
+                tunings.append({
+                    "module": module_name,
+                    "issue": f"Low efficiency ({avg_efficiency:.1f} actions/run)",
+                    "suggestion": f"Module {module_name} produces few results — consider optimizing triggers",
+                    "auto_action": "optimize"
+                })
+
+    evolution["tuning_history"].append({
+        "date": datetime.now().isoformat(),
+        "tunings": tunings
+    })
+    save_evolution(evolution)
+    return tunings
+
+def generate_improvement_proposals():
+    """Victor genereert zelf verbetervoorstellen."""
+    evolution = load_evolution()
+    perf_log = evolution.get("performance_log", [])
+    tunings = evolution.get("tuning_history", [])
+
+    # Gather context
+    radar = load_revenue_radar()
+    forecast = radar.get("forecasts", {})
+
+    prompt = f"""Je bent Victor, een AI SEO agent. Analyseer je eigen prestaties en genereer 3 concrete verbetervoorstellen.
+
+Performance data:
+- Revenue forecast: €{forecast.get('total_monthly', 0):.2f}/maand
+- Recent tunings: {json.dumps(tunings[-3:]) if tunings else 'geen'}
+- Module performance: {json.dumps(perf_log[-1]['modules']) if perf_log else 'geen data'}
+
+Genereer JSON met 3 voorstellen:
+[
+    {{"title": "Voorstel titel", "problem": "Wat gaat er mis/suboptimaal", "solution": "Concrete oplossing", "expected_impact": "Verwacht resultaat", "priority": "HIGH|MEDIUM|LOW"}},
+    ...
+]
+
+Focus op: meer revenue, betere rankings, efficiëntere cycles."""
+
+    try:
+        response = ask_victor(prompt, [])
+        json_match = response[response.find("["):response.rfind("]")+1]
+        proposals = json.loads(json_match)
+
+        evolution["proposals"] = proposals
+        evolution["proposals_date"] = datetime.now().isoformat()
+        save_evolution(evolution)
+        return proposals
+    except Exception as e:
+        log(f"Improvement proposals error: {e}")
+        return []
+
+def write_weekly_journal():
+    """Victor schrijft een wekelijks performance journal."""
+    evolution = load_evolution()
+    radar = load_revenue_radar()
+    authority = load_authority()
+
+    forecast = radar.get("forecasts", {})
+    cluster_scores = authority.get("cluster_scores", {})
+
+    journal_entry = {
+        "week": datetime.now().strftime("%Y-W%V"),
+        "date": datetime.now().isoformat(),
+        "metrics": {
+            "est_monthly_revenue": forecast.get("total_monthly", 0),
+            "articles_tracked": len(radar.get("tracked", {})),
+            "clusters": len(cluster_scores),
+            "top_cluster_score": max((c.get("authority_score", 0) for c in cluster_scores.values()), default=0)
+        },
+        "highlights": [],
+        "lowlights": [],
+        "next_week_focus": []
+    }
+
+    # Auto-detect highlights
+    if forecast.get("total_monthly", 0) > 50:
+        journal_entry["highlights"].append(f"Revenue boven €50/maand target")
+    alerts = radar.get("alerts", [])
+    spikes = [a for a in alerts if a.get("type") == "spike"]
+    if spikes:
+        journal_entry["highlights"].append(f"{len(spikes)} traffic spikes gedetecteerd")
+
+    # Auto-detect lowlights
+    drops = [a for a in alerts if a.get("type") == "drop"]
+    if drops:
+        journal_entry["lowlights"].append(f"{len(drops)} traffic drops — actie nodig")
+
+    evolution["weekly_journal"].append(journal_entry)
+    evolution["weekly_journal"] = evolution["weekly_journal"][-52:]  # Keep 1 year
+    save_evolution(evolution)
+    return journal_entry
+
+# ── 16E: WAR ROOM ──────────────────────────────────────────────────────────
+
+def load_warroom():
+    try:
+        if os.path.exists(WARROOM_FILE):
+            return json.loads(open(WARROOM_FILE).read())
+    except:
+        pass
+    return {"battles": [], "velocity": {}, "victories": [], "counter_plans": []}
+
+def save_warroom(data):
+    with open(WARROOM_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def detect_ranking_battles():
+    """Detecteer wanneer concurrenten ons inhalen op keywords."""
+    warroom = load_warroom()
+    gsc = load_gsc_data()
+    serp_data = {}
+
+    try:
+        serp_file = "/root/felix_hq/victor_serp.json"
+        if os.path.exists(serp_file):
+            serp_data = json.loads(open(serp_file).read())
+    except:
+        pass
+
+    battles = []
+    positions = serp_data.get("positions", {})
+
+    for keyword, pos_data in positions.items():
+        current_pos = pos_data.get("position", 0)
+        prev_pos = pos_data.get("prev_position", current_pos)
+
+        if current_pos > prev_pos and prev_pos > 0:
+            # We dropped — competitor may have overtaken us
+            drop = current_pos - prev_pos
+            if drop >= 3:
+                battles.append({
+                    "keyword": keyword,
+                    "prev_position": prev_pos,
+                    "current_position": current_pos,
+                    "drop": drop,
+                    "severity": "CRITICAL" if drop >= 5 else "WARNING",
+                    "detected": datetime.now().isoformat(),
+                    "action_needed": True
+                })
+
+        # Update prev for next check
+        pos_data["prev_position"] = current_pos
+
+    # Check for victories (reaching #1-3)
+    victories = []
+    for keyword, pos_data in positions.items():
+        current_pos = pos_data.get("position", 0)
+        if 1 <= current_pos <= 3:
+            victories.append({
+                "keyword": keyword,
+                "position": current_pos,
+                "detected": datetime.now().isoformat()
+            })
+
+    warroom["battles"] = (warroom.get("battles", []) + battles)[-50:]
+    warroom["victories"] = (warroom.get("victories", []) + victories)[-50:]
+
+    # Save SERP data back
+    try:
+        with open("/root/felix_hq/victor_serp.json", 'w') as f:
+            json.dump(serp_data, f, indent=2)
+    except:
+        pass
+
+    save_warroom(warroom)
+    return battles, victories
+
+def calculate_ranking_velocity():
+    """Bereken hoe snel keywords stijgen/dalen."""
+    warroom = load_warroom()
+    serp_data = {}
+
+    try:
+        serp_file = "/root/felix_hq/victor_serp.json"
+        if os.path.exists(serp_file):
+            serp_data = json.loads(open(serp_file).read())
+    except:
+        pass
+
+    velocity = {}
+    positions = serp_data.get("positions", {})
+    history = serp_data.get("history", {})
+
+    for keyword, pos_data in positions.items():
+        current_pos = pos_data.get("position", 0)
+        keyword_history = history.get(keyword, [])
+
+        if len(keyword_history) >= 2:
+            # Calculate velocity (positions gained per week)
+            oldest = keyword_history[0].get("position", current_pos) if keyword_history else current_pos
+            weeks = max(len(keyword_history) / 7, 1)
+            vel = (oldest - current_pos) / weeks  # Positive = improving
+
+            velocity[keyword] = {
+                "current": current_pos,
+                "velocity": round(vel, 2),
+                "direction": "📈" if vel > 0 else "📉" if vel < 0 else "➡️",
+                "prediction_4w": max(1, round(current_pos - vel * 4))  # Where we'll be in 4 weeks
+            }
+
+    warroom["velocity"] = velocity
+    save_warroom(warroom)
+    return velocity
+
+def generate_counter_plan(keyword):
+    """Genereer een counter-plan als we op een keyword zakken."""
+    warroom = load_warroom()
+
+    prompt = f"""We zakken op het keyword "{keyword}" in Google. Genereer een counter-attack plan.
+
+Context:
+- We zijn aibuildermarketplace.com (AI tools vergelijking/affiliate)
+- Het keyword is relevant voor onze niche
+
+Genereer JSON:
+{{
+    "keyword": "{keyword}",
+    "immediate_actions": ["Actie 1", "Actie 2", "Actie 3"],
+    "content_update": "Wat moet er aan het artikel veranderen",
+    "link_building": "Specifieke backlink strategie",
+    "timeline": "Verwachte recovery tijd",
+    "priority": "CRITICAL|HIGH|MEDIUM"
+}}"""
+
+    try:
+        response = ask_victor(prompt, [])
+        json_match = response[response.find("{"):response.rfind("}")+1]
+        plan = json.loads(json_match)
+        plan["generated"] = datetime.now().isoformat()
+
+        warroom["counter_plans"].append(plan)
+        warroom["counter_plans"] = warroom["counter_plans"][-20:]
+        save_warroom(warroom)
+        return plan
+    except Exception as e:
+        log(f"Counter plan error: {e}")
+        return None
+
+# ── 16F: OMEGA PROTOCOL ORCHESTRATOR ──────────────────────────────────────
+
+def omega_cycle():
+    """Volledige Omega Protocol cyclus."""
+    actions = []
+
+    # Auto-Monetize
+    try:
+        opps = scan_missed_affiliate_opportunities()
+        if opps:
+            actions.append(f"💰 Monetize: {len(opps)} gemiste affiliate kansen gevonden")
+        comm_opt = optimize_commissions()
+        if comm_opt.get("recommendations"):
+            actions.append(f"📊 Commission optimizer: {len(comm_opt['recommendations'])} aanbevelingen")
+            for rec in comm_opt["recommendations"][:2]:
+                add_digest_item("monetize", rec, priority=8)
+    except Exception as e:
+        log(f"Monetize error: {e}")
+
+    # Content Fortress
+    try:
+        eeat = score_eeat()
+        if eeat:
+            low_scores = [s for s, d in eeat.items() if d.get("overall", 0) < 40]
+            if low_scores:
+                actions.append(f"🏰 E-E-A-T: {len(low_scores)} artikelen onder score 40")
+            avg_score = sum(d.get("overall", 0) for d in eeat.values()) / max(len(eeat), 1)
+            actions.append(f"🏰 Gemiddelde E-E-A-T score: {avg_score:.0f}/100")
+        facts = fact_check_articles()
+        if facts:
+            actions.append(f"📋 Fact-check: {len(facts)} verouderde claims gevonden")
+    except Exception as e:
+        log(f"Fortress error: {e}")
+
+    # War Room
+    try:
+        battles, victories = detect_ranking_battles()
+        if battles:
+            actions.append(f"⚔️ War Room: {len(battles)} ranking battles gedetecteerd!")
+            for battle in battles[:2]:
+                if battle.get("severity") == "CRITICAL":
+                    bot.send_message(ADMIN_ID, f"🚨 RANKING ALERT: '{battle['keyword']}' dropped {battle['drop']} posities! (nu #{battle['current_position']})")
+        if victories:
+            actions.append(f"🏆 Victories: {len(victories)} keywords in top 3!")
+            for v in victories[:2]:
+                add_digest_item("victories", f"🏆 #{v['position']} voor '{v['keyword']}'", priority=7)
+        velocity = calculate_ranking_velocity()
+        if velocity:
+            improving = sum(1 for v in velocity.values() if v.get("velocity", 0) > 0)
+            declining = sum(1 for v in velocity.values() if v.get("velocity", 0) < 0)
+            actions.append(f"📊 Velocity: {improving} stijgend, {declining} dalend")
+    except Exception as e:
+        log(f"War room error: {e}")
+
+    # Self-Evolution
+    try:
+        perf = analyze_cycle_performance()
+        if perf:
+            actions.append(f"🧬 Self-analysis: {len(perf)} modules geanalyseerd")
+        tunings = auto_tune_parameters()
+        if tunings:
+            actions.append(f"🔧 Auto-tune: {len(tunings)} optimalisaties voorgesteld")
+    except Exception as e:
+        log(f"Evolution error: {e}")
+
+    # Viral (weekly only)
+    try:
+        if datetime.now().weekday() == 2:  # Wednesday
+            magnets = generate_link_magnet_ideas()
+            if magnets:
+                actions.append(f"🧲 Viral: {len(magnets)} link magnet ideeën gegenereerd")
+    except Exception as e:
+        log(f"Viral error: {e}")
 
     return actions
 
@@ -10654,7 +11500,7 @@ def cmd_panel(message):
     keyboard = build_main_dashboard_keyboard()
     bot.send_message(
         message.chat.id,
-        "🧠 Victor 16.0 Quantum — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
+        "🧠 Victor 17.0 Omega — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
         reply_markup=keyboard
     )
 
@@ -11468,6 +12314,277 @@ def cmd_quantum(message):
     bot.reply_to(message, msg)
 
 
+@bot.message_handler(commands=['monetize'])
+def cmd_monetize(message):
+    """Auto-Monetize — scan gemiste affiliate kansen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if len(parts) > 1 and parts[1] == "inject":
+        slug = parts[2] if len(parts) > 2 else None
+        bot.reply_to(message, "💉 Affiliate links injecteren (dry run)...")
+        injections = inject_affiliate_links(slug, dry_run=True)
+        if injections:
+            msg = "💉 Injection Preview (dry run)\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            for inj in injections[:8]:
+                msg += f"  📝 {inj['slug'][:30]} → {inj['brand']}\n"
+            msg += f"\nGebruik /monetize inject! [slug] om echt te injecteren"
+        else:
+            msg = "Geen injection targets gevonden."
+        bot.reply_to(message, msg)
+    elif len(parts) > 1 and parts[1] == "inject!":
+        slug = parts[2] if len(parts) > 2 else None
+        bot.reply_to(message, "💉 Affiliate links LIVE injecteren...")
+        injections = inject_affiliate_links(slug, dry_run=False)
+        if injections:
+            msg = f"✅ {len(injections)} affiliate links geïnjecteerd!"
+        else:
+            msg = "Geen links geïnjecteerd."
+        bot.reply_to(message, msg)
+    else:
+        opps = scan_missed_affiliate_opportunities()
+        comm = optimize_commissions()
+
+        msg = "💰 Auto-Monetize Engine\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        if opps:
+            msg += f"🔍 Gemiste kansen ({len(opps)}):\n"
+            for o in opps[:6]:
+                msg += f"  • {o['slug'][:25]} → {o['brand']} ({o['mentions']}x vermeld)\n"
+            msg += "\n"
+
+        recs = comm.get("recommendations", [])
+        if recs:
+            msg += "📊 Commission Optimizer:\n"
+            for r in recs[:4]:
+                msg += f"  {r}\n"
+        else:
+            msg += "📊 Alle brands presteren goed."
+
+        msg += "\n\n💡 /monetize inject — preview link injection"
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['eeat'])
+def cmd_eeat(message):
+    """E-E-A-T Content Fortress scoring."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    slug = parts[1] if len(parts) > 1 else None
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    eeat = score_eeat(slug)
+    if not eeat:
+        bot.reply_to(message, "❌ Geen artikelen gevonden om te scoren.")
+        return
+
+    msg = "🏰 Content Fortress — E-E-A-T Scores\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    sorted_scores = sorted(eeat.items(), key=lambda x: x[1].get("overall", 0))
+
+    if slug and slug in eeat:
+        # Single article detail
+        s = eeat[slug]
+        msg += f"📄 {slug}\n"
+        msg += f"  Grade: {s['grade']} ({s['overall']}/100)\n"
+        msg += f"  🧪 Experience: {s['experience']}/100\n"
+        msg += f"  🎓 Expertise: {s['expertise']}/100\n"
+        msg += f"  👑 Authority: {s['authority']}/100\n"
+        msg += f"  🔒 Trust: {s['trust']}/100\n\n"
+
+        signals = generate_trust_signals(slug)
+        if signals:
+            msg += "💡 Verbeteringen:\n"
+            for sig in signals:
+                msg += f"  [{sig['impact']}] {sig['action']}\n"
+    else:
+        # Overview: worst 5 + best 5
+        msg += "❌ Laagste scores:\n"
+        for s_slug, s_data in sorted_scores[:5]:
+            msg += f"  {s_data['grade']} {s_slug[:30]} ({s_data['overall']:.0f})\n"
+        msg += "\n✅ Hoogste scores:\n"
+        for s_slug, s_data in sorted_scores[-5:]:
+            msg += f"  {s_data['grade']} {s_slug[:30]} ({s_data['overall']:.0f})\n"
+
+        avg = sum(d.get("overall", 0) for d in eeat.values()) / max(len(eeat), 1)
+        msg += f"\n📊 Gemiddeld: {avg:.0f}/100 | Totaal: {len(eeat)} artikelen"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['viral'])
+def cmd_viral(message):
+    """Viral Loop Generator — link magnets + stat cards."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if len(parts) > 1 and parts[1] == "table":
+        bot.reply_to(message, "📊 Vergelijkingstabel genereren...")
+        table = generate_comparison_table()
+        if table:
+            # Save as HTML file and send
+            table_path = "/root/felix_hq/viral_table.html"
+            with open(table_path, 'w') as f:
+                f.write(table)
+            with open(table_path, 'rb') as f:
+                bot.send_document(message.chat.id, f, caption="📊 Embeddable vergelijkingstabel")
+        else:
+            bot.reply_to(message, "❌ Kon geen tabel genereren.")
+    elif len(parts) > 1 and parts[1] == "cards":
+        slug = parts[2] if len(parts) > 2 else None
+        if not slug:
+            bot.reply_to(message, "Gebruik: /viral cards <slug>")
+            return
+        cards = generate_stat_cards(slug)
+        if cards:
+            msg = f"📇 Stat Cards — {slug}\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            for i, card in enumerate(cards, 1):
+                msg += f"{i}. 💬 \"{card.get('text', '?')}\"\n   Type: {card.get('type', '?')}\n\n"
+            bot.reply_to(message, msg)
+        else:
+            bot.reply_to(message, "❌ Kon geen stat cards genereren.")
+    else:
+        magnets = generate_link_magnet_ideas()
+        if magnets:
+            msg = "🧲 Link Magnet Ideeën\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            for i, m in enumerate(magnets, 1):
+                msg += f"{i}. 🧲 {m.get('name', '?')}\n"
+                msg += f"   {m.get('description', '?')[:60]}\n"
+                msg += f"   SEO: {m.get('seo_value', '?')[:40]} | Backlinks: {m.get('backlink_potential', '?')}\n\n"
+        else:
+            msg = "🧲 Geen link magnet ideeën beschikbaar."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['evolve'])
+def cmd_evolve(message):
+    """Self-Evolution — performance analyse + verbetervoorstellen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    perf = analyze_cycle_performance()
+    tunings = auto_tune_parameters()
+    proposals = generate_improvement_proposals()
+
+    msg = "🧬 Self-Evolution Core\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    msg += "📊 Module Performance:\n"
+    for module, data in perf.items():
+        eff = data.get("efficiency", 0)
+        err = data.get("error_rate", 0)
+        status = "✅" if err < 20 else "⚠️" if err < 50 else "❌"
+        msg += f"  {status} {module}: {data['runs']} runs, {eff:.1f} actions/run, {err:.0f}% errors\n"
+
+    if tunings:
+        msg += "\n🔧 Auto-Tune Suggesties:\n"
+        for t in tunings[:3]:
+            msg += f"  ⚡ {t['module']}: {t['issue']}\n"
+
+    if proposals:
+        msg += "\n💡 Verbetervoorstellen:\n"
+        for p in proposals[:3]:
+            msg += f"  [{p.get('priority', '?')}] {p.get('title', '?')}\n"
+            msg += f"    → {p.get('solution', '?')[:60]}\n"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['warroom'])
+def cmd_warroom(message):
+    """War Room — ranking battles + velocity + counter-plans."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    battles, victories = detect_ranking_battles()
+    velocity = calculate_ranking_velocity()
+
+    msg = "⚔️ War Room\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    if victories:
+        msg += "🏆 Victories (Top 3 posities):\n"
+        for v in victories[:5]:
+            msg += f"  🥇 #{v['position']} — {v['keyword'][:40]}\n"
+        msg += "\n"
+
+    if battles:
+        msg += "⚔️ Active Battles:\n"
+        for b in battles[:5]:
+            emoji = "🚨" if b.get("severity") == "CRITICAL" else "⚠️"
+            msg += f"  {emoji} {b['keyword'][:30]} — dropped {b['drop']} (#{b['prev_position']}→#{b['current_position']})\n"
+        msg += "\n"
+
+    if velocity:
+        improving = [(k, v) for k, v in velocity.items() if v.get("velocity", 0) > 0.5]
+        declining = [(k, v) for k, v in velocity.items() if v.get("velocity", 0) < -0.5]
+
+        if improving:
+            msg += f"📈 Stijgende keywords ({len(improving)}):\n"
+            for kw, v in sorted(improving, key=lambda x: x[1]["velocity"], reverse=True)[:3]:
+                msg += f"  📈 {kw[:30]} (+{v['velocity']:.1f}/week) → predicted #{v['prediction_4w']}\n"
+
+        if declining:
+            msg += f"\n📉 Dalende keywords ({len(declining)}):\n"
+            for kw, v in sorted(declining, key=lambda x: x[1]["velocity"])[:3]:
+                msg += f"  📉 {kw[:30]} ({v['velocity']:.1f}/week) → predicted #{v['prediction_4w']}\n"
+
+    if not battles and not victories and not velocity:
+        msg += "Nog geen SERP data. Gebruik /serp update eerst."
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['counter'])
+def cmd_counter(message):
+    """Genereer counter-attack plan voor een keyword."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split(maxsplit=1)
+    if len(parts) < 2:
+        bot.reply_to(message, "Gebruik: /counter <keyword>")
+        return
+
+    keyword = parts[1]
+    bot.send_chat_action(message.chat.id, 'typing')
+    bot.reply_to(message, f"⚔️ Counter-plan genereren voor '{keyword}'...")
+
+    plan = generate_counter_plan(keyword)
+    if plan:
+        msg = f"⚔️ Counter-Attack Plan — {keyword}\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"🎯 Priority: {plan.get('priority', '?')}\n"
+        msg += f"⏱️ Timeline: {plan.get('timeline', '?')}\n\n"
+        msg += "⚡ Directe acties:\n"
+        for a in plan.get("immediate_actions", []):
+            msg += f"  • {a}\n"
+        msg += f"\n📝 Content: {plan.get('content_update', '?')}\n"
+        msg += f"🔗 Links: {plan.get('link_building', '?')}"
+        bot.reply_to(message, msg)
+    else:
+        bot.reply_to(message, "❌ Kon geen counter-plan genereren.")
+
+
+@bot.message_handler(commands=['omega'])
+def cmd_omega(message):
+    """Volledige Omega Protocol cyclus."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "🌀 Omega Protocol activeren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    actions = omega_cycle()
+    if actions:
+        msg = "🌀 Omega Protocol — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "\n".join(f"  ✅ {a}" for a in actions)
+    else:
+        msg = "🌀 Omega: alles optimaal."
+    bot.reply_to(message, msg)
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -11502,7 +12619,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 16.0 Quantum — Commando's:
+    bot.reply_to(message, """Victor 17.0 Omega — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -11604,6 +12721,15 @@ def cmd_help(message):
 /authority — Topic clusters + PageRank simulatie
 /portal — Live web portal genereren
 /quantum — Volledige Quantum Core cyclus
+
+🌀 Omega Protocol:
+/monetize [inject|inject!] — Auto-monetize gemiste affiliate kansen
+/eeat [slug] — E-E-A-T scoring + trust signals
+/viral [table|cards slug] — Viral loops + link magnets
+/evolve — Self-evolution + verbetervoorstellen
+/warroom — Ranking battles + velocity tracker
+/counter <keyword> — Counter-attack plan genereren
+/omega — Volledige Omega Protocol cyclus
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -11925,6 +13051,37 @@ def handle_callback(call):
                 msg = "🔮 Quantum: alles optimaal."
             bot.send_message(chat_id, msg)
 
+        elif data == "dash_monetize":
+            opps = scan_missed_affiliate_opportunities()
+            msg = f"💉 Monetize: {len(opps)} gemiste affiliate kansen"
+            if opps:
+                msg += f"\nTop: {opps[0]['slug'][:25]} → {opps[0]['brand']}"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_eeat":
+            eeat = score_eeat()
+            if eeat:
+                avg = sum(d.get("overall", 0) for d in eeat.values()) / max(len(eeat), 1)
+                low = sum(1 for d in eeat.values() if d.get("overall", 0) < 40)
+                msg = f"🏰 E-E-A-T: gem. {avg:.0f}/100 | {low} artikelen onder 40"
+            else:
+                msg = "🏰 E-E-A-T: geen data. Gebruik /eeat"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_warroom":
+            battles, victories = detect_ranking_battles()
+            msg = f"⚔️ War Room: {len(battles)} battles, {len(victories)} victories"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_omega":
+            bot.send_message(chat_id, "🌀 Omega cyclus starten...")
+            actions = omega_cycle()
+            if actions:
+                msg = "🌀 " + "\n".join(actions[:5])
+            else:
+                msg = "🌀 Omega: alles optimaal."
+            bot.send_message(chat_id, msg)
+
         elif data == "act_generate":
             bot.send_message(chat_id, "📝 Gebruik /generate om een artikel te genereren")
 
@@ -12046,7 +13203,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 16.0 Quantum — Status Report
+    return f"""📊 Victor 17.0 Omega — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -12561,6 +13718,20 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Quantum cycle error: {e}")
 
+            # 🌀 OMEGA PROTOCOL: dagelijks om 12:00 UTC (monetize + fortress + warroom + evolution)
+            if hour == 12 and now.minute < 15 and last_auto_improve != str(now.date()) + "-omega":
+                try:
+                    log("Starting Omega Protocol cycle...")
+                    omega_actions = omega_cycle()
+                    last_auto_improve = str(now.date()) + "-omega"
+                    if omega_actions:
+                        omega_report = "🌀 Omega Protocol — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        omega_report += "\n".join(f"  ✅ {a}" for a in omega_actions)
+                        bot.send_message(ADMIN_ID, omega_report)
+                    log(f"Omega cycle done: {len(omega_actions)} actions")
+                except Exception as e:
+                    log(f"Omega cycle error: {e}")
+
             # 🔥 DOMINATION MATRIX: dagelijkse cyclus om 07:00 UTC
             if hour == 7 and weekday != 0 and last_auto_improve != str(now.date()) + "-domination":
                 try:
@@ -12638,8 +13809,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 16.0 Quantum online!\n\n{report}"
-            f"\n\n🔮 Quantum: /revenue2 /alerts /social2 /predict2 /authority /portal /quantum"
+            f"🚀 Victor 17.0 Omega online!\n\n{report}"
+            f"\n\n🌀 Omega: /monetize /eeat /viral /evolve /warroom /counter /omega"
+            f"\n🔮 Quantum: /revenue2 /alerts /social2 /predict2 /authority /portal /quantum"
             f"\n🛰️ Skynet: /calendar /calexec /outreach /palace /dashboardv2 /api /skynet"
             f"\n👁️ Omniscience: /validate /freshness /journey /roigate /digest"
             f"\n🧠 Hive Mind: /scorecard /conversions /dna /backlinks"
@@ -12657,7 +13829,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 16.0 Quantum gestart — Model: {MODEL}")
+    log(f"Victor 17.0 Omega gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

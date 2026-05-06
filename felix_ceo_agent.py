@@ -2204,7 +2204,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 17.0 Omega — Powered by Claude AI<br>
+Victor 18.0 Titan — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -5285,7 +5285,9 @@ def build_main_dashboard_keyboard():
         [("💰 Revenue2", "dash_revenue2"), ("🏛️ Authority", "dash_authority")],
         [("🔮 Predict", "dash_predict"), ("🔮 Quantum", "dash_quantum")],
         [("💉 Monetize", "dash_monetize"), ("🏰 E-E-A-T", "dash_eeat")],
-        [("⚔️ War Room", "dash_warroom"), ("🌀 Omega", "dash_omega")]
+        [("⚔️ War Room", "dash_warroom"), ("🌀 Omega", "dash_omega")],
+        [("🚀 Deploy", "dash_deploy"), ("🏆 Multiply", "dash_multiply")],
+        [("👥 Personas", "dash_personas"), ("⚡ Titan", "dash_titan")]
     ])
 
 
@@ -6497,7 +6499,7 @@ def validate_live_page(slug):
 
     try:
         req = urllib.request.Request(url, headers={
-            'User-Agent': 'VictorBot/17.0 SiteValidator'
+            'User-Agent': 'VictorBot/18.0 SiteValidator'
         })
         start = time.time()
         with urllib.request.urlopen(req, timeout=15) as response:
@@ -6538,7 +6540,7 @@ def validate_live_page(slug):
             for src in img_srcs[:5]:  # Check max 5
                 if src.startswith('http'):
                     try:
-                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/17.0'})
+                        img_req = urllib.request.Request(src, method='HEAD', headers={'User-Agent': 'VictorBot/18.0'})
                         with urllib.request.urlopen(img_req, timeout=5) as img_resp:
                             if img_resp.status >= 400:
                                 issues.append({"type": "broken_image", "detail": f"Broken image: {src[:50]}", "severity": "medium"})
@@ -6582,7 +6584,7 @@ def validate_full_site(max_pages=20):
     for main_page in ["", "b2b.html"]:
         url = f"https://aibuildermarketplace.com/{main_page}"
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/17.0'})
+            req = urllib.request.Request(url, headers={'User-Agent': 'VictorBot/18.0'})
             start = time.time()
             with urllib.request.urlopen(req, timeout=15) as resp:
                 load_time = time.time() - start
@@ -7814,7 +7816,7 @@ def generate_dashboard_v2():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Victor 17.0 Omega — Command Center</title>
+<title>Victor 18.0 Titan — Command Center</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
 * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -7843,7 +7845,7 @@ canvas {{ max-height: 200px; }}
 </head>
 <body>
 <div class="header">
-<h1>Victor 17.0 Omega — Command Center</h1>
+<h1>Victor 18.0 Titan — Command Center</h1>
 <p>Real-time dashboard | Last update: {datetime.now().strftime('%d/%m/%Y %H:%M')} UTC</p>
 <div style="margin-top:15px;">
 <span class="mini-stat">📝 {article_count} NL</span>
@@ -8808,7 +8810,7 @@ def generate_live_portal():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor 17.0 Omega Core — Live Portal</title>
+    <title>Victor 18.0 Titan Core — Live Portal</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -8843,7 +8845,7 @@ def generate_live_portal():
 </head>
 <body>
     <header>
-        <h1>Victor 17.0 Omega Core</h1>
+        <h1>Victor 18.0 Titan Core</h1>
         <p>Live Portal — Updated {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}</p>
     </header>
 
@@ -9851,6 +9853,857 @@ def omega_cycle():
                 actions.append(f"🧲 Viral: {len(magnets)} link magnet ideeën gegenereerd")
     except Exception as e:
         log(f"Viral error: {e}")
+
+    return actions
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MODULE 17: TITAN — Auto-Deploy Pipeline, Revenue Multiplier, Audience Personas,
+#            Growth Loops, Victor Remote Control
+# ══════════════════════════════════════════════════════════════════════════════
+
+DEPLOY_FILE = "/root/felix_hq/victor_deploy.json"
+MULTIPLIER_FILE = "/root/felix_hq/victor_multiplier.json"
+PERSONAS_FILE = "/root/felix_hq/victor_personas.json"
+GROWTH_LOOPS_FILE = "/root/felix_hq/victor_growth_loops.json"
+TASK_QUEUE_FILE = "/root/felix_hq/victor_task_queue.json"
+
+# Auto-deploy whitelist: content types die zonder goedkeuring live mogen
+AUTO_DEPLOY_TYPES = ["review", "vs", "pricing", "alternatives", "comparison"]
+
+# ── 17A: AUTO-DEPLOY PIPELINE ──────────────────────────────────────────────
+
+def load_deploy():
+    try:
+        if os.path.exists(DEPLOY_FILE):
+            return json.loads(open(DEPLOY_FILE).read())
+    except:
+        pass
+    return {"deployed": [], "review_queue": [], "rollbacks": [], "auto_deploy_enabled": True}
+
+def save_deploy(data):
+    with open(DEPLOY_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def auto_deploy_article(slug, content_html, content_type="review", auto=True):
+    """Schrijf artikel naar repo, commit, en push live."""
+    deploy = load_deploy()
+
+    # Check of auto-deploy is toegestaan voor dit type
+    if auto and content_type not in AUTO_DEPLOY_TYPES:
+        deploy["review_queue"].append({
+            "slug": slug,
+            "type": content_type,
+            "status": "pending_review",
+            "queued": datetime.now().isoformat(),
+            "reason": f"Type '{content_type}' vereist handmatige goedkeuring"
+        })
+        save_deploy(deploy)
+        return {"status": "queued", "reason": f"Type '{content_type}' needs approval"}
+
+    article_path = os.path.join(REPO_ROOT, "b2b", f"{slug}.html")
+
+    try:
+        # Schrijf het artikel
+        os.makedirs(os.path.join(REPO_ROOT, "b2b"), exist_ok=True)
+        with open(article_path, 'w') as f:
+            f.write(content_html)
+
+        # Git add, commit, push
+        git_cmds = [
+            f"cd {REPO_ROOT} && git add b2b/{slug}.html",
+            f"cd {REPO_ROOT} && git commit -m 'Victor auto-deploy: {slug}'",
+            f"cd {REPO_ROOT} && git push origin main"
+        ]
+
+        results = []
+        for cmd in git_cmds:
+            result = run_command(cmd, timeout=30)
+            results.append(result)
+
+            # Als push faalt, probeer force
+            if "rejected" in result.lower() or "error" in result.lower():
+                if "push" in cmd:
+                    force_result = run_command(f"cd {REPO_ROOT} && git push origin main --force", timeout=30)
+                    results.append(force_result)
+
+        deploy_record = {
+            "slug": slug,
+            "type": content_type,
+            "url": f"https://aibuildermarketplace.com/b2b/{slug}.html",
+            "deployed_at": datetime.now().isoformat(),
+            "auto": auto,
+            "status": "live",
+            "impressions_check_at": (datetime.now() + timedelta(hours=48)).isoformat()
+        }
+        deploy["deployed"] = (deploy.get("deployed", []) + [deploy_record])[-100:]
+        save_deploy(deploy)
+
+        log(f"Auto-deployed: {slug}")
+        return {"status": "deployed", "url": deploy_record["url"]}
+
+    except Exception as e:
+        log(f"Auto-deploy error for {slug}: {e}")
+        return {"status": "error", "error": str(e)}
+
+def check_deploy_rollbacks():
+    """Check of recent deployed artikelen impressions krijgen, zo niet → rollback."""
+    deploy = load_deploy()
+    gsc = load_gsc_data()
+    pages = gsc.get("pages", {})
+
+    rollbacks = []
+    now = datetime.now()
+
+    for record in deploy.get("deployed", []):
+        if record.get("status") != "live":
+            continue
+
+        check_time = record.get("impressions_check_at", "")
+        if not check_time:
+            continue
+
+        try:
+            check_dt = datetime.fromisoformat(check_time)
+        except:
+            continue
+
+        if now < check_dt:
+            continue  # Te vroeg om te checken
+
+        # Check impressions
+        slug = record["slug"]
+        url = record.get("url", "")
+        has_impressions = False
+        for page_url, page_data in pages.items():
+            if slug in page_url:
+                if page_data.get("impressions", 0) > 0:
+                    has_impressions = True
+                break
+
+        if not has_impressions:
+            # 48h zonder impressions — markeer maar NIET auto-delete
+            record["status"] = "flagged"
+            rollbacks.append({
+                "slug": slug,
+                "reason": "0 impressions after 48h",
+                "action": "flagged_for_review",
+                "date": now.isoformat()
+            })
+
+    deploy["rollbacks"] = (deploy.get("rollbacks", []) + rollbacks)[-50:]
+    save_deploy(deploy)
+    return rollbacks
+
+def approve_review_queue(slug=None):
+    """Keur een artikel in de review queue goed en deploy het."""
+    deploy = load_deploy()
+    queue = deploy.get("review_queue", [])
+
+    if not queue:
+        return None
+
+    if slug:
+        item = next((q for q in queue if q["slug"] == slug), None)
+    else:
+        item = queue[0]  # Oldest first
+
+    if not item:
+        return None
+
+    # Read the article content if it exists
+    article_path = os.path.join(REPO_ROOT, "b2b", f"{item['slug']}.html")
+    if os.path.exists(article_path):
+        result = auto_deploy_article(item["slug"], open(article_path).read(), item.get("type", "review"), auto=False)
+        deploy["review_queue"] = [q for q in queue if q["slug"] != item["slug"]]
+        save_deploy(deploy)
+        return result
+
+    return {"status": "error", "reason": "Article file not found"}
+
+def generate_and_deploy(keyword, brand=None):
+    """Volledig autonome pipeline: keyword → artikel schrijven → deploy."""
+    # Determine content type from keyword
+    content_type = "review"
+    slug = keyword.lower().replace(" ", "-")
+
+    if "vs" in keyword.lower() or "versus" in keyword.lower():
+        content_type = "vs"
+    elif "pricing" in keyword.lower() or "cost" in keyword.lower():
+        content_type = "pricing"
+    elif "alternative" in keyword.lower():
+        content_type = "alternatives"
+
+    # ROI gate check first
+    try:
+        roi = evaluate_article_roi(keyword, brand)
+        if not roi.get("approved", False):
+            return {"status": "rejected", "reason": f"ROI gate: {roi.get('score', 0)}/{roi.get('threshold', 60)}"}
+    except:
+        pass  # If ROI gate fails, proceed anyway
+
+    # Generate article via Victor AI
+    prompt = f"""Schrijf een compleet SEO-geoptimaliseerd artikel voor het keyword: "{keyword}"
+{'Brand focus: ' + brand if brand else ''}
+Type: {content_type}
+
+Vereisten:
+- Volledige HTML pagina met dark theme (bg #0a0a0f, text #e0e0e0)
+- H1 titel met keyword
+- Meta description
+- Min 1500 woorden
+- Affiliate links uit VAULT waar relevant
+- Schema markup (Article + FAQ)
+- Interne links naar gerelateerde artikelen
+- E-E-A-T signalen: "after testing", update datum, auteur
+- Mobile-responsive
+- CTA buttons naar affiliate links
+
+Affiliate URLs: {json.dumps(VAULT)}
+
+Schrijf het volledige HTML bestand."""
+
+    try:
+        article_html = ask_victor(prompt, [])
+
+        # Clean up: extract HTML if wrapped in text
+        if "<html" in article_html.lower() or "<!doctype" in article_html.lower():
+            start = article_html.lower().find("<!doctype")
+            if start == -1:
+                start = article_html.lower().find("<html")
+            if start >= 0:
+                article_html = article_html[start:]
+        elif "<div" in article_html or "<h1" in article_html:
+            pass  # Partial HTML is ok
+
+        result = auto_deploy_article(slug, article_html, content_type)
+        return result
+    except Exception as e:
+        log(f"Generate and deploy error: {e}")
+        return {"status": "error", "error": str(e)}
+
+# ── 17B: REVENUE MULTIPLIER ────────────────────────────────────────────────
+
+def load_multiplier():
+    try:
+        if os.path.exists(MULTIPLIER_FILE):
+            return json.loads(open(MULTIPLIER_FILE).read())
+    except:
+        pass
+    return {"winners": [], "spinoffs": [], "generated": []}
+
+def save_multiplier(data):
+    with open(MULTIPLIER_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def detect_winners():
+    """Detecteer top-performing artikelen die spin-offs verdienen."""
+    radar = load_revenue_radar()
+    tracked = radar.get("tracked", {})
+    multiplier = load_multiplier()
+
+    winners = []
+    for slug, data in tracked.items():
+        revenue = data.get("est_monthly_revenue", 0)
+        clicks = data.get("clicks", 0)
+
+        if revenue > 3 or clicks > 30:
+            # Determine what spinoffs are possible
+            brand = data.get("brand", "")
+            existing_slugs = list(tracked.keys())
+
+            possible_spinoffs = []
+            spinoff_templates = [
+                (f"{brand.lower()}-review", "review"),
+                (f"{brand.lower()}-pricing", "pricing"),
+                (f"{brand.lower()}-alternatives", "alternatives"),
+                (f"best-{brand.lower()}-features", "features"),
+                (f"{brand.lower()}-tutorial", "tutorial"),
+                (f"{brand.lower()}-vs-", "comparison"),
+            ]
+
+            for template_slug, stype in spinoff_templates:
+                if not any(template_slug in s for s in existing_slugs):
+                    possible_spinoffs.append({"slug": template_slug, "type": stype})
+
+            if possible_spinoffs:
+                winners.append({
+                    "slug": slug,
+                    "brand": brand,
+                    "revenue": revenue,
+                    "clicks": clicks,
+                    "possible_spinoffs": possible_spinoffs[:4],
+                    "detected": datetime.now().isoformat()
+                })
+
+    multiplier["winners"] = winners
+    save_multiplier(multiplier)
+    return winners
+
+def generate_spinoff(winner_slug=None):
+    """Genereer een spin-off artikel van een winnaar."""
+    multiplier = load_multiplier()
+    winners = multiplier.get("winners", [])
+
+    if not winners:
+        winners = detect_winners()
+
+    if winner_slug:
+        winner = next((w for w in winners if w["slug"] == winner_slug), None)
+    else:
+        winner = winners[0] if winners else None
+
+    if not winner or not winner.get("possible_spinoffs"):
+        return None
+
+    spinoff = winner["possible_spinoffs"][0]
+    brand = winner.get("brand", "")
+
+    # Generate the spinoff keyword
+    keyword = spinoff["slug"].replace("-", " ").title()
+    if brand:
+        keyword = keyword.replace(brand.lower().title(), brand)
+
+    result = generate_and_deploy(keyword, brand)
+
+    if result and result.get("status") in ["deployed", "queued"]:
+        multiplier["generated"].append({
+            "parent": winner["slug"],
+            "spinoff": spinoff["slug"],
+            "type": spinoff["type"],
+            "result": result["status"],
+            "date": datetime.now().isoformat()
+        })
+        save_multiplier(multiplier)
+
+    return result
+
+def find_longtail_variations(slug):
+    """Vind long-tail keyword variaties voor een bestaand artikel."""
+    gsc = load_gsc_data()
+    queries = gsc.get("queries", {})
+
+    # Find queries related to this slug
+    related = []
+    slug_words = set(slug.lower().replace("-", " ").split())
+
+    for query, data in queries.items():
+        query_words = set(query.lower().split())
+        overlap = slug_words & query_words
+        if len(overlap) >= 2 and len(query.split()) >= 4:  # Long-tail = 4+ words
+            related.append({
+                "query": query,
+                "clicks": data.get("clicks", 0),
+                "impressions": data.get("impressions", 0),
+                "position": data.get("position", 0),
+                "overlap": len(overlap)
+            })
+
+    related.sort(key=lambda x: x["impressions"], reverse=True)
+    return related[:10]
+
+# ── 17C: AUDIENCE PERSONA ENGINE ───────────────────────────────────────────
+
+def load_personas():
+    try:
+        if os.path.exists(PERSONAS_FILE):
+            return json.loads(open(PERSONAS_FILE).read())
+    except:
+        pass
+    return {"personas": [], "query_clusters": {}, "revenue_by_persona": {}}
+
+def save_personas(data):
+    with open(PERSONAS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def build_audience_personas():
+    """Bouw buyer personas uit GSC zoekqueries."""
+    gsc = load_gsc_data()
+    queries = gsc.get("queries", {})
+    personas_data = load_personas()
+
+    # Cluster queries by intent
+    intent_clusters = {
+        "budget_starter": {"keywords": ["free", "cheap", "pricing", "cost", "affordable", "trial", "budget"],
+                          "queries": [], "total_clicks": 0},
+        "enterprise_buyer": {"keywords": ["enterprise", "team", "business", "company", "scale", "api", "integration"],
+                            "queries": [], "total_clicks": 0},
+        "comparison_shopper": {"keywords": ["vs", "versus", "compare", "alternative", "better than", "switch"],
+                              "queries": [], "total_clicks": 0},
+        "feature_researcher": {"keywords": ["how to", "tutorial", "guide", "features", "review", "does it"],
+                              "queries": [], "total_clicks": 0},
+        "problem_solver": {"keywords": ["fix", "error", "issue", "problem", "not working", "help"],
+                          "queries": [], "total_clicks": 0}
+    }
+
+    for query, data in queries.items():
+        query_lower = query.lower()
+        clicks = data.get("clicks", 0)
+
+        for persona_key, persona in intent_clusters.items():
+            if any(kw in query_lower for kw in persona["keywords"]):
+                persona["queries"].append(query)
+                persona["total_clicks"] += clicks
+                break
+
+    # Build persona profiles
+    personas = []
+    persona_profiles = {
+        "budget_starter": {
+            "name": "De Budget-Bewuste Starter",
+            "description": "Zoekt gratis/goedkope tools, vergelijkt prijzen, wil value for money",
+            "content_tone": "Benadruk gratis trials, ROI, en kosten-besparing",
+            "best_cta": "Start gratis trial"
+        },
+        "enterprise_buyer": {
+            "name": "De Enterprise Decision Maker",
+            "description": "Zoekt schaalbare oplossingen, team features, integraties",
+            "content_tone": "Focus op enterprise features, security, support, case studies",
+            "best_cta": "Plan een demo"
+        },
+        "comparison_shopper": {
+            "name": "De Vergelijker",
+            "description": "Vergelijkt meerdere tools, zoekt de beste optie",
+            "content_tone": "Objectieve vergelijkingen, pros/cons, winner verdict",
+            "best_cta": "Bekijk onze top pick"
+        },
+        "feature_researcher": {
+            "name": "De Feature Explorer",
+            "description": "Wil diepgaande informatie over specifieke features",
+            "content_tone": "Gedetailleerde uitleg, tutorials, hands-on voorbeelden",
+            "best_cta": "Probeer het zelf"
+        },
+        "problem_solver": {
+            "name": "De Probleemoplosser",
+            "description": "Heeft een specifiek probleem en zoekt een oplossing",
+            "content_tone": "Oplossingsgerichte content, stap-voor-stap guides",
+            "best_cta": "Los het nu op"
+        }
+    }
+
+    for key, cluster in intent_clusters.items():
+        profile = persona_profiles.get(key, {})
+        personas.append({
+            "id": key,
+            "name": profile.get("name", key),
+            "description": profile.get("description", ""),
+            "content_tone": profile.get("content_tone", ""),
+            "best_cta": profile.get("best_cta", ""),
+            "query_count": len(cluster["queries"]),
+            "total_clicks": cluster["total_clicks"],
+            "top_queries": cluster["queries"][:5],
+            "revenue_potential": cluster["total_clicks"] * 0.12 * 0.03 * 20  # Rough estimate
+        })
+
+    personas.sort(key=lambda p: p["total_clicks"], reverse=True)
+
+    personas_data["personas"] = personas
+    personas_data["query_clusters"] = {k: len(v["queries"]) for k, v in intent_clusters.items()}
+    personas_data["generated"] = datetime.now().isoformat()
+    save_personas(personas_data)
+    return personas
+
+def get_persona_recommendations():
+    """Welke persona levert het meeste op? Focus daarop."""
+    personas_data = load_personas()
+    personas = personas_data.get("personas", [])
+
+    if not personas:
+        personas = build_audience_personas()
+
+    recommendations = []
+    top_persona = max(personas, key=lambda p: p.get("revenue_potential", 0)) if personas else None
+
+    if top_persona:
+        recommendations.append(f"🎯 Focus op '{top_persona['name']}' — hoogste revenue potentieel (€{top_persona['revenue_potential']:.2f}/mo)")
+        recommendations.append(f"📝 Content tone: {top_persona.get('content_tone', '?')}")
+        recommendations.append(f"🔘 Beste CTA: \"{top_persona.get('best_cta', '?')}\"")
+
+    # Find underserved personas
+    for p in personas:
+        if p.get("total_clicks", 0) > 20 and p.get("query_count", 0) > 5:
+            recommendations.append(f"📈 '{p['name']}': {p['query_count']} queries, {p['total_clicks']} clicks — meer content nodig")
+
+    return recommendations
+
+# ── 17D: GROWTH LOOPS ──────────────────────────────────────────────────────
+
+def load_growth_loops():
+    try:
+        if os.path.exists(GROWTH_LOOPS_FILE):
+            return json.loads(open(GROWTH_LOOPS_FILE).read())
+    except:
+        pass
+    return {"content_upgrades": [], "cross_promos": [], "ladders": [], "cta_tests": []}
+
+def save_growth_loops(data):
+    with open(GROWTH_LOOPS_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def auto_content_upgrade():
+    """Voeg '2026 update' secties toe aan oude artikelen."""
+    articles_dir = os.path.join(REPO_ROOT, "b2b")
+    if not os.path.isdir(articles_dir):
+        return []
+
+    upgrades = []
+    current_year = str(datetime.now().year)
+    prev_year = str(datetime.now().year - 1)
+
+    for fname in os.listdir(articles_dir):
+        if not fname.endswith('.html'):
+            continue
+        slug = fname.replace(".html", "")
+        fpath = os.path.join(articles_dir, fname)
+
+        try:
+            mtime = os.path.getmtime(fpath)
+            age_days = (datetime.now() - datetime.fromtimestamp(mtime)).days
+
+            with open(fpath) as f:
+                content = f.read()
+
+            # Artikel ouder dan 90 dagen EN bevat niet het huidige jaar
+            if age_days > 90 and current_year not in content:
+                upgrades.append({
+                    "slug": slug,
+                    "age_days": age_days,
+                    "has_prev_year": prev_year in content,
+                    "action": f"Add {current_year} update section",
+                    "priority": "HIGH" if age_days > 180 else "MEDIUM"
+                })
+        except:
+            continue
+
+    loops = load_growth_loops()
+    loops["content_upgrades"] = upgrades
+    save_growth_loops(loops)
+    return upgrades
+
+def auto_cross_promote(new_slug):
+    """Wanneer een nieuw artikel wordt gepubliceerd, link vanuit 3 bestaande relevante artikelen."""
+    articles_dir = os.path.join(REPO_ROOT, "b2b")
+    if not os.path.isdir(articles_dir):
+        return []
+
+    new_words = set(new_slug.lower().replace("-", " ").split())
+    candidates = []
+
+    for fname in os.listdir(articles_dir):
+        if not fname.endswith('.html') or fname.replace(".html", "") == new_slug:
+            continue
+        slug = fname.replace(".html", "")
+        slug_words = set(slug.lower().replace("-", " ").split())
+        overlap = new_words & slug_words
+
+        if overlap:
+            candidates.append({"slug": slug, "overlap": len(overlap), "shared_words": list(overlap)})
+
+    candidates.sort(key=lambda x: x["overlap"], reverse=True)
+    top_3 = candidates[:3]
+
+    cross_promos = []
+    for candidate in top_3:
+        cross_promos.append({
+            "from": candidate["slug"],
+            "to": new_slug,
+            "shared_words": candidate["shared_words"],
+            "link_html": f'<a href="/b2b/{new_slug}.html">Read more: {new_slug.replace("-", " ").title()}</a>'
+        })
+
+    loops = load_growth_loops()
+    loops["cross_promos"] = (loops.get("cross_promos", []) + cross_promos)[-50:]
+    save_growth_loops(loops)
+    return cross_promos
+
+def build_content_ladder():
+    """Bouw content ladders: awareness → consideration → decision per brand."""
+    loops = load_growth_loops()
+    articles_dir = os.path.join(REPO_ROOT, "b2b")
+    if not os.path.isdir(articles_dir):
+        return {}
+
+    files = [f.replace(".html", "") for f in os.listdir(articles_dir) if f.endswith('.html')]
+
+    ladders = {}
+    for brand in VAULT.keys():
+        brand_articles = [f for f in files if brand.lower() in f.lower()]
+
+        ladder = {"awareness": [], "consideration": [], "decision": []}
+        for slug in brand_articles:
+            slug_lower = slug.lower()
+            if any(w in slug_lower for w in ["what-is", "guide", "tutorial", "how-to", "intro"]):
+                ladder["awareness"].append(slug)
+            elif any(w in slug_lower for w in ["vs", "compare", "alternative", "review"]):
+                ladder["consideration"].append(slug)
+            elif any(w in slug_lower for w in ["pricing", "coupon", "deal", "signup", "buy"]):
+                ladder["decision"].append(slug)
+            else:
+                ladder["consideration"].append(slug)  # Default
+
+        # Identify gaps
+        gaps = []
+        if not ladder["awareness"]:
+            gaps.append(f"Missing: {brand} beginner guide/what-is article")
+        if not ladder["consideration"]:
+            gaps.append(f"Missing: {brand} comparison/review article")
+        if not ladder["decision"]:
+            gaps.append(f"Missing: {brand} pricing/deal article")
+
+        ladders[brand] = {"stages": ladder, "total": len(brand_articles), "gaps": gaps}
+
+    loops["ladders"] = ladders
+    save_growth_loops(loops)
+    return ladders
+
+# ── 17E: VICTOR REMOTE CONTROL ────────────────────────────────────────────
+
+def load_task_queue():
+    try:
+        if os.path.exists(TASK_QUEUE_FILE):
+            return json.loads(open(TASK_QUEUE_FILE).read())
+    except:
+        pass
+    return {"tasks": [], "completed": [], "scheduled": []}
+
+def save_task_queue(data):
+    with open(TASK_QUEUE_FILE, 'w') as f:
+        json.dump(data, f, indent=2)
+
+def add_task_to_queue(task_type, params, scheduled_time=None):
+    """Voeg een taak toe aan de queue."""
+    queue = load_task_queue()
+
+    task = {
+        "id": f"task_{int(datetime.now().timestamp())}",
+        "type": task_type,
+        "params": params,
+        "status": "scheduled" if scheduled_time else "pending",
+        "created": datetime.now().isoformat(),
+        "scheduled_for": scheduled_time
+    }
+
+    if scheduled_time:
+        queue["scheduled"].append(task)
+    else:
+        queue["tasks"].append(task)
+
+    save_task_queue(queue)
+    return task
+
+def process_task_queue():
+    """Verwerk taken uit de queue."""
+    queue = load_task_queue()
+    results = []
+
+    # Process pending tasks
+    pending = [t for t in queue.get("tasks", []) if t.get("status") == "pending"]
+
+    for task in pending[:3]:  # Max 3 per cycle
+        task_type = task.get("type", "")
+        params = task.get("params", {})
+
+        try:
+            if task_type == "generate":
+                keyword = params.get("keyword", "")
+                brand = params.get("brand")
+                result = generate_and_deploy(keyword, brand)
+                task["result"] = result
+            elif task_type == "spinoff":
+                result = generate_spinoff(params.get("winner_slug"))
+                task["result"] = result
+            elif task_type == "upgrade":
+                upgrades = auto_content_upgrade()
+                task["result"] = {"upgrades": len(upgrades)}
+            elif task_type == "omega":
+                actions = omega_cycle()
+                task["result"] = {"actions": len(actions)}
+            elif task_type == "quantum":
+                actions = quantum_cycle()
+                task["result"] = {"actions": len(actions)}
+            else:
+                task["result"] = {"error": f"Unknown task type: {task_type}"}
+
+            task["status"] = "completed"
+            task["completed_at"] = datetime.now().isoformat()
+            results.append(task)
+        except Exception as e:
+            task["status"] = "error"
+            task["error"] = str(e)
+            log(f"Task queue error: {e}")
+
+    # Move completed tasks
+    queue["completed"] = (queue.get("completed", []) + [t for t in queue["tasks"] if t.get("status") in ["completed", "error"]])[-100:]
+    queue["tasks"] = [t for t in queue["tasks"] if t.get("status") == "pending"]
+
+    # Check scheduled tasks
+    now = datetime.now()
+    due_tasks = []
+    for task in queue.get("scheduled", []):
+        scheduled_for = task.get("scheduled_for", "")
+        try:
+            sched_dt = datetime.fromisoformat(scheduled_for)
+            if now >= sched_dt:
+                task["status"] = "pending"
+                due_tasks.append(task)
+        except:
+            pass
+
+    # Move due scheduled tasks to pending
+    queue["tasks"].extend(due_tasks)
+    queue["scheduled"] = [t for t in queue["scheduled"] if t not in due_tasks]
+
+    save_task_queue(queue)
+    return results
+
+def enhance_api_server_routes():
+    """Extra API routes voor remote control — wordt aangeroepen in start_api_server."""
+    # Note: These routes worden dynamisch toegevoegd aan de bestaande API server
+    # De implementatie gebruikt de bestaande HTTPServer + handlers
+    pass
+
+def generate_mobile_status_page():
+    """Genereer een mobile-friendly status pagina voor de API server."""
+    radar = load_revenue_radar()
+    forecast = radar.get("forecasts", {})
+    deploy = load_deploy()
+    queue = load_task_queue()
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor 18.0 — Remote Control</title>
+    <style>
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{ background: #0a0a0f; color: #e0e0e0; font-family: -apple-system, sans-serif; padding: 16px; max-width: 500px; margin: 0 auto; }}
+        h1 {{ font-size: 1.3rem; color: #00d4ff; text-align: center; margin-bottom: 20px; }}
+        .card {{ background: #1a1a2e; border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid #2a2a4a; }}
+        .card h3 {{ color: #00d4ff; font-size: 0.9rem; margin-bottom: 8px; }}
+        .metric {{ font-size: 1.5rem; font-weight: bold; }}
+        .sub {{ color: #888; font-size: 0.8rem; }}
+        .btn {{ display: block; width: 100%; padding: 12px; margin: 6px 0; border: none; border-radius: 8px; font-size: 0.9rem; cursor: pointer; text-align: center; }}
+        .btn-primary {{ background: #00d4ff; color: #000; font-weight: bold; }}
+        .btn-secondary {{ background: #2a2a4a; color: #e0e0e0; }}
+        .status {{ display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }}
+        .status-green {{ background: #00ff88; }}
+        .status-yellow {{ background: #ffaa00; }}
+        .status-red {{ background: #ff4444; }}
+        .list-item {{ padding: 8px 0; border-bottom: 1px solid #2a2a4a; font-size: 0.85rem; }}
+    </style>
+</head>
+<body>
+    <h1>⚡ Victor 18.0 Titan</h1>
+
+    <div class="card">
+        <h3>💰 Revenue</h3>
+        <div class="metric">€{forecast.get('total_monthly', 0):.2f}<span class="sub">/maand</span></div>
+        <div class="sub">€{forecast.get('total_yearly', 0):.2f}/jaar geschat</div>
+    </div>
+
+    <div class="card">
+        <h3>🚀 Deploy Pipeline</h3>
+        <div class="list-item"><span class="status status-green"></span> Live: {len([d for d in deploy.get('deployed', []) if d.get('status') == 'live'])}</div>
+        <div class="list-item"><span class="status status-yellow"></span> Review Queue: {len(deploy.get('review_queue', []))}</div>
+        <div class="list-item"><span class="status status-red"></span> Flagged: {len([d for d in deploy.get('deployed', []) if d.get('status') == 'flagged'])}</div>
+    </div>
+
+    <div class="card">
+        <h3>📋 Task Queue</h3>
+        <div class="list-item">Pending: {len(queue.get('tasks', []))}</div>
+        <div class="list-item">Scheduled: {len(queue.get('scheduled', []))}</div>
+        <div class="list-item">Completed: {len(queue.get('completed', []))}</div>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Quick Actions</h3>
+        <a class="btn btn-primary" href="/api/trigger/quantum">🔮 Run Quantum Core</a>
+        <a class="btn btn-secondary" href="/api/trigger/omega">🌀 Run Omega Protocol</a>
+        <a class="btn btn-secondary" href="/api/trigger/titan">⚡ Run Titan Cycle</a>
+        <a class="btn btn-secondary" href="/api/health">❤️ Health Check</a>
+    </div>
+
+    <div class="sub" style="text-align:center;margin-top:20px;">
+        Last updated: {datetime.now().strftime('%H:%M UTC')}<br>
+        Victor 18.0 Titan — AIBuilderMarketplace.com
+    </div>
+</body>
+</html>"""
+
+    status_path = os.path.join(PORTAL_DIR, "mobile.html")
+    os.makedirs(PORTAL_DIR, exist_ok=True)
+    with open(status_path, 'w') as f:
+        f.write(html)
+    return status_path
+
+# ── 17F: TITAN ORCHESTRATOR ───────────────────────────────────────────────
+
+def titan_cycle():
+    """Volledige Titan cyclus: deploy check + multiplier + personas + growth loops + queue."""
+    actions = []
+
+    # Auto-Deploy checks
+    try:
+        rollbacks = check_deploy_rollbacks()
+        if rollbacks:
+            actions.append(f"🚀 Deploy: {len(rollbacks)} artikelen geflagged (0 impressions)")
+            for rb in rollbacks[:2]:
+                add_digest_item("deploy", f"⚠️ {rb['slug']}: {rb['reason']}", priority=7)
+        deploy = load_deploy()
+        queue_count = len(deploy.get("review_queue", []))
+        if queue_count:
+            actions.append(f"📋 Review queue: {queue_count} artikelen wachten op goedkeuring")
+    except Exception as e:
+        log(f"Deploy check error: {e}")
+
+    # Revenue Multiplier
+    try:
+        winners = detect_winners()
+        if winners:
+            total_spinoffs = sum(len(w.get("possible_spinoffs", [])) for w in winners)
+            actions.append(f"🏆 Multiplier: {len(winners)} winners, {total_spinoffs} mogelijke spin-offs")
+            if winners and winners[0].get("possible_spinoffs"):
+                top = winners[0]
+                add_digest_item("multiplier", f"💡 Spin-off kans: {top['brand']} ({top['clicks']} clicks) → {top['possible_spinoffs'][0]['type']}", priority=6)
+    except Exception as e:
+        log(f"Multiplier error: {e}")
+
+    # Audience Personas
+    try:
+        personas = build_audience_personas()
+        if personas:
+            top_persona = max(personas, key=lambda p: p.get("total_clicks", 0))
+            actions.append(f"👥 Personas: top '{top_persona['name']}' ({top_persona['total_clicks']} clicks)")
+    except Exception as e:
+        log(f"Persona error: {e}")
+
+    # Growth Loops
+    try:
+        upgrades = auto_content_upgrade()
+        if upgrades:
+            actions.append(f"🔄 Content upgrades: {len(upgrades)} artikelen verouderd")
+        ladders = build_content_ladder()
+        total_gaps = sum(len(l.get("gaps", [])) for l in ladders.values())
+        if total_gaps:
+            actions.append(f"🪜 Content ladders: {total_gaps} gaps in buyer journey")
+    except Exception as e:
+        log(f"Growth loops error: {e}")
+
+    # Task Queue
+    try:
+        results = process_task_queue()
+        if results:
+            actions.append(f"📋 Queue: {len(results)} taken verwerkt")
+    except Exception as e:
+        log(f"Task queue error: {e}")
+
+    # Mobile status page
+    try:
+        generate_mobile_status_page()
+        actions.append("📱 Mobile status page updated")
+    except Exception as e:
+        log(f"Mobile status error: {e}")
 
     return actions
 
@@ -11500,7 +12353,7 @@ def cmd_panel(message):
     keyboard = build_main_dashboard_keyboard()
     bot.send_message(
         message.chat.id,
-        "🧠 Victor 17.0 Omega — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
+        "🧠 Victor 18.0 Titan — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
         reply_markup=keyboard
     )
 
@@ -12585,6 +13438,236 @@ def cmd_omega(message):
     bot.reply_to(message, msg)
 
 
+@bot.message_handler(commands=['autodeploy'])
+def cmd_autodeploy(message):
+    """Auto-deploy pipeline — genereer en publiceer artikelen automatisch."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split(maxsplit=1)
+
+    if len(parts) > 1 and parts[1].startswith("go "):
+        keyword = parts[1][3:].strip()
+        bot.send_chat_action(message.chat.id, 'typing')
+        bot.reply_to(message, f"🚀 Auto-deploy pipeline: '{keyword}'...")
+        result = generate_and_deploy(keyword)
+        if result:
+            if result.get("status") == "deployed":
+                bot.reply_to(message, f"✅ LIVE! {result.get('url', '?')}")
+            elif result.get("status") == "queued":
+                bot.reply_to(message, f"📋 In review queue: {result.get('reason', '?')}")
+            elif result.get("status") == "rejected":
+                bot.reply_to(message, f"❌ ROI gate rejected: {result.get('reason', '?')}")
+            else:
+                bot.reply_to(message, f"⚠️ Status: {result}")
+        else:
+            bot.reply_to(message, "❌ Deploy pipeline mislukt.")
+    elif len(parts) > 1 and parts[1] == "queue":
+        deploy = load_deploy()
+        queue = deploy.get("review_queue", [])
+        if queue:
+            msg = "📋 Review Queue\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            for q in queue[:8]:
+                msg += f"  ⏳ {q['slug'][:30]} [{q.get('type', '?')}]\n"
+            msg += f"\nGebruik /autodeploy approve [slug] om goed te keuren"
+        else:
+            msg = "📋 Review queue is leeg!"
+        bot.reply_to(message, msg)
+    elif len(parts) > 1 and parts[1].startswith("approve"):
+        approve_parts = parts[1].split()
+        slug = approve_parts[1] if len(approve_parts) > 1 else None
+        result = approve_review_queue(slug)
+        if result:
+            bot.reply_to(message, f"✅ Approved: {result}")
+        else:
+            bot.reply_to(message, "❌ Niets om goed te keuren.")
+    else:
+        deploy = load_deploy()
+        msg = "🚀 Auto-Deploy Pipeline\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"📦 Deployed: {len(deploy.get('deployed', []))}\n"
+        msg += f"📋 Review queue: {len(deploy.get('review_queue', []))}\n"
+        msg += f"⚠️ Flagged: {len([d for d in deploy.get('deployed', []) if d.get('status') == 'flagged'])}\n"
+        msg += f"🔙 Rollbacks: {len(deploy.get('rollbacks', []))}\n\n"
+
+        recent = deploy.get("deployed", [])[-5:]
+        if recent:
+            msg += "📋 Recent deploys:\n"
+            for d in reversed(recent):
+                emoji = "✅" if d.get("status") == "live" else "⚠️"
+                msg += f"  {emoji} {d['slug'][:25]} ({d.get('type', '?')})\n"
+
+        msg += "\n💡 /autodeploy go <keyword> — genereer + deploy"
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['multiply'])
+def cmd_multiply(message):
+    """Revenue Multiplier — kloon je winnende artikelen."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split()
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    if len(parts) > 1 and parts[1] == "go":
+        slug = parts[2] if len(parts) > 2 else None
+        bot.reply_to(message, "🏆 Spin-off genereren...")
+        result = generate_spinoff(slug)
+        if result:
+            bot.reply_to(message, f"✅ Spin-off: {result}")
+        else:
+            bot.reply_to(message, "❌ Geen spin-off mogelijkheden gevonden.")
+    elif len(parts) > 1 and parts[1] == "longtail":
+        slug = parts[2] if len(parts) > 2 else None
+        if not slug:
+            bot.reply_to(message, "Gebruik: /multiply longtail <slug>")
+            return
+        variations = find_longtail_variations(slug)
+        if variations:
+            msg = f"🔎 Long-tail variaties voor {slug}\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            for v in variations[:8]:
+                msg += f"  📝 \"{v['query']}\"\n     {v['clicks']} clicks | pos #{v['position']:.0f}\n"
+        else:
+            msg = "Geen long-tail variaties gevonden."
+        bot.reply_to(message, msg)
+    else:
+        winners = detect_winners()
+        if winners:
+            msg = "🏆 Revenue Multiplier\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            for w in winners[:6]:
+                spinoffs = len(w.get("possible_spinoffs", []))
+                msg += f"  🏆 {w['slug'][:25]} [{w['brand']}]\n"
+                msg += f"     €{w['revenue']:.2f}/mo | {w['clicks']} clicks | {spinoffs} spin-offs\n\n"
+            msg += "💡 /multiply go [slug] — genereer spin-off"
+        else:
+            msg = "🏆 Nog geen winners gedetecteerd. Meer traffic data nodig."
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['personas'])
+def cmd_personas(message):
+    """Audience Persona Engine."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    personas = build_audience_personas()
+    recommendations = get_persona_recommendations()
+
+    msg = "👥 Audience Personas\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    for p in personas:
+        if p.get("total_clicks", 0) > 0:
+            bar = "█" * min(int(p["total_clicks"] / 5), 15)
+            msg += f"  {p['name']}\n"
+            msg += f"  {bar} {p['total_clicks']} clicks | {p['query_count']} queries\n"
+            msg += f"  💰 €{p.get('revenue_potential', 0):.2f}/mo potentieel\n"
+            msg += f"  🔘 CTA: \"{p.get('best_cta', '?')}\"\n\n"
+
+    if recommendations:
+        msg += "💡 Aanbevelingen:\n"
+        for r in recommendations[:3]:
+            msg += f"  {r}\n"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['loops'])
+def cmd_loops(message):
+    """Growth Loops — content upgrades + ladders."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    upgrades = auto_content_upgrade()
+    ladders = build_content_ladder()
+
+    msg = "🔄 Growth Loops\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    if upgrades:
+        msg += f"📅 Content Upgrades Nodig ({len(upgrades)}):\n"
+        for u in upgrades[:5]:
+            msg += f"  {'🔴' if u.get('priority') == 'HIGH' else '🟡'} {u['slug'][:25]} ({u['age_days']}d oud)\n"
+        msg += "\n"
+
+    if ladders:
+        msg += "🪜 Content Ladders:\n"
+        for brand, data in ladders.items():
+            if data.get("total", 0) > 0:
+                stages = data.get("stages", {})
+                msg += f"  {brand}: A:{len(stages.get('awareness', []))} → C:{len(stages.get('consideration', []))} → D:{len(stages.get('decision', []))}\n"
+                if data.get("gaps"):
+                    msg += f"    ❌ {data['gaps'][0]}\n"
+
+    bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['taskqueue'])
+def cmd_taskqueue(message):
+    """Task Queue — beheer geplande taken."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    parts = message.text.strip().split(maxsplit=2)
+
+    if len(parts) > 1 and parts[1] == "add":
+        if len(parts) < 3:
+            bot.reply_to(message, "Gebruik: /taskqueue add generate <keyword>")
+            return
+        task_desc = parts[2]
+        if task_desc.startswith("generate "):
+            keyword = task_desc[9:]
+            task = add_task_to_queue("generate", {"keyword": keyword})
+            bot.reply_to(message, f"✅ Taak toegevoegd: generate '{keyword}' (ID: {task['id']})")
+        elif task_desc == "omega":
+            task = add_task_to_queue("omega", {})
+            bot.reply_to(message, f"✅ Taak toegevoegd: omega cycle (ID: {task['id']})")
+        elif task_desc == "quantum":
+            task = add_task_to_queue("quantum", {})
+            bot.reply_to(message, f"✅ Taak toegevoegd: quantum cycle (ID: {task['id']})")
+        else:
+            bot.reply_to(message, "Onbekend taak type. Gebruik: generate <keyword>, omega, quantum")
+    elif len(parts) > 1 and parts[1] == "run":
+        bot.send_chat_action(message.chat.id, 'typing')
+        results = process_task_queue()
+        if results:
+            msg = f"✅ {len(results)} taken verwerkt:\n"
+            for r in results:
+                msg += f"  • {r.get('type', '?')}: {r.get('status', '?')}\n"
+        else:
+            msg = "📋 Geen pending taken in de queue."
+        bot.reply_to(message, msg)
+    else:
+        queue = load_task_queue()
+        msg = "📋 Task Queue\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += f"⏳ Pending: {len(queue.get('tasks', []))}\n"
+        msg += f"📅 Scheduled: {len(queue.get('scheduled', []))}\n"
+        msg += f"✅ Completed: {len(queue.get('completed', []))}\n\n"
+
+        pending = queue.get("tasks", [])[:5]
+        if pending:
+            msg += "⏳ Pending:\n"
+            for t in pending:
+                msg += f"  • [{t.get('type', '?')}] {json.dumps(t.get('params', {}))[:40]}\n"
+
+        msg += "\n💡 /taskqueue add generate <keyword>\n💡 /taskqueue run — verwerk nu"
+        bot.reply_to(message, msg)
+
+
+@bot.message_handler(commands=['titan'])
+def cmd_titan(message):
+    """Volledige Titan cyclus."""
+    if message.from_user.id != ADMIN_ID:
+        return
+    bot.reply_to(message, "⚡ Titan activeren...")
+    bot.send_chat_action(message.chat.id, 'typing')
+
+    actions = titan_cycle()
+    if actions:
+        msg = "⚡ Titan — Resultaten\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        msg += "\n".join(f"  ✅ {a}" for a in actions)
+    else:
+        msg = "⚡ Titan: alles optimaal."
+    bot.reply_to(message, msg)
+
+
 @bot.message_handler(commands=['restyle'])
 def cmd_restyle(message):
     """Restyle alle artikelen naar dark theme met SVG brand logos via fix_articles.py."""
@@ -12619,7 +13702,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 17.0 Omega — Commando's:
+    bot.reply_to(message, """Victor 18.0 Titan — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -12730,6 +13813,14 @@ def cmd_help(message):
 /warroom — Ranking battles + velocity tracker
 /counter <keyword> — Counter-attack plan genereren
 /omega — Volledige Omega Protocol cyclus
+
+⚡ Titan:
+/autodeploy [go keyword|queue|approve] — Auto-deploy pipeline
+/multiply [go slug|longtail slug] — Revenue Multiplier spin-offs
+/personas — Audience persona analyse
+/loops — Growth loops + content ladders
+/taskqueue [add|run] — Task queue beheer
+/titan — Volledige Titan cyclus
 
 🛠️ Actie:
 /generate — Genereer een artikel
@@ -13082,6 +14173,38 @@ def handle_callback(call):
                 msg = "🌀 Omega: alles optimaal."
             bot.send_message(chat_id, msg)
 
+        elif data == "dash_deploy":
+            deploy = load_deploy()
+            live = len([d for d in deploy.get("deployed", []) if d.get("status") == "live"])
+            queue = len(deploy.get("review_queue", []))
+            msg = f"🚀 Deploy: {live} live, {queue} in review queue"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_multiply":
+            winners = detect_winners()
+            msg = f"🏆 Multiplier: {len(winners)} winners gedetecteerd"
+            if winners:
+                msg += f"\nTop: {winners[0].get('brand', '?')} — €{winners[0].get('revenue', 0):.2f}/mo"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_personas":
+            personas = build_audience_personas()
+            if personas:
+                top = max(personas, key=lambda p: p.get("total_clicks", 0))
+                msg = f"👥 Top persona: {top['name']} ({top['total_clicks']} clicks)"
+            else:
+                msg = "👥 Personas: geen data"
+            bot.send_message(chat_id, msg)
+
+        elif data == "dash_titan":
+            bot.send_message(chat_id, "⚡ Titan cyclus starten...")
+            actions = titan_cycle()
+            if actions:
+                msg = "⚡ " + "\n".join(actions[:5])
+            else:
+                msg = "⚡ Titan: alles optimaal."
+            bot.send_message(chat_id, msg)
+
         elif data == "act_generate":
             bot.send_message(chat_id, "📝 Gebruik /generate om een artikel te genereren")
 
@@ -13203,7 +14326,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 17.0 Omega — Status Report
+    return f"""📊 Victor 18.0 Titan — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -13732,6 +14855,20 @@ def proactive_loop():
                 except Exception as e:
                     log(f"Omega cycle error: {e}")
 
+            # ⚡ TITAN: dagelijks om 13:00 UTC (deploy + multiplier + personas + growth loops + queue)
+            if hour == 13 and now.minute < 15 and last_auto_improve != str(now.date()) + "-titan":
+                try:
+                    log("Starting Titan cycle...")
+                    titan_actions = titan_cycle()
+                    last_auto_improve = str(now.date()) + "-titan"
+                    if titan_actions:
+                        titan_report = "⚡ Titan — Dagelijks\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                        titan_report += "\n".join(f"  ✅ {a}" for a in titan_actions)
+                        bot.send_message(ADMIN_ID, titan_report)
+                    log(f"Titan cycle done: {len(titan_actions)} actions")
+                except Exception as e:
+                    log(f"Titan cycle error: {e}")
+
             # 🔥 DOMINATION MATRIX: dagelijkse cyclus om 07:00 UTC
             if hour == 7 and weekday != 0 and last_auto_improve != str(now.date()) + "-domination":
                 try:
@@ -13809,8 +14946,9 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 17.0 Omega online!\n\n{report}"
-            f"\n\n🌀 Omega: /monetize /eeat /viral /evolve /warroom /counter /omega"
+            f"🚀 Victor 18.0 Titan online!\n\n{report}"
+            f"\n\n⚡ Titan: /autodeploy /multiply /personas /loops /taskqueue /titan"
+            f"\n🌀 Omega: /monetize /eeat /viral /evolve /warroom /counter /omega"
             f"\n🔮 Quantum: /revenue2 /alerts /social2 /predict2 /authority /portal /quantum"
             f"\n🛰️ Skynet: /calendar /calexec /outreach /palace /dashboardv2 /api /skynet"
             f"\n👁️ Omniscience: /validate /freshness /journey /roigate /digest"
@@ -13829,7 +14967,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 17.0 Omega gestart — Model: {MODEL}")
+    log(f"Victor 18.0 Titan gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

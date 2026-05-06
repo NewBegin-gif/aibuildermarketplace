@@ -14991,3 +14991,923 @@ if __name__ == "__main__":
     t.start()
 
     bot.infinity_polling(timeout=30, long_polling_timeout=20)
+
+# ==============================================================================
+# === MODULE 19: SINGULARITY PROTOCOL ==========================================
+# === De opvolger van Titan v18 ================================================
+# ==============================================================================
+#
+# Sub-systemen:
+#   A. AEO Citation Tracker      - checkt of ChatGPT / Perplexity / Claude /
+#                                  Gemini jouw site citeren
+#   B. Revenue Attribution + MAB - Thompson-sampling bandit over CTA's
+#   C. Self-Healing              - error log analyse, patch-voorstellen naar
+#                                  review queue (NOOIT auto-applied)
+#   D. Programmatic SEO Engine   - long-tail varianten met cannibalization +
+#                                  freshness + quality gates
+#
+# Telegram commands (admin-only):
+#   /sing_status  /sing_cycle
+#   /aeo_status  /aeo_queries  /aeo_add_query  /aeo_remove_query  /aeo_scan
+#   /rev_status  /rev_dead_zones  /rev_recommend  /rev_register  /rev_pull_gsc
+#   /health  /patches  /patch_show  /patch_approve  /patch_dismiss
+#   /link_rot  /link_rot_scan  /schema_audit
+#   /pseo_templates  /pseo_generate  /pseo_review  /pseo_approve  /pseo_reject
+#   /pseo_freshness  /pseo_freshness_scan  /pseo_cannibal  /pseo_quality
+# ==============================================================================
+
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import os
+import random
+import re
+import shutil
+import threading
+import time
+import traceback
+from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import dataclass, field, asdict
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple
+from urllib.parse import quote_plus, urlencode, urlparse
+
+try:
+    import requests  # type: ignore
+except ImportError:
+    requests = None  # type: ignore
+
+try:
+    from bs4 import BeautifulSoup  # type: ignore
+    _HAS_BS4 = True
+except ImportError:
+    BeautifulSoup = None  # type: ignore
+    _HAS_BS4 = False
+
+try:
+    from google.oauth2 import service_account  # type: ignore
+    from googleapiclient.discovery import build as gapi_build  # type: ignore
+    _HAS_GSC = True
+except ImportError:
+    _HAS_GSC = False
+
+LOG = logging.getLogger("victor.singularity")
+if not LOG.handlers:
+    h = logging.StreamHandler()
+    h.setFormatter(logging.Formatter("%(asctime)s [singularity] %(levelname)s %(message)s"))
+    LOG.addHandler(h)
+    LOG.setLevel(logging.INFO)
+
+UTC = timezone.utc
+
+AEO_MODELS: List[Tuple[str, str]] = [
+    ("claude_sonnet_online",   "anthropic/claude-sonnet-4:online"),
+    ("gpt4o_online",           "openai/gpt-4o:online"),
+    ("gemini_pro_online",      "google/gemini-pro-1.5:online"),
+    ("perplexity_sonar_large", "perplexity/llama-3.1-sonar-large-128k-online"),
+]
+
+LINK_ROT_SKIP_DOMAINS = {
+    "twitter.com", "x.com", "linkedin.com", "facebook.com",
+    "instagram.com", "tiktok.com", "youtube.com", "youtu.be", "amazon.com",
+}
+
+PSEO_TEMPLATES: List[Dict[str, str]] = [
+    {"id": "best_for_persona",  "tpl": "Best {tool} for {persona} in {year}"},
+    {"id": "vs_competitor",     "tpl": "{tool} vs {competitor}: honest {year} comparison"},
+    {"id": "use_case_howto",    "tpl": "How to use {tool} for {use_case} (step by step)"},
+    {"id": "alternatives",      "tpl": "{count} {tool} alternatives that are actually worth it in {year}"},
+    {"id": "pricing_explained", "tpl": "{tool} pricing in {year}: is it worth the cost?"},
+]
+
+FRESHNESS_PATTERNS: List[Tuple[str, re.Pattern]] = [
+    ("stale_year",    re.compile(r"\b(in |for |update[ds]? )?(20(1[5-9]|2[0-3]))\b", re.I)),
+    ("stale_dollar",  re.compile(r"\$\d{1,4}(\.\d{1,2})?/(mo|month|yr|year)", re.I)),
+    ("stale_version", re.compile(r"\bv\d+\.\d+(\.\d+)?\b")),
+    ("stale_phrase",  re.compile(r"(in the last|over the past) \d+ (years|months)", re.I)),
+]
+
+DEFAULT_CITATION_QUERIES = [
+    "best ai website builder", "wp rocket alternatives", "kinsta vs siteground 2026",
+    "best ai voice generator", "synthesia vs heygen comparison",
+    "best replit alternatives", "invideo review",
+]
+
+
+class JsonStore:
+    _locks: Dict[str, threading.RLock] = {}
+    _global_lock = threading.Lock()
+    def __init__(self, path: Path, default: Any):
+        self.path = Path(path)
+        self.default = default
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        with JsonStore._global_lock:
+            self._lock = JsonStore._locks.setdefault(str(path), threading.RLock())
+    def load(self):
+        with self._lock:
+            if not self.path.exists():
+                return json.loads(json.dumps(self.default))
+            try:
+                with self.path.open("r", encoding="utf-8") as f:
+                    return json.load(f)
+            except (json.JSONDecodeError, OSError) as e:
+                LOG.warning("JsonStore.load %s failed (%s)", self.path, e)
+                return json.loads(json.dumps(self.default))
+    def save(self, data):
+        with self._lock:
+            tmp = self.path.with_suffix(self.path.suffix + ".tmp")
+            with tmp.open("w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            os.replace(tmp, self.path)
+    def update(self, mutator):
+        with self._lock:
+            data = self.load()
+            data = mutator(data) or data
+            self.save(data)
+            return data
+
+
+def _now_iso(): return datetime.now(UTC).isoformat(timespec="seconds")
+def _short_hash(s, n=10): return hashlib.sha1(s.encode("utf-8")).hexdigest()[:n]
+
+
+class OpenRouter:
+    URL = "https://openrouter.ai/api/v1/chat/completions"
+    def __init__(self, api_key, referer="https://aibuildermarketplace.com", app_title="Victor"):
+        self.api_key = api_key
+        self.headers = {
+            "Authorization": f"Bearer {api_key}" if api_key else "",
+            "Content-Type": "application/json",
+            "HTTP-Referer": referer, "X-Title": app_title,
+        }
+    @property
+    def available(self): return bool(self.api_key) and requests is not None
+    def chat(self, prompt, model, *, system=None, max_tokens=1200, timeout=90):
+        if not self.available:
+            raise RuntimeError("OpenRouter unavailable")
+        msgs = []
+        if system: msgs.append({"role": "system", "content": system})
+        msgs.append({"role": "user", "content": prompt})
+        body = {"model": model, "messages": msgs, "max_tokens": max_tokens}
+        try:
+            r = requests.post(self.URL, headers=self.headers, json=body, timeout=timeout)
+            r.raise_for_status()
+            return r.json()["choices"][0]["message"]["content"]
+        except (requests.RequestException, KeyError, ValueError) as e:
+            raise RuntimeError(f"OpenRouter call failed for {model}: {e}") from e
+
+
+class AEOTracker:
+    def __init__(self, state_dir, llm, target_domain, competitor_domains=None):
+        self.store = JsonStore(state_dir / "aeo_citations.json", default={"queries": [], "scans": []})
+        self.llm = llm
+        self.target = target_domain.lower().lstrip("www.")
+        self.competitors = [d.lower().lstrip("www.") for d in (competitor_domains or [])]
+        self._seed_default_queries()
+    def _seed_default_queries(self):
+        data = self.store.load()
+        if data["queries"]: return
+        for text in DEFAULT_CITATION_QUERIES:
+            data["queries"].append({"id": _short_hash(text), "text": text, "added": _now_iso()})
+        self.store.save(data)
+    def list_queries(self): return self.store.load()["queries"]
+    def add_query(self, text):
+        text = text.strip()
+        if not text: raise ValueError("empty query")
+        qid = _short_hash(text)
+        def mut(d):
+            if not any(q["id"] == qid for q in d["queries"]):
+                d["queries"].append({"id": qid, "text": text, "added": _now_iso()})
+            return d
+        self.store.update(mut); return qid
+    def remove_query(self, qid):
+        removed = {"flag": False}
+        def mut(d):
+            before = len(d["queries"])
+            d["queries"] = [q for q in d["queries"] if q["id"] != qid]
+            removed["flag"] = len(d["queries"]) < before
+            return d
+        self.store.update(mut); return removed["flag"]
+    def _detect_citations(self, text):
+        t = text.lower()
+        return self.target in t, [c for c in self.competitors if c in t]
+    def scan_query(self, query):
+        rows = []
+        prompt = f"Answer the search-style question below the way you would in a public AI Overview / chat answer. Cite the websites you use.\n\nQUESTION: {query['text']}\n"
+        for label, model in AEO_MODELS:
+            try:
+                resp = self.llm.chat(prompt, model=model, max_tokens=900)
+            except RuntimeError as e:
+                LOG.info("AEO scan skipped %s: %s", model, e); continue
+            cited, comps = self._detect_citations(resp)
+            rows.append({"ts": _now_iso(), "query_id": query["id"], "query_text": query["text"],
+                         "model": label, "cited": cited, "competitors": comps, "snippet": resp[:600]})
+        if rows:
+            def mut(d):
+                d["scans"].extend(rows); d["scans"] = d["scans"][-5000:]; return d
+            self.store.update(mut)
+        return rows
+    def scan_all(self, max_workers=3):
+        queries = self.list_queries()
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            futures = {pool.submit(self.scan_query, q): q for q in queries}
+            for fut in as_completed(futures):
+                try: fut.result()
+                except Exception as e: LOG.warning("scan_query crashed: %s", e)
+        return self.report(window_hours=24)
+    def report(self, window_hours=168):
+        cutoff = datetime.now(UTC) - timedelta(hours=window_hours)
+        recent = [s for s in self.store.load()["scans"] if datetime.fromisoformat(s["ts"]) >= cutoff]
+        by_query = defaultdict(lambda: {"text": "", "scans": 0, "cited": 0, "competitors": Counter()})
+        for s in recent:
+            row = by_query[s["query_id"]]
+            row["text"] = s["query_text"]; row["scans"] += 1
+            row["cited"] += int(bool(s["cited"]))
+            for c in s["competitors"]: row["competitors"][c] += 1
+        summary = []
+        for qid, row in by_query.items():
+            rate = row["cited"]/row["scans"] if row["scans"] else 0.0
+            summary.append({"query_id": qid, "text": row["text"], "scans": row["scans"],
+                            "cited": row["cited"], "citation_rate": round(rate, 3),
+                            "top_competitors": row["competitors"].most_common(3)})
+        summary.sort(key=lambda r: r["citation_rate"])
+        return {"window_hours": window_hours, "total_scans": len(recent), "by_query": summary,
+                "gap_queries": [r for r in summary if r["citation_rate"] < 0.5],
+                "generated_at": _now_iso()}
+
+
+@dataclass
+class Variant:
+    id: str; placement: str; brand: str; cta_text: str; affiliate_url: str
+    impressions: int = 0; clicks: int = 0; conversions: int = 0; revenue_eur: float = 0.0
+    @property
+    def alpha(self): return 1.0 + self.conversions
+    @property
+    def beta(self): return 1.0 + max(0, self.clicks - self.conversions)
+    def sample(self): return random.betavariate(self.alpha, self.beta)
+
+
+class RevenueBandit:
+    BRAND_COMMISSIONS = {"kinsta": 75.0, "synthesia": 20.0, "invideo": 15.0,
+                         "murf": 12.0, "replit": 10.0, "wp_rocket": 10.0, "bitvavo": 5.0}
+    def __init__(self, state_dir, repo_path, llm, gsc_credentials=None,
+                 target_domain="aibuildermarketplace.com"):
+        self.store = JsonStore(state_dir / "bandit_state.json", default={"articles": {}, "events": []})
+        self.repo_path = Path(repo_path)
+        self.gsc_creds = Path(gsc_credentials) if gsc_credentials else None
+        self.target_domain = target_domain; self.llm = llm
+    def register_variant(self, article, placement, brand, cta_text, affiliate_url):
+        vid = _short_hash(f"{article}|{placement}|{brand}|{cta_text}|{affiliate_url}")
+        v = Variant(id=vid, placement=placement, brand=brand, cta_text=cta_text, affiliate_url=affiliate_url)
+        def mut(d):
+            art = d["articles"].setdefault(article, {"placements": {}})
+            plist = art["placements"].setdefault(placement, [])
+            if not any(x["id"] == vid for x in plist): plist.append(asdict(v))
+            return d
+        self.store.update(mut); return vid
+    def _bump(self, article, placement, variant, **deltas):
+        def mut(d):
+            try: plist = d["articles"][article]["placements"][placement]
+            except KeyError: return d
+            for v in plist:
+                if v["id"] == variant:
+                    for k, dv in deltas.items(): v[k] = v.get(k, 0) + dv
+                    break
+            d["events"].append({"ts": _now_iso(), "kind": ",".join(deltas.keys()),
+                                "article": article, "placement": placement,
+                                "variant": variant, "delta": deltas})
+            d["events"] = d["events"][-20000:]; return d
+        self.store.update(mut)
+    def record_impression(self, a, p, v, n=1): self._bump(a, p, v, impressions=n)
+    def record_click(self, a, p, v): self._bump(a, p, v, clicks=1)
+    def record_conversion(self, a, p, v, value_eur=None):
+        d = self.store.load(); brand = ""
+        try:
+            for x in d["articles"][a]["placements"][p]:
+                if x["id"] == v: brand = x["brand"]; break
+        except KeyError: pass
+        if value_eur is None: value_eur = self.BRAND_COMMISSIONS.get(brand, 0.0)
+        self._bump(a, p, v, conversions=1, revenue_eur=value_eur)
+    def recommend(self, article, placement):
+        d = self.store.load()
+        try: plist = d["articles"][article]["placements"][placement]
+        except KeyError: return None
+        if not plist: return None
+        scored = []
+        for raw in plist:
+            v = Variant(**{k: raw[k] for k in raw if k in Variant.__dataclass_fields__})
+            scored.append((v.sample(), raw))
+        scored.sort(key=lambda x: x[0], reverse=True)
+        return scored[0][1]
+    def tracking_link(self, base_url, article, placement, variant):
+        u = urlparse(base_url)
+        q = dict([p.split("=", 1) for p in u.query.split("&") if "=" in p])
+        q.update({"utm_source": "aibuildermarketplace", "utm_medium": "affiliate",
+                  "utm_campaign": article, "utm_content": placement, "utm_term": variant})
+        return f"{u.scheme}://{u.netloc}{u.path}?{urlencode(q)}"
+    def register_flask_routes(self, app):
+        try: from flask import redirect, request, abort, jsonify
+        except ImportError:
+            LOG.warning("Flask not installed"); return
+        @app.route("/track/click/<article>/<placement>/<variant>")
+        def _track_click(article, placement, variant):
+            d = self.store.load()
+            try:
+                plist = d["articles"][article]["placements"][placement]
+                target = next(v for v in plist if v["id"] == variant)
+            except (KeyError, StopIteration): return abort(404)
+            self.record_click(article, placement, variant)
+            return redirect(self.tracking_link(target["affiliate_url"], article, placement, variant), code=302)
+        @app.route("/track/conv", methods=["POST"])
+        def _track_conv():
+            data = request.get_json(silent=True) or {}
+            try:
+                self.record_conversion(data["article"], data["placement"], data["variant"],
+                                       value_eur=data.get("value_eur"))
+                return jsonify({"ok": True})
+            except KeyError: return abort(400)
+    def pull_gsc_clicks(self, days=7):
+        if not _HAS_GSC or not self.gsc_creds or not self.gsc_creds.exists():
+            return {"ok": False, "reason": "gsc_unavailable"}
+        try:
+            creds = service_account.Credentials.from_service_account_file(
+                str(self.gsc_creds),
+                scopes=["https://www.googleapis.com/auth/webmasters.readonly"])
+            svc = gapi_build("searchconsole", "v1", credentials=creds, cache_discovery=False)
+            end = datetime.now(UTC).date(); start = end - timedelta(days=days)
+            rows = svc.searchanalytics().query(
+                siteUrl=f"sc-domain:{self.target_domain}",
+                body={"startDate": start.isoformat(), "endDate": end.isoformat(),
+                      "dimensions": ["page"], "rowLimit": 5000}).execute().get("rows", [])
+        except Exception as e:
+            return {"ok": False, "reason": str(e)}
+        ingested = 0; d = self.store.load()
+        for r in rows:
+            page = r["keys"][0]; clicks = int(r.get("clicks", 0))
+            slug = urlparse(page).path.rstrip("/").split("/")[-1] or "index"
+            if slug in d["articles"]:
+                for placement, plist in d["articles"][slug]["placements"].items():
+                    if not plist: continue
+                    leader = max(plist, key=lambda v: v.get("clicks", 0))
+                    self.record_impression(slug, placement, leader["id"], n=clicks)
+                ingested += clicks
+        return {"ok": True, "rows": len(rows), "impressions_added": ingested}
+    def top_articles(self, limit=10):
+        d = self.store.load(); out = []
+        for slug, art in d["articles"].items():
+            rev = sum(v["revenue_eur"] for plist in art["placements"].values() for v in plist)
+            clicks = sum(v["clicks"] for plist in art["placements"].values() for v in plist)
+            convs = sum(v["conversions"] for plist in art["placements"].values() for v in plist)
+            out.append({"article": slug, "revenue_eur": round(rev, 2),
+                        "clicks": clicks, "conversions": convs})
+        out.sort(key=lambda x: x["revenue_eur"], reverse=True)
+        return out[:limit]
+    def dead_zones(self, min_impressions=200):
+        d = self.store.load(); out = []
+        for slug, art in d["articles"].items():
+            imps = sum(v["impressions"] for plist in art["placements"].values() for v in plist)
+            convs = sum(v["conversions"] for plist in art["placements"].values() for v in plist)
+            if imps >= min_impressions and convs == 0:
+                out.append({"article": slug, "impressions": imps})
+        out.sort(key=lambda x: x["impressions"], reverse=True); return out
+
+
+class HealthDaemon:
+    ERROR_LINE_RX = re.compile(r"\b(ERROR|CRITICAL|Traceback|Exception)\b")
+    PY_LOC_RX = re.compile(r'File "([^"]+)", line (\d+)')
+    def __init__(self, state_dir, log_path, llm, repo_path, target_domain):
+        self.events = JsonStore(state_dir / "health_events.json", default={"errors": [], "scans": []})
+        self.patches = JsonStore(state_dir / "patch_queue.json", default={"queue": []})
+        self.links = JsonStore(state_dir / "link_health.json", default={"last_scan": None, "broken": []})
+        self.log_path = Path(log_path); self.repo_path = Path(repo_path)
+        self.target_domain = target_domain; self.llm = llm
+        self._tail_pos = {}
+    def tail_new_errors(self, max_chars=200_000):
+        if not self.log_path.exists(): return []
+        size = self.log_path.stat().st_size
+        start = self._tail_pos.get(str(self.log_path), max(0, size - max_chars))
+        if start > size: start = 0
+        with self.log_path.open("r", encoding="utf-8", errors="replace") as f:
+            f.seek(start); chunk = f.read()
+            self._tail_pos[str(self.log_path)] = f.tell()
+        return self._parse_errors(chunk)
+    def _parse_errors(self, chunk):
+        lines = chunk.splitlines(); groups = []; cur = []
+        for line in lines:
+            if self.ERROR_LINE_RX.search(line):
+                if cur: groups.append(cur)
+                cur = [line]
+            elif cur:
+                cur.append(line)
+                if len(cur) > 40: groups.append(cur); cur = []
+        if cur: groups.append(cur)
+        out = []
+        for g in groups:
+            txt = "\n".join(g); loc = self.PY_LOC_RX.findall(txt)
+            sig_src = (loc[-1] if loc else (g[0][:120], "0"))
+            sig = _short_hash(f"{sig_src[0]}:{sig_src[1]}", n=12)
+            out.append({"signature": sig, "first_line": g[0][:240],
+                        "loc": list(loc[-3:]), "raw": txt[-2000:], "ts": _now_iso()})
+        return out
+    def diagnose_and_queue(self, error):
+        if not self.llm.available: return None
+        q = self.patches.load()["queue"]
+        if any(p["signature"] == error["signature"] and p["status"] == "pending" for p in q):
+            return None
+        snippet = ""
+        if error["loc"]:
+            path, lineno = error["loc"][-1]
+            try:
+                p = Path(path)
+                if p.exists() and p.is_file() and p.stat().st_size < 2_000_000:
+                    src = p.read_text(encoding="utf-8", errors="replace").splitlines()
+                    n = int(lineno); a, b = max(0, n - 25), min(len(src), n + 15)
+                    snippet = "\n".join(f"{i+1:>5} | {src[i]}" for i in range(a, b))
+            except OSError: pass
+        prompt = (
+            "You are diagnosing a Python error in a long-running Telegram bot.\n"
+            "DO NOT rewrite the entire file. Propose a MINIMAL patch as a unified diff "
+            "or a precise instruction. If the error is environmental (network, quota, missing file), "
+            "say so and recommend a runtime guard instead.\n\n"
+            f"ERROR:\n{error['raw']}\n\nSURROUNDING CODE:\n{snippet or '(unavailable)'}\n\n"
+            "Output sections:\n1) ROOT CAUSE\n2) PROPOSED PATCH\n3) RISK (low/medium/high)\n4) TEST PLAN\n"
+        )
+        try:
+            diag = self.llm.chat(prompt, model="anthropic/claude-sonnet-4", max_tokens=1500)
+        except RuntimeError as e:
+            LOG.warning("diagnose failed: %s", e); return None
+        pid = _short_hash(error["signature"] + _now_iso(), n=8)
+        def mut(d):
+            d["queue"].append({"id": pid, "signature": error["signature"],
+                               "first_line": error["first_line"], "loc": error["loc"],
+                               "diagnosis": diag, "status": "pending", "created": _now_iso()})
+            d["queue"] = d["queue"][-200:]; return d
+        self.patches.update(mut); return pid
+    def list_patches(self, status="pending"):
+        return [p for p in self.patches.load()["queue"] if p["status"] == status]
+    def set_patch_status(self, pid, status):
+        flag = {"v": False}
+        def mut(d):
+            for p in d["queue"]:
+                if p["id"] == pid:
+                    p["status"] = status; p["updated"] = _now_iso()
+                    flag["v"] = True; break
+            return d
+        self.patches.update(mut); return flag["v"]
+    def scan_link_rot(self, max_workers=12, timeout=12):
+        if not _HAS_BS4 or requests is None:
+            return {"ok": False, "reason": "bs4 or requests missing"}
+        b2b = self.repo_path / "b2b"
+        if not b2b.exists(): return {"ok": False, "reason": f"{b2b} missing"}
+        link_to_files = defaultdict(list)
+        for html_file in b2b.rglob("*.html"):
+            try:
+                soup = BeautifulSoup(html_file.read_text(encoding="utf-8", errors="replace"), "html.parser")
+            except Exception: continue
+            for a in soup.find_all("a", href=True):
+                href = a["href"]
+                if not href.startswith(("http://", "https://")): continue
+                host = urlparse(href).hostname or ""
+                if any(host.endswith(d) for d in LINK_ROT_SKIP_DOMAINS): continue
+                if self.target_domain in host: continue
+                link_to_files[href].append(str(html_file.relative_to(self.repo_path)))
+        broken = []
+        def _check(url):
+            try:
+                resp = requests.head(url, timeout=timeout, allow_redirects=True,
+                                     headers={"User-Agent": "VictorLinkBot/1.0"})
+                if resp.status_code >= 400:
+                    resp = requests.get(url, timeout=timeout, allow_redirects=True,
+                                        headers={"User-Agent": "VictorLinkBot/1.0"}, stream=True)
+                return url, resp.status_code, None
+            except requests.RequestException as e:
+                return url, None, str(e)[:200]
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            futures = [pool.submit(_check, u) for u in link_to_files.keys()]
+            for fut in as_completed(futures):
+                url, code, err = fut.result()
+                if (code and code >= 400) or err:
+                    broken.append({"url": url, "status": code, "error": err,
+                                   "files": link_to_files[url][:5]})
+        self.links.save({"last_scan": _now_iso(), "broken": broken, "checked": len(link_to_files)})
+        return {"ok": True, "checked": len(link_to_files), "broken": len(broken)}
+    def schema_audit(self):
+        if not _HAS_BS4: return {"ok": False, "reason": "bs4 missing"}
+        b2b = self.repo_path / "b2b"
+        if not b2b.exists(): return {"ok": False, "reason": "b2b missing"}
+        missing_schema, thin_articles, no_h1 = [], [], []
+        for html_file in b2b.rglob("*.html"):
+            html = html_file.read_text(encoding="utf-8", errors="replace")
+            soup = BeautifulSoup(html, "html.parser")
+            rel = str(html_file.relative_to(self.repo_path))
+            if not soup.find("script", attrs={"type": "application/ld+json"}): missing_schema.append(rel)
+            if not soup.find("h1"): no_h1.append(rel)
+            if len(soup.get_text(" ", strip=True).split()) < 600: thin_articles.append(rel)
+        return {"ok": True, "missing_schema": missing_schema[:50], "thin_articles": thin_articles[:50],
+                "no_h1": no_h1[:50], "missing_schema_count": len(missing_schema),
+                "thin_count": len(thin_articles), "no_h1_count": len(no_h1)}
+    def overview(self):
+        return {"ts": _now_iso(), "pending_patches": len(self.list_patches(status="pending")),
+                "broken_links": len(self.links.load().get("broken", [])),
+                "last_link_scan": self.links.load().get("last_scan"),
+                "log_present": self.log_path.exists()}
+
+
+class PSEOEngine:
+    def __init__(self, state_dir, repo_path, llm):
+        self.store = JsonStore(state_dir / "pseo_pipeline.json", default={
+            "inventory": {
+                "tool":       ["Kinsta", "Synthesia", "InVideo", "Murf", "Replit", "WP Rocket", "Bitvavo"],
+                "persona":    ["solo founders", "ecommerce stores", "content creators",
+                               "agencies", "SaaS marketers", "wordpress bloggers"],
+                "competitor": ["WP Engine", "HeyGen", "Pictory", "ElevenLabs", "Codespaces", "NitroPack", "Coinbase"],
+                "use_case":   ["course creation", "product demos", "podcast intros",
+                               "seo content", "site speed", "crypto onboarding"],
+                "year":       [str(datetime.now(UTC).year), str(datetime.now(UTC).year + 1)],
+                "count":      ["7", "10", "12"],
+            }, "queue": [],
+        })
+        self.freshness = JsonStore(state_dir / "freshness_scan.json",
+                                   default={"last_scan": None, "stale": []})
+        self.repo_path = Path(repo_path); self.llm = llm
+    @staticmethod
+    def _tokenize(s): return [t for t in re.findall(r"[A-Za-z0-9]+", s.lower()) if len(t) > 2]
+    @classmethod
+    def _jaccard(cls, a, b):
+        ta, tb = set(cls._tokenize(a)), set(cls._tokenize(b))
+        if not ta or not tb: return 0.0
+        return len(ta & tb) / len(ta | tb)
+    def existing_titles(self):
+        b2b = self.repo_path / "b2b"; out = []
+        if not b2b.exists(): return out
+        for html_file in b2b.rglob("*.html"):
+            try: html = html_file.read_text(encoding="utf-8", errors="replace")
+            except OSError: continue
+            m = re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
+            if m: out.append((str(html_file.relative_to(self.repo_path)), m.group(1).strip()))
+        return out
+    def cannibalization_check(self, title, threshold=0.55):
+        existing = self.existing_titles(); hits = []
+        for path, etitle in existing:
+            sim = self._jaccard(title, etitle)
+            if sim >= threshold:
+                hits.append({"path": path, "title": etitle, "similarity": round(sim, 3)})
+        hits.sort(key=lambda x: x["similarity"], reverse=True)
+        return {"title": title, "block": bool(hits), "matches": hits[:10]}
+    def generate(self, template_id, max_count=20):
+        d = self.store.load()
+        tpl = next((t for t in PSEO_TEMPLATES if t["id"] == template_id), None)
+        if not tpl: return []
+        inv = d["inventory"]; placeholders = re.findall(r"\{(\w+)\}", tpl["tpl"])
+        candidates = []; seen = set()
+        for _ in range(max_count * 30):
+            if len(candidates) >= max_count: break
+            try: vals = {ph: random.choice(inv[ph]) for ph in placeholders}
+            except KeyError: break
+            title = tpl["tpl"].format(**vals)
+            if title in seen: continue
+            seen.add(title)
+            if self.cannibalization_check(title)["block"]: continue
+            candidates.append(title)
+        out = [{"id": _short_hash(t), "template": template_id, "title": t,
+                "status": "review", "created": _now_iso()} for t in candidates]
+        def mut(s):
+            existing_ids = {q["id"] for q in s["queue"]}
+            for it in out:
+                if it["id"] not in existing_ids: s["queue"].append(it)
+            s["queue"] = s["queue"][-2000:]; return s
+        self.store.update(mut); return out
+    def review_queue(self, status="review"):
+        return [q for q in self.store.load()["queue"] if q["status"] == status]
+    def set_status(self, vid, status):
+        flag = {"v": False}
+        def mut(s):
+            for q in s["queue"]:
+                if q["id"] == vid:
+                    q["status"] = status; q["updated"] = _now_iso()
+                    flag["v"] = True; break
+            return s
+        self.store.update(mut); return flag["v"]
+    def freshness_scan(self):
+        b2b = self.repo_path / "b2b"
+        if not b2b.exists(): return {"ok": False, "reason": "b2b missing"}
+        current_year = datetime.now(UTC).year; stale = []
+        for html_file in b2b.rglob("*.html"):
+            try: html = html_file.read_text(encoding="utf-8", errors="replace")
+            except OSError: continue
+            issues = []
+            for tag, pat in FRESHNESS_PATTERNS:
+                for m in pat.finditer(html):
+                    snippet = m.group(0)
+                    if tag == "stale_year":
+                        try:
+                            y = int(re.search(r"20\d\d", snippet).group(0))
+                            if y < current_year - 1: issues.append({"tag": tag, "match": snippet})
+                        except (AttributeError, ValueError): continue
+                    else: issues.append({"tag": tag, "match": snippet})
+            if issues:
+                stale.append({"file": str(html_file.relative_to(self.repo_path)),
+                              "issue_count": len(issues), "issues": issues[:10]})
+        stale.sort(key=lambda x: x["issue_count"], reverse=True)
+        self.freshness.save({"last_scan": _now_iso(), "stale": stale})
+        return {"ok": True, "stale_files": len(stale)}
+    def quality_gate(self, html_path):
+        if not _HAS_BS4: return {"ok": False, "reason": "bs4 missing"}
+        if not html_path.exists(): return {"ok": False, "reason": "missing"}
+        soup = BeautifulSoup(html_path.read_text(encoding="utf-8", errors="replace"), "html.parser")
+        text = soup.get_text(" ", strip=True); words = len(text.split())
+        h2 = len(soup.find_all("h2")); h3 = len(soup.find_all("h3"))
+        tables = len(soup.find_all("table"))
+        schema = bool(soup.find("script", attrs={"type": "application/ld+json"}))
+        internal = len([a for a in soup.find_all("a", href=True) if a["href"].startswith("/")])
+        external = len([a for a in soup.find_all("a", href=True)
+                        if a["href"].startswith(("http://", "https://"))])
+        gates = {"min_words": words >= 1200, "has_two_h2": h2 >= 2, "has_h3": h3 >= 1,
+                 "has_table": tables >= 1, "has_schema": schema,
+                 "internal_links": internal >= 3, "external_links": external >= 3}
+        return {"ok": True, "metrics": {"words": words, "h2": h2, "h3": h3, "tables": tables,
+                                         "schema": schema, "internal": internal, "external": external},
+                "gates": gates, "passed": all(gates.values()),
+                "failed_gates": [k for k, v in gates.items() if not v]}
+
+
+class Singularity:
+    def __init__(self, *, bot, admin_id, llm, state_dir, repo_path, log_path,
+                 gsc_credentials, target_domain, competitor_domains=None):
+        self.bot = bot; self.admin_id = int(admin_id); self.llm = llm
+        self.state_dir = Path(state_dir); self.state_dir.mkdir(parents=True, exist_ok=True)
+        self.tracker = AEOTracker(self.state_dir, llm, target_domain, competitor_domains)
+        self.bandit  = RevenueBandit(self.state_dir, repo_path, llm,
+                                     gsc_credentials=gsc_credentials, target_domain=target_domain)
+        self.health  = HealthDaemon(self.state_dir, log_path, llm, repo_path, target_domain)
+        self.pseo    = PSEOEngine(self.state_dir, repo_path, llm)
+        self._loop_lock = threading.Lock()
+        self._cycle_state = JsonStore(self.state_dir / "cycle_state.json", default={"last_runs": {}})
+        self._register_handlers()
+    def daily_cycle(self):
+        if not self._loop_lock.acquire(blocking=False): return {"skipped": "already running"}
+        try:
+            now = datetime.now(UTC); state = self._cycle_state.load(); last = state["last_runs"]
+            results = {}
+            schedule = [
+                ("aeo_scan",      12, lambda: self.tracker.scan_all()),
+                ("link_rot",      24, lambda: self.health.scan_link_rot()),
+                ("freshness",     24, lambda: self.pseo.freshness_scan()),
+                ("schema_audit",  24, lambda: self.health.schema_audit()),
+                ("gsc_pull",       6, lambda: self.bandit.pull_gsc_clicks(days=7)),
+                ("error_diagnose", 1, lambda: self._diagnose_loop()),
+            ]
+            for name, hours, fn in schedule:
+                prev = last.get(name)
+                if prev and datetime.fromisoformat(prev) + timedelta(hours=hours) > now: continue
+                try:
+                    results[name] = fn(); last[name] = _now_iso()
+                except Exception as e:
+                    LOG.exception("cycle task %s failed", name); results[name] = {"error": str(e)}
+            state["last_runs"] = last; self._cycle_state.save(state); return results
+        finally: self._loop_lock.release()
+    def _diagnose_loop(self):
+        new = self.health.tail_new_errors(); queued = 0
+        for err in new[-25:]:
+            if self.health.diagnose_and_queue(err): queued += 1
+        return {"errors": len(new), "queued": queued}
+    def _admin_only(self, msg):
+        try: return int(msg.from_user.id) == self.admin_id
+        except AttributeError: return False
+    def _send(self, chat_id, text, **kwargs):
+        for i in range(0, len(text), 4000):
+            try: self.bot.send_message(chat_id, text[i:i+4000], **kwargs)
+            except Exception: LOG.exception("send_message failed")
+    @staticmethod
+    def _fmt_kv(d): return "\n".join(f"• {k}: {v}" for k, v in d.items())
+    def _register_handlers(self):
+        bot, admin_only, send = self.bot, self._admin_only, self._send
+        @bot.message_handler(commands=["sing_status"])
+        def _h(msg):
+            if not admin_only(msg): return
+            ov = self.health.overview(); aeo = self.tracker.report(window_hours=168)
+            top = self.bandit.top_articles(limit=5)
+            lines = ["🛰  *SINGULARITY PROTOCOL — Module 19*", "", "*Health*", self._fmt_kv(ov), "",
+                     f"*AEO (7d)*: {aeo['total_scans']} scans • {len(aeo['gap_queries'])} gap queries", "",
+                     "*Top earners*",
+                     "\n".join(f"• {a['article']} — €{a['revenue_eur']}" for a in top) or "(none yet)"]
+            send(msg.chat.id, "\n".join(lines), parse_mode="Markdown")
+        @bot.message_handler(commands=["aeo_status", "aeo_report"])
+        def _h(msg):
+            if not admin_only(msg): return
+            r = self.tracker.report(window_hours=168)
+            head = f"📡 *AEO (7d)*\nScans: {r['total_scans']}  Gap queries: {len(r['gap_queries'])}\n\n"
+            body = "\n".join(f"• {row['text']} — {int(row['citation_rate']*100)}% cited "
+                             f"({row['cited']}/{row['scans']})" for row in r["by_query"][:25]) or "(no data — run /aeo_scan)"
+            send(msg.chat.id, head + body, parse_mode="Markdown")
+        @bot.message_handler(commands=["aeo_queries"])
+        def _h(msg):
+            if not admin_only(msg): return
+            qs = self.tracker.list_queries()
+            send(msg.chat.id, "📡 *Tracked queries*\n" + ("\n".join(
+                f"`{q['id']}`  {q['text']}" for q in qs) or "(none)"), parse_mode="Markdown")
+        @bot.message_handler(commands=["aeo_add_query"])
+        def _h(msg):
+            if not admin_only(msg): return
+            text = msg.text.partition(" ")[2].strip()
+            if not text: send(msg.chat.id, "Usage: /aeo_add_query <query>"); return
+            qid = self.tracker.add_query(text)
+            send(msg.chat.id, f"✅ Added `{qid}` — {text}", parse_mode="Markdown")
+        @bot.message_handler(commands=["aeo_remove_query"])
+        def _h(msg):
+            if not admin_only(msg): return
+            ok = self.tracker.remove_query(msg.text.partition(" ")[2].strip())
+            send(msg.chat.id, "✅ removed" if ok else "❌ not found")
+        @bot.message_handler(commands=["aeo_scan"])
+        def _h(msg):
+            if not admin_only(msg): return
+            send(msg.chat.id, "📡 Scanning AEO sources…")
+            try:
+                rep = self.tracker.scan_all()
+                send(msg.chat.id, f"✅ {rep['total_scans']} scans, {len(rep['gap_queries'])} gaps")
+            except Exception as e: send(msg.chat.id, f"❌ {e}")
+        @bot.message_handler(commands=["rev_status", "rev_top_articles"])
+        def _h(msg):
+            if not admin_only(msg): return
+            top = self.bandit.top_articles(limit=15)
+            send(msg.chat.id, "💰 *Top earners*\n" + ("\n".join(
+                f"• {a['article']} — €{a['revenue_eur']} • {a['conversions']} conv / {a['clicks']} clicks"
+                for a in top) or "(no data)"), parse_mode="Markdown")
+        @bot.message_handler(commands=["rev_dead_zones"])
+        def _h(msg):
+            if not admin_only(msg): return
+            dz = self.bandit.dead_zones()
+            send(msg.chat.id, "⚰️ *Dead zones*\n" + ("\n".join(
+                f"• {a['article']} — {a['impressions']} imps" for a in dz[:25]) or "(none)"),
+                parse_mode="Markdown")
+        @bot.message_handler(commands=["rev_recommend"])
+        def _h(msg):
+            if not admin_only(msg): return
+            parts = msg.text.split(maxsplit=2)
+            if len(parts) < 3: send(msg.chat.id, "Usage: /rev_recommend <article> <placement>"); return
+            v = self.bandit.recommend(parts[1], parts[2])
+            if not v: send(msg.chat.id, "❌ no variants"); return
+            send(msg.chat.id, "🎯 Pick:\n```\n" + json.dumps(v, indent=2) + "\n```", parse_mode="Markdown")
+        @bot.message_handler(commands=["rev_register"])
+        def _h(msg):
+            if not admin_only(msg): return
+            payload = msg.text.partition(" ")[2]
+            try:
+                head, url = payload.rsplit("|", 1)
+                article, placement, brand, *cta = head.split()
+                vid = self.bandit.register_variant(article, placement, brand,
+                                                    " ".join(cta).strip(), url.strip())
+                send(msg.chat.id, f"✅ `{vid}`", parse_mode="Markdown")
+            except ValueError:
+                send(msg.chat.id, "Usage: /rev_register <article> <placement> <brand> <cta> | <url>")
+        @bot.message_handler(commands=["rev_pull_gsc"])
+        def _h(msg):
+            if not admin_only(msg): return
+            send(msg.chat.id, "📥 GSC…")
+            send(msg.chat.id, "```\n" + json.dumps(self.bandit.pull_gsc_clicks(days=7), indent=2) + "\n```",
+                 parse_mode="Markdown")
+        @bot.message_handler(commands=["health"])
+        def _h(msg):
+            if not admin_only(msg): return
+            send(msg.chat.id, "🩺 *Health*\n" + self._fmt_kv(self.health.overview()), parse_mode="Markdown")
+        @bot.message_handler(commands=["patches"])
+        def _h(msg):
+            if not admin_only(msg): return
+            q = self.health.list_patches()
+            if not q: send(msg.chat.id, "✅ no pending patches"); return
+            send(msg.chat.id, "🛠 *Pending*\n" + "\n".join(
+                f"`{p['id']}` {p['first_line'][:80]}" for p in q[:25]), parse_mode="Markdown")
+        @bot.message_handler(commands=["patch_show"])
+        def _h(msg):
+            if not admin_only(msg): return
+            pid = msg.text.partition(" ")[2].strip()
+            for p in self.health.list_patches():
+                if p["id"] == pid:
+                    send(msg.chat.id, f"🛠 `{pid}`\n\n{p['first_line']}\n\n{p['diagnosis']}",
+                         parse_mode="Markdown"); return
+            send(msg.chat.id, "❌ not found")
+        @bot.message_handler(commands=["patch_dismiss"])
+        def _h(msg):
+            if not admin_only(msg): return
+            ok = self.health.set_patch_status(msg.text.partition(" ")[2].strip(), "dismissed")
+            send(msg.chat.id, "✅" if ok else "❌")
+        @bot.message_handler(commands=["patch_approve"])
+        def _h(msg):
+            if not admin_only(msg): return
+            ok = self.health.set_patch_status(msg.text.partition(" ")[2].strip(), "approved")
+            send(msg.chat.id, "✅ approved (apply manually)" if ok else "❌")
+        @bot.message_handler(commands=["link_rot"])
+        def _h(msg):
+            if not admin_only(msg): return
+            data = self.health.links.load(); broken = data.get("broken", [])
+            send(msg.chat.id, f"🔗 last: {data.get('last_scan')} • broken: {len(broken)}\n\n" +
+                 ("\n".join(f"• {b.get('status') or b.get('error')} — {b['url']}" for b in broken[:25])
+                  or "(none)"))
+        @bot.message_handler(commands=["link_rot_scan"])
+        def _h(msg):
+            if not admin_only(msg): return
+            send(msg.chat.id, "🔗 scanning…")
+            send(msg.chat.id, f"✅ {self.health.scan_link_rot()}")
+        @bot.message_handler(commands=["schema_audit"])
+        def _h(msg):
+            if not admin_only(msg): return
+            r = self.health.schema_audit()
+            send(msg.chat.id, f"📐 missing: {r.get('missing_schema_count','?')} • "
+                              f"thin: {r.get('thin_count','?')} • no h1: {r.get('no_h1_count','?')}\n\n" +
+                 "\n".join(f"• {p}" for p in r.get("missing_schema", [])[:15]))
+        @bot.message_handler(commands=["pseo_templates"])
+        def _h(msg):
+            if not admin_only(msg): return
+            send(msg.chat.id, "📐 *Templates*\n" + "\n".join(
+                f"`{t['id']}`  {t['tpl']}" for t in PSEO_TEMPLATES), parse_mode="Markdown")
+        @bot.message_handler(commands=["pseo_generate"])
+        def _h(msg):
+            if not admin_only(msg): return
+            tid = msg.text.partition(" ")[2].strip()
+            if not tid: send(msg.chat.id, "Usage: /pseo_generate <template_id>"); return
+            items = self.pseo.generate(tid, max_count=20)
+            send(msg.chat.id, f"✅ {len(items)} candidates\n\n" + "\n".join(
+                f"`{i['id']}`  {i['title']}" for i in items[:25]), parse_mode="Markdown")
+        @bot.message_handler(commands=["pseo_review"])
+        def _h(msg):
+            if not admin_only(msg): return
+            q = self.pseo.review_queue()
+            send(msg.chat.id, "📥 *Review*\n" + ("\n".join(
+                f"`{i['id']}`  {i['title']}" for i in q[:30]) or "(empty)"), parse_mode="Markdown")
+        @bot.message_handler(commands=["pseo_approve", "pseo_reject"])
+        def _h(msg):
+            if not admin_only(msg): return
+            cmd = msg.text.split()[0].lstrip("/")
+            target = "approved" if cmd == "pseo_approve" else "rejected"
+            ok = self.pseo.set_status(msg.text.partition(" ")[2].strip(), target)
+            send(msg.chat.id, f"{'✅' if ok else '❌'} {target}")
+        @bot.message_handler(commands=["pseo_freshness"])
+        def _h(msg):
+            if not admin_only(msg): return
+            data = self.pseo.freshness.load(); stale = data.get("stale", [])
+            send(msg.chat.id, f"🍞 stale: {len(stale)} • last: {data.get('last_scan')}\n\n" +
+                 ("\n".join(f"• {s['file']} — {s['issue_count']} issues" for s in stale[:25]) or "(none)"))
+        @bot.message_handler(commands=["pseo_freshness_scan"])
+        def _h(msg):
+            if not admin_only(msg): return
+            send(msg.chat.id, "🍞 scanning…"); send(msg.chat.id, f"✅ {self.pseo.freshness_scan()}")
+        @bot.message_handler(commands=["pseo_cannibal"])
+        def _h(msg):
+            if not admin_only(msg): return
+            title = msg.text.partition(" ")[2].strip()
+            if not title: send(msg.chat.id, "Usage: /pseo_cannibal <title>"); return
+            r = self.pseo.cannibalization_check(title)
+            send(msg.chat.id, ("🚫 BLOCKED" if r["block"] else "✅ unique") + f" — {title}\n\n" +
+                 ("\n".join(f"• {m['similarity']}  {m['title']} ({m['path']})" for m in r["matches"][:5])
+                  or "(no near-duplicates)"))
+        @bot.message_handler(commands=["pseo_quality"])
+        def _h(msg):
+            if not admin_only(msg): return
+            rel = msg.text.partition(" ")[2].strip()
+            if not rel: send(msg.chat.id, "Usage: /pseo_quality <path>"); return
+            send(msg.chat.id, "```\n" + json.dumps(
+                self.pseo.quality_gate(self.pseo.repo_path / rel), indent=2) + "\n```",
+                parse_mode="Markdown")
+        @bot.message_handler(commands=["sing_cycle"])
+        def _h(msg):
+            if not admin_only(msg): return
+            send(msg.chat.id, "🌀 cycle…")
+            send(msg.chat.id, "```\n" + json.dumps(self.daily_cycle(), indent=2, default=str)[:3500] + "\n```",
+                 parse_mode="Markdown")
+
+
+def init_singularity(*, bot, admin_id, openrouter_key, repo_path, state_dir, log_path,
+                     gsc_credentials, target_domain, competitor_domains=None):
+    llm = OpenRouter(api_key=openrouter_key)
+    sing = Singularity(bot=bot, admin_id=admin_id, llm=llm,
+                       state_dir=Path(state_dir), repo_path=Path(repo_path),
+                       log_path=Path(log_path),
+                       gsc_credentials=Path(gsc_credentials) if gsc_credentials else None,
+                       target_domain=target_domain,
+                       competitor_domains=competitor_domains or [
+                           "wpbeginner.com", "kinsta.com", "wpengine.com",
+                           "g2.com", "capterra.com", "tooltester.com"])
+    LOG.info("Singularity Protocol initialised (admin=%s, target=%s)", admin_id, target_domain)
+    return sing
+
+
+try:
+    SINGULARITY = init_singularity(
+        bot=bot, admin_id=ADMIN_ID,
+        openrouter_key=os.getenv("OPENROUTER_API_KEY"),
+        repo_path="/root/felix_hq/repos/aibuildermarketplace",
+        state_dir="/root/felix_hq/singularity",
+        log_path="/root/felix_hq/victor.log",
+        gsc_credentials="/root/felix_hq/gsc_credentials.json",
+        target_domain="aibuildermarketplace.com")
+    LOG.info("Module 19 SINGULARITY auto-wired")
+except NameError as _e:
+    LOG.error("Module 19 wire-up faalde: %s (zorg dat dit ONDER `bot` en `ADMIN_ID` staat)", _e)
+except Exception as _e:
+    LOG.exception("Module 19 init crashte: %s", _e)
+

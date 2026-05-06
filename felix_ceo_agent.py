@@ -60,6 +60,7 @@ VAULT = {
     "Synthesia": "https://www.synthesia.io/?via=daniel-haket",
     "Kinsta": "https://kinsta.com/?kaid=EKSCJEFWBYJO",
     "Murf": "https://get.murf.ai/qbhzdrcv3l7x",
+    "WP Rocket": "https://www.awin1.com/cread.php?awinmid=52401&awinaffid=2880219&ued=https%3A%2F%2Fwp-rocket.me%2Fpricing%2F",
 }
 
 # ── VICTOR SYSTEM PROMPT ────────────────────────────────────────────────────
@@ -8164,7 +8165,8 @@ def track_revenue_per_article():
 
         if brand_match:
             commission = {"Kinsta": 75, "Synthesia": 20, "InVideo": 15,
-                         "Replit": 10, "Murf": 12, "Bitvavo": 5}.get(brand_match, 10)
+                         "Replit": 10, "Murf": 12, "Bitvavo": 5,
+                         "WP Rocket": 10}.get(brand_match, 10)
 
             # Estimate monthly revenue: clicks * estimated CTR to affiliate * conversion rate
             est_affiliate_ctr = 0.12  # 12% click through to affiliate
@@ -9052,7 +9054,8 @@ def scan_missed_affiliate_opportunities():
         "InVideo": ["invideo", "video editor", "video maker", "online video"],
         "Replit": ["replit", "online ide", "code editor", "coding platform"],
         "Murf": ["murf", "ai voice", "voiceover", "text to speech"],
-        "Bitvavo": ["bitvavo", "crypto", "bitcoin", "exchange"]
+        "Bitvavo": ["bitvavo", "crypto", "bitcoin", "exchange"],
+        "WP Rocket": ["wp rocket", "wprocket", "wordpress cache", "cache plugin", "page speed", "wordpress snelheid"]
     }
 
     for fname in os.listdir(articles_dir):

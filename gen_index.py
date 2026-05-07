@@ -49,7 +49,7 @@ def get_desc(slug):
     return d.get(t, f'Expert {tool} guide for B2B founders in 2026.')
 
 folders = sorted([f.name for f in os.scandir(REPO_B2B) if f.is_dir() and f.name != '.git'], reverse=True)
-n = len(folders)
+import subprocess; html_count = subprocess.run(["find", ".", "-name", "*.html", "-not", "-path", "./.*"], capture_output=True, text=True); n = len(html_count.stdout.strip().split("\n")) if html_count.stdout.strip() else 0
 date_str = datetime.now().strftime("%Y-%m-%d")
 
 cards = [{'slug':f,'tool':get_tool(f),'type':get_type(f),'title':clean_title(f),'desc':get_desc(f),'icon':tool_icons.get(get_tool(f),'🔧'),'color':tag_colors.get(get_type(f),'#374151'),'lang':get_lang(f)} for f in folders]

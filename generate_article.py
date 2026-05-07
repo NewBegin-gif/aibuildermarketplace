@@ -99,7 +99,8 @@ def rebuild_index(folders):
         cards_data.append({'slug': f, 'tool': tool, 'type': typ, 'title': clean_title(f), 'desc': get_desc(f), 'icon': tool_icons.get(tool, '🔧'), 'color': tag_colors.get(typ, '#374151')})
 
     cards_json = _json.dumps(cards_data)
-    n = len(folders)
+    # Count all HTML files instead of just folders
+    import subprocess; html_count = subprocess.run(["find", ".", "-name", "*.html", "-not", "-path", "./.*"], capture_output=True, text=True); n = len(html_count.stdout.strip().split("\n")) if html_count.stdout.strip() else 0
 
     html = f"""<\!DOCTYPE html>
 <html lang="en">

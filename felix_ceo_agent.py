@@ -393,7 +393,9 @@ def web_research_scan():
         )
         resp = urllib.request.urlopen(req, timeout=15)
         html = resp.read().decode('utf-8', errors='replace')
-        article_count = html.count('class="card"')
+        # Count real articles from b2b directories
+        b2b_path = "/root/felix_hq/repos/aibuildermarketplace/b2b"
+        article_count = len([d for d in os.listdir(b2b_path) if os.path.isdir(os.path.join(b2b_path, d)) and not d.startswith(".")])
         findings.append(f"Site heeft {article_count} artikel-cards op b2b index")
     except Exception as e:
         findings.append(f"Site check failed: {str(e)[:80]}")

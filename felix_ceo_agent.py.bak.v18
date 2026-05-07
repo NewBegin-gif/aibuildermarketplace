@@ -2205,7 +2205,7 @@ th{{text-align:left;padding:12px;color:#64748b;font-size:13px;font-weight:500;bo
 </div>
 
 <div style="text-align:center;padding:40px 0;color:#475569;font-size:12px">
-Victor 19.0 Singularity — Powered by Claude AI<br>
+Victor 18.0 Titan — Powered by Claude AI<br>
 Automatisch bijgewerkt via /dashboard
 </div>
 
@@ -7817,7 +7817,7 @@ def generate_dashboard_v2():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Victor 19.0 Singularity — Command Center</title>
+<title>Victor 18.0 Titan — Command Center</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
 * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -7846,7 +7846,7 @@ canvas {{ max-height: 200px; }}
 </head>
 <body>
 <div class="header">
-<h1>Victor 19.0 Singularity — Command Center</h1>
+<h1>Victor 18.0 Titan — Command Center</h1>
 <p>Real-time dashboard | Last update: {datetime.now().strftime('%d/%m/%Y %H:%M')} UTC</p>
 <div style="margin-top:15px;">
 <span class="mini-stat">📝 {article_count} NL</span>
@@ -8812,7 +8812,7 @@ def generate_live_portal():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor 19.0 Singularity Core — Live Portal</title>
+    <title>Victor 18.0 Titan Core — Live Portal</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -8847,7 +8847,7 @@ def generate_live_portal():
 </head>
 <body>
     <header>
-        <h1>Victor 19.0 Singularity Core</h1>
+        <h1>Victor 18.0 Titan Core</h1>
         <p>Live Portal — Updated {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}</p>
     </header>
 
@@ -10597,7 +10597,7 @@ def generate_mobile_status_page():
     </style>
 </head>
 <body>
-    <h1>⚡ Victor 19.0 Singularity</h1>
+    <h1>⚡ Victor 18.0 Titan</h1>
 
     <div class="card">
         <h3>💰 Revenue</h3>
@@ -10629,7 +10629,7 @@ def generate_mobile_status_page():
 
     <div class="sub" style="text-align:center;margin-top:20px;">
         Last updated: {datetime.now().strftime('%H:%M UTC')}<br>
-        Victor 19.0 Singularity — AIBuilderMarketplace.com
+        Victor 18.0 Titan — AIBuilderMarketplace.com
     </div>
 </body>
 </html>"""
@@ -12356,7 +12356,7 @@ def cmd_panel(message):
     keyboard = build_main_dashboard_keyboard()
     bot.send_message(
         message.chat.id,
-        "🧠 Victor 19.0 Singularity — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
+        "🧠 Victor 18.0 Titan — Command Center\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nKies een module:",
         reply_markup=keyboard
     )
 
@@ -13705,7 +13705,7 @@ def cmd_restyle(message):
 def cmd_help(message):
     if message.from_user.id != ADMIN_ID:
         return
-    bot.reply_to(message, """Victor 19.0 Singularity — Commando's:
+    bot.reply_to(message, """Victor 18.0 Titan — Commando's:
 
 📊 Monitoring:
 /status — Systeem status
@@ -14329,7 +14329,7 @@ def generate_status_report():
     uptime = run_command("uptime -p")
     disk = run_command("df -h / | tail -1 | awk '{print $5}'")
 
-    return f"""📊 Victor 19.0 Singularity — Status Report
+    return f"""📊 Victor 18.0 Titan — Status Report
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🕐 {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC
 ⏱ {uptime}
@@ -14949,7 +14949,7 @@ def send_startup_message():
                 resume_text = "\n\n🔄 Hervatte taken na restart:\n" + "\n".join(f"  - {r}" for r in resumed)
 
         bot.send_message(ADMIN_ID,
-            f"🚀 Victor 19.0 Singularity online!\n\n{report}"
+            f"🚀 Victor 18.0 Titan online!\n\n{report}"
             f"\n\n⚡ Titan: /autodeploy /multiply /personas /loops /taskqueue /titan"
             f"\n🌀 Omega: /monetize /eeat /viral /evolve /warroom /counter /omega"
             f"\n🔮 Quantum: /revenue2 /alerts /social2 /predict2 /authority /portal /quantum"
@@ -14970,7 +14970,7 @@ def send_startup_message():
 
 # ── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    log(f"Victor 19.0 Singularity gestart — Model: {MODEL}")
+    log(f"Victor 18.0 Titan gestart — Model: {MODEL}")
 
     # Reset Telegram polling state — voorkomt 409 conflicts
     try:

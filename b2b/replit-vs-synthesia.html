@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replit vs Synthesia 2024: Complete Vergelijking | Welke Tool Past Bij Jou?</title>
+    <meta name="description" content="Uitgebreide vergelijking tussen Replit en Synthesia. Ontdek welke tool het beste past bij jouw behoeften: code development of AI video creatie.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e0e6ed;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            color: #b8c5d1;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        h2 {
+            color: #4fc3f7;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(79, 195, 247, 0.3);
+        }
+        
+        h3 {
+            color: #81c784;
+            font-size: 1.4rem;
+            margin: 25px 0 15px 0;
+        }
+        
+        .verdict-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .verdict-table th,
+        .verdict-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .verdict-table th {
+            background: rgba(79, 195, 247, 0.2);
+            color: #4fc3f7;
+            font-weight: 600;
+        }
+        
+        .verdict-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .pros-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .pros-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #b8c5d1;
+            font-size: 1.1rem;
+        }
+        
+        .pros-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #81c784;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .tool-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tool-card h4 {
+            color: #4fc3f7;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 15px 10px 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            margin: 25px 0;
+        }
+        
+        .vs-divider {
+            text-align: center;
+            font-size: 2rem;
+            color: #667eea;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .verdict-table th,
+            .verdict-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Replit vs Synthesia 2024: Complete Vergelijking</h1>
+            <p class="intro">
+                Replit en Synthesia zijn twee totaal verschillende platforms die elk hun eigen niche domineren. 
+                Terwijl Replit zich richt op collaborative coding en development, specialiseert Synthesia zich in AI-gegenereerde video content.
+            </p>
+        </header>
+
+        <section class="section">
+            <h2>Quick Verdict: Replit vs Synthesia</h2>
+            <table class="verdict-table">
+                <thead>
+                    <tr>
+                        <th>Criterium</th>
+                        <th>Replit</th>
+                        <th>Synthesia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Primaire Focus</strong></td>
+                        <td>Code Development & Collaboration</td>
+                        <td>AI Video Creatie</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Doelgroep</strong></td>
+                        <td>Developers, Studenten, Teams</td>
+                        <td>Content Creators, Marketeers, Trainers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Startprijs</strong></td>
+                        <td>Gratis (€7/maand Pro)</td>
+                        <td>€22/maand</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gebruiksgemak</strong></td>
+                        <td>⭐⭐⭐⭐☆</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overall Rating</strong></td>
+                        <td><span class="rating">4.5/5</span></td>
+                        <td><span class="rating">4.3/5</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="comparison-grid">
+            <section class="section">
+                <h2>Replit: Sterke Punten</h2>
+                <ul class="pros-list">
+                    <li><strong>Instant Development Environment:</strong> Geen setup vereist - begin direct met coderen in de browser zonder lokale installaties</li>
+                    <li><strong>Real-time Collaboration:</strong> Meerdere developers kunnen simultaan aan hetzelfde project werken, vergelijkbaar met Google Docs</li>
+                    <li><strong>Multi-language Support:</strong> Ondersteunt 50+ programmeertalen van Python tot Rust, allemaal met één klik te starten</li>
+                    <li><strong>Integrated Hosting:</strong> Deploy je applicaties direct vanuit de IDE met automatische HTTPS en custom domains</li>
+                    <li><strong>Educational Focus:</strong> Uitgebreide leerresources, templates en community voor beginnende programmeurs</li>
+                </ul>
+                <a href="https://replit.com/signup?referral=dglhaket" class="cta-button">Probeer Replit Gratis</a>
+            </section>
+
+            <section class="section">
+                <h2>Synthesia: Sterke Punten</h2>
+                <ul class="pros-list">
+                    <li><strong>AI Avatar Technology:</strong> Professionele AI-presentatoren die je script natuurlijk voorlezen in 120+ talen</li>
+                    <li><strong>No Camera Needed:</strong> Creëer professionele video's zonder opname-equipment of acteurs te hoeven inhuren</li>
+                    <li><strong>Rapid Content Creation:</strong> Van script naar video in minuten, perfect voor training materiaal en marketing content</li>
+                    <li><strong>Enterprise Integration:</strong> Robuuste API en enterprise features voor grote organisaties met compliance vereisten</li>
+                    <li><strong>Template Library:</strong> Honderden professionele templates voor verschillende industrieën en use cases</li>
+                </ul>
+                <a href="https://www.synthesia.io/?via=daniel-haket" class="cta-button">Start met Synthesia</a>
+            </section>
+        </div>
+
+        <section class="section">
+            <h2>Head-to-Head Vergelijking</h2>
+            
+            <h3>🚀 Features & Functionaliteit</h3>
+            <div class="comparison-grid">
+                <div class="tool-card">
+                    <h4>Replit Features</h4>
+                    <ul class="pros-list">
+                        <li>Browser-based IDE met syntax highlighting</li>
+                        <li>Git integration en version control</li>
+                        <li>Database hosting (PostgreSQL, MongoDB)</li>
+                        <li>Package manager voor alle talen</li>
+                        <li>Live reload en debugging tools</li>
+                        <li>Multiplayer editing met voice/video chat</li>
+                    </ul>
+                </div>
+                <div class="tool-card">
+                    <h4>Synthesia Features</h4>
+                    <ul class="pros-list">
+                        <li>120+ AI avatars in verschillende stijlen</li>
+                        <li>Text-to-speech in 120+ talen</li>
+                        <li>Screen recording en presentation modes</li>
+                        <li>Brand kit met custom kleuren en logos</li>
+                        <li>Video editing tools en animaties</li>
+                        <li>Closed captions en accessibility features</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Winner:</strong> Tie - Beide platforms excelleren in hun eigen domein. Replit wint voor development features, Synthesia voor video creatie mogelijkheden.
+            </div>
+
+            <h3>💰 Pricing & Value</h3>
+            <div class="comparison-grid">
+                <div class="tool-card">
+                    <h4>Replit Pricing</h4>
+                    <ul class="pros-list">
+                        <li><strong>Starter:</strong> Gratis - Basic features, public repls</li>
+                        <li><strong>Replit Core:</strong> €7/maand - Private repls, meer resources</li>
+                        <li><strong>Teams:</strong> €20/maand per gebruiker - Team collaboration</li>
+                        <li><strong>Enterprise:</strong> Custom pricing - Advanced security</li>
+                    </ul>
+                </div>
+                <div class="tool-card">
+                    <h4>Synthesia Pricing</h4>
+                    <ul class="pros-list">
+                        <li><strong>Starter:</strong> €22/maand - 10 video credits</li>
+                        <li><strong>Creator:</strong> €67/maand - 90 video credits</li>
+                        <li><strong>Enterprise:</strong> Custom pricing - Unlimited videos</li>
+                        <li>Jaarlijkse kortingen beschikbaar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Winner: Replit</strong> - Veel meer waarde voor geld, vooral met het gratis plan dat al zeer functioneel is.
+            </div>
+
+            <h3>🎯 Gebruiksgemak & Learning Curve</h3>
+            <p>
+                <strong>Replit:</strong> Voor beginners zeer toegankelijk dankzij de browser-based setup en uitgebreide tutorials. 
+                Ervaren developers waarderen de snelle setup en collaboration features. De learning curve is geleidelijk.
+            </p>
+            <p>
+                <strong>Synthesia:</strong> Extreem gebruiksvriendelijk - binnen 10 minuten heb je je eerste video gemaakt. 
+                De interface is intuïtief en vereist

@@ -154,6 +154,30 @@
       "query-input": "required name=search_term_string"
     }
   }
+    // Tool filtering functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const toolCards = document.querySelectorAll(".tool-card");
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove("active"));
+          // Add active class to clicked button
+          btn.classList.add("active");
+          
+          const filter = btn.dataset.filter;
+          
+          toolCards.forEach(card => {
+            if (filter === "all" || card.dataset.category === filter) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    });
   </script>
 </head>
 <body>
@@ -199,7 +223,7 @@
       <h2>AI Tools We Review</h2>
       <p>In-depth reviews, ROI breakdowns, and real-world comparisons to help you pick the right tools.</p>
     </div>
-    <div class="filter-bar"><button class="filter-btn active" data-filter="all">All Tools</button><button class="filter-btn" data-filter="ai-video">AI Video</button><button class="filter-btn" data-filter="voice-ai">Voice AI</button><button class="filter-btn" data-filter="performance">Performance</button><button class="filter-btn" data-filter="seo">SEO</button><button class="filter-btn" data-filter="hosting">Hosting</button><button class="filter-btn" data-filter="coding">Coding</button></div><div class="tools-grid">
+    <div class="filter-bar"><button class="filter-btn active" data-filter="all">All Tools</button><button class="filter-btn" data-filter="ai-video">AI Video</button><button class="filter-btn" data-filter="voice-ai">Voice AI</button><button class="filter-btn" data-filter="performance">Performance</button><button class="filter-btn" data-filter="seo">SEO</button><button class="filter-btn" data-filter="hosting">Hosting</button><button class="filter-btn" data-filter="coding">Coding</button><button class="filter-btn" data-filter="crypto">Crypto</button></div><div class="tools-grid">
 
       <div class="tool-card" data-brand="kinsta" data-category="hosting">
         <div class="tool-card-header"><svg class="tool-logo" viewBox="0 0 24 24" width="36" height="36"><circle cx="12" cy="12" r="11" fill="#5333ed"/><path d="M12 6L7 9v6l5 3 5-3V9l-5-3zm0 1.2l3.9 2.3L12 11.8 8.1 9.5 12 7.2zM8 10.2l3.5 1.75v3.57L8 13.77V10.2zm5 5.32v-3.57L16.5 10.2v3.57L13 15.52z" fill="#fff"/></svg><h3>Kinsta</h3></div>
@@ -336,6 +360,30 @@
     // Animate on scroll
     const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.1});
     document.querySelectorAll('.tool-card,.how-step,.stat-item').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s,transform .5s';observer.observe(el)});
+    // Tool filtering functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const toolCards = document.querySelectorAll(".tool-card");
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove("active"));
+          // Add active class to clicked button
+          btn.classList.add("active");
+          
+          const filter = btn.dataset.filter;
+          
+          toolCards.forEach(card => {
+            if (filter === "all" || card.dataset.category === filter) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    });
   </script>
 </body>
 </html>

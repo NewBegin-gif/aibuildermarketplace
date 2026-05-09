@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinsta vs WP Rocket: Complete Vergelijking 2024</title>
+    <meta name="description" content="Uitgebreide vergelijking tussen Kinsta hosting en WP Rocket plugin. Ontdek welke optie het beste past bij jouw WordPress website behoeften.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 3.2em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: #ffffff;
+            margin: 50px 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #764ba2;
+        }
+
+        h3 {
+            font-size: 1.6em;
+            color: #ffffff;
+            margin: 30px 0 20px 0;
+        }
+
+        .intro {
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .comparison-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .pros-section, .cons-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pros-section h3 {
+            color: #4ade80;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cons-section h3 {
+            color: #f87171;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pros-list, .cons-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .pros-list li, .cons-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pros-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .cons-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #f87171;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            border-color: #ffffff;
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+        }
+
+        .cta-button.secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.2em;
+        }
+
+        .conclusion {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            margin: 25px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .comparison-table {
+                font-size: 0.9em;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Kinsta vs WP Rocket: De Ultieme Vergelijking</h1>
+            <p class="subtitle">Ontdek welke oplossing het beste past bij jouw WordPress website performance behoeften</p>
+        </div>
+
+        <div class="intro">
+            <p>Bij het optimaliseren van je WordPress website kom je al snel twee populaire oplossingen tegen: Kinsta's premium hosting met ingebouwde caching en WP Rocket's krachtige caching plugin. Hoewel beide tools je website sneller maken, zijn het fundamenteel verschillende oplossingen die elk hun eigen voordelen bieden.</p>
+        </div>
+
+        <h2>🏆 Quick Verdict</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Criteria</th>
+                    <th>Kinsta</th>
+                    <th>WP Rocket</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Type Oplossing</strong></td>
+                    <td>Premium WordPress Hosting</td>
+                    <td>Caching & Performance Plugin</td>
+                </tr>
+                <tr>
+                    <td><strong>Startprijs</strong></td>
+                    <td>$35/maand</td>
+                    <td>$59/jaar</td>
+                </tr>
+                <tr>
+                    <td><strong>Gemak van gebruik</strong></td>
+                    <td>Volledig beheerd</td>
+                    <td>Eenvoudige installatie</td>
+                </tr>
+                <tr>
+                    <td><strong>Performance</strong></td>
+                    <td>Server-level optimalisatie</td>
+                    <td>Frontend optimalisatie</td>
+                </tr>
+                <tr>
+                    <td><strong>Ondersteuning</strong></td>
+                    <td>24/7 WordPress experts</td>
+                    <td>Email support + documentatie</td>
+                </tr>
+                <tr>
+                    <td><strong>Overall Rating</strong></td>
+                    <td>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span>4.8/5</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>4.5/5</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pros-cons">
+            <div class="pros-section">
+                <h3>🚀 Kinsta - Sterke Punten</h3>
+                <ul class="pros-list">
+                    <li><strong>Google Cloud Platform Infrastructure:</strong> Gebruik van Google's premium netwerk voor maximale snelheid en betrouwbaarheid</li>
+                    <li><strong>Volledig Beheerde Hosting:</strong> Automatische updates, backups, beveiliging en monitoring zonder zorgen</li>
+                    <li><strong>Ingebouwde Performance Optimalisatie:</strong> Server-level caching, CDN en PHP 8+ ondersteuning standaard inbegrepen</li>
+                    <li><strong>Expert WordPress Support:</strong> 24/7 ondersteuning door echte WordPress developers en engineers</li>
+                    <li><strong>Staging Omgevingen:</strong> Eenvoudig testen van wijzigingen met één klik staging sites</li>
+                </ul>
+            </div>
+
+            <div class="pros-section">
+                <h3>⚡ WP Rocket - Sterke Punten</h3>
+                <ul class="pros-list">
+                    <li><strong>Gebruiksvriendelijke Interface:</strong> Plug-and-play oplossing die direct resultaten levert zonder technische kennis</li>
+                    <li><strong>Uitgebreide Caching Opties:</strong> Page caching, browser caching, en database optimalisatie in één pakket</li>
+                    <li><strong>Kosteffectieve Oplossing:</strong> Aanzienlijk goedkoper dan premium hosting voor kleinere websites</li>
+                    <li><strong>Compatibiliteit:</strong> Werkt met vrijwel elke hosting provider en WordPress configuratie</li>
+                    <li><strong>Geavanceerde Features:</strong> Lazy loading, minificatie, en database cleanup tools inbegrepen</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>⚔️ Head-to-Head Vergelijking</h2>
+
+        <h3>💰 Pricing & Waarde</h3>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4><strong>Kinsta Pricing</strong></h4>
+                <p><strong>Starter:</strong> $35/maand (1 website, 10GB opslag)</p>
+                <p><strong>Pro:</strong> $70/maand (2 websites, 20GB opslag)</p>
+                <p><strong>Business:</strong> $115/maand (5 websites, 30GB opslag)</p>
+                <div class="highlight">
+                    <p><strong>Inbegrepen:</strong> Hosting, CDN, SSL, backups, staging, beveiliging, support</p>
+                </div>
+                <a href="https://kinsta.com/?kaid=EKSCJEFWBYJO" class="cta-button">Bekijk Kinsta Prijzen</a>
+            </div>
+
+            <div class="feature-card">
+                <h4><strong>WP Rocket Pricing</strong></h4>
+                <p><strong>Single:</strong> $59/jaar (1 website)</p>
+                <p><strong>Plus:</strong> $119/jaar (3 websites)</p>
+                <p><strong>Infinite:</strong

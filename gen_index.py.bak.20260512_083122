@@ -8,8 +8,8 @@ REPO_ROOT = "/root/felix_hq/repos/aibuildermarketplace"
 DOMAIN = "https://aibuildermarketplace.com"
 
 lang_codes = ['-en', '-fr', '-du', '-po', '-ge', '-sp']
-lang_flags = {'-en':'🇬🇧','-nl':'🇳🇱','-fr':'🇫🇷','-de':'🇩🇪','-es':'🇪🇸','-it':'🇮🇹','-pt':'🇵🇹','-pl':'🇵🇱','-sv':'🇸🇪','-ja':'🇯🇵','-ko':'🇰🇷','-du':'🇳🇱','-ge':'🇩🇪','-sp':'🇪🇸','-po':'🇵🇹'}
-tool_icons = {'Kinsta':'🟢','Synthesia':'🎬','InVideo':'🎥','Replit':'💻','Bitvavo':'₿','Clay':'🎯','Murf':'🎙️','Other':'🔧','WP Rocket':'🚀','Rank Math':'📊'}
+lang_flags = {'-en':'🇬🇧','-fr':'🇫🇷','-du':'🇳🇱','-po':'🇵🇹','-ge':'🇩🇪','-sp':'🇪🇸'}
+tool_icons = {'Kinsta':'🟢','Synthesia':'🎬','InVideo':'🎥','Replit':'💻','Bitvavo':'₿','Clay':'🎯','Murf':'🎙️','Other':'🔧'}
 tag_colors = {'Review':'#1a7f4e','Comparison':'#6639ba','ROI':'#b45309','Efficiency':'#0369a1','Automation':'#0f766e','Scale-Up':'#be185d','Secrets':'#7c3aed','Hosting':'#0369a1','Pricing':'#b45309','Guide':'#374151'}
 
 def get_lang(slug):
@@ -26,8 +26,8 @@ def clean_title(slug):
 
 def get_tool(slug):
     s = slug.lower()
-    for t in ['kinsta','synthesia','invideo','replit','bitvavo','clay','murf','wprocket','wp-rocket','rankmath','rank-math']:
-        if s.startswith(t): return {'invideo':'InVideo','wprocket':'WP Rocket','wp-rocket':'WP Rocket','rankmath':'Rank Math','rank-math':'Rank Math'}.get(t, t.capitalize())
+    for t in ['kinsta','synthesia','invideo','replit','bitvavo','clay','murf']:
+        if s.startswith(t): return {'invideo':'InVideo'}.get(t, t.capitalize())
     return 'Other'
 
 def get_type(slug):
@@ -52,47 +52,7 @@ folders = sorted([f.name for f in os.scandir(REPO_B2B) if f.is_dir() and f.name 
 import subprocess; html_count = subprocess.run(["find", ".", "-name", "*.html", "-not", "-path", "./.*"], capture_output=True, text=True); n = len(html_count.stdout.strip().split("\n")) if html_count.stdout.strip() else 0
 date_str = datetime.now().strftime("%Y-%m-%d")
 
-
-def _read_html(folder):
-    try:
-        with open("b2b/" + folder + "/index.html", encoding="utf-8") as fh:
-            return fh.read()
-    except Exception:
-        return ""
-
-def get_card_title(folder):
-    """Pak <h1> uit artikel (target lang). Fallback: clean_title(slug)."""
-    html = _read_html(folder)
-    m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.DOTALL)
-    if m:
-        text = re.sub(r"<[^>]+>", "", m.group(1))
-        text = re.sub(r"\s+", " ", text).strip()
-        if text:
-            return text[:80]
-    return clean_title(folder)
-
-def get_card_desc(folder):
-    """Pak eerste betekenisvolle <p> uit artikel (target lang). HTML-tags worden gestript."""
-    html = _read_html(folder)
-    # Match <p>...</p> met willekeurige inhoud (incl nested tags) - non-greedy
-    for m in re.finditer(r"<p\b[^>]*>(.*?)</p>", html, re.DOTALL):
-        text = re.sub(r"<[^>]+>", "", m.group(1))
-        text = re.sub(r"\s+", " ", text).strip()
-        if len(text) >= 50:
-            return (text[:160].rstrip(",.;: ") + "...") if len(text) > 160 else text
-    # Fallback: try unclosed <p>
-    m = re.search(r"<p\b[^>]*>(.{60,400})", html, re.DOTALL)
-    if m:
-        text = re.sub(r"<[^>]+>", "", m.group(1))
-        text = re.sub(r"\s+", " ", text).strip()
-        if text:
-            return text[:160] + "..."
-    try:
-        return get_desc(folder)
-    except Exception:
-        return ""
-
-cards = [{'slug':f,'tool':get_tool(f),'type':get_type(f),'title':get_card_title(f),'desc':get_card_desc(f),'icon':tool_icons.get(get_tool(f),'🔧'),'color':tag_colors.get(get_type(f),'#374151'),'lang':get_lang(f)} for f in folders]
+cards = [{'slug':f,'tool':get_tool(f),'type':get_type(f),'title':clean_title(f),'desc':get_desc(f),'icon':tool_icons.get(get_tool(f),'🔧'),'color':tag_colors.get(get_type(f),'#374151'),'lang':get_lang(f)} for f in folders]
 cards_json = json.dumps(cards, ensure_ascii=False)
 
 # Bouw HTML — let op: geen bash heredoc, dus gewone ! werkt hier prima
@@ -168,8 +128,6 @@ html = """<!DOCTYPE html>
     <button class="filter-btn" onclick="filterTool(this,'Bitvavo')">₿ Bitvavo</button>
     <button class="filter-btn" onclick="filterTool(this,'Clay')">🎯 Clay</button>
     <button class="filter-btn" onclick="filterTool(this,'Murf')">🎙️ Murf</button>
-    <button class="filter-btn" onclick="filterTool(this,'Rank Math')">📊 Rank Math</button>
-    <button class="filter-btn" onclick="filterTool(this,'WP Rocket')">🚀 WP Rocket</button>
     <div class="filter-sep"></div>
     <span class="filter-label">Type:</span>
     <button class="filter-btn active" onclick="filterType(this,'all')">All</button>

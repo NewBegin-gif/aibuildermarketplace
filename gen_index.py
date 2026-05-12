@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Genereert b2b/index.html met alle artikelen en dark theme."""
 import os, json
+import re
 from datetime import datetime
 
 REPO_B2B = "/root/felix_hq/repos/aibuildermarketplace/b2b"

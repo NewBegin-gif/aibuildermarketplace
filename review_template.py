@@ -21,9 +21,46 @@ from datetime import datetime
 DOMAIN = "https://aibuildermarketplace.com"
 
 # ─────────────────────────────────────────────────────────────────────────
+# BRAND LOGOS — inline SVG (geen externe requests, geen broken images)
+# Elk logo gebruikt viewBox 0 0 24 24 en width="1em" height="1em" zodat
+# het schaalt met de parent's font-size.
+# ─────────────────────────────────────────────────────────────────────────
+LOGO_HOSTINGER = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#673DE6"/><path d="M6 6h2.4v5h7.2V6H18v12h-2.4v-5H8.4v5H6V6z" fill="#fff"/></svg>'
+
+LOGO_KINSTA = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#5333ED"/><path d="M7 6h2.6v4.7L13 6h3.1l-3.9 5.3L17 18h-3l-2.7-5.4-1.7 1.9V18H7V6z" fill="#fff"/></svg>'
+
+LOGO_SYNTHESIA = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1F2937"/><circle cx="12" cy="10" r="3" fill="#3B82F6"/><path d="M6 18.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" stroke="#3B82F6" stroke-width="2" fill="none" stroke-linecap="round"/></svg>'
+
+LOGO_INVIDEO = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#7C3AED"/><path d="M9 7.5v9l7-4.5-7-4.5z" fill="#fff"/></svg>'
+
+LOGO_REPLIT = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#0E1525"/><path d="M7 6h5v5H7V6zm5 5h5v5h-5v-5zm-5 5h5v3H7v-3z" fill="#F26207"/></svg>'
+
+LOGO_BITVAVO = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1B49C6"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">B</text></svg>'
+
+LOGO_MURF = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#F23E76"/><path d="M5 11h1.5v2H5v-2zm2.5-2H9v6H7.5V9zm2.5-3h1.5v12H10V6zm2.5 4h1.5v4H12.5v-4zm2.5 2h1.5v0H15v0zm2.5-1h1.5v2H17.5v-2z" fill="#fff"/><circle cx="6" cy="12" r=".7" fill="#fff"/><circle cx="9" cy="12" r="1" fill="#fff"/><circle cx="12" cy="12" r="1.2" fill="#fff"/><circle cx="15" cy="12" r="1" fill="#fff"/><circle cx="18" cy="12" r=".7" fill="#fff"/></svg>'
+
+LOGO_WPROCKET = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#FE5C2B"/><path d="M16.5 5.5c-2 .2-4.5 1.8-6 3.3L9 10.3 6.5 11l-1 1 3 1 1 1 1 3 1-1 .7-2.5 1.5-1.5c1.5-1.5 3.1-4 3.3-6 0-.3-.2-.5-.5-.5zm-2 4a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6z" fill="#fff"/><path d="M7 16l-1.5 2L4 18.5 4.5 17 6 15.5 7 16z" fill="#fff"/></svg>'
+
+LOGO_RANKMATH = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#724FFF"/><path d="M5 17h2v-3H5v3zm3.5 0h2v-6h-2v6zm3.5 0h2V9h-2v8zm3.5 0h2V7h-2v10z" fill="#fff"/></svg>'
+
+LOGO_DEFAULT = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#3B82F6"/><path d="M12 6l-6 4v4l6 4 6-4v-4l-6-4zm0 2.4l4.2 2.8L12 14l-4.2-2.8L12 8.4z" fill="#fff"/></svg>'
+
+
+# ─────────────────────────────────────────────────────────────────────────
 # AFFILIATE CONFIG — per brand
 # ─────────────────────────────────────────────────────────────────────────
 AFFILIATE = {
+    "Hostinger": {
+        "url": "https://www.hostinger.com?REFERRALCODE=UZUDGLHAKW67",
+        "rating": "4.7",
+        "reviews": "28,500",
+        "price": "From $2.99/mo",
+        "badge": "75% off + free domain",
+        "tagline": "Affordable hosting with AI website builder",
+        "logo": LOGO_HOSTINGER,
+        "color": "#673DE6",
+        "category": "Hosting",
+    },
     "Kinsta": {
         "url": "https://kinsta.com/?kaid=EKSCJEFWBYJO",
         "rating": "4.8",
@@ -31,8 +68,8 @@ AFFILIATE = {
         "price": "From $35/mo",
         "badge": "30-day money-back",
         "tagline": "Premium managed WordPress hosting",
-        "icon": "🟢",
-        "color": "#8b5cf6",
+        "logo": LOGO_KINSTA,
+        "color": "#5333ED",
         "category": "Hosting",
     },
     "Synthesia": {
@@ -42,8 +79,8 @@ AFFILIATE = {
         "price": "From $22/mo",
         "badge": "Free demo",
         "tagline": "AI video generator with avatars",
-        "icon": "🎬",
-        "color": "#3b82f6",
+        "logo": LOGO_SYNTHESIA,
+        "color": "#3B82F6",
         "category": "AI Video",
     },
     "InVideo": {
@@ -53,8 +90,8 @@ AFFILIATE = {
         "price": "From $20/mo",
         "badge": "Free plan",
         "tagline": "AI video editor for creators",
-        "icon": "🎥",
-        "color": "#a78bfa",
+        "logo": LOGO_INVIDEO,
+        "color": "#7C3AED",
         "category": "AI Video",
     },
     "Invideo": {
@@ -64,8 +101,8 @@ AFFILIATE = {
         "price": "From $20/mo",
         "badge": "Free plan",
         "tagline": "AI video editor for creators",
-        "icon": "🎥",
-        "color": "#a78bfa",
+        "logo": LOGO_INVIDEO,
+        "color": "#7C3AED",
         "category": "AI Video",
     },
     "Replit": {
@@ -75,8 +112,8 @@ AFFILIATE = {
         "price": "Free plan",
         "badge": "AI Agent included",
         "tagline": "Cloud IDE with AI coding agent",
-        "icon": "💻",
-        "color": "#f59e0b",
+        "logo": LOGO_REPLIT,
+        "color": "#F26207",
         "category": "Developer",
     },
     "Bitvavo": {
@@ -86,8 +123,8 @@ AFFILIATE = {
         "price": "0.25% fee",
         "badge": "€10K fee-free",
         "tagline": "EU-licensed crypto exchange",
-        "icon": "₿",
-        "color": "#10b981",
+        "logo": LOGO_BITVAVO,
+        "color": "#1B49C6",
         "category": "Crypto",
     },
     "Murf": {
@@ -97,8 +134,8 @@ AFFILIATE = {
         "price": "From $19/mo",
         "badge": "Free trial",
         "tagline": "AI voice generator, 120+ voices",
-        "icon": "🎙️",
-        "color": "#ec4899",
+        "logo": LOGO_MURF,
+        "color": "#F23E76",
         "category": "AI Voice",
     },
     "WP Rocket": {
@@ -108,8 +145,8 @@ AFFILIATE = {
         "price": "From $59/yr",
         "badge": "14-day refund",
         "tagline": "WordPress speed-up plugin",
-        "icon": "🚀",
-        "color": "#ef4444",
+        "logo": LOGO_WPROCKET,
+        "color": "#FE5C2B",
         "category": "WordPress",
     },
     "Rank Math": {
@@ -119,8 +156,8 @@ AFFILIATE = {
         "price": "Free plan",
         "badge": "Pro from $59/yr",
         "tagline": "SEO plugin for WordPress",
-        "icon": "📈",
-        "color": "#14b8a6",
+        "logo": LOGO_RANKMATH,
+        "color": "#724FFF",
         "category": "WordPress",
     },
 }
@@ -133,8 +170,8 @@ DEFAULT_AFFILIATE = {
     "price": "Varies",
     "badge": "See pricing",
     "tagline": "AI tool for founders",
-    "icon": "🔧",
-    "color": "#3b82f6",
+    "logo": LOGO_DEFAULT,
+    "color": "#3B82F6",
     "category": "AI Tool",
 }
 
@@ -423,7 +460,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
     quick_verdict = f"""
 <aside class="verdict-card" aria-labelledby="verdict-title">
   <div class="verdict-top">
-    <span class="verdict-icon" aria-hidden="true">{aff['icon']}</span>
+    <span class="verdict-icon" aria-hidden="true">{aff['logo']}</span>
     <div class="verdict-meta">
       <div class="verdict-brand">{brand1}</div>
       <div class="verdict-tagline">{aff['tagline']}</div>
@@ -445,7 +482,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
     # ─── Sticky sidebar CTA (desktop) ───
     sticky_card = f"""
 <aside class="sticky-card" aria-label="{cta_get}">
-  <div class="sc-icon">{aff['icon']}</div>
+  <div class="sc-icon">{aff['logo']}</div>
   <div class="sc-brand">{brand1}</div>
   <div class="sc-rating"><span class="stars">{stars_html}</span> {aff['rating']}/5</div>
   <div class="sc-price">{aff['price']}</div>
@@ -460,7 +497,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
     mobile_cta = f"""
 <div class="mobile-cta" role="region" aria-label="{cta_main}">
   <div class="mc-info">
-    <div class="mc-brand">{aff['icon']} {brand1}</div>
+    <div class="mc-brand"><span class="mc-logo">{aff['logo']}</span>{brand1}</div>
     <div class="mc-rating">{stars_html} {aff['rating']} · {aff['price']}</div>
   </div>
   <a class="mc-btn" href="{aff_url}" rel="sponsored noopener" target="_blank">{cta_main}</a>
@@ -489,7 +526,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
             continue
         footer_items += (
             f'<li><a href="{data["url"]}" rel="sponsored noopener" target="_blank">'
-            f'<span class="fi-icon">{data["icon"]}</span>'
+            f'<span class="fi-icon">{data["logo"]}</span>'
             f'<span class="fi-text"><strong>{brand}</strong><span class="fi-tag">{data["tagline"]}</span></span>'
             f'<span class="fi-arrow">→</span></a></li>'
         )
@@ -596,7 +633,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
 
     .verdict-card{{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:16px;padding:24px;margin:0 0 32px;box-shadow:0 4px 24px rgba(0,0,0,.2)}}
     .verdict-top{{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}}
-    .verdict-icon{{font-size:2.2rem;line-height:1}}
+    .verdict-icon{{font-size:2.4rem;line-height:0;display:inline-flex;align-items:center}}
     .verdict-meta{{flex:1;min-width:0}}
     .verdict-brand{{font-size:1.2rem;font-weight:800;color:var(--text)}}
     .verdict-tagline{{font-size:.85rem;color:var(--muted);margin-top:2px}}
@@ -645,7 +682,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
     .ft-list{{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}}
     .ft-list a{{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);transition:all .15s}}
     .ft-list a:hover{{border-color:var(--accent);transform:translateY(-1px);opacity:1}}
-    .fi-icon{{font-size:1.3rem;line-height:1}}
+    .fi-icon{{font-size:1.5rem;line-height:0;display:inline-flex;align-items:center;flex-shrink:0}}
     .fi-text{{display:flex;flex-direction:column;flex:1;min-width:0}}
     .fi-text strong{{color:var(--text);font-size:.88rem;font-weight:700}}
     .fi-tag{{color:var(--muted);font-size:.74rem;margin-top:2px}}
@@ -653,7 +690,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
 
     .sticky-card{{position:sticky;top:80px;align-self:start;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:14px;padding:22px 20px;text-align:center;margin-top:24px;box-shadow:0 4px 24px rgba(0,0,0,.18)}}
     @media(max-width:980px){{.sticky-card{{display:none}}}}
-    .sc-icon{{font-size:2rem;margin-bottom:8px}}
+    .sc-icon{{font-size:2.2rem;margin-bottom:10px;line-height:0;display:flex;justify-content:center}}
     .sc-brand{{font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:6px}}
     .sc-rating{{color:var(--muted);font-size:.82rem;margin-bottom:6px}}
     .sc-rating .stars{{font-size:.92rem}}
@@ -667,7 +704,8 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
     .mobile-cta{{display:none;position:fixed;left:0;right:0;bottom:0;background:rgba(10,14,23,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:10px 14px;z-index:90;align-items:center;gap:12px;box-shadow:0 -4px 24px rgba(0,0,0,.4)}}
     @media(max-width:980px){{.mobile-cta{{display:flex}}body{{padding-bottom:72px}}}}
     .mc-info{{flex:1;min-width:0}}
-    .mc-brand{{color:var(--text);font-weight:700;font-size:.88rem}}
+    .mc-brand{{color:var(--text);font-weight:700;font-size:.88rem;display:flex;align-items:center;gap:6px}}
+    .mc-logo{{font-size:1.1rem;line-height:0}}
     .mc-rating{{color:var(--muted);font-size:.72rem}}
     .mc-rating .stars{{font-size:.78rem}}
     .mc-btn{{background:var(--accent);color:#0a0e17;font-weight:800;padding:10px 16px;border-radius:8px;white-space:nowrap;font-size:.88rem;text-decoration:none}}

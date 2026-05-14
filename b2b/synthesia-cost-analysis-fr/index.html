@@ -56,7 +56,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box}
-    :root{--bg:#0a0e17;--bg2:#0f172a;--card:#111827;--card2:#1a2238;--border:#1e293b;--text:#f1f5f9;--text2:#cbd5e1;--muted:#94a3b8;--accent:#3b82f6;--accent-soft:#3b82f622}
+    :root{--bg:#0a0e17;--bg2:#0f172a;--card:#111827;--card2:#1a2238;--border:#1e293b;--text:#f1f5f9;--text2:#cbd5e1;--muted:#94a3b8;--accent:#3B82F6;--accent-soft:#3B82F622}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;line-height:1.75;-webkit-font-smoothing:antialiased}
     a{color:var(--accent);text-decoration:none;transition:opacity .15s}
@@ -86,7 +86,7 @@
 
     .verdict-card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:16px;padding:24px;margin:0 0 32px;box-shadow:0 4px 24px rgba(0,0,0,.2)}
     .verdict-top{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
-    .verdict-icon{font-size:2.2rem;line-height:1}
+    .verdict-icon{font-size:2.4rem;line-height:0;display:inline-flex;align-items:center}
     .verdict-meta{flex:1;min-width:0}
     .verdict-brand{font-size:1.2rem;font-weight:800;color:var(--text)}
     .verdict-tagline{font-size:.85rem;color:var(--muted);margin-top:2px}
@@ -135,7 +135,7 @@
     .ft-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
     .ft-list a{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);transition:all .15s}
     .ft-list a:hover{border-color:var(--accent);transform:translateY(-1px);opacity:1}
-    .fi-icon{font-size:1.3rem;line-height:1}
+    .fi-icon{font-size:1.5rem;line-height:0;display:inline-flex;align-items:center;flex-shrink:0}
     .fi-text{display:flex;flex-direction:column;flex:1;min-width:0}
     .fi-text strong{color:var(--text);font-size:.88rem;font-weight:700}
     .fi-tag{color:var(--muted);font-size:.74rem;margin-top:2px}
@@ -143,7 +143,7 @@
 
     .sticky-card{position:sticky;top:80px;align-self:start;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:14px;padding:22px 20px;text-align:center;margin-top:24px;box-shadow:0 4px 24px rgba(0,0,0,.18)}
     @media(max-width:980px){.sticky-card{display:none}}
-    .sc-icon{font-size:2rem;margin-bottom:8px}
+    .sc-icon{font-size:2.2rem;margin-bottom:10px;line-height:0;display:flex;justify-content:center}
     .sc-brand{font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:6px}
     .sc-rating{color:var(--muted);font-size:.82rem;margin-bottom:6px}
     .sc-rating .stars{font-size:.92rem}
@@ -157,7 +157,8 @@
     .mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;background:rgba(10,14,23,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:10px 14px;z-index:90;align-items:center;gap:12px;box-shadow:0 -4px 24px rgba(0,0,0,.4)}
     @media(max-width:980px){.mobile-cta{display:flex}body{padding-bottom:72px}}
     .mc-info{flex:1;min-width:0}
-    .mc-brand{color:var(--text);font-weight:700;font-size:.88rem}
+    .mc-brand{color:var(--text);font-weight:700;font-size:.88rem;display:flex;align-items:center;gap:6px}
+    .mc-logo{font-size:1.1rem;line-height:0}
     .mc-rating{color:var(--muted);font-size:.72rem}
     .mc-rating .stars{font-size:.78rem}
     .mc-btn{background:var(--accent);color:#0a0e17;font-weight:800;padding:10px 16px;border-radius:8px;white-space:nowrap;font-size:.88rem;text-decoration:none}
@@ -202,7 +203,7 @@
       
 <aside class="verdict-card" aria-labelledby="verdict-title">
   <div class="verdict-top">
-    <span class="verdict-icon" aria-hidden="true">🎬</span>
+    <span class="verdict-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1F2937"/><circle cx="12" cy="10" r="3" fill="#3B82F6"/><path d="M6 18.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" stroke="#3B82F6" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>
     <div class="verdict-meta">
       <div class="verdict-brand">Synthesia</div>
       <div class="verdict-tagline">AI video generator with avatars</div>
@@ -227,7 +228,7 @@
 
 <p style="font-size: 1.1em; line-height: 1.6;">Bienvenue dans votre analyse tarifaire définitive. Contrairement aux guides superficiels, ce document est conçu pour les fondateurs, CTO et dirigeants qui ne cherchent pas seulement un prix, mais une <b>solution de coût totale (TCO)</b>. Nous décryptons Synthesia pour que vous sachiez non seulement combien cela coûte, mais ce que vous y gagnez réellement, et comment optimiser chaque euro. Préparez-vous à une plongée totale dans les mécanismes de tarification qui se cachent derrière la création de vidéos IA de pointe.</p>
 
-<h2    style="color: #333;" id="-tableau-rcapitulatif-des-tarifs-synthesia-estimation-2026">📊 Tableau Récapitulatif des Tarifs Synthesia (Estimation 2026)</h2>
+<h2     style="color: #333;" id="-tableau-rcapitulatif-des-tarifs-synthesia-estimation-2026">📊 Tableau Récapitulatif des Tarifs Synthesia (Estimation 2026)</h2>
 
 <p style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
     <table style="width: 100%; border-collapse: collapse; text-align: left;">
@@ -274,7 +275,7 @@
     </table>
 </p>
 
-<h2    style="color: #333;" id="-dtail-des-fonctionnalits-ce-que-vous-achetez-rellement">🌟 Détail des Fonctionnalités : Ce que vous achetez réellement</h2>
+<h2     style="color: #333;" id="-dtail-des-fonctionnalits-ce-que-vous-achetez-rellement">🌟 Détail des Fonctionnalités : Ce que vous achetez réellement</h2>
 
 <p>Comprendre la différence entre les niveaux n'est pas une simple lecture de liste ; c'est comprendre le niveau de maturité de votre entreprise. Chaque plan résout un problème spécifique.</p>
 
@@ -309,7 +310,7 @@
     <li><strong>SLAs (Service Level Agreements) :</strong> Garanties de performance et de temps de réponse maximales.</li>
 </ul>
 
-<h2    style="color: #d9534f;" id="-analyse-des-cots-cachs-les-piges-viter">⚠️ Analyse des Coûts Cachés (Les pièges à éviter)</h2>
+<h2     style="color: #d9534f;" id="-analyse-des-cots-cachs-les-piges-viter">⚠️ Analyse des Coûts Cachés (Les pièges à éviter)</h2>
 
 <p>Les fonctionnalités « visibles » (le nombre de vidéos) ne racontent pas toute l'histoire. Les pièges de tarification se nichent dans les services annexes.</p>
 
@@ -325,7 +326,7 @@
 <h3 style="color: #cc0000;">4. Le Support (Support Costs)</h3>
 <p>Les plans inférieurs n'offrent que le support communautaire (FAQ). Pour une entreprise, un support dédié par téléphone ou chat 24/7 est un coût non négligeable (souvent inclus dans Business/Enterprise, mais à confirmer). Ne sacrifiez jamais le support quand votre contenu est vital pour votre revenue.</p>
 
-<h2    style="color: #5cb85c;" id="-calcul-de-retour-sur-investissement-roi-le-seuil-de-rentabi">💰 Calcul de Retour sur Investissement (ROI) : Le Seuil de Rentabilité</h2>
+<h2     style="color: #5cb85c;" id="-calcul-de-retour-sur-investissement-roi-le-seuil-de-rentabi">💰 Calcul de Retour sur Investissement (ROI) : Le Seuil de Rentabilité</h2>
 
 <p>Le ROI n'est pas basé sur le coût de Synthesia, mais sur la valeur que vous ne pouvez générer qu'avec ce canal. La vidéo IA est un économiseur de temps de production immense.</p>
 
@@ -335,7 +336,7 @@
 <h3 style="color: #5cb85c;">Projections de Breakeven (Basé sur le Plan Pro à $99/mois)</h3>
 <p>Si cette vidéo synthétique vous permet de lancer une mini-formation payante qui génère seulement 500 € de revenus supplémentaires par mois – sans compter le temps économisé – votre coût mensuel est couvert <strong>(Breakeven < 1 mois)</strong>. L'investissement est donc rapidement transformé en canal de revenus.</p>
 
-<h2    style="color: #f0ad4e;" id="-comparatif-concurrentiel-parit-et-avantages-spcifiques">🆚 Comparatif Concurrentiel : Parité et Avantages Spécifiques</h2>
+<h2     style="color: #f0ad4e;" id="-comparatif-concurrentiel-parit-et-avantages-spcifiques">🆚 Comparatif Concurrentiel : Parité et Avantages Spécifiques</h2>
 
 <p>Nous comparons Synthesia non pas avec des outils de montage (comme Canva), mais avec des IA vidéo concurrentes (Hypothèse : DeepBrain AI, HeyGen). Le critère clé est la <strong>Parité Fonctionnelle</strong> : l'accès à l'API, le niveau de personnalisation de la voix/avatar, et la gestion des multiples contenus de marque.</p>
 
@@ -363,6 +364,10 @@
   <a class="mc2-btn" href="https://www.synthesia.io/?via=daniel-haket" rel="sponsored noopener" target="_blank">Essai gratuit →</a>
 </div>
         
+
+  <a class="mc2-btn" href="https://www.synthesia.io/?via=daniel-haket" rel="sponsored noopener" target="_blank">Essai gratuit →</a>
+</div>
+        
 <div class="mid-cta">
   <div class="mc2-text"><strong>Démarrer avec Synthesia</strong> — Free demo. AI video generator with avatars.</div>
   <a class="mc2-btn" href="https://www.synthesia.io/?via=daniel-haket" rel="sponsored noopener" target="_blank">Essai gratuit →</a>
@@ -374,14 +379,14 @@
       <div class="article-footer">
 <section class="more-tools">
   <h3>Plus d'outils pour fondateurs</h3>
-  <ul class="ft-list"><li><a href="https://kinsta.com/?kaid=EKSCJEFWBYJO" rel="sponsored noopener" target="_blank"><span class="fi-icon">🟢</span><span class="fi-text"><strong>Kinsta</strong><span class="fi-tag">Premium managed WordPress hosting</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://www.synthesia.io/?via=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon">🎬</span><span class="fi-text"><strong>Synthesia</strong><span class="fi-tag">AI video generator with avatars</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://replit.com/signup?referral=dglhaket" rel="sponsored noopener" target="_blank"><span class="fi-icon">💻</span><span class="fi-text"><strong>Replit</strong><span class="fi-tag">Cloud IDE with AI coding agent</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://account.bitvavo.com/create?a=68DCE39715&pid=invite&c=referral" rel="sponsored noopener" target="_blank"><span class="fi-icon">₿</span><span class="fi-text"><strong>Bitvavo</strong><span class="fi-tag">EU-licensed crypto exchange</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://get.murf.ai/qbhzdrcv3l7x" rel="sponsored noopener" target="_blank"><span class="fi-icon">🎙️</span><span class="fi-text"><strong>Murf</strong><span class="fi-tag">AI voice generator, 120+ voices</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://wp-rocket.me/?ref=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon">🚀</span><span class="fi-text"><strong>WP Rocket</strong><span class="fi-tag">WordPress speed-up plugin</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://rankmath.com/?utm_source=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon">📈</span><span class="fi-text"><strong>Rank Math</strong><span class="fi-tag">SEO plugin for WordPress</span></span><span class="fi-arrow">→</span></a></li></ul>
+  <ul class="ft-list"><li><a href="https://www.hostinger.com?REFERRALCODE=UZUDGLHAKW67" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#673DE6"/><path d="M6 6h2.4v5h7.2V6H18v12h-2.4v-5H8.4v5H6V6z" fill="#fff"/></svg></span><span class="fi-text"><strong>Hostinger</strong><span class="fi-tag">Affordable hosting with AI website builder</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://kinsta.com/?kaid=EKSCJEFWBYJO" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#5333ED"/><path d="M7 6h2.6v4.7L13 6h3.1l-3.9 5.3L17 18h-3l-2.7-5.4-1.7 1.9V18H7V6z" fill="#fff"/></svg></span><span class="fi-text"><strong>Kinsta</strong><span class="fi-tag">Premium managed WordPress hosting</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://www.synthesia.io/?via=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1F2937"/><circle cx="12" cy="10" r="3" fill="#3B82F6"/><path d="M6 18.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" stroke="#3B82F6" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span><span class="fi-text"><strong>Synthesia</strong><span class="fi-tag">AI video generator with avatars</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://replit.com/signup?referral=dglhaket" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#0E1525"/><path d="M7 6h5v5H7V6zm5 5h5v5h-5v-5zm-5 5h5v3H7v-3z" fill="#F26207"/></svg></span><span class="fi-text"><strong>Replit</strong><span class="fi-tag">Cloud IDE with AI coding agent</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://account.bitvavo.com/create?a=68DCE39715&pid=invite&c=referral" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1B49C6"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">B</text></svg></span><span class="fi-text"><strong>Bitvavo</strong><span class="fi-tag">EU-licensed crypto exchange</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://get.murf.ai/qbhzdrcv3l7x" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#F23E76"/><path d="M5 11h1.5v2H5v-2zm2.5-2H9v6H7.5V9zm2.5-3h1.5v12H10V6zm2.5 4h1.5v4H12.5v-4zm2.5 2h1.5v0H15v0zm2.5-1h1.5v2H17.5v-2z" fill="#fff"/><circle cx="6" cy="12" r=".7" fill="#fff"/><circle cx="9" cy="12" r="1" fill="#fff"/><circle cx="12" cy="12" r="1.2" fill="#fff"/><circle cx="15" cy="12" r="1" fill="#fff"/><circle cx="18" cy="12" r=".7" fill="#fff"/></svg></span><span class="fi-text"><strong>Murf</strong><span class="fi-tag">AI voice generator, 120+ voices</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://wp-rocket.me/?ref=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#FE5C2B"/><path d="M16.5 5.5c-2 .2-4.5 1.8-6 3.3L9 10.3 6.5 11l-1 1 3 1 1 1 1 3 1-1 .7-2.5 1.5-1.5c1.5-1.5 3.1-4 3.3-6 0-.3-.2-.5-.5-.5zm-2 4a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6z" fill="#fff"/><path d="M7 16l-1.5 2L4 18.5 4.5 17 6 15.5 7 16z" fill="#fff"/></svg></span><span class="fi-text"><strong>WP Rocket</strong><span class="fi-tag">WordPress speed-up plugin</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://rankmath.com/?utm_source=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#724FFF"/><path d="M5 17h2v-3H5v3zm3.5 0h2v-6h-2v6zm3.5 0h2V9h-2v8zm3.5 0h2V7h-2v10z" fill="#fff"/></svg></span><span class="fi-text"><strong>Rank Math</strong><span class="fi-tag">SEO plugin for WordPress</span></span><span class="fi-arrow">→</span></a></li></ul>
 </section>
 </div>
     </main>
 
     
 <aside class="sticky-card" aria-label="Démarrer avec Synthesia">
-  <div class="sc-icon">🎬</div>
+  <div class="sc-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1F2937"/><circle cx="12" cy="10" r="3" fill="#3B82F6"/><path d="M6 18.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" stroke="#3B82F6" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
   <div class="sc-brand">Synthesia</div>
   <div class="sc-rating"><span class="stars">★★★★⯨</span> 4.7/5</div>
   <div class="sc-price">From $22/mo</div>
@@ -396,7 +401,7 @@
   
 <div class="mobile-cta" role="region" aria-label="Essayer Synthesia →">
   <div class="mc-info">
-    <div class="mc-brand">🎬 Synthesia</div>
+    <div class="mc-brand"><span class="mc-logo"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1F2937"/><circle cx="12" cy="10" r="3" fill="#3B82F6"/><path d="M6 18.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" stroke="#3B82F6" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span>Synthesia</div>
     <div class="mc-rating">★★★★⯨ 4.7 · From $22/mo</div>
   </div>
   <a class="mc-btn" href="https://www.synthesia.io/?via=daniel-haket" rel="sponsored noopener" target="_blank">Essayer Synthesia →</a>

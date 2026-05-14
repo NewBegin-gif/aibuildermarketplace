@@ -56,7 +56,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box}
-    :root{--bg:#0a0e17;--bg2:#0f172a;--card:#111827;--card2:#1a2238;--border:#1e293b;--text:#f1f5f9;--text2:#cbd5e1;--muted:#94a3b8;--accent:#14b8a6;--accent-soft:#14b8a622}
+    :root{--bg:#0a0e17;--bg2:#0f172a;--card:#111827;--card2:#1a2238;--border:#1e293b;--text:#f1f5f9;--text2:#cbd5e1;--muted:#94a3b8;--accent:#724FFF;--accent-soft:#724FFF22}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;line-height:1.75;-webkit-font-smoothing:antialiased}
     a{color:var(--accent);text-decoration:none;transition:opacity .15s}
@@ -86,7 +86,7 @@
 
     .verdict-card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:16px;padding:24px;margin:0 0 32px;box-shadow:0 4px 24px rgba(0,0,0,.2)}
     .verdict-top{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
-    .verdict-icon{font-size:2.2rem;line-height:1}
+    .verdict-icon{font-size:2.4rem;line-height:0;display:inline-flex;align-items:center}
     .verdict-meta{flex:1;min-width:0}
     .verdict-brand{font-size:1.2rem;font-weight:800;color:var(--text)}
     .verdict-tagline{font-size:.85rem;color:var(--muted);margin-top:2px}
@@ -135,7 +135,7 @@
     .ft-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
     .ft-list a{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--bg2);transition:all .15s}
     .ft-list a:hover{border-color:var(--accent);transform:translateY(-1px);opacity:1}
-    .fi-icon{font-size:1.3rem;line-height:1}
+    .fi-icon{font-size:1.5rem;line-height:0;display:inline-flex;align-items:center;flex-shrink:0}
     .fi-text{display:flex;flex-direction:column;flex:1;min-width:0}
     .fi-text strong{color:var(--text);font-size:.88rem;font-weight:700}
     .fi-tag{color:var(--muted);font-size:.74rem;margin-top:2px}
@@ -143,7 +143,7 @@
 
     .sticky-card{position:sticky;top:80px;align-self:start;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:14px;padding:22px 20px;text-align:center;margin-top:24px;box-shadow:0 4px 24px rgba(0,0,0,.18)}
     @media(max-width:980px){.sticky-card{display:none}}
-    .sc-icon{font-size:2rem;margin-bottom:8px}
+    .sc-icon{font-size:2.2rem;margin-bottom:10px;line-height:0;display:flex;justify-content:center}
     .sc-brand{font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:6px}
     .sc-rating{color:var(--muted);font-size:.82rem;margin-bottom:6px}
     .sc-rating .stars{font-size:.92rem}
@@ -157,7 +157,8 @@
     .mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;background:rgba(10,14,23,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:10px 14px;z-index:90;align-items:center;gap:12px;box-shadow:0 -4px 24px rgba(0,0,0,.4)}
     @media(max-width:980px){.mobile-cta{display:flex}body{padding-bottom:72px}}
     .mc-info{flex:1;min-width:0}
-    .mc-brand{color:var(--text);font-weight:700;font-size:.88rem}
+    .mc-brand{color:var(--text);font-weight:700;font-size:.88rem;display:flex;align-items:center;gap:6px}
+    .mc-logo{font-size:1.1rem;line-height:0}
     .mc-rating{color:var(--muted);font-size:.72rem}
     .mc-rating .stars{font-size:.78rem}
     .mc-btn{background:var(--accent);color:#0a0e17;font-weight:800;padding:10px 16px;border-radius:8px;white-space:nowrap;font-size:.88rem;text-decoration:none}
@@ -202,7 +203,7 @@
       
 <aside class="verdict-card" aria-labelledby="verdict-title">
   <div class="verdict-top">
-    <span class="verdict-icon" aria-hidden="true">📈</span>
+    <span class="verdict-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#724FFF"/><path d="M5 17h2v-3H5v3zm3.5 0h2v-6h-2v6zm3.5 0h2V9h-2v8zm3.5 0h2V7h-2v10z" fill="#fff"/></svg></span>
     <div class="verdict-meta">
       <div class="verdict-brand">Rank Math</div>
       <div class="verdict-tagline">SEO plugin for WordPress</div>
@@ -235,7 +236,7 @@
 
 <p>Si eres el fundador o el Director de Marketing de una empresa en crecimiento, sabes que el SEO no es un gasto, es el corazón de tu adquisición de clientes. RankMath es reconocido como uno de los SEO plugins más potentes para WordPress, pero con tanta potencia, entender el costo real es crucial. Esta guía no solo desglosa el precio, sino que calcula tu verdadero Retorno de Inversión (ROI) para que tomes la decisión más rentable.</p>
 
-<h2    id="tabla-resumen-de-precios-estimaciones-2026">Tabla Resumen de Precios (Estimaciones 2026)</h2>
+<h2     id="tabla-resumen-de-precios-estimaciones-2026">Tabla Resumen de Precios (Estimaciones 2026)</h2>
 
 <p>A continuación, presentamos la estructura de precios de RankMath. Recuerda que los descuentos anuales son significativos.</p>
 
@@ -283,7 +284,7 @@
 
 <p>***Nota sobre el ahorro: El pago anual siempre representa un ahorro de al menos un 30% comparado con el pago mensual. Las cifras de "Billing Screenshot" reflejan la conversión anual a mensual.**</p>
 
-<h2    id="-lo-que-realmente-obtienes-en-cada-plan">📈 Lo Que Realmente Obtienes en Cada Plan</h2>
+<h2     id="-lo-que-realmente-obtienes-en-cada-plan">📈 Lo Que Realmente Obtienes en Cada Plan</h2>
 
 <p>La promesa de un plugin SEO es simple: optimización. Pero cada nivel desbloquea capacidades completamente distintas que afectan directamente tu capacidad de escalar.</p>
 
@@ -315,7 +316,7 @@
     <li><strong>Requisito:</strong> Esto requiere meses de planificación técnica y conversación directa con el equipo de ventas, no es una compra digital simple.</li>
 </ul>
 
-<h2    id="-desglose-de-costos-ocultos-hidden-costs-analysis">⚠️ Desglose de Costos Ocultos (Hidden Costs Analysis)</h2>
+<h2     id="-desglose-de-costos-ocultos-hidden-costs-analysis">⚠️ Desglose de Costos Ocultos (Hidden Costs Analysis)</h2>
 
 <p>Los precios listados son por la licencia del software. Sin embargo, un fundador debe estar atento a costos operativos y de servicio que podrían considerarse "hidden costs".*.</p>
 
@@ -338,7 +339,7 @@
     <p>Si bien el soporte incluido en Pro es excelente, para operaciones críticas 24/7, considera servicios de mantenimiento web premium separados. Un tiempo de inactividad por un error de configuración sin respaldo es la pérdida de ingresos más cara; un buen hosting avanzado suele mitigar esto.</p>
 </div>
 
-<h2    id="-calculadora-de-roi-cundo-empiezas-a-ganar-dinero">💰 Calculadora de ROI: ¿Cuándo Empiezas a Ganar Dinero?</h2>
+<h2     id="-calculadora-de-roi-cundo-empiezas-a-ganar-dinero">💰 Calculadora de ROI: ¿Cuándo Empiezas a Ganar Dinero?</h2>
 
 <p>El verdadero indicador de éxito no es el precio, sino el punto de equilibrio o *Breakeven Point*. Queremos saber: ¿Cuántos clientes me debe traer el SEO avanzado para cubrir el costo anual del plan?</p>
 
@@ -352,7 +353,7 @@
     <li><strong>Resultado:</strong> Si el Plan Pro te ayuda a conseguir solo 3-4 leads más cualificados al mes de lo que conseguirías manualmente, ya has cubierto el 100% del costo anual antes de que finalice el primer trimestre. <strong>El ROI es casi instantáneo.</strong></li>
 </ul>
 
-<h2    id="-comparativa-de-competidores-con-paridad-de-caractersticas">⚔️ Comparativa de Competidores (Con Paridad de Características)</h2>
+<h2     id="-comparativa-de-competidores-con-paridad-de-caractersticas">⚔️ Comparativa de Competidores (Con Paridad de Características)</h2>
 
 <p>Se comparan contra dos competidores hipotéticos: "SEO Lite" y "RankMaster X".</p>
 
@@ -401,7 +402,7 @@
 
 <p><strong>Veredicto de Paridad:</strong> RankMath Pro ofrece el paquete de funcionalidades más directamente integradas y la mejor gestión de límites, haciendo que la compra de *add-ons* separados (como lo hace el Competidor 1) sea innecesaria y costosa.</p>
 
-<h2    id="-el-veredicto-qu-plan-debes-elegir">🧭 El Veredicto: ¿Qué Plan Debes Elegir?</h2>
+<h2     id="-el-veredicto-qu-plan-debes-elegir">🧭 El Veredicto: ¿Qué Plan Debes Elegir?</h2>
 
 <div class="highlight-success">
     <h3>🌱 Para Startups (Baja Tensión, Alto Crecimiento): Plan Starter ($99/año)</h3>
@@ -418,7 +419,7 @@
     <p>Aquí no compras un plugin; adquieres una capa de infraestructura digital. La API access y la gestión de cientos de sitios son imprescindibles cuando estás escalando modelos de negocio complejos (ej. portales de empleo, directorio de negocios).</p>
 </div>
 
-<h2    id="-anlisis-de-costo-total-de-propiedad-tco-y-escalabilidad">⏳ Análisis de Costo Total de Propiedad (TCO) y Escalabilidad</h2>
+<h2     id="-anlisis-de-costo-total-de-propiedad-tco-y-escalabilidad">⏳ Análisis de Costo Total de Propiedad (TCO) y Escalabilidad</h2>
 
 <p>El TCO (Total Cost of Ownership) va más allá del precio. Considera el mantenimiento, la formación y la capacidad de respuesta ante cambios.</p>
 
@@ -431,8 +432,12 @@
 <h3>💥 Escalabilidad: De 10 a 100 a 1000 Usuarios</h3>
 <p>El modelo de desarrollo de contenido siempre requiere un aumento de capacidad. <span style="color: red;">Los planes básicos te frenarán.</span> El salto de unidades requerirá la transición de un plan que maneje la granularidad media (Plan Pro) a un plan que maneje la complejidad total (Plan Empresarial). Estarás pagando por **límites**, no solo por características. Este punto debe guiar tu estrategia anual.</p>
 
-<h2    id="veredicto-final">VEREDICTO FINAL:</h2>
+<h2     id="veredicto-final">VEREDICTO FINAL:</h2>
 <p>Para la mayoría de las empresas en crecimiento (PyMEs activas), el **Plan Pro (o equivalente)** es la elección óptima. Combina la potencia de las funciones avanzadas con una escalabilidad que les permitirá crecer sin tener que cambiar de plataforma cada 18 meses. Siempre evalúen no solo lo que "necesitan hoy", sino lo que "necesitarán el próximo año".</p>
+        
+
+  <a class="mc2-btn" href="https://rankmath.com/?utm_source=daniel-haket" rel="sponsored noopener" target="_blank">Prueba gratis →</a>
+</div>
         
 
   <a class="mc2-btn" href="https://rankmath.com/?utm_source=daniel-haket" rel="sponsored noopener" target="_blank">Prueba gratis →</a>
@@ -457,14 +462,14 @@
       <div class="article-footer">
 <section class="more-tools">
   <h3>Más herramientas para fundadores</h3>
-  <ul class="ft-list"><li><a href="https://kinsta.com/?kaid=EKSCJEFWBYJO" rel="sponsored noopener" target="_blank"><span class="fi-icon">🟢</span><span class="fi-text"><strong>Kinsta</strong><span class="fi-tag">Premium managed WordPress hosting</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://www.synthesia.io/?via=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon">🎬</span><span class="fi-text"><strong>Synthesia</strong><span class="fi-tag">AI video generator with avatars</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://replit.com/signup?referral=dglhaket" rel="sponsored noopener" target="_blank"><span class="fi-icon">💻</span><span class="fi-text"><strong>Replit</strong><span class="fi-tag">Cloud IDE with AI coding agent</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://account.bitvavo.com/create?a=68DCE39715&pid=invite&c=referral" rel="sponsored noopener" target="_blank"><span class="fi-icon">₿</span><span class="fi-text"><strong>Bitvavo</strong><span class="fi-tag">EU-licensed crypto exchange</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://get.murf.ai/qbhzdrcv3l7x" rel="sponsored noopener" target="_blank"><span class="fi-icon">🎙️</span><span class="fi-text"><strong>Murf</strong><span class="fi-tag">AI voice generator, 120+ voices</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://wp-rocket.me/?ref=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon">🚀</span><span class="fi-text"><strong>WP Rocket</strong><span class="fi-tag">WordPress speed-up plugin</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://rankmath.com/?utm_source=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon">📈</span><span class="fi-text"><strong>Rank Math</strong><span class="fi-tag">SEO plugin for WordPress</span></span><span class="fi-arrow">→</span></a></li></ul>
+  <ul class="ft-list"><li><a href="https://www.hostinger.com?REFERRALCODE=UZUDGLHAKW67" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#673DE6"/><path d="M6 6h2.4v5h7.2V6H18v12h-2.4v-5H8.4v5H6V6z" fill="#fff"/></svg></span><span class="fi-text"><strong>Hostinger</strong><span class="fi-tag">Affordable hosting with AI website builder</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://kinsta.com/?kaid=EKSCJEFWBYJO" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#5333ED"/><path d="M7 6h2.6v4.7L13 6h3.1l-3.9 5.3L17 18h-3l-2.7-5.4-1.7 1.9V18H7V6z" fill="#fff"/></svg></span><span class="fi-text"><strong>Kinsta</strong><span class="fi-tag">Premium managed WordPress hosting</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://www.synthesia.io/?via=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1F2937"/><circle cx="12" cy="10" r="3" fill="#3B82F6"/><path d="M6 18.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" stroke="#3B82F6" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span><span class="fi-text"><strong>Synthesia</strong><span class="fi-tag">AI video generator with avatars</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://replit.com/signup?referral=dglhaket" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#0E1525"/><path d="M7 6h5v5H7V6zm5 5h5v5h-5v-5zm-5 5h5v3H7v-3z" fill="#F26207"/></svg></span><span class="fi-text"><strong>Replit</strong><span class="fi-tag">Cloud IDE with AI coding agent</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://account.bitvavo.com/create?a=68DCE39715&pid=invite&c=referral" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#1B49C6"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">B</text></svg></span><span class="fi-text"><strong>Bitvavo</strong><span class="fi-tag">EU-licensed crypto exchange</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://get.murf.ai/qbhzdrcv3l7x" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#F23E76"/><path d="M5 11h1.5v2H5v-2zm2.5-2H9v6H7.5V9zm2.5-3h1.5v12H10V6zm2.5 4h1.5v4H12.5v-4zm2.5 2h1.5v0H15v0zm2.5-1h1.5v2H17.5v-2z" fill="#fff"/><circle cx="6" cy="12" r=".7" fill="#fff"/><circle cx="9" cy="12" r="1" fill="#fff"/><circle cx="12" cy="12" r="1.2" fill="#fff"/><circle cx="15" cy="12" r="1" fill="#fff"/><circle cx="18" cy="12" r=".7" fill="#fff"/></svg></span><span class="fi-text"><strong>Murf</strong><span class="fi-tag">AI voice generator, 120+ voices</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://wp-rocket.me/?ref=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#FE5C2B"/><path d="M16.5 5.5c-2 .2-4.5 1.8-6 3.3L9 10.3 6.5 11l-1 1 3 1 1 1 1 3 1-1 .7-2.5 1.5-1.5c1.5-1.5 3.1-4 3.3-6 0-.3-.2-.5-.5-.5zm-2 4a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6z" fill="#fff"/><path d="M7 16l-1.5 2L4 18.5 4.5 17 6 15.5 7 16z" fill="#fff"/></svg></span><span class="fi-text"><strong>WP Rocket</strong><span class="fi-tag">WordPress speed-up plugin</span></span><span class="fi-arrow">→</span></a></li><li><a href="https://rankmath.com/?utm_source=daniel-haket" rel="sponsored noopener" target="_blank"><span class="fi-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#724FFF"/><path d="M5 17h2v-3H5v3zm3.5 0h2v-6h-2v6zm3.5 0h2V9h-2v8zm3.5 0h2V7h-2v10z" fill="#fff"/></svg></span><span class="fi-text"><strong>Rank Math</strong><span class="fi-tag">SEO plugin for WordPress</span></span><span class="fi-arrow">→</span></a></li></ul>
 </section>
 </div>
     </main>
 
     
 <aside class="sticky-card" aria-label="Empezar con Rank Math">
-  <div class="sc-icon">📈</div>
+  <div class="sc-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#724FFF"/><path d="M5 17h2v-3H5v3zm3.5 0h2v-6h-2v6zm3.5 0h2V9h-2v8zm3.5 0h2V7h-2v10z" fill="#fff"/></svg></div>
   <div class="sc-brand">Rank Math</div>
   <div class="sc-rating"><span class="stars">★★★★⯨</span> 4.9/5</div>
   <div class="sc-price">Free plan</div>
@@ -479,7 +484,7 @@
   
 <div class="mobile-cta" role="region" aria-label="Probar Rank Math →">
   <div class="mc-info">
-    <div class="mc-brand">📈 Rank Math</div>
+    <div class="mc-brand"><span class="mc-logo"><svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle"><rect width="24" height="24" rx="6" fill="#724FFF"/><path d="M5 17h2v-3H5v3zm3.5 0h2v-6h-2v6zm3.5 0h2V9h-2v8zm3.5 0h2V7h-2v10z" fill="#fff"/></svg></span>Rank Math</div>
     <div class="mc-rating">★★★★⯨ 4.9 · Free plan</div>
   </div>
   <a class="mc-btn" href="https://rankmath.com/?utm_source=daniel-haket" rel="sponsored noopener" target="_blank">Probar Rank Math →</a>

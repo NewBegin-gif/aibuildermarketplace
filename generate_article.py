@@ -14,6 +14,7 @@ VAULT = {
     "Synthesia": "https://www.synthesia.io/?via=daniel-haket",
     "Kinsta": "https://kinsta.com/?kaid=EKSCJEFWBYJO",
     "Murf": "https://get.murf.ai/qbhzdrcv3l7x"
+    "ChemiCloud": "https://chemicloud.com/#h09q7aez7gtgm",
 }
 
 LANGUAGES = ["German", "Spanish", "Portuguese", "French", "English", "Dutch"]
@@ -54,6 +55,7 @@ def rebuild_index(folders):
         if s.startswith('kinsta'): return 'Kinsta'
         if s.startswith('synthesia'): return 'Synthesia'
         if s.startswith('invideo'): return 'InVideo'
+        if s.startswith("chemicloud"): return "ChemiCloud"
         if s.startswith('replit'): return 'Replit'
         if s.startswith('bitvavo'): return 'Bitvavo'
         if s.startswith('murf'): return 'Murf'

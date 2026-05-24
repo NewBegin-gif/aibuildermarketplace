@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CW1KZ258ZV');
+  </script>
+  <script defer src="/assets/conversion.js?v=1"></script>
+  <!-- Affiliate click tracking -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var sels = 'a[href*="kinsta.com"],a[href*="beehiiv"],a[href*="bitvavo"],a[href*="synthesia"],a[href*="invideo"],a[href*="replit"],a[href*="clay.com"],a[href*="murf.ai"],a[href*="wp-rocket"],a[href*="rankmath"],a[href*="jotform"],a[href*="chemicloud"],a[href*="frase.io"],a[href*="hostinger"]';
+      document.querySelectorAll(sels).forEach(function(a){
+        a.addEventListener('click', function(){
+          gtag('event','affiliate_click',{event_category:'affiliate',event_label:a.href,transport_type:'beacon'});
+        });
+      });
+    });
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Synthesia: Compliance Training Guide 2026 | AIBuilder Marketplace</title>

@@ -46,10 +46,7 @@
   "@type": "Article",
   "headline": "Invideo vs Canva Video 2026",
   "description": "Expert B2B analysis of Invideo vs Canva Video. ROI breakdown, pricing comparison and founder insights for 2026.",
-  "author": {
-    "@type": "Organization",
-    "name": "AIBuilder Marketplace"
-  },
+  "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"},
   "publisher": {
     "@type": "Organization",
     "name": "AIBuilder Marketplace"
@@ -67,7 +64,7 @@
 }
 </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aibuildermarketplace.com"}, {"@type": "ListItem", "position": 2, "name": "B2B Reviews", "item": "https://aibuildermarketplace.com/b2b/"}, {"@type": "ListItem", "position": 3, "name": "Invideo vs Canva Video", "item": "https://aibuildermarketplace.com/b2b/invideo-vs-canva-video-sv/"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Invideo", "applicationCategory": "AI Video", "offers": {"@type": "Offer", "price": "From $20/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.6", "bestRating": "5"}, "author": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "datePublished": "2026-05-28", "dateModified": "2026-05-28", "name": "Invideo vs Canva Video", "url": "https://aibuildermarketplace.com/b2b/invideo-vs-canva-video-sv/"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Invideo", "applicationCategory": "AI Video", "offers": {"@type": "Offer", "price": "From $20/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.6", "bestRating": "5"}, "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"}, "datePublished": "2026-05-28", "dateModified": "2026-05-28", "name": "Invideo vs Canva Video", "url": "https://aibuildermarketplace.com/b2b/invideo-vs-canva-video-sv/"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vilket verktyg är bättre för nybörjare inom videoskapande?", "acceptedAnswer": {"@type": "Answer", "text": "Canva Video är betydligt bättre för nybörjare tack vare sitt intuitiva gränssnitt och låga inlärningströskel. Du kan skapa professionella videor samma dag du börjar använda verktyget, medan InVideo kräver 2-3 dagars träning för att behärska AI-funktionerna effektivt."}}, {"@type": "Question", "name": "Kan jag använda båda verktygen gratis permanent?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, båda erbjuder permanenta gratisversioner, men med begränsningar. InVideo Free har 60 videor/månad med vattenstämpel, medan Canva Free har obegränsade videor men begränsat stockmaterial. För professionell användning krävs betalplaner för att ta bort vattenstämplar och få högre upplösning."}}, {"@type": "Question", "name": "Vilket verktyg har bättre prestanda för 4K-videoexport?", "acceptedAnswer": {"@type": "Answer", "text": "Canva Video presterar bättre med genomsnittligt 25% snabbare renderingstider för 4K-export (3.2 vs 4.1 minuter). Canva har också stabilare prestanda och färre krascher under intensiv användning, baserat på mina 30 dagars tester."}}, {"@type": "Question", "name": "Finns det några dolda kostnader jag bör vara medveten om?", "acceptedAnswer": {"@type": "Answer", "text": "InVideo tar $1 per extra video över månadsgränsen på Business-planen, medan Canva Pro har obegränsade exporter. Båda verktygen har premium stockmaterial som kostar extra, men Canva inkluderar mer innehåll i grundplanen. InVideos AI-röster inkluderas utan extra kostnad."}}, {"@type": "Question", "name": "Vilket verktyg är bäst för teamsamarbete och företag?", "acceptedAnswer": {"@type": "Answer", "text": "Canva Video är överlägset för teamarbete med realtidssamarbete, avancerade behörigheter och brandkits. InVideo har endast grundläggande kommentarsfunktioner. För företag över 5 personer rekommenderar jag starkt Canva Teams ($14.99/användare) över InVideos samarbetsfunktioner."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,7 +187,17 @@
       .verdict-stats{grid-template-columns:1fr;gap:10px}
       .verdict-card{padding:18px}
     }
-  </style>
+  
+    /* author-box-css-v1 */
+    .author-box{display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin:0 0 24px}
+    .author-box img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--accent)}
+    .author-box .ab-text{font-size:.85rem;color:var(--text2);line-height:1.5;min-width:0}
+    .author-box .ab-name{color:var(--text);font-weight:700}
+    .author-box .ab-name a{color:var(--text)}
+    .author-box .ab-meta{color:var(--muted);font-size:.78rem;margin-top:2px}
+    .author-box .ab-meta a{color:var(--text2)}
+    @media(max-width:640px){.author-box{padding:12px 14px}.author-box img{width:48px;height:48px}}
+</style>
 </head>
 <body>
   <nav class="topnav"><div class="topnav-inner">
@@ -211,6 +218,16 @@
           <span>4 min read</span>
         </div>
       </header>
+      <div class="author-box" role="note">
+        <!-- author-box-v1 -->
+        <img src="/about/daan.jpg" alt="Daan" width="56" height="56" loading="lazy">
+        <div class="ab-text">
+          <div class="ab-name">Av <a href="/about/">Daan</a></div>
+          <div>F.d. bankman (23 år) · AI builder · Skriver från Ho Chi Minh-staden</div>
+          <div class="ab-meta">Uppdaterad: <time>2026-05-28</time> · <a href="/about/">Om Daan →</a></div>
+        </div>
+      </div>
+
 
       
 <div class="disclosure" role="note">

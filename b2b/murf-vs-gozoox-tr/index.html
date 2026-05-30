@@ -46,10 +46,7 @@
   "@type": "Article",
   "headline": "Murf vs Gozoox 2026",
   "description": "Expert B2B analysis of Murf vs Gozoox. ROI breakdown, pricing comparison and founder insights for 2026.",
-  "author": {
-    "@type": "Organization",
-    "name": "AIBuilder Marketplace"
-  },
+  "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"},
   "publisher": {
     "@type": "Organization",
     "name": "AIBuilder Marketplace"
@@ -67,7 +64,7 @@
 }
 </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aibuildermarketplace.com"}, {"@type": "ListItem", "position": 2, "name": "B2B Reviews", "item": "https://aibuildermarketplace.com/b2b/"}, {"@type": "ListItem", "position": 3, "name": "Murf vs Gozoox", "item": "https://aibuildermarketplace.com/b2b/murf-vs-gozoox-tr/"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Murf", "applicationCategory": "AI Voice", "offers": {"@type": "Offer", "price": "From $19/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.6", "bestRating": "5"}, "author": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "datePublished": "2026-05-30", "dateModified": "2026-05-30", "name": "Murf vs Gozoox", "url": "https://aibuildermarketplace.com/b2b/murf-vs-gozoox-tr/"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Murf", "applicationCategory": "AI Voice", "offers": {"@type": "Offer", "price": "From $19/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.6", "bestRating": "5"}, "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"}, "datePublished": "2026-05-30", "dateModified": "2026-05-30", "name": "Murf vs Gozoox", "url": "https://aibuildermarketplace.com/b2b/murf-vs-gozoox-tr/"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Murf ve Gozoox hangisi daha ucuz?", "acceptedAnswer": {"@type": "Answer", "text": "Gozoox, aylık 15$ başlangıç fiyatıyla Murf'ün 23$ fiyatından %35 daha uygun. Yıllık planlarla fark %40'a kadar çıkabiliyor. Ancak Murf daha fazla ses seçeneği ve kalite sunuyor."}}, {"@type": "Question", "name": "Türkçe ses kalitesi hangisinde daha iyi?", "acceptedAnswer": {"@type": "Answer", "text": "Test sonuçlarımıza göre Gozoox Türkçe ses kalitesinde Murf'ü geçiyor. Özellikle doğal tonlama ve vurgu açısından %15 daha başarılı skorlar aldı. Murf'de Türkçe sesler biraz robotik kalabiliyor."}}, {"@type": "Question", "name": "Hangi platform daha hızlı ses üretiyor?", "acceptedAnswer": {"@type": "Answer", "text": "Murf, 1000 kelimelik metni ortalama 2.3 dakikada işlerken, Gozoox 3.1 dakika sürüyor. Murf'ün bulut altyapısı daha güçlü ancak Gozoox da kabul edilebilir hızda çalışıyor."}}, {"@type": "Question", "name": "API entegrasyonu hangisinde daha kolay?", "acceptedAnswer": {"@type": "Answer", "text": "Murf gelişmiş API dokümantasyonu ve webhook desteği sunuyor. Test sürecinde Murf API'si 15 dakikada kurulurken, Gozoox API entegrasyonu yaklaşık 45 dakika sürdü. Murf geliştirici dostu."}}, {"@type": "Question", "name": "Ses çeşitliliği açısından fark var mı?", "acceptedAnswer": {"@type": "Answer", "text": "Murf 120+ ses seçeneği ve 20 dilde hizmet verirken, Gozoox 45 ses ve 12 dil sunuyor. Çoklu dil projelerinde Murf açık ara önde, Türkçe odaklı çalışmalarda Gozoox yeterli."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,7 +187,17 @@
       .verdict-stats{grid-template-columns:1fr;gap:10px}
       .verdict-card{padding:18px}
     }
-  </style>
+  
+    /* author-box-css-v1 */
+    .author-box{display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin:0 0 24px}
+    .author-box img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--accent)}
+    .author-box .ab-text{font-size:.85rem;color:var(--text2);line-height:1.5;min-width:0}
+    .author-box .ab-name{color:var(--text);font-weight:700}
+    .author-box .ab-name a{color:var(--text)}
+    .author-box .ab-meta{color:var(--muted);font-size:.78rem;margin-top:2px}
+    .author-box .ab-meta a{color:var(--text2)}
+    @media(max-width:640px){.author-box{padding:12px 14px}.author-box img{width:48px;height:48px}}
+</style>
 </head>
 <body>
   <nav class="topnav"><div class="topnav-inner">
@@ -211,6 +218,16 @@
           <span>5 min read</span>
         </div>
       </header>
+      <div class="author-box" role="note">
+        <!-- author-box-v1 -->
+        <img src="/about/daan.jpg" alt="Daan" width="56" height="56" loading="lazy">
+        <div class="ab-text">
+          <div class="ab-name">Yazar: <a href="/about/">Daan</a></div>
+          <div>Eski bankacı (23 yıl) · AI builder · Ho Chi Minh'den yazıyor</div>
+          <div class="ab-meta">Güncellendi: <time>2026-05-30</time> · <a href="/about/">Daan Hakkında →</a></div>
+        </div>
+      </div>
+
 
       
 <div class="disclosure" role="note">

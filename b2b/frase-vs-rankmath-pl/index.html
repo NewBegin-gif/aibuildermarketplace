@@ -46,10 +46,7 @@
   "@type": "Article",
   "headline": "Frase vs RankMath 2026",
   "description": "Expert B2B analysis of Frase vs RankMath. ROI breakdown, pricing comparison and founder insights for 2026.",
-  "author": {
-    "@type": "Organization",
-    "name": "AIBuilder Marketplace"
-  },
+  "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"},
   "publisher": {
     "@type": "Organization",
     "name": "AIBuilder Marketplace"
@@ -67,7 +64,7 @@
 }
 </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aibuildermarketplace.com"}, {"@type": "ListItem", "position": 2, "name": "B2B Reviews", "item": "https://aibuildermarketplace.com/b2b/"}, {"@type": "ListItem", "position": 3, "name": "Frase vs RankMath", "item": "https://aibuildermarketplace.com/b2b/frase-vs-rankmath-pl/"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Frase", "applicationCategory": "SEO & Content", "offers": {"@type": "Offer", "price": "$15/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": 4.6, "bestRating": "5"}, "author": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "datePublished": "2026-05-29", "dateModified": "2026-05-29", "name": "Frase vs RankMath", "url": "https://aibuildermarketplace.com/b2b/frase-vs-rankmath-pl/"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Frase", "applicationCategory": "SEO & Content", "offers": {"@type": "Offer", "price": "$15/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": 4.6, "bestRating": "5"}, "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"}, "datePublished": "2026-05-29", "dateModified": "2026-05-29", "name": "Frase vs RankMath", "url": "https://aibuildermarketplace.com/b2b/frase-vs-rankmath-pl/"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Czy Frase jest lepsze od RankMath do tworzenia treści SEO?", "acceptedAnswer": {"@type": "Answer", "text": "Frase przewyższa RankMath w tworzeniu content briefów i analizie SERP, oferując zaawansowane narzędzia research. RankMath jest jednak lepszy do optymalizacji technicznej i analizy istniejących treści bezpośrednio w WordPress z real-time sugestiami."}}, {"@type": "Question", "name": "Ile kosztuje Frase w porównaniu do RankMath w 2024?", "acceptedAnswer": {"@type": "Answer", "text": "Frase kosztuje $14.99-$114.99/miesiąc (Solo-Team), podczas gdy RankMath oferuje plan darmowy i płatne od $6.99-$41.99/miesiąc. RankMath zapewnia lepszy stosunek jakości do ceny, szczególnie dla małych stron WordPress."}}, {"@type": "Question", "name": "Czy można używać Frase i RankMath jednocześnie?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, można używać obu narzędzi komplementarnie - Frase do research i planowania contentu, RankMath do optymalizacji technicznej w WordPress. Wymaga to jednak podwójnych kosztów i może powodać nakładanie się niektórych funkcji analitycznych."}}, {"@type": "Question", "name": "Które narzędzie jest lepsze dla początkujących w SEO?", "acceptedAnswer": {"@type": "Answer", "text": "RankMath jest bardziej przyjazny dla początkujących dzięki intuicyjnemu interfejsowi WordPress, kolorowym wskaźnikom SEO i darmowemu planowi. Frase wymaga większej wiedzy SEO i doświadczenia w content marketingu do efektywnego wykorzystania zaawansowanych funkcji."}}, {"@type": "Question", "name": "Czy Frase działa z innymi CMS-ami oprócz WordPress?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, Frase jest narzędziem cloud-based działającym z każdym CMS-em i systemem treści. RankMath jest dedykowany wyłącznie WordPress, co ogranicza jego zastosowanie ale pozwala na głębszą integrację z tym systemem."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,7 +187,17 @@
       .verdict-stats{grid-template-columns:1fr;gap:10px}
       .verdict-card{padding:18px}
     }
-  </style>
+  
+    /* author-box-css-v1 */
+    .author-box{display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin:0 0 24px}
+    .author-box img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--accent)}
+    .author-box .ab-text{font-size:.85rem;color:var(--text2);line-height:1.5;min-width:0}
+    .author-box .ab-name{color:var(--text);font-weight:700}
+    .author-box .ab-name a{color:var(--text)}
+    .author-box .ab-meta{color:var(--muted);font-size:.78rem;margin-top:2px}
+    .author-box .ab-meta a{color:var(--text2)}
+    @media(max-width:640px){.author-box{padding:12px 14px}.author-box img{width:48px;height:48px}}
+</style>
 </head>
 <body>
   <nav class="topnav"><div class="topnav-inner">
@@ -211,6 +218,16 @@
           <span>6 min read</span>
         </div>
       </header>
+      <div class="author-box" role="note">
+        <!-- author-box-v1 -->
+        <img src="/about/daan.jpg" alt="Daan" width="56" height="56" loading="lazy">
+        <div class="ab-text">
+          <div class="ab-name">Autor: <a href="/about/">Daan</a></div>
+          <div>Były bankier (23 lata) · AI builder · Pisze z Ho Chi Minh</div>
+          <div class="ab-meta">Aktualizacja: <time>2026-05-29</time> · <a href="/about/">O Daanie →</a></div>
+        </div>
+      </div>
+
 
       
 <div class="disclosure" role="note">

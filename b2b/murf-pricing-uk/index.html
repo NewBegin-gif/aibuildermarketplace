@@ -46,10 +46,7 @@
   "@type": "Article",
   "headline": "Murf Pricing Guide 2026",
   "description": "Expert B2B analysis of Murf Pricing Guide 2026. ROI breakdown, pricing comparison and founder insights for 2026.",
-  "author": {
-    "@type": "Organization",
-    "name": "AIBuilder Marketplace"
-  },
+  "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"},
   "publisher": {
     "@type": "Organization",
     "name": "AIBuilder Marketplace"
@@ -67,7 +64,7 @@
 }
 </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aibuildermarketplace.com"}, {"@type": "ListItem", "position": 2, "name": "B2B Reviews", "item": "https://aibuildermarketplace.com/b2b/"}, {"@type": "ListItem", "position": 3, "name": "Murf Pricing Guide 2026", "item": "https://aibuildermarketplace.com/b2b/murf-pricing-uk/"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Murf", "applicationCategory": "AI Voice", "offers": {"@type": "Offer", "price": "From $19/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.6", "bestRating": "5"}, "author": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "datePublished": "2026-05-29", "dateModified": "2026-05-29", "name": "Murf Pricing Guide 2026", "url": "https://aibuildermarketplace.com/b2b/murf-pricing-uk/"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Murf", "applicationCategory": "AI Voice", "offers": {"@type": "Offer", "price": "From $19/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.6", "bestRating": "5"}, "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"}, "datePublished": "2026-05-29", "dateModified": "2026-05-29", "name": "Murf Pricing Guide 2026", "url": "https://aibuildermarketplace.com/b2b/murf-pricing-uk/"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Скільки коштує Murf щомісяця?", "acceptedAnswer": {"@type": "Answer", "text": "Murf коштує від $19/місяць за план Basic до $26/місяць за Pro план при річній оплаті. Є безкоштовний план з обмеженнями та Enterprise з індивідуальним ціноутворенням для великих команд."}}, {"@type": "Question", "name": "Чи є безкоштовна версія Murf?", "acceptedAnswer": {"@type": "Answer", "text": "Так, Murf має безкоштовний план з 10 хвилинами генерації голосу на місяць, доступом до 10+ голосів та базовими функціями редагування. Водяні знаки на аудіо відсутні."}}, {"@type": "Question", "name": "Яка різниця між Basic та Pro планами?", "acceptedAnswer": {"@type": "Answer", "text": "Basic дає 24 хвилини на місяць за $19, а Pro — 4 години за $26. Pro включає більше голосів, просунуте редагування, пріоритетну підтримку та можливість завантаження власного контенту."}}, {"@type": "Question", "name": "Чи можна змінити план в будь-який час?", "acceptedAnswer": {"@type": "Answer", "text": "Так, ви можете підвищити або понизити план в особистому кабінеті. При понижені залишок коштів зараховується на наступний період, при підвищені — доплачується пропорційно."}}, {"@type": "Question", "name": "Скільки коштує Murf для команди з 50 осіб?", "acceptedAnswer": {"@type": "Answer", "text": "Для команди з 50 осіб потрібен Enterprise план з індивідуальним ціноутворенням. Орієнтовна вартість $15-25 за користувача при річному контракті, що складає $750-1250/місяць за всю команду."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,7 +187,17 @@
       .verdict-stats{grid-template-columns:1fr;gap:10px}
       .verdict-card{padding:18px}
     }
-  </style>
+  
+    /* author-box-css-v1 */
+    .author-box{display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin:0 0 24px}
+    .author-box img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--accent)}
+    .author-box .ab-text{font-size:.85rem;color:var(--text2);line-height:1.5;min-width:0}
+    .author-box .ab-name{color:var(--text);font-weight:700}
+    .author-box .ab-name a{color:var(--text)}
+    .author-box .ab-meta{color:var(--muted);font-size:.78rem;margin-top:2px}
+    .author-box .ab-meta a{color:var(--text2)}
+    @media(max-width:640px){.author-box{padding:12px 14px}.author-box img{width:48px;height:48px}}
+</style>
 </head>
 <body>
   <nav class="topnav"><div class="topnav-inner">
@@ -211,6 +218,16 @@
           <span>7 min read</span>
         </div>
       </header>
+      <div class="author-box" role="note">
+        <!-- author-box-v1 -->
+        <img src="/about/daan.jpg" alt="Daan" width="56" height="56" loading="lazy">
+        <div class="ab-text">
+          <div class="ab-name">By <a href="/about/">Daan</a></div>
+          <div>Ex-banker (23y) · AI builder · Writing from Ho Chi Minh City</div>
+          <div class="ab-meta">Last updated: <time>2026-05-29</time> · <a href="/about/">About Daan →</a></div>
+        </div>
+      </div>
+
 
       
 <div class="disclosure" role="note">

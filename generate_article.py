@@ -13,7 +13,7 @@ VAULT = {
     "Invideo": "https://invideo.sjv.io/E00nbn",
     "Synthesia": "https://www.synthesia.io/?via=daniel-haket",
     "Kinsta": "https://kinsta.com/?kaid=EKSCJEFWBYJO",
-    "Murf": "https://get.murf.ai/qbhzdrcv3l7x"
+    "Murf": "https://get.murf.ai/qbhzdrcv3l7x",
     "ChemiCloud": "https://chemicloud.com/#h09q7aez7gtgm",
 }
 
@@ -251,7 +251,7 @@ def build_article_html(title, content, brand1, slug, schema_json, internal_links
     url = f"{DOMAIN}/b2b/{slug}/"
 
     # Taal op basis van slug suffix
-    lang_map = {"-en": "en", "-fr": "fr", "-du": "nl", "-po": "pt", "-ge": "de", "-sp": "es"}
+    lang_map = {"-zh": "zh", "-ko": "ko", "-hi": "hi", "-ar": "ar", "-th": "th", "-ru": "ru", "-cs": "cs", "-fi": "fi", "-el": "el", "-hu": "hu", "-ro": "ro", "-sw": "sw", "-ha": "ha", "-yo": "yo", "-am": "am", "-af": "af", "-zu": "zu", "-en": "en", "-fr": "fr", "-du": "nl", "-po": "pt", "-ge": "de", "-sp": "es"}
     html_lang = "en"
     for suffix, code in lang_map.items():
         if slug.endswith(suffix):

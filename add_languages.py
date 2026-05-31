@@ -217,6 +217,27 @@ def patch_lang_descriptions(src: str) -> tuple[str, bool, str]:
     new, ok = _insert_at_dict_start(src, "LANG_DESCRIPTIONS = {", entries)
     return (new, True, f"{len(NEW_LANGS)} descriptions toegevoegd") if ok else (src, False, "LANG_DESCRIPTIONS NIET gevonden")
 
+# ─── 0. Pre-existing syntaxfouten fixen ───────────────────────────────────
+def fix_review_gtag(src: str) -> tuple[str, bool, str]:
+    """review_template.py regel 583: GA-snippet staat in een f-string met rauwe
+    { } i.p.v. {{ }} (commit 3ded0d8, 14-05). Daardoor compileert het bestand niet."""
+    bad = "function gtag(){dataLayer.push(arguments);}"
+    good = "function gtag(){{dataLayer.push(arguments);}}"
+    if bad in src:
+        return src.replace(bad, good), True, "gtag-braces ge-escaped ({{ }})"
+    if good in src:
+        return src, False, "gtag al ge-escaped"
+    return src, False, "gtag-regel niet gevonden"
+
+def fix_generate_comma(src: str) -> tuple[str, bool, str]:
+    """generate_article.py: na "Murf": "..." ontbreekt een komma (commit 56ea83a,
+    17-05, ChemiCloud). Breekt de import-keten van Victor (felix_ceo_agent.py)."""
+    pat = r'("Murf":\s*"https://get\.murf\.ai/qbhzdrcv3l7x")(?!,)'
+    new, n = re.subn(pat, r"\1,", src)
+    if n:
+        return new, True, "ontbrekende komma na Murf toegevoegd"
+    return src, False, "komma al aanwezig of regel niet gevonden"
+
 # ─── Runner ───────────────────────────────────────────────────────────────
 def run(rel: str, steps, apply: bool):
     target = ROOT / rel
@@ -259,11 +280,13 @@ def main():
     ], apply)
 
     run("review_template.py", [
+        ("FIX gtag f-string (regel 583)", fix_review_gtag),
         ("LANG_MAP_SUFFIX uitbreiden", patch_lang_map_suffix),
         ("LABELS-subdicts toevoegen", patch_labels),
     ], apply)
 
     run("generate_article.py", [
+        ("FIX ontbrekende komma na Murf", fix_generate_comma),
         ("lang_map uitbreiden", patch_lang_map_v1),
         ("LANG_DESCRIPTIONS uitbreiden", patch_lang_descriptions),
     ], apply)

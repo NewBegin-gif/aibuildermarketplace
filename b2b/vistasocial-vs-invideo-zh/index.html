@@ -46,10 +46,7 @@
   "@type": "Article",
   "headline": "VistaSocial vs Invideo 2026",
   "description": "Expert B2B analysis of VistaSocial vs Invideo. ROI breakdown, pricing comparison and founder insights for 2026.",
-  "author": {
-    "@type": "Organization",
-    "name": "AIBuilder Marketplace"
-  },
+  "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"},
   "publisher": {
     "@type": "Organization",
     "name": "AIBuilder Marketplace"
@@ -67,7 +64,7 @@
 }
 </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aibuildermarketplace.com"}, {"@type": "ListItem", "position": 2, "name": "B2B Reviews", "item": "https://aibuildermarketplace.com/b2b/"}, {"@type": "ListItem", "position": 3, "name": "VistaSocial vs Invideo", "item": "https://aibuildermarketplace.com/b2b/vistasocial-vs-invideo-zh/"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "VistaSocial", "applicationCategory": "Social Media", "offers": {"@type": "Offer", "price": "From $79/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.8", "bestRating": "5"}, "author": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "datePublished": "2026-05-31", "dateModified": "2026-05-31", "name": "VistaSocial vs Invideo", "url": "https://aibuildermarketplace.com/b2b/vistasocial-vs-invideo-zh/"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "VistaSocial", "applicationCategory": "Social Media", "offers": {"@type": "Offer", "price": "From $79/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.8", "bestRating": "5"}, "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"}, "datePublished": "2026-05-31", "dateModified": "2026-05-31", "name": "VistaSocial vs Invideo", "url": "https://aibuildermarketplace.com/b2b/vistasocial-vs-invideo-zh/"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "1. 哪个工具更适合初创公司的有限预算？", "acceptedAnswer": {"@type": "Answer", "text": "从性价比角度，VistaSocial的Pro版本($15/月)提供更全面的营销管理功能。InVideo虽然同价位，但主要专注视频制作。如果预算极其有限，建议先从VistaSocial开始，因为社交媒体管理是持续性需求，而视频制作可以阶段性外包。"}}, {"@type": "Question", "name": "2. 这两个工具可以集成其他营销工具吗？", "acceptedAnswer": {"@type": "Answer", "text": "VistaSocial提供更丰富的第三方集成，包括Zapier、Google Analytics、CRM系统等。InVideo的集成主要集中在素材库和发布平台。对于需要构建完整营销技术栈的创业公司，VistaSocial的扩展性更强。"}}, {"@type": "Question", "name": "3. 团队协作功能哪个更好？", "acceptedAnswer": {"@type": "Answer", "text": "VistaSocial在团队协作方面更成熟，提供详细的权限管理、审批流程和角色分配。InVideo的协作功能主要针对视频编辑项目。如果你的团队需要多人管理社交媒体账户，VistaSocial是明显的选择。"}}, {"@type": "Question", "name": "4. 对于非英语创业公司，哪个工具更友好？", "acceptedAnswer": {"@type": "Answer", "text": "两个工具都主要以英文为主，但InVideo在多语言视频制作方面支持更好，包括多语言字幕和文本。VistaSocial在处理中文等非英语社交媒体内容时表现良好，但界面仍为英文。建议根据你的目标市场语言来选择。"}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,7 +187,17 @@
       .verdict-stats{grid-template-columns:1fr;gap:10px}
       .verdict-card{padding:18px}
     }
-  </style>
+  
+    /* author-box-css-v1 */
+    .author-box{display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin:0 0 24px}
+    .author-box img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--accent)}
+    .author-box .ab-text{font-size:.85rem;color:var(--text2);line-height:1.5;min-width:0}
+    .author-box .ab-name{color:var(--text);font-weight:700}
+    .author-box .ab-name a{color:var(--text)}
+    .author-box .ab-meta{color:var(--muted);font-size:.78rem;margin-top:2px}
+    .author-box .ab-meta a{color:var(--text2)}
+    @media(max-width:640px){.author-box{padding:12px 14px}.author-box img{width:48px;height:48px}}
+</style>
 </head>
 <body>
   <nav class="topnav"><div class="topnav-inner">
@@ -211,6 +218,16 @@
           <span>2 min read</span>
         </div>
       </header>
+      <div class="author-box" role="note">
+        <!-- author-box-v1 -->
+        <img src="/about/daan.jpg" alt="Daan" width="56" height="56" loading="lazy">
+        <div class="ab-text">
+          <div class="ab-name">By <a href="/about/">Daan</a></div>
+          <div>Ex-banker (23y) · AI builder · Writing from Ho Chi Minh City</div>
+          <div class="ab-meta">Last updated: <time>2026-05-31</time> · <a href="/about/">About Daan →</a></div>
+        </div>
+      </div>
+
 
       
 <div class="disclosure" role="note">

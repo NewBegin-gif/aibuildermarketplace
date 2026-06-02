@@ -46,10 +46,7 @@
   "@type": "Article",
   "headline": "ChemiCloud vs Bluehost 2026",
   "description": "Expert B2B analysis of ChemiCloud vs Bluehost. ROI breakdown, pricing comparison and founder insights for 2026.",
-  "author": {
-    "@type": "Organization",
-    "name": "AIBuilder Marketplace"
-  },
+  "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"},
   "publisher": {
     "@type": "Organization",
     "name": "AIBuilder Marketplace"
@@ -67,7 +64,7 @@
 }
 </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aibuildermarketplace.com"}, {"@type": "ListItem", "position": 2, "name": "B2B Reviews", "item": "https://aibuildermarketplace.com/b2b/"}, {"@type": "ListItem", "position": 3, "name": "ChemiCloud vs Bluehost", "item": "https://aibuildermarketplace.com/b2b/chemicloud-vs-bluehost-it/"}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "ChemiCloud", "applicationCategory": "Hosting", "offers": {"@type": "Offer", "price": "From $2.95/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.8", "bestRating": "5"}, "author": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "datePublished": "2026-05-31", "dateModified": "2026-05-31", "name": "ChemiCloud vs Bluehost", "url": "https://aibuildermarketplace.com/b2b/chemicloud-vs-bluehost-it/"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "ChemiCloud", "applicationCategory": "Hosting", "offers": {"@type": "Offer", "price": "From $2.95/mo", "priceCurrency": "USD"}}, "reviewRating": {"@type": "Rating", "ratingValue": "4.8", "bestRating": "5"}, "author": {"@type": "Person", "name": "Daan", "url": "https://aibuildermarketplace.com/about/"}, "datePublished": "2026-05-31", "dateModified": "2026-05-31", "name": "ChemiCloud vs Bluehost", "url": "https://aibuildermarketplace.com/b2b/chemicloud-vs-bluehost-it/"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quale hosting è più veloce tra ChemiCloud e Bluehost?", "acceptedAnswer": {"@type": "Answer", "text": "ChemiCloud è significativamente più veloce con tempi di caricamento medi di 1.2 secondi contro i 2.8 secondi di Bluehost. ChemiCloud utilizza SSD NVMe e CDN gratuito, mentre Bluehost offre storage standard sui piani base. La differenza è evidente soprattutto su siti con contenuti pesanti."}}, {"@type": "Question", "name": "ChemiCloud o Bluehost costa di meno?", "acceptedAnswer": {"@type": "Answer", "text": "Bluehost ha prezzi iniziali più bassi (€2.95/mese vs €3.95/mese di ChemiCloud), ma i rinnovi sono più costosi (€11.99/mese vs €9.95/mese). ChemiCloud include più funzionalità gratuite come backup giornalieri e CDN, rendendo il costo totale spesso più conveniente nel lungo periodo."}}, {"@type": "Question", "name": "Qual è il supporto clienti migliore?", "acceptedAnswer": {"@type": "Answer", "text": "ChemiCloud ha un supporto superiore con tempi di risposta medi di 3 minuti via chat e tecnici specializzati sempre disponibili. Bluehost risponde in 8-15 minuti ma spesso rimanda a guide self-service. ChemiCloud offre anche migrazione gratuita assistita del sito."}}, {"@type": "Question", "name": "Bluehost è adatto per principianti?", "acceptedAnswer": {"@type": "Answer", "text": "Sì, Bluehost è più user-friendly per principianti grazie all'integrazione nativa con WordPress e pannello di controllo semplificato. Offre anche un website builder gratuito e installazione WordPress con un click. ChemiCloud richiede maggiori competenze tecniche ma offre più controllo avanzato."}}, {"@type": "Question", "name": "Quale hosting scegliere per e-commerce?", "acceptedAnswer": {"@type": "Answer", "text": "ChemiCloud è preferibile per e-commerce grazie a performance superiori, backup automatici giornalieri e certificati SSL gratuiti illimitati. Bluehost è adeguato per piccoli shop online ma può risultare lento durante picchi di traffico. ChemiCloud garantisce uptime del 99.99% vs 99.95% di Bluehost."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,7 +187,17 @@
       .verdict-stats{grid-template-columns:1fr;gap:10px}
       .verdict-card{padding:18px}
     }
-  </style>
+  
+    /* author-box-css-v1 */
+    .author-box{display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin:0 0 24px}
+    .author-box img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--accent)}
+    .author-box .ab-text{font-size:.85rem;color:var(--text2);line-height:1.5;min-width:0}
+    .author-box .ab-name{color:var(--text);font-weight:700}
+    .author-box .ab-name a{color:var(--text)}
+    .author-box .ab-meta{color:var(--muted);font-size:.78rem;margin-top:2px}
+    .author-box .ab-meta a{color:var(--text2)}
+    @media(max-width:640px){.author-box{padding:12px 14px}.author-box img{width:48px;height:48px}}
+</style>
 </head>
 <body>
   <nav class="topnav"><div class="topnav-inner">
@@ -211,6 +218,16 @@
           <span>6 min read</span>
         </div>
       </header>
+      <div class="author-box" role="note">
+        <!-- author-box-v1 -->
+        <img src="/about/daan.jpg" alt="Daan" width="56" height="56" loading="lazy">
+        <div class="ab-text">
+          <div class="ab-name">Di <a href="/about/">Daan</a></div>
+          <div>Ex-banchiere (23 anni) · AI builder · Scrivo da Ho Chi Minh</div>
+          <div class="ab-meta">Aggiornato: <time>2026-05-31</time> · <a href="/about/">Su Daan →</a></div>
+        </div>
+      </div>
+
 
       
 <div class="disclosure" role="note">

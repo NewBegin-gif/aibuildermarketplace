@@ -850,6 +850,14 @@ def reading_time(content):
 # ─────────────────────────────────────────────────────────────────────────
 # BUILD ARTICLE HTML V2
 # ─────────────────────────────────────────────────────────────────────────
+# cross-brand Verified Workflow box (single source of truth: workflow_cta.py)
+try:
+    from workflow_cta import workflow_cta_html as _wf_box
+except Exception:
+    def _wf_box(_b):
+        return ""
+
+
 def build_article_html_v2(title, content, brand1, slug, schema_json, internal_links_html):
     """V2 wrapper — drop-in vervanging voor build_article_html()."""
     aff = get_affiliate(brand1)
@@ -1185,6 +1193,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
         {content_with_ids}
         {mid_cta}
         {internal_links_html}
+        {_wf_box(brand1)}
       </article>
 
       <div class="article-footer">{footer_tools}</div>

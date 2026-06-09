@@ -49,6 +49,13 @@ LOGO_DEFAULT = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://
 # ─────────────────────────────────────────────────────────────────────────
 # AFFILIATE CONFIG — per brand
 # ─────────────────────────────────────────────────────────────────────────
+LOGO_AIRIA = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#6D28D9"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">A</text></svg>'
+LOGO_PRINTIFY = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#1FA363"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">P</text></svg>'
+LOGO_FLIPPA = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#18A558"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">F</text></svg>'
+LOGO_TURBOTIC = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#FF5630"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">T</text></svg>'
+LOGO_LANDINGI = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#F25C26"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">L</text></svg>'
+LOGO_IDRIVE = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#0072BC"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">i</text></svg>'
+
 AFFILIATE = {
     "Hostinger": {
         "url": "https://www.hostinger.com?REFERRALCODE=UZUDGLHAKW67",
@@ -159,6 +166,72 @@ AFFILIATE = {
         "logo": LOGO_RANKMATH,
         "color": "#724FFF",
         "category": "WordPress",
+    },
+    "Airia": {
+        "url": "https://try.airia.com/63zm3k6oocba",
+        "rating": "4.6",
+        "reviews": "120+",
+        "price": "Custom pricing",
+        "badge": "Free demo",
+        "tagline": "Build and run AI agents for the enterprise",
+        "logo": LOGO_AIRIA,
+        "color": "#6D28D9",
+        "category": "AI Agent",
+    },
+    "Printify": {
+        "url": "https://try.printify.com/nnjq3xkyctsk",
+        "rating": "4.6",
+        "reviews": "9,000+",
+        "price": "Free plan",
+        "badge": "Free to start",
+        "tagline": "Print-on-demand for your online store",
+        "logo": LOGO_PRINTIFY,
+        "color": "#1FA363",
+        "category": "E-commerce",
+    },
+    "Flippa": {
+        "url": "https://referral.flippa.com/423fnj9u9lh5",
+        "rating": "4.3",
+        "reviews": "3,500+",
+        "price": "Free to browse",
+        "badge": "Free signup",
+        "tagline": "Buy and sell online businesses and websites",
+        "logo": LOGO_FLIPPA,
+        "color": "#18A558",
+        "category": "Marketplace",
+    },
+    "Turbotic": {
+        "url": "https://try.turbotic.com/9bsnqewlv0qm",
+        "rating": "4.5",
+        "reviews": "150+",
+        "price": "Custom pricing",
+        "badge": "Book a demo",
+        "tagline": "Manage and scale automation with AI",
+        "logo": LOGO_TURBOTIC,
+        "color": "#FF5630",
+        "category": "Automation",
+    },
+    "Landingi": {
+        "url": "https://try.landingi.com/hsaaq00kz6qg",
+        "rating": "4.5",
+        "reviews": "1,200+",
+        "price": "From $29 per mo",
+        "badge": "Free trial",
+        "tagline": "No-code landing page and funnel builder",
+        "logo": LOGO_LANDINGI,
+        "color": "#F25C26",
+        "category": "Marketing",
+    },
+    "IDrive": {
+        "url": "https://partners.idrive.com/qrvz8k6i2arr",
+        "rating": "4.6",
+        "reviews": "4,000+",
+        "price": "From $2.95 per mo",
+        "badge": "First-year deal",
+        "tagline": "Cloud backup for all your devices",
+        "logo": LOGO_IDRIVE,
+        "color": "#0072BC",
+        "category": "Backup",
     },
 }
 

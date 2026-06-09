@@ -56,6 +56,13 @@ LOGO_TURBOTIC = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http:/
 LOGO_LANDINGI = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#F25C26"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">L</text></svg>'
 LOGO_IDRIVE = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#0072BC"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">i</text></svg>'
 
+LOGO_EXPERTISEAI = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#4F46E5"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">E</text></svg>'
+LOGO_CREDIT_REPAIR_CLOUD = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#1565C0"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">C</text></svg>'
+LOGO_AISQ = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#9333EA"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">A</text></svg>'
+LOGO_NGRAM = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#DB2777"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">N</text></svg>'
+LOGO_MANYCHAT = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#2C6EF2"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">M</text></svg>'
+LOGO_PANGRAM = '<svg viewBox="0 0 24 24" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#0EA5E9"/><text x="12" y="17" text-anchor="middle" fill="#fff" font-size="15" font-weight="900" font-family="Arial, sans-serif">P</text></svg>'
+
 AFFILIATE = {
     "Hostinger": {
         "url": "https://www.hostinger.com?REFERRALCODE=UZUDGLHAKW67",
@@ -232,6 +239,72 @@ AFFILIATE = {
         "logo": LOGO_IDRIVE,
         "color": "#0072BC",
         "category": "Backup",
+    },
+    "ExpertiseAI": {
+        "url": "https://expertiseai.partnerlinks.io/e2k8ggh9klcg",
+        "rating": "4.6",
+        "reviews": "80+",
+        "price": "Custom pricing",
+        "badge": "Free trial",
+        "tagline": "AI sales agent that turns visitors into pipeline",
+        "logo": LOGO_EXPERTISEAI,
+        "color": "#4F46E5",
+        "category": "Sales",
+    },
+    "Credit Repair Cloud": {
+        "url": "https://get.creditrepaircloud.com/rzjqacc3xbwo",
+        "rating": "4.7",
+        "reviews": "2,500+",
+        "price": "From $179 per mo",
+        "badge": "30-day free trial",
+        "tagline": "Software to start and run a credit repair business",
+        "logo": LOGO_CREDIT_REPAIR_CLOUD,
+        "color": "#1565C0",
+        "category": "Finance",
+    },
+    "AISQ": {
+        "url": "https://try.aisq.com/oftwfsjuajyw",
+        "rating": "4.5",
+        "reviews": "25,000+",
+        "price": "Free plan",
+        "badge": "Free to start",
+        "tagline": "End-to-end AI marketing automation",
+        "logo": LOGO_AISQ,
+        "color": "#9333EA",
+        "category": "Marketing",
+    },
+    "Ngram": {
+        "url": "https://partner.ngram.com/32s9nqdqy7lr",
+        "rating": "4.6",
+        "reviews": "200+",
+        "price": "From $20 per mo",
+        "badge": "Free trial",
+        "tagline": "Turn your content into polished branded videos",
+        "logo": LOGO_NGRAM,
+        "color": "#DB2777",
+        "category": "AI Video",
+    },
+    "ManyChat": {
+        "url": "https://manychat.partnerlinks.io/fytpn81je1y4",
+        "rating": "4.6",
+        "reviews": "5,000+",
+        "price": "Free plan",
+        "badge": "Free to start",
+        "tagline": "Chat marketing automation for Instagram and Messenger",
+        "logo": LOGO_MANYCHAT,
+        "color": "#2C6EF2",
+        "category": "Marketing",
+    },
+    "Pangram": {
+        "url": "https://affiliate.pangram.com/x1xctagyhhbz",
+        "rating": "4.7",
+        "reviews": "300+",
+        "price": "From $8 per mo",
+        "badge": "Free trial",
+        "tagline": "Accurate AI content detector you can trust",
+        "logo": LOGO_PANGRAM,
+        "color": "#0EA5E9",
+        "category": "AI Detection",
     },
 }
 

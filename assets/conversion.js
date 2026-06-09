@@ -35,45 +35,10 @@
       var ts = document.createElement('div');
       ts.id = 'trust-strip';
       ts.style.cssText = 'display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 22px;padding:10px 14px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:8px;font-size:13px;color:#10b981;font-family:system-ui,sans-serif';
-      ts.innerHTML = '<span>✓ Expert-reviewed</span><span>✓ Money-back guarantee</span><span>✓ Cancel anytime</span><span>✓ Trusted by 12k+ founders</span>';
+      ts.innerHTML = '<span>✓ Expert-reviewed</span>';
       h1.parentNode.insertBefore(ts, h1.nextSibling);
     }
 
-    // 4. Exit-intent email popup (desktop, once per session)
-    if (window.innerWidth > 768 && !sessionStorage.getItem('exit_shown')){
-      document.addEventListener('mouseout', function(e){
-        if (e.clientY < 10 && !e.relatedTarget && !sessionStorage.getItem('exit_shown')){
-          sessionStorage.setItem('exit_shown','1');
-          showExit();
-        }
-      });
-    }
-
-    function showExit(){
-      var m = document.createElement('div');
-      m.id = 'exit-modal';
-      m.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;font-family:system-ui,sans-serif';
-      m.innerHTML = '<div style="background:#0a0a0a;border:1px solid #333;border-radius:12px;padding:32px;max-width:460px;color:#fff;position:relative">'+
-        '<button id="exit-close" style="position:absolute;top:10px;right:12px;background:none;border:none;color:#999;font-size:26px;cursor:pointer;line-height:1">×</button>'+
-        '<h3 style="margin:0 0 8px;font-size:22px">Wait — before you go</h3>'+
-        '<p style="margin:0 0 18px;color:#bbb;line-height:1.5">Get our free <strong>2026 AI Tool Stack</strong> — 13 hand-picked B2B tools with exclusive partner deals (save $1,200+/yr).</p>'+
-        '<form id="exit-form">'+
-        '<input type="email" required placeholder="you@startup.com" style="width:100%;box-sizing:border-box;padding:13px;border-radius:8px;border:1px solid #333;background:#1a1a1a;color:#fff;font-size:15px;margin-bottom:10px">'+
-        '<button type="submit" style="width:100%;padding:13px;background:#10b981;color:#fff;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer">Send Me The Guide</button>'+
-        '</form>'+
-        '<p style="margin:10px 0 0;font-size:11px;color:#666;text-align:center">No spam. Unsubscribe anytime.</p>'+
-        '</div>';
-      document.body.appendChild(m);
-      if (window.gtag) gtag('event','exit_intent_shown',{event_category:'conversion'});
-      document.getElementById('exit-close').onclick = function(){ m.remove(); };
-      document.getElementById('exit-form').onsubmit = function(ev){
-        ev.preventDefault();
-        var email = ev.target.querySelector('input').value;
-        if (window.gtag) gtag('event','email_signup',{event_category:'conversion',event_label:email});
-        ev.target.innerHTML = '<p style="color:#10b981;text-align:center;padding:20px 0">✓ Check your inbox — guide is on its way.</p>';
-        setTimeout(function(){ m.remove(); }, 2500);
-      };
-    }
   }
 
   if (document.readyState === 'loading'){

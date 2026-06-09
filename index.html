@@ -163,6 +163,9 @@ body{padding-top:38px}
 
 /* TOOLS GRID */
 .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tools-section-head{grid-column:1/-1;margin:18px 0 4px;padding-top:10px;border-top:1px solid var(--border);display:flex;align-items:baseline;gap:10px;font-size:1.15rem;font-weight:700;color:var(--text)}
+.tools-section-head:first-child{border-top:none;padding-top:0;margin-top:0}
+.tools-section-head .ts-sub{font-size:.82rem;font-weight:400;color:var(--text-2)}
 .tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px 26px 22px;transition:border-color .2s,transform .2s,box-shadow .2s;display:flex;flex-direction:column;position:relative;overflow:hidden}
 .tool-card:hover{border-color:var(--border-hi);transform:translateY(-3px);box-shadow:0 12px 32px -16px rgba(0,0,0,.6)}
 .tool-card.featured{border-color:rgba(59,130,246,.4)}
@@ -368,7 +371,8 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
    which is best-practice for affiliate compliance and SEO.
  -->
  <div class="tools-grid" id="tools-grid">
-<article class="tool-card fade-in" data-category="sales">
+<div class="tools-section-head" data-group="ai" style="grid-column:1/-1"><span>AI-tools</span><span class="ts-sub">Direct AI voor jouw workflow</span></div>
+<article data-group="ai" class="tool-card fade-in" data-category="sales">
  <div class="tool-card-top">
   <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#4F46E5" data-fg="#fff" data-letter="E"><img src="https://logo.clearbit.com/expertise.ai" alt="ExpertiseAI" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=expertise.ai&amp;sz=64'"></div><h3>ExpertiseAI</h3></div>
   <span class="tool-badge deal">Free trial</span>
@@ -381,20 +385,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a href="/b2b/?tool=ExpertiseAI" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
  </div>
 </article>
-<article class="tool-card fade-in" data-category="finance">
- <div class="tool-card-top">
-  <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1565C0" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/creditrepaircloud.com" alt="Credit Repair Cloud" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=creditrepaircloud.com&amp;sz=64'"></div><h3>Credit Repair Cloud</h3></div>
-  <span class="tool-badge deal">30-day free trial</span>
- </div>
- <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 2,500+ reviews</div>
- <p class="tool-desc">Software to start and run a credit repair business</p>
- <div class="tool-tags"><span class="tool-tag">Finance</span><span class="tool-tag">Credit Repair</span><span class="tool-tag">Business</span></div>
- <div class="tool-cta-row">
-  <a href="https://get.creditrepaircloud.com/rzjqacc3xbwo" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Credit Repair Cloud <span aria-hidden="true">→</span></a>
-  <a href="/b2b/?tool=Credit%20Repair%20Cloud" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
- </div>
-</article>
-<article class="tool-card fade-in" data-category="marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
  <div class="tool-card-top">
   <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#9333EA" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/aisq.com" alt="AISQ" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=aisq.com&amp;sz=64'"></div><h3>AISQ</h3></div>
   <span class="tool-badge deal">Free to start</span>
@@ -407,7 +398,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a href="/b2b/?tool=AISQ" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
  </div>
 </article>
-<article class="tool-card fade-in" data-category="ai-video">
+<article data-group="ai" class="tool-card fade-in" data-category="ai-video">
  <div class="tool-card-top">
   <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#DB2777" data-fg="#fff" data-letter="N"><img src="https://logo.clearbit.com/ngram.com" alt="Ngram" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=ngram.com&amp;sz=64'"></div><h3>Ngram</h3></div>
   <span class="tool-badge deal">Free trial</span>
@@ -420,7 +411,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a href="/b2b/?tool=Ngram" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
  </div>
 </article>
-<article class="tool-card fade-in" data-category="marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
  <div class="tool-card-top">
   <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#2C6EF2" data-fg="#fff" data-letter="M"><img src="https://logo.clearbit.com/manychat.com" alt="ManyChat" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=manychat.com&amp;sz=64'"></div><h3>ManyChat</h3></div>
   <span class="tool-badge deal">Free to start</span>
@@ -433,7 +424,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a href="/b2b/?tool=ManyChat" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
  </div>
 </article>
-<article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
  <div class="tool-card-top">
   <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0EA5E9" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/pangram.com" alt="Pangram" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=pangram.com&amp;sz=64'"></div><h3>Pangram</h3></div>
   <span class="tool-badge deal">Free trial</span>
@@ -446,7 +437,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a href="/b2b/?tool=Pangram" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
  </div>
 </article>
-<article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
  <div class="tool-card-top">
   <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6D28D9" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/airia.com" alt="Airia" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=airia.com&amp;sz=64'"></div><h3>Airia</h3></div>
   <span class="tool-badge deal">Free demo</span>
@@ -459,33 +450,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a href="/b2b/?tool=Airia" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
  </div>
 </article>
-<article class="tool-card fade-in" data-category="ecommerce">
- <div class="tool-card-top">
-  <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1FA363" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/printify.com" alt="Printify" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=printify.com&amp;sz=64'"></div><h3>Printify</h3></div>
-  <span class="tool-badge deal">Free to start</span>
- </div>
- <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 9,000+ reviews</div>
- <p class="tool-desc">Print-on-demand for your online store</p>
- <div class="tool-tags"><span class="tool-tag">E-commerce</span><span class="tool-tag">Print-on-demand</span><span class="tool-tag">Dropshipping</span></div>
- <div class="tool-cta-row">
-  <a href="https://try.printify.com/nnjq3xkyctsk" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Printify <span aria-hidden="true">→</span></a>
-  <a href="/b2b/?tool=Printify" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
- </div>
-</article>
-<article class="tool-card fade-in" data-category="finance">
- <div class="tool-card-top">
-  <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#18A558" data-fg="#fff" data-letter="F"><img src="https://logo.clearbit.com/flippa.com" alt="Flippa" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=flippa.com&amp;sz=64'"></div><h3>Flippa</h3></div>
-  <span class="tool-badge deal">Free signup</span>
- </div>
- <div class="tool-rating"><span class="stars">★★★★★</span> 4.3 · 3,500+ reviews</div>
- <p class="tool-desc">Buy and sell online businesses and websites</p>
- <div class="tool-tags"><span class="tool-tag">Marketplace</span><span class="tool-tag">Investing</span><span class="tool-tag">Websites</span></div>
- <div class="tool-cta-row">
-  <a href="https://referral.flippa.com/423fnj9u9lh5" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Flippa <span aria-hidden="true">→</span></a>
-  <a href="/b2b/?tool=Flippa" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
- </div>
-</article>
-<article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
  <div class="tool-card-top">
   <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#FF5630" data-fg="#fff" data-letter="T"><img src="https://logo.clearbit.com/turbotic.com" alt="Turbotic" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=turbotic.com&amp;sz=64'"></div><h3>Turbotic</h3></div>
   <span class="tool-badge deal">Book a demo</span>
@@ -498,7 +463,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a href="/b2b/?tool=Turbotic" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
  </div>
 </article>
-<article class="tool-card fade-in" data-category="marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
  <div class="tool-card-top">
   <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#F25C26" data-fg="#fff" data-letter="L"><img src="https://logo.clearbit.com/landingi.com" alt="Landingi" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=landingi.com&amp;sz=64'"></div><h3>Landingi</h3></div>
   <span class="tool-badge deal">Free trial</span>
@@ -511,20 +476,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a href="/b2b/?tool=Landingi" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
  </div>
 </article>
-<article class="tool-card fade-in" data-category="productivity">
- <div class="tool-card-top">
-  <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0072BC" data-fg="#fff" data-letter="i"><img src="https://logo.clearbit.com/idrive.com" alt="IDrive" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=idrive.com&amp;sz=64'"></div><h3>IDrive</h3></div>
-  <span class="tool-badge deal">First-year deal</span>
- </div>
- <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 4,000+ reviews</div>
- <p class="tool-desc">Cloud backup for all your devices</p>
- <div class="tool-tags"><span class="tool-tag">Backup</span><span class="tool-tag">Cloud Storage</span><span class="tool-tag">Security</span></div>
- <div class="tool-cta-row">
-  <a href="https://partners.idrive.com/qrvz8k6i2arr" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try IDrive <span aria-hidden="true">→</span></a>
-  <a href="/b2b/?tool=IDrive" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
- </div>
-</article>
-  <article class="tool-card fade-in" data-category="coding">
+<article data-group="ai" class="tool-card fade-in" data-category="coding">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6366F1" data-fg="#fff" data-letter="E"><img src="https://logo.clearbit.com/emergent.sh" alt="Emergent" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=emergent.sh&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Emergent</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -537,8 +489,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Emergent" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#7C3AED" data-fg="#fff" data-letter="I"><img src="https://logo.clearbit.com/iconosquare.com" alt="Iconosquare" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=iconosquare.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Iconosquare</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -551,7 +502,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Iconosquare" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#00A67E" data-fg="#fff" data-letter="Q"><img src="https://logo.clearbit.com/quillbot.com" alt="QuillBot" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=quillbot.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>QuillBot</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -564,20 +515,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=QuillBot" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="hosting">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6C2BD9" data-fg="#fff" data-letter="R"><img src="https://logo.clearbit.com/runpod.io" alt="RunPod" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=runpod.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>RunPod</h3></div>
-    <span class="tool-badge deal">Pay as you go</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 900+ reviews</div>
-   <p class="tool-desc">Affordable cloud GPUs for AI training &amp; inference</p>
-   <div class="tool-tags"><span class="tool-tag">Cloud GPU</span><span class="tool-tag">AI Training</span><span class="tool-tag">Infrastructure</span></div>
-   <div class="tool-cta-row">
-    <a href="https://get.runpod.io/dai55gii8gxb" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try RunPod <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=RunPod" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#4F46E5" data-fg="#fff" data-letter="L"><img src="https://logo.clearbit.com/lindy.ai" alt="Lindy" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=lindy.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Lindy</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -590,7 +528,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Lindy" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="sales">
+<article data-group="ai" class="tool-card fade-in" data-category="sales">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0EA5E9" data-fg="#fff" data-letter="T"><img src="https://logo.clearbit.com/typewise.app" alt="Typewise" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=typewise.app&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Typewise</h3></div>
     <span class="tool-badge deal">Custom pricing</span>
@@ -603,7 +541,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Typewise" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#F97316" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/adwisely.com" alt="Adwisely" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=adwisely.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Adwisely</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -616,7 +554,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Adwisely" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#EC4899" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/adcreative.ai" alt="AdCreative.ai" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=adcreative.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>AdCreative.ai</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -629,33 +567,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=AdCreative.ai" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="finance">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#16A34A" data-fg="#fff" data-letter="T"><img src="https://logo.clearbit.com/tax1099.com" alt="Tax1099" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=tax1099.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Tax1099</h3></div>
-    <span class="tool-badge deal">Pay per form</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 500+ reviews</div>
-   <p class="tool-desc">E-file 1099, W-2 &amp; IRS forms for businesses</p>
-   <div class="tool-tags"><span class="tool-tag">Finance</span><span class="tool-tag">Tax Filing</span><span class="tool-tag">Compliance</span></div>
-   <div class="tool-cta-row">
-    <a href="https://get.tax1099.com/0ivysaedzf4n" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Tax1099 <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Tax1099" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="productivity">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ED1C24" data-fg="#fff" data-letter="B"><img src="https://logo.clearbit.com/bitdefender.com" alt="Bitdefender" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=bitdefender.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Bitdefender</h3></div>
-    <span class="tool-badge deal">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 5,200+ reviews</div>
-   <p class="tool-desc">Award-winning antivirus &amp; cybersecurity protection</p>
-   <div class="tool-tags"><span class="tool-tag">Security</span><span class="tool-tag">Antivirus</span><span class="tool-tag">Privacy</span></div>
-   <div class="tool-cta-row">
-    <a href="https://get.bitdefender.com/s1cknsqsf3d1" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Bitdefender <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Bitdefender" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#7B68EE" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/clickup.com" alt="ClickUp" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=clickup.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>ClickUp</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -668,8 +580,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=ClickUp" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="analytics">
+<article data-group="ai" class="tool-card fade-in" data-category="analytics">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#E11D48" data-fg="#fff" data-letter="I"><img src="https://logo.clearbit.com/increff.com" alt="Increff" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=increff.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Increff</h3></div>
     <span class="tool-badge pick">Demo</span>
@@ -682,8 +593,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Increff" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#4F46E5" data-fg="#fff" data-letter="R"><img src="https://logo.clearbit.com/reclaim.ai" alt="Reclaim" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=reclaim.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Reclaim</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -696,8 +606,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Reclaim" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#FF5C35" data-fg="#fff" data-letter="B"><img src="https://logo.clearbit.com/browse.ai" alt="Browse AI" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=browse.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Browse AI</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -710,8 +619,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=BrowseAI" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1F2A44" data-fg="#fff" data-letter="V"><img src="https://logo.clearbit.com/vea.ai" alt="VEA" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=vea.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>VEA</h3></div>
     <span class="tool-badge pick">Early access</span>
@@ -724,8 +632,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=VEA" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#00A0DF" data-fg="#fff" data-letter="S"><img src="https://logo.clearbit.com/sanebox.com" alt="SaneBox" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=sanebox.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>SaneBox</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -738,8 +645,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=SaneBox" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6D28D9" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/assembly.com" alt="Assembly" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=assembly.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Assembly</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -752,8 +658,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Assembly" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="sales">
+<article data-group="ai" class="tool-card fade-in" data-category="sales">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1BA77F" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/close.com" alt="Close" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=close.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Close</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -766,8 +671,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Close" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#FF6B35" data-fg="#fff" data-letter="U"><img src="https://logo.clearbit.com/unbounce.com" alt="Unbounce" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=unbounce.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Unbounce</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -780,36 +684,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Unbounce" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#4687FF" data-fg="#fff" data-letter="N"><img src="https://logo.clearbit.com/nordvpn.com" alt="NordVPN" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=nordvpn.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>NordVPN</h3></div>
-    <span class="tool-badge deal">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 5,000+ reviews</div>
-   <p class="tool-desc">Secure VPN with threat protection for business &amp; remote teams</p>
-   <div class="tool-tags"><span class="tool-tag">VPN</span><span class="tool-tag">Security</span><span class="tool-tag">Privacy</span></div>
-   <div class="tool-cta-row">
-    <a href="https://refer-nordvpn.com/rCEQOtjfEJX" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try NordVPN <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=NordVPN" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="email-marketing">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#509DE1" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/campaignmonitor.com" alt="Campaign Monitor" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=campaignmonitor.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Campaign Monitor</h3></div>
-    <span class="tool-badge deal">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 1,500+ reviews</div>
-   <p class="tool-desc">Drag-and-drop email marketing with smart automation</p>
-   <div class="tool-tags"><span class="tool-tag">Email</span><span class="tool-tag">Automation</span><span class="tool-tag">Templates</span></div>
-   <div class="tool-cta-row">
-    <a href="https://partners.campaignmonitor.com/v66v483h4lfy" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Campaign Monitor <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=CampaignMonitor" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="sales">
+<article data-group="ai" class="tool-card fade-in" data-category="sales">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#5B5BD6" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/amplemarket.com" alt="Amplemarket" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=amplemarket.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Amplemarket</h3></div>
     <span class="tool-badge pick">Book a demo</span>
@@ -822,8 +697,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Amplemarket" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="sales">
+<article data-group="ai" class="tool-card fade-in" data-category="sales">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0A66C2" data-fg="#fff" data-letter="S"><img src="https://logo.clearbit.com/seamless.ai" alt="Seamless.AI" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=seamless.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Seamless.AI</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -836,8 +710,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=SeamlessAI" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="seo">
+<article data-group="ai" class="tool-card fade-in" data-category="seo">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#16A085" data-fg="#fff" data-letter="O"><img src="https://logo.clearbit.com/omniseo.com" alt="OmniSEO" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=omniseo.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>OmniSEO</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -850,8 +723,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=OmniSEO" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="ai-chatbot">
+<article data-group="ai" class="tool-card fade-in" data-category="ai-chatbot">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6852D6" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/cometchat.com" alt="CometChat" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=cometchat.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>CometChat</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -864,50 +736,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=CometChat" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="finance">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0050C7" data-fg="#fff" data-letter="B"><img src="https://logo.clearbit.com/bill.com" alt="Bill.com" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=bill.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Bill.com</h3></div>
-    <span class="tool-badge deal">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.4 · 2,000+ reviews</div>
-   <p class="tool-desc">Automate accounts payable, receivable &amp; spend</p>
-   <div class="tool-tags"><span class="tool-tag">Finance</span><span class="tool-tag">AP/AR</span><span class="tool-tag">Payments</span></div>
-   <div class="tool-cta-row">
-    <a href="https://referral.bill.com/d69gftudjro5" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Bill.com <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Billcom" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1FB6A6" data-fg="#fff" data-letter="T"><img src="https://logo.clearbit.com/tradifyhq.com" alt="Tradify" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=tradifyhq.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Tradify</h3></div>
-    <span class="tool-badge deal">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 500+ reviews</div>
-   <p class="tool-desc">Job management for tradespeople — quotes to invoices</p>
-   <div class="tool-tags"><span class="tool-tag">Job Management</span><span class="tool-tag">Trades</span><span class="tool-tag">Invoicing</span></div>
-   <div class="tool-cta-row">
-    <a href="https://partners.tradifyhq.com/633b6rwbm23b" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Tradify <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Tradify" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#F26C3A" data-fg="#fff" data-letter="T"><img src="https://logo.clearbit.com/trainual.com" alt="Trainual" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=trainual.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Trainual</h3></div>
-    <span class="tool-badge deal">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 600+ reviews</div>
-   <p class="tool-desc">Document training, SOPs &amp; onboarding in one place</p>
-   <div class="tool-tags"><span class="tool-tag">Training</span><span class="tool-tag">SOPs</span><span class="tool-tag">Onboarding</span></div>
-   <div class="tool-cta-row">
-    <a href="https://start.trainual.com/nn7g1qwtr0cd" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Trainual <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Trainual" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="sales">
+<article data-group="ai" class="tool-card fade-in" data-category="sales">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6C5CE7" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/aisdr.com" alt="AISDR" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=aisdr.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>AISDR</h3></div>
     <span class="tool-badge deal">Free trial</span>
@@ -920,8 +749,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=AISDR" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="design">
+<article data-group="ai" class="tool-card fade-in" data-category="design">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#7C3AED" data-fg="#fff" data-letter="G"><img src="https://logo.clearbit.com/gamma.app" alt="Gamma" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=gamma.app&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Gamma</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -934,22 +762,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Gamma" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="hosting">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#52BAD5" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/plesk.com" alt="Plesk" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=plesk.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Plesk</h3></div>
-    <span class="tool-badge deal">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 1,500+ reviews</div>
-   <p class="tool-desc">The web hosting control panel for servers &amp; sites</p>
-   <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">Control Panel</span><span class="tool-tag">Servers</span></div>
-   <div class="tool-cta-row">
-    <a href="https://try.plesk.com/bhj2s1yu28h0" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Plesk <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Plesk" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="analytics">
+<article data-group="ai" class="tool-card fade-in" data-category="analytics">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1FA8DD" data-fg="#fff" data-letter="D"><img src="https://logo.clearbit.com/databox.com" alt="Databox" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=databox.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Databox</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -962,8 +775,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Databox" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="email-marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="email-marketing">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#00BAFF" data-fg="#fff" data-letter="G"><img src="https://logo.clearbit.com/getresponse.com" alt="GetResponse" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=getresponse.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>GetResponse</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -976,22 +788,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=GetResponse" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="finance">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#FF4800" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/payoneer.com" alt="Payoneer" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=payoneer.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Payoneer</h3></div>
-    <span class="tool-badge deal">Free account</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.4 · 5,000+ reviews</div>
-   <p class="tool-desc">Send &amp; receive cross-border payments worldwide</p>
-   <div class="tool-tags"><span class="tool-tag">Payments</span><span class="tool-tag">Cross-border</span><span class="tool-tag">Finance</span></div>
-   <div class="tool-cta-row">
-    <a href="https://payoneer557.partnerlinks.io/whpnqt92bm0j" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Payoneer <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Payoneer" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
+<article data-group="ai" class="tool-card fade-in" data-category="productivity">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0EA5E9" data-fg="#fff" data-letter="E"><img src="https://logo.clearbit.com/elevateforward.ai" alt="ElevateForward" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=elevateforward.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>ElevateForward</h3></div>
     <span class="tool-badge pick">Book a demo</span>
@@ -1004,64 +801,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=ElevateForward" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#16A34A" data-fg="#fff" data-letter="S"><img src="https://logo.clearbit.com/success.co" alt="SuccessCo" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=success.co&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>SuccessCo</h3></div>
-    <span class="tool-badge deal">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 90+ reviews</div>
-   <p class="tool-desc">Run your strategy with OKRs, meetings &amp; scorecards</p>
-   <div class="tool-tags"><span class="tool-tag">Strategy</span><span class="tool-tag">OKRs</span><span class="tool-tag">Scorecards</span></div>
-   <div class="tool-cta-row">
-    <a href="https://try.success.co/h478dlerxkga" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try SuccessCo <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=SuccessCo" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="productivity">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6D4AFF" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/proton.me" alt="Proton" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=proton.me&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Proton</h3></div>
-    <span class="tool-badge deal">Free plan</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 2,100+ reviews</div>
-   <p class="tool-desc">Encrypted email, VPN &amp; storage for total privacy</p>
-   <div class="tool-tags"><span class="tool-tag">Privacy</span><span class="tool-tag">Email</span><span class="tool-tag">VPN</span></div>
-   <div class="tool-cta-row">
-    <a href="https://now.getproton.me/xtd5ynchlrma" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Proton <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Proton" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-
-  <article class="tool-card featured fade-in" data-category="hosting">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#673de6" data-fg="#fff" data-letter="H"><img src="https://logo.clearbit.com/hostinger.com" alt="Hostinger" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=hostinger.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Hostinger</h3></div>
-    <span class="tool-badge deal">75% off + free domain</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 28K+ reviews</div>
-   <p class="tool-desc">Affordable, fast hosting with an AI website builder built in. Free domain, free SSL and 24/7 support — perfect for founders launching their first MVP or side project.</p>
-   <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">AI Builder</span><span class="tool-tag">Cheap</span></div>
-   <div class="tool-cta-row">
-    <a href="https://www.hostinger.com?REFERRALCODE=UZUDGLHAKW67" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Hostinger <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Hostinger" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card featured fade-in" data-category="hosting">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ff6b35" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/chemicloud.com" alt="ChemiCloud" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=chemicloud.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>ChemiCloud</h3></div>
-    <span class="tool-badge deal">70% off first year</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.8 · Fast & reliable</div>
-   <p class="tool-desc">Lightning-fast cloud hosting with free migrations, daily backups, and 24/7 expert support. Perfect balance of performance and affordability for growing businesses.</p>
-   <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">Cloud</span><span class="tool-tag">Fast</span></div>
-   <div class="tool-cta-row">
-    <a href="https://chemicloud.com/#h09q7aez7gtgm" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try ChemiCloud <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=ChemiCloud" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card featured fade-in" data-category="seo">
+<article data-group="ai" class="tool-card featured fade-in" data-category="seo">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1f2d5e" data-fg="#fff" data-letter="F"><img src="https://logo.clearbit.com/frase.io" alt="Frase" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=frase.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Frase</h3></div>
     <span class="tool-badge deal">5-day trial</span>
@@ -1074,23 +814,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Frase" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card featured fade-in" data-category="hosting">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#5333ed" data-fg="#fff" data-letter="K"><img src="https://logo.clearbit.com/kinsta.com" alt="Kinsta" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=kinsta.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Kinsta</h3></div>
-    <span class="tool-badge pick">Editor's pick</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.9 · Premium WP hosting</div>
-   <p class="tool-desc">Managed WordPress hosting on Google Cloud's premium tier. Sub-300ms load times, free migrations and 24/7 expert support. The hosting agencies actually recommend.</p>
-   <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">WordPress</span><span class="tool-tag">Google Cloud</span></div>
-   <div class="tool-cta-row">
-    <a href="https://kinsta.com/?kaid=EKSCJEFWBYJO" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Kinsta <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Kinsta" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-
-  <article class="tool-card featured fade-in" data-category="ai-video">
+<article data-group="ai" class="tool-card featured fade-in" data-category="ai-video">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#2563eb" data-fg="#fff" data-letter="S"><img src="https://logo.clearbit.com/synthesia.io" alt="Synthesia" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=synthesia.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Synthesia</h3></div>
     <span class="tool-badge pick">Best for L&amp;D</span>
@@ -1103,9 +827,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Synthesia" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-
-  <article class="tool-card fade-in" data-category="ai-video">
+<article data-group="ai" class="tool-card fade-in" data-category="ai-video">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#7c3aed" data-fg="#fff" data-letter="I"><img src="https://logo.clearbit.com/invideo.io" alt="InVideo" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=invideo.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>InVideo</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -1118,9 +840,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=InVideo" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-
-  <article class="tool-card fade-in" data-category="coding">
+<article data-group="ai" class="tool-card fade-in" data-category="coding">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#f97316" data-fg="#fff" data-letter="R"><img src="https://logo.clearbit.com/replit.com" alt="Replit" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=replit.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Replit</h3></div>
     <span class="tool-badge pick">AI-native IDE</span>
@@ -1133,38 +853,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Replit" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-
-  <article class="tool-card fade-in" data-category="crypto">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1e40af" data-fg="#fff" data-letter="₿"><img src="https://logo.clearbit.com/bitvavo.com" alt="Bitvavo" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=bitvavo.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Bitvavo</h3></div>
-    <span class="tool-badge deal">€10K fee-free</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 2M+ users in EU</div>
-   <p class="tool-desc">Europe's leading crypto exchange. 350+ assets, low fees, Dutch-regulated and a clean UX for both beginners and pros. Sign up via our link for €10K fee-free.</p>
-   <div class="tool-tags"><span class="tool-tag">Crypto</span><span class="tool-tag">Exchange</span><span class="tool-tag">EU-regulated</span></div>
-   <div class="tool-cta-row">
-    <a href="https://account.bitvavo.com/create?a=68DCE39715&amp;pid=invite&amp;c=referral&amp;af_adset=68DCE39715&amp;deep_link_value=bitvavo%3A%2F%2Fcreate%3Fa%3D68DCE39715" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Claim Bitvavo bonus <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Bitvavo" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-  <article class="tool-card fade-in" data-category="crypto">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#f7a600" data-fg="#0a0a0a" data-letter="B"><img src="https://logo.clearbit.com/bybit.com" alt="Bybit" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=bybit.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Bybit</h3></div>
-    <span class="tool-badge pick">EU-licensed</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 20M+ users</div>
-   <p class="tool-desc">Trade crypto with deep liquidity — derivatives, spot and EU-compliant infrastructure.</p>
-   <div class="tool-tags"><span class="tool-tag">Crypto</span><span class="tool-tag">Trading</span><span class="tool-tag">Derivatives</span></div>
-   <div class="tool-cta-row">
-    <a href="https://www.bybit.eu/invite?ref=43R9RJE" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Bybit <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Bybit" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-
-  <article class="tool-card fade-in" data-category="sales">
+<article data-group="ai" class="tool-card fade-in" data-category="sales">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ec4899" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/clay.com" alt="Clay" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=clay.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Clay</h3></div>
     <span class="tool-badge pick">Best for outbound</span>
@@ -1177,9 +866,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Clay" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-
-  <article class="tool-card fade-in" data-category="voice-ai">
+<article data-group="ai" class="tool-card fade-in" data-category="voice-ai">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#db2777" data-fg="#fff" data-letter="M"><img src="https://logo.clearbit.com/murf.ai" alt="Murf" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=murf.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Murf</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -1192,24 +879,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Murf" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-
-  <article class="tool-card fade-in" data-category="performance">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#f43f5e" data-fg="#fff" data-letter="W"><img src="https://logo.clearbit.com/wp-rocket.me" alt="WP Rocket" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=wp-rocket.me&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>WP Rocket</h3></div>
-    <span class="tool-badge deal">14-day refund</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.9 · 3.5M+ sites</div>
-   <p class="tool-desc">The most powerful WordPress caching plugin. Boost site speed by 300%+ with one-click optimization, lazy loading and CDN integration.</p>
-   <div class="tool-tags"><span class="tool-tag">Performance</span><span class="tool-tag">Caching</span><span class="tool-tag">WordPress</span></div>
-   <div class="tool-cta-row">
-    <a href="https://www.awin1.com/cread.php?awinmid=52401&amp;awinaffid=2880219&amp;ued=https%3A%2F%2Faibuildermarketplace.com" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Get WP Rocket <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=WP%20Rocket" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-
-
-  <article class="tool-card fade-in" data-category="seo">
+<article data-group="ai" class="tool-card fade-in" data-category="seo">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#10b981" data-fg="#fff" data-letter="R"><img src="https://logo.clearbit.com/rankmath.com" alt="Rank Math" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=rankmath.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Rank Math</h3></div>
     <span class="tool-badge deal">Free plan</span>
@@ -1222,8 +892,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Rank%20Math" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card featured fade-in" data-category="ai-chatbot">
+<article data-group="ai" class="tool-card featured fade-in" data-category="ai-chatbot">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ff6100" data-fg="#fff" data-letter="J"><img src="https://logo.clearbit.com/jotform.com" alt="Jotform AI Agents" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=jotform.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Jotform AI Agents</h3></div>
     <span class="tool-badge pick">New for 2026</span>
@@ -1236,8 +905,424 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Jotform" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-
-  <article class="tool-card featured fade-in" data-category="email-marketing">
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6366f1" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/tryatria.com" alt="Atria" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=tryatria.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Atria</h3></div>
+    <span class="tool-badge pick">7-day free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 180+ reviews</div>
+   <p class="tool-desc">Generate winning ad creative and research competitor campaigns across Meta and TikTok — built for performance marketers.</p>
+   <div class="tool-tags"><span class="tool-tag">Ad Creative</span><span class="tool-tag">Competitor Research</span><span class="tool-tag">Meta & TikTok</span></div>
+   <div class="tool-cta-row">
+    <a href="https://affiliates.tryatria.com/i0fy7orc6mte" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Atria <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Atria" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="voice-ai">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ec4899" data-fg="#fff" data-letter="H"><img src="https://logo.clearbit.com/hume.ai" alt="HumeAI" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=hume.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>HumeAI</h3></div>
+    <span class="tool-badge pick">Free plan</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 210+ reviews</div>
+   <p class="tool-desc">Build empathic voice experiences with AI that understands emotion in real time — ideal for next-gen assistants.</p>
+   <div class="tool-tags"><span class="tool-tag">Voice AI</span><span class="tool-tag">Emotional Intelligence</span><span class="tool-tag">API</span></div>
+   <div class="tool-cta-row">
+    <a href="https://try.hume.ai/iah71sw9lwr1" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try HumeAI <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=HumeAI" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="ecommerce">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#10b981" data-fg="#fff" data-letter="S"><img src="https://logo.clearbit.com/smartli.ai" alt="Smartli" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=smartli.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Smartli</h3></div>
+    <span class="tool-badge pick">Free plan</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 390+ reviews</div>
+   <p class="tool-desc">Generate product descriptions, blog posts and ad copy at scale — purpose-built for ecommerce brands.</p>
+   <div class="tool-tags"><span class="tool-tag">AI Copy</span><span class="tool-tag">Product Descriptions</span><span class="tool-tag">Ecommerce</span></div>
+   <div class="tool-cta-row">
+    <a href="https://smartli.partnerlinks.io/qz3fmukd575c" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Smartli <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Smartli" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="coding">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#8b5cf6" data-fg="#fff" data-letter="M"><img src="https://logo.clearbit.com/mindstudio.ai" alt="MindStudio" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=mindstudio.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>MindStudio</h3></div>
+    <span class="tool-badge pick">Free plan</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 520+ reviews</div>
+   <p class="tool-desc">Build and deploy no-code AI agents on 200+ models — automate workflows without writing a line of code.</p>
+   <div class="tool-tags"><span class="tool-tag">No-Code</span><span class="tool-tag">AI Agents</span><span class="tool-tag">200+ Models</span></div>
+   <div class="tool-cta-row">
+    <a href="https://get.mindstudio.ai/sw4f21ihy5xi" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try MindStudio <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=MindStudio" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="research">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0ea5e9" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/consensus.app" alt="Consensus" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=consensus.app&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Consensus</h3></div>
+    <span class="tool-badge pick">Free plan</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 1,100+ reviews</div>
+   <p class="tool-desc">Search across 200M+ scientific papers and get evidence-based answers in seconds — an AI research engine for serious work.</p>
+   <div class="tool-tags"><span class="tool-tag">Research</span><span class="tool-tag">Science</span><span class="tool-tag">AI Search</span></div>
+   <div class="tool-cta-row">
+    <a href="https://get.consensus.app/jmzj2dn2d901" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Consensus <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Consensus" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="marketing">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#3b82f6" data-fg="#fff" data-letter="V"><img src="https://logo.clearbit.com/vistasocial.com" alt="VistaSocial" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=vistasocial.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>VistaSocial</h3></div>
+    <span class="tool-badge pick">14-day free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.8 · 2,400+ reviews</div>
+   <p class="tool-desc">Schedule, publish and analyze across every social channel from one dashboard — all-in-one social media management.</p>
+   <div class="tool-tags"><span class="tool-tag">Social Media</span><span class="tool-tag">Scheduling</span><span class="tool-tag">Analytics</span></div>
+   <div class="tool-cta-row">
+    <a href="https://join.vistasocial.com/3gvz9j8tfhuo" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try VistaSocial <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=VistaSocial" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="voice-ai">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#14b8a6" data-fg="#fff" data-letter="V"><img src="https://logo.clearbit.com/vida.io" alt="Vida" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=vida.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Vida</h3></div>
+    <span class="tool-badge pick">Free demo</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 150+ reviews</div>
+   <p class="tool-desc">Deploy AI phone agents that handle calls, texts, email and chat around the clock — never miss a lead again.</p>
+   <div class="tool-tags"><span class="tool-tag">AI Phone Agents</span><span class="tool-tag">Calls & Texts</span><span class="tool-tag">Automation</span></div>
+   <div class="tool-cta-row">
+    <a href="https://try.vida.io/tao3fvpm3wby" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Vida <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Vida" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="design">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#f59e0b" data-fg="#fff" data-letter="L"><img src="https://logo.clearbit.com/logome.ai" alt="Logome" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=logome.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Logome</h3></div>
+    <span class="tool-badge pick">Free plan</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 880+ reviews</div>
+   <p class="tool-desc">Create a professional logo and a complete brand kit in minutes with AI — perfect for founders launching fast.</p>
+   <div class="tool-tags"><span class="tool-tag">Logo Maker</span><span class="tool-tag">Brand Kits</span><span class="tool-tag">AI Design</span></div>
+   <div class="tool-cta-row">
+    <a href="https://logomeai.partnerlinks.io/b7op64h8prya" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Logome <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Logome" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="sales">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6639ba" data-fg="#fff" data-letter="R"><img src="https://logo.clearbit.com/reply.io" alt="Reply" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=reply.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Reply</h3></div>
+    <span class="tool-badge pick">14-day free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 1,300+ reviews</div>
+   <p class="tool-desc">Automate multichannel sales outreach with AI — email, LinkedIn and calls in one sequenced workflow.</p>
+   <div class="tool-tags"><span class="tool-tag">Sales Outreach</span><span class="tool-tag">Multichannel</span><span class="tool-tag">AI</span></div>
+   <div class="tool-cta-row">
+    <a href="https://get.reply.io/l5ko4nvevkas" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Reply <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Reply" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="ai" class="tool-card fade-in" data-category="design">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ff5a5f" data-fg="#fff" data-letter="B"><img src="https://logo.clearbit.com/beautiful.ai" alt="BeautifulAI" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=beautiful.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>BeautifulAI</h3></div>
+    <span class="tool-badge pick">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 600+ reviews</div>
+   <p class="tool-desc">Create stunning presentations in minutes — AI designs your slides as you type so every deck looks polished.</p>
+   <div class="tool-tags"><span class="tool-tag">Presentations</span><span class="tool-tag">AI Slides</span><span class="tool-tag">Design</span></div>
+   <div class="tool-cta-row">
+    <a href="https://beautifulai.partnerlinks.io/7s7xjgpea39q" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try BeautifulAI <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=BeautifulAI" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<div class="tools-section-head" data-group="support" style="grid-column:1/-1"><span>Voor de ondernemer</span><span class="ts-sub">Hosting, betalingen, beveiliging en meer</span></div>
+<article data-group="support" class="tool-card fade-in" data-category="finance">
+ <div class="tool-card-top">
+  <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1565C0" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/creditrepaircloud.com" alt="Credit Repair Cloud" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=creditrepaircloud.com&amp;sz=64'"></div><h3>Credit Repair Cloud</h3></div>
+  <span class="tool-badge deal">30-day free trial</span>
+ </div>
+ <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 2,500+ reviews</div>
+ <p class="tool-desc">Software to start and run a credit repair business</p>
+ <div class="tool-tags"><span class="tool-tag">Finance</span><span class="tool-tag">Credit Repair</span><span class="tool-tag">Business</span></div>
+ <div class="tool-cta-row">
+  <a href="https://get.creditrepaircloud.com/rzjqacc3xbwo" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Credit Repair Cloud <span aria-hidden="true">→</span></a>
+  <a href="/b2b/?tool=Credit%20Repair%20Cloud" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+ </div>
+</article>
+<article data-group="support" class="tool-card fade-in" data-category="ecommerce">
+ <div class="tool-card-top">
+  <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1FA363" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/printify.com" alt="Printify" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=printify.com&amp;sz=64'"></div><h3>Printify</h3></div>
+  <span class="tool-badge deal">Free to start</span>
+ </div>
+ <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 9,000+ reviews</div>
+ <p class="tool-desc">Print-on-demand for your online store</p>
+ <div class="tool-tags"><span class="tool-tag">E-commerce</span><span class="tool-tag">Print-on-demand</span><span class="tool-tag">Dropshipping</span></div>
+ <div class="tool-cta-row">
+  <a href="https://try.printify.com/nnjq3xkyctsk" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Printify <span aria-hidden="true">→</span></a>
+  <a href="/b2b/?tool=Printify" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+ </div>
+</article>
+<article data-group="support" class="tool-card fade-in" data-category="finance">
+ <div class="tool-card-top">
+  <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#18A558" data-fg="#fff" data-letter="F"><img src="https://logo.clearbit.com/flippa.com" alt="Flippa" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=flippa.com&amp;sz=64'"></div><h3>Flippa</h3></div>
+  <span class="tool-badge deal">Free signup</span>
+ </div>
+ <div class="tool-rating"><span class="stars">★★★★★</span> 4.3 · 3,500+ reviews</div>
+ <p class="tool-desc">Buy and sell online businesses and websites</p>
+ <div class="tool-tags"><span class="tool-tag">Marketplace</span><span class="tool-tag">Investing</span><span class="tool-tag">Websites</span></div>
+ <div class="tool-cta-row">
+  <a href="https://referral.flippa.com/423fnj9u9lh5" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Flippa <span aria-hidden="true">→</span></a>
+  <a href="/b2b/?tool=Flippa" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+ </div>
+</article>
+<article data-group="support" class="tool-card fade-in" data-category="productivity">
+ <div class="tool-card-top">
+  <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0072BC" data-fg="#fff" data-letter="i"><img src="https://logo.clearbit.com/idrive.com" alt="IDrive" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=idrive.com&amp;sz=64'"></div><h3>IDrive</h3></div>
+  <span class="tool-badge deal">First-year deal</span>
+ </div>
+ <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 4,000+ reviews</div>
+ <p class="tool-desc">Cloud backup for all your devices</p>
+ <div class="tool-tags"><span class="tool-tag">Backup</span><span class="tool-tag">Cloud Storage</span><span class="tool-tag">Security</span></div>
+ <div class="tool-cta-row">
+  <a href="https://partners.idrive.com/qrvz8k6i2arr" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try IDrive <span aria-hidden="true">→</span></a>
+  <a href="/b2b/?tool=IDrive" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+ </div>
+</article>
+<article data-group="support" class="tool-card fade-in" data-category="hosting">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6C2BD9" data-fg="#fff" data-letter="R"><img src="https://logo.clearbit.com/runpod.io" alt="RunPod" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=runpod.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>RunPod</h3></div>
+    <span class="tool-badge deal">Pay as you go</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 900+ reviews</div>
+   <p class="tool-desc">Affordable cloud GPUs for AI training &amp; inference</p>
+   <div class="tool-tags"><span class="tool-tag">Cloud GPU</span><span class="tool-tag">AI Training</span><span class="tool-tag">Infrastructure</span></div>
+   <div class="tool-cta-row">
+    <a href="https://get.runpod.io/dai55gii8gxb" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try RunPod <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=RunPod" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="finance">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#16A34A" data-fg="#fff" data-letter="T"><img src="https://logo.clearbit.com/tax1099.com" alt="Tax1099" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=tax1099.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Tax1099</h3></div>
+    <span class="tool-badge deal">Pay per form</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 500+ reviews</div>
+   <p class="tool-desc">E-file 1099, W-2 &amp; IRS forms for businesses</p>
+   <div class="tool-tags"><span class="tool-tag">Finance</span><span class="tool-tag">Tax Filing</span><span class="tool-tag">Compliance</span></div>
+   <div class="tool-cta-row">
+    <a href="https://get.tax1099.com/0ivysaedzf4n" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Tax1099 <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Tax1099" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="productivity">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ED1C24" data-fg="#fff" data-letter="B"><img src="https://logo.clearbit.com/bitdefender.com" alt="Bitdefender" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=bitdefender.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Bitdefender</h3></div>
+    <span class="tool-badge deal">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 5,200+ reviews</div>
+   <p class="tool-desc">Award-winning antivirus &amp; cybersecurity protection</p>
+   <div class="tool-tags"><span class="tool-tag">Security</span><span class="tool-tag">Antivirus</span><span class="tool-tag">Privacy</span></div>
+   <div class="tool-cta-row">
+    <a href="https://get.bitdefender.com/s1cknsqsf3d1" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Bitdefender <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Bitdefender" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="productivity">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#4687FF" data-fg="#fff" data-letter="N"><img src="https://logo.clearbit.com/nordvpn.com" alt="NordVPN" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=nordvpn.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>NordVPN</h3></div>
+    <span class="tool-badge deal">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 5,000+ reviews</div>
+   <p class="tool-desc">Secure VPN with threat protection for business &amp; remote teams</p>
+   <div class="tool-tags"><span class="tool-tag">VPN</span><span class="tool-tag">Security</span><span class="tool-tag">Privacy</span></div>
+   <div class="tool-cta-row">
+    <a href="https://refer-nordvpn.com/rCEQOtjfEJX" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try NordVPN <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=NordVPN" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="email-marketing">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#509DE1" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/campaignmonitor.com" alt="Campaign Monitor" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=campaignmonitor.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Campaign Monitor</h3></div>
+    <span class="tool-badge deal">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 1,500+ reviews</div>
+   <p class="tool-desc">Drag-and-drop email marketing with smart automation</p>
+   <div class="tool-tags"><span class="tool-tag">Email</span><span class="tool-tag">Automation</span><span class="tool-tag">Templates</span></div>
+   <div class="tool-cta-row">
+    <a href="https://partners.campaignmonitor.com/v66v483h4lfy" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Campaign Monitor <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=CampaignMonitor" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="finance">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0050C7" data-fg="#fff" data-letter="B"><img src="https://logo.clearbit.com/bill.com" alt="Bill.com" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=bill.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Bill.com</h3></div>
+    <span class="tool-badge deal">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.4 · 2,000+ reviews</div>
+   <p class="tool-desc">Automate accounts payable, receivable &amp; spend</p>
+   <div class="tool-tags"><span class="tool-tag">Finance</span><span class="tool-tag">AP/AR</span><span class="tool-tag">Payments</span></div>
+   <div class="tool-cta-row">
+    <a href="https://referral.bill.com/d69gftudjro5" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Bill.com <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Billcom" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="productivity">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1FB6A6" data-fg="#fff" data-letter="T"><img src="https://logo.clearbit.com/tradifyhq.com" alt="Tradify" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=tradifyhq.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Tradify</h3></div>
+    <span class="tool-badge deal">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 500+ reviews</div>
+   <p class="tool-desc">Job management for tradespeople — quotes to invoices</p>
+   <div class="tool-tags"><span class="tool-tag">Job Management</span><span class="tool-tag">Trades</span><span class="tool-tag">Invoicing</span></div>
+   <div class="tool-cta-row">
+    <a href="https://partners.tradifyhq.com/633b6rwbm23b" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Tradify <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Tradify" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="productivity">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#F26C3A" data-fg="#fff" data-letter="T"><img src="https://logo.clearbit.com/trainual.com" alt="Trainual" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=trainual.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Trainual</h3></div>
+    <span class="tool-badge deal">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 600+ reviews</div>
+   <p class="tool-desc">Document training, SOPs &amp; onboarding in one place</p>
+   <div class="tool-tags"><span class="tool-tag">Training</span><span class="tool-tag">SOPs</span><span class="tool-tag">Onboarding</span></div>
+   <div class="tool-cta-row">
+    <a href="https://start.trainual.com/nn7g1qwtr0cd" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Trainual <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Trainual" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="hosting">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#52BAD5" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/plesk.com" alt="Plesk" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=plesk.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Plesk</h3></div>
+    <span class="tool-badge deal">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 1,500+ reviews</div>
+   <p class="tool-desc">The web hosting control panel for servers &amp; sites</p>
+   <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">Control Panel</span><span class="tool-tag">Servers</span></div>
+   <div class="tool-cta-row">
+    <a href="https://try.plesk.com/bhj2s1yu28h0" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Plesk <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Plesk" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="finance">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#FF4800" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/payoneer.com" alt="Payoneer" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=payoneer.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Payoneer</h3></div>
+    <span class="tool-badge deal">Free account</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.4 · 5,000+ reviews</div>
+   <p class="tool-desc">Send &amp; receive cross-border payments worldwide</p>
+   <div class="tool-tags"><span class="tool-tag">Payments</span><span class="tool-tag">Cross-border</span><span class="tool-tag">Finance</span></div>
+   <div class="tool-cta-row">
+    <a href="https://payoneer557.partnerlinks.io/whpnqt92bm0j" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Payoneer <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Payoneer" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="productivity">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#16A34A" data-fg="#fff" data-letter="S"><img src="https://logo.clearbit.com/success.co" alt="SuccessCo" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=success.co&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>SuccessCo</h3></div>
+    <span class="tool-badge deal">Free trial</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 90+ reviews</div>
+   <p class="tool-desc">Run your strategy with OKRs, meetings &amp; scorecards</p>
+   <div class="tool-tags"><span class="tool-tag">Strategy</span><span class="tool-tag">OKRs</span><span class="tool-tag">Scorecards</span></div>
+   <div class="tool-cta-row">
+    <a href="https://try.success.co/h478dlerxkga" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try SuccessCo <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=SuccessCo" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="productivity">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6D4AFF" data-fg="#fff" data-letter="P"><img src="https://logo.clearbit.com/proton.me" alt="Proton" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=proton.me&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Proton</h3></div>
+    <span class="tool-badge deal">Free plan</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 2,100+ reviews</div>
+   <p class="tool-desc">Encrypted email, VPN &amp; storage for total privacy</p>
+   <div class="tool-tags"><span class="tool-tag">Privacy</span><span class="tool-tag">Email</span><span class="tool-tag">VPN</span></div>
+   <div class="tool-cta-row">
+    <a href="https://now.getproton.me/xtd5ynchlrma" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Proton <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Proton" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card featured fade-in" data-category="hosting">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#673de6" data-fg="#fff" data-letter="H"><img src="https://logo.clearbit.com/hostinger.com" alt="Hostinger" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=hostinger.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Hostinger</h3></div>
+    <span class="tool-badge deal">75% off + free domain</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 28K+ reviews</div>
+   <p class="tool-desc">Affordable, fast hosting with an AI website builder built in. Free domain, free SSL and 24/7 support — perfect for founders launching their first MVP or side project.</p>
+   <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">AI Builder</span><span class="tool-tag">Cheap</span></div>
+   <div class="tool-cta-row">
+    <a href="https://www.hostinger.com?REFERRALCODE=UZUDGLHAKW67" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Hostinger <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Hostinger" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card featured fade-in" data-category="hosting">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ff6b35" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/chemicloud.com" alt="ChemiCloud" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=chemicloud.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>ChemiCloud</h3></div>
+    <span class="tool-badge deal">70% off first year</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.8 · Fast & reliable</div>
+   <p class="tool-desc">Lightning-fast cloud hosting with free migrations, daily backups, and 24/7 expert support. Perfect balance of performance and affordability for growing businesses.</p>
+   <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">Cloud</span><span class="tool-tag">Fast</span></div>
+   <div class="tool-cta-row">
+    <a href="https://chemicloud.com/#h09q7aez7gtgm" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try ChemiCloud <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=ChemiCloud" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card featured fade-in" data-category="hosting">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#5333ed" data-fg="#fff" data-letter="K"><img src="https://logo.clearbit.com/kinsta.com" alt="Kinsta" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=kinsta.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Kinsta</h3></div>
+    <span class="tool-badge pick">Editor's pick</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.9 · Premium WP hosting</div>
+   <p class="tool-desc">Managed WordPress hosting on Google Cloud's premium tier. Sub-300ms load times, free migrations and 24/7 expert support. The hosting agencies actually recommend.</p>
+   <div class="tool-tags"><span class="tool-tag">Hosting</span><span class="tool-tag">WordPress</span><span class="tool-tag">Google Cloud</span></div>
+   <div class="tool-cta-row">
+    <a href="https://kinsta.com/?kaid=EKSCJEFWBYJO" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Kinsta <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Kinsta" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="crypto">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#1e40af" data-fg="#fff" data-letter="₿"><img src="https://logo.clearbit.com/bitvavo.com" alt="Bitvavo" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=bitvavo.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Bitvavo</h3></div>
+    <span class="tool-badge deal">€10K fee-free</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 2M+ users in EU</div>
+   <p class="tool-desc">Europe's leading crypto exchange. 350+ assets, low fees, Dutch-regulated and a clean UX for both beginners and pros. Sign up via our link for €10K fee-free.</p>
+   <div class="tool-tags"><span class="tool-tag">Crypto</span><span class="tool-tag">Exchange</span><span class="tool-tag">EU-regulated</span></div>
+   <div class="tool-cta-row">
+    <a href="https://account.bitvavo.com/create?a=68DCE39715&amp;pid=invite&amp;c=referral&amp;af_adset=68DCE39715&amp;deep_link_value=bitvavo%3A%2F%2Fcreate%3Fa%3D68DCE39715" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Claim Bitvavo bonus <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Bitvavo" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="crypto">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#f7a600" data-fg="#0a0a0a" data-letter="B"><img src="https://logo.clearbit.com/bybit.com" alt="Bybit" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=bybit.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Bybit</h3></div>
+    <span class="tool-badge pick">EU-licensed</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 20M+ users</div>
+   <p class="tool-desc">Trade crypto with deep liquidity — derivatives, spot and EU-compliant infrastructure.</p>
+   <div class="tool-tags"><span class="tool-tag">Crypto</span><span class="tool-tag">Trading</span><span class="tool-tag">Derivatives</span></div>
+   <div class="tool-cta-row">
+    <a href="https://www.bybit.eu/invite?ref=43R9RJE" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Bybit <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=Bybit" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card fade-in" data-category="performance">
+   <div class="tool-card-top">
+    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#f43f5e" data-fg="#fff" data-letter="W"><img src="https://logo.clearbit.com/wp-rocket.me" alt="WP Rocket" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=wp-rocket.me&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>WP Rocket</h3></div>
+    <span class="tool-badge deal">14-day refund</span>
+   </div>
+   <div class="tool-rating"><span class="stars">★★★★★</span> 4.9 · 3.5M+ sites</div>
+   <p class="tool-desc">The most powerful WordPress caching plugin. Boost site speed by 300%+ with one-click optimization, lazy loading and CDN integration.</p>
+   <div class="tool-tags"><span class="tool-tag">Performance</span><span class="tool-tag">Caching</span><span class="tool-tag">WordPress</span></div>
+   <div class="tool-cta-row">
+    <a href="https://www.awin1.com/cread.php?awinmid=52401&amp;awinaffid=2880219&amp;ued=https%3A%2F%2Faibuildermarketplace.com" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Get WP Rocket <span aria-hidden="true">→</span></a>
+    <a href="/b2b/?tool=WP%20Rocket" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
+   </div>
+  </article>
+<article data-group="support" class="tool-card featured fade-in" data-category="email-marketing">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#FFD639" data-fg="#000" data-letter="B"><img src="https://logo.clearbit.com/beehiiv.com" alt="Beehiiv" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=beehiiv.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Beehiiv</h3></div>
     
@@ -1253,22 +1338,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
    
 
   </article>
-
-
-  <article class="tool-card fade-in" data-category="marketing">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6366f1" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/tryatria.com" alt="Atria" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=tryatria.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Atria</h3></div>
-    <span class="tool-badge pick">7-day free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 180+ reviews</div>
-   <p class="tool-desc">Generate winning ad creative and research competitor campaigns across Meta and TikTok — built for performance marketers.</p>
-   <div class="tool-tags"><span class="tool-tag">Ad Creative</span><span class="tool-tag">Competitor Research</span><span class="tool-tag">Meta & TikTok</span></div>
-   <div class="tool-cta-row">
-    <a href="https://affiliates.tryatria.com/i0fy7orc6mte" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Atria <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Atria" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="ecommerce">
+<article data-group="support" class="tool-card fade-in" data-category="ecommerce">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#f97316" data-fg="#fff" data-letter="A"><img src="https://logo.clearbit.com/alidrop.co" alt="AliDrop" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=alidrop.co&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>AliDrop</h3></div>
     <span class="tool-badge pick">7-day free trial</span>
@@ -1281,111 +1351,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=AliDrop" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="voice-ai">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ec4899" data-fg="#fff" data-letter="H"><img src="https://logo.clearbit.com/hume.ai" alt="HumeAI" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=hume.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>HumeAI</h3></div>
-    <span class="tool-badge pick">Free plan</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 210+ reviews</div>
-   <p class="tool-desc">Build empathic voice experiences with AI that understands emotion in real time — ideal for next-gen assistants.</p>
-   <div class="tool-tags"><span class="tool-tag">Voice AI</span><span class="tool-tag">Emotional Intelligence</span><span class="tool-tag">API</span></div>
-   <div class="tool-cta-row">
-    <a href="https://try.hume.ai/iah71sw9lwr1" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try HumeAI <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=HumeAI" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="ecommerce">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#10b981" data-fg="#fff" data-letter="S"><img src="https://logo.clearbit.com/smartli.ai" alt="Smartli" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=smartli.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Smartli</h3></div>
-    <span class="tool-badge pick">Free plan</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 390+ reviews</div>
-   <p class="tool-desc">Generate product descriptions, blog posts and ad copy at scale — purpose-built for ecommerce brands.</p>
-   <div class="tool-tags"><span class="tool-tag">AI Copy</span><span class="tool-tag">Product Descriptions</span><span class="tool-tag">Ecommerce</span></div>
-   <div class="tool-cta-row">
-    <a href="https://smartli.partnerlinks.io/qz3fmukd575c" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Smartli <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Smartli" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="coding">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#8b5cf6" data-fg="#fff" data-letter="M"><img src="https://logo.clearbit.com/mindstudio.ai" alt="MindStudio" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=mindstudio.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>MindStudio</h3></div>
-    <span class="tool-badge pick">Free plan</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 520+ reviews</div>
-   <p class="tool-desc">Build and deploy no-code AI agents on 200+ models — automate workflows without writing a line of code.</p>
-   <div class="tool-tags"><span class="tool-tag">No-Code</span><span class="tool-tag">AI Agents</span><span class="tool-tag">200+ Models</span></div>
-   <div class="tool-cta-row">
-    <a href="https://get.mindstudio.ai/sw4f21ihy5xi" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try MindStudio <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=MindStudio" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="research">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0ea5e9" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/consensus.app" alt="Consensus" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=consensus.app&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Consensus</h3></div>
-    <span class="tool-badge pick">Free plan</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 · 1,100+ reviews</div>
-   <p class="tool-desc">Search across 200M+ scientific papers and get evidence-based answers in seconds — an AI research engine for serious work.</p>
-   <div class="tool-tags"><span class="tool-tag">Research</span><span class="tool-tag">Science</span><span class="tool-tag">AI Search</span></div>
-   <div class="tool-cta-row">
-    <a href="https://get.consensus.app/jmzj2dn2d901" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Consensus <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Consensus" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="marketing">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#3b82f6" data-fg="#fff" data-letter="V"><img src="https://logo.clearbit.com/vistasocial.com" alt="VistaSocial" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=vistasocial.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>VistaSocial</h3></div>
-    <span class="tool-badge pick">14-day free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.8 · 2,400+ reviews</div>
-   <p class="tool-desc">Schedule, publish and analyze across every social channel from one dashboard — all-in-one social media management.</p>
-   <div class="tool-tags"><span class="tool-tag">Social Media</span><span class="tool-tag">Scheduling</span><span class="tool-tag">Analytics</span></div>
-   <div class="tool-cta-row">
-    <a href="https://join.vistasocial.com/3gvz9j8tfhuo" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try VistaSocial <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=VistaSocial" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="voice-ai">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#14b8a6" data-fg="#fff" data-letter="V"><img src="https://logo.clearbit.com/vida.io" alt="Vida" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=vida.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Vida</h3></div>
-    <span class="tool-badge pick">Free demo</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.5 · 150+ reviews</div>
-   <p class="tool-desc">Deploy AI phone agents that handle calls, texts, email and chat around the clock — never miss a lead again.</p>
-   <div class="tool-tags"><span class="tool-tag">AI Phone Agents</span><span class="tool-tag">Calls & Texts</span><span class="tool-tag">Automation</span></div>
-   <div class="tool-cta-row">
-    <a href="https://try.vida.io/tao3fvpm3wby" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Vida <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Vida" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="design">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#f59e0b" data-fg="#fff" data-letter="L"><img src="https://logo.clearbit.com/logome.ai" alt="Logome" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=logome.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Logome</h3></div>
-    <span class="tool-badge pick">Free plan</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 880+ reviews</div>
-   <p class="tool-desc">Create a professional logo and a complete brand kit in minutes with AI — perfect for founders launching fast.</p>
-   <div class="tool-tags"><span class="tool-tag">Logo Maker</span><span class="tool-tag">Brand Kits</span><span class="tool-tag">AI Design</span></div>
-   <div class="tool-cta-row">
-    <a href="https://logomeai.partnerlinks.io/b7op64h8prya" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Logome <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Logome" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="sales">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#6639ba" data-fg="#fff" data-letter="R"><img src="https://logo.clearbit.com/reply.io" alt="Reply" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=reply.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Reply</h3></div>
-    <span class="tool-badge pick">14-day free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 1,300+ reviews</div>
-   <p class="tool-desc">Automate multichannel sales outreach with AI — email, LinkedIn and calls in one sequenced workflow.</p>
-   <div class="tool-tags"><span class="tool-tag">Sales Outreach</span><span class="tool-tag">Multichannel</span><span class="tool-tag">AI</span></div>
-   <div class="tool-cta-row">
-    <a href="https://get.reply.io/l5ko4nvevkas" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try Reply <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=Reply" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
-  <article class="tool-card fade-in" data-category="voice-ai">
+<article data-group="support" class="tool-card fade-in" data-category="voice-ai">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#0369a1" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/calilio.com" alt="Calilio" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=calilio.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>Calilio</h3></div>
     <span class="tool-badge pick">Free number</span>
@@ -1398,7 +1364,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=Calilio" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="voice-ai">
+<article data-group="support" class="tool-card fade-in" data-category="voice-ai">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#2d6cdf" data-fg="#fff" data-letter="C"><img src="https://logo.clearbit.com/cloudtalk.io" alt="CloudTalk" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=cloudtalk.io&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>CloudTalk</h3></div>
     <span class="tool-badge pick">14-day trial</span>
@@ -1411,7 +1377,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=CloudTalk" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="voice-ai">
+<article data-group="support" class="tool-card fade-in" data-category="voice-ai">
    <div class="tool-card-top">
     <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#16a34a" data-fg="#fff" data-letter="K"><img src="https://logo.clearbit.com/krispcall.com" alt="KrispCall" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=krispcall.com&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>KrispCall</h3></div>
     <span class="tool-badge pick">Free trial</span>
@@ -1424,20 +1390,7 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
     <a href="/b2b/?tool=KrispCall" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
    </div>
   </article>
-  <article class="tool-card fade-in" data-category="design">
-   <div class="tool-card-top">
-    <div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px" data-bg="#ff5a5f" data-fg="#fff" data-letter="B"><img src="https://logo.clearbit.com/beautiful.ai" alt="BeautifulAI" style="max-width:100%;max-height:100%;object-fit:contain" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=&quot;https://www.google.com/s2/favicons?domain=beautiful.ai&sz=128&quot;}else{var p=this.parentNode;p.style.background=p.dataset.bg;p.style.color=p.dataset.fg;p.textContent=p.dataset.letter}"></div><h3>BeautifulAI</h3></div>
-    <span class="tool-badge pick">Free trial</span>
-   </div>
-   <div class="tool-rating"><span class="stars">★★★★★</span> 4.6 · 600+ reviews</div>
-   <p class="tool-desc">Create stunning presentations in minutes — AI designs your slides as you type so every deck looks polished.</p>
-   <div class="tool-tags"><span class="tool-tag">Presentations</span><span class="tool-tag">AI Slides</span><span class="tool-tag">Design</span></div>
-   <div class="tool-cta-row">
-    <a href="https://beautifulai.partnerlinks.io/7s7xjgpea39q" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Try BeautifulAI <span aria-hidden="true">→</span></a>
-    <a href="/b2b/?tool=BeautifulAI" class="tool-cta-secondary">Reviews <span aria-hidden="true">→</span></a>
-   </div>
-  </article>
- </div>
+</div>
 
  <div class="compare-teaser fade-in">
   <div class="compare-card">
@@ -1706,6 +1659,15 @@ filterBtns.forEach(btn=>{
  });
 });
 
+// Section headers (AI / supporting) tonen/verbergen bij filteren
+function updateSectionHeads(f){
+ document.querySelectorAll('.tools-section-head').forEach(h=>{
+  const grp=h.dataset.group;
+  const any=[...toolCards].some(c=>c.dataset.group===grp&&(f==='all'||c.dataset.category===f));
+  h.style.display=any?'':'none';
+ });
+}
+filterBtns.forEach(btn=>btn.addEventListener('click',()=>updateSectionHeads(btn.dataset.filter)));
 // Fade-in on scroll
 const io=new IntersectionObserver(es=>{
  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}});

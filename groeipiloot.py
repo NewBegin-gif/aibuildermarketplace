@@ -161,7 +161,9 @@ Zoektermen waarop deze pagina vertoond wordt maar te weinig kliks krijgt:
 Schrijf een betere title en description die de belangrijkste zoekterm natuurlijk
 bevatten en de klik verdienen. Regels:
 - title: max 60 tekens, GEEN site-naam-suffix (die wordt automatisch toegevoegd),
-  eerlijk en specifiek, geen clickbait, geen jaar tenzij dat er nu al in staat.
+  GEEN '|' of '-' als scheidingsteken aan het eind, eerlijk en specifiek, geen clickbait.
+- BELANGRIJK: noem alleen prijzen, percentages of andere cijfers als die LETTERLIJK
+  in de huidige title of description staan. Niets verzinnen of "ongeveer" gokken.
 - description: 140-158 tekens, concreet, eerlijk, eindigt niet midden in een zin.
 - Taal: Engels.
 
@@ -177,6 +179,12 @@ Antwoord met uitsluitend JSON: {{"title": "...", "description": "..."}}"""
     t, d = out.get("title", "").strip(), out.get("description", "").strip()
     if not (10 <= len(t) <= 70) or not (80 <= len(d) <= 170):
         raise ValueError(f"LLM-output buiten grenzen (title {len(t)}, desc {len(d)})")
+    t = t.replace("|", "-").strip(" -")
+    # cijferclaims moeten uit de bestaande tekst komen
+    bron = (info["title"] + " " + info["desc"]).lower()
+    for num in re.findall(r"\$?\d+[\d.,]*%?", t + " " + d):
+        if num.lower() not in bron and num not in ("2025", "2026"):
+            raise ValueError(f"niet-verifieerbaar cijfer in LLM-output: {num}")
     return t, d
 
 

@@ -45,3 +45,24 @@
     document.addEventListener('DOMContentLoaded', init);
   } else { init(); }
 })();
+
+/* ===== Affiliate click tracking (v2, 2026-06) =====
+   Vuurt GA4-event 'affiliate_click' bij klik op elke a[rel~=sponsored].
+   Volledig geisoleerd: een fout hier kan de rest van de pagina niet raken. */
+(function(){try{
+  if (window.__affTrack) return; window.__affTrack = 1;
+  document.addEventListener('click', function(e){
+    try{
+      var t = e.target;
+      var a = t && t.closest ? t.closest('a[rel~="sponsored"]') : null;
+      if (!a || !a.href || a.href.indexOf('http') !== 0) return;
+      var h = 'unknown';
+      try { h = new URL(a.href).hostname.replace(/^(www|try|get|go|join|start|now|refer|partners?|affiliates?|psref)\./,''); } catch(_){}
+      if (window.gtag) gtag('event', 'affiliate_click', {
+        partner: h,
+        link_url: a.href.split('?')[0],
+        transport_type: 'beacon'
+      });
+    }catch(_){}
+  }, true);
+}catch(_){}})();

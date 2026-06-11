@@ -16,6 +16,13 @@ TAG_RE = re.compile(r"<[^>]+>")
 def fix_page(html: str):
     """Geeft (nieuwe_html, omschrijving) of (None, reden_overgeslagen)."""
     matches = list(H1_RE.finditer(html))
+    if len(matches) == 0:
+        # nieuw generator-template: paginatitel is een <h2 class="header-title"> -> promoveren naar h1
+        m = re.search(r'<h2 class="header-title">(.*?)</h2>', html, re.S)
+        if not m:
+            return None, "ok (0 h1, geen header-title)"
+        out = (html[: m.start()] + '<h1 class="header-title">' + m.group(1) + "</h1>" + html[m.end():])
+        return out, "header-title h2 -> h1"
     if len(matches) < 2:
         return None, f"ok ({len(matches)} h1)"
 

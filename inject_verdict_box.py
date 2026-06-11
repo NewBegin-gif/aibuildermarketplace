@@ -24,8 +24,35 @@ HEROES = {
     "replit": "/b2b/replit-trading-bot/",
     "hostinger": "/b2b/hostinger-vps-review/",
     "turbotic": "/b2b/turbotic-ai-review/",
+    "calilio": "/b2b/calilio-review/",
+    "cometchat": "/b2b/cometchat-review/",
+    "krispcall": "/b2b/krispcall-review/",
+    "reply": "/b2b/reply-io-review/",
+    "typewise": "/b2b/typewise-review/",
+    "vida": "/b2b/vida-ai-review/",
+    "aisq": "/b2b/aisq-review/",
+    "browseai": "/b2b/browse-ai-review/",
+    "clickup": "/b2b/clickup-review/",
+    "gamma": "/b2b/gamma-review/",
+    "idrive": "/b2b/idrive-review/",
+    "lindy": "/b2b/lindy-review/",
+    "proton": "/b2b/proton-review/",
+    "quillbot": "/b2b/quillbot-review/",
+    "reclaim": "/b2b/reclaim-ai-review/",
+    "sanebox": "/b2b/sanebox-review/",
+    "trainual": "/b2b/trainual-review/",
+    "vistasocial": "/b2b/vista-social-review/",
+    "consensus": "/b2b/consensus-review/",
+    "mindstudio": "/b2b/mindstudio-review/",
+    "runpod": "/b2b/runpod-review/",
+    "processstreet": "/b2b/process-street-review/",
+    "quo": "/b2b/quo-review/",
+    "flocksy": "/b2b/flocksy-review/",
+    "brightdata": "/b2b/bright-data-review/",
 }
-HERO_SLUGS = {"bitvavo-trading-bot", "replit-trading-bot", "hostinger-vps-review", "turbotic-ai-review"}
+HERO_SLUGS = {"bitvavo-trading-bot", "replit-trading-bot", "hostinger-vps-review", "turbotic-ai-review",
+              "calilio-review", "cometchat-review", "krispcall-review", "reply-io-review", "typewise-review", "vida-ai-review", "aisq-review", "browse-ai-review", "clickup-review", "gamma-review", "idrive-review", "lindy-review", "proton-review", "quillbot-review", "reclaim-ai-review", "sanebox-review", "trainual-review", "vista-social-review", "consensus-review", "mindstudio-review", "runpod-review",
+              "process-street-review", "quo-review", "flocksy-review", "bright-data-review"}
 
 OLD_BOX_RE = re.compile(r'\n[ \t]*<div class="verdict-box".*?</div>', re.S)
 H1_CLOSE_RE = re.compile(r"</h1>")

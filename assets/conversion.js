@@ -1,49 +1,124 @@
-/* AIBuilder Marketplace — Conversion Toolkit v1 */
-(function(){
+/* AIBuilder Marketplace — Conversion Toolkit v2 (2026-06)
+   Volledig client-side, geïsoleerd (try/catch), geen dependencies.
+   Upgradet elke pagina die dit bestand laadt zonder de HTML te wijzigen,
+   dus Victor-regeneratie kan het niet wissen. Opt-out: <body data-skip-conv="1">.
+   Eerlijk by design: geen verzonnen kortingen/urgentie, alles dismissbaar. */
+(function () {
   if (window.__convtkit) return;
   window.__convtkit = true;
-  if (document.body && document.body.dataset.skipConv === '1') return;
+  try {
+    if (document.body && (document.body.dataset.skipConv === '1' || document.body.dataset.skipconv === '1')) return;
 
-  // ===== Brand list (same as click-tracker) =====
-  var BRANDS = ['kinsta.com','beehiiv','bitvavo','synthesia','invideo','replit','clay.com','murf.ai','wp-rocket','rankmath','jotform','chemicloud','frase.io','hostinger'];
+    var SS = window.sessionStorage;
+    function seen(k){ try { return SS && SS.getItem(k) === '1'; } catch (_) { return false; } }
+    function mark(k){ try { SS && SS.setItem(k, '1'); } catch (_) {} }
+    function track(name, label){ try { if (window.gtag) gtag('event', name, {event_category:'conversion', event_label: label, transport_type:'beacon'}); } catch (_) {} }
 
-  function init(){
-    // 1. Find first affiliate link as primary CTA
-    var ctaLink = null;
-    for (var i=0;i<BRANDS.length;i++){
-      var a = document.querySelector('a[href*="'+BRANDS[i]+'"]');
-      if (a){ ctaLink = a.href; break; }
+    // ---- Primaire affiliate-CTA: eerste echte sponsored-link (werkt voor ELKE affiliate) ----
+    function findCTA(){
+      var a = document.querySelector('a[rel~="sponsored"][href^="http"]');
+      if (a) return a.href;
+      var B = ['kinsta.com','beehiiv','bitvavo','synthesia','invideo','replit','clay.com','murf.ai','wp-rocket','rankmath','jotform','chemicloud','frase.io','hostinger','foxit','keap','tresorit','partnerstack','partnerlinks'];
+      for (var i=0;i<B.length;i++){ var x=document.querySelector('a[href*="'+B[i]+'"]'); if (x) return x.href; }
+      return null;
+    }
+    // ---- Tool-naam uit de title (bv. "Foxit Review 2026 — ..." -> "Foxit") ----
+    function toolName(){
+      var t = (document.title || '').split(/\s+[—|]\s+|\s+Review|\s+Pricing|\s+vs\s+|:/i)[0].trim();
+      return (t && t.length <= 28) ? t : '';
     }
 
-    // 2. Sticky mobile CTA bar
-    if (ctaLink && window.innerWidth <= 768){
-      var bar = document.createElement('div');
-      bar.id = 'mobile-cta-bar';
-      bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#0a0a0a;border-top:1px solid #333;padding:10px 14px;z-index:9999;box-shadow:0 -4px 12px rgba(0,0,0,0.4);display:flex;align-items:center;gap:10px;font-family:system-ui,sans-serif';
-      bar.innerHTML = '<div style="flex:1;color:#fff;font-size:12px;line-height:1.3"><strong>Best Deal 2026</strong><br><span style="opacity:0.7">Exclusive partner discount</span></div>'+
-        '<a href="'+ctaLink+'" target="_blank" rel="nofollow sponsored" id="mobile-cta-btn" style="background:#10b981;color:#fff;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;white-space:nowrap">Get Deal →</a>';
-      document.body.appendChild(bar);
-      document.body.style.paddingBottom = '80px';
-      document.getElementById('mobile-cta-btn').addEventListener('click', function(){
-        if (window.gtag) gtag('event','sticky_cta_click',{event_category:'conversion',event_label:ctaLink});
-      });
-    }
+    var ctaLink = findCTA();
+    var tool = toolName();
+    var isReview = !!ctaLink; // conversie-UI alleen op pagina's met een affiliate-link
 
-    // 3. Trust strip after first <h1>
-    var h1 = document.querySelector('main h1, article h1, h1');
-    if (h1 && !document.getElementById('trust-strip')){
-      var ts = document.createElement('div');
-      ts.id = 'trust-strip';
-      ts.style.cssText = 'display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 22px;padding:10px 14px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:8px;font-size:13px;color:#10b981;font-family:system-ui,sans-serif';
-      ts.innerHTML = '<span>✓ Expert-reviewed</span>';
-      h1.parentNode.insertBefore(ts, h1.nextSibling);
-    }
+    function ready(fn){ if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
 
-  }
+    ready(function () {
+      // 1) Trust-strip na de eerste H1 (alleen op review-/aanbiedingspagina's, eerlijk)
+      try {
+        var h1 = document.querySelector('article h1, main h1, h1');
+        if (isReview && h1 && !document.getElementById('trust-strip')) {
+          var ts = document.createElement('div');
+          ts.id = 'trust-strip';
+          ts.style.cssText = 'display:flex;gap:8px 16px;flex-wrap:wrap;margin:14px 0 22px;padding:9px 14px;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.22);border-radius:8px;font-size:12.5px;color:#34d399;font-family:system-ui,-apple-system,sans-serif';
+          ts.innerHTML = '<span>✓ Independent, founder-written review</span><span>✓ Honest pros &amp; cons</span><span>✓ Affiliate-disclosed</span><span>✓ Updated 2026</span>';
+          h1.parentNode.insertBefore(ts, h1.nextSibling);
+        }
+      } catch (_) {}
 
-  if (document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', init);
-  } else { init(); }
+      if (!ctaLink) return;
+      var btnTxt = (tool ? 'Try ' + tool : 'See the offer') + ' →';
+
+      // 2) Sticky CTA — mobiel: onderbalk; desktop: zwevende pill. Beide dismissbaar.
+      try {
+        if (!seen('conv_bar_dismissed') && !document.getElementById('aibm-cta-bar')) {
+          var isMobile = window.innerWidth <= 768;
+          var bar = document.createElement('div');
+          bar.id = 'aibm-cta-bar';
+          var common = 'position:fixed;z-index:9998;font-family:system-ui,-apple-system,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.45)';
+          if (isMobile) {
+            bar.style.cssText = common + ';left:0;right:0;bottom:0;background:#0b0f17;border-top:1px solid #2a2f3a;padding:10px 14px;display:flex;align-items:center;gap:10px;transform:translateY(110%);transition:transform .35s ease';
+            bar.innerHTML =
+              '<div style="flex:1;color:#e5e7eb;font-size:12.5px;line-height:1.3"><strong>' + (tool || 'Our recommended pick') + '</strong><br><span style="opacity:.65">Via our partner link · check current pricing</span></div>' +
+              '<a href="' + ctaLink + '" target="_blank" rel="nofollow sponsored noopener" id="aibm-cta-btn" style="background:#10b981;color:#fff;padding:11px 16px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;white-space:nowrap">' + btnTxt + '</a>' +
+              '<button id="aibm-cta-x" aria-label="Dismiss" style="background:none;border:none;color:#64748b;font-size:20px;line-height:1;padding:0 4px;cursor:pointer">×</button>';
+          } else {
+            bar.style.cssText = common + ';right:22px;bottom:22px;max-width:330px;background:#0b0f17;border:1px solid #2a2f3a;border-radius:14px;padding:14px 16px;transform:translateY(140%);transition:transform .4s ease';
+            bar.innerHTML =
+              '<button id="aibm-cta-x" aria-label="Dismiss" style="position:absolute;top:6px;right:9px;background:none;border:none;color:#64748b;font-size:18px;line-height:1;cursor:pointer">×</button>' +
+              '<div style="color:#e5e7eb;font-size:13px;line-height:1.4;margin-bottom:10px">' + (tool ? '<strong>' + tool + '</strong> — ' : '') + 'ready to try it?<br><span style="opacity:.6;font-size:12px">Our partner link · see current pricing</span></div>' +
+              '<a href="' + ctaLink + '" target="_blank" rel="nofollow sponsored noopener" id="aibm-cta-btn" style="display:block;text-align:center;background:#10b981;color:#fff;padding:11px 16px;border-radius:9px;text-decoration:none;font-weight:700;font-size:13.5px">' + btnTxt + '</a>';
+          }
+          document.body.appendChild(bar);
+          if (isMobile) document.body.style.paddingBottom = '78px';
+          // Inschuiven nadat de bezoeker iets gelezen heeft (scroll of korte delay)
+          var shown = false;
+          function reveal(){ if (shown) return; shown = true; bar.style.transform = 'translateY(0)'; }
+          if (isMobile) { setTimeout(reveal, 1200); }
+          else {
+            var onScroll = function(){ if ((window.scrollY||0) > 600){ reveal(); window.removeEventListener('scroll', onScroll); } };
+            window.addEventListener('scroll', onScroll, {passive:true}); setTimeout(reveal, 6000);
+          }
+          document.getElementById('aibm-cta-btn').addEventListener('click', function(){ track('sticky_cta_click', ctaLink); });
+          document.getElementById('aibm-cta-x').addEventListener('click', function(){
+            bar.style.transform = isMobile ? 'translateY(110%)' : 'translateY(140%)'; setTimeout(function(){ bar.remove(); }, 350);
+            if (isMobile) document.body.style.paddingBottom = '';
+            mark('conv_bar_dismissed'); track('sticky_cta_dismiss', tool || 'page');
+          });
+        }
+      } catch (_) {}
+
+      // 3) Exit-intent (alleen desktop, 1x per sessie, dismissbaar, geen dark pattern)
+      try {
+        if (window.innerWidth > 768 && !seen('conv_exit_seen')) {
+          var fired = false;
+          document.addEventListener('mouseout', function (e) {
+            if (fired || e.clientY > 0 || e.relatedTarget) return;
+            fired = true; mark('conv_exit_seen');
+            var ov = document.createElement('div');
+            ov.id = 'aibm-exit';
+            ov.style.cssText = 'position:fixed;inset:0;z-index:10000;background:rgba(2,6,15,.72);display:flex;align-items:center;justify-content:center;font-family:system-ui,-apple-system,sans-serif;padding:20px';
+            ov.innerHTML =
+              '<div style="max-width:420px;background:#0b0f17;border:1px solid #2a2f3a;border-radius:16px;padding:28px 26px;text-align:center;position:relative">' +
+                '<button id="aibm-exit-x" aria-label="Close" style="position:absolute;top:10px;right:14px;background:none;border:none;color:#64748b;font-size:22px;line-height:1;cursor:pointer">×</button>' +
+                '<div style="font-size:1.25rem;font-weight:800;color:#f1f5f9;margin-bottom:10px">Before you go' + (tool ? ' — one look at ' + tool : '') + '</div>' +
+                '<p style="color:#94a3b8;font-size:.92rem;line-height:1.6;margin:0 0 18px">Check ' + (tool ? tool + "'s" : 'the') + ' current offer and pricing through our partner link — no extra cost to you, and it supports these honest reviews.</p>' +
+                '<a href="' + ctaLink + '" target="_blank" rel="nofollow sponsored noopener" id="aibm-exit-btn" style="display:inline-block;background:#10b981;color:#fff;padding:12px 26px;border-radius:9px;text-decoration:none;font-weight:700">' + btnTxt + '</a>' +
+                '<div style="margin-top:14px"><button id="aibm-exit-no" style="background:none;border:none;color:#64748b;font-size:.8rem;cursor:pointer;text-decoration:underline">No thanks, keep reading</button></div>' +
+              '</div>';
+            document.body.appendChild(ov);
+            track('exit_intent_shown', tool || 'page');
+            function close(){ ov.remove(); }
+            document.getElementById('aibm-exit-x').addEventListener('click', close);
+            document.getElementById('aibm-exit-no').addEventListener('click', close);
+            ov.addEventListener('click', function(e){ if (e.target === ov) close(); });
+            document.getElementById('aibm-exit-btn').addEventListener('click', function(){ track('exit_intent_click', ctaLink); close(); });
+          });
+        }
+      } catch (_) {}
+    });
+  } catch (_) {}
 })();
 
 /* ===== Affiliate click tracking (v2, 2026-06) =====

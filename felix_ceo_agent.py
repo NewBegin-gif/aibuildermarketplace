@@ -6066,7 +6066,7 @@ Geef de VOLLEDIGE verbeterde HTML terug."""
         elif "```" in improved:
             improved = improved.split("```")[1].split("```")[0].strip()
 
-        if len(improved) > 500:  # Sanity check
+        if len(improved) > 500 and slug not in ("index", "sitemap", "deals", "finder", "best", "about", "ai-tools"):  # Sanity check
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(improved)
             run_command(f"cd {REPO_ROOT} && git add b2b/{slug}.html && git commit -m 'Victor: DNA-optimized {slug}' && git push origin main")

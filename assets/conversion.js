@@ -3,6 +3,18 @@
    Upgradet elke pagina die dit bestand laadt zonder de HTML te wijzigen,
    dus Victor-regeneratie kan het niet wissen. Opt-out: <body data-skip-conv="1">.
    Eerlijk by design: geen verzonnen kortingen/urgentie, alles dismissbaar. */
+
+/* ===== Core Web Vitals: off-screen kaarten niet renderen (content-visibility) =====
+   Grote winst op lange kaart-pagina's zoals /b2b/ (1600+ kaarten): de browser
+   slaat layout/paint van niet-zichtbare kaarten over. contain-intrinsic-size
+   reserveert ruimte zodat er geen layout-shift (CLS) optreedt. Veilig voor SEO:
+   de inhoud blijft in de DOM en wordt gewoon geïndexeerd. */
+(function(){ try {
+  var s = document.createElement('style');
+  s.textContent = '.card,.eco-card,.net-card,.deal-row,.review-card{content-visibility:auto;contain-intrinsic-size:auto 230px}';
+  (document.head || document.documentElement).appendChild(s);
+} catch(_){} })();
+
 (function () {
   if (window.__convtkit) return;
   window.__convtkit = true;

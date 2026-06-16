@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CW1KZ258ZV');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free SaaS Stack Auditor — Find overlap &amp; what to consolidate | AIBuilder Marketplace</title>
+  <meta name="description" content="Audit your current software stack in seconds. Spot tools you're paying twice for, see what to consolidate, and get a free SaaS optimization report. No signup.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aibuildermarketplace.com/stack-auditor/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free SaaS Stack Auditor | AIBuilder Marketplace">
+  <meta property="og:description" content="Spot tools you pay twice for and get a free consolidation report — instant, honest, no signup.">
+  <meta property="og:url" content="https://aibuildermarketplace.com/stack-auditor/">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SaaS Stack Auditor","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"url":"https://aibuildermarketplace.com/stack-auditor/","publisher":{"@type":"Organization","name":"AIBuilder Marketplace"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    :root{--bg:#0a0e17;--bg2:#111827;--card:#1a1f2e;--border:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--muted:#64748b;--accent:#6366f1;--warn:#f59e0b;--good:#10b981}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.7}
+    a{color:var(--accent);text-decoration:none}a:hover{opacity:.85}
+    .topnav{background:rgba(10,14,23,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
+    .topnav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+    .topnav-logo{font-weight:800;font-size:.95rem;color:var(--text)}
+    .topnav-logo em{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal}
+    .topnav-links a{color:var(--text2);font-size:.85rem;font-weight:500;margin-left:20px}
+    .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+    header.hero{text-align:center;padding:48px 24px 6px}
+    header.hero h1{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em;margin:0 0 12px}
+    header.hero p{color:var(--text2);max-width:620px;margin:0 auto;font-size:1.02rem}
+    .panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin:26px 0}
+    .panel h2{font-size:1.1rem;margin:0 0 6px}
+    .panel .sub{color:var(--muted);font-size:.86rem;margin:0 0 16px}
+    .search{position:relative}
+    input[type=text],input[type=number]{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:9px;color:var(--text);padding:12px 14px;font-size:1rem;font-family:inherit}
+    input:focus{outline:none;border-color:var(--accent)}
+    .sugg{position:absolute;left:0;right:0;top:calc(100% + 4px);background:#0d1220;border:1px solid var(--border);border-radius:10px;max-height:260px;overflow:auto;z-index:20;display:none}
+    .sugg div{padding:10px 14px;cursor:pointer;font-size:.92rem;display:flex;justify-content:space-between;gap:10px}
+    .sugg div:hover,.sugg div.active{background:var(--card)}
+    .sugg .c{color:var(--muted);font-size:.78rem}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .chip{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:6px 12px;font-size:.85rem;display:flex;align-items:center;gap:8px}
+    .chip .x{cursor:pointer;color:var(--muted);font-weight:700}.chip .x:hover{color:var(--warn)}
+    .chip .cc{color:var(--muted);font-size:.72rem}
+    .row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
+    .row .fld{flex:1 1 200px}
+    label{display:block;font-size:.85rem;color:var(--text2);margin-bottom:6px}
+    .btn{background:var(--accent);color:#fff;border:none;padding:13px 26px;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit}
+    .btn:hover{opacity:.9}.btn[disabled]{opacity:.4;cursor:not-allowed}
+    .btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
+    .quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .quick button{background:transparent;border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:5px 12px;font-size:.8rem;cursor:pointer;font-family:inherit}
+    .quick button:hover{border-color:var(--accent);color:var(--text)}
+    #report{display:none}
+    .stat-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+    .stat{flex:1 1 150px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center}
+    .stat .n{font-size:1.8rem;font-weight:800;line-height:1}
+    .stat .l{color:var(--muted);font-size:.78rem;margin-top:6px}
+    .redund{border-left:3px solid var(--warn);background:rgba(245,158,11,.07);border-radius:0 10px 10px 0;padding:12px 16px;margin:10px 0;font-size:.92rem}
+    .redund b{color:var(--warn)}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+    @media(max-width:680px){.cards{grid-template-columns:1fr}}
+    .tc{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px}
+    .tc-top{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+    .tc-logo{width:40px;height:40px;border-radius:9px;background:#fff;flex:0 0 auto;display:flex;align-items:center;justify-content:center;overflow:hidden;font-weight:800;color:#1e293b}
+    .tc-logo img{width:100%;height:100%;object-fit:contain;padding:5px}
+    .tc h3{margin:0;font-size:1rem}.tc .cat{color:var(--accent);font-size:.72rem;font-weight:600}
+    .tc p{color:var(--text2);font-size:.86rem;margin:0 0 14px}
+    .tc a.cta{display:block;text-align:center;background:var(--accent);color:#fff;padding:9px;border-radius:8px;font-weight:700;font-size:.86rem}
+    .note{color:var(--muted);font-size:.8rem;margin-top:18px;line-height:1.55}
+    .acts{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 6px}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:26px 24px;text-align:center;color:var(--muted);font-size:.82rem;margin-top:42px}
+    @media print{.topnav,.quick,.acts,#input-panel .search,footer,.btn{display:none!important}body{background:#fff;color:#000}.panel,.stat,.tc{border-color:#ccc}}
+  </style>
+</head>
+<body>
+  <nav class="topnav"><div class="topnav-inner">
+    <a href="/" class="topnav-logo"><em>AIBuilder</em> Marketplace</a>
+    <div class="topnav-links"><a href="/finder/">Tool Finder</a><a href="/roi-calculator/">ROI Calculator</a><a href="/b2b/">Reviews</a></div>
+  </div></nav>
+
+  <header class="hero">
+    <h1>Free SaaS Stack Auditor</h1>
+    <p>Add the tools you pay for today. We'll show where you're doubling up, what you could consolidate, and roughly what it's costing you — in seconds, no signup.</p>
+  </header>
+
+  <div class="wrap">
+    <div class="panel" id="input-panel">
+      <h2>1. Which tools do you use?</h2>
+      <p class="sub">Start typing — pick from the list or add your own. Include everything: CRMs, email, storage, phones, accounting.</p>
+      <div class="search">
+        <input type="text" id="q" placeholder="e.g. Mailchimp, HubSpot, Slack…" autocomplete="off">
+        <div class="sugg" id="sugg"></div>
+      </div>
+      <div class="quick" id="quick"></div>
+      <div class="chips" id="chips"></div>
+
+      <div class="row" style="margin-top:22px">
+        <div class="fld">
+          <label>Average cost per tool / month (€) — for the estimate</label>
+          <input type="number" id="avg" value="35" min="0" step="5">
+        </div>
+        <button class="btn" id="run" disabled>Run my audit →</button>
+      </div>
+    </div>
+
+    <div class="panel" id="report">
+      <h2 id="rep-title">Your SaaS optimization report</h2>
+      <p class="sub" id="rep-date"></p>
+      <div class="stat-row" id="stats"></div>
+      <div id="redunds"></div>
+      <h2 style="margin-top:24px">Recommended to consolidate to</h2>
+      <p class="sub">Our picks for the categories you're active in — fewer tools, less overlap.</p>
+      <div class="cards" id="recs"></div>
+      <div class="acts">
+        <button class="btn" onclick="window.print()">⤓ Download report (PDF)</button>
+        <a class="btn btn-ghost" href="/roi-calculator/">See your time buy-back →</a>
+      </div>
+      <p class="note">Savings are a rough estimate based on the average cost you entered (€<span id="avg-echo"></span>/tool) and the number of overlapping tools we found — not on real vendor pricing. Always check current pricing on each tool's site. We may earn a commission on the tools we recommend, at no extra cost to you.</p>
+    </div>
+  </div>
+
+  <footer>© AIBuilder Marketplace · <a href="/">Home</a> · <a href="/finder/">Tool Finder</a> · <a href="/widgets/">Embed Widgets</a></footer>
+
+  <script>
+  // Bekende tools (incl. niet-affiliate) → categorie. Aanbevelingen komen ALLEEN
+  // uit onze eigen affiliate-database (widget-data.json), maar de auditor herkent
+  // ook wat mensen nú gebruiken zodat overlap-detectie klopt.
+  var POPULAR = [
+    ["Mailchimp","Growth & Revenue"],["HubSpot","Growth & Revenue"],["Salesforce","Growth & Revenue"],
+    ["Klaviyo","Growth & Revenue"],["Constant Contact","Growth & Revenue"],["Marketo","Growth & Revenue"],
+    ["Hootsuite","Growth & Revenue"],["Buffer","Growth & Revenue"],["Sprout Social","Growth & Revenue"],
+    ["Semrush","Growth & Revenue"],["Ahrefs","Growth & Revenue"],["Mailerlite","Growth & Revenue"],
+    ["Asana","Operations & Workflow"],["Trello","Operations & Workflow"],["Notion","Operations & Workflow"],
+    ["Airtable","Operations & Workflow"],["Jira","Operations & Workflow"],["Basecamp","Operations & Workflow"],
+    ["Smartsheet","Operations & Workflow"],["Zapier","Operations & Workflow"],["Make","Operations & Workflow"],
+    ["Slack","Communication & Voice"],["Microsoft Teams","Communication & Voice"],["Zoom","Communication & Voice"],
+    ["RingCentral","Communication & Voice"],["Dialpad","Communication & Voice"],["Twilio","Communication & Voice"],
+    ["Intercom","Communication & Voice"],["OpenPhone","Communication & Voice"],["Grasshopper","Communication & Voice"],
+    ["Google Workspace","IT & Productivity"],["Microsoft 365","IT & Productivity"],["Dropbox","IT & Productivity"],
+    ["Box","IT & Productivity"],["1Password","IT & Productivity"],["LastPass","IT & Productivity"],
+    ["Evernote","IT & Productivity"],["DocuSign","IT & Productivity"],
+    ["QuickBooks","Financial Operations"],["Xero","Financial Operations"],["FreshBooks","Financial Operations"],
+    ["Stripe","Financial Operations"],["PayPal","Financial Operations"],["Expensify","Financial Operations"],
+    ["Wave","Financial Operations"],["Ramp","Financial Operations"],["Brex","Financial Operations"]
+  ];
+
+  var OURS = [];            // affiliate-tools uit widget-data.json
+  var CATALOG = [];         // POPULAR + OURS, voor de zoeksuggesties
+  var selected = [];        // {name, category, ours}
+
+  function norm(s){return String(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");}
+
+  fetch("/widget-data.json").then(function(r){return r.json();}).then(function(d){
+    OURS = d;
+    var seen = {};
+    d.forEach(function(t){ seen[norm(t.name)] = true;
+      CATALOG.push({name:t.name, category:t.category, ours:true}); });
+    POPULAR.forEach(function(p){ if(!seen[norm(p[0])]) CATALOG.push({name:p[0], category:p[1], ours:false}); });
+    buildQuick();
+  }).catch(function(){});
+
+  var q=document.getElementById("q"), sugg=document.getElementById("sugg"), ai=-1, matches=[];
+  function showSugg(){
+    var v=norm(q.value);
+    matches = v ? CATALOG.filter(function(t){return norm(t.name).indexOf(v)>=0 && !isSel(t.name);}).slice(0,8) : [];
+    if(q.value.trim() && !matches.some(function(m){return norm(m.name)===v;}))
+      matches.push({name:q.value.trim(), category:"Other", ours:false, custom:true});
+    if(!matches.length){sugg.style.display="none";return;}
+    sugg.innerHTML = matches.map(function(m,i){
+      return '<div class="'+(i===ai?'active':'')+'" data-i="'+i+'">'+esc(m.name)+
+             '<span class="c">'+(m.custom?'add custom':esc(m.category))+'</span></div>';}).join("");
+    sugg.style.display="block";
+  }
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function isSel(n){return selected.some(function(s){return norm(s.name)===norm(n);});}
+  q.addEventListener("input",function(){ai=-1;showSugg();});
+  q.addEventListener("keydown",function(e){
+    if(e.key==="ArrowDown"){ai=Math.min(ai+1,matches.length-1);showSugg();e.preventDefault();}
+    else if(e.key==="ArrowUp"){ai=Math.max(ai-1,0);showSugg();e.preventDefault();}
+    else if(e.key==="Enter"){if(matches[ai<0?0:ai])addTool(matches[ai<0?0:ai]);e.preventDefault();}
+  });
+  sugg.addEventListener("click",function(e){var d=e.target.closest("[data-i]");if(d)addTool(matches[+d.dataset.i]);});
+  document.addEventListener("click",function(e){if(!e.target.closest(".search"))sugg.style.display="none";});
+
+  function addTool(t){
+    if(!t||isSel(t.name))return;
+    selected.push({name:t.name,category:t.category,ours:!!t.ours});
+    q.value="";sugg.style.display="none";renderChips();
+  }
+  function renderChips(){
+    document.getElementById("chips").innerHTML = selected.map(function(s,i){
+      return '<span class="chip">'+esc(s.name)+' <span class="cc">'+esc(s.category)+'</span>'+
+             '<span class="x" data-i="'+i+'">✕</span></span>';}).join("");
+    document.getElementById("run").disabled = selected.length<2;
+  }
+  document.getElementById("chips").addEventListener("click",function(e){
+    if(e.target.classList.contains("x")){selected.splice(+e.target.dataset.i,1);renderChips();}});
+
+  function buildQuick(){
+    var presets={"Marketing agency":["Mailchimp","HubSpot","Hootsuite","Slack","QuickBooks"],
+      "E-commerce":["Klaviyo","Shopify","Zendesk","Stripe","Asana"],
+      "SaaS startup":["Salesforce","Slack","Notion","Zoom","Stripe"]};
+    document.getElementById("quick").innerHTML =
+      '<span style="color:var(--muted);font-size:.8rem;align-self:center">Quick start:</span>'+
+      Object.keys(presets).map(function(k){return '<button data-p="'+esc(k)+'">'+esc(k)+'</button>';}).join("");
+    document.getElementById("quick").addEventListener("click",function(e){
+      var b=e.target.closest("[data-p]");if(!b)return;
+      selected=[]; presets[b.dataset.p].forEach(function(n){
+        var t=CATALOG.filter(function(c){return norm(c.name)===norm(n);})[0]||{name:n,category:"Other",ours:false};
+        if(!isSel(t.name))selected.push({name:t.name,category:t.category,ours:!!t.ours});});
+      renderChips();
+    });
+  }
+
+  document.getElementById("run").addEventListener("click",runAudit);
+  function runAudit(){
+    var avg=Math.max(0,+document.getElementById("avg").value||0);
+    // groepeer op categorie
+    var byCat={};
+    selected.forEach(function(s){(byCat[s.category]=byCat[s.category]||[]).push(s);});
+    var redund=[], extra=0;
+    Object.keys(byCat).forEach(function(c){
+      if(c!=="Other" && byCat[c].length>=2){redund.push([c,byCat[c]]);extra+=byCat[c].length-1;}
+    });
+    // aanbevelingen: onze tools in de categorieën die de gebruiker heeft
+    var recs=[], used={};
+    Object.keys(byCat).forEach(function(c){
+      OURS.filter(function(t){return t.category===c;}).slice(0,2).forEach(function(t){
+        if(!used[t.key]){used[t.key]=1;recs.push(t);}});
+    });
+    recs=recs.slice(0,6);
+
+    // stats
+    var save=extra*avg;
+    document.getElementById("stats").innerHTML=
+      stat(selected.length,"tools in your stack")+
+      stat(Object.keys(byCat).filter(function(c){return c!=="Other";}).length,"categories covered")+
+      stat(extra,"overlapping tools")+
+      stat("€"+(save).toLocaleString('en-US'),"/mo potential saving*");
+    // redundancies
+    document.getElementById("redunds").innerHTML = redund.length ? redund.map(function(r){
+      return '<div class="redund"><b>Overlap in '+esc(r[0])+':</b> you listed '+
+        r[1].map(function(s){return esc(s.name);}).join(", ")+
+        ' — these do similar jobs. Consolidating to one could remove '+(r[1].length-1)+' line item'+(r[1].length-1>1?'s':'')+'.</div>';
+    }).join("") : '<div class="redund" style="border-left-color:var(--good);background:rgba(16,185,129,.07)"><b style="color:var(--good)">No obvious overlap.</b> Your stack looks lean — nice. The picks below are still worth a look.</div>';
+    // recommendation cards
+    document.getElementById("recs").innerHTML = recs.map(card).join("");
+    document.getElementById("recs").addEventListener("click",function(e){
+      var a=e.target.closest("a.cta"); if(a) gtag("event","stack_auditor_cta_click",{partner:a.dataset.p});
+    });
+    document.getElementById("avg-echo").textContent=avg;
+    document.getElementById("rep-date").textContent="Generated "+new Date().toLocaleDateString();
+    document.getElementById("report").style.display="block";
+    gtag("event","stack_auditor_run",{tools:selected.length,overlaps:extra});
+    document.getElementById("report").scrollIntoView({behavior:"smooth"});
+  }
+  function stat(n,l){return '<div class="stat"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>';}
+  function card(t){
+    var letter=t.name.charAt(0).toUpperCase();
+    return '<div class="tc"><div class="tc-top"><div class="tc-logo" data-l="'+esc(letter)+'">'+
+      '<img src="https://logo.clearbit.com/'+esc(t.domain)+'" alt="'+esc(t.name)+'" '+
+      'onerror="if(!this.dataset.t){this.dataset.t=1;this.src=\'https://www.google.com/s2/favicons?domain='+esc(t.domain)+'&sz=128\'}else{this.parentNode.textContent=this.parentNode.dataset.l}"></div>'+
+      '<div><h3>'+esc(t.name)+'</h3><div class="cat">'+esc(t.category)+'</div></div></div>'+
+      '<p>'+esc(t.desc)+'</p>'+
+      '<a class="cta" href="'+esc(t.link)+'" target="_blank" rel="sponsored noopener nofollow" data-p="'+esc((t.domain||"").replace(/^(www|try|get|go|join|start|now|refer|partners?|affiliates?|psref)\./,""))+'">Visit '+esc(t.name)+' →</a></div>';
+  }
+  </script>
+</body>
+</html>

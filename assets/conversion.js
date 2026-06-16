@@ -24,7 +24,23 @@
     var SS = window.sessionStorage;
     function seen(k){ try { return SS && SS.getItem(k) === '1'; } catch (_) { return false; } }
     function mark(k){ try { SS && SS.setItem(k, '1'); } catch (_) {} }
-    function track(name, label){ try { if (window.gtag) gtag('event', name, {event_category:'conversion', event_label: label, transport_type:'beacon'}); } catch (_) {} }
+    function track(name, label){ try { if (window.gtag) gtag('event', name, {event_category:'conversion', event_label: label, variant: VARIANT, transport_type:'beacon'}); } catch (_) {} }
+
+    // ---- A/B-variant (Darwin Fase 1): per bezoeker vastgezet in localStorage.
+    // Test eerlijke CTA-werkwoorden ("Visit" vs "Try"); winnaar bepalen we later uit
+    // GA4 via de param `variant` op affiliate_click. Registreer `variant` als
+    // event-scoped custom dimension in GA4 om het in rapporten te zien. ----
+    var CTA_VERB = { A: 'Visit', B: 'Try' };
+    var VARIANT = (function(){
+      try {
+        var v = localStorage.getItem('aibm_cta_variant');
+        if (v && CTA_VERB[v]) return v;
+        v = Math.random() < 0.5 ? 'A' : 'B';
+        localStorage.setItem('aibm_cta_variant', v);
+        return v;
+      } catch (_) { return 'A'; }
+    })();
+    function ctaVerb(){ return CTA_VERB[VARIANT]; }
 
     // ---- Primaire affiliate-CTA: eerste echte sponsored-link (werkt voor ELKE affiliate) ----
     function findCTA(){
@@ -60,7 +76,16 @@
       } catch (_) {}
 
       if (!ctaLink) return;
-      var btnTxt = (tool ? 'Try ' + tool : 'See the offer') + ' →';
+      var btnTxt = (tool ? ctaVerb() + ' ' + tool : 'See the offer') + ' →';
+
+      // A/B: pas het CTA-werkwoord toe op de homepage-kaartknoppen (variant B → "Try")
+      try {
+        document.querySelectorAll('a.tool-cta-primary').forEach(function (a) {
+          if (a.firstChild && a.firstChild.nodeType === 3) {
+            a.firstChild.nodeValue = a.firstChild.nodeValue.replace(/^\s*(Visit|Try)\b/, ctaVerb());
+          }
+        });
+      } catch (_) {}
 
       // 2) Sticky CTA — mobiel: onderbalk; desktop: zwevende pill. Beide dismissbaar.
       try {
@@ -145,9 +170,12 @@
       if (!a || !a.href || a.href.indexOf('http') !== 0) return;
       var h = 'unknown';
       try { h = new URL(a.href).hostname.replace(/^(www|try|get|go|join|start|now|refer|partners?|affiliates?|psref)\./,''); } catch(_){}
+      var variant = 'A';
+      try { variant = localStorage.getItem('aibm_cta_variant') || 'A'; } catch(_){}
       if (window.gtag) gtag('event', 'affiliate_click', {
         partner: h,
         link_url: a.href.split('?')[0],
+        variant: variant,
         transport_type: 'beacon'
       });
     }catch(_){}

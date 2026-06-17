@@ -179,6 +179,14 @@ body{padding-top:38px}
 
 /* TOOLS GRID */
 .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bundle-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:6px 0 20px}
+.bundle-lead{font-size:.8rem;color:var(--text-2);width:100%;text-align:center;margin-bottom:2px}
+.bundle-btn{background:transparent;border:1px dashed var(--border-hi);color:var(--text-2);padding:7px 15px;border-radius:999px;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit}
+.bundle-btn:hover{color:var(--text);border-color:var(--accent)}
+.bundle-btn.active{background:var(--accent);border-style:solid;border-color:var(--accent);color:#fff}
+#bundle-banner{grid-column:1/-1;display:none;font-size:.92rem;color:var(--text-2);margin:2px 0 12px;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px}
+#bundle-banner b{color:var(--text)}
+#bundle-banner #bundle-clear{color:var(--accent);cursor:pointer;text-decoration:underline;margin-left:8px}
 .tools-section-head{grid-column:1/-1;margin:18px 0 4px;padding-top:10px;border-top:1px solid var(--border);display:flex;align-items:baseline;gap:12px;font-size:1.65rem;font-weight:800;letter-spacing:-.01em;color:var(--text)}
 .tools-section-head:first-child{border-top:none;padding-top:0;margin-top:0}
 .tools-section-head .ts-sub{font-size:.95rem;font-weight:400;color:var(--text-2)}
@@ -367,6 +375,14 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <button class="filter-btn" data-filter="ai">AI tools</button>
   <button class="filter-btn" data-filter="support">Business support</button>
  </div>
+ <div class="bundle-bar fade-in">
+  <span class="bundle-lead">Or start with a ready-made stack →</span>
+  <button class="bundle-btn" data-bundle="outbound">🎯 Cold Outreach Machine</button>
+  <button class="bundle-btn" data-bundle="agency">🏢 Agency Stack</button>
+  <button class="bundle-btn" data-bundle="solo">🚀 Solopreneur Toolkit</button>
+  <button class="bundle-btn" data-bundle="ecom">🛒 E-commerce Starter</button>
+ </div>
+ <div id="bundle-banner"></div>
  <div class="tools-grid" id="tools-grid">
 <div class="tools-section-head" data-group="ai" style="grid-column:1/-1"><span>AI Tools</span><span class="ts-sub">Direct AI for your workflow</span></div>
 <article class="tool-card fade-in" data-group="ai" data-category="Growth &amp; Revenue"><div class="tool-card-top"><div class="tool-card-header"><div class="tool-logo" style="background:#fff;box-sizing:border-box;padding:5px"><img src="https://logo.clearbit.com/aira.app" alt="Aira" style="width:100%;height:100%;object-fit:contain" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=aira.app&amp;sz=64'"></div><h3>Aira</h3></div><span class="tool-badge pick">Growth</span></div><div class="tool-rating"><span style="color:var(--accent-2)">●</span> Featured partner</div><p class="tool-desc">AI-powered sales engagement that qualifies and books leads automatically, so outreach keeps running without constant manual follow-up.</p><div class="tool-tags"><span class="tool-tag">Growth</span><span class="tool-tag">Revenue</span></div><div class="tool-cta-row"><a href="https://get.aira.app/i885nzzcmgg4" target="_blank" rel="sponsored noopener" class="tool-cta-primary">Visit Aira <span aria-hidden="true">→</span></a></div></article>
@@ -798,32 +814,59 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 
 // Filter tools
 const filterBtns=document.querySelectorAll('.filter-btn');
+const bundleBtns=document.querySelectorAll('.bundle-btn');
 const toolCards=document.querySelectorAll('.tool-card');
 const homeSearch=document.getElementById('home-search');
-let curFilter='all',curQ='';
+const bundleBanner=document.getElementById('bundle-banner');
+let curFilter='all',curQ='',curBundle=null;
+const BUNDLES={
+ outbound:{label:'Cold Outreach Machine',sub:'Find, enrich and close leads at scale',tools:['Clay','Reply.io','Close','Salesmessage']},
+ agency:{label:'Agency Stack',sub:'Run clients, content and campaigns',tools:['ClickUp','ActiveCampaign','Later','AdCreative.ai']},
+ solo:{label:'Solopreneur Toolkit',sub:'Everything a one-person business needs',tools:['folk','Beehiiv','Gamma','Todoist','Fastmail']},
+ ecom:{label:'E-commerce Starter',sub:'Launch and ship an online store',tools:['DropGenius','Printify','Shippo','Goflow']}
+};
 function cardText(c){return ((c.querySelector('h3')||{}).textContent+' '+((c.querySelector('.tool-desc')||{}).textContent||'')+' '+(c.dataset.category||'')).toLowerCase();}
+function cardName(c){return ((c.querySelector('h3')||{}).textContent||'').trim();}
 function applyHomeFilter(){
  const vis={};let total=0;
+ const bset=curBundle?new Set(BUNDLES[curBundle].tools):null;
  toolCards.forEach(c=>{
   const g=c.dataset.group;
-  const ok=(curFilter==='all'||g===curFilter)&&(!curQ||cardText(c).indexOf(curQ)>=0);
+  const ok=bset?(bset.has(cardName(c))&&(!curQ||cardText(c).indexOf(curQ)>=0))
+               :((curFilter==='all'||g===curFilter)&&(!curQ||cardText(c).indexOf(curQ)>=0));
   c.style.display=ok?'':'none';
   if(ok){vis[g]=(vis[g]||0)+1;total++;}
  });
  document.querySelectorAll('.tools-section-head').forEach(h=>{
   const g=h.dataset.group;
-  h.style.display=((curFilter==='all'||g===curFilter)&&vis[g])?'':'none';
+  h.style.display=(!bset&&(curFilter==='all'||g===curFilter)&&vis[g])?'':'none';
  });
+ if(bundleBanner){
+  if(bset){const b=BUNDLES[curBundle];bundleBanner.innerHTML='<b>'+b.label+'</b> — '+b.sub+'. Showing '+total+' tools. <span id="bundle-clear">Clear ↺</span>';bundleBanner.style.display='block';}
+  else bundleBanner.style.display='none';
+ }
  let nr=document.getElementById('tools-no-results');
  const grid=document.getElementById('tools-grid');
  if(!nr&&grid){nr=document.createElement('div');nr.id='tools-no-results';nr.className='tools-no-results';nr.textContent='No tools match your search.';grid.appendChild(nr);}
  if(nr)nr.style.display=total?'none':'block';
 }
+function clearBundle(){curBundle=null;bundleBtns.forEach(b=>b.classList.remove('active'));}
 filterBtns.forEach(btn=>btn.addEventListener('click',()=>{
+ clearBundle();
  filterBtns.forEach(b=>b.classList.remove('active'));
  btn.classList.add('active');
  curFilter=btn.dataset.filter;applyHomeFilter();
 }));
+bundleBtns.forEach(btn=>btn.addEventListener('click',()=>{
+ const k=btn.dataset.bundle;
+ if(curBundle===k){clearBundle();}
+ else{curBundle=k;bundleBtns.forEach(b=>b.classList.toggle('active',b===btn));
+  filterBtns.forEach(b=>b.classList.toggle('active',b.dataset.filter==='all'));curFilter='all';}
+ applyHomeFilter();
+ if(window.gtag)gtag('event','bundle_select',{bundle:k||'cleared'});
+ const sec=document.getElementById('tools');if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+document.addEventListener('click',e=>{if(e.target&&e.target.id==='bundle-clear'){clearBundle();applyHomeFilter();}});
 if(homeSearch)homeSearch.addEventListener('input',()=>{curQ=homeSearch.value.trim().toLowerCase();applyHomeFilter();});
 // Fade-in on scroll
 const io=new IntersectionObserver(es=>{

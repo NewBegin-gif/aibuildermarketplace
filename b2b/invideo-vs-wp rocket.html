@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InVideo vs WP Rocket: Complete Vergelijking 2024</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: #667eea;
+            margin: 50px 0 30px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            color: #8892b0;
+            margin: 30px 0 20px 0;
+        }
+        
+        .intro {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+            font-size: 1.1rem;
+        }
+        
+        .verdict-table {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .table-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 20px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        th {
+            background: rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        td {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .rating {
+            color: #ffd700;
+            font-weight: 600;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .pros-card, .cons-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border-top: 4px solid;
+        }
+        
+        .pros-card {
+            border-top-color: #4ade80;
+        }
+        
+        .cons-card {
+            border-top-color: #f87171;
+        }
+        
+        .pros-card h3 {
+            color: #4ade80;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cons-card h3 {
+            color: #f87171;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .comparison-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+        
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>InVideo vs WP Rocket: Volledige Vergelijking 2024</h1>
+            <p class="subtitle">Ontdek welke tool het beste past bij jouw behoeften</p>
+        </header>
+
+        <div class="intro">
+            <p><strong>InVideo en WP Rocket zijn beide krachtige tools, maar dienen compleet verschillende doeleinden.</strong> InVideo is een geavanceerde video-editor voor het creëren van professionele video content, terwijl WP Rocket een premium WordPress caching plugin is die websitesnelheid optimaliseert.</p>
+            
+            <p>In deze uitgebreide vergelijking analyseren we beide tools op functionaliteit, prijs-kwaliteitverhouding en gebruiksgemak om je te helpen de juiste keuze te maken voor jouw specifieke behoeften.</p>
+        </div>
+
+        <div class="verdict-table">
+            <div class="table-header">
+                <h3>🏆 Quick Verdict Overzicht</h3>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criterium</th>
+                        <th>InVideo</th>
+                        <th>WP Rocket</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hoofdfunctie</strong></td>
+                        <td>Video editing & creatie</td>
+                        <td>WordPress optimalisatie</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Startprijs</strong></td>
+                        <td>$15/maand</td>
+                        <td>$59/jaar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gebruiksgemak</strong></td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Support Kwaliteit</strong></td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overall Rating</strong></td>
+                        <td><span class="rating">4.5/5</span></td>
+                        <td><span class="rating">4.8/5</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>🎬 InVideo: Sterke Punten</h2>
+        <div class="pros-card">
+            <h3>✨ Waarom Kiezen voor InVideo?</h3>
+            <ul>
+                <li><strong>Uitgebreide Template Bibliotheek:</strong> Meer dan 5000 professioneel ontworpen templates voor elke niche en gebruik</li>
+                <li><strong>AI-Powered Video Creatie:</strong> Geavanceerde AI-functionaliteiten die automatisch video's genereren op basis van scripts</li>
+                <li><strong>Drag-and-Drop Editor:</strong> Intuïtieve interface waarmee je zonder technische kennis professionele video's kunt maken</li>
+                <li><strong>Multi-Platform Export:</strong> Optimaliseer video's automatisch voor verschillende social media platforms en formaten</li>
+                <li><strong>Royalty-Free Media:</strong> Toegang tot miljoenen stockfoto's, video's en muziek zonder extra kosten</li>
+            </ul>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://invideo.sjv.io/E00nbn" class="cta-button" target="_blank">🚀 Probeer InVideo Gratis</a>
+            </div>
+        </div>
+
+        <h2>⚡ WP Rocket: Sterke Punten</h2>
+        <div class="pros-card">
+            <h3>🚀 Waarom Kiezen voor WP Rocket?</h3>
+            <ul>
+                <li><strong>Instant Prestatieverbetering:</strong> Gemiddeld 50-80% snelheidsverbetering direct na installatie</li>
+                <li><strong>Zero-Configuration Setup:</strong> Werkt out-of-the-box zonder technische configuratie vereist</li>
+                <li><strong>Geavanceerde Caching:</strong> Page caching, browser caching en database optimalisatie in één pakket</li>
+                <li><strong>CDN Integratie:</strong> Naadloze integratie met populaire CDN services voor wereldwijde snelheid</li>
+                <li><strong>Premium Support:</strong> Toegang tot expert WordPress ontwikkelaars voor technische ondersteuning</li>
+            </ul>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://www.awin1.com/cread.php?awinmid=52401&awinaffid=2880219&ued=https%3A%2F%2Fwp-rocket.me%2Fpricing%2F" class="cta-button" target="_blank">⚡ Koop WP Rocket Nu</a>
+            </div>
+        </div>
+
+        <h2>🔍 Head-to-Head Vergelijking</h2>
+
+        <div class="comparison-section">
+            <h3>📊 Functionaliteit & Features</h3>
+            <p><strong>InVideo</strong> biedt een complete video productie suite met geavanceerde editing tools, AI-gestuurde content creatie, en uitgebreide aanpassingsmogelijkheden. De platform ondersteunt 4K video export, real-time samenwerking, en heeft ingebouwde branding opties.</p>
+            
+            <p><strong>WP Rocket</strong> focust volledig op WordPress optimalisatie met features zoals lazy loading, minificatie van CSS/JS, database cleanup, en geavanceerde caching mechanismen. Het biedt ook WooCommerce optimalisatie en mobile-specific caching.</p>
+            
+            <div class="warning-box">
+                <h4>⚠️ Belangrijke Overweging</h4>
+                <p>Deze tools zijn niet direct vergelijkbaar qua functionaliteit - InVideo is voor content creatie, WP Rocket voor website optimalisatie.</p>
+            </div>
+        </div>
+
+        <div class="comparison-section">
+            <h3>💰 Prijsstelling & Waarde</h3>
+            <p><strong>InVideo Pricing:</strong></p>
+            <ul>
+                <li>Free Plan: Beperkte features met watermark</li>
+                <li>Business Plan: $15/maand - Geen watermark, HD export</li>
+                <li>Unlimited Plan: $30/maand - 4K export, premium templates</li>
+            </ul>
+            
+            <p><strong>WP Rocket Pricing:</strong>

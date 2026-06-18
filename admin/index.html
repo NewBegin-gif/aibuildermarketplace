@@ -33,10 +33,10 @@ canvas { max-height: 200px; }
 <body>
 <div class="header">
 <h1>Victor 19.0 Singularity — Command Center</h1>
-<p>Real-time dashboard | Last update: 17/06/2026 10:00 UTC</p>
+<p>Real-time dashboard | Last update: 18/06/2026 10:03 UTC</p>
 <div style="margin-top:15px;">
-<span class="mini-stat">📝 1714 NL</span>
-<span class="mini-stat">🌍 43 EN</span>
+<span class="mini-stat">📝 1729 NL</span>
+<span class="mini-stat">🌍 45 EN</span>
 <span class="mini-stat">📈 0 Pagina 1</span>
 <span class="mini-stat">💰 €0/mo</span>
 </div>
@@ -62,7 +62,7 @@ canvas { max-height: 200px; }
 <div class="card">
 <h3>📋 Content Calendar</h3>
 <ul class="planned">
-<li style="color:#666">Geen items gepland</li>
+<li><span class="prio">[9]</span> <span class="badge badge-warn">journey_gap</span> WP Rocket Pricing & Kosten: Compleet Overzich <span style="color:#666;float:right">2026-06-21</span></li>
 </ul>
 </div>
 <div class="card">
@@ -93,7 +93,7 @@ options: chartDefaults
 new Chart(document.getElementById('performersChart'), {
 type: 'bar',
 data: {
-labels: ["invideo-vs-wp rocket", "bitvavo-vs-kinsta", "bitvavo-vs-murf", "replit-vs-synthesia", "bitvavo-vs-invideo", "bitvavo-vs-replit", "invideo-vs-kinsta", "synthesia-vs-kinsta", "replit-vs-wp rocket", "synthesia-vs-murf"],
+labels: ["bitvavo-vs-kinsta", "bitvavo-vs-murf", "replit-vs-synthesia", "bitvavo-vs-invideo", "bitvavo-vs-replit", "invideo-vs-kinsta", "synthesia-vs-kinsta", "synthesia-vs-murf", "replit-vs-wprocket", "invideo-vs-wprocket"],
 datasets: [{ label: 'Score', data: [20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0], backgroundColor: '#6c63ff' }]
 },
 options: { ...chartDefaults, indexAxis: 'y' }
@@ -102,8 +102,8 @@ options: { ...chartDefaults, indexAxis: 'y' }
 new Chart(document.getElementById('uptimeChart'), {
 type: 'line',
 data: {
-labels: ["9.492", "1.697", "5.140", "9.776", "2.987", "7.498", "9.781", "1.354", "2.976", "5.423", "7.601", "5.885", "7.867", "0.158", "2.440", "3.946", "5.736", "7.775", "0.301", "1.709", "1.033", "9.938", "1.030", "1.312"],
-datasets: [{ label: 'Response (s)', data: [0.01, 0.14, 0.4, 0.16, 0.02, 0.23, 0.03, 0.14, 0.02, 0.17, 0.16, 0.18, 0.14, 0.01, 0.14, 0.01, 0.24, 0.01, 0.17, 0.01, 0.15, 0.13, 0.04, 0.12], borderColor: '#ff9800', tension: 0.3, fill: true, backgroundColor: 'rgba(255,152,0,0.1)' }]
+labels: ["1.354", "2.976", "5.423", "7.601", "5.885", "7.867", "0.158", "2.440", "3.946", "5.736", "7.775", "0.301", "1.709", "1.033", "9.938", "1.030", "1.312", "4.798", "2.906", "9.015", "2.738", "5.094", "4.607", "1.318"],
+datasets: [{ label: 'Response (s)', data: [0.14, 0.02, 0.17, 0.16, 0.18, 0.14, 0.01, 0.14, 0.01, 0.24, 0.01, 0.17, 0.01, 0.15, 0.13, 0.04, 0.12, 0.18, 0.16, 0.04, 0.15, 0.38, 0.14, 0.15], borderColor: '#ff9800', tension: 0.3, fill: true, backgroundColor: 'rgba(255,152,0,0.1)' }]
 },
 options: chartDefaults
 });

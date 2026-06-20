@@ -27,17 +27,19 @@
   .wrap{max-width:760px;margin:0 auto;padding:48px 24px}
   h1{font-size:clamp(1.7rem,5vw,2.5rem);font-weight:800;line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
   .sub{color:var(--text2);font-size:1.05rem;margin:0 0 28px;max-width:560px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-  @media(max-width:720px){.grid{grid-template-columns:1fr}}
-  .inside{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 24px}
-  .inside h2{font-size:1.1rem;margin:0 0 12px}
-  .inside ul{list-style:none;padding:0;margin:0}
-  .inside li{padding:7px 0;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--text2)}
-  .inside li:last-child{border:0}
-  .signup{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(167,139,250,.08));border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center}
-  .signup h2{font-size:1.15rem;margin:0 0 6px}
-  .signup p{color:var(--text2);font-size:.9rem;margin:0 0 16px}
-  .by{color:var(--muted);font-size:.82rem;margin-top:26px}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:6px 0 40px}
+  .tile{display:flex;flex-direction:column;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;transition:border-color .15s,transform .15s}
+  .tile:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .tile-logo{width:40px;height:40px;border-radius:9px;background:#fff;padding:5px;object-fit:contain}
+  .tile-job{font-size:.78rem;color:var(--text2);line-height:1.3}
+  .tile-tool{font-size:1.02rem;font-weight:700;color:var(--text)}
+  .signup{max-width:520px;margin:0 auto;background:linear-gradient(135deg,rgba(59,130,246,.1),rgba(167,139,250,.1));border:1px solid var(--border);border-radius:18px;padding:32px 28px;text-align:center}
+  .signup h2{font-size:1.4rem;margin:0 0 8px}
+  .signup>p{color:var(--text2);font-size:.92rem;margin:0 0 18px}
+  .perks{list-style:none;padding:0;margin:0 auto 20px;text-align:left;max-width:340px}
+  .perks li{font-size:.88rem;color:var(--text2);padding:5px 0 5px 26px;position:relative}
+  .perks li::before{content:'\2713';position:absolute;left:0;color:var(--accent);font-weight:700}
+  .by{color:var(--muted);font-size:.82rem;margin-top:32px;text-align:center;max-width:560px;margin-left:auto;margin-right:auto}
   footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);font-size:.8rem;margin-top:40px}
 </style>
 </head>
@@ -46,18 +48,21 @@
   <div class="wrap">
     <h1>The 2026 B2B Software Stack</h1>
     <p class="sub">The AI &amp; business tools I'd actually pay for - organised by job-to-be-done, so you can build a lean stack in an afternoon instead of a month. Free PDF, straight to your inbox.</p>
-    <div class="grid">
-      <div class="inside">
-        <h2>What's inside</h2>
-        <ul><li><strong>Business finance & multi-currency</strong> &rarr; <span style="color:var(--accent)">Aspire</span></li><li><strong>Getting paid internationally</strong> &rarr; <span style="color:var(--accent)">Payoneer</span></li><li><strong>Passwords & team security</strong> &rarr; <span style="color:var(--accent)">1Password</span></li><li><strong>Privacy & safe remote work</strong> &rarr; <span style="color:var(--accent)">NordVPN</span></li><li><strong>Sales prospecting & outreach</strong> &rarr; <span style="color:var(--accent)">Apollo</span></li><li><strong>CRM inside your inbox</strong> &rarr; <span style="color:var(--accent)">Streak</span></li><li><strong>Email marketing</strong> &rarr; <span style="color:var(--accent)">AWeber</span></li><li><strong>Stop drowning in email</strong> &rarr; <span style="color:var(--accent)">SaneBox</span></li><li><strong>Presentations & decks</strong> &rarr; <span style="color:var(--accent)">Gamma</span></li><li><strong>Web hosting</strong> &rarr; <span style="color:var(--accent)">Hostinger</span></li><li><strong>Projects & work management</strong> &rarr; <span style="color:var(--accent)">ClickUp</span></li><li><strong>PDF & e-signature</strong> &rarr; <span style="color:var(--accent)">Foxit</span></li></ul>
-      </div>
-      <div class="signup">
-        <h2>Get the free PDF</h2>
-        <p>Enter your email and I'll send you the full stack - plus one honest pick a month. No spam, unsubscribe anytime.</p>
-        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="88fd042e-d240-47ba-850d-8e3685ea86a8"></script>
-      </div>
+    <h2 style="font-size:1.2rem;margin:0 0 16px">What's inside — 12 picks by job</h2>
+    <div class="tiles"><a class="tile" href="/b2b/aspire-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/aspireapp.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=aspireapp.com&amp;sz=64'" alt="Aspire logo"><span class="tile-job">Business finance & multi-currency</span><span class="tile-tool">Aspire &rarr;</span></a><a class="tile" href="/b2b/payoneer-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/payoneer.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=payoneer.com&amp;sz=64'" alt="Payoneer logo"><span class="tile-job">Getting paid internationally</span><span class="tile-tool">Payoneer &rarr;</span></a><a class="tile" href="/b2b/1password-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/1password.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=1password.com&amp;sz=64'" alt="1Password logo"><span class="tile-job">Passwords & team security</span><span class="tile-tool">1Password &rarr;</span></a><a class="tile" href="/b2b/nordvpn-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/nordvpn.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=nordvpn.com&amp;sz=64'" alt="NordVPN logo"><span class="tile-job">Privacy & safe remote work</span><span class="tile-tool">NordVPN &rarr;</span></a><a class="tile" href="/b2b/apollo-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/apollo.io" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=apollo.io&amp;sz=64'" alt="Apollo logo"><span class="tile-job">Sales prospecting & outreach</span><span class="tile-tool">Apollo &rarr;</span></a><a class="tile" href="/b2b/streak-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/streak.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=streak.com&amp;sz=64'" alt="Streak logo"><span class="tile-job">CRM inside your inbox</span><span class="tile-tool">Streak &rarr;</span></a><a class="tile" href="/b2b/aweber-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/aweber.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=aweber.com&amp;sz=64'" alt="AWeber logo"><span class="tile-job">Email marketing</span><span class="tile-tool">AWeber &rarr;</span></a><a class="tile" href="/b2b/sanebox-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/sanebox.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=sanebox.com&amp;sz=64'" alt="SaneBox logo"><span class="tile-job">Stop drowning in email</span><span class="tile-tool">SaneBox &rarr;</span></a><a class="tile" href="/b2b/gamma-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/gamma.app" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=gamma.app&amp;sz=64'" alt="Gamma logo"><span class="tile-job">Presentations & decks</span><span class="tile-tool">Gamma &rarr;</span></a><a class="tile" href="/b2b/hostinger-vps-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/hostinger.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=hostinger.com&amp;sz=64'" alt="Hostinger logo"><span class="tile-job">Web hosting</span><span class="tile-tool">Hostinger &rarr;</span></a><a class="tile" href="/b2b/clickup-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/clickup.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=clickup.com&amp;sz=64'" alt="ClickUp logo"><span class="tile-job">Projects & work management</span><span class="tile-tool">ClickUp &rarr;</span></a><a class="tile" href="/b2b/foxit-pdf-editor-review/"><img class="tile-logo" loading="lazy" src="https://logo.clearbit.com/foxit.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=foxit.com&amp;sz=64'" alt="Foxit logo"><span class="tile-job">PDF & e-signature</span><span class="tile-tool">Foxit &rarr;</span></a></div>
+    <div class="signup">
+      <h2>Get the free PDF</h2>
+      <p>Drop your email and I'll send you the full stack — plus the monthly newsletter:</p>
+      <ul class="perks">
+        <li>One tool worth your attention</li>
+        <li>An honest head-to-head comparison</li>
+        <li>A real deal or free trial (no fake discounts)</li>
+        <li>A 10-minute workflow that buys back time</li>
+      </ul>
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="88fd042e-d240-47ba-850d-8e3685ea86a8"></script>
+      <p style="font-size:.78rem;color:var(--muted);margin:16px 0 0">No spam. Unsubscribe anytime.</p>
     </div>
-    <p class="by">Curated by Daniel Haket - 20 years in international banking (ex-Deutsche Bank), now reviewing the software he runs his own business on. <a href="/about/">About &rarr;</a></p>
+    <p class="by">Curated by Daniel Haket — 20 years in international banking (ex-Deutsche Bank), now reviewing the software he runs his own business on. <a href="/about/">About &rarr;</a></p>
   </div>
   <footer>Some links are affiliate links - we may earn a commission at no extra cost to you. <a href="/terms/">Terms</a></footer>
 </body>

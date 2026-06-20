@@ -45,6 +45,9 @@
         .filter-btn:hover{border-color:#58a6ff;color:#58a6ff}
         .filter-btn.active{background:#58a6ff;border-color:#58a6ff;color:#0d1117;font-weight:700}
         .filter-sep{width:1px;height:20px;background:#30363d;margin:0 4px}
+        .pill-group{display:none}
+        .pill-group.open{display:contents}
+        .pill-toggle{font-weight:700;color:#c9d1d9}
         .search-wrap{max-width:1100px;margin:0 auto;padding:20px 24px 0}
         .search-box{width:100%;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px 16px;color:#e6edf3;font-family:inherit;outline:none}
         .search-box:focus{border-color:#58a6ff}
@@ -138,8 +141,8 @@
         </div>
       </section>
       <details class="mobile-filters" open><summary>Filters & Languages</summary><div class="filters-wrap"><div class="filters-inner">
-        <span class="filter-label">Tool:</span>
-        <button class="filter-btn active" onclick="filterTool(this,'all')">All</button>
+        <button type="button" class="filter-btn pill-toggle" onclick="togglePills('toolpills',this)">Tool ▾</button>
+        <span class="pill-group" id="toolpills"><button class="filter-btn active" onclick="filterTool(this,'all')">All</button>
 <button class="filter-btn" onclick="filterTool(this,'Wrike')">Wrike</button>
 <button class="filter-btn" onclick="filterTool(this,'WP Rocket')">WP Rocket</button>
 <button class="filter-btn" onclick="filterTool(this,'Weave')">Weave</button>
@@ -262,7 +265,7 @@
 <button class="filter-btn" onclick="filterTool(this,'AdCreative.ai')">AdCreative.ai</button>
 <button class="filter-btn" onclick="filterTool(this,'ActiveCampaign')">ActiveCampaign</button>
 <button class="filter-btn" onclick="filterTool(this,'800com')">800com</button>
-<button class="filter-btn" onclick="filterTool(this,'1Password')">1Password</button>
+<button class="filter-btn" onclick="filterTool(this,'1Password')">1Password</button></span>
         <div class="filter-sep"></div>
         <span class="filter-label">Type:</span>
         <button class="filter-btn active" data-type="all" onclick="filterType(this,'all')">All</button>
@@ -275,8 +278,8 @@
         <button class="filter-btn" data-type="Automation" onclick="filterType(this,'Automation')">Automation</button>
         <button class="filter-btn" data-type="Guide" onclick="filterType(this,'Guide')">Guide</button>
         <div class="filter-sep"></div>
-        <span class="filter-label">Lang:</span>
-        <button class="filter-btn active" onclick="filterLang(this,'all')">All</button>
+        <button type="button" class="filter-btn pill-toggle" onclick="togglePills('langpills',this)">Lang ▾</button>
+        <span class="pill-group" id="langpills"><button class="filter-btn active" onclick="filterLang(this,'all')">All</button>
 <button class="filter-btn" onclick="filterLang(this,'af')">🇿🇦 Afrikaans</button>
 <button class="filter-btn" onclick="filterLang(this,'am')">🇪🇹 አማርኛ</button>
 <button class="filter-btn" onclick="filterLang(this,'ar')">🇸🇦 العربية</button>
@@ -311,7 +314,7 @@
 <button class="filter-btn" onclick="filterLang(this,'vi')">🇻🇳 Tiếng Việt</button>
 <button class="filter-btn" onclick="filterLang(this,'yo')">🇳🇬 Yorùbá</button>
 <button class="filter-btn" onclick="filterLang(this,'zh')">🇨🇳 中文</button>
-<button class="filter-btn" onclick="filterLang(this,'zu')">🇿🇦 isiZulu</button>
+<button class="filter-btn" onclick="filterLang(this,'zu')">🇿🇦 isiZulu</button></span>
       </div></div>
       </div></details><div class="search-wrap"><input class="search-box" type="text" placeholder="Search reviews, tools or topics..." oninput="filterSearch(this.value)"></div>
       <div class="container">
@@ -2110,6 +2113,7 @@
         function filterType(btn,type){document.querySelectorAll('.filter-btn[data-type]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeType=type;applyFilter();}
         function filterLang(btn,lang){document.querySelectorAll('.filter-btn[data-lang]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeLang=lang;applyFilter();}
         function filterSearch(q){searchQ=q;applyFilter();}
+        function togglePills(id,btn){var e=document.getElementById(id);if(e){e.classList.toggle("open");btn.classList.toggle("active");}}
         (function(){var v=new URLSearchParams(location.search).get('tool');if(!v)return;var N=function(s){return s.toLowerCase().split('').filter(function(c){return 'abcdefghijklmnopqrstuvwxyz0123456789'.indexOf(c)>-1}).join('')};var nv=N(v),exact=null,pre=null;document.querySelectorAll('.filter-btn').forEach(function(b){var oc=b.getAttribute('onclick')||'';if(oc.indexOf('filterTool')!==0)return;var s=oc.indexOf(String.fromCharCode(39))+1,e=oc.lastIndexOf(String.fromCharCode(39));if(s<=0||e<=s)return;var t=oc.substring(s,e);if(t==='all')return;var nb=N(t);if(nb===nv)exact=exact||b;else if(nb.length>4&&nv.indexOf(nb)===0)pre=pre||b});var hit=exact||pre;if(hit)hit.click()})();
       </script>
     </body>

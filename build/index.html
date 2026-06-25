@@ -31,27 +31,32 @@
     .hero h1{font-size:clamp(1.9rem,5vw,2.9rem);font-weight:900;letter-spacing:-.03em;margin:0 0 12px}
     .hero p{color:var(--text2);font-size:1.05rem;margin:0 auto;max-width:560px}
     .finder{max-width:620px;margin:26px auto 0}
-    .finder input{width:100%;padding:16px 20px;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:1.05rem;outline:none}
-    .finder input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,102,241,.2)}
+    .search{position:relative}
+    .s-ico{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted);pointer-events:none}
+    .finder input{width:100%;padding:17px 20px 17px 50px;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:1.05rem;outline:none}
+    .finder input::placeholder{color:var(--muted)}
+    .finder input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,102,241,.22)}
+    .finder input:focus + .chips,.search:focus-within .s-ico{color:var(--accent)}
     .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 0}
     .chip{background:var(--card);border:1px solid var(--border);color:var(--text2);font:inherit;font-size:.85rem;font-weight:600;padding:7px 14px;border-radius:999px;cursor:pointer;transition:all .15s}
     .chip:hover{border-color:var(--accent);color:var(--text)}
     .hint{text-align:center;color:var(--muted);font-size:.82rem;margin:18px 0 4px}
     #bpres{margin:6px 0 10px}
-    .res{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:16px;padding:18px 20px;margin:14px 0}
-    .res-h{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin-bottom:14px}
-    .res-t{font-weight:800;font-size:1.05rem}
-    .res-go{font-size:.85rem;font-weight:700;white-space:nowrap}
-    .res-stack{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
-    .st{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:11px;padding:9px 12px;min-width:0}
-    .st:hover{border-color:var(--accent)}
-    .lg{position:relative;flex:none;width:38px;height:38px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .lt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;color:#0f172a}
+    .res{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-top:3px solid var(--ac,var(--accent));border-radius:16px;padding:20px 22px;margin:16px 0}
+    .res-head{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-bottom:16px}
+    .res-kicker{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--ac,var(--accent));margin-bottom:4px}
+    .res-title{font-weight:800;font-size:1.12rem;letter-spacing:-.01em;line-height:1.25}
+    .res-cta{flex:none;background:var(--ac,var(--accent));color:#0a0e17;font-weight:800;font-size:.84rem;padding:9px 16px;border-radius:10px;white-space:nowrap}
+    .res-cta:hover{filter:brightness(1.08)}
+    .res-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+    .step{position:relative;display:flex;flex-direction:column;gap:10px;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:13px;padding:14px;transition:border-color .15s,transform .15s,background .15s}
+    .step:hover{border-color:var(--ac,var(--accent));transform:translateY(-2px);background:rgba(255,255,255,.05)}
+    .step-num{position:absolute;top:11px;right:13px;font-size:.72rem;font-weight:800;color:var(--muted)}
+    .lg{position:relative;flex:none;width:40px;height:40px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .lt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#0f172a}
     .lg img{position:relative;max-width:80%;max-height:80%;object-fit:contain}
-    .st-tx{display:flex;flex-direction:column;line-height:1.2}
-    .stg{font-size:.62rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
-    .st-tx b{font-size:.92rem;color:var(--text);font-weight:700}
-    .arw{align-self:center;color:var(--muted);font-weight:700}
+    .step-stage{font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:800}
+    .step-tool{font-size:.98rem;color:var(--text);font-weight:700;line-height:1.2}
     .more{margin:44px 0 0}
     .more h2{font-size:1.15rem;font-weight:800;margin:0 0 4px}
     .more p.sub{color:var(--muted);font-size:.86rem;margin:0 0 18px}
@@ -63,7 +68,7 @@
     .bc p{font-size:.84rem;color:var(--text2);margin:0 0 12px;flex-grow:1}
     .bc-arrow{color:var(--accent);font-size:.84rem;font-weight:600}
     footer{border-top:1px solid var(--border);padding:26px 24px;text-align:center;color:var(--muted);font-size:.82rem;margin-top:44px}
-    @media(max-width:560px){.res-stack{flex-direction:column;align-items:stretch}.arw{transform:rotate(90deg);align-self:center}}
+    @media(max-width:560px){.res-head{align-items:flex-start}.res-cta{width:100%;text-align:center}}
   </style>
 </head>
 <body>
@@ -74,7 +79,8 @@
       <h1>What do you want to build?</h1>
       <p>Tell us your goal and get the exact stack — step by step, with honest costs. No fluff, by an ex-banker who builds with these tools.</p>
       <div class="finder">
-        <input id="bpq" type="search" autocomplete="off" placeholder="e.g. cold outreach, an online store, content, support, finance…" aria-label="What do you want to build?">
+        <div class="search"><svg class="s-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="bpq" type="search" autocomplete="off" placeholder="e.g. cold outreach, an online store, content, support, finance…" aria-label="What do you want to build?"></div>
         <div class="chips"><button class="chip" data-q="cold outreach">Cold outreach</button><button class="chip" data-q="online store ecommerce">Online store</button><button class="chip" data-q="content">Content engine</button><button class="chip" data-q="customer support">Customer support</button><button class="chip" data-q="finance">Finance ops</button></div>
       </div>
     </header>
@@ -94,8 +100,8 @@ function fb(img){if(!img.dataset.f){img.dataset.f=1;img.src='https://www.google.
 var _in=document.getElementById('bpq'), _out=document.getElementById('bpres'), _hint=document.getElementById('bphint');
 function logo(d,t){return '<span class="lg"><span class="lt">'+t.charAt(0).toUpperCase()+'</span><img data-d="'+d+'" src="https://logo.clearbit.com/'+d+'" alt="'+t+'" loading="lazy" onerror="fb(this)"></span>';}
 function card(b){
-  var stack=b.stack.map(function(s){return '<a class="st" href="/build/'+b.slug+'/">'+logo(s.domain,s.tool)+'<span class="st-tx"><span class="stg">'+s.stage+'</span><b>'+s.tool+'</b></span></a>';}).join('<span class="arw">→</span>');
-  return '<div class="res" style="border-left-color:'+b.accent+'"><div class="res-h"><span class="res-t">'+b.title+'</span><a class="res-go" href="/build/'+b.slug+'/">Open full blueprint →</a></div><div class="res-stack">'+stack+'</div></div>';
+  var stack=b.stack.map(function(s,i){return '<a class="step" href="/build/'+b.slug+'/"><span class="step-num">'+(i+1)+'</span>'+logo(s.domain,s.tool)+'<span class="step-stage">'+s.stage+'</span><span class="step-tool">'+s.tool+'</span></a>';}).join('');
+  return '<div class="res" style="--ac:'+b.accent+'"><div class="res-head"><div class="res-h-l"><div class="res-kicker">Blueprint · '+b.stack.length+' tools</div><div class="res-title">'+b.title+'</div></div><a class="res-cta" href="/build/'+b.slug+'/">Open full blueprint →</a></div><div class="res-flow">'+stack+'</div></div>';
 }
 function render(q){
   q=(q||'').toLowerCase().trim();

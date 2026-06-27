@@ -69,8 +69,8 @@
         if (isReview && h1 && !document.getElementById('trust-strip')) {
           var ts = document.createElement('div');
           ts.id = 'trust-strip';
-          ts.style.cssText = 'display:flex;gap:8px 16px;flex-wrap:wrap;margin:14px 0 22px;padding:9px 14px;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.22);border-radius:8px;font-size:12.5px;color:#34d399;font-family:system-ui,-apple-system,sans-serif';
-          ts.innerHTML = '<span>✓ Independent, founder-written review</span><span>✓ Honest pros &amp; cons</span><span>✓ Affiliate-disclosed</span><span>✓ Updated 2026</span>';
+          ts.style.cssText = 'display:flex;gap:8px 16px;flex-wrap:wrap;margin:14px 0 22px;padding:9px 14px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:8px;font-size:12.5px;color:#60a5fa;font-family:system-ui,-apple-system,sans-serif';
+          ts.innerHTML = '<span>✓ Independent &amp; founder-written</span><span>✓ Honest pros &amp; cons</span><span>✓ Affiliate-disclosed</span><span>✓ Updated 2026</span>';
           h1.parentNode.insertBefore(ts, h1.nextSibling);
         }
       } catch (_) {}

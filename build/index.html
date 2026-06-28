@@ -131,7 +131,7 @@ function renderStep(){
 }
 function aff(tool,link){ ev('affiliate_click',{event_label:tool,link_url:link,location:'build_wizard'}); }
 window.wzAff = aff;
-window.wzEmail = function(e){ e.preventDefault(); var inp=e.target.querySelector('input[type=email]'); ev('build_wizard_email_capture',{goal:state.goal,email_domain:(inp.value.split('@')[1]||'')}); /* TODO: connect Beehiiv — POST inp.value + state naar je subscribe-endpoint */ e.target.innerHTML='<p class="wsent">&#10003; Got it. Your stack is on its way — check your inbox.</p>'; return false; };
+window.wzEmail = function(f){ var inp=f.querySelector('input[type=email]'); ev('build_wizard_email_capture',{goal:state.goal,email_domain:(inp.value.split('@')[1]||'')}); /* form GET-submit naar Beehiiv (zelfde endpoint als de site-nieuwsbrief); swap naar bevestiging ná submit */ setTimeout(function(){f.innerHTML='<p class="wsent">&#10003; Opening the subscribe page — confirm there and your stack is on its way.</p>';},80); return true; };
 function finish(){
   bar.style.width='100%'; sub.textContent='Your build';
   const b = BP[state.goal]; if(!b) return;
@@ -154,7 +154,7 @@ function finish(){
   out.innerHTML='<div class="res" style="--ac:'+b.accent+'"><div class="res-head"><div><div class="res-kicker">Your stack</div><div class="res-title">'+esc(b.title)+'</div></div><a class="res-cta" href="/build/'+b.slug+'/">Open full blueprint &rarr;</a></div>'+
     '<p class="res-sub">Built for '+bizNote+'. Estimated cost: <strong>'+esc(b.cost)+'</strong> — always check each tool\'s live pricing, plans change.</p>'+
     '<div class="t-list">'+rows+'</div>'+
-    '<form class="wiz-email" onsubmit="return wzEmail(event)"><input type="email" required placeholder="you@email.com" aria-label="Your email"><button type="submit">Send me this stack &rarr;</button></form>'+
+    '<form class="wiz-email" action="https://aibuildermarketplace.beehiiv.com/subscribe" method="get" target="_blank" onsubmit="return wzEmail(this)"><input type="email" name="email" required placeholder="you@email.com" aria-label="Your email"><button type="submit">Send me this stack &rarr;</button></form>'+
     '<p class="res-fine">Honest note: these are the tools I\'d actually use for this, with affiliate links (no extra cost to you). Start with what you need — you don\'t have to buy all of it on day one.</p></div>';
   done();
 }

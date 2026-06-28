@@ -17,6 +17,7 @@ def wf_campaign(brand1):
 
 
 def workflow_cta_html(brand1):
+    return ""  # twae-CTA uitgeschakeld
     """Return the inline-styled 'Verified Workflow' editor's-note box."""
     name = (brand1 or "this tool").strip()
     camp = wf_campaign(brand1)

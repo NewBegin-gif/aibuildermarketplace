@@ -45,14 +45,29 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .sig-y{color:var(--green);font-weight:800}.sig-n{color:#fb7185;font-weight:800}
 .disc{color:var(--muted);font-size:.82rem;margin-top:26px;border-top:1px solid var(--border);padding-top:16px}
 footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);font-size:.82rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px;margin:14px 0 30px}
-.tcard{display:block;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:16px;padding:18px;transition:transform .15s,border-color .15s,box-shadow .15s}
+.hero{text-align:center;padding:36px 0 30px}
+.hero .pill{display:inline-block;background:rgba(59,130,246,.12);color:var(--accent);border:1px solid rgba(59,130,246,.25);padding:6px 15px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(2.1rem,6vw,3.3rem);margin:0 0 14px;line-height:1.1}
+.hero h1 .grad{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:580px;margin:0 auto;color:var(--text2);font-size:1.06rem}
+.hero .meta{margin-top:18px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:15px;margin:14px 0 30px}
+.tcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;transition:transform .15s,border-color .15s,box-shadow .15s}
 .tcard:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 32px -14px rgba(59,130,246,.45)}
-.tcard h3{margin:13px 0 6px;font-size:1.02rem;color:var(--text)}
-.tcard p{margin:0;font-size:.85rem;color:var(--text2);line-height:1.55}
-.ticon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 4px 14px -4px rgba(0,0,0,.5)}
+.tcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:14px}
+.tcard-hd{display:flex;align-items:center;gap:12px;min-width:0}
+.tcard h3{margin:0;font-size:1.04rem;color:var(--text);line-height:1.25}
+.tcard p{margin:0;font-size:.86rem;color:var(--text2);line-height:1.55;flex-grow:1}
+.ticon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;box-shadow:0 4px 14px -4px rgba(0,0,0,.5)}
 .ticon svg{width:24px;height:24px}
-.tsec{font-size:1.18rem;font-weight:800;margin:34px 0 12px;display:flex;align-items:center;gap:10px;color:var(--text)}
+.tbadge{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;padding:4px 8px;border-radius:6px;background:rgba(59,130,246,.12);color:var(--accent);border:1px solid rgba(59,130,246,.22);white-space:nowrap;flex-shrink:0}
+.ttags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 16px}
+.ttag{font-size:.7rem;color:var(--muted);background:var(--card2);border:1px solid var(--border);padding:3px 9px;border-radius:6px}
+.tcta-row{display:flex;gap:10px;align-items:center;margin-top:auto}
+.tcta{flex:1;background:var(--text);color:var(--bg);padding:10px 14px;border-radius:9px;font-weight:700;font-size:.85rem;text-align:center;transition:opacity .15s}
+.tcta:hover{opacity:.88}
+.tcta2{color:var(--accent);font-size:.82rem;font-weight:600;white-space:nowrap}
+.tsec{font-size:1.2rem;font-weight:800;margin:36px 0 14px;display:flex;align-items:center;gap:10px;color:var(--text)}
 .tsec .dot{width:11px;height:11px;border-radius:50%}
 .h1ico{width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;color:#fff;vertical-align:middle;margin-right:12px}
 .h1ico svg{width:24px;height:24px}</style></head><body><nav class="nav"><div class="nav-in"><a href="/" class="logo-t"><em>AIBuilder</em> Marketplace</a><div><a href="/tools/">Free Tools</a><a href="/b2b/">Reviews</a><a href="/best/">Best Tools</a></div></div></nav><div class="wrap"><div class="bc"><a href="/">Home</a> &rsaquo; <a href="/tools/">Free Tools</a> &rsaquo; Free Discount Calculator (2026)</div><h1><span class="h1ico" style="background:linear-gradient(135deg,#10b981,#059669)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h8l10 10-8 8L3 11z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>Discount Calculator</h1><span class="tag">Free tool · by <a href="/about/#daan" style="color:inherit">Daniel Haket</a></span><p class="lede" style="margin-top:14px">Work out a sale price in one step. Enter the original price and the discount percentage, and this shows the final price and exactly how much is saved.</p><div class="tool"><div class="row">

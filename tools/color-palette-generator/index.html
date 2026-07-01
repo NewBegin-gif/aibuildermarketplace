@@ -55,8 +55,9 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .hero p{max-width:580px;margin:0 auto;color:var(--text2);font-size:1.06rem}
 .hero .meta{margin-top:18px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:15px;margin:14px 0 30px}
-.tcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;transition:transform .15s,border-color .15s,box-shadow .15s}
-.tcard:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 32px -14px rgba(59,130,246,.45)}
+.tcard{position:relative;overflow:hidden;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;transition:transform .18s,border-color .18s,box-shadow .18s}
+.tcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--tc-color,#3b82f6);opacity:.9}
+.tcard:hover{transform:translateY(-4px);border-color:var(--tc-color,#3b82f6);box-shadow:0 16px 38px -16px var(--tc-color,#3b82f6)}
 .tcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:14px}
 .tcard-hd{display:flex;align-items:center;gap:12px;min-width:0}
 .tcard h3{margin:0;font-size:1.04rem;color:var(--text);line-height:1.25}

@@ -50,10 +50,17 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .hub-sec{margin:28px 0}
 .hub-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:640px){.hub-grid{grid-template-columns:1fr}}
-.hub-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:15px 17px;transition:border-color .15s,transform .15s}
-.hub-card:hover{border-color:var(--accent);transform:translateY(-2px)}
-.hub-card b{color:var(--text);font-size:.96rem}.hub-card span{display:block;color:var(--text2);font-size:.84rem;margin-top:4px;line-height:1.45}
-.diag-embed{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:16px;padding:24px 26px;margin:22px 0 10px}
+.hub-h{font-size:1.02rem;margin:26px 0 12px;color:var(--text);display:flex;align-items:center;gap:9px;font-weight:700}
+.hub-h::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--hc,#3b82f6);box-shadow:0 0 12px var(--hc,#3b82f6)}
+.hub-card{position:relative;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:14px;padding:17px 18px 15px;transition:transform .18s,border-color .18s,box-shadow .18s}
+.hub-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--hc,#3b82f6);opacity:.85}
+.hub-card:hover{transform:translateY(-3px);border-color:var(--hc,#3b82f6);box-shadow:0 16px 38px -20px var(--hc,#3b82f6)}
+.hub-card b{color:var(--text);font-size:1rem;line-height:1.32}
+.hc-desc{display:block;color:var(--text2);font-size:.85rem;margin-top:6px;line-height:1.5;flex:1}
+.hc-go{margin-top:13px;font-size:.8rem;font-weight:700;color:var(--hc,#3b82f6);align-self:flex-start;transition:transform .18s}
+.hub-card:hover .hc-go{transform:translateX(4px)}
+.diag-prompt{text-align:center;color:var(--accent);font-size:.92rem;font-weight:600;margin:2px 0 12px}
+.diag-embed{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:16px;padding:24px 26px;margin:0 0 10px}
 .dg-q{font-size:1.15rem;font-weight:700;color:var(--text);margin:4px 0 16px}
 .dg-opts{display:flex;flex-direction:column;gap:10px}
 .dg-btn{text-align:left;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:15px 18px;color:var(--text);font-weight:600;font-size:.95rem;cursor:pointer;transition:border-color .15s,transform .15s;font-family:inherit}

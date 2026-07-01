@@ -175,8 +175,8 @@ body{padding-top:38px}
 .stat-label{display:block;font-size:.82rem;color:var(--text-3);margin-top:8px;font-weight:500}
 
 /* SECTIONS */
-.section{max-width:var(--max);margin:0 auto;padding:110px 24px 50px}
-.section-header{text-align:center;max-width:720px;margin:0 auto 48px}
+.section{max-width:var(--max);margin:0 auto;padding:58px 24px 24px}
+.section-header{text-align:left;max-width:860px;margin:0 0 24px}.section-header h2{font-size:clamp(1.45rem,2.5vw,1.95rem);letter-spacing:-.02em;margin-bottom:8px}.section-header p{font-size:.98rem;max-width:640px}
 .section-tag{display:inline-block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2);background:rgba(59,130,246,.08);padding:5px 12px;border-radius:999px;margin-bottom:16px}
 .section-header h2{font-size:clamp(1.8rem,3.5vw,2.7rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:14px}
 .section-header p{color:var(--text-2);font-size:1.02rem}
@@ -371,12 +371,12 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <p>Pick the situation that sounds like yours — we name the real bottleneck behind the symptom, then the honest tools that fix it.</p>
  </div>
  <div class="tr-grid fade-in" style="grid-template-columns:repeat(3,1fr)">
-  <a class="tr-link" href="/solve/have-no-content-or-search-presence/"><b>We can't get found in search &rarr;</b><span>Growth — the real fix, not more tools</span></a>
-  <a class="tr-link" href="/solve/no-proper-invoicing-or-getting-paid-system/"><b>Chasing payments is a mess &rarr;</b><span>Money — fix the cash-flow leak</span></a>
-  <a class="tr-link" href="/solve/there-s-no-self-service-or-automation/"><b>Support drowns in the same questions &rarr;</b><span>Customer experience — deflect the 80%</span></a>
-  <a class="tr-link" href="/solve/nothing-is-automated-we-re-the-glue/"><b>Too much manual copy-paste &rarr;</b><span>Operations — stop being the glue</span></a>
-  <a class="tr-link" href="/solve/slow-hosting-or-poor-performance/"><b>Our site or app is slow &rarr;</b><span>Product &amp; tech — where speed leaks</span></a>
-  <a class="tr-link" href="/solve/can-t-source-enough-qualified-candidates/"><b>Hiring is slow &rarr;</b><span>Team &amp; hiring — fix the pipeline</span></a>
+  <a class="tr-link tr-color" style="--hc:#06b6d4" href="/solve/have-no-content-or-search-presence/"><b>We can't get found in search &rarr;</b><span>Growth — the real fix, not more tools</span></a>
+  <a class="tr-link tr-color" style="--hc:#22c55e" href="/solve/no-proper-invoicing-or-getting-paid-system/"><b>Chasing payments is a mess &rarr;</b><span>Money — fix the cash-flow leak</span></a>
+  <a class="tr-link tr-color" style="--hc:#ec4899" href="/solve/there-s-no-self-service-or-automation/"><b>Support drowns in the same questions &rarr;</b><span>Customer experience — deflect the 80%</span></a>
+  <a class="tr-link tr-color" style="--hc:#8b5cf6" href="/solve/nothing-is-automated-we-re-the-glue/"><b>Too much manual copy-paste &rarr;</b><span>Operations — stop being the glue</span></a>
+  <a class="tr-link tr-color" style="--hc:#3b82f6" href="/solve/slow-hosting-or-poor-performance/"><b>Our site or app is slow &rarr;</b><span>Product &amp; tech — where speed leaks</span></a>
+  <a class="tr-link tr-color" style="--hc:#f59e0b" href="/solve/can-t-source-enough-qualified-candidates/"><b>Hiring is slow &rarr;</b><span>Team &amp; hiring — fix the pipeline</span></a>
  </div>
  <p style="text-align:center;margin-top:20px;font-size:.92rem"><a href="/solve/" style="color:var(--accent-2);font-weight:600">See all 36 common problems &amp; their honest fixes &rarr;</a></p>
 </section>
@@ -936,12 +936,12 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
 </section>
 <section class="section" id="top-reviews" style="padding-top:20px">
  <style>
-  .tr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1100px;margin:0 auto}
+  .tr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:none;margin:0}
   @media(max-width:860px){.tr-grid{grid-template-columns:1fr}}
-  .tr-link{display:block;padding:16px 18px;border:1px solid #1e293b;border-radius:12px;background:rgba(255,255,255,.02);text-decoration:none;transition:border-color .2s,transform .2s}
-  .tr-link:hover{border-color:#3b82f6;transform:translateY(-2px)}
-  .tr-link b{display:block;color:#f1f5f9;font-weight:700;font-size:.98rem;margin-bottom:3px}
-  .tr-link span{color:#94a3b8;font-size:.84rem}
+  .tr-link{position:relative;display:block;padding:17px 19px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,var(--surface-2),var(--surface));text-decoration:none;transition:border-color .2s,transform .2s,box-shadow .2s}
+  .tr-link:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 16px 34px -22px rgba(59,130,246,.55)}
+  .tr-link b{display:block;color:var(--text);font-weight:700;font-size:.98rem;margin-bottom:4px}
+  .tr-link span{color:var(--text-2);font-size:.85rem;line-height:1.5}.tr-link.tr-color{overflow:hidden}.tr-link.tr-color::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--hc,var(--accent));opacity:.9}.tr-link.tr-color:hover{border-color:var(--hc,var(--accent));box-shadow:0 16px 34px -22px var(--hc,var(--accent))}
  </style>
  <div class="section-header fade-in">
   <span class="section-tag">Most-read</span>

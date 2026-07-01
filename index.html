@@ -110,8 +110,9 @@ button{font-family:inherit;cursor:pointer}
 .nav-links a{color:var(--text-2);font-size:.92rem;font-weight:500;transition:color .15s}
 .nav-dd{position:relative}
 .nav-dd-toggle{cursor:pointer}
-.nav-dd-menu{position:absolute;top:150%;left:0;background:#0d1117;border:1px solid #1e293b;border-radius:10px;padding:8px;min-width:180px;display:none;flex-direction:column;gap:2px;z-index:300;box-shadow:0 12px 30px rgba(0,0,0,.45)}
-.nav-dd:hover .nav-dd-menu{display:flex}
+.nav-dd-menu{position:absolute;top:100%;left:0;margin-top:6px;background:#0d1117;border:1px solid #1e293b;border-radius:10px;padding:8px;min-width:180px;display:none;flex-direction:column;gap:2px;z-index:300;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+.nav-dd-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:flex}
 .nav-dd-menu a{padding:9px 12px;border-radius:6px;white-space:nowrap;font-size:.9rem}
 .nav-dd-menu a:hover{background:#1a1f2e;color:var(--text)}
 .nav-links a:hover{color:var(--text)}

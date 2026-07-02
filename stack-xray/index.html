@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CW1KZ258ZV');</script>
+<title>Free Stack X-Ray — What Your Software Really Costs</title>
+<meta name="description" content="Build your stack, enter what YOU pay, and get the honest diagnosis: yearly total, a kill-list of rarely-used subscriptions, category overlap, cost-trap checks from our researched dossiers, and honest swap suggestions. Free, private, no signup — your numbers never leave your browser.">
+<link rel="canonical" href="https://aibuildermarketplace.com/stack-xray/">
+<meta property="og:title" content="Free Stack X-Ray — What Your Software Really Costs"><meta property="og:description" content="Build your stack, enter what YOU pay, and get the honest diagnosis: yearly total, a kill-list of rarely-used subscriptions, category overlap, cost-trap checks from our researched dossiers, and honest swap suggestions. Free, private, no signup — your numbers never leave your browser.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Stack X-Ray", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://aibuildermarketplace.com/stack-xray/", "publisher": {"@type": "Organization", "name": "AIBuilder Marketplace"}}</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--bg:#0a0a0a;--card:#141414;--card2:#1a1a1a;--border:#262626;--text:#fafafa;--text2:#a3a3a3;--muted:#737373;--accent:#3b82f6;--green:#22c55e;--rose:#fb7185;--amber:#f59e0b}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+.nav{border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);z-index:60}
+.nav-in{max-width:1080px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav a{color:var(--text2);font-size:.85rem;font-weight:600;margin-left:16px}
+.logo-t{font-weight:900;color:var(--text)}.logo-t em{font-style:normal;background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 24px 90px}
+.pill{display:inline-block;background:rgba(59,130,246,.12);color:var(--accent);border:1px solid rgba(59,130,246,.25);padding:5px 14px;border-radius:20px;font-weight:700;font-size:.75rem}
+h1{font-size:clamp(1.9rem,4.8vw,2.8rem);font-weight:900;letter-spacing:-.02em;line-height:1.12;margin:10px 0}
+h1 .grad{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.lede{color:var(--text2);max-width:700px;font-size:1.05rem}
+.cols{display:grid;grid-template-columns:1fr 380px;gap:22px;margin-top:26px;align-items:start}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.panel{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:16px;padding:18px 20px}
+.panel h2{margin:0 0 4px;font-size:1.05rem;font-weight:800}
+.panel .sub{color:var(--muted);font-size:.82rem;margin:0 0 12px}
+.search{display:flex;align-items:center;gap:9px;background:var(--bg);border:1px solid var(--border);border-radius:11px;padding:10px 14px;margin-bottom:10px}
+.search input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:.95rem;font-family:inherit}
+#sug{max-height:260px;overflow:auto;border:1px solid var(--border);border-radius:11px;display:none;background:var(--bg)}
+#sug button{display:flex;width:100%;text-align:left;align-items:center;gap:10px;background:none;border:none;border-bottom:1px solid var(--border);color:var(--text);padding:9px 13px;font-family:inherit;font-size:.9rem;cursor:pointer}
+#sug button:hover{background:var(--card2)}
+#sug img{width:20px;height:20px;border-radius:5px;background:#fff;object-fit:contain}
+#sug .inc-tag{margin-left:auto;font-size:.68rem;color:var(--muted);border:1px solid var(--border);border-radius:10px;padding:1px 8px}
+.row{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin:8px 0;background:var(--bg)}
+.row img{width:26px;height:26px;border-radius:6px;background:#fff;object-fit:contain;flex-shrink:0}
+.row b{font-size:.92rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .fl{display:flex;gap:4px}
+.row .fl span{font-size:.8rem;cursor:help}
+.row input{width:84px;background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:7px 9px;font-size:.9rem;font-weight:700;font-family:inherit}
+.row select{background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:7px 8px;font-size:.8rem;font-family:inherit}
+.row .rm{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.1rem;padding:0 2px}
+.quick{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.quick button{background:var(--bg);border:1px solid var(--border);border-radius:16px;color:var(--text2);padding:5px 12px;font-size:.78rem;cursor:pointer;font-family:inherit}
+.quick button:hover{border-color:var(--accent);color:var(--text)}
+#diag .big{font-size:2.4rem;font-weight:900;letter-spacing:-.02em}
+#diag .big small{font-size:1rem;color:var(--muted);font-weight:600}
+.grade{float:right;width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:900;border:2px solid var(--border)}
+.g-A{color:var(--green);border-color:var(--green)}.g-B{color:#84cc16;border-color:#84cc16}.g-C{color:var(--amber);border-color:var(--amber)}.g-D,.g-F{color:var(--rose);border-color:var(--rose)}
+.dsec{border-top:1px solid var(--border);margin-top:14px;padding-top:12px}
+.dsec h3{margin:0 0 6px;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.dsec p,.dsec li{color:var(--text2);font-size:.86rem;margin:4px 0}
+.dsec ul{margin:4px 0;padding-left:18px}
+.kill{color:var(--rose)}
+.save{color:var(--green);font-weight:800}
+.acts{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.btn{background:linear-gradient(135deg,#3b82f6,#a78bfa);border:none;color:#fff;font-weight:800;font-size:.88rem;padding:11px 20px;border-radius:10px;cursor:pointer;font-family:inherit}
+.btn.sec{background:var(--card2);border:1px solid var(--border);color:var(--text2)}
+.foot-note{color:var(--muted);font-size:.8rem;margin-top:14px}
+footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);font-size:.82rem;margin-top:40px}
+@media print{
+ .nav,.panel.picker,.acts,footer,.quick{display:none!important}
+ body{background:#fff;color:#111}
+ :root{--card:#fff;--card2:#f6f6f6;--border:#ddd;--text:#111;--text2:#333;--muted:#666;--bg:#fff}
+ .cols{grid-template-columns:1fr}
+}
+</style></head><body>
+<nav class="nav"><div class="nav-in"><a href="/" class="logo-t"><em>AIBuilder</em> Marketplace</a>
+<div><a href="/atlas/">Atlas</a><a href="/roadmap/">AI Roadmap</a><a href="/b2b/">Reviews</a><a href="/tools/">Free Tools</a></div></div></nav>
+<div class="wrap">
+<span class="pill">Free &middot; private &middot; your numbers never leave your browser</span>
+<h1>The Stack <span class="grad">X-Ray</span></h1>
+<p class="lede">Add the tools you pay for, fill in what <strong>you</strong> actually pay (we never guess prices), and mark how often each gets used. The diagnosis updates live: your yearly total, the kill-list, overlap, and cost-trap checks from our researched dossiers.</p>
+
+<div class="cols">
+<div class="panel picker">
+<h2>1 &middot; Build your stack</h2>
+<p class="sub">Search 261 tools &mdash; our researched partners plus the big incumbents.</p>
+<div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+<input id="q" type="search" placeholder="Type a tool name&hellip; (e.g. Mailchimp, Close, Canva)" autocomplete="off"></div>
+<div id="sug"></div>
+<div id="rows"></div>
+<div class="quick" id="quick"></div>
+<p class="foot-note">Monthly price = what your invoice says, not the website. Usage: be honest &mdash; that's the whole point.</p>
+</div>
+
+<div class="panel" id="diag">
+<h2>2 &middot; The diagnosis</h2>
+<p class="sub">Live, from your own numbers only.</p>
+<div id="dout"><p style="color:var(--muted)">Add at least one tool to start the X-ray.</p></div>
+<div class="acts" id="dacts" style="display:none">
+<button class="btn" onclick="window.print()">Print report</button>
+<button class="btn sec" onclick="copyRep()">Copy as text</button>
+<button class="btn sec" onclick="reset()">Start over</button>
+</div>
+<p class="foot-note">We never see your numbers &mdash; nothing is uploaded. Trap-checks come from our <a href="/atlas/">Atlas dossiers</a>; the swap links go to honest alternatives guides. <a href="/how-we-review/">How we review &rarr;</a></p>
+</div>
+</div>
+</div>
+<footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links &mdash; they never change our advice.</footer>
+<script>
+var T=[{"n": "1Password", "c": "it", "dom": "1password.com", "rev": "/b2b/1password-review/", "fl": ["per_seat"]}, {"n": "800.com", "c": "comms", "dom": "800.com", "rev": "/b2b/800-com-review/", "fl": []}, {"n": "ActiveCampaign", "c": "growth", "dom": "activecampaign.com", "rev": "/b2b/activecampaign-review/", "fl": ["addons_extra", "annual_lock"]}, {"n": "AdCreative.ai", "c": "growth", "dom": "adcreative.ai", "rev": "/b2b/adcreative-ai-review/", "fl": []}, {"n": "Adwisely", "c": "growth", "dom": "adwisely.com", "rev": "/b2b/adwisely-review/", "fl": ["usage_metered", "addons_extra"]}, {"n": "AfterSell", "c": "growth", "dom": "aftersell.app", "rev": "/b2b/aftersell-review/", "fl": []}, {"n": "AgencyAnalytics", "c": "growth", "dom": "agencyanalytics.com", "rev": "/b2b/agencyanalytics-review/", "fl": []}, {"n": "Aira", "c": "growth", "dom": "aira.app", "rev": "/b2b/aira-review/", "fl": []}, {"n": "Aircall", "c": "comms", "dom": "aircall.io", "rev": "/b2b/aircall-review/", "fl": []}, {"n": "Airia", "c": "it", "dom": "airia.com", "rev": "/b2b/airia-review/", "fl": []}, {"n": "AISDR", "c": "growth", "dom": "aisdr.com", "rev": "/b2b/aisdr-review/", "fl": ["usage_metered", "annual_lock"]}, {"n": "AISQ", "c": "growth", "dom": "aisq.com", "rev": "/b2b/aisq-review/", "fl": []}, {"n": "Alidrop", "c": "growth", "dom": "alidrop.co", "rev": "/b2b/alidrop-review/", "fl": ["annual_lock"]}, {"n": "Alohi", "c": "ops", "dom": "alohi.com", "rev": "/b2b/alohi-review/", "fl": ["addons_extra"]}, {"n": "Alvys", "c": "ops", "dom": "alvys.com", "rev": "/b2b/alvys-review/", "fl": ["per_seat"]}, {"n": "Amplemarket", "c": "growth", "dom": "amplemarket.com", "rev": "/b2b/amplemarket-review/", "fl": ["usage_metered"]}, {"n": "Apollo", "c": "growth", "dom": "apollo.io", "rev": "/b2b/apollo-review/", "fl": ["per_seat", "usage_metered"]}, {"n": "Arbor", "c": "fin", "dom": "joinarbor.com", "rev": "/b2b/arbor-review/", "fl": []}, {"n": "Aspire", "c": "fin", "dom": "aspireapp.com", "rev": "/b2b/aspire-review/", "fl": []}, {"n": "Assembly", "c": "ops", "dom": "joinassembly.com", "rev": "/b2b/assembly-review/", "fl": ["per_seat", "addons_extra"]}, {"n": "Atria", "c": "growth", "dom": "tryatria.com", "rev": "/b2b/atria-review/", "fl": ["usage_metered"]}, {"n": "Atto", "c": "ops", "dom": "attotime.com", "rev": "/b2b/atto-review/", "fl": []}, {"n": "Auware", "c": "growth", "dom": "auware.com", "rev": "/b2b/auware-review/", "fl": []}, {"n": "AWeber", "c": "growth", "dom": "aweber.com", "rev": "/b2b/aweber-review/", "fl": []}, {"n": "Barcodes Talk", "c": "ops", "dom": "barcodestalk.com", "rev": "/b2b/barcodes-talk-review/", "fl": []}, {"n": "Beautiful.ai", "c": "ops", "dom": "beautiful.ai", "rev": "/b2b/beautiful-ai-review/", "fl": []}, {"n": "Beefree", "c": "growth", "dom": "beefree.io", "rev": "/b2b/beefree-review/", "fl": []}, {"n": "Beehiiv", "c": "growth", "dom": "beehiiv.com", "rev": "/b2b/beehiiv-review/", "fl": []}, {"n": "Bill.com", "c": "fin", "dom": "bill.com", "rev": "/b2b/bill-com-review/", "fl": ["per_seat"]}, {"n": "Birch", "c": "growth", "dom": "bir.ch", "rev": "/b2b/birch-review/", "fl": ["usage_metered"]}, {"n": "Bitdefender", "c": "it", "dom": "bitdefender.com", "rev": "/b2b/bitdefender-review/", "fl": ["renewal_jump"]}, {"n": "Bitvavo", "c": "fin", "dom": "bitvavo.com", "rev": "/b2b/bitvavo-review/", "fl": []}, {"n": "Blinq", "c": "it", "dom": "blinq.me", "rev": "/b2b/blinq-review/", "fl": []}, {"n": "Bokun", "c": "ops", "dom": "bokun.io", "rev": "/b2b/bokun-review/", "fl": ["usage_metered", "addons_extra"]}, {"n": "Bolt Business", "c": "ops", "dom": "bolt.eu", "rev": "/b2b/bolt-business-review/", "fl": []}, {"n": "Bookyourdata", "c": "growth", "dom": "bookyourdata.com", "rev": "/b2b/bookyourdata-review/", "fl": []}, {"n": "Bouncer", "c": "growth", "dom": "usebouncer.com", "rev": "/b2b/bouncer-review/", "fl": []}, {"n": "Breezy HR", "c": "ops", "dom": "breezy.hr", "rev": "/b2b/breezy-hr-review/", "fl": ["annual_lock"]}, {"n": "Brevo", "c": "growth", "dom": "brevo.com", "rev": "/b2b/brevo-review/", "fl": ["addons_extra"]}, {"n": "Bright Data", "c": "it", "dom": "brightdata.com", "rev": "/b2b/bright-data-review/", "fl": []}, {"n": "Browse.ai", "c": "it", "dom": "browse.ai", "rev": "/b2b/browse-ai-review/", "fl": []}, {"n": "BuddyPunch", "c": "ops", "dom": "buddypunch.com", "rev": "/b2b/buddypunch-review/", "fl": ["per_seat", "addons_extra"]}, {"n": "BugHerd", "c": "ops", "dom": "bugherd.com", "rev": "/b2b/bugherd-review/", "fl": ["annual_lock"]}, {"n": "Bybit", "c": "fin", "dom": "bybit.com", "rev": "/b2b/bybit-review/", "fl": []}, {"n": "Calilio", "c": "comms", "dom": "calilio.com", "rev": "/b2b/calilio-review/", "fl": []}, {"n": "CallHippo", "c": "comms", "dom": "callhippo.com", "rev": "/b2b/callhippo-review/", "fl": []}, {"n": "CallRail", "c": "growth", "dom": "callrail.com", "rev": "/b2b/callrail-review/", "fl": ["usage_metered"]}, {"n": "Campaign Monitor", "c": "growth", "dom": "campaignmonitor.com", "rev": "/b2b/campaign-monitor-review/", "fl": []}, {"n": "Campaigner", "c": "growth", "dom": "campaigner.com", "rev": "/b2b/campaigner-review/", "fl": []}, {"n": "Capsule", "c": "growth", "dom": "capsulecrm.com", "rev": "/b2b/capsule-review/", "fl": []}, {"n": "Carbon6", "c": "ops", "dom": "carbon6.io", "rev": "/b2b/carbon6-review/", "fl": []}, {"n": "Checkr", "c": "ops", "dom": "checkr.com", "rev": "/b2b/checkr-review/", "fl": []}, {"n": "ChemiCloud", "c": "it", "dom": "chemicloud.com", "rev": "/b2b/chemicloud-review/", "fl": ["renewal_jump"]}, {"n": "Clay", "c": "growth", "dom": "clay.com", "rev": "/b2b/clay-review/", "fl": ["usage_metered"]}, {"n": "ClickUp", "c": "ops", "dom": "clickup.com", "rev": "/b2b/clickup-review/", "fl": ["per_seat"]}, {"n": "Close", "c": "growth", "dom": "close.com", "rev": "/b2b/close-review/", "fl": ["per_seat", "usage_metered", "addons_extra"]}, {"n": "CloudTalk", "c": "comms", "dom": "cloudtalk.io", "rev": "/b2b/cloudtalk-review/", "fl": ["per_seat", "addons_extra"]}, {"n": "CometChat", "c": "comms", "dom": "cometchat.com", "rev": "/b2b/cometchat-review/", "fl": []}, {"n": "Connecteam", "c": "ops", "dom": "connecteam.com", "rev": "/b2b/connecteam-review/", "fl": ["annual_lock"]}, {"n": "Consensus", "c": "it", "dom": "consensus.app", "rev": "/b2b/consensus-review/", "fl": []}, {"n": "Contractor Foreman", "c": "ops", "dom": "contractorforeman.com", "rev": "/b2b/contractor-foreman-review/", "fl": ["per_seat", "annual_lock"]}, {"n": "CrankWheel", "c": "comms", "dom": "crankwheel.com", "rev": "/b2b/crankwheel-review/", "fl": ["per_seat"]}, {"n": "Crazy Egg", "c": "growth", "dom": "crazyegg.com", "rev": "/b2b/crazy-egg-review/", "fl": []}, {"n": "Credit Repair Cloud", "c": "fin", "dom": "creditrepaircloud.com", "rev": "/b2b/credit-repair-cloud-review/", "fl": ["usage_metered"]}, {"n": "Databox", "c": "ops", "dom": "databox.com", "rev": "/b2b/databox-review/", "fl": []}, {"n": "Devs.ai", "c": "it", "dom": "devs.ai", "rev": "/b2b/devs-ai-review/", "fl": []}, {"n": "Dext", "c": "fin", "dom": "dext.com", "rev": "/b2b/dext-review/", "fl": []}, {"n": "Dify", "c": "it", "dom": "dify.ai", "rev": "/b2b/dify-review/", "fl": []}, {"n": "Diginius", "c": "growth", "dom": "diginius.com", "rev": "/b2b/diginius-review/", "fl": []}, {"n": "doola", "c": "fin", "dom": "doola.com", "rev": "/b2b/doola-review/", "fl": ["addons_extra"]}, {"n": "DropGenius", "c": "growth", "dom": "dropgenius.com", "rev": "/b2b/dropgenius-review/", "fl": []}, {"n": "Dryground AI", "c": "it", "dom": "dryground.ai", "rev": "/b2b/dryground-ai-review/", "fl": []}, {"n": "ElevateForward", "c": "ops", "dom": "elevateforward.ai", "rev": "/b2b/elevateforward-review/", "fl": []}, {"n": "Emergent", "c": "it", "dom": "emergent.sh", "rev": "/b2b/emergent-review/", "fl": ["usage_metered"]}, {"n": "ExpertEx", "c": "it", "dom": "expertex.ai", "rev": "/b2b/expertex-review/", "fl": []}, {"n": "Expertise AI", "c": "it", "dom": "expertise.ai", "rev": "/b2b/expertise-ai-review/", "fl": []}, {"n": "Fastmail", "c": "it", "dom": "fastmail.com", "rev": "/b2b/fastmail-review/", "fl": []}, {"n": "Feedvisor", "c": "growth", "dom": "feedvisor.com", "rev": "/b2b/feedvisor-review/", "fl": []}, {"n": "Finale Inventory", "c": "ops", "dom": "finaleinventory.com", "rev": "/b2b/finale-inventory-review/", "fl": []}, {"n": "Fireflies.ai", "c": "comms", "dom": "fireflies.ai", "rev": "/b2b/fireflies-ai-review/", "fl": ["usage_metered"]}, {"n": "Flippa", "c": "fin", "dom": "flippa.com", "rev": "/b2b/flippa-review/", "fl": ["usage_metered"]}, {"n": "Flocksy", "c": "growth", "dom": "flocksy.com", "rev": "/b2b/flocksy-review/", "fl": []}, {"n": "folk", "c": "growth", "dom": "folk.app", "rev": "/b2b/folk-review/", "fl": ["per_seat"]}, {"n": "Foxit", "c": "it", "dom": "foxit.com", "rev": "/b2b/foxit-review/", "fl": []}, {"n": "Frase", "c": "growth", "dom": "frase.io", "rev": "/b2b/frase-review/", "fl": ["usage_metered", "annual_lock"]}, {"n": "Freshchat", "c": "comms", "dom": "freshchat.com", "rev": "/b2b/freshchat-review/", "fl": ["per_seat", "addons_extra"]}, {"n": "Freshservice", "c": "it", "dom": "freshservice.com", "rev": "/b2b/freshservice-review/", "fl": []}, {"n": "FullEnrich", "c": "growth", "dom": "fullenrich.com", "rev": "/b2b/fullenrich-review/", "fl": []}, {"n": "Gamma", "c": "ops", "dom": "gamma.app", "rev": "/b2b/gamma-review/", "fl": ["usage_metered"]}, {"n": "Gelato", "c": "growth", "dom": "gelato.com", "rev": "/b2b/gelato-review/", "fl": []}, {"n": "GetResponse", "c": "growth", "dom": "getresponse.com", "rev": "/b2b/getresponse-review/", "fl": []}, {"n": "Getscreen", "c": "it", "dom": "getscreen.me", "rev": "/b2b/getscreen-review/", "fl": []}, {"n": "Goflow", "c": "ops", "dom": "goflow.com", "rev": "/b2b/goflow-review/", "fl": []}, {"n": "Gravity Forms", "c": "it", "dom": "gravity.com", "rev": "/b2b/gravity-forms-review/", "fl": ["addons_extra"]}, {"n": "Guesty", "c": "ops", "dom": "guesty.com", "rev": "/b2b/guesty-review/", "fl": []}, {"n": "Gusto", "c": "fin", "dom": "gusto.com", "rev": "/b2b/gusto-review/", "fl": ["per_seat"]}, {"n": "Healthie", "c": "ops", "dom": "gethealthie.com", "rev": "/b2b/healthie-review/", "fl": []}, {"n": "HiBob", "c": "ops", "dom": "hibob.com", "rev": "/b2b/hibob-review/", "fl": ["per_seat"]}, {"n": "Hive", "c": "ops", "dom": "hive.com", "rev": "/b2b/hive-review/", "fl": []}, {"n": "Hopp", "c": "it", "dom": "gethopp.com", "rev": "/b2b/hopp-review/", "fl": []}, {"n": "Hostinger", "c": "it", "dom": "hostinger.com", "rev": "/b2b/hostinger-review/", "fl": ["renewal_jump"]}, {"n": "Housecall Pro", "c": "ops", "dom": "housecallpro.com", "rev": "/b2b/housecall-pro-review/", "fl": ["addons_extra"]}, {"n": "Iconosquare", "c": "growth", "dom": "iconosquare.com", "rev": "/b2b/iconosquare-review/", "fl": ["per_seat", "usage_metered"]}, {"n": "iContact", "c": "growth", "dom": "icontact.com", "rev": "/b2b/icontact-review/", "fl": []}, {"n": "IDrive", "c": "it", "dom": "idrive.com", "rev": "/b2b/idrive-review/", "fl": []}, {"n": "InboxAlly", "c": "growth", "dom": "inboxally.com", "rev": "/b2b/inboxally-review/", "fl": []}, {"n": "Increff", "c": "ops", "dom": "increff.com", "rev": "/b2b/increff-review/", "fl": ["per_seat"]}, {"n": "Instapage", "c": "growth", "dom": "instapage.com", "rev": "/b2b/instapage-review/", "fl": ["usage_metered"]}, {"n": "InVideo", "c": "ops", "dom": "invideo.io", "rev": "/b2b/invideo-review/", "fl": ["usage_metered"]}, {"n": "Jotform AI Agents", "c": "ops", "dom": "jotform.com", "rev": "/b2b/jotform-ai-agents-review/", "fl": ["usage_metered"]}, {"n": "Jubilee", "c": "fin", "dom": "jubileepro.com", "rev": "/b2b/jubilee-review/", "fl": ["usage_metered"]}, {"n": "Kartra", "c": "growth", "dom": "kartra.com", "rev": "/b2b/kartra-review/", "fl": []}, {"n": "Katana MRP", "c": "ops", "dom": "katanamrp.com", "rev": "/b2b/katana-mrp-review/", "fl": ["addons_extra"]}, {"n": "Keap", "c": "growth", "dom": "keap.com", "rev": "/b2b/keap-review/", "fl": []}, {"n": "Kinsta", "c": "it", "dom": "kinsta.com", "rev": "/b2b/kinsta-review/", "fl": []}, {"n": "Kit", "c": "growth", "dom": "kit.com", "rev": "/b2b/kit-review/", "fl": []}, {"n": "Kixie", "c": "comms", "dom": "kixie.com", "rev": "/b2b/kixie-review/", "fl": []}, {"n": "KrispCall", "c": "comms", "dom": "krispcall.com", "rev": "/b2b/krispcall-review/", "fl": []}, {"n": "Landingi", "c": "growth", "dom": "landingi.com", "rev": "/b2b/landingi-review/", "fl": []}, {"n": "Later", "c": "growth", "dom": "later.com", "rev": "/b2b/later-review/", "fl": []}, {"n": "Leadfeeder", "c": "growth", "dom": "leadfeeder.com", "rev": "/b2b/leadfeeder-review/", "fl": []}, {"n": "Leadpages", "c": "growth", "dom": "leadpages.com", "rev": "/b2b/leadpages-review/", "fl": []}, {"n": "LearnWorlds", "c": "growth", "dom": "learnworlds.com", "rev": "/b2b/learnworlds-review/", "fl": ["usage_metered", "addons_extra"]}, {"n": "lemlist", "c": "growth", "dom": "lemlist.com", "rev": "/b2b/lemlist-review/", "fl": ["per_seat"]}, {"n": "LettrLabs", "c": "growth", "dom": "lettrlabs.com", "rev": "/b2b/lettrlabs-review/", "fl": []}, {"n": "Lindy.ai", "c": "ops", "dom": "lindy.ai", "rev": "/b2b/lindy-ai-review/", "fl": ["usage_metered"]}, {"n": "Livestorm", "c": "growth", "dom": "livestorm.com", "rev": "/b2b/livestorm-review/", "fl": []}, {"n": "Logome.ai", "c": "growth", "dom": "logome.ai", "rev": "/b2b/logome-ai-review/", "fl": []}, {"n": "ManyChat", "c": "growth", "dom": "manychat.com", "rev": "/b2b/manychat-review/", "fl": ["addons_extra"]}, {"n": "MarketerHire", "c": "growth", "dom": "marketerhire.com", "rev": "/b2b/marketerhire-review/", "fl": []}, {"n": "Marketing 360", "c": "growth", "dom": "marketing360.com", "rev": "/b2b/marketing-360-review/", "fl": []}, {"n": "Melio", "c": "fin", "dom": "meliopayments.com", "rev": "/b2b/melio-review/", "fl": []}, {"n": "MindStudio", "c": "it", "dom": "mindstudio.ai", "rev": "/b2b/mindstudio-review/", "fl": []}, {"n": "MRPeasy", "c": "ops", "dom": "mrpeasy.com", "rev": "/b2b/mrpeasy-review/", "fl": ["per_seat"]}, {"n": "Murf", "c": "ops", "dom": "murf.ai", "rev": "/b2b/murf-review/", "fl": []}, {"n": "Navan", "c": "fin", "dom": "navan.com", "rev": "/b2b/navan-review/", "fl": []}, {"n": "Ngram", "c": "it", "dom": "ngram.com", "rev": "/b2b/ngram-review/", "fl": ["usage_metered", "annual_lock"]}, {"n": "NiceJob", "c": "growth", "dom": "nicejob.com", "rev": "/b2b/nicejob-review/", "fl": ["addons_extra"]}, {"n": "NordVPN", "c": "it", "dom": "nordvpn.com", "rev": "/b2b/nordvpn-review/", "fl": ["per_seat", "renewal_jump"]}, {"n": "Notify Me", "c": "growth", "dom": "notify-me.io", "rev": "/b2b/notify-me-review/", "fl": []}, {"n": "Nutshell", "c": "growth", "dom": "nutshell.com", "rev": "/b2b/nutshell-review/", "fl": ["per_seat"]}, {"n": "Omniseo", "c": "growth", "dom": "omniseo.com", "rev": "/b2b/omniseo-review/", "fl": []}, {"n": "Outgrow", "c": "growth", "dom": "outgrow.co", "rev": "/b2b/outgrow-review/", "fl": []}, {"n": "Ownr", "c": "ops", "dom": "ownr.co", "rev": "/b2b/ownr-review/", "fl": []}, {"n": "Pangram", "c": "ops", "dom": "pangram.com", "rev": "/b2b/pangram-review/", "fl": ["usage_metered"]}, {"n": "Passpack", "c": "it", "dom": "passpack.com", "rev": "/b2b/passpack-review/", "fl": ["per_seat"]}, {"n": "Payoneer", "c": "fin", "dom": "payoneer.com", "rev": "/b2b/payoneer-review/", "fl": []}, {"n": "PDWare", "c": "ops", "dom": "pdware.com", "rev": "/b2b/pdware-review/", "fl": []}, {"n": "Pipedrive", "c": "growth", "dom": "pipedrive.com", "rev": "/b2b/pipedrive-review/", "fl": ["per_seat", "addons_extra"]}, {"n": "Pixel Union", "c": "growth", "dom": "pixelunion.net", "rev": "/b2b/pixel-union-review/", "fl": []}, {"n": "Plansom", "c": "ops", "dom": "plansom.com", "rev": "/b2b/plansom-review/", "fl": []}, {"n": "Plesk", "c": "it", "dom": "plesk.com", "rev": "/b2b/plesk-review/", "fl": []}, {"n": "Prezi", "c": "ops", "dom": "prezi.com", "rev": "/b2b/prezi-review/", "fl": []}, {"n": "Printify", "c": "growth", "dom": "printify.com", "rev": "/b2b/printify-review/", "fl": ["usage_metered"]}, {"n": "Process Street", "c": "ops", "dom": "process.st", "rev": "/b2b/process-street-review/", "fl": ["per_seat"]}, {"n": "Proton Drive", "c": "it", "dom": "proton.me", "rev": "/b2b/proton-drive-review/", "fl": []}, {"n": "Pylon", "c": "comms", "dom": "usepylon.com", "rev": "/b2b/pylon-review/", "fl": []}, {"n": "QuickSigner", "c": "it", "dom": "quicksigner.com", "rev": "/b2b/quicksigner-review/", "fl": []}, {"n": "QuillBot", "c": "ops", "dom": "quillbot.com", "rev": "/b2b/quillbot-review/", "fl": ["per_seat"]}, {"n": "Quo", "c": "comms", "dom": "quo.com", "rev": "/b2b/quo-review/", "fl": ["per_seat"]}, {"n": "Rank Math", "c": "growth", "dom": "rankmath.com", "rev": "/b2b/rank-math-review/", "fl": ["usage_metered"]}, {"n": "Readymode", "c": "comms", "dom": "readymode.com", "rev": "/b2b/readymode-review/", "fl": ["per_seat"]}, {"n": "Reclaim.ai", "c": "ops", "dom": "reclaim.ai", "rev": "/b2b/reclaim-ai-review/", "fl": ["per_seat"]}, {"n": "Replit", "c": "it", "dom": "replit.com", "rev": "/b2b/replit-review/", "fl": ["usage_metered"]}, {"n": "Reply.io", "c": "growth", "dom": "reply.io", "rev": "/b2b/reply-io-review/", "fl": []}, {"n": "Riverside", "c": "growth", "dom": "riverside.fm", "rev": "/b2b/riverside-review/", "fl": ["per_seat"]}, {"n": "Ruby", "c": "comms", "dom": "ruby.com", "rev": "/b2b/ruby-review/", "fl": ["usage_metered"]}, {"n": "RunPod", "c": "it", "dom": "runpod.io", "rev": "/b2b/runpod-review/", "fl": []}, {"n": "Salesflare", "c": "growth", "dom": "salesflare.com", "rev": "/b2b/salesflare-review/", "fl": ["per_seat"]}, {"n": "Salesmessage", "c": "comms", "dom": "salesmessage.com", "rev": "/b2b/salesmessage-review/", "fl": []}, {"n": "SaneBox", "c": "ops", "dom": "sanebox.com", "rev": "/b2b/sanebox-review/", "fl": ["annual_lock"]}, {"n": "Seamless.ai", "c": "growth", "dom": "seamless.ai", "rev": "/b2b/seamless-ai-review/", "fl": ["per_seat", "usage_metered"]}, {"n": "Sellfy", "c": "growth", "dom": "sellfy.com", "rev": "/b2b/sellfy-review/", "fl": []}, {"n": "Sendcloud", "c": "ops", "dom": "sendcloud.com", "rev": "/b2b/sendcloud-review/", "fl": ["addons_extra"]}, {"n": "Sentaro", "c": "it", "dom": "sentaro.com", "rev": "/b2b/sentaro-review/", "fl": []}, {"n": "Shiftie", "c": "ops", "dom": "shiftie.co", "rev": "/b2b/shiftie-review/", "fl": []}, {"n": "Shippo", "c": "ops", "dom": "goshippo.com", "rev": "/b2b/shippo-review/", "fl": []}, {"n": "Shoeboxed", "c": "fin", "dom": "shoeboxed.com", "rev": "/b2b/shoeboxed-review/", "fl": []}, {"n": "Shorby", "c": "growth", "dom": "shorby.com", "rev": "/b2b/shorby-review/", "fl": []}, {"n": "Shore", "c": "ops", "dom": "shore.com", "rev": "/b2b/shore-review/", "fl": ["addons_extra"]}, {"n": "SignNow", "c": "ops", "dom": "signnow.com", "rev": "/b2b/signnow-review/", "fl": ["per_seat"]}, {"n": "SimpleTexting", "c": "comms", "dom": "simpletexting.com", "rev": "/b2b/simpletexting-review/", "fl": ["per_seat", "usage_metered", "addons_extra"]}, {"n": "Smartli", "c": "growth", "dom": "smartli.com", "rev": "/b2b/smartli-review/", "fl": []}, {"n": "SmartSuite", "c": "ops", "dom": "smartsuite.com", "rev": "/b2b/smartsuite-review/", "fl": ["per_seat", "annual_lock"]}, {"n": "SMTP.com", "c": "it", "dom": "smtp.com", "rev": "/b2b/smtp-com-review/", "fl": ["usage_metered", "addons_extra"]}, {"n": "SMTP2GO", "c": "it", "dom": "smtp2go.com", "rev": "/b2b/smtp2go-review/", "fl": []}, {"n": "SocialBee", "c": "growth", "dom": "socialbee.io", "rev": "/b2b/socialbee-review/", "fl": []}, {"n": "Softr", "c": "it", "dom": "softr.io", "rev": "/b2b/softr-review/", "fl": ["usage_metered"]}, {"n": "Spocket", "c": "growth", "dom": "spocket.co", "rev": "/b2b/spocket-review/", "fl": ["usage_metered", "addons_extra"]}, {"n": "Stamped", "c": "growth", "dom": "stamped.io", "rev": "/b2b/stamped-review/", "fl": ["usage_metered"]}, {"n": "Stampezee", "c": "growth", "dom": "stampezee.com", "rev": "/b2b/stampezee-review/", "fl": []}, {"n": "Streak", "c": "growth", "dom": "streak.com", "rev": "/b2b/streak-review/", "fl": []}, {"n": "Success.co", "c": "growth", "dom": "success.co", "rev": "/b2b/success-co-review/", "fl": ["per_seat"]}, {"n": "Superfiliate", "c": "growth", "dom": "superfiliate.com", "rev": "/b2b/superfiliate-review/", "fl": []}, {"n": "SurveyMonkey", "c": "ops", "dom": "surveymonkey.com", "rev": "/b2b/surveymonkey-review/", "fl": ["per_seat", "usage_metered"]}, {"n": "SurveySparrow", "c": "growth", "dom": "surveysparrow.com", "rev": "/b2b/surveysparrow-review/", "fl": []}, {"n": "Switcher Studio", "c": "ops", "dom": "switcherstudio.com", "rev": "/b2b/switcher-studio-review/", "fl": ["annual_lock"]}, {"n": "Synthesia", "c": "ops", "dom": "synthesia.io", "rev": "/b2b/synthesia-review/", "fl": ["annual_lock"]}, {"n": "Tapstitch", "c": "growth", "dom": "tapstitch.com", "rev": "/b2b/tapstitch-review/", "fl": []}, {"n": "Tax1099", "c": "fin", "dom": "tax1099.com", "rev": "/b2b/tax1099-review/", "fl": ["usage_metered", "addons_extra"]}, {"n": "TaxCycle", "c": "fin", "dom": "taxcycle.com", "rev": "/b2b/taxcycle-review/", "fl": []}, {"n": "Tellent", "c": "ops", "dom": "tellent.com", "rev": "/b2b/tellent-review/", "fl": []}, {"n": "Tenable", "c": "it", "dom": "tenable.com", "rev": "/b2b/tenable-review/", "fl": []}, {"n": "TicketTailor", "c": "growth", "dom": "tickettailor.com", "rev": "/b2b/tickettailor-review/", "fl": []}, {"n": "Todoist", "c": "ops", "dom": "todoist.com", "rev": "/b2b/todoist-review/", "fl": ["per_seat"]}, {"n": "Toggl", "c": "ops", "dom": "toggl.com", "rev": "/b2b/toggl-review/", "fl": []}, {"n": "Tradify", "c": "ops", "dom": "tradifyhq.com", "rev": "/b2b/tradify-review/", "fl": ["per_seat", "addons_extra", "annual_lock"]}, {"n": "Trainerize", "c": "ops", "dom": "trainerize.com", "rev": "/b2b/trainerize-review/", "fl": []}, {"n": "Trainual", "c": "ops", "dom": "trainual.com", "rev": "/b2b/trainual-review/", "fl": []}, {"n": "Tresorit", "c": "it", "dom": "tresorit.com", "rev": "/b2b/tresorit-review/", "fl": []}, {"n": "Turbotic", "c": "ops", "dom": "turbotic.com", "rev": "/b2b/turbotic-review/", "fl": ["per_seat", "usage_metered"]}, {"n": "Typewise", "c": "ops", "dom": "typewise.app", "rev": "/b2b/typewise-review/", "fl": []}, {"n": "UENI", "c": "growth", "dom": "ueni.com", "rev": "/b2b/ueni-review/", "fl": []}, {"n": "Unbounce", "c": "growth", "dom": "unbounce.com", "rev": "/b2b/unbounce-review/", "fl": []}, {"n": "Uniqode", "c": "growth", "dom": "uniqode.com", "rev": "/b2b/uniqode-review/", "fl": ["annual_lock"]}, {"n": "UniTel Voice", "c": "comms", "dom": "unitelvoice.com", "rev": "/b2b/unitel-voice-review/", "fl": ["annual_lock"]}, {"n": "VEA", "c": "ops", "dom": "vea.ai", "rev": "/b2b/vea-review/", "fl": ["usage_metered"]}, {"n": "Velora", "c": "ops", "dom": "joinvelora.com", "rev": "/b2b/velora-review/", "fl": []}, {"n": "Vida AI", "c": "comms", "dom": "vida.io", "rev": "/b2b/vida-ai-review/", "fl": []}, {"n": "VidPal", "c": "growth", "dom": "vidpal.ai", "rev": "/b2b/vidpal-review/", "fl": ["usage_metered"]}, {"n": "Vista Social", "c": "growth", "dom": "vistasocial.com", "rev": "/b2b/vista-social-review/", "fl": []}, {"n": "Volza", "c": "growth", "dom": "volza.com", "rev": "/b2b/volza-review/", "fl": []}, {"n": "Voye", "c": "comms", "dom": "voyedatapool.com", "rev": "/b2b/voye-review/", "fl": []}, {"n": "VWO", "c": "growth", "dom": "vwo.com", "rev": "/b2b/vwo-review/", "fl": []}, {"n": "Wati", "c": "comms", "dom": "wati.io", "rev": "/b2b/wati-review/", "fl": []}, {"n": "Weave", "c": "comms", "dom": "getweave.com", "rev": "/b2b/weave-review/", "fl": ["addons_extra"]}, {"n": "WebCatalog", "c": "it", "dom": "webcatalog.io", "rev": "/b2b/webcatalog-review/", "fl": []}, {"n": "WhatConverts", "c": "growth", "dom": "whatconverts.com", "rev": "/b2b/whatconverts-review/", "fl": []}, {"n": "Wing Assistant", "c": "ops", "dom": "wingassistant.com", "rev": "/b2b/wing-assistant-review/", "fl": ["addons_extra"]}, {"n": "WP Rocket", "c": "it", "dom": "wp-rocket.me", "rev": "/b2b/wp-rocket-review/", "fl": ["renewal_jump"]}, {"n": "Wrike", "c": "ops", "dom": "wrike.com", "rev": "/b2b/wrike-review/", "fl": ["per_seat", "annual_lock"]}, {"n": "Zeffy", "c": "fin", "dom": "zeffy.com", "rev": "/b2b/zeffy-review/", "fl": []}, {"n": "ZenZap", "c": "comms", "dom": "zenzap.co", "rev": "/b2b/zenzap-review/", "fl": []}, {"n": "ZoomInfo", "c": "growth", "dom": "zoominfo.com", "rev": "/b2b/zoominfo-review/", "fl": ["usage_metered", "addons_extra"]}, {"n": "Mailchimp", "c": "growth", "dom": "mailchimp.com", "swap": "/guides/mailchimp-alternatives/", "inc": 1}, {"n": "Zendesk", "c": "comms", "dom": "zendesk.com", "swap": "/guides/zendesk-alternatives/", "inc": 1}, {"n": "Canva", "c": "growth", "dom": "canva.com", "swap": "/guides/canva-alternatives/", "inc": 1}, {"n": "Salesforce", "c": "growth", "dom": "salesforce.com", "swap": "/alternatives/salesforce/", "inc": 1}, {"n": "HubSpot", "c": "growth", "dom": "hubspot.com", "swap": "/alternatives/hubspot/", "inc": 1}, {"n": "Asana", "c": "ops", "dom": "asana.com", "swap": "/alternatives/asana/", "inc": 1}, {"n": "monday.com", "c": "ops", "dom": "monday.com", "swap": "/alternatives/monday-com/", "inc": 1}, {"n": "Dropbox", "c": "it", "dom": "dropbox.com", "swap": "/alternatives/dropbox/", "inc": 1}, {"n": "Expensify", "c": "fin", "dom": "expensify.com", "swap": "/alternatives/expensify/", "inc": 1}, {"n": "Hootsuite", "c": "growth", "dom": "hootsuite.com", "swap": "/alternatives/hootsuite/", "inc": 1}, {"n": "RingCentral", "c": "comms", "dom": "ringcentral.com", "swap": "/alternatives/ringcentral/", "inc": 1}, {"n": "Outreach", "c": "growth", "dom": "outreach.io", "swap": "/alternatives/outreach/", "inc": 1}, {"n": "DocuSign", "c": "ops", "dom": "docusign.com", "swap": "/alternatives/docusign/", "inc": 1}, {"n": "BambooHR", "c": "ops", "dom": "bamboohr.com", "swap": "/alternatives/bamboohr/", "inc": 1}, {"n": "ClickFunnels", "c": "growth", "dom": "clickfunnels.com", "swap": "/alternatives/clickfunnels/", "inc": 1}, {"n": "ShipStation", "c": "ops", "dom": "shipstation.com", "swap": "/alternatives/shipstation/", "inc": 1}, {"n": "Slack", "c": "comms", "dom": "slack.com", "swap": "", "inc": 1}, {"n": "Zoom", "c": "comms", "dom": "zoom.us", "swap": "", "inc": 1}, {"n": "Notion", "c": "ops", "dom": "notion.so", "swap": "", "inc": 1}, {"n": "Jira", "c": "it", "dom": "atlassian.com", "swap": "", "inc": 1}, {"n": "QuickBooks", "c": "fin", "dom": "quickbooks.intuit.com", "swap": "", "inc": 1}, {"n": "Microsoft 365", "c": "it", "dom": "microsoft.com", "swap": "", "inc": 1}, {"n": "Google Workspace", "c": "it", "dom": "workspace.google.com", "swap": "", "inc": 1}, {"n": "Adobe Creative Cloud", "c": "growth", "dom": "adobe.com", "swap": "", "inc": 1}, {"n": "Shopify", "c": "growth", "dom": "shopify.com", "swap": "", "inc": 1}, {"n": "Squarespace", "c": "growth", "dom": "squarespace.com", "swap": "", "inc": 1}, {"n": "Calendly", "c": "ops", "dom": "calendly.com", "swap": "", "inc": 1}];
+var F={"per_seat": {"i": "🪑", "l": "Per-seat", "x": "Recount who actually needs a paid login — viewers and clients often don't."}, "usage_metered": {"i": "🧮", "l": "Metered", "x": "Pull your last invoice: overages, credits and percentage fees live there, not on the pricing page."}, "addons_extra": {"i": "🧩", "l": "Add-ons", "x": "Check which add-ons you're paying for — and which you actually switched on."}, "renewal_jump": {"i": "📈", "l": "Renewal", "x": "Find your renewal date — the intro rate may be about to jump."}, "annual_lock": {"i": "📅", "l": "Annual", "x": "You may be committed until renewal — note the cancellation window."}};
+var CATN={"growth": "Growth & Revenue", "ops": "Operations & Workflow", "it": "IT & Productivity", "comms": "Communication & Voice", "fin": "Financial Operations"};
+var stack=[];
+var USE={d:["Daily",1],w:["Weekly",1],r:["Rarely",0],f:["Forgot I had it",0]};
+var QUICK=["Mailchimp","Salesforce","HubSpot","Slack","Zoom","Canva","QuickBooks","Notion","Shopify"];
+
+function el(i){return document.getElementById(i)}
+function esc(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function money(x){return "$"+Math.round(x).toLocaleString()}
+
+function readURL(){
+  var p=new URLSearchParams(location.search);
+  (p.get("t")||"").split("|").filter(Boolean).slice(0,40).forEach(function(n){
+    var t=T.find(function(x){return x.n.toLowerCase()===n.toLowerCase()});
+    if(t&&!inStack(t.n))stack.push({n:t.n,price:"",use:"w"});
+  });
+}
+function writeURL(){
+  var p=new URLSearchParams();
+  if(stack.length)p.set("t",stack.map(function(s){return s.n}).join("|"));
+  history.replaceState(null,"",location.pathname+(p.toString()?"?"+p.toString():""));
+}
+function inStack(n){return stack.some(function(s){return s.n===n})}
+
+el("q").addEventListener("input",function(){
+  var q=this.value.trim().toLowerCase();
+  var box=el("sug");
+  if(q.length<2){box.style.display="none";return}
+  var hits=T.filter(function(t){return t.n.toLowerCase().indexOf(q)>-1&&!inStack(t.n)}).slice(0,8);
+  box.innerHTML=hits.map(function(t){
+    return '<button onclick="add(\''+esc(t.n)+'\')"><img loading="lazy" src="https://logo.clearbit.com/'+esc(t.dom)+'" onerror="this.style.visibility=\'hidden\'">'+esc(t.n)+(t.inc?'<span class="inc-tag">not a partner</span>':'')+'</button>';
+  }).join("")||'<button disabled style="color:var(--muted)">No match \u2014 tool not in our set</button>';
+  box.style.display="block";
+});
+function add(n){
+  if(inStack(n))return;
+  stack.push({n:n,price:"",use:"w"});
+  el("q").value="";el("sug").style.display="none";
+  gtag('event','xray_add',{event_label:n});
+  render();
+}
+function rm(i){stack.splice(i,1);render()}
+function reset(){stack=[];render()}
+
+function renderQuick(){
+  el("quick").innerHTML=QUICK.filter(function(n){return !inStack(n)}).map(function(n){
+    return '<button onclick="add(\''+n+'\')">+ '+n+'</button>';
+  }).join("");
+}
+function renderRows(){
+  el("rows").innerHTML=stack.map(function(s,i){
+    var t=T.find(function(x){return x.n===s.n});
+    var fl=(t.fl||[]).map(function(f){return '<span title="'+esc(F[f].l+": "+F[f].x)+'">'+F[f].i+'</span>'}).join("");
+    return '<div class="row"><img loading="lazy" src="https://logo.clearbit.com/'+esc(t.dom)+'" onerror="this.style.visibility=\'hidden\'">'+
+     '<b>'+esc(s.n)+'</b><span class="fl">'+fl+'</span>'+
+     '$<input type="number" min="0" placeholder="0" value="'+(s.price===""?"":s.price)+'" oninput="stack['+i+'].price=this.value;diag()" aria-label="monthly price">'+
+     '<select onchange="stack['+i+'].use=this.value;diag()">'+
+       Object.keys(USE).map(function(k){return '<option value="'+k+'"'+(s.use===k?" selected":"")+'>'+USE[k][0]+'</option>'}).join("")+
+     '</select><button class="rm" onclick="rm('+i+')" title="remove">&times;</button></div>';
+  }).join("");
+}
+
+function diag(){
+  writeURL();
+  var out=el("dout");
+  if(!stack.length){out.innerHTML='<p style="color:var(--muted)">Add at least one tool to start the X-ray.</p>';el("dacts").style.display="none";return}
+  el("dacts").style.display="flex";
+  var priced=stack.filter(function(s){return parseFloat(s.price)>0});
+  var monthly=priced.reduce(function(a,s){return a+parseFloat(s.price)},0);
+  var yearly=monthly*12;
+  var kills=stack.filter(function(s){return s.use==="r"||s.use==="f"});
+  var killSum=kills.reduce(function(a,s){return a+(parseFloat(s.price)||0)*12},0);
+  // overlap per categorie
+  var byCat={};
+  stack.forEach(function(s){var t=T.find(function(x){return x.n===s.n});(byCat[t.c]=byCat[t.c]||[]).push(s.n)});
+  var overlaps=Object.keys(byCat).filter(function(c){return byCat[c].length>=3});
+  // trap-checks
+  var traps=[];
+  stack.forEach(function(s){
+    var t=T.find(function(x){return x.n===s.n});
+    (t.fl||[]).forEach(function(f){traps.push({n:s.n,f:f})});
+  });
+  // swaps
+  var swaps=stack.map(function(s){return T.find(function(x){return x.n===s.n})}).filter(function(t){return t.inc&&t.swap});
+  // cijfer: deterministisch uit eigen invoer
+  var wasteShare=yearly>0?killSum/yearly:(kills.length?0.5:0);
+  var score=100 - wasteShare*60 - overlaps.length*10 - (stack.filter(function(s){return s.use==="f"}).length*8);
+  var grade=score>=85?"A":score>=70?"B":score>=55?"C":score>=40?"D":"F";
+
+  var h='<div class="grade g-'+grade+'">'+grade+'</div>'+
+   '<div class="big">'+money(yearly)+'<small> /year</small></div>'+
+   '<p style="color:var(--muted);font-size:.82rem;margin:2px 0 0">'+money(monthly)+'/month across '+stack.length+' tools'+(priced.length<stack.length?' \u00b7 '+(stack.length-priced.length)+' without a price yet':'')+'</p>';
+
+  if(kills.length){
+    h+='<div class="dsec"><h3 class="kill">\u2702\uFE0F The kill-list</h3><ul>'+
+     kills.map(function(s){var p=(parseFloat(s.price)||0)*12;return '<li><b>'+esc(s.n)+'</b> \u2014 '+USE[s.use][0].toLowerCase()+(p?' \u2192 <span class="save">'+money(p)+'/yr back</span>':'')+'</li>'}).join("")+
+     '</ul><p>The honest test costs nothing: <b>cancel first, re-subscribe if you miss it within a month.</b> Most people never do.'+(killSum?' Potential: <span class="save">'+money(killSum)+' per year</span>.':'')+'</p></div>';
+  }
+  if(overlaps.length){
+    h+='<div class="dsec"><h3>\u26A0\uFE0F Category crowding</h3>'+
+     overlaps.map(function(c){return '<p><b>'+CATN[c]+'</b>: '+byCat[c].map(esc).join(", ")+' \u2014 overlap isn\u2019t always waste, but name the job each one owns. If two share a job, one is a candidate.</p>'}).join("")+'</div>';
+  }
+  if(traps.length){
+    h+='<div class="dsec"><h3>\uD83D\uDD0D Invoice checks (from our dossiers)</h3><ul>'+
+     traps.slice(0,8).map(function(x){return '<li>'+F[x.f].i+' <b>'+esc(x.n)+'</b>: '+esc(F[x.f].x)+'</li>'}).join("")+
+     '</ul></div>';
+  }
+  if(swaps.length){
+    h+='<div class="dsec"><h3>\uD83D\uDD01 Honest swaps to consider</h3><ul>'+
+     swaps.map(function(t){return '<li><b>'+esc(t.n)+'</b> \u2014 <a href="'+esc(t.swap)+'">see the honest alternatives \u2192</a></li>'}).join("")+
+     '</ul></div>';
+  }
+  h+='<div class="dsec"><h3>Next step</h3><p>Want the 30/60/90 plan for what stays? <a href="/roadmap/">Get your free AI roadmap \u2192</a> \u00b7 Or compare candidates in <a href="/atlas/">the Atlas</a>.</p></div>';
+  out.innerHTML=h;
+}
+
+function copyRep(){
+  navigator.clipboard.writeText(el("dout").innerText+"\n\n\u2014 Stack X-Ray, aibuildermarketplace.com/stack-xray/").then(function(){alert("Report copied.")});
+}
+function render(){renderRows();renderQuick();diag()}
+document.addEventListener("click",function(e){if(!e.target.closest(".search,#sug"))el("sug").style.display="none"});
+readURL();render();
+if(stack.length)gtag('event','xray_shared_open',{event_label:String(stack.length)});
+</script>
+</body></html>

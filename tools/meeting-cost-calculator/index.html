@@ -151,4 +151,4 @@ function mcCalc(){var n=+document.getElementById('mc-n').value,r=+document.getEl
 var cost=n*r*(d/60);
 o.innerHTML='<p class="big">'+cost.toFixed(0)+'</p><p class="muted">this meeting costs in salaried time. Held weekly? That\u2019s '+(cost*52).toLocaleString()+' a year.</p>';
 gtag&&gtag('event','tool_use',{event_label:'meeting_cost'});}
-['mc-n','mc-r','mc-d'].forEach(function(id){document.getElementById(id).addEventListener('input',mcCalc);});mcCalc();</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer></body></html>
+['mc-n','mc-r','mc-d'].forEach(function(id){document.getElementById(id).addEventListener('input',mcCalc);});mcCalc();</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer><script>try{var r=JSON.parse(localStorage.aibm_recent||'[]');r=['meeting-cost-calculator'].concat(r.filter(function(x){return x!=='meeting-cost-calculator';})).slice(0,8);localStorage.aibm_recent=JSON.stringify(r);}catch(e){}</script></body></html>

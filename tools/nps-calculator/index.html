@@ -133,4 +133,4 @@ if(!(tot>0)){o.innerHTML='<p class="muted">Enter your responses.</p>';return;}
 var nps=Math.round((p/tot-d/tot)*100),v=nps>=50?'Excellent':nps>=30?'Great':nps>=0?'Good':'Needs work';
 o.innerHTML='<p class="big '+(nps>=0?'sig-y':'sig-n')+'">'+nps+'</p><p class="muted">Net Promoter Score \u2014 '+v+' ('+tot+' responses)</p>';
 gtag&&gtag('event','tool_use',{event_label:'nps'});}
-['np-p','np-a','np-d'].forEach(function(id){document.getElementById(id).addEventListener('input',npCalc);});npCalc();</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer></body></html>
+['np-p','np-a','np-d'].forEach(function(id){document.getElementById(id).addEventListener('input',npCalc);});npCalc();</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer><script>try{var r=JSON.parse(localStorage.aibm_recent||'[]');r=['nps-calculator'].concat(r.filter(function(x){return x!=='nps-calculator';})).slice(0,8);localStorage.aibm_recent=JSON.stringify(r);}catch(e){}</script></body></html>

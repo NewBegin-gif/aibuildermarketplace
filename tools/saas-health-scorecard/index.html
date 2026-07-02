@@ -151,4 +151,4 @@ var grade=(bad===0&&good>=cards.length-1)?'A':bad===0?'B':bad===1?'C':bad<=2?'D'
 out.innerHTML='<p class="big '+gc+'">Grade '+grade+'</p><p class="muted">'+good+' of '+cards.length+' metrics healthy'+(bad?' &middot; '+bad+' need attention':'')+' &middot; growth '+Math.round(growth)+'%, ARR '+Math.round(end).toLocaleString()+'</p><div class="scv-grid">'+cards.join('')+'</div>';
 gtag&&gtag('event','tool_use',{event_label:'saas_scorecard'});}
 ids.forEach(function(id){document.getElementById(id).addEventListener('input',calc);});calc();
-})();</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer></body></html>
+})();</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer><script>try{var r=JSON.parse(localStorage.aibm_recent||'[]');r=['saas-health-scorecard'].concat(r.filter(function(x){return x!=='saas-health-scorecard';})).slice(0,8);localStorage.aibm_recent=JSON.stringify(r);}catch(e){}</script></body></html>

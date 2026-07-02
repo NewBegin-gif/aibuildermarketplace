@@ -155,4 +155,4 @@ var sub=0;rows().forEach(function(r){var amt=r.qty*r.price;sub+=amt;doc.text(Str
 var tax=sub*(+document.getElementById('iv-tax').value||0)/100;y+=3;doc.line(20,y,195,y);y+=8;
 doc.text('Subtotal: '+sub.toFixed(2),150,y);y+=7;doc.text('Tax: '+tax.toFixed(2),150,y);y+=7;doc.setFontSize(13);doc.text('Total: '+(sub+tax).toFixed(2),150,y);
 doc.save('invoice.pdf');gtag&&gtag('event','tool_download',{event_label:'invoice_pdf'});};
-</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer></body></html>
+</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer><script>try{var r=JSON.parse(localStorage.aibm_recent||'[]');r=['invoice-generator'].concat(r.filter(function(x){return x!=='invoice-generator';})).slice(0,8);localStorage.aibm_recent=JSON.stringify(r);}catch(e){}</script></body></html>

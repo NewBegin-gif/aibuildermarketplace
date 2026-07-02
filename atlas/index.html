@@ -169,7 +169,7 @@ function card(t){
   var fp=t.fp!=null?'<span class="fp">from ~$'+(t.fp%1?t.fp.toFixed(2):t.fp)+'</span>':'<span class="fp na">'+(t.res?(t.fl&&t.fl.some(function(f){return f.f==="quote_only"})?"quote-only":"see pricing"):"")+'</span>';
   var checked=state.cmp.indexOf(t.n)>-1?" checked":"";
   return '<div class="tc" style="--cc:var(--c-'+t.cat+')" data-n="'+esc(t.n)+'">'+
-   '<div class="tc-h"><span class="tc-logo"><img alt="" loading="lazy" src="https://logo.clearbit.com/'+esc(t.dom)+'" onerror="this.style.display=\'none\'"></span>'+
+   '<div class="tc-h"><span class="tc-logo"><img alt="" loading="lazy" src="https://www.google.com/s2/favicons?sz=128&domain='+esc(t.dom)+'" onerror="this.style.display=\'none\'"></span>'+
    '<b>'+esc(t.n)+'</b>'+fp+'</div>'+
    '<p class="tc-k">'+esc(t.k||t.d)+'</p>'+
    '<div class="tc-fl">'+flBadges(t)+'</div>'+

@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CW1KZ258ZV');</script>
+<title>Free AI Token Counter — Estimate Tokens for Any Prompt (2026)</title>
+<meta name="description" content="Free token counter — paste text and estimate its LLM token count, plus how much of an 8k/32k/128k/200k context window it fills. In your browser, no signup.">
+<link rel="canonical" href="https://aibuildermarketplace.com/tools/ai-token-counter/">
+<meta property="og:title" content="Free AI Token Counter — Estimate Tokens for Any Prompt (2026)"><meta property="og:description" content="Free token counter — paste text and estimate its LLM token count, plus how much of an 8k/32k/128k/200k context window it fills. In your browser, no signup.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Free AI Token Counter — Estimate Tokens for Any Prompt (2026)", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (browser)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": "https://aibuildermarketplace.com/tools/ai-token-counter/", "author": {"@type": "Person", "@id": "https://aibuildermarketplace.com/about/#daan", "name": "Daniel Haket"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How accurate is the token estimate?", "acceptedAnswer": {"@type": "Answer", "text": "It blends the two standard rules of thumb (~4 characters and ~¾ word per token for English) — expect ±15% versus any specific model's tokenizer, more for code and non-English text. For exact counts, use the provider's own tokenizer."}}, {"@type": "Question", "name": "Why do token counts differ between models?", "acceptedAnswer": {"@type": "Answer", "text": "Each model family (GPT, Claude, Llama, Gemini) uses its own tokenizer with a different vocabulary, so the same text splits differently — often by around ten percent between families."}}, {"@type": "Question", "name": "What is a context window?", "acceptedAnswer": {"@type": "Answer", "text": "The total tokens a model can hold at once: system prompt, history, documents, question and answer combined. The fit-bars show your text against common window tiers from 8k to 1M tokens."}}, {"@type": "Question", "name": "Does my text leave my browser?", "acceptedAnswer": {"@type": "Answer", "text": "No — counting happens locally in JavaScript. Nothing you paste is uploaded, logged or stored."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aibuildermarketplace.com"}, {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://aibuildermarketplace.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Free AI Token Counter — Estimate Tokens for Any Prompt (2026)", "item": "https://aibuildermarketplace.com/tools/ai-token-counter/"}]}</script>
+<style>*,*::before,*::after{box-sizing:border-box}
+:root{--bg:#0a0a0a;--card:#141414;--card2:#1a1a1a;--border:#262626;--text:#fafafa;--text2:#a3a3a3;--muted:#737373;--accent:#3b82f6;--green:#22c55e}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.75}
+a{color:var(--accent);text-decoration:none}
+.nav{border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);z-index:50}
+.nav-in{max-width:800px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav a{color:var(--text2);font-size:.85rem;font-weight:600;margin-left:16px}
+.logo-t{font-weight:900;color:var(--text)}.logo-t em{font-style:normal;background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.wrap{max-width:800px;margin:0 auto;padding:14px 24px 70px}
+.bc{font-size:.8rem;color:var(--muted);margin:14px 0}
+h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;margin:6px 0 8px;line-height:1.2}
+h2{font-size:1.3rem;font-weight:800;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--border)}
+h3{font-size:1.02rem;font-weight:700;margin:20px 0 6px}
+p,li{color:var(--text2)}
+.lede{font-size:1.08rem;color:var(--text2)}
+.tag{display:inline-block;background:rgba(59,130,246,.1);color:var(--accent);padding:4px 12px;border-radius:20px;font-weight:700;font-size:.72rem;border:1px solid rgba(59,130,246,.18)}
+.tool{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:16px;padding:22px;margin:20px 0}
+label{display:block;font-size:.82rem;font-weight:700;color:var(--text);margin:12px 0 5px}
+input[type=text],input[type=number],textarea,select{width:100%;background:#0f0f0f;border:1px solid var(--border);border-radius:9px;color:var(--text);padding:11px 13px;font-size:.95rem;font-family:inherit}
+select{appearance:none;cursor:pointer}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.row{display:flex;gap:14px;flex-wrap:wrap}.row>div{flex:1;min-width:130px}
+.chk{display:flex;gap:8px;align-items:center;font-weight:600;color:var(--text2);font-size:.9rem;margin:6px 0}
+.chk input{accent-color:var(--accent);width:16px;height:16px}
+.btn{background:var(--accent);color:#0a0a0a;font-weight:800;font-size:.9rem;padding:11px 20px;border:none;border-radius:9px;cursor:pointer;margin:6px 8px 0 0}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--border)}
+.out{font-family:ui-monospace,Menlo,monospace;font-size:1.05rem;color:var(--text);word-break:break-all}
+.muted{color:var(--muted);font-size:.85rem}
+.box{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin:18px 0}
+.box.fun{border-left:4px solid var(--accent)}
+.fun-tag{display:inline-block;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);padding:4px 11px;border-radius:999px;margin-bottom:12px}
+.fun-p{margin:0 0 10px;color:var(--text2);font-size:.92rem;line-height:1.6}
+.fun-p b{color:var(--text)}
+.fun-hd{display:flex;gap:14px;align-items:flex-start;margin-bottom:8px}
+.aff-logo{width:46px;height:46px;border-radius:11px;background:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:6px;box-sizing:border-box}
+.aff-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.box b{color:var(--text)}
+.cta{display:inline-block;background:var(--accent);color:#0a0a0a;font-weight:800;font-size:.92rem;padding:12px 22px;border-radius:10px;margin:8px 0}
+.big{font-size:1.6rem;font-weight:900;color:var(--text)}
+.tool select{background:var(--card);border:1px solid var(--border);border-radius:9px;color:var(--text);padding:9px 12px;font-family:inherit;font-size:.92rem;width:100%}
+.cro-g{margin:0 0 14px}.cro-g h4{margin:0 0 8px;font-size:.95rem;color:var(--text)}
+.cro-i{display:flex;gap:10px;align-items:flex-start;padding:7px 0;color:var(--text2);font-size:.92rem;cursor:pointer;line-height:1.45}
+.cro-i input{margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:var(--accent)}
+.cro-fix{margin:6px 0 0;padding-left:20px;color:var(--text2);font-size:.9rem}.cro-fix li{margin:5px 0}
+.scv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+@media(max-width:520px){.scv-grid{grid-template-columns:1fr}}
+.scv{border:1px solid var(--border);border-left:3px solid #737373;border-radius:10px;padding:11px 13px;background:var(--card)}
+.scv-g{border-left-color:#22c55e}.scv-w{border-left-color:#f59e0b}.scv-x{border-left-color:#fb7185}
+.scv-n{font-size:.8rem;color:var(--text2);font-weight:600}
+.scv-v{font-size:1.35rem;font-weight:900;color:var(--text);margin:2px 0}
+.scv-bench{font-size:.72rem;color:var(--muted);line-height:1.35}
+.sig-y{color:var(--green);font-weight:800}.sig-n{color:#fb7185;font-weight:800}
+.disc{color:var(--muted);font-size:.82rem;margin-top:26px;border-top:1px solid var(--border);padding-top:16px}
+footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);font-size:.82rem}
+.hero{text-align:center;padding:36px 0 30px}
+.hero .pill{display:inline-block;background:rgba(59,130,246,.12);color:var(--accent);border:1px solid rgba(59,130,246,.25);padding:6px 15px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(2.1rem,6vw,3.3rem);margin:0 0 14px;line-height:1.1}
+.hero h1 .grad{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:580px;margin:0 auto;color:var(--text2);font-size:1.06rem}
+.hero .meta{margin-top:18px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:15px;margin:14px 0 30px}
+.tcard{position:relative;overflow:hidden;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;transition:transform .18s,border-color .18s,box-shadow .18s}
+.tcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--tc-color,#3b82f6);opacity:.9}
+.tcard:hover{transform:translateY(-4px);border-color:var(--tc-color,#3b82f6);box-shadow:0 16px 38px -16px var(--tc-color,#3b82f6)}
+.tcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:14px}
+.tcard-hd{display:flex;align-items:center;gap:12px;min-width:0}
+.tcard h3{margin:0;font-size:1.04rem;color:var(--text);line-height:1.25}
+.tcard p{margin:0;font-size:.86rem;color:var(--text2);line-height:1.55;flex-grow:1}
+.ticon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;box-shadow:0 4px 14px -4px rgba(0,0,0,.5)}
+.ticon svg{width:24px;height:24px}
+.tbadge{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;padding:4px 8px;border-radius:6px;background:rgba(59,130,246,.12);color:var(--accent);border:1px solid rgba(59,130,246,.22);white-space:nowrap;flex-shrink:0}
+.ttags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 16px}
+.ttag{font-size:.7rem;color:var(--muted);background:var(--card2);border:1px solid var(--border);padding:3px 9px;border-radius:6px}
+.tcta-row{display:flex;gap:10px;align-items:center;margin-top:auto}
+.tcta{flex:1;background:var(--text);color:var(--bg);padding:10px 14px;border-radius:9px;font-weight:700;font-size:.85rem;text-align:center;transition:opacity .15s}
+.tcta:hover{opacity:.88}
+.tcta2{color:var(--accent);font-size:.82rem;font-weight:600;white-space:nowrap}
+.tsec{font-size:1.2rem;font-weight:800;margin:36px 0 14px;display:flex;align-items:center;gap:10px;color:var(--text)}
+.tsec .dot{width:11px;height:11px;border-radius:50%}
+.h1ico{width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;color:#fff;vertical-align:middle;margin-right:12px}
+.h1ico svg{width:24px;height:24px}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:0 18px;margin:10px 0}
+.faq-item summary{cursor:pointer;font-weight:700;color:var(--text);padding:15px 0;list-style:none;font-size:.97rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";float:right;color:var(--accent);font-weight:800;font-size:1.15rem;line-height:1}
+.faq-item[open] summary::after{content:"\2013"}
+.faq-item[open] summary{border-bottom:1px solid var(--border)}
+.faq-item p{color:var(--text2);font-size:.92rem;padding:12px 0 16px;margin:0}
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:12px;margin:14px 0 8px}
+.rel-card{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px 15px;text-decoration:none;transition:border-color .15s,transform .15s}
+.rel-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.rel-ic{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.rel-ic svg{width:19px;height:19px}
+.rel-card span{color:var(--text);font-weight:600;font-size:.86rem;line-height:1.3}
+.dg-q{font-size:1.15rem;font-weight:700;color:var(--text);margin:4px 0 16px}
+.dg-opts{display:flex;flex-direction:column;gap:10px}
+.dg-btn{text-align:left;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:15px 18px;color:var(--text);font-weight:600;font-size:.95rem;cursor:pointer;transition:border-color .15s,transform .15s;font-family:inherit}
+.dg-btn:hover{border-color:var(--accent);transform:translateX(3px)}
+.dg-back{background:transparent;border:none;color:var(--muted);font-weight:600;font-size:.85rem;cursor:pointer;padding:8px 0;font-family:inherit;margin-top:4px}
+.dg-back:hover{color:var(--text)}
+.dg-prog{display:flex;gap:6px;margin-bottom:16px}
+.dg-prog span{height:4px;flex:1;border-radius:3px;background:var(--border)}
+.dg-prog span.on{background:var(--accent)}
+.dg-diag{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:14px;padding:20px 22px}
+.dg-diag-t{color:var(--accent);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.dg-diag p{margin:0;font-size:1.06rem;color:var(--text);line-height:1.6}
+.dg-h{font-size:1.05rem;margin:24px 0 10px}
+.dg-tool{display:flex;align-items:center;gap:13px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin:9px 0;text-decoration:none;transition:border-color .15s,transform .15s}
+.dg-tool:hover{border-color:var(--accent);transform:translateY(-2px)}
+.dg-tool-logo{width:40px;height:40px;border-radius:9px;background:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:5px;box-sizing:border-box}
+.dg-tool-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.dg-tool-txt{flex:1;display:flex;flex-direction:column;min-width:0}
+.dg-tool-txt b{color:var(--text);font-size:.95rem}
+.dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
+.dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}</style></head><body><nav class="nav"><div class="nav-in"><a href="/" class="logo-t"><em>AIBuilder</em> Marketplace</a><div><a href="/tools/">Free Tools</a><a href="/b2b/">Reviews</a><a href="/best/">Best Tools</a></div></div></nav><div class="wrap"><div class="bc"><a href="/">Home</a> &rsaquo; <a href="/tools/">Free Tools</a> &rsaquo; Free AI Token Counter — Estimate Tokens for Any Prompt (2026)</div><h1><span class="h1ico" style="background:linear-gradient(135deg,#10b981,#059669)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h14M5 15h14M10 4 8 20M16 4l-2 16"/></svg></span>AI Token Counter</h1><span class="tag">Free tool · by <a href="/about/#daan" style="color:inherit">Daniel Haket</a></span><p class="lede" style="margin-top:14px">Paste a prompt or document and see its estimated token count — and how much of each common context window it fills. The number your AI bill and context limits actually run on.</p><div class="tool">
+<label for="tk-in">Paste your prompt or text</label>
+<textarea id="tk-in" rows="8" placeholder="Paste a prompt, article or document to estimate its token count&hellip;"></textarea>
+<div class="row" style="margin-top:12px">
+<div><label>Characters</label><input type="text" id="tk-chars" class="out" readonly value="0"></div>
+<div><label>Words</label><input type="text" id="tk-words" class="out" readonly value="0"></div></div>
+<label style="margin-top:12px">Estimated tokens</label>
+<input type="text" id="tk-tokens" class="out big" readonly value="0">
+<div id="tk-fit" style="margin-top:12px;font-size:.85rem;color:#a3a3a3"></div>
+<p class="note">Rule-of-thumb estimate (&asymp;4 characters or &asymp;&frac34; word per token for English). Exact counts vary per model's tokenizer &mdash; expect &plusmn;15%, more for code and non-English text. Counted entirely in your browser.</p></div><div class="box fun"><span class="fun-tag">Free vs paid — when to upgrade</span><p class="fun-p"><b>What this free tool is great for:</b> a quick, one-off job with no signup — it runs entirely in your browser, so nothing leaves your device and there's nothing to manage.</p><p class="fun-p"><b>Its honest limit:</b> it's a one-off calculation in your browser — it doesn't save your scenarios, update as your real numbers change, or connect to your live accounts, so you re-enter the figures every time and can't watch how they move.</p><div class="fun-hd"><div class="aff-logo"><img src="https://logo.clearbit.com/dify.ai" alt="Dify" loading="lazy" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=dify.ai&amp;sz=128'"></div><div><b>Where Dify does more:</b> Counting tokens is planning; building is next. Dify is the open LLM-ops platform where prompts become real AI apps and agents — with retrieval, deployment and per-user token monitoring built in.</div></div><a class="cta" href="https://affiliate.dify.ai/6g7z70ov0bx6" target="_blank" rel="sponsored noopener nofollow" onclick="gtag('event','affiliate_click',{event_label:'Dify'})">Try Dify &rarr;</a><div class="muted">Affiliate link — we may earn a commission if you sign up, at no cost to you. It never changes our honest take.</div></div><h2>Tokens: the currency your AI actually charges in</h2><p>Every large language model reads and writes in tokens — chunks of text that are usually smaller than a word and larger than a character. Your API bill is priced per token. Your context window is measured in tokens. Your prompt gets truncated at a token limit, not a word limit. Yet almost everyone reasons in words, which is why AI costs and cut-off prompts keep surprising people. This counter gives you the missing number: paste any text and see its estimated token count, plus how much of the common context-window sizes it consumes — counted entirely in your browser, with an honest label on the word "estimated."</p><h2>What a token actually is</h2><p>Tokenizers split text into pieces drawn from a fixed vocabulary learned from massive corpora. Common words ("the", "and", "founder") are usually single tokens; rarer words get split into sub-pieces ("tokenization" might become "token" + "ization"); punctuation, spaces and capitalisation all influence the split. That's why token counts feel unintuitive: "ChatGPT is great" and "Antidisestablishmentarianism!" have wildly different token-per-word ratios. For ordinary English prose the averages are stable enough to estimate — roughly four characters or three-quarters of a word per token — and those two rules of thumb, blended, are what this tool uses.</p><h2>Why an estimate is honest — and when it drifts</h2><p>Exact token counts require running the specific model's tokenizer, and every family (GPT, Claude, Llama, Gemini) tokenizes slightly differently — the same paragraph can differ by ten percent between them. For planning purposes that rarely matters: budgeting, context-fit checks and cost estimates all survive ±15% noise. But know when the estimate drifts further: code tokenizes heavier than prose (symbols and indentation fragment badly), non-English languages often cost dramatically more tokens per word — some scripts multiply counts several-fold — and text stuffed with URLs, IDs or JSON skews high. If you're doing precision work at scale, use the provider's own tokenizer; for everything else, this estimate is the right tool.</p><h2>The context window: your token budget per request</h2><p>A model's context window is the total tokens it can hold at once — your system prompt, the conversation history, the retrieved documents, the user's question and the answer it writes, all sharing one budget. The fit-bars above show your text against common window tiers, from small 8k models to the million-token giants. The practical insight most people miss: the window fills faster than you think, because everything counts. A 200-page document, a long chat history, a bloated system prompt — they all crowd out room for the answer. When a model "forgets" the start of a long conversation, it didn't forget; the early tokens fell out of the window.</p><h2>Tokens are money: budgeting prompts like a CFO</h2><p>Because pricing is per token — with output tokens typically costing several times input tokens — token counts translate directly to unit economics. A system prompt of 2,000 tokens sounds harmless until it rides along on every one of a million requests. The high-leverage moves, in order: trim the system prompt (it's paid on every call); summarise or truncate conversation history instead of resending it whole; retrieve only the relevant chunks of documents rather than stuffing entire files; and cap output length, since output is the expensive direction. Count before you ship — our AI Cost Calculator turns the token counts from this tool into an actual monthly bill projection.</p><h2>Counting for writers and prompt-crafters</h2><p>Token awareness isn't just an engineering concern. If you write prompts for a living — or paste long documents into chat assistants — the counter answers everyday questions: will this whole report fit, how much can I paste before the model loses the beginning, why did my carefully crafted instruction get cut. A useful habit for long tasks: check the token count of your material first, and if it brushes against the window you're using, split by sections with a running summary instead of trusting one giant paste. The models handle a well-structured 30k tokens far better than a truncated 130k.</p><h2>Why counts differ between tools</h2><p>Paste the same text into three token counters and you may get three numbers. That's not sloppiness — they're either using different tokenizers (each accurate for its own model) or different estimation rules. This tool deliberately shows a blended estimate rather than impersonating any specific model's tokenizer, and says so — an honest ~1,050 beats a false-precision 1,047 that's only true for one model family. Treat cross-tool differences under fifteen percent as agreement. When someone quotes you an exact token count without naming the tokenizer, they've told you less than this estimate does.</p><h2>A budgeting workflow that sticks</h2><p>The teams that keep AI costs boring all converge on the same loop. First, count the fixed overhead: paste your system prompt and any always-included examples here and treat that number as the per-request tax. Second, estimate the variable part — a typical user message plus retrieved context — and set the output cap deliberately rather than accepting the default. Third, multiply through your expected volume in our AI Cost Calculator to see the monthly bill before a line of code ships. Finally, re-count whenever the prompt changes: prompts only ever grow, a phenomenon veterans call prompt bloat, and a monthly five-minute audit of what's actually riding along on every request routinely finds a third of the tokens doing nothing. Counting is the cheapest optimisation in AI — it just has to actually happen.</p><h2>Counting tokens is step one — where Dify does more</h2><p>A counter tells you what a prompt costs and whether it fits; the harder work is building the thing around the prompt — the chains, the knowledge base with retrieval, the agent logic, the deployment, the observability that shows token spend per user in production. That's where Dify does more: an open LLM-ops platform where you visually build AI apps and agents, plug in your documents, and monitor exactly the token flows you estimated here — turning prompt-craft into shipped product without wiring the plumbing yourself. Count and budget here; when the prompt needs to become an app, build it on rails instead of glue code.</p><h2>Frequently asked questions</h2><details class="faq-item"><summary>How accurate is the token estimate?</summary><p>It blends the two standard rules of thumb (~4 characters and ~¾ word per token for English) — expect ±15% versus any specific model's tokenizer, more for code and non-English text. For exact counts, use the provider's own tokenizer.</p></details><details class="faq-item"><summary>Why do token counts differ between models?</summary><p>Each model family (GPT, Claude, Llama, Gemini) uses its own tokenizer with a different vocabulary, so the same text splits differently — often by around ten percent between families.</p></details><details class="faq-item"><summary>What is a context window?</summary><p>The total tokens a model can hold at once: system prompt, history, documents, question and answer combined. The fit-bars show your text against common window tiers from 8k to 1M tokens.</p></details><details class="faq-item"><summary>Does my text leave my browser?</summary><p>No — counting happens locally in JavaScript. Nothing you paste is uploaded, logged or stored.</p></details><h2>More free calculators</h2><div class="related"><a class="rel-card" href="/tools/ai-cost-calculator/"><span class="rel-ic" style="background:linear-gradient(135deg,#10b981,#059669)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M12 8V5M9 13h.01M15 13h.01"/><circle cx="12" cy="4" r="1"/></svg></span><span>AI Cost Calculator</span></a><a class="rel-card" href="/tools/startup-financial-model/"><span class="rel-ic" style="background:linear-gradient(135deg,#10b981,#059669)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7" rx="1"/><rect x="11" y="6" width="3" height="12" rx="1"/><rect x="17" y="9" width="3" height="9" rx="1"/></svg></span><span>Startup Financial Model</span></a><a class="rel-card" href="/tools/cap-table-calculator/"><span class="rel-ic" style="background:linear-gradient(135deg,#10b981,#059669)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3.5 3.5 0 0 1 0 6M21 20a6 6 0 0 0-5-5.9"/></svg></span><span>Cap Table & Dilution Calculator</span></a><a class="rel-card" href="/tools/saas-valuation-calculator/"><span class="rel-ic" style="background:linear-gradient(135deg,#10b981,#059669)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 6c-1-1.5-3-2.5-5-2.5C9 3.5 7 5 7 7c0 4.5 10 2.5 10 7 0 2-2 3.5-5 3.5s-4-1-5-2.5"/></svg></span><span>SaaS Valuation Calculator</span></a></div><p style="margin:6px 0 0"><a href="/tools/">Browse all free tools &rarr;</a></p><h2 id="embed">Embed this tool on your site</h2><p>Blogger, teacher or toolmaker? Put this calculator on your own page — free forever, no strings. Copy the snippet below (the credit link is appreciated and keeps the tool free):</p><textarea class="out" rows="5" readonly onclick="this.select()">&lt;iframe src="https://aibuildermarketplace.com/tools/ai-token-counter/embed/" style="width:100%;max-width:760px;height:560px;border:1px solid #2a2a2e;border-radius:14px" loading="lazy" title="AI Token Counter — free tool"&gt;&lt;/iframe&gt;
+&lt;p style="font-size:14px"&gt;Free tool by &lt;a href="https://aibuildermarketplace.com/tools/ai-token-counter/"&gt;AIBuilder Marketplace&lt;/a&gt;&lt;/p&gt;</textarea><p class="disc">This tool is free and runs entirely in your browser. The link above is an affiliate link: we may earn a commission if you sign up, at no extra cost to you, and it never changes our honest take.</p></div><script>
+(function(){
+var inp=document.getElementById('tk-in');
+var windows=[['8k',8000],['32k',32000],['128k',128000],['200k',200000],['1M',1000000]];
+function fmt(n){return n.toLocaleString('en-US');}
+function run(){
+var t=inp.value;
+var chars=t.length;
+var words=t.trim()?t.trim().split(/\s+/).length:0;
+var est=Math.round((chars/4+words*1.333)/2);
+document.getElementById('tk-chars').value=fmt(chars);
+document.getElementById('tk-words').value=fmt(words);
+document.getElementById('tk-tokens').value='~'+fmt(est);
+var rows=windows.map(function(w){
+var pct=est?Math.min(100,Math.round(est/w[1]*100)):0;
+var col=pct>90?'#f87171':pct>60?'#fbbf24':'#34d399';
+return '<div style="display:flex;align-items:center;gap:10px;margin:4px 0">'
++'<span style="width:44px;color:#e2e8f0;font-weight:600">'+w[0]+'</span>'
++'<div style="flex:1;height:8px;background:#1c1c22;border-radius:99px;overflow:hidden">'
++'<div style="width:'+pct+'%;height:100%;background:'+col+'"></div></div>'
++'<span style="width:44px;text-align:right">'+pct+'%</span></div>';}).join('');
+document.getElementById('tk-fit').innerHTML=est?'<strong style="color:#e2e8f0">Fits in a context window of&hellip;</strong>'+rows:'';
+if(est>0&&typeof gtag==='function'&&!window._tk){window._tk=1;gtag('event','tool_use',{event_label:'ai-token-counter'});}}
+inp.addEventListener('input',run);run();
+})();</script><script>[].slice.call(document.querySelectorAll('input.out,textarea.out')).forEach(function(el){el.addEventListener('click',function(){if(!el.value)return;el.select();try{navigator.clipboard.writeText(el.value);}catch(e){try{document.execCommand('copy');}catch(e2){}}var t=el.title;el.title='Copied!';setTimeout(function(){el.title=t||'';},900);});});</script><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.</footer><script>try{var r=JSON.parse(localStorage.aibm_recent||'[]');r=['ai-token-counter'].concat(r.filter(function(x){return x!=='ai-token-counter';})).slice(0,8);localStorage.aibm_recent=JSON.stringify(r);}catch(e){}</script></body></html>

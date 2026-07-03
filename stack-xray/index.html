@@ -62,6 +62,15 @@ h1 .grad{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-c
 .btn.sec{background:var(--card2);border:1px solid var(--border);color:var(--text2)}
 .foot-note{color:var(--muted);font-size:.8rem;margin-top:14px}
 footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);font-size:.82rem;margin-top:40px}
+
+@media(max-width:640px){
+.nav-in{gap:8px}
+.nav-in>div{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;display:flex}
+.nav-in>div::-webkit-scrollbar{display:none}
+.nav a{font-size:.78rem;margin-left:11px;flex-shrink:0}
+h1{font-size:1.5rem}
+.wrap{padding:10px 16px 50px}
+}
 @media print{
  .nav,.panel.picker,.acts,footer,.quick{display:none!important}
  body{background:#fff;color:#111}

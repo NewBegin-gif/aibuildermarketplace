@@ -89,6 +89,15 @@ select{background:var(--card);border:1px solid var(--border);border-radius:10px;
 .cmp-cell .fbadge{margin:2px 3px 0 0;display:inline-block}
 @media(max-width:760px){.cmp-grid.c2,.cmp-grid.c3{grid-template-columns:1fr}.cmp-lbl{padding-top:12px}}
 footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);font-size:.82rem;margin-top:50px}
+
+@media(max-width:640px){
+.nav-in{gap:8px}
+.nav-in>div{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;display:flex}
+.nav-in>div::-webkit-scrollbar{display:none}
+.nav a{font-size:.78rem;margin-left:11px;flex-shrink:0}
+h1{font-size:1.5rem}
+.wrap{padding:10px 16px 50px}
+}
 @media print{
  .nav,.toolbar,.chips,.stats,.tray,.hero p,.method,#grid,#noresults,footer{display:none!important}
  body{background:#fff;color:#111}

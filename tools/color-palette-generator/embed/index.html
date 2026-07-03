@@ -3,7 +3,7 @@
 body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.75}
 a{color:var(--accent);text-decoration:none}
 .nav{border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);z-index:50}
-.nav-in{max-width:800px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-in{max-width:1180px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
 .nav a{color:var(--text2);font-size:.85rem;font-weight:600;margin-left:16px}
 .logo-t{font-weight:800 !important;font-size:.95rem !important;letter-spacing:-.01em;color:var(--text);white-space:nowrap}.logo-t em{font-style:normal;background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .wrap{max-width:800px;margin:0 auto;padding:14px 24px 70px}
@@ -113,7 +113,7 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-txt b{color:var(--text);font-size:.95rem}
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
-body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><label for="cp-base">Base colour</label>
+body{padding:6px 10px}.wrap{padding:0;max-width:none}/*aibm-nav-align*/.nav-inner,.nav-in,.topnav-inner{box-sizing:border-box;max-width:1180px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}.nav,.topnav{padding-left:0;padding-right:0}.nav-logo,.logo-t,.topnav-logo{margin-left:0 !important}</style></head><body><div class="wrap"><div class="tool"><label for="cp-base">Base colour</label>
 <input type="color" id="cp-base" value="#3b82f6" style="width:80px;height:44px;background:#0f0f0f;border:1px solid var(--border);border-radius:9px;cursor:pointer">
 <div id="cp-out" style="margin-top:16px"></div></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/color-palette-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Colour Palette Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 function hsl2hex(h,s,l){s/=100;l/=100;var k=function(n){return (n+h/30)%12;},a=s*Math.min(l,1-l),f=function(n){var c=l-a*Math.max(-1,Math.min(k(n)-3,Math.min(9-k(n),1)));return Math.round(255*c).toString(16).padStart(2,'0');};return '#'+f(0)+f(8)+f(4);}

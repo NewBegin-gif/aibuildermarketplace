@@ -210,7 +210,9 @@ function diag(){
   if(traps.length){
     h+='<div class="dsec"><h3>\uD83D\uDD0D Invoice checks (from our dossiers)</h3><ul>'+
      traps.slice(0,8).map(function(x){return '<li>'+F[x.f].i+' <b>'+esc(x.n)+'</b>: '+esc(F[x.f].x)+'</li>'}).join("")+
-     '</ul></div>';
+     '</ul>'+
+     (traps.some(function(x){return x.f==="renewal_jump"||x.f==="annual_lock"})?'<p style="font-size:.84rem"><b>Tip:</b> put those renewal dates on your calendar with the free <a href="/tools/renewal-radar/">Renewal Radar</a> — it generates the .ics reminders for every cancel window.</p>':'')+
+     '</div>';
   }
   if(swaps.length){
     h+='<div class="dsec"><h3>\uD83D\uDD01 Honest swaps to consider</h3><ul>'+

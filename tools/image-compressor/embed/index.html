@@ -123,7 +123,7 @@ document.getElementById('ic-q').addEventListener('input',function(){document.get
 document.getElementById('ic-file').addEventListener('change',function(e){var f=e.target.files[0];if(!f)return;icName='compressed-'+f.name.replace(/\.[^.]+$/,'')+'.jpg';var r=new FileReader();r.onload=function(ev){var img=new Image();img.onload=function(){window._icImg=img;window._icOrig=f.size;icRun();};img.src=ev.target.result;};r.readAsDataURL(f);});
 function icRun(){var img=window._icImg,q=+document.getElementById('ic-q').value/100,c=document.createElement('canvas');c.width=img.width;c.height=img.height;c.getContext('2d').drawImage(img,0,0);
 c.toBlob(function(b){if(!b)return;icBlob=b;var pct=window._icOrig?Math.round((1-b.size/window._icOrig)*100):0;
-document.getElementById('ic-out').innerHTML='<img src="'+URL.createObjectURL(b)+'" style="max-width:100%;border-radius:10px"><p class="muted">'+(window._icOrig/1024).toFixed(0)+' KB \u2192 <b style="color:var(--text)">'+(b.size/1024).toFixed(0)+' KB</b> ('+pct+'% smaller)</p>';
+document.getElementById('ic-out').innerHTML='<img alt=""  src="'+URL.createObjectURL(b)+'" style="max-width:100%;border-radius:10px"><p class="muted">'+(window._icOrig/1024).toFixed(0)+' KB \u2192 <b style="color:var(--text)">'+(b.size/1024).toFixed(0)+' KB</b> ('+pct+'% smaller)</p>';
 document.getElementById('ic-dl').disabled=false;},'image/jpeg',q);
 gtag&&gtag('event','tool_use',{event_label:'image_compress'});}
 document.getElementById('ic-dl').onclick=function(){if(!icBlob)return;var a=document.createElement('a');a.href=URL.createObjectURL(icBlob);a.download=icName;a.click();};</script></body></html>

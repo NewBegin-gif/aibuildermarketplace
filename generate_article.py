@@ -122,6 +122,7 @@ def rebuild_index(folders):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B2B AI Tools Reviews &amp; Comparisons 2026 | AIBuilder Marketplace</title>
+  <meta property="og:image" content="https://aibuildermarketplace.com/og/aibm-default.png">
   <meta name="description" content="Expert reviews and ROI comparisons of the best B2B AI tools in 2026. Kinsta, Synthesia, InVideo, Replit, Bitvavo and more.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{DOMAIN}/b2b/">

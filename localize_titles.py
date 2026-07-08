@@ -52,7 +52,10 @@ def fix_page(html: str):
     headline = short_headline(re.sub(r"<[^>]+>", "", h1s[0]))
     if not headline:
         return None, "lege headline"
-    new_title = headline + BRAND
+    # SUFFIX-GUARD (2026-07-08): merk-suffix alleen als het totaal <=65 blijft.
+    # LET OP: dit bestand wordt door fix_h1_cron.sh elke run vers van GitHub main
+    # gecurld — patches MOETEN hier in de repo, niet op de VPS.
+    new_title = headline + BRAND if len(headline) + len(BRAND) <= 65 else headline
     attr_title = new_title.replace('"', "&quot;")
 
     out = TITLE_RE.sub(lambda m: f"<title>{new_title}</title>", html, count=1)

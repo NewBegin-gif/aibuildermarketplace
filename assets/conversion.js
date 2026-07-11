@@ -48,6 +48,25 @@
     /* CRO-autopilot: exposure-event 1x per pagina → click-rate per variant berekenbaar */
     try { if (window.gtag) setTimeout(function(){ gtag('event', 'cro_view_' + VARIANT.toLowerCase(), {transport_type:'beacon'}); }, 800); } catch (_) {}
 
+    /* Demand-mining: wat zoeken bezoekers op de site? (GA4 'search' → searchTerm-dimensie)
+       Elke term = gratis marktonderzoek; termen zonder dekking worden dossier-kandidaten. */
+    try {
+      var sIn = document.getElementById('home-search') || document.getElementById('q') || document.getElementById('vsq') || document.getElementById('pq');
+      if (sIn && window.gtag) {
+        var sLast = '';
+        function sSend(){
+          var v = (sIn.value || '').trim().toLowerCase();
+          if (v.length >= 3 && v !== sLast && !seen('dm_' + v)) {
+            sLast = v; mark('dm_' + v);
+            gtag('event', 'search', {search_term: v, transport_type: 'beacon'});
+          }
+        }
+        sIn.addEventListener('change', sSend);
+        sIn.addEventListener('keydown', function(e){ if (e.key === 'Enter') sSend(); });
+        sIn.addEventListener('blur', sSend);
+      }
+    } catch (_) {}
+
     // ---- Primaire affiliate-CTA: eerste echte sponsored-link (werkt voor ELKE affiliate) ----
     function findCTA(){
       var a = document.querySelector('a[rel~="sponsored"][href^="http"]');

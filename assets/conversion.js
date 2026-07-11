@@ -24,7 +24,11 @@
     var SS = window.sessionStorage;
     function seen(k){ try { return SS && SS.getItem(k) === '1'; } catch (_) { return false; } }
     function mark(k){ try { SS && SS.setItem(k, '1'); } catch (_) {} }
-    function track(name, label){ try { if (window.gtag) gtag('event', name, {event_category:'conversion', event_label: label, variant: VARIANT, transport_type:'beacon'}); } catch (_) {} }
+    function track(name, label){ try { if (window.gtag) gtag('event', name, {event_category:'conversion', event_label: label, variant: VARIANT, transport_type:'beacon'});
+      /* CRO-autopilot (Darwin fase 2): variant-gecodeerde eventnaam, zodat de
+         GA4-API per variant kan meten zonder custom-dimension-registratie */
+      if (window.gtag && name.indexOf('cta') > -1) gtag('event', 'cro_' + name.replace(/[^a-z_]/g, '') + '_' + (VARIANT || 'a').toLowerCase(), {transport_type:'beacon'});
+    } catch (_) {} }
 
     // ---- A/B-variant (Darwin Fase 1): per bezoeker vastgezet in localStorage.
     // Test eerlijke CTA-werkwoorden ("Visit" vs "Try"); winnaar bepalen we later uit
@@ -41,6 +45,8 @@
       } catch (_) { return 'A'; }
     })();
     function ctaVerb(){ return CTA_VERB[VARIANT]; }
+    /* CRO-autopilot: exposure-event 1x per pagina → click-rate per variant berekenbaar */
+    try { if (window.gtag) setTimeout(function(){ gtag('event', 'cro_view_' + VARIANT.toLowerCase(), {transport_type:'beacon'}); }, 800); } catch (_) {}
 
     // ---- Primaire affiliate-CTA: eerste echte sponsored-link (werkt voor ELKE affiliate) ----
     function findCTA(){

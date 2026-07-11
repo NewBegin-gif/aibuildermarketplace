@@ -1,6 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="max-image-preview:large">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CW1KZ258ZV');</script>
 <title>Free AI Roadmap Generator — Your 30/60/90-Day Plan</title>
@@ -167,7 +166,8 @@ function render(){
    P.free.map(function(f){return '<a href="/tools/'+f.s+'/">'+f.l+'</a>'}).join('')+
    '</div></div></div>'+
 
-   '<div class="repacts"><button onclick="window.print()">Download report (PDF)</button>'+
+   '<div class="repacts"><button onclick="shareCard()">Download share card</button>'+
+   '<button class="sec" onclick="window.print()">Download report (PDF)</button>'+
    '<button class="sec" onclick="copyTxt()">Copy as text</button></div>'+
    '<div class="nlbox" style="background:linear-gradient(180deg,#1a1a1a,#141414);border:1px solid #262626;border-left:4px solid #3b82f6;border-radius:14px;padding:18px 20px;margin:26px 0"><b style="color:#fafafa">One honest email a week</b><p style="color:#a3a3a3;font-size:.88rem;margin:6px 0 2px">New dossiers, cost-traps we found, and tools that earned a keep — no hype, no sponsored-disguised-as-advice. Unsubscribe anytime.</p><form action="https://aibuildermarketplace.beehiiv.com/subscribe" method="get" target="_blank" onsubmit="gtag(\'event\',\'newsletter_submit\',{event_label:location.pathname})" style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><input type="email" name="email" required placeholder="you@company.com" style="flex:1 1 200px;min-width:180px;padding:11px 14px;border-radius:9px;border:1px solid #262626;background:#0a0a0a;color:#fafafa;font-size:.92rem;font-family:inherit"><button type="submit" style="padding:11px 22px;border-radius:9px;border:0;background:linear-gradient(135deg,#3b82f6,#a78bfa);color:#fff;font-weight:800;font-size:.9rem;cursor:pointer;font-family:inherit">Subscribe &rarr;</button></form></div>'+
    '<p id="restartrow"><button class="backbtn" onclick="location.reload()">&larr; Start over</button></p>'+
@@ -178,6 +178,35 @@ function calc(){
   var r=parseFloat(el('rate').value);
   var hrs=HOURS[ans.hours][1];
   el('mout').textContent=(r>0)?('$'+Math.round(hrs*r*4.33).toLocaleString()):'\u2014';
+}
+function shareCard(){
+  // v-viral: deelbare roadmap-kaart, client-side
+  var P2=(window.PLAYS&&ans&&PLAYS[ans.pain])||{label:'AI adoption'};
+  var cv=document.createElement("canvas"); cv.width=1200; cv.height=675;
+  var c=cv.getContext("2d");
+  c.fillStyle="#0a0a0e"; c.fillRect(0,0,1200,675);
+  var g1=c.createRadialGradient(150,80,0,150,80,500); g1.addColorStop(0,"rgba(59,130,246,.22)"); g1.addColorStop(1,"rgba(0,0,0,0)");
+  c.fillStyle=g1; c.fillRect(0,0,1200,675);
+  var g2=c.createRadialGradient(1050,600,0,1050,600,520); g2.addColorStop(0,"rgba(167,139,250,.18)"); g2.addColorStop(1,"rgba(0,0,0,0)");
+  c.fillStyle=g2; c.fillRect(0,0,1200,675);
+  c.font="800 34px Inter,system-ui,sans-serif"; c.fillStyle="#7c8cf8"; c.fillText("AIBuilder",70,80);
+  c.fillStyle="#fafafa"; c.fillText("Marketplace",232,80);
+  c.font="700 22px Inter,sans-serif"; c.fillStyle="#8b93a7";
+  c.fillText("MY HONEST 30/60/90 AI ROADMAP",70,130);
+  c.font="900 68px Inter,sans-serif"; c.fillStyle="#fafafa";
+  var focus=(P2.label||'AI adoption'); if(focus.length>26)focus=focus.slice(0,26)+"…";
+  c.fillText(focus,70,260);
+  ["30 days — foundations","60 days — momentum","90 days — compounding"].forEach(function(s,i){
+    c.fillStyle=["#22c55e","#3b82f6","#a78bfa"][i];
+    c.beginPath(); c.arc(90,330+i*70,12,0,6.284); c.fill();
+    c.font="700 30px Inter,sans-serif"; c.fillStyle="#e6e8ee"; c.fillText(s,125,340+i*70);
+  });
+  c.font="600 26px Inter,sans-serif"; c.fillStyle="#8b93a7";
+  c.fillText("Built from researched reviews — no invented savings, skip-it advice included",70,590);
+  c.font="800 30px Inter,sans-serif"; c.fillStyle="#60a5fa";
+  c.fillText("aibuildermarketplace.com/roadmap/",70,632);
+  var a=document.createElement("a"); a.download="my-honest-ai-roadmap.png"; a.href=cv.toDataURL("image/png"); a.click();
+  try{gtag("event","share_card",{event_label:"roadmap",transport_type:"beacon"})}catch(_){}
 }
 function copyTxt(){
   var t=el('report').innerText;

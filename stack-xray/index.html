@@ -1,6 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="max-image-preview:large">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CW1KZ258ZV');</script>
 <title>Free Stack X-Ray — What Your Software Really Costs</title>
@@ -106,7 +105,8 @@ h1{font-size:1.5rem}
 <p class="sub">Live, from your own numbers only.</p>
 <div id="dout"><p style="color:var(--muted)">Add at least one tool to start the X-ray.</p></div>
 <div class="acts" id="dacts" style="display:none">
-<button class="btn" onclick="window.print()">Print report</button>
+<button class="btn" onclick="shareCard()">Download share card</button>
+<button class="btn sec" onclick="window.print()">Print report</button>
 <button class="btn sec" onclick="copyRep()">Copy as text</button>
 <button class="btn sec" onclick="reset()">Start over</button>
 </div>
@@ -207,6 +207,7 @@ function diag(){
   var score=100 - wasteShare*60 - overlaps.length*10 - (stack.filter(function(s){return s.use==="f"}).length*8);
   var grade=score>=85?"A":score>=70?"B":score>=55?"C":score>=40?"D":"F";
 
+  window.__diag={grade:grade,yearly:yearly,monthly:monthly,n:stack.length,kills:kills.length,save:killSum};
   var h='<div class="grade g-'+grade+'">'+grade+'</div>'+
    '<div class="big">'+money(yearly)+'<small> /year</small></div>'+
    '<p style="color:var(--muted);font-size:.82rem;margin:2px 0 0">'+money(monthly)+'/month across '+stack.length+' tools'+(priced.length<stack.length?' \u00b7 '+(stack.length-priced.length)+' without a price yet':'')+'</p>';
@@ -236,6 +237,35 @@ function diag(){
   out.innerHTML=h;
 }
 
+function shareCard(){
+  // v-viral: deelbare audit-kaart, volledig client-side (privacy intact)
+  var d=window.__diag; if(!d) return;
+  var cv=document.createElement("canvas"); cv.width=1200; cv.height=675;
+  var c=cv.getContext("2d");
+  c.fillStyle="#0a0a0e"; c.fillRect(0,0,1200,675);
+  var g1=c.createRadialGradient(150,80,0,150,80,500); g1.addColorStop(0,"rgba(59,130,246,.22)"); g1.addColorStop(1,"rgba(0,0,0,0)");
+  c.fillStyle=g1; c.fillRect(0,0,1200,675);
+  var g2=c.createRadialGradient(1050,600,0,1050,600,520); g2.addColorStop(0,"rgba(167,139,250,.18)"); g2.addColorStop(1,"rgba(0,0,0,0)");
+  c.fillStyle=g2; c.fillRect(0,0,1200,675);
+  c.font="800 34px Inter,system-ui,sans-serif"; c.fillStyle="#7c8cf8"; c.fillText("AIBuilder",70,80);
+  c.fillStyle="#fafafa"; c.fillText("Marketplace",232,80);
+  c.font="700 22px Inter,sans-serif"; c.fillStyle="#8b93a7";
+  c.fillText("MY SOFTWARE STACK — HONESTLY AUDITED",70,130);
+  var gcol={A:"#22c55e",B:"#a3e635",C:"#f59e0b",D:"#fb7185",F:"#ef4444"}[d.grade]||"#f59e0b";
+  c.strokeStyle=gcol; c.lineWidth=8; c.beginPath(); c.arc(210,360,120,0,6.284); c.stroke();
+  c.font="900 150px Inter,sans-serif"; c.fillStyle=gcol; c.textAlign="center"; c.fillText(d.grade,210,412); c.textAlign="left";
+  function money(x){return "$"+Math.round(x).toLocaleString("en-US")}
+  c.font="900 84px Inter,sans-serif"; c.fillStyle="#fafafa"; c.fillText(money(d.yearly),420,330);
+  c.font="600 30px Inter,sans-serif"; c.fillStyle="#8b93a7"; c.fillText("per year, across "+d.n+" tools",424,375);
+  c.font="700 30px Inter,sans-serif"; c.fillStyle="#e6e8ee";
+  c.fillText("✂ "+d.kills+" on the kill-list"+(d.save?"  ·  "+money(d.save)+"/yr winnable":""),424,445);
+  c.font="600 26px Inter,sans-serif"; c.fillStyle="#8b93a7";
+  c.fillText("Audited with the free Stack X-Ray — numbers never leave your browser",70,590);
+  c.font="800 30px Inter,sans-serif"; c.fillStyle="#60a5fa";
+  c.fillText("aibuildermarketplace.com/stack-xray/",70,632);
+  var a=document.createElement("a"); a.download="my-honest-stack-audit.png"; a.href=cv.toDataURL("image/png"); a.click();
+  try{gtag("event","share_card",{event_label:"stackxray",transport_type:"beacon"})}catch(_){}
+}
 function copyRep(){
   navigator.clipboard.writeText(el("dout").innerText+"\n\n\u2014 Stack X-Ray, aibuildermarketplace.com/stack-xray/").then(function(){alert("Report copied.")});
 }

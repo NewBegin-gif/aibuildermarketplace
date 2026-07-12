@@ -183,6 +183,82 @@
   } catch (_) {}
 })();
 
+/* ===== Lezersreviews (motor 29, 2026-07) =====
+   Client-side: haalt gepubliceerde reviews op en toont een eerlijk formulier.
+   Moderatie filtert alleen spam — kritische reviews worden net zo gepubliceerd. */
+(function(){try{
+  var m = location.pathname.match(/^\/b2b\/([a-z0-9-]+)-review\/?$/);
+  if (!m) return;
+  var slug = m[1];
+  var API = 'https://api.aibuildermarketplace.com';
+  function el(tag, css, html){ var e = document.createElement(tag); if (css) e.style.cssText = css; if (html) e.innerHTML = html; return e; }
+  function dots(n){ var s=''; for (var i=1;i<=5;i++) s += (i<=n?'●':'○'); return s; }
+  function rdy(fn){ if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  rdy(function(){
+    if (document.getElementById('reader-reviews')) return;
+    var host = document.querySelector('article, main, .wrap') || document.body;
+    var sec = el('section', 'margin:44px 0 20px;font-family:inherit');
+    sec.id = 'reader-reviews';
+    sec.innerHTML = '<h2 style="margin-bottom:4px">Reader reviews</h2>' +
+      '<p style="color:var(--muted,#94a3b8);font-size:.88rem;margin:0 0 14px">Real users, unedited — moderated for spam only. Critical takes get published just like glowing ones. <a href="/community/" style="color:#93c5fd">All reader reviews →</a></p>' +
+      '<div id="rr-list"></div>' +
+      '<button id="rr-open" style="background:none;border:1px solid #2a2f3a;color:#93c5fd;border-radius:9px;padding:10px 18px;cursor:pointer;font-weight:700">✍️ Write your honest review (critical welcome)</button>' +
+      '<form id="rr-form" style="display:none;border:1px solid #2a2f3a;border-radius:12px;padding:16px;margin-top:12px;background:rgba(11,15,23,.6)">' +
+        '<input name="website" style="display:none" tabindex="-1" autocomplete="off">' +
+        '<label style="display:block;font-size:.85rem;color:#94a3b8;margin:8px 0 3px">What do you use it for?</label>' +
+        '<input name="use_case" maxlength="200" style="width:100%;background:#0b0f17;border:1px solid #2a2f3a;border-radius:7px;color:#e5e7eb;padding:9px">' +
+        '<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">' +
+          '<label style="font-size:.85rem;color:#94a3b8">Ease of use<br><select name="ease" style="background:#0b0f17;border:1px solid #2a2f3a;border-radius:7px;color:#e5e7eb;padding:8px"><option>5</option><option selected>4</option><option>3</option><option>2</option><option>1</option></select></label>' +
+          '<label style="font-size:.85rem;color:#94a3b8">Plan<br><select name="plan" style="background:#0b0f17;border:1px solid #2a2f3a;border-radius:7px;color:#e5e7eb;padding:8px"><option value="free">Free</option><option value="paid">Paid</option><option value="trial">Trial</option></select></label>' +
+          '<label style="font-size:.85rem;color:#94a3b8">Satisfaction<br><select name="satisfied" style="background:#0b0f17;border:1px solid #2a2f3a;border-radius:7px;color:#e5e7eb;padding:8px"><option>5</option><option selected>4</option><option>3</option><option>2</option><option>1</option></select></label>' +
+          '<label style="font-size:.85rem;color:#94a3b8">Recommend?<br><select name="recommend" style="background:#0b0f17;border:1px solid #2a2f3a;border-radius:7px;color:#e5e7eb;padding:8px"><option value="1">Yes</option><option value="0">No</option></select></label>' +
+        '</div>' +
+        '<label style="display:block;font-size:.85rem;color:#94a3b8;margin:10px 0 3px">Why? (the honest part — min. 15 characters)</label>' +
+        '<textarea name="why" maxlength="900" rows="4" style="width:100%;background:#0b0f17;border:1px solid #2a2f3a;border-radius:7px;color:#e5e7eb;padding:9px"></textarea>' +
+        '<label style="display:block;font-size:.85rem;color:#94a3b8;margin:10px 0 3px">Name (optional)</label>' +
+        '<input name="name" maxlength="40" style="width:220px;background:#0b0f17;border:1px solid #2a2f3a;border-radius:7px;color:#e5e7eb;padding:9px">' +
+        '<div style="margin-top:14px"><button type="submit" style="background:#10b981;color:#fff;border:none;border-radius:9px;padding:11px 22px;font-weight:700;cursor:pointer">Submit review</button>' +
+        '<span id="rr-msg" style="margin-left:12px;font-size:.85rem;color:#94a3b8"></span></div>' +
+      '</form>';
+    host.appendChild(sec);
+    document.getElementById('rr-open').addEventListener('click', function(){
+      this.style.display = 'none';
+      document.getElementById('rr-form').style.display = 'block';
+      if (window.gtag) gtag('event', 'reader_review_open', {transport_type:'beacon'});
+    });
+    fetch(API + '/reviews/' + slug + '.json').then(function(r){ return r.json(); }).then(function(d){
+      var list = document.getElementById('rr-list');
+      (d.reviews || []).slice(0, 8).forEach(function(r){
+        var rec = r.recommend ? '<span style="color:#22c55e;font-weight:700">✓ would recommend</span>' : '<span style="color:#f43f5e;font-weight:700">✗ would not recommend</span>';
+        var c = el('div', 'border:1px solid #2a2f3a;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:rgba(11,15,23,.6)');
+        function esc(t){ var d2 = document.createElement('div'); d2.textContent = t || ''; return d2.innerHTML; }
+        c.innerHTML = '<div style="font-size:.85rem;color:#94a3b8"><strong style="color:#e5e7eb">' + esc(r.name) + '</strong> · ' + esc((r.ts||'').slice(0,10)) + (r.use_case ? ' · uses it for: ' + esc(r.use_case) : '') + '</div>' +
+          '<div style="font-size:.83rem;color:#94a3b8;margin-top:4px">Ease ' + dots(r.ease) + ' · Satisfaction ' + dots(r.satisfied) + ' · ' + esc(r.plan) + ' plan · ' + rec + '</div>' +
+          '<p style="margin:8px 0 0;color:#e2e8f0">“' + esc(r.why) + '”</p>';
+        list.appendChild(c);
+      });
+    }).catch(function(){});
+    document.getElementById('rr-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      var f = this;
+      var body = { tool_slug: slug, tool: (document.title || '').split(' Review')[0].trim(),
+        website: f.website.value, use_case: f.use_case.value, ease: parseInt(f.ease.value, 10),
+        plan: f.plan.value, satisfied: parseInt(f.satisfied.value, 10),
+        recommend: f.recommend.value === '1', why: f.why.value, name: f.name.value };
+      var msg = document.getElementById('rr-msg');
+      msg.textContent = '…';
+      fetch(API + '/review', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body) })
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          if (d.ok) { f.style.display = 'none'; var ok = el('p', 'color:#22c55e;font-weight:700', '✓ ' + (d.msg || 'Thanks!')); f.parentNode.appendChild(ok);
+            if (window.gtag) gtag('event', 'reader_review_submit', {transport_type:'beacon'}); }
+          else { msg.textContent = d.error || 'Something went wrong — try again.'; }
+        })
+        .catch(function(){ msg.textContent = 'Temporarily unavailable — please try again later.'; });
+    });
+  });
+}catch(_){}})();
+
 /* ===== Consent Mode v2 (GDPR, 2026-07) =====
    De inline head-snippet zet analytics_storage default op 'denied' voor EEA/UK/CH
    (cookieless pings blijven lopen). Dit blok onthoudt de keuze en toont een

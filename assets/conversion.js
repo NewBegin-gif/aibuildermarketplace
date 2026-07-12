@@ -197,6 +197,16 @@
       try { h = new URL(a.href).hostname.replace(/^(www|try|get|go|join|start|now|refer|partners?|affiliates?|psref)\./,''); } catch(_){}
       var variant = 'A';
       try { variant = localStorage.getItem('aibm_cta_variant') || 'A'; } catch(_){}
+      /* v3: sub-ID-attributie — de pagina-slug reist mee naar het netwerk
+         (Impact: subId1; generiek: sid — onbekende params negeren redirectors).
+         Zo wordt omzet straks per PAGINA zichtbaar, zonder één pagina te herschrijven. */
+      try {
+        var sid = location.pathname.replace(/^\/+|\/+$/g,'').replace(/[^a-zA-Z0-9\/-]/g,'').replace(/\//g,'-').slice(0,60) || 'home';
+        var u = new URL(a.href);
+        if (!u.searchParams.has('subId1')) u.searchParams.set('subId1', sid);
+        if (!u.searchParams.has('sid')) u.searchParams.set('sid', sid);
+        a.href = u.toString();
+      } catch(_){}
       if (window.gtag) gtag('event', 'affiliate_click', {
         partner: h,
         link_url: a.href.split('?')[0],

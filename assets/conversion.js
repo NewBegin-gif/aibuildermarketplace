@@ -183,6 +183,35 @@
   } catch (_) {}
 })();
 
+/* ===== Consent Mode v2 (GDPR, 2026-07) =====
+   De inline head-snippet zet analytics_storage default op 'denied' voor EEA/UK/CH
+   (cookieless pings blijven lopen). Dit blok onthoudt de keuze en toont een
+   minimale, eerlijke banner — alleen voor bezoekers met een Europe/-tijdzone. */
+(function(){try{
+  var KEY='aibm_consent';
+  var keuze=null; try{keuze=localStorage.getItem(KEY);}catch(_){}
+  function upd(v){ try{ if(window.gtag) gtag('consent','update',{analytics_storage:v}); }catch(_){} }
+  if(keuze==='granted'){ upd('granted'); return; }
+  if(keuze==='denied'){ upd('denied'); return; }
+  var eu=false; try{ eu=(Intl.DateTimeFormat().resolvedOptions().timeZone||'').indexOf('Europe/')===0; }catch(_){}
+  if(!eu && !window.__aibmForceConsent) return;
+  function ready(fn){ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fn); else fn(); }
+  ready(function(){
+    if(document.getElementById('aibm-consent')) return;
+    var b=document.createElement('div');
+    b.id='aibm-consent';
+    var bot=(window.innerWidth<=768)?'92px':'14px';
+    b.style.cssText='position:fixed;left:14px;bottom:'+bot+';z-index:10001;max-width:320px;background:#0b0f17;border:1px solid #2a2f3a;border-radius:12px;padding:14px 16px;font-family:system-ui,-apple-system,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.45)';
+    b.innerHTML='<div style="color:#e5e7eb;font-size:12.5px;line-height:1.5;margin-bottom:10px">We use one analytics cookie to see what helps readers. No ads, no data resale.</div>'+
+      '<div style="display:flex;gap:8px"><button id="aibm-c-ok" style="flex:1;background:#10b981;color:#fff;border:none;border-radius:8px;padding:9px 0;font-weight:700;cursor:pointer">OK</button>'+
+      '<button id="aibm-c-no" style="flex:1;background:none;color:#94a3b8;border:1px solid #2a2f3a;border-radius:8px;padding:9px 0;cursor:pointer">Decline</button></div>';
+    document.body.appendChild(b);
+    function kies(v){ try{localStorage.setItem(KEY,v);}catch(_){} upd(v); b.remove(); }
+    document.getElementById('aibm-c-ok').addEventListener('click',function(){kies('granted');});
+    document.getElementById('aibm-c-no').addEventListener('click',function(){kies('denied');});
+  });
+}catch(_){}})();
+
 /* ===== Affiliate click tracking (v2, 2026-06) =====
    Vuurt GA4-event 'affiliate_click' bij klik op elke a[rel~=sponsored].
    Volledig geisoleerd: een fout hier kan de rest van de pagina niet raken. */
@@ -197,6 +226,16 @@
       try { h = new URL(a.href).hostname.replace(/^(www|try|get|go|join|start|now|refer|partners?|affiliates?|psref)\./,''); } catch(_){}
       var variant = 'A';
       try { variant = localStorage.getItem('aibm_cta_variant') || 'A'; } catch(_){}
+      /* v3: sub-ID-attributie — de pagina-slug reist mee naar het netwerk
+         (Impact: subId1; generiek: sid — onbekende params negeren redirectors).
+         Zo wordt omzet straks per PAGINA zichtbaar, zonder één pagina te herschrijven. */
+      try {
+        var sid = location.pathname.replace(/^\/+|\/+$/g,'').replace(/[^a-zA-Z0-9\/-]/g,'').replace(/\//g,'-').slice(0,60) || 'home';
+        var u = new URL(a.href);
+        if (!u.searchParams.has('subId1')) u.searchParams.set('subId1', sid);
+        if (!u.searchParams.has('sid')) u.searchParams.set('sid', sid);
+        a.href = u.toString();
+      } catch(_){}
       if (window.gtag) gtag('event', 'affiliate_click', {
         partner: h,
         link_url: a.href.split('?')[0],

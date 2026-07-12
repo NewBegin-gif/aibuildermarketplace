@@ -188,8 +188,11 @@
    Moderatie filtert alleen spam — kritische reviews worden net zo gepubliceerd. */
 (function(){try{
   var m = location.pathname.match(/^\/b2b\/([a-z0-9-]+)-review\/?$/);
-  if (!m) return;
-  var slug = m[1];
+  var mp = location.pathname.match(/^\/marketplace\/([a-z0-9-]+)\/?$/);
+  if (!m && !mp) return;
+  /* motor 31: op vendor-listings krijgen reviews een eigen mp-namespace,
+     zodat ze nooit mengen met de reviews op onze onafhankelijke dossiers */
+  var slug = m ? m[1] : 'mp-' + mp[1];
   var API = 'https://api.aibuildermarketplace.com';
   function el(tag, css, html){ var e = document.createElement(tag); if (css) e.style.cssText = css; if (html) e.innerHTML = html; return e; }
   function dots(n){ var s=''; for (var i=1;i<=5;i++) s += (i<=n?'●':'○'); return s; }

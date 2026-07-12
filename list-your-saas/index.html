@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-19QLKCM7GB"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}/*cmv2*/gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});gtag('consent','default',{analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});gtag('js',new Date());gtag('config','G-19QLKCM7GB');</script>
+<title>List your SaaS — free during beta | AIBuilder Marketplace</title>
+<meta name="description" content="List your SaaS product on the AIBuilder Marketplace — free during beta. Vendor-written listings, clearly labeled, with reader reviews (critical ones included). That's the honest deal.">
+<link rel="canonical" href="https://aibuildermarketplace.com/list-your-saas/">
+<style>*{box-sizing:border-box}body{margin:0;background:#060a12;color:#e5e7eb;font-family:system-ui,-apple-system,sans-serif;line-height:1.6}
+.nav{border-bottom:1px solid #1e293b;padding:14px 20px}.nav a{color:#e5e7eb;text-decoration:none;font-weight:800}.nav em{color:#818cf8;font-style:normal}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px 60px}h1{font-size:1.8rem;margin:20px 0 6px}
+.muted{color:#94a3b8}label{display:block;font-size:.88rem;color:#94a3b8;margin:14px 0 4px}
+input,textarea,select{width:100%;background:#0b0f17;border:1px solid #1e293b;border-radius:8px;color:#e5e7eb;padding:10px 12px;font-family:inherit;font-size:.95rem}
+button{background:#10b981;color:#fff;border:none;border-radius:9px;padding:13px 28px;font-weight:700;font-size:1rem;cursor:pointer;margin-top:18px}
+.regels{border:1px solid #1e293b;border-left:4px solid #10b981;border-radius:10px;padding:12px 16px;font-size:.88rem;color:#94a3b8;margin:16px 0}</style></head><body>
+<nav class="nav"><a href="/"><em>AIBuilder</em> Marketplace</a></nav>
+<div class="wrap">
+<h1>List your SaaS</h1>
+<p class="muted"><strong style="color:#10b981">Free during beta.</strong> Your listing is vendor-written and clearly labeled as such — our <a href="/atlas/" style="color:#93c5fd">independent dossiers</a> stay independent. Readers can review your product on the listing page, and critical reviews get published just like glowing ones. If you're comfortable with honesty, you'll fit right in.</p>
+<div class="regels">The honest house rules: real pricing (we verify against your site), no invented claims, no fake urgency. Listings that break these get removed. Featured placement may become paid later — the free tier stays.</div>
+<form id="lform">
+  <input name="website" style="display:none" tabindex="-1" autocomplete="off">
+  <label>Product name *</label><input name="name" maxlength="60" required>
+  <label>Tagline (one line)</label><input name="tagline" maxlength="120" placeholder="What it does, in one honest sentence">
+  <label>Category</label>
+  <select name="category"><option>Marketing</option><option>Sales & CRM</option><option>Productivity</option><option>Developer Tools</option><option>Finance & Accounting</option><option>HR & People</option><option>E-commerce</option><option>Communication</option><option>AI & Data</option><option>Design & Content</option><option>Security & Hosting</option><option>Other SaaS</option></select>
+  <label>Description * (min. 80 characters — what it does, who it's for, what makes it different)</label>
+  <textarea name="desc" rows="6" maxlength="1500" required></textarea>
+  <label>Pricing (from) — must match your live pricing page</label><input name="price_from" maxlength="60" placeholder="e.g. Free plan + paid from $19/mo">
+  <label>Website URL *</label><input name="url" maxlength="200" type="url" required placeholder="https://…">
+  <label>Logo URL (direct image link, square works best)</label><input name="logo_url" maxlength="300" type="url">
+  <label>Screenshot URLs (up to 3, comma-separated direct image links)</label><input name="shots" maxlength="900" placeholder="https://…/screen1.png, https://…/screen2.png">
+  <label>Contact e-mail (not published — for listing questions only)</label><input name="email" maxlength="80" type="email">
+  <button type="submit">Submit listing (free)</button>
+  <span id="lmsg" class="muted" style="margin-left:12px;font-size:.9rem"></span>
+</form>
+</div>
+<script>
+document.getElementById('lform').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = this, m = document.getElementById('lmsg');
+  m.textContent = '…';
+  var shots = (f.shots.value || '').split(',').map(function(s){return s.trim();}).filter(function(s){return s.indexOf('http')===0;}).slice(0,3);
+  fetch('https://api.aibuildermarketplace.com/listing', {method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({website:f.website.value, name:f.name.value, tagline:f.tagline.value, category:f.category.value,
+      desc:f.desc.value, price_from:f.price_from.value, url:f.url.value, logo_url:f.logo_url.value, shot_urls:shots, email:f.email.value})})
+  .then(function(r){return r.json();})
+  .then(function(d){ if(d.ok){ f.style.display='none'; m.textContent='✓ ' + (d.msg||'Submitted!'); if(window.gtag) gtag('event','listing_submit',{transport_type:'beacon'}); } else { m.textContent = d.error || 'Something went wrong.'; } })
+  .catch(function(){ m.textContent = 'Temporarily unavailable — try again later.'; });
+});
+</script>
+<script src="/assets/conversion.js" defer></script>
+</body></html>

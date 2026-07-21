@@ -34,12 +34,22 @@
     // Test eerlijke CTA-werkwoorden ("Visit" vs "Try"); winnaar bepalen we later uit
     // GA4 via de param `variant` op affiliate_click. Registreer `variant` als
     // event-scoped custom dimension in GA4 om het in rapporten te zien. ----
-    var CTA_VERB = { A: 'Visit', B: 'Try' };
+    var CTA_VERB = { A: 'Visit', B: 'Try', C: 'See' };
+    /* Epsilon-greedy bandit (Darwin Fase 2): nieuwe bezoekers krijgen met kans
+       1-epsilon de LEADER (best presterende variant), met kans epsilon een
+       willekeurige variant (exploratie). Bestaande bezoekers blijven sticky op
+       hun eerdere variant. De BANDIT-CONFIG-regel hieronder wordt wekelijks
+       bijgewerkt door bandit_update.py (VPS) uit GA4 cro_-events — epsilon 1.0
+       betekent koude start (zuiver uniform verkennen tot er genoeg data is). */
+    var BANDIT = { leader: 'A', epsilon: 1.0, updated: '2026-07-21' }; /* BANDIT-CONFIG */
     var VARIANT = (function(){
       try {
         var v = localStorage.getItem('aibm_cta_variant');
         if (v && CTA_VERB[v]) return v;
-        v = Math.random() < 0.5 ? 'A' : 'B';
+        if (Math.random() < BANDIT.epsilon) {
+          var ks = Object.keys(CTA_VERB);
+          v = ks[Math.floor(Math.random() * ks.length)];
+        } else { v = BANDIT.leader; }
         localStorage.setItem('aibm_cta_variant', v);
         return v;
       } catch (_) { return 'A'; }
@@ -100,17 +110,34 @@
         }
       } catch (_) {}
 
+      // A/B: pas het CTA-werkwoord toe op de homepage-kaartknoppen. Staat
+      // bewust VÓÓR de ctaLink-return: findCTA() draait bij script-parse en
+      // vindt op de homepage nog niets (kaarten bestaan dan nog niet), waardoor
+      // deze vervanging anders nooit draaide (gevonden bij bandit-test 21 jul).
+      // De homepage-widget rendert kaarten bovendien NA ready(), dus een
+      // MutationObserver houdt ook later toegevoegde knoppen consistent.
+      try {
+        var applyVerb = function () {
+          document.querySelectorAll('a.tool-cta-primary').forEach(function (a) {
+            if (a.firstChild && a.firstChild.nodeType === 3) {
+              a.firstChild.nodeValue = a.firstChild.nodeValue.replace(/^\s*(Visit|Try|See)\b/, ctaVerb());
+            }
+          });
+        };
+        applyVerb();
+        if (window.MutationObserver) {
+          var mo = new MutationObserver(function (muts) {
+            for (var i = 0; i < muts.length; i++) {
+              if (muts[i].addedNodes && muts[i].addedNodes.length) { applyVerb(); return; }
+            }
+          });
+          mo.observe(document.body, { childList: true, subtree: true });
+          setTimeout(function(){ try { mo.disconnect(); } catch(_){} }, 15000);
+        }
+      } catch (_) {}
+
       if (!ctaLink) return;
       var btnTxt = (tool ? ctaVerb() + ' ' + tool : 'See the offer') + ' →';
-
-      // A/B: pas het CTA-werkwoord toe op de homepage-kaartknoppen (variant B → "Try")
-      try {
-        document.querySelectorAll('a.tool-cta-primary').forEach(function (a) {
-          if (a.firstChild && a.firstChild.nodeType === 3) {
-            a.firstChild.nodeValue = a.firstChild.nodeValue.replace(/^\s*(Visit|Try)\b/, ctaVerb());
-          }
-        });
-      } catch (_) {}
 
       // 2) Sticky CTA — mobiel: onderbalk; desktop: zwevende pill. Beide dismissbaar.
       try {
@@ -309,7 +336,10 @@
          (Impact: subId1; generiek: sid — onbekende params negeren redirectors).
          Zo wordt omzet straks per PAGINA zichtbaar, zonder één pagina te herschrijven. */
       try {
-        var sid = location.pathname.replace(/^\/+|\/+$/g,'').replace(/[^a-zA-Z0-9\/-]/g,'').replace(/\//g,'-').slice(0,60) || 'home';
+        /* Bandit-meting: de CTA-variant reist als suffix mee in de sub-ID
+           (…-va/-vb/-vc), zodat kliks per variant in de netwerk-data zichtbaar
+           worden naast de GA4 cro_-events. */
+        var sid = (location.pathname.replace(/^\/+|\/+$/g,'').replace(/[^a-zA-Z0-9\/-]/g,'').replace(/\//g,'-').slice(0,56) || 'home') + '-v' + String(variant).toLowerCase().slice(0,1);
         var u = new URL(a.href);
         if (!u.searchParams.has('subId1')) u.searchParams.set('subId1', sid);
         if (!u.searchParams.has('sid')) u.searchParams.set('sid', sid);

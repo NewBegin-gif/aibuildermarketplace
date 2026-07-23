@@ -58,6 +58,8 @@ button{background:#10b981;color:#fff;border:none;border-radius:9px;padding:13px 
   <label>Website URL *</label><input name="url" maxlength="200" type="url" required placeholder="https://…">
   <label>Logo URL (direct image link, square works best)</label><input name="logo_url" maxlength="300" type="url">
   <label>Screenshot URLs (up to 3, comma-separated direct image links)</label><input name="shots" maxlength="900" placeholder="https://…/screen1.png, https://…/screen2.png">
+  <label>Exclusive AIBM reader code (optional — a real discount for our readers makes your listing stand out; we display it prominently)</label><input name="coupon_code" maxlength="40" placeholder="e.g. AIBM20" style="text-transform:uppercase">
+  <label>What the code gives (be precise — we publish offers exactly as they are, including when the normal rate returns)</label><input name="coupon_deal" maxlength="160" placeholder="e.g. 20% off the first 3 months of the Pro plan">
   <label>Contact e-mail (not published — for listing questions only)</label><input name="email" maxlength="80" type="email">
   <button type="submit">Submit listing (free)</button>
   <span id="lmsg" class="muted" style="margin-left:12px;font-size:.9rem"></span>
@@ -71,7 +73,8 @@ document.getElementById('lform').addEventListener('submit', function(e){
   var shots = (f.shots.value || '').split(',').map(function(s){return s.trim();}).filter(function(s){return s.indexOf('http')===0;}).slice(0,3);
   fetch('https://api.aibuildermarketplace.com/listing', {method:'POST', headers:{'Content-Type':'application/json'},
     body: JSON.stringify({website:f.website.value, name:f.name.value, tagline:f.tagline.value, category:f.category.value,
-      desc:f.desc.value, price_from:f.price_from.value, url:f.url.value, logo_url:f.logo_url.value, shot_urls:shots, email:f.email.value})})
+      desc:f.desc.value, price_from:f.price_from.value, url:f.url.value, logo_url:f.logo_url.value, shot_urls:shots, email:f.email.value,
+      coupon_code:(f.coupon_code.value||'').toUpperCase().trim(), coupon_deal:f.coupon_deal.value})})
   .then(function(r){return r.json();})
   .then(function(d){ if(d.ok){ f.style.display='none'; m.textContent='✓ ' + (d.msg||'Submitted!'); if(window.gtag) gtag('event','listing_submit',{transport_type:'beacon'}); } else { m.textContent = d.error || 'Something went wrong.'; } })
   .catch(function(){ m.textContent = 'Temporarily unavailable — try again later.'; });

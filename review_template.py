@@ -362,7 +362,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ 评分，{price}。{tagline}。诚实的创始人评测，含优点、缺点和投资回报率。",
+        "meta_description": "{title} —{price}。{tagline}。诚实的创始人评测，含优点、缺点和投资回报率。",
     },
     "ko": {
         "cta_main": "Try {brand} →",
@@ -387,7 +387,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ 평가, {price}. {tagline}. 장단점과 ROI를 담은 솔직한 창업자 리뷰.",
+        "meta_description": "{title} —{price}. {tagline}. 장단점과 ROI를 담은 솔직한 창업자 리뷰.",
     },
     "hi": {
         "cta_main": "Try {brand} →",
@@ -412,7 +412,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ रेटिंग, {price}. {tagline}. फायदे, नुकसान और ROI के साथ ईमानदार संस्थापक समीक्षा।",
+        "meta_description": "{title} —{price}. {tagline}. फायदे, नुकसान और ROI के साथ ईमानदार संस्थापक समीक्षा।",
     },
     "ar": {
         "cta_main": "Try {brand} →",
@@ -437,7 +437,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ تقييم، {price}. {tagline}. مراجعة صادقة من المؤسس مع الإيجابيات والسلبيات والعائد على الاستثمار.",
+        "meta_description": "{title} —{price}. {tagline}. مراجعة صادقة من المؤسس مع الإيجابيات والسلبيات والعائد على الاستثمار.",
     },
     "th": {
         "cta_main": "Try {brand} →",
@@ -462,7 +462,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ คะแนน, {price}. {tagline}. รีวิวจากผู้ก่อตั้งอย่างตรงไปตรงมา พร้อมข้อดี ข้อเสีย และ ROI",
+        "meta_description": "{title} —{price}. {tagline}. รีวิวจากผู้ก่อตั้งอย่างตรงไปตรงมา พร้อมข้อดี ข้อเสีย และ ROI",
     },
     "ru": {
         "cta_main": "Try {brand} →",
@@ -487,7 +487,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — оценка {rating}★, {price}. {tagline}. Честный обзор от основателя с плюсами, минусами и ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Честный обзор от основателя с плюсами, минусами и ROI.",
     },
     "cs": {
         "cta_main": "Try {brand} →",
@@ -512,7 +512,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — hodnocení {rating}★, {price}. {tagline}. Upřímná recenze zakladatele s klady, zápory a ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Upřímná recenze zakladatele s klady, zápory a ROI.",
     },
     "fi": {
         "cta_main": "Try {brand} →",
@@ -537,7 +537,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ arvio, {price}. {tagline}. Rehellinen perustajan arvostelu: hyödyt, haitat ja ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Rehellinen perustajan arvostelu: hyödyt, haitat ja ROI.",
     },
     "el": {
         "cta_main": "Try {brand} →",
@@ -562,7 +562,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — βαθμολογία {rating}★, {price}. {tagline}. Ειλικρινής κριτική ιδρυτή με πλεονεκτήματα, μειονεκτήματα και ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Ειλικρινής κριτική ιδρυτή με πλεονεκτήματα, μειονεκτήματα και ROI.",
     },
     "hu": {
         "cta_main": "Try {brand} →",
@@ -587,7 +587,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ értékelés, {price}. {tagline}. Őszinte alapítói értékelés előnyökkel, hátrányokkal és ROI-val.",
+        "meta_description": "{title} —{price}. {tagline}. Őszinte alapítói értékelés előnyökkel, hátrányokkal és ROI-val.",
     },
     "ro": {
         "cta_main": "Try {brand} →",
@@ -612,7 +612,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — evaluare {rating}★, {price}. {tagline}. Recenzie sinceră a fondatorului cu avantaje, dezavantaje și ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Recenzie sinceră a fondatorului cu avantaje, dezavantaje și ROI.",
     },
     "sw": {
         "cta_main": "Try {brand} →",
@@ -637,7 +637,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — kiwango {rating}★, {price}. {tagline}. Mapitio ya kweli ya mwanzilishi yenye faida, hasara na ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Mapitio ya kweli ya mwanzilishi yenye faida, hasara na ROI.",
     },
     "ha": {
         "cta_main": "Try {brand} →",
@@ -662,7 +662,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — kima {rating}★, {price}. {tagline}. Sahihin bita daga wanda ya kafa: fa'idodi, illa da ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Sahihin bita daga wanda ya kafa: fa'idodi, illa da ROI.",
     },
     "yo": {
         "cta_main": "Try {brand} →",
@@ -687,7 +687,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — ìdíwọ̀n {rating}★, {price}. {tagline}. Àtúnyẹ̀wò olódodo láti ọ̀dọ̀ olùdásílẹ̀: àǹfààní, àìní àti ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Àtúnyẹ̀wò olódodo láti ọ̀dọ̀ olùdásílẹ̀: àǹfààní, àìní àti ROI.",
     },
     "am": {
         "cta_main": "Try {brand} →",
@@ -712,7 +712,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ ደረጃ, {price}. {tagline}. ከመስራቹ ሐቀኛ ግምገማ ከጥቅሞች፣ ጉዳቶች እና ROI ጋር።",
+        "meta_description": "{title} —{price}. {tagline}. ከመስራቹ ሐቀኛ ግምገማ ከጥቅሞች፣ ጉዳቶች እና ROI ጋር።",
     },
     "af": {
         "cta_main": "Try {brand} →",
@@ -737,7 +737,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — {rating}★ gradering, {price}. {tagline}. Eerlike stigter-resensie met voordele, nadele en ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Eerlike stigter-resensie met voordele, nadele en ROI.",
     },
     "zu": {
         "cta_main": "Try {brand} →",
@@ -762,7 +762,7 @@ LABELS = {
         "disclosure": "We may earn a commission when you sign up via the links on this page — at no extra cost to you. Our reviews remain independent and based on hands-on testing.",
         "last_updated": "Last updated",
         "reading_time": "min read",
-        "meta_description": "{title} — isilinganiso {rating}★, {price}. {tagline}. Ukubuyekezwa okuqotho komsunguli: izinzuzo, ububi ne-ROI.",
+        "meta_description": "{title} —{price}. {tagline}. Ukubuyekezwa okuqotho komsunguli: izinzuzo, ububi ne-ROI.",
     },
 
     "en": {
@@ -1021,7 +1021,7 @@ def build_article_html_v2(title, content, brand1, slug, schema_json, internal_li
 
     # Meta description
     description = (
-        f"{title} — {aff['rating']}★ rating, {aff['price']}. "
+        f"{title} — {aff['price']}. "
         f"{aff['tagline']}. Honest founder review with pros, cons and ROI."
     )[:160]
 

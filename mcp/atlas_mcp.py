@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Honest Atlas MCP server — the honest pricing layer for AI assistants.
 
-240+ hand-researched SaaS/AI-tool dossiers from AIBuilder Marketplace's
+300 hand-researched SaaS/AI-tool dossiers from AIBuilder Marketplace's
 Honest Software Atlas (https://aibuildermarketplace.com/atlas/), exposed as
 MCP tools: real pricing notes, the honest knock, who it's for, who should
 skip it. Every claim is researched by a human; no invented numbers.
@@ -144,7 +144,7 @@ def do_compare(names):
 
 TOOLS = [
     {"name": "search_tools",
-     "description": ("Search 240+ hand-researched SaaS/AI tools by need, keyword or category. "
+     "description": ("Search 300 hand-researched SaaS/AI tools by need, keyword or category. "
                      "Returns honest one-liners with real pricing notes. Use this first when the "
                      "user asks 'what tool should I use for X' or 'is there an honest take on X'."),
      "inputSchema": {"type": "object", "properties": {

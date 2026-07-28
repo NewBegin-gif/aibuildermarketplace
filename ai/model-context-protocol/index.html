@@ -93,9 +93,17 @@ footer{border-top:1px solid var(--border);padding:26px 24px;text-align:center;co
 .tcard:hover{transform:translateY(-2px);border-color:#3b82f6}
 .tcard::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,#3b82f6,#a78bfa)}
 .tcard .ico{flex:none;width:44px;height:44px;border-radius:12px;background:rgba(59,130,246,.13);border:1px solid rgba(59,130,246,.25);display:flex;align-items:center;justify-content:center}
-.tcard h3{margin:0 0 4px;font-size:1.08rem;color:var(--text)}
+.tcard h3{margin:0 0 4px;font-size:1.08rem}
+.tcard h3 a{color:var(--text)}
+.tcard h3 a:hover{color:#93c5fd;text-decoration:none}
 .tcard p{margin:0;font-size:.9rem}
 .mini{font-size:.76rem;color:var(--muted);margin-top:7px}
+.tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:11px}
+.tools a{display:inline-flex;width:28px;height:28px;border-radius:7px;background:#fff;align-items:center;justify-content:center;overflow:hidden;flex:none}
+.tools a:hover{outline:2px solid #3b82f6;outline-offset:1px}
+.tools a img{max-width:74%;max-height:74%;object-fit:contain}
+.tools .more{font-size:.75rem;color:var(--muted);font-weight:700;padding-left:2px}
+.tools-lbl{font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;width:100%;margin-bottom:-2px}
 @media(max-width:640px){.wrap{padding:12px 16px 60px}.nav-in{padding:0 16px}h2{font-size:1.24rem}.hero{padding:20px 18px}.figw{padding:10px;border-radius:14px}}</style></head><body>
 <nav class="nav"><div class="nav-in"><a href="/" class="logo-t"><em>AIBuilder</em> Marketplace</a><div><a href="/ai/">AI</a><a href="/atlas/">Atlas</a><a href="/b2b/">Reviews</a><a href="/data/">Data</a><a href="/mcp/">Our MCP</a></div></div></nav><div class="wrap">
 <div class="bc"><a href="/">Home</a> &rsaquo; <a href="/ai/">AI</a> &rsaquo; Model Context Protocol</div>
@@ -277,6 +285,11 @@ publishes an MCP server. The rule was strict: it counts only if it is documented
 servers on GitHub — and there are hundreds, some excellent — do not count here, because you cannot hold a weekend
 project to an uptime promise. Several well-known tools failed that test: there are popular third-party MCP servers for
 Pipedrive, Aircall, Toggl Track and Kinsta, but nothing first-party we could find, so they are not in this list.</p>
+<div class="warn"><b>One disclosure that belongs here, not in the small print.</b> Claude appears throughout this
+article as the example client, because it is what we use. Anthropic also created MCP — and Claude is a partner of
+ours, with an affiliate link we earn from elsewhere on this site. We have deliberately left that link out of this
+article. An article about a protocol, carrying a commission link to the company that invented it, would read like an
+advertisement whatever the intent. Cursor, ChatGPT and the other clients named here are not partners of ours at all.</div>
 <p>35 passed. Each card below states what the server actually does, and what the vendor says about plan and price —
 in their words, with a link to the page we took it from. Where they say nothing, we say "not stated".</p>
 

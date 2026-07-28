@@ -18,7 +18,7 @@ B2B_PATH = os.path.join(REPO_ROOT, "b2b")
 VAULT = {
     "Kinsta": "https://kinsta.com/?kaid=EKSCJEFWBYJO",
     "Synthesia": "https://www.synthesia.io/?via=daniel-haket",
-    "InVideo": "https://invideo.sjv.io/E00nbn",
+    "InVideo": "https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F",
     "Replit": "https://replit.com/signup?referral=dglhaket",
     "Bitvavo": "https://account.bitvavo.com/create?a=68DCE39715",
     "Murf": "https://get.murf.ai/qbhzdrcv3l7x",

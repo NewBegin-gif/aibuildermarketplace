@@ -13,8 +13,8 @@ REPO_B2B = "/root/felix_hq/repos/aibuildermarketplace/b2b"
 VAULT = {
     "Bitvavo": "https://account.bitvavo.com/create?a=68DCE39715&pid=invite&c=referral",
     "Replit": "https://replit.com/signup?referral=dglhaket",
-    "InVideo": "https://invideo.sjv.io/E00nbn",
-    "Invideo": "https://invideo.sjv.io/E00nbn",
+    "InVideo": "https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F",
+    "Invideo": "https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F",
     "Synthesia": "https://www.synthesia.io/?via=daniel-haket",
     "Kinsta": "https://kinsta.com/?kaid=EKSCJEFWBYJO",
     "Clay": "https://www.clay.com",

@@ -98,7 +98,7 @@ AFFILIATE = {
         "category": "AI Video",
     },
     "InVideo": {
-        "url": "https://invideo.sjv.io/E00nbn",
+        "url": "https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F",
         "rating": "4.6",
         "reviews": "12,400",
         "price": "From $20/mo",
@@ -109,7 +109,7 @@ AFFILIATE = {
         "category": "AI Video",
     },
     "Invideo": {
-        "url": "https://invideo.sjv.io/E00nbn",
+        "url": "https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F",
         "rating": "4.6",
         "reviews": "12,400",
         "price": "From $20/mo",

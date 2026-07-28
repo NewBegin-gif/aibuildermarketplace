@@ -56,7 +56,7 @@ else:
 VAULT = {
     "Bitvavo": "https://account.bitvavo.com/create?a=68DCE39715",
     "Replit": "https://replit.com/signup?referral=dglhaket",
-    "InVideo": "https://invideo.sjv.io/E00nbn",
+    "InVideo": "https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F",
     "Synthesia": "https://www.synthesia.io/?via=daniel-haket",
     "Kinsta": "https://kinsta.com/?kaid=EKSCJEFWBYJO",
     "Murf": "https://get.murf.ai/qbhzdrcv3l7x",
@@ -172,7 +172,7 @@ Je stopt NOOIT na "het lukt niet". Je bent een engineer — je lost het op.
 ## AFFILIATES
 - Kinsta (hosting): https://kinsta.com/?kaid=EKSCJEFWBYJO
 - Synthesia (AI video): https://www.synthesia.io/?via=daniel-haket
-- InVideo (video): https://invideo.sjv.io/E00nbn
+- InVideo (video): https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F
 - Replit (coding): https://replit.com/signup?referral=dglhaket
 - Bitvavo (crypto): https://account.bitvavo.com/create?a=68DCE39715
 - Murf (AI voice): https://get.murf.ai/qbhzdrcv3l7x
@@ -11170,7 +11170,7 @@ DESIGN REQUIREMENTS:
 AFFILIATES:
 - Kinsta: https://kinsta.com/?kaid=EKSCJEFWBYJO
 - Synthesia: https://www.synthesia.io/?via=daniel-haket
-- InVideo: https://invideo.sjv.io/E00nbn
+- InVideo: https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F
 - Replit: https://replit.com/signup?referral=dglhaket
 - Bitvavo: https://account.bitvavo.com/create?a=68DCE39715
 - Murf: https://get.murf.ai/qbhzdrcv3l7x

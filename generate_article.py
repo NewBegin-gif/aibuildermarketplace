@@ -10,7 +10,7 @@ DOMAIN_B2B = f"{DOMAIN}/b2b"
 VAULT = {
     "Bitvavo": "https://account.bitvavo.com/create?a=68DCE39715&pid=invite&c=referral",
     "Replit": "https://replit.com/signup?referral=dglhaket",
-    "Invideo": "https://invideo.sjv.io/E00nbn",
+    "Invideo": "https://invideo.sjv.io/E00nbn?u=https%3A%2F%2Finvideo.io%2Fmake%2Fai-video-generator%2F",
     "Synthesia": "https://www.synthesia.io/?via=daniel-haket",
     "Kinsta": "https://kinsta.com/?kaid=EKSCJEFWBYJO",
     "Murf": "https://get.murf.ai/qbhzdrcv3l7x",

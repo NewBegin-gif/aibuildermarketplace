@@ -112,7 +112,9 @@ button{font-family:inherit;cursor:pointer}
 .nav-logo{font-weight:800;font-size:.95rem;letter-spacing:-.01em;color:var(--text);white-space:nowrap}
 .nav-logo b{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .nav-links{display:flex;align-items:center;gap:28px}
-.nav-links a{color:var(--text-2);font-size:.92rem;font-weight:500;transition:color .15s}
+.nav-links a{color:var(--text-2);font-size:.92rem;font-weight:500;white-space:nowrap;transition:color .15s}
+/*navfix*/@media(max-width:1100px){.nav-links a.nav-cta{display:none}}
+/*navfix*/.nav-dd-menu{left:auto !important;right:0}
 .nav-dd{position:relative}
 .nav-dd-toggle{cursor:pointer}
 .nav-dd-menu{position:absolute;top:100%;left:0;margin-top:6px;background:#0d1117;border:1px solid #1e293b;border-radius:10px;padding:8px;min-width:180px;display:none;flex-direction:column;gap:2px;z-index:300;box-shadow:0 12px 30px rgba(0,0,0,.45)}
@@ -293,7 +295,10 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
  .nav-links::-webkit-scrollbar{display:none}
  .nav-links a{font-size:.78rem;margin-left:12px;flex-shrink:0}
  .nav-links a.nav-cta{display:none}
- .nav-links .nav-dd{display:none}
+ .nav-links .nav-dd{display:contents}
+ .nav-links .nav-dd-toggle{display:none}
+ .nav-links .nav-dd-menu{display:contents !important;position:static;background:none;border:0;box-shadow:none;padding:0;margin:0}
+ .nav-links .nav-dd-menu a{padding:0;border-radius:0;font-size:.78rem;margin-left:12px;flex-shrink:0}
  .hero{padding:130px 24px 60px}
  .stats-inner{grid-template-columns:repeat(2,1fr)}
  .stat-item:nth-child(2){border-right:none}
@@ -342,13 +347,9 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
    <a href="/finder/">Find your tool</a>
    <a href="/b2b/">Reviews</a>
    <a href="/best/">Best Tools</a>
+   <a href="/ai/">AI explained</a>
    <a href="/tools/">Free Tools</a>
-   <a href="/atlas/">Atlas</a>
-   <a href="/ai/">AI</a>
-   <a href="/roadmap/">AI Roadmap</a>
-   <a href="/alternatives/">Alternatives</a>
-   <a href="/guides/">Guides</a>
-   <a href="/about/">About</a>
+   <span class="nav-dd"><a class="nav-dd-toggle" href="/atlas/">Research &#9662;</a><span class="nav-dd-menu"><a href="/atlas/">Atlas</a><a href="/alternatives/">Alternatives</a><a href="/guides/">Guides</a><a href="/roadmap/">AI Roadmap</a></span></span>
    <a href="/b2b/" class="nav-cta">Browse 300+ Honest Reviews</a>
   </div>
  </div>
@@ -971,6 +972,31 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
   <a class="tr-link" href="/b2b/beehiiv-pricing-en/"><b>Beehiiv pricing &rarr;</b><span>What the newsletter platform really costs</span></a>
   <a class="tr-link" href="/b2b/gamma-pricing-en/"><b>Gamma pricing &rarr;</b><span>What the AI deck-builder really costs</span></a>
   <a class="tr-link" href="/b2b/chemicloud-pricing-en/"><b>ChemiCloud pricing &rarr;</b><span>Managed hosting value, broken down</span></a>
+ </div>
+</section>
+<section class="section" id="ai-explained" style="padding-top:20px">
+ <style>
+  .aix-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;max-width:1100px;margin:0 auto}
+  @media(max-width:860px){.aix-grid{grid-template-columns:1fr}}
+  .aixc{display:flex;flex-direction:column;padding:18px 20px;border:1px solid #1e293b;border-radius:14px;background:rgba(255,255,255,.02);text-decoration:none;transition:border-color .2s,transform .2s}
+  .aixc:hover{border-color:#3b82f6;transform:translateY(-2px)}
+  .aixc .k{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:7px}
+  .aixc b{color:#f1f5f9;font-weight:700;font-size:1rem;margin-bottom:6px;line-height:1.3}
+  .aixc .d{color:#94a3b8;font-size:.85rem;margin-bottom:12px;flex-grow:1}
+  .aixc .go{color:#60a5fa;font-weight:700;font-size:.85rem}
+  .aixc.lead b{font-size:1.18rem}
+  .aixc.all{align-items:center;justify-content:center;text-align:center;border-style:dashed}
+  .aixc.all b{font-size:1.05rem;margin:0}
+ </style>
+ <div class="section-header fade-in">
+  <span class="section-tag">AI, explained</span>
+  <h2>Understand the plumbing before you buy</h2>
+  <p>The parts of AI infrastructure that actually change a software decision &mdash; written from running them ourselves, not from a press release. Beginner-readable, and still useful if you build.</p>
+ </div>
+ <div class="aix-grid fade-in">
+  <a class="aixc lead" href="/ai/model-context-protocol/"><span class="k" style="color:#3b82f6">Model Context Protocol</span><b>MCP, explained properly &mdash; and the 35 tools we partner with that ship one</b><span class="d">What MCP actually does, drawn out rather than described. We checked all 300 tools in our database against their own docs: 35 publish a first-party MCP server &mdash; and 21 of them say nothing at all about what it costs.</span><span class="go">Read the guide &rarr;</span></a>
+  <a class="aixc" href="/mcp/"><span class="k" style="color:#a78bfa">Our own server</span><b>Give your AI our honest pricing data</b><span class="d">A free MCP server: 300 hand-researched dossiers, real prices, the honest knock. Runs locally, no account.</span><span class="go">Install in 30s &rarr;</span></a>
+  <a class="aixc all" href="/ai/"><b>Browse the AI section &rarr;</b></a>
  </div>
 </section>
 <section class="section" id="blueprints" style="padding-top:20px">

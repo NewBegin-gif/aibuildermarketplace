@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}/*cmv2*/gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});gtag('consent','default',{analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});gtag('js',new Date());gtag('config','G-CW1KZ258ZV');</script>
+<title>llms.txt, explained by someone who publishes one (2026)</title>
+<meta name="description" content="What llms.txt is, what it is not, and what we learned from running one across six sites — including the honest answer on whether it does anything.">
+<link rel="canonical" href="https://aibuildermarketplace.com/ai/llms-txt/">
+<meta property="og:title" content="llms.txt, explained by someone who publishes one (2026)"><meta property="og:description" content="What llms.txt is, what it is not, and what we learned from running one across six sites — including the honest answer on whether it does anything.">
+<meta property="og:url" content="https://aibuildermarketplace.com/ai/llms-txt/"><meta property="og:type" content="article">
+<meta property="og:image" content="https://aibuildermarketplace.com/og/aibm-default.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "llms.txt, explained by someone who publishes one (2026)", "description": "What llms.txt is, what it is not, and what we learned from running one across six sites — including the honest answer on whether it does anything.", "datePublished": "2026-07-28", "dateModified": "2026-07-28", "mainEntityOfPage": "https://aibuildermarketplace.com/ai/llms-txt/", "author": {"@type": "Person", "@id": "https://aibuildermarketplace.com/about/#daan", "name": "Daniel Haket"}, "publisher": {"@type": "Organization", "name": "AIBuilder Marketplace"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is llms.txt?", "acceptedAnswer": {"@type": "Answer", "text": "A plain-text file at the root of your site that tells AI assistants what the site is, which pages are worth citing and how to attribute you. It is a proposed convention, not a standard anyone enforces — think robots.txt in spirit, but written for reading rather than crawling permission."}}, {"@type": "Question", "name": "Does llms.txt actually do anything?", "acceptedAnswer": {"@type": "Answer", "text": "Honestly: nobody outside the AI labs can prove it. No major assistant documents llms.txt as a ranking or retrieval input. What we can say is that it costs almost nothing to publish, it forces you to write down what you would want cited, and that exercise improved our own pages. We would not spend a week on it."}}, {"@type": "Question", "name": "Is llms.txt the same as an MCP server?", "acceptedAnswer": {"@type": "Answer", "text": "No, and the difference matters. llms.txt is passive: a file an assistant may read if it happens to fetch it. An MCP server is active: the assistant connects and asks questions, and you answer in real time. One is a note on the door; the other is a doorbell."}}, {"@type": "Question", "name": "What should go in it?", "acceptedAnswer": {"@type": "Answer", "text": "The claims you are willing to stand behind, with links. Ours lists our best-of guides, the reviews Daan actually tested hands-on (kept separate from the researched ones), the machine-readable catalogs and the attribution line. What should not go in it: everything. A file that lists every page is a sitemap, and you already have one."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aibuildermarketplace.com"}, {"@type": "ListItem", "position": 2, "name": "AI", "item": "https://aibuildermarketplace.com/ai/"}, {"@type": "ListItem", "position": 3, "name": "llms.txt", "item": "https://aibuildermarketplace.com/ai/llms-txt/"}]}</script><style>*,*::before,*::after{box-sizing:border-box}
+:root{--bg:#0a0a0a;--card:#141414;--card2:#1a1a1a;--border:#262626;--text:#fafafa;--text2:#a3a3a3;--muted:#737373;--accent:#3b82f6;--violet:#a78bfa;--green:#22c55e;--amber:#f59e0b}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.72;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.nav{border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);z-index:60}
+.nav-in{max-width:1180px;margin:0 auto;height:56px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.nav a{color:var(--text2);font-size:.85rem;font-weight:600;margin-left:16px}
+.logo-t{font-weight:800!important;font-size:.95rem!important;letter-spacing:-.01em;color:var(--text);white-space:nowrap;margin-left:0!important}
+.logo-t em{font-style:normal;background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.wrap{max-width:860px;margin:0 auto;padding:16px 24px 80px}
+.bc{font-size:.79rem;color:var(--muted);margin:14px 0 4px}
+.pill{display:inline-block;background:rgba(59,130,246,.12);color:#93c5fd;border:1px solid rgba(59,130,246,.28);padding:5px 14px;border-radius:20px;font-weight:700;font-size:.72rem;letter-spacing:.04em}
+h1{font-size:clamp(1.85rem,4.6vw,2.75rem);font-weight:900;letter-spacing:-.025em;line-height:1.13;margin:14px 0 12px}
+h1 .grad{background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h2{font-size:1.42rem;font-weight:800;letter-spacing:-.015em;margin:44px 0 12px;padding-bottom:9px;border-bottom:1px solid var(--border)}
+h3{font-size:1.06rem;font-weight:700;margin:26px 0 6px}
+p,li{color:var(--text2)}
+.lede{color:#d4d4d8;font-size:1.09rem;max-width:760px}
+.qa{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-left:4px solid var(--green);border-radius:14px;padding:16px 20px;margin:18px 0 8px}
+.qa b{color:var(--text)}
+.box{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin:18px 0}
+.figw{background:radial-gradient(120% 120% at 20% 0%,#16161c,#0f0f12);border:1px solid var(--border);border-radius:18px;padding:14px;margin:22px 0 8px;overflow:hidden}
+.fig{display:block;width:100%;height:auto}
+figcaption,.figc{color:var(--muted);font-size:.8rem;margin:0 0 22px;padding:0 4px}
+pre{background:#0c0c0f;border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-size:.79rem;line-height:1.62;overflow-x:auto;color:#d4d4d8;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre b{color:#93c5fd;font-weight:700}pre i{color:#6ee7b7;font-style:normal}
+code{background:#141414;border:1px solid var(--border);border-radius:6px;padding:1px 6px;font-size:.86em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+details.jar{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:0;margin:9px 0}
+details.jar summary{cursor:pointer;padding:11px 16px;font-weight:700;color:var(--text);font-size:.93rem;list-style:none;display:flex;align-items:center;gap:9px}
+details.jar summary::-webkit-details-marker{display:none}
+details.jar summary::before{content:"?";flex:none;width:19px;height:19px;border-radius:6px;background:rgba(59,130,246,.16);color:#93c5fd;font-size:.72rem;font-weight:800;display:flex;align-items:center;justify-content:center}
+details.jar[open] summary{border-bottom:1px solid var(--border)}
+details.jar .jb{padding:12px 16px 14px;color:var(--text2);font-size:.92rem}
+.tblw{overflow-x:auto;border:1px solid var(--border);border-radius:14px;margin:18px 0}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:660px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;font-weight:800;background:#101013;position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+.lg{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:#fff;overflow:hidden;flex:none;vertical-align:middle;margin-right:9px}
+.lg img{max-width:74%;max-height:74%;object-fit:contain;display:block}
+.lg span{font-weight:800;color:#0f172a;font-size:.8rem}
+.tcell{display:flex;align-items:center;gap:2px;min-width:150px}
+.tcell .pn{display:block;line-height:1.3}
+a.dos{display:block;font-size:.76rem;font-weight:600;margin-top:1px}
+.pn{font-weight:800;color:var(--text);display:inline-block;vertical-align:middle}
+.tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.04em;padding:2px 7px;border-radius:5px;text-transform:uppercase}
+.t-live{background:rgba(34,197,94,.14);color:#86efac}
+.t-beta{background:rgba(245,158,11,.14);color:#fcd34d}
+.t-gate{background:rgba(239,68,68,.13);color:#fca5a5}
+.t-none{background:#27272a;color:#a1a1aa}
+.pcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:12px;margin:18px 0}
+.pc{background:linear-gradient(180deg,#17171b,#121215);border:1px solid var(--border);border-radius:15px;padding:15px 16px;position:relative;overflow:hidden}
+.pc::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,#3b82f6,#a78bfa)}
+.pc-h{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.pc-w{font-size:.85rem;color:var(--text2);margin:0 0 10px}
+.pc-p{font-size:.79rem;color:#d4d4d8;background:#0e0e11;border:1px solid var(--border);border-radius:9px;padding:8px 10px;margin:0 0 10px}
+.pc-p b{color:var(--text)}
+.pc-l{display:flex;flex-wrap:wrap;gap:8px;font-size:.77rem;font-weight:700}
+.pc-l a{padding:5px 10px;border-radius:8px;border:1px solid var(--border);background:#0e0e11}
+.pc-l a.aff{background:linear-gradient(135deg,#3b82f6,#6366f1);color:#fff;border-color:transparent}
+.verd{background:linear-gradient(180deg,#16211a,#111814);border:1px solid rgba(34,197,94,.3);border-left:4px solid var(--green);border-radius:14px;padding:16px 20px;margin:16px 0}
+.verd h3{margin:0 0 4px;color:#86efac;font-size:.98rem}
+.verd p{margin:0 0 14px}
+.warn{background:linear-gradient(180deg,#221a12,#181410);border:1px solid rgba(245,158,11,.28);border-left:4px solid var(--amber);border-radius:14px;padding:16px 20px;margin:18px 0}
+.warn b{color:#fcd34d}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:16px 0}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:14px 16px}
+.stat b{display:block;font-size:1.6rem;font-weight:900;color:var(--text);line-height:1.1;letter-spacing:-.02em}
+.stat span{font-size:.81rem;color:var(--muted)}
+.disc{color:var(--muted);font-size:.81rem;margin-top:30px;border-top:1px solid var(--border);padding-top:16px}
+footer{border-top:1px solid var(--border);padding:26px 24px;text-align:center;color:var(--muted);font-size:.81rem}
+.nl{background:linear-gradient(180deg,#1a1a1a,#141414);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:14px;padding:18px 20px;margin:30px 0 0}
+.nl b{color:var(--text)}
+.nl form{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.nl input{flex:1 1 200px;min-width:170px;padding:11px 14px;border-radius:9px;border:1px solid var(--border);background:#0a0a0a;color:var(--text);font-size:.92rem;font-family:inherit}
+.nl button{padding:11px 22px;border-radius:9px;border:0;background:linear-gradient(135deg,#3b82f6,#a78bfa);color:#fff;font-weight:800;font-size:.9rem;cursor:pointer;font-family:inherit}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 20px;margin:20px 0}
+.toc b{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.toc ol{margin:8px 0 0;padding-left:20px}.toc li{margin:3px 0;font-size:.9rem}
+.hero{background:radial-gradient(90% 130% at 12% 0%,rgba(59,130,246,.14),transparent 62%),radial-gradient(80% 120% at 92% 10%,rgba(167,139,250,.13),transparent 60%);border:1px solid var(--border);border-radius:20px;padding:26px 26px 22px;margin:16px 0 6px}
+.tcard{display:flex;gap:14px;align-items:flex-start;background:linear-gradient(180deg,#17171b,#121215);border:1px solid var(--border);border-radius:16px;padding:18px 20px;margin:12px 0;position:relative;overflow:hidden;transition:transform .18s,border-color .18s}
+.tcard:hover{transform:translateY(-2px);border-color:#3b82f6}
+.tcard::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,#3b82f6,#a78bfa)}
+.tcard .ico{flex:none;width:44px;height:44px;border-radius:12px;background:rgba(59,130,246,.13);border:1px solid rgba(59,130,246,.25);display:flex;align-items:center;justify-content:center}
+.tcard h3{margin:0 0 4px;font-size:1.08rem;color:var(--text)}
+.tcard p{margin:0;font-size:.9rem}
+.mini{font-size:.76rem;color:var(--muted);margin-top:7px}
+@media(max-width:640px){.wrap{padding:12px 16px 60px}.nav-in{padding:0 16px}h2{font-size:1.24rem}.hero{padding:20px 18px}.figw{padding:10px;border-radius:14px}}</style></head><body>
+<nav class="nav"><div class="nav-in"><a href="/" class="logo-t"><em>AIBuilder</em> Marketplace</a><div><a href="/ai/">AI</a><a href="/atlas/">Atlas</a><a href="/b2b/">Reviews</a><a href="/data/">Data</a><a href="/mcp/">Our MCP</a></div></div></nav><div class="wrap">
+<div class="bc"><a href="/">Home</a> &rsaquo; <a href="/ai/">AI</a> &rsaquo; llms.txt</div>
+<div class="hero">
+<span class="pill">WE PUBLISH ONE ON SIX SITES</span>
+<h1>llms.txt, explained by someone who <span class="grad">actually publishes one</span></h1>
+<p class="lede">There is a lot of confident writing about llms.txt by people who have never shipped one, and a lot
+of dismissal by people who have never tried. We generate one for six sites from live data. Here is what it is, what
+we put in ours, and the honest answer on whether it does anything.</p>
+</div>
+
+<div class="qa"><b>Short answer:</b> llms.txt is a short plain-text file telling AI assistants what your site is and
+what is worth citing. It is a proposed convention, not an enforced standard, and no major assistant documents it as
+an input. It costs an hour. We publish one anyway &mdash; for a reason that has less to do with AI than you'd think.</div>
+
+<h2 id="what">What it is</h2>
+<p>Take everything you would say to a journalist in thirty seconds &mdash; who you are, what you cover, which pieces
+are your best work, how you want to be credited &mdash; and put it in a text file at
+<code>/llms.txt</code>. That is the whole idea. The format is Markdown, the audience is a language model, and the
+premise is that an assistant summarising your site does better with a curated map than with whatever it scraped.</p>
+<p>It is explicitly <em>not</em> a permissions file. robots.txt says what may be crawled; llms.txt says what is worth
+reading. Publishing one grants nothing and blocks nothing.</p>
+
+<details class="jar"><summary>Is this an official standard?</summary><div class="jb">No. It is a proposed convention that spread because it is easy, not because a standards body ratified it. Nobody is obliged to read it and no assistant promises to. Treat anyone who tells you it is required with suspicion.</div></details>
+<details class="jar"><summary>llms.txt vs llms-full.txt</summary><div class="jb">The short file is the map: a curated list of your best, citable pages. The <code>-full</code> variant is the territory: the whole catalog in plain text for an assistant that wants the data rather than the highlights. We publish both &mdash; ours has the {len(DATA) if False else MCP['_checked']} tools grouped by category.</div></details>
+
+<h2 id="ours">What we put in ours</h2>
+<p>Ours is generated from the same database that drives the site, so it can't drift out of date. The sections, and
+why each is there:</p>
+<div class="box"><ul>
+<li><b>Quick recommendations.</b> Direct answers to "best tool for X", each linking to the page that argues it.
+These exist because an assistant answering a buying question wants a claim plus a source, and if we don't provide
+one it will assemble something from elsewhere.</li>
+<li><b>Hands-on reviews, kept separate from researched ones.</b> This is the section we care most about. Daan has
+personally tested three tools with his own money; the rest are researched. Collapsing that distinction would make
+the file look more impressive and would be a lie, so the file states it explicitly.</li>
+<li><b>Machine-readable data.</b> The full catalog, the JSON version, the dossier feed and our
+<a href="/mcp/">MCP server</a> &mdash; so an assistant that wants to ask rather than read has somewhere to go.</li>
+<li><b>Attribution and disclosure.</b> How to cite us, and the fact that links may be affiliate links. If a model is
+going to repeat our research, it should repeat that too.</li>
+</ul></div>
+
+<div class="figw"><svg viewBox="0 0 600 330" role="img" aria-label="Three ways an AI assistant can read this site: llms.txt, the JSON catalog and the MCP server." xmlns="http://www.w3.org/2000/svg" class="fig">
+<style>.card{fill:#141414;stroke:#2f2f2f}.hd{fill:#fafafa;font:800 13.5px system-ui,sans-serif}
+.mono{fill:#93c5fd;font:600 11px ui-monospace,Menlo,monospace}
+.bd{fill:#a3a3a3;font:400 11.5px system-ui,sans-serif}
+.cap{fill:#a3a3a3;font:700 12px system-ui,sans-serif}
+.ar{stroke:#3b82f6;stroke-width:1.6;fill:none;marker-end:url(#a2)}
+.pill{fill:rgba(59,130,246,.13);stroke:rgba(59,130,246,.3)}
+.pt{fill:#93c5fd;font:700 12px system-ui,sans-serif}</style>
+<defs><marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#3b82f6"/></marker></defs>
+<text x="14" y="26" class="cap">THREE DOORS — pick by how much the assistant needs</text>
+<rect x="222" y="44" width="156" height="38" rx="19" class="pill"/>
+<text x="300" y="68" class="pt" text-anchor="middle">An AI assistant</text>
+<path d="M300 84 L 300 104" class="ar"/>
+<rect x="14" y="110" width="180" height="122" rx="13" class="card"/>
+<text x="30" y="136" class="hd">llms.txt</text>
+<text x="30" y="156" class="mono">/llms.txt</text>
+<text x="30" y="176" class="bd">A short map: what this</text>
+<text x="30" y="192" class="bd">site is, which pages are</text>
+<text x="30" y="208" class="bd">worth citing, how to</text>
+<text x="30" y="224" class="bd">attribute it.</text>
+<rect x="210" y="110" width="180" height="122" rx="13" class="card"/>
+<text x="226" y="136" class="hd">JSON catalog</text>
+<text x="226" y="156" class="mono">/widget-data.json</text>
+<text x="226" y="176" class="bd">Every tool as data,</text>
+<text x="226" y="192" class="bd">CORS-enabled, for</text>
+<text x="226" y="208" class="bd">when it wants to</text>
+<text x="226" y="224" class="bd">process rather than read.</text>
+<rect x="406" y="110" width="180" height="122" rx="13" class="card"/>
+<text x="422" y="136" class="hd">MCP server</text>
+<text x="422" y="156" class="mono">/mcp/</text>
+<text x="422" y="176" class="bd">Live queries: ask for</text>
+<text x="422" y="192" class="bd">one dossier, compare</text>
+<text x="422" y="208" class="bd">four tools, search by</text>
+<text x="422" y="224" class="bd">need.</text>
+<path d="M290 104 L 120 106" class="ar"/><path d="M310 104 L 480 106" class="ar"/>
+<text x="14" y="266" class="bd">All three are plain files we generate and host ourselves. None of them needs the assistant to scrape the site,</text>
+<text x="14" y="284" class="bd">and all three carry the same attribution line and affiliate disclosure.</text>
+<text x="14" y="312" class="cap">READ &rarr; PROCESS &rarr; ASK</text>
+</svg></div>
+<p class="figc">Our illustration of the three routes we publish. They differ in effort, not in honesty &mdash; all
+three carry the same attribution and disclosure.</p>
+
+<h2 id="worth">Does it do anything?</h2>
+<p>The honest answer is that we cannot prove it, and neither can anyone else. No major assistant publishes llms.txt
+as a retrieval or ranking input. Anyone showing you a traffic chart and attributing it to a text file is selling
+something.</p>
+<p>What we can say is narrower and, we think, more useful. Writing ours forced a decision we had been avoiding: what
+do we actually claim, and which of our pages would we be comfortable seeing quoted back at us? That turned out to be
+a short list. It also surfaced an inconsistency &mdash; we were describing far more reviews as "hands-on" than Daan
+had genuinely tested, and fixing that in the file meant fixing it across the site.</p>
+<p>So: publish one, spend an hour, and treat any traffic effect as a bonus. The reason to do it is that it makes you
+write down what you stand behind. If your answer to "which pages would I want cited?" is "all of them", the file
+isn't the problem.</p>
+
+<h2 id="how">How to write one that isn't noise</h2>
+<div class="box"><ul>
+<li><b>Curate ruthlessly.</b> A list of every page is a sitemap. Twenty links you would defend beats two hundred you
+wouldn't.</li>
+<li><b>Generate it, don't hand-write it.</b> Ours is built from the live database on every run. A hand-written file
+is out of date the week after you write it, and a confidently wrong file is worse than none.</li>
+<li><b>Say what you don't know.</b> Ours separates tested from researched. That distinction is the most valuable
+thing in the file precisely because most sites blur it.</li>
+<li><b>Put the attribution in.</b> One line. It is the only part with a plausible direct benefit.</li>
+</ul></div>
+<p>You can read <a href="/llms.txt">ours</a> and take whatever is useful.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What is llms.txt?</h3><p>A plain-text file at the root of your site that tells AI assistants what the site is, which pages are worth citing and how to attribute you. It is a proposed convention, not a standard anyone enforces — think robots.txt in spirit, but written for reading rather than crawling permission.</p><h3>Does llms.txt actually do anything?</h3><p>Honestly: nobody outside the AI labs can prove it. No major assistant documents llms.txt as a ranking or retrieval input. What we can say is that it costs almost nothing to publish, it forces you to write down what you would want cited, and that exercise improved our own pages. We would not spend a week on it.</p><h3>Is llms.txt the same as an MCP server?</h3><p>No, and the difference matters. llms.txt is passive: a file an assistant may read if it happens to fetch it. An MCP server is active: the assistant connects and asks questions, and you answer in real time. One is a note on the door; the other is a doorbell.</p><h3>What should go in it?</h3><p>The claims you are willing to stand behind, with links. Ours lists our best-of guides, the reviews Daan actually tested hands-on (kept separate from the researched ones), the machine-readable catalogs and the attribution line. What should not go in it: everything. A file that lists every page is a sitemap, and you already have one.</p>
+
+<div class="box"><b style="color:var(--text)">The more interesting door.</b> If you want an assistant to use your
+data rather than skim your summary, that's <a href="/ai/model-context-protocol/">what MCP is for</a> &mdash; and we
+run a free one you can point your own assistant at.</div>
+
+<p class="disc">Written from running llms.txt on six sites since 2026. We make no claim that it drives traffic,
+because we cannot measure that honestly. Some links elsewhere on this site are affiliate links; there are none in
+this article. <a href="/how-we-review/">How we review &rarr;</a></p>
+<div class="nl"><b>One honest email a week</b><p style="font-size:.88rem;margin:6px 0 2px">New dossiers, cost-traps we found, and what actually changed in AI tooling &mdash; no hype, no sponsored-disguised-as-advice. Unsubscribe anytime.</p><form action="https://aibuildermarketplace.beehiiv.com/subscribe" method="get" target="_blank"><input type="email" name="email" required placeholder="you@company.com" aria-label="Your email"><button type="submit">Subscribe &rarr;</button></form></div>
+</div><footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; Written by <a href="/about/">Daniel Haket</a> &middot; <a href="/how-we-review/">How we review</a> &middot; <a href="/atlas/">The Honest Software Atlas</a></footer></body></html>

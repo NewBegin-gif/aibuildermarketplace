@@ -62,54 +62,6 @@ button{background:#10b981;color:#fff;border:none;border-radius:9px;padding:12px 
 <div class="shots"><img src="/marketplace/media/salesmsg-shot0.png" alt="Salesmsg screenshot" loading="lazy"><img src="/marketplace/media/salesmsg-shot1.png" alt="Salesmsg screenshot" loading="lazy"></div><p>Salesmsg is a business texting, calling, and AI-agent platform built natively for HubSpot. Sales and service teams run two-way SMS, MMS, and calls from one shared inbox, with automations, keywords, and broadcast campaigns that sync to the CRM contact by contact. What sets it apart: 10DLC registration and carrier fees are passed through transparently instead of buried, so the invoice matches the quote. Best for revenue and support teams that want texting tied to CRM records rather than a siloed app, and for multi-location or franchise brands running many numbers and users from one account. Integrates beyond HubSpot via Zapier and an open API.</p><p><strong>Pricing:</strong> From $25/mo (500 credits); annual billing is 2 months free. <span class="muted">(vendor-stated — always verify on their site)</span></p>
 <p style="margin:22px 0"><a class="cta" href="https://join.salesmessage.com/y1pdhmogp2y0" target="_blank" rel="nofollow ugc noopener">Visit Salesmsg &rarr;</a></p>
 <div class="dos"><h2>What we found &mdash; independently</h2><p class="muted" style="margin:0 0 4px;font-size:.9rem">Researched by AIBM, not supplied by the vendor. The vendor cannot edit this part of the page.</p><div class="card" style="margin:16px 0"><b style="display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:#64748b;margin-bottom:4px">Our pricing check &middot; 2026</b>Credit-based (2026): from about $25/mo (500 credits), $49 (1,000), $99 (2,500), scaling past 50k; annual = 2 months free.</div><div class="card" style="margin:16px 0;border-left:4px solid #f59e0b"><b style="display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:#f59e0b;margin-bottom:4px">What will cost you money if you skim it</b>US business texting comes with a regulatory meter most vendors whisper about: 10DLC registration fees, monthly campaign fees and per-message carrier surcharges land on top of every plan — Salesmsg at least passes them through transparently, but budget them.</div><h2 style="font-size:1rem">Cost-trap flags &mdash; each with its evidence</h2><div class="flag"><div class="fl-t">🧮 Usage-metered <span class="muted" style="font-weight:400;font-size:.85rem">&mdash; Credits, overages or percentage fees on top of the subscription</span></div><div class="fl-e">&ldquo;Credit-based (2026): from about $25/mo (500 credits), $49 (1,000), $99 (2,500), scaling past 50k; annual = 2 months free.&rdquo;</div></div><div class="split"><div class="bs b"><h3>Genuinely good for</h3><p>sales and service teams that want two-way business texting and calling tied to their CRM, with transparent per-credit economics</p></div><div class="bs s"><h3>Skip it if</h3><p>your audience doesn&#x27;t respond to SMS, or low volume makes the fixed 10DLC overhead disproportionate</p></div></div><div class="card" style="margin:16px 0"><b style="display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:#64748b;margin-bottom:4px">The honest comparison</b><strong>SimpleTexting or Textline</strong> &mdash; the business-SMS peer group — compare credits-per-dollar AND the pass-through fees; the sticker rows look more alike than the invoices</div><p style="margin:18px 0 0"><a class="cta" href="/b2b/salesmessage-review/">Read our full Salesmsg review &rarr;</a></p><p class="bron">Source: our own researched dossier on Salesmessage, the same one behind <a href="/atlas/">the Honest Software Atlas</a> and our reviews. Flags are derived from that text and each one carries the sentence it came from, so you can judge it yourself. Prices move &mdash; always check the vendor&rsquo;s live pricing page before you buy.</p></div>
-<h2 id="reviews">Reader reviews</h2>
-<p class="muted" style="margin-top:0">Used Salesmsg? Say so here. We moderate for spam only &mdash; critical reviews get
-published too, and that is exactly what makes a positive one worth reading.</p>
-<div id="rvlist" class="muted">Loading reader reviews&hellip;</div>
-<details style="margin-top:18px"><summary style="cursor:pointer;color:#93c5fd;font-weight:700">Write a review</summary>
-<form id="rvform" class="card" style="margin-top:12px">
-  <input name="website" style="display:none" tabindex="-1" autocomplete="off">
-  <label>What do you use it for?</label><input name="use_case" maxlength="200" placeholder="e.g. weekly client reporting">
-  <label>Your plan</label><select name="plan"><option value="free">Free</option><option value="trial">Trial</option><option value="paid">Paid</option></select>
-  <label>Ease of use (1&ndash;5)</label><input name="ease" type="number" min="1" max="5" value="4">
-  <label>Satisfaction (1&ndash;5)</label><input name="satisfied" type="number" min="1" max="5" value="4">
-  <label><input name="recommend" type="checkbox" style="width:auto;margin-right:8px" checked>I would recommend it</label>
-  <label>Your take * (min. 15 characters &mdash; what worked, what did not)</label>
-  <textarea name="why" rows="4" maxlength="900" required></textarea>
-  <label>Name (optional)</label><input name="name" maxlength="40" placeholder="Anonymous">
-  <button type="submit">Submit review</button>
-  <p id="rvmsg" class="muted" style="font-size:.85rem"></p>
-</form></details>
-<script>
-(function(){
-  var SLUG="salesmsg", TOOL="Salesmsg", API="https://api.aibuildermarketplace.com";
-  var box=document.getElementById('rvlist');
-  function dots(n){var s='';for(var i=1;i<=5;i++)s+=(i<=n?'\u25cf':'\u25cb');return s;}
-  fetch(API+'/reviews/'+SLUG+'.json').then(function(r){return r.json();}).then(function(d){
-    var rv=(d&&d.reviews)||[];
-    if(!rv.length){box.innerHTML='No reader reviews yet \u2014 be the first. We publish critical ones too.';return;}
-    box.className='';
-    box.innerHTML=rv.map(function(r){
-      return '<div class="rv"><div>'+esc(r.why)+'</div><div class="rv-m">'+esc(r.name||'Anonymous')+
-        (r.use_case?' \u00b7 '+esc(r.use_case):'')+' \u00b7 '+esc(r.plan||'')+' plan \u00b7 ease '+dots(r.ease)+
-        ' \u00b7 satisfaction '+dots(r.satisfied)+' \u00b7 '+esc((r.ts||'').slice(0,10))+'</div></div>';
-    }).join('');
-  }).catch(function(){box.innerHTML='Reader reviews could not be loaded right now.';});
-  function esc(s){var d=document.createElement('div');d.textContent=s==null?'':String(s);return d.innerHTML;}
-  var f=document.getElementById('rvform'), m=document.getElementById('rvmsg');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var fd=new FormData(f), o={tool_slug:SLUG, tool:TOOL};
-    fd.forEach(function(v,k){o[k]=v;});
-    o.recommend=f.recommend.checked; o.ease=+o.ease; o.satisfied=+o.satisfied;
-    m.textContent='Sending\u2026';
-    fetch(API+'/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)})
-      .then(function(r){return r.json();})
-      .then(function(d){m.textContent=d.msg||d.error||'Thanks!'; if(!d.error)f.reset();})
-      .catch(function(){m.textContent='Could not send \u2014 please try again later.';});
-  });
-})();
-</script>
 <p class="muted" style="font-size:.8rem;margin-top:26px">Listed 2026-07-27 &middot; free beta listing &middot; outbound links are <code>nofollow ugc</code> &middot; <a href="/list-your-saas/">list your own SaaS</a></p>
 <footer style="border-top:1px solid #1e293b;margin-top:50px;padding-top:20px" class="muted"><p style="font-size:.83rem">The AIBuilder Marketplace is where vendors list their own product and we put our own research next to it. Listing is free during beta. <a href="/list-your-saas/">List your SaaS</a> &middot; <a href="/atlas/">Honest Software Atlas</a> &middot; <a href="/how-we-review/">How we review</a></p></footer>
 </div>

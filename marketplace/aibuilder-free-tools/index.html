@@ -61,54 +61,6 @@ button{background:#10b981;color:#fff;border:none;border-radius:9px;padding:12px 
 <h2>In AIBuilder Free Tools&rsquo;s own words</h2>
 <p>A set of 78 small tools that run entirely in your browser: calculators, generators, and SEO and email helpers. There is no signup, no trial clock and no account, and nothing you type is uploaded — the work happens on your own device.</p><p>Each tool ships with a short honest guide that says where it helps and, just as importantly, at what point you are better off paying for a real product instead. We built them because most free tools online are lead-capture forms wearing a calculator costume, and we wanted the opposite.</p><p>This is our own product, listed here as an example of what a listing looks like while the marketplace is in beta.</p><p><strong>Pricing:</strong> Free — no paid tier, no upsell <span class="muted">(vendor-stated — always verify on their site)</span></p>
 <p style="margin:22px 0"><a class="cta" href="https://aibuildermarketplace.com/tools/" target="_blank" rel="nofollow ugc noopener">Visit AIBuilder Free Tools &rarr;</a></p>
-<h2 id="reviews">Reader reviews</h2>
-<p class="muted" style="margin-top:0">Used AIBuilder Free Tools? Say so here. We moderate for spam only &mdash; critical reviews get
-published too, and that is exactly what makes a positive one worth reading.</p>
-<div id="rvlist" class="muted">Loading reader reviews&hellip;</div>
-<details style="margin-top:18px"><summary style="cursor:pointer;color:#93c5fd;font-weight:700">Write a review</summary>
-<form id="rvform" class="card" style="margin-top:12px">
-  <input name="website" style="display:none" tabindex="-1" autocomplete="off">
-  <label>What do you use it for?</label><input name="use_case" maxlength="200" placeholder="e.g. weekly client reporting">
-  <label>Your plan</label><select name="plan"><option value="free">Free</option><option value="trial">Trial</option><option value="paid">Paid</option></select>
-  <label>Ease of use (1&ndash;5)</label><input name="ease" type="number" min="1" max="5" value="4">
-  <label>Satisfaction (1&ndash;5)</label><input name="satisfied" type="number" min="1" max="5" value="4">
-  <label><input name="recommend" type="checkbox" style="width:auto;margin-right:8px" checked>I would recommend it</label>
-  <label>Your take * (min. 15 characters &mdash; what worked, what did not)</label>
-  <textarea name="why" rows="4" maxlength="900" required></textarea>
-  <label>Name (optional)</label><input name="name" maxlength="40" placeholder="Anonymous">
-  <button type="submit">Submit review</button>
-  <p id="rvmsg" class="muted" style="font-size:.85rem"></p>
-</form></details>
-<script>
-(function(){
-  var SLUG="aibuilder-free-tools", TOOL="AIBuilder Free Tools", API="https://api.aibuildermarketplace.com";
-  var box=document.getElementById('rvlist');
-  function dots(n){var s='';for(var i=1;i<=5;i++)s+=(i<=n?'\u25cf':'\u25cb');return s;}
-  fetch(API+'/reviews/'+SLUG+'.json').then(function(r){return r.json();}).then(function(d){
-    var rv=(d&&d.reviews)||[];
-    if(!rv.length){box.innerHTML='No reader reviews yet \u2014 be the first. We publish critical ones too.';return;}
-    box.className='';
-    box.innerHTML=rv.map(function(r){
-      return '<div class="rv"><div>'+esc(r.why)+'</div><div class="rv-m">'+esc(r.name||'Anonymous')+
-        (r.use_case?' \u00b7 '+esc(r.use_case):'')+' \u00b7 '+esc(r.plan||'')+' plan \u00b7 ease '+dots(r.ease)+
-        ' \u00b7 satisfaction '+dots(r.satisfied)+' \u00b7 '+esc((r.ts||'').slice(0,10))+'</div></div>';
-    }).join('');
-  }).catch(function(){box.innerHTML='Reader reviews could not be loaded right now.';});
-  function esc(s){var d=document.createElement('div');d.textContent=s==null?'':String(s);return d.innerHTML;}
-  var f=document.getElementById('rvform'), m=document.getElementById('rvmsg');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var fd=new FormData(f), o={tool_slug:SLUG, tool:TOOL};
-    fd.forEach(function(v,k){o[k]=v;});
-    o.recommend=f.recommend.checked; o.ease=+o.ease; o.satisfied=+o.satisfied;
-    m.textContent='Sending\u2026';
-    fetch(API+'/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)})
-      .then(function(r){return r.json();})
-      .then(function(d){m.textContent=d.msg||d.error||'Thanks!'; if(!d.error)f.reset();})
-      .catch(function(){m.textContent='Could not send \u2014 please try again later.';});
-  });
-})();
-</script>
 <p class="muted" style="font-size:.8rem;margin-top:26px">Listed 2026-07-22 &middot; free beta listing &middot; outbound links are <code>nofollow ugc</code> &middot; <a href="/list-your-saas/">list your own SaaS</a></p>
 <footer style="border-top:1px solid #1e293b;margin-top:50px;padding-top:20px" class="muted"><p style="font-size:.83rem">The AIBuilder Marketplace is where vendors list their own product and we put our own research next to it. Listing is free during beta. <a href="/list-your-saas/">List your SaaS</a> &middot; <a href="/atlas/">Honest Software Atlas</a> &middot; <a href="/how-we-review/">How we review</a></p></footer>
 </div>

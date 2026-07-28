@@ -62,54 +62,6 @@ button{background:#10b981;color:#fff;border:none;border-radius:9px;padding:12px 
 <p>An AI repricer for Amazon and Walmart sellers, built around what the vendor calls game-theory repricing: instead of racing competitors to the lowest price, it aims at Buy Box share. It ships with min/max profit calculation, seller analytics, and imports from tools like InventoryLab and SkuVault.</p><p>Pricing follows capacity rather than features — every tier lists the same feature groups, and what you pay is set by your total SKU count in Seller Central and your number of Seller IDs. Starter is $100/month on annual billing (annual only); the cheapest month-to-month entry is $250. There is a 15-day trial that does not ask for a card.</p><p>Worth knowing before you sign: Amazon already includes a rule-based repricer with the Professional selling plan, so test that first if your need is simply matching the competitive price above your cost. Our review states the caps and the annual-commitment terms plainly.</p><p><strong>Pricing:</strong> $100/month (annual billing) <span class="muted">(vendor-stated — always verify on their site)</span></p>
 <p style="margin:22px 0"><a class="cta" href="https://referrals.sellersnap.io/l/AIBUILDER/" target="_blank" rel="nofollow ugc noopener">Visit Seller Snap &rarr;</a></p>
 <div class="dos"><h2>What we found &mdash; independently</h2><p class="muted" style="margin:0 0 4px;font-size:.9rem">Researched by AIBM, not supplied by the vendor. The vendor cannot edit this part of the page.</p><div class="card" style="margin:16px 0"><b style="display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:#64748b;margin-bottom:4px">Our pricing check &middot; re-verified 2026-07-24, read in a live browser on their own…</b>Four tiers, and the axis that sets your price is capacity, not features — all four list the same six feature groups (Amazon &amp; Walmart, AI repric…</div><div class="card" style="margin:16px 0;border-left:4px solid #f59e0b"><b style="display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:#f59e0b;margin-bottom:4px">What will cost you money if you skim it</b>Read the caps before you read the prices, because the caps are what you are actually buying.</div><h2 style="font-size:1rem">Cost-trap flags &mdash; each with its evidence</h2><div class="flag"><div class="fl-t">📅 Annual commit <span class="muted" style="font-weight:400;font-size:.85rem">&mdash; Best price (or any price) requires an annual/quarterly commitment</span></div><div class="fl-e">&ldquo;Starter: $100/month, annual billing only, for 1 marketplace, 1 user, 1,000 SKUs and $15,000 revenue.&rdquo;</div></div><div class="split"><div class="bs b"><h3>Genuinely good for</h3><p>Amazon and Walmart sellers past the hobby stage who compete for the Buy Box on a catalog of up to a few thousand SKUs and want AI repricing and deep seller analytics in one place — the 15-day no-card trial makes it cheap to test against your own listings before any commitment</p></div><div class="bs s"><h3>Skip it if</h3><p>you sell mainly outside Amazon and Walmart (those are the only two marketplaces supported), your catalog and revenue are small enough that a rules-based repricer at a fraction of the price does the same job, or what you actually need is multi-channel competitor price monitoring rather than…</p></div></div><div class="card" style="margin:16px 0"><b style="display:block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:#64748b;margin-bottom:4px">The honest comparison</b><strong>Feedvisor</strong> &mdash; the other AI-first Amazon repricer we cover: Feedvisor&#x27;s real platform (Feedvisor360, with ad optimization and dedicated analysts) starts around $1,500/mo, while Seller Snap sits in the $175-$425/mo band on published, self-serve pricing with a no-card trial. If you need multi-channel price…</div><p style="margin:18px 0 0"><a class="cta" href="/b2b/seller-snap-review/">Read our full Seller Snap review &rarr;</a></p><p class="bron">Source: our own researched dossier on Seller Snap, the same one behind <a href="/atlas/">the Honest Software Atlas</a> and our reviews. Flags are derived from that text and each one carries the sentence it came from, so you can judge it yourself. Prices move &mdash; always check the vendor&rsquo;s live pricing page before you buy.</p></div>
-<h2 id="reviews">Reader reviews</h2>
-<p class="muted" style="margin-top:0">Used Seller Snap? Say so here. We moderate for spam only &mdash; critical reviews get
-published too, and that is exactly what makes a positive one worth reading.</p>
-<div id="rvlist" class="muted">Loading reader reviews&hellip;</div>
-<details style="margin-top:18px"><summary style="cursor:pointer;color:#93c5fd;font-weight:700">Write a review</summary>
-<form id="rvform" class="card" style="margin-top:12px">
-  <input name="website" style="display:none" tabindex="-1" autocomplete="off">
-  <label>What do you use it for?</label><input name="use_case" maxlength="200" placeholder="e.g. weekly client reporting">
-  <label>Your plan</label><select name="plan"><option value="free">Free</option><option value="trial">Trial</option><option value="paid">Paid</option></select>
-  <label>Ease of use (1&ndash;5)</label><input name="ease" type="number" min="1" max="5" value="4">
-  <label>Satisfaction (1&ndash;5)</label><input name="satisfied" type="number" min="1" max="5" value="4">
-  <label><input name="recommend" type="checkbox" style="width:auto;margin-right:8px" checked>I would recommend it</label>
-  <label>Your take * (min. 15 characters &mdash; what worked, what did not)</label>
-  <textarea name="why" rows="4" maxlength="900" required></textarea>
-  <label>Name (optional)</label><input name="name" maxlength="40" placeholder="Anonymous">
-  <button type="submit">Submit review</button>
-  <p id="rvmsg" class="muted" style="font-size:.85rem"></p>
-</form></details>
-<script>
-(function(){
-  var SLUG="seller-snap", TOOL="Seller Snap", API="https://api.aibuildermarketplace.com";
-  var box=document.getElementById('rvlist');
-  function dots(n){var s='';for(var i=1;i<=5;i++)s+=(i<=n?'\u25cf':'\u25cb');return s;}
-  fetch(API+'/reviews/'+SLUG+'.json').then(function(r){return r.json();}).then(function(d){
-    var rv=(d&&d.reviews)||[];
-    if(!rv.length){box.innerHTML='No reader reviews yet \u2014 be the first. We publish critical ones too.';return;}
-    box.className='';
-    box.innerHTML=rv.map(function(r){
-      return '<div class="rv"><div>'+esc(r.why)+'</div><div class="rv-m">'+esc(r.name||'Anonymous')+
-        (r.use_case?' \u00b7 '+esc(r.use_case):'')+' \u00b7 '+esc(r.plan||'')+' plan \u00b7 ease '+dots(r.ease)+
-        ' \u00b7 satisfaction '+dots(r.satisfied)+' \u00b7 '+esc((r.ts||'').slice(0,10))+'</div></div>';
-    }).join('');
-  }).catch(function(){box.innerHTML='Reader reviews could not be loaded right now.';});
-  function esc(s){var d=document.createElement('div');d.textContent=s==null?'':String(s);return d.innerHTML;}
-  var f=document.getElementById('rvform'), m=document.getElementById('rvmsg');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var fd=new FormData(f), o={tool_slug:SLUG, tool:TOOL};
-    fd.forEach(function(v,k){o[k]=v;});
-    o.recommend=f.recommend.checked; o.ease=+o.ease; o.satisfied=+o.satisfied;
-    m.textContent='Sending\u2026';
-    fetch(API+'/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)})
-      .then(function(r){return r.json();})
-      .then(function(d){m.textContent=d.msg||d.error||'Thanks!'; if(!d.error)f.reset();})
-      .catch(function(){m.textContent='Could not send \u2014 please try again later.';});
-  });
-})();
-</script>
 <p class="muted" style="font-size:.8rem;margin-top:26px">Listed 2026-07-24 &middot; free beta listing &middot; outbound links are <code>nofollow ugc</code> &middot; <a href="/list-your-saas/">list your own SaaS</a></p>
 <footer style="border-top:1px solid #1e293b;margin-top:50px;padding-top:20px" class="muted"><p style="font-size:.83rem">The AIBuilder Marketplace is where vendors list their own product and we put our own research next to it. Listing is free during beta. <a href="/list-your-saas/">List your SaaS</a> &middot; <a href="/atlas/">Honest Software Atlas</a> &middot; <a href="/how-we-review/">How we review</a></p></footer>
 </div>

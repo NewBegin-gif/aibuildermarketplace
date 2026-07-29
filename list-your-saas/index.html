@@ -58,6 +58,37 @@ button{background:#10b981;color:#fff;border:none;border-radius:9px;padding:13px 
 <div class="regels">Why this is worth having: we say "skip it" when that is the honest answer, we never invent prices, and we do not run fake urgency. Listings that break those rules come down. That is exactly why being listed here carries more weight than a directory that accepts everyone. Featured placement may become paid later — the free tier stays free.</div>
 <div style="position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;border:1px solid #1e293b;margin:18px 0">
 <iframe src="https://www.youtube-nocookie.com/embed/80VvwdfjaBQ" title="List your SaaS — how it works" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer;encrypted-media;picture-in-picture" allowfullscreen></iframe></div>
+<div id="claimbox" style="display:none;border:1px solid rgba(129,140,248,.4);
+ background:linear-gradient(180deg,rgba(129,140,248,.1),rgba(129,140,248,.02));border-radius:14px;
+ padding:16px 20px;margin:18px 0">
+<strong id="claimtitel" style="color:#e5e7eb"></strong>
+<p class="muted" style="margin:7px 0 0;font-size:.9rem">We have pre-filled the name, site and category we already
+have on file, so the only thing left for you to write is the description. Our research on the page stays exactly
+as it is &mdash; you are adding your words next to it, not replacing it. Claiming also removes the
+<code>noindex</code> we keep on research-only pages.</p>
+<p class="muted" style="margin:7px 0 0;font-size:.9rem"><a id="claimlink" href="/marketplace/">See the page you
+are claiming &rarr;</a></p></div>
+<script>/*claim-prefill-v1*/
+(function(){try{
+  var p=new URLSearchParams(location.search);
+  var naam=p.get('name'), slug=p.get('tool'), url=p.get('url'), cat=p.get('cat');
+  if(!naam&&!slug)return;
+  var f=document.getElementById('lform'); if(!f)return;
+  if(naam&&f.name&&!f.name.value)f.name.value=naam;
+  if(url&&f.url&&!f.url.value)f.url.value=url;
+  if(cat&&f.category){
+    for(var i=0;i<f.category.options.length;i++){
+      if(f.category.options[i].text.toLowerCase()===cat.toLowerCase()){f.category.selectedIndex=i;break;}
+    }
+  }
+  var box=document.getElementById('claimbox');
+  document.getElementById('claimtitel').textContent='You are claiming the page for '+(naam||slug)+'.';
+  if(slug)document.getElementById('claimlink').href='/marketplace/'+slug+'/';
+  box.style.display='';
+  box.parentNode.insertBefore(box,f);
+  if(f.desc)f.desc.focus();
+}catch(e){}})();
+</script>
 <form id="lform">
   <input name="website" style="display:none" tabindex="-1" autocomplete="off">
   <label>Product name *</label><input name="name" maxlength="60" required>

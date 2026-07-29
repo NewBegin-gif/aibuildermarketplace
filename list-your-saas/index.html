@@ -68,26 +68,28 @@ as it is &mdash; you are adding your words next to it, not replacing it. Claimin
 <code>noindex</code> we keep on research-only pages.</p>
 <p class="muted" style="margin:7px 0 0;font-size:.9rem"><a id="claimlink" href="/marketplace/">See the page you
 are claiming &rarr;</a></p></div>
-<script>/*claim-prefill-v1*/
-(function(){try{
-  var p=new URLSearchParams(location.search);
-  var naam=p.get('name'), slug=p.get('tool'), url=p.get('url'), cat=p.get('cat');
-  if(!naam&&!slug)return;
-  var f=document.getElementById('lform'); if(!f)return;
-  if(naam&&f.name&&!f.name.value)f.name.value=naam;
-  if(url&&f.url&&!f.url.value)f.url.value=url;
-  if(cat&&f.category){
-    for(var i=0;i<f.category.options.length;i++){
-      if(f.category.options[i].text.toLowerCase()===cat.toLowerCase()){f.category.selectedIndex=i;break;}
+<script>/*claim-prefill-v2*/
+(function(){
+  function start(){try{
+    var p=new URLSearchParams(location.search);
+    var naam=p.get('name'), slug=p.get('tool'), url=p.get('url'), cat=p.get('cat');
+    if(!naam&&!slug)return;
+    var f=document.getElementById('lform'); if(!f)return;
+    if(naam&&f.name&&!f.name.value)f.name.value=naam;
+    if(url&&f.url&&!f.url.value)f.url.value=url;
+    if(cat&&f.category){
+      for(var i=0;i<f.category.options.length;i++){
+        if(f.category.options[i].text.toLowerCase()===cat.toLowerCase()){f.category.selectedIndex=i;break;}
+      }
     }
-  }
-  var box=document.getElementById('claimbox');
-  document.getElementById('claimtitel').textContent='You are claiming the page for '+(naam||slug)+'.';
-  if(slug)document.getElementById('claimlink').href='/marketplace/'+slug+'/';
-  box.style.display='';
-  box.parentNode.insertBefore(box,f);
-  if(f.desc)f.desc.focus();
-}catch(e){}})();
+    var box=document.getElementById('claimbox');
+    document.getElementById('claimtitel').textContent='You are claiming the page for '+(naam||slug)+'.';
+    if(slug)document.getElementById('claimlink').href='/marketplace/'+slug+'/';
+    box.style.display='';
+    f.parentNode.insertBefore(box,f);
+  }catch(e){}}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
 </script>
 <form id="lform">
   <input name="website" style="display:none" tabindex="-1" autocomplete="off">

@@ -13,7 +13,7 @@ RT  = "/root/felix_hq/review_template.py"
 
 NEW = {
     "Quo": {
-        "url": "https://get.quo.com/npur0vxl3w49",
+        "url": "https://get.quo.com/aibuildermarketplace",
         "domain": "quo.com", "category": "Business Phone", "color": "#6366F1",
         "icon": "📞", "letter": "Q", "badge": "Free trial", "price": "From $15/mo",
         "rating": "4.7", "reviews": "2000",

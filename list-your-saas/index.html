@@ -62,26 +62,45 @@ button{background:#10b981;color:#fff;border:none;border-radius:9px;padding:13px 
  background:linear-gradient(180deg,rgba(129,140,248,.1),rgba(129,140,248,.02));border-radius:14px;
  padding:16px 20px;margin:18px 0">
 <strong id="claimtitel" style="color:#e5e7eb"></strong>
-<p class="muted" style="margin:7px 0 0;font-size:.9rem">We have pre-filled the name, site and category we already
-have on file, so the only thing left for you to write is the description. Our research on the page stays exactly
-as it is &mdash; you are adding your words next to it, not replacing it. Claiming also removes the
+<p class="muted" id="claimvoor" style="margin:7px 0 0;font-size:.9rem"></p>
+<p class="muted" style="margin:7px 0 0;font-size:.9rem">Our research on the page stays exactly as it is
+&mdash; you are adding your words next to it, not replacing it. Claiming also removes the
 <code>noindex</code> we keep on research-only pages.</p>
 <p class="muted" style="margin:7px 0 0;font-size:.9rem"><a id="claimlink" href="/marketplace/">See the page you
 are claiming &rarr;</a></p></div>
-<script>/*claim-prefill-v2*/
+<script>/*claim-prefill-v3*/
 (function(){
+  /* Onze eigen categorienamen naar de opties van dit formulier. Alleen waar de
+     vertaling eenduidig is — 'Growth & Revenue' staat er bewust niet in, want
+     dat is bij ons marketing en sales door elkaar. */
+  var KAART={
+    'it & productivity':'Productivity',
+    'operations & workflow':'Productivity',
+    'communication & voice':'Communication',
+    'financial operations':'Finance & Accounting',
+    'content & media':'Design & Content'
+  };
   function start(){try{
     var p=new URLSearchParams(location.search);
     var naam=p.get('name'), slug=p.get('tool'), url=p.get('url'), cat=p.get('cat');
     if(!naam&&!slug)return;
     var f=document.getElementById('lform'); if(!f)return;
-    if(naam&&f.name&&!f.name.value)f.name.value=naam;
-    if(url&&f.url&&!f.url.value)f.url.value=url;
+    var gevuld=[];
+    if(naam&&f.name&&!f.name.value){f.name.value=naam;gevuld.push('name');}
+    if(url&&f.url&&!f.url.value){f.url.value=url;gevuld.push('site');}
     if(cat&&f.category){
+      var wens=(KAART[cat.toLowerCase()]||cat).toLowerCase(), gezet=false;
       for(var i=0;i<f.category.options.length;i++){
-        if(f.category.options[i].text.toLowerCase()===cat.toLowerCase()){f.category.selectedIndex=i;break;}
+        if(f.category.options[i].text.toLowerCase()===wens){f.category.selectedIndex=i;gezet=true;break;}
       }
+      if(gezet)gevuld.push('category');
     }
+    var zin=gevuld.length
+      ? 'We have pre-filled the '+(gevuld.length>1
+          ? gevuld.slice(0,-1).join(', ')+' and '+gevuld[gevuld.length-1]
+          : gevuld[0])+' we already have on file, so the main thing left for you to write is the description.'
+      : 'Write your own description below — our research on the page is already there.';
+    document.getElementById('claimvoor').textContent=zin;
     var box=document.getElementById('claimbox');
     document.getElementById('claimtitel').textContent='You are claiming the page for '+(naam||slug)+'.';
     if(slug)document.getElementById('claimlink').href='/marketplace/'+slug+'/';

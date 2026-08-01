@@ -130,7 +130,7 @@ function toolCard(name,extra){
   var t=TOOLS[name];
   return '<div class="toolcard"><span class="lg"><img alt="" loading="lazy" src="https://www.google.com/s2/favicons?sz=128&domain='+t.dom+'" onerror="this.style.display=\'none\'"></span>'+
    '<div><b>'+t.n+'</b><p>'+t.d+'</p>'+(extra||'')+
-   '<div class="acts"><a href="'+t.l+'" target="_blank" rel="sponsored noopener nofollow" onclick="gtag(\'event\',\'affiliate_click\',{event_label:\''+t.n+'\'})">Try '+t.n+' &rarr;</a>'+
+   '<div class="acts"><a href="'+t.l+'" target="_blank" rel="nofollow noopener" onclick="gtag(\'event\',\'affiliate_click\',{event_label:\''+t.n+'\'})">Try '+t.n+' &rarr;</a>'+
    '<a href="'+t.r+'">Read our honest review</a></div></div></div>';
 }
 

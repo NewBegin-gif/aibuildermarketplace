@@ -105,7 +105,7 @@
 <p>In 2024, I watched a YC startup build their entire MVP in 72 hours using nothing but Replit. They raised $2.3M three months later. While that's an extreme case, it highlights something profound happening in the development world: the lines between prototyping, production, and automation are blurring faster than most founders realize.</p>
 <!--BLUF:START--><div style="border-left:4px solid #6366f1;background:rgba(99,102,241,.07);border-radius:8px;padding:12px 16px;margin:18px 0"><b>The honest bottom line on Replit.</b> Worth it for developers, learners and tinkerers who want a zero-setup, browser-based coding environment with AI assistance. Skip it once you need a stable, cost-predictable production environment. <a href="/b2b/replit-review/">Full review &rarr;</a></div><!--BLUF:END-->
 
-<p>Replit has evolved from a simple online IDE into what I consider the most underrated automation powerhouse for B2B SaaS founders. After spending six months building production systems on their platform and interviewing 47 technical founders who've made the switch, I'm convinced we're looking at a fundamental shift in how lean teams approach development and automation.</p>
+<p>Replit has evolved from a simple online IDE into what I consider the most underrated automation powerhouse for B2B SaaS founders. I run my own trading bot on Replit, which is the extent of my production use; the rest of this piece is built from Replit's documentation, its pricing pages and what other builders report.</p>
 
 <p>This isn't another "code in the browser" review. This is a deep dive into whether Replit can genuinely replace your current development and automation stack, backed by real numbers, actual use cases, and honest assessments of where it falls short.</p>
 
@@ -125,13 +125,13 @@
 
 <p>Every Repl comes with instant HTTPS deployment. Write a Flask API, hit run, and you have a live endpoint immediately. For automation workflows, this eliminates the traditional deploy-test-debug cycle that can take hours with conventional platforms.</p>
 
-<p>The "Always On" feature keeps your services running 24/7 without cold starts. I'm running a Slack bot that processes 2,000+ messages daily, a webhook handler for Stripe payments, and a data sync service between Airtable and our CRM—all on Always On Repls that have maintained 99.7% uptime over eight months.</p>
+<p>The "Always On" feature keeps your services running 24/7 without cold starts. This is the feature that makes Replit viable for anything that has to stay up rather than run on demand — my own trading bot depends on it. Budget for it: Always On is a paid add-on, and it is the line item that surprises people.</p>
 
 <h3>Database Integration Without the Overhead</h3>
 
 <p>Replit Database is a key-value store that's instantly available in any Repl. No setup, no connection strings, no configuration. For automation scripts that need to store state, cache API responses, or maintain simple datasets, it's incredibly convenient.</p>
 
-<p>I built a lead scoring automation that pulls data from five different APIs, processes it through a custom algorithm, and stores results in Replit Database. The entire system runs on a single Repl and processes 500+ leads daily. Traditional alternatives would require separate database hosting, connection management, and significantly more infrastructure complexity.</p>
+<p>For a script that needs to remember something between runs — cached API responses, a watermark, a small lookup table — this removes an entire layer of setup that would otherwise mean provisioning a database, managing connection strings and paying for hosting you barely use.</p>
 
 <h3>Secrets Management and Environment Variables</h3>
 

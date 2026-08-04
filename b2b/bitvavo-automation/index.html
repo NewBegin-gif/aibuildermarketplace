@@ -111,7 +111,7 @@
 
 <p>Bitvavo operates as a Netherlands-based cryptocurrency exchange that's positioned itself uniquely in the B2B space. Unlike consumer-focused platforms like Coinbase or Binance, Bitvavo has built its infrastructure around API-first design and institutional-grade automation tools that actually work for businesses managing significant crypto operations.</p>
 
-<p>The platform supports over 200 cryptocurrency pairs with what they claim is 99.9% uptime (I've tracked 99.7% in my testing). More importantly for founders, they offer sub-0.1% trading fees for volume above €100,000 monthly, which puts them in direct competition with institutional platforms at a fraction of the complexity.</p>
+<p>The platform supports a broad set of cryptocurrency pairs and publishes an uptime target you should read on their status page rather than take from a review. More relevant for founders: the fee schedule drops below 0.1% at higher 30-day volumes, which puts Bitvavo in the same conversation as institutional platforms at a fraction of the complexity.</p>
 
 <p>What sets Bitvavo apart is their focus on European regulatory compliance combined with robust API infrastructure. They hold a DNB (Dutch Central Bank) registration and maintain segregated client funds, which matters significantly if you're building financial products that need to pass enterprise security audits.</p>
 
@@ -121,7 +121,7 @@
 
 <h3>Advanced API Infrastructure</h3>
 
-<p>Bitvavo's REST API handles up to 1,000 requests per minute per API key, with WebSocket feeds supporting real-time market data at sub-100ms latency. I've built automated trading systems on their API that execute thousands of micro-transactions daily without hitting rate limits.</p>
+<p>Bitvavo publishes per-key rate limits on its REST API and offers WebSocket feeds for real-time market data — check the current limits in their API docs, since they have changed before. I run my own bot against this API; it is a modest, low-frequency strategy rather than a high-throughput one, so treat the rate limits as something to size against your own design.</p>
 
 <p>The API documentation is comprehensive, with SDKs available in Python, JavaScript, PHP, and C#. Unlike some competitors, their sandbox environment actually mirrors production behavior, which saved our development team approximately 40 hours during integration testing.</p>
 
@@ -137,7 +137,7 @@
 
 <p>The platform includes native Dollar Cost Averaging (DCA) functionality that you can configure via API calls. This isn't just a consumer feature—it's designed for businesses that need to systematically accumulate or distribute crypto positions over time.</p>
 
-<p>I tested their DCA system by programming automated Bitcoin purchases totaling €50,000 over three months. The system executed 247 transactions with zero failed orders and an average slippage of just 0.03% compared to market prices at execution time.</p>
+<p>I run my own bot against Bitvavo's API, so I can say the order endpoints are dependable for scheduled buying — that is the part automated DCA depends on. I am not going to publish transaction counts or slippage figures for it: my own volumes are small, and slippage on a scheduled market order depends on the pair and the moment far more than on the exchange.</p>
 
 <p>Their automated trading tools support:</p>
 <ul>
@@ -186,7 +186,7 @@
 <li>€1,000,000+: 0.03% maker/taker (negotiable)</li>
 </ul>
 
-<p>In my testing with €150,000 monthly volume, I consistently paid 0.05% fees, which translated to €75 monthly in trading costs. For comparison, the same volume on Coinbase Pro would have cost approximately €150-200 monthly.</p>
+<p>Bitvavo's published fee schedule is tiered by 30-day volume, and the headline taker fee is low by European standards — that is the main cost argument for it against a US exchange. Work out your own tier from your actual monthly volume on their fee page rather than from any example figure, because the tiers move and the difference between two of them dwarfs most other costs.</p>
 
 <h3>API and Infrastructure Costs</h3>
 

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 355 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-13.
+All 356 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -14,10 +14,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/1password-review/
 
 ## 800.com (800.com)
-- **Verified pricing:** (2026) Three plans, ~15% off annual: Personal $23/mo (toll-free + local + fax number, 1,000 minutes), Unlimited $59/mo, Pro $117/mo (5 numbers).
+- **Verified pricing:** (re-verified 2026-08-13, read on their own plans page with both billing tabs open) No free tier.
 - **Honest take:** It does one thing — toll-free and vanity numbers with call tracking and routing — cleanly, but it's a phone-number layer, not a full business-comms platform, so you won't get team chat, video or a contact cent…
 - **Best for:** businesses that want a professional toll-free or vanity number with call tracking, routing and analytics to look bigger and measure inbound calls
-- **Flags:** {'f': 'annual_lock', 'ev': 'In July 2026 800.com announced an added Complete plan at $99/mo on annual billing (excl.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/800-com-review/
 
 ## accessiBe (accessibe.com)
@@ -302,9 +301,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bitdefender-review/
 
 ## Bitvavo (bitvavo.com)
-- **Verified pricing:** No subscription — you pay per trade (2026): the base tier under €100k monthly volume is around 0.15% maker / 0.25% taker, dropping through nine volume tiers (0.10%/0.20% past €100k, near-ze…
+- **Verified pricing:** (re-verified 2026-08-13, read on their own fees page) No subscription — you pay per trade.
 - **Honest take:** The honest caveats are crypto-wide, not Bitvavo-specific: fees are only part of the cost (spread matters on small orders), and no exchange removes market risk — the platform being cheap and MiCA-regulated does…
 - **Best for:** EU-based traders and builders who want a MiCA-regulated, euro-native exchange with low tiered fees, deep EUR pairs and a solid API for automation
+- **Flags:** {'f': 'usage_metered', 'ev': 'Deposits are free by SEPA, iDEAL/Wero and Bancontact; a credit card costs 1% and PayPal 2%.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bitvavo-review/
 
 ## Blinq (blinq.me)
@@ -328,10 +328,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bolt-business-review/
 
 ## Bookyourdata (bookyourdata.com)
-- **Verified pricing:** Pay-as-you-go, no subscription (2026): from $99 one-time for 250 contacts (~$0.40 each), dropping toward $0.05-0.08 per contact above 10k credits.
+- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.
 - **Honest take:** The model is honest — no subscription, credits keep, bad data refunded — so the real scrutiny belongs on usage: bought lists are only as good as your targeting and your sending infrastructure, and cold-emailin…
 - **Best for:** sporadic, project-based prospecting where a subscription would idle — buy exactly the verified contacts you need, when you need them
-- **Flags:** {'f': 'usage_metered', 'ev': 'Pay-as-you-go, no subscription (2026): from $99 one-time for 250 contacts (~$0.40 each), dropping toward $0.05-0.08 per contact above 10k credits.'}, {'f': 'free_tier', 'ev': 'Pay-as-you-go, no subscription (2026): from $99 one-time for 250 contacts (~$0.40 each), dropping toward $0.05-0.08 per contact above 10k credits.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.'}, {'f': 'addons_extra', 'ev': 'BeSpoke, the hand-built private list service, is priced separately from $499 for 1,000 records.'}, {'f': 'free_tier', 'ev': 'The published pack table runs 250 credits for $99 ($0.40 each), 500 for $159, 1,000 for $299 ($0.30), 2,500 for $599, 5,000 for $799 ($0.16), 10,000 …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bookyourdata-review/
 
 ## Boulevard (joinblvd.com)
@@ -493,10 +493,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clay-review/
 
 ## ClickUp (clickup.com)
-- **Verified pricing:** A Free Forever plan (unlimited members, limited storage/features); Unlimited about $7/user/mo, Business $12/user/mo billed annually (higher monthly), plus custom Enterprise (2026).
+- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page with both billing tabs open) A Free Forever plan with unlimited tasks but 60MB of storage; Unlimited $7 and Business $12 per user/mon…
 - **Honest take:** The everything-app breadth is also the downside — it's feature-dense with a real learning curve, and teams can drown in options.
 - **Best for:** teams that want one highly customizable app for tasks, docs, goals and reporting and will invest in setting it up
-- **Flags:** {'f': 'per_seat', 'ev': 'A Free Forever plan (unlimited members, limited storage/features); Unlimited about $7/user/mo, Business $12/user/mo billed annually (higher monthly),…'}, {'f': 'free_tier', 'ev': 'A Free Forever plan (unlimited members, limited storage/features); Unlimited about $7/user/mo, Business $12/user/mo billed annually (higher monthly),…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-13, read on their own pricing page with both billing tabs open) A Free Forever plan with unlimited tasks but 60MB of storage; Un…'}, {'f': 'addons_extra', 'ev': 'AI is priced on top of the plan: Brain AI $9 and Everything AI $28 per user/month.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-13, read on their own pricing page with both billing tabs open) A Free Forever plan with unlimited tasks but 60MB of storage; Un…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/clickup-review/
 
 ## Clonable (clonable.net)
@@ -615,10 +615,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/customer-io-review/
 
 ## Databox (databox.com)
-- **Verified pricing:** (re-verified 2026-07-29) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 AI credits a month.
+- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 AI credits a month.
 - **Honest take:** The pricing model bites: Pro connects only 3 data sources, so the per-source fees stack up fast — and for agencies juggling many clients with diverse tools it gets expensive.
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-07-29) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 AI credits a month.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-07-29) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 AI credits a month.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13, read on their own pricing page) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 A…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-13, read on their own pricing page) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 A…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/databox-review/
 
 ## Deel (deel.com)
@@ -1340,10 +1340,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/momence-review/
 
 ## monday.com (monday.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Work Management: Free €0 (max 2 seats), Basic €9, Standard €12, Pro €19 per seat/month; Enterprise quote-only.
+- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page; first read 2026-08-01) Work Management: Free €0 (max 2 seats), Basic €9, Standard €12, Pro €19 per seat/month; Enterprise quote-only.
 - **Honest take:** The seat price is not the product price.
 - **Best for:** teams who want one visual system for projects and work, and who will actually use the automations and views that justify the per-seat price at Standard or above
-- **Flags:** {'f': 'per_seat', 'ev': '(2026-08-01, read on their own pricing page) Work Management: Free €0 (max 2 seats), Basic €9, Standard €12, Pro €19 per seat/month; Enterprise quote…'}, {'f': 'addons_extra', 'ev': 'monday CRM is a separate subscription (Basic €12 annual / €18 monthly, Standard €17/€25, Pro €28/€41, minimum 3 seats), and monday Dev and monday Ser…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-13, read on their own pricing page; first read 2026-08-01) Work Management: Free €0 (max 2 seats), Basic €9, Standard €12, Pro €…'}, {'f': 'addons_extra', 'ev': 'monday CRM is a separate subscription (Basic €12 annual / €18 monthly, Standard €17/€25, Pro €28/€41, minimum 3 seats), and monday Dev and monday Ser…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/monday-com-review/
 
 ## Moosend (moosend.com)
@@ -1693,6 +1693,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'per_seat', 'ev': '(2026) Email Volume from about $49/mo (1,000 active contacts, 5,000 emails); Multichannel about $89/user/mo — but LinkedIn automation (~$69/user) and…'}, {'f': 'addons_extra', 'ev': '(2026) Email Volume from about $49/mo (1,000 active contacts, 5,000 emails); Multichannel about $89/user/mo — but LinkedIn automation (~$69/user) and…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/reply-io-review/
 
+## respond.io (respond.io)
+- **Verified pricing:** (2026-08-13, read off respond.io/pricing) Four tiers, billed on monthly active contacts rather than seats: Starter $79/month, Growth $159, Advanced $279, and Enterprise on quote.
+- **Honest take:** The entry plan is the inbox without the engine.
+- **Best for:** a small team that already lives in WhatsApp and Instagram DMs and has outgrown a shared phone — retail, clinics, travel, local services. Per-contact pricing suits you if headcount grows faster than conversation volume, and the sev
+- **Flags:** {'f': 'per_seat', 'ev': 'That is kinder than per-seat pricing for a small team fielding a lot of chats, and harsher if you have a big list you talk to often.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/respond-io-review/
+
 ## Restream (restream.io)
 - **Verified pricing:** (2026) A free plan (multistream to 2 channels, with Restream branding); Standard about $16/mo billed annually ($19 monthly, 3 channels), Professional $39/mo annual ($49 monthly, 5 channels,…
 - **Honest take:** The channel caps are the business model — each tier buys a few more destinations, and every extra teammate is a separate $25/mo seat on top of the plan.
@@ -1715,7 +1722,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/riverside-review/
 
 ## Ruby (ruby.com)
-- **Verified pricing:** Live virtual receptionists billed by receptionist-minutes: plans run roughly $235-$385/mo for 50-100 minutes and up into the four figures for higher volume; chat bundles from about $112/mo …
+- **Verified pricing:** (re-verified 2026-08-13, read on their own plans-and-pricing page) Live virtual receptionists billed on included receptionist-minutes: $250/mo for 50 minutes, $395/mo for 100, $720/mo for 2…
 - **Honest take:** You're paying premium rates for real human receptionists billed per minute — worth it when a missed call is a lost client, but expensive if your call volume is low or an AI answering service would do the job f…
 - **Best for:** client-driven service businesses (law, home services, clinics) where a live human answering every call directly wins business
 - **Flags:** {'f': 'usage_metered', 'ev': "You're paying premium rates for real human receptionists billed per minute — worth it when a missed call is a lost client, but expensive if your call…"}

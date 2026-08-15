@@ -278,18 +278,29 @@
         </section>
         <section id="pricing">
           <h2>What Hume AI costs</h2>
-          <p>Hume works on a pay-as-you-go setup, so you can start small and only pay for more once your project is really up and running:</p>
+          <p style="margin:-4px 0 12px"><span style="display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:#22c55e;border:1px solid rgba(34,197,94,.4);background:rgba(34,197,94,.08);border-radius:999px;padding:3px 11px">&#10003; Pricing re-verified 15 Aug 2026</span></p>
+          <p>We described this as pay-as-you-go before, and that was only half right. Hume sells monthly
+          plans with an allowance built in, and you pay per minute or per thousand characters only once you
+          run past it. Read on their own pricing page on 15 August 2026:</p>
           <table>
             <thead>
-              <tr><th>Feature / Model</th><th>Roughly what it costs</th><th>Best for</th></tr>
+              <tr><th>Plan</th><th>Per month</th><th>What the allowance covers</th><th>Overage once you pass it</th></tr>
             </thead>
             <tbody>
-              <tr><td>EVI (voice chat)</td><td>Per minute (around $0.05–$0.07/min)</td><td>Live voice bots &amp; conversational apps</td></tr>
-              <tr><td>Custom models &amp; tools</td><td>Per second of audio/video looked at</td><td>Bigger data projects &amp; UX testing</td></tr>
-              <tr><td>Free playground</td><td>Free (limited test credits)</td><td>Trying things out &amp; prototyping</td></tr>
+              <tr><td>Free</td><td>$0</td><td>10,000 text-to-speech characters (about 10 minutes) and 5 minutes of EVI, 1 concurrent connection, unlimited voice cloning, 3 team seats</td><td>&mdash;</td></tr>
+              <tr><td>Starter</td><td>$3</td><td>30,000 characters and 40 minutes of EVI, 5 concurrent connections</td><td>$0.07 per EVI minute</td></tr>
+              <tr><td>Creator</td><td>$7 (listed at $14 regular)</td><td>140,000 characters and 200 minutes of EVI, 5 concurrent connections</td><td>$0.15 per 1,000 characters, $0.07 per EVI minute</td></tr>
+              <tr><td>Pro</td><td>$70</td><td>1,000,000 characters and 1,200 minutes of EVI, 10 concurrent connections</td><td>$0.12 per 1,000 characters, $0.06 per EVI minute</td></tr>
+              <tr><td>Scale</td><td>$200</td><td>3,300,000 characters and 5,000 minutes of EVI, 20 concurrent connections</td><td>$0.10 per 1,000 characters, $0.05 per EVI minute</td></tr>
+              <tr><td>Business</td><td>$500</td><td>10,000,000 characters and 12,500 minutes of EVI, 30 concurrent connections, 5 seats</td><td>$0.05 per 1,000 characters, $0.04 per EVI minute</td></tr>
+              <tr><td>Enterprise</td><td>Quote-only</td><td>Custom volume, with SOC 2 Type II, GDPR and HIPAA commitments and Slack support</td><td>Custom rates</td></tr>
             </tbody>
           </table>
-          <p>AI prices tend to shift around quite a bit as the tech gets cheaper to run, so it's always worth a quick look at the official pricing page for the latest numbers.</p>
+          <p>Two things that table makes plain and the old one did not. The EVI minute gets cheaper the more
+          you buy, from $0.07 down to $0.04, so the per-minute figure only means something alongside the plan
+          it sits on. And the free tier is 5 minutes of EVI, not a trial period &mdash; it is enough to hear
+          what the model sounds like and nowhere near enough to test a product on. AI prices move as the
+          models get cheaper to run, so check the live page before you budget.</p>
         </section>
         <section id="proscons">
           <h2>The honest good and not-so-good</h2>
@@ -311,7 +322,7 @@
         <section id="buyers">
           <!-- aibm-voice-v1 · handmatig, bron: review_voice.json sleutel "Hume AI" · NIET verwijderen bij hergeneratie -->
           <h2>What buyers report about Hume AI</h2>
-          <p>Recurring themes from practitioner reviews and SourceForge, read in August 2026. I tried Hume's playground but have not shipped a product on it, so this is other buyers' experience rather than mine. We summarise it here because the complaints are usually the part a vendor page leaves out.</p>
+          <p>Recurring themes from practitioner reviews, SourceForge and Product Hunt, read in August 2026 &mdash; the Product Hunt reviews themselves were posted around August and September 2025. I tried Hume's playground but have not shipped a product on it, so this is other buyers' experience rather than mine. We summarise it here because the complaints are usually the part a vendor page leaves out. One limit worth stating: G2 carries no Hume AI reviews at all, its page says so outright, so the public record here is thin.</p>
           <div style="background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-left:4px solid #64748b;border-radius:14px;padding:16px 20px;margin:18px 0">
             <div style="display:flex;flex-wrap:wrap;gap:22px">
               <div style="flex:1 1 260px;min-width:0">
@@ -319,6 +330,7 @@
                 <ul style="margin:0;padding:0;list-style:none">
                   <li style="margin:0 0 7px;line-height:1.6"><span style="color:#34d399;font-weight:800">&bull;</span> Voice output is genuinely expressive rather than flat, with sub-300ms latency — reviewers who tested it against other voice APIs say this is the gap.</li>
                   <li style="margin:0 0 7px;line-height:1.6"><span style="color:#34d399;font-weight:800">&bull;</span> Entry pricing is low enough to prototype on.</li>
+                  <li style="margin:0 0 7px;line-height:1.6"><span style="color:#34d399;font-weight:800">&bull;</span> Builders on Product Hunt describe the emotion read as nuanced rather than labelled &mdash; one notes it reported a drop in energy and emotional tone instead of stamping the word sadness on it &mdash; and several say tone, rhythm and expression carry through in streaming voice conversations.</li>
                 </ul>
               </div>
               <div style="flex:1 1 260px;min-width:0">
@@ -326,6 +338,9 @@
                 <ul style="margin:0;padding:0;list-style:none">
                   <li style="margin:0 0 7px;line-height:1.6"><span style="color:#f87171;font-weight:800">&bull;</span> It is built for developers. Reviewers without API experience say the learning curve is steep and plug-and-play integrations are thin.</li>
                   <li style="margin:0 0 7px;line-height:1.6"><span style="color:#f87171;font-weight:800">&bull;</span> High-volume use runs into meaningful overage charges — model the cost at your real volume, not at prototype volume.</li>
+                  <li style="margin:0 0 7px;line-height:1.6"><span style="color:#f87171;font-weight:800">&bull;</span> The quality really only holds up in English. A Product Hunt reviewer says other languages are supported but that accents and word stress leave the result underwhelming &mdash; worth knowing if your users are not English-speaking.</li>
+                  <li style="margin:0 0 7px;line-height:1.6"><span style="color:#f87171;font-weight:800">&bull;</span> The same reviewer could find no way to export a voiceover to a file, so putting the audio onto a video was not possible from the product itself.</li>
+                  <li style="margin:0 0 7px;line-height:1.6"><span style="color:#f87171;font-weight:800">&bull;</span> Another found the emotional interpretations generic at times. And none of the twelve Product Hunt reviews mentions spend at real volume, so on the question a buyer most wants answered the public record is silent.</li>
                 </ul>
               </div>
             </div>

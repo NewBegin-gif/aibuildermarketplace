@@ -226,6 +226,8 @@
           <li><a href="#evi">Building with EVI: the Empathic Voice Interface</a></li>
           <li><a href="#apis">The multi-modal APIs: measuring human emotion</a></li>
           <li><a href="#pricing">What Hume AI costs</a></li>
+          <li><a href="#premium">When the paid plan is worth it</a></li>
+          <li><a href="#getting-started">How to actually use Hume AI</a></li>
           <li><a href="#proscons">The honest pros and cons</a></li>
           <li><a href="#who">Who Hume AI is (and isn't) for</a></li>
           <li><a href="#buyers">What buyers report</a></li>
@@ -278,7 +280,7 @@
         </section>
         <section id="pricing">
           <h2>What Hume AI costs</h2>
-          <p style="margin:-4px 0 12px"><span style="display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:#22c55e;border:1px solid rgba(34,197,94,.4);background:rgba(34,197,94,.08);border-radius:999px;padding:3px 11px">&#10003; Pricing re-verified 15 Aug 2026</span></p>
+          <p style="margin:-4px 0 12px"><span style="display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:#22c55e;border:1px solid rgba(34,197,94,.4);background:rgba(34,197,94,.08);border-radius:999px;padding:3px 11px">&#10003; Pricing re-verified 19 Aug 2026</span></p>
           <p>We described this as pay-as-you-go before, and that was only half right. Hume sells monthly
           plans with an allowance built in, and you pay per minute or per thousand characters only once you
           run past it. Read on their own pricing page on 15 August 2026:</p>
@@ -287,7 +289,7 @@
               <tr><th>Plan</th><th>Per month</th><th>What the allowance covers</th><th>Overage once you pass it</th></tr>
             </thead>
             <tbody>
-              <tr><td>Free</td><td>$0</td><td>10,000 text-to-speech characters (about 10 minutes) and 5 minutes of EVI, 1 concurrent connection, unlimited voice cloning, 3 team seats</td><td>&mdash;</td></tr>
+              <tr><td>Free</td><td>$0</td><td>10,000 text-to-speech characters (about 10 minutes) and 5 minutes of EVI, 1 concurrent connection, unlimited voice cloning; no team seats &mdash; those start at Scale</td><td>&mdash;</td></tr>
               <tr><td>Starter</td><td>$3</td><td>30,000 characters and 40 minutes of EVI, 5 concurrent connections</td><td>$0.07 per EVI minute</td></tr>
               <tr><td>Creator</td><td>$7 (listed at $14 regular)</td><td>140,000 characters and 200 minutes of EVI, 5 concurrent connections</td><td>$0.15 per 1,000 characters, $0.07 per EVI minute</td></tr>
               <tr><td>Pro</td><td>$70</td><td>1,000,000 characters and 1,200 minutes of EVI, 10 concurrent connections</td><td>$0.12 per 1,000 characters, $0.06 per EVI minute</td></tr>
@@ -301,6 +303,14 @@
           it sits on. And the free tier is 5 minutes of EVI, not a trial period &mdash; it is enough to hear
           what the model sounds like and nowhere near enough to test a product on. AI prices move as the
           models get cheaper to run, so check the live page before you budget.</p>
+        </section>
+        <section id="premium">
+          <h2>When the paid plan is worth it</h2>
+          <p>Every paid tier below Enterprise buys the same two things: a bigger monthly allowance and a cheaper rate once you pass it. Characters run 10,000 free, 30,000 at $3, 140,000 at $7 (a first-month rate against $14 regular), a million at $70, 3.3 million at $200 and ten million at $500, while the overage falls from $0.15 to $0.05 per thousand and the EVI minute from $0.07 to $0.04. A second ladder climbs alongside it and is easy to miss: requests per minute go 15, 15, 75, 75, 150 and 225. If your traffic is bursty rather than large, that ceiling rather than the allowance is what you are buying, and team seats appear only at Scale (3) and Business (5). What money does not buy below Enterprise is the paperwork or a support channel. SOC 2 Type II, GDPR and HIPAA sit in the Enterprise column alone, support is Discord on every plan up to and including Business at $500 a month, and API access to voice cloning is Enterprise-only as well. If compliance is a requirement, stacking paid tiers never gets you there.</p>
+        </section>
+        <section id="getting-started">
+          <h2>How to actually use Hume AI</h2>
+          <p>Start in the browser rather than the editor: Hume's own documentation points to the EVI Playground in the Hume Portal, which is where you find out whether the voice suits your product before an allowance goes on it. The same portal issues credentials, and every account is provisioned with both an API key and a Secret key on the API keys page in the left sidebar. Which one you reach for matters. The API key travels in an X-Hume-Api-Key header for server-side requests and Hume says plainly not to expose it in client-side code; browser code uses the token strategy instead, where your server mints an access token that expires after thirty minutes, and only EVI and text-to-speech support it. Then choose a version before you build around one: EVI 3 is English-only, while EVI 4-mini covers eleven languages but requires a supplemental LLM and has no quick responses. <span style="font-size:.82rem;color:var(--muted)">Distilled from Hume&#x27;s own developer documentation &mdash; the Speech-to-Speech (EVI) overview and the Getting your API keys page on dev.hume.ai &mdash; together with the plan columns on hume.ai/pricing, all read 19 August 2026.</span></p>
         </section>
         <section id="proscons">
           <h2>The honest good and not-so-good</h2>

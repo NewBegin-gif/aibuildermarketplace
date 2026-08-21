@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 388 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-20.
+All 393 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-21.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -814,6 +814,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'The page also does not say what happens when you pass the message volume — their own FAQ does, and the answer is that you lose access to your reports…'}, {'f': 'free_tier', 'ev': 'A free plan exists and the comparison table now itemises it: 1 domain, 1,000 messages a month, 14 days of report history and 1 invited user.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/easydmarc-review/
 
+## EcomXray (ecomxray.io)
+- **Verified pricing:** (read 2026-08-21 on apps.shopify.com/ecomxray) Two tiers.
+- **Honest take:** The split between the two tiers is unusually clean, and worth seeing clearly: everything this app is described as doing, the margins, the net units, the restock advice, is free.
+- **Best for:** small and mid-size Shopify merchants who want cost price, gross margin, clean net unit sales and restock advice inside the admin instead of exporting to a spreadsheet
+- **Flags:** {'f': 'free_tier', 'ev': 'If you are happy making changes in the Shopify admin you already have, the free plan is the whole product and the paid one is a convenience layer ove…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/ecomxray-review/
+
 ## eDesk (edesk.com)
 - **Verified pricing:** (re-verified 2026-08-17) Free plan to start; Essential $39 per agent/mo, Growth $89 (recommended), Professional $119, Enterprise custom — all billed annually, with monthly billing 20% highe…
 - **Honest take:** Two meters, and the second one is easy to miss: the per-agent price is the entry ticket, but the AI Agent charges $0.99 for every automated resolution on top — great when it deflects real tickets, but a variab…
@@ -1236,6 +1243,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** marketing teams running significant paid ad campaigns who need post-click optimisation — AdMap ad-to-page personalisation, A/B testing and heatmaps
 - **Flags:** {'f': 'usage_metered', 'ev': 'Last published rates (2026) were Create from $99/mo (~$79 annual, ~15k visitors) and Optimize $199-299/mo with visitor caps and overage fees; Convert…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/instapage-review/
+
+## Intelis (intelis.ai)
+- **Verified pricing:** (read 2026-08-21 on apps.shopify.com/ecoprice-analytics and on intelis.ai/pricing) Four tiers on the Shopify listing, priced by how many products or variants you track, each with a 14-day f…
+- **Honest take:** The ladder counts variants, not products, and that is where stores get caught.
+- **Best for:** Shopify stores with hundreds to a few thousand variants that genuinely compete on price on Google Shopping and want competitor monitoring and repricing handled automatically
+- **Full review:** https://aibuildermarketplace.com/b2b/intelis-review/
 
 ## InVideo (invideo.io)
 - **Verified pricing:** (2026) Free plan (limited AI minutes, watermarked); Plus around $28/mo (removes watermark, ~50 AI minutes, commercial rights); Max around $50–60/mo (~200 AI minutes, 4K); a higher generativ…
@@ -1963,6 +1976,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** stores selling final-sale, high-consideration or hard-to-size products, where return anxiety is the thing killing the order — merchants report conversion lifting around 5% and shoppers taking the option roughly 24% of the time
 - **Full review:** https://aibuildermarketplace.com/b2b/seel-review/
 
+## Selixer (selixer.com)
+- **Verified pricing:** (read 2026-08-21 on apps.shopify.com/selixer) Three tiers, no free plan, each with a 14-day free trial.
+- **Honest take:** Read the feature lists rather than the prices and the entry tier stops looking like an entry tier.
+- **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
+- **Flags:** {'f': 'usage_metered', 'ev': 'There is nothing bad in the record, but there is barely any record, and this is a tool you hand your cost prices, your ad spend and your margins to.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/selixer-review/
+
 ## Seller Investigators (sellerinvestigators.com)
 - **Verified pricing:** (2026-08-15, read on their own site) One number, and it is the whole model: a 25% commission, charged only after Amazon has deposited recovered funds in your account.
 - **Honest take:** Contingency pricing is the honest kind — you pay only out of money that arrived — but 25% of a recovery is not the same as 25% of a profit, and there is one question that decides whether this is worth it for y…
@@ -2169,6 +2189,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'The category is honest and proven (digital stamp cards beat lost paper cards), and the platform is young with limited public pricing and review cover…'}, {'f': 'free_tier', 'ev': 'The category is honest and proven (digital stamp cards beat lost paper cards), and the platform is young with limited public pricing and review cover…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/stampezee-review/
 
+## StoreFAQ (storefaq.io)
+- **Verified pricing:** (read 2026-08-21 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversations rather than on the number of FAQs.
+- **Honest take:** The meter is FAQ page views, and that is the thing this app exists to increase.
+- **Best for:** small Shopify stores that want SEO-tagged FAQ pages with JSON-LD schema and a light AI chatbot for deflection, without standing up a full support stack
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-21 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversations rather than on the number of FAQs.'}, {'f': 'free_tier', 'ev': 'Professional $7.99 a month: 500 FAQ page views, 50 AI conversations a month, training on 150 products, multilingual FAQs and dedicated support, with …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/storefaq-review/
+
 ## StoreSEO (storeseo.com)
 - **Verified pricing:** (read 2026-08-19 on apps.shopify.com/storeseo) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25 image optimisations, up to 5 tracked keywords, an LLMs.txt generator and …
 - **Honest take:** Know what an SEO app can and cannot do before you buy any tier.
@@ -2250,6 +2277,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores that want structured, product-linked blog drafts and a publishing schedule, and that will edit what comes out before it goes live
 - **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-19 on apps.shopify.com/tapita-ai-seo-blog-builder) Free plan available: unlimited blog posts, 50 credits that do not recur, extra credi…'}, {'f': 'free_tier', 'ev': '(read 2026-08-19 on apps.shopify.com/tapita-ai-seo-blog-builder) Free plan available: unlimited blog posts, 50 credits that do not recur, extra credi…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tapita-ai-seo-blog-builder-review/
+
+## Tapita SEO Optimizer (tapita.io)
+- **Verified pricing:** (read 2026-08-21 on apps.shopify.com/google-seo-schema-meta-data) Three tiers.
+- **Honest take:** The price on the listing is a Shopify-Basic price, and almost nobody reads the line underneath it.
+- **Best for:** Shopify merchants on the Basic or Grow plan who want SEO audits, bulk metadata, image alt text and speed fixes out of one app instead of hiring a specialist
+- **Flags:** {'f': 'usage_metered', 'ev': 'Basic $9.99 a month or $101.88 a year, a 15% saving, adds SEO audit and LLMs.txt on main pages, auto image optimisation 100 a day, 100 AI metadata cr…'}, {'f': 'free_tier', 'ev': "Tapita's own sister app publishes $0.06 a credit on its listing; this one publishes nothing, so you cannot price a month of AI metadata before you in…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/tapita-seo-optimizer-review/
 
 ## Tapstitch (tapstitch.com)
 - **Verified pricing:** (re-verified 2026-08-17) No subscription and no monthly fee — you pay per item, production plus shipping, so there is no plan price to compare.

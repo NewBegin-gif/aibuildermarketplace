@@ -661,30 +661,31 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/contractor-foreman-review/
 
 ## Convert (convert.com)
-- **Verified pricing:** (2026) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified 16 Jul 2026, no credit card).
+- **Verified pricing:** (re-verified 2026-08-21 on their own pricing page) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified 16 Jul 2026, no credit card).
 - **Honest take:** The meter is tested users, and it keeps running: blow past your monthly allowance and overuse blocks land at $399-699 unless you hard-cap them — and every extra custom domain is $1,000 a year.
 - **Best for:** CRO teams running serious A/B and multivariate testing who want a privacy-first, GDPR-friendly alternative to the big experimentation suites
-- **Flags:** {'f': 'usage_metered', 'ev': "(2026) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified 16 Jul 2026, no credit card)."}
+- **Flags:** {'f': 'usage_metered', 'ev': "(re-verified 2026-08-21 on their own pricing page) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/convert-review/
 
 ## CrankWheel (crankwheel.com)
-- **Verified pricing:** (price re-verified 2026-08-17 against crankwheel.com) (2026) A free plan (1 user, 15 meetings/mo), Solo about $29/user/mo (unlimited screen sharing, ~48% off on annual), Team about $89–$99/…
+- **Verified pricing:** (read on crankwheel.com/pricing, 2026-08-21) A free plan with no payment details required — unlimited usage for the first 15 days, then up to 15 sessions a month for life.
 - **Honest take:** It's deliberately narrow — instant, no-download screen sharing for sales calls — so it's excellent at that one job and thin everywhere else: no full video-conferencing suite, no deep collaboration or webinar t…
 - **Best for:** sales reps, insurance agents and consultants who need prospects to view a screen instantly with no download or install, on any device
-- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-08-17 against crankwheel.com) (2026) A free plan (1 user, 15 meetings/mo), Solo about $29/user/mo (unlimited screen sharing, …'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-08-17 against crankwheel.com) (2026) A free plan (1 user, 15 meetings/mo), Solo about $29/user/mo (unlimited screen sharing, …'}
+- **Flags:** {'f': 'free_tier', 'ev': '(read on crankwheel.com/pricing, 2026-08-21) A free plan with no payment details required — unlimited usage for the first 15 days, then up to 15 sess…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/crankwheel-review/
 
 ## Crazy Egg (crazyegg.com)
-- **Verified pricing:** From $29/mo to $499, billed annually only (no real monthly option); it bills per pageview, so your bill swings with pages-per-session (2026).
-- **Honest take:** The entry plan is thin on recordings (~100/mo vs Hotjar's free ~1,050), heatmaps need manual per-page and per-device setup, and annual-only billing locks you in.
-- **Best for:** lean marketing teams that want heatmaps and built-in A/B testing in one affordable, consolidated tool
+- **Verified pricing:** (2026-08-21, read on their own pricing page) Three plans, all billed annually, with a 30-day free trial and — in the vendor's words — no overages, ever.
+- **Honest take:** The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier — and A/B testing is not in it at all: that starts on Growth at $99, whose pageview slider begins at 50,000 rather…
+- **Best for:** lean marketing teams that want heatmaps, recordings and built-in A/B testing in one consolidated tool — noting that testing starts on the $99 plan, not the $29 one
+- **Flags:** {'f': 'usage_metered', 'ev': "(2026-08-21, read on their own pricing page) Three plans, all billed annually, with a 30-day free trial and — in the vendor's words — no overages, ev…"}, {'f': 'free_tier', 'ev': "The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier — and A/B testing is not in it at all: that starts on …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/crazy-egg-review/
 
 ## Credit Repair Cloud (creditrepaircloud.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Five plans from Personal about $49/mo up to Enterprise about $599/mo (Start ~$179, Grow ~$299, Scale ~$399), scal…
+- **Verified pricing:** (price re-verified 2026-08-21 against the vendor's own pricing page, and now with the published limits rather than approximations) Five plans, monthly: Personal $49 (1 user, up to 3 friends…
 - **Honest take:** This is business-in-a-box software for starting a credit-repair company, not a tool that repairs your own credit — the price only makes sense if you're actually building a client business on it.
 - **Best for:** entrepreneurs building or running a credit-repair business who need client management, dispute automation and done-for-you letter workflows
-- **Flags:** {'f': 'usage_metered', 'ev': "This is business-in-a-box software for starting a credit-repair company, not a tool that repairs your own credit — the price only makes sense if you'…"}
+- **Flags:** {'f': 'usage_metered', 'ev': "This is business-in-a-box software for starting a credit-repair company, not a tool that repairs your own credit — the price only makes sense if you'…"}, {'f': 'annual_lock', 'ev': 'Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/credit-repair-cloud-review/
 
 ## CrowdStrike (crowdstrike.com)
@@ -736,9 +737,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/devs-ai-review/
 
 ## Dext (dext.com)
-- **Verified pricing:** From ~£24/mo (Starter) to £42 (Growing) and £84 (Business) — roughly $31–239 depending on plan and region (2026).
+- **Verified pricing:** (re-verified 2026-08-21, read in a browser on dext.com/en/business/pricing because the price panel renders client-side) Dext has moved off named tiers: you choose a region and a billing per…
 - **Honest take:** It's a data-capture layer, not accounting software — it feeds Xero, QuickBooks or Sage, so you still need one of those.
 - **Best for:** accountants, bookkeepers and growing businesses drowning in receipts who want fast, accurate capture flowing straight into Xero, QuickBooks or Sage
+- **Flags:** {'f': 'usage_metered', 'ev': 'Plans include 10 sheets of bank statement extraction, 5 line-item documents and 5 supplier statement extractions as free credits, and the free trial …'}, {'f': 'addons_extra', 'ev': 'Add-ons are billed separately: AI Assist $10.5 a month until 31 October, Commerce Lite from $7.50 and Vault free for 100MB then from $4.'}, {'f': 'free_tier', 'ev': 'Line Item Extraction and Supplier Statement Extraction are from $20.50 a month or $0.50 per document, and Bank Statement Extraction from $13.00 a mon…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/dext-review/
 
 ## Dify (dify.ai)
@@ -748,9 +750,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dify-review/
 
 ## Diginius (diginius.com)
-- **Verified pricing:** (2026) Essential about $20/mo (single user); Pro ~$99/mo (5 users); Core ~$249/mo (10 users, most features); Business/custom above.
+- **Verified pricing:** (re-verified 2026-08-21 on diginius.com/pricing/, business pricing) Essential $75 USD a month for 2 users, Pro $250 for 5 users, Core $500 for 10 users and marked Most Popular, Business by …
 - **Honest take:** All-in-one marketing dashboards live or die on data depth per module: Diginius bundles PPC, SEO, lead intelligence and reporting affordably, but specialists (a dedicated SEO suite, a dedicated PPC optimizer) g…
 - **Best for:** lean teams and agencies that want PPC, SEO and lead intelligence consolidated in one affordable dashboard instead of five subscriptions
+- **Flags:** {'f': 'usage_metered', 'ev': 'The plan limits scale with the price: SEO keywords 25 / 500 / 1000 / custom, SEO site pages 1000 / 5000 / 10000 / custom, Lead Intelligence leads 10 …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/diginius-review/
 
 ## Digit (digit-software.com)
@@ -829,7 +832,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/edesk-review/
 
 ## ElevateForward (elevateforward.ai)
-- **Verified pricing:** (re-verified 2026-08-12, read on their own pricing page) The prices are published, despite the consultative first impression: an Elevate Insight Report is $500 per report and a bundle of th…
+- **Verified pricing:** (re-verified 2026-08-21, read on their own pricing page) The prices are published, despite the consultative first impression, and the report figures have not moved since our 12 August readi…
 - **Honest take:** It's a strategy-to-execution layer, not a task app or a dashboard — so the value only lands if leadership actually adopts the framework.
 - **Best for:** scaling companies where growth is outpacing alignment — leadership lacks execution visibility and strategic initiatives keep stalling halfway
 - **Full review:** https://aibuildermarketplace.com/b2b/elevateforward-review/
@@ -2218,10 +2221,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/streak-review/
 
 ## Success.co (success.co)
-- **Verified pricing:** Team-based subscription (2026); specific rates aren't published in full — expect per-user pricing, verified on their site.
-- **Honest take:** The honest truth about strategy-execution and OKR software is that the tool is the easy part — value comes entirely from the cadence around it (setting real objectives, updating scorecards, running the weekly …
+- **Verified pricing:** (read 2026-08-21 in Success.co's own structured data on success.co/pricing) There is a Free Forever plan at $0, and the paid product is tiered per user with the rate falling as the team gro…
+- **Honest take:** The ladder rewards size rather than commitment: moving from 25 to 26 users drops the rate a dollar, and the annual discount is worth about the same single dollar per user.
 - **Best for:** leadership teams that already run on goals and want one place to set objectives, track KPIs and scorecards, and keep strategy execution on cadence
-- **Flags:** {'f': 'quote_only', 'ev': 'Get a quote for your team size.'}
+- **Flags:** {'f': 'per_seat', 'ev': "(read 2026-08-21 in Success.co's own structured data on success.co/pricing) There is a Free Forever plan at $0, and the paid product is tiered per us…"}, {'f': 'usage_metered', 'ev': 'A 30-day free trial needs no credit card, and 501(c)(3) nonprofits get 50% off.'}, {'f': 'addons_extra', 'ev': 'Two enterprise add-ons sit outside that ladder and are quoted on the page itself at $250 a month each: Single Sign-On (Okta, Microsoft Entra ID, Goog…'}, {'f': 'annual_lock', 'ev': 'Annual billing takes roughly a dollar to two off each step: $11, $10, $8, $6 and $5 per user a month paid annually.'}, {'f': 'free_tier', 'ev': "(read 2026-08-21 in Success.co's own structured data on success.co/pricing) There is a Free Forever plan at $0, and the paid product is tiered per us…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/success-co-review/
 
 ## Sunsama (sunsama.com)
@@ -2537,9 +2540,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vwo-review/
 
 ## Warmup Inbox (warmupinbox.com)
-- **Verified pricing:** (2026) Free trial available.
+- **Verified pricing:** (read 2026-08-21 on warmupinbox.com/pricing) Three published tiers, priced per inbox: Basic $15 an inbox a month ($180 billed yearly) for 75 warmup messages a day, Pro $49 ($588 yearly) for…
 - **Honest take:** A pricing page without prices: at research time every number sat behind a signup or demo request.
 - **Best for:** outbound teams warming new sending domains and inboxes before campaigns, with integrations across Google, Outlook, Zoho and SendGrid
+- **Flags:** {'f': 'usage_metered', 'ev': 'There is a free trial with no credit card, and the vendor states more than 30,000 real inboxes in the network.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/warmup-inbox-review/
 
 ## Wati (wati.io)

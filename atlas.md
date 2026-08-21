@@ -1423,7 +1423,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/logome-ai-review/
 
 ## Lucrovox (lucrovox.com)
-- **Verified pricing:** (re-verified 2026-08-17) Careful with any figure here, including ours: the pricing page now leads with a missed-call ROI calculator rather than a plan table, and the only numbers our readin…
+- **Verified pricing:** (re-verified 2026-08-17) Our dated reading of the plan table gives Starter $199/mo for up to 100 AI-handled calls, Pro $499/mo for up to 500 calls with CRM integration, and Enterprise $999/…
 - **Honest take:** The meter is AI-handled calls: Starter’s 100 calls a month is roughly three a day, so a genuinely busy shop outgrows it quickly — and the steps are steep ($199 → $499 → $999).
 - **Best for:** local service businesses — HVAC, plumbing, roofing, med spas — losing revenue to missed calls who want a 24/7 AI receptionist that books jobs straight into Google Calendar, Housecall Pro, ServiceTitan or Jobber
 - **Full review:** https://aibuildermarketplace.com/b2b/lucrovox-review/

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 393 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-21.
+All 397 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-22.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -289,6 +289,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** solo founders and lean startups who want hands-off SEO content velocity fast, are comfortable with AI-generated articles at scale, and value the 90-day guarantee as a safety net
 - **Full review:** https://aibuildermarketplace.com/b2b/babylovegrowth-review/
 
+## BackupMaster (backupmaster.io)
+- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/backup-master) Four tiers, each paid one with a 7-day free trial.
+- **Honest take:** The listing header says free to install, and there is a free tier, but it is not for you unless you are an agency: Agency is limited to Shopify Partner development stores before they are handed over to a clien…
+- **Best for:** Shopify stores under roughly 1,500 orders a month that want the whole store backed up daily — metafields, metaobjects and translations included — without anyone having to remember to trigger it
+- **Flags:** {'f': 'free_tier', 'ev': 'The listing header says free to install, and there is a free tier, but it is not for you unless you are an agency: Agency is limited to Shopify Partn…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/backupmaster-review/
+
 ## Barcodes Talk (barcodestalk.com)
 - **Verified pricing:** One-time purchase, no annual fees or renewals — GS1-origin UPC/EAN codes issued to you for life, typically a few dollars each (cents in bulk), versus GS1's own roughly $30 per single GTIN.
 - **Honest take:** The honest caveat is about fit, not the codes.
@@ -364,6 +371,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams and field-sales orgs that want consistent, branded digital cards with contacts syncing straight into the CRM — and events teams via the capture add-on
 - **Flags:** {'f': 'per_seat', 'ev': 'For teams, Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a 5-user minimum, adding CRM sync, templates and…'}, {'f': 'addons_extra', 'ev': 'A lead-capture add-on for events starts around $199/mo.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17) Free forever for individuals (2 cards, unlimited QR sharing).'}
 - **Full review:** https://aibuildermarketplace.com/b2b/blinq-review/
+
+## Blocky (effectify.io)
+- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial.
+- **Honest take:** Read the plan text before you read the badge.
+- **Best for:** Shopify stores below Plus that are losing time to bot traffic, repeat fraudsters or orders from regions they do not ship to, and want blocking rules they control rather than a full security suite
+- **Flags:** {'f': 'addons_extra', 'ev': 'Pro $19.99 a month or $167.92 a year adds blocking by email, name, address and phone, the Bot Killer for TOR, proxy and VPN traffic, an add-ons block…'}, {'f': 'free_tier', 'ev': 'The App Store header says a free plan is available; that free plan is Development Stores, for development and partner stores only, and it starts char…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/blocky-review/
 
 ## Bokun (bokun.io)
 - **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) A free version plus paid plans from about $49/mo (Start).
@@ -769,6 +783,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores with a chargeback problem big enough to cost real money and nobody in-house to fight disputes, who would rather pay a share of what is recovered than a monthly fee
 - **Flags:** {'f': 'usage_metered', 'ev': "The vendor's own pricing page fills in the rest: recovery is 20% of the recovered amount with the fee capped at $250 per win (win a $50 chargeback an…"}, {'f': 'free_tier', 'ev': "The vendor's own pricing page fills in the rest: recovery is 20% of the recovered amount with the fee capped at $250 per win (win a $50 chargeback an…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/disputifier-review/
+
+## Dondy (dondy.net)
+- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/dondy-marketing-ai, listed as “Dondy: WhatsApp Marketing+Chat”) Four tiers, each paid one with a 7-day free trial.
+- **Honest take:** The free plan is a chat button.
+- **Best for:** Shopify stores whose customers already live in WhatsApp — much of Europe, Latin America, the Middle East and Asia — that want cart recovery, order updates and campaigns on the official API without leaving the Shopify admin
+- **Flags:** {'f': 'free_tier', 'ev': 'Power Automation $79.99 a month or $719.88 a year, a 25% saving: automated abandoned-cart recovery, WhatsApp marketing campaigns, customisable automa…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/dondy-review/
 
 ## doola (doola.com)
 - **Verified pricing:** (re-verified 2026-08-17) Starter $297/yr for LLC or C-Corp formation, EIN, registered agent and a US address, with a 30-day trial and renewal at $300/yr; state filing fees are extra ($50-50…
@@ -1758,6 +1779,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'quote_only', 'ev': 'Re-verified 2026-08-17: every tier on their pricing page, Startup included, shows Contact sales rather than a figure, and our monthly captures from J…'}, {'f': 'per_seat', 'ev': 'Figures quoted elsewhere — roughly $100 a month for Startup, the $1,500 range for Pro, per-member rates around $12.50 to $15 — do not come from Proce…'}, {'f': 'usage_metered', 'ev': 'What the page does publish are the limits: Startup is capped at 5 users and 10 guests with 5,000 Data Set records, 10 automation apps, 100 automation…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/process-street-review/
 
+## ProtectMyOrder (protectmyorder.com)
+- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/protectmyorder, listed as “PMO: ProtectMyOrder”) One plan, no tiers.
+- **Honest take:** The pitch is that you keep 80% of the upsell.
+- **Best for:** Shopify stores with enough volume to clear roughly $100 of protection revenue a month, a known parcel-loss rate, and the support capacity to settle claims in-house in exchange for keeping 80% of the upsell
+- **Full review:** https://aibuildermarketplace.com/b2b/protectmyorder-review/
+
 ## Proton (proton.me)
 - **Verified pricing:** (2026-08-02, read on their own plans page, in euros — the page has a currency switch) Free: 1 GB mail plus 5 GB Drive, one address, no custom domain.
 - **Honest take:** Storage is the axis, and the jump from Drive Plus to Unlimited is not really about storage at all: you go from 200 GB to 500 GB, but you also start paying for Mail, Calendar, Pass and VPN whether or not you wa…
@@ -2541,7 +2568,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Warmup Inbox (warmupinbox.com)
 - **Verified pricing:** (read 2026-08-21 on warmupinbox.com/pricing) Three published tiers, priced per inbox: Basic $15 an inbox a month ($180 billed yearly) for 75 warmup messages a day, Pro $49 ($588 yearly) for…
-- **Honest take:** A pricing page without prices: at research time every number sat behind a signup or demo request.
+- **Honest take:** The pricing is published and readable — three tiers, per inbox, with the yearly total printed next to each.
 - **Best for:** outbound teams warming new sending domains and inboxes before campaigns, with integrations across Google, Outlook, Zoho and SendGrid
 - **Flags:** {'f': 'usage_metered', 'ev': 'There is a free trial with no credit card, and the vendor states more than 30,000 real inboxes in the network.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/warmup-inbox-review/

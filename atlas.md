@@ -1780,9 +1780,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/process-street-review/
 
 ## ProtectMyOrder (protectmyorder.com)
-- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/protectmyorder, listed as “PMO: ProtectMyOrder”) One plan, no tiers.
-- **Honest take:** The pitch is that you keep 80% of the upsell.
-- **Best for:** Shopify stores with enough volume to clear roughly $100 of protection revenue a month, a known parcel-loss rate, and the support capacity to settle claims in-house in exchange for keeping 80% of the upsell
+- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/protectmyorder, listed as “PMO: ProtectMyOrder”, and on protectmyorder.com/pricing) The two pages sell different ladders.
+- **Honest take:** Start with the two pricing pages, because they do not describe the same product.
+- **Best for:** Shopify stores with enough volume to clear roughly $100 of protection revenue a month and a known parcel-loss rate — keeping 80% on Standard if they can settle claims in-house, or buying that work back at 44.99% if they cannot
 - **Full review:** https://aibuildermarketplace.com/b2b/protectmyorder-review/
 
 ## Proton (proton.me)

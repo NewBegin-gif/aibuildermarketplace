@@ -37,9 +37,22 @@ a{color:var(--accent);text-decoration:none}
 .meta{display:flex;gap:14px;align-items:center;color:var(--muted);font-size:.8rem;margin:0 0 18px;flex-wrap:wrap}
 .tag{background:rgba(59,130,246,.1);color:var(--accent);padding:4px 12px;border-radius:20px;font-weight:700;font-size:.72rem;border:1px solid rgba(59,130,246,.18)}
 h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;margin:6px 0 8px;line-height:1.2}
-h2{font-size:1.3rem;font-weight:800;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--border)}
-h3{font-size:1.02rem;font-weight:700;margin:20px 0 6px}
+h2{font-size:1.5rem;font-weight:800;margin:38px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--border)}
+h3{font-size:1.1rem;font-weight:700;margin:22px 0 6px}
 p,li{color:var(--text2)}
+/* Leesbaarheid, gemeten 22 aug 2026. Drie dingen tegelijk:
+   REGELLENGTE -- de tekst liep over ~87 tekens per regel (800px wrap bij 17,28px).
+   Optimaal is 45-75; daarboven raakt het oog de volgende regel kwijt. 72ch zet
+   dat op ~72. Alleen op de artikeltekst, dus tabellen en beelden blijven breed.
+   ALINEAWITRUIMTE -- stond op de browserstandaard van 1em (17,28px), terwijl de
+   regelafstand 1,75em (30,24px) is. De ruimte TUSSEN alinea's was dus kleiner
+   dan die erbinnen, waardoor een alineagrens niet als grens las.
+   KOPHIERARCHIE -- h2 was 1,3rem tegen 1,08rem bodytekst: 1,2x, te weinig om op
+   te scannen. Nu 1,5rem (1,39x).
+   Gescoped op directe kinderen van .wrap zodat .box, .crit en figcaption hun
+   eigen marges houden. */
+.wrap>p{max-width:72ch;margin:0 0 1.5em}
+.wrap>ul,.wrap>ol{max-width:72ch}
 .lede{font-size:1.08rem;color:var(--text2)}
 .box{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin:18px 0}
 .box.best{border-left:4px solid var(--green)}.box.skip{border-left:4px solid #fb7185}

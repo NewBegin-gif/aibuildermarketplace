@@ -9,9 +9,14 @@ a{color:var(--accent);text-decoration:none}
 .wrap{max-width:800px;margin:0 auto;padding:14px 24px 70px}
 .bc{font-size:.8rem;color:var(--muted);margin:14px 0}
 h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;margin:6px 0 8px;line-height:1.2}
-h2{font-size:1.3rem;font-weight:800;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--border)}
-h3{font-size:1.02rem;font-weight:700;margin:20px 0 6px}
+h2{font-size:1.5rem;font-weight:800;margin:38px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--border)}
+h3{font-size:1.1rem;font-weight:700;margin:22px 0 6px}
 p,li{color:var(--text2)}
+/* Zelfde leesbaarheidsregels als op de reviewpagina's (22 aug 2026): regels van
+   ~72 tekens in plaats van ~87, alineawitruimte groter dan de standaard 1em die
+   kleiner was dan de regelafstand zelf, en koppen die van de tekst afsteken. */
+.wrap>p{max-width:72ch;margin:0 0 1.5em}
+.wrap>ul,.wrap>ol{max-width:72ch}
 .lede{font-size:1.08rem;color:var(--text2)}
 .tag{display:inline-block;background:rgba(59,130,246,.1);color:var(--accent);padding:4px 12px;border-radius:20px;font-weight:700;font-size:.72rem;border:1px solid rgba(59,130,246,.18)}
 .tool{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:16px;padding:22px;margin:20px 0}

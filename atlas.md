@@ -1578,10 +1578,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/motive-review/
 
 ## MRPeasy (mrpeasy.com)
-- **Verified pricing:** (re-verified 2026-08-17 on their own pricing page) Four tiers, per user per month, with a minimum of 2 users: Starter $49, Professional $69, Enterprise $99 and Unlimited $149.
+- **Verified pricing:** (re-verified 2026-08-24 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise $99 and Unlimited $149.
 - **Honest take:** Paying ~$50 per user just so a shop-floor worker can clock in and out feels steep when they'll touch a fraction of the features.
 - **Best for:** small manufacturers, wholesalers and distributors who want dependable production planning and inventory control without a heavy ERP or a dedicated IT team
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17 on their own pricing page) Four tiers, per user per month, with a minimum of 2 users: Starter $49, Professional $69, Enterpri…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-24 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise $99 and Unlimited $149.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/mrpeasy-review/
 
 ## Murf (murf.ai)

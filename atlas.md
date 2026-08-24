@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 407 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-24.
+All 409 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-24.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -941,6 +941,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** e-commerce stores from 10,000+ monthly visitors (the vendor's own stated ICP) and high-volume senders doing 100k+ emails a month, who want email, SMS, push and on-site messaging on one unified customer data platform with a managed
 - **Flags:** {'f': 'quote_only', 'ev': "(price re-verified 2026-08-17 against the vendor's own pricing page) (2026) Quote-based with a documented floor: their site lists pricing starting ar…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/expertsender-review/
+
+## Fast Bundle (fastbundle.co)
+- **Verified pricing:** (read 2026-08-24 on apps.shopify.com/fast-bundle-product-bundles, listed as “FBP | Fast Bundle & Upsell App”, and on fastbundle.co/pricing) The meter here is not your catalogue, your traffi…
+- **Honest take:** The most important thing about this app is not on its App Store listing.
+- **Best for:** Shopify merchants who want every bundle and upsell format from one app — mix-and-match, build-your-own, BOGO, volume breaks, AI frequently-bought-together — priced against what those offers actually earn rather than a flat fee, an
+- **Flags:** {'f': 'usage_metered', 'ev': 'Its comparison table shows what the free tier gives up: volume discounts and product add-ons on selected products only rather than collections or the…'}, {'f': 'addons_extra', 'ev': 'All three paid tiers carry a 7-day free trial and the same feature list: unlimited bundles, upsells and cross-sells, mix and match, volume-discount u…'}, {'f': 'annual_lock', 'ev': 'That page also prices the annual commitments as effective monthly rates — $15, $39, $115 and $249 — under a “2-MONTHS FREE” label, and it is the only…'}, {'f': 'free_tier', 'ev': 'That page also prices the annual commitments as effective monthly rates — $15, $39, $115 and $249 — under a “2-MONTHS FREE” label, and it is the only…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/fast-bundle-review/
 
 ## Fastmail (fastmail.com)
 - **Verified pricing:** (re-verified 2026-08-17, served in euros from a Dutch address) Individual is €6 a month billed monthly, dropping to €5 on a 12-month prepay (€60), €4.75 on 24 months (€114) and €4.67 on 36 …
@@ -2466,6 +2473,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants running Meta and TikTok ads who need more than the free channel apps give them — several pixels on one store, pixels scoped to individual products, or server-side Events API tracking alongside the browser pixel t
 - **Flags:** {'f': 'free_tier', 'ev': 'The other tier, Development Stores, is free but only for development and partner stores, and billing activates on upgrade — the same shape as this de…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tixel-review/
+
+## TnC (effectify.io)
+- **Verified pricing:** (read 2026-08-24 on apps.shopify.com/terms-and-conditions-checkbox, listed as “TnC: Terms and Conditions Box”, and in the vendor's own pricing article on effectify.help) Four plans on the l…
+- **Honest take:** Start with the badge at the top of the listing, because it is the one thing on this page that misleads.
+- **Best for:** Shopify merchants on a standard plan who need a recorded “I agree” gate before payment — for GDPR, an age gate, digital-goods withdrawal rules or chargeback defence — and who go to Advanced at $9.99 for the consent timestamp rathe
+- **Flags:** {'f': 'free_tier', 'ev': 'Development Stores is free and carries every Pro feature, but the listing states it is for development and partner stores only and that payment will …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/tnc-review/
 
 ## Todoist (todoist.com)
 - **Verified pricing:** Free (up to 5 projects, no reminders); Pro about $5/mo (annual, ~$7 monthly), Business about $8/user/mo (annual, ~$10 monthly) (2026).

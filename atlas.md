@@ -793,10 +793,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dondy-review/
 
 ## doola (doola.com)
-- **Verified pricing:** (re-verified 2026-08-17) Starter $297/yr for LLC or C-Corp formation, EIN, registered agent and a US address, with a 30-day trial and renewal at $300/yr; state filing fees are extra ($50-50…
+- **Verified pricing:** (re-verified 2026-08-24) Starter $297/yr for LLC or C-Corp formation, EIN, registered agent and a US address, with state filing fees extra ($50-500 depending on the state).
 - **Honest take:** Formation is the cheap part; the recurring bookkeeping and tax tiers are where the real cost sits, and state fees are extra on top of doola's price.
 - **Best for:** founders (often non-US) who want US LLC/C-Corp formation, EIN and compliance handled in one place without the paperwork
-- **Flags:** {'f': 'renewal_jump', 'ev': '(re-verified 2026-08-17) Starter $297/yr for LLC or C-Corp formation, EIN, registered agent and a US address, with a 30-day trial and renewal at $300…'}, {'f': 'addons_extra', 'ev': "Formation is the cheap part; the recurring bookkeeping and tax tiers are where the real cost sits, and state fees are extra on top of doola's price."}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as saving 25% against the alternative.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'A sale was running on top of that list on the day we re-read the page: $222, $1,499 and $2,249 for those three tiers, badged as up to $750 off all pl…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/doola-review/
 
 ## Drip (drip.com)

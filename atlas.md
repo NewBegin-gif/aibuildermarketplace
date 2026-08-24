@@ -758,9 +758,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dext-review/
 
 ## Dify (dify.ai)
-- **Verified pricing:** Genuinely open-source and free to self-host (you pay only infrastructure plus your own LLM API bills); the managed cloud adds a free Sandbox, Professional about $59/mo and Team around $159/…
-- **Honest take:** 'Free' self-hosting isn't free — you own the servers, updates and reliability, and LLM tokens cost extra on every plan.
-- **Best for:** technical teams that want to build and ship LLM apps and agents on an open-source platform they can self-host and control
+- **Verified pricing:** Source-available and free of a software fee to self-host — the Community Edition ships under the Dify Open Source License, a modified Apache 2.0 with additional conditions — while the manag…
+- **Honest take:** 'Free' self-hosting isn't free — you own the servers, updates and reliability, and model usage bills separately once the included message credits run out.
+- **Best for:** technical teams that want to build and ship LLM apps and agents on a source-available platform they can self-host and control
+- **Flags:** {'f': 'usage_metered', 'ev': 'Cloud plans include message credits for supported model providers; once those run out you connect your own provider API key and pay that provider dir…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/dify-review/
 
 ## Diginius (diginius.com)

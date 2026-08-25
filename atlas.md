@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 411 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-25.
+All 412 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-25.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -721,6 +721,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
 - **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13, read on their own pricing page) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 A…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-13, read on their own pricing page) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 A…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/databox-review/
+
+## Datarails (datarails.com)
+- **Verified pricing:** (read 2026-08-25 on www.datarails.com/pricing) There is no public price.
+- **Honest take:** You cannot find out what it costs without talking to sales, and the entry plan is smaller than it looks: Professional covers 2 users and 1 integration, so a finance team of three, or one that needs both the ER…
+- **Best for:** Excel-bound finance teams that have outgrown the spreadsheet plumbing but not the spreadsheets — consolidating several entities or data sources into one governed set of numbers, with planning, reporting and dashboards on top, whil
+- **Full review:** https://aibuildermarketplace.com/b2b/datarails-review/
 
 ## Deel (deel.com)
 - **Verified pricing:** (re-verified 2026-08-17) Pricing is per worker and demo-led, and each product is priced separately.
@@ -1654,10 +1660,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/omniseo-review/
 
 ## Oneflow (oneflow.com)
-- **Verified pricing:** (2026) Starting at €250/month, billed annually, with 5 users included — and that is the entire public price list: everything beyond the starting rate goes through a book-a-demo call.
+- **Verified pricing:** (read 2026-08-25 on their own pricing page) Business is €50 per user per month, billed annually, for teams starting at five users — so €250 a month is the practical floor rather than a list…
 - **Honest take:** The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a sales conversation.
 - **Best for:** sales and legal teams with real contract volume who want the full lifecycle — creating, negotiating, e-signing and archiving interactive contracts — in one platform with CRM integrations
-- **Flags:** {'f': 'annual_lock', 'ev': "The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a …"}
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-25 on their own pricing page) Business is €50 per user per month, billed annually, for teams starting at five users — so €250 a month i…'}, {'f': 'annual_lock', 'ev': "The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/oneflow-review/
 
 ## Outgrow (outgrow.co)
@@ -1709,10 +1715,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/parim-review/
 
 ## Passpack (passpack.com)
-- **Verified pricing:** (re-verified 2026-08-17, with a caveat) Passpack does not publish its rates in a form our capture can read, and neither our July nor our August 2026 reading retrieved an amount.
+- **Verified pricing:** (read 2026-08-25 on their own pricing page) Teams is $20 per user per year, paid annually, for teams of up to 20 people.
 - **Honest take:** The honest trade-off is polish.
-- **Best for:** small-to-mid teams who want zero-knowledge encryption and shared team vaults at a rock-bottom per-user price, and don't mind a plainer interface
-- **Flags:** {'f': 'per_seat', 'ev': 'Our dated reading: around $1.50 per user a month for Teams (up to 20 users) and about $4.50 per user a month for Business, billed annually, with a 28…'}
+- **Best for:** teams under twenty people who want zero-knowledge encryption and shared vaults at about $1.67 a seat a month, and don't mind a plainer interface
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-25 on their own pricing page) Teams is $20 per user per year, paid annually, for teams of up to 20 people.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/passpack-review/
 
 ## Payoneer (payoneer.com)
@@ -2186,10 +2192,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/signnow-review/
 
 ## Similarweb (similarweb.com)
-- **Verified pricing:** (re-verified 2026-08-14, read on their own pricing page) No prices are shown — that is still the finding.
-- **Honest take:** There is no price on the pricing page, and that is the finding.
-- **Best for:** marketing and strategy teams who need traffic and channel estimates for competitors and will use them often enough to justify a negotiated annual contract
-- **Flags:** {'f': 'addons_extra', 'ev': 'Up to 37 months of data history is sold as an add-on rather than an inclusion, and API access is either standalone or inside a custom package.'}
+- **Verified pricing:** (read 2026-08-25 on their own pricing page) The entrepreneur plans are published: $125 per month on annual billing for Competitive Intelligence, $333 for Competitive Intel & SEO & AEO, and …
+- **Honest take:** Similarweb does publish a price — $125 a month for one seat on annual billing, or $199 if you pay monthly.
+- **Best for:** a single analyst or marketer who needs competitor traffic and channel estimates often enough to justify $125 a month, and teams who are prepared to negotiate an annual contract for more than one seat
+- **Flags:** {'f': 'addons_extra', 'ev': 'Up to 37 months of data history is sold as an add-on rather than an inclusion, and API access is either standalone or inside a custom package.'}, {'f': 'annual_lock', 'ev': '(read 2026-08-25 on their own pricing page) The entrepreneur plans are published: $125 per month on annual billing for Competitive Intelligence, $333…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/similarweb-review/
 
 ## SimpleTexting (simpletexting.com)
@@ -2460,10 +2466,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/thordata-review/
 
 ## Thryv (thryv.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Starter $85 a month.
+- **Verified pricing:** (read 2026-08-25 on their own pricing page) Starter is $99 a month and Signature $399 a month on monthly billing.
 - **Honest take:** The gap between the two published tiers is the thing to plan around: $85 to $340 is four times, with nothing in between, so the question is not which plan but whether the jump is worth it in one step.
 - **Best for:** small service businesses — trades, salons, clinics — that currently run on a diary, a spreadsheet and a separate invoicing tool, and would genuinely retire all three
-- **Flags:** {'f': 'addons_extra', 'ev': 'Higher tiers and add-on services are not priced on the page.'}, {'f': 'annual_lock', 'ev': 'Annual billing is stated to save 15%.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'A free trial is offered, and the growth add-ons sold alongside these plans are not priced on the page.'}, {'f': 'annual_lock', 'ev': 'Annual billing is stated to save 15%, which our 1 August reading put at $85 and $340, with Signature billed $4,068 a year.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/thryv-review/
 
 ## TicketTailor (tickettailor.com)
@@ -2686,10 +2692,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/weave-review/
 
 ## WebCatalog (webcatalog.io)
-- **Verified pricing:** (2026) Free Basic (2 apps, 2 spaces); Pro about $5/user/mo annual (~$6 monthly) with unlimited apps, profiles, sync and blocking; Business ~$8-10/user/mo adds team management; a legacy life…
+- **Verified pricing:** (read 2026-08-25 on their own pricing page) Basic is free and no card is required: 2 desktop apps, 2 profiles, 1 space, 1 page and 5 links.
 - **Honest take:** It solves a real annoyance: dozens of web apps and multiple accounts per app as tidy desktop windows.
 - **Best for:** people juggling many web apps and multiple accounts per service who want them as clean, separate desktop apps with per-profile isolation
-- **Flags:** {'f': 'per_seat', 'ev': '(2026) Free Basic (2 apps, 2 spaces); Pro about $5/user/mo annual (~$6 monthly) with unlimited apps, profiles, sync and blocking; Business ~$8-10/use…'}, {'f': 'free_tier', 'ev': "The free plan's 2-app limit is tight, but browser profiles and PWAs solve part of the same problem for free."}
+- **Flags:** {'f': 'per_seat', 'ev': 'Pro is $5 per user per month billed annually, plus local taxes, and lifts those caps to unlimited apps, profiles, spaces and pages with cloud backup …'}, {'f': 'addons_extra', 'ev': 'Business is $8 per user per month billed annually and adds shared spaces, team management, centralised billing and an activity log, with SAML single …'}, {'f': 'free_tier', 'ev': "The free plan's 2-app limit is tight, but browser profiles and PWAs solve part of the same problem for free."}
 - **Full review:** https://aibuildermarketplace.com/b2b/webcatalog-review/
 
 ## Webflow (webflow.com)

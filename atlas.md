@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 409 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-24.
+All 411 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-25.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2023,6 +2023,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'free_tier', 'ev': 'The Low Stock Counter is $4.99 a month or $41.91 a year at a stated 30% saving, with a 7-day trial; its free tier is Development Stores, meaning deve…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/scarcity-ai-review/
 
+## Scrolly (effectify.io)
+- **Verified pricing:** (read 2026-08-25 on apps.shopify.com/custom-scroll-to-top) Free, and free is the only plan.
+- **Honest take:** The two features carry very different risk and the app presents them as one install.
+- **Best for:** Shopify merchants who want a free, one-click back-to-top button on long collection and product pages without touching theme code
+- **Full review:** https://aibuildermarketplace.com/b2b/scrolly-review/
+
 ## Seamless.ai (seamless.ai)
 - **Verified pricing:** (re-verified 2026-08-17) A free plan with 50 credits; everything above it is sales-led and quote-based, and neither our July nor our August 2026 capture retrieved a published figure.
 - **Honest take:** Data accuracy is the recurring complaint — independent tests put email deliverability around 74% (20–30% bounce) versus ZoomInfo's ~2–3%, so real cost per usable contact climbs.
@@ -2439,6 +2445,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** support and sales teams that already text customers from personal phones and need a shared, compliant inbox with a record of who said what
 - **Flags:** {'f': 'usage_metered', 'ev': 'Add-on message credits are $0.03 each, bought in advance.'}, {'f': 'addons_extra', 'ev': 'Add-on message credits are $0.03 each, bought in advance.'}, {'f': 'free_tier', 'ev': 'Add-on message credits are $0.03 each, bought in advance.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/textline-review/
+
+## TheTop (thetop.com)
+- **Verified pricing:** (read 2026-08-25 on thetop.com/pricing) Two paid plans, both month to month with no contract.
+- **Honest take:** Out-of-the-box integrations stop at Gmail, Google Calendar, Outlook, Microsoft 365, and RSS or news feeds, so anything else in your stack sits outside the brief.
+- **Best for:** professionals and small-business owners who lose the first hour of the day triaging Gmail and a calendar, and want one ranked brief instead of five open tabs
+- **Full review:** https://aibuildermarketplace.com/b2b/thetop-review/
 
 ## Thordata (thordata.com)
 - **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Usage-metered, with free trials on the APIs.

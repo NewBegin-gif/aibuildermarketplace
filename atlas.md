@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 415 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-27.
+All 417 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-27.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -690,9 +690,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Crazy Egg (crazyegg.com)
 - **Verified pricing:** (2026-08-21, read on their own pricing page) Three plans, all billed annually, with a 30-day free trial and — in the vendor's words — no overages, ever.
-- **Honest take:** The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier — and A/B testing is not in it at all: that starts on Growth at $99, whose pageview slider begins at 50,000 rather…
+- **Honest take:** The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier.
 - **Best for:** lean marketing teams that want heatmaps, recordings and built-in A/B testing in one consolidated tool — noting that testing starts on the $99 plan, not the $29 one
-- **Flags:** {'f': 'usage_metered', 'ev': "(2026-08-21, read on their own pricing page) Three plans, all billed annually, with a 30-day free trial and — in the vendor's words — no overages, ev…"}, {'f': 'free_tier', 'ev': "The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier — and A/B testing is not in it at all: that starts on …"}
+- **Flags:** {'f': 'usage_metered', 'ev': "(2026-08-21, read on their own pricing page) Three plans, all billed annually, with a 30-day free trial and — in the vendor's words — no overages, ev…"}, {'f': 'free_tier', 'ev': "The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier."}
 - **Full review:** https://aibuildermarketplace.com/b2b/crazy-egg-review/
 
 ## Credit Repair Cloud (creditrepaircloud.com)
@@ -1094,7 +1094,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Geotargetly (geotargetly.com)
 - **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) 14-day free trial.
-- **Honest take:** The meter is your traffic: tiers gate on visitor quotas, so a growth spike pushes you up a tier whether you planned it or not — and the friendlier advertised numbers are the yearly-billing rates; month-to-mont…
+- **Honest take:** The meter is your traffic: tiers gate on visitor quotas, so a growth spike pushes you up a tier whether you planned it or not.
 - **Best for:** marketers personalizing redirects, content blocks and popups by visitor location — country to city level — without engineering work
 - **Full review:** https://aibuildermarketplace.com/b2b/geotargetly-review/
 
@@ -1209,7 +1209,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Hopp (gethopp.com)
 - **Verified pricing:** A free tier exists (2026); public pricing beyond that is fragmented across Hopp-branded products — verify the exact product and current plans on their site before committing.
-- **Honest take:** The honest note is brand confusion: multiple products share the Hopp name (Wix's link-in-bio tool among them), so make sure the thing you're evaluating is the digital-card/networking product you mean — and giv…
+- **Honest take:** The honest note is brand confusion: multiple products share the Hopp name (Wix's link-in-bio tool among them), so make sure the thing you're evaluating is the digital-card/networking product you mean.
 - **Best for:** teams that want modern digital business cards with centralized branding, starting free and verifying paid tiers directly
 - **Flags:** {'f': 'free_tier', 'ev': 'A free tier exists (2026); public pricing beyond that is fragmented across Hopp-branded products — verify the exact product and current plans on thei…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/hopp-review/
@@ -1325,9 +1325,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Jotform AI Agents (jotform.com)
 - **Verified pricing:** (read 2026-08-26 on jotform.com/pricing over a US connection, on the yearly tab) Starter is free with 5 forms and 100 monthly submissions.
-- **Honest take:** The gating detail is conversations, not features — the free and lower tiers cap monthly conversations quickly, so an agent that actually gets used will push you up a tier, and voice minutes and SMS are metered…
+- **Honest take:** The gating detail is conversations, not features — the free and lower tiers cap monthly conversations quickly, so an agent that actually gets used will push you up a tier.
 - **Best for:** teams already using Jotform (or wanting no-code) that need AI chatbots and service agents to handle leads, support and bookings tied to their forms
-- **Flags:** {'f': 'usage_metered', 'ev': 'The gating detail is conversations, not features — the free and lower tiers cap monthly conversations quickly, so an agent that actually gets used wi…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Voice minutes and SMS are metered separately on top.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/jotform-ai-agents-review/
 
 ## Jubilee (jubileepro.com)
@@ -1618,9 +1618,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## NiceJob (nicejob.com)
 - **Verified pricing:** (price re-verified 2026-08-07) Reviews plan about $75/mo and Pro around $125/mo (adds referrals, AI replies, booking reminders), both with a 14-day trial and a one-off setup fee near $199 (…
-- **Honest take:** Reporting and customization are fairly basic and there's a setup fee on top of the monthly — it automates review collection genuinely well, but if you want deep analytics or granular control over timing and wo…
+- **Honest take:** Reporting and customization are fairly basic and there's a setup fee on top of the monthly.
 - **Best for:** local and service businesses that want reputation marketing on offense — automatically asking happy customers for reviews and showcasing them — rather than only managing damage when a bad review lands
-- **Flags:** {'f': 'addons_extra', 'ev': "Reporting and customization are fairly basic and there's a setup fee on top of the monthly — it automates review collection genuinely well, but if yo…"}
+- **Flags:** {'f': 'addons_extra', 'ev': "Reporting and customization are fairly basic and there's a setup fee on top of the monthly."}
 - **Full review:** https://aibuildermarketplace.com/b2b/nicejob-review/
 
 ## NordVPN (nordvpn.com)
@@ -1687,9 +1687,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## PagePulse (getpagepulse.io)
 - **Verified pricing:** (2026) Genuinely free tier: $0 for 1 member and 1 page with unlimited traffic.
-- **Honest take:** The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages, AI insights are metered per month per tier, and the ‘unlimited traffic…
+- **Honest take:** The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages.
 - **Best for:** solos and small teams who want simple per-page analytics — heatmaps, visitor behavior and AI-summarized insights — with a genuinely free single-page tier to start
-- **Flags:** {'f': 'usage_metered', 'ev': 'The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages, AI insight…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% — and note the footnote: ‘unlimited’ traffic is subject to fair use.'}, {'f': 'free_tier', 'ev': '(2026) Genuinely free tier: $0 for 1 member and 1 page with unlimited traffic.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'AI insights are metered per month per tier, and the ‘unlimited traffic’ promise carries a fair-use asterisk.'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% — and note the footnote: ‘unlimited’ traffic is subject to fair use.'}, {'f': 'free_tier', 'ev': '(2026) Genuinely free tier: $0 for 1 member and 1 page with unlimited traffic.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pagepulse-review/
 
 ## Pangram (pangram.com)
@@ -1739,6 +1739,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** enterprise PMOs that plan portfolios around named-resource capacity and need feasibility answers before committing to projects
 - **Flags:** {'f': 'quote_only', 'ev': 'Quote-based enterprise pricing (2026) — no public tiers, no self-serve trial; the entry point is a guided demo.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pdware-review/
+
+## Pecan AI (pecan.ai)
+- **Verified pricing:** (read 2026-08-27 on pecan.ai/pricing) No public price at any tier.
+- **Honest take:** The pricing page argues instead of quoting.
+- **Best for:** data and marketing teams that want churn, LTV or demand predictions running against their own warehouse without hiring data scientists, and can work with an annual commitment quoted on a call
+- **Full review:** https://aibuildermarketplace.com/b2b/pecan-ai-review/
 
 ## Piktochart (piktochart.com)
 - **Verified pricing:** (2026-08-06, read in a live browser on their own pricing page, US dollar view) Free is $0, Pro is $15 per member per month billed monthly or $10 billed annually, Business is $20 monthly or …
@@ -1979,6 +1985,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': '(2) Subscriptions that include the full plugin set plus a yearly retouch-credit allowance.'}, {'f': 'free_tier', 'ev': '(3) Pay-as-you-go cloud retouching at $0.10 per photo.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/retouch4me-review/
 
+## Rippling (rippling.com)
+- **Verified pricing:** (verified 2026-08-27) Rippling is modular and mostly quote-led.
+- **Honest take:** The published '$8 per user a month' is real but it's only the floor, and it's the HR-and-payroll entry — not the price of the platform.
+- **Best for:** growing companies that want HR, IT and Finance on one employee record — so a single hire can trigger payroll, a provisioned laptop and app access at once, and offboarding claws it all back automatically
+- **Flags:** {'f': 'quote_only', 'ev': "That $8 is an entry point, not a quote — the buttons beside it read 'Get a free quote' and 'Contact Sales', and the real bill depends on which module…"}, {'f': 'per_seat', 'ev': "The one figure Rippling publishes is a floor: its global-payroll page advertises 'Starting at $8 per month per user' for the platform (HR, payroll, b…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/rippling-review/
+
 ## Riverside (riverside.fm)
 - **Verified pricing:** (read 2026-08-26 on riverside.fm/pricing over a US connection) Free covers one two-hour recording at 720p on a single track.
 - **Honest take:** The meter is not recording time, it is separate-track recording time — and separate tracks are the entire reason to use this rather than a video call.
@@ -2157,7 +2170,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Shoeboxed (shoeboxed.com)
 - **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Starter about $97/yr (30 digital scans/mo, 1 Magic Envelope/yr); Pro ~$297/yr (200 scans/mo, monthly paper scans,…
-- **Honest take:** Its unique trick — the Magic Envelope, where you literally mail a stuffed envelope of paper receipts and humans digitize them — is also the meter to watch: envelope frequency defines the tiers, and heavy paper…
+- **Honest take:** Its unique trick is the Magic Envelope, where you literally mail a stuffed envelope of paper receipts and humans digitize them.
 - **Best for:** businesses drowning in PAPER receipts — trades, field crews, owners with shoeboxes of history — who want them humanly digitized, verified and IRS-ready
 - **Full review:** https://aibuildermarketplace.com/b2b/shoeboxed-review/
 
@@ -2357,9 +2370,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## SurveyMonkey (surveymonkey.com)
 - **Verified pricing:** (read 2026-08-26 on surveymonkey.com/pricing over a US connection, on the Team plans tab) Team Advantage is $30 per user a month and Team Premier $92, both starting at three users and bille…
-- **Honest take:** The free tier is a teaser, response caps trigger $0.15-per-response overages that become a hidden cost on big studies, branding and customisation are limited, and a lot of the good analytics and logic sit behi…
+- **Honest take:** The free tier is a teaser.
 - **Best for:** teams that need research-grade survey logic (skip logic, randomisation, quotas) with compliance (HIPAA, GDPR, SOC 2) and 200+ integrations
-- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-26 on surveymonkey.com/pricing over a US connection, on the Team plans tab) Team Advantage is $30 per user a month and Team Premier $92…'}, {'f': 'usage_metered', 'ev': 'The free tier is a teaser, response caps trigger $0.15-per-response overages that become a hidden cost on big studies, branding and customisation are…'}, {'f': 'free_tier', 'ev': 'Advantage carries 50,000 responses a year and Premier 100,000, with $0.15 per response beyond that.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-26 on surveymonkey.com/pricing over a US connection, on the Team plans tab) Team Advantage is $30 per user a month and Team Premier $92…'}, {'f': 'usage_metered', 'ev': 'Response caps trigger $0.15-per-response overages that become a hidden cost on big studies.'}, {'f': 'free_tier', 'ev': 'Advantage carries 50,000 responses a year and Premier 100,000, with $0.15 per response beyond that.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/surveymonkey-review/
 
 ## SurveySparrow (surveysparrow.com)
@@ -2479,14 +2492,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Thordata (thordata.com)
 - **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Usage-metered, with free trials on the APIs.
-- **Honest take:** Everything is a meter — per GB, per IP, per 1K responses — so the bill scales with usage, and the headline rates were SALE prices at research time (roughly half of list): budget on list price, not the promo.
+- **Honest take:** Everything is a meter — per GB, per IP, per 1K responses — so the bill scales with usage.
 - **Best for:** data teams scraping at scale — price intelligence, SERP tracking, AI-training data — who want proxy infrastructure plus ready-made scraping APIs at aggressive per-unit rates
 - **Flags:** {'f': 'usage_metered', 'ev': "(price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Usage-metered, with free trials on the APIs."}, {'f': 'free_tier', 'ev': 'At research time a ~50%-off sale ran: residential proxies from $0.65/GB (list $1.05), mobile $2.20/GB, static ISP and datacenter proxies from $0.75/I…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/thordata-review/
 
 ## Thryv (thryv.com)
 - **Verified pricing:** (read 2026-08-25 on their own pricing page) Starter is $99 a month and Signature $399 a month on monthly billing.
-- **Honest take:** The gap between the two published tiers is the thing to plan around: $85 to $340 is four times, with nothing in between, so the question is not which plan but whether the jump is worth it in one step.
+- **Honest take:** Two published tiers, $85 and $340, and nothing between them.
 - **Best for:** small service businesses — trades, salons, clinics — that currently run on a diary, a spreadsheet and a separate invoicing tool, and would genuinely retire all three
 - **Flags:** {'f': 'addons_extra', 'ev': 'A free trial is offered, and the growth add-ons sold alongside these plans are not priced on the page.'}, {'f': 'annual_lock', 'ev': 'Annual billing is stated to save 15%, which our 1 August reading put at $85 and $340, with Signature billed $4,068 a year.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/thryv-review/
@@ -2657,9 +2670,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Vista Social (vistasocial.com)
 - **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Professional about $79/mo (3 users, 15 profiles, listening, review management), Advanced ~$149/mo (Zapier/Make, u…
-- **Honest take:** It undercuts the big suites convincingly, and the honest check is coverage depth: platform APIs change constantly, so verify the specific networks and features YOUR clients need (particularly newer TikTok/thre…
+- **Honest take:** It undercuts the big suites convincingly.
 - **Best for:** agencies and multi-brand teams that want scheduling, listening, reviews and reporting across many profiles at a notably lower price than legacy suites
-- **Flags:** {'f': 'usage_metered', 'ev': 'It undercuts the big suites convincingly, and the honest check is coverage depth: platform APIs change constantly, so verify the specific networks an…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The honest check is coverage depth: platform APIs change constantly, so verify the specific networks and features YOUR clients need (particularly new…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/vista-social-review/
 
 ## Volza (volza.com)

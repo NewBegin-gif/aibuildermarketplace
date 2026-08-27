@@ -22,7 +22,7 @@ from pathlib import Path
 HEROES = {
     "bitvavo": "/b2b/bitvavo-trading-bot/",
     "replit": "/b2b/replit-trading-bot/",
-    "hostinger": "/b2b/hostinger-vps-review/",
+    "hostinger": "/b2b/hostinger-review/",
     "turbotic": "/b2b/turbotic-ai-review/",
     "calilio": "/b2b/calilio-review/",
     "cometchat": "/b2b/cometchat-review/",
@@ -50,7 +50,7 @@ HEROES = {
     "flocksy": "/b2b/flocksy-review/",
     "brightdata": "/b2b/bright-data-review/",
 }
-HERO_SLUGS = {"bitvavo-trading-bot", "replit-trading-bot", "hostinger-vps-review", "turbotic-ai-review",
+HERO_SLUGS = {"bitvavo-trading-bot", "replit-trading-bot", "hostinger-review", "turbotic-ai-review",
               "calilio-review", "cometchat-review", "krispcall-review", "reply-io-review", "typewise-review", "vida-ai-review", "aisq-review", "browse-ai-review", "clickup-review", "gamma-review", "idrive-review", "lindy-review", "proton-review", "quillbot-review", "reclaim-ai-review", "sanebox-review", "trainual-review", "vista-social-review", "consensus-review", "mindstudio-review", "runpod-review",
               "process-street-review", "quo-review", "flocksy-review", "bright-data-review"}
 

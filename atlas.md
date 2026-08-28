@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 417 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-27.
+All 417 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-28.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -559,10 +559,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/circle-review/
 
 ## Claude (claude.ai)
-- **Verified pricing:** (price re-verified 2026-07-31) The free tier is $0 with daily usage caps (2026).
+- **Verified pricing:** (price re-verified 2026-08-27 on their own pricing page) The free tier is $0.
 - **Honest take:** The honest catch is usage limits: even on Pro you can hit a ceiling mid-session on a heavy day, and the step up to Max is a real $100 to $200 a month — you're buying headroom, not extra features.
 - **Best for:** developers, writers, analysts and researchers who want best-in-class reasoning, coding and long-document work — and a model that's careful and direct rather than eager to please
-- **Flags:** {'f': 'free_tier', 'ev': '(price re-verified 2026-07-31) The free tier is $0 with daily usage caps (2026).'}
+- **Flags:** {'f': 'free_tier', 'ev': '(price re-verified 2026-08-27 on their own pricing page) The free tier is $0.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/claude-review/
 
 ## Clay (clay.com)
@@ -1256,7 +1256,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/icontact-review/
 
 ## IDrive (idrive.com)
-- **Verified pricing:** (2026, re-verified 26 Jul 2026) Free 10 GB Basic tier.
+- **Verified pricing:** (2026, re-verified 27 Aug 2026) Free 10 GB Basic tier.
 - **Honest take:** The first-year price is a teaser and the renewal is the price — IDrive says so itself under the plan table, and on the current numbers the step from discounted to standard is about 43% (Personal 5 TB goes from…
 - **Best for:** individuals and small businesses that want cheap multi-device cloud backup with versioning, snapshots and physical seed/restore shipping
 - **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons: server backup $5/month/server, and Microsoft 365 or Google Workspace backup at $20/seat/year.'}, {'f': 'annual_lock', 'ev': 'IDrive Personal is $9.99/month for 5 TB, shown discounted to $6.99/month with annual billing (save 30%), scaling up to $99.99/month ($69.99 discounte…'}, {'f': 'free_tier', 'ev': 'IDrive Mini is $0.25/month for 100 GB ($0.83/month for 500 GB).'}
@@ -1754,10 +1754,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/piktochart-review/
 
 ## Pingtree (pingtree.com)
-- **Verified pricing:** (2026-07-27, read on their own pricing page) Six tiers in two groups.
+- **Verified pricing:** (2026-08-27, read on their own pricing page) Self Service is “From $199” per month with a free trial included, and Managed Services carries a starting cost of $2,500, “scoped with your acco…
 - **Honest take:** Two things about this price list will cost you money if you skim it.
-- **Best for:** performance marketers, lead brokers and affiliate operations that already move real lead volume and want ping-tree routing, partner management, funnels and reporting in one system — the unlimited-users-with-roles policy on every s
-- **Flags:** {'f': 'usage_metered', 'ev': 'Startup includes 500K processed leads, 500K ping requests, 1M clicks, 1GB database storage and 100K database API calls, with unlimited users on role-…'}, {'f': 'addons_extra', 'ev': 'Starter adds full platform access (funnels, routing, reporting, partner management), one account manager for onboarding and day-to-day support, and d…'}
+- **Best for:** performance marketers, lead brokers and affiliate operations that already move real lead volume and want ping-tree routing, partner management, funnels and reporting in one system — the unlimited-users-with-roles policy on the sel
+- **Flags:** {'f': 'usage_metered', 'ev': 'Self Service is the whole platform driven by Pingtree Copilot, with core usage — leads, pings, clicks and storage — included each month, overage bill…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pingtree-review/
 
 ## Pipedrive (pipedrive.com)
@@ -2820,10 +2820,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/zeffy-review/
 
 ## ZenBusiness (zenbusiness.com)
-- **Verified pricing:** (2026-07-25, read on their own pricing page) Formation itself is $0 plus the state's fee — that applies to LLC, S corp and C corp filings alike, and the state fee is separate, varies by sta…
+- **Verified pricing:** (re-verified 2026-08-27 on their own pricing page; unchanged since 25 Jul 2026) Formation itself is $0 plus the state's fee — that applies to LLC, S corp and C corp filings alike, and the s…
 - **Honest take:** The $0 is real for the filing service and it is also the whole commercial idea: what you sign up for at zero has an annual carry that is not shown next to it.
 - **Best for:** first-time founders who want the paperwork handled and are willing to pay a yearly fee to keep it handled — the a-la-carte pricing means you can start at the state fee plus a registered agent and add only what you actually need
-- **Flags:** {'f': 'free_tier', 'ev': "(2026-07-25, read on their own pricing page) Formation itself is $0 plus the state's fee — that applies to LLC, S corp and C corp filings alike, and …"}
+- **Flags:** {'f': 'free_tier', 'ev': "(re-verified 2026-08-27 on their own pricing page; unchanged since 25 Jul 2026) Formation itself is $0 plus the state's fee — that applies to LLC, S …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/zenbusiness-review/
 
 ## Zendesk (zendesk.com)

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 417 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-28.
+All 420 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-28.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -275,6 +275,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's deliberately narrow — Shopify-only and built around segmented paid traffic.
 - **Best for:** Shopify stores running segmented paid campaigns (different personas, interests, offers) who are currently sending all that traffic to one generic page
 - **Full review:** https://aibuildermarketplace.com/b2b/auware-review/
+
+## Ava AI (avasales.ai)
+- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/ava-ai and avasales.ai) Three paid tiers, no free plan, each with a 7-day trial.
+- **Honest take:** The monthly price is a minutes allowance, not a flat fee — every minute past the bucket bills at $0.07 to $0.10, so a busy support line can cost far more than the headline.
+- **Best for:** Shopify DTC and cash-on-delivery stores with real inbound call volume that want 24/7 phone support and outbound cart-recovery automated, and are comfortable with per-minute economics
+- **Flags:** {'f': 'usage_metered', 'ev': 'The headline price is really a minutes bucket: a store with real call volume pays the overage, so cost tracks conversation length, not seats.'}, {'f': 'free_tier', 'ev': 'Support is $29 a month and includes 100 call minutes, then $0.10 a minute; Recover is $99 a month with 400 minutes and $0.08 over; Scale is $499 a mo…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/ava-ai-review/
 
 ## AWeber (aweber.com)
 - **Verified pricing:** (re-verified 16 Jul 2026) Genuinely free plan (up to 500 subscribers); Lite shows $12.50/mo and Plus $20/mo at 500 subs (annual billing; both scale by subscriber count).
@@ -837,6 +844,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** This is consulting, not a tool you log into: best when you want AI designed and built for you, not when you'd rather DIY with software.
 - **Best for:** businesses that want AI solutions built for them as a services engagement rather than assembling tools themselves
 - **Full review:** https://aibuildermarketplace.com/b2b/dryground-ai-review/
+
+## Easy Advanced Translations (northwest.dev)
+- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/advanced-translation) Four tiers, all monthly.
+- **Honest take:** The 'free AI' is heavily quota-limited — 50 products on Free, up to 800 on Pro — so a genuinely multilingual catalogue pushes you either to a paid tier or to your own OpenAI/DeepSeek key, where you pay token c…
+- **Best for:** small-to-mid Shopify stores that want affordable, full-store AI translation — including images and third-party-app text — and are comfortable bringing their own OpenAI or DeepSeek key for unlimited volume
+- **Flags:** {'f': 'addons_extra', 'ev': "The 'free AI' is heavily quota-limited — 50 products on Free, up to 800 on Pro — so a genuinely multilingual catalogue pushes you either to a paid ti…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/easy-advanced-translations-review/
 
 ## EasyDMARC (easydmarc.com)
 - **Verified pricing:** (read 2026-08-26 on easydmarc.com/pricing over a US connection, on the Organizations tab with annual billing on) Plus is $US 44.99 a month, or $US 35.99 billed annually, for 2 domains, thre…
@@ -2347,6 +2361,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The pricing page contradicts itself: the plan card says $17 yearly and $22 monthly, the FAQ on the same page says $20 yearly and $25 monthly.
 - **Best for:** people whose problem is deciding what to do today rather than tracking what exists — it pulls from your existing tools and forces a daily plan, which is the whole product
 - **Full review:** https://aibuildermarketplace.com/b2b/sunsama-review/
+
+## SupaEasy (supaeasy.com)
+- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing) A free plan plus three paid monthly tiers, each with a 7-day trial.
+- **Honest take:** Two things the marketing glosses over.
+- **Best for:** Shopify merchants — especially non-Plus stores — who want custom discount, checkout, payment and shipping logic without hiring a developer, and above all those forced to migrate deprecated Shopify Scripts to Functions before the c
+- **Flags:** {'f': 'usage_metered', 'ev': "First, the 'free' plan is development-stores only, so any live use is paid, and the AI generator that headlines the app is not in Premium ($49) but i…"}, {'f': 'addons_extra', 'ev': "First, the 'free' plan is development-stores only, so any live use is paid, and the AI generator that headlines the app is not in Premium ($49) but i…"}, {'f': 'free_tier', 'ev': '(verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing) A free plan plus three paid monthly tiers, each with a 7-day trial.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/
 
 ## Superfiliate (superfiliate.com)
 - **Verified pricing:** (read 2026-08-25) Superfiliate publishes no price.

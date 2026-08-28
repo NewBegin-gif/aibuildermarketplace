@@ -102,10 +102,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/airia-review/
 
 ## Airwallex (airwallex.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) FX conversion 0.5% above the interbank rate for major currencies and 1% for all others.
+- **Verified pricing:** (2026-08-28, read off their own pricing page and fee table; no rate below has changed since 1 Aug 2026) FX conversion 0.5% above the interbank rate for major currencies and 1% for all other…
 - **Honest take:** The honest headline here is that the FX markup is published at all — 0.5% and 1% above interbank is a real number, and most competitors will not print one.
 - **Best for:** companies invoicing or paying in several currencies, where a 0.5% spread against your bank's 2–3% is the whole business case
-- **Flags:** {'f': 'per_seat', 'ev': 'Account plans: Explore free, Grow $12 per user/month plus a platform fee that varies with team size, Accelerate custom.'}, {'f': 'free_tier', 'ev': 'Payment acceptance 2.8% + $0.30 on domestic cards and 4.30% + $0.30 on international cards; local payment methods $0.30 plus method-specific fees.'}
+- **Flags:** {'f': 'free_tier', 'ev': 'Payment acceptance 2.8% + $0.30 on domestic cards and 4.30% + $0.30 on international cards; local payment methods $0.30 plus method-specific fees.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/airwallex-review/
 
 ## AISDR (aisdr.com)
@@ -258,7 +258,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/audiorista-review/
 
 ## Aura (goaura.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Flat per account, not per seat, with unlimited listings on every tier.
+- **Verified pricing:** (2026-08-28, checked line by line against their own pricing page; every figure below is the same as on 1 Aug 2026) Flat per account, not per seat, with unlimited listings on every tier.
 - **Honest take:** The tier is decided by how much you sell, not by what you need.
 - **Best for:** Amazon and Walmart sellers past the point where manual repricing costs more attention than it is worth, and whose monthly volume sits comfortably inside one band
 - **Full review:** https://aibuildermarketplace.com/b2b/aura-review/
@@ -675,10 +675,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/consensus-review/
 
 ## Contractor Foreman (contractorforeman.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Priced for the company rather than per seat, with unlimited projects on every tier.
+- **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; all plan prices unchanged since 1 Aug 2026) Priced for the company rather than per seat, with unlimited projects on every tier, and every…
 - **Honest take:** Credit where it is due first: this is company pricing with unlimited projects and no per-user overage inside your tier, which is rare in construction software and genuinely cheaper than per-seat rivals for a c…
 - **Best for:** small and mid-size contractors who want estimating, scheduling and daily logs in one place and can commit to a year — the company-wide fee makes it cheap per head once you have a crew
-- **Flags:** {'f': 'per_seat', 'ev': '(2026-08-01, read on their own pricing page) Priced for the company rather than per seat, with unlimited projects on every tier.'}, {'f': 'usage_metered', 'ev': 'Credit where it is due first: this is company pricing with unlimited projects and no per-user overage inside your tier, which is rare in construction…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 28 Aug 2026 on their own pricing page; all plan prices unchanged since 1 Aug 2026) Priced for the company rather than per seat, with unl…'}, {'f': 'usage_metered', 'ev': 'Credit where it is due first: this is company pricing with unlimited projects and no per-user overage inside your tier, which is rare in construction…'}, {'f': 'free_tier', 'ev': 'Card payments taken through the built-in Stripe integration are billed separately at 2.9% + $0.30 a transaction (3.9% + $0.30 for Amex, 1% + $0.30 ca…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/contractor-foreman-review/
 
 ## Convert (convert.com)
@@ -710,13 +710,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/credit-repair-cloud-review/
 
 ## CrowdStrike (crowdstrike.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Priced per device.
+- **Verified pricing:** (2026-08-28, taken from the bundle table on their pricing page; the three published per-device rates have not moved since 1 Aug 2026) Priced per device.
 - **Honest take:** Two numbers decide whether this is for you, and neither is the headline.
 - **Best for:** small and mid-size companies that want a serious endpoint agent without running a security team — Falcon Go is genuinely priced for businesses under 100 devices
 - **Full review:** https://aibuildermarketplace.com/b2b/crowdstrike-review/
 
 ## Customer.io (customer.io)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Essentials starts at $100 a month billed monthly, scaled by profiles.
+- **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; unchanged since 1 Aug 2026) Essentials starts at $100 a month billed monthly, scaled by profiles.
 - **Honest take:** The gap between the two published tiers is the thing to plan around: $100 to $1,000 a month is ten times, and there is nothing in between.
 - **Best for:** product-led companies whose messaging is triggered by what people do in the product rather than by a list — that is what this is built for and it is genuinely better at it than list-first tools
 - **Flags:** {'f': 'usage_metered', 'ev': 'Overages are published, which is unusual and useful: additional people and object profiles $0.009 each on Essentials, additional 1,000 emails $0.12, …'}, {'f': 'free_tier', 'ev': 'Overages are published, which is unusual and useful: additional people and object profiles $0.009 each on Essentials, additional 1,000 emails $0.12, …'}
@@ -901,10 +901,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/emergent-review/
 
 ## Employment Hero (employmenthero.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Sold as separate modules rather than one plan.
-- **Honest take:** There is no such thing as the Employment Hero price.
-- **Best for:** small and mid-size employers who want HR and payroll from one vendor and will genuinely use both, where the per-employee rate beats separate systems
-- **Flags:** {'f': 'per_seat', 'ev': 'HR Essentials $10 per employee per month, HR Engage $14, Payroll $10.'}, {'f': 'addons_extra', 'ev': 'HR, payroll, recruitment and chat are four separate subscriptions and three of them are per employee, so the number you want is a sum you have to bui…'}, {'f': 'free_tier', 'ev': 'Recruitment: a free ATS tier at $0, then $199, $359, $639 and $959 a month for 50, 100, 200 and 300 AI video interviews — their page notes no HR or p…'}
+- **Verified pricing:** (2026-08-28, read on their own pricing page at employmenthero.com/pricing/) EVERY PRICE ON THAT PAGE IS AUD EXCLUDING GST — the page states it in its own disclaimer.
+- **Honest take:** There is no such thing as the Employment Hero price, and the first thing to fix is the currency: the pricing page is the Australian one, its disclaimer says every figure is AUD excluding GST, and there is no U…
+- **Best for:** Australian and New Zealand employers who want HR and payroll from one vendor and will genuinely use both, where the per-employee rate beats separate systems
+- **Flags:** {'f': 'per_seat', 'ev': 'HR Essentials A$10 per employee per month, HR Engage A$14; HR Elite and Employment Unlimited are quote-only.'}, {'f': 'usage_metered', 'ev': 'Interview credits reset monthly, unused credits do not roll over, and overage is billed automatically with no hard cap.'}, {'f': 'addons_extra', 'ev': 'There is no standalone payroll tier on the page any more: payroll sits inside Employment Unlimited, and Managed Payroll is an add-on at A$20 per empl…'}, {'f': 'free_tier', 'ev': 'Recruitment: a free ATS tier at A$0 that includes 50 complimentary AI video interviews as a one-off trial, then A$199, A$359, A$639 and A$959 a month…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/employment-hero-review/
 
 ## EngageBay (engagebay.com)
@@ -1147,7 +1147,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/goflow-review/
 
 ## Gorgias (gorgias.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Not priced per agent — their own line.
+- **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; every figure below unchanged since 1 Aug 2026) Not priced per agent — their own line.
 - **Honest take:** Never priced per agent is a real advantage and worth saying plainly: your whole team can be in the inbox without the bill moving.
 - **Best for:** ecommerce support teams with seasonal or spiky volume, where per-agent pricing punishes you for having enough people on a busy week
 - **Flags:** {'f': 'usage_metered', 'ev': 'Basic is $90/month month-to-month or $77/month billed annually ($924 a year), including 300 tickets and 30 automated interactions, with the same $0.4…'}, {'f': 'free_tier', 'ev': 'Starter is $40/month all in: a $10/month helpdesk with 50 tickets included and $0.40 per ticket beyond, plus the AI Agent at $30/month with 30 automa…'}
@@ -1902,10 +1902,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/quartile-review/
 
 ## QuickBooks UK (quickbooks.intuit.com)
-- **Verified pricing:** Read in a live browser on their own UK pricing page, 31 Jul 2026, on the annual toggle and in pounds.
+- **Verified pricing:** Read in a live browser on their own UK pricing page, 28 Aug 2026, in pounds.
 - **Honest take:** The 90% offer is the number to be careful with, because it is the one you will see everywhere and it is not what you will pay.
 - **Best for:** UK sole traders and small businesses that need Making Tax Digital submissions handled and would rather their accountant worked in the same system they do — the accountant access on every tier is the practical reason most people la
-- **Flags:** {'f': 'renewal_jump', 'ev': 'Sole Trader Plus reads as £10.80 and renews at £108; Plus reads as £60.48 and renews at £604.80.'}, {'f': 'addons_extra', 'ev': 'Payroll is a paid add-on rather than part of any tier.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Payroll is a paid add-on rather than part of any tier, including Advanced.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/quickbooks-uk-review/
 
 ## QuickSigner (quicksigner.com)
@@ -2287,7 +2287,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/softr-review/
 
 ## Spiky.ai (spiky.ai)
-- **Verified pricing:** Read in a live browser on their own pricing page, 31 Jul 2026, across both billing toggles.
+- **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; unchanged since 31 Jul 2026) Read across both billing toggles.
 - **Honest take:** The number to check first is the meeting cap, not the price.
 - **Best for:** sales and customer-facing teams that already run most conversations on video and want the coaching layer — talk-time, keyword tracking and call review — without buying a full revenue-intelligence platform
 - **Flags:** {'f': 'per_seat', 'ev': 'There is a genuine free tier, capped at 3 meetings per user per month.'}, {'f': 'annual_lock', 'ev': 'On annual billing Plus is $15, Pro $24 and Premium $40 per user per month; switch to monthly and the same three read $18, $29 and $49.'}, {'f': 'free_tier', 'ev': 'There is a genuine free tier, capped at 3 meetings per user per month.'}

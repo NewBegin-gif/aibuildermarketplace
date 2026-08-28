@@ -1038,10 +1038,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/folk-review/
 
 ## Foxit (foxit.com)
-- **Verified pricing:** (2026) PDF Editor about $129.99/yr (desktop + 20GB cloud); Editor+ ~$159.99/yr (adds mobile, AI redaction); monthly options ~$10.99-13.99/mo.
-- **Honest take:** Foxit's whole pitch is being the honest fraction of Acrobat's price, and it largely delivers.
+- **Verified pricing:** (re-verified 28 Aug 2026 on Foxit's own pricing and checkout pages) PDF Editor is $129.99 per user per year, or from $10.99 per user per month.
+- **Honest take:** Foxit's pitch is being the honest fraction of Acrobat's price, and on the headline numbers it delivers.
 - **Best for:** individuals and businesses that want full PDF editing, OCR and organizing at a fraction of Acrobat's subscription — especially multi-seat deployments
-- **Flags:** {'f': 'addons_extra', 'ev': 'eSign runs separately (~$120/yr individual, ~$300/yr business with 5-user minimum); an AI Assistant add-on is ~$49.99/yr.'}
+- **Flags:** {'f': 'per_seat', 'ev': "(re-verified 28 Aug 2026 on Foxit's own pricing and checkout pages) PDF Editor is $129.99 per user per year, or from $10.99 per user per month."}, {'f': 'usage_metered', 'ev': 'The AI Assistant paid tier is $49.99 a year for 2,000 credits a month per user; Editor and Editor+ include 20 credits a month per user, credits reset…'}, {'f': 'addons_extra', 'ev': 'The AI Assistant paid tier is $49.99 a year for 2,000 credits a month per user; Editor and Editor+ include 20 credits a month per user, credits reset…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/foxit-review/
 
 ## Frase (frase.io)

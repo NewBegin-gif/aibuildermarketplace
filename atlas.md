@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 420 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-28.
+All 420 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-29.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -915,10 +915,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/engagebay-review/
 
 ## Envoy (envoy.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Five products, each metered differently and all billed annually.
-- **Honest take:** None of the prices on that page is a price you can budget from, because every one of them is followed by 'Price excludes platform fee' and the fee has no number anywhere.
+- **Verified pricing:** (2026-08-29, read on their own pricing page and their platform page) Five products, each metered differently and all billed annually.
+- **Honest take:** None of the prices on that page is a price you can budget from.
 - **Best for:** companies with a real office and a front desk problem — visitor compliance, desk booking and deliveries in one system, where the per-location price is spread over enough employees to be worth it
-- **Flags:** {'f': 'per_seat', 'ev': 'Emergency Notifications $2 per user per month.'}, {'f': 'usage_metered', 'ev': '(2026-08-01, read on their own pricing page) Five products, each metered differently and all billed annually.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Emergency Notifications $2 per user per month.'}, {'f': 'usage_metered', 'ev': '(2026-08-29, read on their own pricing page and their platform page) Five products, each metered differently and all billed annually.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/envoy-review/
 
 ## Essential Loyalty (essential-apps.com)
@@ -984,9 +984,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/feedvisor-review/
 
 ## Filevine (filevine.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) No prices are shown.
+- **Verified pricing:** (2026-08-29, read on their own pricing page) No prices are shown.
 - **Honest take:** Nothing is priced, so everything is negotiable — which cuts both ways.
 - **Best for:** law firms past the point where a general project tool works, with enough matters that case-specific workflows and intake tracking pay back a negotiated annual contract
+- **Flags:** {'f': 'usage_metered', 'ev': 'What the page does name now is a free way in: LOIS Explore, described as a free tier of LOIS for AI-powered legal research and drafting, with a trial…'}, {'f': 'free_tier', 'ev': 'What the page does name now is a free way in: LOIS Explore, described as a free tier of LOIS for AI-powered legal research and drafting, with a trial…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/filevine-review/
 
 ## Finale Inventory (finaleinventory.com)
@@ -1052,7 +1053,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/frase-review/
 
 ## FreshBooks (freshbooks.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) The prices shown are 90% off for three months.
+- **Verified pricing:** (2026-08-29, read on their own pricing page) Every amount is unchanged since 1 August 2026.
 - **Honest take:** Two things multiply the number you first see.
 - **Best for:** freelancers and small service firms who bill time and want invoicing that chases payment for them — the client cap is generous enough at Plus for most one-person businesses
 - **Flags:** {'f': 'per_seat', 'ev': 'Two add-ons sit in the fine print: Advanced Payments $20 a month and Payroll $40 a month plus $6 per user.'}, {'f': 'renewal_jump', 'ev': 'The promotional rate is 90% off for three months, so Lite is $23 rather than $2.30 from month four.'}, {'f': 'addons_extra', 'ev': 'Two add-ons sit in the fine print: Advanced Payments $20 a month and Payroll $40 a month plus $6 per user.'}
@@ -1073,10 +1074,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/freshservice-review/
 
 ## Freshworks (freshworks.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing pages) The main Freshworks pricing page carries no prices at all — it lists the products and links out to each one.
-- **Honest take:** Freshworks is not a product, it is five of them, and the page you land on when you search for its price does not contain a price.
+- **Verified pricing:** (2026-08-29, read on their own pricing pages) The main Freshworks pricing page still carries no prices at all — it lists the products and links out to each one, and that list has grown to n…
+- **Honest take:** Freshworks is not a product, it is nine of them behind a pricing page that contains no price.
 - **Best for:** teams who want a support desk that is cheaper per agent than the category leaders and will genuinely use the annual commitment — Growth at $19 is real value if ticketing is all you need
-- **Flags:** {'f': 'per_seat', 'ev': 'On Freshdesk: Growth $19 per agent per month, Pro $55, Enterprise $89, all requiring annual billing, with a stated 20% annual saving and no monthly r…'}, {'f': 'addons_extra', 'ev': 'Freddy AI Copilot is a separate add-on at $29 per agent per month on Pro and Enterprise.'}, {'f': 'annual_lock', 'ev': 'On Freshdesk: Growth $19 per agent per month, Pro $55, Enterprise $89, all requiring annual billing, with a stated 20% annual saving and no monthly r…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'On Freshdesk the annual rates are unchanged since 1 August 2026: Growth $19 per agent per month, Pro $55, Enterprise $89, billed annually.'}, {'f': 'usage_metered', 'ev': 'And the Freddy AI Agent that is included stops after 500 sessions; beyond that it is $49 per 100 sessions, so a busy queue turns the included allowan…'}, {'f': 'addons_extra', 'ev': 'Freddy AI Copilot is a separate add-on at $29 per agent per month annually, or $35 monthly, on Pro and Enterprise only.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/freshworks-review/
 
 ## FullEnrich (fullenrich.com)
@@ -1250,10 +1251,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/hubspot-review/
 
 ## Hubstaff (hubstaff.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Priced per seat.
+- **Verified pricing:** (2026-08-29, read on their own pricing page) Priced per seat, with both billing columns published.
 - **Honest take:** The seat definition is the whole story and they state it plainly, which deserves credit: you pay for every seat you have created, not every person actually being tracked.
 - **Best for:** agencies and distributed teams that bill clients for hours and need defensible time records — the proof is the product, and per-seat is fair when every seat is a person you invoice for
-- **Flags:** {'f': 'per_seat', 'ev': '(2026-08-01, read on their own pricing page) Priced per seat.'}, {'f': 'usage_metered', 'ev': 'The seat definition is the whole story and they state it plainly, which deserves credit: you pay for every seat you have created, not every person ac…'}, {'f': 'addons_extra', 'ev': 'Monthly and annual options exist, with different proration rules, and add-ons are available on lower tiers.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(2026-08-29, read on their own pricing page) Priced per seat, with both billing columns published.'}, {'f': 'usage_metered', 'ev': 'There is a 14-day free trial with no credit card, a 30-day money-back guarantee excluding that trial, and a free Project Viewer role for people who o…'}, {'f': 'addons_extra', 'ev': 'Six add-ons are sold per seat per month: Insights, More screenshots, Tasks and Silent app from $2.50, Locations from $3.33, Data retention from $1.67.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/hubstaff-review/
 
 ## Iconosquare (iconosquare.com)

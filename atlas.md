@@ -733,6 +733,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-08-25 on www.datarails.com/pricing) There is no public price.
 - **Honest take:** You cannot find out what it costs without talking to sales, and the entry plan is smaller than it looks: Professional covers 2 users and 1 integration, so a finance team of three, or one that needs both the ER…
 - **Best for:** Excel-bound finance teams that have outgrown the spreadsheet plumbing but not the spreadsheets — consolidating several entities or data sources into one governed set of numbers, with planning, reporting and dashboards on top, whil
+- **Flags:** {'f': 'addons_extra', 'ev': 'On 31 August 2026, through its partner team, Datarails told us that customers typically commit to an annual term, that billing can run monthly across…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/datarails-review/
 
 ## Deel (deel.com)

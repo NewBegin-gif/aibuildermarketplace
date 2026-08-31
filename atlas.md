@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 420 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-31.
+All 423 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-31.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1680,6 +1680,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-25 on their own pricing page) Business is €50 per user per month, billed annually, for teams starting at five users — so €250 a month i…'}, {'f': 'annual_lock', 'ev': "The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/oneflow-review/
 
+## Optizen (optizenapp.com)
+- **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell) Three tiers, billed in USD.
+- **Honest take:** AI video is the reason to install this, and it is the one thing the subscription does not cover.
+- **Best for:** shopify stores that already own product video and want it working as an upsell at the product page, cart and post-purchase moments, or that want to test a handful of AI-generated clips cheaply before committing
+- **Flags:** {'f': 'usage_metered', 'ev': 'Starter is $9.99 a month and removes the campaign and conversion limits, adds AI-generated video and includes 2 AI video credits a month; extra credi…'}, {'f': 'addons_extra', 'ev': 'The AI video generation on top of it is not.'}, {'f': 'free_tier', 'ev': 'The free tier is a demo rather than a usable floor — one campaign, five conversions, no AI at all.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/optizen-review/
+
 ## Outgrow (outgrow.co)
 - **Verified pricing:** (re-verified 2026-08-17) Freelancer Limited $22/month, or $14 billed annually, for 5 content pieces; Freelancer Pro $45/month or $25 annually; Essentials $115/month or $95 annually with unl…
 - **Honest take:** Two meters at once: content types/layouts gate the lower tiers, and monthly LEAD limits gate the upside — a quiz that goes even mildly viral hits the 1,000-lead cap on Essentials, which is precisely when you l…
@@ -1813,6 +1820,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Two honest notes.
 - **Best for:** agencies and hosters managing multiple sites on their own servers who want a mature control panel with per-domain management, security and one-click stacks
 - **Full review:** https://aibuildermarketplace.com/b2b/plesk-review/
+
+## Post Purchase Upsell Hero (postpurchaseupsellhero.com)
+- **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/post-purchase-upsell-hero) One plan, Performance, at $0 a month plus usage charges, billed in USD.
+- **Honest take:** The 2.5% comes off revenue, not margin.
+- **Best for:** shopify stores that want post-purchase upsells with no fixed monthly cost, where the bill only exists once the app has already added revenue, and that are comfortable being early on an app a few months old
+- **Flags:** {'f': 'addons_extra', 'ev': 'On discounted or thin-margin add-ons the same percentage is a far bigger share of the profit, and the meter reads revenue either way.'}, {'f': 'free_tier', 'ev': '(prices read 2026-08-31 on apps.shopify.com/post-purchase-upsell-hero) One plan, Performance, at $0 a month plus usage charges, billed in USD.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/post-purchase-upsell-hero-review/
 
 ## Postscript (postscript.io)
 - **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0.015 then $0.009 per SMS and $0.045 per MMS, plus carrie…
@@ -2659,6 +2673,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** manufacturers and wholesalers who have outgrown spreadsheets and need real-time stock across multiple warehouses, with batch and serial tracking, landed costs and purchase-to-sale visibility in one system
 - **Flags:** {'f': 'addons_extra', 'ev': 'Everything past that is priced separately.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/unleashed-software-review/
+
+## UpsellPlus (upsellplus.com)
+- **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/upsellpluscheckout) Four tiers, billed in USD, with a 14-day free trial on the paid ones.
+- **Honest take:** The plans are capped by the revenue they are allowed to earn you, and the first paid step does not raise that cap: Free and the $49 Launch plan both stop at $500 of upsell revenue a month.
+- **Best for:** shopify merchants who want one app covering product page, cart, checkout, post-purchase, customer accounts and POS offers rather than three, especially Shopify Plus stores, where the checkout half of the product actually unlocks
+- **Full review:** https://aibuildermarketplace.com/b2b/upsellplus-review/
 
 ## UptimeRobot (uptimerobot.com)
 - **Verified pricing:** (read 2026-08-26 on uptimerobot.com/pricing over a US connection) Free is $0.

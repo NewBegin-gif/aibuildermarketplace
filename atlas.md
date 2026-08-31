@@ -888,17 +888,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/elevenlabs-review/
 
 ## EmailListVerify (emaillistverify.com)
-- **Verified pricing:** (2026) Pay-as-you-go credits that never expire: 1,000 for $5 ($0.005/check), 5,000 for $17, 10,000 for $27, 25,000 for $54, 50,000 for $98 ($0.00196/check).
+- **Verified pricing:** (re-verified 2026-08-31 on emaillistverify.com/pricing, read from the page's own JSON-LD offer data) Pay-as-you-go credits that never expire: 1,000 for $5 ($0.005/check), 5,000 for $17 ($0.…
 - **Honest take:** The $5 entry pack is the most expensive way to buy: $0.005 per check versus $0.00196 at the 50k tier — a 2.5x spread that rewards guessing your volume upfront.
 - **Best for:** teams cleaning real sending lists before campaigns — bulk verification at volume rates, with credits that never expire
-- **Flags:** {'f': 'usage_metered', 'ev': '(2026) Pay-as-you-go credits that never expire: 1,000 for $5 ($0.005/check), 5,000 for $17, 10,000 for $27, 25,000 for $54, 50,000 for $98 ($0.00196/…'}, {'f': 'free_tier', 'ev': 'The $5 entry pack is the most expensive way to buy: $0.005 per check versus $0.00196 at the 50k tier — a 2.5x spread that rewards guessing your volum…'}
+- **Flags:** {'f': 'usage_metered', 'ev': "(re-verified 2026-08-31 on emaillistverify.com/pricing, read from the page's own JSON-LD offer data) Pay-as-you-go credits that never expire: 1,000 f…"}, {'f': 'free_tier', 'ev': 'Monthly subscription at the same volumes: 5,000 for $16 ($0.0032), 10,000 for $25 ($0.0025), 25,000 for $49 ($0.00196), 50,000 for $89 ($0.00178), 10…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/emaillistverify-review/
 
 ## Emergent (emergent.sh)
-- **Verified pricing:** (2026) Free $0 (10 credits/mo), Standard $20/mo (100 credits), Pro $200/mo (750 credits), Team $300/mo (1,250 shared credits); ~17% off annual.
-- **Honest take:** The real cost is credit consumption, not the flat sticker — a genuinely complex app burns 10–20+ credits per big change, so serious builders move up tiers faster than the price list implies.
+- **Verified pricing:** (re-verified 2026-08-31 on emergent.sh/pricing) Free $0 (10 credits/mo); Standard $20/mo, or $17/mo billed annually, for 100 credits (the page states a $36 annual saving, 15%); Pro $200/mo,…
+- **Honest take:** The real cost is credit consumption, not the flat sticker -- a genuinely complex app burns 10-20+ credits per big change, so serious builders move up tiers faster than the price list implies.
 - **Best for:** founders, PMs and builders who want to turn a prompt into a working full-stack web app or MVP fast, without writing the code themselves
-- **Flags:** {'f': 'usage_metered', 'ev': '(2026) Free $0 (10 credits/mo), Standard $20/mo (100 credits), Pro $200/mo (750 credits), Team $300/mo (1,250 shared credits); ~17% off annual.'}, {'f': 'annual_lock', 'ev': 'Moving up a tier makes every unit of work more expensive, not less: Pro costs 33% more per credit than Standard, and annual billing keeps the gap (17…'}, {'f': 'free_tier', 'ev': '(2026) Free $0 (10 credits/mo), Standard $20/mo (100 credits), Pro $200/mo (750 credits), Team $300/mo (1,250 shared credits); ~17% off annual.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-31 on emergent.sh/pricing) Free $0 (10 credits/mo); Standard $20/mo, or $17/mo billed annually, for 100 credits (the page states…'}, {'f': 'annual_lock', 'ev': 'Moving up a tier makes every unit of work more expensive, not less: Pro costs 33% more per credit than Standard, and annual billing keeps the gap (17…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-31 on emergent.sh/pricing) Free $0 (10 credits/mo); Standard $20/mo, or $17/mo billed annually, for 100 credits (the page states…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/emergent-review/
 
 ## Employment Hero (employmenthero.com)
@@ -930,10 +930,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/essential-loyalty-review/
 
 ## Evolve (evolveplatform.ai)
-- **Verified pricing:** (2026) No public price list — enterprise quote-based only ('book an intro').
+- **Verified pricing:** (re-verified 2026-08-31 on evolveplatform.ai) No public price list -- there is no /pricing page and the call to action across the site is 'Book an intro'.
 - **Honest take:** It's built for large organizations — the site lists 100+ deployed enterprises like Carlsberg and Danone — and the sales-led, quote-only motion reflects that: there is no self-serve tier to trial quietly, so sm…
 - **Best for:** enterprises and scale-ups that need structured, measurable training rolled out across hundreds of employees — branded academies, AI-generated courses, job-skill simulations and assessment in one platform
-- **Flags:** {'f': 'quote_only', 'ev': "(2026) No public price list — enterprise quote-based only ('book an intro')."}
 - **Full review:** https://aibuildermarketplace.com/b2b/evolve-review/
 
 ## Expandi (expandi.io)
@@ -992,16 +991,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/filevine-review/
 
 ## Finale Inventory (finaleinventory.com)
-- **Verified pricing:** Self-Starter around $99/mo (one user, up to ~500 orders/mo); mid-tiers roughly $200–$800/mo add multi-channel sync and advanced reporting; enterprise $1,000+/mo.
-- **Honest take:** It's built for real warehouse volume, and the price reflects that — at $99 you're capped on orders and users, so a growing multi-channel seller climbs the tiers quickly.
+- **Verified pricing:** (re-verified 2026-08-31 on finaleinventory.com/pricing) Essentials starts at $499/mo (positioned for 1-2 warehouses); Growth starts at $799/mo and adds the Mobile Barcode WMS module plus em…
+- **Honest take:** It's built for real warehouse volume and priced that way: Essentials starts at $499 a month and Growth at $799, with Enterprise quoted.
 - **Best for:** e-commerce and wholesale operations with real order volume that need multi-channel stock sync, purchasing and barcode-driven warehouse workflows
+- **Flags:** {'f': 'quote_only', 'ev': '(re-verified 2026-08-31 on finaleinventory.com/pricing) Essentials starts at $499/mo (positioned for 1-2 warehouses); Growth starts at $799/mo and ad…'}, {'f': 'usage_metered', 'ev': "Both published figures are 'starting at' and no per-tier order, SKU or user cap is published -- the vendor's FAQ says overage means additional usage …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/finale-inventory-review/
 
 ## Fireflies.ai (fireflies.ai)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) Free plan with unlimited transcription (limited AI); Pro ~$10/seat/mo and Business ~$19/seat/mo in 2026.
-- **Honest take:** Paid tiers cap AI credits, and if you mainly want real-time in-Zoom captioning and simple English notes, Otter is the simpler pick.
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Free $0 — unlimited transcription, limited AI summaries, 400 mins storage per team, 20 AI cre…
+- **Honest take:** The advertised $10 and $19 are annual-billing rates; month-to-month is $18 and $29.
 - **Best for:** teams that want every meeting transcribed and searchable automatically — the free unlimited-transcription tier is genuinely rare
-- **Flags:** {'f': 'usage_metered', 'ev': 'Paid tiers cap AI credits, and if you mainly want real-time in-Zoom captioning and simple English notes, Otter is the simpler pick.'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-08-02 against the vendor's own pricing page) Free plan with unlimited transcription (limited AI); Pro ~$10/seat/mo and Busine…"}
+- **Flags:** {'f': 'per_seat', 'ev': 'Pro $18/seat/mo month-to-month or $10/seat/mo billed annually — unlimited AI summaries, 8,000 mins storage per seat, 20 AI credits.'}, {'f': 'usage_metered', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Free $0 — unlimited transcription, limited AI summari…"}, {'f': 'free_tier', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Free $0 — unlimited transcription, limited AI summari…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/fireflies-ai-review/
 
 ## Flatpay (flatpay.com)
@@ -1012,10 +1012,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/flatpay-review/
 
 ## FlexiQuiz (flexiquiz.com)
-- **Verified pricing:** (2026) A genuinely free plan (up to 20 responses a month); paid tiers run roughly $17/mo (Essentials) to about $60/mo (Premium), with Enterprise above that (contact sales for Enterprise+).
-- **Honest take:** The monthly response caps are the business model: 20 on free, roughly 500 on Essentials and 2,000 on Premium — one viral quiz or one big exam cohort and you're shopping a tier up.
+- **Verified pricing:** (re-verified 2026-08-31 on flexiquiz.com/Home/Plans; the monthly-billed rates were read from the page's own billing-toggle script, the yearly rates from the rendered cards) Free: 20 respons…
+- **Honest take:** The monthly response caps are the business model: 20 on free, 500 on Essentials, 2,000 on Premium and 25,000 on Enterprise -- one viral quiz or one big exam cohort and you're shopping a tier up.
 - **Best for:** educators, trainers and small teams that want professional graded quizzes, exams and simple courses — with certificates, timed tests, question banks and analytics — without building out a full LMS
-- **Flags:** {'f': 'quote_only', 'ev': '(2026) A genuinely free plan (up to 20 responses a month); paid tiers run roughly $17/mo (Essentials) to about $60/mo (Premium), with Enterprise abov…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 25%+.'}, {'f': 'free_tier', 'ev': '(2026) A genuinely free plan (up to 20 responses a month); paid tiers run roughly $17/mo (Essentials) to about $60/mo (Premium), with Enterprise abov…'}
+- **Flags:** {'f': 'free_tier', 'ev': 'The per-response price falls steeply as you climb ($0.034, $0.0125, $0.0024 on yearly billing), so the ceiling is the thing to price, not the sticker.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/flexiquiz-review/
 
 ## Flippa (flippa.com)
@@ -1109,9 +1109,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/geostock-review/
 
 ## Geotargetly (geotargetly.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) 14-day free trial.
-- **Honest take:** The meter is your traffic: tiers gate on visitor quotas, so a growth spike pushes you up a tier whether you planned it or not.
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) 14-day free trial.
+- **Honest take:** The meter is pageviews, not visitors, and each product consumes its own pageview on the same page visit — so a redirect plus a popup bills twice.
 - **Best for:** marketers personalizing redirects, content blocks and popups by visitor location — country to city level — without engineering work
+- **Flags:** {'f': 'usage_metered', 'ev': 'The meter is PAGEVIEWS, not visitors (the previous dossier said visitors): the FAQ states a pageview is consumed for every page visit, and that pagev…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/geotargetly-review/
 
 ## GetResponse (getresponse.com)
@@ -1170,9 +1171,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gravity-forms-review/
 
 ## Guesty (guesty.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) Guesty Lite is roughly $9/mo plus ~1% per reservation for 1–3 listings; Pro and Enterprise are custom-quoted (2026).
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Guesty Lite is $9/mo PER LISTING plus ~1% per reservation, for 1–3 listings; Pro covers 4–199…
 - **Honest take:** Pricing runs higher than leaner rivals, onboarding has a learning curve, and some users flag support — it earns its keep at scale, but it's heavy for a single listing.
 - **Best for:** hosts with 1-3 listings starting on Guesty Lite (~$9/mo + ~1% per reservation) who may grow into the full property-management platform
+- **Flags:** {'f': 'usage_metered', 'ev': 'Also add-ons rather than inclusions on Pro: Trust Accounting, GuestyPay, Fraud & Chargeback Management, GuestVerify, Damage Protection, Liability Cov…'}, {'f': 'addons_extra', 'ev': "VENDOR SELF-CONTRADICTION, confirm before relying: the geo-price note reads '+1% per reservation | Including PriceOptimizer', while the same page's f…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/guesty-review/
 
 ## Gusto (gusto.com)
@@ -1279,7 +1281,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/idrive-review/
 
 ## InboxAlly (inboxally.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Starter about $149/mo (100 seed emails/day, 1 sender profile), Plus about $645/mo (500/day, 5 profiles), Premium …
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Every amount unchanged and confirmed on the plan comparison table, which states 'Pricing in U…
 - **Honest take:** This is a premium, seed-list-based deliverability tool, and the price reflects it — Starter alone is well above casual warm-up apps, so it only makes sense if inbox placement is genuinely costing you real reve…
 - **Best for:** serious senders — email marketers and cold-outreach teams — whose deliverability problems are costing measurable revenue and who need active reputation repair
 - **Full review:** https://aibuildermarketplace.com/b2b/inboxally-review/
@@ -2518,10 +2520,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/textexpander-review/
 
 ## Textline (textline.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) The page we read documents the meters rather than the plans.
-- **Honest take:** Two costs here are easy to miss and both are per month rather than one-off.
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Amounts unchanged since 2026-08-01.
+- **Honest take:** Two costs are easy to miss and both are monthly.
 - **Best for:** support and sales teams that already text customers from personal phones and need a shared, compliant inbox with a record of who said what
-- **Flags:** {'f': 'usage_metered', 'ev': 'Add-on message credits are $0.03 each, bought in advance.'}, {'f': 'addons_extra', 'ev': 'Add-on message credits are $0.03 each, bought in advance.'}, {'f': 'free_tier', 'ev': 'Add-on message credits are $0.03 each, bought in advance.'}
+- **Flags:** {'f': 'usage_metered', 'ev': "Add-on message credits $0.03 each, bought in advance; backup message credits $0.04 each, Textline's automatic fallback when you run out mid-conversat…"}, {'f': 'addons_extra', 'ev': "Add-on message credits $0.03 each, bought in advance; backup message credits $0.04 each, Textline's automatic fallback when you run out mid-conversat…"}, {'f': 'free_tier', 'ev': "Add-on message credits $0.03 each, bought in advance; backup message credits $0.04 each, Textline's automatic fallback when you run out mid-conversat…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/textline-review/
 
 ## TheTop (thetop.com)

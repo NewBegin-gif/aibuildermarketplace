@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 423 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-08-31.
+All 424 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-01.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1465,10 +1465,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/lemlist-review/
 
 ## LettrLabs (lettrlabs.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) Robotically handwritten pieces start around $0.49 each including postage (2026).
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Postage is included in every per-piece rate.
 - **Honest take:** Direct mail only pays off with a tight list and a real offer — it's a leverage channel, not a cheap thing to test blindly.
 - **Best for:** local businesses and e-commerce brands using robotically handwritten mail (~$0.49/piece incl. postage) to stand out where email gets ignored
-- **Flags:** {'f': 'free_tier', 'ev': "(price re-verified 2026-08-02 against the vendor's own pricing page) Robotically handwritten pieces start around $0.49 each including postage (2026)."}
+- **Flags:** {'f': 'usage_metered', 'ev': 'New accounts get $30 in free credit.'}, {'f': 'free_tier', 'ev': 'On Starter, postcards are $0.76 (4x6), $0.79 (6x9), $0.85 (6x11) and $1.15 (11x18 tri-fold), and handwritten pieces are $1.56 (handwritten envelope w…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/lettrlabs-review/
 
 ## Lindy.ai (lindy.ai)
@@ -1941,10 +1941,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/quillbot-review/
 
 ## Quo (quo.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) Starter ~$15/user/mo (annual) or $19 monthly; Business ~$23 (annual) or $33 monthly — plus telecom taxes and surcharges …
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page; quo.com refuses TLS to our usual client, so the page was fetched through our own European server — all prices are quoted…
 - **Honest take:** Call reliability is the recurring complaint — G2 logs hundreds of connection and disconnection reports, and calls get shaky the moment you're off Wi-Fi.
 - **Best for:** micro-teams of 2–5 people working mostly on Wi-Fi who want a clean, modern phone app built around a shared inbox, with AI call summaries (Sona)
-- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-08-02 against the vendor's own pricing page) Starter ~$15/user/mo (annual) or $19 monthly; Business ~$23 (annual) or $33 mont…"}
+- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page; quo.com refuses TLS to our usual client, so the page was fetched through our own…"}, {'f': 'usage_metered', 'ev': 'Itemised extras: The Campaign Registry takes $19.50 once plus $1.50-$3/month to keep US carrier messaging deliverable, each additional phone number i…'}, {'f': 'free_tier', 'ev': 'The Sona AI answering agent is included on every plan with 1,000 automation credits a month (a call costs 100 credits, so ten calls); more credits ru…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/quo-review/
 
 ## Rank Math (rankmath.com)
@@ -2030,6 +2030,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** podcasters and interviewers who need broadcast-quality audio and video from guests on bad connections — local recording at each end is genuinely the thing that solves it
 - **Flags:** {'f': 'usage_metered', 'ev': 'What separates them is recording hours and studios — 15 hours and one studio on Pro, 20 and two on Grow, 25 and three on Webinar — with 20 AI credits…'}, {'f': 'annual_lock', 'ev': 'The paid tiers carry two prices each: Pro is $35 a month or $24 on annual billing, Grow $45 or $34, Webinar $99 or $79.'}, {'f': 'free_tier', 'ev': 'The free tier is a demonstration rather than a plan: one 2-hour session, 720p, single track.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/riverside-review/
+
+## RocketReach (rocketreach.co)
+- **Verified pricing:** (read 2026-09-01 on rocketreach.co/pricing) A free account exists: signing up takes no credit card and gives a limited number of lookups.
+- **Honest take:** The published prices are annual rates, and the annual term is doing more work than the page lets on.
+- **Best for:** sales, recruiting and BD teams whose bottleneck is finding verified direct dials and personal emails, and who can commit to an annual term - that is where the search allowance stops being metered
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-09-01 on rocketreach.co/pricing) A free account exists: signing up takes no credit card and gives a limited number of lookups.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/rocketreach-review/
 
 ## Ruby (ruby.com)
 - **Verified pricing:** (re-verified 2026-08-13, read on their own plans-and-pricing page) Live virtual receptionists billed on included receptionist-minutes: $250/mo for 50 minutes, $395/mo for 100, $720/mo for 2…
@@ -2140,10 +2147,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sellfy-review/
 
 ## Sendcloud (sendcloud.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026, tiers renamed) A genuine Free plan (€0/mo, no courier contract, no subscription — you pay only carrier costs, wit…
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Free plan €0/mo: up to 20 parcels a month, no courier contract, no subscription, €0.50 a labe…
 - **Honest take:** The pricing has layers — a per-label fee on top of the subscription, plus carrier surcharges that can land on invoices weeks later.
 - **Best for:** European e-commerce stores that want easy multi-carrier shipping (DHL, PostNL, Colissimo, GLS, DPD), branded tracking and a returns portal live in under 30 minutes
-- **Flags:** {'f': 'addons_extra', 'ev': 'The pricing has layers — a per-label fee on top of the subscription, plus carrier surcharges that can land on invoices weeks later.'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-08-02 against the vendor's own pricing page) (2026, tiers renamed) A genuine Free plan (€0/mo, no courier contract, no subscr…"}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Every tier also has a MONTHLY label cap (Lite 400, Growth 1,000, Premium 10,000, Pro 30,000) and past it each extra label costs €0.15 on top of the p…'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Free plan €0/mo: up to 20 parcels a month, no courier…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/sendcloud-review/
 
 ## Sentaro (sentaro.com)
@@ -2202,9 +2209,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/shippo-review/
 
 ## Shoeboxed (shoeboxed.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Starter about $97/yr (30 digital scans/mo, 1 Magic Envelope/yr); Pro ~$297/yr (200 scans/mo, monthly paper scans,…
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Four plans, each quoted both yearly and monthly: Starter $97/yr or $9/mo (30 digital scans/mo, 20 paper scans/yr,…
 - **Honest take:** Its unique trick is the Magic Envelope, where you literally mail a stuffed envelope of paper receipts and humans digitize them.
 - **Best for:** businesses drowning in PAPER receipts — trades, field crews, owners with shoeboxes of history — who want them humanly digitized, verified and IRS-ready
+- **Flags:** {'f': 'usage_metered', 'ev': 'Overages by tier: $0.30/$0.15/$0.10 per digital scan, $2.00 or $1.50 per paper scan, $9 per extra envelope.'}, {'f': 'free_tier', 'ev': 'Overages by tier: $0.30/$0.15/$0.10 per digital scan, $2.00 or $1.50 per paper scan, $9 per extra envelope.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/shoeboxed-review/
 
 ## Shorby (shorby.com)
@@ -2362,10 +2370,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/storylane-review/
 
 ## Streak (streak.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Pro about $49/user/mo annual ($59 monthly), Pro+ ~$69, Enterprise ~$129; ~20% annual discount.
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or $89 monthly; Enterprise $129 annual or $159 monthly — a…
 - **Honest take:** The pitch — CRM living inside Gmail — is also the ceiling: everything happens in the inbox, which power users love and growing teams outgrow (reporting, permissions, cross-team process).
 - **Best for:** solo founders and small Gmail-native teams whose pipeline genuinely lives in email threads and who want zero context-switching
-- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-08-02 against the vendor's own pricing page) (2026) Pro about $49/user/mo annual ($59 monthly), Pro+ ~$69, Enterprise ~$129; …"}, {'f': 'addons_extra', 'ev': "And note the trajectory: the free tier is gone and per-seat prices sit at real-CRM levels now, so the 'lightweight Gmail add-on' framing no longer ma…"}, {'f': 'free_tier', 'ev': "And note the trajectory: the free tier is gone and per-seat prices sit at real-CRM levels now, so the 'lightweight Gmail add-on' framing no longer ma…"}
+- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or $89 monthly; En…"}, {'f': 'usage_metered', 'ev': 'AI credits are a second meter: 20 per user per month on Pro, 150 on Pro+, 500 on Enterprise, pooled across the team and expiring each period; top-ups…'}, {'f': 'addons_extra', 'ev': "And note the trajectory: the free tier is gone and per-seat prices sit at real-CRM levels now, so the 'lightweight Gmail add-on' framing no longer ma…"}, {'f': 'annual_lock', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or $89 monthly; En…"}, {'f': 'free_tier', 'ev': "And note the trajectory: the free tier is gone and per-seat prices sit at real-CRM levels now, so the 'lightweight Gmail add-on' framing no longer ma…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/streak-review/
 
 ## Success.co (success.co)

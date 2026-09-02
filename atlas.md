@@ -1773,10 +1773,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/partnerstack-review/
 
 ## Passpack (passpack.com)
-- **Verified pricing:** (read 2026-08-25 on their own pricing page) Teams is $20 per user per year, paid annually, for teams of up to 20 people.
-- **Honest take:** The honest trade-off is polish.
-- **Best for:** teams under twenty people who want zero-knowledge encryption and shared vaults at about $1.67 a seat a month, and don't mind a plainer interface
-- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-25 on their own pricing page) Teams is $20 per user per year, paid annually, for teams of up to 20 people.'}
+- **Verified pricing:** (re-verified 2026-09-02 on their own pricing page; unchanged since 2026-08-25) Teams is $20 per user per year, paid annually, for teams of up to 20 people.
+- **Honest take:** The honest trade-off is maturity, not security.
+- **Best for:** teams under twenty people who want zero-knowledge encryption and shared vaults at about $1.67 a seat a month, and can live with a first-generation mobile app and a plainer interface
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-02 on their own pricing page; unchanged since 2026-08-25) Teams is $20 per user per year, paid annually, for teams of up to 20 p…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/passpack-review/
 
 ## Payoneer (payoneer.com)

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 431 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-02.
+All 432 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-02.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -462,6 +462,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** ops, research and growth teams that want to monitor competitors, prices or listings and pipe structured web data into sheets without writing scrapers
 - **Flags:** {'f': 'usage_metered', 'ev': '(price re-verified 2026-08-17 against browse.ai) Credit-metered (2026): Free ~50 credits/mo (2 sites); Personal about $19/mo annual (12,000 credits/y…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/browse-ai-review/
+
+## BrowserAct (browseract.com)
+- **Verified pricing:** (prices read 2026-09-02 on browseract.com/pricing, both billing tabs open) A credit-metered subscription with a free tier.
+- **Honest take:** The yearly toggle wears a -20% badge, but the arithmetic on the page is steeper than that: Basic is $13 yearly against $20 monthly (35% less), Essential $56 against $100 (44% less) and Advanced $96 against $20…
+- **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, residential proxies and CAPTCHA handling managed for them, and can commit to yearly billing -- at $13 a month Basic is a cheap way
+- **Flags:** {'f': 'usage_metered', 'ev': '(prices read 2026-09-02 on browseract.com/pricing, both billing tabs open) A credit-metered subscription with a free tier.'}, {'f': 'free_tier', 'ev': '(prices read 2026-09-02 on browseract.com/pricing, both billing tabs open) A credit-metered subscription with a free tier.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
 
 ## BuddyPunch (buddypunch.com)
 - **Verified pricing:** Per-user plus a base fee: Starter about $5.49/user/mo, Pro $6.99, Enterprise $11.99, each with a roughly $19/mo base fee (2026).
@@ -1403,10 +1410,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/kinsta-review/
 
 ## Kit (kit.com)
-- **Verified pricing:** (re-verified 2026-08-09) The free Newsletter plan is $0/mo and covers 1,000 email subscribers, with one basic Visual Automation plus unlimited landing pages, forms and broadcasts.
+- **Verified pricing:** (re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email broadcasts, audience tagging and segmentat…
 - **Honest take:** Three honest notes.
 - **Best for:** creators, writers and coaches building an audience-first business who want email, landing pages, digital products and a creator network in one
-- **Flags:** {'f': 'free_tier', 'ev': '(re-verified 2026-08-09) The free Newsletter plan is $0/mo and covers 1,000 email subscribers, with one basic Visual Automation plus unlimited landin…'}
+- **Flags:** {'f': 'free_tier', 'ev': '(re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email br…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/kit-review/
 
 ## Kiwi Sizing (kiwisizing.com)

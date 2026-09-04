@@ -2872,10 +2872,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wegic-review/
 
 ## WhatConverts (whatconverts.com)
-- **Verified pricing:** (price re-verified 2026-08-17 against whatconverts.com) (2026) Single-account plans: Call Tracking $30/mo, Plus $60 (forms/chat/e-com), Pro $100 (HIPAA, API), Elite $160 (full journey attri…
-- **Honest take:** The per-lead-action overage is the honest meter: every form, chat, call and tracked event past your credits bills a dime — busy sites should model that before choosing a tier.
+- **Verified pricing:** (re-verified 2026-09-04 on whatconverts.com/pricing) Two ladders behind one toggle, and the page opens on the single-account one.
+- **Honest take:** The meter is honest and the rate is invisible: every phone number, call minute, text, form, chat, appointment, email, event and transaction is charged against a monthly credit, and past that credit WhatConvert…
 - **Best for:** agencies and lead-gen businesses that want every lead — calls, forms, chats — attributed to its source and campaign without enterprise-suite prices
-- **Flags:** {'f': 'usage_metered', 'ev': '(price re-verified 2026-08-17 against whatconverts.com) (2026) Single-account plans: Call Tracking $30/mo, Plus $60 (forms/chat/e-com), Pro $100 (HIP…'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-08-17 against whatconverts.com) (2026) Single-account plans: Call Tracking $30/mo, Plus $60 (forms/chat/e-com), Pro $100 (HIP…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Single account: Call Tracking $30 a month, Plus $60 (forms, chat, ecommerce), Pro $100 (HIPAA, call flows, report builder), Elite $160 (customer jour…'}, {'f': 'addons_extra', 'ev': 'The only usage prices WhatConverts does publish are three add-ons: white label $50 a month, call transcription $0.02 (unit not stated) and PCI redact…'}, {'f': 'free_tier', 'ev': 'The only usage prices WhatConverts does publish are three add-ons: white label $50 a month, call transcription $0.02 (unit not stated) and PCI redact…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/whatconverts-review/
 
 ## Wing Assistant (wingassistant.com)

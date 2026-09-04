@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 434 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-04.
+All 435 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-04.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -578,6 +578,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators and brands running a paid community — courses, memberships, events and discussions in one branded home, with a built-in payments stack and even branded mobile apps
 - **Flags:** {'f': 'usage_metered', 'ev': 'On top of the subscription Circle takes a commission on every sale you make through the platform (roughly 2% on Professional, 1% on Business, 0.5% on…'}, {'f': 'addons_extra', 'ev': 'On top of the subscription Circle takes a commission on every sale you make through the platform (roughly 2% on Professional, 1% on Business, 0.5% on…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/circle-review/
+
+## Claap (claap.io)
+- **Verified pricing:** (read 2026-09-04 on claap.io/pricing, both billing toggles and the full comparison table) Priced per license per month, in euros, with no dollar column anywhere on the page.
+- **Honest take:** The four tiers sell two different products, and only one of them is self-serve.
+- **Best for:** revenue teams that want every call captured without a notetaker bot joining the meeting, and want those calls to end up as CRM fields, coaching and deal signals rather than as transcripts nobody reopens — with enough seats to make
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-09-04 on claap.io/pricing, both billing toggles and the full comparison table) Priced per license per month, in euros, with no dollar colu…'}, {'f': 'usage_metered', 'ev': 'Pro is €24 per license a month billed yearly or €30 monthly: unlimited recordings, 1,000 minutes a month, 500 AI credits per license pooled across th…'}, {'f': 'annual_lock', 'ev': 'Everything Claap actually markets itself on — CRM auto-complete, AI coaching, deal insights, asking Claap AI a question across all your meetings — st…'}, {'f': 'free_tier', 'ev': "And the free tier's 300 minutes is a total, not a monthly allowance: it is a sample, not a plan you can sit on."}
+- **Full review:** https://aibuildermarketplace.com/b2b/claap-review/
 
 ## Claude (claude.ai)
 - **Verified pricing:** (price re-verified 2026-08-27 on their own pricing page) The free tier is $0.
@@ -1554,10 +1561,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/meeri-review/
 
 ## MeetGeek (meetgeek.ai)
-- **Verified pricing:** (2026-08-30, read on their own pricing page) Basic is free with 3 hours of transcription a month.
+- **Verified pricing:** (re-verified 2026-09-04, read on their own pricing page in a rendered browser) The page loads on annual billing, so the figures it shows first are the annual ones; both terms are given here.
 - **Honest take:** The meter is transcription hours and Pro gives you twenty a month, which is about an hour a working day.
 - **Best for:** people who run many external meetings and need a searchable record — the summaries earn their keep when you cannot remember which of four calls a detail came from
-- **Flags:** {'f': 'per_seat', 'ev': 'Pro $9.99 per user per month with 20 hours of transcription.'}, {'f': 'usage_metered', 'ev': 'That sounds generous until you count the meetings you would actually record — a sales rep on four calls a day passes it in the first week, and the ov…'}, {'f': 'free_tier', 'ev': 'Extra transcription hours are $0.50 each.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Pro $9.99 per user per month billed annually, $15.99 billed monthly, with 20 hours of transcription.'}, {'f': 'usage_metered', 'ev': 'That sounds generous until you count the meetings you would actually record — a sales rep on four calls a day passes it in the first week, and the ov…'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-09-04, read on their own pricing page in a rendered browser) The page loads on annual billing, so the figures it shows first are th…'}, {'f': 'free_tier', 'ev': 'Extra transcription hours are $0.50 each.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/meetgeek-review/
 
 ## Melio (meliopayments.com)

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 435 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-04.
+All 436 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-04.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1461,7 +1461,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-17) Starter $18.75/month, Growth $37.50 and Scale $82.50, all billed yearly, which Later advertises as three months free and 25% off against monthly.
 - **Honest take:** The Starter caps are where the price really lives: 30 posts per profile and 3 months of analytics run out fast for an active brand, pushing real users toward Growth — so compare at the tier you'll actually nee…
 - **Best for:** creators and visual-first brands (Instagram/TikTok-centric) that want drag-and-drop visual planning, link-in-bio and scheduling in one
-- **Flags:** {'f': 'usage_metered', 'ev': 'The add-ons are where a growing team pays more: extra Social Sets are $11.25 a month each, extra users $3.75 a month each, and extra AI credits $3.75…'}, {'f': 'addons_extra', 'ev': 'The add-ons are where a growing team pays more: extra Social Sets are $11.25 a month each, extra users $3.75 a month each, and extra AI credits $3.75…'}, {'f': 'free_tier', 'ev': 'There is a limited free plan and a 14-day trial.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The add-ons are where a growing team pays more: extra Social Sets are $11.25 a month each, extra users $3.75 a month each, and extra AI credits $3.75…'}, {'f': 'addons_extra', 'ev': 'The add-ons are where a growing team pays more: extra Social Sets are $11.25 a month each, extra users $3.75 a month each, and extra AI credits $3.75…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/later-review/
 
 ## Leadfeeder (leadfeeder.com)
@@ -1655,6 +1655,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators, trainers and product teams that need studio-quality voiceovers in many languages without booking voice actors — explainers, courses, product videos
 - **Flags:** {'f': 'annual_lock', 'ev': '(re-verified 2026-08-17 in a browser; the page renders client-side and opens on annual billing, so check which column you are reading) Studio plans: …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17 in a browser; the page renders client-side and opens on annual billing, so check which column you are reading) Studio plans: …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/murf-review/
+
+## Mycroft (mycroft.io)
+- **Verified pricing:** (read 4 September 2026 on www.mycroft.io/pricing) Mycroft has no public pricing: three packages, and not one number between them.
+- **Honest take:** The pricing page is a feature list with the prices taken out, and that is a choice rather than an oversight — Mycroft publishes what is in each package down to the individual capability, then stops short of th…
+- **Best for:** companies chasing an attestation they cannot staff for — CMMC or FedRAMP to keep bidding on defence and public-sector work, SOC 2 or ISO 27001 to get through enterprise procurement — that would rather buy the platform, the securit
+- **Full review:** https://aibuildermarketplace.com/b2b/mycroft-review/
 
 ## Navan (navan.com)
 - **Verified pricing:** Navan publishes no price list, re-verified 2026-08-17: the pricing URL is a marketing page and neither our July nor our August 2026 capture retrieved an amount.

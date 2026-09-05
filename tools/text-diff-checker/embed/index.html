@@ -135,8 +135,8 @@ body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div c
 (function(){
 var $=function(id){return document.getElementById(id);},NL=String.fromCharCode(10);
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function tokens(t,mode){if(mode==='char')return t.split('');if(mode==='line')return t.split(NL).map(function(l){return l+NL;});return t.split(/(\\s+)/).filter(function(x){return x!=='';});}
-function norm(x){var s=x;if($('df-ws').checked)s=s.replace(/\\s+/g,' ').trim();if($('df-case').checked)s=s.toLowerCase();return s;}
+function tokens(t,mode){if(mode==='char')return t.split('');if(mode==='line')return t.split(NL).map(function(l){return l+NL;});return t.split(/(\s+)/).filter(function(x){return x!=='';});}
+function norm(x){var s=x;if($('df-ws').checked)s=s.replace(/\s+/g,' ').trim();if($('df-case').checked)s=s.toLowerCase();return s;}
 function diff(a,b){var n=a.length,m=b.length;if(n*m>6000000)return null;var A=a.map(norm),B=b.map(norm);
 var L=[];for(var i=0;i<=n;i++)L.push(new Int32Array(m+1));
 for(var i=n-1;i>=0;i--)for(var j=m-1;j>=0;j--)L[i][j]=A[i]===B[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
@@ -144,7 +144,7 @@ var out=[],i=0,j=0;while(i<n&&j<m){if(A[i]===B[j]){out.push([0,a[i],b[j]]);i++;j
 while(i<n){out.push([-1,a[i]]);i++;}while(j<m){out.push([1,b[j]]);j++;}return out;}
 var lastHtml='';
 function run(){var mode=$('df-mode').value,a=tokens($('df-a').value,mode),b=tokens($('df-b').value,mode),d=diff(a,b),out=$('df-out'),st=$('df-stats');
-if(!d){st.textContent='Texts too large for this granularity \\u2014 switch to lines.';return;}
+if(!d){st.textContent='Texts too large for this granularity \u2014 switch to lines.';return;}
 var add=0,del=0,left='',right='',inline='';
 d.forEach(function(x){var t=esc(x[1]);
 if(x[0]===0){inline+=t;left+=t;right+=esc(x[2]);}
@@ -152,7 +152,7 @@ else if(x[0]===1){var s='<span style="background:rgba(52,211,153,.25);border-rad
 else{var s2='<span style="background:rgba(248,113,113,.25);border-radius:3px;text-decoration:line-through">'+t+'</span>';inline+=s2;left+=s2;if(t.trim())del++;}});
 if($('df-view').value==='side'){lastHtml='<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px"><div style="border-right:1px solid #26262b;padding-right:12px">'+(left||'&nbsp;')+'</div><div>'+(right||'&nbsp;')+'</div></div>';}else{lastHtml=inline;}
 out.innerHTML=lastHtml||'<span style="color:#6b7280">(both empty)</span>';
-st.textContent=(add||del)?('+'+add+' added, \\u2212'+del+' removed ('+mode+' level)'):'Identical \\u2014 no differences.';
+st.textContent=(add||del)?('+'+add+' added, \u2212'+del+' removed ('+mode+' level)'):'Identical \u2014 no differences.';
 if(typeof gtag==='function')gtag('event','tool_use',{event_label:'text-diff-checker'});}
 $('df-go').addEventListener('click',run);['df-mode','df-view','df-ws','df-case'].forEach(function(id){$(id).addEventListener('change',function(){if($('df-a').value||$('df-b').value)run();});});
 $('df-copy').onclick=function(){if(!lastHtml)return;navigator.clipboard&&navigator.clipboard.writeText('<div style="font-family:system-ui;line-height:1.7">'+lastHtml+'</div>');var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy as HTML';},1500);};

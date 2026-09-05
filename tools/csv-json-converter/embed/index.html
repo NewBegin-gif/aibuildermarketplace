@@ -140,10 +140,10 @@ function parseCSV(t,d){var rows=[],row=[],cur='',q=false;for(var i=0;i<t.length;
 if(q){if(ch==='"'){if(t[i+1]==='"'){cur+='"';i++;}else q=false;}else cur+=ch;}
 else{if(ch==='"')q=true;else if(ch===d){row.push(cur);cur='';}else if(ch===NL){row.push(cur);rows.push(row);row=[];cur='';}else if(ch!==String.fromCharCode(13))cur+=ch;}}
 if(cur!==''||row.length){row.push(cur);rows.push(row);}return rows.filter(function(r){return r.length>1||r[0]!=='';});}
-function typed(v){if(!$('cj-types').checked)return v;if(v==='')return '';if(v==='true')return true;if(v==='false')return false;if(/^-?\\d+(\\.\\d+)?$/.test(v)&&v.length<16)return +v;return v;}
+function typed(v){if(!$('cj-types').checked)return v;if(v==='')return '';if(v==='true')return true;if(v==='false')return false;if(/^-?\d+(\.\d+)?$/.test(v)&&v.length<16)return +v;return v;}
 function keepCols(rows){var c=($('cj-cols').value||'').split(',').map(function(s){return s.trim();}).filter(Boolean);if(!c.length)return rows;return rows.map(function(r){var o={};c.forEach(function(k){if(k in r)o[k]=r[k];});return o;});}
 function toRows(){var t=inp.value;if(!t.trim())return null;
-if(/^\\s*[\\[{]/.test(t)){var data=JSON.parse(t);if(!Array.isArray(data))data=data.data&&Array.isArray(data.data)?data.data:[data];return data;}
+if(/^\s*[\[{]/.test(t)){var data=JSON.parse(t);if(!Array.isArray(data))data=data.data&&Array.isArray(data.data)?data.data:[data];return data;}
 var d=delim(t),rows=parseCSV(t,d),hdr=$('cj-headers').checked;if(!rows.length)return [];
 if(hdr){var h=rows[0];return rows.slice(1).map(function(r){var o={};h.forEach(function(k,i){o[k]=typed(r[i]!==undefined?r[i]:'');});return o;});}
 return rows.map(function(r){return r.map(typed);});}

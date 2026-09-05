@@ -120,38 +120,44 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
-<label>Draw your signature below (mouse, trackpad or finger)</label>
+<div class="row"><div><label for="sg-mode">Signature</label><select id="sg-mode"><option value="draw">Draw it</option><option value="type">Type it</option></select></div>
+<div id="sg-typebox" hidden style="flex:2"><label for="sg-typed">Your name</label><input type="text" id="sg-typed" value="Jane Doe"></div>
+<div id="sg-fontbox" hidden><label for="sg-font">Style</label><select id="sg-font"><option value="'Brush Script MT','Segoe Script','Bradley Hand',cursive">Script</option><option value="'Snell Roundhand','Apple Chancery','URW Chancery L',cursive">Chancery</option><option value="'Segoe Print','Comic Sans MS',cursive">Casual</option><option value="Georgia,serif">Serif</option></select></div></div>
+<label id="sg-drawlabel">Draw your signature below (mouse, trackpad or finger)</label>
 <canvas id="sg-pad" width="740" height="240" style="width:100%;touch-action:none;background:#fff;border:1px solid #2a2a2e;border-radius:12px;cursor:crosshair"></canvas>
 <div class="row" style="margin-top:10px"><div><label for="sg-color">Ink</label>
-<select id="sg-color"><option value="#111827">Black</option><option value="#1d4ed8">Blue</option></select></div>
+<select id="sg-color"><option value="#111827">Black</option><option value="#1d4ed8">Blue</option><option value="#7c2d12">Brown</option><option value="#166534">Green</option><option value="#dc2626">Red</option></select></div>
 <div><label for="sg-width">Stroke</label>
-<select id="sg-width"><option value="2">Fine</option><option value="3" selected>Medium</option><option value="5">Bold</option></select></div></div>
-<div class="row" style="margin-top:10px"><div><button class="btn" id="sg-dl">Download PNG (transparent)</button></div>
-<div><button class="btn" id="sg-clear" style="background:#26262b">Clear</button></div></div>
-<p class="note">Drawn and saved entirely in your browser &mdash; your signature is never uploaded.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/signature-maker/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Signature Maker &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+<select id="sg-width"><option value="1.5">Fine</option><option value="3" selected>Medium</option><option value="5">Bold</option></select></div>
+<div><label for="sg-smooth">Smoothing</label><select id="sg-smooth"><option value="1" selected>On</option><option value="0">Off</option></select></div></div>
+<div class="row" style="margin-top:10px"><div><button class="btn" id="sg-dl">Download PNG (transparent)</button></div><div><button class="btn ghost" id="sg-svg">Download SVG</button></div>
+<div><button class="btn ghost" id="sg-undo">Undo</button></div><div><button class="btn ghost" id="sg-clear">Clear</button></div></div>
+<p class="note">Drawn and saved entirely in your browser &mdash; your signature is never uploaded. SVG stays crisp at any size; SignWell and Signaturely ask for an account for that.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/signature-maker/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Signature Maker &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 (function(){
-var c=document.getElementById('sg-pad'),x=c.getContext('2d'),drawing=false,drew=false,last=null;
-function pos(e){var r=c.getBoundingClientRect(),t=e.touches?e.touches[0]:e;
-return {x:(t.clientX-r.left)*(c.width/r.width),y:(t.clientY-r.top)*(c.height/r.height)};}
-function start(e){drawing=true;last=pos(e);e.preventDefault();}
-function move(e){if(!drawing)return;var p=pos(e);
-x.strokeStyle=document.getElementById('sg-color').value;
-x.lineWidth=+document.getElementById('sg-width').value;
+var $=function(id){return document.getElementById(id);},c=$('sg-pad'),x=c.getContext('2d'),drawing=false,strokes=[],cur=null;
+function pos(e){var r=c.getBoundingClientRect(),t=e.touches?e.touches[0]:e;return {x:(t.clientX-r.left)*(c.width/r.width),y:(t.clientY-r.top)*(c.height/r.height)};}
+function mode(){return $('sg-mode').value;}
+function redraw(){x.clearRect(0,0,c.width,c.height);
+if(mode()==='type'){x.fillStyle=$('sg-color').value;var f=$('sg-font').value,t=$('sg-typed').value||'Signature',size=110;x.font='italic '+size+'px '+f;while(x.measureText(t).width>c.width-60&&size>20){size-=4;x.font='italic '+size+'px '+f;}x.textAlign='center';x.textBaseline='middle';x.fillText(t,c.width/2,c.height/2);return;}
 x.lineCap='round';x.lineJoin='round';
-x.beginPath();x.moveTo(last.x,last.y);x.lineTo(p.x,p.y);x.stroke();last=p;drew=true;e.preventDefault();}
-function end(){drawing=false;}
+strokes.forEach(function(s){x.strokeStyle=s.color;x.lineWidth=s.width;x.beginPath();if(s.pts.length<2){x.arc(s.pts[0].x,s.pts[0].y,s.width/2,0,6.3);x.fillStyle=s.color;x.fill();return;}
+x.moveTo(s.pts[0].x,s.pts[0].y);
+if(s.smooth){for(var i=1;i<s.pts.length-1;i++){var mx=(s.pts[i].x+s.pts[i+1].x)/2,my=(s.pts[i].y+s.pts[i+1].y)/2;x.quadraticCurveTo(s.pts[i].x,s.pts[i].y,mx,my);}var l=s.pts[s.pts.length-1];x.lineTo(l.x,l.y);}
+else{s.pts.forEach(function(p){x.lineTo(p.x,p.y);});}x.stroke();});}
+function start(e){if(mode()==='type')return;drawing=true;cur={color:$('sg-color').value,width:+$('sg-width').value,smooth:$('sg-smooth').value==='1',pts:[pos(e)]};strokes.push(cur);e.preventDefault();redraw();}
+function move(e){if(!drawing)return;cur.pts.push(pos(e));redraw();e.preventDefault();}
+function end(){drawing=false;cur=null;}
 c.addEventListener('mousedown',start);c.addEventListener('mousemove',move);document.addEventListener('mouseup',end);
 c.addEventListener('touchstart',start,{passive:false});c.addEventListener('touchmove',move,{passive:false});c.addEventListener('touchend',end);
-document.getElementById('sg-clear').addEventListener('click',function(){x.clearRect(0,0,c.width,c.height);drew=false;});
-document.getElementById('sg-dl').addEventListener('click',function(){
-if(!drew)return;
-var d=x.getImageData(0,0,c.width,c.height).data,minX=c.width,minY=c.height,maxX=0,maxY=0;
-for(var i=0;i<d.length;i+=4){if(d[i+3]>0){var px=(i/4)%c.width,py=Math.floor((i/4)/c.width);
-if(px<minX)minX=px;if(px>maxX)maxX=px;if(py<minY)minY=py;if(py>maxY)maxY=py;}}
-var pad=12,w=Math.max(1,maxX-minX+pad*2),h=Math.max(1,maxY-minY+pad*2);
-var out=document.createElement('canvas');out.width=w;out.height=h;
-out.getContext('2d').drawImage(c,minX-pad,minY-pad,w,h,0,0,w,h);
-var a=document.createElement('a');a.href=out.toDataURL('image/png');a.download='signature.png';
-document.body.appendChild(a);a.click();document.body.removeChild(a);
-if(typeof gtag==='function')gtag('event','tool_use',{event_label:'signature-maker'});});
+$('sg-clear').onclick=function(){strokes=[];redraw();};$('sg-undo').onclick=function(){strokes.pop();redraw();};
+['sg-color','sg-width','sg-smooth','sg-font','sg-typed'].forEach(function(id){$(id).addEventListener('input',redraw);$(id).addEventListener('change',redraw);});
+$('sg-mode').addEventListener('change',function(){var t=mode()==='type';$('sg-typebox').hidden=!t;$('sg-fontbox').hidden=!t;$('sg-drawlabel').textContent=t?'Preview':'Draw your signature below (mouse, trackpad or finger)';redraw();});
+function bounds(){var d=x.getImageData(0,0,c.width,c.height).data,minX=c.width,minY=c.height,maxX=0,maxY=0,any=false;for(var i=0;i<d.length;i+=4){if(d[i+3]>0){any=true;var px=(i/4)%c.width,py=Math.floor((i/4)/c.width);if(px<minX)minX=px;if(px>maxX)maxX=px;if(py<minY)minY=py;if(py>maxY)maxY=py;}}return any?{x:minX,y:minY,w:maxX-minX,h:maxY-minY}:null;}
+$('sg-dl').onclick=function(){var b=bounds();if(!b)return;var pad=12,out=document.createElement('canvas');out.width=b.w+pad*2;out.height=b.h+pad*2;out.getContext('2d').drawImage(c,b.x-pad,b.y-pad,out.width,out.height,0,0,out.width,out.height);var a=document.createElement('a');a.href=out.toDataURL('image/png');a.download='signature.png';a.click();if(typeof gtag==='function')gtag('event','tool_use',{event_label:'signature-maker'});};
+$('sg-svg').onclick=function(){var b=bounds();if(!b)return;var pad=12,svg;
+if(mode()==='type'){svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+c.width+' '+c.height+'"><text x="'+(c.width/2)+'" y="'+(c.height/2)+'" text-anchor="middle" dominant-baseline="middle" font-family="'+$('sg-font').value.split('"').join('')+'" font-style="italic" font-size="'+parseInt(x.font,10)+'" fill="'+$('sg-color').value+'">'+($('sg-typed').value||'Signature').replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</text></svg>';}
+else{var paths=strokes.map(function(s){if(!s.pts.length)return '';var d='M'+(s.pts[0].x-b.x+pad).toFixed(1)+' '+(s.pts[0].y-b.y+pad).toFixed(1);for(var i=1;i<s.pts.length;i++)d+=' L'+(s.pts[i].x-b.x+pad).toFixed(1)+' '+(s.pts[i].y-b.y+pad).toFixed(1);return '<path d="'+d+'" fill="none" stroke="'+s.color+'" stroke-width="'+s.width+'" stroke-linecap="round" stroke-linejoin="round"/>';}).join('');
+svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+(b.w+pad*2)+' '+(b.h+pad*2)+'" width="'+(b.w+pad*2)+'" height="'+(b.h+pad*2)+'">'+paths+'</svg>';}
+var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));a.download='signature.svg';a.click();};
+redraw();
 })();</script></body></html>

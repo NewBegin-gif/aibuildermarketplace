@@ -121,31 +121,38 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
 <div class="row"><div><label for="bn-kw">Your core word or theme</label><input type="text" id="bn-kw" placeholder="ship, brew, ledger, spark&hellip;"></div>
-<div><label for="bn-style">Style</label><select id="bn-style"><option value="modern">Modern / tech</option><option value="pro">Professional</option><option value="playful">Playful</option></select></div></div>
-<div class="row" style="margin-top:10px"><div><button class="btn" id="bn-gen">Generate 20 names</button></div></div>
+<div><label for="bn-kw2">Second word (optional)</label><input type="text" id="bn-kw2" placeholder="labs, data, pay&hellip;"></div>
+<div><label for="bn-style">Style</label><select id="bn-style"><option value="modern">Modern / tech</option><option value="pro">Professional</option><option value="playful">Playful</option><option value="short">Short &amp; brandable</option></select></div></div>
+<div class="row" style="margin-top:10px"><div><button class="btn" id="bn-gen">Generate 24 names</button></div><div><button class="btn ghost" id="bn-more" type="button" hidden>Shuffle again</button></div></div>
 <div id="bn-out" style="margin-top:14px"></div>
-<p class="note">Names are combinations, generated locally &mdash; check trademarks and domain availability before you commit.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/business-name-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Business Name Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+<div id="bn-saved" style="margin-top:14px"></div>
+<p class="note">Names are combinations generated locally. The domain check opens a live search for .com, .io and .ai; save the ones you like (kept in this browser). Check trademarks before you commit.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/business-name-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Business Name Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 (function(){
-var SETS={modern:{pre:['get','try','use','go','hey','omni','meta','nova','flux','zen'],suf:['ly','io','ify','hub','lab','base','stack','flow','kit','pilot','os','grid']},
-pro:{pre:['pro','prime','true','clear','north','apex','core','summit','atlas','vector'],suf:['works','group','partners','solutions','systems','advisory','collective','ventures','and co','forge']},
-playful:{pre:['happy','tiny','mighty','funky','snappy','bubbly','wiggly','sunny','cosmo','pixel'],suf:['ster','aroo','bee','pop','doodle','muffin','beam','whale','panda','spark']}};
+var $=function(id){return document.getElementById(id);};
+var SETS={modern:{pre:['get','try','use','go','hey','omni','meta','nova','flux','zen','neo','ever'],suf:['ly','io','ify','hub','lab','base','stack','flow','kit','pilot','os','grid','ai','sync']},
+pro:{pre:['pro','prime','true','clear','north','apex','core','summit','atlas','vector','crest','meridian'],suf:['works','group','partners','solutions','systems','advisory','collective','ventures','and co','forge','capital','studio']},
+playful:{pre:['happy','tiny','mighty','funky','snappy','bubbly','wiggly','sunny','cosmo','pixel','zippy','jolly'],suf:['ster','aroo','bee','pop','doodle','muffin','beam','whale','panda','spark','nest','pals']},
+short:{pre:[],suf:['a','o','i','ly','io','ix','eo','ova','ora','ify']}};
 function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
-document.getElementById('bn-gen').addEventListener('click',function(){
-var kw=(document.getElementById('bn-kw').value||'').toLowerCase().replace(/[^a-z0-9]/g,'');
-if(!kw){document.getElementById('bn-out').innerHTML='<p class="note">Enter a core word first.</p>';return;}
-var st=SETS[document.getElementById('bn-style').value];
-var names=[];
-st.pre.forEach(function(p){names.push(cap(p)+cap(kw));});
-st.suf.forEach(function(s){names.push(cap(kw)+(s==='and co'?' & Co':cap(s)));});
-var noVowelEnd=kw.replace(/[aeiou]+$/,'');
-if(noVowelEnd.length>2&&noVowelEnd!==kw){['ly','io','ify'].forEach(function(s){names.push(cap(noVowelEnd)+s);});}
-names=shuffle(names).slice(0,20);
-var rows=names.map(function(nm){
-var dom=nm.toLowerCase().replace(/[^a-z0-9]/g,'');
-return '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;background:#17171c;border:1px solid #26262b;border-radius:10px;margin:5px 0">'
-+'<strong style="color:#fafafa">'+nm+'</strong>'
-+'<a href="https://www.hostinger.com/domain-name-search?REFERRALCODE=UZUDGLHAKW67&domain='+dom+'.com" target="_blank" rel="sponsored noopener" style="color:#60a5fa;font-size:.82rem;text-decoration:none;white-space:nowrap">check '+dom+'.com &rarr;</a></div>';}).join('');
-document.getElementById('bn-out').innerHTML=rows;
-if(typeof gtag==='function')gtag('event','tool_use',{event_label:'business-name-generator'});});
+function saved(){try{return JSON.parse(localStorage.getItem('aibm_names')||'[]');}catch(e){return [];}}
+function setSaved(l){try{localStorage.setItem('aibm_names',JSON.stringify(l));}catch(e){}}
+function dom(nm){return nm.toLowerCase().replace(/[^a-z0-9]/g,'');}
+function links(nm){var d=dom(nm);return ['com','io','ai'].map(function(t){return '<a href="https://www.hostinger.com/domain-name-search?REFERRALCODE=UZUDGLHAKW67&domain='+d+'.'+t+'" target="_blank" rel="sponsored noopener" style="color:#60a5fa;font-size:.8rem;text-decoration:none;white-space:nowrap;margin-left:8px">.'+t+'</a>';}).join('');}
+function row(nm,isSaved){return '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;background:#17171c;border:1px solid #26262b;border-radius:10px;margin:5px 0"><strong style="color:#fafafa">'+nm+'</strong><span><span class="muted" style="font-size:.78rem">check</span>'+links(nm)+'<button type="button" class="bn-save" data-n="'+nm.replace(/"/g,'&quot;')+'" style="margin-left:10px;background:none;border:1px solid #3f3f46;color:#e5e5e5;border-radius:6px;padding:2px 8px;cursor:pointer;font-size:.78rem">'+(isSaved?'Remove':'Save')+'</button></span></div>';}
+function renderSaved(){var l=saved();$('bn-saved').innerHTML=l.length?'<label>Saved names</label>'+l.map(function(n){return row(n,true);}).join(''):'';bind();}
+function bind(){[].slice.call(document.querySelectorAll('.bn-save')).forEach(function(b){b.onclick=function(){var l=saved(),n=b.dataset.n,i=l.indexOf(n);if(i>=0)l.splice(i,1);else l.push(n);setSaved(l);gen(false);renderSaved();};});}
+var lastNames=[];
+function gen(fresh){var kw=($('bn-kw').value||'').toLowerCase().replace(/[^a-z0-9]/g,''),kw2=($('bn-kw2').value||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+if(!kw){$('bn-out').innerHTML='<p class="note">Enter a core word first.</p>';return;}
+if(fresh||!lastNames.length){var st=SETS[$('bn-style').value],names=[];
+st.pre.forEach(function(p){names.push(cap(p)+cap(kw));});st.suf.forEach(function(s){names.push(cap(kw)+(s==='and co'?' & Co':cap(s)));});
+if(kw2){names.push(cap(kw)+cap(kw2));names.push(cap(kw2)+cap(kw));names.push(cap(kw)+' '+cap(kw2));names.push(cap(kw.slice(0,Math.ceil(kw.length/2)))+kw2);}
+var stem=kw.replace(/[aeiou]+$/,'');if(stem.length>2&&stem!==kw){['ly','io','ify','a','o'].forEach(function(s){names.push(cap(stem)+s);});}
+if($('bn-style').value==='short'){var v='aeiou';for(var i=0;i<6;i++){var c1='bcdfghjklmnprstvz'[Math.floor(Math.random()*17)];names.push(cap(kw.slice(0,3)+v[Math.floor(Math.random()*5)]+c1+v[Math.floor(Math.random()*5)]));}}
+lastNames=shuffle(names.filter(function(n,i,a){return a.indexOf(n)===i;})).slice(0,24);}
+var l=saved();$('bn-out').innerHTML=lastNames.map(function(nm){return row(nm,l.indexOf(nm)>=0);}).join('');$('bn-more').hidden=false;bind();
+if(fresh&&typeof gtag==='function')gtag('event','tool_use',{event_label:'business-name-generator'});}
+$('bn-gen').addEventListener('click',function(){gen(true);});$('bn-more').addEventListener('click',function(){gen(true);});
+renderSaved();
 })();</script></body></html>

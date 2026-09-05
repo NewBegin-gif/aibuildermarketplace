@@ -126,19 +126,42 @@ body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div c
 <div><label>Phone</label><input type="text" id="sg-phone" value="+1 555 0100"></div></div>
 <div class="row"><div><label>Email</label><input type="text" id="sg-email" value="jane@acme.com"></div>
 <div><label>Website</label><input type="text" id="sg-web" value="acme.com"></div></div>
+<div class="row"><div><label>Template</label><select id="sg-tpl"><option value="bar">Classic (accent bar)</option><option value="photo">Photo left</option><option value="stack">Stacked with logo</option></select></div>
+<div><label>Accent colour</label><input type="color" id="sg-col" value="#3b82f6" style="height:42px;padding:2px"></div></div>
+<div class="row"><div><label>Photo URL (hosted image, optional)</label><input type="text" id="sg-photo" placeholder="https://.../photo.jpg"></div>
+<div><label>Logo URL (hosted image, optional)</label><input type="text" id="sg-logo" placeholder="https://.../logo.png"></div></div>
+<div class="row"><div><label>LinkedIn</label><input type="text" id="sg-li" placeholder="linkedin.com/in/you"></div><div><label>X / Twitter</label><input type="text" id="sg-x" placeholder="x.com/you"></div>
+<div><label>Instagram</label><input type="text" id="sg-ig" placeholder="instagram.com/you"></div><div><label>YouTube</label><input type="text" id="sg-yt" placeholder="youtube.com/@you"></div></div>
+<div class="row"><div><label>Banner text (optional call to action)</label><input type="text" id="sg-cta" placeholder="Book a 15-minute call"></div><div><label>Banner link</label><input type="text" id="sg-ctaurl" placeholder="https://cal.com/you"></div></div>
+<label>Disclaimer (optional)</label><textarea id="sg-disc" rows="2" placeholder="This email and any attachments are confidential&hellip;"></textarea>
 <label style="margin-top:12px">Preview</label><div id="sg-prev" style="background:#fff;border-radius:10px;padding:14px"></div>
-<button class="btn" id="sg-copy" style="margin-top:10px">Copy HTML</button></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/email-signature-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Email Signature Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
-function sgE(x){return (x||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function sgBuild(){var n=document.getElementById('sg-name').value,t=document.getElementById('sg-title').value,co=document.getElementById('sg-co').value,ph=document.getElementById('sg-phone').value,em=document.getElementById('sg-email').value,wb=document.getElementById('sg-web').value;
-var html='<table cellpadding="0" cellspacing="0" style="font-family:Arial,sans-serif;font-size:13px;color:#333"><tr><td style="border-left:3px solid #3b82f6;padding-left:12px">'
-+'<div style="font-weight:bold;font-size:15px;color:#111">'+sgE(n)+'</div>'
-+'<div style="color:#666">'+sgE(t)+(co?' \u00b7 '+sgE(co):'')+'</div>'
-+(ph?'<div style="margin-top:4px">'+sgE(ph)+'</div>':'')
-+(em?'<div><a href="mailto:'+sgE(em)+'" style="color:#3b82f6;text-decoration:none">'+sgE(em)+'</a></div>':'')
-+(wb?'<div><a href="https://'+sgE(wb)+'" style="color:#3b82f6;text-decoration:none">'+sgE(wb)+'</a></div>':'')
-+'</td></tr></table>';
-document.getElementById('sg-prev').innerHTML=html;document.getElementById('sg-prev').dataset.html=html;
-gtag&&gtag('event','tool_use',{event_label:'signature'});}
-['sg-name','sg-title','sg-co','sg-phone','sg-email','sg-web'].forEach(function(id){document.getElementById(id).addEventListener('input',sgBuild);});
-document.getElementById('sg-copy').onclick=function(){var h=document.getElementById('sg-prev').dataset.html;navigator.clipboard&&navigator.clipboard.writeText(h);var b=this;b.textContent='Copied HTML!';setTimeout(function(){b.textContent='Copy HTML';},1500);};
-sgBuild();</script></body></html>
+<div class="row" style="margin-top:10px"><div><button class="btn" id="sg-rich">Copy for Gmail / Outlook</button></div><div><button class="btn ghost" id="sg-copy">Copy HTML</button></div></div>
+<details style="margin-top:12px"><summary>How to install it</summary><p class="note"><b>Gmail:</b> Settings &rarr; See all settings &rarr; Signature &rarr; Create new, then paste (Ctrl/Cmd+V) into the box. <b>Outlook (web):</b> Settings &rarr; Mail &rarr; Compose and reply &rarr; paste. <b>Apple Mail:</b> Settings &rarr; Signatures, paste, and untick "Always match my default message font". Images must be hosted URLs (not uploads): most mail clients strip embedded images.</p></details>
+<p class="note">No watermark, no account, no branding of ours in your signature. Tables and inline styles only, so it survives every mail client.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/email-signature-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Email Signature Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+(function(){
+var $=function(id){return document.getElementById(id);};
+function e(x){return (x||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function href(u){u=(u||'').trim();return u?(/^https?:/i.test(u)?u:'https://'+u):'';}
+function build(){var n=$('sg-name').value,t=$('sg-title').value,co=$('sg-co').value,ph=$('sg-phone').value,em=$('sg-email').value,wb=$('sg-web').value,col=$('sg-col').value,tpl=$('sg-tpl').value,photo=href($('sg-photo').value),logo=href($('sg-logo').value),cta=$('sg-cta').value,ctau=href($('sg-ctaurl').value),disc=$('sg-disc').value;
+var socials=[['LinkedIn',$('sg-li').value],['X',$('sg-x').value],['Instagram',$('sg-ig').value],['YouTube',$('sg-yt').value]].filter(function(s){return s[1].trim();}).map(function(s){return '<a href="'+e(href(s[1]))+'" style="color:'+col+';text-decoration:none;margin-right:10px">'+s[0]+'</a>';}).join('');
+var lines='<div style="font-weight:bold;font-size:15px;color:#111">'+e(n)+'</div><div style="color:#666">'+e(t)+(co?' \u00b7 '+e(co):'')+'</div>'
++(ph?'<div style="margin-top:4px;color:#333">'+e(ph)+'</div>':'')
++(em?'<div><a href="mailto:'+e(em)+'" style="color:'+col+';text-decoration:none">'+e(em)+'</a></div>':'')
++(wb?'<div><a href="'+e(href(wb))+'" style="color:'+col+';text-decoration:none">'+e(wb)+'</a></div>':'')
++(socials?'<div style="margin-top:6px;font-size:12px">'+socials+'</div>':'');
+var core;
+if(tpl==='photo'&&photo){core='<tr>'+'<td style="padding-right:14px;vertical-align:top"><img src="'+e(photo)+'" width="72" height="72" alt="" style="border-radius:36px;display:block"></td><td style="vertical-align:top;border-left:2px solid '+col+';padding-left:14px">'+lines+'</td></tr>';}
+else if(tpl==='stack'){core='<tr><td>'+(logo?'<img src="'+e(logo)+'" height="36" alt="'+e(co)+'" style="display:block;margin-bottom:8px">':'')+lines+'</td></tr>';}
+else{core='<tr><td style="border-left:3px solid '+col+';padding-left:12px">'+lines+'</td></tr>';}
+var banner=cta?'<tr><td colspan="2" style="padding-top:10px"><a href="'+e(ctau||href(wb))+'" style="display:inline-block;background:'+col+';color:#fff;text-decoration:none;padding:7px 14px;border-radius:6px;font-size:12px;font-weight:bold">'+e(cta)+'</a></td></tr>':'';
+var dsc=disc?'<tr><td colspan="2" style="padding-top:10px;color:#999;font-size:10px;line-height:1.4">'+e(disc)+'</td></tr>':'';
+var html='<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#333;line-height:1.4">'+core+banner+dsc+'</table>';
+$('sg-prev').innerHTML=html;$('sg-prev').dataset.html=html;
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'signature'});}
+['sg-name','sg-title','sg-co','sg-phone','sg-email','sg-web','sg-tpl','sg-col','sg-photo','sg-logo','sg-li','sg-x','sg-ig','sg-yt','sg-cta','sg-ctaurl','sg-disc'].forEach(function(id){$(id).addEventListener('input',build);$(id).addEventListener('change',build);});
+$('sg-copy').onclick=function(){navigator.clipboard&&navigator.clipboard.writeText($('sg-prev').dataset.html);var b=this;b.textContent='Copied HTML!';setTimeout(function(){b.textContent='Copy HTML';},1500);};
+$('sg-rich').onclick=function(){var h=$('sg-prev').dataset.html,b=this,done=function(){b.textContent='Copied \u2014 now paste into your signature box';setTimeout(function(){b.textContent='Copy for Gmail / Outlook';},2500);};
+if(navigator.clipboard&&window.ClipboardItem){try{navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([h],{type:'text/html'}),'text/plain':new Blob([$('sg-prev').innerText],{type:'text/plain'})})]).then(done);return;}catch(err){}}
+var r=document.createRange();r.selectNodeContents($('sg-prev'));var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');}catch(err){}s.removeAllRanges();done();};
+build();
+})();</script></body></html>

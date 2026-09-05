@@ -120,35 +120,62 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
-<div class="row"><div><label>Your business</label><input type="text" id="iv-from" value="Your Company"></div>
-<div><label>Bill to (client)</label><input type="text" id="iv-to" value="Client Name"></div></div>
+<div class="row"><div><label>Your business</label><input type="text" id="iv-from" value="Your Company"><textarea id="iv-from-addr" rows="2" placeholder="Address, VAT number, IBAN&hellip;" style="margin-top:6px"></textarea></div>
+<div><label>Bill to (client)</label><input type="text" id="iv-to" value="Client Name"><textarea id="iv-to-addr" rows="2" placeholder="Client address" style="margin-top:6px"></textarea></div></div>
 <div class="row"><div><label>Invoice #</label><input type="text" id="iv-num" value="INV-001"></div>
-<div><label>Date</label><input type="text" id="iv-date"></div>
-<div><label>Tax %</label><input type="number" id="iv-tax" value="0" min="0"></div></div>
+<div><label>Date</label><input type="date" id="iv-date"></div>
+<div><label>Due date</label><input type="date" id="iv-due"></div></div>
+<div class="row"><div><label>Currency</label><select id="iv-cur"><option value="EUR">EUR &euro;</option><option value="USD">USD $</option><option value="GBP">GBP &pound;</option><option value="CHF">CHF</option><option value="AUD">AUD $</option><option value="CAD">CAD $</option><option value="INR">INR &#8377;</option><option value="JPY">JPY &yen;</option><option value="SEK">SEK kr</option><option value="PLN">PLN z&#322;</option></select></div>
+<div><label>Tax label</label><input type="text" id="iv-taxname" value="VAT"></div>
+<div><label>Tax %</label><input type="number" id="iv-tax" value="21" min="0" step="0.1"></div>
+<div><label>Discount</label><div style="display:flex;gap:6px"><input type="number" id="iv-disc" value="0" min="0" step="0.01"><select id="iv-disctype" style="max-width:70px"><option value="pct">%</option><option value="abs">amt</option></select></div></div></div>
+<div class="row"><div><label>Status stamp</label><select id="iv-stamp"><option value="">none</option><option value="PAID">PAID</option><option value="DUE">DUE</option><option value="OVERDUE">OVERDUE</option><option value="DRAFT">DRAFT</option></select></div>
+<div><label>Your logo (optional)</label><input type="file" id="iv-logo" accept="image/*" style="padding:8px"></div></div>
 <label style="margin-top:10px">Line items</label><div id="iv-items"></div>
 <button class="btn ghost" id="iv-add" type="button">+ Add line</button>
+<label style="margin-top:12px">Notes / payment terms</label><textarea id="iv-notes" rows="2">Payment within 14 days by bank transfer. Thank you for your business.</textarea>
 <div id="iv-total" style="margin-top:12px"></div>
-<button class="btn" id="iv-pdf" style="margin-top:8px">Download PDF</button></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/invoice-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Free Invoice Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<button class="btn" id="iv-pdf" style="margin-top:8px">Download PDF</button> <button class="btn ghost" id="iv-reset" type="button">Start a new invoice</button>
+<p class="note">Everything you type is kept in this browser (localStorage) so the next invoice starts pre-filled and the number counts up. Nothing is sent to us. Unlimited invoices, no account, no watermark.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/invoice-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Free Invoice Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <script>
-var itemsEl=document.getElementById('iv-items');
+(function(){
+var $=function(id){return document.getElementById(id);},itemsEl=$('iv-items'),logo=null;
+var SYM={EUR:'\u20ac',USD:'$',GBP:'\u00a3',CHF:'CHF ',AUD:'A$',CAD:'C$',INR:'\u20b9',JPY:'\u00a5',SEK:'kr ',PLN:'z\u0142 '};
+var FIELDS=['iv-from','iv-from-addr','iv-to','iv-to-addr','iv-num','iv-date','iv-due','iv-cur','iv-taxname','iv-tax','iv-disc','iv-disctype','iv-stamp','iv-notes'];
+function money(v){var c=$('iv-cur').value;return SYM[c]+(c==='JPY'?Math.round(v).toString():v.toFixed(2));}
 function addRow(desc,qty,price){var d=document.createElement('div');d.className='row';d.style.marginBottom='6px';
-d.innerHTML='<div style="flex:2"><input type="text" placeholder="Description" value="'+(desc||'')+'"></div><div><input type="number" placeholder="Qty" value="'+(qty||1)+'" min="0"></div><div><input type="number" placeholder="Price" value="'+(price||0)+'" min="0"></div>';
-Array.prototype.forEach.call(d.querySelectorAll('input'),function(i){i.addEventListener('input',calc);});itemsEl.appendChild(d);calc();}
+d.innerHTML='<div style="flex:2"><input type="text" placeholder="Description"></div><div><input type="number" placeholder="Qty" min="0" step="0.01"></div><div><input type="number" placeholder="Unit price" min="0" step="0.01"></div><div style="flex:0 0 34px"><button type="button" class="iv-x" style="background:none;border:0;color:#ef4444;cursor:pointer;font-weight:700;font-size:1.1rem">&times;</button></div>';
+var i=d.querySelectorAll('input');i[0].value=desc||'';i[1].value=qty==null?1:qty;i[2].value=price==null?0:price;
+Array.prototype.forEach.call(i,function(x){x.addEventListener('input',calc);});d.querySelector('.iv-x').onclick=function(){d.remove();calc();};itemsEl.appendChild(d);calc();}
 function rows(){return Array.prototype.map.call(itemsEl.children,function(r){var i=r.querySelectorAll('input');return{desc:i[0].value,qty:+i[1].value||0,price:+i[2].value||0};});}
-function calc(){var sub=rows().reduce(function(a,r){return a+r.qty*r.price;},0);var tax=sub*(+document.getElementById('iv-tax').value||0)/100;
-document.getElementById('iv-total').innerHTML='<p>Subtotal: <b>'+sub.toFixed(2)+'</b> \u00b7 Tax: <b>'+tax.toFixed(2)+'</b> \u00b7 <span class="big">Total: '+(sub+tax).toFixed(2)+'</span></p>';}
-document.getElementById('iv-add').onclick=function(){addRow('',1,0);};
-document.getElementById('iv-tax').addEventListener('input',calc);
-document.getElementById('iv-date').value=new Date().toISOString().slice(0,10);
-addRow('Consulting',10,100);
-document.getElementById('iv-pdf').onclick=function(){var J=window.jspdf.jsPDF,doc=new J(),y=20;
-doc.setFontSize(20);doc.text('INVOICE',20,y);doc.setFontSize(11);y+=12;
-doc.text('From: '+document.getElementById('iv-from').value,20,y);y+=7;
-doc.text('Bill to: '+document.getElementById('iv-to').value,20,y);y+=7;
-doc.text('Invoice #: '+document.getElementById('iv-num').value+'    Date: '+document.getElementById('iv-date').value,20,y);y+=12;
-doc.text('Description',20,y);doc.text('Qty',120,y);doc.text('Price',150,y);doc.text('Amount',175,y);y+=3;doc.line(20,y,195,y);y+=8;
-var sub=0;rows().forEach(function(r){var amt=r.qty*r.price;sub+=amt;doc.text(String(r.desc).slice(0,55),20,y);doc.text(String(r.qty),120,y);doc.text(r.price.toFixed(2),150,y);doc.text(amt.toFixed(2),175,y);y+=8;});
-var tax=sub*(+document.getElementById('iv-tax').value||0)/100;y+=3;doc.line(20,y,195,y);y+=8;
-doc.text('Subtotal: '+sub.toFixed(2),150,y);y+=7;doc.text('Tax: '+tax.toFixed(2),150,y);y+=7;doc.setFontSize(13);doc.text('Total: '+(sub+tax).toFixed(2),150,y);
-doc.save('invoice.pdf');gtag&&gtag('event','tool_download',{event_label:'invoice_pdf'});};
+function totals(){var sub=rows().reduce(function(a,r){return a+r.qty*r.price;},0);var dv=+$('iv-disc').value||0;var disc=$('iv-disctype').value==='pct'?sub*dv/100:Math.min(dv,sub);var net=sub-disc;var tax=net*(+$('iv-tax').value||0)/100;return{sub:sub,disc:disc,net:net,tax:tax,total:net+tax};}
+function calc(){var t=totals();$('iv-total').innerHTML='<p>Subtotal: <b>'+money(t.sub)+'</b>'+(t.disc?' \u00b7 Discount: <b>\u2212'+money(t.disc)+'</b>':'')+' \u00b7 '+($('iv-taxname').value||'Tax')+' '+(+$('iv-tax').value||0)+'%: <b>'+money(t.tax)+'</b> \u00b7 <span class="big">Total: '+money(t.total)+'</span></p>';save();}
+function save(){try{var o={};FIELDS.forEach(function(f){o[f]=$(f).value;});o.rows=rows();localStorage.setItem('aibm_invoice',JSON.stringify(o));}catch(e){}}
+function load(){try{var o=JSON.parse(localStorage.getItem('aibm_invoice')||'null');if(!o)return false;FIELDS.forEach(function(f){if(o[f]!=null)$(f).value=o[f];});(o.rows||[]).forEach(function(r){addRow(r.desc,r.qty,r.price);});return true;}catch(e){return false;}}
+function bump(n){var m=/(\\d+)(?!.*\\d)/.exec(n);if(!m)return n+'-2';var z=m[1],nx=String(+z+1);while(nx.length<z.length)nx='0'+nx;return n.slice(0,m.index)+nx+n.slice(m.index+z.length);}
+FIELDS.forEach(function(f){$(f).addEventListener('input',calc);$(f).addEventListener('change',calc);});
+$('iv-add').onclick=function(){addRow('',1,0);};
+$('iv-logo').addEventListener('change',function(){var f=this.files&&this.files[0];if(!f){logo=null;return;}var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){logo=im;};im.src=r.result;};r.readAsDataURL(f);});
+$('iv-reset').onclick=function(){itemsEl.innerHTML='';$('iv-num').value=bump($('iv-num').value);var d=new Date();$('iv-date').value=d.toISOString().slice(0,10);d.setDate(d.getDate()+14);$('iv-due').value=d.toISOString().slice(0,10);$('iv-stamp').value='';addRow('',1,0);};
+if(!load()){var d=new Date();$('iv-date').value=d.toISOString().slice(0,10);d.setDate(d.getDate()+14);$('iv-due').value=d.toISOString().slice(0,10);addRow('Consulting',10,100);}else{calc();}
+$('iv-pdf').onclick=function(){var J=window.jspdf.jsPDF,doc=new J(),y=20,cur=$('iv-cur').value,sym=SYM[cur];
+function m(v){return (cur==='JPY'?Math.round(v).toString():v.toFixed(2))+' '+cur;}
+if(logo){var w=40,h=Math.min(22,w*logo.height/logo.width);try{doc.addImage(logo,'PNG',150,12,w,h);}catch(e){}}
+doc.setFontSize(22);doc.text('INVOICE',20,y);
+var st=$('iv-stamp').value;if(st){doc.setFontSize(26);doc.setTextColor(st==='PAID'?22:st==='OVERDUE'?220:120,st==='PAID'?163:st==='OVERDUE'?38:120,st==='PAID'?74:st==='OVERDUE'?38:120);doc.text(st,110,y);doc.setTextColor(0,0,0);}
+doc.setFontSize(10);y+=10;
+var L=function(t,x,yy){String(t||'').split(String.fromCharCode(10)).forEach(function(s,i){doc.text(s,x,yy+i*5);});return yy+5*String(t||'').split(String.fromCharCode(10)).length;};
+doc.setFont(undefined,'bold');doc.text('From',20,y);doc.text('Bill to',110,y);doc.setFont(undefined,'normal');y+=6;
+var y1=L($('iv-from').value+String.fromCharCode(10)+$('iv-from-addr').value,20,y),y2=L($('iv-to').value+String.fromCharCode(10)+$('iv-to-addr').value,110,y);y=Math.max(y1,y2)+4;
+doc.text('Invoice #: '+$('iv-num').value,20,y);doc.text('Date: '+$('iv-date').value,80,y);doc.text('Due: '+$('iv-due').value,140,y);y+=10;
+doc.setFont(undefined,'bold');doc.text('Description',20,y);doc.text('Qty',120,y);doc.text('Unit',140,y);doc.text('Amount',170,y);doc.setFont(undefined,'normal');y+=2;doc.line(20,y,195,y);y+=7;
+rows().forEach(function(r){var amt=r.qty*r.price;doc.text(String(r.desc).slice(0,60),20,y);doc.text(String(r.qty),120,y);doc.text(m(r.price),140,y);doc.text(m(amt),170,y);y+=7;if(y>265){doc.addPage();y=20;}});
+var t=totals();y+=2;doc.line(120,y,195,y);y+=7;doc.text('Subtotal',120,y);doc.text(m(t.sub),170,y);y+=6;
+if(t.disc){doc.text('Discount',120,y);doc.text('-'+m(t.disc),170,y);y+=6;}
+doc.text(($('iv-taxname').value||'Tax')+' '+(+$('iv-tax').value||0)+'%',120,y);doc.text(m(t.tax),170,y);y+=7;
+doc.setFont(undefined,'bold');doc.setFontSize(12);doc.text('Total',120,y);doc.text(m(t.total),170,y);doc.setFont(undefined,'normal');doc.setFontSize(10);y+=12;
+if($('iv-notes').value){doc.setTextColor(90,90,90);L($('iv-notes').value,20,y);doc.setTextColor(0,0,0);}
+doc.save(($('iv-num').value||'invoice').replace(/[^A-Za-z0-9_-]+/g,'-')+'.pdf');
+if(typeof gtag==='function')gtag('event','tool_download',{event_label:'invoice_pdf'});};
+})();
 </script></body></html>

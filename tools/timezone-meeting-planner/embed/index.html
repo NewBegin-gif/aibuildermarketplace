@@ -120,45 +120,46 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
-<div class="row"><div><label for="tz-1">Your timezone</label><select id="tz-1"></select></div>
-<div><label for="tz-2">Teammate / client 2</label><select id="tz-2"></select></div></div>
-<div class="row"><div><label for="tz-3">Teammate / client 3 (optional)</label><select id="tz-3"></select></div>
-<div><label>Now</label><input type="text" id="tz-now" class="out" readonly></div></div>
-<label style="margin-top:14px">Overlap today &mdash; green = everyone 9&ndash;17, yellow = someone 7&ndash;9 / 17&ndash;21</label>
+<div id="tz-people"></div>
+<div class="row"><div><button class="btn ghost" id="tz-add" type="button">+ Add a person (max 6)</button></div>
+<div><label for="tz-date">Date</label><input type="date" id="tz-date"></div></div>
+<label style="margin-top:12px">Now</label><input type="text" id="tz-now" class="out" readonly>
+<label style="margin-top:14px">Overlap on that date &mdash; green = everyone inside their own working hours, yellow = someone stretched by up to two hours</label>
 <div id="tz-grid" style="margin-top:8px;font-size:.82rem;overflow-x:auto"></div>
-<p class="note">Times come from your browser's timezone database &mdash; DST is handled automatically. Nothing is sent anywhere.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/timezone-meeting-planner/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Timezone Meeting Planner &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+<div id="tz-best" style="margin-top:12px"></div>
+<div class="row" style="margin-top:8px"><div><button class="btn" id="tz-copy" type="button">Copy the best slots</button></div><div><button class="btn ghost" id="tz-share" type="button">Copy a share link</button></div></div>
+<p class="note">Times come from your browser's timezone database &mdash; DST is handled automatically for the chosen date. Working hours are per person. Nothing is sent anywhere; the share link carries only the zones and hours.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/timezone-meeting-planner/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Timezone Meeting Planner &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 (function(){
-var ZONES=[['Amsterdam','Europe/Amsterdam'],['London','Europe/London'],['Lisbon','Europe/Lisbon'],['New York','America/New_York'],['Chicago','America/Chicago'],['Denver','America/Denver'],['Los Angeles','America/Los_Angeles'],['São Paulo','America/Sao_Paulo'],['Mexico City','America/Mexico_City'],['Lagos','Africa/Lagos'],['Cairo','Africa/Cairo'],['Nairobi','Africa/Nairobi'],['Dubai','Asia/Dubai'],['Karachi','Asia/Karachi'],['Mumbai','Asia/Kolkata'],['Bangkok','Asia/Bangkok'],['Ho Chi Minh City','Asia/Ho_Chi_Minh'],['Singapore','Asia/Singapore'],['Hong Kong','Asia/Hong_Kong'],['Shanghai','Asia/Shanghai'],['Tokyo','Asia/Tokyo'],['Seoul','Asia/Seoul'],['Sydney','Australia/Sydney'],['Auckland','Pacific/Auckland']];
-var sels=['tz-1','tz-2','tz-3'].map(function(id){return document.getElementById(id);});
-sels.forEach(function(s,i){
-if(i===2)s.appendChild(new Option('— none —',''));
-ZONES.forEach(function(z){s.appendChild(new Option(z[0],z[1]));});});
-try{var mine=Intl.DateTimeFormat().resolvedOptions().timeZone;
-var hit=ZONES.filter(function(z){return z[1]===mine;})[0];
-sels[0].value=hit?hit[1]:'Europe/Amsterdam';}catch(e){sels[0].value='Europe/Amsterdam';}
-sels[1].value='America/New_York';sels[2].value='Asia/Ho_Chi_Minh';
-function hourIn(dateUTC,tz){return +new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',hour12:false}).format(dateUTC);}
+var ZONES=[['Amsterdam','Europe/Amsterdam'],['Berlin','Europe/Berlin'],['Paris','Europe/Paris'],['Madrid','Europe/Madrid'],['Warsaw','Europe/Warsaw'],['London','Europe/London'],['Dublin','Europe/Dublin'],['Lisbon','Europe/Lisbon'],['Istanbul','Europe/Istanbul'],['Kyiv','Europe/Kyiv'],['New York','America/New_York'],['Toronto','America/Toronto'],['Chicago','America/Chicago'],['Denver','America/Denver'],['Los Angeles','America/Los_Angeles'],['Vancouver','America/Vancouver'],['S\u00e3o Paulo','America/Sao_Paulo'],['Buenos Aires','America/Argentina/Buenos_Aires'],['Mexico City','America/Mexico_City'],['Bogot\u00e1','America/Bogota'],['Lagos','Africa/Lagos'],['Cairo','Africa/Cairo'],['Johannesburg','Africa/Johannesburg'],['Nairobi','Africa/Nairobi'],['Dubai','Asia/Dubai'],['Tel Aviv','Asia/Jerusalem'],['Karachi','Asia/Karachi'],['Mumbai','Asia/Kolkata'],['Dhaka','Asia/Dhaka'],['Bangkok','Asia/Bangkok'],['Jakarta','Asia/Jakarta'],['Ho Chi Minh City','Asia/Ho_Chi_Minh'],['Manila','Asia/Manila'],['Singapore','Asia/Singapore'],['Hong Kong','Asia/Hong_Kong'],['Shanghai','Asia/Shanghai'],['Taipei','Asia/Taipei'],['Tokyo','Asia/Tokyo'],['Seoul','Asia/Seoul'],['Perth','Australia/Perth'],['Sydney','Australia/Sydney'],['Auckland','Pacific/Auckland'],['Honolulu','Pacific/Honolulu'],['UTC','UTC']];
+var $=function(id){return document.getElementById(id);},people=[];
+function hourIn(d,tz){return +new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',hour12:false}).format(d)%24;}
 function label(tz){var p=tz.split('/');return p[p.length-1].replace(/_/g,' ');}
-function render(){
-var zones=sels.map(function(s){return s.value;}).filter(Boolean);
-var now=new Date();
-document.getElementById('tz-now').value=zones.map(function(z){
-return label(z)+' '+new Intl.DateTimeFormat('en-GB',{timeZone:z,hour:'2-digit',minute:'2-digit'}).format(now);}).join(' · ');
-var head='<tr><th style="text-align:left;padding:4px 8px">UTC</th>'+zones.map(function(z){return '<th style="text-align:left;padding:4px 8px">'+label(z)+'</th>';}).join('')+'</tr>';
-var rows='';
-var base=new Date();base.setUTCMinutes(0,0,0);
-for(var h=0;h<24;h++){
-var d=new Date(Date.UTC(base.getUTCFullYear(),base.getUTCMonth(),base.getUTCDate(),h));
-var hs=zones.map(function(z){return hourIn(d,z);});
-var allCore=hs.every(function(x){return x>=9&&x<17;});
-var allOk=hs.every(function(x){return x>=7&&x<21;});
-var col=allCore?'#065f46':allOk?'#78350f':'transparent';
-var txt=allCore?'#a7f3d0':allOk?'#fde68a':'#6b7280';
-rows+='<tr style="background:'+(allCore||allOk?col:'transparent')+'">'
-+'<td style="padding:3px 8px;color:'+txt+'">'+('0'+h).slice(-2)+':00</td>'
-+hs.map(function(x){return '<td style="padding:3px 8px;color:'+txt+'">'+('0'+x).slice(-2)+':00</td>';}).join('')+'</tr>';}
-document.getElementById('tz-grid').innerHTML='<table style="border-collapse:collapse;width:100%">'+head+rows+'</table>';
+function hourOpts(sel){var s='';for(var h=0;h<24;h++)s+='<option value="'+h+'"'+(h===sel?' selected':'')+'>'+('0'+h).slice(-2)+':00</option>';return s;}
+function renderPeople(){$('tz-people').innerHTML=people.map(function(p,i){return '<div class="row" style="align-items:end"><div style="flex:2"><label>'+(i===0?'You':'Person '+(i+1))+'</label><select data-i="'+i+'" class="tz-z">'+ZONES.map(function(z){return '<option value="'+z[1]+'"'+(z[1]===p.tz?' selected':'')+'>'+z[0]+'</option>';}).join('')+'</select></div><div><label>Works from</label><select data-i="'+i+'" class="tz-a">'+hourOpts(p.a)+'</select></div><div><label>until</label><select data-i="'+i+'" class="tz-b">'+hourOpts(p.b)+'</select></div>'+(i>1?'<div style="flex:0 0 34px"><button type="button" data-i="'+i+'" class="tz-x" style="background:none;border:0;color:#ef4444;cursor:pointer;font-weight:700;font-size:1.1rem">&times;</button></div>':'')+'</div>';}).join('');
+[].slice.call(document.querySelectorAll('.tz-z,.tz-a,.tz-b')).forEach(function(s){s.addEventListener('change',function(){var p=people[+s.dataset.i];if(s.className==='tz-z')p.tz=s.value;else if(s.className==='tz-a')p.a=+s.value;else p.b=+s.value;render();});});
+[].slice.call(document.querySelectorAll('.tz-x')).forEach(function(b){b.onclick=function(){people.splice(+b.dataset.i,1);renderPeople();render();};});
+$('tz-add').disabled=people.length>=6;}
+function inHours(h,p){return p.a<=p.b?(h>=p.a&&h<p.b):(h>=p.a||h<p.b);}
+function stretch(h,p){return inHours(h,{a:(p.a+22)%24,b:(p.b+2)%24});}
+var best=[];
+function render(){var date=$('tz-date').value||new Date().toISOString().slice(0,10),parts=date.split('-'),now=new Date();
+$('tz-now').value=people.map(function(p){return label(p.tz)+' '+new Intl.DateTimeFormat('en-GB',{timeZone:p.tz,hour:'2-digit',minute:'2-digit'}).format(now);}).join(' \u00b7 ');
+var head='<tr><th style="text-align:left;padding:4px 8px">UTC</th>'+people.map(function(p){return '<th style="text-align:left;padding:4px 8px">'+label(p.tz)+'</th>';}).join('')+'</tr>',rows='';best=[];
+for(var h=0;h<24;h++){var d=new Date(Date.UTC(+parts[0],+parts[1]-1,+parts[2],h));var hs=people.map(function(p){return hourIn(d,p.tz);});
+var core=hs.every(function(x,i){return inHours(x,people[i]);}),ok=hs.every(function(x,i){return stretch(x,people[i]);});
+if(core)best.push(hs.map(function(x,i){return label(people[i].tz)+' '+('0'+x).slice(-2)+':00';}).join(' / '));
+var col=core?'#065f46':ok?'#78350f':'transparent',txt=core?'#a7f3d0':ok?'#fde68a':'#6b7280';
+rows+='<tr style="background:'+col+'"><td style="padding:3px 8px;color:'+txt+'">'+('0'+h).slice(-2)+':00</td>'+hs.map(function(x){return '<td style="padding:3px 8px;color:'+txt+'">'+('0'+x).slice(-2)+':00</td>';}).join('')+'</tr>';}
+$('tz-grid').innerHTML='<table style="border-collapse:collapse;width:100%">'+head+rows+'</table>';
+$('tz-best').innerHTML=best.length?'<b>'+best.length+' hour'+(best.length>1?'s':'')+' where everyone is at work:</b><br>'+best.join('<br>'):'<b>No hour where everyone is inside their working hours on '+date+'.</b> Yellow rows are the least painful compromise.';
+try{history.replaceState(null,'','#'+people.map(function(p){return p.tz+','+p.a+','+p.b;}).join(';')+'|'+date);}catch(e){}
 if(typeof gtag==='function'&&!window._tz){window._tz=1;gtag('event','tool_use',{event_label:'timezone-meeting-planner'});}}
-sels.forEach(function(s){s.addEventListener('change',render);});
-render();
+function init(){var h=location.hash.slice(1),ok=false;if(h){try{var sp=h.split('|');people=sp[0].split(';').map(function(x){var q=x.split(',');return{tz:q[0],a:+q[1]||9,b:+q[2]||17};}).filter(function(p){return ZONES.some(function(z){return z[1]===p.tz;});});if(sp[1])$('tz-date').value=sp[1];ok=people.length>=2;}catch(e){}}
+if(!ok){var mine='Europe/Amsterdam';try{var m=Intl.DateTimeFormat().resolvedOptions().timeZone;if(ZONES.some(function(z){return z[1]===m;}))mine=m;}catch(e){}people=[{tz:mine,a:9,b:17},{tz:'America/New_York',a:9,b:17},{tz:'Asia/Ho_Chi_Minh',a:9,b:17}];}
+if(!$('tz-date').value)$('tz-date').value=new Date().toISOString().slice(0,10);renderPeople();render();}
+$('tz-add').onclick=function(){if(people.length>=6)return;people.push({tz:'Europe/London',a:9,b:17});renderPeople();render();};
+$('tz-date').addEventListener('change',render);
+$('tz-copy').onclick=function(){var t=best.length?best.join(String.fromCharCode(10)):'No common working hour';navigator.clipboard&&navigator.clipboard.writeText(t);var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy the best slots';},1500);};
+$('tz-share').onclick=function(){navigator.clipboard&&navigator.clipboard.writeText(location.href);var b=this;b.textContent='Link copied!';setTimeout(function(){b.textContent='Copy a share link';},1500);};
+init();
 })();</script></body></html>

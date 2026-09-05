@@ -119,17 +119,31 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-txt b{color:var(--text);font-size:.95rem}
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
-body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><label for="ic-file">Choose an image</label>
-<input type="file" id="ic-file" accept="image/*" style="color:var(--text2);width:100%">
-<label for="ic-q" style="margin-top:12px">Quality: <span id="ic-qv">70</span>%</label><input type="range" id="ic-q" min="10" max="100" value="70">
-<div id="ic-out" style="margin-top:16px"><p class="muted">Pick a JPG or PNG to compress — it stays on your device.</p></div>
-<button class="btn" id="ic-dl" disabled style="margin-top:8px">Download compressed</button></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/image-compressor/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Image Compressor &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
-var icBlob=null,icName='compressed.jpg';
-document.getElementById('ic-q').addEventListener('input',function(){document.getElementById('ic-qv').textContent=this.value;if(window._icImg)icRun();});
-document.getElementById('ic-file').addEventListener('change',function(e){var f=e.target.files[0];if(!f)return;icName='compressed-'+f.name.replace(/\.[^.]+$/,'')+'.jpg';var r=new FileReader();r.onload=function(ev){var img=new Image();img.onload=function(){window._icImg=img;window._icOrig=f.size;icRun();};img.src=ev.target.result;};r.readAsDataURL(f);});
-function icRun(){var img=window._icImg,q=+document.getElementById('ic-q').value/100,c=document.createElement('canvas');c.width=img.width;c.height=img.height;c.getContext('2d').drawImage(img,0,0);
-c.toBlob(function(b){if(!b)return;icBlob=b;var pct=window._icOrig?Math.round((1-b.size/window._icOrig)*100):0;
-document.getElementById('ic-out').innerHTML='<img src="'+URL.createObjectURL(b)+'" style="max-width:100%;border-radius:10px"><p class="muted">'+(window._icOrig/1024).toFixed(0)+' KB \u2192 <b style="color:var(--text)">'+(b.size/1024).toFixed(0)+' KB</b> ('+pct+'% smaller)</p>';
-document.getElementById('ic-dl').disabled=false;},'image/jpeg',q);
-gtag&&gtag('event','tool_use',{event_label:'image_compress'});}
-document.getElementById('ic-dl').onclick=function(){if(!icBlob)return;var a=document.createElement('a');a.href=URL.createObjectURL(icBlob);a.download=icName;a.click();};</script></body></html>
+body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><label for="ic-file">Choose one or more images</label>
+<input type="file" id="ic-file" accept="image/*" multiple style="color:var(--text2);width:100%">
+<div class="row" style="margin-top:12px"><div><label for="ic-q">Quality: <span id="ic-qv">75</span>%</label><input type="range" id="ic-q" min="10" max="100" value="75"></div>
+<div><label for="ic-fmt">Output format</label><select id="ic-fmt"><option value="image/webp">WebP (smallest)</option><option value="image/jpeg">JPEG</option><option value="image/png">PNG (lossless)</option></select></div></div>
+<div class="row"><div><label for="ic-maxw">Max width in px (optional)</label><input type="number" id="ic-maxw" placeholder="e.g. 1600" min="16"></div>
+<div><label for="ic-target">Target size in KB (optional)</label><input type="number" id="ic-target" placeholder="e.g. 200" min="5"></div></div>
+<div id="ic-out" style="margin-top:16px"><p class="muted">Pick JPG, PNG or WebP files &mdash; they stay on your device. No 5 MB cap, no 20-image limit.</p></div>
+<button class="btn" id="ic-zip" disabled style="margin-top:8px">Download all as .zip</button></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/image-compressor/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Image Compressor &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id);},items=[];
+$('ic-q').addEventListener('input',function(){$('ic-qv').textContent=this.value;});
+['ic-q','ic-fmt','ic-maxw','ic-target'].forEach(function(id){$(id).addEventListener('change',run);});
+$('ic-file').addEventListener('change',function(e){var fs=[].slice.call(e.target.files);fs.forEach(function(f){var r=new FileReader();r.onload=function(ev){var img=new Image();img.onload=function(){items.push({file:f,img:img});run();};img.src=ev.target.result;};r.readAsDataURL(f);});e.target.value='';});
+function toBlob(c,type,q){return new Promise(function(res){c.toBlob(res,type,q);});}
+function draw(img){var mw=+$('ic-maxw').value||0,w=img.width,h=img.height;if(mw&&w>mw){h=Math.round(h*mw/w);w=mw;}var c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);return c;}
+async function compress(it){var type=$('ic-fmt').value,q=+$('ic-q').value/100,c=draw(it.img),target=(+$('ic-target').value||0)*1024,b=await toBlob(c,type,q);
+if(target&&type!=='image/png'&&b.size>target){var lo=0.05,hi=q;for(var i=0;i<7&&b.size>target&&hi-lo>0.02;i++){var mid=(lo+hi)/2,t=await toBlob(c,type,mid);if(t.size>target){hi=mid;}else{lo=mid;}b=t.size<=target?t:b;if(t.size<=target)q=mid;}}
+it.blob=b;it.w=c.width;it.h=c.height;it.q=q;}
+async function run(){if(!items.length)return;for(var i=0;i<items.length;i++)await compress(items[i]);
+var ext={'image/webp':'webp','image/jpeg':'jpg','image/png':'png'}[$('ic-fmt').value];
+$('ic-out').innerHTML=items.map(function(it,i){var pct=Math.round((1-it.blob.size/it.file.size)*100);it.name=it.file.name.replace(/\\.[^.]+$/,'')+'.'+ext;
+return '<div style="display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid #26262b"><img src="'+URL.createObjectURL(it.blob)+'" alt="" style="width:72px;height:72px;object-fit:cover;border-radius:8px"><div style="flex:1;min-width:0"><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+it.file.name.replace(/</g,'&lt;')+'</div><div class="muted">'+(it.file.size/1024).toFixed(0)+' KB \u2192 <b style="color:var(--text)">'+(it.blob.size/1024).toFixed(0)+' KB</b> ('+(pct>0?pct+'% smaller':'no gain')+') \u00b7 '+it.w+'\u00d7'+it.h+'</div></div><button class="btn ghost ic-one" data-i="'+i+'" style="padding:6px 12px">Download</button></div>';}).join('');
+[].slice.call(document.querySelectorAll('.ic-one')).forEach(function(b){b.onclick=function(){var it=items[+b.dataset.i];var a=document.createElement('a');a.href=URL.createObjectURL(it.blob);a.download=it.name;a.click();};});
+$('ic-zip').disabled=items.length<1;
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'image_compress'});}
+$('ic-zip').onclick=async function(){var z=new JSZip();items.forEach(function(it){z.file(it.name,it.blob);});var b=await z.generateAsync({type:'blob'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='compressed-images.zip';a.click();};
+})();</script></body></html>

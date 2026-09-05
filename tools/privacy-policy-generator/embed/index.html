@@ -120,72 +120,94 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
-<div class="row"><div><label for="pp-name">Company / site name</label><input type="text" id="pp-name" placeholder="Acme B.V."></div>
-<div><label for="pp-url">Website URL</label><input type="text" id="pp-url" placeholder="https://example.com"></div></div>
-<div class="row"><div><label for="pp-mail">Contact email</label><input type="text" id="pp-mail" placeholder="privacy@example.com"></div>
-<div><label for="pp-country">Country of establishment</label><input type="text" id="pp-country" placeholder="the Netherlands"></div></div>
+<div class="row"><div><label for="pp-doc">Document</label><select id="pp-doc"><option value="privacy">Privacy policy</option><option value="cookie">Cookie policy</option><option value="terms">Terms of service</option></select></div>
+<div><label for="pp-name">Company / site name</label><input type="text" id="pp-name" placeholder="Acme B.V."></div></div>
+<div class="row"><div><label for="pp-url">Website URL</label><input type="text" id="pp-url" placeholder="https://example.com"></div>
+<div><label for="pp-mail">Contact email</label><input type="text" id="pp-mail" placeholder="privacy@example.com"></div></div>
+<div class="row"><div><label for="pp-country">Country of establishment</label><input type="text" id="pp-country" placeholder="the Netherlands"></div>
+<div><label for="pp-dpo">Data controller / representative (optional)</label><input type="text" id="pp-dpo" placeholder="Name of the responsible person"></div></div>
+<label style="margin-top:12px">Which laws apply to your visitors?</label>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px;margin-top:6px">
+<label style="font-weight:400"><input type="checkbox" id="pp-gdpr" checked> EU visitors (GDPR)</label>
+<label style="font-weight:400"><input type="checkbox" id="pp-uk"> UK visitors (UK GDPR)</label>
+<label style="font-weight:400"><input type="checkbox" id="pp-ccpa"> California visitors (CCPA/CPRA)</label>
+<label style="font-weight:400"><input type="checkbox" id="pp-kids"> Not intended for children under 16 (COPPA / GDPR-K)</label></div>
 <label style="margin-top:12px">What does your site do? (tick all that apply)</label>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px;margin-top:6px">
 <label style="font-weight:400"><input type="checkbox" id="pp-analytics" checked> Analytics (e.g. Google Analytics)</label>
 <label style="font-weight:400"><input type="checkbox" id="pp-cookies" checked> Cookies</label>
 <label style="font-weight:400"><input type="checkbox" id="pp-newsletter"> Newsletter / email signup</label>
 <label style="font-weight:400"><input type="checkbox" id="pp-forms"> Contact forms</label>
+<label style="font-weight:400"><input type="checkbox" id="pp-accounts"> User accounts</label>
 <label style="font-weight:400"><input type="checkbox" id="pp-payments"> Payments / orders</label>
 <label style="font-weight:400"><input type="checkbox" id="pp-affiliate"> Affiliate links</label>
-<label style="font-weight:400"><input type="checkbox" id="pp-ads"> Advertising</label></div>
-<div class="row" style="margin-top:12px"><div><button class="btn" id="pp-gen">Generate policy</button></div>
-<div><button class="btn" id="pp-dl" style="background:#26262b">Download .txt</button></div></div>
-<label for="pp-out" style="margin-top:12px">Your privacy policy (click to copy)</label>
-<textarea id="pp-out" class="out" rows="16" readonly></textarea>
-<p class="note"><strong>Honest disclaimer:</strong> this is a general template, not legal advice. Privacy law differs per country (GDPR, CCPA and others) and per business &mdash; have a professional review it for anything beyond a simple site.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/privacy-policy-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Privacy Policy Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+<label style="font-weight:400"><input type="checkbox" id="pp-ads"> Advertising</label>
+<label style="font-weight:400"><input type="checkbox" id="pp-ugc"> User-generated content (reviews, comments)</label></div>
+<div class="row" style="margin-top:12px"><div><button class="btn" id="pp-gen">Generate</button></div>
+<div><button class="btn ghost" id="pp-dl">Download .txt</button></div><div><button class="btn ghost" id="pp-html">Download .html</button></div><div><button class="btn ghost" id="pp-md">Download .md</button></div></div>
+<label for="pp-out" style="margin-top:12px">Your document (click to copy)</label>
+<textarea id="pp-out" class="out" rows="18" readonly></textarea>
+<p class="note"><strong>Honest disclaimer:</strong> these are plain-language templates, not legal advice, and they carry no branding of ours. Privacy law differs per country and per business &mdash; have a professional review anything beyond a simple site.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/privacy-policy-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Privacy Policy Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 (function(){
-function g(id){return document.getElementById(id);}
-function on(id){return g(id).checked;}
-function build(){
-var name=g('pp-name').value.trim()||'[Company name]';
-var url=g('pp-url').value.trim()||'[website URL]';
-var mail=g('pp-mail').value.trim()||'[contact email]';
-var country=g('pp-country').value.trim()||'[country]';
-var d=new Date(),date=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
-var s=[];
-s.push('PRIVACY POLICY — '+name+'
-Last updated: '+date+'
-');
-s.push('This privacy policy explains how '+name+' ("we") handles personal data on '+url+'. We are established in '+country+'. Questions? Contact us at '+mail+'.
-');
-s.push('1. DATA WE COLLECT
-We only collect the data described below, and only for the purposes stated.');
-var n=2;
-if(on('pp-analytics'))s.push(n+++'. ANALYTICS
-We use analytics tools to understand how visitors use our site (pages visited, approximate location, device type). This data is aggregated and does not identify you personally. Where required, analytics runs only after your consent.');
-if(on('pp-cookies'))s.push(n+++'. COOKIES
-We use cookies that are necessary for the site to function, and — where you consent — cookies for analytics or preferences. You can delete or block cookies in your browser settings at any time.');
-if(on('pp-newsletter'))s.push(n+++'. NEWSLETTER
-If you subscribe to our newsletter, we store your email address to send it to you. Every email contains an unsubscribe link; unsubscribing removes you from the list.');
-if(on('pp-forms'))s.push(n+++'. CONTACT FORMS
-When you contact us through a form, we receive the information you submit (such as your name, email and message) and use it solely to respond to you.');
-if(on('pp-payments'))s.push(n+++'. PAYMENTS AND ORDERS
-When you place an order, we process the data needed to fulfil it (name, address, email, order details). Payment details are handled by our payment provider; we never see or store your full card number.');
-if(on('pp-affiliate'))s.push(n+++'. AFFILIATE LINKS
-Some links on our site are affiliate links: if you make a purchase through them we may earn a commission, at no extra cost to you. The affiliate partner may set a cookie to attribute the purchase.');
-if(on('pp-ads'))s.push(n+++'. ADVERTISING
-We show advertisements. Ad partners may process data (such as cookies or device identifiers) to display and measure ads; where required this only happens after your consent.');
-s.push(n+++'. YOUR RIGHTS
-Depending on where you live, you may have the right to access, correct, delete or receive a copy of your personal data, to object to or restrict processing, and to withdraw consent. To exercise these rights, email '+mail+'. You may also have the right to complain to your data-protection authority.');
-s.push(n+++'. DATA RETENTION AND SECURITY
-We keep personal data no longer than needed for the purposes above (or as law requires) and protect it with appropriate technical and organisational measures.');
-s.push(n+++'. CHANGES
-We may update this policy; the date above shows the latest version. Significant changes will be announced on this page.
-');
-s.push('This document was generated with a template and adapted by '+name+'. It is provided as-is and does not constitute legal advice.');
-g('pp-out').value=s.join('
-
-');
-if(typeof gtag==='function')gtag('event','tool_use',{event_label:'privacy-policy-generator'});}
-g('pp-gen').addEventListener('click',build);
-g('pp-dl').addEventListener('click',function(){
-if(!g('pp-out').value)build();
-var blob=new Blob([g('pp-out').value],{type:'text/plain'});
-var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='privacy-policy.txt';
-document.body.appendChild(a);a.click();document.body.removeChild(a);});
+var $=function(id){return document.getElementById(id);},NL=String.fromCharCode(10);
+function on(id){return $(id).checked;}
+function ctx(){var d=new Date();return{name:$('pp-name').value.trim()||'[Company name]',url:$('pp-url').value.trim()||'[website URL]',mail:$('pp-mail').value.trim()||'[contact email]',country:$('pp-country').value.trim()||'[country]',dpo:$('pp-dpo').value.trim(),date:d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)};}
+function privacy(c){var s=[],n=1;
+s.push('PRIVACY POLICY '+String.fromCharCode(8212)+' '+c.name+NL+'Last updated: '+c.date);
+s.push('This privacy policy explains how '+c.name+' ("we") handles personal data on '+c.url+'. We are established in '+c.country+(c.dpo?'. The person responsible for data protection is '+c.dpo:'')+'. Questions? Contact us at '+c.mail+'.');
+s.push(n+++'. WHO WE ARE AND WHICH LAWS APPLY'+NL+'We are the data controller for the processing described here.'+(on('pp-gdpr')?' For visitors in the European Economic Area, the General Data Protection Regulation (GDPR) applies; our legal bases are consent, performance of a contract, legal obligations and our legitimate interests in running and improving the site.':'')+(on('pp-uk')?' For visitors in the United Kingdom, the UK GDPR and the Data Protection Act 2018 apply.':'')+(on('pp-ccpa')?' For California residents, the CCPA/CPRA applies: we do not sell personal information, and you can exercise your rights below at no cost and without discrimination.':''));
+s.push(n+++'. DATA WE COLLECT'+NL+'We only collect the data described below, and only for the purposes stated.');
+if(on('pp-analytics'))s.push(n+++'. ANALYTICS'+NL+'We use analytics tools to understand how visitors use our site (pages visited, approximate location, device type). This data is aggregated and does not identify you personally. Where required, analytics runs only after your consent.');
+if(on('pp-cookies'))s.push(n+++'. COOKIES'+NL+'We use cookies that are necessary for the site to function and, where you consent, cookies for analytics or preferences. See our cookie policy for the list. You can delete or block cookies in your browser at any time.');
+if(on('pp-accounts'))s.push(n+++'. ACCOUNTS'+NL+'If you create an account, we store your name, email address and the settings you choose, to provide the service to you. You can delete your account at any time by contacting us.');
+if(on('pp-newsletter'))s.push(n+++'. NEWSLETTER'+NL+'If you subscribe to our newsletter, we store your email address to send it to you. Every email contains an unsubscribe link; unsubscribing removes you from the list.');
+if(on('pp-forms'))s.push(n+++'. CONTACT FORMS'+NL+'When you contact us through a form, we receive the information you submit (such as your name, email and message) and use it solely to respond to you.');
+if(on('pp-payments'))s.push(n+++'. PAYMENTS AND ORDERS'+NL+'When you place an order, we process the data needed to fulfil it (name, address, email, order details). Payment details are handled by our payment provider; we never see or store your full card number.');
+if(on('pp-ugc'))s.push(n+++'. CONTENT YOU POST'+NL+'Reviews, comments or other content you post may be visible to other visitors together with the name you choose. Do not post personal data you do not want to be public. We may remove content that breaks our terms.');
+if(on('pp-affiliate'))s.push(n+++'. AFFILIATE LINKS'+NL+'Some links on our site are affiliate links: if you make a purchase through them we may earn a commission, at no extra cost to you. The affiliate partner may set a cookie to attribute the purchase.');
+if(on('pp-ads'))s.push(n+++'. ADVERTISING'+NL+'We show advertisements. Ad partners may process data (such as cookies or device identifiers) to display and measure ads; where required this only happens after your consent.');
+if(on('pp-kids'))s.push(n+++'. CHILDREN'+NL+'Our site is not intended for children under 16 and we do not knowingly collect their data. If you believe a child has provided us with personal data, contact us and we will delete it.');
+s.push(n+++'. SHARING AND TRANSFERS'+NL+'We share data only with service providers who process it on our behalf (hosting, email, analytics, payments) under contracts that protect it, and with authorities when the law requires. Where data leaves your region, we rely on adequacy decisions or standard contractual clauses.');
+s.push(n+++'. YOUR RIGHTS'+NL+'Depending on where you live, you may have the right to access, correct, delete or receive a copy of your personal data, to object to or restrict processing, to withdraw consent, and to opt out of any sale or sharing. To exercise these rights, email '+c.mail+'. We respond within one month. You may also complain to your data-protection authority.');
+s.push(n+++'. DATA RETENTION AND SECURITY'+NL+'We keep personal data no longer than needed for the purposes above (or as law requires) and protect it with appropriate technical and organisational measures.');
+s.push(n+++'. CHANGES'+NL+'We may update this policy; the date above shows the latest version. Significant changes will be announced on this page.');
+return s;}
+function cookie(c){var s=[],n=1;
+s.push('COOKIE POLICY '+String.fromCharCode(8212)+' '+c.name+NL+'Last updated: '+c.date);
+s.push('This cookie policy explains which cookies and similar technologies '+c.url+' uses and how you can control them. Questions: '+c.mail+'.');
+s.push(n+++'. WHAT A COOKIE IS'+NL+'A cookie is a small text file stored in your browser. Some are needed for the site to work; others are used only with your consent.');
+s.push(n+++'. STRICTLY NECESSARY COOKIES'+NL+'Session and security cookies, your cookie choices and basic settings. These do not need consent and expire at the end of the session or within 12 months.');
+if(on('pp-analytics'))s.push(n+++'. ANALYTICS COOKIES (consent)'+NL+'Used to count visits and see which pages are used, so we can improve the site. Data is aggregated. Typical lifetime: up to 2 years.');
+if(on('pp-accounts'))s.push(n+++'. FUNCTIONAL COOKIES'+NL+'Remember that you are logged in and the preferences you set. Lifetime: up to 12 months.');
+if(on('pp-affiliate'))s.push(n+++'. AFFILIATE COOKIES'+NL+'Set by a partner when you click an affiliate link, so that a purchase can be attributed to us. Lifetime is set by the partner, usually 30 to 90 days.');
+if(on('pp-ads'))s.push(n+++'. ADVERTISING COOKIES (consent)'+NL+'Set by advertising partners to show and measure ads. They may track you across sites. Only placed after your consent.');
+s.push(n+++'. HOW TO CONTROL COOKIES'+NL+'You can withdraw consent at any time through the cookie settings on our site, and delete or block cookies in your browser. Blocking necessary cookies may break parts of the site.'+(on('pp-gdpr')||on('pp-uk')?' Under the GDPR and the ePrivacy rules, non-essential cookies are only placed after you agree.':'')+(on('pp-ccpa')?' California residents can opt out of any sale or sharing of personal information via '+c.mail+'.':''));
+s.push(n+++'. CHANGES'+NL+'We update this list when we add or remove cookies; the date above shows the latest version.');
+return s;}
+function terms(c){var s=[],n=1;
+s.push('TERMS OF SERVICE '+String.fromCharCode(8212)+' '+c.name+NL+'Last updated: '+c.date);
+s.push('These terms govern your use of '+c.url+', operated by '+c.name+', established in '+c.country+'. By using the site you agree to them. Questions: '+c.mail+'.');
+s.push(n+++'. USE OF THE SITE'+NL+'You may use the site for lawful purposes only. You may not attempt to break into it, scrape it at scale, overload it, or use it to harm others.');
+if(on('pp-accounts'))s.push(n+++'. ACCOUNTS'+NL+'You are responsible for keeping your login details secret and for everything done under your account. We may suspend accounts that break these terms.');
+if(on('pp-payments'))s.push(n+++'. ORDERS, PAYMENT AND REFUNDS'+NL+'Prices are shown including or excluding tax as stated on the page. Payment is due at the time of the order. Statutory withdrawal and refund rights of consumers in your country apply and are not limited by these terms.');
+if(on('pp-ugc'))s.push(n+++'. YOUR CONTENT'+NL+'You keep the rights to content you post and give us a non-exclusive licence to display it on the site. You confirm it is yours, lawful and not misleading. We may remove content at our discretion.');
+if(on('pp-affiliate'))s.push(n+++'. AFFILIATE LINKS'+NL+'Some links are affiliate links; we may earn a commission at no extra cost to you. This does not change our content.');
+s.push(n+++'. OUR CONTENT'+NL+'The site and its content are protected by copyright and other rights. You may quote short excerpts with attribution; any other reuse needs our written permission.');
+s.push(n+++'. NO WARRANTY'+NL+'The site is provided as is. We do our best to keep information accurate and the site available, but we do not guarantee either, and nothing on the site is professional (legal, financial, medical) advice.');
+s.push(n+++'. LIABILITY'+NL+'To the extent the law allows, we are not liable for indirect or consequential loss arising from use of the site. Nothing in these terms limits liability that cannot be limited by law, including for consumers.');
+s.push(n+++'. PRIVACY'+NL+'Our privacy policy explains how we handle personal data and forms part of these terms.');
+s.push(n+++'. CHANGES AND GOVERNING LAW'+NL+'We may change these terms; the date above shows the current version. These terms are governed by the laws of '+c.country+', without prejudice to mandatory consumer protection where you live.');
+return s;}
+var last='';
+function build(){var c=ctx(),doc=$('pp-doc').value,s=doc==='cookie'?cookie(c):doc==='terms'?terms(c):privacy(c);
+s.push('This document was generated from a template and adapted by '+c.name+'. It is provided as-is and does not constitute legal advice.');
+last=s.join(NL+NL);$('pp-out').value=last;
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'privacy-policy-generator-'+doc});}
+function dl(txt,name,type){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:type}));a.download=name;document.body.appendChild(a);a.click();document.body.removeChild(a);}
+function fname(){return $('pp-doc').value==='cookie'?'cookie-policy':$('pp-doc').value==='terms'?'terms-of-service':'privacy-policy';}
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+$('pp-gen').addEventListener('click',build);
+$('pp-dl').addEventListener('click',function(){if(!last)build();dl(last,fname()+'.txt','text/plain');});
+$('pp-md').addEventListener('click',function(){if(!last)build();var md=last.split(NL+NL).map(function(p,i){var l=p.split(NL);return i===0?'# '+l[0]+NL+NL+'_'+l[1]+'_':(/^\\d+\\. /.test(l[0])?'## '+l[0]+NL+NL+l.slice(1).join(NL):p);}).join(NL+NL);dl(md,fname()+'.md','text/markdown');});
+$('pp-html').addEventListener('click',function(){if(!last)build();var h=last.split(NL+NL).map(function(p,i){var l=p.split(NL);return i===0?'<h1>'+esc(l[0])+'</h1><p><em>'+esc(l[1])+'</em></p>':(/^\\d+\\. /.test(l[0])?'<h2>'+esc(l[0])+'</h2><p>'+esc(l.slice(1).join(' '))+'</p>':'<p>'+esc(p)+'</p>');}).join(NL);dl('<!doctype html><html lang="en"><head><meta charset="utf-8"><title>'+esc(fname())+'</title><style>body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.6}</style></head><body>'+h+'</body></html>',fname()+'.html','text/html');});
 })();</script></body></html>

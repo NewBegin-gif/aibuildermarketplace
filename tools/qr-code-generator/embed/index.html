@@ -120,21 +120,61 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
-<label for="qr-text">Text or URL</label>
-<input type="text" id="qr-text" placeholder="https://your-link.com" value="https://aibuildermarketplace.com">
+<div class="row"><div><label for="qr-type">What should the code hold?</label>
+<select id="qr-type"><option value="url">URL or text</option><option value="wifi">Wi-Fi login</option><option value="vcard">Contact card (vCard)</option><option value="email">E-mail</option><option value="sms">SMS</option><option value="tel">Phone number</option></select></div>
+<div><label for="qr-ec">Error correction</label><select id="qr-ec"><option value="L">L &mdash; 7% (smallest)</option><option value="M" selected>M &mdash; 15%</option><option value="Q">Q &mdash; 25%</option><option value="H">H &mdash; 30% (use with a logo)</option></select></div></div>
+<div id="qr-f-url"><label for="qr-text">Text or URL</label><input type="text" id="qr-text" placeholder="https://your-link.com" value="https://aibuildermarketplace.com"></div>
+<div id="qr-f-wifi" hidden><div class="row"><div><label for="qr-ssid">Network name (SSID)</label><input type="text" id="qr-ssid"></div><div><label for="qr-pass">Password</label><input type="text" id="qr-pass"></div></div>
+<div class="row"><div><label for="qr-enc">Security</label><select id="qr-enc"><option value="WPA">WPA / WPA2 / WPA3</option><option value="WEP">WEP</option><option value="nopass">Open (no password)</option></select></div><div><label for="qr-hid">Hidden network</label><select id="qr-hid"><option value="false">No</option><option value="true">Yes</option></select></div></div></div>
+<div id="qr-f-vcard" hidden><div class="row"><div><label for="qr-vn">Full name</label><input type="text" id="qr-vn"></div><div><label for="qr-vo">Company</label><input type="text" id="qr-vo"></div></div>
+<div class="row"><div><label for="qr-vt">Job title</label><input type="text" id="qr-vt"></div><div><label for="qr-vp">Phone</label><input type="text" id="qr-vp"></div></div>
+<div class="row"><div><label for="qr-ve">E-mail</label><input type="text" id="qr-ve"></div><div><label for="qr-vu">Website</label><input type="text" id="qr-vu"></div></div></div>
+<div id="qr-f-email" hidden><div class="row"><div><label for="qr-ea">To</label><input type="text" id="qr-ea" placeholder="hello@company.com"></div><div><label for="qr-es">Subject</label><input type="text" id="qr-es"></div></div></div>
+<div id="qr-f-sms" hidden><div class="row"><div><label for="qr-sn">Phone number</label><input type="text" id="qr-sn" placeholder="+31612345678"></div><div><label for="qr-sm">Message</label><input type="text" id="qr-sm"></div></div></div>
+<div id="qr-f-tel" hidden><label for="qr-tn">Phone number</label><input type="text" id="qr-tn" placeholder="+31612345678"></div>
+<div class="row"><div><label for="qr-fg">Code colour</label><input type="color" id="qr-fg" value="#111111" style="height:42px;padding:2px"></div>
+<div><label for="qr-bg">Background</label><input type="color" id="qr-bg" value="#ffffff" style="height:42px;padding:2px"></div></div>
+<div class="row"><div><label for="qr-size">Size</label><select id="qr-size"><option value="4">Small (web)</option><option value="8" selected>Medium</option><option value="14">Large (print)</option></select></div>
+<div><label for="qr-logo">Logo in the middle (optional)</label><input type="file" id="qr-logo" accept="image/*" style="padding:8px"></div></div>
+<div id="qr-warn" class="note" hidden></div>
 <div id="qr-out" style="text-align:center;margin:18px 0"></div>
 <button class="btn" id="dl-png">Download PNG</button>
 <button class="btn ghost" id="dl-svg">Download SVG</button>
+<p class="note">Static codes: they work forever, never expire and are not tracked. Colours, a logo and Wi-Fi or contact cards are free here; most generators charge for them.</p>
 </div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/qr-code-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Free QR Code Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
 <script>
-var inp=document.getElementById('qr-text'),out=document.getElementById('qr-out'),qSvg='',qUrl='';
-function gen(){var t=(inp.value||'').trim()||'https://aibuildermarketplace.com';
-try{var qr=qrcode(0,'M');qr.addData(t);qr.make();
-out.innerHTML='<div style="display:inline-block;background:#fff;padding:12px;border-radius:12px;line-height:0">'+qr.createImgTag(6,2)+'</div>';
-qSvg=qr.createSvgTag(6,2);qUrl=qr.createDataURL(6,2);}catch(e){out.innerHTML='<p class="muted">Enter a value to generate a QR code.</p>';}
-gtag&&gtag('event','tool_use',{event_label:'qr_generate'});}
-inp.addEventListener('input',gen);
-document.getElementById('dl-svg').onclick=function(){if(!qSvg)return;var b=new Blob([qSvg],{type:'image/svg+xml'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='qr-code.svg';a.click();gtag&&gtag('event','tool_download',{event_label:'qr_svg'});};
-document.getElementById('dl-png').onclick=function(){if(!qUrl)return;var img=new Image();img.onload=function(){var c=document.createElement('canvas');c.width=img.width;c.height=img.height;var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(img,0,0);var a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='qr-code.png';a.click();gtag&&gtag('event','tool_download',{event_label:'qr_png'});};img.src=qUrl;};
-gen();
+(function(){
+var $=function(id){return document.getElementById(id);},out=$('qr-out'),warn=$('qr-warn'),logoImg=null,cur=null;
+var TYPES=['url','wifi','vcard','email','sms','tel'];
+function esc(s){return String(s||'').replace(/([\\;,:"])/g,'\\$1');}
+function payload(){var t=$('qr-type').value;
+if(t==='wifi'){var e=$('qr-enc').value;return 'WIFI:T:'+e+';S:'+esc($('qr-ssid').value)+';'+(e==='nopass'?'':'P:'+esc($('qr-pass').value)+';')+'H:'+$('qr-hid').value+';;';}
+if(t==='vcard'){var n=$('qr-vn').value.trim();return ['BEGIN:VCARD','VERSION:3.0','N:'+n,'FN:'+n,'ORG:'+$('qr-vo').value,'TITLE:'+$('qr-vt').value,'TEL:'+$('qr-vp').value,'EMAIL:'+$('qr-ve').value,'URL:'+$('qr-vu').value,'END:VCARD'].join('\n');}
+if(t==='email'){return 'mailto:'+$('qr-ea').value.trim()+($('qr-es').value?'?subject='+encodeURIComponent($('qr-es').value):'');}
+if(t==='sms'){return 'SMSTO:'+$('qr-sn').value.trim()+':'+$('qr-sm').value;}
+if(t==='tel'){return 'tel:'+$('qr-tn').value.trim();}
+return ($('qr-text').value||'').trim()||'https://aibuildermarketplace.com';}
+function draw(){var fg=$('qr-fg').value,bg=$('qr-bg').value,cell=+$('qr-size').value,ec=$('qr-ec').value,m=4;
+try{var qr=qrcode(0,ec);qr.addData(payload());qr.make();}catch(e){out.innerHTML='<p class="muted">Too much content for one code &mdash; shorten it.</p>';cur=null;return;}
+var n=qr.getModuleCount(),px=(n+2*m)*cell,c=document.createElement('canvas');c.width=c.height=px;var x=c.getContext('2d');
+x.fillStyle=bg;x.fillRect(0,0,px,px);x.fillStyle=fg;
+var svg=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+px+' '+px+'" width="'+px+'" height="'+px+'"><rect width="100%" height="100%" fill="'+bg+'"/><path fill="'+fg+'" d="'];
+for(var r=0;r<n;r++)for(var q=0;q<n;q++)if(qr.isDark(r,q)){var X=(q+m)*cell,Y=(r+m)*cell;x.fillRect(X,Y,cell,cell);svg.push('M'+X+' '+Y+'h'+cell+'v'+cell+'h-'+cell+'z');}
+svg.push('"/>');
+if(logoImg){var L=Math.round(px*0.22),o=Math.round((px-L)/2);x.fillStyle=bg;x.fillRect(o-cell,o-cell,L+2*cell,L+2*cell);x.drawImage(logoImg,o,o,L,L);
+svg.push('<rect x="'+(o-cell)+'" y="'+(o-cell)+'" width="'+(L+2*cell)+'" height="'+(L+2*cell)+'" fill="'+bg+'"/><image href="'+logoImg.src+'" x="'+o+'" y="'+o+'" width="'+L+'" height="'+L+'"/>');
+warn.hidden=ec==='H';warn.textContent='A logo hides part of the code: set error correction to H so it still scans.';}else{warn.hidden=true;}
+svg.push('</svg>');
+var lum=function(h){var v=parseInt(h.slice(1),16);return 0.299*(v>>16)+0.587*((v>>8)&255)+0.114*(v&255);};
+if(lum(fg)>lum(bg)-60){warn.hidden=false;warn.textContent='Low contrast: scanners want a dark code on a light background.';}
+out.innerHTML='';var wrap=document.createElement('div');wrap.style.cssText='display:inline-block;padding:12px;border-radius:12px;line-height:0;background:'+bg;c.style.maxWidth='100%';c.style.height='auto';wrap.appendChild(c);out.appendChild(wrap);
+cur={canvas:c,svg:svg.join('')};
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'qr_generate'});}
+$('qr-type').addEventListener('change',function(){TYPES.forEach(function(t){$('qr-f-'+t).hidden=t!==$('qr-type').value;});draw();});
+['qr-text','qr-ssid','qr-pass','qr-enc','qr-hid','qr-vn','qr-vo','qr-vt','qr-vp','qr-ve','qr-vu','qr-ea','qr-es','qr-sn','qr-sm','qr-tn','qr-fg','qr-bg','qr-size','qr-ec'].forEach(function(id){$(id).addEventListener('input',draw);$(id).addEventListener('change',draw);});
+$('qr-logo').addEventListener('change',function(){var f=this.files&&this.files[0];if(!f){logoImg=null;draw();return;}var rd=new FileReader();rd.onload=function(){var im=new Image();im.onload=function(){logoImg=im;if($('qr-ec').value!=='H')$('qr-ec').value='H';draw();};im.src=rd.result;};rd.readAsDataURL(f);});
+$('dl-svg').onclick=function(){if(!cur)return;var b=new Blob([cur.svg],{type:'image/svg+xml'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='qr-code.svg';a.click();if(typeof gtag==='function')gtag('event','tool_download',{event_label:'qr_svg'});};
+$('dl-png').onclick=function(){if(!cur)return;var a=document.createElement('a');a.href=cur.canvas.toDataURL('image/png');a.download='qr-code.png';a.click();if(typeof gtag==='function')gtag('event','tool_download',{event_label:'qr_png'});};
+draw();
+})();
 </script></body></html>

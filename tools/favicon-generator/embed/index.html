@@ -121,19 +121,46 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><div class="row">
 <div><label>Letter or emoji</label><input type="text" id="fv-t" value="A" maxlength="2"></div>
-<div><label>Background</label><input type="color" id="fv-bg" value="#3b82f6" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
+<div><label>Or upload an image</label><input type="file" id="fv-img" accept="image/*" style="padding:8px"></div></div>
+<div class="row"><div><label>Background</label><input type="color" id="fv-bg" value="#3b82f6" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
 <div><label>Text colour</label><input type="color" id="fv-fg" value="#ffffff" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
-<div><label>Shape</label><select id="fv-sh"><option value="round">Rounded</option><option value="circle">Circle</option><option value="square">Square</option></select></div></div>
-<div style="text-align:center;margin:18px 0"><canvas id="fv-cv" width="180" height="180" style="border-radius:12px"></canvas></div>
-<button class="btn" id="fv-dl">Download 180px</button><button class="btn ghost" id="fv-dl32">Download 32px</button></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/favicon-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Favicon Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
-function fvDraw(size){var cv=document.getElementById('fv-cv'),x=cv.getContext('2d'),bg=document.getElementById('fv-bg').value,fg=document.getElementById('fv-fg').value,t=document.getElementById('fv-t').value||'A',sh=document.getElementById('fv-sh').value;
-cv.width=size;cv.height=size;x.clearRect(0,0,size,size);x.fillStyle=bg;
-if(sh==='circle'){x.beginPath();x.arc(size/2,size/2,size/2,0,2*Math.PI);x.fill();}
-else if(sh==='round'){var r=size*0.22;x.beginPath();x.moveTo(r,0);x.arcTo(size,0,size,size,r);x.arcTo(size,size,0,size,r);x.arcTo(0,size,0,0,r);x.arcTo(0,0,size,0,r);x.fill();}
+<div><label>Shape</label><select id="fv-sh"><option value="round">Rounded</option><option value="circle">Circle</option><option value="square">Square</option></select></div>
+<div><label>Font</label><select id="fv-font"><option value="Inter,Arial,sans-serif">Sans</option><option value="Georgia,serif">Serif</option><option value="ui-monospace,Menlo,monospace">Mono</option></select></div></div>
+<div style="text-align:center;margin:18px 0"><canvas id="fv-cv" width="180" height="180" style="border-radius:12px"></canvas>
+<div id="fv-prev" style="display:flex;gap:14px;justify-content:center;align-items:center;margin-top:10px"></div></div>
+<button class="btn" id="fv-zip">Download the full set (.zip)</button> <button class="btn ghost" id="fv-dl">PNG 512</button> <button class="btn ghost" id="fv-dl32">PNG 32</button>
+<details style="margin-top:12px"><summary>What is in the zip</summary><p class="note">favicon.ico (16+32+48), favicon-16.png, favicon-32.png, apple-touch-icon.png (180), android-chrome-192.png, android-chrome-512.png, site.webmanifest and a ready-to-paste <code>&lt;head&gt;</code> snippet. Most generators charge or ask for an account for exactly this bundle.</p></details></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/favicon-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Favicon Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id);},img=null;
+function draw(size){var cv=document.createElement('canvas'),x=cv.getContext('2d'),bg=$('fv-bg').value,fg=$('fv-fg').value,t=$('fv-t').value||'A',sh=$('fv-sh').value;
+cv.width=size;cv.height=size;x.fillStyle=bg;
+if(sh==='circle'){x.beginPath();x.arc(size/2,size/2,size/2,0,2*Math.PI);x.fill();x.clip();}
+else if(sh==='round'){var r=size*0.22;x.beginPath();x.moveTo(r,0);x.arcTo(size,0,size,size,r);x.arcTo(size,size,0,size,r);x.arcTo(0,size,0,0,r);x.arcTo(0,0,size,0,r);x.fill();x.clip();}
 else{x.fillRect(0,0,size,size);}
-x.fillStyle=fg;x.font='bold '+(size*0.55)+'px Inter,Arial,sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(t,size/2,size/2+size*0.04);return cv;}
-function fvShow(){fvDraw(180);gtag&&gtag('event','tool_use',{event_label:'favicon'});}
-['fv-t','fv-bg','fv-fg','fv-sh'].forEach(function(id){var e=document.getElementById(id);e.addEventListener('input',fvShow);e.addEventListener('change',fvShow);});
-function fvDl(size){var cv=fvDraw(size),a=document.createElement('a');a.href=cv.toDataURL('image/png');a.download='favicon-'+size+'.png';a.click();fvDraw(180);}
-document.getElementById('fv-dl').onclick=function(){fvDl(180);};document.getElementById('fv-dl32').onclick=function(){fvDl(32);};
-fvShow();</script></body></html>
+if(img){var s=Math.min(size/img.width,size/img.height)*0.86,w=img.width*s,h=img.height*s;x.drawImage(img,(size-w)/2,(size-h)/2,w,h);}
+else{x.fillStyle=fg;x.font='bold '+(size*0.55)+'px '+$('fv-font').value;x.textAlign='center';x.textBaseline='middle';x.fillText(t,size/2,size/2+size*0.04);}
+return cv;}
+function show(){var big=draw(180),cv=$('fv-cv');cv.width=180;cv.height=180;cv.getContext('2d').drawImage(big,0,0);
+$('fv-prev').innerHTML=[16,32,48].map(function(s){return '<img src="'+draw(s).toDataURL()+'" width="'+s+'" height="'+s+'" alt="" title="'+s+'px" style="image-rendering:auto">';}).join('')+'<span class="muted" style="font-size:.8rem">16 / 32 / 48 as the browser tab sees them</span>';
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'favicon'});}
+['fv-t','fv-bg','fv-fg','fv-sh','fv-font'].forEach(function(id){$(id).addEventListener('input',show);$(id).addEventListener('change',show);});
+$('fv-img').addEventListener('change',function(){var f=this.files&&this.files[0];if(!f){img=null;show();return;}var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){img=im;show();};im.src=r.result;};r.readAsDataURL(f);});
+function blob(size){return new Promise(function(res){draw(size).toBlob(res,'image/png');});}
+function u8(b){return b.arrayBuffer().then(function(a){return new Uint8Array(a);});}
+function ico(pngs){var n=pngs.length,head=6+16*n,total=head+pngs.reduce(function(a,p){return a+p.data.length;},0),buf=new Uint8Array(total),dv=new DataView(buf.buffer),off=head;
+dv.setUint16(0,0,true);dv.setUint16(2,1,true);dv.setUint16(4,n,true);
+pngs.forEach(function(p,i){var o=6+16*i;buf[o]=p.size>=256?0:p.size;buf[o+1]=p.size>=256?0:p.size;buf[o+2]=0;buf[o+3]=0;dv.setUint16(o+4,1,true);dv.setUint16(o+6,32,true);dv.setUint32(o+8,p.data.length,true);dv.setUint32(o+12,off,true);buf.set(p.data,off);off+=p.data.length;});
+return new Blob([buf],{type:'image/x-icon'});}
+$('fv-zip').onclick=async function(){var b=this;b.textContent='Building\u2026';
+var z=new JSZip(),sizes={'favicon-16.png':16,'favicon-32.png':32,'favicon-48.png':48,'apple-touch-icon.png':180,'android-chrome-192.png':192,'android-chrome-512.png':512},icoParts=[];
+for(var name in sizes){var bl=await blob(sizes[name]);z.file(name,bl);if(sizes[name]<=48)icoParts.push({size:sizes[name],data:await u8(bl)});}
+z.file('favicon.ico',ico(icoParts));
+z.file('site.webmanifest',JSON.stringify({name:'',short_name:'',icons:[{src:'/android-chrome-192.png',sizes:'192x192',type:'image/png'},{src:'/android-chrome-512.png',sizes:'512x512',type:'image/png'}],theme_color:$('fv-bg').value,background_color:$('fv-bg').value,display:'standalone'},null,2));
+z.file('head-snippet.html',['<link rel="icon" href="/favicon.ico" sizes="32x32">','<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">','<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">','<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">','<link rel="manifest" href="/site.webmanifest">','<meta name="theme-color" content="'+$('fv-bg').value+'">'].join(String.fromCharCode(10)));
+var out=await z.generateAsync({type:'blob'});var a=document.createElement('a');a.href=URL.createObjectURL(out);a.download='favicons.zip';a.click();b.textContent='Download the full set (.zip)';
+if(typeof gtag==='function')gtag('event','tool_download',{event_label:'favicon_zip'});};
+function dl(size){var a=document.createElement('a');a.href=draw(size).toDataURL('image/png');a.download='favicon-'+size+'.png';a.click();}
+$('fv-dl').onclick=function(){dl(512);};$('fv-dl32').onclick=function(){dl(32);};
+show();
+})();</script></body></html>

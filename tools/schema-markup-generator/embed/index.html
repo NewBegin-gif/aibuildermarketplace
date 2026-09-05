@@ -119,19 +119,55 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-txt b{color:var(--text);font-size:.95rem}
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
-body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><p class="muted">Generate FAQ schema (JSON-LD) to paste into your page &lt;head&gt;.</p>
-<label>Question 1</label><input type="text" id="sc-q1" value="Is this tool free?">
-<label>Answer 1</label><input type="text" id="sc-a1" value="Yes, it is completely free with no signup.">
-<label>Question 2</label><input type="text" id="sc-q2" value="">
-<label>Answer 2</label><input type="text" id="sc-a2" value="">
-<label>Question 3</label><input type="text" id="sc-q3" value="">
-<label>Answer 3</label><input type="text" id="sc-a3" value="">
-<label style="margin-top:12px">Your JSON-LD</label><textarea id="sc-out" rows="8" class="out" readonly></textarea>
-<button class="btn" id="sc-copy">Copy</button></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/schema-markup-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; FAQ Schema Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
-function schGen(){var items=[];for(var i=1;i<=3;i++){var q=(document.getElementById('sc-q'+i).value||'').trim(),a=(document.getElementById('sc-a'+i).value||'').trim();if(q&&a)items.push({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}});}
-var obj={"@context":"https://schema.org","@type":"FAQPage",mainEntity:items};
-document.getElementById('sc-out').value=items.length?('<script type="application/ld+json">\n'+JSON.stringify(obj,null,2)+'\n<\/script>'):'Fill in at least one question and answer.';
-gtag&&gtag('event','tool_use',{event_label:'schema_gen'});}
-['sc-q1','sc-a1','sc-q2','sc-a2','sc-q3','sc-a3'].forEach(function(id){document.getElementById(id).addEventListener('input',schGen);});
-document.getElementById('sc-copy').onclick=function(){var o=document.getElementById('sc-out');o.select();navigator.clipboard&&navigator.clipboard.writeText(o.value);var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},1500);};
-schGen();</script></body></html>
+body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
+<div class="row"><div><label for="sc-type">Schema type</label><select id="sc-type"><option value="FAQPage">FAQ</option><option value="Article">Article / blog post</option><option value="Product">Product (with offer and rating)</option><option value="LocalBusiness">Local business</option><option value="HowTo">How-to (steps)</option><option value="BreadcrumbList">Breadcrumbs</option><option value="Organization">Organization</option><option value="WebSite">Website (with site search)</option><option value="Event">Event</option></select></div></div>
+<div id="sc-fields"></div>
+<div class="row" style="margin-top:12px"><div><button class="btn" id="sc-copy">Copy JSON-LD</button></div><div><button class="btn ghost" id="sc-val">Validate</button></div><div><a class="btn ghost" id="sc-google" href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none">Open Google Rich Results Test</a></div></div>
+<div id="sc-msg" class="note" style="margin-top:8px"></div>
+<label for="sc-out" style="margin-top:10px">Your JSON-LD (paste in &lt;head&gt;)</label><textarea id="sc-out" rows="12" class="out" readonly spellcheck="false"></textarea>
+<p class="note">Nine schema types, unlimited FAQ questions and how-to steps, and a built-in check of the fields Google requires. Free, no account.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/schema-markup-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; FAQ Schema Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+(function(){
+var $=function(id){return document.getElementById(id);};
+var F={
+FAQPage:{list:['Question','Answer'],listName:'Questions'},
+Article:{fields:[['headline','Headline'],['description','Description'],['author','Author name'],['publisher','Publisher / site name'],['image','Image URL'],['datePublished','Published (YYYY-MM-DD)'],['dateModified','Modified (YYYY-MM-DD)'],['url','Page URL']],req:['headline','image','datePublished','author']},
+Product:{fields:[['name','Product name'],['description','Description'],['brand','Brand'],['sku','SKU'],['image','Image URL'],['price','Price'],['priceCurrency','Currency (EUR, USD)'],['availability','Availability (InStock, OutOfStock, PreOrder)'],['url','Product URL'],['ratingValue','Rating value (1-5)'],['reviewCount','Number of reviews']],req:['name','image','price','priceCurrency']},
+LocalBusiness:{fields:[['name','Business name'],['type','Type (Restaurant, Dentist, Store...)'],['image','Image URL'],['telephone','Phone'],['streetAddress','Street'],['addressLocality','City'],['postalCode','Postal code'],['addressCountry','Country code (NL, US)'],['url','Website'],['priceRange','Price range ($$)'],['openingHours','Opening hours (Mo-Fr 09:00-17:00)']],req:['name','streetAddress','addressLocality']},
+HowTo:{fields:[['name','Title'],['description','Description'],['totalTime','Total time (PT30M)'],['image','Image URL']],list:['Step name','Step text'],listName:'Steps',req:['name']},
+BreadcrumbList:{list:['Name','URL'],listName:'Crumbs (in order)'},
+Organization:{fields:[['name','Name'],['url','Website'],['logo','Logo URL'],['email','Contact email'],['telephone','Phone'],['sameAs','Social profile URLs (comma-separated)']],req:['name','url']},
+WebSite:{fields:[['name','Site name'],['url','Site URL'],['searchUrl','Search URL with {search_term_string}']],req:['name','url']},
+Event:{fields:[['name','Event name'],['description','Description'],['startDate','Start (YYYY-MM-DDTHH:MM)'],['endDate','End'],['location','Venue name'],['streetAddress','Street'],['addressLocality','City'],['addressCountry','Country code'],['image','Image URL'],['price','Ticket price'],['priceCurrency','Currency'],['url','Tickets URL'],['organizer','Organizer']],req:['name','startDate','location']}};
+var listRows=[];
+function e(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+function renderFields(){var t=$('sc-type').value,d=F[t],h='';
+(d.fields||[]).forEach(function(f){h+='<label>'+f[1]+'</label><input type="text" class="sc-f" data-k="'+f[0]+'">';});
+if(d.list){h+='<label style="margin-top:12px">'+d.listName+'</label><div id="sc-list"></div><button class="btn ghost" id="sc-addrow" type="button">+ Add</button>';}
+$('sc-fields').innerHTML=h;listRows=d.list?[['',''],['','']]:[];renderList();
+[].slice.call(document.querySelectorAll('.sc-f')).forEach(function(i){i.addEventListener('input',gen);});
+if($('sc-addrow'))$('sc-addrow').onclick=function(){listRows.push(['','']);renderList();};gen();}
+function renderList(){var d=F[$('sc-type').value],box=$('sc-list');if(!box)return;
+box.innerHTML=listRows.map(function(r,i){return '<div class="row" style="margin-bottom:6px"><div><input type="text" class="sc-l" data-i="'+i+'" data-j="0" placeholder="'+e(d.list[0])+'" value="'+e(r[0])+'"></div><div style="flex:2"><input type="text" class="sc-l" data-i="'+i+'" data-j="1" placeholder="'+e(d.list[1])+'" value="'+e(r[1])+'"></div></div>';}).join('');
+[].slice.call(box.querySelectorAll('.sc-l')).forEach(function(i){i.addEventListener('input',function(){listRows[+i.dataset.i][+i.dataset.j]=i.value;gen();});});}
+function vals(){var o={};[].slice.call(document.querySelectorAll('.sc-f')).forEach(function(i){if(i.value.trim())o[i.dataset.k]=i.value.trim();});return o;}
+function build(){var t=$('sc-type').value,v=vals(),o={'@context':'https://schema.org','@type':t},rows=listRows.filter(function(r){return r[0].trim()&&r[1].trim();});
+if(t==='FAQPage'){o.mainEntity=rows.map(function(r){return{'@type':'Question',name:r[0],acceptedAnswer:{'@type':'Answer',text:r[1]}};});}
+else if(t==='BreadcrumbList'){o.itemListElement=rows.map(function(r,i){return{'@type':'ListItem',position:i+1,name:r[0],item:r[1]};});}
+else if(t==='Article'){o.headline=v.headline;o.description=v.description;o.image=v.image;o.datePublished=v.datePublished;o.dateModified=v.dateModified||v.datePublished;if(v.author)o.author={'@type':'Person',name:v.author};if(v.publisher)o.publisher={'@type':'Organization',name:v.publisher};if(v.url)o.mainEntityOfPage=v.url;}
+else if(t==='Product'){o.name=v.name;o.description=v.description;o.image=v.image;o.sku=v.sku;if(v.brand)o.brand={'@type':'Brand',name:v.brand};if(v.price)o.offers={'@type':'Offer',price:v.price,priceCurrency:v.priceCurrency||'EUR',availability:'https://schema.org/'+(v.availability||'InStock'),url:v.url};if(v.ratingValue)o.aggregateRating={'@type':'AggregateRating',ratingValue:v.ratingValue,reviewCount:v.reviewCount||'1'};}
+else if(t==='LocalBusiness'){if(v.type)o['@type']=v.type;o.name=v.name;o.image=v.image;o.telephone=v.telephone;o.url=v.url;o.priceRange=v.priceRange;o.address={'@type':'PostalAddress',streetAddress:v.streetAddress,addressLocality:v.addressLocality,postalCode:v.postalCode,addressCountry:v.addressCountry};if(v.openingHours)o.openingHours=v.openingHours;}
+else if(t==='HowTo'){o.name=v.name;o.description=v.description;o.totalTime=v.totalTime;o.image=v.image;o.step=rows.map(function(r,i){return{'@type':'HowToStep',position:i+1,name:r[0],text:r[1]};});}
+else if(t==='Organization'){o.name=v.name;o.url=v.url;o.logo=v.logo;o.email=v.email;o.telephone=v.telephone;if(v.sameAs)o.sameAs=v.sameAs.split(',').map(function(s){return s.trim();}).filter(Boolean);}
+else if(t==='WebSite'){o.name=v.name;o.url=v.url;if(v.searchUrl)o.potentialAction={'@type':'SearchAction',target:{'@type':'EntryPoint',urlTemplate:v.searchUrl},'query-input':'required name=search_term_string'};}
+else if(t==='Event'){o.name=v.name;o.description=v.description;o.startDate=v.startDate;o.endDate=v.endDate;o.image=v.image;o.url=v.url;o.eventAttendanceMode='https://schema.org/OfflineEventAttendanceMode';o.eventStatus='https://schema.org/EventScheduled';if(v.location)o.location={'@type':'Place',name:v.location,address:{'@type':'PostalAddress',streetAddress:v.streetAddress,addressLocality:v.addressLocality,addressCountry:v.addressCountry}};if(v.price)o.offers={'@type':'Offer',price:v.price,priceCurrency:v.priceCurrency||'EUR',url:v.url,availability:'https://schema.org/InStock'};if(v.organizer)o.organizer={'@type':'Organization',name:v.organizer};}
+return JSON.parse(JSON.stringify(o,function(k,x){return x===undefined||x===''?undefined:x;}));}
+function gen(){var o=build();$('sc-out').value='<script type="application/ld+json">'+String.fromCharCode(10)+JSON.stringify(o,null,2)+String.fromCharCode(10)+'<'+'/script>';$('sc-msg').textContent='';
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'schema_gen'});}
+$('sc-val').onclick=function(){var t=$('sc-type').value,d=F[t],v=vals(),miss=(d.req||[]).filter(function(k){return !v[k];}),rows=listRows.filter(function(r){return r[0].trim()&&r[1].trim();});
+if(d.list&&!rows.length)miss.push(d.listName.toLowerCase()+' (at least one)');
+try{JSON.parse(JSON.stringify(build()));}catch(err){miss.push('JSON: '+err.message);}
+$('sc-msg').innerHTML=miss.length?'<span style="color:#f87171;font-weight:700">Missing for Google: </span>'+miss.map(e).join(', '):'<span style="color:#34d399;font-weight:700">&check; All required fields present</span> &mdash; paste it and confirm in the Rich Results Test.';};
+$('sc-copy').onclick=function(){navigator.clipboard&&navigator.clipboard.writeText($('sc-out').value);var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy JSON-LD';},1500);};
+$('sc-type').addEventListener('change',renderFields);
+renderFields();
+})();</script></body></html>

@@ -125,43 +125,35 @@ body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div c
 <div><label for="df-b">Changed text</label>
 <textarea id="df-b" rows="8" placeholder="Version B&hellip;"></textarea></div></div>
 <div class="row" style="margin-top:10px"><div><button class="btn" id="df-go">Compare</button></div>
-<div><label style="font-weight:400;margin-top:8px"><input type="checkbox" id="df-word" checked> word-level (uncheck for line-level)</label></div></div>
+<div><label for="df-mode">Granularity</label><select id="df-mode"><option value="word">Words</option><option value="line">Lines</option><option value="char">Characters</option></select></div>
+<div><label for="df-view">View</label><select id="df-view"><option value="inline">Inline</option><option value="side">Side by side</option></select></div>
+<div><label style="font-weight:400;margin-top:8px"><input type="checkbox" id="df-ws"> ignore whitespace</label><br><label style="font-weight:400"><input type="checkbox" id="df-case"> ignore case</label></div></div>
 <div id="df-stats" class="note" style="margin-top:10px"></div>
 <div id="df-out" style="margin-top:8px;background:#121214;border:1px solid #26262b;border-radius:12px;padding:14px;line-height:1.8;white-space:pre-wrap;word-break:break-word;font-size:.9rem;min-height:40px"></div>
-<p class="note"><span style="background:rgba(52,211,153,.25);border-radius:3px;padding:0 3px">groen</span> = toegevoegd &middot; <span style="background:rgba(248,113,113,.25);border-radius:3px;padding:0 3px;text-decoration:line-through">rood</span> = verwijderd. Vergeleken in je browser &mdash; contracten en concepten blijven op je apparaat.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/text-diff-checker/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Text Diff Checker &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+<div class="row" style="margin-top:8px"><div><button class="btn ghost" id="df-copy">Copy as HTML</button></div></div>
+<p class="note"><span style="background:rgba(52,211,153,.25);border-radius:3px;padding:0 3px">green</span> = added &middot; <span style="background:rgba(248,113,113,.25);border-radius:3px;padding:0 3px;text-decoration:line-through">red</span> = removed. Compared in your browser &mdash; contracts and drafts stay on your device.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/text-diff-checker/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Text Diff Checker &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 (function(){
+var $=function(id){return document.getElementById(id);},NL=String.fromCharCode(10);
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function tokens(t,word){return word?t.split(/(\s+)/):t.split('
-').map(function(l){return l+'
-';});}
-function diff(a,b){
-var n=a.length,m=b.length;
-if(n*m>4000000){return null;}
-var L=[];for(var i=0;i<=n;i++){L.push(new Int32Array(m+1));}
-for(var i=n-1;i>=0;i--)for(var j=m-1;j>=0;j--)
-L[i][j]=a[i]===b[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
-var out=[],i=0,j=0;
-while(i<n&&j<m){
-if(a[i]===b[j]){out.push([0,a[i]]);i++;j++;}
-else if(L[i+1][j]>=L[i][j+1]){out.push([-1,a[i]]);i++;}
-else{out.push([1,b[j]]);j++;}}
-while(i<n){out.push([-1,a[i]]);i++;}
-while(j<m){out.push([1,b[j]]);j++;}
-return out;}
-document.getElementById('df-go').addEventListener('click',function(){
-var word=document.getElementById('df-word').checked;
-var a=tokens(document.getElementById('df-a').value,word),
-b=tokens(document.getElementById('df-b').value,word);
-var d=diff(a,b);
-var out=document.getElementById('df-out'),st=document.getElementById('df-stats');
-if(!d){st.textContent='Teksten te groot voor woord-niveau — schakel naar regel-niveau.';return;}
-var add=0,del=0,html='';
-d.forEach(function(x){
-var t=esc(x[1]);
-if(x[0]===0)html+=t;
-else if(x[0]===1){html+='<span style="background:rgba(52,211,153,.25);border-radius:3px">'+t+'</span>';if(t.trim())add++;}
-else{html+='<span style="background:rgba(248,113,113,.25);border-radius:3px;text-decoration:line-through">'+t+'</span>';if(t.trim())del++;}});
-out.innerHTML=html||'<span style="color:#6b7280">(beide leeg)</span>';
-st.textContent=(add||del)?('+'+add+' toegevoegd, −'+del+' verwijderd'):'Identiek — geen verschillen.';
-if(typeof gtag==='function')gtag('event','tool_use',{event_label:'text-diff-checker'});});
+function tokens(t,mode){if(mode==='char')return t.split('');if(mode==='line')return t.split(NL).map(function(l){return l+NL;});return t.split(/(\\s+)/).filter(function(x){return x!=='';});}
+function norm(x){var s=x;if($('df-ws').checked)s=s.replace(/\\s+/g,' ').trim();if($('df-case').checked)s=s.toLowerCase();return s;}
+function diff(a,b){var n=a.length,m=b.length;if(n*m>6000000)return null;var A=a.map(norm),B=b.map(norm);
+var L=[];for(var i=0;i<=n;i++)L.push(new Int32Array(m+1));
+for(var i=n-1;i>=0;i--)for(var j=m-1;j>=0;j--)L[i][j]=A[i]===B[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+var out=[],i=0,j=0;while(i<n&&j<m){if(A[i]===B[j]){out.push([0,a[i],b[j]]);i++;j++;}else if(L[i+1][j]>=L[i][j+1]){out.push([-1,a[i]]);i++;}else{out.push([1,b[j]]);j++;}}
+while(i<n){out.push([-1,a[i]]);i++;}while(j<m){out.push([1,b[j]]);j++;}return out;}
+var lastHtml='';
+function run(){var mode=$('df-mode').value,a=tokens($('df-a').value,mode),b=tokens($('df-b').value,mode),d=diff(a,b),out=$('df-out'),st=$('df-stats');
+if(!d){st.textContent='Texts too large for this granularity \\u2014 switch to lines.';return;}
+var add=0,del=0,left='',right='',inline='';
+d.forEach(function(x){var t=esc(x[1]);
+if(x[0]===0){inline+=t;left+=t;right+=esc(x[2]);}
+else if(x[0]===1){var s='<span style="background:rgba(52,211,153,.25);border-radius:3px">'+t+'</span>';inline+=s;right+=s;if(t.trim())add++;}
+else{var s2='<span style="background:rgba(248,113,113,.25);border-radius:3px;text-decoration:line-through">'+t+'</span>';inline+=s2;left+=s2;if(t.trim())del++;}});
+if($('df-view').value==='side'){lastHtml='<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px"><div style="border-right:1px solid #26262b;padding-right:12px">'+(left||'&nbsp;')+'</div><div>'+(right||'&nbsp;')+'</div></div>';}else{lastHtml=inline;}
+out.innerHTML=lastHtml||'<span style="color:#6b7280">(both empty)</span>';
+st.textContent=(add||del)?('+'+add+' added, \\u2212'+del+' removed ('+mode+' level)'):'Identical \\u2014 no differences.';
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'text-diff-checker'});}
+$('df-go').addEventListener('click',run);['df-mode','df-view','df-ws','df-case'].forEach(function(id){$(id).addEventListener('change',function(){if($('df-a').value||$('df-b').value)run();});});
+$('df-copy').onclick=function(){if(!lastHtml)return;navigator.clipboard&&navigator.clipboard.writeText('<div style="font-family:system-ui;line-height:1.7">'+lastHtml+'</div>');var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy as HTML';},1500);};
 })();</script></body></html>

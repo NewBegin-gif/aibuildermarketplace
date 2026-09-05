@@ -128,56 +128,49 @@ body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div c
 <input type="text" id="og-brand" maxlength="40" placeholder="yoursite.com"></div></div>
 <div class="row"><div><label for="og-theme">Style</label>
 <select id="og-theme"><option value="indigo">Indigo gradient</option><option value="emerald">Emerald gradient</option>
-<option value="sunset">Sunset gradient</option><option value="dark">Dark minimal</option><option value="light">Light clean</option></select></div>
+<option value="sunset">Sunset gradient</option><option value="dark">Dark minimal</option><option value="light">Light clean</option><option value="custom">Custom colours</option></select></div>
+<div><label for="og-layout">Layout</label><select id="og-layout"><option value="left">Left-aligned</option><option value="center">Centered</option><option value="split">Text left, logo right</option></select></div>
+<div><label for="og-font">Font</label><select id="og-font"><option value="Inter,system-ui,sans-serif">Sans</option><option value="Georgia,'Times New Roman',serif">Serif</option><option value="ui-monospace,Menlo,monospace">Mono</option></select></div></div>
+<div class="row" id="og-custom" hidden><div><label>Background 1</label><input type="color" id="og-c1" value="#1e1b4b" style="height:42px;padding:2px"></div><div><label>Background 2</label><input type="color" id="og-c2" value="#3730a3" style="height:42px;padding:2px"></div><div><label>Text</label><input type="color" id="og-ct" value="#ffffff" style="height:42px;padding:2px"></div><div><label>Accent</label><input type="color" id="og-ca" value="#818cf8" style="height:42px;padding:2px"></div></div>
+<div class="row"><div><label for="og-logo">Logo (optional)</label><input type="file" id="og-logo" accept="image/*" style="padding:8px"></div>
+<div><label for="og-pattern">Pattern</label><select id="og-pattern"><option value="none">No pattern</option><option value="grid">Grid</option><option value="dots">Dots</option></select></div>
 <div><label for="og-size">Size</label>
-<select id="og-size"><option value="1200x630" selected>1200&times;630 (OG standard)</option><option value="1600x900">1600&times;900 (16:9)</option></select></div></div>
+<select id="og-size"><option value="1200x630" selected>1200&times;630 (OG)</option><option value="1600x900">1600&times;900 (16:9)</option><option value="1080x1080">1080&times;1080 (square)</option><option value="1080x1920">1080&times;1920 (story)</option></select></div></div>
 <canvas id="og-canvas" width="1200" height="630" style="width:100%;border:1px solid #26262b;border-radius:12px;margin-top:12px"></canvas>
-<div class="row" style="margin-top:10px"><div><button class="btn" id="og-dl">Download PNG</button></div></div>
-<p class="note">Rendered entirely in your browser &mdash; nothing is uploaded.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/og-image-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; OG Image Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+<div class="row" style="margin-top:10px"><div><button class="btn" id="og-dl">Download PNG</button></div><div><button class="btn ghost" id="og-jpg">Download JPG</button></div></div>
+<p class="note">Rendered entirely in your browser &mdash; nothing is uploaded. Your last settings are remembered on this device.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/og-image-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; OG Image Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 (function(){
+var $=function(id){return document.getElementById(id);};
 var THEMES={indigo:{a:'#1e1b4b',b:'#3730a3',t:'#ffffff',s:'#c7d2fe',acc:'#818cf8'},
 emerald:{a:'#052e16',b:'#065f46',t:'#ffffff',s:'#a7f3d0',acc:'#34d399'},
 sunset:{a:'#431407',b:'#9a3412',t:'#ffffff',s:'#fed7aa',acc:'#fb923c'},
 dark:{a:'#09090b',b:'#18181b',t:'#fafafa',s:'#a1a1aa',acc:'#3b82f6'},
 light:{a:'#f8fafc',b:'#e2e8f0',t:'#0f172a',s:'#475569',acc:'#2563eb'}};
-var c=document.getElementById('og-canvas'),x=c.getContext('2d');
-function wrap(text,maxW,font){x.font=font;var words=text.split(' '),lines=[],cur='';
-words.forEach(function(w){var t=cur?cur+' '+w:w;
-if(x.measureText(t).width>maxW&&cur){lines.push(cur);cur=w;}else{cur=t;}});
-if(cur)lines.push(cur);return lines;}
-function draw(){
-var sz=document.getElementById('og-size').value.split('x');
-c.width=+sz[0];c.height=+sz[1];
-var th=THEMES[document.getElementById('og-theme').value];
-var g=x.createLinearGradient(0,0,c.width,c.height);
-g.addColorStop(0,th.a);g.addColorStop(1,th.b);
-x.fillStyle=g;x.fillRect(0,0,c.width,c.height);
+var c=$('og-canvas'),x=c.getContext('2d'),logo=null,IDS=['og-title','og-sub','og-brand','og-theme','og-layout','og-font','og-c1','og-c2','og-ct','og-ca','og-pattern','og-size'];
+function theme(){if($('og-theme').value!=='custom')return THEMES[$('og-theme').value];var t=$('og-ct').value;return{a:$('og-c1').value,b:$('og-c2').value,t:t,s:t+'b3',acc:$('og-ca').value};}
+function wrap(text,maxW,font){x.font=font;var words=text.split(' '),lines=[],cur='';words.forEach(function(w){var t=cur?cur+' '+w:w;if(x.measureText(t).width>maxW&&cur){lines.push(cur);cur=w;}else{cur=t;}});if(cur)lines.push(cur);return lines;}
+function draw(){var sz=$('og-size').value.split('x');c.width=+sz[0];c.height=+sz[1];var th=theme(),fam=$('og-font').value,lay=$('og-layout').value;
+$('og-custom').hidden=$('og-theme').value!=='custom';
+var g=x.createLinearGradient(0,0,c.width,c.height);g.addColorStop(0,th.a);g.addColorStop(1,th.b);x.fillStyle=g;x.fillRect(0,0,c.width,c.height);
+var pat=$('og-pattern').value;if(pat!=='none'){x.save();x.globalAlpha=0.12;x.strokeStyle=th.t;x.fillStyle=th.t;var step=Math.round(c.width/24);for(var i=0;i<c.width;i+=step){if(pat==='grid'){x.beginPath();x.moveTo(i,0);x.lineTo(i,c.height);x.stroke();}for(var j=0;j<c.height;j+=step){if(pat==='grid'){x.beginPath();x.moveTo(0,j);x.lineTo(c.width,j);x.stroke();}else{x.beginPath();x.arc(i,j,2,0,6.3);x.fill();}}}x.restore();}
 x.fillStyle=th.acc;x.fillRect(0,0,14,c.height);
-var pad=Math.round(c.width*0.06),maxW=c.width-pad*2;
-var title=document.getElementById('og-title').value||'Your title here';
-var tsize=Math.round(c.width/14);
-var lines=wrap(title,maxW,'800 '+tsize+'px Inter,system-ui,sans-serif');
-while(lines.length>3){tsize=Math.round(tsize*0.88);lines=wrap(title,maxW,'800 '+tsize+'px Inter,system-ui,sans-serif');}
-var y=Math.round(c.height*0.36);
-x.fillStyle=th.t;x.textBaseline='top';
-lines.forEach(function(l,i){x.font='800 '+tsize+'px Inter,system-ui,sans-serif';x.fillText(l,pad,y+i*(tsize*1.18));});
-var sub=document.getElementById('og-sub').value;
-if(sub){var ssz=Math.round(tsize*0.42);
-var slines=wrap(sub,maxW,'500 '+ssz+'px Inter,system-ui,sans-serif').slice(0,2);
-x.fillStyle=th.s;
-slines.forEach(function(l,i){x.font='500 '+ssz+'px Inter,system-ui,sans-serif';
-x.fillText(l,pad,y+lines.length*(tsize*1.18)+Math.round(tsize*0.35)+i*(ssz*1.4));});}
-var brand=document.getElementById('og-brand').value;
-if(brand){var bsz=Math.round(c.width/44);
-x.font='700 '+bsz+'px Inter,system-ui,sans-serif';
-x.fillStyle=th.acc;x.fillText(brand,pad,c.height-pad-bsz);}
-}
-['og-title','og-sub','og-brand'].forEach(function(id){document.getElementById(id).addEventListener('input',draw);});
-['og-theme','og-size'].forEach(function(id){document.getElementById(id).addEventListener('change',draw);});
-document.getElementById('og-dl').addEventListener('click',function(){
-var a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='og-image.png';
-document.body.appendChild(a);a.click();document.body.removeChild(a);
-if(typeof gtag==='function')gtag('event','tool_use',{event_label:'og-image-generator'});});
-if(document.fonts&&document.fonts.ready){document.fonts.ready.then(draw);}
-draw();setTimeout(draw,400);
+var pad=Math.round(c.width*0.06),textW=c.width-pad*2,logoBox=0;
+if(lay==='split'&&logo){logoBox=Math.round(c.width*0.3);textW-=logoBox+pad;}
+var title=$('og-title').value||'Your title here',tsize=Math.round(Math.min(c.width,c.height*1.4)/13);
+var lines=wrap(title,textW,'800 '+tsize+'px '+fam);while(lines.length>3&&tsize>20){tsize=Math.round(tsize*0.88);lines=wrap(title,textW,'800 '+tsize+'px '+fam);}
+var sub=$('og-sub').value,ssz=Math.round(tsize*0.42),slines=sub?wrap(sub,textW,'500 '+ssz+'px '+fam).slice(0,2):[];
+var blockH=lines.length*tsize*1.18+(slines.length?ssz*0.8+slines.length*ssz*1.4:0),y=Math.round((c.height-blockH)/2*(lay==='center'?1:0.9));
+x.textBaseline='top';x.textAlign=lay==='center'?'center':'left';var tx=lay==='center'?c.width/2:pad;
+x.fillStyle=th.t;lines.forEach(function(l,i){x.font='800 '+tsize+'px '+fam;x.fillText(l,tx,y+i*(tsize*1.18));});
+x.fillStyle=th.s;slines.forEach(function(l,i){x.font='500 '+ssz+'px '+fam;x.fillText(l,tx,y+lines.length*(tsize*1.18)+Math.round(tsize*0.35)+i*(ssz*1.4));});
+var brand=$('og-brand').value;if(brand){var bsz=Math.round(c.width/44);x.font='700 '+bsz+'px '+fam;x.fillStyle=th.acc;x.fillText(brand,tx,c.height-pad-bsz);}
+if(logo){var L=lay==='split'?logoBox:Math.round(c.width*0.09),s=Math.min(L/logo.width,L/logo.height),w=logo.width*s,h=logo.height*s;
+if(lay==='split')x.drawImage(logo,c.width-pad-w,(c.height-h)/2,w,h);else x.drawImage(logo,lay==='center'?(c.width-w)/2:c.width-pad-w,pad,w,h);}
+try{var o={};IDS.forEach(function(id){o[id]=$(id).value;});localStorage.setItem('aibm_og',JSON.stringify(o));}catch(e){}}
+IDS.forEach(function(id){$(id).addEventListener('input',draw);$(id).addEventListener('change',draw);});
+$('og-logo').addEventListener('change',function(){var f=this.files&&this.files[0];if(!f){logo=null;draw();return;}var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){logo=im;draw();};im.src=r.result;};r.readAsDataURL(f);});
+function dl(type,ext){var a=document.createElement('a');a.href=c.toDataURL(type,0.92);a.download='og-image.'+ext;document.body.appendChild(a);a.click();document.body.removeChild(a);if(typeof gtag==='function')gtag('event','tool_use',{event_label:'og-image-generator'});}
+$('og-dl').addEventListener('click',function(){dl('image/png','png');});$('og-jpg').addEventListener('click',function(){dl('image/jpeg','jpg');});
+try{var s=JSON.parse(localStorage.getItem('aibm_og')||'null');if(s)IDS.forEach(function(id){if(s[id]!=null)$(id).value=s[id];});}catch(e){}
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(draw);}draw();setTimeout(draw,400);
 })();</script></body></html>

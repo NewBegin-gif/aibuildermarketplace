@@ -111,7 +111,7 @@ const body=document.getElementById('wiz-body'), bar=document.getElementById('wiz
 function ev(n,p){ if(window.gtag) gtag('event',n,p||{}); }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
 function fb(img){if(!img.dataset.f){img.dataset.f=1;img.src='https://www.google.com/s2/favicons?domain='+img.dataset.d+'&sz=64';}else{img.style.display='none';}}
-function logo(d,t){return '<span class="lg"><span class="lt">'+esc(t.charAt(0).toUpperCase())+'</span>'+(d?'<img data-d="'+esc(d)+'" src="https://logo.clearbit.com/'+esc(d)+'" alt="'+esc(t)+'" loading="lazy" onerror="fb(this)">':'')+'</span>';}
+function logo(d,t){return '<span class="lg"><span class="lt">'+esc(t.charAt(0).toUpperCase())+'</span>'+(d?'<img data-d="'+esc(d)+'" src="https://www.google.com/s2/favicons?sz=128&amp;domain='+esc(d)+'" alt="'+esc(t)+'" loading="lazy" onerror="fb(this)">':'')+'</span>';}
 function renderStep(){
   bar.style.width = (step/STEPS.length*100)+'%';
   sub.textContent = 'Step '+(step+1)+' of '+STEPS.length;

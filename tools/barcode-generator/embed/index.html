@@ -121,18 +121,34 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
 <div class="row"><div><label for="bc-val">Value</label><input type="text" id="bc-val" value="012345678905"></div>
-<div><label for="bc-type">Type</label><select id="bc-type"><option>CODE128</option><option>EAN13</option><option>UPC</option><option>CODE39</option></select></div></div>
+<div><label for="bc-type">Type</label><select id="bc-type"><option>CODE128</option><option>EAN13</option><option>EAN8</option><option>UPC</option><option>CODE39</option><option>ITF14</option><option>ITF</option><option>MSI</option><option>pharmacode</option><option>codabar</option></select></div></div>
+<div class="row"><div><label for="bc-w">Bar width</label><select id="bc-w"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select></div>
+<div><label for="bc-h">Height</label><select id="bc-h"><option value="40">40</option><option value="80" selected>80</option><option value="120">120</option></select></div>
+<div><label for="bc-text">Show value</label><select id="bc-text"><option value="1" selected>Yes</option><option value="0">No</option></select></div>
+<div><label for="bc-color">Colour</label><input type="color" id="bc-color" value="#0a0a0a" style="height:42px;padding:2px"></div></div>
 <div style="text-align:center;margin:18px 0"><svg id="bc-svg" style="background:#fff;border-radius:10px;padding:10px;max-width:100%"></svg></div>
 <button class="btn" id="bc-png">Download PNG</button><button class="btn ghost" id="bc-svgdl">Download SVG</button>
-<div id="bc-err" class="muted"></div></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/barcode-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Free Barcode Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+<div id="bc-err" class="muted"></div>
+<details style="margin-top:14px"><summary>Batch: one barcode per line, download all as a zip</summary><textarea id="bc-batch" rows="4" placeholder="012345678905&#10;4006381333931&#10;ORDER-00123"></textarea><button class="btn ghost" id="bc-batchdl" type="button" style="margin-top:8px">Generate zip of PNGs</button><div id="bc-batchmsg" class="note"></div></details>
+<p class="note">EAN-13 and UPC need a valid check digit &mdash; leave it off and the tool adds it for you. Batch export is where the paid generators start charging.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/barcode-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Free Barcode Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script>
-function bcGen(){var v=document.getElementById('bc-val').value,t=document.getElementById('bc-type').value,e=document.getElementById('bc-err');
-try{JsBarcode('#bc-svg',v,{format:t,lineColor:'#0a0a0a',width:2,height:80,displayValue:true});e.textContent='';}
-catch(err){e.textContent='Invalid value for '+t+' format.';}
-gtag&&gtag('event','tool_use',{event_label:'barcode_gen'});}
-['bc-val','bc-type'].forEach(function(id){var el=document.getElementById(id);el.addEventListener('input',bcGen);el.addEventListener('change',bcGen);});
-document.getElementById('bc-svgdl').onclick=function(){var b=new Blob([document.getElementById('bc-svg').outerHTML],{type:'image/svg+xml'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='barcode.svg';a.click();};
-document.getElementById('bc-png').onclick=function(){var svg=document.getElementById('bc-svg'),xml=new XMLSerializer().serializeToString(svg),img=new Image();
-img.onload=function(){var c=document.createElement('canvas');c.width=img.width||320;c.height=img.height||130;var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(img,0,0);var a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='barcode.png';a.click();};
-img.src='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(xml)));};
-bcGen();</script></body></html>
+(function(){
+var $=function(id){return document.getElementById(id);};
+function ean(v,len){var d=v.replace(/\\D/g,'');if(d.length===len-1){var s=0;for(var i=0;i<d.length;i++){s+=(+d[i])*((len===8?(i%2===0):(i%2===1))?3:1);}d+=(10-s%10)%10;}return d;}
+function opts(){return{format:$('bc-type').value,lineColor:$('bc-color').value,width:+$('bc-w').value,height:+$('bc-h').value,displayValue:$('bc-text').value==='1',margin:8};}
+function fix(v,t){if(t==='EAN13')return ean(v,13);if(t==='EAN8')return ean(v,8);if(t==='UPC'){var d=v.replace(/\\D/g,'');if(d.length===11){var s=0;for(var i=0;i<11;i++)s+=(+d[i])*(i%2===0?3:1);d+=(10-s%10)%10;}return d;}return v;}
+function gen(){var t=$('bc-type').value,v=fix($('bc-val').value,t),e=$('bc-err');
+try{JsBarcode('#bc-svg',v,opts());e.textContent=v!==$('bc-val').value?'Check digit added: '+v:'';}catch(err){e.textContent='Invalid value for '+t+'.';}
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'barcode_gen'});}
+['bc-val','bc-type','bc-w','bc-h','bc-text','bc-color'].forEach(function(id){$(id).addEventListener('input',gen);$(id).addEventListener('change',gen);});
+function svgToPng(svgEl,cb){var xml=new XMLSerializer().serializeToString(svgEl),img=new Image();img.onload=function(){var c=document.createElement('canvas');c.width=img.width||320;c.height=img.height||130;var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(img,0,0);cb(c);};img.src='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(xml)));}
+$('bc-svgdl').onclick=function(){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([$('bc-svg').outerHTML],{type:'image/svg+xml'}));a.download='barcode.svg';a.click();};
+$('bc-png').onclick=function(){svgToPng($('bc-svg'),function(c){var a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='barcode.png';a.click();});};
+$('bc-batchdl').onclick=function(){var lines=$('bc-batch').value.split(String.fromCharCode(10)).map(function(l){return l.trim();}).filter(Boolean);if(!lines.length){$('bc-batchmsg').textContent='Paste one value per line first.';return;}
+var z=new JSZip(),t=$('bc-type').value,done=0,bad=0,tmp=document.createElementNS('http://www.w3.org/2000/svg','svg');
+(function next(i){if(i>=lines.length){z.generateAsync({type:'blob'}).then(function(b){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='barcodes.zip';a.click();$('bc-batchmsg').textContent=done+' barcodes in the zip'+(bad?', '+bad+' invalid skipped':'')+'.';});return;}
+var v=fix(lines[i],t);try{JsBarcode(tmp,v,opts());}catch(e){bad++;next(i+1);return;}
+svgToPng(tmp,function(c){c.toBlob(function(bl){z.file(v.replace(/[^A-Za-z0-9_-]+/g,'_')+'.png',bl);done++;next(i+1);},'image/png');});})(0);};
+gen();
+})();</script></body></html>

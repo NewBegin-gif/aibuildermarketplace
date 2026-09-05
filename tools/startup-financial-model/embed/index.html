@@ -121,41 +121,43 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
 <div class="row"><div><label>Starting cash ($)</label><input type="number" id="fm-cash" value="200000" min="0"></div>
-<div><label>Starting MRR ($)</label><input type="number" id="fm-mrr" value="10000" min="0"></div></div>
+<div><label>Starting MRR ($)</label><input type="number" id="fm-mrr" value="10000" min="0"></div>
+<div><label>Months to model</label><select id="fm-n"><option value="12">12</option><option value="24" selected>24</option><option value="36">36</option></select></div></div>
 <div class="row"><div><label>Monthly growth (%)</label><input type="number" id="fm-growth" value="12" step="0.5"></div>
-<div><label>Monthly churn (%)</label><input type="number" id="fm-churn" value="3" step="0.5"></div></div>
+<div><label>Monthly churn (%)</label><input type="number" id="fm-churn" value="3" step="0.5"></div>
+<div><label>Growth decay per month (%)</label><input type="number" id="fm-decay" value="2" step="0.5" title="How much the growth rate itself shrinks each month"></div></div>
 <div class="row"><div><label>Gross margin (%)</label><input type="number" id="fm-margin" value="80" min="0" max="100"></div>
-<div><label>Monthly operating cost ($)</label><input type="number" id="fm-opex" value="35000" min="0"></div></div>
+<div><label>Monthly operating cost ($)</label><input type="number" id="fm-opex" value="35000" min="0"></div>
+<div><label>Opex growth per month (%)</label><input type="number" id="fm-opexg" value="1" step="0.5"></div></div>
+<div class="row"><div><label>Funding round ($, optional)</label><input type="number" id="fm-raise" value="0" min="0"></div><div><label>In month</label><input type="number" id="fm-raisem" value="6" min="1"></div>
+<div><label>Scenario spread (&plusmn; growth pts)</label><input type="number" id="fm-spread" value="4" min="0" step="0.5"></div></div>
 <div id="fm-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:12px;margin:18px 0"></div>
-<div id="fm-chart"></div></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/startup-financial-model/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Startup Financial Model &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
-function fmN(x){var s=x<0?'-':'';x=Math.abs(x);return s+(x>=1e6?'$'+(x/1e6).toFixed(2)+'M':x>=1e3?'$'+Math.round(x/1e3)+'k':'$'+Math.round(x));}
-function fmModel(){
-var cash=+document.getElementById('fm-cash').value,mrr=+document.getElementById('fm-mrr').value,
-g=+document.getElementById('fm-growth').value/100,c=+document.getElementById('fm-churn').value/100,
-m=+document.getElementById('fm-margin').value/100,opex=+document.getElementById('fm-opex').value;
-var N=24,cashA=[cash],mrrA=[mrr],runway=null,be=null;
-for(var i=1;i<=N;i++){mrr=mrr*(1+g-c);var net=mrr*m-opex;cash+=net;cashA.push(cash);mrrA.push(mrr);
-if(runway===null&&cash<0)runway=i;if(be===null&&net>=0)be=i;}
-var stats=[['Runway',runway?runway+' mo':'&#8734;',runway?(runway<=6?'sig-n':''):'sig-y'],
-['Break-even',be?'Month '+be:'>24 mo',be?'sig-y':'sig-n'],
-['MRR (mo 24)',fmN(mrrA[N]),''],['ARR (mo 24)',fmN(mrrA[N]*12),'']];
-document.getElementById('fm-stats').innerHTML=stats.map(function(s){return '<div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px"><div class="big '+s[2]+'" style="font-size:1.45rem;line-height:1.1">'+s[1]+'</div><div class="muted" style="font-size:.76rem;margin-top:2px">'+s[0]+'</div></div>';}).join('');
-var W=640,H=240,pd=34,cmin=Math.min(0,Math.min.apply(null,cashA)),cmax=Math.max.apply(null,cashA);if(cmax===cmin)cmax=cmin+1;
-var mmax=Math.max.apply(null,mrrA)||1;
-function X(i){return (pd+i/N*(W-2*pd)).toFixed(1);}
-function Yc(v){return (H-pd-(v-cmin)/(cmax-cmin)*(H-2*pd)).toFixed(1);}
-function Ym(v){return (H-pd-(v/mmax)*(H-2*pd)).toFixed(1);}
-var cashPts=cashA.map(function(v,i){return X(i)+','+Yc(v);}).join(' ');
-var mrrPts=mrrA.map(function(v,i){return X(i)+','+Ym(v);}).join(' ');
-var xl='';[0,6,12,18,24].forEach(function(mo){xl+='<text x="'+X(mo)+'" y="'+(H-9)+'" fill="#737373" font-size="11" text-anchor="middle">'+mo+'</text>';});
-document.getElementById('fm-chart').innerHTML='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;background:var(--card2);border:1px solid var(--border);border-radius:12px">'
-+'<line x1="'+pd+'" y1="'+Yc(0)+'" x2="'+(W-pd)+'" y2="'+Yc(0)+'" stroke="#fb7185" stroke-dasharray="4 4" stroke-width="1"/>'
-+'<polyline points="'+mrrPts+'" fill="none" stroke="#22c55e" stroke-width="2"/>'
-+'<polyline points="'+cashPts+'" fill="none" stroke="#3b82f6" stroke-width="2.5"/>'+xl
-+'<text x="'+pd+'" y="18" fill="#3b82f6" font-size="11" font-weight="700">Cash balance</text>'
-+'<text x="'+(pd+96)+'" y="18" fill="#22c55e" font-size="11" font-weight="700">MRR</text>'
-+'<text x="'+(W-pd)+'" y="18" fill="#fb7185" font-size="10" text-anchor="end">$0 line</text></svg>'
-+'<p class="muted" style="font-size:.8rem;margin-top:8px">Months on the x-axis. Cash (blue) against the $0 line is your runway; MRR (green) is growth. A simple model \u2014 pressure-test it, don\u2019t bet the company on it.</p>';
-gtag&&gtag('event','tool_use',{event_label:'financial_model'});}
-['fm-cash','fm-mrr','fm-growth','fm-churn','fm-margin','fm-opex'].forEach(function(id){document.getElementById(id).addEventListener('input',fmModel);});fmModel();
-</script></body></html>
+<div id="fm-chart"></div>
+<div class="row" style="margin-top:10px"><div><button class="btn ghost" id="fm-csv" type="button">Download month-by-month CSV</button></div><div><button class="btn ghost" id="fm-share" type="button">Copy share link</button></div></div>
+<details style="margin-top:10px"><summary>Month-by-month table</summary><div id="fm-table" style="overflow-x:auto;font-size:.82rem;margin-top:8px"></div></details>
+<p class="note">Base, bear and bull scenarios; the bear and bull lines move the growth rate by the spread you set. Runs in your browser, remembered in the URL so you can share a scenario.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/startup-financial-model/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Startup Financial Model &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+(function(){
+var $=function(id){return document.getElementById(id);},IDS=['fm-cash','fm-mrr','fm-n','fm-growth','fm-churn','fm-decay','fm-margin','fm-opex','fm-opexg','fm-raise','fm-raisem','fm-spread'],last=null;
+function N(x){var s=x<0?'-':'';x=Math.abs(x);return s+(x>=1e6?'$'+(x/1e6).toFixed(2)+'M':x>=1e3?'$'+Math.round(x/1e3)+'k':'$'+Math.round(x));}
+function sim(gAdj){var cash=+$('fm-cash').value,mrr=+$('fm-mrr').value,g=(+$('fm-growth').value+gAdj)/100,c=+$('fm-churn').value/100,dec=+$('fm-decay').value/100,m=+$('fm-margin').value/100,opex=+$('fm-opex').value,og=+$('fm-opexg').value/100,raise=+$('fm-raise').value,rm=+$('fm-raisem').value,n=+$('fm-n').value;
+var rows=[{mo:0,mrr:mrr,cash:cash,net:0,opex:opex}],runway=null,be=null,gg=g;
+for(var i=1;i<=n;i++){mrr=mrr*(1+gg-c);gg=Math.max(0,gg*(1-dec));var net=mrr*m-opex;if(raise>0&&i===rm)cash+=raise;cash+=net;opex=opex*(1+og);rows.push({mo:i,mrr:mrr,cash:cash,net:net,opex:opex});if(runway===null&&cash<0)runway=i;if(be===null&&net>=0)be=i;}
+return{rows:rows,runway:runway,be:be};}
+function model(){var sp=+$('fm-spread').value||0,base=sim(0),bear=sim(-sp),bull=sim(sp),n=+$('fm-n').value;last=base;
+var end=base.rows[n];
+var stats=[['Runway (base)',base.runway?base.runway+' mo':'\u221e',base.runway?(base.runway<=6?'sig-n':''):'sig-y'],['Runway (bear)',bear.runway?bear.runway+' mo':'\u221e',bear.runway?(bear.runway<=6?'sig-n':''):'sig-y'],['Break-even',base.be?'Month '+base.be:'>'+n+' mo',base.be?'sig-y':'sig-n'],['MRR (mo '+n+')',N(end.mrr),''],['ARR (mo '+n+')',N(end.mrr*12),''],['Cash (mo '+n+')',N(end.cash),end.cash<0?'sig-n':'']];
+$('fm-stats').innerHTML=stats.map(function(s){return '<div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px"><div class="big '+s[2]+'" style="font-size:1.3rem;line-height:1.1">'+s[1]+'</div><div class="muted" style="font-size:.76rem;margin-top:2px">'+s[0]+'</div></div>';}).join('');
+var W=640,H=250,pd=34,all=base.rows.concat(bear.rows,bull.rows),cmin=Math.min(0,Math.min.apply(null,all.map(function(r){return r.cash;}))),cmax=Math.max.apply(null,all.map(function(r){return r.cash;}));if(cmax===cmin)cmax=cmin+1;var mmax=Math.max.apply(null,all.map(function(r){return r.mrr;}))||1;
+function X(i){return (pd+i/n*(W-2*pd)).toFixed(1);}function Yc(v){return (H-pd-(v-cmin)/(cmax-cmin)*(H-2*pd)).toFixed(1);}function Ym(v){return (H-pd-(v/mmax)*(H-2*pd)).toFixed(1);}
+function line(rows,key,Y,col,w,dash){return '<polyline points="'+rows.map(function(r){return X(r.mo)+','+Y(r[key]);}).join(' ')+'" fill="none" stroke="'+col+'" stroke-width="'+w+'"'+(dash?' stroke-dasharray="5 4"':'')+'/>';}
+var xl='';for(var mo=0;mo<=n;mo+=(n>24?6:n>12?6:3))xl+='<text x="'+X(mo)+'" y="'+(H-9)+'" fill="#737373" font-size="11" text-anchor="middle">'+mo+'</text>';
+$('fm-chart').innerHTML='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;background:var(--card2);border:1px solid var(--border);border-radius:12px"><line x1="'+pd+'" y1="'+Yc(0)+'" x2="'+(W-pd)+'" y2="'+Yc(0)+'" stroke="#fb7185" stroke-dasharray="4 4" stroke-width="1"/>'+line(bear.rows,'cash',Yc,'#3b82f6',1,true)+line(bull.rows,'cash',Yc,'#3b82f6',1,true)+line(base.rows,'mrr',Ym,'#22c55e',2)+line(base.rows,'cash',Yc,'#3b82f6',2.5)+xl+'<text x="'+pd+'" y="18" fill="#3b82f6" font-size="11" font-weight="700">Cash (solid = base, dashed = bear/bull)</text><text x="'+(W-pd)+'" y="18" fill="#22c55e" font-size="11" font-weight="700" text-anchor="end">MRR</text></svg>';
+$('fm-table').innerHTML='<table style="border-collapse:collapse;width:100%"><tr><th style="text-align:left;padding:3px 6px">Mo</th><th style="text-align:right;padding:3px 6px">MRR</th><th style="text-align:right;padding:3px 6px">Opex</th><th style="text-align:right;padding:3px 6px">Net</th><th style="text-align:right;padding:3px 6px">Cash</th></tr>'+base.rows.map(function(r){return '<tr style="border-top:1px solid var(--border)"><td style="padding:3px 6px">'+r.mo+'</td><td style="text-align:right;padding:3px 6px">'+N(r.mrr)+'</td><td style="text-align:right;padding:3px 6px">'+N(r.opex)+'</td><td style="text-align:right;padding:3px 6px;color:'+(r.net<0?'#fb7185':'#22c55e')+'">'+N(r.net)+'</td><td style="text-align:right;padding:3px 6px;color:'+(r.cash<0?'#fb7185':'inherit')+'">'+N(r.cash)+'</td></tr>';}).join('')+'</table>';
+try{history.replaceState(null,'','#'+IDS.map(function(id){return $(id).value;}).join(','));}catch(e){}
+if(typeof gtag==='function')gtag('event','tool_use',{event_label:'financial_model'});}
+IDS.forEach(function(id){$(id).addEventListener('input',model);$(id).addEventListener('change',model);});
+$('fm-csv').onclick=function(){if(!last)return;var l=['month,mrr,opex,net,cash'].concat(last.rows.map(function(r){return [r.mo,Math.round(r.mrr),Math.round(r.opex),Math.round(r.net),Math.round(r.cash)].join(',');}));var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([l.join(String.fromCharCode(10))],{type:'text/csv'}));a.download='financial-model.csv';a.click();};
+$('fm-share').onclick=function(){navigator.clipboard&&navigator.clipboard.writeText(location.href);var b=this;b.textContent='Link copied!';setTimeout(function(){b.textContent='Copy share link';},1500);};
+try{var h=location.hash.slice(1).split(',');if(h.length===IDS.length)IDS.forEach(function(id,i){$(id).value=h[i];});}catch(e){}
+model();
+})();</script></body></html>

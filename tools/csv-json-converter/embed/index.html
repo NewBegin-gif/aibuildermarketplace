@@ -120,58 +120,40 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
-<label for="cj-in">CSV or JSON</label>
-<textarea id="cj-in" rows="8" spellcheck="false" placeholder="name,email
-Ada,ada@example.com&#10;&#10;of plak een JSON-array van objecten&hellip;"></textarea>
+<label for="cj-in">CSV or JSON (paste, or drop a file)</label>
+<textarea id="cj-in" rows="8" spellcheck="false" placeholder="name,email&#10;Ada,ada@example.com&#10;&#10;or paste a JSON array of objects&hellip;"></textarea>
+<input type="file" id="cj-file" accept=".csv,.tsv,.txt,.json" style="margin-top:6px;padding:6px">
 <div class="row" style="margin-top:10px"><div><button class="btn" id="cj-tojson">CSV &rarr; JSON</button></div>
-<div><button class="btn" id="cj-tocsv" style="background:#26262b">JSON &rarr; CSV</button></div></div>
-<div style="margin-top:8px"><label style="font-weight:400"><input type="checkbox" id="cj-headers" checked> First row is headers</label></div>
+<div><button class="btn ghost" id="cj-tocsv">JSON &rarr; CSV</button></div><div><button class="btn ghost" id="cj-toxlsx">JSON/CSV &rarr; Excel (.xlsx)</button></div><div><button class="btn ghost" id="cj-dl">Download result</button></div></div>
+<div class="row" style="margin-top:8px"><div><label style="font-weight:400"><input type="checkbox" id="cj-headers" checked> First row is headers</label><br><label style="font-weight:400"><input type="checkbox" id="cj-types" checked> Convert numbers and booleans</label></div>
+<div><label for="cj-cols">Keep only these columns (comma-separated, optional)</label><input type="text" id="cj-cols" placeholder="name,email"></div>
+<div><label for="cj-delim">Delimiter</label><select id="cj-delim"><option value="auto">auto</option><option value=",">comma</option><option value=";">semicolon</option><option value="tab">tab</option><option value="|">pipe</option></select></div></div>
 <div id="cj-status" class="note" style="margin-top:8px"></div>
 <label for="cj-out" style="margin-top:10px">Result (click to copy)</label>
 <textarea id="cj-out" class="out" rows="8" readonly spellcheck="false"></textarea>
-<p class="note">Delimiter auto-detected (comma, semicolon or tab). Converted entirely in your browser &mdash; customer exports never leave your device.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/csv-json-converter/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; CSV ↔ JSON Converter &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
+<p class="note">Converted entirely in your browser &mdash; customer exports never leave your device. Handles quoted fields, embedded newlines and files of tens of thousands of rows.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/csv-json-converter/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; CSV ↔ JSON Converter &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
 (function(){
-var inp=document.getElementById('cj-in'),out=document.getElementById('cj-out'),st=document.getElementById('cj-status');
-function detectDelim(t){var first=t.split('
-')[0]||'';var c={',':0,';':0,'	':0};
-for(var k in c)c[k]=first.split(k).length-1;
-return c[';']>c[',']&&c[';']>=c['	']?';':c['	']>c[',']?'	':',';}
-function parseCSV(t,d){var rows=[],row=[],cur='',q=false;
-for(var i=0;i<t.length;i++){var ch=t[i];
+var $=function(id){return document.getElementById(id);},inp=$('cj-in'),out=$('cj-out'),st=$('cj-status'),NL=String.fromCharCode(10),TAB=String.fromCharCode(9),lastRows=null,lastKind='';
+function delim(t){var v=$('cj-delim').value;if(v==='tab')return TAB;if(v!=='auto')return v;var first=t.split(NL)[0]||'',c={',':0,';':0,'|':0};c[TAB]=0;for(var k in c)c[k]=first.split(k).length-1;var best=',';for(var k2 in c)if(c[k2]>c[best])best=k2;return best;}
+function parseCSV(t,d){var rows=[],row=[],cur='',q=false;for(var i=0;i<t.length;i++){var ch=t[i];
 if(q){if(ch==='"'){if(t[i+1]==='"'){cur+='"';i++;}else q=false;}else cur+=ch;}
-else{if(ch==='"')q=true;
-else if(ch===d){row.push(cur);cur='';}
-else if(ch==='
-'){row.push(cur);rows.push(row);row=[];cur='';}
-else if(ch!=='')cur+=ch;}}
-if(cur!==''||row.length){row.push(cur);rows.push(row);}
-return rows.filter(function(r){return r.length>1||r[0]!=='';});}
-document.getElementById('cj-tojson').addEventListener('click',function(){
-var t=inp.value;if(!t.trim()){st.textContent='';out.value='';return;}
-var d=detectDelim(t),rows=parseCSV(t,d);
-var hdr=document.getElementById('cj-headers').checked;
-var res;
-if(hdr&&rows.length){var h=rows[0];
-res=rows.slice(1).map(function(r){var o={};h.forEach(function(k,i){o[k]=r[i]!==undefined?r[i]:'';});return o;});}
-else res=rows;
-out.value=JSON.stringify(res,null,2);
-var dn=d==='	'?'tab':d;
-st.innerHTML='<span style="color:#34d399">&check;</span> '+(hdr?res.length+' rijen':'array')+' &middot; delimiter: "'+dn+'"';
-if(typeof gtag==='function')gtag('event','tool_use',{event_label:'csv-json-converter'});});
-document.getElementById('cj-tocsv').addEventListener('click',function(){
-try{
-var data=JSON.parse(inp.value);
-if(!Array.isArray(data))data=[data];
-var keys=[];data.forEach(function(o){Object.keys(o).forEach(function(k){if(keys.indexOf(k)<0)keys.push(k);});});
-function cell(v){if(v===null||v===undefined)return '';
-v=typeof v==='object'?JSON.stringify(v):String(v);
-return /[",
-;]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
-var lines=[keys.map(cell).join(',')];
-data.forEach(function(o){lines.push(keys.map(function(k){return cell(o[k]);}).join(','));});
-out.value=lines.join('
-');
-st.innerHTML='<span style="color:#34d399">&check;</span> '+data.length+' rijen, '+keys.length+' kolommen';
-if(typeof gtag==='function')gtag('event','tool_use',{event_label:'csv-json-converter'});
-}catch(e){st.innerHTML='<span style="color:#f87171">&times;</span> Geen geldige JSON: '+String(e.message).replace(/</g,'&lt;').slice(0,80);out.value='';}});
+else{if(ch==='"')q=true;else if(ch===d){row.push(cur);cur='';}else if(ch===NL){row.push(cur);rows.push(row);row=[];cur='';}else if(ch!==String.fromCharCode(13))cur+=ch;}}
+if(cur!==''||row.length){row.push(cur);rows.push(row);}return rows.filter(function(r){return r.length>1||r[0]!=='';});}
+function typed(v){if(!$('cj-types').checked)return v;if(v==='')return '';if(v==='true')return true;if(v==='false')return false;if(/^-?\\d+(\\.\\d+)?$/.test(v)&&v.length<16)return +v;return v;}
+function keepCols(rows){var c=($('cj-cols').value||'').split(',').map(function(s){return s.trim();}).filter(Boolean);if(!c.length)return rows;return rows.map(function(r){var o={};c.forEach(function(k){if(k in r)o[k]=r[k];});return o;});}
+function toRows(){var t=inp.value;if(!t.trim())return null;
+if(/^\\s*[\\[{]/.test(t)){var data=JSON.parse(t);if(!Array.isArray(data))data=data.data&&Array.isArray(data.data)?data.data:[data];return data;}
+var d=delim(t),rows=parseCSV(t,d),hdr=$('cj-headers').checked;if(!rows.length)return [];
+if(hdr){var h=rows[0];return rows.slice(1).map(function(r){var o={};h.forEach(function(k,i){o[k]=typed(r[i]!==undefined?r[i]:'');});return o;});}
+return rows.map(function(r){return r.map(typed);});}
+$('cj-file').addEventListener('change',function(){var f=this.files&&this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){inp.value=r.result;};r.readAsText(f);});
+$('cj-tojson').onclick=function(){try{var rows=toRows();if(rows===null){st.textContent='';out.value='';return;}rows=keepCols(rows);lastRows=rows;lastKind='json';out.value=JSON.stringify(rows,null,2);st.innerHTML='<span style="color:#34d399">&check;</span> '+rows.length+' rows';if(typeof gtag==='function')gtag('event','tool_use',{event_label:'csv-json-converter'});}catch(e){st.innerHTML='<span style="color:#f87171">&times;</span> '+String(e.message).replace(/</g,'&lt;').slice(0,90);}};
+function csvOf(rows){var keys=[];rows.forEach(function(o){if(o&&typeof o==='object'&&!Array.isArray(o))Object.keys(o).forEach(function(k){if(keys.indexOf(k)<0)keys.push(k);});});
+function cell(v){if(v===null||v===undefined)return '';v=typeof v==='object'?JSON.stringify(v):String(v);return (v.indexOf('"')>=0||v.indexOf(',')>=0||v.indexOf(NL)>=0||v.indexOf(';')>=0)?'"'+v.split('"').join('""')+'"':v;}
+if(!keys.length)return rows.map(function(r){return (Array.isArray(r)?r:[r]).map(cell).join(',');}).join(NL);
+return [keys.map(cell).join(',')].concat(rows.map(function(o){return keys.map(function(k){return cell(o[k]);}).join(',');})).join(NL);}
+$('cj-tocsv').onclick=function(){try{var rows=toRows();if(rows===null)return;rows=keepCols(rows);lastRows=rows;lastKind='csv';out.value=csvOf(rows);st.innerHTML='<span style="color:#34d399">&check;</span> '+rows.length+' rows as CSV';if(typeof gtag==='function')gtag('event','tool_use',{event_label:'csv-json-converter'});}catch(e){st.innerHTML='<span style="color:#f87171">&times;</span> '+String(e.message).replace(/</g,'&lt;').slice(0,90);}};
+$('cj-toxlsx').onclick=function(){try{var rows=toRows();if(rows===null)return;rows=keepCols(rows);var ws=Array.isArray(rows[0])?XLSX.utils.aoa_to_sheet(rows):XLSX.utils.json_to_sheet(rows),wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Sheet1');XLSX.writeFile(wb,'data.xlsx');st.innerHTML='<span style="color:#34d399">&check;</span> '+rows.length+' rows written to data.xlsx';}catch(e){st.innerHTML='<span style="color:#f87171">&times;</span> '+String(e.message).replace(/</g,'&lt;').slice(0,90);}};
+$('cj-dl').onclick=function(){if(!out.value)return;var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([out.value],{type:lastKind==='csv'?'text/csv':'application/json'}));a.download=lastKind==='csv'?'data.csv':'data.json';a.click();};
 })();</script></body></html>

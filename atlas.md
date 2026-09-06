@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 437 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-06.
+All 439 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-06.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -663,6 +663,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's genuinely free to submit a brief — but be clear on what it is: a lead-generation marketplace, not a neutral directory.
 - **Best for:** businesses that want to skip manual agency research and get matched quickly with vetted, best-fit service providers for a specific project
 - **Full review:** https://aibuildermarketplace.com/b2b/clutch-review/
+
+## Code Bulk Discounts (discountkit.app)
+- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/code-bulk) Two plans, billed in USD every 30 days.
+- **Honest take:** Read the free plan's number twice, because the word doing the work is 'lifetime': it is 500 codes in total, not 500 a month.
+- **Best for:** shopify stores that already run email or SMS campaigns and need thousands of unique, single-use codes generated out of one existing discount and handed over as a CSV
+- **Flags:** {'f': 'free_tier', 'ev': "Read the free plan's number twice, because the word doing the work is 'lifetime': it is 500 codes in total, not 500 a month."}
+- **Full review:** https://aibuildermarketplace.com/b2b/code-bulk-discounts-review/
 
 ## Cognism (cognism.com)
 - **Verified pricing:** (2026-08-01, read on their own pricing page) No prices are shown.
@@ -1428,6 +1435,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'free_tier', 'ev': '(re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email br…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/kit-review/
 
+## Kite (kite.skailama.app)
+- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/kite-free-gift) Four plans, billed in USD every 30 days.
+- **Honest take:** 'Free to install' is doing a lot of work on this listing.
+- **Best for:** shopify stores that want the discount mechanics themselves — gift with purchase, buy X get Y, tiered and volume pricing, with progress bars pushing the cart toward the next reward — built on native Shopify Functions rather than th
+- **Flags:** {'f': 'free_tier', 'ev': 'The Free plan is free to install and covers the first 50 discount orders each month; the listing states that $29 a month is billed only if you go ove…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/kite-review/
+
 ## Kiwi Sizing (kiwisizing.com)
 - **Verified pricing:** (read 5 September 2026 on apps.shopify.com/kiwi-sizing) Four tiers, and the interesting line is not the price but the sentence under it.
 - **Honest take:** The free plan is not limited by the chart count most people assume.
@@ -1484,10 +1498,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/leadpages-review/
 
 ## LearnWorlds (learnworlds.com)
-- **Verified pricing:** (re-verified 2026-09-05 on their own pricing page, which now runs under the heading New Pricing 2026) Starter $29/mo (or $24 annually) but with a $5 fee per enrollment — still the single mo…
-- **Honest take:** The detail most people miss is Starter's $5-per-enrollment fee — at any real sales volume it quietly makes Starter more expensive than the flat Pro Trainer plan, so the "cheap" tier often isn't.
+- **Verified pricing:** (re-verified 2026-09-05 on their own pricing page, which now carries the browser title New Pricing 2026) Starter $29/mo (or $24 annually) but with a $5 fee per paid enrollment — still the s…
+- **Honest take:** The detail most people miss is Starter's $5-per-paid-enrollment fee — at any real sales volume it quietly makes Starter more expensive than the flat Pro Trainer plan, so the "cheap" tier often isn't.
 - **Best for:** course creators and training businesses that want a branded school with interactive video, assessments, certificates and a built-in checkout
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-05 on their own pricing page, which now runs under the heading New Pricing 2026) Starter $29/mo (or $24 annually) but with a $5 …'}, {'f': 'addons_extra', 'ev': 'A branded mobile app is still a separate add-on, but the page now lists it as having multiple price options and prints no amount, so the roughly $149…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% and the trial is 30 days.'}, {'f': 'free_tier', 'ev': 'All prices exclude VAT, which is added for EU customers unless a valid EU VAT number is given, and your payment gateway (Stripe at about 2.9% + $0.30…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Limits published alongside: 1,000 / 2,000 / 2,000 monthly active learners, 1 / 5 / 25 admins, 300 / 500 / 1,000 AI credits a month, email support 24/…'}, {'f': 'addons_extra', 'ev': 'A branded mobile app is still a separate add-on, but the page now lists it as having multiple price options and prints no amount, so the roughly $149…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% and the trial is 30 days.'}, {'f': 'free_tier', 'ev': 'All prices exclude VAT, which is added for EU customers unless a valid EU VAT number is given, and your payment gateway (Stripe at about 2.9% + $0.30…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/learnworlds-review/
 
 ## Leavo (leavo.com)

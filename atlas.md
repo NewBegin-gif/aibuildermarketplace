@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 439 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-06.
+All 440 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-07.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1695,6 +1695,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small and mid-size Shopify stores that want a multilingual, catalogue-aware chat widget with product cards, order tracking and add-to-cart, and want to judge it on the genuinely usable free tier of 200 conversations a month
 - **Full review:** https://aibuildermarketplace.com/b2b/neuroads-review/
 
+## Nextify.ai (nextify.ai)
+- **Verified pricing:** (read 7 September 2026 on nextify.ai/pricing, signed in and signed out, in both billing modes) Five ways to pay, and the free plan is only visible when you are logged out — the signed-in pr…
+- **Honest take:** The plans are sold in videos and images; the meter runs in credits per second, and the two do not reconcile.
+- **Best for:** advertisers who need a steady stream of short product clips and will deliberately choose the cheap model for drafts, and teams who would rather have video, avatars, lip-sync and product imagery drawing on one credit pool than pay 
+- **Flags:** {'f': 'usage_metered', 'ev': 'Free is $0 for 50 credits a month, watermarked, on the basic models only, and the page sells that as up to 2 videos and 25 images.'}, {'f': 'addons_extra', 'ev': 'Refunds are limited to three days from a first subscription, and add-on packs are non-refundable.'}, {'f': 'free_tier', 'ev': '(read 7 September 2026 on nextify.ai/pricing, signed in and signed out, in both billing modes) Five ways to pay, and the free plan is only visible wh…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/nextify-ai-review/
+
 ## Ngram (ngram.com)
 - **Verified pricing:** (re-verified 2026-08-17) Credit-based, three published tiers plus a quote-only Enterprise, with annual billing 20% off.
 - **Honest take:** The sticker price buys a credit allowance, not finished video, and the two are easy to confuse.
@@ -1786,10 +1793,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pagepulse-review/
 
 ## Pangram (pangram.com)
-- **Verified pricing:** (re-verified 2026-08-17 from Pangram's own llms.txt, which publishes the full plan list) Free: $0, no payment method, up to 2,000 words a day (twenty checks).
+- **Verified pricing:** (re-verified 6 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Free: $0, no payment method, up to 2,000 words a day (twenty chec…
 - **Honest take:** The unavoidable honest limit of every AI detector, including accurate ones: it is never infallible.
 - **Best for:** educators, publishers and platforms that need a low-false-positive signal on whether text is AI-generated, at web-app or API scale
-- **Flags:** {'f': 'per_seat', 'ev': 'Team $20 per seat/mo or $15 annually, from 2 seats.'}, {'f': 'usage_metered', 'ev': 'Pair it with human judgment and the credit meter with your actual volume.'}, {'f': 'free_tier', 'ev': "(re-verified 2026-08-17 from Pangram's own llms.txt, which publishes the full plan list) Free: $0, no payment method, up to 2,000 words a day (twenty…"}
+- **Flags:** {'f': 'per_seat', 'ev': 'Team $20 per seat/mo or $15 annually, from 2 seats, 300,000 words per seat.'}, {'f': 'usage_metered', 'ev': 'Pair it with human judgment and the credit meter with your actual volume.'}, {'f': 'free_tier', 'ev': '(re-verified 6 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Free: $0, no payment meth…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pangram-review/
 
 ## Papaya Global (papayaglobal.com)
@@ -1813,10 +1820,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/partnerstack-review/
 
 ## Passpack (passpack.com)
-- **Verified pricing:** (re-verified 2026-09-03 on their own plans page; unchanged since 2026-08-25) Teams is $20 per user per year, paid annually, for teams of up to 20 people.
+- **Verified pricing:** (re-verified 6 September 2026 on passpack.com/plans/ and passpack.com/llms.txt, which agree; unchanged since our 25 August, 2 September and 3 September readings) Teams is $20 per user per y…
 - **Honest take:** The honest trade-off is maturity, not security.
 - **Best for:** teams under twenty people who want zero-knowledge encryption and shared vaults at about $1.67 a seat a month, and can live with a first-generation mobile app and a plainer interface
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-03 on their own plans page; unchanged since 2026-08-25) Teams is $20 per user per year, paid annually, for teams of up to 20 peo…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 6 September 2026 on passpack.com/plans/ and passpack.com/llms.txt, which agree; unchanged since our 25 August, 2 September and 3 Septemb…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/passpack-review/
 
 ## Payoneer (payoneer.com)
@@ -1827,10 +1834,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/payoneer-review/
 
 ## PDWare (pdware.com)
-- **Verified pricing:** Quote-only, confirmed 5 September 2026 in a browser: pdware.com has no pricing page (the /pricing URL returns 404) and every route ends in a 'Request pricing' form or a guided demo.
+- **Verified pricing:** Quote-only, re-confirmed 6 September 2026: pdware.com has no pricing page (/pricing returns 404) and every route ends in a 'Request pricing' form or a guided demo, with no amount anywhere o…
 - **Honest take:** This is genuine enterprise software with enterprise buying: opaque pricing, demo-first sales and implementation effort — appropriate for portfolio offices planning hundreds of resources, overkill below that.
 - **Best for:** enterprise PMOs that plan portfolios around named-resource capacity and need feasibility answers before committing to projects
-- **Flags:** {'f': 'per_seat', 'ev': 'It sells to pharma, medical-device and manufacturing enterprises for portfolio and resource planning, so expect an enterprise contract sized to the o…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pdware-review/
 
 ## Pecan AI (pecan.ai)
@@ -1840,10 +1846,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pecan-ai-review/
 
 ## Piktochart (piktochart.com)
-- **Verified pricing:** (2026-08-06, read in a live browser on their own pricing page, US dollar view) Free is $0, Pro is $15 per member per month billed monthly or $10 billed annually, Business is $20 monthly or …
+- **Verified pricing:** (re-verified 6 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 2026 reading) Free is $0, Pro is $15 per member per month billed m…
 - **Honest take:** The ladder here is not about how much you make, it is about which file you are allowed to hand over.
-- **Best for:** individuals and small teams who need infographics, data-heavy reports and posters to look designed without hiring a designer — and above all students and teachers, for whom $39 a member a year with PDF and PowerPoint export is the
-- **Flags:** {'f': 'per_seat', 'ev': '(2026-08-06, read in a live browser on their own pricing page, US dollar view) Free is $0, Pro is $15 per member per month billed monthly or $10 bill…'}, {'f': 'usage_metered', 'ev': 'Free stops at 2 PNG downloads, 1 GB of storage, 60 AI credits and free templates only, and is capped at 1-4 members.'}, {'f': 'addons_extra', 'ev': 'Business, 15% off annually, adds PDF and PowerPoint export on top of PNG, the Brand Kit (brand colours, fonts and logos), 1,000 AI credits and 250 GB.'}, {'f': 'annual_lock', 'ev': 'Your real entry price is $17 a member a month on annual billing, or $20 monthly.'}, {'f': 'free_tier', 'ev': '(2026-08-06, read in a live browser on their own pricing page, US dollar view) Free is $0, Pro is $15 per member per month billed monthly or $10 bill…'}
+- **Best for:** individuals and small teams who need infographics, data-heavy reports and posters to look designed without hiring a designer — and above all students, teachers and nonprofits, for whom $39.99 and $60 a member a year with PDF and P
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 6 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 2026 reading) Free is $0, …'}, {'f': 'usage_metered', 'ev': 'Free stops at 2 PNG downloads — a flat total, not two a month — 1 GB of storage, 60 AI credits and free templates only, and is capped at four members…'}, {'f': 'addons_extra', 'ev': 'Business, 15% off annually, adds PDF and PowerPoint export on top of PNG, the Brand Kit (unlimited brand colours, fonts and logos), 1,000 AI credits …'}, {'f': 'annual_lock', 'ev': 'Your real entry price is $17 a member a month on annual billing, or $20 monthly.'}, {'f': 'free_tier', 'ev': '(re-verified 6 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 2026 reading) Free is $0, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/piktochart-review/
 
 ## Pingtree (pingtree.com)
@@ -1861,10 +1867,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pipedrive-review/
 
 ## Pippit (pippit.ai)
-- **Verified pricing:** (read 2026-08-26 on pippit.ai/pricing over a US connection, on the yearly tab) Free is $0 with daily credits and no card.
+- **Verified pricing:** (read twice on pippit.ai/pricing on 6 September 2026 from a Netherlands exit, both reads identical; the figures are in euros because the page prices in the visitor's currency) The page open…
 - **Honest take:** The meter is credits per attempt, not per usable result — and buyer reviews centre on exactly that.
 - **Best for:** solo founders and small teams that want a steady stream of product-marketing videos and posters generated from a product link, without filming anything
-- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-26 on pippit.ai/pricing over a US connection, on the yearly tab) Free is $0 with daily credits and no card.'}, {'f': 'free_tier', 'ev': '(read 2026-08-26 on pippit.ai/pricing over a US connection, on the yearly tab) Free is $0 with daily credits and no card.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Yearly: Free is €0 with recurring daily credits and no card; Starter €105 a year (list €170) for 2,100 credits a month; Plus €310 (list €515) for 6,7…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pippit-review/
 
 ## Pixel Union (pixelunion.net)
@@ -2301,7 +2307,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/shoeboxed-review/
 
 ## Shorby (shorby.com)
-- **Verified pricing:** (prices last read 2026-08) Rocket about $15/mo, Pro ~$29/mo (analytics, custom domains), Agency ~$99/mo (multi-client); 7-day trial, no permanent free tier.
+- **Verified pricing:** (re-verified 2026-09-06 at dash.shorby.com/pricing) Three paid plans, no free plan on the table.
 - **Honest take:** In a category where the market leader has a generous free plan, Shorby charges from day one, so it has to earn the gap.
 - **Best for:** creators and businesses that sell via messenger conversations or retarget link-in-bio traffic with ad pixels
 - **Flags:** {'f': 'free_tier', 'ev': 'In a category where the market leader has a generous free plan, Shorby charges from day one, so it has to earn the gap.'}

@@ -1360,10 +1360,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/invideo-review/
 
 ## involve.me (involve.me)
-- **Verified pricing:** (re-verified 4 Sep 2026) There is a free plan to start on; the 14-day trial of a paid plan asks for billing details first.
-- **Honest take:** The tier ladder is really a funnel-and-seat ladder — 3 live funnels on Start evaporates once you run campaigns in parallel, and Start cannot buy extra seats at all, so a second user means the $40 step up to Gr…
+- **Verified pricing:** (re-verified 7 September 2026 — the paid figures on the public page, the free plan measured inside the product, because involve.me publishes nothing about it) There is a free plan, and this…
+- **Honest take:** The tier pages sell live funnels, but the meter that empties first is contacts.
 - **Best for:** marketers building interactive lead-gen — quizzes, calculators, assessments and payment funnels with built-in email sequences — who want a free tier to validate the concept first
-- **Flags:** {'f': 'per_seat', 'ev': 'Extra seats are $10/user/mo, but the comparison table marks them unavailable on Start.'}, {'f': 'usage_metered', 'ev': 'AI credits are metered as well: 50 a month on Start, 100 on Grow, 300 on Scale.'}, {'f': 'annual_lock', 'ev': 'Enterprise is from $499/mo on annual contracts only.'}, {'f': 'free_tier', 'ev': '(re-verified 4 Sep 2026) There is a free plan to start on; the 14-day trial of a paid plan asks for billing details first.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The tier pages also hide three meters that decide more than the funnel count does: funnel visits a month (10,000 / 25,000 / 100,000), contacts collec…'}, {'f': 'annual_lock', 'ev': 'Enterprise is from $499/mo on annual contracts only.'}, {'f': 'free_tier', 'ev': '(re-verified 7 September 2026 — the paid figures on the public page, the free plan measured inside the product, because involve.me publishes nothing …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/involve-me-review/
 
 ## Jibble (jibble.io)
@@ -1874,7 +1874,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pippit-review/
 
 ## Pixel Union (pixelunion.net)
-- **Verified pricing:** Pixel Union sells premium Shopify themes (Empire, Atlantic, Tailor, Grid, Editions, Startup) as one-time purchases, but pixelunion.net itself prints no prices: every theme links out to the …
+- **Verified pricing:** Read on 7 September 2026.
 - **Honest take:** A premium theme is a strong starting point, not a finished store.
 - **Best for:** online retailers and larger-catalog stores that want a professionally designed, conversion-focused Shopify storefront without paying for custom development
 - **Full review:** https://aibuildermarketplace.com/b2b/pixel-union-review/
@@ -1921,9 +1921,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/preorder-now-review/
 
 ## Prezi (prezi.com)
-- **Verified pricing:** Three plans, read on prezi.com/pricing on 5 September 2026 (shown in euros from the EU; the dollar ladder matches): Standard €5 a month, Plus €15 a month and Premium €25 a month, all billed…
+- **Verified pricing:** Three plans, re-read on prezi.com/pricing (which redirects to prezi.com/gts/pricing) on 7 September 2026, shown in euros from an EU exit: Standard €5 a month, Plus €15 a month and Premium €…
 - **Honest take:** It exports to PDF only — no editable .pptx — and the zooming format is polarising: some audiences find it engaging, others find it disorienting.
 - **Best for:** presenters who want motion and zooming-canvas storytelling that stands out from slide decks — especially for talks, pitches and teaching
+- **Flags:** {'f': 'usage_metered', 'ev': 'The comparison table is where the gates actually are: Prezi AI is 500 credits on Standard and unlimited above it; presentation recording, smart brand…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/prezi-review/
 
 ## Pricefy (pricefy.io)
@@ -1934,10 +1935,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pricefy-review/
 
 ## Printify (printify.com)
-- **Verified pricing:** (re-verified 2026-08-17) A free plan at $0 a month — you pay only the product base cost plus shipping per order — and Premium from $39 a month, or from $24.99 a month billed yearly, which t…
+- **Verified pricing:** (re-verified 2026-09-07) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium from $39 a month, or from $24.99 a month billed yearly, which…
 - **Honest take:** Printify makes nothing until you sell — the Premium fee only pays off past a break-even order volume, and because it's a middleman marketplace, print quality and shipping vary by the provider you pick.
 - **Best for:** creators and stores testing print-on-demand with no upfront cost, upgrading to Premium once volume justifies it
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-17) A free plan at $0 a month — you pay only the product base cost plus shipping per order — and Premium from $39 a month, or fr…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17) A free plan at $0 a month — you pay only the product base cost plus shipping per order — and Premium from $39 a month, or fr…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium from $39 a month, or …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-07) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium from $39 a month, or …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/printify-review/
 
 ## Process Street (process.st)
@@ -2023,7 +2024,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/quicksigner-review/
 
 ## QuillBot (quillbot.com)
-- **Verified pricing:** Read in a browser on quillbot.com/premium from the EU on 5 September 2026: Free at €0 (paraphrasing up to 125 words in 2 modes, humanizer 6 uses a day), Premium at €8.33 a month billed annu…
+- **Verified pricing:** Read in a browser on quillbot.com/premium from an EU exit on 7 September 2026, with the annual toggle operated in both positions.
 - **Honest take:** The free tier is deliberately narrow: 125 words per paraphrase and two of the modes.
 - **Best for:** students, non-native writers and anyone who wants quick paraphrasing, grammar and summarizing help
 - **Flags:** {'f': 'free_tier', 'ev': 'The free tier is deliberately narrow: 125 words per paraphrase and two of the modes.'}
@@ -2093,17 +2094,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/respond-io-review/
 
 ## Restream (restream.io)
-- **Verified pricing:** (price re-verified 2026-08-17 against restream.io) (2026) A free plan (multistream to 2 channels, with Restream branding); Standard about $16/mo billed annually ($19 monthly, 3 channels), P…
-- **Honest take:** The channel caps are the business model — each tier buys a few more destinations, and every extra teammate is a separate $25/mo seat on top of the plan.
+- **Verified pricing:** Re-read on restream.io/pricing on 7 September 2026, with both the Creator/Business tabs and the Monthly/Annually toggle operated.
+- **Honest take:** The channel caps are the business model -- each tier buys a few more destinations.
 - **Best for:** creators, podcasters and marketing teams who broadcast one show to many platforms at once, without extra encoding hardware
-- **Flags:** {'f': 'addons_extra', 'ev': 'The channel caps are the business model — each tier buys a few more destinations, and every extra teammate is a separate $25/mo seat on top of the pl…'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-08-17 against restream.io) (2026) A free plan (multistream to 2 channels, with Restream branding); Standard about $16/mo bill…'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons are monthly on top: Clips +$19/+$29/+$59 and Webinars +$99/+$99/+$299 across the three tiers, extra team seats $25 a seat on Professional and…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/restream-review/
 
 ## Retouch4me (retouch4.me)
-- **Verified pricing:** (2026, all verified on their /pricing page) Three ways to pay.
+- **Verified pricing:** (read 2026-09-07 on retouch4.me/pricing and retouch4.me/products/retouch-plugins) Three ways to pay.
 - **Honest take:** Work out which lane you are in before you pay, because the three lanes price the same photo very differently.
 - **Best for:** high-volume portrait, school and wedding photographers who already live in Photoshop and want repetitive retouching (skin, stray hairs, dust, teeth) automated — owning the plugins outright or renting the whole suite on credits, wh
-- **Flags:** {'f': 'usage_metered', 'ev': '(2) Subscriptions that include the full plugin set plus a yearly retouch-credit allowance.'}, {'f': 'free_tier', 'ev': '(3) Pay-as-you-go cloud retouching at $0.10 per photo.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'They carry 2,400/6,000/18,000 retouching credits and 108,000/300,000/1,200,000 culling credits a year, 20/40/100 GB of MyShot storage, unlimited AI c…'}, {'f': 'free_tier', 'ev': '(3) Credit packs without a subscription: $24 for 100 retouching credits (plus 9,000 culling credits), $59 for 300 (25,000) and $179 for 1,200 (100,00…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/retouch4me-review/
 
 ## Rippling (rippling.com)
@@ -2113,11 +2114,11 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'quote_only', 'ev': "That $8 is an entry point, not a quote — the buttons beside it read 'Get a free quote' and 'Contact Sales', and the real bill depends on which module…"}, {'f': 'per_seat', 'ev': "The one figure Rippling publishes is a floor: its global-payroll page advertises 'Starting at $8 per month per user' for the platform (HR, payroll, b…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/rippling-review/
 
-## Riverside (riverside.fm)
-- **Verified pricing:** (read 2026-08-26 on riverside.fm/pricing over a US connection) Free covers one two-hour recording at 720p on a single track.
-- **Honest take:** The meter is not recording time, it is separate-track recording time — and separate tracks are the entire reason to use this rather than a video call.
+## Riverside (riverside.com)
+- **Verified pricing:** (read 2026-09-07 on riverside.com/pricing; riverside.fm now redirects to riverside.com.
+- **Honest take:** The meter is not recording time, it is separate-track download time — and separate tracks are the entire reason to use this rather than a video call.
 - **Best for:** podcasters and interviewers who need broadcast-quality audio and video from guests on bad connections — local recording at each end is genuinely the thing that solves it
-- **Flags:** {'f': 'usage_metered', 'ev': 'What separates them is recording hours and studios — 15 hours and one studio on Pro, 20 and two on Grow, 25 and three on Webinar — with 20 AI credits…'}, {'f': 'annual_lock', 'ev': 'The paid tiers carry two prices each: Pro is $35 a month or $24 on annual billing, Grow $45 or $34, Webinar $99 or $79.'}, {'f': 'free_tier', 'ev': 'The free tier is a demonstration rather than a plan: one 2-hour session, 720p, single track.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'AI credits: Pro starts with 2,000 and Business with 12,000, and Magic Clips, Magic Audio and the AI Co-Creator do not consume them.'}, {'f': 'annual_lock', 'ev': 'Amounts are region-priced: the page returned euros from a Netherlands exit on this date, with the same numerals our 26 August 2026 US reading returne…'}, {'f': 'free_tier', 'ev': 'There is a 14-day trial rather than a published free plan.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/riverside-review/
 
 ## RocketReach (rocketreach.co)
@@ -2182,10 +2183,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/scrolly-review/
 
 ## Seamless.ai (seamless.ai)
-- **Verified pricing:** (re-verified 2026-08-17) A free plan with 50 credits; everything above it is sales-led and quote-based, and neither our July nor our August 2026 capture retrieved a published figure.
+- **Verified pricing:** (read 2026-09-07 on seamless.ai/pricing and seamless.ai/llms.txt) Still no published amount above the free plan, in a fourth reading.
 - **Honest take:** Data accuracy is the recurring complaint — independent tests put email deliverability around 74% (20–30% bounce) versus ZoomInfo's ~2–3%, so real cost per usable contact climbs.
 - **Best for:** teams that want a huge real-time contact database and AI list-building for less than ZoomInfo, and can tolerate cleaning the data
-- **Flags:** {'f': 'quote_only', 'ev': '(re-verified 2026-08-17) A free plan with 50 credits; everything above it is sales-led and quote-based, and neither our July nor our August 2026 capt…'}, {'f': 'per_seat', 'ev': "Third-party guides report an entry around $147 a month for roughly 250 credits, ranging up to $150-500 per user a month — those are not Seamless's nu…"}, {'f': 'usage_metered', 'ev': '(re-verified 2026-08-17) A free plan with 50 credits; everything above it is sales-led and quote-based, and neither our July nor our August 2026 capt…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17) A free plan with 50 credits; everything above it is sales-led and quote-based, and neither our July nor our August 2026 capt…'}
+- **Flags:** {'f': 'quote_only', 'ev': "Pro: 'Per User', unlimited exports, annual credit packages, '1 Credits = Phone + Email', Contact sales."}, {'f': 'per_seat', 'ev': "Pro: 'Per User', unlimited exports, annual credit packages, '1 Credits = Phone + Email', Contact sales."}, {'f': 'usage_metered', 'ev': 'Free: 1 user, 50 credits.'}, {'f': 'addons_extra', 'ev': 'Four capabilities are marked Add-on in every column, Enterprise included: AI Assistant, Data Enrichment, Autopilot and Buyer Intent Data.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/seamless-ai-review/
 
 ## Section Library (sectionlibrary.com)
@@ -2203,10 +2204,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/securify-review/
 
 ## Seel (seel.com)
-- **Verified pricing:** Three plans on seel.com/pricing as of 3 September 2026: Free at $0 per store per month (no monthly platform fee), Growth at $99 per store per month, Enterprise at custom pricing.
+- **Verified pricing:** Three plans on seel.com/pricing, re-read 7 September 2026: Free at $0 per store per month (no monthly platform fee), Growth at $99 per store per month, Enterprise at custom pricing.
 - **Honest take:** Two things to weigh, and neither is the price you pay — because you do not pay one.
 - **Best for:** stores selling final-sale, high-consideration or hard-to-size products, where return anxiety is the thing killing the order — merchants report conversion lifting around 5% and shoppers taking the option roughly 24% of the time
-- **Flags:** {'f': 'quote_only', 'ev': 'Three plans on seel.com/pricing as of 3 September 2026: Free at $0 per store per month (no monthly platform fee), Growth at $99 per store per month, …'}, {'f': 'free_tier', 'ev': 'Three plans on seel.com/pricing as of 3 September 2026: Free at $0 per store per month (no monthly platform fee), Growth at $99 per store per month, …'}
+- **Flags:** {'f': 'quote_only', 'ev': 'Three plans on seel.com/pricing, re-read 7 September 2026: Free at $0 per store per month (no monthly platform fee), Growth at $99 per store per mont…'}, {'f': 'usage_metered', 'ev': 'Growth covers all five with capped usage — up to 100 resolved tickets, 100 listings, $500 attributed GMV, one Voice of Customer report (sentiment acr…'}, {'f': 'free_tier', 'ev': 'Three plans on seel.com/pricing, re-read 7 September 2026: Free at $0 per store per month (no monthly platform fee), Growth at $99 per store per mont…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/seel-review/
 
 ## Selixer (selixer.com)
@@ -2391,10 +2392,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/smtp-com-review/
 
 ## SMTP2GO (smtp2go.com)
-- **Verified pricing:** (price re-verified 2026-08-17 against smtp2go.com) (2026) Free 1,000 emails/mo (200/day); Starter about $15/mo (10,000 emails, overage ~$1/1k); Professional ~$75/mo (100,000, dedicated IPs,…
+- **Verified pricing:** (read 2026-09-07 on smtp2go.com/pricing with the volume slider walked through all nine stops; the plan cards carry the amounts in their data-rate-monthly and data-rate-annual attributes) Fr…
 - **Honest take:** It's the pragmatic middle of email infrastructure: simpler and better-supported than the hyperscale APIs, cheaper than most, with genuinely useful reporting — but sending reputation is still yours to earn.
 - **Best for:** businesses that want dependable transactional/bulk sending via SMTP or API with human support and clear per-volume pricing
-- **Flags:** {'f': 'usage_metered', 'ev': '(price re-verified 2026-08-17 against smtp2go.com) (2026) Free 1,000 emails/mo (200/day); Starter about $15/mo (10,000 emails, overage ~$1/1k); Profe…'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-08-17 against smtp2go.com) (2026) Free 1,000 emails/mo (200/day); Starter about $15/mo (10,000 emails, overage ~$1/1k); Profe…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Starter: $15/mo or $150/year for 10,000 (overage $1.20 per thousand); $30/mo or $300/year for 50,000 ($1 per thousand).'}, {'f': 'free_tier', 'ev': 'Professional: $75/$750 for 100,000 ($0.85), $170/$1,700 for 250,000 ($0.70), $280/$2,800 for 500,000 ($0.60), $520/$5,200 for 1,000,000 ($0.50), and …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/smtp2go-review/
 
 ## SocialBee (socialbee.io)

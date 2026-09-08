@@ -251,6 +251,15 @@
         '<span id="rr-msg" style="margin-left:12px;font-size:.85rem;color:#94a3b8"></span></div>' +
       '</form>';
     host.appendChild(sec);
+    /* Elke videobeschrijving linkt naar .../#reader-reviews. De browser lost die
+       hash op voordat dit blok bestaat, dus zonder deze regels landt de kijker
+       bovenaan een lange reviewpagina en vindt het formulier nooit - 8 sep 2026.
+       Het formulier staat dan meteen open: wie hierheen klikt, komt om te schrijven. */
+    if (location.hash === '#reader-reviews') {
+      document.getElementById('rr-open').style.display = 'none';
+      document.getElementById('rr-form').style.display = 'block';
+      sec.scrollIntoView();
+    }
     document.getElementById('rr-open').addEventListener('click', function(){
       this.style.display = 'none';
       document.getElementById('rr-form').style.display = 'block';

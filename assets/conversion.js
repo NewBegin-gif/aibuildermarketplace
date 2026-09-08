@@ -255,11 +255,16 @@
        hash op voordat dit blok bestaat, dus zonder deze regels landt de kijker
        bovenaan een lange reviewpagina en vindt het formulier nooit - 8 sep 2026.
        Het formulier staat dan meteen open: wie hierheen klikt, komt om te schrijven. */
-    if (location.hash === '#reader-reviews') {
+    function naarBlok(){
+      if (location.hash !== '#reader-reviews') return;
       document.getElementById('rr-open').style.display = 'none';
       document.getElementById('rr-form').style.display = 'block';
       sec.scrollIntoView();
     }
+    /* Drie keer: meteen, zodra de reviewkaarten binnen zijn, en op window.load.
+       Lazy-loading beelden boven het blok schuiven de pagina anders alsnog weg. */
+    naarBlok();
+    window.addEventListener('load', naarBlok);
     document.getElementById('rr-open').addEventListener('click', function(){
       this.style.display = 'none';
       document.getElementById('rr-form').style.display = 'block';
@@ -276,6 +281,7 @@
           '<p style="margin:8px 0 0;color:#e2e8f0">“' + esc(r.why) + '”</p>';
         list.appendChild(c);
       });
+      naarBlok();
     }).catch(function(){});
     document.getElementById('rr-form').addEventListener('submit', function(e){
       e.preventDefault();

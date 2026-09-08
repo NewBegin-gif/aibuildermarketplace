@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 440 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-07.
+All 442 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-08.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -409,6 +409,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'On credit card it is deducted automatically and does not appear on the individual trip invoice — it arrives as a separate service fee statement on th…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bolt-business-review/
 
+## BookX (logbase.io)
+- **Verified pricing:** (read 2026-09-08 on apps.shopify.com/appointment-booking-bookeasy and checked against the vendor's own pricing section on logbase.io, which lists the same tiers) Four tiers billed in USD ev…
+- **Honest take:** The free plan is a demonstration rather than a plan.
+- **Best for:** Shopify merchants running appointment-based services — salons, studios, clinics, rentals, classes and events — who want the booking calendar inside the store they already sell from, with staff and multi-location schedules and paym
+- **Flags:** {'f': 'free_tier', 'ev': 'The free plan is a demonstration rather than a plan.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/bookx-review/
+
 ## Bookyourdata (bookyourdata.com)
 - **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.
 - **Honest take:** The model is honest — no subscription, credits keep, bad data refunded — so the real scrutiny belongs on usage.
@@ -705,6 +712,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** researchers, clinicians, students and writers who want evidence-backed answers drawn from peer-reviewed papers instead of the open web
 - **Flags:** {'f': 'free_tier', 'ev': 'Our dated reading: a free tier with essential search; Pro about $15/mo, or roughly $10/mo billed annually, with unlimited Pro searches and 15 Deep se…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/consensus-review/
+
+## Consentmo (consentmo.com)
+- **Verified pricing:** (read 2026-09-08 on apps.shopify.com/gdpr-backpack and on the vendor's own consentmo.com/pricing, which list the same four tiers) Billed in USD every 30 days, with a 7-day free trial on eac…
+- **Honest take:** Read the ladder before you budget $10 for this.
+- **Best for:** Shopify merchants selling into several jurisdictions who want one app to carry the cookie banner, the consent signals the ad platforms now demand, and a first layer of accessibility — and who go in knowing that the region-aware ba
+- **Flags:** {'f': 'free_tier', 'ev': "And the free tier puts Consentmo's own branding on the banner your visitors see first."}
+- **Full review:** https://aibuildermarketplace.com/b2b/consentmo-review/
 
 ## Contractor Foreman (contractorforeman.com)
 - **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; all plan prices unchanged since 1 Aug 2026) Priced for the company rather than per seat, with unlimited projects on every tier, and every…
@@ -2232,9 +2246,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seller-snap-review/
 
 ## Sellfy (sellfy.com)
-- **Verified pricing:** (re-verified 2026-09-02, and the August increase has been reversed) Starter is $29/mo billed monthly or $22/mo billed yearly, for up to $10k of sales a year: the July figures, back after a …
-- **Honest take:** The honest mechanic is the revenue ladder: plans cap by your ANNUAL SALES, so success automatically promotes you to a pricier tier — factor that into margins rather than discovering it at $10,001.
+- **Verified pricing:** (re-verified 2026-09-07) Starter is $29/mo billed monthly or $22/mo billed yearly, for up to $10k of sales a year; Business $79 or $59, up to $50k; Premium $159 or $119, up to $200k; above …
+- **Honest take:** The honest mechanic is the revenue ladder: plans cap by your ANNUAL SALES, so success moves you up.
 - **Best for:** creators selling digital products, subscriptions and print-on-demand who want a simple store with zero platform commission
+- **Flags:** {'f': 'usage_metered', 'ev': "The revenue limits are soft: Sellfy's own pricing.md says the store is never suspended and you are never forced to upgrade, while the page's FAQ says…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/sellfy-review/
 
 ## Sendcloud (sendcloud.com)
@@ -2315,10 +2330,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/shorby-review/
 
 ## Shore (shore.com)
-- **Verified pricing:** (2026-08-15, read on their own pricing page, in euros) There are three packages, each per month and each currently marked down from a struck-through list price.
+- **Verified pricing:** (2026-09-07, read on their own pricing pages in English and German, in euros) Three packages, each showing two figures that are a billing choice rather than a discount: the higher is the mo…
 - **Honest take:** It's built for local appointment businesses, and that's also the boundary: the integration list is short (calendar, Google, Instagram, Meta), and once you add POS and payments the monthly total climbs well pas…
 - **Best for:** salons, barbers, spas, wellness studios, physical therapists, craftspeople and local retailers that want bookings via Google and Instagram, no-show-reducing reminders, marketing and (optionally) POS in one fixed-price system
-- **Flags:** {'f': 'per_seat', 'ev': 'The top tier adds shift planning, revenue reports per employee, register analytics and a direct DATEV connection.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons: a professional website at EUR 65/month and a branded web app at EUR 40/month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/shore-review/
 
 ## Signal House (signalhouse.io)
@@ -2336,10 +2351,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/signeasy-review/
 
 ## SignNow (signnow.com)
-- **Verified pricing:** Three seat plans, read on signnow.com on 5 September 2026 (shown in euros from the EU; the dollar ladder is the same numbers): Business at €8 per user a month on annual billing (€20 month-t…
+- **Verified pricing:** Three seat plans, read on signnow.com/pricing.md on 7 September 2026: Business at $8 per user a month on annual billing, Business Premium at $15 and Enterprise at $30, with month-to-month p…
 - **Honest take:** It's built for straightforward everyday signing — if you need deep contract-lifecycle (CLM) features, a heavier platform fits better.
 - **Best for:** teams that sign at volume and want unlimited users at a flat rate — roughly 60% under DocuSign for the same core job
-- **Flags:** {'f': 'per_seat', 'ev': 'Three seat plans, read on signnow.com on 5 September 2026 (shown in euros from the EU; the dollar ladder is the same numbers): Business at €8 per use…'}, {'f': 'annual_lock', 'ev': 'Three seat plans, read on signnow.com on 5 September 2026 (shown in euros from the EU; the dollar ladder is the same numbers): Business at €8 per use…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Three seat plans, read on signnow.com/pricing.md on 7 September 2026: Business at $8 per user a month on annual billing, Business Premium at $15 and …'}, {'f': 'usage_metered', 'ev': 'Free 7-day trial, no credit card required.'}, {'f': 'addons_extra', 'ev': 'A Site License is billed at $1.50 per signature invite instead of per seat, aimed at organisations sending 1,000+ documents a year, and is where SSO,…'}, {'f': 'annual_lock', 'ev': 'Three seat plans, read on signnow.com/pricing.md on 7 September 2026: Business at $8 per user a month on annual billing, Business Premium at $15 and …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/signnow-review/
 
 ## Similarweb (similarweb.com)
@@ -2406,10 +2421,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/socialbee-review/
 
 ## Softr (softr.io)
-- **Verified pricing:** (re-verified 2026-08-17) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credits a month.
-- **Honest take:** Builder seats are billed on top of the plan.
+- **Verified pricing:** (re-verified 2026-09-07) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credits a month.
+- **Honest take:** Builder seats are billed on top of the plan, and pricing counts builders and app users separately, so a public-facing app with a lot of end users gets expensive fast.
 - **Best for:** teams building internal tools, client portals or member apps on top of Airtable or Google Sheets without code
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-17) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credit…'}, {'f': 'addons_extra', 'ev': 'Builder seats are billed on top of the plan.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credit…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credit…'}, {'f': 'addons_extra', 'ev': 'Builder seats are billed on top of the plan, and pricing counts builders and app users separately, so a public-facing app with a lot of end users get…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-07) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credit…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/softr-review/
 
 ## Spiky.ai (spiky.ai)
@@ -2420,10 +2435,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/spiky-ai-review/
 
 ## Spocket (spocket.co)
-- **Verified pricing:** (re-verified 2026-08-17) Four monthly plans: Starter $39.99 (25 unique products), Pro $59.99 (250 products), Empire $99.99 (10,000) and Unicorn $299.99 (25,000).
+- **Verified pricing:** (re-verified 2026-09-07) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products, 25 premium), Empire $99.99 (10,000 / 10,000) and Unicorn $29…
 - **Honest take:** Spocket's pitch is faster-shipping US and EU suppliers, and that's real — but you still pay twice: the monthly subscription and the wholesale product cost, so margins depend on picking items with room to mark …
 - **Best for:** dropshippers who want vetted US and EU suppliers with faster shipping and one-click store integration, prioritizing delivery speed over raw catalog size
-- **Flags:** {'f': 'usage_metered', 'ev': 'There is a 7-day trial and no per-order platform fee on top of the subscription — 0% transaction fee is stated on every tier.'}, {'f': 'addons_extra', 'ev': 'There is a 7-day trial and no per-order platform fee on top of the subscription — 0% transaction fee is stated on every tier.'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as eight months free, which the page quantifies as savings of $432, $516 and $2,563 on the upper plans, bringing Pro to …'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products, 25 premium), Empire …'}, {'f': 'addons_extra', 'ev': 'Multiple-store support is listed on all plans, but the page states a separate subscription is required for each store.'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as eight months free and the annual rates are printed on the cards: Pro $24 a month, Empire $57 and Unicorn $79, with st…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/spocket-review/
 
 ## Stackable (stkbl.app)

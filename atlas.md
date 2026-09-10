@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 444 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-10.
+All 448 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1036,6 +1036,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'One correction to what we wrote before: the sentence we attributed to Feedvisor, that pricing is hybrid and varies with catalogue size, ad spend and …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/feedvisor-review/
 
+## Feedyio (feedyio.com)
+- **Verified pricing:** (read 2026-09-10 on apps.shopify.com/product-feed-10) Four published tiers, billed in USD every 30 days.
+- **Honest take:** Two gates decide your bill and neither is about how much value the feeds create.
+- **Best for:** Shopify merchants who need several feeds at once, in formats they control — custom XML, CSV, TXT or JSON built from their own template — and especially those selling into Central and Eastern European marketplaces and price-compari
+- **Flags:** {'f': 'free_tier', 'ev': 'The second is freshness — the free tier updates products once a day, and hourly updates start at $9.99, which matters when stock moves faster than a …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/feedyio-review/
+
 ## Filevine (filevine.com)
 - **Verified pricing:** (2026-08-29, read on their own pricing page) No prices are shown.
 - **Honest take:** Nothing is priced, so everything is negotiable — which cuts both ways.
@@ -1215,6 +1222,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** web developers, designers and agencies prospecting local businesses that do not have a website yet — surfaced from Google Maps with contact details
 - **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-12, read on their own buy-credits page) Pay-as-you-go credit packs, bought once rather than subscribed to: Freelancer $28 for 50…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-12, read on their own buy-credits page) Pay-as-you-go credit packs, bought once rather than subscribed to: Freelancer $28 for 50…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/grapeleads-review/
+
+## Grapevine (grapevine-surveys.com)
+- **Verified pricing:** (read 2026-09-10 on apps.shopify.com/grapevine) One plan, called Complete, at $25 a month, billed in USD every 30 days, with a 14-day free trial and no free tier.
+- **Honest take:** The flat price is the whole pricing page, which cuts both ways.
+- **Best for:** Shopify stores running more than one marketing channel that want attribution from customers rather than from cookies — post-purchase 'how did you hear about us', NPS and CSAT — with unlimited responses at a predictable flat price,
+- **Full review:** https://aibuildermarketplace.com/b2b/grapevine-review/
 
 ## Gravity Forms (gravity.com)
 - **Verified pricing:** Annual WordPress licences, read 1 Sep 2026 on gravityforms.com/pricing/: Basic $59/yr (1 site), Pro $159/yr (3 sites, payment add-ons such as Stripe, Square and PayPal Checkout), Elite $259…
@@ -1489,6 +1502,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** budget-conscious teams, international businesses and anyone needing bulk or programmatic page generation across 29 languages
 - **Flags:** {'f': 'usage_metered', 'ev': 'Custom domains are metered: 1 on Build, 3 on Optimize, 10 on Scale and 100 on Enterprise, with extras at $5 a month each.'}, {'f': 'renewal_jump', 'ev': 'A promotional rate roughly half the Build price appears periodically — it is a limited-time offer rather than the standard rate.'}, {'f': 'annual_lock', 'ev': 'Annual billing includes two months free against monthly.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/landingi-review/
+
+## LangShop (langshop.io)
+- **Verified pricing:** (read 2026-09-10 on apps.shopify.com/langshop) Four published tiers, billed in USD every 30 days.
+- **Honest take:** Two things sit awkwardly next to each other in the plan table.
+- **Best for:** Shopify merchants selling into several language markets who want machine translation they can correct by hand — glossary rules, brand terms, bulk editing — plus a geolocated language and currency switcher, and whose catalogue and 
+- **Full review:** https://aibuildermarketplace.com/b2b/langshop-review/
 
 ## Later (later.com)
 - **Verified pricing:** (re-verified 2026-08-17) Starter $18.75/month, Growth $37.50 and Scale $82.50, all billed yearly, which Later advertises as three months free and 25% off against monthly.
@@ -2064,6 +2083,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** WordPress site owners who want a powerful, feature-rich SEO plugin — the free version alone beats most paid rivals
 - **Flags:** {'f': 'usage_metered', 'ev': 'The free version is so generous that many sites never need to upgrade — PRO mainly earns its keep once you want built-in rank tracking, Content AI cr…'}, {'f': 'free_tier', 'ev': 'The free version is so generous that many sites never need to upgrade — PRO mainly earns its keep once you want built-in rank tracking, Content AI cr…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/rank-math-review/
+
+## ReachStream (reachstream.com)
+- **Verified pricing:** (read 2026-09-10 on reachstream.com/prospect/pricing/, with both billing toggles) Five tiers in USD.
+- **Honest take:** The meter is on exporting, not on looking, and that is the number to size before you pick a tier.
+- **Best for:** small sales and marketing teams that want a B2B contact database with a published price rather than a quote, and whose volume is predictable enough to size in exports a month — the tier below the ones where ZoomInfo and Cognism st
+- **Flags:** {'f': 'usage_metered', 'ev': 'Free is $0 with 100 export credits a month and 2,400 email views a year.'}, {'f': 'annual_lock', 'ev': 'Starter is $39 a month, or $29 on annual billing, for 5,000 export credits a month.'}, {'f': 'free_tier', 'ev': 'Free is $0 with 100 export credits a month and 2,400 email views a year.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/reachstream-review/
 
 ## Readymode (readymode.com)
 - **Verified pricing:** (re-verified 2026-08-17 on their own pricing page, after the vendor announced a price change effective 1 Aug 2026) Two published plans, priced per license per month: Starter $239 for 1+ lic…
@@ -2768,7 +2794,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Typewise (typewise.app)
 - **Verified pricing:** (re-read 2026-09-05 on typewise.app/pricing, a page that did not exist in August) A base plan plus a per-resolution rate.
-- **Honest take:** The bill has two parts now and both are published: a base fee from $99 and a resolution rate from $2 (pay as you go) down to $1 with volume packages.
+- **Honest take:** The bill has two parts and both are published: a base fee from $99 and a resolution rate from $2 (pay as you go) down to $1 with volume packages.
 - **Best for:** customer-service teams with real ticket volume that want AI agents to resolve requests end to end and act inside the systems they already run — CRM, ERP, billing, commerce — with approval steps and human handover as they raise the
 - **Flags:** {'f': 'per_seat', 'ev': 'Additional users are $89 a month.'}, {'f': 'usage_metered', 'ev': 'Every plan starts with a 14-day trial of 100 resolution credits and $10 of AI Operator credit, no card.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/typewise-review/
@@ -2917,10 +2943,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/weave-review/
 
 ## WebCatalog (webcatalog.io)
-- **Verified pricing:** (read 2026-08-25 on their own pricing page, re-read 2026-09-05 from a European connection where it prices in euros: Pro €4.31 and Business €6.89 per user a month billed annually, plus local…
+- **Verified pricing:** (read 2026-08-25 on their own pricing page, re-read 2026-09-10 in a browser) Basic is free and no card is required: 2 desktop apps, 2 profiles and 1 space.
 - **Honest take:** It solves a real annoyance: dozens of web apps and multiple accounts per app as tidy desktop windows.
 - **Best for:** people juggling many web apps and multiple accounts per service who want them as clean, separate desktop apps with per-profile isolation
-- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-25 on their own pricing page, re-read 2026-09-05 from a European connection where it prices in euros: Pro €4.31 and Business €6.89 per …'}, {'f': 'addons_extra', 'ev': 'Business is $8 per user per month billed annually and adds shared spaces, team management, centralised billing and an activity log, with SAML single …'}, {'f': 'free_tier', 'ev': "The free plan's 2-app limit is tight, but browser profiles and PWAs solve part of the same problem for free."}
+- **Flags:** {'f': 'per_seat', 'ev': 'Pro is $5 per user per month billed annually, plus local taxes, and lifts those caps to unlimited apps, profiles and spaces with cloud sync, pages, t…'}, {'f': 'free_tier', 'ev': "The free plan's 2-app limit is tight, but browser profiles and PWAs solve part of the same problem for free."}
 - **Full review:** https://aibuildermarketplace.com/b2b/webcatalog-review/
 
 ## Webflow (webflow.com)
@@ -2946,7 +2972,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## WhatConverts (whatconverts.com)
 - **Verified pricing:** (re-verified 2026-09-05 on whatconverts.com/pricing) Two ladders behind one toggle, and the page opens on the single-account one.
-- **Honest take:** The meter is honest and the rate is invisible: every phone number, call minute, text, form, chat, appointment, email, event and transaction is charged against a monthly credit, and past that credit WhatConvert…
+- **Honest take:** The meter is honest and the unit rate is invisible: every phone number, call minute, text, form, chat, appointment, email, event and transaction is charged against a monthly credit, and past that credit WhatCo…
 - **Best for:** agencies and lead-gen businesses that want every lead — calls, forms, chats — attributed to its source and campaign without enterprise-suite prices
 - **Flags:** {'f': 'usage_metered', 'ev': 'Single account: Call Tracking $30 a month, Plus $60 (forms, chat, ecommerce), Pro $100 (HIPAA, call flows, report builder), Elite $160 (customer jour…'}, {'f': 'addons_extra', 'ev': 'Past the included credit, the comparison table on the same page prints the usage rates: additional local numbers $2.50 each, local minutes 4.5 cents …'}, {'f': 'free_tier', 'ev': 'Past the included credit, the comparison table on the same page prints the usage rates: additional local numbers $2.50 each, local minutes 4.5 cents …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/whatconverts-review/

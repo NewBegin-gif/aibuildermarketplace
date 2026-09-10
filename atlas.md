@@ -951,7 +951,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-08-28, read on their own pricing page at employmenthero.com/pricing/) EVERY PRICE ON THAT PAGE IS AUD EXCLUDING GST — the page states it in its own disclaimer.
 - **Honest take:** There is no such thing as the Employment Hero price, and the first thing to fix is the currency: the pricing page is the Australian one, its disclaimer says every figure is AUD excluding GST, and there is no U…
 - **Best for:** Australian and New Zealand employers who want HR and payroll from one vendor and will genuinely use both, where the per-employee rate beats separate systems
-- **Flags:** {'f': 'per_seat', 'ev': 'HR Essentials A$10 per employee per month, HR Engage A$14; HR Elite and Employment Unlimited are quote-only.'}, {'f': 'usage_metered', 'ev': 'Interview credits reset monthly, unused credits do not roll over, and overage is billed automatically with no hard cap.'}, {'f': 'addons_extra', 'ev': 'There is no standalone payroll tier on the page any more: payroll sits inside Employment Unlimited, and Managed Payroll is an add-on at A$20 per empl…'}, {'f': 'free_tier', 'ev': 'Recruitment: a free ATS tier at A$0 that includes 50 complimentary AI video interviews as a one-off trial, then A$199, A$359, A$639 and A$959 a month…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'HR Essentials A$10 per employee per month, HR Engage A$14; HR Elite and Employment Unlimited are quote-only.'}, {'f': 'usage_metered', 'ev': 'Interview credits reset monthly, unused credits do not roll over, and overage is billed automatically with no hard cap.'}, {'f': 'addons_extra', 'ev': 'There is no standalone payroll tier on the page any more: payroll sits inside Employment Unlimited, and Managed Payroll is an add-on at A$20 per empl…'}, {'f': 'free_tier', 'ev': 'Recruitment: a free ATS tier at A$0 that includes 50 complimentary AI video interviews as a one-off trial, then A$199, A$359 and A$639 a month for 50…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/employment-hero-review/
 
 ## EngageBay (engagebay.com)
@@ -1010,10 +1010,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/expertise-ai-review/
 
 ## ExpertSender (expertsender.com)
-- **Verified pricing:** (price re-verified 2026-08-17 against the vendor's own pricing page) (2026) Quote-based with a documented floor: their site lists pricing starting around $450/mo, scaling with volume and ch…
+- **Verified pricing:** (re-verified 10 September 2026 on expertsender.com — on the home page, because the pricing page is gone: /pricing, /pricing-plans/ and /en/pricing/ all return 404) (2026) Quote-based with a…
 - **Honest take:** The $450/mo floor and the 30k-monthly-visits target make this an established-store tool, not a starter one: below that traffic the platform can't pay for itself, and there is no self-serve plan to test it chea…
 - **Best for:** e-commerce stores from 10,000+ monthly visitors (the vendor's own stated ICP) and high-volume senders doing 100k+ emails a month, who want email, SMS, push and on-site messaging on one unified customer data platform with a managed
-- **Flags:** {'f': 'quote_only', 'ev': "(price re-verified 2026-08-17 against the vendor's own pricing page) (2026) Quote-based with a documented floor: their site lists pricing starting ar…"}
+- **Flags:** {'f': 'quote_only', 'ev': '(re-verified 10 September 2026 on expertsender.com — on the home page, because the pricing page is gone: /pricing, /pricing-plans/ and /en/pricing/ a…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/expertsender-review/
 
 ## Fast Bundle (fastbundle.co)
@@ -1820,10 +1820,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/oyster-review/
 
 ## PagePulse (getpagepulse.io)
-- **Verified pricing:** (2026) Genuinely free tier: $0 for 1 member and 1 page with unlimited traffic.
+- **Verified pricing:** (read 10 September 2026 on getpagepulse.io — the plans sit on the home page under the #pricing anchor; /pricing itself returns 404.) Five tiers, and the meter is pages plus AI insights rath…
 - **Honest take:** The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages.
 - **Best for:** solos and small teams who want simple per-page analytics — heatmaps, visitor behavior and AI-summarized insights — with a genuinely free single-page tier to start
-- **Flags:** {'f': 'usage_metered', 'ev': 'AI insights are metered per month per tier, and the ‘unlimited traffic’ promise carries a fair-use asterisk.'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% — and note the footnote: ‘unlimited’ traffic is subject to fair use.'}, {'f': 'free_tier', 'ev': '(2026) Genuinely free tier: $0 for 1 member and 1 page with unlimited traffic.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'AI insights are metered per month per tier, and the ‘unlimited traffic’ promise carries a fair-use asterisk.'}, {'f': 'annual_lock', 'ev': 'Annual billing is marked Save 20%.'}, {'f': 'free_tier', 'ev': 'Free $0: 1 page, unlimited traffic, unlimited collaborators, 14 days of data retention and 15 AI insights a month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pagepulse-review/
 
 ## Pangram (pangram.com)
@@ -2198,10 +2198,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/salesflow-review/
 
 ## Salesmessage (salesmessage.com)
-- **Verified pricing:** (2026-08-08, re-verified on their own pricing page) Repackaged since our last check into two named plans plus Enterprise, metered in message credits.
+- **Verified pricing:** (2026-08-08, re-verified 10 September 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plans plus Enterprise, metered in message cr…
 - **Honest take:** Two things changed here and both cost money.
 - **Best for:** sales and service teams that want two-way texting and calling in one CRM-linked inbox, and can estimate their monthly credit burn — messages plus call minutes — before they sign
-- **Flags:** {'f': 'usage_metered', 'ev': '(2026-08-08, re-verified on their own pricing page) Repackaged since our last check into two named plans plus Enterprise, metered in message credits.'}, {'f': 'addons_extra', 'ev': 'Both plans carry a credits dropdown that raises the allowance for a fixed add-on.'}, {'f': 'annual_lock', 'ev': 'Annual billing is shown as two months free.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(2026-08-08, re-verified 10 September 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plan…'}, {'f': 'addons_extra', 'ev': 'Both plans carry a credits dropdown that raises the allowance for a fixed add-on.'}, {'f': 'annual_lock', 'ev': 'Annual billing is shown as two months free.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/salesmessage-review/
 
 ## SaneBox (sanebox.com)
@@ -2255,7 +2255,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 10 September 2026 on apps.shopify.com/selixer) Three tiers, no free plan, each with a 14-day free trial.
 - **Honest take:** Read the feature lists rather than the prices and the entry tier stops looking like the product.
 - **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
-- **Flags:** {'f': 'usage_metered', 'ev': 'Essance $149 a month: two user seats, one connected ad platform, a year of historical data, the ad dashboard with campaigns and trends, stockout, ove…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Essence $149 a month: two user seats, one connected ad platform, a year of historical data, the ad dashboard with campaigns and trends, stockout, ove…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/selixer-review/
 
 ## Seller Investigators (sellerinvestigators.com)

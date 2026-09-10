@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 444 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-09.
+All 444 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -110,7 +110,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/airwallex-review/
 
 ## AISDR (aisdr.com)
-- **Verified pricing:** (re-verified 2026-08-17 from AiSDR's own machine-readable pricing page) There are three published plans.
+- **Verified pricing:** (re-verified 2026-09-09 on AiSDR's own pricing page) There are three published plans.
 - **Honest take:** It's priced like an SDR salary because it's meant to replace part of that function — so judge it on cost-per-meeting, not the sticker, and expect a quarterly commitment rather than a flip-the-switch monthly.
 - **Best for:** sales teams with a clear ICP and offer that want autonomous AI to qualify leads, personalize outreach and book meetings around the clock
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing takes 20% off.'}
@@ -1347,10 +1347,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/increff-review/
 
 ## Insightful (insightful.io)
-- **Verified pricing:** (price re-verified 2026-09-01 against the vendor's own pricing page) (2026) Per seat, billed annually.
-- **Honest take:** This is employee-monitoring software, so weigh the culture cost, not just the price: the advertised $8-16 rates are per seat AND assume annual billing, security features like insider-threat detection are a pai…
-- **Best for:** operations leaders who want transparent, consent-based workforce analytics — time tracking, productivity insight and workflow data — across in-office and remote teams
-- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-09-01 against the vendor's own pricing page) (2026) Per seat, billed annually."}, {'f': 'addons_extra', 'ev': 'Add-ons: Workspace Security $4/seat/mo, screen recording $4, on-demand screenshots $4, higher-frequency screenshots $3 (up to 120 an hour), data-ware…'}, {'f': 'annual_lock', 'ev': 'This is employee-monitoring software, so weigh the culture cost, not just the price: the advertised $8-16 rates are per seat AND assume annual billin…'}, {'f': 'free_tier', 'ev': 'Add-ons: Workspace Security $4/seat/mo, screen recording $4, on-demand screenshots $4, higher-frequency screenshots $3 (up to 120 an hour), data-ware…'}
+- **Verified pricing:** (price re-verified 2026-09-09 against the vendor's own pricing page) (2026) Per seat; the rates below are the annual ones.
+- **Honest take:** This is employee-monitoring software, so weigh the culture cost, not just the price: the advertised $8-16 rates are per seat AND are the annual ones (month-to-month exists on select plans but is never priced),…
+- **Best for:** COOs, CFOs and operations leaders who want a work intelligence platform rather than a time clock: workforce analytics plus AI process capture — where the hours go, and how the work actually flows — across in-office and remote team
+- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-09-09 against the vendor's own pricing page) (2026) Per seat; the rates below are the annual ones."}, {'f': 'addons_extra', 'ev': 'Add-ons: Workspace Security $4/seat/mo, screen recording $4, on-demand screenshots $4, higher-frequency screenshots $3 (up to 120 an hour), data-ware…'}, {'f': 'free_tier', 'ev': 'Add-ons: Workspace Security $4/seat/mo, screen recording $4, on-demand screenshots $4, higher-frequency screenshots $3 (up to 120 an hour), data-ware…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/insightful-review/
 
 ## Instapage (instapage.com)
@@ -2171,10 +2171,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/salesflare-review/
 
 ## Salesflow (salesflow.io)
-- **Verified pricing:** (2026-08-02) Their own pricing page returns a 403 to us, so these figures come from independent reviews read on 2 August 2026 rather than from Salesflow directly — verify on their site befo…
-- **Honest take:** The per-seat price falls steeply with team size — roughly $79 alone against $29.98 at fifty seats — so a solo operator pays two to three times what an agency pays per seat for the same product.
+- **Verified pricing:** (2026-09-09) Read on Salesflow's own pricing page.
+- **Honest take:** The per-seat rate falls with team size but the monthly bill does not follow it: 19 seats on Starter is $1,330 while 20 seats on Pro is $799, so a team that stops one seat short of a tier pays $531 a month more…
 - **Best for:** outbound sales teams and agencies running LinkedIn sequences across several seats, where the per-seat price drops and the admin panel earns its keep
-- **Flags:** {'f': 'per_seat', 'ev': 'Single User is reported at $99 per user per month, or $79 per user per month billed annually, plus VAT where it applies, including 400 LinkedIn invit…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'It returns a 403 to our server but renders normally in a browser, so these are their published figures rather than third-party ones: Basic $99 per se…'}, {'f': 'addons_extra', 'ev': 'Longer terms are discounted on top of that: 15% off at six months and 30% off at twelve.'}, {'f': 'annual_lock', 'ev': 'Agency and Enterprise require an annual commitment billed monthly.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/salesflow-review/
 
 ## Salesmessage (salesmessage.com)
@@ -2608,9 +2608,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tax1099-review/
 
 ## TaxCycle (taxcycle.com)
-- **Verified pricing:** Prices are published on taxcycle.com (read 5 September 2026, Canadian dollars before tax, per year): Tax Basics 2026 is $1,600 for one user (regular $1,680) and $540 per additional user; th…
+- **Verified pricing:** Prices are published on www.taxcycle.com/pricing (read 9 September 2026, Canadian dollars before tax, per year, single user) and are currently sale prices: Tax Basics 2026 $1,600 (reg.
 - **Honest take:** This is professional preparer software priced for firms, not a consumer filing app: the cost only makes sense if you're preparing returns for clients at volume.
 - **Best for:** Canadian accountants and bookkeepers who prepare and e-file client returns and want fast, checked, CRA-integrated professional tax software
+- **Flags:** {'f': 'per_seat', 'ev': '$1,680) with additional users at $540; the Complete Tax Suite $2,625 (reg.'}, {'f': 'addons_extra', 'ev': 'Every module is also priced separately: TaxCycle T1 $618 (+$238/user), T2 $1,102 (+$248), T3 $532 (+$211), T5013 $516 (+$211), T2202 $558 (+$211), T3…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/taxcycle-review/
 
 ## Team Pulse (goteampulse.io)
@@ -2629,9 +2630,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Tellent (tellent.com)
 - **Verified pricing:** Tellent publishes no prices.
-- **Honest take:** The modular pricing is honest — buy only the ATS, or only HRIS — but note the ATS floor: ~€270/mo prices it for teams that hire continuously, not for the company filling two roles a year.
-- **Best for:** European scale-ups hiring continuously that want a collaborative ATS (and optionally modular HRIS/performance) with transparent per-module pricing
-- **Flags:** {'f': 'usage_metered', 'ev': 'What the page does state is scope: Start covers 5 active job posts and a single-page careers site, Advance unlimited posts, referrals and 100 AI scre…'}
+- **Honest take:** Tellent's modular shape is genuinely useful — you can buy just the ATS, or just the HRIS — but nothing is priced in public: every tier on tellent.com/pricing ends in 'Get a demo' (read in a browser on 9 Septem…
+- **Best for:** European scale-ups hiring continuously that want a collaborative ATS they can extend with HRIS and performance modules, and can put a sales call in the buying process
+- **Flags:** {'f': 'usage_metered', 'ev': 'What the page does state is scope: Start covers 5 active job posts and a single-page CareersHub; Advance adds unlimited posts, a multi-page branded c…'}, {'f': 'addons_extra', 'ev': 'SSO, Texting, Journeys, AgencyHub and WhatsApp Hiring are optional add-ons on the lower tiers.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tellent-review/
 
 ## Tenable (tenable.com)
@@ -2683,10 +2684,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/thryv-review/
 
 ## TicketTailor (tickettailor.com)
-- **Verified pricing:** (2026-08-15, read on their own pricing page) No subscription and no contract: pay-as-you-sell $0.85/ticket, or prepaid credits from $0.30/ticket — 500 credits cost $300, which is $0.60 each.
+- **Verified pricing:** (re-verified 2026-09-09 on tickettailor.com/pricing with the currency switched to USD) No subscription and no contract: pay-as-you-sell $0.85 a ticket, or prepaid credits from $0.70 down to…
 - **Honest take:** The fee honesty is the product — flat cents per ticket instead of percentage skims makes it dramatically cheaper than the big platforms on higher-priced tickets (a $0.30-0.85 fee on a $50 ticket vs a percentag…
 - **Best for:** event organizers with their own audience (venues, communities, creators) who want flat low per-ticket fees, full branding and no subscription
-- **Flags:** {'f': 'usage_metered', 'ev': '(2026-08-15, read on their own pricing page) No subscription and no contract: pay-as-you-sell $0.85/ticket, or prepaid credits from $0.30/ticket — 50…'}, {'f': 'free_tier', 'ev': 'The fee honesty is the product — flat cents per ticket instead of percentage skims makes it dramatically cheaper than the big platforms on higher-pri…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-09 on tickettailor.com/pricing with the currency switched to USD) No subscription and no contract: pay-as-you-sell $0.85 a ticke…'}, {'f': 'free_tier', 'ev': 'The fee honesty is the product — flat cents per ticket instead of percentage skims makes it dramatically cheaper than the big platforms on higher-pri…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tickettailor-review/
 
 ## Tidio (tidio.com)
@@ -2711,17 +2712,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tnc-review/
 
 ## Todoist (todoist.com)
-- **Verified pricing:** Free (up to 5 projects, no reminders); Pro about $5/mo (annual, ~$7 monthly), Business about $8/user/mo (annual, ~$10 monthly) (2026).
-- **Honest take:** The free plan's 5-project cap and missing reminders push most serious users to Pro quickly — but Pro is genuinely cheap.
+- **Verified pricing:** Free (up to 5 projects, one automatic reminder per task); Pro about $5/mo (annual, ~$7 monthly), Business about $8/user/mo (annual, ~$10 monthly) (2026).
+- **Honest take:** The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly — but Pro is genuinely cheap.
 - **Best for:** individuals and small teams who want a fast, elegant task manager that gets out of the way
-- **Flags:** {'f': 'per_seat', 'ev': 'Free (up to 5 projects, no reminders); Pro about $5/mo (annual, ~$7 monthly), Business about $8/user/mo (annual, ~$10 monthly) (2026).'}, {'f': 'free_tier', 'ev': "The free plan's 5-project cap and missing reminders push most serious users to Pro quickly — but Pro is genuinely cheap."}
+- **Flags:** {'f': 'per_seat', 'ev': 'Free (up to 5 projects, one automatic reminder per task); Pro about $5/mo (annual, ~$7 monthly), Business about $8/user/mo (annual, ~$10 monthly) (20…'}, {'f': 'free_tier', 'ev': "The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly — but Pro is genui…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/todoist-review/
 
 ## Toggl (toggl.com)
-- **Verified pricing:** (re-verified 2026-08-17 on their own pricing page) Free covers a limited number of users, Starter is $9 per licence a month and Premium $14.
+- **Verified pricing:** (re-verified 2026-09-09 on toggl.com/track/pricing) Free is $0 for a limited number of users and the page calls it free forever.
 - **Honest take:** Toggl's honesty problem is the good kind: the free tier is so capable that many teams never need to pay — the paid line is drawn exactly at 'do you bill clients' (budgets, rates, profitability).
 - **Best for:** freelancers, consultants and agencies that bill by the hour and want frictionless tracking with budgets, rates and profitability per project
-- **Flags:** {'f': 'renewal_jump', 'ev': 'But read the asterisk: that $14 applies to your first year of Premium annual, and then renews at $18 per licence a month.'}, {'f': 'free_tier', 'ev': "Toggl's honesty problem is the good kind: the free tier is so capable that many teams never need to pay — the paid line is drawn exactly at 'do you b…"}
+- **Flags:** {'f': 'per_seat', 'ev': 'Starter is $9 per user a month billed annually and $12 monthly; Premium is $16 annually and $24 monthly; Enterprise is quoted.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-09 on toggl.com/track/pricing) Free is $0 for a limited number of users and the page calls it free forever.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/toggl-review/
 
 ## Top Echelon (topechelon.com)
@@ -2739,10 +2740,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tradify-review/
 
 ## Trainerize (trainerize.com)
-- **Verified pricing:** (2026) Free for 1 client; Grow ~$9/mo (2 clients); Pro scales by client count (~$23/mo at 5 clients to ~$275/mo at 200); Studio Plus ~$248/mo per location.
-- **Honest take:** The client-count ladder looks gentle, but working trainers switch on nutrition, payments and video — and the real monthly lands 30-50% above the sticker (a Pro-50 at ~$120 becomes ~$165+ dressed for work).
+- **Verified pricing:** (re-verified 2026-09-09 on www.trainerize.com/pricing; prices in USD and subject to applicable taxes, annual plans billed once a year) Basic is free for 1 client; Grow is $9/mo for 2 client…
+- **Honest take:** The client-count ladder looks gentle, but the add-ons are flat and they land hardest on the smallest coach: at five seats a $23 Pro plan dressed with nutrition, payments and video is $88, while the same three …
 - **Best for:** personal trainers and studios delivering structured workout/nutrition coaching through a polished client app, scaling by client count
-- **Flags:** {'f': 'addons_extra', 'ev': 'The add-ons are the real bill: nutrition $20-45/mo, payments $10/mo, video coaching $10/mo, branded app ~$169 one-time + $99/yr.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons are priced per tier: on Pro, Advanced Nutrition Coaching $45/mo, Business $25/mo, Stripe Integrated Payments $10/mo, Video Coaching $10/mo an…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/trainerize-review/
 
 ## Trainual (trainual.com)
@@ -2773,16 +2774,16 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/typewise-review/
 
 ## UENI (ueni.com)
-- **Verified pricing:** (re-verified 2026-08-22, read in a live browser on their own US pricing page) A done-for-you website, now sold in four tiers rather than one.
+- **Verified pricing:** (re-verified 2026-09-09 on www.ueni.com/pricing; every figure below unchanged since the August reading) A done-for-you website, now sold in four tiers rather than one.
 - **Honest take:** It's done-for-you, which is the appeal and the catch.
 - **Best for:** small-business owners with no time or tech skills who want a professional site built for them, not another tool to learn
 - **Full review:** https://aibuildermarketplace.com/b2b/ueni-review/
 
 ## UltaHost (ultahost.com)
-- **Verified pricing:** (re-verified 2026-08-17) Term toggles are Monthly, Yearly (-30%), 2 Years (-40%) and 3 Years (-50%), and the pages default to the 2-year rate.
+- **Verified pricing:** (re-verified 2026-09-09 on ultahost.com/shared-hosting) The term ladder is Monthly, Yearly -30%, 2 Years -40% and 3 Years -50%, and the page opens on the two-year term.
 - **Honest take:** It's the classic budget-host trade-off, with one thing in its favour.
 - **Best for:** budget-conscious owners, developers and small businesses that want cheap, fast NVMe hosting (shared or VPS) with free migration and DDoS protection, and will prepay a multi-year term
-- **Flags:** {'f': 'renewal_jump', 'ev': 'The line to read on every card is the renewal: our August capture records plans renewing at $4.39 and $6.89 a month rather than at the promotional ra…'}
+- **Flags:** {'f': 'renewal_jump', 'ev': 'Renews at [the same rate] /mo for 2 years.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/ultahost-review/
 
 ## Unbounce (unbounce.com)
@@ -2800,10 +2801,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/uniqode-review/
 
 ## UniTel Voice (unitelvoice.com)
-- **Verified pricing:** Four plans, no contracts (re-verified 2026-08-17): Start-Up $9.99/mo, Unlimited $24.99/mo, Office $29.99/mo and Office-Max $69.99/mo, with a stated saving of over 30% on annual billing and …
+- **Verified pricing:** (re-verified 2026-09-09 on unitelvoice.com/pricing) Three plans, no contracts: Solo $9.99/mo, Team $19.99/mo and Office $29.99/mo, each with one phone number and unlimited minutes.
 - **Honest take:** It's a virtual phone layer, not a full unified-comms suite — you won't find the deep team messaging, video meetings and contact-center features pricier platforms bundle.
 - **Best for:** solopreneurs and small teams that want a professional toll-free or local number, auto-attendant and call routing on their existing phones — no hardware
-- **Flags:** {'f': 'per_seat', 'ev': 'The line to read before you size a team: additional users on the Office plans are $9.99 per user per month on top of the plan, added any time after s…'}, {'f': 'addons_extra', 'ev': 'The line to read before you size a team: additional users on the Office plans are $9.99 per user per month on top of the plan, added any time after s…'}, {'f': 'annual_lock', 'ev': 'Four plans, no contracts (re-verified 2026-08-17): Start-Up $9.99/mo, Unlimited $24.99/mo, Office $29.99/mo and Office-Max $69.99/mo, with a stated s…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Solo is one user, Team carries unlimited users, and Office includes three with additional users at $9.99 each a month.'}, {'f': 'usage_metered', 'ev': 'One caveat on those unlimited minutes: the pricing FAQ offers 3.9¢ per minute above "the minutes on your plan" and still names an Office-Max plan the…'}, {'f': 'annual_lock', 'ev': 'Annual billing takes 30% off, making them $6.99, $13.99 and $20.99 a month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/unitel-voice-review/
 
 ## Unleashed Software (unleashedsoftware.com)
@@ -3013,17 +3014,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
 
 ## Zedonk (zedonk.co.uk)
-- **Verified pricing:** (price re-verified 2026-08-17 against zedonk.co.uk) (2026) Modular fashion-ERP, priced per building block and billed annually, all listed as 'prices starting from': PLM £166/mo, ERP Essenti…
+- **Verified pricing:** (price re-verified 2026-09-09 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building block and billed annually, all listed as 'prices sta…
 - **Honest take:** The 'starting from' wording is doing real work: £166/mo is the floor of the cheapest module, billed annually, so a working setup for a brand that sells wholesale quickly stacks toward £332/mo and beyond — abou…
 - **Best for:** small and mid-size fashion brands that need sales, production, inventory and wholesale in one system built around size curves, seasons and linesheets
-- **Flags:** {'f': 'addons_extra', 'ev': "The 'starting from' wording is doing real work: £166/mo is the floor of the cheapest module, billed annually, so a working setup for a brand that sel…"}
+- **Flags:** {'f': 'addons_extra', 'ev': "The two upper cards read 'All ERP Essential Features PLUS' — Shopify integration and barcode generation on B2C, the B2B digital showroom on B2B — so …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/zedonk-review/
 
 ## Zeffy (zeffy.com)
-- **Verified pricing:** (price re-verified 2026-08-17 against the vendor's own pricing page) Genuinely $0 for nonprofits (2026): no platform, transaction or card-processing fees on donations, ticketing or payments.
+- **Verified pricing:** (re-verified 2026-09-09 on zeffy.com/home/free-online-fundraising-platform) Still genuinely $0 for nonprofits: no platform fee, no transaction fee and no card-processing fee on donations, t…
 - **Honest take:** The honest scrutiny of 'free': the tip prompt is shown to YOUR donors, with suggested percentages.
 - **Best for:** small and mid-size nonprofits that want donations, ticketing, memberships and payments without any fee eating the mission's money
-- **Flags:** {'f': 'free_tier', 'ev': "(price re-verified 2026-08-17 against the vendor's own pricing page) Genuinely $0 for nonprofits (2026): no platform, transaction or card-processing …"}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Zeffy states it covers transaction and credit-card fees itself and earns only from the optional tip donors are offered at checkout.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-09 on zeffy.com/home/free-online-fundraising-platform) Still genuinely $0 for nonprofits: no platform fee, no transaction fee an…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/zeffy-review/
 
 ## ZenBusiness (zenbusiness.com)

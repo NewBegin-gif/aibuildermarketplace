@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 448 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-10.
+All 447 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -96,7 +96,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aircall-review/
 
 ## Airia (airia.com)
-- **Verified pricing:** (re-verified 2026-08-20) Quote-only.
+- **Verified pricing:** (re-verified 2026-09-10) Quote-only.
 - **Honest take:** Airia used to publish part of its ladder, which was refreshingly rare for enterprise AI.
 - **Best for:** enterprises that need to find the AI already running across their organisation, enforce policy on it at runtime, and build and govern their own agents, with auditability and compliance evidence built in
 - **Flags:** {'f': 'free_tier', 'ev': 'Airia used to publish a ladder: a free tier, Individual around $50 a month and Team around $250.'}
@@ -1572,12 +1572,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Pro is sold as attendee credits, bought as a yearly pack up front, with sessions up to 4 hours and unlimited team members; Enterprise is quote-only w…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/livestorm-review/
 
-## Logome.ai (logome.ai)
-- **Verified pricing:** (re-verified 2026-09-06) Nothing is on sale here.
-- **Honest take:** Update, 6 Sep 2026: logome.ai no longer answers at all.
-- **Best for:** founders and small businesses that want a professional-looking logo and basic brand assets generated fast and cheaply, without hiring a designer
-- **Full review:** https://aibuildermarketplace.com/b2b/logome-ai-review/
-
 ## Lucrovox (lucrovox.com)
 - **Verified pricing:** (re-verified 2026-08-24 on lucrovox.com/#pricing and lucrovox.com/lucrochat, both read in a real browser with the pages fully loaded) The phone agent has three published tiers and the plan …
 - **Honest take:** The meter is AI-handled calls: Starter’s 100 calls a month is roughly three a day, so a genuinely busy shop outgrows it quickly — and the steps are steep ($199 → $499 → $999).
@@ -1954,10 +1948,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
 
 ## PreOrder Now (zenpire.tech)
-- **Verified pricing:** (read 1 September 2026 on the vendor's own listing page, because the Shopify App Store listing would not serve its pricing block to us) Five tiers, and they are named after your Shopify pla…
+- **Verified pricing:** (re-verified 10 September 2026 on zenpire.tech/app-listing/pre-order-now/, because the Shopify App Store listing would not serve its pricing block to us) Five tiers, and they are named afte…
 - **Honest take:** The free tier is more useful than it first looks: one pre-order product, unlimited time, with the mixed-cart warning included.
 - **Best for:** stores that sell drops, restocks or made-to-order products and want pre-order badges, partial payments and back-in-stock emails without touching the theme — and that are on Shopify Basic or Standard, where the price is proportiona
-- **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 and covers your first pre-order product, with mixed-cart warnings, email and tech support.'}
+- **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 and covers your first pre-order product, with mixed-cart warnings and email tech support.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/preorder-now-review/
 
 ## Prezi (prezi.com)
@@ -2258,10 +2252,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seel-review/
 
 ## Selixer (selixer.com)
-- **Verified pricing:** (read 2026-08-21 on apps.shopify.com/selixer) Three tiers, no free plan, each with a 14-day free trial.
-- **Honest take:** Read the feature lists rather than the prices and the entry tier stops looking like an entry tier.
+- **Verified pricing:** (re-verified 10 September 2026 on apps.shopify.com/selixer) Three tiers, no free plan, each with a 14-day free trial.
+- **Honest take:** Read the feature lists rather than the prices and the entry tier stops looking like the product.
 - **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
-- **Flags:** {'f': 'usage_metered', 'ev': 'There is nothing bad in the record, but there is barely any record, and this is a tool you hand your cost prices, your ad spend and your margins to.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Essance $149 a month: two user seats, one connected ad platform, a year of historical data, the ad dashboard with campaigns and trends, stockout, ove…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/selixer-review/
 
 ## Seller Investigators (sellerinvestigators.com)
@@ -2690,9 +2684,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/textline-review/
 
 ## TheTop (thetop.com)
-- **Verified pricing:** (read 2026-08-25 on thetop.com/pricing) Two paid plans, both month to month with no contract.
-- **Honest take:** Out-of-the-box integrations stop at Gmail, Google Calendar, Outlook, Microsoft 365, and RSS or news feeds, so anything else in your stack sits outside the brief.
+- **Verified pricing:** (re-verified 10 September 2026 on thetop.com/pricing) One plan.
+- **Honest take:** Everything sits on one $8 plan, so the question is not which tier to buy but whether the caps on that plan fit your day.
 - **Best for:** professionals and small-business owners who lose the first hour of the day triaging Gmail and a calendar, and want one ranked brief instead of five open tabs
+- **Flags:** {'f': 'free_tier', 'ev': 'And the FAQ still describes a Free plan the pricing page does not show.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/thetop-review/
 
 ## Thordata (thordata.com)

@@ -20,7 +20,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/800-com-review/
 
 ## accessiBe (accessibe.com)
-- **Verified pricing:** (2026-08-07, read on their own pricing page) Four tiers for accessWidget, priced per monthly website visits and billed yearly: Micro $490/year up to 5,000 visits a month, Growth $1,490/year…
+- **Verified pricing:** (2026-09-10, read on their own pricing page) Four tiers for accessWidget, priced per monthly website visits, with both a monthly and a yearly rate on every tier: Micro $59/month or $490/yea…
 - **Honest take:** The thing you most need to know about this product is not on its pricing page, it is on the FTC’s.
 - **Best for:** small and medium sites on ordinary CMS templates whose owners want a visible, cheap first step — contrast, text sizing, keyboard hints and an accessibility statement — and who understand they are buying an aid rather than conforma
 - **Flags:** {'f': 'addons_extra', 'ev': 'An overlay sits on top of a site and adjusts it in the browser.'}

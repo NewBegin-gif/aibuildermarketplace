@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 447 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-10.
+All 447 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-11.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -48,10 +48,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/adp-review/
 
 ## Adwisely (adwisely.com)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (2026) A Self-Serve plan from a $49/mo minimum and a Concierge (managed) plan from a $249/mo minimum, plus a 10% fee on …
+- **Verified pricing:** (price re-verified 2026-09-10) Read on adwisely.com/pricing; every figure below stood unchanged from our previous reading on 2 August 2026.
 - **Honest take:** The honest math is the 10%-of-ad-spend fee on top of the minimum.
 - **Best for:** e-commerce stores (Shopify, WooCommerce, BigCommerce) that want automated, largely hands-off retargeting and prospecting ads on Meta and Google
-- **Flags:** {'f': 'usage_metered', 'ev': "(price re-verified 2026-08-02 against the vendor's own pricing page) (2026) A Self-Serve plan from a $49/mo minimum and a Concierge (managed) plan fr…"}, {'f': 'addons_extra', 'ev': 'The honest math is the 10%-of-ad-spend fee on top of the minimum.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'A Self-Serve plan from a $49/mo minimum and a Concierge (managed) plan from a $249/mo minimum, plus a 10% fee on the ad spend it manages, capped so t…'}, {'f': 'addons_extra', 'ev': 'The honest math is the 10%-of-ad-spend fee on top of the minimum.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/adwisely-review/
 
 ## AfterSell (aftersell.app)
@@ -180,7 +180,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-09-10, read off their own pricing page, both billing toggles) Four plans, priced on included minutes.
 - **Honest take:** Do the arithmetic before you pick a tier, because their own page does not.
 - **Best for:** a small business that loses money when a call goes to voicemail — trades, clinics, law and property firms — and wants real people answering around the clock without hiring a receptionist. It suits you especially if your call volum
-- **Flags:** {'f': 'usage_metered', 'ev': 'Billed monthly: Starter $40 with **zero** minutes included and $1.75 per minute after that; Small Business $179 for 100 minutes, then $1.70; Pro $329…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Billed monthly: Starter $40 with zero minutes included and $1.75 per minute after that; Small Business $179 for 100 minutes, then $1.70; Pro $329 for…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/answering-service-care-review/
 
 ## Aplos (aplos.com)
@@ -319,7 +319,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/beautiful-ai-review/
 
 ## Beefree (beefree.io)
-- **Verified pricing:** (price re-verified 2026-08-02 against the vendor's own pricing page) (verified 21 Jul 2026 on reallygoodemails.com/pricing) Sold as RGE Studio since the 14 May 2026 rebrand.
+- **Verified pricing:** (price re-verified 2026-09-10) Sold as RGE Studio since the 14 May 2026 rebrand.
 - **Honest take:** Read the seat row before the price row.
 - **Best for:** agencies and in-house teams shipping email at volume across brands or ESPs — a dedicated builder with approvals, brand controls and one-click push to Salesforce Marketing Cloud, Pardot and HubSpot, sitting above whatever you send 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.'}, {'f': 'addons_extra', 'ev': 'It is purely a creation environment that never sends, so it always sits on top of your ESP.'}, {'f': 'free_tier', 'ev': 'Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.'}
@@ -2870,9 +2870,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/velora-review/
 
 ## Vida AI (vida.io)
-- **Verified pricing:** Quote-oriented (2026): agency/reseller plans from about $750/mo (a starter tier carries 5 agents and ~2,500 AI voice minutes; growth tiers advertise unlimited agents and minutes) and platfo…
-- **Honest take:** This is priced for agencies and telecoms reselling AI phone agents, not for a single small business wanting one receptionist bot — if that's you, the entry price buys far more platform than you need.
-- **Best for:** agencies, MSPs and service providers that want to deploy and resell white-label AI voice agents at volume, with unlimited-minute economics at scale
+- **Verified pricing:** (price re-verified 2026-09-10) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate.
+- **Honest take:** This is priced for agencies and telecoms reselling AI phone agents, not for a single small business wanting one receptionist bot.
+- **Best for:** agencies, MSPs and service providers that want to deploy and resell white-label AI voice agents at volume, and that can absorb a scoped pilot before they ever see a production price
+- **Flags:** {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-10) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/vida-ai-review/
 
 ## VidPal (vidpal.ai)

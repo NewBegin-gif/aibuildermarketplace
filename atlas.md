@@ -368,10 +368,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bitdefender-review/
 
 ## Bitscale (bitscale.ai)
-- **Verified pricing:** (re-verified 8 September 2026 on bitscale.ai/pricing; every headline figure unchanged since 1 September 2026) The meter is credits.
+- **Verified pricing:** (re-verified 8 September 2026 on bitscale.ai/pricing and extended on 11 September 2026 from inside a free account; every headline figure unchanged since 1 September 2026) The meter is credi…
 - **Honest take:** The free tier is real and needs no card, which makes Bitscale unusually easy to judge for yourself before paying.
 - **Best for:** sales and RevOps teams that already run enrichment across several vendors and want the waterfall, the signals and the CRM sync in one place, with enough monthly volume to put 15,000 credits to work
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 8 September 2026 on bitscale.ai/pricing; every headline figure unchanged since 1 September 2026) The meter is credits.'}, {'f': 'annual_lock', 'ev': 'Enterprise is quote-only but publishes a floor most vendors hide: annual billing at $15,000 and above, adding SOC 2 and SSO, priority support, role-b…'}, {'f': 'free_tier', 'ev': 'Free is $0 with 200 credits, no card required, capped at 20 action columns per grid and 50,000 rows.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 8 September 2026 on bitscale.ai/pricing and extended on 11 September 2026 from inside a free account; every headline figure unchanged si…'}, {'f': 'annual_lock', 'ev': 'Enterprise is quote-only but publishes a floor most vendors hide: annual billing at $15,000 and above, adding SOC 2 and SSO, priority support, role-b…'}, {'f': 'free_tier', 'ev': 'Free is $0 with 200 credits, no card required, capped at 20 action columns per grid and 50,000 rows.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bitscale-review/
 
 ## Bitvavo (bitvavo.com)
@@ -542,10 +542,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/campaigner-review/
 
 ## Capsule (capsulecrm.com)
-- **Verified pricing:** (read 2026-08-26 on capsulecrm.com/pricing over a US connection) Four tiers, each quoted per user a month on annual billing: Free for two users and 250 contacts, then Starter at US$18, Grow…
+- **Verified pricing:** (price page re-read 2026-09-11) The free tier covers two users and 250 contacts, and every paid card is quoted per user a month with a 14-day trial that needs no card.
 - **Honest take:** Capsule's simplicity is the product: it deliberately does less than the CRM giants, which is why small teams actually use it.
 - **Best for:** small businesses that want a clean, genuinely simple CRM for contacts, pipeline and tasks — one the team will actually keep updated
-- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-26 on capsulecrm.com/pricing over a US connection) Four tiers, each quoted per user a month on annual billing: Free for two users and 2…'}, {'f': 'addons_extra', 'ev': 'A Marketing add-on is sold beside the CRM, and the AI features can be switched off in your account.'}, {'f': 'annual_lock', 'ev': '(read 2026-08-26 on capsulecrm.com/pricing over a US connection) Four tiers, each quoted per user a month on annual billing: Free for two users and 2…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(price page re-read 2026-09-11) The free tier covers two users and 250 contacts, and every paid card is quoted per user a month with a 14-day trial t…'}, {'f': 'addons_extra', 'ev': 'A Marketing add-on is sold beside the CRM, and the AI features can be switched off in your account.'}, {'f': 'annual_lock', 'ev': 'The reading on 11 September was taken from the Netherlands, where those same four cards render in euros at €15, €28 and €49 on annual billing.'}, {'f': 'free_tier', 'ev': '(price page re-read 2026-09-11) The free tier covers two users and 250 contacts, and every paid card is quoted per user a month with a 14-day trial t…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/capsule-review/
 
 ## Carbon6 (carbon6.io)
@@ -1948,7 +1948,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Read the tiers as what they are: a platform fee plus a per-message rate plus carrier fees.'}, {'f': 'free_tier', 'ev': '(2026-08-30, re-read on their own pricing page from a US exit) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0.015 then $0.009…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
 
-## PreOrder Now (zenpire.tech)
+## PreOrder Now (preordernow.app)
 - **Verified pricing:** (re-verified 10 September 2026 on zenpire.tech/app-listing/pre-order-now/, because the Shopify App Store listing would not serve its pricing block to us) Five tiers, and they are named afte…
 - **Honest take:** The free tier is more useful than it first looks: one pre-order product, unlimited time, with the mixed-cart warning included.
 - **Best for:** stores that sell drops, restocks or made-to-order products and want pre-order badges, partial payments and back-in-stock emails without touching the theme — and that are on Shopify Basic or Standard, where the price is proportiona

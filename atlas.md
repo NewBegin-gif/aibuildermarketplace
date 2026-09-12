@@ -363,9 +363,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Bitdefender (bitdefender.com)
 - **Verified pricing:** Read on their own product pages, 6 September 2026, where a configurator prices each tier by device count and term.
-- **Honest take:** Like most antivirus, the first-year price is a promo — renewals run notably higher, so budget for the renewal rate, not the intro.
+- **Honest take:** The price you see is already discounted: the configurator applies 30% off list by default on all three GravityZone tiers, so compare on the discounted figure and ask what applies at renewal rather than assumin…
 - **Best for:** small businesses that want top-tier, independently-validated endpoint protection managed from one console
-- **Flags:** {'f': 'renewal_jump', 'ev': 'Like most antivirus, the first-year price is a promo — renewals run notably higher, so budget for the renewal rate, not the intro.'}, {'f': 'addons_extra', 'ev': 'Add-ons are priced separately: at 10 devices, Web Access and Device Control $41.99 and Network Attack Defense and Risk Management $41.99 on Small Bus…'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons are priced separately: at 10 devices, Web Access and Device Control $41.99 and Network Attack Defense and Risk Management $41.99 on Small Bus…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bitdefender-review/
 
 ## Bitscale (bitscale.ai)

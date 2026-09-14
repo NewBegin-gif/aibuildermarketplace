@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 453 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-14.
+All 454 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-14.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1971,7 +1971,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
 
 ## PreOrder Now (preordernow.app)
-- **Verified pricing:** (re-verified 13 September 2026 on zenpire.tech/app-listing/pre-order-now/, every amount unchanged since 10 September; the Shopify App Store listing still would not serve us its pricing bloc…
+- **Verified pricing:** (re-verified 13 September 2026 on zenpire.tech/app-listing/pre-order-now/, every amount unchanged since 10 September; the amounts come from Zenpire's own page because the app is not install…
 - **Honest take:** The free tier is more useful than it first looks: one pre-order product, unlimited time, with the mixed-cart warning included.
 - **Best for:** stores that sell drops, restocks or made-to-order products and want pre-order badges, partial payments and back-in-stock emails without touching the theme — and that are on Shopify Basic or Standard, where the price is proportiona
 - **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 and covers your first pre-order product, with mixed-cart warnings and email tech support.'}
@@ -2324,9 +2324,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seo-space-review/
 
 ## SEOKart (seokart.com)
-- **Verified pricing:** (price read 2026-09-12) Four tiers on apps.shopify.com/seokart, billed in USD and recurring every 30 days through Shopify.
-- **Honest take:** Every plan, free included, lists free SEO consultancy, and it is worth knowing what sits behind that call.
-- **Best for:** Shopify merchants with a few hundred to a few thousand products who want on-page SEO cleaned up in bulk — meta tags, image alt text and file names, URLs, JSON-LD schema, 404s and redirects, image compression for page speed — and w
+- **Verified pricing:** (price read 2026-09-12, re-verified 2026-09-14) Four tiers on apps.shopify.com/seokart, billed in USD and recurring every 30 days through Shopify.
+- **Honest take:** Every plan, free included, lists free SEO consultancy, and it is worth knowing what sits next to it.
+- **Best for:** Shopify or BigCommerce merchants with a few hundred to a few thousand products who want on-page SEO cleaned up in bulk — meta tags, image alt text and file names, URLs, JSON-LD schema, 404s and redirects, image compression for pag
 - **Full review:** https://aibuildermarketplace.com/b2b/seokart-review/
 
 ## SEOmatic (seomatic.io)
@@ -2405,6 +2405,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small teams that want straightforward unlimited sending and signing per seat, with contract management one tier up
 - **Flags:** {'f': 'per_seat', 'ev': 'Business $20/mo per seat billed yearly ($240/seat) adds unlimited sending and collaboration; Business Pro $30/mo per seat ($360/seat) adds end-to-end…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/signeasy-review/
+
+## Signitic (signitic.com)
+- **Verified pricing:** (price read 2026-09-14) Signitic's own pricing page, read in euros from a European connection, carries three tiers.
+- **Honest take:** The homepage sells deployment 'without going through IT', and Signitic's own help centre contradicts that on every path in.
+- **Best for:** European organisations of roughly twenty people and up, on Google Workspace or Microsoft 365, that want every signature centrally controlled and the banner slot run as a measurable campaign channel — and that need EU hosting and I
+- **Flags:** {'f': 'per_seat', 'ev': 'The paid tier — the card the page marks Most popular — is €1 per user with a minimum of 20 licences, and it is where the caps come off: unlimited sig…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/signitic-review/
 
 ## SignNow (signnow.com)
 - **Verified pricing:** Three seat plans, read on signnow.com/pricing.md on 7 September 2026: Business at $8 per user a month on annual billing, Business Premium at $15 and Enterprise at $30, with month-to-month p…

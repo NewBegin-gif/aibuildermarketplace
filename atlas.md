@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 451 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-12.
+All 453 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-14.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -131,9 +131,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/algomo-review/
 
 ## Alidrop (alidrop.co)
-- **Verified pricing:** (re-verified 2026-08-17) Four monthly plans: Starter $39/mo (50 unique / 25 premium products), Professional $59/mo (500 unique / 250 premium), Empire $99/mo (5,000 unique / 2,500 premium) a…
+- **Verified pricing:** (re-verified 2026-09-13 on their own pricing page) Four monthly plans: Starter $39/mo (50 unique / 25 premium products), Professional $59/mo (500 unique / 250 premium), Empire $99/mo (5,000…
 - **Honest take:** Alidrop's pitch includes faster-shipping (including US/EU) suppliers, but the core dropshipping economics still apply: you pay the subscription plus wholesale product cost, and margins live or die on product s…
 - **Best for:** dropshippers who want automated product sourcing, fulfillment and inventory sync with access to faster-shipping suppliers and one-click store integration
+- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing is listed only from Professional up — $288, $684 and $948 a year — and the discount grows with the tier: 6 months off Professional, 5 …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/alidrop-review/
 
 ## Alli AI (alliai.com)
@@ -246,10 +247,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/atto-review/
 
 ## Attribuly (attribuly.com)
-- **Verified pricing:** (read 2026-08-18 on apps.shopify.com/attribuly) A free plan that covers the first $1,000 of recovered email revenue, then Capture at $450 a month and Recapture at $500.
+- **Verified pricing:** (re-verified 2026-09-13 on apps.shopify.com/attribuly; every amount unchanged since 2026-08-18) A free plan that covers the first $1,000 of recovered email revenue, then Capture at $450 a m…
 - **Honest take:** This is the most expensive app in its category on the Shopify store by a wide margin, and the jump is not gradual — free to $450 a month with nothing in between.
 - **Best for:** stores already running Klaviyo at volume, where a few percent more recovered carts is worth $450 a month and the identity-resolution layer has enough traffic to work with
-- **Flags:** {'f': 'usage_metered', 'ev': 'Note the shape: the free tier is metered on recovered revenue rather than on time, so it ends when the tool starts working.'}, {'f': 'addons_extra', 'ev': 'It is also an add-on rather than a replacement: the pitch is explicitly that it recovers carts “Klaviyo misses” and syncs identity signals back into …'}, {'f': 'free_tier', 'ev': '(read 2026-08-18 on apps.shopify.com/attribuly) A free plan that covers the first $1,000 of recovered email revenue, then Capture at $450 a month and…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Note the shape: the free tier is metered on recovered revenue rather than on time, so it ends when the tool starts working.'}, {'f': 'addons_extra', 'ev': 'It is also an add-on rather than a replacement: the pitch is explicitly that it recovers carts “Klaviyo misses” and syncs identity signals back into …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-13 on apps.shopify.com/attribuly; every amount unchanged since 2026-08-18) A free plan that covers the first $1,000 of recovered…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/attribuly-review/
 
 ## Audiorista (audiorista.com)
@@ -369,10 +370,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bitdefender-review/
 
 ## Bitscale (bitscale.ai)
-- **Verified pricing:** (re-verified 8 September 2026 on bitscale.ai/pricing and extended on 11 September 2026 from inside a free account; every headline figure unchanged since 1 September 2026) The meter is credi…
+- **Verified pricing:** (re-verified 13 September 2026 on bitscale.ai/pricing, extended on 11 September 2026 from inside a free account; every headline figure unchanged since 1 September 2026) The meter is credits.
 - **Honest take:** The free tier is real and needs no card, which makes Bitscale unusually easy to judge for yourself before paying.
 - **Best for:** sales and RevOps teams that already run enrichment across several vendors and want the waterfall, the signals and the CRM sync in one place, with enough monthly volume to put 15,000 credits to work
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 8 September 2026 on bitscale.ai/pricing and extended on 11 September 2026 from inside a free account; every headline figure unchanged si…'}, {'f': 'annual_lock', 'ev': 'Enterprise is quote-only but publishes a floor most vendors hide: annual billing at $15,000 and above, adding SOC 2 and SSO, priority support, role-b…'}, {'f': 'free_tier', 'ev': 'Free is $0 with 200 credits, no card required, capped at 20 action columns per grid and 50,000 rows.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 13 September 2026 on bitscale.ai/pricing, extended on 11 September 2026 from inside a free account; every headline figure unchanged sinc…'}, {'f': 'annual_lock', 'ev': 'Enterprise is quote-only but publishes a floor most vendors hide: annual billing at $15,000 and above, adding SOC 2 and SSO, priority support, role-b…'}, {'f': 'free_tier', 'ev': 'Free is $0 with 200 credits, no card required, capped at 20 action columns per grid and 50,000 rows.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bitscale-review/
 
 ## Bitvavo (bitvavo.com)
@@ -474,10 +475,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/browse-ai-review/
 
 ## BrowserAct (browseract.com)
-- **Verified pricing:** (prices read 2026-09-02 on browseract.com/pricing, both billing tabs open) A credit-metered subscription with a free tier.
-- **Honest take:** The yearly toggle wears a -20% badge, but the arithmetic on the page is steeper than that: Basic is $13 yearly against $20 monthly (35% less), Essential $56 against $100 (44% less) and Advanced $96 against $20…
+- **Verified pricing:** (prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-metered subscription with a free tier.
+- **Honest take:** The yearly toggle wears a -20% badge and the crossed-out prices suggest much more, but read what you would actually be charged on 13 September 2026: monthly is $16, $70 and $120, and yearly is $13, $56 and $96…
 - **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, residential proxies and CAPTCHA handling managed for them, and can commit to yearly billing -- at $13 a month Basic is a cheap way
-- **Flags:** {'f': 'usage_metered', 'ev': '(prices read 2026-09-02 on browseract.com/pricing, both billing tabs open) A credit-metered subscription with a free tier.'}, {'f': 'free_tier', 'ev': '(prices read 2026-09-02 on browseract.com/pricing, both billing tabs open) A credit-metered subscription with a free tier.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-mete…'}, {'f': 'free_tier', 'ev': '(prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-mete…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
 
 ## BuddyPunch (buddypunch.com)
@@ -633,10 +634,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/cloro-review/
 
 ## Close (close.com)
-- **Verified pricing:** (re-verified 2026-08-14, read on their own pricing page) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed annually.
+- **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed annually — the same twel…
 - **Honest take:** The built-in calling is the draw, but call and SMS credits stack on top of the seat price — a '$99' plan can effectively cost ~$160/user once a rep dials 50+ times a day.
 - **Best for:** inside-sales teams that live on the phone and want calling, SMS and CRM in one place
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-14, read on their own pricing page) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 …'}, {'f': 'usage_metered', 'ev': 'No free plan; the trial runs 14 days and close.com states no credit card is required, with $5 of calling and enrichment credits included, and the pag…'}, {'f': 'addons_extra', 'ev': 'The Call Assistant add-on is $50 a month per organisation plus $0.02 a minute.'}, {'f': 'free_tier', 'ev': 'Outbound calls run about $0.02 a minute, phone lines start at about $1 a month, and premium numbers are $19 a month per line.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-12, read on their own pricing page) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 …'}, {'f': 'usage_metered', 'ev': 'No free plan; the trial runs 14 days and close.com states no credit card is required, with $5 of calling and enrichment credits included, and the pag…'}, {'f': 'addons_extra', 'ev': 'The Call Assistant add-on is $50 a month per organisation plus $0.02 a minute, and additional organisations are $50 a month each, with Growth and Sca…'}, {'f': 'free_tier', 'ev': 'Call minutes, SMS and dialer credits are billed separately and can meaningfully raise the real cost: outbound calls run about $0.02 a minute and phon…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/close-review/
 
 ## CloudTalk (cloudtalk.io)
@@ -667,7 +668,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/cloze-review/
 
 ## Clutch (clutch.co)
-- **Verified pricing:** (re-verified 2026-08-14, read in their own help centre) Free for buyers.
+- **Verified pricing:** (re-verified 2026-09-12, read in their own help centre) Free for buyers.
 - **Honest take:** It's genuinely free to submit a brief — but be clear on what it is: a lead-generation marketplace, not a neutral directory.
 - **Best for:** businesses that want to skip manual agency research and get matched quickly with vetted, best-fit service providers for a specific project
 - **Full review:** https://aibuildermarketplace.com/b2b/clutch-review/
@@ -763,10 +764,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/crowdstrike-review/
 
 ## Databox (databox.com)
-- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 AI credits a month.
-- **Honest take:** The pricing model bites: Pro connects only 3 data sources, so the per-source fees stack up fast — and for agencies juggling many clients with diverse tools it gets expensive.
+- **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers we described are gone.
+- **Honest take:** The pricing model bites, just not where it used to.
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13, read on their own pricing page) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 A…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-13, read on their own pricing page) There is a free plan: Free at $0 with 3 data sources, 1 user, 1 dashboard or report and 50 A…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync.'}, {'f': 'addons_extra', 'ev': 'Add-ons are priced separately: branding and white-labeling $200/mo, advanced security management $80/mo, OKRs $160/mo, fiscal calendar $40/mo, 15-min…'}, {'f': 'annual_lock', 'ev': 'Monthly those read $249, $399 and from $99; annual billing is 20% off.'}, {'f': 'free_tier', 'ev': 'Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/databox-review/
 
 ## Datarails (datarails.com)
@@ -885,6 +886,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** This is consulting, not a tool you log into: best when you want AI designed and built for you, not when you'd rather DIY with software.
 - **Best for:** businesses that want AI solutions built for them as a services engagement rather than assembling tools themselves
 - **Full review:** https://aibuildermarketplace.com/b2b/dryground-ai-review/
+
+## Dynasort (dynasort.io)
+- **Verified pricing:** (read 14 September 2026 on apps.shopify.com/dynasort) Four tiers, all billed in USD every 30 days.
+- **Honest take:** Sorting driven by 60+ blended signals is powerful and opaque in the same breath: a recipe that ranks by margin, velocity and stock at once will sometimes bury a product you wanted seen, and there is real trial…
+- **Best for:** Shopify stores with large or fast-changing catalogues where product order is a merchandising decision — seasonal ranges, frequent stock-outs, wide margin spreads — and nobody who wants to re-order collections by hand every week.
+- **Full review:** https://aibuildermarketplace.com/b2b/dynasort-review/
 
 ## Easy Advanced Translations (northwest.dev)
 - **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/advanced-translation) Four tiers, all monthly.
@@ -1066,10 +1073,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/fireflies-ai-review/
 
 ## Flatpay (flatpay.com)
-- **Verified pricing:** (2026-08-13, read off flatpay.com/en-gb/pricing and their separate /pricelist page) Flatpay charges one rate per transaction on every card type, with no monthly subscription.
+- **Verified pricing:** (re-verified 2026-09-13 on flatpay.com/en-gb/pricing and their separate /pricelist page; every amount unchanged since 2026-08-13) Flatpay charges one rate per transaction on every card type…
 - **Honest take:** “Zero monthly fees” is the headline, and there genuinely is no subscription — but there is a floor.
 - **Best for:** a physical shop, café or bar with steady card turnover above £995 a month that wants one predictable rate on every card type instead of a pricing table full of card categories. The on-site installation and 24/7 support suit an own
-- **Flags:** {'f': 'quote_only', 'ev': 'Every one of those four prices applies only below £200,000 in annual card turnover; above it, all four say “custom rate — contact sales”, so the publ…'}
+- **Flags:** {'f': 'quote_only', 'ev': 'That hidden markup holds both a "custom rate - contact sales" variant and a "0,99% / EUR 0" variant; neither renders for a UK visitor, and the comma …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/flatpay-review/
 
 ## FlexiQuiz (flexiquiz.com)
@@ -1218,10 +1225,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gorgias-review/
 
 ## GrapeLeads (grapeleads.com)
-- **Verified pricing:** (re-verified 2026-08-12, read on their own buy-credits page) Pay-as-you-go credit packs, bought once rather than subscribed to: Freelancer $28 for 50 credits ($0.56 each), Startup $55 for 1…
+- **Verified pricing:** (re-verified 2026-09-12, read on their own buy-credits page; every amount unchanged since 12 August) Pay-as-you-go credit packs, bought once rather than subscribed to: Freelancer $28 for 50…
 - **Honest take:** You are billed per result, not per usable lead: one credit opens the search and one more is charged for every business it returns, so a broad filter burns credits whether or not the results are worth calling.
 - **Best for:** web developers, designers and agencies prospecting local businesses that do not have a website yet — surfaced from Google Maps with contact details
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-12, read on their own buy-credits page) Pay-as-you-go credit packs, bought once rather than subscribed to: Freelancer $28 for 50…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-12, read on their own buy-credits page) Pay-as-you-go credit packs, bought once rather than subscribed to: Freelancer $28 for 50…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-12, read on their own buy-credits page; every amount unchanged since 12 August) Pay-as-you-go credit packs, bought once rather t…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-12, read on their own buy-credits page; every amount unchanged since 12 August) Pay-as-you-go credit packs, bought once rather t…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/grapeleads-review/
 
 ## Grapevine (grapevine-surveys.com)
@@ -1561,10 +1568,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/lettrlabs-review/
 
 ## Lindy.ai (lindy.ai)
-- **Verified pricing:** (re-verified 2026-09-04, read on their own pricing page; the 12 August figures were unchanged) Now sold per user, and the credit allowance is published again.
+- **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, and the credit allowance is published ag…
 - **Honest take:** Cost tracks headcount rather than output: every colleague who so much as @mentions Lindy in Slack takes a paid seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration.
 - **Best for:** teams that live in Slack and want one shared teammate that sits in their meetings, runs scheduled routines and drafts replies inside the tools they already use
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-04, read on their own pricing page; the 12 August figures were unchanged) Now sold per user, and the credit allowance is publish…'}, {'f': 'usage_metered', 'ev': '(re-verified 2026-09-04, read on their own pricing page; the 12 August figures were unchanged) Now sold per user, and the credit allowance is publish…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-12, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, …'}, {'f': 'usage_metered', 'ev': '(re-verified 2026-09-12, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/lindy-ai-review/
 
 ## Livestorm (livestorm.com)
@@ -1723,6 +1730,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The app is ten weeks old.
 - **Best for:** small and mid-size Shopify stores that want a multilingual, catalogue-aware chat widget with product cards, order tracking and add-to-cart, and want to judge it on the genuinely usable free tier of 200 conversations a month
 - **Full review:** https://aibuildermarketplace.com/b2b/neuroads-review/
+
+## Nexis CRO (nexiscro.com)
+- **Verified pricing:** (read 14 September 2026 on apps.shopify.com/nexis-cro-ai-seo-aeo-audit) Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 or $344.
+- **Honest take:** It has no track record at all.
+- **Best for:** Shopify merchants who already care about being cited in ChatGPT, Gemini and Perplexity, and who want the audit, the schema deployment, the llms.txt file and the citation tracking in one app instead of stitching them together.
+- **Flags:** {'f': 'usage_metered', 'ev': 'The meter is AI credits: Free gives 5 a month and a single audit, Pro 100 with unlimited audits and history, Growth 300, Agency 500.'}, {'f': 'free_tier', 'ev': 'The free tier is also thin — 5 AI credits and one audit a month is enough to see the interface, not to test the product.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/nexis-cro-review/
 
 ## Nextify.ai (nextify.ai)
 - **Verified pricing:** (read 7 September 2026 on nextify.ai/pricing, signed in and signed out, in both billing modes) Five ways to pay, and the free plan is only visible when you are logged out — the signed-in pr…
@@ -1957,7 +1971,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
 
 ## PreOrder Now (preordernow.app)
-- **Verified pricing:** (re-verified 10 September 2026 on zenpire.tech/app-listing/pre-order-now/, because the Shopify App Store listing would not serve its pricing block to us) Five tiers, and they are named afte…
+- **Verified pricing:** (re-verified 13 September 2026 on zenpire.tech/app-listing/pre-order-now/, every amount unchanged since 10 September; the Shopify App Store listing still would not serve us its pricing bloc…
 - **Honest take:** The free tier is more useful than it first looks: one pre-order product, unlimited time, with the mixed-cart warning included.
 - **Best for:** stores that sell drops, restocks or made-to-order products and want pre-order badges, partial payments and back-in-stock emails without touching the theme — and that are on Shopify Basic or Standard, where the price is proportiona
 - **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 and covers your first pre-order product, with mixed-cart warnings and email tech support.'}
@@ -2810,10 +2824,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tresorit-review/
 
 ## Turbotic (turbotic.com)
-- **Verified pricing:** (re-verified 2026-08-14, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with additional credits bought as needed.
+- **Verified pricing:** (re-verified 2026-09-12, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with additional credits bought as needed.
 - **Honest take:** It's a newer, enterprise-leaning automation platform, so it's less proven with a smaller community than the big names — and the credit-per-execution model means heavy volume needs cost-checking.
 - **Best for:** teams that want an AI-assisted way to discover, document and run automations without deep RPA expertise
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-14, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with…'}, {'f': 'usage_metered', 'ev': '(re-verified 2026-08-14, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-12, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with…'}, {'f': 'usage_metered', 'ev': '(re-verified 2026-09-12, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/turbotic-review/
 
 ## Typewise (typewise.app)
@@ -2844,10 +2858,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/unbounce-review/
 
 ## Uniqode (uniqode.com)
-- **Verified pricing:** (re-verified 2026-08-12, read on their own pricing page) The plan cards are rendered in the browser and invisible to a non-browser client.
+- **Verified pricing:** (re-verified 2026-09-13 on their own pricing page, read both as plain HTML and as a live browser render) The plan cards are rendered in the browser and carry no price in either reading, so …
 - **Honest take:** The tier jumps are steep and a lot is gated: analytics are capped at 60 days on the entry plan, scan limits apply across all tiers, and custom domains sit behind higher pricing.
 - **Best for:** marketing teams that need dynamic QR codes with real analytics and enterprise compliance (SOC 2, GDPR, ISO 27001, optional HIPAA)
-- **Flags:** {'f': 'per_seat', 'ev': 'Your first digital business card is free, with extra seats on a Team plan at $6 per user per month.'}, {'f': 'addons_extra', 'ev': 'A custom domain is a Plus add-on at $2,000 per domain per year.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Your first digital business card is free, with extra seats on a Team plan at $6 per user per month; Business+ card pricing is custom.'}, {'f': 'addons_extra', 'ev': 'A custom domain is a Plus add-on at $2,000 per domain per year.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/uniqode-review/
 
 ## UniTel Voice (unitelvoice.com)
@@ -2946,10 +2960,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/warmup-inbox-review/
 
 ## Wati (wati.io)
-- **Verified pricing:** (re-verified 2026-08-14, read on their own pricing page — which served us euros, not dollars) Growth €59/mo, Pro €119/mo and Business €279/mo billed annually, with a 7-day free trial and no…
+- **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page — which again served us euros, not dollars) Growth €59/mo, Pro €119/mo and Business €279/mo billed annually, or €69, €149 and €349 bi…
 - **Honest take:** The plan price is the smallest part of the bill.
 - **Best for:** businesses that want to run WhatsApp support and broadcasts at scale with a shared team inbox and automation
-- **Flags:** {'f': 'per_seat', 'ev': 'Users are capped per tier: Growth includes 3 and lets you add none at all; Pro and Business include 5, with extra seats at €39 and €89 per user per m…'}, {'f': 'usage_metered', 'ev': 'Add-ons are separate again — 1,000 automation triggers €35/mo, 1,000 AI co-pilot credits €25/mo, Shopify $4.99/mo, each extra WhatsApp number €29/mo.'}, {'f': 'addons_extra', 'ev': 'Add-ons are separate again — 1,000 automation triggers €35/mo, 1,000 AI co-pilot credits €25/mo, Shopify $4.99/mo, each extra WhatsApp number €29/mo.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Users are capped per tier: Growth includes 3 and lets you add none at all; Pro and Business include 5, with extra seats at €39 and €89 per user per m…'}, {'f': 'usage_metered', 'ev': 'Add-ons are separate again — 1,000 automation triggers €35/mo, 1,000 AI co-pilot credits €25/mo, Shopify $4.99/mo, each extra WhatsApp number €29/mo …'}, {'f': 'addons_extra', 'ev': 'Add-ons are separate again — 1,000 automation triggers €35/mo, 1,000 AI co-pilot credits €25/mo, Shopify $4.99/mo, each extra WhatsApp number €29/mo …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/wati-review/
 
 ## Way (effectify.io)

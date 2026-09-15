@@ -131,7 +131,7 @@ function riCalc(){
 var inv=+document.getElementById('ri-inv').value,mo=+document.getElementById('ri-mo').value,ret=+document.getElementById('ri-ret').value,cost=+document.getElementById('ri-cost').value;
 var net=ret-cost,cum=[-inv],payback=null;for(var m=1;m<=mo;m++){var v=cum[m-1]+net;cum.push(v);if(payback===null&&v>=0)payback=m;}
 var gain=net*mo-inv,roi=inv>0?gain/inv*100:0;
-var stats=[['ROI',(roi>=0?'+':'')+roi.toFixed(0)+'%',(roi>=0?'sig-y':'sig-n')],['Payback',payback?'Month '+payback:'>'+mo+' mo',(payback?'sig-y':'sig-n')],['Net gain',riFmt(gain),(gain>=0?'sig-y':'sig-n')],['Monthly net',riFmt(net),'']];
+var stats=[['ROI',(roi>=0?'+':'')+roi.toFixed(0)+'%',(roi>=0?'sig-y':'sig-n')],['Payback',payback?'Month '+payback:(net>0&&inv>0?'Month '+Math.ceil(inv/net)+' (beyond horizon)':'Never at these numbers'),(payback?'sig-y':'sig-n')],['Net gain',riFmt(gain),(gain>=0?'sig-y':'sig-n')],['Monthly net',riFmt(net),'']];
 document.getElementById('ri-stats').innerHTML=stats.map(function(s){return '<div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px"><div class="big '+s[2]+'" style="font-size:1.4rem;line-height:1.1">'+s[1]+'</div><div class="muted" style="font-size:.76rem;margin-top:2px">'+s[0]+'</div></div>';}).join('');
 var W=640,H=220,pd=34,mn=Math.min.apply(null,cum),mx=Math.max.apply(null,cum);if(mx===mn)mx=mn+1;
 function X(i){return (pd+i/mo*(W-2*pd)).toFixed(1);}function Y(v){return (H-pd-(v-mn)/(mx-mn)*(H-2*pd)).toFixed(1);}

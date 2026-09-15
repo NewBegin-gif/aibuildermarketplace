@@ -131,7 +131,7 @@ var amt=+document.getElementById('ln-amt').value,rate=+document.getElementById('
 var r=rate/100/12,pay=r>0?amt*r*Math.pow(1+r,term)/(Math.pow(1+r,term)-1):amt/term;
 var bal=amt,balA=[amt];for(var i=1;i<=term;i++){var it=bal*r;bal=bal-(pay-it);if(bal<0)bal=0;balA.push(bal);}
 var totalPaid=pay*term,totalInt=totalPaid-amt;
-var stats=[['Monthly payment','$'+Math.round(pay).toLocaleString(),''],['Total interest',lnFmt(totalInt),(totalInt>amt*0.5?'sig-n':'')],['Total repaid',lnFmt(totalPaid),''],['Term',term+' mo','']];
+var stats=[['Monthly payment','$'+Math.round(pay).toLocaleString(),''],['First payment: interest / principal','$'+Math.round(amt*r).toLocaleString()+' / $'+Math.round(pay-amt*r).toLocaleString(),''],['Total interest',lnFmt(totalInt),(totalInt>amt*0.5?'sig-n':'')],['Total repaid',lnFmt(totalPaid),''],['Term',term+' mo','']];
 document.getElementById('ln-stats').innerHTML=stats.map(function(s){return '<div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px"><div class="big '+s[2]+'" style="font-size:1.3rem;line-height:1.1">'+s[1]+'</div><div class="muted" style="font-size:.76rem;margin-top:2px">'+s[0]+'</div></div>';}).join('');
 var W=640,H=210,pd=32,mx=amt||1;function X(i){return (pd+i/term*(W-2*pd)).toFixed(1);}function Y(v){return (H-pd-v/mx*(H-2*pd)).toFixed(1);}
 var pts=balA.map(function(v,i){return X(i)+','+Y(v);}).join(' ');

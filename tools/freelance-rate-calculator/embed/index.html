@@ -127,7 +127,7 @@ body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div c
 <div id="fr-out" style="margin-top:16px"></div></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/freelance-rate-calculator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Freelance Hourly Rate Calculator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 function frCalc(){var inc=+document.getElementById('fr-inc').value,exp=+document.getElementById('fr-exp').value,h=+document.getElementById('fr-hrs').value,w=+document.getElementById('fr-wks').value,o=document.getElementById('fr-out');
 var hours=h*w;if(!(hours>0)){o.innerHTML='<p class="muted">Enter your hours and weeks.</p>';return;}
-var rate=(inc+exp)/hours;
-o.innerHTML='<p class="big">'+rate.toFixed(0)+' /hr</p><p class="muted">to cover '+(inc+exp).toLocaleString()+' across '+hours.toLocaleString()+' billable hours. Round up \u2014 not every hour is billable.</p>';
+var rate=(inc+exp)/hours,up=Math.ceil(rate);
+o.innerHTML='<p class="big">'+up+' /hr</p><p class="muted">Exact minimum '+rate.toFixed(2)+' per hour to cover '+(inc+exp).toLocaleString()+' across '+hours.toLocaleString()+' billable hours, rounded up so the target is actually met ('+up+' \u00d7 '+hours.toLocaleString()+' = '+(up*hours).toLocaleString()+'). The income figure is before tax.</p>';
 gtag&&gtag('event','tool_use',{event_label:'freelance_rate'});}
 ['fr-inc','fr-exp','fr-hrs','fr-wks'].forEach(function(id){document.getElementById(id).addEventListener('input',frCalc);});frCalc();</script></body></html>

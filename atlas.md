@@ -1331,10 +1331,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/hubstaff-review/
 
 ## Iconosquare (iconosquare.com)
-- **Verified pricing:** (read 2026-08-26 on iconosquare.com/pricing over a US connection, at their default of 5 social profiles) Launch is $39 a month, Scale $79 and Excel $139, all billed yearly; the page puts th…
+- **Verified pricing:** (price re-verified 2026-09-15) Read on iconosquare.com/pricing from a Netherlands connection, at the profile count each plan includes.
 - **Honest take:** Its depth is strongest on Instagram and the core networks; if your priority platform sits outside its best-supported set, coverage thins.
 - **Best for:** agencies and brands that want deep social analytics, reporting and competitor benchmarking alongside scheduling, especially Instagram-first teams
-- **Flags:** {'f': 'per_seat', 'ev': 'And the per-seat, per-profile tiering means agencies managing many brands climb toward the Excel tier quicker than the headline Launch price suggests.'}, {'f': 'usage_metered', 'ev': 'Its depth is strongest on Instagram and the core networks; if your priority platform sits outside its best-supported set, coverage thins.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'And the per-seat, per-profile tiering means agencies managing many brands climb toward the Custom plan quicker than the headline Starter price sugges…'}, {'f': 'usage_metered', 'ev': 'Its depth is strongest on Instagram and the core networks; if your priority platform sits outside its best-supported set, coverage thins.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/iconosquare-review/
 
 ## iContact (icontact.com)

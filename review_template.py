@@ -285,7 +285,7 @@ AFFILIATE = {
         "category": "AI Video",
     },
     "ManyChat": {
-        "url": "https://manychat.partnerlinks.io/fytpn81je1y4",
+        "url": "https://manychat.com/",
         "rating": "4.6",
         "reviews": "5,000+",
         "price": "Free plan",

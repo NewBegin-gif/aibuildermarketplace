@@ -82,8 +82,8 @@
     function findCTA(){
       var a = document.querySelector('a[rel~="sponsored"][href^="http"]');
       if (a) return a.href;
-      var B = ['kinsta.com','beehiiv','bitvavo','synthesia','invideo','replit','clay.com','murf.ai','wp-rocket','rankmath','jotform','chemicloud','frase.io','hostinger','foxit','keap','tresorit','partnerstack','partnerlinks'];
-      for (var i=0;i<B.length;i++){ var x=document.querySelector('a[href*="'+B[i]+'"]'); if (x) return x.href; }
+      // 15 sep 2026 (audit R3-11): geen terugval op een willekeurige merklink --
+      // op /b2b/ werd de eerste Beehiiv-kaart de 'recommended pick'.
       return null;
     }
     // ---- Tool-naam uit de title (bv. "Foxit Review 2026 — ..." -> "Foxit") ----

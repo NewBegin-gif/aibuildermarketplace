@@ -25,7 +25,7 @@ VAULT = {
     "Credit Repair Cloud": "https://get.creditrepaircloud.com/rzjqacc3xbwo",
     "AISQ": "https://try.aisq.com/oftwfsjuajyw",
     "Ngram": "https://partner.ngram.com/32s9nqdqy7lr",
-    "ManyChat": "https://manychat.partnerlinks.io/fytpn81je1y4",
+    "ManyChat": "https://manychat.com/",
     "Pangram": "https://affiliate.pangram.com/x1xctagyhhbz",
 }
 

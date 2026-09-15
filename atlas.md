@@ -1818,7 +1818,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/outgrow-review/
 
 ## Ownr (ownr.co)
-- **Verified pricing:** Sole proprietorship around $49 CAD; incorporation roughly $499 (federal) to $699 (BC), with government fees included; annual compliance about $199–599/yr.
+- **Verified pricing:** Sole proprietorship around CA$49; incorporation roughly CA$499 (federal) to CA$699 (BC), with government fees included; annual compliance about CA$199–599 a year.
 - **Honest take:** Two honest limits.
 - **Best for:** Canadian founders who want a straightforward sole proprietorship or single-shareholder incorporation done fast, without paying lawyer rates
 - **Full review:** https://aibuildermarketplace.com/b2b/ownr-review/

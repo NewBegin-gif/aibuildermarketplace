@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 454 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-15.
+All 454 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1578,7 +1578,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/livestorm-review/
 
 ## Lucrovox (lucrovox.com)
-- **Verified pricing:** (re-verified 2026-08-24 on lucrovox.com/#pricing and lucrovox.com/lucrochat, both read in a real browser with the pages fully loaded) The phone agent has three published tiers and the plan …
+- **Verified pricing:** (re-verified 2026-09-15 on lucrovox.com/#pricing and lucrovox.com/lucrochat, both read in a real browser with the pages fully loaded) The phone agent has three published tiers and the plan …
 - **Honest take:** The meter is AI-handled calls: Starter’s 100 calls a month is roughly three a day, so a genuinely busy shop outgrows it quickly — and the steps are steep ($199 → $499 → $999).
 - **Best for:** local service businesses — HVAC, plumbing, roofing, med spas — losing revenue to missed calls who want a 24/7 AI receptionist that books jobs straight into Google Calendar, Housecall Pro, ServiceTitan or Jobber
 - **Flags:** {'f': 'usage_metered', 'ev': 'LucroChat, the website chat product from the same vendor, sits on lucrovox.com/lucrochat with its own table metered on monthly conversations rather t…'}
@@ -2967,7 +2967,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wati-review/
 
 ## Way (effectify.io)
-- **Verified pricing:** (read 2026-08-25 on apps.shopify.com/sticky-navigate-to-store) Four tiers, and above the first one the ladder is a location counter rather than a feature list.
+- **Verified pricing:** (re-verified 2026-09-16) Four tiers, and above the first one the ladder is a location counter rather than a feature list.
 - **Honest take:** The pricing page reads like a feature ladder and behaves like a counter.
 - **Best for:** retailers and brands with physical stockists who want a Google Maps locator on their Shopify storefront without setting up a Maps API key or paying Google directly — the app handles the key on every tier, including the free one, w
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 20% on every paid tier and each carries a 7-day free trial.'}, {'f': 'free_tier', 'ev': "The free plan is genuinely usable on a live store, which is worth saying plainly — the same developer's Blocky and TiXel listings advertise free plan…"}

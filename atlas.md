@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 455 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
+All 456 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -886,8 +886,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dryground-ai-review/
 
 ## Dynasort (dynasort.io)
-- **Verified pricing:** (read 14 September 2026 on apps.shopify.com/dynasort) Four tiers, all billed in USD every 30 days.
-- **Honest take:** Sorting driven by 60+ blended signals is powerful and opaque in the same breath: a recipe that ranks by margin, velocity and stock at once will sometimes bury a product you wanted seen, and there is real trial…
+- **Verified pricing:** (re-read 15 September 2026 on apps.shopify.com/dynasort) Four tiers, all billed in USD and recurring every 30 days.
+- **Honest take:** Sorting driven by 40+ blended signals is powerful and opaque in the same breath: a recipe that ranks by margin, velocity and stock at once will sometimes bury a product you wanted seen, and there is real trial…
 - **Best for:** Shopify stores with large or fast-changing catalogues where product order is a merchandising decision — seasonal ranges, frequent stock-outs, wide margin spreads — and nobody who wants to re-order collections by hand every week.
 - **Full review:** https://aibuildermarketplace.com/b2b/dynasort-review/
 
@@ -1714,6 +1714,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators, trainers and product teams that need studio-quality voiceovers in many languages without booking voice actors — explainers, courses, product videos
 - **Flags:** {'f': 'annual_lock', 'ev': '(re-verified 2026-09-14 in a browser; the page renders client-side and opens on annual billing, so check which column you are reading) Studio plans: …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-14 in a browser; the page renders client-side and opens on annual billing, so check which column you are reading) Studio plans: …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/murf-review/
+
+## MX AI Background Music Player (effectify.io)
+- **Verified pricing:** (read 2026-09-16 on apps.shopify.com/custom-background-music) Two plans, and the free one is not for you.
+- **Honest take:** The strongest argument against paying for this is one App Store search away.
+- **Best for:** Shopify merchants who want seasonal or ambient audio on the storefront, want a say in how the player looks and behaves, and would rather use the app's royalty-free tracks than sort out the licensing for a song of their own
+- **Flags:** {'f': 'free_tier', 'ev': 'The "Free plan available" badge on the listing is for development and partner stores only — on a live store there is no free tier, so read that badge…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/mx-ai-background-music-player-review/
 
 ## Mycroft (mycroft.io)
 - **Verified pricing:** (read 4 September 2026 on www.mycroft.io/pricing) Mycroft has no public pricing: three packages, and not one number between them.

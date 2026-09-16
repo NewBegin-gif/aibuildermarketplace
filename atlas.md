@@ -1715,12 +1715,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'annual_lock', 'ev': '(re-verified 2026-09-14 in a browser; the page renders client-side and opens on annual billing, so check which column you are reading) Studio plans: …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-14 in a browser; the page renders client-side and opens on annual billing, so check which column you are reading) Studio plans: …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/murf-review/
 
-## MX AI Background Music Player (effectify.io)
+## MX AI (effectify.io)
 - **Verified pricing:** (read 2026-09-16 on apps.shopify.com/custom-background-music) Two plans, and the free one is not for you.
 - **Honest take:** The strongest argument against paying for this is one App Store search away.
 - **Best for:** Shopify merchants who want seasonal or ambient audio on the storefront, want a say in how the player looks and behaves, and would rather use the app's royalty-free tracks than sort out the licensing for a song of their own
 - **Flags:** {'f': 'free_tier', 'ev': 'The "Free plan available" badge on the listing is for development and partner stores only — on a live store there is no free tier, so read that badge…'}
-- **Full review:** https://aibuildermarketplace.com/b2b/mx-ai-background-music-player-review/
+- **Full review:** https://aibuildermarketplace.com/b2b/mx-ai-review/
 
 ## Mycroft (mycroft.io)
 - **Verified pricing:** (read 4 September 2026 on www.mycroft.io/pricing) Mycroft has no public pricing: three packages, and not one number between them.

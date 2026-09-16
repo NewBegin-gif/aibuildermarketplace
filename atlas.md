@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 456 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
+All 457 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1273,6 +1273,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** content sites, blogs and stores that already have traffic and a genuinely worthwhile offer, and want sticky bars, popups and slide-ins with A/B testing to convert more of that traffic into subscribers
 - **Flags:** {'f': 'usage_metered', 'ev': 'No credit card is needed to start, and first-time customers on an annual plan get a 30-day money-back guarantee.'}, {'f': 'free_tier', 'ev': 'Starter is $0 forever with 5,000 views in total rather than per month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/hello-bar-review/
+
+## Helm (pactai.app)
+- **Verified pricing:** (read 2026-09-16 in a live browser on apps.shopify.com/helm) One plan, called Operator, at $129 a month or $1,299 a year — the listing puts the annual saving at 16% — billed in USD every 30…
+- **Honest take:** Nine days old and trading under three names.
+- **Best for:** Shopify stores already spending on Meta and Google Ads and keeping their books in QuickBooks Online, that want one place reading orders, ad spend, GA4 traffic and financials against each other instead of four dashboards that never
+- **Flags:** {'f': 'usage_metered', 'ev': 'To its credit the site labels the first a goal in progress rather than a result, and says plainly that the SOC 2 Type II and ISO/IEC 27001 certificat…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/helm-review/
 
 ## HelpCenter (helpcenterapp.com)
 - **Verified pricing:** (re-read 2026-08-29 on apps.shopify.com/helpcenter) Free to install, and the meter is tickets rather than agents — Basic already gives unlimited support agents, then bills for every ticket …

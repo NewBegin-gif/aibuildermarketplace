@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 454 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
+All 455 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1499,6 +1499,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** sales and support teams that need virtual numbers across many countries with a shared dashboard, dialer and CRM hooks at a budget seat price
 - **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up…"}, {'f': 'usage_metered', 'ev': 'Annual saves 20%, which the page puts at $36 per user a year on Essential and $96 on Standard, and each plan comes with $1 of free calling and SMS cr…'}, {'f': 'addons_extra', 'ev': 'Same honest math as most budget VoIP: the plan buys the platform, the meter buys the conversations — per-minute and per-SMS charges land on top of ev…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/krispcall-review/
+
+## Kumo (cloudlift.app)
+- **Verified pricing:** (read 2026-09-16 on apps.shopify.com/b2b-wholesale-tools) Two plans and no free tier: B2B at $15 a month and PLUS at $30, both with a 7-day free trial, billed in USD every 30 days.
+- **Honest take:** Five stars over nine reviews is not a track record, and the age makes that worse rather than better.
+- **Best for:** Shopify merchants on a standard plan who need wholesale prices for named customer groups, with CSV price lists and a registration form that someone approves, and who would rather not pay three times as much for a heavier wholesale
+- **Flags:** {'f': 'usage_metered', 'ev': 'B2B carries the whole working app — wholesale pricing, volume pricing, customer registration forms and the approval workflow — and pricing rules are …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/kumo-review/
 
 ## Landingi (landingi.com)
 - **Verified pricing:** (re-verified 2026-08-17; the English page quotes USD while the same page served from a Dutch address quotes euros at the same numerals, so check your own currency) Four plans, billed annual…

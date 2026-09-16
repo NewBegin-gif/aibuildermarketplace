@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 457 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
+All 458 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1917,6 +1917,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The pricing page argues instead of quoting.
 - **Best for:** data and marketing teams that want churn, LTV or demand predictions running against their own warehouse without hiring data scientists, and can work with an annual commitment quoted on a call
 - **Full review:** https://aibuildermarketplace.com/b2b/pecan-ai-review/
+
+## PhotoGenerator (photogenerator.ai)
+- **Verified pricing:** (read 16 September 2026 in a live browser on photogenerator.ai/pricing, in all three billing modes) Credit-based, in US dollars, with no free tier among the published plans — the site offer…
+- **Honest take:** The plan cards and the comparison table on the same page disagree about what Pro costs.
+- **Best for:** people who want several image and video models behind one balance and one interface — switching between Nano Banana, GPT Image 2, Seedance, Kling, Veo and Wan without holding four subscriptions — and who generate enough to justify
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 16 September 2026 in a live browser on photogenerator.ai/pricing, in all three billing modes) Credit-based, in US dollars, with no free tier am…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/photogenerator-review/
 
 ## Piktochart (piktochart.com)
 - **Verified pricing:** (re-verified 6 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 2026 reading) Free is $0, Pro is $15 per member per month billed m…

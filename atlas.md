@@ -1979,7 +1979,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Read the tiers as what they are: a platform fee plus a per-message rate plus carrier fees.'}, {'f': 'free_tier', 'ev': '(2026-08-30, re-read on their own pricing page from a US exit) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0.015 then $0.009…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
 
-## PreOrder Now (preordernow.app)
+## PreOrder Now (zenpire.tech)
 - **Verified pricing:** (re-verified 13 September 2026 on zenpire.tech/app-listing/pre-order-now/, every amount unchanged since 10 September; the amounts come from Zenpire's own page because the app is not install…
 - **Honest take:** The free tier is more useful than it first looks: one pre-order product, unlimited time, with the mixed-cart warning included.
 - **Best for:** stores that sell drops, restocks or made-to-order products and want pre-order badges, partial payments and back-in-stock emails without touching the theme — and that are on Shopify Basic or Standard, where the price is proportiona

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 458 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-16.
+All 458 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -672,7 +672,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clutch-review/
 
 ## Code Bulk Discounts (discountkit.app)
-- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/code-bulk) Two plans, billed in USD every 30 days.
+- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/code-bulk and re-verified there on 2026-09-16, unchanged) Two plans, billed in USD every 30 days.
 - **Honest take:** Read the free plan's number twice, because the word doing the work is 'lifetime': it is 500 codes in total, not 500 a month.
 - **Best for:** shopify stores that already run email or SMS campaigns and need thousands of unique, single-use codes generated out of one existing discount and handed over as a CSV
 - **Flags:** {'f': 'free_tier', 'ev': "Read the free plan's number twice, because the word doing the work is 'lifetime': it is 500 codes in total, not 500 a month."}
@@ -2338,10 +2338,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sentaro-review/
 
 ## SEO Space (seospace.co)
-- **Verified pricing:** (2026-08-17, re-verified on their own homepage pricing block) One figure is published: Pro, the default position on their website slider, is $33.33/mo billed annually, labelled MOST POPULAR…
+- **Verified pricing:** (prices read 2026-09-16 on seospace.co, where the plan cards and the page's own pricing script both carry the figures) Three named tiers plus a free plan.
 - **Honest take:** Squarespace has been quietly absorbing the job this tool was invented for.
 - **Best for:** Squarespace freelancers and studios billing for several client sites. Pricing by number of websites rather than per seat, multi-site dashboards and white-label PDF reports are things the big per-seat SEO suites never bothered to b
-- **Flags:** {'f': 'usage_metered', 'ev': 'It is metered against plan-varying AI credits rather than unlimited.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The tiers buy capacity rather than capability: 1, 3 and 10 websites; 100, 500 and unlimited audited pages; 50, 200 and 500 AI credits a month; 25, 10…'}, {'f': 'addons_extra', 'ev': 'New since August: Orbit, a five-agent AI layer, is sold as a separate add-on at $119 a month or $952 a year on top of a subscription.'}, {'f': 'free_tier', 'ev': "(prices read 2026-09-16 on seospace.co, where the plan cards and the page's own pricing script both carry the figures) Three named tiers plus a free …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/seo-space-review/
 
 ## SEOKart (seokart.com)

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 463 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-18.
+All 464 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-18.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -962,10 +962,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/employment-hero-review/
 
 ## EngageBay (engagebay.com)
-- **Verified pricing:** (re-verified 26 Aug 2026) Genuinely free tier: $0 for 250 contacts with email marketing, CRM, helpdesk and live chat, and the plan card adds that it is free for teams of up to 15 members.
+- **Verified pricing:** (price re-verified 2026-09-18 on engagebay.com/pricing) Genuinely free tier: $0 for 250 contacts with email marketing, CRM, helpdesk and live chat, and the plan card adds that it is free fo…
 - **Honest take:** The meter is contacts AND seats at once: prices are per user, and each tier caps contacts — Basic’s 500 contacts fills fast, and the Growth jump is steep ($15 → $65 per user).
 - **Best for:** small teams that want CRM, email marketing, helpdesk and live chat in one affordable suite — the free tier is a genuine trial-for-life, and it undercuts HubSpot hard at small scale
-- **Flags:** {'f': 'per_seat', 'ev': 'All-in-One suite per user/month on monthly billing: Basic $14.99 (500 contacts), Growth $64.99 (5,000 contacts, marketing automation), Pro $119.99 (5…'}, {'f': 'free_tier', 'ev': '(re-verified 26 Aug 2026) Genuinely free tier: $0 for 250 contacts with email marketing, CRM, helpdesk and live chat, and the plan card adds that it …'}
+- **Flags:** {'f': 'per_seat', 'ev': 'All-in-One suite per user/month on monthly billing: Basic $14.99 (500 contacts), Growth $64.99 (5,000 contacts, marketing automation), Pro $119.99 (1…'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-18 on engagebay.com/pricing) Genuinely free tier: $0 for 250 contacts with email marketing, CRM, helpdesk and live chat, a…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/engagebay-review/
 
 ## Envoy (envoy.com)
@@ -1655,10 +1655,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/migrationpro-review/
 
 ## MindStudio (mindstudio.ai)
-- **Verified pricing:** (prices read 2026-08-17 on mindstudio.ai/pricing) The subscription is a floor, not the bill: every tier reads “+ usage”, so model calls are charged on top.
+- **Verified pricing:** (prices re-verified 2026-09-18 on mindstudio.ai/pricing) The subscription is a floor, not the bill: every tier reads “+ usage”, so model calls are charged on top.
 - **Honest take:** The no-markup model pass-through is genuinely fair — but it also means your real cost is subscription PLUS model spend, and an agent that loops or processes big documents burns provider credits invisibly until…
 - **Best for:** operators and teams that want to build and deploy real AI agents and workflows visually, across many models, without engineering time
-- **Flags:** {'f': 'quote_only', 'ev': 'Business is quote-based.'}, {'f': 'usage_metered', 'ev': 'Because the metered part is uncapped, the tier you pick says little about what you will actually pay - the run volume does.'}, {'f': 'free_tier', 'ev': 'Free is $0/month plus usage and caps you at one agent and 1,000 runs a month.'}
+- **Flags:** {'f': 'quote_only', 'ev': 'Business is quote-based.'}, {'f': 'per_seat', 'ev': 'MindStudio states it does not mark up model cost — its FAQ says you pay exactly the same price as bringing your own API keys from the providers — and…'}, {'f': 'usage_metered', 'ev': 'Because the metered part is uncapped by the plan, the tier you pick says little about what you will actually pay — the run volume does.'}, {'f': 'free_tier', 'ev': 'Free is $0/month plus usage and caps you at one agent and 1,000 runs a month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/mindstudio-review/
 
 ## Miro (miro.com)
@@ -1833,10 +1833,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/omniseo-review/
 
 ## Oneflow (oneflow.com)
-- **Verified pricing:** (price re-verified 2026-09-02 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK, SEK and USD — these are the EUR figures) Business is €50 per u…
+- **Verified pricing:** (price re-verified 2026-09-18 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK, SEK and USD — these are the EUR figures) Business is €50 per u…
 - **Honest take:** The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a sales conversation.
 - **Best for:** sales and legal teams with real contract volume who want the full lifecycle — creating, negotiating, e-signing and archiving interactive contracts — in one platform with CRM integrations
-- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-02 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK, SEK and USD — these ar…'}, {'f': 'annual_lock', 'ev': "The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a …"}
+- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-18 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK, SEK and USD — these ar…'}, {'f': 'addons_extra', 'ev': 'Two features sit behind a ($) marker even on the plan that lists them, meaning a paid add-on rather than an unavailable feature: eID signature on Bus…'}, {'f': 'annual_lock', 'ev': "The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/oneflow-review/
 
 ## Optizen (optizenapp.com)
@@ -1993,6 +1993,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Two honest notes.
 - **Best for:** agencies and hosters managing multiple sites on their own servers who want a mature control panel with per-domain management, security and one-click stacks
 - **Full review:** https://aibuildermarketplace.com/b2b/plesk-review/
+
+## Poptin (poptin.com)
+- **Verified pricing:** (read 18 September 2026 in a live browser on poptin.com/pricing, in both product modes and both billing cycles, with the in-app billing page at app.popt.in checked alongside it) The page op…
+- **Honest take:** The plan Poptin recommends does not have a price on it.
+- **Best for:** sites that want popups, forms and coupons with a genuinely usable free tier and a cheap first paid rung — $20 a month for 10,000 visitors, unlimited popups and no Poptin branding — and that are happy to run the email side elsewher
+- **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 forever with 1,000 unique visitors a month, one domain and unlimited poptins.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/poptin-review/
 
 ## Post Purchase Upsell Hero (postpurchaseupsellhero.com)
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/post-purchase-upsell-hero) One plan, Performance, at $0 a month plus usage charges, billed in USD.
@@ -2874,9 +2881,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/trainerize-review/
 
 ## Trainual (trainual.com)
-- **Verified pricing:** (read 2026-08-25 on trainual.com/pricing) No prices at all.
+- **Verified pricing:** (re-read 2026-09-18 on trainual.com/pricing) No prices at all.
 - **Honest take:** You cannot find out what it costs without booking a demo.
 - **Best for:** growing teams (roughly 10+ staff) that need to document SOPs and onboard new hires consistently instead of training by osmosis
+- **Flags:** {'f': 'addons_extra', 'ev': 'Two things are quantified beyond the fee: the implementation team aims to have interviews completed and content in the account within 10 business day…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/trainual-review/
 
 ## Tresorit (tresorit.com)
@@ -3107,10 +3115,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/
 
 ## Woodpecker (woodpecker.co)
-- **Verified pricing:** (price re-verified 2026-08-25 against the vendor's own pricing page) (2026) Free trial.
+- **Verified pricing:** (price re-verified 2026-09-18 against woodpecker.co/pricing) Free trial.
 - **Honest take:** The $7-per-100-prospects unit reads cheap, but a real outbound motion stacks add-ons fast.
 - **Best for:** outbound teams that want usage-priced cold email plus LinkedIn outreach, with unlimited seats and email accounts included instead of per-user fees
-- **Flags:** {'f': 'usage_metered', 'ev': 'Add-ons: LinkedIn account $29/mo each, managed sending addresses (Google/Microsoft) $6/mo each, extra warm-ups $5/mo per email account, Lead Finder c…'}, {'f': 'addons_extra', 'ev': 'Add-ons: LinkedIn account $29/mo each, managed sending addresses (Google/Microsoft) $6/mo each, extra warm-ups $5/mo per email account, Lead Finder c…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Lead Finder credits start at 500 for $10.'}, {'f': 'addons_extra', 'ev': 'Add-ons are where an outbound motion actually gets expensive, and there are now two grades of managed sending address rather than one: LinkedIn accou…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/woodpecker-review/
 
 ## World Businesses for Sale (worldbusinessesforsale.com)

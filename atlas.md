@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 460 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-18.
+All 463 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-18.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1371,6 +1371,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'quote_only', 'ev': 'This is enterprise omnichannel supply-chain software, and the opaque, quote-based pricing signals the target customer: retail brands with real scale,…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/increff-review/
 
+## Influencer Hero (influencer-hero.com)
+- **Verified pricing:** (read 18 September 2026 in a live browser on influencer-hero.com/pricing) Four plans, quoted per month but charged up front for the period, and every plan carries a three-month minimum term.
+- **Honest take:** The three-month minimum is the real commitment, and it is easy to read past.
+- **Best for:** brands running influencer marketing as a continuous programme rather than a campaign, with enough volume to use 1,000 reach-outs a month from the first month, who want discovery, outreach, a creator CRM, UGC tracking and affiliate
+- **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage rate anywhere on it, so the only stated remedy for exceeding 1,000 reach-outs is the next plan up at $320 a month more.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/influencer-hero-review/
+
 ## Insightful (insightful.io)
 - **Verified pricing:** (price re-verified 2026-09-09 against the vendor's own pricing page) (2026) Per seat; the rates below are the annual ones.
 - **Honest take:** This is employee-monitoring software, so weigh the culture cost, not just the price: the advertised $8-16 rates are per seat AND are the annual ones (month-to-month exists on select plans but is never priced),…
@@ -1776,6 +1783,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** local and service businesses that want reputation marketing on offense — automatically asking happy customers for reviews and showcasing them — rather than only managing damage when a bad review lands
 - **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-11 on their own pricing page) Software plans are Reviews at $75/mo and Pro at $125/mo, both USD, with a 14-day free trial, no cr…'}, {'f': 'addons_extra', 'ev': 'Sites add-ons are billed on top: an extra landing page is $145 one-time plus $15/mo, and a CMS for blogs, services or locations is $245 one-time plus…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/nicejob-review/
+
+## Niural AI (niural.com)
+- **Verified pricing:** (read 18 September 2026 in a live browser on niural.com/pricing) Eight products, each priced separately, and unusually for this category every one of them carries a published figure.
+- **Honest take:** Every tier says Book a demo.
+- **Best for:** US companies that want payroll, benefits, PEO and international hiring from one vendor and want to see a number before the call — and especially teams above about fifty people, where the $100 platform fee stops distorting the per-
+- **Flags:** {'f': 'per_seat', 'ev': 'US Payroll Standard is $100 a month as a platform fee plus $20 per employee a month, covering multi-state payroll with W-2s and 1099s, unlimited pay …'}, {'f': 'addons_extra', 'ev': '(read 18 September 2026 in a live browser on niural.com/pricing) Eight products, each priced separately, and unusually for this category every one of…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/niural-ai-review/
 
 ## noCRM (nocrm.io)
 - **Verified pricing:** (read 9 September 2026 on www.nocrm.io/pricing, in both billing modes) Three per-seat tiers and no free plan.
@@ -2739,6 +2753,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** security teams and IT-mature companies that need continuous, authoritative vulnerability scanning and can remediate what it finds
 - **Flags:** {'f': 'addons_extra', 'ev': 'Advanced Support (24x365 phone, email, community and chat) is a $400/year add-on on both.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tenable-review/
+
+## TestDriver.ai (testdriver.ai)
+- **Verified pricing:** (read 18 September 2026 in a live browser on testdriver.ai/pricing) Two tiers.
+- **Honest take:** You do not control your own seat count.
+- **Best for:** teams already living inside GitHub pull requests who want end-to-end tests to exist at all — mention @testdriverai in a PR, get a written, run and committed test back with a recording — and who would otherwise keep postponing a Pl
+- **Flags:** {'f': 'per_seat', 'ev': 'Pro is $20 per seat a month plus $0.14 for every testing minute, with 120 testing minutes included and a 14-day free trial.'}, {'f': 'usage_metered', 'ev': '120 testing minutes at the published $0.14 overage rate is $16.80 of metered value against a $20 seat, so the bundle is close to a rounding error on …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/testdriver-ai-review/
 
 ## TestGorilla (testgorilla.com)
 - **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) Free $0 with 10 credits a month, no card needed, including preset custom questions and 1 full-access seat.

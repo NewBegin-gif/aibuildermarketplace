@@ -1174,10 +1174,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/geostock-review/
 
 ## Geotargetly (geotargetly.com)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) 14-day free trial.
+- **Verified pricing:** (re-verified 2026-09-19 on their own pricing page, from a European exit, USD) 14-day free trial, no card.
 - **Honest take:** The meter is pageviews, not visitors, and each product consumes its own pageview on the same page visit — so a redirect plus a popup bills twice.
 - **Best for:** marketers personalizing redirects, content blocks and popups by visitor location — country to city level — without engineering work
-- **Flags:** {'f': 'usage_metered', 'ev': 'The meter is PAGEVIEWS, not visitors (the previous dossier said visitors): the FAQ states a pageview is consumed for every page visit, and that pagev…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The meter is PAGEVIEWS, not visitors: a pageview is consumed for every page visit, and separately for each product in use; Geo Links consumes one on …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/geotargetly-review/
 
 ## GetResponse (getresponse.com)
@@ -2001,10 +2001,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/poptin-review/
 
 ## Post Purchase Upsell Hero (postpurchaseupsellhero.com)
-- **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/post-purchase-upsell-hero) One plan, Performance, at $0 a month plus usage charges, billed in USD.
+- **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/post-purchase-upsell-hero and the vendor's own site; amounts unchanged since 31 August, USD) One plan, Performance, free to install, at $0 a mont…
 - **Honest take:** The 2.5% comes off revenue, not margin.
 - **Best for:** shopify stores that want post-purchase upsells with no fixed monthly cost, where the bill only exists once the app has already added revenue, and that are comfortable being early on an app a few months old
-- **Flags:** {'f': 'addons_extra', 'ev': 'On discounted or thin-margin add-ons the same percentage is a far bigger share of the profit, and the meter reads revenue either way.'}, {'f': 'free_tier', 'ev': '(prices read 2026-08-31 on apps.shopify.com/post-purchase-upsell-hero) One plan, Performance, at $0 a month plus usage charges, billed in USD.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'On discounted or thin-margin add-ons the same percentage is a far bigger share of the profit, and the meter reads revenue either way.'}, {'f': 'free_tier', 'ev': "(re-verified 2026-09-19 on apps.shopify.com/post-purchase-upsell-hero and the vendor's own site; amounts unchanged since 31 August, USD) One plan, Pe…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/post-purchase-upsell-hero-review/
 
 ## Postscript (postscript.io)
@@ -2069,7 +2069,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/proton-drive-review/
 
 ## Pumper Bundles (pumper.run)
-- **Verified pricing:** (prices read 2026-09-02 on apps.shopify.com/pumper-quantity-breaks-product-bundles-discounts) Four tiers, billed in USD, with a 7-day free trial on the paid ones.
+- **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/pumper-quantity-breaks-product-bundles-discounts AND on the vendor's own site, USD; listed amounts unchanged since 2 September) Four tiers on the…
 - **Honest take:** Every tier ships the same four features, so what you are buying is a ceiling on the revenue the app is allowed to earn you.
 - **Best for:** shopify stores that want bundles, quantity breaks, BOGO and free-gift offers without touching code, and that value a free tier which is the complete app rather than a feature-stripped demo
 - **Flags:** {'f': 'free_tier', 'ev': 'It makes the free plan unusually generous — the whole app, not a stripped demo — and it makes every upgrade buy you nothing new, only permission to k…'}
@@ -2402,10 +2402,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/serpstat-review/
 
 ## ServiceM8 (servicem8.com)
-- **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit, USD) Priced by jobs per month, with unlimited users on every paid tier.
+- **Verified pricing:** (re-verified 2026-09-19 on their own pricing page, USD) Priced by jobs per month, with unlimited users on every paid tier.
 - **Honest take:** Unlimited users on every paid tier is genuinely unusual in this category and worth saying first: put your whole crew in without the bill moving.
 - **Best for:** trades and service businesses with a crew, where per-user pricing elsewhere punishes you for having enough people — this is one of the few tools in the category that does not
-- **Flags:** {'f': 'free_tier', 'ev': 'Free $0: 1 user, 30 jobs a month, 10 AI uses a day.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Premium Plus $349: 1,500+ jobs, with additional jobs at 20c each — the only tier where the page prices an overage.'}, {'f': 'free_tier', 'ev': 'Free $0: 1 user, 30 jobs a month, SMS at 10c each.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/servicem8-review/
 
 ## Shiftie (shiftie.co)
@@ -2962,14 +2962,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/unleashed-software-review/
 
 ## Upsell.com (upsell.com)
-- **Verified pricing:** (prices read 2026-09-02 on apps.shopify.com/reconvert-upsell-cross-sell) Billed in USD, with a 14-day free trial.
-- **Honest take:** The prices on the listing are the bottom three rungs of a ladder that keeps going.
-- **Best for:** shopify merchants who want one funnel covering product page, cart and post-purchase offers with AI recommendations and A/B testing, and whose monthly order volume is still low enough that the published tiers apply
-- **Flags:** {'f': 'free_tier', 'ev': 'The free plan is for development stores only, not a live shop.'}
+- **Verified pricing:** (prices re-verified 2026-09-19 on upsell.com/pricing and on the Shopify listing apps.shopify.com/reconvert-upsell-cross-sell; both now show the same ladder, which replaces the $4.99/$9.99/$…
+- **Honest take:** The ladder is public now, and that removes the complaint we had in September, but it leaves a cliff where the old one had a gap.
+- **Best for:** shopify merchants who want one funnel covering product page, cart, post-purchase and thank-you offers with AI recommendations and A/B testing, and who are either under 2,000 orders a month — where the whole feature set costs $9.99
 - **Full review:** https://aibuildermarketplace.com/b2b/upsell-com-review/
 
 ## UpsellPlus (upsellplus.com)
-- **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/upsellpluscheckout) Four tiers, billed in USD, with a 14-day free trial on the paid ones.
+- **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/upsellpluscheckout AND on the vendor's own pricing page, USD; listed amounts unchanged since 31 August) Fixed monthly tiers based on the revenue …
 - **Honest take:** The plans are capped by the revenue they are allowed to earn you, and the first paid step does not raise that cap: Free and the $49 Launch plan both stop at $500 of upsell revenue a month.
 - **Best for:** shopify merchants who want one app covering product page, cart, checkout, post-purchase, customer accounts and POS offers rather than three, especially Shopify Plus stores, where the checkout half of the product actually unlocks
 - **Full review:** https://aibuildermarketplace.com/b2b/upsellplus-review/
@@ -3154,10 +3153,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wrike-review/
 
 ## Xero (xero.com)
-- **Verified pricing:** (2026-08-30, read on their own US pricing page) Every headline price is a promotion: 'Get 90% off your plan for your first 6 months when you buy by 30 September 2026'.
+- **Verified pricing:** (re-verified 2026-09-19 on their own US pricing page) Every headline price is still a promotion: 'Get 90% off your plan for your first 6 months when you buy by 30 September 2026'.
 - **Honest take:** Read the second number, not the first.
 - **Best for:** small businesses whose bookkeeper or accountant already works in Xero — the ecosystem and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs
-- **Flags:** {'f': 'per_seat', 'ev': 'Optional add-ons: Inventory Plus (no price shown) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or contractor.'}, {'f': 'addons_extra', 'ev': 'Optional add-ons: Inventory Plus (no price shown) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or contractor.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or con…'}, {'f': 'addons_extra', 'ev': 'Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or con…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
 
 ## Zedonk (zedonk.co.uk)

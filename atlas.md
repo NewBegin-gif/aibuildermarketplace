@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 465 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-19.
+All 466 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-19.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2329,6 +2329,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
 - **Flags:** {'f': 'usage_metered', 'ev': 'Essence $149 a month: two user seats, one connected ad platform, a year of historical data, the ad dashboard with campaigns and trends, stockout, ove…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/selixer-review/
+
+## Selleasy (logbase.io)
+- **Verified pricing:** (prices read 2026-09-19 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/products/shopify-upsell-app-selleasy) Billed in USD.
+- **Honest take:** The meter is your whole store, not the app.
+- **Best for:** shopify stores that want bundles, add-ons, cart funnels and post-purchase offers out of one app and would rather be billed on order volume than hand over a share of the upsell revenue — and small stores in particular, since under 
+- **Flags:** {'f': 'free_tier', 'ev': "Every Starter tier counts total store orders, so the free plan's 50-order ceiling is reached by any shop doing two orders a day whether or not a sing…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/selleasy-review/
 
 ## Seller Investigators (sellerinvestigators.com)
 - **Verified pricing:** (2026-08-15, read on their own site) One number, and it is the whole model: a 25% commission, charged only after Amazon has deposited recovered funds in your account.

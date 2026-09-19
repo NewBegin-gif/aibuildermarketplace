@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 464 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-18.
+All 465 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-19.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -389,7 +389,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/blinq-review/
 
 ## Blocky (effectify.io)
-- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial.
+- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial, and every amount unchanged since 22 August 2026.
 - **Honest take:** Read the plan text before you read the badge.
 - **Best for:** Shopify stores below Plus that are losing time to bot traffic, repeat fraudsters or orders from regions they do not ship to, and want blocking rules they control rather than a full security suite
 - **Flags:** {'f': 'addons_extra', 'ev': 'Pro $19.99 a month or $167.92 a year adds blocking by email, name, address and phone, the Bot Killer for TOR, proxy and VPN traffic, an add-ons block…'}, {'f': 'free_tier', 'ev': 'The App Store header says a free plan is available; that free plan is Development Stores, for development and partner stores only, and it starts char…'}
@@ -555,10 +555,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/carbon6-review/
 
 ## Castmagic (castmagic.io)
-- **Verified pricing:** (read 2026-08-19 on castmagic.io/pricing) Three published tiers plus an enterprise band, and the page opens on annual billing with a 'Save 30%' label, so every headline number is the annual…
+- **Verified pricing:** (re-read 2026-09-18 on castmagic.io/pricing) Three published tiers plus an enterprise band.
 - **Honest take:** The prices on the page are the annual prices.
 - **Best for:** content teams, agencies and serious podcasters with a steady flow of recorded audio or video who want a transcript plus a stack of derived assets — show notes, newsletters, social posts, clips — from every upload, and who record e
-- **Flags:** {'f': 'annual_lock', 'ev': "(read 2026-08-19 on castmagic.io/pricing) Three published tiers plus an enterprise band, and the page opens on annual billing with a 'Save 30%' label…"}
+- **Flags:** {'f': 'annual_lock', 'ev': 'Business & Scale from $699 a month on annual billing and $999 a month on monthly billing, by demo, for custom volume, seats, storage, SLA and dedicat…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/castmagic-review/
 
 ## ChatGPT AI Product Description (profitoniumapps.com)
@@ -839,7 +839,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/disputifier-review/
 
 ## Dondy (dondy.net)
-- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/dondy-marketing-ai, listed as “Dondy: WhatsApp Marketing+Chat”) Four tiers, each paid one with a 7-day free trial.
+- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/dondy-marketing-ai, listed as “Dondy: WhatsApp Marketing+Chat”) Four tiers, each paid one with a 7-day free trial, and every amount unchanged since 2…
 - **Honest take:** The free plan is a chat button.
 - **Best for:** Shopify stores whose customers already live in WhatsApp — much of Europe, Latin America, the Middle East and Asia — that want cart recovery, order updates and campaigns on the official API without leaving the Shopify admin
 - **Flags:** {'f': 'free_tier', 'ev': 'The free plan is a chat button.'}
@@ -976,7 +976,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/envoy-review/
 
 ## Essential Loyalty (essential-apps.com)
-- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/essential-loyalty-rewards-program) Four tiers, and the meter is the whole decision.
+- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/essential-loyalty-rewards-program) Four tiers, every amount unchanged since 22 August 2026, and the meter is still the whole decision: it counts loya…
 - **Honest take:** Two things to read closely before you pay.
 - **Best for:** Shopify stores with genuine repeat business that want a loyalty programme priced on the orders it influences rather than on total volume — and stores selling in person too, since POS support arrives at $10 and the free tier carrie
 - **Flags:** {'f': 'usage_metered', 'ev': 'Free covers up to 250 of those and is unusually complete: the point program, VIP tiers, a referral program, twelve-plus ways to earn points, product,…'}, {'f': 'free_tier', 'ev': "The free plan advertises an 'Advanced loyalty point program' while Starter at $10 advertises a 'Free loyalty point program', which read literally mea…"}
@@ -1372,10 +1372,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/increff-review/
 
 ## Influencer Hero (influencer-hero.com)
-- **Verified pricing:** (read 18 September 2026 in a live browser on influencer-hero.com/pricing) Four plans, quoted per month but charged up front for the period, and every plan carries a three-month minimum term.
-- **Honest take:** The three-month minimum is the real commitment, and it is easy to read past.
+- **Verified pricing:** (pricing matrix read 18 September 2026 in documentation the vendor sent us; the public ladder at influencer-hero.com/pricing was read the same week and shows the quarterly column) Four plan…
+- **Honest take:** The three-month minimum is the real commitment, and there is no free trial to soften it.
 - **Best for:** brands running influencer marketing as a continuous programme rather than a campaign, with enough volume to use 1,000 reach-outs a month from the first month, who want discovery, outreach, a creator CRM, UGC tracking and affiliate
-- **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage rate anywhere on it, so the only stated remedy for exceeding 1,000 reach-outs is the next plan up at $320 a month more.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/influencer-hero-review/
 
 ## Insightful (insightful.io)
@@ -1648,10 +1647,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/melio-review/
 
 ## MigrationPro (migrationpro.io)
-- **Verified pricing:** (read 2026-08-23 on apps.shopify.com/migrationpro-shopify-migration-app and migrationpro.io/pricing) The App Store listing prints no number at all.
+- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/migrationpro-shopify-migration-app and migrationpro.io/pricing/) The App Store listing still prints no number at all: one plan, free to install, with…
 - **Honest take:** The listing tells you nothing about what this costs.
-- **Best for:** merchants moving an existing store into Shopify who want products, customers, orders and — critically — URLs and 301 redirects preserved, and who would rather pay once than subscribe to a tool they will use for a week
-- **Flags:** {'f': 'usage_metered', 'ev': 'Both carry a 30-day guarantee and need no credit card to start, and every migration begins with a free demo of up to 10 products, customers and order…'}, {'f': 'addons_extra', 'ev': 'The Automated app plan, where you run the migration yourself, starts at $29 based on store size, with add-ons selected and paid individually.'}
+- **Best for:** merchants moving an existing store into Shopify who want products, customers, orders and — critically — URLs and 301 redirects preserved, who are willing to pay the $29 add-on that carries those redirects on the self-service route
+- **Flags:** {'f': 'usage_metered', 'ev': 'Both carry a 30-day guarantee, need no credit card, and begin with a free demo of up to 10 products, customers and orders.'}, {'f': 'addons_extra', 'ev': 'The Done-for-you plan, where their team handles mapping, testing and go-live with a dedicated specialist, starts at $300 with every add-on included.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/migrationpro-review/
 
 ## MindStudio (mindstudio.ai)
@@ -2051,9 +2050,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/process-street-review/
 
 ## ProtectMyOrder (protectmyorder.com)
-- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/protectmyorder, listed as “PMO: ProtectMyOrder”, and on protectmyorder.com/pricing) The two pages sell different ladders.
-- **Honest take:** Start with the two pricing pages, because they do not describe the same product.
-- **Best for:** Shopify stores with enough volume to clear roughly $100 of protection revenue a month and a known parcel-loss rate — keeping 80% on Standard if they can settle claims in-house, or buying that work back at 44.99% if they cannot
+- **Verified pricing:** (re-read 2026-09-18) The App Store route has closed.
+- **Honest take:** Start with what is no longer there.
+- **Best for:** Shopify stores with a known parcel-loss rate that are willing to come in through the vendor rather than the App Store — keeping 80% of the upsell on Standard if they can settle claims in-house, or buying that work back at 44.99% i
 - **Full review:** https://aibuildermarketplace.com/b2b/protectmyorder-review/
 
 ## Proton (proton.me)
@@ -2179,6 +2178,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small and mid-size teams hiring a handful of people abroad who want to pay monthly, keep the option to stop, and not carry a five-employee minimum. EOR Flex is genuinely unusual on those terms: no setup fee, no deposit, no minimum
 - **Flags:** {'f': 'per_seat', 'ev': 'Employer of Record: EOR Flex from $199 per employee a month, billed monthly with no commitment, no setup fee and no minimum headcount; EOR Plus from …'}, {'f': 'annual_lock', 'ev': 'Employer of Record: EOR Flex from $199 per employee a month, billed monthly with no commitment, no setup fee and no minimum headcount; EOR Plus from …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/remote-people-review/
+
+## rePete (repete.me)
+- **Verified pricing:** (read 19 September 2026 in a live browser on repete.me/pricing and on the App Store listing at apps.shopify.com/reorder-service) There is no subscription and no tier.
+- **Honest take:** The pricing is honest and the arithmetic still deserves care, because this is a percentage with no ceiling on it.
+- **Best for:** Shopify stores selling consumables or anything with a natural replenishment rhythm — coffee, supplements, pet food, skincare — whose customers refuse subscriptions but do come back, and who would rather pay for results than carry 
+- **Flags:** {'f': 'usage_metered', 'ev': 'So the messaging channels — email, SMS, WhatsApp and on-site — carry no cost of their own, which is unusual in a category where SMS is normally meter…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/repete-review/
 
 ## Replit (replit.com)
 - **Verified pricing:** (re-verified 2026-09-02 on their own pricing page) Starter is free, with daily Agent credits, a built-in database and the slides/video/animation tools.
@@ -2402,7 +2408,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/shiftie-review/
 
 ## Shipdock (happyapps.cz)
-- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/packeta) Three tiers, no free plan, and the entry tier names its own limitation.
+- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/packeta) Three tiers, no free plan, every amount unchanged since 22 August 2026, and the entry tier still names its own limitation.
 - **Honest take:** Read the carrier list against your own country before anything else.
 - **Best for:** Shopify merchants shipping in Central and Eastern Europe who want pickup points, multi-carrier label printing and cash-on-delivery tracking in one app rather than one integration per carrier — and who are on Shopify Plus, where th
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 10% on each.'}
@@ -2790,10 +2796,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/textline-review/
 
 ## TheTop (thetop.com)
-- **Verified pricing:** (re-verified 10 September 2026 on thetop.com/pricing) One plan.
-- **Honest take:** Everything sits on one $8 plan, so the question is not which tier to buy but whether the caps on that plan fit your day.
-- **Best for:** professionals and small-business owners who lose the first hour of the day triaging Gmail and a calendar, and want one ranked brief instead of five open tabs
-- **Flags:** {'f': 'free_tier', 'ev': 'And the FAQ still describes a Free plan the pricing page does not show.'}
+- **Verified pricing:** (read 19 September 2026) TheTop publishes no price.
+- **Honest take:** The price is the knock, because there isn't one.
+- **Best for:** enterprises running AI across several departments, models and applications that cannot answer what the bill bought — organisations with a real AI invoice to explain, a CFO asking for return per team, and a security function that w
 - **Full review:** https://aibuildermarketplace.com/b2b/thetop-review/
 
 ## Thordata (thordata.com)
@@ -2825,10 +2830,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tidio-review/
 
 ## TiXel (effectify.io)
-- **Verified pricing:** (read 2026-08-22 on apps.shopify.com/tixel) One paid plan and no ladder to climb.
-- **Honest take:** The 4.1 rating is the most useful number on this listing, but not for the reason an average usually is.
+- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/tixel) One paid plan and no ladder to climb, and the amounts are unchanged since 22 August 2026.
+- **Honest take:** The rating is the most useful number on this listing, but not for the reason an average usually is.
 - **Best for:** Shopify merchants running Meta and TikTok ads who need more than the free channel apps give them — several pixels on one store, pixels scoped to individual products, or server-side Events API tracking alongside the browser pixel t
-- **Flags:** {'f': 'free_tier', 'ev': 'The other tier, Development Stores, is free but only for development and partner stores, and billing activates on upgrade — the same shape as this de…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tixel-review/
 
 ## TnC (effectify.io)
@@ -3101,10 +3105,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wing-assistant-review/
 
 ## Wistia (wistia.com)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Free $0: 25 GB storage, 1 user, 200 GB bandwidth, and Wistia branding on the player.
+- **Verified pricing:** (re-read 2026-09-18 on wistia.com/pricing, Video Platform tab) Four tiers, and the headline numbers are the ANNUAL rates: the billing toggle on the page is set to Annual with a “Save 20%” c…
 - **Honest take:** Bandwidth is the meter that decides your bill, and it is the one number you cannot predict before you publish.
 - **Best for:** marketing teams who want video on their own site with real analytics and lead capture, and who care that the player does not recommend a competitor's video afterwards
-- **Flags:** {'f': 'usage_metered', 'ev': 'Two overages sit in the FAQ rather than on the price card: webinar attendees beyond the allowance cost $0.20 each and extra webinar minutes $2.00 eac…'}, {'f': 'free_tier', 'ev': '(2026-08-01, read on their own pricing page) Free $0: 25 GB storage, 1 user, 200 GB bandwidth, and Wistia branding on the player.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The overage rules sit in the FAQ rather than on the cards.'}, {'f': 'free_tier', 'ev': 'Free $0: 25 GB storage, 1 user, 200 GB bandwidth, basic analytics, Wistia branding on the player.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/wistia-review/
 
 ## Wiz Checkout Upsell (skailama.com)
@@ -3177,10 +3181,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/zendesk-review/
 
 ## Zendrop (zendrop.com)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/zendrop) Free to install, with three paid tiers: Beginner $29, Pro $49 and Plus $79 a month.
+- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/zendrop and on zendrop.com/pricing — the two do not carry the same ladder) On the Shopify listing: free to install, with three paid tiers, Beginner $…
 - **Honest take:** The free plan is a catalogue browser rather than a working tier: it allows no linked products, so nothing can actually be sold through it.
 - **Best for:** Shopify merchants starting or scaling a dropshipping or print-on-demand store who want sourcing, automated fulfilment, tracking and custom branding in one app, and who can price the per-order product and shipping cost into their m
-- **Flags:** {'f': 'usage_metered', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'addons_extra', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'free_tier', 'ev': 'The free tier allows none at all, Beginner covers 1-20, Pro 21-100 and Plus 101 or more.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'addons_extra', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'free_tier', 'ev': 'The free tier allows none at all (“No linked products allowed”), Beginner covers 1-20, Pro 21-100 and Plus 101 or more; the feature list on all three…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/zendrop-review/
 
 ## ZenZap (zenzap.co)

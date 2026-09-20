@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 466 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-19.
+All 467 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-20.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -137,10 +137,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/alidrop-review/
 
 ## Alli AI (alliai.com)
-- **Verified pricing:** (2026) 10-day free trial, cancel anytime.
-- **Honest take:** The entry is $299 a month — agency-grade automation priced accordingly — and every tier meters on FOUR axes at once (sites, seats, keywords, pages), so growth on any axis forces the upgrade.
+- **Verified pricing:** (prices re-verified 2026-09-19 on alliai.com/pricing) Billed in USD, no free tier, a 10-day free trial on every plan and cancellation from the dashboard at any time.
+- **Honest take:** The entry is $299 a month paid monthly — agency-grade automation priced accordingly — and every tier meters on FOUR axes at once (sites, seats, keywords, pages).
 - **Best for:** consultants and agencies managing SEO across a portfolio of client sites who want bulk on-page changes, optimization rules and keyword tracking from one dashboard
-- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves up to 17%.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Every quota has a published add-on price that differs per tier and per term: monthly Business is extra sites from $39 each, extra keywords from $24.9…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/alli-ai-review/
 
 ## Alohi (alohi.com)
@@ -293,8 +293,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aweber-review/
 
 ## BabyLoveGrowth (babylovegrowth.ai)
-- **Verified pricing:** (re-read 2026-09-05 on babylovegrowth.ai/pricing from a European connection, where it prices in euros) Two plans, both billed yearly.
-- **Honest take:** The honest concern here isn't the price — it's the model.
+- **Verified pricing:** (prices re-verified 2026-09-19 on babylovegrowth.ai/en/pricing from a European connection, where it prices in euros) Two plans and a Monthly/Yearly toggle that swaps the amounts.
+- **Honest take:** The honest concern here isn't the price — it's the model, and the guarantee that is supposed to cover you if the model fails.
 - **Best for:** solo founders and lean startups who want hands-off SEO content velocity fast, are comfortable with AI-generated articles at scale, and value the 90-day guarantee as a safety net
 - **Full review:** https://aibuildermarketplace.com/b2b/babylovegrowth-review/
 
@@ -306,7 +306,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/backupmaster-review/
 
 ## Barcodes Talk (barcodestalk.com)
-- **Verified pricing:** One-off purchase, no subscription and no renewal, read on barcodestalk.com on 5 September 2026: a single barcode is $5, 10 are $15 ($1.50 each), 100 are $45 ($0.45 each), 1,000 are $180 ($0…
+- **Verified pricing:** (prices re-verified 2026-09-19 on barcodestalk.com/buy-barcodes) One-off purchase, no subscription and no renewal.
 - **Honest take:** The honest caveat is about fit, not the codes.
 - **Best for:** sellers and small brands listing on marketplaces or in independent retail who want authentic, one-time-cost UPC/EAN barcodes without an annual GS1 membership
 - **Full review:** https://aibuildermarketplace.com/b2b/barcodes-talk-review/
@@ -452,10 +452,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/breezy-hr-review/
 
 ## Brevo (brevo.com)
-- **Verified pricing:** Read on brevo.com/pricing on 6 September 2026 with the currency switched to US dollars and the yearly tab open (the page prices the same tiers in euros from the EU, at roughly 7, 15 and 499…
+- **Verified pricing:** Read on brevo.com/pricing on 6 September 2026 with the currency switched to US dollars and the yearly tab open: Free at $0 with 300 emails a day; Starter from $9 a month for 5,000 emails, o…
 - **Honest take:** Charging by sends looks cheaper for a big list you email rarely, but the send tiers cap stored contacts too: 5,000 sends a month stores only 500 contacts, and a 20,000-contact list needs the 20,000-send tier w…
 - **Best for:** businesses with large contact lists who email selectively and want to pay by send volume, not list size
-- **Flags:** {'f': 'addons_extra', 'ev': 'Model both numbers first — and the free daily cap and add-on fees on top.'}, {'f': 'free_tier', 'ev': 'Read on brevo.com/pricing on 6 September 2026 with the currency switched to US dollars and the yearly tab open (the page prices the same tiers in eur…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'The Sales Essentials CRM is billed separately at €26.08 a month per seat, Sales Advanced at €53.08.'}, {'f': 'addons_extra', 'ev': 'Two things the builder now puts on the public page that we previously had to cite the help centre for: the 5,000-email step lists 500 contacts and 1,…'}, {'f': 'free_tier', 'ev': 'Read on brevo.com/pricing on 6 September 2026 with the currency switched to US dollars and the yearly tab open: Free at $0 with 300 emails a day; Sta…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/brevo-review/
 
 ## Bright Data (brightdata.com)
@@ -618,10 +618,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clickup-review/
 
 ## Clonable (clonable.net)
-- **Verified pricing:** Read in a browser on clonable.net/pricing on 5 September 2026 (the page blocks plain fetches), monthly view in euros: Free at €0 for 1 clone and up to 20 translated pages (50 pages for €25 …
+- **Verified pricing:** (prices re-verified 2026-09-19 on clonable.net/pricing; the page blocks plain fetches and was read in a browser) Two ladders behind a Website / Online Store tab, each with a Per month / Ann…
 - **Honest take:** Two honest caveats.
 - **Best for:** businesses that want a fast, continuously-updated translated version of an existing website without rebuilding it as a multilingual site
-- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing is cheaper and there is a separate ladder for online stores.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/clonable-review/
 
 ## Cloro (cloro.dev)
@@ -874,8 +873,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dripshipper-review/
 
 ## DropGenius (dropgenius.com)
-- **Verified pricing:** Re-verified 6 September 2026 on their own pricing page, unchanged since August.
-- **Honest take:** We have to be blunt here: DropGenius carries a very poor Trustpilot rating (around 1.6/5 at research time), with recurring complaints about charges continuing after cancellation and refund difficulty.
+- **Verified pricing:** Re-verified 19 September 2026 on their own pricing page, unchanged since August.
+- **Honest take:** We have to be blunt here: the dominant theme in DropGenius’s public buyer reviews is unauthorised charges continuing after cancellation with no route to a refund, and some reviewers report never reaching a das…
 - **Best for:** absolute beginners who want a pre-built Shopify dropshipping store scaffold in minutes and understand it's a starting point, not a business
 - **Flags:** {'f': 'annual_lock', 'ev': 'Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicor…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/dropgenius-review/
@@ -1174,7 +1173,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/geostock-review/
 
 ## Geotargetly (geotargetly.com)
-- **Verified pricing:** (re-verified 2026-09-19 on their own pricing page, from a European exit, USD) 14-day free trial, no card.
+- **Verified pricing:** (re-verified 2026-09-20 on their own pricing page, from a European exit) 14-day free trial, no card.
 - **Honest take:** The meter is pageviews, not visitors, and each product consumes its own pageview on the same page visit — so a redirect plus a popup bills twice.
 - **Best for:** marketers personalizing redirects, content blocks and popups by visitor location — country to city level — without engineering work
 - **Flags:** {'f': 'usage_metered', 'ev': 'The meter is PAGEVIEWS, not visitors: a pageview is consumed for every page visit, and separately for each product in use; Geo Links consumes one on …'}
@@ -1405,10 +1404,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/invideo-review/
 
 ## involve.me (involve.me)
-- **Verified pricing:** (re-verified 7 September 2026 — the paid figures on the public page, the free plan measured inside the product, because involve.me publishes nothing about it) There is a free plan, and this…
+- **Verified pricing:** (re-verified 19 September 2026 on the public pricing page; the free plan's feature set was measured inside the product, because the plan cards still do not state it) There is a free plan, a…
 - **Honest take:** The tier pages sell live funnels, but the meter that empties first is contacts.
 - **Best for:** marketers building interactive lead-gen — quizzes, calculators, assessments and payment funnels with built-in email sequences — who want a free tier to validate the concept first
-- **Flags:** {'f': 'usage_metered', 'ev': 'The tier pages also hide three meters that decide more than the funnel count does: funnel visits a month (10,000 / 25,000 / 100,000), contacts collec…'}, {'f': 'annual_lock', 'ev': 'Enterprise is from $499/mo on annual contracts only.'}, {'f': 'free_tier', 'ev': '(re-verified 7 September 2026 — the paid figures on the public page, the free plan measured inside the product, because involve.me publishes nothing …'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Two meters that decide more than the funnel count does are still missing from the tier pages: funnel visits a month (10,000 / 25,000 / 100,000) and c…'}, {'f': 'annual_lock', 'ev': 'Enterprise is from $499/mo on annual contracts only.'}, {'f': 'free_tier', 'ev': "(re-verified 19 September 2026 on the public pricing page; the free plan's feature set was measured inside the product, because the plan cards still …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/involve-me-review/
 
 ## Jibble (jibble.io)
@@ -1961,10 +1960,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pipedrive-review/
 
 ## Pippit (pippit.ai)
-- **Verified pricing:** (read twice on pippit.ai/pricing on 6 September 2026 from a Netherlands exit, both reads identical; the figures are in euros because the page prices in the visitor's currency) The page open…
+- **Verified pricing:** (read 2026-09-19 on pippit.ai/pricing from a Netherlands exit; the page prices in the visitor's currency, so these are euro amounts) Every tier was repriced and every credit allowance cut s…
 - **Honest take:** The meter is credits per attempt, not per usable result — and buyer reviews centre on exactly that.
 - **Best for:** solo founders and small teams that want a steady stream of product-marketing videos and posters generated from a product link, without filming anything
-- **Flags:** {'f': 'usage_metered', 'ev': 'Yearly: Free is €0 with recurring daily credits and no card; Starter €105 a year (list €170) for 2,100 credits a month; Plus €310 (list €515) for 6,7…'}
+- **Flags:** {'f': 'usage_metered', 'ev': "(read 2026-09-19 on pippit.ai/pricing from a Netherlands exit; the page prices in the visitor's currency, so these are euro amounts) Every tier was r…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/pippit-review/
 
 ## Pixel Union (pixelunion.net)
@@ -2008,10 +2007,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/post-purchase-upsell-hero-review/
 
 ## Postscript (postscript.io)
-- **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0.015 then $0.009 per SMS and $0.045 per MMS, plus carrie…
+- **Verified pricing:** (Re-verified 19 September 2026 on their own pricing page; every figure below is unchanged from the 30 August reading.) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0…
 - **Honest take:** The $0 a month is not free — it carries a $49 monthly minimum spend, which means $49 is your floor whether you send anything or not.
 - **Best for:** Shopify stores with a list large enough that SMS beats email on response — the per-message economics only work once volume justifies the platform fee
-- **Flags:** {'f': 'usage_metered', 'ev': 'Read the tiers as what they are: a platform fee plus a per-message rate plus carrier fees.'}, {'f': 'free_tier', 'ev': '(2026-08-30, re-read on their own pricing page from a US exit) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0.015 then $0.009…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The free trial is a credit equal to $100 against message and carrier fees during your first 30 days; exhaust it and you are billed at the Free packag…'}, {'f': 'free_tier', 'ev': '(Re-verified 19 September 2026 on their own pricing page; every figure below is unchanged from the 30 August reading.) Starter is shown as $0 a month…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
 
 ## PreOrder Now (zenpire.tech)
@@ -2236,10 +2235,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/riverside-review/
 
 ## RocketReach (rocketreach.co)
-- **Verified pricing:** (read 2026-09-01 on rocketreach.co/pricing) A free account exists: signing up takes no credit card and gives a limited number of lookups.
+- **Verified pricing:** (read 2026-09-01 on rocketreach.co/pricing, re-verified 2026-09-19 in a real browser with every amount unchanged) A free account exists: signing up takes no credit card and gives 5 lookups.
 - **Honest take:** The published prices are annual rates, and the annual term is doing more work than the page lets on.
 - **Best for:** sales, recruiting and BD teams whose bottleneck is finding verified direct dials and personal emails, and who can commit to an annual term - that is where the search allowance stops being metered
-- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-09-01 on rocketreach.co/pricing) A free account exists: signing up takes no credit card and gives a limited number of lookups.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-09-01 on rocketreach.co/pricing, re-verified 2026-09-19 in a real browser with every amount unchanged) A free account exists: signing up t…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/rocketreach-review/
 
 ## Ruby (ruby.com)
@@ -2817,10 +2816,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/thordata-review/
 
 ## Thryv (thryv.com)
-- **Verified pricing:** (read 2026-08-25 on their own pricing page) Starter is $99 a month and Signature $399 a month on monthly billing.
+- **Verified pricing:** (read 2026-09-19 on thryv.com/pricing in a real browser with the billing toggle switched both ways; the page refuses plain HTTP clients with a 403) Two published tiers and a quote-only thir…
 - **Honest take:** Two published tiers, $85 and $340, and nothing between them.
 - **Best for:** small service businesses — trades, salons, clinics — that currently run on a diary, a spreadsheet and a separate invoicing tool, and would genuinely retire all three
-- **Flags:** {'f': 'addons_extra', 'ev': 'A free trial is offered, and the growth add-ons sold alongside these plans are not priced on the page.'}, {'f': 'annual_lock', 'ev': 'Annual billing is stated to save 15%, which our 1 August reading put at $85 and $340, with Signature billed $4,068 a year.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/thryv-review/
 
 ## TicketTailor (tickettailor.com)
@@ -3041,6 +3039,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'There is a free trial with no credit card, and the vendor states more than 30,000 real inboxes in the network.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/warmup-inbox-review/
 
+## Warn (effectify.io)
+- **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/product-notes) Billed in USD, every 30 days, and the ladder has three steps rather than the two the app's own summary suggests.
+- **Honest take:** The app is called Warn: Warnings Checkout Blocks, and blocking checkout is the one thing most readers of this listing cannot buy at the advertised price.
+- **Best for:** shopify merchants who know exactly which notice they need — a Prop 65 label, a shipping-delay alert, an age-verification disclaimer, a we-no-longer-ship-here message — and want it on the right products, collections or countries wi
+- **Flags:** {'f': 'addons_extra', 'ev': 'It lifts the cap to unlimited warnings, notes and pop-ups, adds cart and checkout warnings, targeting by product or collection, and US-state geo-targ…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/warn-review/
+
 ## Wati (wati.io)
 - **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page — which again served us euros, not dollars) Growth €59/mo, Pro €119/mo and Business €279/mo billed annually, or €69, €149 and €349 bi…
 - **Honest take:** The plan price is the smallest part of the bill.
@@ -3084,10 +3089,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/webinargeek-review/
 
 ## Wegic (wegic.ai)
-- **Verified pricing:** (read 2026-08-30 on wegic.ai/en/pricing from a US exit) Credit-based AI website builder, priced in US dollars.
+- **Verified pricing:** (re-verified 19 September 2026 on wegic.ai/pricing in a browser; the monthly headline figures stand on the 30 August reading from a US exit, see below) Credit-based AI website builder, pric…
 - **Honest take:** Everything is credits, and generating a site burns them fast — Wegic's own page notes a single generation can cost over $10 in credits, while the free plan gives 100 credits once.
 - **Best for:** non-technical founders who want an AI to build and host a simple site fast, and are comfortable with usage-based credit pricing
-- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-30 on wegic.ai/en/pricing from a US exit) Credit-based AI website builder, priced in US dollars.'}, {'f': 'addons_extra', 'ev': "The cheaper per-credit rate only kicks in on the higher annual tier, and premium AI media draws down a second 'Cloud' balance on top of your plan."}, {'f': 'free_tier', 'ev': "Everything is credits, and generating a site burns them fast — Wegic's own page notes a single generation can cost over $10 in credits, while the fre…"}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 19 September 2026 on wegic.ai/pricing in a browser; the monthly headline figures stand on the 30 August reading from a US exit, see belo…'}, {'f': 'addons_extra', 'ev': "The cheaper per-credit rate only kicks in on the higher annual tier, and premium AI media draws down a second 'Cloud' balance on top of your plan."}, {'f': 'free_tier', 'ev': "Everything is credits, and generating a site burns them fast — Wegic's own page notes a single generation can cost over $10 in credits, while the fre…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/wegic-review/
 
 ## WhatConverts (whatconverts.com)
@@ -3119,7 +3124,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wistia-review/
 
 ## Wiz Checkout Upsell (skailama.com)
-- **Verified pricing:** (prices read 2026-09-02 on apps.shopify.com/checkout-pro) Three tiers, billed in USD, each with a 14-day free trial and no free plan.
+- **Verified pricing:** (prices re-verified 2026-09-19 on apps.shopify.com/checkout-pro; the ladder is unchanged since 2 September, one promotion is new) Three tiers, billed in USD every 30 days, each with a 14-da…
 - **Honest take:** The name says checkout, but the $49 Essential plan does not include checkout upsells.
 - **Best for:** shopify merchants who want checkout-stage upsells, banners, trust badges and gift messages alongside post-purchase and thank-you page offers from a single app, and whose order volume already makes $99 a month a rounding error
 - **Flags:** {'f': 'addons_extra', 'ev': 'Plus Growth is $99 a month, or $999 a year (the listing says that saves 16%), and is the tier that opens the checkout itself: checkout upsells, subsc…'}

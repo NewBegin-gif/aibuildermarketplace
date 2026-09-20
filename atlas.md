@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 467 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-20.
+All 468 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-20.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1357,6 +1357,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons: server backup $5/month/server, and Microsoft 365 or Google Workspace backup at $20/seat/year.'}, {'f': 'annual_lock', 'ev': 'IDrive Personal is $9.99/month for 5 TB, shown discounted to $6.99/month with annual billing (save 30%), scaling up to $99.99/month ($69.99 discounte…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/idrive-review/
 
+## Imgify (effectify.io)
+- **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/custom-falling-effect) Billed in USD, with recurring charges billed every 30 days.
+- **Honest take:** Start with the word 'free' on the listing card, because it does not mean what it looks like.
+- **Best for:** shopify stores that want their own logo falling down the page, or a marquee of partner, payment and press logos, rather than generic snow — and that have no artwork ready, since the AI logo maker is the one thing here the free com
+- **Flags:** {'f': 'free_tier', 'ev': 'The free plan is development and partner stores only, and billing activates the moment you upgrade — a real storefront pays $2.99 from the first day,…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/imgify-review/
+
 ## InboxAlly (inboxally.com)
 - **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Every amount unchanged and confirmed on the plan comparison table, which states 'Pricing in U…
 - **Honest take:** This is a premium, seed-list-based deliverability tool, and the price reflects it — Starter alone is well above casual warm-up apps, so it only makes sense if inbox placement is genuinely costing you real reve…
@@ -2685,10 +2692,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/surveymonkey-review/
 
 ## SurveySparrow (surveysparrow.com)
-- **Verified pricing:** (re-verified 2026-09-14) The plan prices do render on the pricing page once the plan selector loads; our July and August 2026 captures simply never retrieved them, and the indicative figure…
+- **Verified pricing:** (re-verified 20 September 2026 from a US exit in New York; the euro ladder was read 14 September 2026 from Europe) SurveySparrow bills quarterly or yearly — there is no monthly option — and…
 - **Honest take:** The conversational-survey UX is the draw, but response limits on lower tiers and the 'contact sales' wall on advanced features (API, higher volume) make budgeting fiddly — and there's no true monthly billing.
 - **Best for:** teams that want engaging, conversational surveys and NPS with a polished respondent experience
-- **Flags:** {'f': 'quote_only', 'ev': "The conversational-survey UX is the draw, but response limits on lower tiers and the 'contact sales' wall on advanced features (API, higher volume) m…"}, {'f': 'usage_metered', 'ev': 'Discounts: yearly billing saves up to 40%, students and education 50%, nonprofits 15%, and a startup programme offers $2,000 of credit for $500.'}, {'f': 'free_tier', 'ev': 'Read on 14 September 2026, the survey line runs Basic €19, Starter €39 and Business €79 per month billed yearly, above a forever-free plan (75 respon…'}
+- **Flags:** {'f': 'quote_only', 'ev': "The conversational-survey UX is the draw, but response limits on lower tiers and the 'contact sales' wall on advanced features (API, higher volume) m…"}, {'f': 'usage_metered', 'ev': 'Discounts: yearly saves up to 40%, students and education 50%, nonprofits 15%, and a startup programme offers $2,000 of credit for $500.'}, {'f': 'free_tier', 'ev': 'On yearly billing the survey line runs Basic $19, Starter $39 and Business $79 a month, above a forever-free plan (75 responses a quarter, 3 active s…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/surveysparrow-review/
 
 ## Survicate (survicate.com)

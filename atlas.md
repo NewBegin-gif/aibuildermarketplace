@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 466 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-20.
+All 467 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-20.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -3038,6 +3038,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** outbound teams warming new sending domains and inboxes before campaigns, with integrations across Google, Outlook, Zoho and SendGrid
 - **Flags:** {'f': 'usage_metered', 'ev': 'There is a free trial with no credit card, and the vendor states more than 30,000 real inboxes in the network.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/warmup-inbox-review/
+
+## Warn (effectify.io)
+- **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/product-notes) Billed in USD, every 30 days, and the ladder has three steps rather than the two the app's own summary suggests.
+- **Honest take:** The app is called Warn: Warnings Checkout Blocks, and blocking checkout is the one thing most readers of this listing cannot buy at the advertised price.
+- **Best for:** shopify merchants who know exactly which notice they need — a Prop 65 label, a shipping-delay alert, an age-verification disclaimer, a we-no-longer-ship-here message — and want it on the right products, collections or countries wi
+- **Flags:** {'f': 'addons_extra', 'ev': 'It lifts the cap to unlimited warnings, notes and pop-ups, adds cart and checkout warnings, targeting by product or collection, and US-state geo-targ…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/warn-review/
 
 ## Wati (wati.io)
 - **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page — which again served us euros, not dollars) Growth €59/mo, Pro €119/mo and Business €279/mo billed annually, or €69, €149 and €349 bi…

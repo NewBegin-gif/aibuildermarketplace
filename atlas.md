@@ -467,10 +467,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bright-data-review/
 
 ## Browse.ai (browse.ai)
-- **Verified pricing:** (price re-verified 2026-09-14 on browse.ai/pricing, both billing columns read) Credit-metered (2026): Free ~50 credits/mo (2 sites); Personal about $19/mo annual (12,000 credits/yr, 5 sites…
+- **Verified pricing:** (price re-verified 2026-09-21 in a live browser on www.browse.ai/pricing, with browse.ai/llms.txt read alongside it) Credit-metered, prices in USD.
 - **Honest take:** Two honest realities of no-code scraping.
 - **Best for:** ops, research and growth teams that want to monitor competitors, prices or listings and pipe structured web data into sheets without writing scrapers
-- **Flags:** {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-14 on browse.ai/pricing, both billing columns read) Credit-metered (2026): Free ~50 credits/mo (2 sites); Personal about $…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-21 in a live browser on www.browse.ai/pricing, with browse.ai/llms.txt read alongside it) Credit-metered, prices in USD.'}, {'f': 'annual_lock', 'ev': 'Premium is the one that changed: it no longer reads simply “custom” but “Starting at $500 per month, billed annually” for 600,000+ credits a year wit…'}, {'f': 'free_tier', 'ev': 'Free is $0 with 50 credits a month, 2 websites and 3 users.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/browse-ai-review/
 
 ## BrowserAct (browseract.com)

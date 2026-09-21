@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 468 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-21.
+All 469 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-21.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -619,7 +619,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clickup-review/
 
 ## Clonable (clonable.net)
-- **Verified pricing:** (prices re-verified 2026-09-19 on clonable.net/pricing; the page blocks plain fetches and was read in a browser) Two ladders behind a Website / Online Store tab, each with a Per month / Ann…
+- **Verified pricing:** (prices re-verified 2026-09-21 on clonable.net/pricing; the page blocks plain fetches and was read in a browser) Two ladders behind a Website / Online Store tab, each with a Per month / Ann…
 - **Honest take:** Two honest caveats.
 - **Best for:** businesses that want a fast, continuously-updated translated version of an existing website without rebuilding it as a multilingual site
 - **Full review:** https://aibuildermarketplace.com/b2b/clonable-review/
@@ -846,10 +846,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dondy-review/
 
 ## doola (doola.com)
-- **Verified pricing:** (re-verified 1 September 2026 on doola.com/pricing) The August sale has ended, so these are the list prices again.
+- **Verified pricing:** (re-verified 21 September 2026 on doola.com/pricing) These are the list prices.
 - **Honest take:** Formation is the cheap part; the recurring bookkeeping and tax tiers are where the real cost sits, and state fees are extra on top of doola's price.
 - **Best for:** founders (often non-US) who want US LLC/C-Corp formation, EIN and compliance handled in one place without the paperwork
-- **Flags:** {'f': 'renewal_jump', 'ev': 'Pulse bookkeeping comes with a 30-day trial and renews at $300 a year.'}, {'f': 'addons_extra', 'ev': "Formation is the cheap part; the recurring bookkeeping and tax tiers are where the real cost sits, and state fees are extra on top of doola's price."}
+- **Flags:** {'f': 'renewal_jump', 'ev': 'Pulse bookkeeping comes with a 30-day trial and renews at $300 a year.'}, {'f': 'addons_extra', 'ev': 'Worth knowing for timing: doola runs periodic automatic sales on top of that list, and one was running on the day we read the page.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/doola-review/
 
 ## Drip (drip.com)
@@ -1247,6 +1247,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** hosts with 1-3 listings starting on Guesty Lite (~$9/mo + ~1% per reservation) who may grow into the full property-management platform
 - **Flags:** {'f': 'usage_metered', 'ev': 'Also add-ons rather than inclusions on Pro: Trust Accounting, GuestyPay, Fraud & Chargeback Management, GuestVerify, Damage Protection, Liability Cov…'}, {'f': 'addons_extra', 'ev': "VENDOR SELF-CONTRADICTION, confirm before relying: the geo-price note reads '+1% per reservation | Including PriceOptimizer', while the same page's f…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/guesty-review/
+
+## Gushwork (gushwork.ai)
+- **Verified pricing:** (read 21 September 2026 on www.gushwork.ai/pricing) Gushwork publishes one number and no ladder.
+- **Honest take:** One published number, and it is the floor.
+- **Best for:** sales-led B2B businesses with no marketer and no agency, that win work through quote requests and consultation calls, and want the research, writing, publishing and optimisation handled for them — at $900 a month and up, with the 
+- **Flags:** {'f': 'usage_metered', 'ev': 'Third — and to their credit they say this themselves — it is slow.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/gushwork-review/
 
 ## Gusto (gusto.com)
 - **Verified pricing:** Read in a browser on gusto.com/pricing on 5 September 2026; the page blocks plain fetches.
@@ -3139,7 +3146,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/
 
 ## Woodpecker (woodpecker.co)
-- **Verified pricing:** (price re-verified 2026-09-18 against woodpecker.co/pricing) Free trial.
+- **Verified pricing:** (price re-verified 2026-09-18 against woodpecker.co/pricing) Free trial: the pricing page and its FAQ put it at 14 days or 100 cold emails, whichever comes first (read 21 September 2026), a…
 - **Honest take:** The $7-per-100-prospects unit reads cheap, but a real outbound motion stacks add-ons fast.
 - **Best for:** outbound teams that want usage-priced cold email plus LinkedIn outreach, with unlimited seats and email accounts included instead of per-user fees
 - **Flags:** {'f': 'usage_metered', 'ev': 'Lead Finder credits start at 500 for $10.'}, {'f': 'addons_extra', 'ev': 'Add-ons are where an outbound motion actually gets expensive, and there are now two grades of managed sending address rather than one: LinkedIn accou…'}

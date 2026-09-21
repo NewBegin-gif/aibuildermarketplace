@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 468 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-20.
+All 468 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-21.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -158,9 +158,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/alttext-ai-review/
 
 ## Alvys (alvys.com)
-- **Verified pricing:** (re-verified 26 Aug 2026) Pricing is still not public: alvys.com/pricing answers an ordinary request with HTTP 401, so the page sits behind a password rather than behind a form.
+- **Verified pricing:** (re-verified 20 Sep 2026) The pricing page is public again, and it has tiers now.
 - **Honest take:** Two honest boundaries.
 - **Best for:** FTL trucking carriers and asset-based (hybrid) brokers with roughly 5–300 trucks — especially compliance-heavy freight like hazmat, reefer and cross-border — plus shippers running private fleets, with real back-office staff to put
+- **Flags:** {'f': 'addons_extra', 'ev': 'Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and the developer…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/alvys-review/
 
 ## Amplemarket (amplemarket.com)
@@ -396,10 +397,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/blocky-review/
 
 ## Bokun (bokun.io)
-- **Verified pricing:** (price re-verified 2026-09-11 against the vendor's own pricing page) (2026) A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users), $149 (Plus, up to 10) and $499 (Premi…
+- **Verified pricing:** (price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users), $149 (Plus, u…
 - **Honest take:** Bokun is a Tripadvisor/Viator company, and that's both the draw and the lock-in.
 - **Best for:** tour, activity and experience operators who want booking management plus wide OTA distribution (Viator, GetYourGuide and more) from one dashboard
-- **Flags:** {'f': 'usage_metered', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'addons_extra', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'free_tier', 'ev': "(price re-verified 2026-09-11 against the vendor's own pricing page) (2026) A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users…"}
+- **Flags:** {'f': 'usage_metered', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'addons_extra', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bokun-review/
 
 ## Bolt Business (bolt.eu)
@@ -438,10 +439,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bouncer-review/
 
 ## Bread & Butter (breadbutter.io)
-- **Verified pricing:** (price re-verified 2026-08-17 against breadbutter.io) (2026) Fully functional 30-day free trial that moves to a freemium tier after (200 lead profiles, unlimited traffic).
+- **Verified pricing:** (re-verified 2026-09-20 on breadbutter.io/pricing) Two published plans.
 - **Honest take:** Two meters to watch: it prices per WEBSITE (multi-site setups multiply the $49) and the AI features run on compute-credit blocks that stack as usage grows.
 - **Best for:** marketing and revenue teams that want engaged visitors — people who filled a form or left an email — automatically enriched, scored and nurtured, on a genuinely usable freemium tier
-- **Flags:** {'f': 'usage_metered', 'ev': 'AI capacity scales via add-on blocks: +$49/mo per Scale-AI-Enrichment block (+10,000 compute credits) and +$89/mo per deep-profile-research block (10…'}, {'f': 'addons_extra', 'ev': 'AI capacity scales via add-on blocks: +$49/mo per Scale-AI-Enrichment block (+10,000 compute credits) and +$89/mo per deep-profile-research block (10…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'AI Enabled Pro at $49 a month per website: 5,000 lead profiles, 10-year retention, 3,000 credits a month, three peripheral sub-domains, one-hour emai…'}, {'f': 'addons_extra', 'ev': 'One add-on: Scale Credits at $89 a month per 10,000 credits, stackable.'}, {'f': 'free_tier', 'ev': 'Free at $0: unlimited website traffic, 200 stored lead profiles, 30 days of attribution retention, your existing web forms, lead capture and content …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bread-butter-review/
 
 ## Breezy HR (breezy.hr)
@@ -562,10 +563,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/castmagic-review/
 
 ## ChatGPT AI Product Description (profitoniumapps.com)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/automated-description-writing) Four tiers, priced in credits per month.
+- **Verified pricing:** (re-verified 2026-09-20 on apps.shopify.com/automated-description-writing) Four tiers, priced in credits per month, all amounts unchanged since 19 August 2026.
 - **Honest take:** First, the name is not a name.
 - **Best for:** Shopify stores with catalogues in the thousands that need descriptions, titles, meta tags and alt text written in bulk and in several languages, and have the discipline to check a sample before running the whole catalogue
-- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-19 on apps.shopify.com/automated-description-writing) Four tiers, priced in credits per month.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-20 on apps.shopify.com/automated-description-writing) Four tiers, priced in credits per month, all amounts unchanged since 19 Au…'}, {'f': 'addons_extra', 'ev': "Worse, the plan price may not be the whole bill: the listing carries Shopify's usage-based-charges line, and a merchant of twelve months, in a review…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/
 
 ## Checkr (checkr.com)
@@ -727,10 +728,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/contractor-foreman-review/
 
 ## Convert (convert.com)
-- **Verified pricing:** (re-verified 2026-08-21 on their own pricing page) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified 16 Jul 2026, no credit card).
+- **Verified pricing:** (re-verified 2026-09-20 on convert.com/pricing) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified 16 Jul 2026, no credit card).
 - **Honest take:** The meter is tested users, and it keeps running: blow past your monthly allowance and overuse blocks land at $399-699 unless you hard-cap them — and every extra custom domain is $1,000 a year.
 - **Best for:** CRO teams running serious A/B and multivariate testing who want a privacy-first, GDPR-friendly alternative to the big experimentation suites
-- **Flags:** {'f': 'usage_metered', 'ev': "(re-verified 2026-08-21 on their own pricing page) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified…"}
+- **Flags:** {'f': 'usage_metered', 'ev': "(re-verified 2026-09-20 on convert.com/pricing) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified 16…"}, {'f': 'addons_extra', 'ev': 'Native heatmaps and frustration-sensing session recordings are included at every tier at no extra cost and do not consume tested users; 8% of the ann…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/convert-review/
 
 ## CrankWheel (crankwheel.com)
@@ -1167,7 +1168,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gelato-review/
 
 ## GeoStock (jtcinteractive.com)
-- **Verified pricing:** (read 2026-08-18 on apps.shopify.com/product-inventory-information) From $9.99 a month, with a free trial.
+- **Verified pricing:** (re-verified 2026-09-20 on apps.shopify.com/product-inventory-information) Two plans, no free tier.
 - **Honest take:** Know what this is before you buy it: despite the name it is a storefront widget, not an inventory system.
 - **Best for:** retailers with physical locations who want shoppers to see per-store stock and find the nearest branch on the product page itself
 - **Full review:** https://aibuildermarketplace.com/b2b/geostock-review/
@@ -1994,7 +1995,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/plansom-review/
 
 ## Plesk (plesk.com)
-- **Verified pricing:** (read 2026-08-30 on plesk.com/pricing from a US exit) Per-server licences, priced per edition by domain count.
+- **Verified pricing:** (read 2026-08-30 on plesk.com/pricing from a US exit; re-verified 2026-09-20 from the Netherlands against the page's own PleskPricing rate card, which carries every currency) Per-server lic…
 - **Honest take:** Two honest notes.
 - **Best for:** agencies and hosters managing multiple sites on their own servers who want a mature control panel with per-domain management, security and one-click stacks
 - **Full review:** https://aibuildermarketplace.com/b2b/plesk-review/
@@ -2317,10 +2318,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/section-library-review/
 
 ## Securify (securification.ai)
-- **Verified pricing:** (read 2026-08-18 on apps.shopify.com/easy-block-customer-ip-country) Free plan available with a free trial on the paid tiers.
+- **Verified pricing:** (re-verified 2026-09-20 on apps.shopify.com/easy-block-customer-ip-country) Free plan plus three paid tiers, unchanged since the readings of 18 August and 13 September 2026.
 - **Honest take:** Blocking by country and IP is a blunt instrument and it cuts both ways: every rule that keeps out a fraudster also keeps out a customer travelling, using a corporate VPN, or living behind a carrier NAT.
 - **Best for:** stores seeing real fraud or bot traffic that want country, IP, VPN and email-risk rules plus automatic holds on suspicious orders, and who will review the block log rather than set and forget
-- **Flags:** {'f': 'free_tier', 'ev': '(read 2026-08-18 on apps.shopify.com/easy-block-customer-ip-country) Free plan available with a free trial on the paid tiers.'}
+- **Flags:** {'f': 'free_tier', 'ev': '(re-verified 2026-09-20 on apps.shopify.com/easy-block-customer-ip-country) Free plan plus three paid tiers, unchanged since the readings of 18 Augus…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/securify-review/
 
 ## Seel (seel.com)
@@ -2498,10 +2499,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/simpletexting-review/
 
 ## SimplyBook.me (simplybook.me)
-- **Verified pricing:** (2026, re-verified 2026-09-11 on their own pricing page, in euros; every figure below unchanged since 2 August 2026) Free EUR 0: 50 bookings a month, 1 custom feature, 1 provider, no card n…
+- **Verified pricing:** (2026, re-read 2026-09-20 on their own pricing page; the euro ladder below was verified there on 2026-09-11 and has since stopped being shown to us) Free EUR 0: 50 bookings a month, 1 custo…
 - **Honest take:** The plan ladder is set by bookings per month and by how many custom features you may switch on, and those two ceilings move independently — so you can outgrow a plan on features while nowhere near the booking …
 - **Best for:** service businesses that take appointments and want a booking page, reminders and online payment without building one
-- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 17%.'}
+- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 17%.'}, {'f': 'free_tier', 'ev': 'SECOND READING, SAME DAY, DIFFERENT COUNTRY: a server in Frankfurt (German IP, Accept-Language en-GB) was served the identical ladder, R$0 / R$33.75 …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/simplybook-me-review/
 
 ## Skip To Checkout (effectify.io)
@@ -3034,7 +3035,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/voye-review/
 
 ## VWO (vwo.com)
-- **Verified pricing:** No price is published any more.
+- **Verified pricing:** No price is published any more, and the site has moved.
 - **Honest take:** The jump from Growth to Pro is steep — small businesses get priced out of MVT and complex targeting — and the UI is dense with options.
 - **Best for:** teams that want an all-in-one experience-optimisation platform (A/B testing + heatmaps + personalisation) with friendlier Bayesian stats and transparent pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/vwo-review/

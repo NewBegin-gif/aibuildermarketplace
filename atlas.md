@@ -2974,7 +2974,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/upsell-com-review/
 
 ## UpsellPlus (upsellplus.com)
-- **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/upsellpluscheckout AND on the vendor's own pricing page, USD; listed amounts unchanged since 31 August) Fixed monthly tiers based on the revenue …
+- **Verified pricing:** (listing and vendor pricing page re-verified 2026-09-19 on apps.shopify.com/upsellpluscheckout, USD; the Scale ladder confirmed in writing by UpsellPlus support on 2026-09-21) Fixed monthly…
 - **Honest take:** The plans are capped by the revenue they are allowed to earn you, and the first paid step does not raise that cap: Free and the $49 Launch plan both stop at $500 of upsell revenue a month.
 - **Best for:** shopify merchants who want one app covering product page, cart, checkout, post-purchase, customer accounts and POS offers rather than three, especially Shopify Plus stores, where the checkout half of the product actually unlocks
 - **Full review:** https://aibuildermarketplace.com/b2b/upsellplus-review/

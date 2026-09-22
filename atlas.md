@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 470 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-22.
+All 471 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-22.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1626,6 +1626,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** local service businesses — HVAC, plumbing, roofing, med spas — losing revenue to missed calls who want a 24/7 AI receptionist that books jobs straight into Google Calendar, Housecall Pro, ServiceTitan or Jobber
 - **Flags:** {'f': 'usage_metered', 'ev': 'LucroChat, the website chat product from the same vendor, sits on lucrovox.com/lucrochat with its own table metered on monthly conversations rather t…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/lucrovox-review/
+
+## LumenCart (lumencart.fleeta.co.uk)
+- **Verified pricing:** (read 22 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store; then Starter $9, Growth $29, Pro $79 an…
+- **Honest take:** Two things decide whether this is cheap, and neither is the plan price.
+- **Best for:** small Shopify merchants who want studio and lifestyle product shots out of the photos they already have, without hiring a photographer or a studio, and who want them published straight to the product rather than downloaded and re-
+- **Flags:** {'f': 'usage_metered', 'ev': 'Read the plans in credits rather than images, because that is what you actually buy: the monthly allowances are 75, 300, 1,000 and 2,500 credits, ref…'}, {'f': 'annual_lock', 'ev': "(read 22 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store;…"}, {'f': 'free_tier', 'ev': "(read 22 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store;…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/lumencart-review/
 
 ## ManyChat (manychat.com)
 - **Verified pricing:** Read on their own pricing page, 6 September 2026.

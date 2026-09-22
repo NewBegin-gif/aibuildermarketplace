@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 469 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-21.
+All 470 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-22.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -55,10 +55,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/adwisely-review/
 
 ## AfterSell (aftersell.app)
-- **Verified pricing:** Priced by monthly order volume on the Shopify App Store listing (read 5 September 2026): the free plan is for development and partner stores only; paid plans start at $34.99 a month for 0 t…
+- **Verified pricing:** Three plans, each metered by monthly order volume, read on aftersell.com/pricing and on the Shopify App Store listing on 22 September 2026 (re-verified 22 September 2026).
 - **Honest take:** Post-purchase upsells only move the needle with steady order volume and a sensible complementary-offer strategy — bolt it onto a store with little traffic and there's nothing to upsell.
 - **Best for:** Shopify stores with steady order volume that want to lift average order value with one-click post-purchase and checkout upsells
-- **Flags:** {'f': 'free_tier', 'ev': 'Priced by monthly order volume on the Shopify App Store listing (read 5 September 2026): the free plan is for development and partner stores only; pa…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Three plans, each metered by monthly order volume, read on aftersell.com/pricing and on the Shopify App Store listing on 22 September 2026 (re-verifi…'}, {'f': 'free_tier', 'ev': 'Every plan carries a 30-day free trial, all charges are billed in USD, and the Free plan on the listing is for development and partner stores only.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/aftersell-review/
 
 ## AgencyAnalytics (agencyanalytics.com)
@@ -818,10 +818,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dify-review/
 
 ## Diginius (diginius.com)
-- **Verified pricing:** (re-verified 2026-08-21 on diginius.com/pricing/, business pricing) Essential $75 USD a month for 2 users, Pro $250 for 5 users, Core $500 for 10 users and marked Most Popular, Business by …
+- **Verified pricing:** (re-verified 2026-09-22 on diginius.com/pricing/, business pricing) Essential $75 USD a month, Pro $250, Core $500 and marked Most Popular, Business by contact with sales.
 - **Honest take:** All-in-one marketing dashboards live or die on data depth per module.
 - **Best for:** lean teams and agencies that want PPC, SEO and lead intelligence consolidated in one affordable dashboard instead of five subscriptions
-- **Flags:** {'f': 'usage_metered', 'ev': 'Contact info credits run 25 / 50 / 100 per month, and support goes from email only to a dedicated customer success rep.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The plan limits scale with the price: SEO keywords 25 / 500 / 1000 / custom, SEO site pages 1000 / 5000 / 10000 / custom, Lead Intelligence leads 10 …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/diginius-review/
 
 ## Digit (heysutton.com)
@@ -1450,7 +1450,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** Pay As You Go is $95 per case.
 - **Honest take:** It's a focused vertical tool — bankruptcy petition preparation and case management — so its whole value is bounded by that practice area; a general legal practice won't get much from it.
 - **Best for:** bankruptcy attorneys and legal professionals who want streamlined petition preparation, document automation and case management for filings
-- **Flags:** {'f': 'quote_only', 'ev': 'Prices are for annual billing; above 500 filings a year the vendor quotes custom pricing (re-verified 2026-08-26).'}, {'f': 'usage_metered', 'ev': 'Pay As You Go is $95 per case.'}, {'f': 'annual_lock', 'ev': 'Prices are for annual billing; above 500 filings a year the vendor quotes custom pricing (re-verified 2026-08-26).'}
+- **Flags:** {'f': 'quote_only', 'ev': 'Prices are for annual billing; above 500 filings a year the vendor quotes custom pricing.'}, {'f': 'usage_metered', 'ev': 'Pay As You Go is $95 per case.'}, {'f': 'annual_lock', 'ev': 'Prices are for annual billing; above 500 filings a year the vendor quotes custom pricing.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/jubilee-review/
 
 ## Kartra (kartra.com)
@@ -1585,7 +1585,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/leavo-review/
 
 ## lemlist (lemlist.com)
-- **Verified pricing:** (re-verified 2026-08-17; the page served us DOLLARS today where our previous reading was in euros, with the same numerals — check your own checkout) No free plan, 14-day trial.
+- **Verified pricing:** (re-verified 2026-09-21 on www.lemlist.com/en/pricing; dollars again from a Dutch exit, the same numerals the earlier euro reading carried — check your own checkout) No free plan, 14-day tr…
 - **Honest take:** The per-seat plus per-email-account model makes total cost unpredictable as you scale, and reviews flag support response times and the LinkedIn Chrome-extension's reliability.
 - **Best for:** outbound teams that live in cold email and want multichannel sequences, warm-up and a big template community in one per-seat tool
 - **Flags:** {'f': 'per_seat', 'ev': 'Multichannel is $109/month per user, or $87/month yearly, with unlimited emails and messages and 5 senders per user.'}, {'f': 'usage_metered', 'ev': 'Contact data is billed separately through rechargeable credits where 1 credit = $0.01: a 1,000-credit pack is $10 and buys roughly 200 email lookups …'}
@@ -1611,6 +1611,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams running a predictable programme of webinars to a known audience size, where buying a year of attendance up front is cheaper than a per-seat platform
 - **Flags:** {'f': 'usage_metered', 'ev': 'Pro is sold as attendee credits, bought as a yearly pack up front, with sessions up to 4 hours and unlimited team members; Enterprise is quote-only w…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/livestorm-review/
+
+## Loyalino (loyalino.io)
+- **Verified pricing:** (prices read 22 September 2026 on apps.shopify.com/loyalino-loyalty-rewards and on loyalino.io/pricing) Billed in USD through Shopify and metered by monthly loyalty orders rather than by fe…
+- **Honest take:** Reach your plan's order limit and the program does not cost more, it stops.
+- **Best for:** shopify stores whose loyalty orders sit comfortably below a plan ceiling and who want the whole program - points, VIP tiers, referrals, the widget, a customer-accounts loyalty page and eight built-in languages - on a free tier tha
+- **Flags:** {'f': 'usage_metered', 'ev': '(prices read 22 September 2026 on apps.shopify.com/loyalino-loyalty-rewards and on loyalino.io/pricing) Billed in USD through Shopify and metered by …'}, {'f': 'addons_extra', 'ev': 'What the paid tiers add on top of the free plan is the standalone storefront loyalty page, earning and redemption in Shopify POS, sending from your o…'}, {'f': 'annual_lock', 'ev': 'Annual billing works out at ten monthly payments, which is where the 17% they advertise comes from.'}, {'f': 'free_tier', 'ev': 'Free: $0 for up to 200 loyalty orders a month.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/loyalino-review/
 
 ## Lucrovox (lucrovox.com)
 - **Verified pricing:** (re-verified 2026-09-15 on lucrovox.com/#pricing and lucrovox.com/lucrochat, both read in a real browser with the pages fully loaded) The phone agent has three published tiers and the plan …
@@ -1867,7 +1874,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/outgrow-review/
 
 ## Ownr (ownr.co)
-- **Verified pricing:** Sole proprietorship around CA$49; incorporation roughly CA$499 (federal) to CA$699 (BC), with government fees included; annual compliance about CA$199–599 a year.
+- **Verified pricing:** Sole proprietorship around CA$49; incorporation roughly CA$499 (federal) to CA$699 (BC), with government fees included; annual compliance about CA$199–599 a year, with the Online Minute Boo…
 - **Honest take:** Two honest limits.
 - **Best for:** Canadian founders who want a straightforward sole proprietorship or single-shareholder incorporation done fast, without paying lawyer rates
 - **Full review:** https://aibuildermarketplace.com/b2b/ownr-review/
@@ -2762,10 +2769,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/taxcycle-review/
 
 ## Team Pulse (goteampulse.io)
-- **Verified pricing:** (2026) Genuinely free tier: $0/mo for 1 member, 2 projects, unlimited collaborators, chat/tasks/files.
+- **Verified pricing:** (re-verified 2026-09-22 in the site's own plan-config array) Genuinely free tier: $0/mo for 1 member, 2 projects, unlimited collaborators, chat/tasks/files, 3 private notes, 15 AI credits a…
 - **Honest take:** The tiers gate on TWO axes at once — member count and project/pipeline count — so you can hit a wall on either.
 - **Best for:** solo operators and small teams who want projects, tasks, chat AND a lightweight CRM pipeline with AI in one simple tool, and value the real free tier to start
-- **Flags:** {'f': 'usage_metered', 'ev': 'Paid (billed annually): Starter $29/mo ($348/yr) — 1 member, 5 projects, NO pipelines; Growth $79/mo ($948/yr) — 3 members, 10 projects, 1 pipeline, …'}, {'f': 'annual_lock', 'ev': 'The listed rates also assume annual billing.'}, {'f': 'free_tier', 'ev': '(2026) Genuinely free tier: $0/mo for 1 member, 2 projects, unlimited collaborators, chat/tasks/files.'}
+- **Flags:** {'f': 'usage_metered', 'ev': "(re-verified 2026-09-22 in the site's own plan-config array) Genuinely free tier: $0/mo for 1 member, 2 projects, unlimited collaborators, chat/tasks…"}, {'f': 'free_tier', 'ev': "(re-verified 2026-09-22 in the site's own plan-config array) Genuinely free tier: $0/mo for 1 member, 2 projects, unlimited collaborators, chat/tasks…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/team-pulse-review/
 
 ## Teikametrics (teikametrics.com)

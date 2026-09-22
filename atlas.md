@@ -1883,9 +1883,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/outgrow-review/
 
 ## Ownr (ownr.co)
-- **Verified pricing:** Sole proprietorship around CA$49; incorporation roughly CA$499 (federal) to CA$699 (BC), with government fees included; annual compliance about CA$199–599 a year, with the Online Minute Boo…
+- **Verified pricing:** (prices read 22 September 2026 in a live browser on www.ownr.co/pricing, all amounts in Canadian dollars - Ownr sells into Canada only) The page has two selectors, jurisdiction and structur…
 - **Honest take:** Two honest limits.
 - **Best for:** Canadian founders who want a straightforward sole proprietorship or single-shareholder incorporation done fast, without paying lawyer rates
+- **Flags:** {'f': 'renewal_jump', 'ev': 'The renewal rate is the same in every jurisdiction; only the incorporation year differs.'}, {'f': 'addons_extra', 'ev': 'Three add-ons exist and all three are locked to the Managed Corporation Plan: Managed Shareholders at CA$297 a year including three shareholders and …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/ownr-review/
 
 ## Oyster (oysterhr.com)

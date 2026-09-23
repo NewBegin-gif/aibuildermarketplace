@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 471 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-22.
+All 471 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-23.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1105,10 +1105,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/folk-review/
 
 ## Foxit (foxit.com)
-- **Verified pricing:** (re-verified 1 Sep 2026 on the Foxit pricing pages and the eSign JSON-LD) PDF Editor is $129.99 per user per year, or from $10.99 per user per month, with a 14-day free trial that asks for …
+- **Verified pricing:** (re-verified 2026-09-22 on the Foxit PDF Editor pricing page; every figure identical to the 1 Sep 2026 reading) PDF Editor is $129.99 per user per year, or $10.99 per user per month, with a…
 - **Honest take:** Foxit's pitch is being the honest fraction of Acrobat's price, and on the headline numbers it delivers.
 - **Best for:** individuals and businesses that want full PDF editing, OCR and organizing at a fraction of Acrobat's subscription — especially multi-seat deployments
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 1 Sep 2026 on the Foxit pricing pages and the eSign JSON-LD) PDF Editor is $129.99 per user per year, or from $10.99 per user per month,…'}, {'f': 'usage_metered', 'ev': 'Every Editor seat carries 300 free AI credits per user per month; the paid AI Assistant tier is $49.99 a year for 2,000 credits a month per user, cre…'}, {'f': 'addons_extra', 'ev': 'Every Editor seat carries 300 free AI credits per user per month; the paid AI Assistant tier is $49.99 a year for 2,000 credits a month per user, cre…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-22 on the Foxit PDF Editor pricing page; every figure identical to the 1 Sep 2026 reading) PDF Editor is $129.99 per user per ye…'}, {'f': 'usage_metered', 'ev': 'Every Editor and Editor+ seat carries 300 free AI credits per user per month; the paid AI Assistant tier is $49.99 a year for 2,000 credits a month p…'}, {'f': 'addons_extra', 'ev': 'Credits reset monthly and do not roll over, and the add-on is not sold for perpetual licences.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/foxit-review/
 
 ## Frase (frase.io)
@@ -1242,10 +1242,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gravity-forms-review/
 
 ## Guesty (guesty.com)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Guesty Lite is $9/mo PER LISTING plus ~1% per reservation, for 1–3 listings; Pro covers 4–199…
+- **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page and the Guesty Lite package page, read from a Dutch exit) Guesty Lite is $9/mo PER LISTING plus 1% per reservation in 34 …
 - **Honest take:** Pricing runs higher than leaner rivals, onboarding has a learning curve, and some users flag support — it earns its keep at scale, but it's heavy for a single listing.
 - **Best for:** hosts with 1-3 listings starting on Guesty Lite (~$9/mo + ~1% per reservation) who may grow into the full property-management platform
-- **Flags:** {'f': 'usage_metered', 'ev': 'Also add-ons rather than inclusions on Pro: Trust Accounting, GuestyPay, Fraud & Chargeback Management, GuestVerify, Damage Protection, Liability Cov…'}, {'f': 'addons_extra', 'ev': "VENDOR SELF-CONTRADICTION, confirm before relying: the geo-price note reads '+1% per reservation | Including PriceOptimizer', while the same page's f…"}
+- **Flags:** {'f': 'usage_metered', 'ev': '14-day free trial of Lite, no credit card.'}, {'f': 'addons_extra', 'ev': "VENDOR SELF-CONTRADICTION, confirm before relying: the geo note reads '+1% per reservation | Including PriceOptimizer' while the feature table on the…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/guesty-review/
 
 ## Gushwork (gushwork.ai)
@@ -1460,10 +1460,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/kartra-review/
 
 ## Katana MRP (katanamrp.com)
-- **Verified pricing:** (re-verified 2026-09-14) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all features, add-ons and API access, then Core starting at $299/mo with unlimite…
+- **Verified pricing:** (re-verified 2026-09-23) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all Katana features, add-ons and API access, then Core starting at $299/month wit…
 - **Honest take:** The $299 headline is the floor.
 - **Best for:** product makers and small manufacturers who need live inventory, production scheduling and multi-channel order sync in one cloud platform
-- **Flags:** {'f': 'quote_only', 'ev': '(re-verified 2026-09-14) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all features, add-ons and API access, the…'}, {'f': 'usage_metered', 'ev': "The $299 is a floor, not a bill: Katana's own price calculator, embedded on the pricing page, charges per delivered sales order on a tapering rate — …"}, {'f': 'addons_extra', 'ev': '(re-verified 2026-09-14) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all features, add-ons and API access, the…'}, {'f': 'annual_lock', 'ev': 'Annual billing costs MORE per month rather than less: it adds a "scale guarantee" line — $23, $54 and $79 a month on the vendor\'s own three example c…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-14) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all features, add-ons and API access, the…'}
+- **Flags:** {'f': 'quote_only', 'ev': '(re-verified 2026-09-23) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all Katana features, add-ons and API acce…'}, {'f': 'usage_metered', 'ev': "The $299 is a floor, not a bill: Katana's own FAQ says Core is usage-based, billed on the number of sales orders delivered at a lower per-unit cost a…"}, {'f': 'addons_extra', 'ev': '(re-verified 2026-09-23) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all Katana features, add-ons and API acce…'}, {'f': 'annual_lock', 'ev': 'Annual billing is not a discount: the FAQ says it includes "a small premium" because Katana absorbs usage swings, and usage more than 20% over your e…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-23) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all Katana features, add-ons and API acce…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/katana-mrp-review/
 
 ## Keap (keap.com)
@@ -1593,10 +1593,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/lemlist-review/
 
 ## LettrLabs (lettrlabs.com)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Postage is included in every per-piece rate.
+- **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page; EVERY rate identical to the 31 Aug 2026 reading, to the cent) (2026) Postage is included in every per-piece rate.
 - **Honest take:** Direct mail only pays off with a tight list and a real offer — it's a leverage channel, not a cheap thing to test blindly.
 - **Best for:** local businesses and e-commerce brands using robotically handwritten mail (~$0.49/piece incl. postage) to stand out where email gets ignored
-- **Flags:** {'f': 'usage_metered', 'ev': 'New accounts get $30 in free credit.'}
+- **Flags:** {'f': 'quote_only', 'ev': "FOURTH TIER, NOT PURCHASABLE FROM THIS PAGE (first recorded 22 Sep 2026): every comparison header reads 'Starter | Core | Premium | Enterprise', and …"}, {'f': 'usage_metered', 'ev': 'New accounts get $30 in free credit.'}, {'f': 'addons_extra', 'ev': "Add-on rows publish two numbers and then 'Custom' without labelling which tier each column is: LeadReveal $0.50 and $0.25 per card, double-sided prin…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/lettrlabs-review/
 
 ## Lindy.ai (lindy.ai)
@@ -2392,10 +2392,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sellfy-review/
 
 ## Sendcloud (sendcloud.com)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Free plan €0/mo: up to 20 parcels a month, no courier contract, no subscription, €0.50 a labe…
+- **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 31 Aug 2026 reading) Free plan €0/mo: up …
 - **Honest take:** The pricing has layers — a per-label fee on top of the subscription, plus carrier surcharges that can land on invoices weeks later.
 - **Best for:** European e-commerce stores that want easy multi-carrier shipping (DHL, PostNL, Colissimo, GLS, DPD), branded tracking and a returns portal live in under 30 minutes
-- **Flags:** {'f': 'addons_extra', 'ev': 'Every tier also has a MONTHLY label cap (Lite 400, Growth 1,000, Premium 10,000, Pro 30,000) and past it each extra label costs €0.15 on top of the p…'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Free plan €0/mo: up to 20 parcels a month, no courier…"}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Every tier also has a MONTHLY label cap (Lite 400, Growth 1,000, Premium 10,000, Pro 30,000) and past it each extra label costs €0.15 on top of the p…'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 3…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/sendcloud-review/
 
 ## Sentaro (sentaro.com)
@@ -2656,10 +2656,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/storylane-review/
 
 ## Streak (streak.com)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or $89 monthly; Enterprise $129 annual or $159 monthly — a…
+- **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page; every plan figure identical to the 31 Aug 2026 reading) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or…
 - **Honest take:** The pitch — CRM living inside Gmail — is also the ceiling: everything happens in the inbox, which power users love and growing teams outgrow (reporting, permissions, cross-team process).
 - **Best for:** solo founders and small Gmail-native teams whose pipeline genuinely lives in email threads and who want zero context-switching
-- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or $89 monthly; En…"}, {'f': 'usage_metered', 'ev': 'AI credits are a second meter: 20 per user per month on Pro, 150 on Pro+, 500 on Enterprise, pooled across the team and expiring each period; top-ups…'}, {'f': 'addons_extra', 'ev': "And note the trajectory: the free tier is gone and per-seat prices sit at real-CRM levels now, so the 'lightweight Gmail add-on' framing no longer ma…"}, {'f': 'annual_lock', 'ev': "(price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or $89 monthly; En…"}, {'f': 'free_tier', 'ev': "And note the trajectory: the free tier is gone and per-seat prices sit at real-CRM levels now, so the 'lightweight Gmail add-on' framing no longer ma…"}
+- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-09-22 against the vendor's own pricing page; every plan figure identical to the 31 Aug 2026 reading) (2026) Pro $49/user/mo a…"}, {'f': 'usage_metered', 'ev': 'AI credits are a second meter: 20 per user per month on Pro, 150 on Pro+, 500 on Enterprise, pooled across the team, spent only on successful operati…'}, {'f': 'addons_extra', 'ev': 'Top-ups, purchasable by team admins only and billed as a separate recurring add-on on your billing cycle: 1,000 credits $100/mo, 2,500 $200/mo, 10,00…'}, {'f': 'free_tier', 'ev': 'The free CRM tier was eliminated in 2024-25, but the free email tools remain - email and link tracking, snippets, Streak Share, a thread splitter, an…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/streak-review/
 
 ## Success.co (success.co)

@@ -2945,10 +2945,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/turbotic-review/
 
 ## Typewise (typewise.app)
-- **Verified pricing:** (re-read 2026-09-05 on typewise.app/pricing, a page that did not exist in August) A base plan plus a per-resolution rate.
+- **Verified pricing:** (re-read 2026-09-23 on typewise.app/pricing) A base plan plus a per-resolution rate.
 - **Honest take:** The bill has two parts and both are published: a base fee from $99 and a resolution rate from $2 (pay as you go) down to $1 with volume packages.
 - **Best for:** customer-service teams with real ticket volume that want AI agents to resolve requests end to end and act inside the systems they already run — CRM, ERP, billing, commerce — with approval steps and human handover as they raise the
-- **Flags:** {'f': 'per_seat', 'ev': 'Additional users are $89 a month.'}, {'f': 'usage_metered', 'ev': 'Every plan starts with a 14-day trial of 100 resolution credits and $10 of AI Operator credit, no card.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Additional users are $89 a month on every plan - an add-on, not a starting price.'}, {'f': 'usage_metered', 'ev': 'Every plan starts with a 14-day trial of 100 resolution credits and $10 of AI Operator credit, no card.'}, {'f': 'addons_extra', 'ev': 'Additional users are $89 a month on every plan - an add-on, not a starting price.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/typewise-review/
 
 ## UENI (ueni.com)

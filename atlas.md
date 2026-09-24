@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 472 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-24.
+All 473 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-24.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -424,6 +424,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** sporadic, project-based prospecting where a subscription would idle — buy exactly the verified contacts you need, when you need them
 - **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.'}, {'f': 'addons_extra', 'ev': 'BeSpoke, the hand-built private list service, is priced separately from $499 for 1,000 records.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bookyourdata-review/
+
+## Bot It AI (botitai.com)
+- **Verified pricing:** (read 2026-09-24 on apps.shopify.com/bot-it and on the vendor's own botitai.com/pricing, which list the same two tiers) Free is free forever, with no trial involved: the full catalogue audi…
+- **Honest take:** The budget behind the AI fixes is not published.
+- **Best for:** Shopify merchants who want to know how complete their catalogue data is for AI shopping agents and are willing to test an early tool, starting with the free audit before paying for automated fixes
+- **Flags:** {'f': 'free_tier', 'ev': "(read 2026-09-24 on apps.shopify.com/bot-it and on the vendor's own botitai.com/pricing, which list the same two tiers) Free is free forever, with no…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/bot-it-ai-review/
 
 ## Boulevard (joinblvd.com)
 - **Verified pricing:** (2026-09-17, read on their own pricing page) Priced per location per month, and the page opens on its Annually tab, so the headline figures are annual-billing rates: Essentials $143, Premie…

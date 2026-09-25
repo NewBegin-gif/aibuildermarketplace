@@ -2895,10 +2895,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tnc-review/
 
 ## Todoist (todoist.com)
-- **Verified pricing:** Free (up to 5 projects, one automatic reminder per task); Pro about $5/mo (annual, ~$7 monthly), Business about $8/user/mo (annual, ~$10 monthly) (2026).
+- **Verified pricing:** (re-verified 25 September 2026 on todoist.com/pricing, currency set to USD, both billing toggles) Free Beginner plan: 5 personal projects, 3 filter views, 5 MB uploads, one week of activity…
 - **Honest take:** The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly — but Pro is genuinely cheap.
 - **Best for:** individuals and small teams who want a fast, elegant task manager that gets out of the way
-- **Flags:** {'f': 'per_seat', 'ev': 'Free (up to 5 projects, one automatic reminder per task); Pro about $5/mo (annual, ~$7 monthly), Business about $8/user/mo (annual, ~$10 monthly) (20…'}, {'f': 'free_tier', 'ev': "The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly — but Pro is genui…"}
+- **Flags:** {'f': 'per_seat', 'ev': 'Business $8 per user a month billed annually ($96 a year) or $10 monthly, plus local tax, adding a shared team workspace with 500 team projects and u…'}, {'f': 'free_tier', 'ev': "The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly — but Pro is genui…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/todoist-review/
 
 ## Toggl (toggl.com)
@@ -3086,7 +3086,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vyreel-review/
 
 ## Warmup Inbox (warmupinbox.com)
-- **Verified pricing:** (re-read 2026-09-05 on warmupinbox.com/pricing, both billing toggles) Three tiers, priced per inbox.
+- **Verified pricing:** (re-read 25 September 2026 on warmupinbox.com/pricing/, plan cards plus the page's schema.org price list) Three tiers, priced per inbox.
 - **Honest take:** The pricing is published and readable — three tiers, per inbox, with both billing toggles printing a rate: $19, $59 and $99 monthly, or $15, $49 and $79 on the yearly plan.
 - **Best for:** outbound teams warming new sending domains and inboxes before campaigns, with integrations across Google, Outlook, Zoho and SendGrid
 - **Full review:** https://aibuildermarketplace.com/b2b/warmup-inbox-review/
@@ -3120,10 +3120,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/weave-review/
 
 ## WebCatalog (webcatalog.io)
-- **Verified pricing:** (read 2026-08-25 on their own pricing page, re-read 2026-09-10 in a browser) Basic is free and no card is required: 2 desktop apps, 2 profiles and 1 space.
+- **Verified pricing:** (re-read 25 September 2026 on webcatalog.io/en/pricing in a browser, both billing toggles, USD) Basic is free and no card is required: 2 desktop apps, 2 profiles and 1 space, with cloud syn…
 - **Honest take:** It solves a real annoyance: dozens of web apps and multiple accounts per app as tidy desktop windows.
 - **Best for:** people juggling many web apps and multiple accounts per service who want them as clean, separate desktop apps with per-profile isolation
-- **Flags:** {'f': 'per_seat', 'ev': 'Pro is $5 per user per month billed annually, plus local taxes, and lifts those caps to unlimited apps, profiles and spaces with cloud sync, pages, t…'}, {'f': 'free_tier', 'ev': "The free plan's 2-app limit is tight, but browser profiles and PWAs solve part of the same problem for free."}
+- **Flags:** {'f': 'per_seat', 'ev': 'Pro is $5 per user per month billed annually or $6 billed monthly, plus local taxes, and lifts the caps to unlimited apps, profiles and spaces, with …'}, {'f': 'free_tier', 'ev': "The free plan's 2-app limit is tight, but browser profiles and PWAs solve part of the same problem for free."}
 - **Full review:** https://aibuildermarketplace.com/b2b/webcatalog-review/
 
 ## Webflow (webflow.com)
@@ -3148,10 +3148,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wegic-review/
 
 ## WhatConverts (whatconverts.com)
-- **Verified pricing:** (re-verified 2026-09-05 on whatconverts.com/pricing) Two ladders behind one toggle, and the page opens on the single-account one.
-- **Honest take:** The meter is honest and the unit rate is invisible: every phone number, call minute, text, form, chat, appointment, email, event and transaction is charged against a monthly credit, and past that credit WhatCo…
+- **Verified pricing:** (re-verified 25 September 2026 on whatconverts.com/pricing) Two ladders behind one toggle, and the page opens on the single-account one.
+- **Honest take:** The meter is honest and only half of it is printed: every phone number, call minute, text, form, chat, appointment, email, event and transaction is charged against a monthly credit.
 - **Best for:** agencies and lead-gen businesses that want every lead — calls, forms, chats — attributed to its source and campaign without enterprise-suite prices
-- **Flags:** {'f': 'usage_metered', 'ev': 'Single account: Call Tracking $30 a month, Plus $60 (forms, chat, ecommerce), Pro $100 (HIPAA, call flows, report builder), Elite $160 (customer jour…'}, {'f': 'addons_extra', 'ev': 'Past the included credit, the comparison table on the same page prints the usage rates: additional local numbers $2.50 each, local minutes 4.5 cents …'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Single account: Call Tracking $30 a month, Plus $60 (forms, chat, ecommerce), Pro $100 (HIPAA, call flows, report builder), Elite $160 (customer jour…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/whatconverts-review/
 
 ## Wholesale Gorilla (wholesalegorilla.com)

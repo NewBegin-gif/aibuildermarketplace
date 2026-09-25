@@ -1728,10 +1728,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/modge-review/
 
 ## Momence (momence.com)
-- **Verified pricing:** (re-verified 2026-09-06 on the vendor's own pricing page) The tiers render in plain text again: Basic $0/mo with a 5% Momence fee on every transaction plus 4% passed to the client; Pro $60/…
-- **Honest take:** The 'free' plan is the most expensive one once you have real volume: a 5% commission on every sale overtakes Pro's $60 flat fee around $29k a year in processed revenue, and Pro in turn loses to the $199 Custom…
+- **Verified pricing:** Quote-only since September 2026.
+- **Honest take:** Momence stopped publishing prices in September 2026: on the 25th its pricing page was a 'Let's talk pricing' form with no figure on it.
 - **Best for:** class-based businesses — studios, gyms, salons, schools — that want scheduling, memberships, payments and marketing in one system with a member app
-- **Flags:** {'f': 'usage_metered', 'ev': "The 'free' plan is the most expensive one once you have real volume: a 5% commission on every sale overtakes Pro's $60 flat fee around $29k a year in…"}, {'f': 'addons_extra', 'ev': "(re-verified 2026-09-06 on the vendor's own pricing page) The tiers render in plain text again: Basic $0/mo with a 5% Momence fee on every transactio…"}, {'f': 'free_tier', 'ev': "(re-verified 2026-09-06 on the vendor's own pricing page) The tiers render in plain text again: Basic $0/mo with a 5% Momence fee on every transactio…"}
+- **Flags:** {'f': 'addons_extra', 'ev': 'The last ladder Momence published itself, read 6 September 2026: Basic $0/mo with a 5% Momence fee on every transaction plus 4% passed to the client;…'}, {'f': 'free_tier', 'ev': 'The last ladder Momence published itself, read 6 September 2026: Basic $0/mo with a 5% Momence fee on every transaction plus 4% passed to the client;…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/momence-review/
 
 ## monday.com (monday.com)
@@ -1962,7 +1962,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/payoneer-review/
 
 ## PDWare (pdware.com)
-- **Verified pricing:** Quote-only, re-confirmed 6 September 2026: pdware.com has no pricing page (/pricing returns 404) and every route ends in a 'Request pricing' form or a guided demo, with no amount anywhere o…
+- **Verified pricing:** Quote-only, re-confirmed 25 September 2026: pdware.com has no pricing page (/pricing returns 404) and every route ends in a 'Request pricing' form or a guided demo, with no amount anywhere …
 - **Honest take:** This is genuine enterprise software with enterprise buying: opaque pricing, demo-first sales and implementation effort — appropriate for portfolio offices planning hundreds of resources, overkill below that.
 - **Best for:** enterprise PMOs that plan portfolios around named-resource capacity and need feasibility answers before committing to projects
 - **Full review:** https://aibuildermarketplace.com/b2b/pdware-review/
@@ -2063,7 +2063,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/preorder-now-review/
 
 ## Prezi (prezi.com)
-- **Verified pricing:** Three plans, re-read on prezi.com/pricing (which redirects to prezi.com/gts/pricing) on 7 September 2026, shown in euros from an EU exit: Standard €5 a month, Plus €15 a month and Premium €…
+- **Verified pricing:** Three plans, re-read on prezi.com/pricing (which redirects to prezi.com/gts/pricing) on 25 September 2026, shown in euros from an EU exit: Standard €5 a month, Plus €15 a month and Premium …
 - **Honest take:** It exports to PDF only — no editable .pptx — and the zooming format is polarising: some audiences find it engaging, others find it disorienting.
 - **Best for:** presenters who want motion and zooming-canvas storytelling that stands out from slide decks — especially for talks, pitches and teaching
 - **Flags:** {'f': 'usage_metered', 'ev': 'The comparison table is where the gates actually are: Prezi AI is 500 credits on Standard and unlimited above it; presentation recording, smart brand…'}
@@ -2463,7 +2463,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/shipdock-review/
 
 ## Shippo (goshippo.com)
-- **Verified pricing:** Read on their own pricing page, 6 September 2026.
+- **Verified pricing:** Read on their own pricing page, re-verified 25 September 2026.
 - **Honest take:** The pricing is honest but layered.
 - **Best for:** e-commerce sellers shipping across multiple carriers who want rate comparison, label printing and tracking in one place with genuine rate discounts
 - **Flags:** {'f': 'usage_metered', 'ev': 'Non-US address validation is metered separately at 9¢, 8¢ and 6¢ per validation on Starter, Pro and Premier.'}, {'f': 'annual_lock', 'ev': 'Annual billing saves about 10% at every band.'}, {'f': 'free_tier', 'ev': 'Starter is free: up to 30 labels a month, discounted USPS, UPS, FedEx and DHL Express rates, 1 user login, and 5¢ per label if you connect your own c…'}
@@ -2477,7 +2477,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/shoeboxed-review/
 
 ## Shorby (shorby.com)
-- **Verified pricing:** (re-verified 2026-09-06 at dash.shorby.com/pricing) Three paid plans, no free plan on the table.
+- **Verified pricing:** (re-verified 2026-09-25 at dash.shorby.com/pricing) Three paid plans, no free plan on the table.
 - **Honest take:** In a category where the market leader has a generous free plan, Shorby charges from day one, so it has to earn the gap.
 - **Best for:** creators and businesses that sell via messenger conversations or retarget link-in-bio traffic with ad pixels
 - **Full review:** https://aibuildermarketplace.com/b2b/shorby-review/

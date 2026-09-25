@@ -1372,7 +1372,7 @@ const BUNDLES={
  solo:{label:'Solopreneur Toolkit',sub:'Everything a one-person business needs',tools:['folk','Beehiiv','Gamma','Todoist','Fastmail']},
  ecom:{label:'E-commerce Starter',sub:'Launch and ship an online store',tools:['DropGenius','Printify','Shippo','Goflow']}
 };
-function cardText(c){return ((c.querySelector('h3')||{}).textContent+' '+((c.querySelector('.tool-desc')||{}).textContent||'')+' '+(c.dataset.category||'')).toLowerCase();}
+function cardText(c){if(c._t===undefined)c._t=((c.querySelector('h3')||{}).textContent+' '+((c.querySelector('.tool-desc')||{}).textContent||'')+' '+(c.dataset.category||'')).toLowerCase();return c._t;} /* R25-04: eenmaal lezen, niet per toetsaanslag */
 function cardName(c){return ((c.querySelector('h3')||{}).textContent||'').trim();}
 function applyHomeFilter(){
  const vis={};let total=0;
@@ -1381,7 +1381,7 @@ function applyHomeFilter(){
   const g=c.dataset.group;
   const ok=bset?(bset.has(cardName(c))&&(!curQ||cardText(c).indexOf(curQ)>=0))
                :((curFilter==='all'||g===curFilter)&&(!curQ||cardText(c).indexOf(curQ)>=0));
-  c.style.display=ok?'':'none';
+  const d=ok?'':'none'; if(c.style.display!==d)c.style.display=d;
   if(ok){vis[g]=(vis[g]||0)+1;total++;}
  });
  document.querySelectorAll('.tools-section-head').forEach(h=>{

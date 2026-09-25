@@ -115,7 +115,7 @@ button{background:#10b981;color:#fff;border:none;border-radius:9px;padding:12px 
       t.map(function(x){return '<th scope="col"><a href="/marketplace/'+esc(x.slug)+'/">'+esc(x.naam)+'</a>'+
         '<div class="muted" style="font-weight:400;font-size:.8rem">'+esc(x.cat)+' \u00b7 '+(x.claimed?'claimed by the vendor':'unclaimed')+'</div></th>';}).join('')+'</tr></thead><tbody>';
     h+=rij('Our pricing check',t.map(function(x){return '<td>'+(x.datum?'Read on their own pricing page, '+esc(x.datum):'Read on their own pricing page')+'</td>';}).join(''));
-    h+=rij('Entry price we found',t.map(function(x){return '<td>'+(x.vanaf!=null?'from $'+esc(x.vanaf):'<span class="muted">not a single fixed entry price</span>')+'</td>';}).join(''));
+    h+=rij('Entry price we found',t.map(function(x){return '<td>'+(x.vanaf!=null?esc(x.vanaf)+(x.voorw?'<br><span class="muted">'+esc(x.voorw)+'</span>':''):'<span class="muted">not a single fixed entry price</span>')+'</td>';}).join(''));
     h+=rij('What it says on pricing',t.map(function(x){return '<td>'+esc(x.prijs)+'</td>';}).join(''));
     h+=rij('Cost-trap flags',t.map(function(x){return '<td>'+vlaggen(x.flags)+'</td>';}).join(''));
     h+=rij('Genuinely good for',t.map(function(x){return '<td>'+esc(x.best)+'</td>';}).join(''));

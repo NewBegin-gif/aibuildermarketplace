@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 473 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-25.
+All 474 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-25.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -844,6 +844,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores with a chargeback problem big enough to cost real money and nobody in-house to fight disputes, who would rather pay a share of what is recovered than a monthly fee
 - **Flags:** {'f': 'usage_metered', 'ev': 'Recovery is 20% of the recovered amount with the fee capped at $250 per win — win a $50 chargeback and they debit $10 — while fraud prevention is $0.…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/disputifier-review/
+
+## DocSend (docsend.com)
+- **Verified pricing:** (read 2026-09-25 on docsend.com/pricing, both billing toggles) Personal is $10 per user a month billed yearly or $15 billed monthly, one user, basic link controls (email to view, passcode, …
+- **Honest take:** The cheap plan is not the product people buy DocSend for.
+- **Best for:** founders sharing a pitch deck or running a fundraise, and small deal teams that want a data room with page-level analytics, NDA gating and watermarking without buying a legacy virtual data room
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-09-25 on docsend.com/pricing, both billing toggles) Personal is $10 per user a month billed yearly or $15 billed monthly, one user, basic …'}, {'f': 'addons_extra', 'ev': 'Salesforce is a paid add-on from Standard up, SSO (Okta, OneLogin, Azure) and sub-teams are paid add-ons on the two team plans, all priced only throu…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/docsend-review/
 
 ## Dondy (dondy.net)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/dondy-marketing-ai, listed as “Dondy: WhatsApp Marketing+Chat”) Four tiers, each paid one with a 7-day free trial, and every amount unchanged since 2…

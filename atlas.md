@@ -362,7 +362,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/birch-review/
 
 ## Bitdefender (bitdefender.com)
-- **Verified pricing:** Read on their own product pages, 6 September 2026, where a configurator prices each tier by device count and term.
+- **Verified pricing:** Read on their own product pages, 6 September 2026 and again, unchanged, 25 September 2026, where a configurator prices each tier by device count and term.
 - **Honest take:** The price you see is already discounted: the configurator applies 30% off list by default on all three GravityZone tiers, so compare on the discounted figure and ask what applies at renewal rather than assumin…
 - **Best for:** small businesses that want top-tier, independently-validated endpoint protection managed from one console
 - **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons are priced separately: at 10 devices, Web Access and Device Control $41.99 and Network Attack Defense and Risk Management $41.99 on Small Bus…'}
@@ -1645,7 +1645,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/lumencart-review/
 
 ## ManyChat (manychat.com)
-- **Verified pricing:** Read on their own pricing page, 6 September 2026.
+- **Verified pricing:** Read on their own pricing page, 6 September 2026, and again, unchanged, 25 September 2026.
 - **Honest take:** Flows are button-and-script based, not natural language — type something unexpected and the bot falls back.
 - **Best for:** creators and brands running comment-to-DM and multi-channel (Instagram, Messenger, WhatsApp) marketing funnels — its killer feature works reliably
 - **Flags:** {'f': 'addons_extra', 'ev': 'The AI add-on is closer to keyword-matching than real conversational AI, billing scales with contacts (a viral Reel can spike your bill), and support…'}, {'f': 'free_tier', 'ev': 'Free: $0, 25 active contacts, 2 channels, 1 user.'}
@@ -1658,10 +1658,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/marketerhire-review/
 
 ## Marketing 360 (marketing360.com)
-- **Verified pricing:** Quote-based, and deliberately so (verified 6 September 2026 on their own site).
+- **Verified pricing:** Quote-based, and deliberately so (verified 6 September 2026 and again 25 September 2026 on their own site).
 - **Honest take:** Two honest cautions.
 - **Best for:** small businesses that want one vendor handling website, CRM, ads, email and reputation with real humans to help, and prefer done-for-you over DIY
-- **Flags:** {'f': 'quote_only', 'ev': 'Quote-based, and deliberately so (verified 6 September 2026 on their own site).'}
+- **Flags:** {'f': 'quote_only', 'ev': 'Quote-based, and deliberately so (verified 6 September 2026 and again 25 September 2026 on their own site).'}
 - **Full review:** https://aibuildermarketplace.com/b2b/marketing-360-review/
 
 ## Meeri (meeritech.com)
@@ -1707,7 +1707,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/miro-review/
 
 ## Mktg.ai (mktg.ai)
-- **Verified pricing:** No public pricing (re-verified 6 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'.
+- **Verified pricing:** No public pricing (re-verified 25 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'.
 - **Honest take:** Two honest cautions.
 - **Best for:** marketing teams with real media spend across channels who want an always-on AI analyst — unified creative visibility, live performance signals and plain-language questions over their own data. It layers on top of your existing pla
 - **Flags:** {'f': 'addons_extra', 'ev': 'The tiers themselves are no longer secret, though — the FAQ names Growth and Enterprise above the entry level and describes what they add (dedicated …'}
@@ -3202,10 +3202,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wp-rocket-review/
 
 ## Wrike (wrike.com)
-- **Verified pricing:** (price re-verified 2026-09-05) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 to 15 users; Business $25 per user a month for …
+- **Verified pricing:** (price re-verified 2026-09-25) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 to 15 users; Business $25 per user a month for …
 - **Honest take:** It's powerful and scales to complex, cross-team portfolios, but that power brings a learning curve and a per-seat cost that climbs — small teams often find it heavier than they need next to a simpler board too…
 - **Best for:** mid-to-large teams running complex, cross-functional projects that need robust reporting, workflows and resource management
-- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-05) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 to 15 u…'}, {'f': 'addons_extra', 'ev': 'Self-service checkout covers Team and Business up to 15 users with no add-ons; beyond that the purchase goes through a Wrike representative.'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-05) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 to 15 u…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-25) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 to 15 u…'}, {'f': 'addons_extra', 'ev': 'Self-service checkout covers Team and Business up to 15 users with no add-ons; beyond that the purchase goes through a Wrike representative.'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-25) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 to 15 u…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/wrike-review/
 
 ## Xero (xero.com)

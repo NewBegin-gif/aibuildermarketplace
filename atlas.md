@@ -100,7 +100,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-10) Quote-only.
 - **Honest take:** Airia used to publish part of its ladder, which was refreshingly rare for enterprise AI.
 - **Best for:** enterprises that need to find the AI already running across their organisation, enforce policy on it at runtime, and build and govern their own agents, with auditability and compliance evidence built in
-- **Flags:** {'f': 'free_tier', 'ev': 'Airia used to publish a ladder: a free tier, Individual around $50 a month and Team around $250.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/airia-review/
 
 ## Airwallex (airwallex.com)
@@ -345,7 +344,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-15 on their own pricing page) Accounts-payable and receivable plans priced per user: Essentials $49, Team $65 and Corporate $89 per user per month, plus a quote-only En…
 - **Honest take:** Per-user pricing plus per-transaction fees means the real cost depends on team size and payment volume — it's built for finance teams with genuine AP workflows and is overkill if you pay a handful of bills a m…
 - **Best for:** growing companies with real accounts-payable volume and approval chains that want to automate bill pay and sync to accounting
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-15 on their own pricing page) Accounts-payable and receivable plans priced per user: Essentials $49, Team $65 and Corporate $89 …'}, {'f': 'usage_metered', 'ev': 'The separate Spend and Expense product is $0 per user per month and carries credit lines the page advertises as $1,000-$5M, not guaranteed and set on…'}, {'f': 'addons_extra', 'ev': 'Transaction fees stack on top of the seat, and are where the real cost hides.'}, {'f': 'free_tier', 'ev': 'The separate Spend and Expense product is $0 per user per month and carries credit lines the page advertises as $1,000-$5M, not guaranteed and set on…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-15 on their own pricing page) Accounts-payable and receivable plans priced per user: Essentials $49, Team $65 and Corporate $89 …'}, {'f': 'usage_metered', 'ev': 'The separate Spend and Expense product is $0 per user per month and carries credit lines the page advertises as $1,000-$5M, not guaranteed and set on…'}, {'f': 'addons_extra', 'ev': 'Transaction fees stack on top of the seat, and are where the real cost hides.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bill-com-review/
 
 ## BillingNow (billingnow.com)
@@ -972,7 +971,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-08-28, read on their own pricing page at employmenthero.com/pricing/) EVERY PRICE ON THAT PAGE IS AUD EXCLUDING GST — the page states it in its own disclaimer.
 - **Honest take:** There is no such thing as the Employment Hero price, and the first thing to fix is the currency: the pricing page is the Australian one, its disclaimer says every figure is AUD excluding GST, and there is no U…
 - **Best for:** Australian and New Zealand employers who want HR and payroll from one vendor and will genuinely use both, where the per-employee rate beats separate systems
-- **Flags:** {'f': 'per_seat', 'ev': 'HR Essentials A$10 per employee per month, HR Engage A$14; HR Elite and Employment Unlimited are quote-only.'}, {'f': 'usage_metered', 'ev': 'Interview credits reset monthly, unused credits do not roll over, and overage is billed automatically with no hard cap.'}, {'f': 'addons_extra', 'ev': 'There is no standalone payroll tier on the page any more: payroll sits inside Employment Unlimited, and Managed Payroll is an add-on at A$20 per empl…'}, {'f': 'free_tier', 'ev': 'Recruitment: a free ATS tier at A$0 that includes 50 complimentary AI video interviews as a one-off trial, then A$199, A$359 and A$639 a month for 50…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'HR Essentials A$10 per employee per month, HR Engage A$14; HR Elite and Employment Unlimited are quote-only.'}, {'f': 'usage_metered', 'ev': 'Interview credits reset monthly, unused credits do not roll over, and overage is billed automatically with no hard cap.'}, {'f': 'addons_extra', 'ev': 'There is no standalone payroll tier on the page any more: payroll sits inside Employment Unlimited, and Managed Payroll is an add-on at A$20 per empl…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/employment-hero-review/
 
 ## EngageBay (engagebay.com)
@@ -1067,7 +1066,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-08-29, read on their own pricing page) No prices are shown.
 - **Honest take:** Nothing is priced, so everything is negotiable — which cuts both ways.
 - **Best for:** law firms past the point where a general project tool works, with enough matters that case-specific workflows and intake tracking pay back a negotiated annual contract
-- **Flags:** {'f': 'usage_metered', 'ev': 'What the page does name now is a free way in: LOIS Explore, described as a free tier of LOIS for AI-powered legal research and drafting, with a trial…'}, {'f': 'free_tier', 'ev': 'What the page does name now is a free way in: LOIS Explore, described as a free tier of LOIS for AI-powered legal research and drafting, with a trial…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'What the page does name now is a free way in: LOIS Explore, described as a free tier of LOIS for AI-powered legal research and drafting, with a trial…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/filevine-review/
 
 ## Finale Inventory (finaleinventory.com)
@@ -1198,7 +1197,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-14 on their own pricing page, in euros, quoted at 1,000 contacts) Starter €16/mo or €13.12/mo billed annually: 1 automation workflow, up to 3 users.
 - **Honest take:** Priced by contact count, so the entry number climbs as your list grows, and the best value only shows on long (annual/24-month) commitments.
 - **Best for:** small businesses that want email plus landing pages, automation and webinars in one affordable suite
-- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 18%, and prices step up at 1k, 2.5k, 5k, 10k, 25k, 50k and 100k contacts.'}, {'f': 'free_tier', 'ev': 'What changed since our August 2026 reading is the free tier: the pricing page no longer sells one.'}
+- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 18%, and prices step up at 1k, 2.5k, 5k, 10k, 25k, 50k and 100k contacts.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/getresponse-review/
 
 ## Getscreen (getscreen.me)
@@ -1286,7 +1285,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-05 on their own pricing page) Three plans, billed upfront per year with the monthly equivalent shown: Lite $129/mo or $1,548 a year, Essential $169/mo or $2,028, Premiu…
 - **Honest take:** Mind the fine print between tiers: the entry plan does not include your annual tax filing (a ~$750 one-off on Lite), it is annual billing only, and messy back-months cost extra as catch-up fees.
 - **Best for:** therapists and health-and-wellness practice owners — SLPs, dieticians, chiropractors, audiologists, coaches, massage and physical therapists — who want books, quarterly estimates and filing handled by specialists who know their ni
-- **Flags:** {'f': 'addons_extra', 'ev': 'Lite covers done-for-you bookkeeping, financial reports and quarterly and annual tax support for solo sole proprietors; Essential adds personal tax p…'}, {'f': 'annual_lock', 'ev': 'Mind the fine print between tiers: the entry plan does not include your annual tax filing (a ~$750 one-off on Lite), it is annual billing only, and m…'}, {'f': 'free_tier', 'ev': 'The page now also offers a 30-day free trial of any plan, card required, $0 due today.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Lite covers done-for-you bookkeeping, financial reports and quarterly and annual tax support for solo sole proprietors; Essential adds personal tax p…'}, {'f': 'annual_lock', 'ev': 'Mind the fine print between tiers: the entry plan does not include your annual tax filing (a ~$750 one-off on Lite), it is annual billing only, and m…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/heard-review/
 
 ## Hello Bar (hellobar.com)
@@ -1355,7 +1354,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-08-29, read on their own pricing page) Priced per seat, with both billing columns published.
 - **Honest take:** The seat definition is the whole story and they state it plainly, which deserves credit: you pay for every seat you have created, not every person actually being tracked.
 - **Best for:** agencies and distributed teams that bill clients for hours and need defensible time records — the proof is the product, and per-seat is fair when every seat is a person you invoice for
-- **Flags:** {'f': 'per_seat', 'ev': '(2026-08-29, read on their own pricing page) Priced per seat, with both billing columns published.'}, {'f': 'usage_metered', 'ev': 'There is a 14-day free trial with no credit card, a 30-day money-back guarantee excluding that trial, and a free Project Viewer role for people who o…'}, {'f': 'addons_extra', 'ev': 'Six add-ons are sold per seat per month: Insights, More screenshots, Tasks and Silent app from $2.50, Locations from $3.33, Data retention from $1.67.'}, {'f': 'free_tier', 'ev': "The page's plan data still carries a dormant Free tier that does not render as a card and that the FAQ does not acknowledge — asked whether you can u…"}
+- **Flags:** {'f': 'per_seat', 'ev': '(2026-08-29, read on their own pricing page) Priced per seat, with both billing columns published.'}, {'f': 'usage_metered', 'ev': 'There is a 14-day free trial with no credit card, a 30-day money-back guarantee excluding that trial, and a free Project Viewer role for people who o…'}, {'f': 'addons_extra', 'ev': 'Six add-ons are sold per seat per month: Insights, More screenshots, Tasks and Silent app from $2.50, Locations from $3.33, Data retention from $1.67.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/hubstaff-review/
 
 ## Iconosquare (iconosquare.com)
@@ -1440,10 +1439,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/involve-me-review/
 
 ## Jibble (jibble.io)
-- **Verified pricing:** (read 2026-08-30 on jibble.io, re-checked 2026-09-19) There is no published price for anything above the free plan.
-- **Honest take:** Free forever with unlimited users is a real claim and unusual in this category, where per-seat pricing is the norm — that alone makes it worth a look for a team on a tight budget.
-- **Best for:** teams that need attendance records without a per-seat bill — if the free tier covers your case it is genuinely free, which nothing else in this category offers
-- **Flags:** {'f': 'per_seat', 'ev': 'Free forever with unlimited users is a real claim and unusual in this category, where per-seat pricing is the norm — that alone makes it worth a look…'}, {'f': 'usage_metered', 'ev': "What the homepage claims is a free forever plan with unlimited users, described as '100% free', with no credit card required and setup 'in under 2 mi…"}, {'f': 'free_tier', 'ev': "What the homepage claims is a free forever plan with unlimited users, described as '100% free', with no credit card required and setup 'in under 2 mi…"}
+- **Verified pricing:** (read 2026-09-25 inside a new Jibble account, signed in from the Netherlands; euros, excluding VAT) Jibble still publishes no prices on its public site — jibble.io/pricing, /plans and /upgr…
+- **Honest take:** Free forever with unlimited users holds up: the plan a new account lands on is Free, €0, with no card.
+- **Best for:** teams that need clock-ins, overtime calculations and payroll exports for unlimited people at no cost, and can live with one admin and no approval step — for them it is genuinely free, which nothing else in this category offers
+- **Flags:** {'f': 'per_seat', 'ev': "Four plans, per user per month: Free, €0, 'forever', for unlimited members; Essentieel €1.79 billed annually or €2.99 monthly; Groei €3.79 annually o…"}, {'f': 'annual_lock', 'ev': 'And the paid tiers are cheap per head but add up: timesheet approvals and groups start at €1.79 per user a month on annual billing, €2.99 if you pay …'}, {'f': 'free_tier', 'ev': 'Free forever with unlimited users holds up: the plan a new account lands on is Free, €0, with no card.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/jibble-review/
 
 ## Joiin (joiin.co)
@@ -1665,7 +1664,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** Quote-based, and deliberately so (verified 6 September 2026 on their own site).
 - **Honest take:** Two honest cautions.
 - **Best for:** small businesses that want one vendor handling website, CRM, ads, email and reputation with real humans to help, and prefer done-for-you over DIY
-- **Flags:** {'f': 'quote_only', 'ev': 'Quote-based, and deliberately so (verified 6 September 2026 on their own site).'}, {'f': 'free_tier', 'ev': 'Marketing 360 does publish a page called How Plans & Pricing Work, and it carries no prices at all: the only numbers on it are the annual-revenue ban…'}
+- **Flags:** {'f': 'quote_only', 'ev': 'Quote-based, and deliberately so (verified 6 September 2026 on their own site).'}
 - **Full review:** https://aibuildermarketplace.com/b2b/marketing-360-review/
 
 ## Meeri (meeritech.com)
@@ -1842,8 +1841,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## NordVPN (nordvpn.com)
 - **Verified pricing:** (consumer plans re-verified 2026-09-14 in the browser; the page is geo-priced and served us euros from a Dutch address) Consumer two-year plans: Basic €3.49/mo, Complete €4.49/mo and Ultima…
-- **Honest take:** For a business you're really buying NordLayer, priced per user with a seat minimum.
-- **Best for:** teams that want simple, reliable secure network access and a business VPN without heavy setup
+- **Honest take:** The €3.49 is a two-year introductory rate: Basic renews at €139.08 a year, about €11.59 a month, roughly three times what you signed up at.
+- **Best for:** individuals and households who want an easy personal VPN and will set a reminder before the two-year plan renews
 - **Flags:** {'f': 'per_seat', 'ev': 'Per user per month: Lite $8 on annual billing or $10 month-to-month, Core $11 or $14, Premium $14 or $18, which the toggle labels as savings of 20%, …'}, {'f': 'renewal_jump', 'ev': 'Read the renewal line before you buy: those same plans renew at €139.08, €219.48 and €338.28 a year, so Basic goes from about €3.49 a month to about …'}, {'f': 'addons_extra', 'ev': 'Two endpoint add-ons sit beside the ladder: CrowdStrike Falcon Go at $2 per device a month and CrowdStrike Falcon Enterprise at $9.'}, {'f': 'annual_lock', 'ev': 'Per user per month: Lite $8 on annual billing or $10 month-to-month, Core $11 or $14, Premium $14 or $18, which the toggle labels as savings of 20%, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/nordvpn-review/
 
@@ -1928,7 +1927,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-09-10) Papaya publishes floors on its own pricing page, read in a browser because the page returns HTTP 403 to plain fetches.
 - **Honest take:** Every headline price is a 'starting from' that dead-ends at 'book a demo'.
 - **Best for:** finance-led mid-market and enterprises already running legal entities in several countries. They want to consolidate fragmented multi-country payroll and cross-border payments into one platform, with real-time workforce-cost dashb
-- **Flags:** {'f': 'per_seat', 'ev': 'EOR from $499 per employee/month, Contractor of Record from $199 per contractor/month, the lighter Contractor solution from $5 per contractor/month, …'}, {'f': 'free_tier', 'ev': 'EOR from $499 per employee/month, Contractor of Record from $199 per contractor/month, the lighter Contractor solution from $5 per contractor/month, …'}
+- **Flags:** {'f': 'per_seat', 'ev': 'EOR from $499 per employee/month, Contractor of Record from $199 per contractor/month, the lighter Contractor solution from $5 per contractor/month, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/papaya-global-review/
 
 ## Parallel AI (parallellabs.app)
@@ -2279,7 +2278,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-09-07 on riverside.com/pricing; riverside.fm now redirects to riverside.com.
 - **Honest take:** The meter is not recording time, it is separate-track download time — and separate tracks are the entire reason to use this rather than a video call.
 - **Best for:** podcasters and interviewers who need broadcast-quality audio and video from guests on bad connections — local recording at each end is genuinely the thing that solves it
-- **Flags:** {'f': 'usage_metered', 'ev': 'AI credits: Pro starts with 2,000 and Business with 12,000, and Magic Clips, Magic Audio and the AI Co-Creator do not consume them.'}, {'f': 'annual_lock', 'ev': 'Amounts are region-priced: the page returned euros from a Netherlands exit on this date, with the same numerals our 26 August 2026 US reading returne…'}, {'f': 'free_tier', 'ev': 'There is a 14-day trial rather than a published free plan.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'AI credits: Pro starts with 2,000 and Business with 12,000, and Magic Clips, Magic Audio and the AI Co-Creator do not consume them.'}, {'f': 'annual_lock', 'ev': 'Amounts are region-priced: the page returned euros from a Netherlands exit on this date, with the same numerals our 26 August 2026 US reading returne…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/riverside-review/
 
 ## RocketReach (rocketreach.co)
@@ -2485,7 +2484,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-06 at dash.shorby.com/pricing) Three paid plans, no free plan on the table.
 - **Honest take:** In a category where the market leader has a generous free plan, Shorby charges from day one, so it has to earn the gap.
 - **Best for:** creators and businesses that sell via messenger conversations or retarget link-in-bio traffic with ad pixels
-- **Flags:** {'f': 'free_tier', 'ev': 'In a category where the market leader has a generous free plan, Shorby charges from day one, so it has to earn the gap.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/shorby-review/
 
 ## Shore (shore.com)
@@ -2686,7 +2684,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) The page gives two different numbers and it is worth knowing both.
 - **Honest take:** The pricing page contradicts itself: the plan card says $17 yearly and $22 monthly, the FAQ on the same page says $20 yearly and $25 monthly.
 - **Best for:** people whose problem is deciding what to do today rather than tracking what exists — it pulls from your existing tools and forces a daily plan, which is the whole product
-- **Flags:** {'f': 'free_tier', 'ev': 'Their own llms.txt, read the same day, lists Pro at $17 per person a month billed yearly and $22 billed monthly, plus a 14-day trial at $0 with no ca…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/sunsama-review/
 
 ## SupaEasy (supaeasy.com)
@@ -3140,7 +3137,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-04, read on their own pricing page with every plan accordion and billing tab open) Webflow bills in two places at once.
 - **Honest take:** Three separate bills, and the pricing page shows them on separate tabs.
 - **Best for:** designers and marketing teams who want to ship a real, fast site without a developer in the loop for every change, and who value that the CMS and hosting are the same product as the editor
-- **Flags:** {'f': 'usage_metered', 'ev': 'Add-ons: Optimize from $299/mo by page views, Analyze from $9/mo by sessions, Localize Essential $9/mo and Localize Advanced $29/mo by number of loca…'}, {'f': 'addons_extra', 'ev': 'Seats are charged on top of the workspace plan: a full seat is $39/mo billed yearly, a limited seat $15/mo, a review-only seat $0.'}, {'f': 'annual_lock', 'ev': 'Platform plans start at Team $2,500/mo with an annual contract required, and Enterprise above it is quote-only.'}, {'f': 'free_tier', 'ev': 'Seats are charged on top of the workspace plan: a full seat is $39/mo billed yearly, a limited seat $15/mo, a review-only seat $0.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Add-ons: Optimize from $299/mo by page views, Analyze from $9/mo by sessions, Localize Essential $9/mo and Localize Advanced $29/mo by number of loca…'}, {'f': 'addons_extra', 'ev': 'Seats are charged on top of the workspace plan: a full seat is $39/mo billed yearly, a limited seat $15/mo, a review-only seat $0.'}, {'f': 'annual_lock', 'ev': 'Platform plans start at Team $2,500/mo with an annual contract required, and Enterprise above it is quote-only.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/webflow-review/
 
 ## WebinarGeek (webinargeek.com)

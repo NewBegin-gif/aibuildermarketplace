@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 474 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-25.
+All 475 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-25.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2881,6 +2881,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** support teams that want an AI agent and a help desk from the same vendor and can size all three meters — billable conversations, Lyro AI conversations and Flows visitors — against their own volume before they commit, and Shopify, 
 - **Flags:** {'f': 'addons_extra', 'ev': 'Starter is 24.17 a month billed annually against 29 paid monthly, Growth starts at 49.17 annually against 59 monthly, and the two stand-alone add-ons…'}, {'f': 'annual_lock', 'ev': 'Second, the plan table opens on annual billing.'}, {'f': 'free_tier', 'ev': "The free plan carries 50 billable conversations, 100 Flows visitors reached and 50 Lyro AI conversations, and the comparison table's own footnote mak…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/tidio-review/
+
+## Timesact Preorder (timesact.com)
+- **Verified pricing:** (read 2026-09-25 on timesact.com/pages/pricing, including its volume selector and yearly toggle, and on the Shopify App Store listing apps.shopify.com/timesact-discount-pre-order, which sho…
+- **Honest take:** The Fixed price depends on your Shopify plan, not on what you use.
+- **Best for:** Shopify stores that take pre-orders, deposits or back-in-stock sign-ups on a modest or seasonal volume and want to start free, pay a few dollars a month in quiet months and switch to a fixed price when a launch runs past a hundred
+- **Flags:** {'f': 'usage_metered', 'ev': 'Flexible plans are usage-based: CORE Flexible starts at $5 a month for 10 orders and adds deposits, split payments, $0-down pre-orders, CSV upload, p…'}, {'f': 'addons_extra', 'ev': 'A Merchandising add-on (hiding sold-out products, merchant alerts by email and Slack) is $10 a month on any plan, Free included.'}, {'f': 'free_tier', 'ev': 'Free costs $0 and covers 20 orders a month on unlimited products, unlimited email sending and sign-ups, unlimited coming-soon and low-stock states, a…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/timesact-preorder-review/
 
 ## TiXel (effectify.io)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/tixel) One paid plan and no ladder to climb, and the amounts are unchanged since 22 August 2026.

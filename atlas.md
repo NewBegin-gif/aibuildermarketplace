@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 476 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-26.
+All 477 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-26.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2187,6 +2187,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'The free version is so generous that many sites never need to upgrade — PRO mainly earns its keep once you want built-in rank tracking, Content AI cr…'}, {'f': 'free_tier', 'ev': 'The free version is so generous that many sites never need to upgrade — PRO mainly earns its keep once you want built-in rank tracking, Content AI cr…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/rank-math-review/
 
+## Rapid Search (rapidsearch.app)
+- **Verified pricing:** (read 2026-09-26 on apps.shopify.com/rapid-search and on the vendor's own pricing page at rapidsearch.app/pricing) Every plan carries every feature; the tiers differ only in monthly session…
+- **Honest take:** The meter is your traffic, not your searches.
+- **Best for:** Shopify stores whose shoppers arrive knowing what they want, with catalogues from a few hundred to 100,000 products, that want typo-tolerant instant search, filters on tags and metafields and hand-set pins and boosts without editi
+- **Flags:** {'f': 'usage_metered', 'ev': 'That is more honest than a surprise overage, but it means the best month of the year is the month your search can quietly downgrade itself.'}, {'f': 'annual_lock', 'ev': 'The listing quotes annual billing as a 17% saving and only for the three Basic tiers.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/rapid-search-review/
+
 ## ReachStream (reachstream.com)
 - **Verified pricing:** (read 2026-09-10 in a browser on reachstream.com/prospect/pricing/ with both billing toggles, and re-verified against that same page on 19 September 2026 -- every amount, credit allowance a…
 - **Honest take:** The meter is on exporting, not on looking, and that is the number to size before you pick a tier.
@@ -2230,10 +2237,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/repete-review/
 
 ## Replit (replit.com)
-- **Verified pricing:** (re-verified 2026-09-02 on their own pricing page) Starter is free, with daily Agent credits, a built-in database and the slides/video/animation tools.
+- **Verified pricing:** (re-verified 2026-09-26 on replit.com/pricing and docs.replit.com/billing/plans/starter-plan) The pricing page now lists Core, Pro and Enterprise.
 - **Honest take:** The credit model on AI-heavy building is unpredictable — a complex agent session can burn credits fast, and they expire monthly, so heavy AI users hit surprise costs.
 - **Best for:** developers, learners and tinkerers who want a zero-setup, browser-based coding environment with AI assistance
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-02 on their own pricing page) Starter is free, with daily Agent credits, a built-in database and the slides/video/animation tool…'}
+- **Flags:** {'f': 'usage_metered', 'ev': "The free Starter plan is no longer shown there but still exists in Replit's documentation: daily Agent credits up to a monthly cap, Lite build only (…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/replit-review/
 
 ## Reply.io (reply.io)

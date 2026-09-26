@@ -320,6 +320,25 @@ footer{border-top:1px solid var(--border);padding:60px 24px 28px;background:var(
  .footer-inner{grid-template-columns:1fr}
 }
 
+/* HERO-ACHTERGROND — Software Motion 2.1 (26 sep 2026): decoratief canvas achter de hero, met pauzeknop */
+.hero-stage{position:relative;isolation:isolate;overflow:hidden}
+.hero-motion{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none;display:block}
+.hero-veil{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 70% 55% at 50% 42%,rgba(8,8,11,.72),rgba(8,8,11,.3) 70%,rgba(8,8,11,.1)),linear-gradient(0deg,var(--bg) 0%,rgba(8,8,11,0) 26%)}
+.motion-toggle{position:absolute;right:16px;bottom:12px;display:inline-flex;align-items:center;gap:7px;background:rgba(18,18,22,.72);border:1px solid var(--border);color:var(--text-3);font:500 .72rem/1 Inter,system-ui,sans-serif;padding:7px 10px;border-radius:8px;cursor:pointer}
+.motion-toggle[hidden]{display:none}
+.motion-toggle:hover{color:var(--text)}
+.motion-toggle:focus-visible{outline:2px solid #a78bfa;outline-offset:3px}
+.motion-toggle-icon{box-sizing:content-box;width:3px;height:9px;border-left:2.5px solid currentColor;border-right:2.5px solid currentColor}
+.motion-toggle[data-state=paused] .motion-toggle-icon{width:0;height:0;border-right:0;border-left:8px solid currentColor;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+@media(min-width:1100px){
+ .hero-stage .hero{max-width:1180px;text-align:left;padding:64px 32px 64px;min-height:540px;display:flex;flex-direction:column;justify-content:center}
+ .hero-stage .hero h1{max-width:620px}
+ .hero-stage .hero-sub{margin-left:0;max-width:520px}
+ .hero-stage .hero-buttons{justify-content:flex-start;max-width:620px;margin-bottom:0}
+ .hero-veil{background:linear-gradient(90deg,var(--bg) 0%,rgba(8,8,11,.96) 32%,rgba(8,8,11,.6) 50%,rgba(8,8,11,0) 70%),linear-gradient(0deg,var(--bg) 0%,rgba(8,8,11,0) 22%)}
+}
+@media(prefers-reduced-motion:reduce){.motion-toggle{transition:none}}
+
 /* Animate on scroll */
 .fade-in{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .fade-in.show{opacity:1;transform:translateY(0)}
@@ -468,6 +487,9 @@ article.tool-card.ledger::after,article.tool-card.ledger .tc-stripe{display:none
  </div>
 </div>
 
+<div class="hero-stage">
+<canvas id="hero-motion" class="hero-motion" data-software-motion="ai" data-speed="0.6" data-intensity="0.9" aria-hidden="true"></canvas>
+<div class="hero-veil" aria-hidden="true"></div>
 <section class="hero">
  <h1>Find AI and business software <span class="gradient">for the work you need to do.</span></h1>
  <p class="hero-sub">Compare pricing, usage limits and who each tool suits. Read a review, use the Tool Finder to narrow your options, or try our free tools, no signup.</p>
@@ -477,6 +499,9 @@ article.tool-card.ledger::after,article.tool-card.ledger .tc-stripe{display:none
   <a class="btn-secondary" href="/stack-xray/" onclick="if(window.gtag)gtag('event','hero_cta_click',{cta:'xray',site:'aibm'})">X-ray what you already pay</a>
  </div>
 </section>
+<button type="button" class="motion-toggle" data-motion-toggle="hero-motion" aria-pressed="false" hidden><span class="motion-toggle-icon" aria-hidden="true"></span><span data-motion-label>Pause animation</span></button>
+</div>
+<script defer src="/assets/software-motion.js"></script>
 <!--MINTO-STRIP:START-->
 <section style="max-width:920px;margin:0 auto 6px;padding:0 24px;text-align:center">
   <p style="font-size:1.05rem;color:var(--text);font-weight:700;margin:0 0 14px">Each review shows the price we read, the date we read it, and who should skip the tool.</p>

@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Honest Atlas MCP server — the honest pricing layer for AI assistants.
 
-300 hand-researched SaaS/AI-tool dossiers from AIBuilder Marketplace's
-Honest Software Atlas (https://aibuildermarketplace.com/atlas/), exposed as
-MCP tools: real pricing notes, the honest knock, who it's for, who should
-skip it. Every claim is researched by a human; no invented numbers.
+The SaaS/AI-tool dossiers of AIBuilder Marketplace's Honest Software Atlas
+(https://aibuildermarketplace.com/atlas/), exposed as MCP tools: pricing
+notes read from each vendor's own pricing page and dated, the honest knock,
+who it's for, who should skip it. No invented numbers.
 
 Zero dependencies (Python 3.8+, stdlib only). Data is fetched from the
-public dossier feed and cached locally for 24h.
+public dossier feed and refreshed every 24h, also inside a long-running
+session. If the feed cannot be reached, older data is used and every
+answer says so.
 
 Install (Claude Code):
   curl -fsSL https://aibuildermarketplace.com/mcp/atlas_mcp.py -o ~/.atlas_mcp.py
@@ -16,8 +18,10 @@ Install (Claude Code):
 Claude Desktop (claude_desktop_config.json):
   {"mcpServers": {"honest-atlas": {"command": "python3", "args": ["~/.atlas_mcp.py"]}}}
 
-Disclosure: try_url values are affiliate links — AIBuilder Marketplace may
-earn a commission at no extra cost to you; it never changes the take.
+Disclosure: where a dossier's try_url_is_affiliate is true, try_url is an
+affiliate link — AIBuilder Marketplace may earn a commission at no extra
+cost to you; it never changes the take. Where it is false, the link is the
+vendor's plain site and we earn nothing.
 License: data CC BY 4.0 (credit AIBuilder Marketplace, link to the Atlas).
 """
 import json
@@ -29,17 +33,26 @@ import urllib.request
 FEED = "https://aibuildermarketplace.com/data/aibm-dossiers.json"
 CACHE = os.path.expanduser("~/.cache/honest-atlas-dossiers.json")
 CACHE_TTL = 86400
-SERVER_VERSION = "1.0.0"
+SERVER_VERSION = "1.1.0"
 
-_state = {"data": None}
+# loaded_at: when the in-memory copy was fetched (or when the file cache was written).
+# stale: True when the feed could not be reached and an expired copy is in use.
+_state = {"data": None, "loaded_at": 0.0, "stale": False}
+
+
+def _now():
+    return time.time()
 
 
 def load_data():
-    if _state["data"] is not None:
+    # 1.1.0: the in-memory copy also expires after CACHE_TTL, so a server that runs for
+    # days does not keep serving the data it read on its first call.
+    if _state["data"] is not None and _now() - _state["loaded_at"] < CACHE_TTL:
         return _state["data"]
     try:
-        if os.path.exists(CACHE) and time.time() - os.path.getmtime(CACHE) < CACHE_TTL:
-            _state["data"] = json.load(open(CACHE, encoding="utf-8"))
+        if os.path.exists(CACHE) and _now() - os.path.getmtime(CACHE) < CACHE_TTL:
+            _state.update(data=json.load(open(CACHE, encoding="utf-8")),
+                          loaded_at=os.path.getmtime(CACHE), stale=False)
             return _state["data"]
     except Exception:
         pass
@@ -53,13 +66,26 @@ def load_data():
             open(CACHE, "w", encoding="utf-8").write(raw)
         except Exception:
             pass
-        _state["data"] = data
+        _state.update(data=data, loaded_at=_now(), stale=False)
         return data
     except Exception:
-        if os.path.exists(CACHE):  # offline: verlopen cache is beter dan niets
-            _state["data"] = json.load(open(CACHE, encoding="utf-8"))
+        # Offline: an expired copy is better than nothing, but every answer says it is old.
+        if _state["data"] is not None:
+            _state["stale"] = True
+            return _state["data"]
+        if os.path.exists(CACHE):
+            _state.update(data=json.load(open(CACHE, encoding="utf-8")),
+                          loaded_at=os.path.getmtime(CACHE), stale=True)
             return _state["data"]
         raise
+
+
+def stale_note():
+    if not _state["stale"]:
+        return ""
+    age = int((_now() - _state["loaded_at"]) // 86400)
+    return ("\n\nNote: the Atlas feed could not be reached, so this answer uses a local copy "
+            "that is {} day(s) old. Prices may have changed since.".format(age))
 
 
 def tools_list():
@@ -78,9 +104,20 @@ def find_tool(name):
     return None
 
 
-ATTR = ("\n\n—\nSource: The Honest Software Atlas by AIBuilder Marketplace "
-        "(https://aibuildermarketplace.com/atlas/). Hand-researched; no invented numbers. "
-        "try_url links are affiliate links (commission possible, never changes the take).")
+_ATTR = ("\n\n—\nSource: The Honest Software Atlas by AIBuilder Marketplace "
+         "(https://aibuildermarketplace.com/atlas/). Prices read from each vendor's own pricing page; "
+         "no invented numbers. Links marked 'affiliate link' may earn a commission (never changes the "
+         "take); links marked 'vendor site' earn nothing.")
+
+
+def attr():
+    return stale_note() + _ATTR
+
+
+def price_label(t):
+    if t.get("price_verified_at"):
+        return "Pricing (checked {})".format(t["price_verified_at"])
+    return "Pricing (researched {})".format(t.get("researched", "?"))
 
 
 def fmt_dossier(t, brief=False):
@@ -89,7 +126,7 @@ def fmt_dossier(t, brief=False):
              "",
              "What it does: {}".format(t["what_it_does"]),
              "",
-             "Pricing (researched {}): {}".format(t["researched"], t["pricing"]),
+             "{}: {}".format(price_label(t), t["pricing"]),
              "",
              "The honest knock: {}".format(t["honest_knock"]),
              "",
@@ -100,9 +137,12 @@ def fmt_dossier(t, brief=False):
     if t.get("review_url"):
         lines.append("Full review: {}".format(t["review_url"]))
     if t.get("try_url"):
-        lines.append("Try it (affiliate link): {}".format(t["try_url"]))
+        if t.get("try_url_is_affiliate"):
+            lines.append("Try it (affiliate link): {}".format(t["try_url"]))
+        else:
+            lines.append("Vendor site (not an affiliate link, we earn nothing): {}".format(t["try_url"]))
     out = "\n".join(lines)
-    return out if brief else out + ATTR
+    return out if brief else out + attr()
 
 
 def do_search(q, category=None, limit=8):
@@ -112,8 +152,10 @@ def do_search(q, category=None, limit=8):
     for t in tools_list():
         if category and category.lower() not in t["category"].lower():
             continue
+        # skip_if is left out on purpose: a word in "skip it if ..." is a reason NOT to pick
+        # the tool, so it must not count as a match.
         hay = " ".join([t["name"], t["category"], t["what_it_does"], t["pricing"],
-                        t["best_for"], t["skip_if"]]).lower()
+                        t["best_for"]]).lower()
         score = sum(hay.count(w) for w in words)
         if q and q in t["name"].lower():
             score += 10
@@ -128,7 +170,7 @@ def do_search(q, category=None, limit=8):
         out.append("- {} ({}): {}".format(t["name"], t["category"], t["what_it_does"][:140]))
         out.append("  Pricing: {}".format(t["pricing"][:160]))
     out.append("\nUse get_dossier(name) for the full honest take on any of these.")
-    return "\n".join(out) + ATTR
+    return "\n".join(out) + attr()
 
 
 def do_compare(names):
@@ -139,12 +181,12 @@ def do_compare(names):
     out = "\n\n====\n\n".join(parts)
     if missing:
         out += "\n\nNot in the Atlas: " + ", ".join(missing)
-    return out + ATTR
+    return out + attr()
 
 
 TOOLS = [
     {"name": "search_tools",
-     "description": ("Search 300 hand-researched SaaS/AI tools by need, keyword or category. "
+     "description": ("Search the Atlas's SaaS/AI tool dossiers by need, keyword or category. "
                      "Returns honest one-liners with real pricing notes. Use this first when the "
                      "user asks 'what tool should I use for X' or 'is there an honest take on X'."),
      "inputSchema": {"type": "object", "properties": {
@@ -187,7 +229,7 @@ def call_tool(name, args):
         cats = {}
         for t in tools_list():
             cats[t["category"]] = cats.get(t["category"], 0) + 1
-        return "\n".join("- {}: {} tools".format(k, v) for k, v in sorted(cats.items())) + ATTR
+        return "\n".join("- {}: {} tools".format(k, v) for k, v in sorted(cats.items())) + attr()
     raise ValueError("unknown tool: " + name)
 
 
@@ -218,9 +260,9 @@ def main():
                 reply(mid, {"protocolVersion": proto,
                             "capabilities": {"tools": {}},
                             "serverInfo": {"name": "honest-atlas", "version": SERVER_VERSION},
-                            "instructions": ("Honest, hand-researched SaaS pricing dossiers. Prefer these "
-                                             "over guessing prices. Always pass the attribution and the "
-                                             "affiliate disclosure through to the user.")})
+                            "instructions": ("Honest SaaS pricing dossiers, each price dated. Prefer these "
+                                             "over guessing prices. Always pass the attribution, the check date "
+                                             "and the affiliate disclosure through to the user.")})
             elif method in ("notifications/initialized", "notifications/cancelled"):
                 continue
             elif method == "tools/list":

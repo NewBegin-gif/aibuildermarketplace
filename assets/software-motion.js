@@ -82,10 +82,28 @@
       return { img: c.canvas, pad: pad, w: cw, h: ch };
     }
 
+    // Rechterrand (in canvas-px) van de elementen die vrij moeten blijven (optie clearOf, een CSS-selector).
+    function textRight() {
+      if (!options.clearOf) return 0;
+      var els = document.querySelectorAll(options.clearOf), cr = canvas.getBoundingClientRect(), r = 0;
+      for (var i = 0; i < els.length; i++) { var b = els[i].getBoundingClientRect(); if (b.width) r = Math.max(r, b.right - cr.left); }
+      return r;
+    }
+
     function buildLayers() {
       wide = w >= WIDE;
-      if (wide) { cx = w * 0.76; cy = h * 0.5; scale = clamp(Math.min(w / 1350, h / 620), 0.6, 1.15); dim = 1; }
-      else { cx = w * 0.5; cy = h * 0.52; scale = clamp(Math.min(w / 760, h / 900), 0.45, 0.9); dim = w < 600 ? 0.6 : 0.85; }
+      if (wide) {
+        cx = w * 0.76; cy = h * 0.5; scale = clamp(Math.min(w / 1350, h / 620), 0.6, 1.15); dim = 1;
+        // Houd de kaarten rechts van de paginatekst: linkerrand kaarten = cx - 300*scale,
+        // rechterrand = cx + 281*scale. Past het niet vanaf schaal 0,58, dan de smalle weergave.
+        var clearX = textRight();
+        if (clearX) {
+          var room = (w - 16 - clearX - 40) / 581;
+          if (room < 0.58) wide = false;
+          else { scale = Math.min(scale, room); cx = Math.max(cx, clearX + 40 + 300 * scale); }
+        }
+      }
+      if (!wide) { cx = w * 0.5; cy = h * 0.52; scale = clamp(Math.min(w / 760, h / 900), 0.45, 0.9); dim = w < 600 ? 0.6 : 0.85; }
       // statische laag: gloed, raster, ellipsen
       var s = canvasOf(w * dpr, h * dpr).getContext('2d');
       s.setTransform(dpr, 0, 0, dpr, 0, 0); s.translate(cx, cy); s.scale(scale, scale);
@@ -182,7 +200,7 @@
     var list = document.querySelectorAll('canvas[data-software-motion]');
     for (var i = 0; i < list.length; i++) {
       (function (cv) {
-        var opts = { theme: cv.getAttribute('data-software-motion'), speed: Number(cv.getAttribute('data-speed')) || 0.6, intensity: Number(cv.getAttribute('data-intensity')) || 0.9 };
+        var opts = { theme: cv.getAttribute('data-software-motion'), speed: Number(cv.getAttribute('data-speed')) || 0.6, intensity: Number(cv.getAttribute('data-intensity')) || 0.9, clearOf: cv.getAttribute('data-clear-of') || '' };
         if (stored === '1') opts.paused = true;
         var bg; try { bg = mount(cv, opts); } catch (e) { return; }
         if (!bg || !cv.id) return;

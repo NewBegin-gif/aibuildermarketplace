@@ -2687,10 +2687,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/streak-review/
 
 ## Success.co (success.co)
-- **Verified pricing:** (read 2026-08-21 in Success.co's own structured data on success.co/pricing and re-read there unchanged on 2026-09-08) There is a Free Forever plan at $0, and the paid product is tiered per …
-- **Honest take:** The ladder rewards size rather than commitment: moving from 25 to 26 users drops the rate a dollar, and the annual discount is worth about the same single dollar per user.
+- **Verified pricing:** (read 2026-08-21 in Success.co's structured data on success.co/pricing, re-read 2026-09-08 and 2026-09-26) There is a Free Forever plan at $0 with the V/TO, Accountability Chart and Organiz…
+- **Honest take:** The ladder rewards size rather than commitment: each band's rate applies only to the seats inside it, so the 26th user costs a dollar less than the 25th, and the annual discount is worth about the same single …
 - **Best for:** leadership teams that already run on goals and want one place to set objectives, track KPIs and scorecards, and keep strategy execution on cadence
-- **Flags:** {'f': 'per_seat', 'ev': "(read 2026-08-21 in Success.co's own structured data on success.co/pricing and re-read there unchanged on 2026-09-08) There is a Free Forever plan at…"}, {'f': 'addons_extra', 'ev': 'Two enterprise add-ons sit outside that ladder and are quoted on the page itself at $250 a month each: Single Sign-On (Okta, Microsoft Entra ID, Goog…'}, {'f': 'annual_lock', 'ev': 'Annual billing takes roughly a dollar to two off each step: $11, $10, $8, $6 and $5 per user a month paid annually.'}, {'f': 'free_tier', 'ev': "(read 2026-08-21 in Success.co's own structured data on success.co/pricing and re-read there unchanged on 2026-09-08) There is a Free Forever plan at…"}
+- **Flags:** {'f': 'per_seat', 'ev': 'Monthly billing: $12, $11, $9, $7 and $6 per user a month; annual billing: $11, $10, $8, $6 and $5.'}, {'f': 'addons_extra', 'ev': 'Two add-ons sit outside the plan at $250 a month each: Single Sign-On (Okta, Microsoft Entra ID, Google Workspace or any SAML/OIDC provider) and Dire…'}, {'f': 'annual_lock', 'ev': 'Monthly billing: $12, $11, $9, $7 and $6 per user a month; annual billing: $11, $10, $8, $6 and $5.'}, {'f': 'free_tier', 'ev': "(read 2026-08-21 in Success.co's structured data on success.co/pricing, re-read 2026-09-08 and 2026-09-26) There is a Free Forever plan at $0 with th…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/success-co-review/
 
 ## Sunsama (sunsama.com)
@@ -2748,17 +2748,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/surveysparrow-review/
 
 ## Survicate (survicate.com)
-- **Verified pricing:** (read 2026-09-08 in the plan data embedded in survicate.com/pricing) A 10-day trial of all features, no card.
+- **Verified pricing:** (read 2026-09-08 and re-read unchanged 2026-09-26 in the plan data embedded in survicate.com/pricing; from an EU exit the cards show EUR 99 for Growth at 250 responses, EUR 299 for Pro and …
 - **Honest take:** The plan is metered by response volume, not by surveys — a viral NPS month can push you a tier up, and the free plan's 30-day retention quietly deletes your history.
 - **Best for:** product and CX teams running always-on feedback — NPS, CSAT and in-app surveys — piped into the CRM and analytics stack they already use
 - **Flags:** {'f': 'usage_metered', 'ev': 'Growth is metered on feedback rather than seats and is a ladder, not a single price: $56 a month for 100 responses and 500 data points, $114 for 250 …'}, {'f': 'annual_lock', 'ev': 'Mind the billing asymmetry too: Starter is monthly-only while Growth and up expect an annual commitment.'}, {'f': 'free_tier', 'ev': "The plan is metered by response volume, not by surveys — a viral NPS month can push you a tier up, and the free plan's 30-day retention quietly delet…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/survicate-review/
 
 ## Switcher Studio (switcherstudio.com)
-- **Verified pricing:** (read 2026-09-08 on switcherstudio.com/pricing) Studio is $65 a month month-to-month and $45 on annual billing; Suite is $99 month-to-month and $79 annually, discounted to $71 a month for a…
+- **Verified pricing:** (read 2026-09-26 on switcherstudio.com/pricing) Studio is $65 a month month-to-month and $45 on annual billing ('Up to 30% Off').
 - **Honest take:** The app runs on Mac and iOS only — Android phones can join as cameras, but there is no Windows version — so the machine doing the switching has to be an Apple one.
 - **Best for:** creators, churches, events and small businesses that want multi-camera live production and streaming using iPhones and iPads they already own — no broadcast hardware
-- **Flags:** {'f': 'renewal_jump', 'ev': '(read 2026-09-08 on switcherstudio.com/pricing) Studio is $65 a month month-to-month and $45 on annual billing; Suite is $99 month-to-month and $79 a…'}, {'f': 'annual_lock', 'ev': '(read 2026-09-08 on switcherstudio.com/pricing) Studio is $65 a month month-to-month and $45 on annual billing; Suite is $99 month-to-month and $79 a…'}
+- **Flags:** {'f': 'annual_lock', 'ev': "(read 2026-09-26 on switcherstudio.com/pricing) Studio is $65 a month month-to-month and $45 on annual billing ('Up to 30% Off')."}
 - **Full review:** https://aibuildermarketplace.com/b2b/switcher-studio-review/
 
 ## Synthesia (synthesia.io)

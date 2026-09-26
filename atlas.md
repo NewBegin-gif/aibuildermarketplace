@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 477 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-26.
+All 478 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-26.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1622,6 +1622,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams running a predictable programme of webinars to a known audience size, where buying a year of attendance up front is cheaper than a per-seat platform
 - **Flags:** {'f': 'usage_metered', 'ev': 'Pro is sold as attendee credits, bought as a yearly pack up front, with sessions up to 4 hours and unlimited team members; Enterprise is quote-only w…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/livestorm-review/
+
+## Lovable (lovable.dev)
+- **Verified pricing:** (read 2026-09-26 on lovable.dev/pricing from a European exit, so shown in euros including VAT, and in Lovable's plans-and-credits documentation) Free: 5 build credits a day, capped at 30 a …
+- **Honest take:** You do not know what a change costs until it is done.
+- **Best for:** founders, marketers and small teams who want a working web app with a database from a written description, online the same day without setting up hosting
+- **Flags:** {'f': 'usage_metered', 'ev': "(read 2026-09-26 on lovable.dev/pricing from a European exit, so shown in euros including VAT, and in Lovable's plans-and-credits documentation) Free…"}, {'f': 'free_tier', 'ev': "(read 2026-09-26 on lovable.dev/pricing from a European exit, so shown in euros including VAT, and in Lovable's plans-and-credits documentation) Free…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/lovable-review/
 
 ## Loyalino (loyalino.io)
 - **Verified pricing:** (prices read 22 September 2026 on apps.shopify.com/loyalino-loyalty-rewards and on loyalino.io/pricing) Billed in USD through Shopify and metered by monthly loyalty orders rather than by fe…

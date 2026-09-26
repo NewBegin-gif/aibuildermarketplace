@@ -1,0 +1,365 @@
+{
+ "title": "One booking app, three AI builders (hands-on test)",
+ "run_date": "2026-09-26",
+ "publisher": "AIBuilder Marketplace",
+ "licence": "CC BY 4.0",
+ "page": "https://aibuildermarketplace.com/research/one-booking-app-three-ai-builders/",
+ "method": {
+  "same_prompt_word_for_word": true,
+  "plans": "free plan of each builder, new accounts",
+  "code_edits_by_us": false,
+  "repair_template": "These tests fail: [test, what we did, what we saw]. Fix only these, change nothing else, and republish.",
+  "max_repairs": 3,
+  "runs_per_builder": 1,
+  "simultaneous_booking_test": "10 POST requests to the app's own booking endpoint for one empty 8-spot class, sent at the same moment; bookings counted afterwards",
+  "not_covered": [
+   "security audit beyond T09/T11",
+   "load beyond 10 requests",
+   "payments, email, real traffic",
+   "repeat runs"
+  ]
+ },
+ "checks": {
+  "T01": "Published at a public URL without logging in to the builder",
+  "T02": "Next 14 days: Mon-Fri 07:00 and 18:30, Sat 09:00, no Sunday, 8 spots each",
+  "T03": "Booking with name and email lowers spots left by one, also after reload",
+  "T04": "Confirmation shows a unique manage link",
+  "T05": "A full class cannot be booked: 10 simultaneous requests on an empty 8-spot class",
+  "T06": "Same email cannot book the same class twice (also in capitals)",
+  "T07": "Manage link moves a booking: old class +1, new class -1",
+  "T08": "Manage link cancels a booking and frees the spot",
+  "T09": "Manage link contains a long random token, not a sequence number",
+  "T10": "Admin page refuses access without or with a wrong password (UI and API)",
+  "T11": "Admin password not present in page source, JavaScript or URLs",
+  "T12": "Admin page lists all bookings per class, consistent with T03-T08",
+  "T13": "Admin can cancel a booking; spot freed, status visible",
+  "T14": "CSV export with exactly: class date, class time, name, email, status",
+  "T15": "Empty name, name of only spaces and invalid email are refused (server side)",
+  "T16": "Bookings still there after reload and after republishing",
+  "T17": "Schedule, booking and manage link usable at 390 px without sideways scrolling",
+  "T18": "Code can be exported (GitHub or zip) and data downloaded"
+ },
+ "builders": {
+  "Lovable": {
+   "plan": "Free",
+   "mode": "Build",
+   "affiliate_relationship": false,
+   "prompts": [
+    {
+     "kind": "build",
+     "sent_utc": "2026-09-26T10:12:28Z"
+    }
+   ],
+   "first_working_version": "about 10 minutes",
+   "clicks_needed": [
+    "Allow once (create project)",
+    "Publish"
+   ],
+   "credits": {
+    "start": 10,
+    "after_build_and_publish": 6
+   },
+   "publishing_on_free_plan": "one click; stays online; 'Edit with Lovable' badge",
+   "results": {
+    "T01": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T02": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T03": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T04": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T05": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "8 accepted, 2 refused ('Sorry, this class is full.')"
+    },
+    "T06": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T07": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T08": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T09": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "UUID v4"
+    },
+    "T10": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T11": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T12": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T13": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T14": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "values starting with = + - @ are prefixed against spreadsheet formula injection"
+    },
+    "T15": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T16": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "republished 12:07 UTC; all bookings present"
+    },
+    "T17": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T18": {
+     "first_version": "not tested",
+     "after_repairs": "not tested",
+     "note": "documentation: GitHub sync on all plans, direct download on paid plans"
+    }
+   }
+  },
+  "Replit": {
+   "plan": "Starter (free), separate new account",
+   "mode": "Free agent mode (Power and Max locked)",
+   "affiliate_relationship": true,
+   "prompts": [
+    {
+     "kind": "build",
+     "sent_utc": "2026-09-26T10:11:09Z"
+    },
+    {
+     "kind": "repair 1 (T05, T15)",
+     "sent_utc": "2026-09-26T12:06:11Z",
+     "agent_time": "2 minutes"
+    }
+   ],
+   "first_working_version": "8 minutes of agent work (Replit's count)",
+   "clicks_needed": [
+    "Publish (10:22 UTC)",
+    "Republish after repair (12:09 UTC)"
+   ],
+   "credits": "usage not visible on the free plan ('You must have an active subscription to view your own usage.'); daily credits used up after repair 1",
+   "publishing_on_free_plan": "manual Publish; 'Free deployments are temporary and will expire'; 'Made with Replit' badge",
+   "results": {
+    "T01": {
+     "first_version": "partial",
+     "after_repairs": "partial",
+     "note": "manual Publish click; free deployment temporary"
+    },
+    "T02": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T03": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T04": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "link behind a 'Manage this booking' button"
+    },
+    "T05": {
+     "first_version": "fail",
+     "after_repairs": "pass",
+     "note": "first version: 10 of 10 accepted, then GET /api/classes returned 500 and the public page showed 'No classes on the calendar yet.'; after repair 1: 8 accepted, 2 refused"
+    },
+    "T06": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T07": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T08": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T09": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "UUID; internal booking id is sequential but not in the link"
+    },
+    "T10": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T11": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T12": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T13": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T14": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "no protection against spreadsheet formula injection"
+    },
+    "T15": {
+     "first_version": "partial",
+     "after_repairs": "pass",
+     "note": "first version saved a name of only spaces as empty"
+    },
+    "T16": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "republished after repair 1; all bookings present"
+    },
+    "T17": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T18": {
+     "first_version": "not tested",
+     "after_repairs": "not tested",
+     "note": "account settings offer an app export on the free plan"
+    }
+   }
+  },
+  "Emergent": {
+   "plan": "Free",
+   "mode": "Web app",
+   "affiliate_relationship": true,
+   "prompts": [
+    {
+     "kind": "build",
+     "sent_utc": "2026-09-26T10:13:36Z",
+     "note": "asked 5 clarifying questions; we chose Auto-answer"
+    },
+    {
+     "kind": "repair 1 (T05, T15, T11, T17)",
+     "sent_utc": "2026-09-26T12:06:48Z",
+     "done_utc": "about 12:12"
+    },
+    {
+     "kind": "repair 2 (T05)",
+     "sent_utc": "2026-09-26T12:15:14Z",
+     "done_utc": "about 12:20"
+    }
+   ],
+   "first_working_version": "about 9 minutes to a preview",
+   "credits": {
+    "start": 10.0,
+    "before_repairs": 34.66,
+    "after_repairs": 15.49,
+    "note": "balance rose from 10.00 to 34.66 during the first build without a purchase; the app does not explain it"
+   },
+   "publishing_on_free_plan": "not possible: 'Deploy Your App' opens the plan chooser (Standard trial $1 for 7 days, then $20/month)",
+   "data_deleted_by_builder": "during both repairs the agent 'cleared test data' by removing all bookings, including ours; in repair 1 this also removed the index its capacity fix depended on",
+   "results": {
+    "T01": {
+     "first_version": "fail",
+     "after_repairs": "fail",
+     "note": "free plan cannot deploy; preview URL only"
+    },
+    "T02": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "today's 09:00 class still bookable at 13:25 Amsterdam time; the app's time zone is unknown, not counted as a failure"
+    },
+    "T03": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T04": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T05": {
+     "first_version": "fail",
+     "after_repairs": "pass",
+     "note": "first version and after repair 1: 10 of 10 accepted; after repair 2: 8 accepted, 2 refused, twice"
+    },
+    "T06": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T07": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T08": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T09": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "32 hex characters"
+    },
+    "T10": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T11": {
+     "first_version": "fail",
+     "after_repairs": "pass",
+     "note": "first version put the admin password in the CSV export URL"
+    },
+    "T12": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "admin view showed the overbooking as '9 / 8 booked'"
+    },
+    "T13": {
+     "first_version": "pass",
+     "after_repairs": "pass"
+    },
+    "T14": {
+     "first_version": "pass",
+     "after_repairs": "pass",
+     "note": "no protection against spreadsheet formula injection"
+    },
+    "T15": {
+     "first_version": "partial",
+     "after_repairs": "pass",
+     "note": "first version saved a name of only spaces as empty"
+    },
+    "T16": {
+     "first_version": "not tested",
+     "after_repairs": "not tested",
+     "note": "could not publish"
+    },
+    "T17": {
+     "first_version": "partial",
+     "after_repairs": "pass",
+     "note": "first version: page 494 px wide at 390 px"
+    },
+    "T18": {
+     "first_version": "not tested",
+     "after_repairs": "not tested",
+     "note": "pricing page lists GitHub integration from the Standard plan"
+    }
+   }
+  }
+ }
+}

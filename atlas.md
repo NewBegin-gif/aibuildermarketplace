@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 475 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-25.
+All 476 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-26.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2598,6 +2598,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams building internal tools, client portals or member apps on top of Airtable or Google Sheets without code
 - **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credit…'}, {'f': 'addons_extra', 'ev': 'Builder seats are billed on top of the plan, and pricing counts builders and app users separately, so a public-facing app with a lot of end users get…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-07) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credit…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/softr-review/
+
+## SoftSync (softsync.ai)
+- **Verified pricing:** (read 2026-09-26 on softsync.ai/pricing in a headless browser, including the plan table and every pricing FAQ answer) Two standard paid plans, priced per seat per month, plus a custom Enter…
+- **Honest take:** Pro stops at five team members per workspace.
+- **Best for:** small B2B sales teams of up to five people who want CRM records, email campaigns, meeting summaries and follow-up automation in one workspace, and who want Claude, ChatGPT or Gemini to work with that CRM directly rather than throu
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-09-26 on softsync.ai/pricing in a headless browser, including the plan table and every pricing FAQ answer) Two standard paid plans, priced…'}, {'f': 'usage_metered', 'ev': 'A single rep running cold outreach from SoftSync can reach 1,000 campaign emails well before the month ends, and the page does not say what happens w…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/softsync-review/
 
 ## Spiky.ai (spiky.ai)
 - **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; unchanged since 31 Jul 2026) Read across both billing toggles.

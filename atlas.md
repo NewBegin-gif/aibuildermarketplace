@@ -1844,10 +1844,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/nordvpn-review/
 
 ## Notify Me (notify-me.io)
-- **Verified pricing:** (price re-verified 2026-09-23 against the Shopify App Store listing and notify-me.io/pricing) Four tiers: Lite free, Kickstart $9.90/mo or $95/yr, Starter $19.90/mo or $191/yr, Standard $39…
+- **Verified pricing:** (price re-verified 2026-09-23 against the Shopify App Store listing and notify-me.io/pricing) Four tiers: Lite, a free plan with mostly lifetime allowances, then Kickstart $9.90/mo or $95/y…
 - **Honest take:** It does one job — turning out-of-stock moments into recovered sales via back-in-stock and pre-order alerts — and its value is entirely tied to how often you actually sell out.
 - **Best for:** Shopify stores that regularly sell out of popular products and want to recover that lost demand with back-in-stock notifications, pre-orders and wishlists
-- **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · notifications'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · notifications'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-23 against the Shopify App Store listing and notify-me.io/pricing) Four tiers: Lite, a free plan with mostly lifetime allo…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/notify-me-review/
 
 ## Nouswise (nouswise.com)

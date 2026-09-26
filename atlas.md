@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 478 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-26.
+All 477 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-26.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2060,13 +2060,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores with a list large enough that SMS beats email on response — the per-message economics only work once volume justifies the platform fee
 - **Flags:** {'f': 'usage_metered', 'ev': 'The free trial is a credit equal to $100 against message and carrier fees during your first 30 days; exhaust it and you are billed at the Free packag…'}, {'f': 'free_tier', 'ev': '(Re-verified 19 September 2026 on their own pricing page; every figure below is unchanged from the 30 August reading.) Starter is shown as $0 a month…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
-
-## PreOrder Now (zenpire.tech)
-- **Verified pricing:** (re-verified 13 September 2026 on zenpire.tech/app-listing/pre-order-now/, every amount unchanged since 10 September; the amounts come from Zenpire's own page because the app is not install…
-- **Honest take:** Check availability before anything else: on 26 September 2026 we could not find any way to install PreOrder Now.
-- **Best for:** stores that sell drops, restocks or made-to-order products and want pre-order badges, partial payments and back-in-stock emails without touching the theme — and that are on Shopify Basic or Standard, where the price is proportiona
-- **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 and covers your first pre-order product, with mixed-cart warnings and email tech support.'}
-- **Full review:** https://aibuildermarketplace.com/b2b/preorder-now-review/
 
 ## Prezi (prezi.com)
 - **Verified pricing:** Three plans, re-read on prezi.com/pricing (which redirects to prezi.com/gts/pricing) on 25 September 2026, shown in euros from an EU exit: Standard €5 a month, Plus €15 a month and Premium …

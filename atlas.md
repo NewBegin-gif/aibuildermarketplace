@@ -2064,7 +2064,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## PreOrder Now (zenpire.tech)
 - **Verified pricing:** (re-verified 13 September 2026 on zenpire.tech/app-listing/pre-order-now/, every amount unchanged since 10 September; the amounts come from Zenpire's own page because the app is not install…
-- **Honest take:** The free tier is more useful than it first looks: one pre-order product, unlimited time, with the mixed-cart warning included.
+- **Honest take:** Check availability before anything else: on 26 September 2026 we could not find any way to install PreOrder Now.
 - **Best for:** stores that sell drops, restocks or made-to-order products and want pre-order badges, partial payments and back-in-stock emails without touching the theme — and that are on Shopify Basic or Standard, where the price is proportiona
 - **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 and covers your first pre-order product, with mixed-cart warnings and email tech support.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/preorder-now-review/

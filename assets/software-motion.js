@@ -8,7 +8,11 @@
    - geen paginateksten in de renderer; de pagina houdt haar eigen inhoud.
    - roundRect heeft een terugval voor oudere Safari.
    Automatisch: elk <canvas data-software-motion="ai|office|marketing|support">
-   wordt gestart; een knop met data-motion-toggle="<canvas-id>" pauzeert/hervat. */
+   wordt gestart; een knop met data-motion-toggle="<canvas-id>" pauzeert/hervat.
+   data-clear-of="<selector>": kaarten blijven 40 px rechts van die elementen.
+   data-layout="network": alleen het netwerk, nooit kaarten (voor een hero met eigen illustratie).
+   Eén bron: aibuildermarketplace-main/assets/software-motion.js; de zusters dragen een
+   identieke kopie (invariant motion-kopieen-gelijk). Wijzig alleen de bron en kopieer. */
 (function (global) {
   'use strict';
   var THEMES = {
@@ -91,7 +95,7 @@
     }
 
     function buildLayers() {
-      wide = w >= WIDE;
+      wide = w >= WIDE && options.layout !== 'network'; // 'network': nooit kaarten (hero met eigen illustratie)
       if (wide) {
         cx = w * 0.76; cy = h * 0.5; scale = clamp(Math.min(w / 1350, h / 620), 0.6, 1.15); dim = 1;
         // Houd de kaarten rechts van de paginatekst: linkerrand kaarten = cx - 300*scale,
@@ -195,12 +199,12 @@
   }
 
   function autostart() {
-    var PREF = 'aibm-motion-paused', stored = null;
+    var PREF = 'software-motion-paused', stored = null;
     try { stored = global.localStorage.getItem(PREF); } catch (e) { stored = null; }
     var list = document.querySelectorAll('canvas[data-software-motion]');
     for (var i = 0; i < list.length; i++) {
       (function (cv) {
-        var opts = { theme: cv.getAttribute('data-software-motion'), speed: Number(cv.getAttribute('data-speed')) || 0.6, intensity: Number(cv.getAttribute('data-intensity')) || 0.9, clearOf: cv.getAttribute('data-clear-of') || '' };
+        var opts = { theme: cv.getAttribute('data-software-motion'), speed: Number(cv.getAttribute('data-speed')) || 0.6, intensity: Number(cv.getAttribute('data-intensity')) || 0.9, clearOf: cv.getAttribute('data-clear-of') || '', layout: cv.getAttribute('data-layout') || '' };
         if (stored === '1') opts.paused = true;
         var bg; try { bg = mount(cv, opts); } catch (e) { return; }
         if (!bg || !cv.id) return;

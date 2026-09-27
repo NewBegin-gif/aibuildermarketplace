@@ -93,7 +93,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-08-26 on aircall.io/pricing over a US connection, with their own country selector on United States) Essentials is $30 per license a month and Professional $50, both on annual bil…
 - **Honest take:** Two structural catches: the 3-seat minimum makes the real starting price triple the sticker, and the annual-vs-monthly gap is steep (Professional: $50 vs $70).
 - **Best for:** sales and support teams (3+ seats) that want a polished cloud phone system embedded in their CRM/helpdesk, with call routing, analytics and 250+ integrations
-- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-26 on aircall.io/pricing over a US connection, with their own country selector on United States) Essentials is $30 per license a month …'}, {'f': 'addons_extra', 'ev': 'Smaller add-ons sit at $9, $10, $15, $30 and $49 per license a month, so the license fee is a floor rather than the bill.'}, {'f': 'annual_lock', 'ev': '(read 2026-08-26 on aircall.io/pricing over a US connection, with their own country selector on United States) Essentials is $30 per license a month …'}
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-26 on aircall.io/pricing over a US connection, with their own country selector on United States) Essentials is $30 per license a month …'}, {'f': 'addons_extra', 'ev': "Other add-ons: Analytics+ $15, WhatsApp $10 plus WhatsApp's own messaging rates, all per licence a month, so the licence fee is a floor rather than t…"}, {'f': 'annual_lock', 'ev': '(read 2026-08-26 on aircall.io/pricing over a US connection, with their own country selector on United States) Essentials is $30 per license a month …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/aircall-review/
 
 ## Airia (airia.com)
@@ -1708,7 +1708,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Miro (miro.com)
 - **Verified pricing:** (price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 c…
-- **Honest take:** Per-member pricing charges for every member added to the workspace, so an org-wide rollout multiplies at full headcount — and the free plan's 3-board cap is workspace-wide, not per person, so real teams outgro…
+- **Honest take:** Per-member pricing charges for every member added to the workspace, so an org-wide rollout multiplies at full headcount — and the free plan's 3-board cap is workspace-wide, not per person, so a team reaches it…
 - **Best for:** teams that think visually — brainstorms, flowcharts, retros, workshops and planning on an infinite shared canvas with strong templates and facilitation tools
 - **Flags:** {'f': 'per_seat', 'ev': 'Starter $8/member/mo and Business $20/member/mo, both billed yearly; Enterprise custom priced from 30 members.'}, {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in th…'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in th…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/miro-review/

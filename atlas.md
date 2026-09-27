@@ -256,6 +256,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps.
 - **Honest take:** The $29 Demo tier cannot actually publish to the App Store or Google Play — real branded apps start at $240 a month.
 - **Best for:** creators and media brands with a real audio catalog — podcasts, audiobooks, meditations, courses — ready to monetize subscriptions in their own branded apps
+- **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · monthly active user of the app (Business, from $0.80, tiered)'}
 - **Full review:** https://aibuildermarketplace.com/b2b/audiorista-review/
 
 ## Aura (goaura.com)
@@ -1960,7 +1961,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-14 on payoneer.com/about/pricing/, the canonical fee page their own llms.txt names; the page itself carries "Last updated on 1 January 2026") Free to open; the cost is …
 - **Honest take:** The conversion and cross-currency withdrawal markups are where it quietly costs you — for pure currency conversion a specialist like Wise is often cheaper.
 - **Best for:** freelancers and sellers getting paid by international clients and marketplaces (Amazon, Upwork, Fiverr) who need local receiving accounts
-- **Flags:** {'f': 'per_seat', 'ev': 'Workforce Management is a separate product line with its own price list, read on payoneer.com/workforce-management/ on 5 September 2026: Employer of …'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'meter: percentage · transaction fees on receiving, converting and withdrawing (e.g. 1%, 1.2%-4%)'}
 - **Full review:** https://aibuildermarketplace.com/b2b/payoneer-review/
 
 ## PDWare (pdware.com)
@@ -2220,6 +2221,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-17) 14-day free trial, no credit card.
 - **Honest take:** The advertised $99 is the annual-commitment rate — month-to-month is $149.
 - **Best for:** B2B SaaS teams with a product-led motion that want to launch an affiliate program and tap an affiliate-discovery network, and are comfortable committing annually
+- **Flags:** {'f': 'usage_metered', 'ev': 'meter: percentage · payout processing on commissions paid (5% card, 2% invoice)'}
 - **Full review:** https://aibuildermarketplace.com/b2b/reditus-review/
 
 ## Remote People (remotepeople.com)
@@ -2410,7 +2412,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 31 Aug 2026 reading) Free plan €0/mo: up …
 - **Honest take:** The pricing has layers — a per-label fee on top of the subscription, plus carrier surcharges that can land on invoices weeks later.
 - **Best for:** European e-commerce stores that want easy multi-carrier shipping (DHL, PostNL, Colissimo, GLS, DPD), branded tracking and a returns portal live in under 30 minutes
-- **Flags:** {'f': 'free_tier', 'ev': "(price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 3…"}
+- **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · shipping label (per-label fee on every paid tier; €0.15 each above the monthly cap)'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 3…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/sendcloud-review/
 
 ## Sentaro (sentaro.com)

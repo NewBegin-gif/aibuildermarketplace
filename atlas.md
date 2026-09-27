@@ -1401,10 +1401,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/influencer-hero-review/
 
 ## Insightful (insightful.io)
-- **Verified pricing:** (price re-verified 2026-09-09 against the vendor's own pricing page) (2026) Per seat; the rates below are the annual ones.
+- **Verified pricing:** (price re-verified 2026-09-09 against the vendor's own pricing page, re-read unchanged 2026-09-26) (2026) Per seat; the rates below are the annual ones.
 - **Honest take:** This is employee-monitoring software, so weigh the culture cost, not just the price: the advertised $8-16 rates are per seat AND are the annual ones (month-to-month exists on select plans but is never priced),…
 - **Best for:** COOs, CFOs and operations leaders who want a work intelligence platform rather than a time clock: workforce analytics plus AI process capture — where the hours go, and how the work actually flows — across in-office and remote team
-- **Flags:** {'f': 'per_seat', 'ev': 'Workforce Analytics $8/seat/mo, Workflow Optimization $12/seat/mo (a beta open to selected customers), or both bundled at $16/seat/mo (saves 20%); En…'}, {'f': 'addons_extra', 'ev': 'Add-ons: Workspace Security $4/seat/mo, screen recording $4, on-demand screenshots $4, higher-frequency screenshots $3 (up to 120 an hour), data-ware…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Workforce Analytics $8/seat/mo, Workflow Optimization $12/seat/mo (a beta open to selected customers), or both bundled at $16/seat/mo (saves 20%); En…'}, {'f': 'usage_metered', 'ev': "New on the page since the last reading: a '7-Day ROI Promise', a conditional offer whose only remedy is a 30-day service credit."}, {'f': 'addons_extra', 'ev': 'Add-ons: Workspace Security $4/seat/mo, screen recording $4, on-demand screenshots $4, higher-frequency screenshots $3 (up to 120 an hour), data-ware…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/insightful-review/
 
 ## Instapage (instapage.com)
@@ -2821,7 +2821,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** Tellent publishes no prices.
 - **Honest take:** Tellent's modular shape is genuinely useful — you can buy just the ATS, or just the HRIS — but nothing is priced in public: every tier on tellent.com/pricing ends in 'Get a demo' (read in a browser on 9 Septem…
 - **Best for:** European scale-ups hiring continuously that want a collaborative ATS they can extend with HRIS and performance modules, and can put a sales call in the buying process
-- **Flags:** {'f': 'usage_metered', 'ev': 'What the page does state is scope: Start covers 5 active job posts and a single-page CareersHub; Advance adds unlimited posts, a multi-page branded c…'}, {'f': 'addons_extra', 'ev': 'SSO, Texting, Journeys, AgencyHub and WhatsApp Hiring are optional add-ons on the lower tiers.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'What the page does state is scope: Start covers 5 active job posts and a single-page CareersHub; Advance adds unlimited posts, a multi-page branded c…'}, {'f': 'addons_extra', 'ev': 'SSO, Texting, Journeys, AgencyHub and WhatsApp Hiring are optional add-ons on the lower tiers.'}, {'f': 'annual_lock', 'ev': 'The pricing FAQ now states three terms that bear on the quote: annual billing saves 20% against monthly, pricing increases with your employee count, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tellent-review/
 
 ## Tenable (tenable.com)
@@ -2879,10 +2879,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/thryv-review/
 
 ## TicketTailor (tickettailor.com)
-- **Verified pricing:** (re-verified 2026-09-09 on tickettailor.com/pricing with the currency switched to USD) No subscription and no contract: pay-as-you-sell $0.85 a ticket, or prepaid credits from $0.70 down to…
+- **Verified pricing:** (re-verified 2026-09-09 and re-read unchanged 2026-09-26 on tickettailor.com/pricing with the currency switched to USD) No subscription and no contract: pay-as-you-sell $0.85 a ticket, or p…
 - **Honest take:** The fee honesty is the product — flat cents per ticket instead of percentage skims makes it dramatically cheaper than the big platforms on higher-priced tickets (a $0.30-0.85 fee on a $50 ticket vs a percentag…
 - **Best for:** event organizers with their own audience (venues, communities, creators) who want flat low per-ticket fees, full branding and no subscription
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-09 on tickettailor.com/pricing with the currency switched to USD) No subscription and no contract: pay-as-you-sell $0.85 a ticke…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-09 and re-read unchanged 2026-09-26 on tickettailor.com/pricing with the currency switched to USD) No subscription and no contra…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tickettailor-review/
 
 ## Tidio (tidio.com)
@@ -2954,10 +2954,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tradify-review/
 
 ## Trainerize (trainerize.com)
-- **Verified pricing:** (re-verified 2026-09-09 on www.trainerize.com/pricing; prices in USD and subject to applicable taxes, annual plans billed once a year) Basic is free for 1 client; Grow is $9/mo for 2 client…
-- **Honest take:** The client-count ladder looks gentle, but the add-ons are flat and they land hardest on the smallest coach: at five seats a $23 Pro plan dressed with nutrition, payments and video is $88, while the same three …
+- **Verified pricing:** (re-verified 2026-09-27 on www.trainerize.com/pricing in the browser pane, both billing toggles and every seat selector operated; prices in USD and subject to applicable taxes, annual plans…
+- **Honest take:** The client-count ladder looks gentle, but most add-ons are flat and they land hardest on the smallest coach: at five seats a $23 Pro plan dressed with nutrition, payments and video is $63, while the same three…
 - **Best for:** personal trainers and studios delivering structured workout/nutrition coaching through a polished client app, scaling by client count
-- **Flags:** {'f': 'addons_extra', 'ev': 'FitMetrics is a separate add-on from $6 per client.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'FitMetrics is a separate add-on from $6 per client.'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 10% and there are no long-term contracts.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/trainerize-review/
 
 ## Trainual (trainual.com)
@@ -2989,7 +2989,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/typewise-review/
 
 ## UENI (ueni.com)
-- **Verified pricing:** (re-verified 2026-09-09 on www.ueni.com/pricing; every figure below unchanged since the August reading) A done-for-you website, now sold in four tiers rather than one.
+- **Verified pricing:** (re-verified 2026-09-09 on www.ueni.com/pricing and re-read unchanged 2026-09-26; every figure below unchanged since the August reading) A done-for-you website, now sold in four tiers rathe…
 - **Honest take:** It's done-for-you, which is the appeal and the catch.
 - **Best for:** small-business owners with no time or tech skills who want a professional site built for them, not another tool to learn
 - **Full review:** https://aibuildermarketplace.com/b2b/ueni-review/

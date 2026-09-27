@@ -10,7 +10,7 @@
   "generated_at": "2026-09-27",
   "notes": "Prices are the entry prices we found at research time; always check live pricing. Every flag carries the evidence sentence from our hand-researched dossier.",
   "tool_count": 479,
-  "flag_count": 790
+  "flag_count": 793
  },
  "tools": [
   {
@@ -773,7 +773,12 @@
    "entry_price_terms": "per month (preview tier, no publishing or monetization)",
    "pricing_status": "public",
    "price_note": "(re-verified 2026-09-14 and re-read unchanged 2026-09-27 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps. Business is from $400/mo per app, plus a tiered variable fee from $0.80 per monthly active user. Enterprise sits on that same $400 per app with further fees based on services, features, extensions and commitment, and the plan card quotes a floor of $5,000/mo. 30-day free trial. Demo carries all Lite features except publishing to the App Store and Google Play, and monetization is disabled on it — a preview tier rather than a product. Paid app sales, RevenueCat in-app subscriptions and Zapier webshop sync start at Lite; the web app, Stripe web payments and push-notification campaigns start at Business. Read the quotas beside the prices, because they decide the tier as much as the money does: Demo and Lite both cap the catalogue at 100 titles, Lite includes only 200 monthly active users, Business lifts users to unlimited but caps the catalogue at 10,000 items, and only Enterprise is unlimited on both counts. Push notifications are still marked Coming Soon on Demo and Lite.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "usage_metered",
+     "evidence": "meter: unit · monthly active user of the app (Business, from $0.80, tiered)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-27"
   },
@@ -6199,8 +6204,8 @@
    "price_note": "(re-verified 2026-09-14 on payoneer.com/about/pricing/, the canonical fee page their own llms.txt names; the page itself carries \"Last updated on 1 January 2026\") Free to open; the cost is in the fees. Receiving into a receiving account in your local currency is free, in a currency that is not your local currency 1% (minimum $1). Receiving by credit card or PayPal up to 3.99% + $0.49; by US ACH bank debit or an EU or UK bank account 1%. Withdrawing to a bank account in your own country and currency $1.50 flat; to a bank account in another country or currency 1.2%-4%, even when no conversion happens, and in some countries a minimum fee of up to $20 may apply. Moving funds between your own Payoneer balances 0.50%. Card purchases up to 1.8% without conversion and up to 3.5% with; cash withdrawals $3.15 / €2.50 / £1.95 / C$3.15 / ¥470 on top of that percentage; annual card fee $29.95, replacement card $12.95, additional virtual cards free. Annual account fee $29.95, charged only if less than $6,000 arrives in any 12 consecutive months and not charged in the first year on paid annual plans. Certain US customers, depending on registration date, instead pay a flat $1.50 per withdrawal or payment up to $50,000 a month and up to 0.5% above that. Businesses moving over $50K a month are pointed at a custom package. Workforce Management is a separate product line with its own price list, read on payoneer.com/workforce-management/ on 5 September 2026: Employer of Record from $199 per employee a month (110+ countries), Agent of Record from $99 per contractor a month (160+ countries), and the Contractor Management System from $19 per contractor a month, all three 'starts at' figures behind a demo and marked 'pricing may vary by country, services and engagement type'. Our partner link on this page belongs to that Workforce Management programme, so it lands on the workforce partners page rather than on the free payments account.",
    "flags": [
     {
-     "flag": "per_seat",
-     "evidence": "Workforce Management is a separate product line with its own price list, read on payoneer.com/workforce-management/ on 5 September 2026: Employer of Record from $199 per employee a month (110+ countr…"
+     "flag": "usage_metered",
+     "evidence": "meter: percentage · transaction fees on receiving, converting and withdrawing (e.g. 1%, 1.2%-4%)"
     }
    ],
    "researched": "2026-07",
@@ -7001,7 +7006,12 @@
    "entry_price_terms": "per month billed annually ($1,188/yr), up to $60K tracked ARR",
    "pricing_status": "public",
    "price_note": "(re-verified 2026-08-17) 14-day free trial, no credit card. The published entry plan is Growth at $99/mo billed annually — $1,188 once a year, which the page presents as 34% off and four months free — covering up to $60K of tracked ARR. The tier above covers up to $360K ARR, and larger plans and Enterprise sit above that, annual-only. Payout processing is charged on top on every plan at 5% for card and 2% for invoice. Note the tier names have shifted since our earlier reading, so match on the ARR ceiling rather than on the plan name.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "usage_metered",
+     "evidence": "meter: percentage · payout processing on commissions paid (5% card, 2% invoice)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-08-17"
   },
@@ -7576,6 +7586,10 @@
    "pricing_status": "public",
    "price_note": "(price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 31 Aug 2026 reading) Free plan €0/mo: up to 20 parcels a month, no courier contract, no subscription, €0.50 a label beyond that. Paid tiers at the monthly rate: Lite €28/mo + €0.10 per label, Growth €87/mo + €0.09, Premium €175/mo + €0.08, Pro €639/mo + €0.07. Every tier also has a MONTHLY label cap (Lite 400, Growth 1,000, Premium 10,000, Pro 30,000) and past it each extra label costs €0.15 on top of the plan rate; the same caps appear as yearly maxima on the plan cards (4,800 / 12,000 / 120,000 / 360,000 labels a year). Users: 1 free, 3 Lite, 5 Growth, 10 Premium, unlimited Pro. Integrations: max 2 free, 3 Lite, 5 Growth, unlimited on Premium and Pro. Carriers: 70+ on free, 170+ on every paid tier. 14-day free trial, no card. The page advertises a yearly option at -20% but the discounted figures are not in the served HTML. You can only ship FROM eight European countries (Austria, Belgium, France, Germany, Italy, the Netherlands, Spain, the UK). THE CARRIER RATE TABLE, first recorded 22 Sep 2026 and the part that actually moves the bill: the plans buy a carrier discount the feature table grades '- / + / ++ / +++ / ++++', and the starting rates are published per plan. PostNL Standaard €7.20 free, €6.95 Lite, €6.75 Growth, €6.60 Premium, 'On request' on Pro. DHLForYou Drop off €5.80 / 5.50 / 5.25 / 5.14 / On request. DPD Home €5.82 / 5.61 / 5.48 / 5.35 / On request. So the per-parcel discount steps (€0.20 and €0.15 between the paid tiers on PostNL) are fifteen to twenty times the one-cent steps in the label fee. The three UK carriers are priced on the FREE column only - Royal Mail Tracked 48 £2.38, Evri Standard Two Day £3.37, FedEx Priority £5.15 - with 'On request' across Lite, Growth, Premium and Pro. Pro publishes no rate for any carrier at all, so the €639 tier cannot be modelled from this page. The table is footnoted 'Prices shown are starting rates. Actual costs may vary. Create a free account to view all rates', and its row-label column header is still literally 'Placeholder'. (2026)",
    "flags": [
+    {
+     "flag": "usage_metered",
+     "evidence": "meter: unit · shipping label (per-label fee on every paid tier; €0.15 each above the monthly cap)"
+    },
     {
      "flag": "free_tier",
      "evidence": "(price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 31 Aug 2026 reading) Free plan €0/mo: up to 20 parc…"

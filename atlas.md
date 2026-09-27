@@ -54,7 +54,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/adwisely-review/
 
 ## AfterSell (aftersell.app)
-- **Verified pricing:** Three plans, each metered by monthly order volume, read on aftersell.com/pricing and on the Shopify App Store listing on 22 September 2026 (re-verified 22 September 2026).
+- **Verified pricing:** Three plans, each metered by monthly order volume, read on aftersell.com/pricing and on the Shopify App Store listing on 22 September 2026 (re-verified 22 September 2026 and again 27 Septem…
 - **Honest take:** Post-purchase upsells only move the needle with steady order volume and a sensible complementary-offer strategy — bolt it onto a store with little traffic and there's nothing to upsell.
 - **Best for:** Shopify stores with steady order volume that want to lift average order value with one-click post-purchase and checkout upsells
 - **Flags:** {'f': 'usage_metered', 'ev': 'Three plans, each metered by monthly order volume, read on aftersell.com/pricing and on the Shopify App Store listing on 22 September 2026 (re-verifi…'}
@@ -449,10 +449,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bread-butter-review/
 
 ## Breezy HR (breezy.hr)
-- **Verified pricing:** (re-verified 2026-08-17) A genuinely permanent free Bootstrap plan: one open position, unlimited users.
+- **Verified pricing:** (re-verified 2026-08-17 and re-read unchanged 2026-09-27) A genuinely permanent free Bootstrap plan: one open position, unlimited users.
 - **Honest take:** The jump from free (one position) to the first paid tier is steep if you only hire occasionally — the free plan is genuinely usable, so live in it until you're filling several roles at once.
 - **Best for:** small teams hiring for a few roles at once that want a visual, drag-and-drop pipeline without enterprise-ATS pricing
-- **Flags:** {'f': 'free_tier', 'ev': 'The jump from free (one position) to the first paid tier is steep if you only hire occasionally — the free plan is genuinely usable, so live in it un…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The same page, read 27 September 2026, offers a 14-day full-feature trial with no card and 100,000 Breezy Intelligence credits included; further AI c…'}, {'f': 'free_tier', 'ev': 'The jump from free (one position) to the first paid tier is steep if you only hire occasionally — the free plan is genuinely usable, so live in it un…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/breezy-hr-review/
 
 ## Brevo (brevo.com)
@@ -2161,10 +2161,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/quickbooks-uk-review/
 
 ## QuickSigner (quicksigner.com)
-- **Verified pricing:** (re-verified 2026-08-17 against QuickSigner's own machine-readable pricing page) Personal is free: 5 documents a month, 3 signers and 1 document per request, 5 MB maximum, PDF only, with si…
+- **Verified pricing:** (re-verified 2026-08-17 and re-read unchanged 2026-09-27 against QuickSigner's own machine-readable pricing page and pricing table) Personal is free: 5 documents a month, 3 signers and 1 do…
 - **Honest take:** A few users report occasional email-deliverability hiccups — otherwise it does exactly what it says (recipients even sign without an account) for a fraction of enterprise pricing.
 - **Best for:** cost-conscious teams that want certified e-signing (ISO 27001, AATL) with unlimited documents from ~$5/mo and a real free tier
-- **Flags:** {'f': 'per_seat', 'ev': 'Business is $5 per user a month ($48 a year) and is where documents become unlimited — 10 signers and 3 documents per request, 10 MB, Word files, 10 …'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% and paid plans carry a 14-day trial.'}, {'f': 'free_tier', 'ev': "(re-verified 2026-08-17 against QuickSigner's own machine-readable pricing page) Personal is free: 5 documents a month, 3 signers and 1 document per …"}
+- **Flags:** {'f': 'per_seat', 'ev': 'Business is $5 per user a month ($48 a year) and is where documents become unlimited — 10 signers and 3 documents per request, 10 MB, Word files, 10 …'}, {'f': 'usage_metered', 'ev': 'The API has a free developer account with unlimited test requests; production costs from $0.30 per signed document and requires Professional, whose c…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% and paid plans carry a 14-day trial.'}, {'f': 'free_tier', 'ev': "(re-verified 2026-08-17 and re-read unchanged 2026-09-27 against QuickSigner's own machine-readable pricing page and pricing table) Personal is free:…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/quicksigner-review/
 
 ## QuillBot (quillbot.com)
@@ -2791,10 +2791,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tax1099-review/
 
 ## TaxCycle (taxcycle.com)
-- **Verified pricing:** Prices are published on www.taxcycle.com/pricing (read 9 September 2026, Canadian dollars before tax, per year, single user) and are currently sale prices: Tax Basics 2026 $1,600 (reg.
+- **Verified pricing:** Prices are published on www.taxcycle.com/pricing (Canadian dollars before tax, per year, single user).
 - **Honest take:** This is professional preparer software priced for firms, not a consumer filing app: the cost only makes sense if you're preparing returns for clients at volume.
 - **Best for:** Canadian accountants and bookkeepers who prepare and e-file client returns and want fast, checked, CRA-integrated professional tax software
-- **Flags:** {'f': 'per_seat', 'ev': '$1,680) with additional users at $540; the Complete Tax Suite $2,625 (reg.'}, {'f': 'addons_extra', 'ev': 'Every module is also priced separately: TaxCycle T1 $618 (+$238/user), T2 $1,102 (+$248), T3 $532 (+$211), T5013 $516 (+$211), T2202 $558 (+$211), T3…'}
+- **Flags:** {'f': 'per_seat', 'ev': '$1,680) with additional users at $540; the Complete Tax Suite $2,700 (reg.'}, {'f': 'addons_extra', 'ev': 'Every module is also priced separately: TaxCycle T1 $618 (+$238/user), T2 $1,102 (+$248), T3 $532 (+$211), T5013 $516 (+$211), T2202 $558 (+$211), T3…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/taxcycle-review/
 
 ## Team Pulse (goteampulse.io)
@@ -2976,7 +2976,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/turbotic-review/
 
 ## Typewise (typewise.app)
-- **Verified pricing:** (re-read 2026-09-23 on typewise.app/pricing) A base plan plus a per-resolution rate.
+- **Verified pricing:** (re-read 2026-09-23 and again, unchanged, 2026-09-27 on typewise.app/pricing) A base plan plus a per-resolution rate.
 - **Honest take:** The bill has two parts and both are published: a base fee from $99 and a resolution rate from $2 (pay as you go) down to $1 with volume packages.
 - **Best for:** customer-service teams with real ticket volume that want AI agents to resolve requests end to end and act inside the systems they already run — CRM, ERP, billing, commerce — with approval steps and human handover as they raise the
 - **Flags:** {'f': 'per_seat', 'ev': 'Additional users are $89 a month on every plan - an add-on, not a starting price.'}, {'f': 'usage_metered', 'ev': 'Every plan starts with a 14-day trial of 100 resolution credits and $10 of AI Operator credit, no card.'}, {'f': 'addons_extra', 'ev': 'Additional users are $89 a month on every plan - an add-on, not a starting price.'}

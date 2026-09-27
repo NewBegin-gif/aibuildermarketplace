@@ -23,7 +23,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-09-10, read on their own pricing page) Four tiers for accessWidget, priced per monthly website visits, with both a monthly and a yearly rate on every tier: Micro $59/month or $490/yea…
 - **Honest take:** The thing you most need to know about this product is not on its pricing page, it is on the FTC’s.
 - **Best for:** small and medium sites on ordinary CMS templates whose owners want a visible, cheap first step — contrast, text sizing, keyboard hints and an accessibility statement — and who understand they are buying an aid rather than conforma
-- **Flags:** {'f': 'addons_extra', 'ev': 'An overlay sits on top of a site and adjusts it in the browser.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/accessibe-review/
 
 ## ActiveCampaign (activecampaign.com)
@@ -48,10 +47,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/adp-review/
 
 ## Adwisely (adwisely.com)
-- **Verified pricing:** (price re-verified 2026-09-10) Read on adwisely.com/pricing; every figure below stood unchanged from our previous reading on 2 August 2026.
+- **Verified pricing:** (price re-verified 2026-09-10, re-read unchanged 2026-09-27) Read on adwisely.com/pricing; every figure below stood unchanged from our previous reading on 2 August 2026.
 - **Honest take:** The honest math is the 10%-of-ad-spend fee on top of the minimum.
 - **Best for:** e-commerce stores (Shopify, WooCommerce, BigCommerce) that want automated, largely hands-off retargeting and prospecting ads on Meta and Google
-- **Flags:** {'f': 'usage_metered', 'ev': 'Both plans charge 10% of the ad spend Adwisely manages, with a monthly minimum that acts as a floor rather than a fee on top: $49 on Self-Serve and $…'}, {'f': 'addons_extra', 'ev': 'The honest math is the 10%-of-ad-spend fee on top of the minimum.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Both plans charge 10% of the ad spend Adwisely manages, with a monthly minimum that acts as a floor rather than a fee on top: $49 on Self-Serve and $…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/adwisely-review/
 
 ## AfterSell (aftersell.app)
@@ -143,7 +142,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/alli-ai-review/
 
 ## Alohi (alohi.com)
-- **Verified pricing:** (read 2026-09-10 on fax.plus/pricing and sign.plus/pricing) Priced per product, in USD, with a currency switcher offering EUR, CHF and GBP.
+- **Verified pricing:** (read 2026-09-10 and re-read unchanged 2026-09-27 on fax.plus/pricing and sign.plus/pricing) Priced per product, in USD, with a currency switcher offering EUR, CHF and GBP.
 - **Honest take:** The honest catch is that Alohi is a suite of separate products — Fax.Plus, Sign.Plus, Scan.Plus — each with its own subscription, so "one ecosystem" can mean several line items if you want e-signatures and fax…
 - **Best for:** businesses that need secure online faxing, e-signatures or scanning — especially regulated ones needing HIPAA-compliant fax on the Enterprise tier
 - **Flags:** {'f': 'per_seat', 'ev': 'Sign.Plus is a separate subscription and prints annual and monthly rates side by side: Free (3 signature requests in total, 1 template, 1 user), Pers…'}, {'f': 'usage_metered', 'ev': 'Fax.Plus — Basic $6.99 a month billed as $83.99 annually (200 pages a month, one fax number, one member, $0.10 per extra page, 60 pages maximum per f…'}, {'f': 'addons_extra', 'ev': 'Sign.Plus is a separate subscription and prints annual and monthly rates side by side: Free (3 signature requests in total, 1 template, 1 user), Pers…'}, {'f': 'annual_lock', 'ev': 'Fax.Plus — Basic $6.99 a month billed as $83.99 annually (200 pages a month, one fax number, one member, $0.10 per extra page, 60 pages maximum per f…'}, {'f': 'free_tier', 'ev': 'A free plan gives 10 pages in total, not per month.'}
@@ -222,7 +221,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-17 in the browser) Assembly publishes exactly one price: Empower at $3 per user per month, billed yearly, with an Enterprise tier quoted on request for advanced securit…
 - **Honest take:** Two meters run at once and they move at different speeds.
 - **Best for:** agencies and professional services firms who want one branded place for clients to message, sign, pay and share files instead of four tools and an email thread
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17 in the browser) Assembly publishes exactly one price: Empower at $3 per user per month, billed yearly, with an Enterprise tie…'}, {'f': 'addons_extra', 'ev': 'Note that the reward points themselves are funded by you on top of the seat price, so budget the catalogue separately from the licence.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17 in the browser) Assembly publishes exactly one price: Empower at $3 per user per month, billed yearly, with an Enterprise tie…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/assembly-review/
 
 ## Atlas AI Store Builder (helloatlas.io)
@@ -254,10 +253,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/attribuly-review/
 
 ## Audiorista (audiorista.com)
-- **Verified pricing:** (re-verified 2026-09-14 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps.
+- **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps.
 - **Honest take:** The $29 Demo tier cannot actually publish to the App Store or Google Play — real branded apps start at $240 a month.
 - **Best for:** creators and media brands with a real audio catalog — podcasts, audiobooks, meditations, courses — ready to monetize subscriptions in their own branded apps
-- **Flags:** {'f': 'addons_extra', 'ev': "The Business tier adds a per-active-user fee from $0.80 on top of $400 per app, so growth literally raises the bill — and Apple and Google's own stor…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/audiorista-review/
 
 ## Aura (goaura.com)
@@ -323,7 +321,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-09-10) Sold as RGE Studio since the 14 May 2026 rebrand.
 - **Honest take:** Read the seat row before the price row.
 - **Best for:** agencies and in-house teams shipping email at volume across brands or ESPs — a dedicated builder with approvals, brand controls and one-click push to Salesforce Marketing Cloud, Pardot and HubSpot, sitting above whatever you send 
-- **Flags:** {'f': 'usage_metered', 'ev': 'Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.'}, {'f': 'addons_extra', 'ev': 'It is purely a creation environment that never sends, so it always sits on top of your ESP.'}, {'f': 'free_tier', 'ev': 'Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.'}, {'f': 'free_tier', 'ev': 'Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/beefree-review/
 
 ## Beehiiv (beehiiv.com)
@@ -344,7 +342,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-15 on their own pricing page) Accounts-payable and receivable plans priced per user: Essentials $49, Team $65 and Corporate $89 per user per month, plus a quote-only En…
 - **Honest take:** Per-user pricing plus per-transaction fees means the real cost depends on team size and payment volume — it's built for finance teams with genuine AP workflows and is overkill if you pay a handful of bills a m…
 - **Best for:** growing companies with real accounts-payable volume and approval chains that want to automate bill pay and sync to accounting
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-15 on their own pricing page) Accounts-payable and receivable plans priced per user: Essentials $49, Team $65 and Corporate $89 …'}, {'f': 'usage_metered', 'ev': 'The separate Spend and Expense product is $0 per user per month and carries credit lines the page advertises as $1,000-$5M, not guaranteed and set on…'}, {'f': 'addons_extra', 'ev': 'Transaction fees stack on top of the seat, and are where the real cost hides.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-15 on their own pricing page) Accounts-payable and receivable plans priced per user: Essentials $49, Team $65 and Corporate $89 …'}, {'f': 'usage_metered', 'ev': 'The separate Spend and Expense product is $0 per user per month and carries credit lines the page advertises as $1,000-$5M, not guaranteed and set on…'}, {'f': 'addons_extra', 'ev': 'The accountant side is priced separately again: a BILL AP & AR Partner subscription at $49 a month, an Accountant Console the FAQ also prices at $49 …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bill-com-review/
 
 ## BillingNow (billingnow.com)
@@ -399,7 +397,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users), $149 (Plus, u…
 - **Honest take:** Bokun is a Tripadvisor/Viator company, and that's both the draw and the lock-in.
 - **Best for:** tour, activity and experience operators who want booking management plus wide OTA distribution (Viator, GetYourGuide and more) from one dashboard
-- **Flags:** {'f': 'usage_metered', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'addons_extra', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/…'}
+- **Flags:** {'f': 'usage_metered', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bokun-review/
 
 ## Bolt Business (bolt.eu)
@@ -633,7 +631,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (prices re-read 2026-09-17 on cloro.dev/pricing) Credit-metered, and the credit table matters more than the plan price.
 - **Honest take:** The free tier is a sampler, not a trial of the real thing: 500 credits is about 100 async ChatGPT answers at the 5-credit rate we were actually charged, and their table lists 7 for a full response.
 - **Best for:** SEO and marketing teams who need AI-search visibility as structured data — who gets cited for which query on ChatGPT, Perplexity, Copilot, Gemini and Google's AI Overview — rather than as a dashboard someone else designed
-- **Flags:** {'f': 'usage_metered', 'ev': '(prices re-read 2026-09-17 on cloro.dev/pricing) Credit-metered, and the credit table matters more than the plan price.'}, {'f': 'addons_extra', 'ev': 'A synchronous call adds 2 credits on top of all of those.'}, {'f': 'free_tier', 'ev': 'Free is $0 for 500 credits a month, one concurrent job and one seat.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(prices re-read 2026-09-17 on cloro.dev/pricing) Credit-metered, and the credit table matters more than the plan price.'}, {'f': 'free_tier', 'ev': 'Free is $0 for 500 credits a month, one concurrent job and one seat.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/cloro-review/
 
 ## Close (close.com)
@@ -804,7 +802,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-26, read in a live browser session on devs.ai/home/pricing with both billing toggles) Devs.ai does publish its pricing — on the marketing site at devs.ai/home/pricing, …
 - **Honest take:** The seat price is the smaller half of the bill.
 - **Best for:** teams that want to prototype and ship AI agents and apps across multiple models without engineering overhead, and that can absorb model usage metered on top of the per-seat fee
-- **Flags:** {'f': 'per_seat', 'ev': 'Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a cus…'}, {'f': 'usage_metered', 'ev': 'The seat fee is not the whole bill: Personal includes $10 of usage per month and Business $21, with model usage metered on top of the seat.'}, {'f': 'addons_extra', 'ev': 'The seat fee is not the whole bill: Personal includes $10 of usage per month and Business $21, with model usage metered on top of the seat.'}, {'f': 'annual_lock', 'ev': 'Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a cus…'}, {'f': 'free_tier', 'ev': 'Free is $0 forever, but Agent Builder and App Builder appear there in "Core" rather than "Full" form, data upload is capped at 2 GB, and workflows, A…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a cus…'}, {'f': 'usage_metered', 'ev': 'The seat fee is not the whole bill: Personal includes $10 of usage per month and Business $21, with model usage metered on top of the seat.'}, {'f': 'annual_lock', 'ev': 'Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a cus…'}, {'f': 'free_tier', 'ev': 'Free is $0 forever, but Agent Builder and App Builder appear there in "Core" rather than "Full" form, data upload is capped at 2 GB, and workflows, A…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/devs-ai-review/
 
 ## Dext (dext.com)
@@ -860,7 +858,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 21 September 2026 on doola.com/pricing) These are the list prices.
 - **Honest take:** Formation is the cheap part; the recurring bookkeeping and tax tiers are where the real cost sits, and state fees are extra on top of doola's price.
 - **Best for:** founders (often non-US) who want US LLC/C-Corp formation, EIN and compliance handled in one place without the paperwork
-- **Flags:** {'f': 'renewal_jump', 'ev': 'Pulse bookkeeping comes with a 30-day trial and renews at $300 a year.'}, {'f': 'addons_extra', 'ev': 'Worth knowing for timing: doola runs periodic automatic sales on top of that list, and one was running on the day we read the page.'}
+- **Flags:** {'f': 'renewal_jump', 'ev': 'Pulse bookkeeping comes with a 30-day trial and renews at $300 a year.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/doola-review/
 
 ## Drip (drip.com)
@@ -881,7 +879,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-read 2026-09-17 on apps.shopify.com/dripshipper, listed as “Dripshipper: Coffee & Tea”) Starter $30 a month, Professional $99 and Elite $197, each with a 14-day free trial — all three u…
 - **Honest take:** Read the ladder before you climb it.
 - **Best for:** someone who wants a turnkey private-label coffee or tea brand on Shopify — their roasting and packaging, your label on the bag — and is content to stay inside one product category
-- **Flags:** {'f': 'addons_extra', 'ev': 'Product and shipping cost is charged per order on top of the subscription.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/dripshipper-review/
 
 ## DropGenius (dropgenius.com)
@@ -907,7 +904,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/advanced-translation) Four tiers, all monthly.
 - **Honest take:** The 'free AI' is heavily quota-limited — 50 products on Free, up to 800 on Pro — so a genuinely multilingual catalogue pushes you either to a paid tier or to your own OpenAI/DeepSeek key, where you pay token c…
 - **Best for:** small-to-mid Shopify stores that want affordable, full-store AI translation — including images and third-party-app text — and are comfortable bringing their own OpenAI or DeepSeek key for unlimited volume
-- **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · products, metafields, variants and articles'}, {'f': 'addons_extra', 'ev': "The 'free AI' is heavily quota-limited — 50 products on Free, up to 800 on Pro — so a genuinely multilingual catalogue pushes you either to a paid ti…"}
+- **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · products, metafields, variants and articles'}
 - **Full review:** https://aibuildermarketplace.com/b2b/easy-advanced-translations-review/
 
 ## Easy Bundles (skailama.com)
@@ -1536,7 +1533,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up to 5 people; Standard $32 per user/mo a…
 - **Honest take:** Same honest math as most budget VoIP: the plan buys the platform, the meter buys the conversations — per-minute and per-SMS charges land on top of every seat, so the comparison that matters is call-rate-per-co…
 - **Best for:** sales and support teams that need virtual numbers across many countries with a shared dashboard, dialer and CRM hooks at a budget seat price
-- **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up…"}, {'f': 'usage_metered', 'ev': 'Annual saves 20%, which the page puts at $36 per user a year on Essential and $96 on Standard, and each plan comes with $1 of free calling and SMS cr…'}, {'f': 'addons_extra', 'ev': 'Same honest math as most budget VoIP: the plan buys the platform, the meter buys the conversations — per-minute and per-SMS charges land on top of ev…'}
+- **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up…"}, {'f': 'usage_metered', 'ev': 'Annual saves 20%, which the page puts at $36 per user a year on Essential and $96 on Standard, and each plan comes with $1 of free calling and SMS cr…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/krispcall-review/
 
 ## Kumo (cloudlift.app)
@@ -1634,7 +1631,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (prices read 22 September 2026 on apps.shopify.com/loyalino-loyalty-rewards and on loyalino.io/pricing) Billed in USD through Shopify and metered by monthly loyalty orders rather than by fe…
 - **Honest take:** Reach your plan's order limit and the program does not cost more, it stops.
 - **Best for:** shopify stores whose loyalty orders sit comfortably below a plan ceiling and who want the whole program - points, VIP tiers, referrals, the widget, a customer-accounts loyalty page and eight built-in languages - on a free tier tha
-- **Flags:** {'f': 'usage_metered', 'ev': '(prices read 22 September 2026 on apps.shopify.com/loyalino-loyalty-rewards and on loyalino.io/pricing) Billed in USD through Shopify and metered by …'}, {'f': 'addons_extra', 'ev': 'What the paid tiers add on top of the free plan is the standalone storefront loyalty page, earning and redemption in Shopify POS, sending from your o…'}, {'f': 'annual_lock', 'ev': 'Annual billing works out at ten monthly payments, which is where the 17% they advertise comes from.'}, {'f': 'free_tier', 'ev': 'Free: $0 for up to 200 loyalty orders a month.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(prices read 22 September 2026 on apps.shopify.com/loyalino-loyalty-rewards and on loyalino.io/pricing) Billed in USD through Shopify and metered by …'}, {'f': 'annual_lock', 'ev': 'Annual billing works out at ten monthly payments, which is where the 17% they advertise comes from.'}, {'f': 'free_tier', 'ev': 'Free: $0 for up to 200 loyalty orders a month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/loyalino-review/
 
 ## Lucrovox (lucrovox.com)
@@ -1645,10 +1642,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/lucrovox-review/
 
 ## LumenCart (lumencart.fleeta.co.uk)
-- **Verified pricing:** (read 22 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store; then Starter $9, Growth $29, Pro $79 an…
+- **Verified pricing:** (read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store;…
 - **Honest take:** Two things decide whether this is cheap, and neither is the plan price.
 - **Best for:** small Shopify merchants who want studio and lifestyle product shots out of the photos they already have, without hiring a photographer or a studio, and who want them published straight to the product rather than downloaded and re-
-- **Flags:** {'f': 'usage_metered', 'ev': 'Read the plans in credits rather than images, because that is what you actually buy: the monthly allowances are 75, 300, 1,000 and 2,500 credits, ref…'}, {'f': 'annual_lock', 'ev': "(read 22 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store;…"}, {'f': 'free_tier', 'ev': "(read 22 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store;…"}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Read the plans in credits rather than images, because that is what you actually buy: the monthly allowances are 75, 300, 1,000 and 2,500 credits, ref…'}, {'f': 'annual_lock', 'ev': "(read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lif…"}, {'f': 'free_tier', 'ev': "(read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lif…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/lumencart-review/
 
 ## ManyChat (manychat.com)
@@ -1717,7 +1714,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** No public pricing (re-verified 25 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'.
 - **Honest take:** Two honest cautions.
 - **Best for:** marketing teams with real media spend across channels who want an always-on AI analyst — unified creative visibility, live performance signals and plain-language questions over their own data. It layers on top of your existing pla
-- **Flags:** {'f': 'addons_extra', 'ev': 'The tiers themselves are no longer secret, though — the FAQ names Growth and Enterprise above the entry level and describes what they add (dedicated …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/mktg-ai-review/
 
 ## Modelize (modelize.studio)
@@ -1889,7 +1885,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell) Three tiers, billed in USD.
 - **Honest take:** AI video is the reason to install this, and it is the one thing the subscription does not cover.
 - **Best for:** shopify stores that already own product video and want it working as an upsell at the product page, cart and post-purchase moments, or that want to test a handful of AI-generated clips cheaply before committing
-- **Flags:** {'f': 'usage_metered', 'ev': 'Starter is $9.99 a month and removes the campaign and conversion limits, adds AI-generated video and includes 2 AI video credits a month; extra credi…'}, {'f': 'addons_extra', 'ev': 'The AI video generation on top of it is not.'}, {'f': 'free_tier', 'ev': 'The free tier is a demo rather than a usable floor — one campaign, five conversions, no AI at all.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Starter is $9.99 a month and removes the campaign and conversion limits, adds AI-generated video and includes 2 AI video credits a month; extra credi…'}, {'f': 'free_tier', 'ev': 'The free tier is a demo rather than a usable floor — one campaign, five conversions, no AI at all.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/optizen-review/
 
 ## Outgrow (outgrow.co)
@@ -1964,7 +1960,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-14 on payoneer.com/about/pricing/, the canonical fee page their own llms.txt names; the page itself carries "Last updated on 1 January 2026") Free to open; the cost is …
 - **Honest take:** The conversion and cross-currency withdrawal markups are where it quietly costs you — for pure currency conversion a specialist like Wise is often cheaper.
 - **Best for:** freelancers and sellers getting paid by international clients and marketplaces (Amazon, Upwork, Fiverr) who need local receiving accounts
-- **Flags:** {'f': 'per_seat', 'ev': 'Workforce Management is a separate product line with its own price list, read on payoneer.com/workforce-management/ on 5 September 2026: Employer of …'}, {'f': 'addons_extra', 'ev': 'Card purchases up to 1.8% without conversion and up to 3.5% with; cash withdrawals $3.15 / €2.50 / £1.95 / C$3.15 / ¥470 on top of that percentage; a…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Workforce Management is a separate product line with its own price list, read on payoneer.com/workforce-management/ on 5 September 2026: Employer of …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/payoneer-review/
 
 ## PDWare (pdware.com)
@@ -1990,14 +1986,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-09-27 on apps.shopify.com/order-delivery-date-time and on the vendor's pricing page at logbase.io/pickeasy-pricing-plan) Five tiers, gated on features and store locations rather …
 - **Honest take:** The rate features depend on something Pickeasy does not sell.
 - **Best for:** Florists, bakeries, butchers, grocers and restaurants on Shopify that sell for local pickup or delivery and need customers to choose a date and time slot, with cut-off and preparation times, blackout dates, per-slot order limits a
-- **Flags:** {'f': 'addons_extra', 'ev': 'Reviewers from January 2024, June 2025 and August 2025 say they set the app up before finding that their Shopify plan did not include the API, and on…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pickeasy-review/
 
 ## Piktochart (piktochart.com)
 - **Verified pricing:** (re-verified 6 September and again 19 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 2026 reading) Free is $0, Pro is $15 per me…
 - **Honest take:** The ladder here is not about how much you make, it is about which file you are allowed to hand over.
 - **Best for:** individuals and small teams who need infographics, data-heavy reports and posters to look designed without hiring a designer — and above all students, teachers and nonprofits, for whom $39.99 and $60 a member a year with PDF and P
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 6 September and again 19 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 202…'}, {'f': 'usage_metered', 'ev': 'Free stops at 2 PNG downloads — a flat total, not two a month — 1 GB of storage, 60 AI credits and free templates only, and is capped at four members…'}, {'f': 'addons_extra', 'ev': 'Business, 15% off annually, adds PDF and PowerPoint export on top of PNG, the Brand Kit (unlimited brand colours, fonts and logos), 1,000 AI credits …'}, {'f': 'annual_lock', 'ev': 'Your real entry price is $17 a member a month on annual billing, or $20 monthly.'}, {'f': 'free_tier', 'ev': '(re-verified 6 September and again 19 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 202…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 6 September and again 19 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 202…'}, {'f': 'usage_metered', 'ev': 'Free stops at 2 PNG downloads — a flat total, not two a month — 1 GB of storage, 60 AI credits and free templates only, and is capped at four members…'}, {'f': 'annual_lock', 'ev': 'Your real entry price is $17 a member a month on annual billing, or $20 monthly.'}, {'f': 'free_tier', 'ev': '(re-verified 6 September and again 19 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 202…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/piktochart-review/
 
 ## Pingtree (pingtree.com)
@@ -2022,7 +2017,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pippit-review/
 
 ## Pixel Union (pixelunion.net)
-- **Verified pricing:** Read on 7 September 2026, re-read on 12 September 2026.
+- **Verified pricing:** Read on 7 September 2026, re-read on 12 September 2026 and again, unchanged, on 27 September 2026.
 - **Honest take:** A premium theme is a strong starting point, not a finished store.
 - **Best for:** online retailers and larger-catalog stores that want a professionally designed, conversion-focused Shopify storefront without paying for custom development
 - **Full review:** https://aibuildermarketplace.com/b2b/pixel-union-review/
@@ -2031,7 +2026,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-read 2026-09-17; the euro list is unchanged since 20 August 2026, but which list you see depends on the page you open) Three tiers, two of them priced.
 - **Honest take:** The €25 monthly platform fee on Plus is the line most comparisons miss.
 - **Best for:** shift-based businesses in hospitality and retail with 10 or more staff who need leave management and payroll integration, where the flat fee spreads thin enough to disappear
-- **Flags:** {'f': 'per_seat', 'ev': 'On the euro page, planday.com/de/preise, Starter is €2.99 per user per month with a 5-user minimum, Plus is €4.99 per user with a 10-user minimum plu…'}, {'f': 'addons_extra', 'ev': 'On the euro page, planday.com/de/preise, Starter is €2.99 per user per month with a 5-user minimum, Plus is €4.99 per user with a 10-user minimum plu…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'On the euro page, planday.com/de/preise, Starter is €2.99 per user per month with a 5-user minimum, Plus is €4.99 per user with a 10-user minimum plu…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/planday-review/
 
 ## Plansom (plansom.com)
@@ -2225,7 +2220,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-17) 14-day free trial, no credit card.
 - **Honest take:** The advertised $99 is the annual-commitment rate — month-to-month is $149.
 - **Best for:** B2B SaaS teams with a product-led motion that want to launch an affiliate program and tap an affiliate-discovery network, and are comfortable committing annually
-- **Flags:** {'f': 'addons_extra', 'ev': 'And payout processing fees of 5% (card) or 2% (invoice) sit on top of every plan.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/reditus-review/
 
 ## Remote People (remotepeople.com)
@@ -2310,7 +2304,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/runpod-review/
 
 ## Salesflare (salesflare.com)
-- **Verified pricing:** (re-verified 2026-09-14 on salesflare.com/pricing, per user a month) Three plans, and the page carries both billing terms plus a $/€ switch: Growth $39 a month or $29 billed annually, Pro $…
+- **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27 on salesflare.com/pricing, per user a month) Three plans, and the page carries both billing terms plus a $/€ switch: Growth $39 a mo…
 - **Honest take:** It's deliberately lean: no built-in dialer, no quoting or invoicing, and reporting feels basic unless you export.
 - **Best for:** small B2B teams whose reps hate data entry — Salesflare auto-logs emails, meetings and contact details from your inbox and calendar
 - **Flags:** {'f': 'per_seat', 'ev': 'Our earlier reading called this “$29–99 per user” with Growth at about $29–39 and Pro at about $49.'}, {'f': 'usage_metered', 'ev': 'Lead credits are part of the ladder rather than an add-on — 5 on Growth, 100 on Pro, 250 on Enterprise.'}, {'f': 'addons_extra', 'ev': 'Lead credits are part of the ladder rather than an add-on — 5 on Growth, 100 on Pro, 250 on Enterprise.'}
@@ -2320,7 +2314,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-09-09) Read on Salesflow's own pricing page.
 - **Honest take:** The per-seat rate falls with team size but the monthly bill does not follow it: 19 seats on Starter is $1,330 while 20 seats on Pro is $799, so a team that stops one seat short of a tier pays $531 a month more…
 - **Best for:** outbound sales teams and agencies running LinkedIn sequences across several seats, where the per-seat price drops and the admin panel earns its keep
-- **Flags:** {'f': 'per_seat', 'ev': 'It returns a 403 to our server but renders normally in a browser, so these are their published figures rather than third-party ones: Basic $99 per se…'}, {'f': 'addons_extra', 'ev': 'Longer terms are discounted on top of that: 15% off at six months and 30% off at twelve.'}, {'f': 'annual_lock', 'ev': 'Agency and Enterprise require an annual commitment billed monthly.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'It returns a 403 to our server but renders normally in a browser, so these are their published figures rather than third-party ones: Basic $99 per se…'}, {'f': 'annual_lock', 'ev': 'Agency and Enterprise require an annual commitment billed monthly.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/salesflow-review/
 
 ## Salesmessage (salesmessage.com)
@@ -2416,7 +2410,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 31 Aug 2026 reading) Free plan €0/mo: up …
 - **Honest take:** The pricing has layers — a per-label fee on top of the subscription, plus carrier surcharges that can land on invoices weeks later.
 - **Best for:** European e-commerce stores that want easy multi-carrier shipping (DHL, PostNL, Colissimo, GLS, DPD), branded tracking and a returns portal live in under 30 minutes
-- **Flags:** {'f': 'addons_extra', 'ev': 'Every tier also has a MONTHLY label cap (Lite 400, Growth 1,000, Premium 10,000, Pro 30,000) and past it each extra label costs €0.15 on top of the p…'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 3…"}
+- **Flags:** {'f': 'free_tier', 'ev': "(price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 3…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/sendcloud-review/
 
 ## Sentaro (sentaro.com)
@@ -2555,7 +2549,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/skip-to-checkout-review/
 
 ## Smartli (smartli.ai)
-- **Verified pricing:** (re-verified 2026-09-11 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 7-day free trial.
+- **Verified pricing:** (re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each …
 - **Honest take:** Smartli bundles nine AI tools — copy, SEO, images, logos — into one suite, and that breadth is also the honest catch: each individual tool is competent rather than best-in-class, so a team that leans hard on o…
 - **Best for:** e-commerce sellers who want an affordable all-in-one AI suite to draft product listings, ad copy, SEO text and basic brand assets in one place
 - **Flags:** {'f': 'annual_lock', 'ev': 'Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicor…'}
@@ -2634,7 +2628,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/stackable-discounts) Two paid tiers, billed in USD every 30 days, and no free plan.
 - **Honest take:** The two halves of the pitch are priced five times apart.
 - **Best for:** shopify stores running several promotions at once — an order discount, free shipping and a collection deal — that want shoppers to redeem them with one code instead of choosing, or that want the progress type which raises the disc
-- **Flags:** {'f': 'usage_metered', 'ev': 'The plan table lists no order caps, credit allowances or per-use charges, so what the tier costs is what the app costs.'}, {'f': 'addons_extra', 'ev': 'Unlimited is $99.99 a month, or $999.99 a year on the same 17%, and adds unlimited checkout upsells and unlimited linked discounts on top of the same…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The plan table lists no order caps, credit allowances or per-use charges, so what the tier costs is what the app costs.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/stackable-review/
 
 ## Stamped (stamped.io)
@@ -3118,7 +3112,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/product-notes) Billed in USD, every 30 days, and the ladder has three steps rather than the two the app's own summary suggests.
 - **Honest take:** The app is called Warn: Warnings Checkout Blocks, and blocking checkout is the one thing most readers of this listing cannot buy at the advertised price.
 - **Best for:** shopify merchants who know exactly which notice they need — a Prop 65 label, a shipping-delay alert, an age-verification disclaimer, a we-no-longer-ship-here message — and want it on the right products, collections or countries wi
-- **Flags:** {'f': 'addons_extra', 'ev': 'It lifts the cap to unlimited warnings, notes and pop-ups, adds cart and checkout warnings, targeting by product or collection, and US-state geo-targ…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/warn-review/
 
 ## Wati (wati.io)
@@ -3167,7 +3160,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 19 September 2026 on wegic.ai/pricing in a browser; the monthly headline figures stand on the 30 August reading from a US exit, see below) Credit-based AI website builder, pric…
 - **Honest take:** Everything is credits, and generating a site burns them fast — Wegic's own page notes a single generation can cost over $10 in credits, while the free plan gives 100 credits once.
 - **Best for:** non-technical founders who want an AI to build and host a simple site fast, and are comfortable with usage-based credit pricing
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 19 September 2026 on wegic.ai/pricing in a browser; the monthly headline figures stand on the 30 August reading from a US exit, see belo…'}, {'f': 'addons_extra', 'ev': "The cheaper per-credit rate only kicks in on the higher annual tier, and premium AI media draws down a second 'Cloud' balance on top of your plan."}, {'f': 'free_tier', 'ev': "Free: 100 credits at signup only, which Wegic's FAQ describes as credits to chat with the AI — generating a site is a paid action."}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 19 September 2026 on wegic.ai/pricing in a browser; the monthly headline figures stand on the 30 August reading from a US exit, see belo…'}, {'f': 'free_tier', 'ev': "Free: 100 credits at signup only, which Wegic's FAQ describes as credits to chat with the AI — generating a site is a paid action."}
 - **Full review:** https://aibuildermarketplace.com/b2b/wegic-review/
 
 ## WhatConverts (whatconverts.com)
@@ -3201,7 +3194,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (prices re-verified 2026-09-19 on apps.shopify.com/checkout-pro; the ladder is unchanged since 2 September, one promotion is new) Three tiers, billed in USD every 30 days, each with a 14-da…
 - **Honest take:** The name says checkout, but the $49 Essential plan does not include checkout upsells.
 - **Best for:** shopify merchants who want checkout-stage upsells, banners, trust badges and gift messages alongside post-purchase and thank-you page offers from a single app, and whose order volume already makes $99 a month a rounding error
-- **Flags:** {'f': 'addons_extra', 'ev': 'Plus Growth is $99 a month, or $999 a year (the listing says that saves 16%), and is the tier that opens the checkout itself: checkout upsells, subsc…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/
 
 ## Woodpecker (woodpecker.co)
@@ -3239,17 +3231,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
 
 ## Zedonk (zedonk.co.uk)
-- **Verified pricing:** (price re-verified 2026-09-09 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building block and billed annually, all listed as 'prices sta…
+- **Verified pricing:** (price re-verified 2026-09-09 and re-read unchanged 2026-09-27 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building block and billed an…
 - **Honest take:** The 'starting from' wording is doing real work: £166/mo is the floor of the cheapest module, billed annually, so a working setup for a brand that sells wholesale quickly stacks toward £332/mo and beyond — abou…
 - **Best for:** small and mid-size fashion brands that need sales, production, inventory and wholesale in one system built around size curves, seasons and linesheets
 - **Flags:** {'f': 'addons_extra', 'ev': "The 'starting from' wording is doing real work: £166/mo is the floor of the cheapest module, billed annually, so a working setup for a brand that sel…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/zedonk-review/
 
 ## Zeffy (zeffy.com)
-- **Verified pricing:** (re-verified 2026-09-09 on zeffy.com/home/free-online-fundraising-platform) Still genuinely $0 for nonprofits: no platform fee, no transaction fee and no card-processing fee on donations, t…
+- **Verified pricing:** (re-verified 2026-09-09 and re-read 2026-09-27 on zeffy.com/home/free-online-fundraising-platform) Still genuinely $0 for nonprofits: no platform fee, no transaction fee and no card-process…
 - **Honest take:** The honest scrutiny of 'free': the tip prompt is shown to YOUR donors, with suggested percentages.
 - **Best for:** small and mid-size nonprofits that want donations, ticketing, memberships and payments without any fee eating the mission's money
-- **Flags:** {'f': 'usage_metered', 'ev': 'Zeffy states it covers transaction and credit-card fees itself and earns only from the optional tip donors are offered at checkout.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-09 on zeffy.com/home/free-online-fundraising-platform) Still genuinely $0 for nonprofits: no platform fee, no transaction fee an…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Zeffy states it covers transaction and credit-card fees itself and earns only from the optional tip donors are offered at checkout.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-09 and re-read 2026-09-27 on zeffy.com/home/free-online-fundraising-platform) Still genuinely $0 for nonprofits: no platform fee…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/zeffy-review/
 
 ## ZenBusiness (zenbusiness.com)
@@ -3270,7 +3262,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/zendrop and on zendrop.com/pricing — the two do not carry the same ladder) On the Shopify listing: free to install, with three paid tiers, Beginner $…
 - **Honest take:** The free plan is a catalogue browser rather than a working tier: it allows no linked products, so nothing can actually be sold through it.
 - **Best for:** Shopify merchants starting or scaling a dropshipping or print-on-demand store who want sourcing, automated fulfilment, tracking and custom branding in one app, and who can price the per-order product and shipping cost into their m
-- **Flags:** {'f': 'usage_metered', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'addons_extra', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'free_tier', 'ev': 'The free tier allows none at all (“No linked products allowed”), Beginner covers 1-20, Pro 21-100 and Plus 101 or more; the feature list on all three…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'free_tier', 'ev': 'The free tier allows none at all (“No linked products allowed”), Beginner covers 1-20, Pro 21-100 and Plus 101 or more; the feature list on all three…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/zendrop-review/
 
 ## ZenZap (zenzap.co)

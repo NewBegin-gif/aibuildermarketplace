@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 477 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-26.
+All 479 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-27.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1986,6 +1986,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': '(read 16 September 2026 in a live browser on photogenerator.ai/pricing, in all three billing modes) Credit-based, in US dollars, with no free tier am…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/photogenerator-review/
 
+## Pickeasy (logbase.io)
+- **Verified pricing:** (read 2026-09-27 on apps.shopify.com/order-delivery-date-time and on the vendor's pricing page at logbase.io/pickeasy-pricing-plan) Five tiers, gated on features and store locations rather …
+- **Honest take:** The rate features depend on something Pickeasy does not sell.
+- **Best for:** Florists, bakeries, butchers, grocers and restaurants on Shopify that sell for local pickup or delivery and need customers to choose a date and time slot, with cut-off and preparation times, blackout dates, per-slot order limits a
+- **Flags:** {'f': 'addons_extra', 'ev': 'Reviewers from January 2024, June 2025 and August 2025 say they set the app up before finding that their Shopify plan did not include the API, and on…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/pickeasy-review/
+
 ## Piktochart (piktochart.com)
 - **Verified pricing:** (re-verified 6 September and again 19 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 2026 reading) Free is $0, Pro is $15 per me…
 - **Honest take:** The ladder here is not about how much you make, it is about which file you are allowed to hand over.
@@ -2924,6 +2931,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** recruiting agencies and SMB staffing firms that want an applicant tracking system and CRM in one place, especially ones that would actually work split placements with other recruiters
 - **Flags:** {'f': 'per_seat', 'ev': '(2026-09-10, read on their own pricing page, both billing toggles) TE Recruit (the ATS and CRM) runs $79 per seat per month billed annually or $95 mo…'}, {'f': 'addons_extra', 'ev': 'The bigger thing to price honestly is that TE Recruit and TE Network are two separate subscriptions.'}, {'f': 'annual_lock', 'ev': 'And taking the network month-to-month adds a $350 one-time startup fee that annual billing waives.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/top-echelon-review/
+
+## Track123 (track123.com)
+- **Verified pricing:** (read 2026-09-27 on apps.shopify.com/track123 and in the vendor's pricing article on intercom.help/track123, dated 14 July 2026) Three published plans plus Enterprise, priced on synced orde…
+- **Honest take:** The overage is the most expensive order on the ladder.
+- **Best for:** Shopify stores shipping from a few dozen to tens of thousands of orders a month, dropshippers included, that want a branded tracking page and order lookup on their own store, PayPal and Stripe tracking sync, and a free tier to sta
+- **Flags:** {'f': 'usage_metered', 'ev': 'On monthly billing every order past the allowance costs $0.05; on annual billing there is no overage and new orders stop syncing until you upgrade.'}, {'f': 'annual_lock', 'ev': 'On monthly billing every order past the allowance costs $0.05; on annual billing there is no overage and new orders stop syncing until you upgrade.'}, {'f': 'free_tier', 'ev': 'The pricing article says annual plans have no overage: once the allowance is used up, new orders stop syncing until you upgrade, and the free plan st…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/track123-review/
 
 ## Trackr (parceltrackr.com)
 - **Verified pricing:** (price read 2026-09-12) Four tiers and no free plan, billed in USD every 30 days through Shopify: Basic $10 a month or $96 a year for 400 shipments a month, Standard $45 or $432 for 2,000, …

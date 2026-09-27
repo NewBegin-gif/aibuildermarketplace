@@ -77,21 +77,82 @@ h1{font-size:1.5rem}
 .wrap{padding:10px 16px 50px}
 }
 /*aibm-nav-align*/.nav-inner,.nav-in,.topnav-inner{box-sizing:border-box;max-width:1180px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}.nav,.topnav{padding-left:0;padding-right:0}.nav-logo,.logo-t,.topnav-logo{margin-left:0 !important}</style></head><body>
-<nav class="nav"><div class="nav-in"><a href="/" class="logo-t"><em>AIBuilder</em> Marketplace</a>
-<div><a href="/atlas/?q=postscript">Atlas</a><a href="/b2b/">Reviews</a><a href="/finder/">Tool Finder</a><a href="/best/">Best Tools</a><a href="/about/">About</a><a href="/videos/">Videos</a><a href="/list-your-saas/">List your SaaS</a></div></div></nav>
+<nav class="snav" id="nav" aria-label="Main"><style>
+:root{--snav-h:56px}
+nav.snav{display:block;position:sticky;top:0;left:auto;right:auto;z-index:1000;margin:0;padding:0;height:auto;border:0;width:auto;
+ max-width:none;transform:none;box-shadow:none;
+ background:rgba(2,6,23,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+ border-bottom:1px solid rgba(148,163,184,.16);font:500 .9rem/1.2 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+ text-align:left;color:#e2e8f0}
+nav.snav *{box-sizing:border-box}
+nav.snav .snav-in{max-width:1180px;margin:0 auto;padding:0 20px;height:var(--snav-h);display:flex;align-items:center;gap:12px}
+nav.snav a{text-decoration:none}
+nav.snav button,nav.snav a{margin:0;line-height:1.2;height:auto;min-height:0;box-shadow:none;text-transform:none;
+ letter-spacing:normal;vertical-align:middle;width:auto}
+nav.snav li{margin:0;padding:0;list-style:none}
+nav.snav .snav-merk{display:flex;align-items:center;gap:9px;color:#f8fafc;font-weight:800;font-size:1.05rem;
+ letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+nav.snav .snav-merk i{width:10px;height:10px;border-radius:3px;flex:0 0 10px;background:linear-gradient(135deg,#818cf8,#34d399)}
+nav.snav .snav-merk em{font-style:normal;color:#a5b4fc}
+nav.snav .snav-links{display:flex;align-items:center;gap:2px;margin-left:auto;list-style:none;padding:0;margin-top:0;margin-bottom:0}
+nav.snav .snav-links a,nav.snav .snav-meer>button{color:#cbd5e1;padding:8px 11px;border-radius:8px;white-space:nowrap;
+ background:none;border:0;font:inherit;cursor:pointer;display:block}
+nav.snav .snav-links a:hover,nav.snav .snav-meer>button:hover{color:#fff;background:rgba(255,255,255,.07)}
+nav.snav .nu>a,nav.snav a.nu,nav.snav .snav-meer.nu>button{color:#fff;background:rgba(129,140,248,.16)}
+nav.snav .snav-meer{position:relative}
+nav.snav .snav-meer>button::after{content:"";display:inline-block;margin-left:6px;border:4px solid transparent;
+ border-top-color:currentColor;vertical-align:-2px}
+nav.snav .snav-meer-lijst{position:absolute;right:0;top:calc(100% + 6px);min-width:220px;list-style:none;margin:0;padding:6px;
+ background:#0f172a;border:1px solid rgba(148,163,184,.2);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+nav.snav .snav-meer-lijst[hidden]{display:none}
+nav.snav .snav-meer-lijst a{padding:9px 12px}
+nav.snav .snav-cta{flex:0 0 auto;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;font-weight:700;
+ padding:8px 14px;border-radius:9px;white-space:nowrap}
+nav.snav .snav-cta:hover{filter:brightness(1.08)}
+nav.snav .snav-menu{display:none;flex:0 0 auto;background:none;border:1px solid rgba(148,163,184,.3);color:#e2e8f0;
+ border-radius:9px;padding:7px 11px;font:inherit;font-weight:600;cursor:pointer}
+nav.snav a:focus-visible,nav.snav button:focus-visible{outline:2px solid #a5b4fc;outline-offset:2px}
+@media(max-width:900px){
+ nav.snav .snav-in{padding:0 12px;gap:8px}
+ nav.snav .snav-merk{font-size:.98rem}
+ nav.snav .snav-menu{display:block}
+ nav.snav .snav-cta{margin-left:auto;padding:7px 11px;font-size:.84rem}
+ nav.snav .snav-links{display:none;position:absolute;left:0;right:0;top:var(--snav-h);flex-direction:column;align-items:stretch;
+  gap:0;margin:0;padding:8px 12px 14px;background:#0b1224;border-bottom:1px solid rgba(148,163,184,.2);
+  max-height:calc(100vh - var(--snav-h));overflow-y:auto;box-shadow:0 16px 32px rgba(0,0,0,.5)}
+ nav.snav.open .snav-links{display:flex}
+ nav.snav .snav-links a,nav.snav .snav-meer>button{padding:12px 10px;font-size:1rem;width:100%;text-align:left}
+ nav.snav .snav-meer>button{display:none}
+ nav.snav .snav-meer-lijst,nav.snav .snav-meer-lijst[hidden]{display:block;position:static;box-shadow:none;border:0;
+  border-top:1px solid rgba(148,163,184,.16);border-radius:0;padding:6px 0 0;margin-top:6px;background:none;min-width:0}
+}
+@media(max-width:480px){nav.snav .snav-merk em{display:none}}
+/* audit P1-2: de marketplace-subnav (vorige/volgende) plakt direct onder deze balk, op elke breedte */
+.subnav{top:calc(var(--snav-h) + 1px)!important}
+</style><div class="snav-in"><a class="snav-merk" href="/"><i aria-hidden="true"></i><span>AIBuilder <em>Marketplace</em></span></a><ul class="snav-links" id="nav-links"><li class=nu><a href="/b2b/">Reviews</a></li><li><a href="/atlas/">Atlas</a></li><li><a href="/best/">Best tools</a></li><li><a href="/tools/">Free tools</a></li><li><a href="/deals/">Deals</a></li><li class="snav-meer"><button type="button" aria-expanded="false" aria-controls="nav-meer">More</button><ul class="snav-meer-lijst" id="nav-meer" hidden><li><a href="/about/">About</a></li><li><a href="/research/">Research</a></li><li><a href="/pricewatch/">Price Watch</a></li><li><a href="/guides/hidden-cost-report-2026/">Hidden Cost Report</a></li><li><a href="/stats/">Stats</a></li><li><a href="/stack-xray/">Stack X-Ray</a></li><li><a href="/roadmap/">AI Roadmap</a></li><li><a href="/ai/">AI explained</a></li><li><a href="/videos/">Videos</a></li><li><a href="/marketplace/">Marketplace</a></li><li><a href="/list-your-saas/">List your SaaS</a></li></ul></li></ul><a class="snav-cta" href="/finder/">Find software</a><button type="button" class="snav-menu" aria-expanded="false" aria-controls="nav-links">Menu</button></div><script>(function(){var n=document.currentScript&&document.currentScript.closest('nav.snav');if(!n)return;
+var m=n.querySelector('.snav-menu'),w=n.querySelector('.snav-meer>button'),l=n.querySelector('.snav-meer-lijst');
+function zetMenu(o){n.classList.toggle('open',o);m.setAttribute('aria-expanded',o?'true':'false');}
+function zetMeer(o){if(!w)return;w.setAttribute('aria-expanded',o?'true':'false');l.hidden=!o;}
+m.addEventListener('click',function(){zetMenu(!n.classList.contains('open'));});
+if(w)w.addEventListener('click',function(e){e.stopPropagation();zetMeer(l.hidden);});
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;
+ if(w&&!l.hidden){zetMeer(false);w.focus();}else if(n.classList.contains('open')){zetMenu(false);m.focus();}});
+document.addEventListener('click',function(e){if(!n.contains(e.target)){zetMeer(false);zetMenu(false);}});
+})();</script></nav>
 <div class="wrap">
 <div class="bc"><a href="/">Home</a> &rsaquo; <a href="/b2b/">Reviews</a> &rsaquo; Postscript</div>
 <h1><span class="lg"><img src="https://www.google.com/s2/favicons?sz=128&amp;domain=postscript.io" alt="Postscript" loading="lazy" onerror="this.style.display='none'"></span>Postscript Review <span style="color:var(--muted);font-weight:700">(2026)</span><span style="display:block;font-size:.6em;color:var(--muted);font-weight:700;margin-top:6px">The $0 Plan Has a $49 Floor</span></h1>
-<div class="meta"><span class="tag">SEO &amp; Marketing</span><span>Researched assessment · by <a href="/about/#daan">Daniel Haket</a></span><span>Updated 2026-09-25</span></div>
+<div class="meta"><span class="tag">SEO &amp; Marketing</span><span>Researched assessment · by <a href="/about/#daan">Daniel Haket</a></span><span>Content updated 2026-09-25</span><span>Prices checked 2026-09-19</span><span><a href="/atlas/?q=postscript">View Postscript in the Atlas &rarr;</a></span></div>
 <p class="lede">The $0 a month is not free — it carries a $49 monthly minimum spend, which means $49 is your floor whether you send anything or not.</p>
 <div class="box best"><b>Best for:</b> Shopify stores with a list large enough that SMS beats email on response — the per-message economics only work once volume justifies the platform fee.</div>
 <div class="box skip"><b>Who should skip it:</b> if you are testing whether SMS works for you at all — the $49 minimum spend on the free tier means the experiment has a floor before you have sent a single message, and the listed rates cover the US and Canada only.</div>
 <div class="box price"><b>Price:</b> Starter shown as $0/mo with a $49/mo minimum spend; Growth $100/mo, Professional $500/mo &middot; <a href="#pricing">full pricing as we read it on 19 Sep 2026 &darr;</a></div>
 
+
 <p><a class="cta" href="https://postscript.io" target="_blank" rel="nofollow noopener">Visit Postscript &rarr;</a></p>
+<nav class="toc" aria-label="On this page" style="border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:20px 0;background:var(--card)"><div style="font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:8px">On this page</div><ul style="margin:0;padding-left:19px;line-height:1.75;font-size:.92rem"><li><a href="#watch-the-2-minute-review">Watch the 2-minute review</a></li><li><a href="#pricing">Pricing (2026)</a></li><li><a href="#what-the-pricing-page-doesn-t-say">What the pricing page doesn’t say</a></li><li><a href="#what-postscript-does">What Postscript does</a></li><li><a href="#what-buyers-report-about-postscript">What buyers report about Postscript</a></li><li><a href="#the-0-plan-has-a-49-floor">The $0 plan has a $49 floor</a></li><li><a href="#how-to-actually-use-postscript">How to actually use Postscript</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li></ul></nav>
 
 <h2 id="watch-the-2-minute-review">Watch the 2-minute review</h2><div style="position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--border);margin:18px 0"><iframe src="https://www.youtube-nocookie.com/embed/JYCBXU2Su2U" title="Postscript review video" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer;encrypted-media;picture-in-picture" allowfullscreen></iframe></div><p style="font-size:.85rem;color:var(--muted)">The video version of this review, from our <a href="https://www.youtube.com/@AIBuilderMarketplace" target="_blank" rel="noopener">YouTube channel</a>.</p><p style="font-size:.9rem;color:var(--muted);margin-top:10px">&#9889; Short on time? <a href="https://www.youtube.com/shorts/033Rf7fhoA8" target="_blank" rel="noopener">Watch the 30-second verdict Short</a>.</p>
-<nav class="toc" aria-label="On this page" style="border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:20px 0;background:var(--card)"><div style="font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:8px">On this page</div><ul style="margin:0;padding-left:19px;line-height:1.75;font-size:.92rem"><li><a href="#watch-the-2-minute-review">Watch the 2-minute review</a></li><li><a href="#what-the-pricing-page-doesn-t-say">What the pricing page doesn’t say</a></li><li><a href="#what-postscript-does">What Postscript does</a></li><li><a href="#what-buyers-report-about-postscript">What buyers report about Postscript</a></li><li><a href="#the-0-plan-has-a-49-floor">The $0 plan has a $49 floor</a></li><li><a href="#how-to-actually-use-postscript">How to actually use Postscript</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li></ul></nav>
 <h2 id='pricing'>Pricing (2026)</h2><p style="margin:-4px 0 12px"><span style="display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:#22c55e;border:1px solid rgba(34,197,94,.4);background:rgba(34,197,94,.08);border-radius:999px;padding:3px 11px">&#10003; Pricing re-verified 19 Sep 2026</span></p><p>Starter is shown as $0 a month with a $49 monthly minimum spend, at $0.015 then $0.009 per SMS and $0.045 per MMS, plus carrier fees. Growth is $100 a month at $0.01 then $0.008 per SMS and $0.03 per MMS. Professional is $500 a month at $0.007 per SMS and $0.024 per MMS. Enterprise is contact-sales. Carrier fees are asterisked on every tier and are quantified in the footnote below the feature list: average US carrier fees of $0.00418 per SMS and $0.00841 per MMS, with the listed rates covering the US 50 states and Canada only.</p><p>The free trial is a credit equal to $100 against message and carrier fees during your first 30 days; exhaust it and you are billed at the Free package rate unless you select another package. Phone numbers are priced outside the tiers: a dedicated toll-free number is assigned and verified free of charge at install, while a dedicated short code costs $750 a month levied by the carriers and passed on without markup. No contract is required. <em>Plans change — always verify the live price on their site.</em></p>
 
 
@@ -120,7 +181,7 @@ h1{font-size:1.5rem}
 <div class="box" style="border-left:4px solid #3b82f6"><b>Work at Postscript?</b> Tell us what this review gets wrong and we fix it, or <a href="/list-your-saas/">list Postscript on our marketplace</a> (free, nofollow).</div>
 </div>
 <footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. Some links are affiliate links.<!--sister-net-start-->
-<nav aria-label="Sister sites" style="max-width:1100px;margin:28px auto 0;padding:16px 20px 4px;border-top:1px solid rgba(128,128,128,.22);font-size:.8rem;line-height:2;text-align:center;opacity:.8"><span style="display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.66rem;opacity:.7;margin-bottom:4px">Part of the network</span><a href="https://officesoftwaremarketplace.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">Office Software</a> <span style="opacity:.4">&middot;</span> <a href="https://marketingandsalessoftware.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">Marketing & Sales Software</a> <span style="opacity:.4">&middot;</span> <a href="https://theweeklyaiedge.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">The Weekly AI Edge</a> <span style="opacity:.4">&middot;</span> <a href="https://theweekly2pctedge.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">The Weekly 2% Edge</a> <span style="opacity:.4">&middot;</span> <a href="https://zerotouchsupport.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">ZeroTouch Support</a><span style="display:block;margin-top:6px;font-size:.72rem;opacity:.65">Six sites, one owner &mdash; all built and run by <a href="/about/" style="color:inherit">Daniel Haket</a>.</span></nav>
+<nav aria-label="Sister sites" style="display:block;max-width:1100px;margin:28px auto 0;padding:16px 20px 4px;border-top:1px solid rgba(128,128,128,.22);font-size:.8rem;line-height:2;text-align:center;opacity:.8"><span style="display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.66rem;opacity:.7;margin-bottom:4px">Part of the network</span><a href="https://officesoftwaremarketplace.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">Office Software</a> <span style="opacity:.4">&middot;</span> <a href="https://marketingandsalessoftware.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">Marketing & Sales Software</a> <span style="opacity:.4">&middot;</span> <a href="https://theweeklyaiedge.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">The Weekly AI Edge</a> <span style="opacity:.4">&middot;</span> <a href="https://theweekly2pctedge.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">The Weekly 2% Edge</a> <span style="opacity:.4">&middot;</span> <a href="https://zerotouchsupport.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">ZeroTouch Support</a><span style="display:block;margin-top:6px;font-size:.72rem;opacity:.65">Six sites, one owner &mdash; all built and run by <a href="/about/" style="color:inherit">Daniel Haket</a>.</span></nav>
 <!--sister-net-end-->
 </footer>
 </body></html>

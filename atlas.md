@@ -2079,10 +2079,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
 
 ## Prezi (prezi.com)
-- **Verified pricing:** Three plans, re-read on prezi.com/pricing (which redirects to prezi.com/gts/pricing) on 25 September 2026, shown in euros from an EU exit: Standard €5 a month, Plus €15 a month and Premium …
-- **Honest take:** It exports to PDF only — no editable .pptx — and the zooming format is polarising: some audiences find it engaging, others find it disorienting.
+- **Verified pricing:** Prezi has a free plan, Basic, and three paid individual plans: Standard €5 a month, Plus €15 and Premium €25, all billed annually.
+- **Honest take:** The pricing table puts PDF export and portable presentations at Plus, not Standard, and our free account's AI editor locked PDF, PowerPoint and SCORM downloads to Plus.
 - **Best for:** presenters who want motion and zooming-canvas storytelling that stands out from slide decks — especially for talks, pitches and teaching
-- **Flags:** {'f': 'usage_metered', 'ev': 'The comparison table is where the gates actually are: Prezi AI is 500 credits on Standard and unlimited above it; presentation recording, smart brand…'}
+- **Flags:** {'f': 'annual_lock', 'ev': 'Every paid plan on the page requires annual billing: there is no monthly-billing switch and no monthly-billed price, and the page advertises a 14-day…'}, {'f': 'free_tier', 'ev': 'Prezi has a free plan, Basic, and three paid individual plans: Standard €5 a month, Plus €15 and Premium €25, all billed annually.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/prezi-review/
 
 ## Pricefy (pricefy.io)

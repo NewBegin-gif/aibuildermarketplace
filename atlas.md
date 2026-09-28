@@ -218,10 +218,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aspire-review/
 
 ## Assembly (assembly.com)
-- **Verified pricing:** (re-verified 2026-08-17 in the browser) Assembly publishes exactly one price: Empower at $3 per user per month, billed yearly, with an Enterprise tier quoted on request for advanced securit…
-- **Honest take:** Two meters run at once and they move at different speeds.
+- **Verified pricing:** (re-verified 28 September 2026 in a rendered browser, both billing tabs and the full comparison table) Assembly, the client-portal platform at assembly.com, publishes five tiers.
+- **Honest take:** Two meters run at once.
 - **Best for:** agencies and professional services firms who want one branded place for clients to message, sign, pay and share files instead of four tools and an email thread
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17 in the browser) Assembly publishes exactly one price: Empower at $3 per user per month, billed yearly, with an Enterprise tie…'}
+- **Flags:** {'f': 'per_seat', 'ev': "Correction: until 28 September 2026 this field described a different company's employee-recognition plan at $3 per user; that was never the price of …"}, {'f': 'usage_metered', 'ev': 'Free, a free-forever plan: $0 with 5 active contacts, 1 internal user, 50 build credits a month and 3 apps.'}, {'f': 'free_tier', 'ev': 'Free, a free-forever plan: $0 with 5 active contacts, 1 internal user, 50 build credits a month and 3 apps.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/assembly-review/
 
 ## Atlas AI Store Builder (helloatlas.io)
@@ -273,9 +273,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/autowrite-review/
 
 ## Auware (auware.com)
-- **Verified pricing:** (re-verified 2026-08-17) Auware publishes a price after all: $99 a month on auware.com, alongside a 1-click Shopify install with a 30-day free trial that needs no card.
+- **Verified pricing:** (re-verified 28 September 2026 on auware.com/pricing and the Shopify App Store listing) One plan: Pro at $199 a month per store, where a store is one myshopify.com domain, so each store nee…
 - **Honest take:** It's deliberately narrow — Shopify-only and built around segmented paid traffic.
 - **Best for:** Shopify stores running segmented paid campaigns (different personas, interests, offers) who are currently sending all that traffic to one generic page
+- **Flags:** {'f': 'addons_extra', 'ev': 'Influencer Pages is a $99-a-month add-on.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/auware-review/
 
 ## Ava AI (avasales.ai)
@@ -711,10 +712,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/connecteam-review/
 
 ## Consensus (consensus.app)
-- **Verified pricing:** (re-verified 2026-08-17, with a caveat) Consensus blocks plain fetches of its pricing page and neither our July nor our August 2026 capture retrieved an amount, so today's figures are not i…
+- **Verified pricing:** (re-verified 28 September 2026 in a rendered browser, monthly and annual tabs) Free: $0, 10 Pro messages and up to 3 Deep reviews a month.
 - **Honest take:** It searches peer-reviewed literature, which is its strength and its boundary: it can tell you what published studies found, not whether those studies are good.
 - **Best for:** researchers, clinicians, students and writers who want evidence-backed answers drawn from peer-reviewed papers instead of the open web
-- **Flags:** {'f': 'free_tier', 'ev': 'Our dated reading: a free tier with essential search; Pro about $15/mo, or roughly $10/mo billed annually, with unlimited Pro searches and 15 Deep se…'}
+- **Flags:** {'f': 'per_seat', 'ev': "Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per se…"}, {'f': 'free_tier', 'ev': '(re-verified 28 September 2026 in a rendered browser, monthly and annual tabs) Free: $0, 10 Pro messages and up to 3 Deep reviews a month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/consensus-review/
 
 ## Consentmo (consentmo.com)
@@ -1286,9 +1287,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gusto-review/
 
 ## Healthie (gethealthie.com)
-- **Verified pricing:** (re-verified 2026-08-17 on their own pricing page; yearly billing saves 10%) The entry tier is far lower than most summaries suggest: Core is $19.99/mo billed monthly or $18 billed yearly, …
+- **Verified pricing:** (re-verified 2026-08-17 and re-read unchanged 2026-09-28 on their own pricing page; yearly billing saves 10%) The entry tier is far lower than most summaries suggest: Core is $19.99/mo bill…
 - **Honest take:** Two honest limits: it's pricier than alternatives with thin mid-tier options, and several users report slow customer service (sometimes a week or more to reply).
 - **Best for:** growing group practices (10+ clinicians) in health, wellness and nutrition that need multi-provider scheduling, telehealth and a real API to automate operations
+- **Flags:** {'f': 'addons_extra', 'ev': 'The same page, read 28 September 2026, offers the 14-day trial on the Plus plan, lists DoseSpot ePrescribing at $40 per clinician a month with no set…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/healthie-review/
 
 ## Heard (joinheard.com)
@@ -1319,10 +1321,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/helpcenter-review/
 
 ## HiBob (hibob.com)
-- **Verified pricing:** Quote-only, and re-verified as such on 2026-08-17: HiBob publishes no price list, their machine-readable site index lists no pricing page, and neither our July nor our August 2026 capture r…
+- **Verified pricing:** Quote-only, and re-verified as such on 2026-08-17 and again on 2026-09-28: HiBob publishes no price list.
 - **Honest take:** Opaque pricing and an implementation fee mean the real cost only surfaces in a sales call — and it's built for scaling mid-size companies, so it's heavy and expensive for a small team.
 - **Best for:** growing mid-size companies (roughly 50-500 staff) that have outgrown spreadsheets and want a modern, culture-focused HRIS
-- **Flags:** {'f': 'per_seat', 'ev': 'Pricing is per employee per month with modules bolted on, and third-party estimates cluster in the mid-teens per employee per month, plus a one-off i…'}, {'f': 'annual_lock', 'ev': 'Pricing is per employee per month with modules bolted on, and third-party estimates cluster in the mid-teens per employee per month, plus a one-off i…'}
+- **Flags:** {'f': 'quote_only', 'ev': 'Its machine-readable site index (llms.txt) now lists pricing-plans and pricing-packages pages, but both describe custom pricing without an amount, hi…'}, {'f': 'per_seat', 'ev': "HiBob's own pricing FAQ confirms the model: generally per employee, Core HR in every plan with modules added on, and pricing that 'may vary slightly …"}, {'f': 'annual_lock', 'ev': 'Pricing is per employee per month with modules bolted on, and third-party estimates cluster in the mid-teens per employee per month, plus a one-off i…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/hibob-review/
 
 ## Hive (hive.com)

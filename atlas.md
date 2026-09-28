@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 479 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-27.
+All 481 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-28.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -984,6 +984,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'per_seat', 'ev': 'Emergency Notifications $2 per user per month.'}, {'f': 'usage_metered', 'ev': '(2026-08-29, read on their own pricing page and their platform page) Five products, each metered differently and all billed annually.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/envoy-review/
 
+## Essential Countdown Timer Bar (essential-apps.com)
+- **Verified pricing:** (read 2026-09-28 on apps.shopify.com/essential-countdown-timer, on essential-apps.com/countdown-timer and in the vendor's help article on timer views) Four plans priced on monthly timer vie…
+- **Honest take:** The free plan is smaller than it looks, because of what counts as a view.
+- **Best for:** Shopify merchants who run real, dated promotions, launches or shipping cut-offs and want a top-bar, product-page or cart countdown without code, starting on a free plan
+- **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days every published timer is unpublished until views…'}, {'f': 'free_tier', 'ev': 'The free plan is smaller than it looks, because of what counts as a view.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/essential-countdown-timer-bar-review/
+
 ## Essential Loyalty (essential-apps.com)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/essential-loyalty-rewards-program) Four tiers, every amount unchanged since 22 August 2026, and the meter is still the whole decision: it counts loya…
 - **Honest take:** Two things to read closely before you pay.
@@ -1043,6 +1050,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** You're paying for what the free giants monetize differently: no ads, no profiling, real support and standards-first email (JMAP/IMAP everywhere).
 - **Best for:** individuals and small businesses that want fast, private, ad-free email on their own domain with proper support and masked-email aliases
 - **Full review:** https://aibuildermarketplace.com/b2b/fastmail-review/
+
+## FBtrack (optiapps.xyz)
+- **Verified pricing:** (read 2026-09-28 on apps.shopify.com/facebook-pixel-conversion-api-fbtrack) Three paid plans and no free plan, each with a 14-day free trial.
+- **Honest take:** A pixel app earns its fee by being dull: it has to fire every event, every day, and you only notice it when it stops.
+- **Best for:** Shopify stores that advertise on Meta plus TikTok, Snapchat or Pinterest and want several pixels, for example one per collection or a backup pixel, with server-side events for all of them managed from one screen
+- **Flags:** {'f': 'free_tier', 'ev': "Meta's own Facebook & Instagram app for Shopify is free to install and sets up a conversion pixel, and the three apps the App Store lists next to FBt…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/fbtrack-review/
 
 ## Feedvisor (feedvisor.com)
 - **Verified pricing:** Feedvisor publishes no price, and we checked that again on 2026-09-03.

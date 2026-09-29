@@ -1157,10 +1157,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/freshchat-review/
 
 ## Freshservice (freshservice.com)
-- **Verified pricing:** (price re-verified 2026-09-23 against the vendor's own pricing page) Per agent, read 23 Sep 2026 on freshworks.com/freshservice/pricing/: Starter $19/agent/mo billed annually or $29 monthly…
-- **Honest take:** The $19 headline rarely survives contact with a real deployment: the ITSM features most IT teams buy for (change/problem management, deeper analytics) live at Pro, and the modern extras — AI agent sessions, or…
+- **Verified pricing:** (price re-verified 2026-09-29 against the vendor's own pricing page) Per agent, read 29 Sep 2026 on freshworks.com/freshservice/pricing/: Starter $19/agent/mo billed annually or $29 monthly…
+- **Honest take:** The $19 headline rarely survives contact with a real deployment: the ITSM features most IT teams buy for (change/problem management, deeper analytics) live at Pro, and so does Freddy AI Copilot, a $29-an-agent…
 - **Best for:** IT teams that want proper ITSM (incidents, assets, changes, service catalog) running in weeks, without enterprise-suite implementation pain
-- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-09-23 against the vendor's own pricing page) Per agent, read 23 Sep 2026 on freshworks.com/freshservice/pricing/: Starter $19…"}, {'f': 'usage_metered', 'ev': "Metered on top of the seat: Freddy AI Copilot $29/agent/mo, still an add-on on Enterprise even though that card now says 'Freddy AI included' (what i…"}, {'f': 'addons_extra', 'ev': "Metered on top of the seat: Freddy AI Copilot $29/agent/mo, still an add-on on Enterprise even though that card now says 'Freddy AI included' (what i…"}
+- **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-09-29 against the vendor's own pricing page) Per agent, read 29 Sep 2026 on freshworks.com/freshservice/pricing/: Starter $19…"}, {'f': 'usage_metered', 'ev': 'Add-ons and allowances: Freddy AI Copilot $29/agent/mo, offered on the Pro and Enterprise cards only and still an add-on on Enterprise even though th…'}, {'f': 'addons_extra', 'ev': 'The $19 headline rarely survives contact with a real deployment: the ITSM features most IT teams buy for (change/problem management, deeper analytics…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/freshservice-review/
 
 ## Freshworks (freshworks.com)
@@ -2263,9 +2263,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Replit (replit.com)
 - **Verified pricing:** (re-verified 2026-09-26 on replit.com/pricing and docs.replit.com/billing/plans/starter-plan) The pricing page now lists Core, Pro and Enterprise.
-- **Honest take:** The credit model on AI-heavy building is unpredictable — a complex agent session can burn credits fast, and they expire monthly, so heavy AI users hit surprise costs.
+- **Honest take:** The subscription price is fixed; the paid Agent work is not.
 - **Best for:** developers, learners and tinkerers who want a zero-setup, browser-based coding environment with AI assistance
-- **Flags:** {'f': 'usage_metered', 'ev': "The free Starter plan is no longer shown there but still exists in Replit's documentation: daily Agent credits up to a monthly cap, Lite build only (…"}
+- **Flags:** {'f': 'usage_metered', 'ev': "The free Starter plan is no longer shown there but still exists in Replit's documentation: daily Agent credits up to a monthly cap, Free Mode with a …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/replit-review/
 
 ## Reply.io (reply.io)

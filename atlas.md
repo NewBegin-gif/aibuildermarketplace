@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 481 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-28.
+All 481 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-29.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -204,7 +204,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/arbor-review/
 
 ## AskNest (ecommercestorez.us)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/asknest-ai-faq-product-bot) Four tiers, priced by AI replies per month, and the cheapest ladder in this category.
+- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/asknest-ai-faq-product-bot, re-verified unchanged 2026-09-28) Four tiers, priced by AI replies per month, and the cheapest ladder in this category.
 - **Honest take:** One review.
 - **Best for:** small stores with repetitive product, shipping and returns questions who want a cheap multilingual FAQ widget and can test the answer quality on their own policy pages for free first
 - **Flags:** {'f': 'usage_metered', 'ev': 'What the listing never says is what happens when you run out: there is no overage rate anywhere on the page, so whether reply 501 costs money or simp…'}, {'f': 'free_tier', 'ev': 'Free: 50 AI replies a month, replies in one language you select, answers drawn from your FAQs, policy pages and product data, translated storefront w…'}
@@ -416,10 +416,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bookx-review/
 
 ## Bookyourdata (bookyourdata.com)
-- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.
+- **Verified pricing:** (re-verified 2026-08-13 and again unchanged on 2026-09-28, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.
 - **Honest take:** The model is honest — no subscription, credits keep, bad data refunded — so the real scrutiny belongs on usage.
 - **Best for:** sporadic, project-based prospecting where a subscription would idle — buy exactly the verified contacts you need, when you need them
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.'}, {'f': 'addons_extra', 'ev': 'BeSpoke, the hand-built private list service, is priced separately from $499 for 1,000 records.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13 and again unchanged on 2026-09-28, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full con…'}, {'f': 'addons_extra', 'ev': 'BeSpoke, the hand-built private list service, is priced separately from $499 for 1,000 records.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bookyourdata-review/
 
 ## Bot It AI (botitai.com)
@@ -938,7 +938,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/edesk-review/
 
 ## ElevateForward (elevateforward.ai)
-- **Verified pricing:** (re-verified 2026-08-21, read on their own pricing page) The prices are published, despite the consultative first impression, and the report figures have not moved since our 12 August readi…
+- **Verified pricing:** (re-verified 2026-08-21 and again unchanged on 2026-09-28, read on their own pricing page) The prices are published, despite the consultative first impression, and the report figures have n…
 - **Honest take:** It's a strategy-to-execution layer, not a task app or a dashboard — so the value only lands if leadership actually adopts the framework.
 - **Best for:** scaling companies where growth is outpacing alignment — leadership lacks execution visibility and strategic initiatives keep stalling halfway
 - **Full review:** https://aibuildermarketplace.com/b2b/elevateforward-review/
@@ -1561,7 +1561,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/kumo-review/
 
 ## Landingi (landingi.com)
-- **Verified pricing:** (re-verified 2026-08-17; the English page quotes USD while the same page served from a Dutch address quotes euros at the same numerals, so check your own currency) Four plans, billed annual…
+- **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28; the English page quotes USD while the same page served from a Dutch address quotes euros at the same numerals, so check your own currency) F…
 - **Honest take:** You trade away the high-end optimisation: no AI traffic routing like Unbounce's Smart Traffic, no real-time collaboration, and thinner technical control (script containers).
 - **Best for:** budget-conscious teams, international businesses and anyone needing bulk or programmatic page generation across 29 languages
 - **Flags:** {'f': 'usage_metered', 'ev': 'Custom domains are metered: 1 on Build, 3 on Optimize, 10 on Scale and 100 on Enterprise, with extras at $5 a month each.'}, {'f': 'renewal_jump', 'ev': 'A promotional rate roughly half the Build price appears periodically — it is a limited-time offer rather than the standard rate.'}, {'f': 'annual_lock', 'ev': 'Annual billing includes two months free against monthly.'}
@@ -1775,10 +1775,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/motive-review/
 
 ## MRPeasy (mrpeasy.com)
-- **Verified pricing:** (re-verified 2026-08-24 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise $99 and Unlimited $149.
+- **Verified pricing:** (re-verified 2026-08-24 and again on 2026-09-28 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise $99 and Unlimited $149.
 - **Honest take:** Paying ~$50 per user just so a shop-floor worker can clock in and out feels steep when they'll touch a fraction of the features.
 - **Best for:** small manufacturers, wholesalers and distributors who want dependable production planning and inventory control without a heavy ERP or a dedicated IT team
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-24 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise $99 and Unlimited $149.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-24 and again on 2026-09-28 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/mrpeasy-review/
 
 ## Murf (murf.ai)
@@ -1885,7 +1885,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/nutshell-review/
 
 ## Omniseo (omniseo.com)
-- **Verified pricing:** (re-verified 2026-08-17 against the vendor's own pricing page) Essentials $89/mo (4 AI channels, 50 prompts, 5 seats), Professional $349/mo (10 AI channels, 100 prompts), Enterprise from $8…
+- **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28 against the vendor's own pricing page) Essentials $89/mo (4 AI channels, 50 prompts, 5 seats), Professional $349/mo (10 AI channels, 100 prom…
 - **Honest take:** Two honest cautions.
 - **Best for:** brands and SEO teams that want to measure and improve how they show up in AI-generated answers (ChatGPT, Google AI and more) as AI search grows
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing is $890 and $3,490 a year respectively, which the page describes as two months free.'}
@@ -2088,10 +2088,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/prezi-review/
 
 ## Pricefy (pricefy.io)
-- **Verified pricing:** (re-verified 2026-08-17) A genuinely free tier: $0 for up to 50 SKUs, 5 competitors, daily price updates and AI automatch.
+- **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28) A genuinely free tier: $0 for up to 50 SKUs, 5 competitors, daily price updates and AI automatch.
 - **Honest take:** Credit where due: the free tier is real.
 - **Best for:** e-commerce sellers monitoring competitor prices and repricing catalogs up to ~25,000 SKUs on rules or autopilot
-- **Flags:** {'f': 'usage_metered', 'ev': 'Credit where due: the free tier is real.'}, {'f': 'annual_lock', 'ev': 'The headline prices are monthly rates; the advertised savings require annual commitment.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17) A genuinely free tier: $0 for up to 50 SKUs, 5 competitors, daily price updates and AI automatch.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Credit where due: the free tier is real.'}, {'f': 'annual_lock', 'ev': 'The headline prices are monthly rates; the advertised savings require annual commitment.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17 and again on 2026-09-28) A genuinely free tier: $0 for up to 50 SKUs, 5 competitors, daily price updates and AI automatch.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pricefy-review/
 
 ## Printify (printify.com)
@@ -2452,8 +2452,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seokart-review/
 
 ## SEOmatic (seomatic.io)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/minifier and on seomatic.io) Four tiers, and the only thing that changes between the three paid ones is how many products they cover.
-- **Honest take:** This app is eleven years old and has 114 reviews.
+- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/minifier and on seomatic.io, re-verified unchanged on both 2026-09-28) Four tiers, and the only thing that changes between the three paid ones is how ma…
+- **Honest take:** This app is eleven years old and has 151 reviews (28 September 2026; it was 114 in August).
 - **Best for:** Shopify stores under 5,000 products that want image compression, alt text, auto-generated meta tags, schema and sitemaps from one app on a flat monthly fee, and would rather not pay per AI credit
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · products covered'}, {'f': 'free_tier', 'ev': 'Free: 10 products, 50 image optimisations, AI SEO audit, auto-pilot AI meta title and description, schema markup, HTML sitemap.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/seomatic-review/
@@ -2671,10 +2671,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/storefaq-review/
 
 ## StoreSEO (storeseo.com)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/storeseo) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25 image optimisations, up to 5 tracked keywords, an LLMs.txt generator and …
+- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/storeseo, re-verified unchanged 2026-09-28) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25 image optimisations, up to 5 tracked ke…
 - **Honest take:** Know what an SEO app can and cannot do before you buy any tier.
 - **Best for:** Shopify stores with a few hundred products and no in-house SEO help, who want metadata, schema, alt text and indexing handled in bulk and reported against Search Console
-- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-19 on apps.shopify.com/storeseo) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25 image optimisations, up to 5 trac…'}, {'f': 'free_tier', 'ev': '(read 2026-08-19 on apps.shopify.com/storeseo) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25 image optimisations, up to 5 trac…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-19 on apps.shopify.com/storeseo, re-verified unchanged 2026-09-28) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25…'}, {'f': 'free_tier', 'ev': '(read 2026-08-19 on apps.shopify.com/storeseo, re-verified unchanged 2026-09-28) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/storeseo-review/
 
 ## Storista (storista.io)
@@ -3195,10 +3195,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wholesale-gorilla-review/
 
 ## Wing Assistant (wingassistant.com)
-- **Verified pricing:** (re-verified 2026-08-17 against Wing's own machine-readable pricing page) This is a managed assistant service, not software.
+- **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28 against Wing's homepage plan cards and its machine-readable llms.txt; wingassistant.com/pricing/ itself now redirects to a call-booking page)…
 - **Honest take:** You're renting a person, not automating a task — a good VA is real leverage, but only if you already have documented, delegatable work.
 - **Best for:** founders drowning in delegatable admin who have processes to hand off and want a managed VA without recruiting one themselves
-- **Flags:** {'f': 'addons_extra', 'ev': 'Specialist roles are priced separately and enterprise is custom.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/wing-assistant-review/
 
 ## Wistia (wistia.com)

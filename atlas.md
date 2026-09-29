@@ -2918,9 +2918,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tixel-review/
 
 ## TnC (effectify.io)
-- **Verified pricing:** (read 2026-08-25 and re-verified 2026-09-09 on apps.shopify.com/terms-and-conditions-checkbox, listed as “TnC: Terms and Conditions Box”, and in the vendor's own pricing article at www.effe…
+- **Verified pricing:** (read 2026-08-25, re-verified 2026-09-09 and again on 2026-09-29 on apps.shopify.com/terms-and-conditions-checkbox, listed as “TnC: Terms and Conditions Box”, and in the vendor's own pricin…
 - **Honest take:** Start with the badge at the top of the listing, because it is the one thing on this page that misleads.
-- **Best for:** Shopify merchants on a standard plan who need a recorded “I agree” gate before payment — for GDPR, an age gate, digital-goods withdrawal rules or chargeback defence — and who go to Advanced at $12.99 for the consent timestamp rath
+- **Best for:** Shopify merchants on a standard plan who need a recorded “I agree” gate before payment — for GDPR, an age gate, digital-goods withdrawal rules or chargeback defence — and who go to Advanced at $10.99 for the consent timestamp rath
 - **Full review:** https://aibuildermarketplace.com/b2b/tnc-review/
 
 ## Todoist (todoist.com)

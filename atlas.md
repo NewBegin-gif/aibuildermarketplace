@@ -1397,7 +1397,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/iconosquare-review/
 
 ## iContact (icontact.com)
-- **Verified pricing:** (re-verified 2026-08-17) No permanent free plan — a 30-day free trial, then paid tiers by contact count, with 15% off for paying yearly.
+- **Verified pricing:** (re-verified 2026-09-29, every contact band read on their own pricing page; previously verified 2026-08-17) No permanent free plan: a 30-day free trial, then from $9 a month for Standard at…
 - **Honest take:** Pricing feels a touch high for what you get, and the Standard plan's hard caps on automations and landing pages push growing teams to upgrade sooner than expected.
 - **Best for:** small businesses and nonprofits who want a simple, reliable email tool with strong deliverability and a real marketing advisor included on every paid plan
 - **Full review:** https://aibuildermarketplace.com/b2b/icontact-review/

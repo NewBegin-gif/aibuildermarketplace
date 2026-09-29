@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 482 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-29.
+All 484 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-29.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -985,12 +985,26 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'per_seat', 'ev': 'Emergency Notifications $2 per user per month.'}, {'f': 'usage_metered', 'ev': '(2026-08-29, read on their own pricing page and their platform page) Five products, each metered differently and all billed annually.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/envoy-review/
 
+## Essential Announcement Bar (essential-apps.com)
+- **Verified pricing:** (read 2026-09-29 on apps.shopify.com/essential-announcement-bar, on essential-apps.com/announcement-bar and in the vendor's help articles on bar types and on views) Four plans priced on mon…
+- **Honest take:** The bar the listing leads with is not on the free plan.
+- **Best for:** Shopify merchants who want a free, no-code top bar or rotating bar for shipping terms, offers and store notices, and who will pay $9.99 once they need scheduled flash-sale bars, cart-page bars or country targeting
+- **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days your bars are unpublished; views reset on the 1s…'}, {'f': 'free_tier', 'ev': 'What the free plan does give you is a static bar and a rotating bar that cycles several messages; one merchant who installed it expecting the moving …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/essential-announcement-bar-review/
+
 ## Essential Countdown Timer Bar (essential-apps.com)
 - **Verified pricing:** (read 2026-09-28 on apps.shopify.com/essential-countdown-timer, on essential-apps.com/countdown-timer and in the vendor's help article on timer views) Four plans priced on monthly timer vie…
 - **Honest take:** The free plan is smaller than it looks, because of what counts as a view.
 - **Best for:** Shopify merchants who run real, dated promotions, launches or shipping cut-offs and want a top-bar, product-page or cart countdown without code, starting on a free plan
 - **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days every published timer is unpublished until views…'}, {'f': 'free_tier', 'ev': 'The free plan is smaller than it looks, because of what counts as a view.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/essential-countdown-timer-bar-review/
+
+## Essential Free Shipping Bar (essential-apps.com)
+- **Verified pricing:** (read 2026-09-29 on apps.shopify.com/essential-order-value-booster, on essential-apps.com/free-shipping-bar and in the vendor's help articles on views and on setup) Four plans priced on mon…
+- **Honest take:** The cart page, where a free-shipping progress bar does most of its work, is not on the free plan and not on Starter either.
+- **Best for:** Shopify stores that already offer free shipping above a threshold and want a no-code progress bar on the top bar or product pages, and that will pay $14.99 once they want it in the cart with upsell products next to it
+- **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days the banners are unpublished until views reset on…'}, {'f': 'free_tier', 'ev': "Views are counted on every load of every widget, and the free plan's 1,000 a month is small for a bar that sits on every product page."}
+- **Full review:** https://aibuildermarketplace.com/b2b/essential-free-shipping-bar-review/
 
 ## Essential Loyalty (essential-apps.com)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/essential-loyalty-rewards-program) Four tiers, every amount unchanged since 22 August 2026, and the meter is still the whole decision: it counts loya…

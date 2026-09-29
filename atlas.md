@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 481 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-29.
+All 482 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-29.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -931,10 +931,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/ecomxray-review/
 
 ## eDesk (edesk.com)
-- **Verified pricing:** (re-verified 2026-08-17) Free plan to start; Essential $39 per agent/mo, Growth $89 (recommended), Professional $119, Enterprise custom — all billed annually, with monthly billing 20% highe…
+- **Verified pricing:** (re-verified 2026-09-29) No free plan: 'Start for free' opens a 14-day full-feature trial with no credit card.
 - **Honest take:** There are two meters, and the second one is easy to miss.
 - **Best for:** e-commerce and marketplace sellers who want one unified inbox across Amazon, eBay, Shopify and email — with order data and AI-assisted replies where support and revenue overlap
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17) Free plan to start; Essential $39 per agent/mo, Growth $89 (recommended), Professional $119, Enterprise custom — all billed …'}, {'f': 'usage_metered', 'ev': 'meter: unit · agent seats and resolved AI outcomes'}, {'f': 'addons_extra', 'ev': 'eDesk claims the agent can automate up to 65% of support across channels, so model the outcome fee against your ticket volume — at 1,000 resolved tic…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17) Free plan to start; Essential $39 per agent/mo, Growth $89 (recommended), Professional $119, Enterprise custom — all billed …'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Essential $39 per agent/mo, Growth $89, Professional $119 (the plan eDesk marks Most Popular), Enterprise custom — all billed annually.'}, {'f': 'usage_metered', 'ev': 'meter: unit · agent seats and resolved AI outcomes'}, {'f': 'addons_extra', 'ev': 'eDesk claims the agent can automate up to 65% of support across channels, so model the outcome fee against your ticket volume — at 1,000 resolved tic…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/edesk-review/
 
 ## ElevateForward (elevateforward.ai)
@@ -1183,6 +1183,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** anyone who wants to turn a prompt or notes into a good-looking presentation, doc or webpage draft in minutes
 - **Flags:** {'f': 'per_seat', 'ev': 'On the business side Team is €18 per seat a month (€216 a year) with 6,000 credits per seat, Business €35 (€420 a year) with 10,000 credits and SSO, …'}, {'f': 'usage_metered', 'ev': 'Served to us in euros from a Dutch address, so your own checkout may quote dollars) Free €0 with 400 one-time credits at signup and up to 10 slides p…'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as saving up to 25%.'}, {'f': 'free_tier', 'ev': "The free tier's watermark pushes you to paid quickly."}
 - **Full review:** https://aibuildermarketplace.com/b2b/gamma-review/
+
+## GCheck (gcheck.com)
+- **Verified pricing:** (read 2026-09-29 on gcheck.com/pricing-packages, including its FAQ) Three packages, each priced per background check, with no setup fees, no minimums and no long-term contracts.
+- **Honest take:** The pricing page reads like self-serve and is not.
+- **Best for:** US employers running a steady number of hires, especially in healthcare, nonprofits, education and staffing, who want published per-check prices with no setup fee or contract and are happy to open an account through GCheck's sales
+- **Flags:** {'f': 'usage_metered', 'ev': 'Everything else in the catalogue — drug tests (DOT, 5-panel and 10-panel), motor vehicle and CDL records, employment, education and reference verific…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/gcheck-review/
 
 ## Gelato (gelato.com)
 - **Verified pricing:** (re-read 2026-09-23 on gelato.com/subscription-plans in a browser session, every figure unchanged since 26 August; the site serves a bot challenge that our capture cannot pass, so there is …

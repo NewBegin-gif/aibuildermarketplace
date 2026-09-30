@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 484 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-29.
+All 484 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-30.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -26,10 +26,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/accessibe-review/
 
 ## ActiveCampaign (activecampaign.com)
-- **Verified pricing:** (re-verified 2026-08-17 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan, trial only.
+- **Verified pricing:** (re-verified 2026-08-17 and again 2026-09-29 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan, trial only.
 - **Honest take:** Pricing climbs with contact count and the add-ons (CRM, SMS, extra seats) stack up fast — the sticker Starter price is not what a serious automation setup actually costs.
 - **Best for:** businesses that want deep marketing automation and lifecycle email tied to a light CRM, and will actually use the automation depth
-- **Flags:** {'f': 'addons_extra', 'ev': 'CRM pipelines, SMS and extra users remain paid add-ons.'}, {'f': 'annual_lock', 'ev': "(re-verified 2026-08-17 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan…"}
+- **Flags:** {'f': 'addons_extra', 'ev': 'CRM pipelines, SMS and extra users remain paid add-ons.'}, {'f': 'annual_lock', 'ev': "(re-verified 2026-08-17 and again 2026-09-29 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contac…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/activecampaign-review/
 
 ## AdCreative.ai (adcreative.ai)
@@ -313,10 +313,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/barcodes-talk-review/
 
 ## Beautiful.ai (beautiful.ai)
-- **Verified pricing:** (re-verified 2026-09-02 on the vendor's own pricing page) Pro is $14.50/mo billed annually, up from $12 in our July and August 2026 captures ($45 for a one-off month); Team about $40/user/m…
+- **Verified pricing:** (re-verified 2026-09-02 on the vendor's own pricing page, amounts unchanged on 2026-09-29) Pro is $14.50/mo billed annually, up from $12 in our July and August 2026 captures ($45 for a one-…
 - **Honest take:** The smart-template engine is the feature and the fence: decks look polished with zero design skill precisely because the system constrains you, so pixel-perfect custom layouts and heavy brand exceptions fight …
 - **Best for:** founders, sales and small teams that want consistently good-looking decks fast, where design consistency matters more than pixel-level control
-- **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-09-02 on the vendor's own pricing page) Pro is $14.50/mo billed annually, up from $12 in our July and August 2026 captures ($45 for…"}
+- **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-09-02 on the vendor's own pricing page, amounts unchanged on 2026-09-29) Pro is $14.50/mo billed annually, up from $12 in our July …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/beautiful-ai-review/
 
 ## Beefree (beefree.io)
@@ -1061,7 +1061,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/fast-bundle-review/
 
 ## Fastmail (fastmail.com)
-- **Verified pricing:** (read 2026-08-26 on fastmail.com/pricing over a US connection, with their country selector on United States and the 12-month term chosen) Individual is $5 a month, or $60 for twelve months,…
+- **Verified pricing:** (read 2026-08-26 on fastmail.com/pricing over a US connection, with their country selector on United States and the 12-month term chosen; re-read 2026-09-29 from a Dutch connection, where t…
 - **Honest take:** You're paying for what the free giants monetize differently: no ads, no profiling, real support and standards-first email (JMAP/IMAP everywhere).
 - **Best for:** individuals and small businesses that want fast, private, ad-free email on their own domain with proper support and masked-email aliases
 - **Full review:** https://aibuildermarketplace.com/b2b/fastmail-review/
@@ -1074,7 +1074,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/fbtrack-review/
 
 ## Feedvisor (feedvisor.com)
-- **Verified pricing:** Feedvisor publishes no price, and we checked that again on 2026-09-03.
+- **Verified pricing:** Feedvisor publishes no price, and we checked that again on 2026-09-03 and 2026-09-29.
 - **Honest take:** The honest structure: the $100 tier is a limited on-ramp, and most of what Feedvisor is famous for (the algorithmic Buy-Box strategy that holds prices UP, ad management, analysts) lives behind the $1,500+ top …
 - **Best for:** mid-market and enterprise Amazon sellers with large catalogs where algorithmic repricing and ad optimization move real revenue
 - **Flags:** {'f': 'usage_metered', 'ev': 'One correction to what we wrote before: the sentence we attributed to Feedvisor, that pricing is hybrid and varies with catalogue size, ad spend and …'}
@@ -1122,10 +1122,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/flexiquiz-review/
 
 ## Flippa (flippa.com)
-- **Verified pricing:** (re-verified 2026-09-03 on their own pricing page, USD) Sellers pay an upfront listing fee plus a success fee when the business sells, and BOTH change with the asking-price band.
+- **Verified pricing:** (re-verified 2026-09-03 on their own pricing page, USD, and unchanged band by band on 2026-09-29) Sellers pay an upfront listing fee plus a success fee when the business sells, and BOTH cha…
 - **Honest take:** The real cost is the success fee, and it's a flat bracket rate on the whole sale price, not marginal — a mid-five-figure sale can hand over a four- to five-figure commission.
 - **Best for:** buyers and sellers of small-to-mid online businesses, SaaS, apps and domains who want the largest marketplace and are comfortable doing their own due diligence
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-03 on their own pricing page, USD) Sellers pay an upfront listing fee plus a success fee when the business sells, and BOTH chang…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-03 on their own pricing page, USD, and unchanged band by band on 2026-09-29) Sellers pay an upfront listing fee plus a success f…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/flippa-review/
 
 ## Flocksy (flocksy.com)
@@ -1192,10 +1192,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/fullenrich-review/
 
 ## Gamma (gamma.app)
-- **Verified pricing:** (re-verified 2026-08-26 in the browser, and unchanged from our 16 Aug reading; the page is client-rendered and serves a bot challenge that our capture cannot pass, so there is no dated scre…
+- **Verified pricing:** (re-verified 2026-09-29 in a rendered browser that got past the bot challenge: the individual plans are unchanged from our 16 and 26 August readings, the business side is not.
 - **Honest take:** The credit model means heavy generation eats your monthly allowance, and outputs still need a human polish for high-stakes decks — it's a brilliant first-draft engine, not a finished-deck button.
 - **Best for:** anyone who wants to turn a prompt or notes into a good-looking presentation, doc or webpage draft in minutes
-- **Flags:** {'f': 'per_seat', 'ev': 'On the business side Team is €18 per seat a month (€216 a year) with 6,000 credits per seat, Business €35 (€420 a year) with 10,000 credits and SSO, …'}, {'f': 'usage_metered', 'ev': 'Served to us in euros from a Dutch address, so your own checkout may quote dollars) Free €0 with 400 one-time credits at signup and up to 10 slides p…'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as saving up to 25%.'}, {'f': 'free_tier', 'ev': "The free tier's watermark pushes you to paid quickly."}
+- **Flags:** {'f': 'per_seat', 'ev': 'On the business side the page now lists only Business, at €35 per seat a month billed annually (€420 a year) with 10,000 credits per seat, shared wor…'}, {'f': 'usage_metered', 'ev': 'Served to us in euros from a Dutch address, so your own checkout may quote dollars) Free €0 with 400 one-time credits at signup and up to 10 slides p…'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as saving up to 25%, and unused credits roll over up to twice the monthly allowance.'}, {'f': 'free_tier', 'ev': "The free tier's watermark pushes you to paid quickly."}
 - **Full review:** https://aibuildermarketplace.com/b2b/gamma-review/
 
 ## GCheck (gcheck.com)
@@ -1369,10 +1369,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/hostinger-review/
 
 ## Housecall Pro (housecallpro.com)
-- **Verified pricing:** (re-verified 2026-09-04) Basic $59/month billed annually ($79 month-to-month, advertised as 'save $20/mo') for ONE user, with no GPS tracking and no QuickBooks Online sync; Essentials $149/…
+- **Verified pricing:** (re-verified 2026-09-29) Basic $59/month billed annually ($79 month-to-month, advertised as 'save $20/mo') for ONE user, with no GPS tracking and no QuickBooks Online sync; Essentials $149/…
 - **Honest take:** The Basic tier is a trap for real field teams — it omits GPS tracking and QuickBooks sync, so most businesses need Essentials or up.
 - **Best for:** home-service businesses (HVAC, plumbing, cleaning) that want scheduling, dispatch, invoicing and payments in one app
-- **Flags:** {'f': 'addons_extra', 'ev': 'Extra users beyond those counts are $100/month each on Essentials and $75/month each on MAX — a seat, not a small add-on.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/housecall-pro-review/
 
 ## HubSpot (hubspot.com)
@@ -1416,7 +1415,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/imgify-review/
 
 ## InboxAlly (inboxally.com)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Every amount unchanged and confirmed on the plan comparison table, which states 'Pricing in U…
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit, and unchanged on 2026-09-29) Every amount unchanged and confirmed on the plan comparison tabl…
 - **Honest take:** This is a premium, seed-list-based deliverability tool, and the price reflects it — Starter alone is well above casual warm-up apps, so it only makes sense if inbox placement is genuinely costing you real reve…
 - **Best for:** serious senders — email marketers and cold-outreach teams — whose deliverability problems are costing measurable revenue and who need active reputation repair
 - **Full review:** https://aibuildermarketplace.com/b2b/inboxally-review/
@@ -1776,10 +1775,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/momence-review/
 
 ## monday.com (monday.com)
-- **Verified pricing:** (read 2026-08-26 on monday.com/pricing over a US connection, at their default of 10 seats on yearly billing) Free covers two seats.
+- **Verified pricing:** (read 2026-08-26 on monday.com/pricing over a US connection, at their default of 10 seats on yearly billing; re-read 2026-09-29 in a rendered browser from a Dutch connection, where the page…
 - **Honest take:** The seat price is not the product price.
 - **Best for:** teams who want one visual system for projects and work, and who will actually use the automations and views that justify the per-seat price at Standard or above
-- **Flags:** {'f': 'per_seat', 'ev': 'Basic is $9 per seat a month, a total of $90; Standard $12, down from $14, for $120 instead of $140; Pro $19, down from $22, for $190 instead of $220.'}, {'f': 'usage_metered', 'ev': 'Yearly billing is marked as 18% off, and each paid tier carries its own monthly AI-credit allowance rather than selling AI separately.'}, {'f': 'addons_extra', 'ev': 'A sales team that wants the CRM is buying a second subscription on top of whatever Work Management costs, with a three-seat minimum of its own.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Basic is $9 per seat a month, a total of $90; Standard $12, down from $14, for $120 instead of $140; Pro $19, down from $22, for $190 instead of $220.'}, {'f': 'usage_metered', 'ev': '(read 2026-08-26 on monday.com/pricing over a US connection, at their default of 10 seats on yearly billing; re-read 2026-09-29 in a rendered browser…'}, {'f': 'addons_extra', 'ev': 'A sales team that wants the CRM is buying a second subscription on top of whatever Work Management costs, with a three-seat minimum of its own.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/monday-com-review/
 
 ## Moosend (moosend.com)
@@ -2008,7 +2007,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pdware-review/
 
 ## Pecan AI (pecan.ai)
-- **Verified pricing:** (read 2026-08-27 on pecan.ai/pricing) No public price at any tier.
+- **Verified pricing:** (read 2026-08-27 on pecan.ai/pricing, and unchanged on 2026-09-29: the same three quote-only tiers, batch and row meters, SSO split and FAQ) No public price at any tier.
 - **Honest take:** The pricing page argues instead of quoting.
 - **Best for:** data and marketing teams that want churn, LTV or demand predictions running against their own warehouse without hiring data scientists, and can work with an annual commitment quoted on a call
 - **Full review:** https://aibuildermarketplace.com/b2b/pecan-ai-review/
@@ -2706,10 +2705,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/storista-review/
 
 ## Storylane (storylane.io)
-- **Verified pricing:** (2026-08-01, read on their own pricing page) Free $0: 1 seat, 1 published demo live at a time, unlimited views.
+- **Verified pricing:** (2026-08-01, read on their own pricing page; the Demo Suite amounts were unchanged on 2026-09-29) Free $0: 1 seat, 1 published demo live at a time, unlimited views.
 - **Honest take:** The jump from Starter to Growth is $50 to $625 a month — twelve and a half times — and the free tier is capped at one live demo, so the moment you want a second demo published you are on the ladder.
 - **Best for:** sales and marketing teams who show a product before a call and want to know which prospects clicked what — the free tier is genuinely usable for one demo
-- **Flags:** {'f': 'free_tier', 'ev': '(2026-08-01, read on their own pricing page) Free $0: 1 seat, 1 published demo live at a time, unlimited views.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Their RepX AI sales-agent product is priced separately and was restructured by 2026-09-29: Growth from $2,000/month for up to 20,000 monthly visitors…'}, {'f': 'free_tier', 'ev': '(2026-08-01, read on their own pricing page; the Demo Suite amounts were unchanged on 2026-09-29) Free $0: 1 seat, 1 published demo live at a time, u…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/storylane-review/
 
 ## Streak (streak.com)
@@ -2733,10 +2732,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sunsama-review/
 
 ## SupaEasy (supaeasy.com)
-- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing) A free plan plus three paid monthly tiers, each with a 7-day trial.
+- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing, and unchanged when re-read on 2026-09-29) A free plan plus three paid monthly tiers, each with a 7-day trial.
 - **Honest take:** Two things the marketing glosses over.
 - **Best for:** Shopify merchants — especially non-Plus stores — who want custom discount, checkout, payment and shipping logic without hiring a developer, and above all those forced to migrate deprecated Shopify Scripts to Functions before the c
-- **Flags:** {'f': 'addons_extra', 'ev': "First, the 'free' plan is development-stores only, so any live use is paid, and the AI generator that headlines the app is not in Premium ($49) but i…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/
 
 ## Super (effectify.io)
@@ -3075,14 +3073,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/upsellplus-review/
 
 ## UptimeRobot (uptimerobot.com)
-- **Verified pricing:** (read 2026-08-26 on uptimerobot.com/pricing over a US connection) Free is $0.
+- **Verified pricing:** (read 2026-08-26 on uptimerobot.com/pricing over a US connection; re-read 2026-09-29 from a Dutch connection, where the page and its machine-readable pricing.md serve euro amounts identical…
 - **Honest take:** The famous free tier is real — but the paid ladder has quiet extras: extra login seats cost $15-19 per month EACH beyond the included ones, and SMS or voice-call alerts are pay-per-credit on every plan.
 - **Best for:** solo builders and small teams monitoring sites, ports and APIs at 60-second resolution with status pages — and honestly, the free 50-monitor tier covers most hobby stacks
-- **Flags:** {'f': 'usage_metered', 'ev': 'The famous free tier is real — but the paid ladder has quiet extras: extra login seats cost $15-19 per month EACH beyond the included ones, and SMS o…'}, {'f': 'free_tier', 'ev': '(read 2026-08-26 on uptimerobot.com/pricing over a US connection) Free is $0.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The famous free tier is real — but the paid ladder has quiet extras: extra login seats cost $15-19 per month EACH beyond the included ones, and SMS o…'}, {'f': 'free_tier', 'ev': 'The famous free tier is real — but the paid ladder has quiet extras: extra login seats cost $15-19 per month EACH beyond the included ones, and SMS o…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/uptimerobot-review/
 
 ## VEA (vea.ai)
-- **Verified pricing:** (re-verified 2026-09-02 on VEA's own pricing page) Four tiers now, per user per month, monthly against annual: $30 / $25, $50 / $40, $150 / $120 and $597 / $497.
+- **Verified pricing:** (re-verified 2026-09-29 on the pricing section of VEA's own site, vea.ai; amounts unchanged since 2026-09-02) Four tiers, per user per month, monthly against annual: Business Class $30 / $2…
 - **Honest take:** The pitch is unusually bold: an AI that learns your business the way a great employee would, finds the constraint keeping you stuck, and helps you solve it.
 - **Best for:** hands-on entrepreneurs and small-business owners buried in operational detail who want AI that learns their specific business and helps surface what's actually holding it back — explicitly not enterprise software
 - **Flags:** {'f': 'per_seat', 'ev': "That ambition is also the honest caveat — it's a young product making a big promise, its price ladder was rebuilt in August 2026 with a top tier at $…"}, {'f': 'annual_lock', 'ev': 'Annual billing saves roughly 17% to 20%.'}

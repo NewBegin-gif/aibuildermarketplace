@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 484 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-30.
+All 485 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-30.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1725,6 +1725,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small businesses that want to pay bills by bank transfer or card and get paid, starting free with no subscription
 - **Flags:** {'f': 'annual_lock', 'ev': 'The detail our earlier note missed: every paid plan adds $10 a month per additional user, or $8 on annual billing, so a three-person finance team on …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/melio-review/
+
+## Mera Work (mera.work)
+- **Verified pricing:** (read 2026-09-30 on mera.work/pricing, INR and USD tabs, and on mera.work/signup) One plan, priced per user, with every feature included: the page states there are no feature restrictions a…
+- **Honest take:** The price is low and the feature list is long; the catch sits in the data rather than the bill.
+- **Best for:** small and mid-sized teams, especially remote or hybrid ones doing computer-based work such as support, BPO, IT services or back office, that want time tracking, attendance and activity monitoring under one per-user price without p
+- **Flags:** {'f': 'per_seat', 'ev': 'In US dollars it is $4 per user a month billed monthly or $3 per user a month billed annually, which the page describes as saving $12 per user a year.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/mera-work-review/
 
 ## MigrationPro (migrationpro.io)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/migrationpro-shopify-migration-app and migrationpro.io/pricing/) The App Store listing still prints no number at all: one plan, free to install, with…

@@ -1,0 +1,173 @@
+{
+ "title": "Active Intelligence 3.0: Wavelength on a brand-new ActiveCampaign account (hands-on test)",
+ "run_date": "2026-09-30",
+ "publisher": "AIBuilder Marketplace",
+ "licence": "CC BY 4.0",
+ "page": "https://aibuildermarketplace.com/research/activecampaign-active-intelligence-new-account/",
+ "affiliate_relationship": {
+  "ActiveCampaign": "affiliate programme via PartnerStack, we may be paid; this page is also our entry in ActiveCampaign's Active Intelligence 3.0: Wavelength content contest (USD 125 if selected)"
+ },
+ "method": {
+  "account": "new ActiveCampaign account created 2026-09-30 on the 14-day free trial; ActiveCampaign help centre 'Free trial capabilities' (updated 2026-07-07): trial matches Pro plan features, includes Active Intelligence, 1 user, up to 100 email sends",
+  "signup_answers": {
+   "other_platform": "Not sure yet",
+   "channel": "Email Marketing",
+   "contacts": "< 500",
+   "company_size": "1",
+   "industry": "Media / Publishing"
+  },
+  "brand_source": "https://aibuildermarketplace.com/ (our own site)",
+  "ground_truth": "https://aibuildermarketplace.com/research/one-pitch-deck-four-ai-presentation-tools/ and its results.json, saved by plain HTTP before the test (60 distinct figures)",
+  "prompts": "written as a normal user; no extra rules",
+  "timing": "from sending a prompt until the result was complete; polled every 10 seconds, so approximate",
+  "sending": "nothing sent: a postal address is required before sending and none was added to the test account",
+  "browser": "Chrome, 1568x770 viewport; screenshots are full screens scaled to 1200 px"
+ },
+ "tasks": [
+  {
+   "id": "T01",
+   "task": "Ask about past campaigns on an empty account",
+   "time_utc": "2026-09-30T08:02Z",
+   "prompt": "Which of my past campaigns performed best, and what should my next email be about?",
+   "result": "pass",
+   "duration_s": 20,
+   "saw": "'It looks like there aren't any campaigns on record for the past 12 months, so I don't have performance data to compare just yet.' Then five general email ideas. No made-up results."
+  },
+  {
+   "id": "T02",
+   "task": "Build a Brand Kit from our website",
+   "time_utc": "2026-09-30T08:03:19Z",
+   "prompt": "Create a Brand Kit > https://aibuildermarketplace.com > Add brand",
+   "result": "partial",
+   "duration_s": 35,
+   "saw": "Voice and tone, mission and colours (#3b82f6, #93c5fd) match our site. Industry list includes Finance. No logo imported, yet a blue 'N' logo was stored as logo-light.png and appeared in every email it later wrote. Competitors picked: lindy.ai (a tool we review), missiveapp.com and getalai.com (not in our catalogue); none is a competitor of a review site. The kit only showed after reopening the Brand Kits page. Our server log: ActiveCampaign-SiteScraper/1.0 and a headless Chrome fetched / and /b2b/ (HTTP 200); a third client read robots.txt and three sitemaps."
+  },
+  {
+   "id": "T03",
+   "task": "Campaign from one of our test pages (run 1)",
+   "time_utc": "2026-09-30T08:08:05Z",
+   "prompt": "Create an email campaign for our subscribers announcing our new hands-on test: https://aibuildermarketplace.com/research/one-pitch-deck-four-ai-presentation-tools/",
+   "result": "pass",
+   "duration_s": 170,
+   "saw": "Subject 'One deck added 9 numbers'. Ten figures in the email (0, 1, 3, 9, 14, 15, 28, 2025, 2026, 250,000); all ten are on the source page and none was added. Button links to the right page; our affiliate disclosure carried over correctly. While writing, the chat said 'I ran into a problem reading [the URL] ... so I haven't built anything yet'."
+  },
+  {
+   "id": "T04",
+   "task": "Same prompt again, new conversation (run 2)",
+   "time_utc": "2026-09-30T08:13:19Z",
+   "prompt": "(identical to T03)",
+   "result": "partial",
+   "duration_s": 128,
+   "saw": "Different layout (four stat blocks) and subject 'One AI deck added 9 numbers'. All eight figures are on the source page. One sentence is not: 'Beautiful.ai and Prezi had chart and axis issues too.' Our test recorded Prezi's chart as drawn to scale, and the same email later says 'Prezi. Numbers and charts right'. The chat's summary listed stat blocks and a link to our methodology page that are not in the email. It did flag that a postal address is required before sending and that its suggested send time had passed."
+  },
+  {
+   "id": "T05",
+   "task": "Translate the run 2 campaign into Dutch",
+   "time_utc": "2026-09-30T08:16:58Z",
+   "prompt": "Translate this campaign into Dutch.",
+   "result": "partial",
+   "duration_s": 88,
+   "saw": "'Rewrote 21 blocks, added 1 block': the English campaign was replaced, not kept as a separate language version. Fluent Dutch, 250,000 written the Dutch way as 250.000. Errors: typo in the preheader (deelink for deellink), 'the ask' rendered as 'de vraag' (the question), 'Price-trapvlag' left half in English, a new footer link left in English ('Manage preferences'), and the unsupported Prezi sentence translated along with the rest. The chat said numbers were unchanged."
+  },
+  {
+   "id": "T06",
+   "task": "Generate a header image",
+   "time_utc": "2026-09-30T08:19:46Z",
+   "prompt": "Replace the N logo at the top with a generated header image: four slide decks side by side on a desk, one of them with its numbers circled in red. No text in the image.",
+   "result": "fail",
+   "duration_s": null,
+   "saw": "In the campaign chat: 'I couldn't use what I was given for that.' In a new chat: 'I'm not able to generate or create images directly', suggesting DALL-E, Midjourney or Adobe Firefly. The image generator in Email > Content (Content Manager) showed 'This may take up to 20 seconds...' and returned no image in four attempts between 08:24 and 08:54 UTC (waited 187, 131, 129 and 90 seconds), with brand personalisation on and off."
+  },
+  {
+   "id": "T07",
+   "task": "Build a welcome automation",
+   "time_utc": "2026-09-30T08:35:01Z",
+   "prompt": "Build an automation that welcomes new newsletter subscribers: a welcome email right away, then two follow-up emails a few days apart. Our readers are small-business owners choosing software.",
+   "result": "pass",
+   "duration_s": 63,
+   "saw": "Trigger 'Contact subscribes to list newsletter signup' (a list it created), email, wait 3 days, email, wait 3 days, email, end. No duplicate steps, every step editable, left inactive. Sender set to our address. Subject of email 1: 'Your 490+ honestly reviewed AI and business tools are here' (our homepage says 490 reviews; the plus sign is its own). Each email carries the warning 'An address is needed in order to send this email'."
+  },
+  {
+   "id": "T08",
+   "task": "Schedule a daily report",
+   "time_utc": "2026-09-30T08:39:04Z",
+   "prompt": "/schedule-task Every morning at 8:00, summarise in three bullet points anything new from the competitors in my Brand Kit and anything unusual in my account.",
+   "result": "pending",
+   "duration_s": 40,
+   "saw": "First attempt sent only the /schedule-task tag and returned 'A network error occurred'. Second attempt: task 'Daily competitor and account summary', daily 08:00 Europe/Amsterdam, report emailed to us. Its own task text reads 'review g2.com, capterra.com, trustradius.com for Brand Kit mentions', which is not quite what we asked. 'Run now to preview' had not loaded after 288 seconds. Activated; first run 2026-10-01 08:00 Amsterdam."
+  },
+  {
+   "id": "T09",
+   "task": "Compare the account with industry benchmarks",
+   "time_utc": "2026-09-30T08:45:53Z",
+   "prompt": "How does my account compare with the benchmarks for my industry? / Yes, show me the benchmarks for my industry, and tell me where the numbers come from.",
+   "result": "pass",
+   "duration_s": 40,
+   "saw": "Zero sends, so nothing to compare, and it said so. It used the industry 'Computers, Electronics & Technology' from the Brand Kit, not the 'Media / Publishing' we chose at sign-up. The benchmark lookup returned no industry-specific figures; it showed general ranges from two ActiveCampaign blog posts (open rate 20-25%, click-through 2-5%, 3-5% for B2B/SaaS) and wrote that it would not invent the rest."
+  },
+  {
+   "id": "T10",
+   "task": "Automation health check",
+   "time_utc": "2026-09-30T08:49:42Z",
+   "prompt": "Check the health of my automations. Is anything misconfigured or likely to fail?",
+   "result": "partial",
+   "duration_s": 50,
+   "saw": "Flagged that the automation is inactive and has had no contacts. Did not flag that all three emails still need a postal address, or that no form or import feeds the list it created. Called multi-entry 'appropriate for a welcome series'."
+  },
+  {
+   "id": "X01",
+   "task": "AI Actions Library in an automation",
+   "time_utc": "2026-09-30T08:47Z",
+   "prompt": "(automation builder > Add an action > AI Actions Library)",
+   "result": "not_in_trial",
+   "duration_s": null,
+   "saw": "'Upgrade to use AI Actions. AI Actions require Activities to use. Get started by upgrading your account, then adding Activities to your plan.' Summarize, Analyze, Translate, Classify intent, Determine sentiment and Build your own action all carry the upgrade mark."
+  }
+ ],
+ "ground_truth_check": {
+  "run_1": {
+   "figures_in_email": [
+    "0",
+    "1",
+    "3",
+    "9",
+    "14",
+    "15",
+    "28",
+    "2025",
+    "2026",
+    "250,000"
+   ],
+   "not_on_source_page": [],
+   "unsupported_sentences": []
+  },
+  "run_2": {
+   "figures_in_email": [
+    "0",
+    "1",
+    "3",
+    "9",
+    "15",
+    "28",
+    "2026",
+    "250,000"
+   ],
+   "not_on_source_page": [],
+   "unsupported_sentences": [
+    "Beautiful.ai and Prezi had chart and axis issues too. (source test: Prezi C05 pass, 'bar chart, measured to scale')"
+   ]
+  }
+ },
+ "not_covered": [
+  "deliverability and real sends",
+  "content performance with send history",
+  "Starter and Plus plan limits",
+  "SMS, WhatsApp",
+  "connectors, including the ActiveCampaign connector for Claude and ChatGPT",
+  "repeat runs beyond the campaign prompt"
+ ],
+ "after_the_test": {
+  "scheduled_task_first_run": "due 2026-10-01 08:00 Europe/Amsterdam; to be added",
+  "image_generator_retry": "planned before the trial ends on 2026-10-14"
+ }
+}

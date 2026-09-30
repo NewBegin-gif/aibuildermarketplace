@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 485 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-30.
+All 487 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-30.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1013,6 +1013,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Free covers up to 250 of those and is unusually complete: the point program, VIP tiers, a referral program, twelve-plus ways to earn points, product,…'}, {'f': 'free_tier', 'ev': "The free plan advertises an 'Advanced loyalty point program' while Starter at $10 advertises a 'Free loyalty point program', which read literally mea…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/essential-loyalty-review/
 
+## Essential Trust Badges (essential-apps.com)
+- **Verified pricing:** (read 2026-09-30 on apps.shopify.com/essential-icon-badge-banners, on essential-apps.com/trust-badges and in the vendor's help articles on views, cart placement and badges not showing) Four…
+- **Honest take:** The free plan is generous on views and tight on badges.
+- **Best for:** Shopify merchants who want payment icons, feature icons and guarantee or shipping badges under the add-to-cart button without code, starting free, and who will pay $9.99 once they need badges in the cart, per-country badges or tra
+- **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days the badges are unpublished until views reset on …'}, {'f': 'free_tier', 'ev': 'The free plan is generous on views and tight on badges.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/essential-trust-badges-review/
+
 ## Evey Events (evey.io)
 - **Verified pricing:** (re-verified 8 September 2026 on apps.shopify.com/event-tickets; every figure unchanged since 1 September 2026) Four tiers, and every one of them charges twice: a monthly fee and a fee per …
 - **Honest take:** Nobody gets caught by the monthly fee here; they get caught by the per-ticket one.
@@ -1558,6 +1565,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** outbound sales teams living in their CRM that want a serious power dialer with local presence, SMS and automation
 - **Flags:** {'f': 'per_seat', 'ev': "The plan cards claim unlimited US/Canada minutes while the FAQ published in the page's own structured data prices unlimited US and Canada minutes at …"}, {'f': 'addons_extra', 'ev': 'There is no PowerDialer on Professional, one line on Single-Line, and up to four simultaneous lines on Multi-Line — also the only tier offering AI hu…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/kixie-review/
+
+## Koala Bundles (profitkoala.com)
+- **Verified pricing:** (read 2026-09-30 on apps.shopify.com/profitkoala-upsell-bundle and in the vendor's billing articles at koala-bundles.crisp.help) Priced on the revenue its offers bring in, not on features: …
+- **Honest take:** The meter is revenue, and it counts more of it than you might expect.
+- **Best for:** Shopify merchants who want quantity breaks, multi-product bundles, cart volume discounts, BOGO offers and one-click post-purchase upsells in one app, with every feature on every plan and a price that stays small while bundle sales
+- **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage charge; instead the store owner gets an email at 80% and at 100%, and if nobody upgrades within 24 hours the offers are paused un…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/koala-bundles-review/
 
 ## Koongo (koongo.com)
 - **Verified pricing:** (read 2026-08-23 on apps.shopify.com/koongo, listed as “Koongo: Sell on Marketplaces”, and on koongo.com/pricing) Four tiers on the listing, separated by update frequency rather than by cap…

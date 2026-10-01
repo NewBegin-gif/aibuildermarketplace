@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 487 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-09-30.
+All 488 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-01.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -75,7 +75,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/agentnest-review/
 
 ## AhaSlides (ahaslides.com)
-- **Verified pricing:** (re-verified 2026-09-06) AhaSlides prices regionally, so the currency and the amount depend on where you buy from; the figures below are the reading from a Netherlands location on 6 Septemb…
+- **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30) AhaSlides prices regionally, so the currency and the amount depend on where you buy from; the figures below are the reading from a Netherlands …
 - **Honest take:** AhaSlides runs regional pricing: the number on the pricing page depends on where you browse from — so any review quoting one price (including ours) may not match yours.
 - **Best for:** educators, trainers and event hosts running interactive sessions — polls, quizzes, word clouds and live Q&A — with audiences up to 50 free
 - **Flags:** {'f': 'annual_lock', 'ev': "The advertised savings assume annual commitment, and the free tier's five-quiz-slide cap nudges real quiz use toward paid."}, {'f': 'free_tier', 'ev': "The advertised savings assume annual commitment, and the free tier's five-quiz-slide cap nudges real quiz use toward paid."}
@@ -500,10 +500,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bugherd-review/
 
 ## Buzz.ai (buzz.ai)
-- **Verified pricing:** (price re-verified 2026-09-05) Teams: Core is $79 per seat a month with 500 credits a month, AI Employee $695 per seat a month with 5,000 credits; both are billed monthly and show a $0 setu…
+- **Verified pricing:** (price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a month, AI Employee $695 per seat a month…
 - **Honest take:** Two meters run at once: seats AND credits — the seat price includes a credit allowance (500 a month on Core, 5,000 on AI Employee, read 5 September 2026), and real outbound volume means credit packages on top,…
 - **Best for:** GTM teams that want AI to run outbound end-to-end — prompt-driven prospecting of intent-ready buyers, multichannel sequences and meeting booking without adding SDR headcount
-- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-05) Teams: Core is $79 per seat a month with 500 credits a month, AI Employee $695 per seat a month with 5,000 credits; bo…'}, {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-05) Teams: Core is $79 per seat a month with 500 credits a month, AI Employee $695 per seat a month with 5,000 credits; bo…'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-05) Teams: Core is $79 per seat a month with 500 credits a month, AI Employee $695 per seat a month with 5,000 credits; bo…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}, {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/buzz-ai-review/
 
 ## Bybit (bybit.com)
@@ -575,7 +575,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/
 
 ## Checkr (checkr.com)
-- **Verified pricing:** (re-verified 2026-08-17) Pay-as-you-go per report, no subscription: Basic $29.99, Essential $59.99 and Complete $94.99 per report, with Enterprise quote-only.
+- **Verified pricing:** (re-verified 2026-08-17 and again 2026-09-30) Pay-as-you-go per report, no subscription: Basic $29.99, Essential $59.99 and Complete $94.99 per report, with Enterprise quote-only.
 - **Honest take:** The headline per-check price is rarely what you actually pay — passthrough fees vary wildly by county and search type, so budget for the effective cost, not the advertised one.
 - **Best for:** companies hiring hourly or gig workers at volume that need fast, API-driven, compliant background checks
 - **Flags:** {'f': 'addons_extra', 'ev': 'Tenant screening is priced separately at $24.99, $34.99 and $44.99 per report, and personal checks start from $49.99.'}
@@ -617,10 +617,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clay-review/
 
 ## ClickUp (clickup.com)
-- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page with both billing tabs open) A Free Forever plan with unlimited tasks but 60MB of storage; Unlimited $7 and Business $12 per user/mon…
+- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page with both billing tabs open; every amount unchanged on 2026-09-30) A Free Forever plan with unlimited tasks but 60MB of storage; Unli…
 - **Honest take:** The everything-app breadth is also the downside — it's feature-dense with a real learning curve, and teams can drown in options.
 - **Best for:** teams that want one highly customizable app for tasks, docs, goals and reporting and will invest in setting it up
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-13, read on their own pricing page with both billing tabs open) A Free Forever plan with unlimited tasks but 60MB of storage; Un…'}, {'f': 'addons_extra', 'ev': 'AI is priced on top of the plan: Brain AI $9 and Everything AI $28 per user/month.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-13, read on their own pricing page with both billing tabs open) A Free Forever plan with unlimited tasks but 60MB of storage; Un…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-13, read on their own pricing page with both billing tabs open; every amount unchanged on 2026-09-30) A Free Forever plan with u…'}, {'f': 'usage_metered', 'ev': 'On 2026-09-30 the AI section also listed what the AI plans include: Brain AI adds 1,500 AI Super Credits per user a month and Everything AI 5,000, sh…'}, {'f': 'addons_extra', 'ev': 'AI is priced on top of the plan: Brain AI $9 and Everything AI $28 per user/month.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-13, read on their own pricing page with both billing tabs open; every amount unchanged on 2026-09-30) A Free Forever plan with u…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/clickup-review/
 
 ## Clonable (clonable.net)
@@ -1505,7 +1505,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/jubilee-review/
 
 ## Kartra (kartra.com)
-- **Verified pricing:** (re-verified 2026-09-05 on their own pricing page) Four tiers, monthly against yearly: Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Professional $549 / $429, with yearly…
+- **Verified pricing:** (re-verified 2026-09-05 and again 2026-09-30 on their own pricing page) Four tiers, monthly against yearly: Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Professional $54…
 - **Honest take:** If your core need is polished course delivery, Kajabi's creator features are stronger; Kartra wins on all-in-one breadth, not course depth.
 - **Best for:** creators and coaches who want funnels, email, checkout, memberships and scheduling under one roof instead of five subscriptions
 - **Full review:** https://aibuildermarketplace.com/b2b/kartra-review/
@@ -1630,7 +1630,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/leadpages-review/
 
 ## LearnWorlds (learnworlds.com)
-- **Verified pricing:** (re-verified 2026-09-05 on their own pricing page, which now carries the browser title New Pricing 2026) Starter $29/mo (or $24 annually) but with a $5 fee per paid enrollment — still the s…
+- **Verified pricing:** (re-verified 2026-09-05 and again 2026-09-30 on their own pricing page) Starter $29/mo (or $24 annually) but with a $5 fee per paid enrollment — still the single most important number in th…
 - **Honest take:** The detail most people miss is Starter's $5-per-paid-enrollment fee — at any real sales volume it quietly makes Starter more expensive than the flat Pro Trainer plan, so the "cheap" tier often isn't.
 - **Best for:** course creators and training businesses that want a branded school with interactive video, assessments, certificates and a built-in checkout
 - **Flags:** {'f': 'usage_metered', 'ev': 'Limits published alongside: 1,000 / 2,000 / 2,000 monthly active learners, 1 / 5 / 25 admins, 300 / 500 / 1,000 AI credits a month, email support 24/…'}, {'f': 'addons_extra', 'ev': 'A branded mobile app is still a separate add-on, but the page now lists it as having multiple price options and prints no amount, so the roughly $149…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% and the trial is 30 days.'}
@@ -1665,7 +1665,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/lindy-ai-review/
 
 ## Livestorm (livestorm.com)
-- **Verified pricing:** (re-verified 2026-09-05 on their own pricing page) There is still no plan price.
+- **Verified pricing:** (re-verified 2026-09-05 and again 2026-09-30 on their own pricing page) There is still no plan price.
 - **Honest take:** This is a bet on attendance that you place a year in advance.
 - **Best for:** teams running a predictable programme of webinars to a known audience size, where buying a year of attendance up front is cheaper than a per-seat platform
 - **Flags:** {'f': 'usage_metered', 'ev': 'Pro is sold as attendee credits, bought as a yearly pack up front, with sessions up to 4 hours and unlimited team members; Enterprise is quote-only w…'}
@@ -1803,7 +1803,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/monday-com-review/
 
 ## Moosend (moosend.com)
-- **Verified pricing:** (re-verified 2026-09-06) A 30-day free trial with no credit card.
+- **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30) A 30-day free trial with no credit card.
 - **Honest take:** The friendly $7-9 headline is the entry rate at the smallest list size (500 contacts), and the ladder above it does not fall smoothly: paid annually, 8,000 contacts costs $51 a month while 10,000 costs $70, so…
 - **Best for:** small businesses and marketers who want affordable email marketing and automation with a low entry price, a real free trial and a clean drag-and-drop builder
 - **Flags:** {'f': 'usage_metered', 'ev': 'Instead of a subscription you can buy email credits outright with no expiry: 350,000 for $350, 500,000 for $500, 750,000 for $750 and 1,000,000 for $…'}, {'f': 'addons_extra', 'ev': 'Above Pro the page shows Moosend+ (a custom plan assembled from add-ons: dedicated IPs, transactional emails, audience discovery, custom dashboards, …'}
@@ -1947,7 +1947,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/optizen-review/
 
 ## Outgrow (outgrow.co)
-- **Verified pricing:** (re-verified 2026-09-06 on the vendor's own pricing page) Freelancer Limited $22/month or $14 annually for 5 content pieces, 5 content types and 250 leads a month; Freelancer Pro $45/$25 fo…
+- **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30 on the vendor's own pricing page) Freelancer Limited $22/month or $14 annually for 5 content pieces, 5 content types and 250 leads a month; Free…
 - **Honest take:** Two meters at once: content types and pieces gate the lower tiers, and monthly LEAD limits gate the upside.
 - **Best for:** marketers who want quizzes, calculators and assessments that earn the lead by giving genuine value — with logic, integrations and templates handled
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing is advertised as saving up to 44%.'}, {'f': 'free_tier', 'ev': "Three tiers our earlier reading missed sit alongside these: a free Forms/Surveys plan at $0 with 100 leads a month, Startup Basic at $55/$35 ('only n…"}
@@ -1975,10 +1975,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pagepulse-review/
 
 ## Pangram (pangram.com)
-- **Verified pricing:** (re-verified 6 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Free: $0, no payment method, up to 2,000 words a day (twenty chec…
+- **Verified pricing:** (re-verified 6 September and again 30 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Free: $0, no payment method, up to 2,000 w…
 - **Honest take:** The unavoidable honest limit of every AI detector, including accurate ones: it is never infallible.
 - **Best for:** educators, publishers and platforms that need a low-false-positive signal on whether text is AI-generated, at web-app or API scale
-- **Flags:** {'f': 'per_seat', 'ev': 'Team $20 per seat/mo or $15 annually, from 2 seats, 300,000 words per seat.'}, {'f': 'usage_metered', 'ev': 'Pair it with human judgment and the credit meter with your actual volume.'}, {'f': 'free_tier', 'ev': '(re-verified 6 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Free: $0, no payment meth…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Team $20 per seat/mo or $15 annually, from 2 seats, 300,000 words per seat.'}, {'f': 'usage_metered', 'ev': 'Pair it with human judgment and the credit meter with your actual volume.'}, {'f': 'free_tier', 'ev': '(re-verified 6 September and again 30 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Fr…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pangram-review/
 
 ## Papaya Global (papayaglobal.com)
@@ -2008,10 +2008,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/partnerstack-review/
 
 ## Passpack (passpack.com)
-- **Verified pricing:** (re-verified 6 September 2026 on passpack.com/plans/ and passpack.com/llms.txt, which agree; unchanged since our 25 August, 2 September and 3 September readings) Teams is $20 per user per y…
+- **Verified pricing:** (re-verified 30 September 2026 on passpack.com/plans/ and passpack.com/llms.txt, which agree; unchanged since our 25 August, 2, 3 and 6 September readings) Teams is $20 per user per year, p…
 - **Honest take:** The honest trade-off is maturity, not security.
 - **Best for:** teams under twenty people who want zero-knowledge encryption and shared vaults at about $1.67 a seat a month, and can live with a first-generation mobile app and a plainer interface
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 6 September 2026 on passpack.com/plans/ and passpack.com/llms.txt, which agree; unchanged since our 25 August, 2 September and 3 Septemb…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 30 September 2026 on passpack.com/plans/ and passpack.com/llms.txt, which agree; unchanged since our 25 August, 2, 3 and 6 September rea…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/passpack-review/
 
 ## Payoneer (payoneer.com)
@@ -2146,7 +2146,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** Process Street publishes no prices.
 - **Honest take:** Pricing is opaque and jumps steeply from Startup to Pro, with seat minimums that push the real cost above the headline per-member rate — you'll need a sales call to price it.
 - **Best for:** operations-driven teams that run recurring, checklist-based processes and want them tracked and auditable
-- **Flags:** {'f': 'quote_only', 'ev': 'Re-verified 2026-08-17: every tier on their pricing page, Startup included, shows Contact sales rather than a figure, and our monthly captures from J…'}, {'f': 'per_seat', 'ev': 'Figures quoted elsewhere — roughly $100 a month for Startup, the $1,500 range for Pro, per-member rates around $12.50 to $15 — do not come from Proce…'}
+- **Flags:** {'f': 'quote_only', 'ev': 'Re-verified 2026-08-17 and again 2026-09-30: every tier on their pricing page, Startup included, shows Contact sales rather than a figure, and our mo…'}, {'f': 'per_seat', 'ev': 'Figures quoted elsewhere — roughly $100 a month for Startup, the $1,500 range for Pro, per-member rates around $12.50 to $15 — do not come from Proce…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/process-street-review/
 
 ## ProtectMyOrder (protectmyorder.com)
@@ -2383,6 +2383,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': '(2026-08-08, re-verified 10 September 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plan…'}, {'f': 'addons_extra', 'ev': 'Both plans carry a credits dropdown that raises the allowance for a fixed add-on.'}, {'f': 'annual_lock', 'ev': 'Annual billing is shown as two months free.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/salesmessage-review/
 
+## SalesTarget.ai (salestarget.ai)
+- **Verified pricing:** (read 2026-10-01 on salestarget.ai/pricing, tab by tab, and in the help centre at help.salestarget.ai) Sold either as one bundle or module by module, priced per organisation rather than per…
+- **Honest take:** The credit numbers on the plan cards shrink once you read the help centre's price list.
+- **Best for:** small sales teams and agencies that want a B2B lead database, cold email with unlimited inboxes and warm-up, LinkedIn automation and a basic CRM under one login, priced per organisation with 3 seats included rather than per seat
+- **Flags:** {'f': 'usage_metered', 'ev': "All In One, the default tab with a 'Super Saver' badge: Growth $169 a month (1 LinkedIn automation, 5,000 emails a month, 2,000 enrichment credits), …"}
+- **Full review:** https://aibuildermarketplace.com/b2b/salestarget-ai-review/
+
 ## SaneBox (sanebox.com)
 - **Verified pricing:** (amounts unchanged since 18 Aug 2026; re-verified 24 September 2026 against the plan data that sanebox.com/pricing embeds for its client-side price cards) Three plans, and the advertised pr…
 - **Honest take:** It works with any email provider, which is a genuine advantage over the built-in tools in Gmail and Outlook.
@@ -2403,10 +2410,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/scrolly-review/
 
 ## Seamless.ai (seamless.ai)
-- **Verified pricing:** (read 2026-09-07 on seamless.ai/pricing and seamless.ai/llms.txt) Still no published amount above the free plan, in a fourth reading.
+- **Verified pricing:** (read 2026-09-30 on seamless.ai/pricing, seamless.ai/pricing-inquiry, Seamless's help centre and seamless.ai/llms.txt) The pricing page no longer shows plans: seamless.ai/pricing now forwar…
 - **Honest take:** Data accuracy is the recurring complaint — independent tests put email deliverability around 74% (20–30% bounce) versus ZoomInfo's ~2–3%, so real cost per usable contact climbs.
 - **Best for:** teams that want a huge real-time contact database and AI list-building for less than ZoomInfo, and can tolerate cleaning the data
-- **Flags:** {'f': 'quote_only', 'ev': "Pro: 'Per User', unlimited exports, annual credit packages, '1 Credits = Phone + Email', Contact sales."}, {'f': 'per_seat', 'ev': "Third-party guides report an entry around $147 a month for roughly 250 credits and up to $150-500 per user a month; those are not Seamless's numbers,…"}, {'f': 'usage_metered', 'ev': 'Free: 1 user, 50 credits.'}, {'f': 'addons_extra', 'ev': 'Four capabilities are marked Add-on in every column, Enterprise included: AI Assistant, Data Enrichment, Autopilot and Buyer Intent Data.'}, {'f': 'free_tier', 'ev': 'Free: 1 user, 50 credits.'}
+- **Flags:** {'f': 'usage_metered', 'ev': "(read 2026-09-30 on seamless.ai/pricing, seamless.ai/pricing-inquiry, Seamless's help centre and seamless.ai/llms.txt) The pricing page no longer sho…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/seamless-ai-review/
 
 ## Section Library (sectionlibrary.com)
@@ -2459,7 +2466,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seller-snap-review/
 
 ## Sellfy (sellfy.com)
-- **Verified pricing:** (re-verified 2026-09-07) Starter is $29/mo billed monthly or $22/mo billed yearly, for up to $10k of sales a year; Business $79 or $59, up to $50k; Premium $159 or $119, up to $200k; above …
+- **Verified pricing:** (re-verified 2026-09-07 and again 2026-09-30) Starter is $29/mo billed monthly or $22/mo billed yearly, for up to $10k of sales a year; Business $79 or $59, up to $50k; Premium $159 or $119…
 - **Honest take:** The honest mechanic is the revenue ladder: plans cap by your ANNUAL SALES, so success moves you up.
 - **Best for:** creators selling digital products, subscriptions and print-on-demand who want a simple store with zero platform commission
 - **Flags:** {'f': 'usage_metered', 'ev': "The revenue limits are soft: Sellfy's own pricing.md says the store is never suspended and you are never forced to upgrade, while the page's FAQ says…"}

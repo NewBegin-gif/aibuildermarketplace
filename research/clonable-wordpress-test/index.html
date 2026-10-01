@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}/*cmv2*/gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});gtag('consent','default',{analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});gtag('js',new Date());var s=document.createElement('script');s.src='/ga4-gate.js';s.defer=true;document.head.appendChild(s);</script>
+<title>Clonable on WordPress, Tested: Clone, Sync and the WPML Question</title>
+<meta name="description" content="We ran Clonable on a WordPress test site: a German clone in under five minutes, an edit synced in under fifteen seconds, and no translated copies added to WordPress.">
+<link rel="canonical" href="https://aibuildermarketplace.com/research/clonable-wordpress-test/">
+<meta property="og:title" content="Clonable on WordPress, Tested: Clone, Sync and the WPML Question"><meta property="og:description" content="We ran Clonable on a WordPress test site: a German clone in under five minutes, an edit synced in under fifteen seconds, and no translated copies added to WordPress.">
+<meta property="og:image" content="https://aibuildermarketplace.com/research/clonable-wordpress-test/img/clone-page-german.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Clonable on WordPress, Tested: Clone, Sync and the WPML Question", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Daniel Haket", "@id": "https://aibuildermarketplace.com/about/#daan"}, "publisher": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "about": [{"@type": "SoftwareApplication", "name": "Clonable"}, {"@type": "SoftwareApplication", "name": "WordPress"}]}</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--bg:#0a0a0a;--card:#141414;--border:#262626;--text:#fafafa;--text2:#a3a3a3;--accent:#3b82f6;--amber:#f59e0b;--ok:#22c55e;--no:#fb7185}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.75}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.nav{border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);z-index:50}
+.nav-in{max-width:1180px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav a{color:var(--text2);font-size:.85rem;font-weight:600;margin-left:16px}
+.logo-t{font-weight:800;color:var(--text)}.logo-t em{font-style:normal;background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.wrap{max-width:900px;margin:0 auto;padding:14px 24px 70px}
+h1{font-size:2.1rem;line-height:1.2;margin:18px 0 10px;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:1.25rem;margin:40px 0 12px;text-wrap:balance}
+h3{font-size:1.04rem;margin:26px 0 4px}
+.lede{font-size:1.08rem;color:var(--text2)}
+.pill{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(59,130,246,.3);border-radius:999px;padding:4px 11px}
+.cite{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:16px 20px;margin:20px 0;font-size:1.02rem}
+.cite small{display:block;color:var(--text2);font-size:.8rem;margin-top:8px}
+.big{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0}
+.big div{flex:1 1 160px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.big b{display:block;font-size:1.9rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.big span{color:var(--text2);font-size:.86rem}
+.tw{overflow-x:auto;margin:10px 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{padding:9px 10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+th{color:var(--text2);font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+td.t{color:var(--text2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.r{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.03em;border:1px solid;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.ok{color:var(--ok);border-color:rgba(34,197,94,.4)}
+.pa{color:var(--amber);border-color:rgba(245,158,11,.45)}
+.no{color:var(--no);border-color:rgba(251,113,133,.45)}
+.nt{color:var(--text2);border-color:var(--border)}
+.fx{display:block;font-size:.74rem;color:var(--text2);margin-top:3px}
+.note{border-left:3px solid var(--amber);padding:2px 0 2px 14px;margin:18px 0;color:var(--text2)}
+.disc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:20px 0;font-size:.93rem;color:var(--text2)}
+.disc b{color:var(--text)}
+pre{background:#101010;border:1px solid var(--border);border-radius:12px;padding:16px 18px;overflow-x:auto;font-size:.82rem;line-height:1.6;white-space:pre-wrap}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+.card h3{margin-top:0}
+.card p{margin:.4em 0;color:var(--text2);font-size:.92rem}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto;background:#fff}
+.shots figcaption{padding:10px 14px;font-size:.84rem;color:var(--text2);line-height:1.55}
+.shots figcaption b{color:var(--text)}
+ul.tight{padding-left:20px}ul.tight li{margin:6px 0}
+footer{border-top:1px solid var(--border);margin-top:48px;padding:22px 24px;color:var(--text2);font-size:.85rem;text-align:center}
+.shots img{background:#0a0a14}
+</style></head>
+<body><nav class="snav" id="nav" aria-label="Main"><style>
+:root{--snav-h:56px}
+nav.snav{display:block;position:sticky;top:0;left:auto;right:auto;z-index:1000;margin:0;padding:0;height:auto;border:0;width:auto;
+ max-width:none;transform:none;box-shadow:none;
+ background:rgba(2,6,23,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+ border-bottom:1px solid rgba(148,163,184,.16);font:500 .9rem/1.2 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+ text-align:left;color:#e2e8f0}
+nav.snav *{box-sizing:border-box}
+nav.snav .snav-in{max-width:1180px;margin:0 auto;padding:0 20px;height:var(--snav-h);display:flex;align-items:center;gap:12px}
+nav.snav a{text-decoration:none}
+nav.snav button,nav.snav a{margin:0;line-height:1.2;height:auto;min-height:0;box-shadow:none;text-transform:none;
+ letter-spacing:normal;vertical-align:middle;width:auto}
+nav.snav li{margin:0;padding:0;list-style:none}
+nav.snav .snav-merk{display:flex;align-items:center;gap:9px;color:#f8fafc;font-weight:800;font-size:1.05rem;
+ letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+nav.snav .snav-merk i{width:10px;height:10px;border-radius:3px;flex:0 0 10px;background:linear-gradient(135deg,#818cf8,#34d399)}
+nav.snav .snav-merk em{font-style:normal;color:#a5b4fc}
+nav.snav .snav-links{display:flex;align-items:center;gap:2px;margin-left:auto;list-style:none;padding:0;margin-top:0;margin-bottom:0}
+nav.snav .snav-links a,nav.snav .snav-meer>button{color:#cbd5e1;padding:8px 11px;border-radius:8px;white-space:nowrap;
+ background:none;border:0;font:inherit;cursor:pointer;display:block}
+nav.snav .snav-links a:hover,nav.snav .snav-meer>button:hover{color:#fff;background:rgba(255,255,255,.07)}
+nav.snav .nu>a,nav.snav a.nu,nav.snav .snav-meer.nu>button{color:#fff;background:rgba(129,140,248,.16)}
+nav.snav .snav-meer{position:relative}
+nav.snav .snav-meer>button::after{content:"";display:inline-block;margin-left:6px;border:4px solid transparent;
+ border-top-color:currentColor;vertical-align:-2px}
+nav.snav .snav-meer-lijst{position:absolute;right:0;top:calc(100% + 6px);min-width:220px;list-style:none;margin:0;padding:6px;
+ background:#0f172a;border:1px solid rgba(148,163,184,.2);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+nav.snav .snav-meer-lijst[hidden]{display:none}
+nav.snav .snav-meer-lijst a{padding:9px 12px}
+nav.snav .snav-cta{flex:0 0 auto;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-weight:700;
+ padding:8px 14px;border-radius:9px;white-space:nowrap}
+nav.snav .snav-cta:hover{filter:brightness(1.08)}
+nav.snav .snav-menu{display:none;flex:0 0 auto;background:none;border:1px solid rgba(148,163,184,.3);color:#e2e8f0;
+ border-radius:9px;padding:7px 11px;font:inherit;font-weight:600;cursor:pointer}
+nav.snav a:focus-visible,nav.snav button:focus-visible{outline:2px solid #a5b4fc;outline-offset:2px}
+@media(max-width:900px){
+ nav.snav .snav-in{padding:0 12px;gap:8px}
+ nav.snav .snav-merk{font-size:.98rem}
+ nav.snav .snav-menu{display:block}
+ nav.snav .snav-cta{margin-left:auto;padding:7px 11px;font-size:.84rem}
+ nav.snav .snav-links{display:none;position:absolute;left:0;right:0;top:var(--snav-h);flex-direction:column;align-items:stretch;
+  gap:0;margin:0;padding:8px 12px 14px;background:#0b1224;border-bottom:1px solid rgba(148,163,184,.2);
+  max-height:calc(100vh - var(--snav-h));overflow-y:auto;box-shadow:0 16px 32px rgba(0,0,0,.5)}
+ nav.snav.open .snav-links{display:flex}
+ nav.snav .snav-links a,nav.snav .snav-meer>button{padding:12px 10px;font-size:1rem;width:100%;text-align:left}
+ nav.snav .snav-meer>button{display:none}
+ nav.snav .snav-meer-lijst,nav.snav .snav-meer-lijst[hidden]{display:block;position:static;box-shadow:none;border:0;
+  border-top:1px solid rgba(148,163,184,.16);border-radius:0;padding:6px 0 0;margin-top:6px;background:none;min-width:0}
+}
+@media(max-width:480px){nav.snav .snav-merk em{display:none}}
+/* audit P1-2: de marketplace-subnav (vorige/volgende) plakt direct onder deze balk, op elke breedte */
+.subnav{top:calc(var(--snav-h) + 1px)!important}
+</style><div class="snav-in"><a class="snav-merk" href="/"><i aria-hidden="true"></i><span>AIBuilder <em>Marketplace</em></span></a><ul class="snav-links" id="nav-links"><li><a href="/b2b/">Reviews</a></li><li><a href="/atlas/">Atlas</a></li><li><a href="/best/">Best tools</a></li><li><a href="/tools/">Free tools</a></li><li><a href="/deals/">Deals</a></li><li class="snav-meer nu"><button type="button" aria-expanded="false" aria-controls="nav-meer">More</button><ul class="snav-meer-lijst" id="nav-meer" hidden><li><a href="/about/">About</a></li><li class=nu><a href="/research/">Research</a></li><li><a href="/pricewatch/">Price Watch</a></li><li><a href="/guides/hidden-cost-report-2026/">Hidden Cost Report</a></li><li><a href="/stats/">Stats</a></li><li><a href="/stack-xray/">Stack X-Ray</a></li><li><a href="/roadmap/">AI Roadmap</a></li><li><a href="/ai/">AI explained</a></li><li><a href="/videos/">Videos</a></li><li><a href="/marketplace/">Marketplace</a></li><li><a href="/list-your-saas/">List your SaaS</a></li></ul></li></ul><a class="snav-cta" href="/finder/">Find software</a><button type="button" class="snav-menu" aria-expanded="false" aria-controls="nav-links">Menu</button></div><script>(function(){var n=document.currentScript&&document.currentScript.closest('nav.snav');if(!n)return;
+var m=n.querySelector('.snav-menu'),w=n.querySelector('.snav-meer>button'),l=n.querySelector('.snav-meer-lijst');
+function zetMenu(o){n.classList.toggle('open',o);m.setAttribute('aria-expanded',o?'true':'false');}
+function zetMeer(o){if(!w)return;w.setAttribute('aria-expanded',o?'true':'false');l.hidden=!o;}
+m.addEventListener('click',function(){zetMenu(!n.classList.contains('open'));});
+if(w)w.addEventListener('click',function(e){e.stopPropagation();zetMeer(l.hidden);});
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;
+ if(w&&!l.hidden){zetMeer(false);w.focus();}else if(n.classList.contains('open')){zetMenu(false);m.focus();}});
+document.addEventListener('click',function(e){if(!n.contains(e.target)){zetMeer(false);zetMenu(false);}});
+})();</script></nav>
+<div class="wrap">
+<p style="font-size:.8rem;color:#737373;margin:14px 0"><a href="/">Home</a> &rsaquo; <a href="/research/">Research</a> &rsaquo; Hands-on test</p>
+<span class="pill">Hands-on test &middot; run on 2026-10-01</span>
+<h1>Clonable on WordPress: a German clone in under five minutes, an edit synced in fifteen seconds, and nothing added to the database</h1>
+<p class="lede">On 1 October 2026 we put Clonable on a fresh WordPress site and translated it into German on the free plan. Between 20:55 and 21:25 Amsterdam time we installed the plugin, built a clone, wrote a page, changed it, corrected a translation by hand and connected the plugin to the Clonable account. We checked every result on the live pages and in WordPress itself. One site, one evening, one language: a case study, not a verdict on every setup.</p>
+
+<blockquote class="cite">Clonable translated our WordPress test site into German without adding a single translated page to WordPress: the install still held three English pages afterwards, plus one plugin. A price we changed on the English page showed up in German within fifteen seconds. The bulk-correction tools are paid, and the free plan&rsquo;s numbers inside the app do not match the public pricing page.<small>AIBuilder Marketplace, hands-on test, 2026-10-01. Free to quote with attribution.</small></blockquote>
+
+<div class="big">
+  <div><b>4 min 45 s</b><span>from typing the address to a German preview</span></div>
+  <div><b>&lt;15 s</b><span>for an edit on the English page to appear in German</span></div>
+  <div><b>3 &rarr; 3</b><span>pages in WordPress before and after translating</span></div>
+  <div><b>1</b><span>thing added to the WordPress install: the plugin</span></div>
+</div>
+
+<div class="disc"><b>Who pays us.</b> Clonable runs an affiliate programme on Reditus that we are part of: if you sign up through a link in our review, we may be paid. This page is also our entry in Clonable&rsquo;s review content campaign on Reditus, which pays a one-off €30 if Clonable approves it. Neither changes what we report. We used the public free plan, Clonable did not see this page before it went live, and there are no affiliate links on this page.</div>
+
+<h2>How we tested</h2>
+<ul class="tight">
+<li><b>A fresh WordPress site.</b> WordPress 7.1.2 on PHP 8.5 with the default Twenty Twenty-Three theme, on a temporary TasteWP sandbox. No other translation plugin was installed.</li>
+<li><b>Our own content.</b> Besides WordPress&rsquo;s sample post and page, we wrote one page, &ldquo;WordPress maintenance plans&rdquo;: an intro, a heading, a three-item list, two prices and a closing line. Knowing every word let us check the German against the English line by line.</li>
+<li><b>The free plan.</b> A new Clonable account, no card. We used the Clonable plugin 2.13.3 from the WordPress plugin directory and the clone wizard in the Clonable dashboard.</li>
+<li><b>Timed and saved.</b> We noted the time of each step and saved screenshots as we went. Times below are Amsterdam time.</li>
+</ul>
+
+<h2>What happened, step by step</h2>
+<div class="tw"><table><thead><tr><th>Step</th><th>What we saw</th><th>Result</th></tr></thead><tbody><tr><td><b>Scan</b></td><td>Typed the site address. About ten seconds later it had found WordPress, English (United States) and the installed plugins, sorted into Not supported, Has overlap, Supported and Unknown. It warned that the site sits behind Cloudflare, which can make detection less accurate.</td><td><span class="r ok">worked</span></td></tr><tr><td><b>Language and context</b></td><td>Picked German (Germany). A formality setting appeared, left on &ldquo;Same as original&rdquo;. The context step offers an AI assistant (&ldquo;Takes 5-10 minutes&rdquo;) or a free text field; we wrote two sentences.</td><td><span class="r ok">worked</span></td></tr><tr><td><b>Preview</b></td><td>&ldquo;Preview first&rdquo; needs no DNS change and no plugin. The preview was ready about two minutes after we started the build, under five minutes after we first typed the address.</td><td><span class="r ok">worked</span></td></tr><tr><td><b>Translation</b></td><td>Our test page came back fully in German, menu included, in the formal &ldquo;Sie&rdquo;. The URL slug stayed English. WordPress&rsquo;s own &ldquo;Hello world&rdquo; post came out informal, mirroring its casual original.</td><td><span class="r pa">worked, with notes</span></td></tr><tr><td><b>Sync</b></td><td>We changed a price on the English page from 49 to 59 euros and saved at 21:04:46. The German page showed &ldquo;59 Euro&rdquo; on our first reload, at 21:05:01.</td><td><span class="r ok">under 15 seconds</span></td></tr><tr><td><b>WordPress database</b></td><td>After cloning and syncing, WordPress still listed three pages, all English. The only thing added to the install was the Clonable plugin.</td><td><span class="r ok">nothing added</span></td></tr><tr><td><b>Manual correction</b></td><td>The Clone editor opens the clone with a toolbar. We changed &ldquo;Hallo Welt!&rdquo; to &ldquo;Hallo, Welt!&rdquo;; it reported &ldquo;Translation saved successfully&rdquo; and the public preview showed the change on the next load.</td><td><span class="r ok">worked on free</span></td></tr><tr><td><b>Bulk fixes</b></td><td>Translation Replacements and the Glossary show &ldquo;Plan upgrade required&rdquo; on the free plan. Translation exclusions are open.</td><td><span class="r nt">paid only</span></td></tr><tr><td><b>Plugin connection</b></td><td>The plugin needs an API key from the Clonable dashboard. Once pasted, it reported &ldquo;successfully connected&rdquo; and synced the clone into WordPress. hreflang tags for x-default, en-us and de-de appeared in the head of both the English site and the German clone straight away.</td><td><span class="r ok">worked</span></td></tr><tr><td><b>Language switcher</b></td><td>Ticking two boxes put a floating switcher on the English site; it opens to list both languages. Choosing German did not take us to the German page in our automated browser session, so we could not confirm the click-through.</td><td><span class="r pa">not confirmed</span></td></tr></tbody></table></div>
+
+<h2>The WPML question: what changes inside WordPress</h2>
+<p>Clonable pitches itself against plugins such as WPML, so this is the part we wanted to see for ourselves. WPML&rsquo;s documented model keeps translations inside WordPress: each translated post, page or term is stored in the WordPress database as its own item, linked to the original through WPML&rsquo;s own tables, and someone has to keep those copies current when the original changes.</p>
+<p>Clonable works the other way round. After we had cloned the site, written a page, changed it and corrected a translation, the Pages screen in WordPress still showed the same three pages, all in English. Nothing had been duplicated, and the only addition to the install was the Clonable plugin. The German site is assembled outside WordPress, on Clonable&rsquo;s servers, from the English pages as they are at that moment. That is why our price change reached the German page in under fifteen seconds without anyone touching a translation.</p>
+<p>The trade-off is just as real, and Clonable says so itself. Its setup guide warns that &ldquo;all clone traffic passes through our servers&rdquo; and asks you to whitelist its IP addresses so your host does not block it. Your German site is only up while Clonable is, and only while you keep paying. Because the translations do not live in WordPress, anything that reads the database, such as site search or emails, needs the plugin&rsquo;s extra modules; the plugin offers tabs for WooCommerce, multi-currency, email translations and a multilingual search marked beta, none of which we tested.</p>
+
+<h2>SEO: language tags yes, translated URLs not by default</h2>
+<p>Connecting the plugin is what makes the clone visible to search engines as a language version. Within seconds of pasting the API key, the head of both the English site and the German clone carried hreflang tags for x-default, en-us and de-de, pointing at each other. The preview itself is marked &ldquo;Not indexed&rdquo; until you finish the setup guide, which ends with &ldquo;Allow indexing by search engines&rdquo;. Our page address stayed English in German (<code>/wordpress-maintenance-plans/</code>). URL translation is a separate feature, and the plugin warns that switching on translated URLs in the language tags &ldquo;does not mean your URLs are actually translated&rdquo;.</p>
+
+<h2>Fixing a translation</h2>
+<p>The German was good: the formal &ldquo;Sie&rdquo; throughout our page, the prices and units intact, the list structure kept. Where you want different wording, the Clone editor lets you click any text on the German page and rewrite it; we did that on the free plan and the change was live on the next load. What the free plan does not include are the tools you would use to fix a word everywhere at once: Translation Replacements and the Glossary both ask for an upgrade.</p>
+
+<h2>What the plans cost, and where the numbers disagree</h2>
+<p>Inside the app the free account showed &ldquo;Translated pages 0 / 25&rdquo; and &ldquo;Clones 1 / 1&rdquo;, and the counter still read 0 after our clone had translated several pages. The plan picker inside the app and the public pricing page, both read on 1 October 2026, do not describe the same plans:</p>
+<div class="tw"><table><thead><tr><th>Plan</th><th>Public pricing page</th><th>Plan picker inside the app</th></tr></thead><tbody><tr><td><b>Free</b></td><td>€0, 1 clone, up to 20 translated pages; 50 pages for €25 a month</td><td>Free plan, 25 translated pages, 1 clone; a Starter plan at €25 a month for 50 pages</td></tr><tr><td><b>Business</b></td><td>€49 a month, 3 clones, 400 pages</td><td>€49 a month, 1 clone, 400 pages, marked Recommended</td></tr><tr><td><b>Pro</b></td><td>€79 a month, 5 clones, 1,200 pages, marked Recommended</td><td>€79 a month, 1 clone, 1,200 pages</td></tr><tr><td><b>Expert</b></td><td>€249 a month, 10 clones, 5,000 pages</td><td>€249 a month, 1 clone, 5,000 pages</td></tr><tr><td><b>Premium</b></td><td>€999 a month, 20 clones, 50,000 pages</td><td>€999 a month, 1 clone, 50,000 pages</td></tr></tbody></table></div>
+<p>The public page has a monthly/annual switch and opens on the annual setting; the app showed the same euro amounts. Until the two agree, take the clone count from your checkout rather than from either page. The same app screen listed its add-ons with the line &ldquo;Your new subscription price will be € -0,01 per month&rdquo;, which looks like a display bug.</p>
+
+<h2>Screens from the test</h2>
+<div class="shots">
+<figure><a href="img/original-english-page.jpg"><img src="img/original-english-page.jpg" alt="The English original" loading="lazy"></a><figcaption><b>The English original.</b> Our test page on WordPress, with Clonable&rsquo;s floating language switcher at the bottom left.</figcaption></figure>
+<figure><a href="img/scan.jpg"><img src="img/scan.jpg" alt="Step 1: the scan" loading="lazy"></a><figcaption><b>Step 1: the scan.</b> Clonable asks only for the address of the site you want to translate.</figcaption></figure>
+<figure><a href="img/check-wordpress-details.jpg"><img src="img/check-wordpress-details.jpg" alt="Step 2: what it found" loading="lazy"></a><figcaption><b>Step 2: what it found.</b> WordPress and English detected, the Cloudflare warning, and the plugin check.</figcaption></figure>
+<figure><a href="img/confirmation.jpg"><img src="img/confirmation.jpg" alt="Step 5: confirmation" loading="lazy"></a><figcaption><b>Step 5: confirmation.</b> &ldquo;Ready to launch! Your subscription allows you to create this clone.&rdquo;</figcaption></figure>
+<figure><a href="img/launch-preview-first.jpg"><img src="img/launch-preview-first.jpg" alt="Step 6: launch method" loading="lazy"></a><figcaption><b>Step 6: launch method.</b> &ldquo;Preview first&rdquo;: no setup required, test before going live.</figcaption></figure>
+<figure><a href="img/clone-home-german.jpg"><img src="img/clone-home-german.jpg" alt="The German clone" loading="lazy"></a><figcaption><b>The German clone.</b> Home page, site tagline and menu translated.</figcaption></figure>
+<figure><a href="img/clone-page-german.jpg"><img src="img/clone-page-german.jpg" alt="Our page in German" loading="lazy"></a><figcaption><b>Our page in German.</b> Fully translated, formal register, address still English.</figcaption></figure>
+<figure><a href="img/clone-price-after-edit.jpg"><img src="img/clone-price-after-edit.jpg" alt="The sync test" loading="lazy"></a><figcaption><b>The sync test.</b> After we changed 49 to 59 euros on the English page, the German page said 59 Euro on the first reload.</figcaption></figure>
+<figure><a href="img/wordpress-pages-unchanged.jpg"><img src="img/wordpress-pages-unchanged.jpg" alt="WordPress afterwards" loading="lazy"></a><figcaption><b>WordPress afterwards.</b> Still three pages, all English: no translated copies in the database.</figcaption></figure>
+<figure><a href="img/clone-editor-edit.jpg"><img src="img/clone-editor-edit.jpg" alt="Clone editor" loading="lazy"></a><figcaption><b>Clone editor.</b> Click any German text and rewrite it.</figcaption></figure>
+<figure><a href="img/correction-saved.jpg"><img src="img/correction-saved.jpg" alt="Correction saved" loading="lazy"></a><figcaption><b>Correction saved.</b> &ldquo;Hallo, Welt!&rdquo; live after saving, on the free plan.</figcaption></figure>
+<figure><a href="img/replacements-locked.jpg"><img src="img/replacements-locked.jpg" alt="Replacements need an upgrade" loading="lazy"></a><figcaption><b>Replacements need an upgrade.</b> Bulk replacements and the glossary are not on the free plan.</figcaption></figure>
+<figure><a href="img/plugin-connected.jpg"><img src="img/plugin-connected.jpg" alt="Plugin connected" loading="lazy"></a><figcaption><b>Plugin connected.</b> The WordPress side after pasting the API key, with tabs for language tags, the switcher, WooCommerce and more.</figcaption></figure>
+<figure><a href="img/language-tags.jpg"><img src="img/language-tags.jpg" alt="Language tags" loading="lazy"></a><figcaption><b>Language tags.</b> Synced from Clonable: en-us for the original, de-de for the clone.</figcaption></figure>
+<figure><a href="img/switcher-open.jpg"><img src="img/switcher-open.jpg" alt="The language switcher" loading="lazy"></a><figcaption><b>The language switcher.</b> Opened on the English site, listing both languages.</figcaption></figure>
+<figure><a href="img/setup-guide.jpg"><img src="img/setup-guide.jpg" alt="Before going live" loading="lazy"></a><figcaption><b>Before going live.</b> Five setup tasks: ownership, plugin, DNS, whitelisting and indexing.</figcaption></figure>
+<figure><a href="img/in-app-plans.jpg"><img src="img/in-app-plans.jpg" alt="Plans inside the app" loading="lazy"></a><figcaption><b>Plans inside the app.</b> One clone per plan, and the free plan at 25 pages.</figcaption></figure>
+<figure><a href="img/public-pricing.jpg"><img src="img/public-pricing.jpg" alt="Plans on the public page" loading="lazy"></a><figcaption><b>Plans on the public page.</b> Three to twenty clones per plan, and the free plan at 20 pages.</figcaption></figure>
+</div>
+
+<h2>What this test does not show</h2>
+<ul class="tight">
+<li><b>Going live.</b> We stayed on the preview. Publishing the clone on our own domain needs ownership verification and a DNS change, or a subfolder set up through the plugin, and a sandbox site cannot do that.</li>
+<li><b>WPML side by side.</b> We compared Clonable with WPML&rsquo;s documented model, not with WPML installed on the same site, so we make no claim about WPML&rsquo;s speed or stability.</li>
+<li><b>Scale and shops.</b> One short page and WordPress&rsquo;s sample content, so neither the 25-page limit nor translation quality across a large site was tested, and WooCommerce, checkout and multi-currency were not installed.</li>
+<li><b>Other languages and load.</b> German only, and no measurement of how fast the clone serves pages to real visitors.</li>
+</ul>
+<p>Our full review: <a href="/b2b/clonable-review/">Clonable</a>. Our other hands-on tests: <a href="/research/activecampaign-active-intelligence-new-account/">Active Intelligence 3.0 on a new ActiveCampaign account</a> &middot; <a href="/research/one-pitch-deck-four-ai-presentation-tools/">one pitch deck, four AI presentation tools</a> &middot; <a href="/research/one-booking-app-three-ai-builders/">one booking app, three AI builders</a>. How we separate researched reviews from hands-on ones: <a href="/how-we-review/">how we review</a>.</p>
+
+<h2>Citation</h2>
+<p>AIBuilder Marketplace, &ldquo;Clonable on WordPress: a German clone in under five minutes&rdquo;, hands-on test run on 2026-10-01. Free to quote and reproduce with attribution (CC BY 4.0).</p>
+</div>
+<footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. This page contains no affiliate links.<!--sister-net-start-->
+<nav aria-label="Sister sites" style="max-width:1100px;margin:28px auto 0;padding:16px 20px 4px;border-top:1px solid rgba(128,128,128,.22);font-size:.8rem;line-height:2;text-align:center;opacity:.8"><span style="display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.66rem;opacity:.7;margin-bottom:4px">Part of the network</span><a href="https://officesoftwaremarketplace.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">Office Software</a> <span style="opacity:.4">&middot;</span> <a href="https://marketingandsalessoftware.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">Marketing & Sales Software</a> <span style="opacity:.4">&middot;</span> <a href="https://theweeklyaiedge.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">The Weekly AI Edge</a> <span style="opacity:.4">&middot;</span> <a href="https://theweekly2pctedge.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">The Weekly 2% Edge</a> <span style="opacity:.4">&middot;</span> <a href="https://zerotouchsupport.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">ZeroTouch Support</a><span style="display:block;margin-top:6px;font-size:.72rem;opacity:.65">Six sites, one owner &mdash; all built and run by <a href="/about/" style="color:inherit">Daniel Haket</a>.</span></nav>
+<!--sister-net-end-->
+</footer>
+</body></html>

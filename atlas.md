@@ -1021,7 +1021,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/essential-trust-badges-review/
 
 ## Evey Events (evey.io)
-- **Verified pricing:** (re-verified 8 September 2026 on apps.shopify.com/event-tickets; every figure unchanged since 1 September 2026) Four tiers, and every one of them charges twice: a monthly fee and a fee per …
+- **Verified pricing:** (re-verified 1 October 2026 on apps.shopify.com/event-tickets; every rate unchanged since 1 September 2026) Four tiers, and every one of them charges twice: a monthly fee and a fee per tick…
 - **Honest take:** Nobody gets caught by the monthly fee here; they get caught by the per-ticket one.
 - **Best for:** Shopify stores that sell tickets alongside products and want attendees, orders and customer data in one place instead of reconciling a separate ticketing platform against the shop
 - **Full review:** https://aibuildermarketplace.com/b2b/evey-events-review/
@@ -1456,7 +1456,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/instapage-review/
 
 ## Intelis (intelis.ai)
-- **Verified pricing:** (re-verified 8 September 2026 on apps.shopify.com/ecoprice-analytics, intelis.ai/pricing and the Intelis homepage) Four tiers on the Shopify listing, priced by how many products or variants…
+- **Verified pricing:** (re-verified 8 September 2026 on apps.shopify.com/ecoprice-analytics, intelis.ai/pricing and the Intelis homepage; listing and pricing page re-read 1 October 2026, unchanged) Four tiers on …
 - **Honest take:** The ladder counts variants, not products, and that is where stores get caught.
 - **Best for:** Shopify stores with hundreds to a few thousand variants that genuinely compete on price on Google Shopping and want competitor monitoring and repricing handled automatically
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · products or variants tracked'}
@@ -2862,7 +2862,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tapstitch-review/
 
 ## Tax1099 (tax1099.com)
-- **Verified pricing:** (read 2026-09-08 on tax1099.com/tax-1099-efile-pricing) Filing is graduated volume pricing, not a flat rate that falls: each band is billed at its own rate and the bill is the sum across ba…
+- **Verified pricing:** (read 2026-09-08 and re-read 2026-10-01 on tax1099.com/tax-1099-efile-pricing) Filing is graduated volume pricing, not a flat rate that falls: each band is billed at its own rate and the bi…
 - **Honest take:** Per-form pricing is genuinely cheap for a handful of 1099s, but it's metered: TIN matching, W-9 requests, state filing and corrections can each carry their own charge.
 - **Best for:** businesses and accountants who need to e-file 1099s, W-2s and related forms accurately and cheaply, especially seasonal or higher-volume filers
 - **Flags:** {'f': 'usage_metered', 'ev': "Per-form pricing is genuinely cheap for a handful of 1099s, but it's metered: TIN matching, W-9 requests, state filing and corrections can each carry…"}, {'f': 'addons_extra', 'ev': 'Other add-ons: eDelivery $0.25 a unit, print and mail $1.90 a form (plus a $1 rush fee in the last five days of the season through 2 February), forei…'}
@@ -2991,10 +2991,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/todoist-review/
 
 ## Toggl (toggl.com)
-- **Verified pricing:** (re-verified 2026-09-09 on toggl.com/track/pricing) Free is $0 for a limited number of users and the page calls it free forever.
+- **Verified pricing:** (re-verified 2026-09-09 and again 2026-10-01 on toggl.com/track/pricing, which now redirects to toggl.com/pricing) Free is $0 for a limited number of users and the page calls it free foreve…
 - **Honest take:** Toggl's honesty problem is the good kind: the free tier is so capable that many teams never need to pay — the paid line is drawn exactly at 'do you bill clients' (budgets, rates, profitability).
 - **Best for:** freelancers, consultants and agencies that bill by the hour and want frictionless tracking with budgets, rates and profitability per project
-- **Flags:** {'f': 'per_seat', 'ev': 'Starter is $9 per user a month billed annually and $12 monthly; Premium is $16 annually and $24 monthly; Enterprise is quoted.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-09 on toggl.com/track/pricing) Free is $0 for a limited number of users and the page calls it free forever.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Starter is $9 per user a month billed annually and $12 monthly; Premium is $16 annually and $24 monthly; Enterprise is quoted.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-09 and again 2026-10-01 on toggl.com/track/pricing, which now redirects to toggl.com/pricing) Free is $0 for a limited number of…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/toggl-review/
 
 ## Top Echelon (topechelon.com)
@@ -3067,9 +3067,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/ueni-review/
 
 ## UltaHost (ultahost.com)
-- **Verified pricing:** (re-verified 2026-09-09 on ultahost.com/shared-hosting) The term ladder is Monthly, Yearly -30%, 2 Years -40% and 3 Years -50%, and the page opens on the two-year term.
+- **Verified pricing:** (re-verified 2026-10-01 on ultahost.com/shared-hosting, all four term tabs rendered) The term ladder is Monthly, Yearly -30%, 2 Years -40% and 3 Years -50%, and the page opens on the two-ye…
 - **Honest take:** It's the classic budget-host trade-off, with one thing in its favour.
 - **Best for:** budget-conscious owners, developers and small businesses that want cheap, fast NVMe hosting (shared or VPS) with free migration and DDoS protection, and will prepay a multi-year term
+- **Flags:** {'f': 'renewal_jump', 'ev': "Every card states it renews at its own rate for the same term ('Renews at $3.44/mo for 2 years."}
 - **Full review:** https://aibuildermarketplace.com/b2b/ultahost-review/
 
 ## Unbounce (unbounce.com)

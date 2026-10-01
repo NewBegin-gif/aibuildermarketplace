@@ -92,9 +92,9 @@
    "task": "Schedule a daily report",
    "time_utc": "2026-09-30T08:39:04Z",
    "prompt": "/schedule-task Every morning at 8:00, summarise in three bullet points anything new from the competitors in my Brand Kit and anything unusual in my account.",
-   "result": "pending",
+   "result": "partial",
    "duration_s": 40,
-   "saw": "First attempt sent only the /schedule-task tag and returned 'A network error occurred'. Second attempt: task 'Daily competitor and account summary', daily 08:00 Europe/Amsterdam, report emailed to us. Its own task text reads 'review g2.com, capterra.com, trustradius.com for Brand Kit mentions', which is not quite what we asked. 'Run now to preview' had not loaded after 288 seconds. Activated; first run 2026-10-01 08:00 Amsterdam."
+   "saw": "First attempt sent only the /schedule-task tag and returned 'A network error occurred'. Second attempt: task 'Daily competitor and account summary', daily 08:00 Europe/Amsterdam, report emailed to us. Its own task text reads 'review g2.com, capterra.com, trustradius.com for Brand Kit mentions', which is not quite what we asked. 'Run now to preview' had not loaded after 288 seconds. Activated; first run 2026-10-01 08:00 Amsterdam. First report: email 'Your Daily competitor and account summary is ready', received 2026-10-01 by 08:15 Amsterdam. Account part: 5 draft campaigns, 1 contact, 0 CRM deals, no automation events, 'expected for a brand-new, unsent account' (we did not recount the drafts in the account). Competitor part: it reported G2, Capterra and TrustRadius news (a G2 buyer-intent release, a Capterra construction report, TrustRadius awards) and that none mentioned AIBuilder Marketplace. The three Brand Kit competitors (lindy.ai, missiveapp.com, getalai.com) were not mentioned. It followed its own task text, not our prompt."
   },
   {
    "id": "T09",
@@ -168,7 +168,7 @@
  ],
  "video": "https://youtu.be/1OSuuM-wqo8",
  "after_the_test": {
-  "scheduled_task_first_run": "due 2026-10-01 08:00 Europe/Amsterdam; to be added",
+  "scheduled_task_first_run": "received 2026-10-01 by 08:15 Europe/Amsterdam; account summary accurate for an empty account; competitor section covered G2/Capterra/TrustRadius news, not the Brand Kit competitors; result set to partial",
   "image_generator_retry": "planned before the trial ends on 2026-10-14"
  }
 }

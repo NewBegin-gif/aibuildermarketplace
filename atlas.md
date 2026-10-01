@@ -857,7 +857,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dondy-review/
 
 ## doola (doola.com)
-- **Verified pricing:** (re-verified 21 September 2026 on doola.com/pricing) These are the list prices.
+- **Verified pricing:** (re-verified 1 October 2026 on doola.com/pricing) These are the list prices.
 - **Honest take:** Formation is the cheap part; the recurring bookkeeping and tax tiers are where the real cost sits, and state fees are extra on top of doola's price.
 - **Best for:** founders (often non-US) who want US LLC/C-Corp formation, EIN and compliance handled in one place without the paperwork
 - **Flags:** {'f': 'renewal_jump', 'ev': 'Pulse bookkeeping comes with a 30-day trial and renews at $300 a year.'}
@@ -1978,7 +1978,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 6 September and again 30 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Free: $0, no payment method, up to 2,000 w…
 - **Honest take:** The unavoidable honest limit of every AI detector, including accurate ones: it is never infallible.
 - **Best for:** educators, publishers and platforms that need a low-false-positive signal on whether text is AI-generated, at web-app or API scale
-- **Flags:** {'f': 'per_seat', 'ev': 'Team $20 per seat/mo or $15 annually, from 2 seats, 300,000 words per seat.'}, {'f': 'usage_metered', 'ev': 'Pair it with human judgment and the credit meter with your actual volume.'}, {'f': 'free_tier', 'ev': '(re-verified 6 September and again 30 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Fr…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Team $20 per seat/mo or $15 annually, from 2 seats, 300,000 words per seat.'}, {'f': 'usage_metered', 'ev': '(re-verified 6 September and again 30 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Fr…'}, {'f': 'free_tier', 'ev': '(re-verified 6 September and again 30 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Fr…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pangram-review/
 
 ## Papaya Global (papayaglobal.com)
@@ -2827,10 +2827,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/switcher-studio-review/
 
 ## Synthesia (synthesia.io)
-- **Verified pricing:** (re-verified 2026-09-14; the plan cards are geo-priced and served us euros from a Dutch address, where our August reading was in dollars, so check your own currency before budgeting) Basic …
-- **Honest take:** The video-minute caps are tight — 10 min/mo on Starter goes fast when you iterate, and re-generating edits burns minutes.
+- **Verified pricing:** (re-read 1 October 2026) The public pricing page, read without signing in from a Netherlands connection, now shows dollars and a new credit model: 'Credits are now the shared currency acros…
+- **Honest take:** The minute caps are tight: Starter's 1,250 credits a month is roughly 10 to 12 minutes of finished video, and the meter counts seconds.
 - **Best for:** teams making talking-head training, explainer and onboarding videos without cameras, actors or editing
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-14; the plan cards are geo-priced and served us euros from a Dutch address, where our August reading was in dollars, so check yo…'}, {'f': 'addons_extra', 'ev': 'Everything is priced by credits rather than by seat, so the minute allowance and not the sticker is what decides which plan you need, and a Studio av…'}
+- **Flags:** {'f': 'usage_metered', 'ev': "(re-read 1 October 2026) The public pricing page, read without signing in from a Netherlands connection, now shows dollars and a new credit model: 'C…"}, {'f': 'addons_extra', 'ev': 'A Studio avatar remains a paid add-on.'}, {'f': 'free_tier', 'ev': 'Basic is $0 with 500 credits a month plus a free allowance of 10 minutes of video or dubbing and 3 survey responses; free videos carry a Synthesia wa…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/synthesia-review/
 
 ## Tapita AI SEO Blog Builder (tapita.io)

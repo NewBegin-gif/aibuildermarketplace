@@ -794,10 +794,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/deputy-review/
 
 ## Descript (descript.com)
-- **Verified pricing:** (re-verified 2026-08-17) Free plan with 60 minutes a month and watermarked 720p exports.
+- **Verified pricing:** (re-verified 2026-08-17 and again 2026-10-01) Free plan with 60 minutes a month and watermarked 720p exports.
 - **Honest take:** It's per-editor pricing with two meters running underneath: media hours AND monthly AI credits.
 - **Best for:** podcasters and video creators who want to edit by editing the transcript, cutting, overdubbing and stripping filler words as easily as editing a doc. It also suits teams who want those same edits triggered from code or from an AI 
-- **Flags:** {'f': 'usage_metered', 'ev': 'Media hours and AI credits are capped per tier: roughly 10, 30 and 40 hours a month, and 400 to 1,500 credits.'}, {'f': 'annual_lock', 'ev': 'Paid, per person per month, annual against monthly: Hobbyist $16 / $24, Creator $24 / $35, Business $50 / $65, with annual billing saving up to 35%.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17) Free plan with 60 minutes a month and watermarked 720p exports.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Media hours and AI credits are capped per tier: roughly 10, 30 and 40 hours a month, and 400 to 1,500 credits.'}, {'f': 'annual_lock', 'ev': 'Paid, per person per month, annual against monthly: Hobbyist $16 / $24, Creator $24 / $35, Business $50 / $65, with annual billing saving up to 35%.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17 and again 2026-10-01) Free plan with 60 minutes a month and watermarked 720p exports.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/descript-review/
 
 ## Devs.ai (devs.ai)
@@ -2143,10 +2143,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pricefy-review/
 
 ## Printify (printify.com)
-- **Verified pricing:** (re-verified 2026-09-07) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium from $39 a month, or from $24.99 a month billed yearly, which…
+- **Verified pricing:** (re-verified 2026-09-07 and again 2026-10-01) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium from $39 a month, or from $24.99 a month…
 - **Honest take:** Printify makes nothing until you sell — the Premium fee only pays off past a break-even order volume, and because it's a middleman marketplace, print quality and shipping vary by the provider you pick.
 - **Best for:** creators and stores testing print-on-demand with no upfront cost, upgrading to Premium once volume justifies it
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium from $39 a month, or …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-07) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium from $39 a month, or …'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07 and again 2026-10-01) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-07 and again 2026-10-01) A free plan at $0 a month -- you pay only the product base cost plus shipping per order -- and Premium …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/printify-review/
 
 ## Process Street (process.st)
@@ -2670,10 +2670,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/socialbee-review/
 
 ## Softr (softr.io)
-- **Verified pricing:** (re-verified 2026-09-07) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credits a month.
+- **Verified pricing:** (re-verified 2026-09-07 and again 2026-10-01) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credits a month.
 - **Honest take:** Builder seats are billed on top of the plan, and pricing counts builders and app users separately, so a public-facing app with a lot of end users gets expensive fast.
 - **Best for:** teams building internal tools, client portals or member apps on top of Airtable or Google Sheets without code
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credit…'}, {'f': 'addons_extra', 'ev': 'Builder seats are billed on top of the plan, and pricing counts builders and app users separately, so a public-facing app with a lot of end users get…'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-07) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credit…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07 and again 2026-10-01) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow ac…'}, {'f': 'addons_extra', 'ev': 'AI credits run 10, 50 and 100 a month on Basic, Pro and Business (5 on Free), and add-on credits can be bought on every plan, Free included.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-07 and again 2026-10-01) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow ac…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/softr-review/
 
 ## SoftSync (softsync.ai)
@@ -2691,10 +2691,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/spiky-ai-review/
 
 ## Spocket (spocket.co)
-- **Verified pricing:** (re-verified 2026-09-07) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products, 25 premium), Empire $99.99 (10,000 / 10,000) and Unicorn $29…
+- **Verified pricing:** (re-verified 2026-09-07 and again 2026-10-01) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products, 25 premium), Empire $99.99 (10,000 / 10…
 - **Honest take:** Spocket's pitch is faster-shipping US and EU suppliers, and that's real — but you still pay twice: the monthly subscription and the wholesale product cost, so margins depend on picking items with room to mark …
 - **Best for:** dropshippers who want vetted US and EU suppliers with faster shipping and one-click store integration, prioritizing delivery speed over raw catalog size
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products, 25 premium), Empire …'}, {'f': 'addons_extra', 'ev': 'Multiple-store support is listed on all plans, but the page states a separate subscription is required for each store.'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as eight months free and the annual rates are printed on the cards: Pro $24 a month, Empire $57 and Unicorn $79, with st…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07 and again 2026-10-01) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products,…'}, {'f': 'addons_extra', 'ev': 'Multiple-store support is listed on all plans, but the page states a separate subscription is required for each store.'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as eight months free and the annual rates are printed on the cards: Pro $24 a month, Empire $57 and Unicorn $79, with st…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/spocket-review/
 
 ## Stackable (stkbl.app)
@@ -2806,10 +2806,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/surfer-surferseo-review/
 
 ## SurveyMonkey (surveymonkey.com)
-- **Verified pricing:** (read 2026-09-08 in surveymonkey.com/pricing.md, the vendor's own machine-readable pricing reference, whose header dates the content 2026-08-31) Team plans are annual-only in practice: pric…
+- **Verified pricing:** (re-verified 2026-10-01 in surveymonkey.com/pricing.md, whose header now dates the content 2026-09-22, and on surveymonkey.com/pricing/ as served to a euro storefront) Team plans are billed…
 - **Honest take:** The free tier is a teaser.
 - **Best for:** teams that need research-grade survey logic (skip logic, randomisation, quotas) with compliance (HIPAA, GDPR, SOC 2) and 200+ integrations
-- **Flags:** {'f': 'per_seat', 'ev': 'Confirmed by the SurveyMonkey partner team by email on 24 September 2026: the $0.15 overage is the current self-serve rate, while Enterprise plans ha…'}, {'f': 'usage_metered', 'ev': 'Overage above the included response limit is priced per storefront: $0.15 a response in dollar countries, €0.10 in euro countries, £0.15 in sterling.'}, {'f': 'free_tier', 'ev': 'The free tier is a teaser.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Overage above the limit is priced per storefront: $0.15 a response in dollar countries, €0.10 in euro countries, £0.15 in sterling; SurveyMonkey Audi…'}, {'f': 'free_tier', 'ev': 'The free tier is a teaser.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/surveymonkey-review/
 
 ## SurveySparrow (surveysparrow.com)

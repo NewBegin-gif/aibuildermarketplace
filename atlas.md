@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 488 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-01.
+All 489 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-01.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2717,6 +2717,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small Shopify stores that want SEO-tagged FAQ pages with JSON-LD schema and a light AI chatbot for deflection, without standing up a full support stack
 - **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-21 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversations rather than on the number of FAQs.'}, {'f': 'free_tier', 'ev': 'Free: 100 FAQ page views, unlimited FAQs and FAQ groups, the AI chatbot and AI-written FAQs, 25 AI conversations for the lifetime of the account, AI …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/storefaq-review/
+
+## StoreLock (storelock.app)
+- **Verified pricing:** (read 2026-10-01 on apps.shopify.com/storelock and in the vendor's FAQ at storelock.app/faqs) Two plans.
+- **Honest take:** Be clear about which half of the app you are paying for.
+- **Best for:** Shopify merchants with their own product photography and a brand worth copying, especially those whose store has already been cloned, who want lookalike-domain and clone alerts plus DMCA notices pre-filled with the evidence, and w
+- **Full review:** https://aibuildermarketplace.com/b2b/storelock-review/
 
 ## StoreSEO (storeseo.com)
 - **Verified pricing:** (read 2026-08-19 on apps.shopify.com/storeseo, re-verified unchanged 2026-09-28) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25 image optimisations, up to 5 tracked ke…

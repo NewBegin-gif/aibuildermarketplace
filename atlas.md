@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 489 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-01.
+All 490 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-01.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1475,6 +1475,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** marketers building interactive lead-gen — quizzes, calculators, assessments and payment funnels with built-in email sequences — who want a free tier to validate the concept first
 - **Flags:** {'f': 'usage_metered', 'ev': 'Two meters that decide more than the funnel count does are still missing from the tier pages: funnel visits a month (10,000 / 25,000 / 100,000) and c…'}, {'f': 'annual_lock', 'ev': 'Enterprise is from $499/mo on annual contracts only.'}, {'f': 'free_tier', 'ev': "(re-verified 19 September 2026 on the public pricing page; the free plan's feature set was measured inside the product, because the plan cards still …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/involve-me-review/
+
+## Jane (jane.app)
+- **Verified pricing:** (read 2026-10-01 on jane.app/pricing with the US locale; the same page shows CAD to Canadian visitors and much lower GBP prices to UK visitors) Three plans, billed monthly.
+- **Honest take:** Work out your price from your practitioner count, not from the plan headline.
+- **Best for:** Allied health practices (physio, chiropractic, massage, counselling and similar) with a handful of practitioners who want online booking, charting, telehealth, reminders and payments in one system, and value unlimited human suppor
+- **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons: AI Scribe $15 a month per opted-in practitioner for unlimited notes (5 free notes a month otherwise); Group Telehealth $15 a month per opted…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/jane-review/
 
 ## Jibble (jibble.io)
 - **Verified pricing:** (read 2026-09-25 inside a new Jibble account, signed in from the Netherlands; euros, excluding VAT) Jibble still publishes no prices on its public site — jibble.io/pricing, /plans and /upgr…

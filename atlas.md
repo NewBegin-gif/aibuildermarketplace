@@ -7,10 +7,10 @@ Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-a
 No invented benchmarks, no fabricated hands-on claims: every figure traces to a vendor page or is marked as not published.
 
 ## 1Password (1password.com)
-- **Verified pricing:** Teams Starter Pack about $24.95/mo flat for 10 members (billed annually, $29.95 month-to-month), with up to 10 further seats at per-member pricing; Business about $8.99/user/mo (billed annu…
+- **Verified pricing:** Teams Starter Pack about $24.95/mo flat for 10 members (billed annually, $29.95 month-to-month), with up to 10 further seats at $4.99 each per month on annual billing; Business about $8.99/…
 - **Honest take:** It's the polished, category-leading pick, and it's priced like it — free and cheaper managers exist, so you're paying for the UX, ecosystem and business controls, not raw functionality.
 - **Best for:** teams that want the most polished, secure password manager with solid admin controls and integrations
-- **Flags:** {'f': 'per_seat', 'ev': 'Teams Starter Pack about $24.95/mo flat for 10 members (billed annually, $29.95 month-to-month), with up to 10 further seats at per-member pricing; B…'}, {'f': 'annual_lock', 'ev': 'Personal plans Individual $3.99/mo and Families $5.99/mo on annual billing, or $4.99 and $7.99 month-to-month; the $2.99 and $4.49 shown on the cards…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Teams Starter Pack about $24.95/mo flat for 10 members (billed annually, $29.95 month-to-month), with up to 10 further seats at $4.99 each per month …'}, {'f': 'annual_lock', 'ev': 'Teams Starter Pack about $24.95/mo flat for 10 members (billed annually, $29.95 month-to-month), with up to 10 further seats at $4.99 each per month …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/1password-review/
 
 ## 800.com (800.com)
@@ -287,10 +287,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/ava-ai-review/
 
 ## AWeber (aweber.com)
-- **Verified pricing:** (re-verified 11 Sep 2026) A free plan still exists (up to 500 subscribers, 3,000 emails a month) but it is reached through the separate free-signup page, not the pricing page; Lite shows $1…
+- **Verified pricing:** (re-verified 1 Oct 2026) A free plan still exists (up to 500 subscribers, 3,000 emails a month) but it is reached through the separate free-signup page, not the pricing page; Lite shows $12…
 - **Honest take:** The free and low tiers are generous, but Lite and Plus prices climb with your subscriber count, so budget for growth.
 - **Best for:** small businesses and creators who want reliable, simple email marketing with a genuinely usable free tier
-- **Flags:** {'f': 'annual_lock', 'ev': '(re-verified 11 Sep 2026) A free plan still exists (up to 500 subscribers, 3,000 emails a month) but it is reached through the separate free-signup p…'}, {'f': 'free_tier', 'ev': '(re-verified 11 Sep 2026) A free plan still exists (up to 500 subscribers, 3,000 emails a month) but it is reached through the separate free-signup p…'}
+- **Flags:** {'f': 'annual_lock', 'ev': '(re-verified 1 Oct 2026) A free plan still exists (up to 500 subscribers, 3,000 emails a month) but it is reached through the separate free-signup pa…'}, {'f': 'free_tier', 'ev': '(re-verified 1 Oct 2026) A free plan still exists (up to 500 subscribers, 3,000 emails a month) but it is reached through the separate free-signup pa…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/aweber-review/
 
 ## BabyLoveGrowth (babylovegrowth.ai)
@@ -1989,7 +1989,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pangram-review/
 
 ## Papaya Global (papayaglobal.com)
-- **Verified pricing:** (price re-verified 2026-09-10) Papaya publishes floors on its own pricing page, read in a browser because the page returns HTTP 403 to plain fetches.
+- **Verified pricing:** (price re-verified 2026-10-01) Papaya publishes floors on its own pricing page, read in a browser because the page returns HTTP 403 to plain fetches.
 - **Honest take:** Every headline price is a 'starting from' that dead-ends at 'book a demo'.
 - **Best for:** finance-led mid-market and enterprises already running legal entities in several countries. They want to consolidate fragmented multi-country payroll and cross-border payments into one platform, with real-time workforce-cost dashb
 - **Flags:** {'f': 'per_seat', 'ev': 'EOR from $499 per employee/month, Contractor of Record from $199 per contractor/month, the lighter Contractor solution from $5 per contractor/month, …'}
@@ -2377,10 +2377,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/salesflare-review/
 
 ## Salesflow (salesflow.io)
-- **Verified pricing:** (2026-09-09) Read on Salesflow's own pricing page.
+- **Verified pricing:** (read 2026-09-09, re-read 2026-10-01) Read on Salesflow's own pricing page.
 - **Honest take:** The per-seat rate falls with team size but the monthly bill does not follow it: 19 seats on Starter is $1,330 while 20 seats on Pro is $799, so a team that stops one seat short of a tier pays $531 a month more…
 - **Best for:** outbound sales teams and agencies running LinkedIn sequences across several seats, where the per-seat price drops and the admin panel earns its keep
-- **Flags:** {'f': 'per_seat', 'ev': 'It returns a 403 to our server but renders normally in a browser, so these are their published figures rather than third-party ones: Basic $99 per se…'}, {'f': 'annual_lock', 'ev': 'Agency and Enterprise require an annual commitment billed monthly.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'It returns a 403 to plain fetches but renders normally in a browser, so these are their published figures rather than third-party ones: Basic $99 per…'}, {'f': 'annual_lock', 'ev': 'Agency and Enterprise require an annual commitment billed monthly, and the comparison table adds seats one at a time on Basic, Starter and Pro but in…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/salesflow-review/
 
 ## Salesmessage (salesmessage.com)

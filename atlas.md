@@ -211,10 +211,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/asknest-review/
 
 ## Aspire (aspireapp.com)
-- **Verified pricing:** (price re-verified 2026-09-11 against the vendor's own pricing page) SGD $0 monthly fee on Basic, no minimum balance and no deposit to open.
+- **Verified pricing:** (price re-verified 2026-10-02 against the vendor's own pricing page) SGD $0 monthly fee on Basic, no minimum balance and no deposit to open.
 - **Honest take:** It's a fintech account (strongest in Southeast Asia), not a full bank — great for keeping fixed costs near zero on mostly-domestic activity, but confirm it supports your country and currencies before you build…
 - **Best for:** startups and SMBs that want an all-in-one business account with $0 monthly fees and built-in spend management
-- **Flags:** {'f': 'free_tier', 'ev': "(price re-verified 2026-09-11 against the vendor's own pricing page) SGD $0 monthly fee on Basic, no minimum balance and no deposit to open."}
+- **Flags:** {'f': 'free_tier', 'ev': "(price re-verified 2026-10-02 against the vendor's own pricing page) SGD $0 monthly fee on Basic, no minimum balance and no deposit to open."}
 - **Full review:** https://aibuildermarketplace.com/b2b/aspire-review/
 
 ## Assembly (assembly.com)
@@ -472,7 +472,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/brevo-review/
 
 ## Bright Data (brightdata.com)
-- **Verified pricing:** Usage-based (re-verified 2026-09-11): residential proxies start at $4.00/GB with no commitment, against a struck-through $8 — the $2.50/GB rate the overview page leads with is the $1,999/mo…
+- **Verified pricing:** Usage-based (re-verified 2026-10-02): residential proxies start at $4.00/GB with no commitment, against a struck-through $8 — the $2.50/GB rate the overview page leads with is the $1,999/mo…
 - **Honest take:** The bigger honest note is compliance: Bright Data is strict about KYC and use-cases (a feature, not a bug), and whatever you collect still has to respect the target sites' terms and applicable law.
 - **Best for:** data teams and enterprises with real, ongoing web-data needs (pricing intelligence, market research) that justify committed volume and pass use-case vetting
 - **Flags:** {'f': 'usage_metered', 'ev': 'API side: Unlocker, Crawl and SERP APIs from $1/1k requests (free tiers available), Scraper APIs $1.50/1k records pay-as-you-go with a 5K/month free …'}, {'f': 'free_tier', 'ev': 'API side: Unlocker, Crawl and SERP APIs from $1/1k requests (free tiers available), Scraper APIs $1.50/1k records pay-as-you-go with a 5K/month free …'}
@@ -678,7 +678,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/cloze-review/
 
 ## Clutch (clutch.co)
-- **Verified pricing:** (re-verified 2026-09-12, read in their own help centre) Free for buyers.
+- **Verified pricing:** (re-verified 2026-10-02, read in their own help centre) Free for buyers.
 - **Honest take:** It's genuinely free to submit a brief — but be clear on what it is: a lead-generation marketplace, not a neutral directory.
 - **Best for:** businesses that want to skip manual agency research and get matched quickly with vetted, best-fit service providers for a specific project
 - **Full review:** https://aibuildermarketplace.com/b2b/clutch-review/
@@ -1679,10 +1679,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/lettrlabs-review/
 
 ## Lindy.ai (lindy.ai)
-- **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, and the credit allowance is published ag…
+- **Verified pricing:** (re-verified 2026-10-02, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, and the credit allowance is published ag…
 - **Honest take:** Cost tracks headcount rather than output: every colleague who so much as @mentions Lindy in Slack takes a paid seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration.
 - **Best for:** teams that live in Slack and want one shared teammate that sits in their meetings, runs scheduled routines and drafts replies inside the tools they already use
-- **Flags:** {'f': 'per_seat', 'ev': 'Plus is $29.99/mo per user (3k credits per user per month), Pro $99.99/mo per user (15k credits, 5x Plus) and Max $199.99/mo per user (35k credits, ~…'}, {'f': 'usage_metered', 'ev': '(re-verified 2026-09-12, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, …'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Plus is $29.99/mo per user (3k credits per user per month), Pro $99.99/mo per user (15k credits, 5x Plus) and Max $199.99/mo per user (35k credits, ~…'}, {'f': 'usage_metered', 'ev': '(re-verified 2026-10-02, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/lindy-ai-review/
 
 ## Livestorm (livestorm.com)
@@ -3068,10 +3068,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tresorit-review/
 
 ## Turbotic (turbotic.com)
-- **Verified pricing:** (re-verified 2026-09-12, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with additional credits bought as needed.
+- **Verified pricing:** (re-verified 2026-10-02, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with additional credits bought as needed.
 - **Honest take:** It's a newer, enterprise-leaning automation platform, so it's less proven with a smaller community than the big names — and the credit-per-execution model means heavy volume needs cost-checking.
 - **Best for:** teams that want an AI-assisted way to discover, document and run automations without deep RPA expertise
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-12, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with…'}, {'f': 'usage_metered', 'ev': '(re-verified 2026-09-12, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with…'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-10-02, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with…'}, {'f': 'usage_metered', 'ev': '(re-verified 2026-10-02, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/turbotic-review/
 
 ## Typewise (typewise.app)

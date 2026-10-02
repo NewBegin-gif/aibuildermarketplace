@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 490 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-01.
+All 492 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-02.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -442,6 +442,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** email marketers and outbound teams that clean lists regularly and want accurate verification with fair credit mechanics (no expiry, no double-charging)
 - **Flags:** {'f': 'usage_metered', 'ev': 'Email verification credits, pay-as-you-go and never expiring (re-verified 2026-09-11): $8 per 1,000 credits is the minimum purchase.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bouncer-review/
+
+## Brandye (brandye.com)
+- **Verified pricing:** (read 2026-10-02 on brandye.com/pricing and on apps.shopify.com/brandye-quiz-ai-recommendation) Every plan includes the product quiz, the AI shopping assistant and AI product questions; the…
+- **Honest take:** Read the free plan as a trial, not a tier.
+- **Best for:** Shopify stores with a catalogue where shoppers genuinely need help choosing, such as skincare, supplements or gifts, that want a product-finder quiz, answers on product pages and a chat assistant in one app, and value a small team
+- **Flags:** {'f': 'free_tier', 'ev': 'Read the free plan as a trial, not a tier.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/brandye-review/
 
 ## Bread & Butter (breadbutter.io)
 - **Verified pricing:** (re-verified 2026-09-20 on breadbutter.io/pricing) Two published plans.
@@ -2443,6 +2450,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** stores selling final-sale, high-consideration or hard-to-size products, where return anxiety is the thing killing the order — merchants report conversion lifting around 5% and shoppers taking the option roughly 24% of the time
 - **Flags:** {'f': 'usage_metered', 'ev': 'Growth covers all five with capped usage — up to 100 resolved tickets, 100 listings, $500 attributed GMV, one Voice of Customer report (sentiment acr…'}, {'f': 'free_tier', 'ev': 'Three plans on seel.com/pricing, re-read 7 September and again 19 September 2026 (on that second reading the plan cards no longer print a monthly fig…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/seel-review/
+
+## Seele (seeles.ai)
+- **Verified pricing:** (read 2026-10-02 on seeles.ai/upgrade on the monthly, annual and Koin Pack tabs, on the workspace sign-up screen and in the help centre) Everything is paid for in Koins, the platform's cred…
+- **Honest take:** You cannot know in advance what a game will cost.
+- **Best for:** hobbyists, students and teachers who want to turn an idea, a drawing or a photo into a playable browser game without writing code, and indie developers who want to prototype a game idea quickly before building it properly
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-10-02 on seeles.ai/upgrade on the monthly, annual and Koin Pack tabs, on the workspace sign-up screen and in the help centre) Everything i…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/seele-review/
 
 ## Selixer (selixer.com)
 - **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/selixer; unchanged since 10 September 2026) Three tiers, no free plan, each with a 14-day free trial.

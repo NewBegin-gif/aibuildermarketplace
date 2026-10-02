@@ -148,9 +148,9 @@ function vaCalc(){if(!veldPoort('va-stats',['va-arr','va-growth','va-margin'],['
 var arr=+document.getElementById('va-arr').value,g=+document.getElementById('va-growth').value,m=+document.getElementById('va-margin').value;
 var lo,hi;if(g>=60){lo=8;hi=15;}else if(g>=30){lo=6;hi=10;}else if(g>=15){lo=4;hi=7;}else if(g>=5){lo=2.5;hi=5;}else{lo=1.5;hi=3;}
 var r40=g+m;if(r40>=40){lo*=1.1;hi*=1.15;}else if(r40<0){lo*=0.7;hi*=0.8;}
-var stats=[['Valuation range',vaFmt(arr*lo)+'\u2013'+vaFmt(arr*hi),''],['Implied multiple',lo.toFixed(1)+'\u2013'+hi.toFixed(1)+'x',''],['Rule of 40',r40.toFixed(0)+'%',(r40>=40?'sig-y':'sig-n')],['ARR',vaFmt(arr),'']];
+var stats=[['Valuation range',vaFmt(arr*lo)+'\u2013'+vaFmt(arr*hi),''],['Implied multiple',lo.toFixed(1)+'\u2013'+hi.toFixed(1)+'x',''],['Rule of 40',r40.toFixed(0)+'%',''],['ARR',vaFmt(arr),'']];
 document.getElementById('va-stats').innerHTML=stats.map(function(s){return '<div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px"><div class="big '+s[2]+'" style="font-size:1.3rem;line-height:1.1">'+s[1]+'</div><div class="muted" style="font-size:.76rem;margin-top:2px">'+s[0]+'</div></div>';}).join('');
-document.getElementById('va-note').innerHTML='<p class="muted" style="margin:0">'+(r40>=40?'A Rule of 40 above 40 signals a healthy balance of growth and profit \u2014 it supports the higher end of the range.':'Below 40 on the Rule of 40 \u2014 buyers will lean toward the lower end until growth or margin improves.')+' Valuation is a range, not a number: the real figure depends on the market, your retention and who is buying.</p>';
+document.getElementById('va-note').innerHTML='<p class="muted" style="margin:0">Rule of 40: growth plus profit margin comes to '+r40.toFixed(0)+'%. Many SaaS buyers use 40% as a reference point. This estimate raises the multiple by 10 to 15% when the sum is 40% or more, lowers it by 20 to 30% when it is below 0, and leaves it as is in between. Valuation is a range, not a number: the real figure depends on the market, your retention and who is buying.</p>';
 gtag&&gtag('event','tool_use',{event_label:'valuation'});}
 ['va-arr','va-growth','va-margin'].forEach(function(id){document.getElementById(id).addEventListener('input',vaCalc);});vaCalc();
 </script></body></html>

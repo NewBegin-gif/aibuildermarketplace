@@ -120,20 +120,20 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
-<div class="row"><div><label>Your business</label><input type="text" id="iv-from" value="Your Company"><textarea id="iv-from-addr" rows="2" placeholder="Address, VAT number, IBAN&hellip;" style="margin-top:6px"></textarea></div>
-<div><label>Bill to (client)</label><input type="text" id="iv-to" value="Client Name"><textarea id="iv-to-addr" rows="2" placeholder="Client address" style="margin-top:6px"></textarea></div></div>
-<div class="row"><div><label>Invoice #</label><input type="text" id="iv-num" value="INV-001"></div>
-<div><label>Date</label><input type="date" id="iv-date"></div>
-<div><label>Due date</label><input type="date" id="iv-due"></div></div>
-<div class="row"><div><label>Currency</label><select id="iv-cur"><option value="EUR">EUR &euro;</option><option value="USD">USD $</option><option value="GBP">GBP &pound;</option><option value="CHF">CHF</option><option value="AUD">AUD $</option><option value="CAD">CAD $</option><option value="INR">INR &#8377;</option><option value="JPY">JPY &yen;</option><option value="SEK">SEK kr</option><option value="PLN">PLN z&#322;</option></select></div>
-<div><label>Tax label</label><input type="text" id="iv-taxname" value="VAT"></div>
-<div><label>Tax %</label><input type="number" id="iv-tax" value="21" min="0" step="0.1"></div>
-<div><label>Discount</label><div style="display:flex;gap:6px"><input type="number" id="iv-disc" value="0" min="0" step="0.01"><select id="iv-disctype" style="max-width:70px"><option value="pct">%</option><option value="abs">amt</option></select></div></div></div>
-<div class="row"><div><label>Status stamp</label><select id="iv-stamp"><option value="">none</option><option value="PAID">PAID</option><option value="DUE">DUE</option><option value="OVERDUE">OVERDUE</option><option value="DRAFT">DRAFT</option></select></div>
-<div><label>Your logo (optional)</label><input type="file" id="iv-logo" accept="image/*" style="padding:8px"></div></div>
+<div class="row"><div><label for="iv-from">Your business</label><input type="text" id="iv-from" value="Your Company"><textarea id="iv-from-addr" aria-label="Your business address" rows="2" placeholder="Address, VAT number, IBAN&hellip;" style="margin-top:6px"></textarea></div>
+<div><label for="iv-to">Bill to (client)</label><input type="text" id="iv-to" value="Client Name"><textarea id="iv-to-addr" aria-label="Client address" rows="2" placeholder="Client address" style="margin-top:6px"></textarea></div></div>
+<div class="row"><div><label for="iv-num">Invoice #</label><input type="text" id="iv-num" value="INV-001"></div>
+<div><label for="iv-date">Date</label><input type="date" id="iv-date"></div>
+<div><label for="iv-due">Due date</label><input type="date" id="iv-due"></div></div>
+<div class="row"><div><label for="iv-cur">Currency</label><select id="iv-cur"><option value="EUR">EUR &euro;</option><option value="USD">USD $</option><option value="GBP">GBP &pound;</option><option value="CHF">CHF</option><option value="AUD">AUD $</option><option value="CAD">CAD $</option><option value="INR">INR &#8377;</option><option value="JPY">JPY &yen;</option><option value="SEK">SEK kr</option><option value="PLN">PLN z&#322;</option></select></div>
+<div><label for="iv-taxname">Tax label</label><input type="text" id="iv-taxname" value="VAT"></div>
+<div><label for="iv-tax">Tax %</label><input type="number" id="iv-tax" value="21" min="0" step="0.1"></div>
+<div><label>Discount</label><div style="display:flex;gap:6px"><input type="number" id="iv-disc" aria-label="Discount" value="0" min="0" step="0.01"><select id="iv-disctype" aria-label="Discount type" style="max-width:70px"><option value="pct">%</option><option value="abs">amt</option></select></div></div></div>
+<div class="row"><div><label for="iv-stamp">Status stamp</label><select id="iv-stamp"><option value="">none</option><option value="PAID">PAID</option><option value="DUE">DUE</option><option value="OVERDUE">OVERDUE</option><option value="DRAFT">DRAFT</option></select></div>
+<div><label for="iv-logo">Your logo (optional)</label><input type="file" id="iv-logo" accept="image/*" style="padding:8px"></div></div>
 <label style="margin-top:10px">Line items</label><div id="iv-items"></div>
 <button class="btn ghost" id="iv-add" type="button">+ Add line</button>
-<label style="margin-top:12px">Notes / payment terms</label><textarea id="iv-notes" rows="2">Payment within 14 days by bank transfer. Thank you for your business.</textarea>
+<label for="iv-notes" style="margin-top:12px">Notes / payment terms</label><textarea id="iv-notes" rows="2">Payment within 14 days by bank transfer. Thank you for your business.</textarea>
 <div id="iv-total" style="margin-top:12px"></div>
 <button class="btn" id="iv-pdf" style="margin-top:8px">Download PDF</button> <button class="btn ghost" id="iv-reset" type="button">Start a new invoice</button>
 <p class="note">Everything you type is kept in this browser (localStorage) so the next invoice starts pre-filled and the number counts up. Nothing is sent to us. Unlimited invoices, no account, no watermark.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://officesoftwaremarketplace.com/tools/invoice-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="nofollow noopener" style="color:#8b93a7;text-decoration:none">&#9889; Free Invoice Generator &mdash; free tool by <span style="color:#60a5fa">Office Software Marketplace</span></a></p></div><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>

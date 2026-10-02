@@ -120,10 +120,10 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><div class="row">
-<div><label>Original width</label><input type="number" id="ar-ow" value="1920" min="1"></div>
-<div><label>Original height</label><input type="number" id="ar-oh" value="1080" min="1"></div></div>
-<div class="row"><div><label>New width</label><input type="number" id="ar-nw" value="1280" min="1"></div>
-<div><label>New height (auto)</label><input type="number" id="ar-nh" readonly></div></div>
+<div><label for="ar-ow">Original width</label><input type="number" id="ar-ow" value="1920" min="1"></div>
+<div><label for="ar-oh">Original height</label><input type="number" id="ar-oh" value="1080" min="1"></div></div>
+<div class="row"><div><label for="ar-nw">New width</label><input type="number" id="ar-nw" value="1280" min="1"></div>
+<div><label for="ar-nh">New height (auto)</label><input type="number" id="ar-nh" readonly></div></div>
 <div id="ar-out" style="margin-top:16px"></div></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/aspect-ratio-calculator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Aspect Ratio Calculator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 function gcd(a,b){return b?gcd(b,a%b):a;}
 function arCalc(){var ow=+document.getElementById('ar-ow').value,oh=+document.getElementById('ar-oh').value,nw=+document.getElementById('ar-nw').value,o=document.getElementById('ar-out');

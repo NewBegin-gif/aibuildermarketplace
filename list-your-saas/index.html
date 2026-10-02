@@ -112,19 +112,19 @@ are claiming &rarr;</a></p></div>
 </script>
 <form id="lform">
   <input name="website" style="display:none" tabindex="-1" autocomplete="off">
-  <label>Product name *</label><input name="name" maxlength="60" required>
-  <label>Tagline (one line)</label><input name="tagline" maxlength="120" placeholder="What it does, in one honest sentence">
-  <label>Category</label>
-  <select name="category"><option>Marketing</option><option>Sales & CRM</option><option>Productivity</option><option>Developer Tools</option><option>Finance & Accounting</option><option>HR & People</option><option>E-commerce</option><option>Communication</option><option>AI & Data</option><option>Design & Content</option><option>Security & Hosting</option><option>Other SaaS</option></select>
-  <label>Description * (min. 80 characters — what it does, who it's for, what makes it different)</label>
-  <textarea name="desc" rows="6" maxlength="1500" required></textarea>
-  <label>Pricing (from) — must match your live pricing page</label><input name="price_from" maxlength="60" placeholder="e.g. Free plan + paid from $19/mo">
-  <label>Website URL *</label><input name="url" maxlength="200" type="url" required placeholder="https://…">
-  <label>Logo URL (direct image link, square works best)</label><input name="logo_url" maxlength="300" type="url">
-  <label>Screenshot URLs (up to 3, comma-separated direct image links)</label><input name="shots" maxlength="900" placeholder="https://…/screen1.png, https://…/screen2.png">
-  <label>Exclusive AIBM reader code (optional — a real discount for our readers makes your listing stand out; we display it prominently)</label><input name="coupon_code" maxlength="40" placeholder="e.g. AIBM20" style="text-transform:uppercase">
-  <label>What the code gives (be precise — we publish offers exactly as they are, including when the normal rate returns)</label><input name="coupon_deal" maxlength="160" placeholder="e.g. 20% off the first 3 months of the Pro plan">
-  <label>Contact e-mail (not published — for listing questions only)</label><input name="email" maxlength="80" type="email">
+  <label for="lys-name">Product name *</label><input id="lys-name" name="name" maxlength="60" required>
+  <label for="lys-tagline">Tagline (one line)</label><input id="lys-tagline" name="tagline" maxlength="120" placeholder="What it does, in one honest sentence">
+  <label for="lys-category">Category</label>
+  <select id="lys-category" name="category"><option>Marketing</option><option>Sales & CRM</option><option>Productivity</option><option>Developer Tools</option><option>Finance & Accounting</option><option>HR & People</option><option>E-commerce</option><option>Communication</option><option>AI & Data</option><option>Design & Content</option><option>Security & Hosting</option><option>Other SaaS</option></select>
+  <label for="lys-desc">Description * (min. 80 characters — what it does, who it's for, what makes it different)</label>
+  <textarea id="lys-desc" name="desc" rows="6" maxlength="1500" required></textarea>
+  <label for="lys-price_from">Pricing (from) — must match your live pricing page</label><input id="lys-price_from" name="price_from" maxlength="60" placeholder="e.g. Free plan + paid from $19/mo">
+  <label for="lys-url">Website URL *</label><input id="lys-url" name="url" maxlength="200" type="url" required placeholder="https://…">
+  <label for="lys-logo_url">Logo URL (direct image link, square works best)</label><input id="lys-logo_url" name="logo_url" maxlength="300" type="url">
+  <label for="lys-shots">Screenshot URLs (up to 3, comma-separated direct image links)</label><input id="lys-shots" name="shots" maxlength="900" placeholder="https://…/screen1.png, https://…/screen2.png">
+  <label for="lys-coupon_code">Exclusive AIBM reader code (optional — a real discount for our readers makes your listing stand out; we display it prominently)</label><input id="lys-coupon_code" name="coupon_code" maxlength="40" placeholder="e.g. AIBM20" style="text-transform:uppercase">
+  <label for="lys-coupon_deal">What the code gives (be precise — we publish offers exactly as they are, including when the normal rate returns)</label><input id="lys-coupon_deal" name="coupon_deal" maxlength="160" placeholder="e.g. 20% off the first 3 months of the Pro plan">
+  <label for="lys-email">Contact e-mail (not published — for listing questions only)</label><input id="lys-email" autocomplete="email" name="email" maxlength="80" type="email">
   <button type="submit">Submit listing (free)</button>
   <span id="lmsg" class="muted" style="margin-left:12px;font-size:.9rem"></span>
 </form>

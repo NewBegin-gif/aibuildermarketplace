@@ -121,7 +121,7 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><label for="hs-in">Text to hash</label>
 <textarea id="hs-in" rows="3">hello world</textarea>
-<label for="hs-out" style="margin-top:10px">SHA-256 hash</label><input type="text" id="hs-out" class="out" readonly>
+<label for="hs-out" style="margin-top:10px">SHA-256 hash</label><input aria-label="Result" type="text" id="hs-out" class="out" readonly>
 <button class="btn" id="hs-copy">Copy</button></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/sha256-hash-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; SHA-256 Hash Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 async function hsCalc(){var t=document.getElementById('hs-in').value||'',o=document.getElementById('hs-out');
 try{var buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));o.value=Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');}catch(e){o.value='SHA-256 needs a secure (https) page.';}

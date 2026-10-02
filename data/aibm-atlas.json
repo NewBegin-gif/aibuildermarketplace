@@ -10,7 +10,7 @@
   "generated_at": "2026-10-02",
   "notes": "Prices are the entry prices we found at research time; always check live pricing. Every flag carries the evidence sentence from our hand-researched dossier.",
   "tool_count": 493,
-  "flag_count": 813
+  "flag_count": 828
  },
  "tools": [
   {
@@ -117,6 +117,10 @@
    "pricing_status": "quote_only",
    "price_note": "(2026-08-15, read on their own site) ADP shows no public pricing for RUN anywhere on its site, and we checked four places before saying so. /pricing returns a 404, and so does /pricing.md. The RUN product page offers only a “Get Pricing” button. And the dedicated package-comparison page lists all four tiers with “Get pricing” under each one and not a single figure. The tiers are Essential Payroll, Enhanced Payroll (adds ZipRecruiter, State Unemployment Insurance and garnishment payments), Complete Payroll & HR Plus (adds basic HR support) and HR Pro Payroll & HR (enhanced HR support and staff perks). A promotion was running when we read it: three months of free payroll, marked “Ends 8/27”, with terms behind an asterisk.",
    "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: pricing page and package page return only \"Get Pricing\" buttons, no figure anywhere (read 15 Aug 2026)"
+    },
     {
      "flag": "per_seat",
      "evidence": "Ask for the per-employee-per-month rate and the per-payroll-run fee separately."
@@ -288,7 +292,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(re-verified 2026-09-10) Quote-only. Airia used to publish a ladder: a free tier, Individual around $50 a month and Team around $250. That page is gone — both airia.com/pricing and www.airia.com/pricing now redirect to airia.ai/docs/build/interface-options/usage_limits, a developer documentation page titled Usage Limits on a different domain, while airia.ai/pricing answers 200 with a shell that carries no text at all without JavaScript, and we found no amount anywhere on the site on 10 September 2026. Every deployment is therefore quoted after a sales conversation. Treat any $50 or $250 figure still in circulation, including in older versions of this review, as historical rather than current.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: pricing page redirects to developer docs, and no amount was found anywhere on the site (read 10 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-10"
   },
@@ -466,6 +475,10 @@
    "price_note": "(re-verified 20 Sep 2026) The pricing page is public again, and it has tiers now. On 26 August 2026 alvys.com/pricing answered an ordinary request with HTTP 401 and sat behind a password; read on 20 September 2026 it returns 200 and shows three plans — Foundations, Growth and Scale — none of which carries an amount. All three read \"Quoted based on volume of loads\", under the page's own summary line: simple per-load pricing, free implementation, cancel anytime. Foundations now has a 14-day free trial behind a Try for free button; Growth and Scale route to sales. The FAQ states there are no setup fees, no per-user or per-seat charge, no contracts and month-to-month cancellation. Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and the developer sandbox is a $100/month add-on on Foundations and Growth, included on Scale. Custom reports, scheduled reports, Insights AI analytics, Sage and Samsara Premium are add-ons on every tier. The last published load-based rates (2026) were Carrier from ~$150/mo and Broker from ~$300/mo; those tier names no longer exist on the page and the figures are history, not a quote.",
    "flags": [
     {
+     "flag": "quote_only",
+     "evidence": "No amount is published: all three plans read 'Quoted based on volume of loads'; the $100 on the page is a developer-sandbox add-on and the older ~$150/~$300 load rates are history"
+    },
+    {
      "flag": "addons_extra",
      "evidence": "Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and the developer sandbox is a $100/month add-on on Foundations and…"
     }
@@ -511,6 +524,10 @@
    "pricing_status": "quote_only",
    "price_note": "(2026-09-17, re-read on their own pricing page) Free $0 with 2 million events a month, permanently, no card required and no time limit. Plus starts at $0 with the first 2 million events free and scales up to 70 million events; a card is required and the card itself offers an estimator rather than a rate. Growth and Enterprise are quote-only, both described as event-based pricing. The page states every plan includes the full platform and unlimited seats, and that expanded packages are priced as a percentage of your platform plan. Startups with under $10 million in funding and fewer than 20 employees are offered one free year on Growth, applied for rather than self-served. The published caps that do differ by tier are session replays (10,000 a month on Free and Plus, 20,000 on Growth, 50,000 on Enterprise), active experiments (one on Free and Plus, two on Growth and Enterprise, more as an add-on) and agent sessions (5,000, 10,000 and 20,000).",
    "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published paid amount: Free is $0, Plus 'starts at $0' but scales through an unpublished usage estimator, and Growth/Enterprise are quote-only (read 17 Sep 2026)"
+    },
     {
      "flag": "usage_metered",
      "evidence": "Unlimited seats is genuinely unusual and worth the credit — you are not taxed for letting the whole team look."
@@ -619,7 +636,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "What the listing never says is what happens when you run out: there is no overage rate anywhere on the page, so whether reply 501 costs money or simply does not happen is not published."
+     "evidence": "meter: unit · AI replies"
     },
     {
      "flag": "free_tier",
@@ -1229,7 +1246,7 @@
    "from_price_usd_mo": null,
    "entry_price": null,
    "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "pricing_status": "see_details",
    "price_note": "No subscription, no activation cost and no minimum commitment (re-verified 2026-08-20 on Bolt's own business page): you pay per ride or rental taken, with consolidated monthly billing, spend limits and policy controls included. One line the marketing does not carry, but Bolt's own support pages do: Bolt charges a service fee on every trip made with the business payment method, billed at the start of the following month. On credit card it is deducted automatically and does not appear on the individual trip invoice — it arrives as a separate service fee statement on the 3rd of each month; on postpaid it sits on the monthly invoice. The amount is not published. Still commitment-free to pilot, but ‘you only pay for the rides’ is not the whole bill.",
    "flags": [],
    "researched": "2026-07",
@@ -1760,7 +1777,7 @@
    "from_price_usd_mo": null,
    "entry_price": null,
    "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "pricing_status": "see_details",
    "price_note": "What we can verify on the vendor’s own pages today (re-checked 26 Aug 2026): carbon6.io/pricing now redirects to the tool list, so there is no suite-level price at all. SoStocked has dropped its two-tier ladder — where on 21 Jul it listed ProfitFlow at $97/mo and ProfitFlow + Inventory at \"starting at\" $250/mo, it now shows a single Inventory + Profit plan at \"starting at\" $175/mo with a free trial. ScanUnlimited lists a free Limited tier and Unlimited at $70/mo, or $60/mo on the annual plan ($720/yr, marketed as two months free); the Unlimited Plus tier that sat above it at $1,080/yr is no longer on the pricing page. The off-Amazon advertising tool is listed as PixelMe by Carbon6 again rather than SPS Ad Performance, and it publishes no price. The 3P FBA-reimbursement service is a contingency arrangement: Seller Investigators by Carbon6 states a 25% commission charged only after Amazon has deposited the recovered funds, stated twice on its own site (re-read 26 Aug 2026), after a free 48-hour audit with no obligation. Our older suite-level figures — entry tools from about $49/mo, PixelMe from about $500/mo with a 6-month minimum, and $300-500+/mo for a working stack — stay withdrawn: none of those is verifiable against a live authoritative source today.",
    "flags": [],
    "researched": "2026-07",
@@ -1814,9 +1831,9 @@
    "domain": "checkr.com",
    "review_url": "https://aibuildermarketplace.com/b2b/checkr-review/",
    "from_price_usd_mo": null,
-   "entry_price": null,
-   "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "entry_price": "$29.99",
+   "entry_price_terms": "per report",
+   "pricing_status": "public",
    "price_note": "(re-verified 2026-08-17 and again 2026-09-30) Pay-as-you-go per report, no subscription: Basic $29.99, Essential $59.99 and Complete $94.99 per report, with Enterprise quote-only. Tenant screening is priced separately at $24.99, $34.99 and $44.99 per report, and personal checks start from $49.99. Add-ons stack on top: MVR report $9.50 per check, identity verification $4.99 per check, and employment verification from $12.50 a check for the current employer, rising to $15, $25, $35 and $50 for three, five, seven and ten years back, with third-party court and database fees passed through at cost. The $59.95 (employment) and $64.95 (income and employment) figures on the same page belong to Checkr's separate pay-as-you-go verification product for mortgage lending, billed per verification with no commitment or contract, not to the hiring add-ons.",
    "flags": [
     {
@@ -2088,7 +2105,7 @@
    "from_price_usd_mo": null,
    "entry_price": null,
    "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "pricing_status": "see_details",
    "price_note": "(re-verified 2026-08-19, read on their own pricing page) Two hiring models, both published, plus one deposit. A one-time $299 deposit starts your search — asked “Do you charge a monthly platform fee?” their FAQ answers “No. There is a one-time $299 deposit to start your search. That is the only fee outside the models above.” — and the deposit applies toward your buyout or your first placement. Direct Hire costs 20% to 30% of first-year base salary, paid once and quoted per role, with a 6-month replacement guarantee (one replacement, same job description) and US W2 employment available. Managed Staffing is billed as one all-in monthly rate per person covering salary, compliance, payroll and support — that rate is not published, and it is the number that decides what this costs. It carries a 24-month replacement guarantee with replacements not capped, and time and activity tracking on by default, which the hire agrees to before matching and you can switch off when you post the role. Graduating a managed hire onto your own payroll is possible after six months for a one-time placement fee quoted at that moment; no amount is published. Health and equipment benefits are available on request on Managed Staffing only.",
    "flags": [],
    "researched": "2026-07",
@@ -2180,6 +2197,10 @@
    "pricing_status": "quote_only",
    "price_note": "(2026-09-17, re-read on their own pricing page) No prices are shown. Two named plans, Standard and Pro, both stated to include 5 seats, with everything routed to 'Talk to sales' and 'Get a personalised quote'. The model is credit-based — their own wording is that 1 credit equals 1 revealed contact — with credits included in the subscription per seat, but no allowance is published. Their FAQ adds that a redeemed contact stays usable for the length of the contract and only costs a second credit if that person changes jobs, and that additional credits can be purchased at any point. CRM Enrichment is sold standalone or as an add-on; Data-as-a-Service is priced by volume, delivery method and the fields required, and its API route requires a prospecting seat.",
    "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: Standard and Pro both route to Talk to sales / a personalised quote, with no credit allowance or amount stated (read 17 Sep 2026)"
+    },
     {
      "flag": "per_seat",
      "evidence": "The model is credit-based — their own wording is that 1 credit equals 1 revealed contact — with credits included in the subscription per seat, but no allowance is published."
@@ -2373,16 +2394,7 @@
    "entry_price_terms": "per month billed annually (5,000 pageviews, 50 recordings)",
    "pricing_status": "public",
    "price_note": "(2026-08-21, read on their own pricing page) Three plans, all billed annually, with a 30-day free trial and — in the vendor's words — no overages, ever. Analytics starts at $29/month and scales on tracked pageviews across 5,000, 50,000, 150,000, 500,000 and 1,000,000 a month, starting at 50 recordings. Growth starts at $99/month, but its slider starts at 50,000 pageviews rather than 5,000, and includes 500 recordings plus A/B testing, CTAs and targeting by device type. Enterprise is quoted. Note a conflict in the vendor's own material: their machine-readable pricing.md still lists an older Starter/Plus/Pro/Enterprise ladder at $29/$99/$249/$599 with different pageview allowances. The live pricing page is the one we read for the figures above.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "(2026-08-21, read on their own pricing page) Three plans, all billed annually, with a 30-day free trial and — in the vendor's words — no overages, ever."
-    },
-    {
-     "flag": "free_tier",
-     "evidence": "The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-08-21"
   },
@@ -2465,6 +2477,10 @@
    "pricing_status": "quote_only",
    "price_note": "(read 2026-08-25 on www.datarails.com/pricing) There is no public price. Datarails publishes three plans — Professional, Premium and Expert — and every one of them carries a Request Quote button where the number would be. The page frames that as a feature: “Get a custom quote tailored to your needs. Complete cost transparency, with no consultant fees—ever.”\n\nWhat the page does publish is the shape of the ladder, and it is unusually explicit about what changes between tiers. The comparison table lists the same feature set on all three plans: reporting, planning, dashboards, Data Mapper, Lookups, Workflows, Submit Button, File Boxes, Filters, version control, the Datarails AI Suite, the FinanceOS AI Connector and permissions. Only two rows differ. Professional gives 1 integration and 2 users with standard support. Premium, marked most popular, gives 2 integrations and 5 users with premium support, and adds AI Storyboards, described as board decks in one click. Expert gives 3 integrations and 15 users with premium support, plus one “additional product included” — the line beyond FP&A runs to Datarails Month-End Close, Datarails Cash, Datarails Spend Control and Datarails Desk, and the page does not say which of those the extra slot may be spent on.\n\nSo the meter is seats and connected systems, not features. The page states no currency, no billing period, no minimum term and does not say whether a quote is annual, and there is no free plan, no free trial and no self-serve signup: the only entry point on every page of the site is Request Demo or Request Quote. Treat any Datarails figure you have seen quoted elsewhere as unverified — on 25 August 2026 the vendor's own pricing page contains no amount at all.\n\nOne of those unpublished terms the vendor will answer if you ask. On 31 August 2026, through its partner team, Datarails told us that customers typically commit to an annual term, that billing can run monthly across that year, that users can be added as a team grows, and that adding modules or capabilities beyond the core platform can carry an extra cost that depends on the scope of the expansion. That is the vendor's own account rather than a published rate, so it belongs in your quote in writing — but it does answer the term question the pricing page leaves open.",
    "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: Professional, Premium and Expert all route to a Request Quote button, no amount on the page (read 25 Aug 2026)"
+    },
     {
      "flag": "addons_extra",
      "evidence": "On 31 August 2026, through its partner team, Datarails told us that customers typically commit to an annual term, that billing can run monthly across that year, that users can be added as a team grow…"
@@ -2736,12 +2752,7 @@
    "entry_price_terms": "per year",
    "pricing_status": "public",
    "price_note": "(re-verified 1 October 2026 on doola.com/pricing) These are the list prices. Starter is $297 a year plus state fees and covers LLC or C-Corp formation, EIN, a registered agent and a US address; state filing fees run $50 to $500 depending on the state, and they are yours, not doola's. Pulse bookkeeping comes with a 30-day trial and renews at $300 a year. Tax and Compliance, the tier the page marks Most Popular, is $1,999 a year plus state fees. Business-in-a-Box is $2,999 a year, or $329 a month, plus state fees. doola's own FAQ states that all plans are billed annually. Worth knowing for timing: doola runs periodic automatic sales on top of that list. We have recorded two: an up-to-$750 sale that ran through 31 August 2026 and a 20% sale badged Back to Building that ran from 21 to 30 September 2026. Both ended on schedule, and on 1 October 2026 the page showed no sale banner; the one struck-through figure left was the monthly view of Business-in-a-Box, $329 shown at $263, with no badge or end date beside it. So budget from the list column, because that is what year two costs.",
-   "flags": [
-    {
-     "flag": "renewal_jump",
-     "evidence": "Pulse bookkeeping comes with a 30-day trial and renews at $300 a year."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-10-01"
   },
@@ -2830,7 +2841,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(2026-08-17, read in a browser because the site renders client-side and a plain fetch returns only the title) There is no public pricing anywhere, and we checked before saying so. /pricing, /plans, /services, /about and /contact all return 404. The words “pricing”, “price” and “$” appear zero times on the homepage, and the navigation carries no pricing entry at all — it runs Solutions, Products, Verticals, Case Studies, Research, Book a Consultation. Tiers do exist with no numbers attached: the AI Velocity line is described as “six tiers from pilot to full enterprise transformation” on 90-day outcome cycles. Budget this as a consulting engagement scoped per project, not a subscription you can read off a page.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No public pricing anywhere: /pricing and related paths 404, no dollar amounts anywhere on the site, budgeted as a scoped consulting engagement (read 17 Aug 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-08-21"
   },
@@ -3139,10 +3155,6 @@
    "price_note": "(read 2026-09-29 on apps.shopify.com/essential-announcement-bar, on essential-apps.com/announcement-bar and in the vendor's help articles on bar types and on views) Four plans priced on monthly bar views. Free covers up to 2,000 views a month with unlimited simple bars and unlimited rotating bars, each with a link or button. Starter is $6.99 a month, or $67.08 a year at a stated 20% saving, for up to 20,000 views, and adds running-line (scrolling marquee) bars and icons, including your own uploaded icons. Essential is $9.99 a month or $95.88 a year for up to 50,000 views, and adds cart-page bars, scheduling, geolocation targeting and translations. Professional is $29.99 a month or $287.88 a year for unlimited views and every premium feature. Paid plans carry a 7-day free trial. A view is counted every time a bar is rendered: per page load, not per visitor, and two bars on one page count twice. There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days your bars are unpublished; views reset on the 1st of the month, but the help centre says the bars are not published again automatically. All charges are in USD, billed through Shopify every 30 days. Developer Essential Apps, with an address in Vilnius, Lithuania; the listing gives a launch date of 9 August 2023 and shows 1,302 reviews.",
    "flags": [
     {
-     "flag": "usage_metered",
-     "evidence": "There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days your bars are unpublished; views reset on the 1st of the month, but the help centre says the bars …"
-    },
-    {
      "flag": "free_tier",
      "evidence": "What the free plan does give you is a static bar and a rotating bar that cycles several messages; one merchant who installed it expecting the moving bar for free left a one-line complaint within half…"
     }
@@ -3162,10 +3174,6 @@
    "price_note": "(read 2026-09-28 on apps.shopify.com/essential-countdown-timer, on essential-apps.com/countdown-timer and in the vendor's help article on timer views) Four plans priced on monthly timer views. Free covers up to 1,000 views a month with unlimited product-page and top-bar timers. Starter is $6.99 a month, or $67.08 a year at a stated 20% saving, for up to 10,000 views, and adds landing-page timers and scheduled and recurring timers. Essential is $9.99 a month or $95.88 a year for up to 50,000 views, and adds cart timers, email timers, placing timers by product tag and geo-targeting. Professional is $29.99 a month or $287.88 a year for unlimited views and every premium feature. Paid plans carry a 7-day free trial, and the vendor's own site adds a 30-day money-back guarantee. A view is counted every time a timer loads, not once per visitor. There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days every published timer is unpublished until views reset on the 1st of the month. All charges are in USD, billed through Shopify every 30 days. Developer Essential Apps, with an address in Vilnius, Lithuania; the listing gives a launch date of 10 February 2022 and shows 1,721 reviews.",
    "flags": [
     {
-     "flag": "usage_metered",
-     "evidence": "There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days every published timer is unpublished until views reset on the 1st of the month."
-    },
-    {
      "flag": "free_tier",
      "evidence": "The free plan is smaller than it looks, because of what counts as a view."
     }
@@ -3184,10 +3192,6 @@
    "pricing_status": "public",
    "price_note": "(read 2026-09-29 on apps.shopify.com/essential-order-value-booster, on essential-apps.com/free-shipping-bar and in the vendor's help articles on views and on setup) Four plans priced on monthly booster views. Free covers up to 1,000 views a month with unlimited top-bar and product-page boosters. Starter is $9.99 a month for up to 10,000 views and adds geolocation targeting and excluding products from the goal. Essential is $14.99 a month for up to 50,000 views and adds cart-page boosters, upsell products inside the bar and analytics. Professional is $29.99 a month for unlimited views and every premium feature. Paid plans carry a 7-day free trial. The listing shows monthly prices only; the help centre says a yearly billing cycle can be chosen inside the app, and we found no published yearly price. A view is counted each time the widget loads, not per visitor; the help centre says Preview mode and the theme customiser are not counted. There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days the banners are unpublished until views reset on the 1st. All charges are in USD, billed through Shopify every 30 days. Developer Essential Apps, with an address in Vilnius, Lithuania; the listing gives a launch date of 3 June 2022 and shows 964 reviews.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days the banners are unpublished until views reset on the 1st."
-    },
     {
      "flag": "free_tier",
      "evidence": "Views are counted on every load of every widget, and the free plan's 1,000 a month is small for a bar that sits on every product page."
@@ -3230,10 +3234,6 @@
    "pricing_status": "public",
    "price_note": "(read 2026-09-30 on apps.shopify.com/essential-icon-badge-banners, on essential-apps.com/trust-badges and in the vendor's help articles on views, cart placement and badges not showing) Four plans priced on monthly widget views. Free covers up to 5,000 views a month, the full icon library, unlimited payment icons on product pages and one product-page banner or one block of three icons. Starter is $6.99 a month, or $67.08 a year at a stated 20% saving, for up to 20,000 views, and adds unlimited product-page blocks, unlimited icons per block and uploading your own icons. Essential is $9.99 a month or $95.88 a year for up to 50,000 views, and adds cart-page and cart-drawer badges, placing badges by product tag, geolocation targeting and translations. Professional is $29.99 a month or $287.88 a year for unlimited views and every premium feature. Paid plans carry a 7-day free trial. A view is counted every time a badge widget loads, not once per visitor, and your own browsing counts too. There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days the badges are unpublished until views reset on the 1st of the month. All charges are in USD, billed through Shopify every 30 days. Developer Essential Apps, with an address in Vilnius, Lithuania; the listing gives a launch date of 2 June 2023 and shows 1,163 reviews.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days the badges are unpublished until views reset on the 1st of the month."
-    },
     {
      "flag": "free_tier",
      "evidence": "The free plan is generous on views and tight on badges."
@@ -3289,7 +3289,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(re-verified 2026-09-22 on evolveplatform.ai) No public price list -- there is no /pricing page and the call to action across the site is 'Book an intro'. The platform is modular by design and the quote is built from which modules you contract and how many seats: Evolve Learning, Course Generate, Evolve Studio course builder, Assessment Center, Knowledge base and Simulations -- six independent but connected products, not four. Budget for an enterprise-tier commitment.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No public price list; modular platform quoted per module and seat count via 'Book an intro' (re-verified 22 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-22"
   },
@@ -3368,16 +3373,11 @@
    "domain": "expertsender.com",
    "review_url": "https://aibuildermarketplace.com/b2b/expertsender-review/",
    "from_price_usd_mo": null,
-   "entry_price": null,
-   "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "entry_price": "$450",
+   "entry_price_terms": "published floor ('from $450 USD' on the home page); the actual price is quote-based",
+   "pricing_status": "public",
    "price_note": "(re-verified 10 September 2026 on expertsender.com — on the home page, because the pricing page is gone: /pricing, /pricing-plans/ and /en/pricing/ all return 404) (2026) Quote-based with a documented floor: their home page says 'Start growing your eCommerce business from $450 USD', scaling with volume and channels, and they explicitly target stores with at least 30,000 unique monthly visits. No free tier — a free consultation is the entry point.",
-   "flags": [
-    {
-     "flag": "quote_only",
-     "evidence": "(re-verified 10 September 2026 on expertsender.com — on the home page, because the pricing page is gone: /pricing, /pricing-plans/ and /en/pricing/ all return 404) (2026) Quote-based with a documente…"
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-08-17"
   },
@@ -3453,6 +3453,10 @@
    "price_note": "Feedvisor publishes no price, and we checked that again on 2026-09-03 and 2026-09-29. feedvisor.com/pricing returns a 404. Their own llms.txt lists every public page and contains no pricing page and no amount. The plan comparison at feedvisor.com/plans does publish a tier structure — Professional, Premium and Enterprise for price optimisation, Feedvisor and Feedvisor Plus for advertising, and a single Enterprise tier for brand optimisation — but every column ends in Request Demo rather than a figure. One correction to what we wrote before: the sentence we attributed to Feedvisor, that pricing is hybrid and varies with catalogue size, ad spend and complexity, is no longer anywhere on their site. The platform has been rebranded to Agentis and that wording went with it, so we no longer put those words in their mouth. Every figure you will read elsewhere, including the roughly $100 a month entry tier and the roughly $1,500 a month for the full platform that we carried before, comes from third parties or from sales conversations rather than from Feedvisor. Treat those as indicative only, and expect a sales call.",
    "flags": [
     {
+     "flag": "quote_only",
+     "evidence": "No published price: feedvisor.com/pricing returns a 404 and the plan comparison page routes every tier to Request Demo (read 3 Sep 2026)"
+    },
+    {
      "flag": "usage_metered",
      "evidence": "One correction to what we wrote before: the sentence we attributed to Feedvisor, that pricing is hybrid and varies with catalogue size, ad spend and complexity, is no longer anywhere on their site."
     }
@@ -3493,7 +3497,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(2026-08-29, read on their own pricing page) No prices are shown. Their own wording: all packages are custom built for your team's needs. The page describes five products — LOIS (AI features), Matters, Intake, Depositions and Signatures — and routes everything to a sales team for a custom quote. No per-user cost, no minimum seats, no contract length and no implementation fee is published, which is unchanged since 1 August 2026. What the page does name now is a free way in: LOIS Explore, described as a free tier of LOIS for AI-powered legal research and drafting, with a trial that takes no credit card.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No prices shown; all packages are custom-built and quoted by sales (read 29 Aug 2026); the one free way in is LOIS Explore, a free tier of the LOIS legal-AI tool with no card required (re-read 16 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-16"
   },
@@ -3549,16 +3558,11 @@
    "domain": "flatpay.com",
    "review_url": "https://aibuildermarketplace.com/b2b/flatpay-review/",
    "from_price_usd_mo": null,
-   "entry_price": null,
-   "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "entry_price": "1.49%",
+   "entry_price_terms": "per card transaction, no monthly subscription (POS plans 1.69% plus an up-front fee)",
+   "pricing_status": "public",
    "price_note": "(re-verified 2026-09-13 on flatpay.com/en-gb/pricing and their separate /pricelist page; every amount unchanged since 2026-08-13) Flatpay charges one rate per transaction on every card type, with no monthly subscription. The card terminal is 1.49% and costs GBP 0 to start. The three point-of-sale tiers all run at 1.69% and differ only in what you pay up front for onboarding and installation: GBP 995 for mobile POS, GBP 1,495 for POS Pro and GBP 2,495 for POS Premium. Every one of those four prices is labelled \"Below GBP 200,000 in annual card turnover\". CHANGED SINCE AUGUST: the above-threshold panel is no longer reachable on the UK page -- there is no visible toggle, and the markup for it sits in a display:none component variant. That hidden markup holds both a \"custom rate - contact sales\" variant and a \"0,99% / EUR 0\" variant; neither renders for a UK visitor, and the comma decimal and euro sign mark the second as another market's card, so we do not quote 0.99% as a Flatpay UK rate (a WebFetch read it as a live figure on 2026-08-20 and that was wrong then too). Included on all plans: 24/7 support, daily payouts and a customer portal. The part that needs reading is the price list, linked from the footer rather than from the pricing page. It sets a minimum monthly turnover of GBP 995 and charges GBP 39 in any month you fall short -- assessed annually, so seasonal businesses are explicitly in scope. It also lists GBP 410 for a replacement terminal, GBP 25 to re-onboard after a change in business registration, and hardware separately: tablet GBP 495, printer GBP 495, cash drawer GBP 200. All of those figures exclude VAT. One inconsistency worth raising with their salesperson: the pricing page puts POS Pro onboarding at GBP 1,495 while the price list quotes a \"Pro POS bundle\" at GBP 1,995 -- a GBP 500 gap between two pages on the same site.",
-   "flags": [
-    {
-     "flag": "quote_only",
-     "evidence": "That hidden markup holds both a \"custom rate - contact sales\" variant and a \"0,99% / EUR 0\" variant; neither renders for a UK visitor, and the comma decimal and euro sign mark the second as another m…"
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-09-13"
   },
@@ -4209,10 +4213,6 @@
    "price_note": "(re-verified 2026-09-24 against hellobar.com/pricing; amounts unchanged since 3 Sep 2026) Hello Bar publishes exact prices, so the ranges we carried before were wrong: they were the monthly and the annual rate side by side. Paid tiers meter monthly popup VIEWS. Growth is $39 a month billed monthly or $29 billed annually, up to 50,000 views a month; Premium $69 or $49, up to 150,000; Elite $129 or $99, up to 500,000, with unlimited seats. The annual feature table states the same quotas as 600,000, 1.8 million and 6 million views a year. Starter is $0 forever with 5,000 views in total rather than per month. The view limit applies per website, and only a custom agency or enterprise plan can move it to a per-account basis. A view is one display per page load per visitor. When a site reaches its monthly limit its campaigns pause until the next billing cycle; the page describes no overage charge, and an upgrade takes effect immediately. Seats: 1 on Starter, 3 on Growth, unlimited on Premium and Elite. Monthly plans stay active to the end of the period after cancelling, annual plans to the end of the term, and a cancelled account drops to Starter with campaigns and subscriber data kept. No credit card is needed to start, and first-time customers on an annual plan get a 30-day money-back guarantee.",
    "flags": [
     {
-     "flag": "usage_metered",
-     "evidence": "When a site reaches its monthly limit its campaigns pause until the next billing cycle; the page describes no overage charge, and an upgrade takes effect immediately."
-    },
-    {
      "flag": "free_tier",
      "evidence": "Starter is $0 forever with 5,000 views in total rather than per month."
     }
@@ -4323,7 +4323,7 @@
    "from_price_usd_mo": null,
    "entry_price": null,
    "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "pricing_status": "see_details",
    "price_note": "(price re-verified 2026-09-23 on gethopp.com/en/business/) Hopp Business publishes no subscription price because it does not charge one: the page states there are no activation costs and no minimum commitment, and billing is per ride on a single consolidated monthly invoice. Ride fares vary by city, vehicle class and demand and are not published as a rate card. The site cites 50,000+ businesses; the equivalent Bolt for Business page cited over 70,000 companies when read on 2 September 2026. The gethopp.com homepage says Hopp is brought to you by Bolt Technology OU and cites the group's 50+ countries on 5 continents; neither page lists the cities where Hopp Business itself runs.",
    "flags": [],
    "researched": "2026-07",
@@ -4737,7 +4737,7 @@
    "review_url": "https://aibuildermarketplace.com/b2b/jotform-ai-agents-review/",
    "from_price_usd_mo": 34.0,
    "entry_price": "$34",
-   "entry_price_terms": "a month billed annually (5 agents, 100 conversations/mo)",
+   "entry_price_terms": "a month billed annually (25 agents, 1,000 conversations/mo)",
    "pricing_status": "public",
    "price_note": "(re-verified 24 Sep 2026 on jotform.com/ai/agents/pricing from the plan data embedded in the page, and 4 Sep 2026 on the yearly tab; the same figures were read from a US exit on 26 Aug 2026. The page localises its currency — it quotes $34 / $39 / $99 to a US visitor and €34 / €39 / €99 to a Dutch one, the same numerals either way.) Starter is free. Bronze is $34 a month, Silver $39 and Gold $99, each billed annually, with 'save up to 20%' against monthly billing; Enterprise is quoted. On the AI Agents page the ladder is drawn in agents and conversations, not in forms and submissions: 5 agents and 100 monthly conversations on Starter, 25 and 1,000 on Bronze, 50 and 2,500 on Silver, 100 and 10,000 on Gold. Sessions, voice-call minutes, SMS and knowledge-base characters are metered alongside — 10,000 / 100,000 / 1,000,000 / 2,000,000 monthly sessions and 50 / 100 / 200 / 300 voice minutes across the same four tiers. Jotform defines a session as a chatbot view, a page refresh or a phone call starting, whether or not anyone interacts. The same plan data, read from a Netherlands exit on 24 Sep 2026, gives the annual totals as 408, 468 and 1,188 and the month-to-month rates as 39, 49 and 129 (in euros there), so monthly billing costs about 15% more on Bronze, 26% on Silver and 30% on Gold. Conversations count chat and phone alike, and the voice-call limit is shared between voice calls and calls to a dedicated phone number, which is a separate add-on (also available on Starter) whose price the served page does not print. Per the FAQ: a 30-day money-back guarantee from the date of payment; seasonal discounts apply only when upgrading to a higher-tier yearly plan and renew at full price the next period; upgrades are prorated and immediate, and a downgrade takes effect immediately with the unused time kept as account balance.",
    "flags": [
@@ -4975,6 +4975,10 @@
    "price_note": "(2026-09-10, read on their own pricing page) No seat price is published. Three plans are listed — Professional, Single-Line PowerDialer and Multi-Line PowerDialer — and no amount is rendered anywhere on the page; the billing toggle that used to sit above the cards has gone too, so there is now no path from this page to a number. The core phone system is identical on all three; what separates them is dialling. There is no PowerDialer on Professional, one line on Single-Line, and up to four simultaneous lines on Multi-Line — also the only tier offering AI human voice detection, as a premium add-on. ConnectionBoost, Conversation Intelligence and DNC compliance are add-ons at every tier. The plan cards claim unlimited US/Canada minutes while the FAQ published in the page's own structured data prices unlimited US and Canada minutes at $30 a month per user, so which of the two applies belongs in writing in your quote. First US/Canada number free, extra local numbers $5.00 a month, porting in free. Texts from $0.011 each ($11 per 1,000) on a registered 10DLC number, inbound free. 7-day trial, no credit card.",
    "flags": [
     {
+     "flag": "quote_only",
+     "evidence": "No seat price published anywhere on the pricing page; the billing toggle has been removed and only add-ons carry a stated price (read 10 Sep 2026)"
+    },
+    {
      "flag": "per_seat",
      "evidence": "The plan cards claim unlimited US/Canada minutes while the FAQ published in the page's own structured data prices unlimited US and Canada minutes at $30 a month per user, so which of the two applies …"
     },
@@ -4996,12 +5000,7 @@
    "entry_price_terms": "Kickstart · per month for up to $1,000 of bundle offer revenue, or $131.88 a year",
    "pricing_status": "public",
    "price_note": "(read 2026-09-30 on apps.shopify.com/profitkoala-upsell-bundle and in the vendor's billing articles at koala-bundles.crisp.help) Priced on the revenue its offers bring in, not on features: the help centre says all plans include the same features. Kickstart is $12.99 a month, or $131.88 a year at a stated 15% saving, for up to $1,000 of bundle offer revenue a month, and the listing marks it with a discounted price for first-time users. Scale Koala is $19.99 a month or $191.88 a year for up to $5,000. Unlimited is $59.99 a month or $575.88 a year with no revenue ceiling. Every paid plan has a 14-day free trial. The listing also shows a free tier, described as 'perfect for development stores'; the billing article lists only the three paid plans for a live store. Bundle offer revenue is the full value of a bundle bought through a Koala block or post-purchase offer, not the extra amount it earned: a $70 three-pack counts as $70. At 80% of the cap the store owner gets a warning email, at 100% a second email, and if nothing changes within 24 hours the offers are paused until the first day of the next month. All charges are in USD, billed through Shopify every 30 days. Developer ProfitKoala, with an address in Vilnius, Lithuania; the listing gives a launch date of 11 March 2024 and shows 811 reviews.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "There is no overage charge; instead the store owner gets an email at 80% and at 100%, and if nobody upgrades within 24 hours the offers are paused until the first of the next month."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-09-30"
   },
@@ -5452,7 +5451,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(price re-verified 2026-09-23 against marketerhire.com/pricing and the vendor's FAQ at marketerhire.com/faqs/all) No rates are published on the pricing page or in the FAQ. The pricing page says there is \"no plan to pick and no retainer to guess at\" and that after one call you are matched with a marketer \"at a budget you agreed to\". Published terms: a free consultation with no obligation, a match within 24-48 hours, a two-week refundable trial, and month-to-month billing you can cancel at any time. The FAQ adds how it works: engagements are structured as a monthly retainer, with the marketer working to agreed priorities and outcomes instead of tracked hours; you are billed at project kick-off; if the first person does not work out during the initial two weeks you are rematched with another candidate, as part of the Service Contract signed at the start; invoices are monthly and can be reviewed before they are processed, by card or ACH. The hiring form routes you by budget, either to a call with a Growth Manager or to a further job brief with a follow-up.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No rates published; matched to a marketer 'at a budget you agreed to' after a call, billed as a monthly retainer (re-verified 23 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-23"
   },
@@ -5654,7 +5658,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "No public pricing (re-verified 25 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'. The tiers themselves are no longer secret, though — the FAQ names Growth and Enterprise above the entry level and describes what they add (dedicated onboarding on both; a dedicated customer success manager, SLA-backed response times and quarterly business reviews on top of that). Email support is on every plan; custom integrations and EU data residency are Enterprise-only, with US data centres the default. The machine-readable llms.txt is Wix boilerplate advertising an MCP endpoint and carries no price either. Rates require a sales conversation.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No public pricing: /pricing 404s and every route ends at 'Book a Demo' (re-verified 25 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-25"
   },
@@ -5791,7 +5800,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(2026-08-30, read on their own pricing page) No prices are shown. gomotive.com/pricing resolves to a lead-capture form at /get-in-touch/?id=pricing — a four-step email capture before any figure appears, preceded by a geolocation prompt offering the UK site. No per-vehicle rate, no plan names with amounts, no contract length and no hardware cost is published on the pricing page, the Pro plan page or the products overview.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: pricing page resolves to a lead-capture form, no per-vehicle rate or plan names shown (read 30 Aug 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-16"
   },
@@ -5861,7 +5875,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(read 4 September 2026 on www.mycroft.io/pricing) Mycroft has no public pricing: three packages, and not one number between them. Platform is the entry tier and the only one whose button says Get started rather than something sales-shaped; it bundles the full GRC platform for SOC 2, ISO 27001, GDPR, HIPAA and more, a Cloud Native Application Protection Platform, security, AI and privacy awareness training, 24/7/365 threat intelligence and monitoring, a Trust Center, and what Mycroft calls basic Agentic AI workflows. Scale says Book a demo and adds penetration testing, continuous third-party risk management, a customer success manager and expanded AI workflows. Managed says Talk to sales and adds customised frameworks, customised AI workflows and a dedicated CISO who doubles as your success manager. What the page never does is price any of it: no monthly figure, no per-seat rate, no starting-from, no annual floor, not even for the tier you are invited to start by yourself. We looked past the pricing page before writing that down, because the claim is usually wrong. The FAQ page, the product pages, the CMMC-as-a-Service page and the machine-readable llms.txt all describe the packages in detail and none of them names an amount; the sitemap holds no second pricing page; and the raw HTML of /pricing carries no hidden figure either. So the tiers tell you exactly what you get and leave what you pay entirely to a call.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: none of the three tiers (Platform, Scale, Managed) shows a figure anywhere on the site, including the self-serve entry tier (read 4 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-04"
   },
@@ -6265,10 +6284,6 @@
    "price_note": "(prices read 22 September 2026 in a live browser on www.ownr.co/pricing, all amounts in Canadian dollars - Ownr sells into Canada only) The page has two selectors, jurisdiction and structure, and shows different cards for each combination, so there is no single ladder. It also now leads with the discounted price rather than the regular one, which is the first thing to correct for.\n\nSole proprietorship, Ontario: the card reads Free with an RBC bank account, plus applicable taxes, under a banner offering to save CA$49 on the regular price by opening one. So the published regular price is CA$49 and the advertised price is nothing. It covers the government fees, business name searches, the registration number and documents, document storage, chat support and Ownr Perks.\n\nIncorporation is priced identically in Ontario and federally: the Online Minute Book Plan at CA$199 with an RBC bank account, renewing annually at CA$199, and the Managed Corporation Plan at CA$698 with an RBC bank account, renewing annually at CA$599. Both cards state they include the one-time government and filing fees. The banner offers CA$300 off for opening an RBC account, which puts the regular first-year price at CA$499 and CA$998.\n\nBritish Columbia, which the selector labels Canadian Provincial, costs more to enter and the same to keep: Online Minute Book CA$399 with an RBC bank account renewing at CA$199, Managed Corporation CA$898 renewing at CA$599, with the same CA$300 rebate - so CA$699 and CA$1,198 at the regular price. The renewal rate is the same in every jurisdiction; only the incorporation year differs.\n\nThree add-ons exist and all three are locked to the Managed Corporation Plan: Managed Shareholders at CA$297 a year including three shareholders and CA$99 a year for each one after that; Managed Employees and Contractors at CA$99 a year including three and CA$39 for each extra; and an Employee Stock Option Plan at CA$999 a year.\n\nTwo things on that page do not agree. Every plan card says it includes the one-time government and filing fees, while the small print under the comparison table says prices do not include government registry fees and that such fees are payable at the time of filing. Read the quote at checkout rather than the card.\n\nAnd the RBC offer is not a cashback that arrives later. Ownr's help centre describes it as an instant discount taken at payment - CA$49 off a sole proprietorship, CA$300 off an incorporation - on the condition that you open an RBC business bank account at a branch within 60 days. Miss that window and the rebated amount is charged back to the card you paid with; open the account later and it is refunded once you tell Ownr's team. If a branch visit inside two months is not certain, budget the regular price.",
    "flags": [
     {
-     "flag": "renewal_jump",
-     "evidence": "The renewal rate is the same in every jurisdiction; only the incorporation year differs."
-    },
-    {
      "flag": "addons_extra",
      "evidence": "Three add-ons exist and all three are locked to the Managed Corporation Plan: Managed Shareholders at CA$297 a year including three shareholders and CA$99 a year for each one after that; Managed Empl…"
     }
@@ -6419,7 +6434,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(read 2026-08-26 on partnerstack.com/pricing) There is no public price at any tier. PartnerStack publishes three plans — Launch, Growth and Enterprise — and every one of them carries a Book your demo button where the number would be; /plans is a 404. What the page does publish is what moves between tiers, and it is unusually specific. Launch gives you affiliate link tracking OR lead and deal registration — you pick one — plus marketplace access, partner payments built for B2B sales cycles, onboarding and enablement tooling, CRM integrations and their AI and MCP connector. Growth adds deeper integration support, a learning-management solution, partner challenges and incentives, MDF management and payments, and segmentation by performance or strategy. Enterprise is the only tier with full access to link tracking AND both registration motions at once, and adds custom workflows, a designated CSM with semi-annual business reviews, partner introductions and priority support. So the meter is not seats or volume as far as the page will say — it is which partner motions you are allowed to run, and the choice between tracking and registration on the entry tier is the line worth reading twice.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: Launch, Growth and Enterprise all route to Book your demo and /plans is a 404 (read 26 Aug 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-08-27"
   },
@@ -6471,7 +6491,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "Quote-only, re-confirmed 25 September 2026: pdware.com has no pricing page (/pricing returns 404) and every route ends in a 'Request pricing' form or a guided demo, with no amount anywhere on the homepage. What the site does publish, in a Pricing & licensing section on its FAQ page that carries no numbers, is the shape of the quote: licensing is based on the size of the planning group and on the types of users on the system, and packages exist for workgroups of 50 users, 100 users, and enterprise-level deployments, with multi-team and enterprise licensing handled by an account executive at sales@pdware.com. There is no self-serve trial, but there is a pilot: the FAQ says many organisations start with one, validating the software on their own data before committing to a long-term subscription. The same picture holds off-site — the ResourceFirst Workgroup Package is listed on Microsoft's commercial marketplace by Portfolio Decisionware Inc. with no price at all and a contact-me action, its offer identifier carrying the band 10-50.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: /pricing 404s and every route ends in a quote request or guided demo (read 25 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-25"
   },
@@ -6485,7 +6510,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(read 2026-08-27 on pecan.ai/pricing, and unchanged on 2026-09-29: the same three quote-only tiers, batch and row meters, SSO split and FAQ) No public price at any tier. Pecan publishes three plans — Starter, Team and Business — and each one carries a Talk to sales button where the number would be, with a fourth enterprise route for special deployment and granular explainability. Billing is annual only and Pecan states there is no setup fee. What the page does publish is the meter, and it is not the one most buyers expect: the tier is set by monthly prediction batches and stored rows, not by seats. Starter gives 2 batches a month and 500M rows, Team 10 batches and 2Bn rows, Business custom batches and 5Bn rows; support runs from in-app only, to in-app plus Essential enablement, to Pro enablement. A batch is one run against a dataset, so two a month is a fortnightly cadence — the number that decides your tier before any conversation about team size.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: Starter, Team and Business all route to a Talk to sales button (read 27 Aug 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-29"
   },
@@ -6659,7 +6689,7 @@
    "from_price_usd_mo": null,
    "entry_price": null,
    "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "pricing_status": "see_details",
    "price_note": "No public price. plansom.com (read in a browser on 5 September 2026) has no pricing page, no pricing link in the navigation and no amount anywhere on the site; the only routes off the homepage are 'Create plan' and the app login. The old /pricing URL returns 404, and still did when re-checked on 24 September 2026; the site's own llms.txt, read the same day, lists the homepage, about, terms, privacy and cookie pages and no pricing page. Plans and any paid tier are only visible after signing in, so budget on what the app shows you, not on the Pro figure of about $14.99 a month (or $149.99 a year) we recorded earlier and can no longer trace. What the homepage does publish alongside the product: 'Your data is not used to train LLMs', SOC 2 Ready, GDPR compliant.",
    "flags": [
     {
@@ -6861,7 +6891,7 @@
    "from_price_usd_mo": null,
    "entry_price": null,
    "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "pricing_status": "see_details",
    "price_note": "(re-read 2026-09-18) The App Store route has closed. apps.shopify.com/protectmyorder, the page this review was built on, now returns “This app is not currently available on the Shopify App Store. If you have support questions, contact ProtectMyOrder directly.” — no plan block, no review record, no install button. With it goes the only plan that carried a figure you could read before signing up: 19.99% of delivery protection revenue with a minimum charge of $20 per month, billed in USD. ProtectMyOrder's own pricing page, re-read the same day, is unchanged and still sells three tiers, all priced as a share of upsell revenue rather than a monthly fee. Standard at 19.99% adds a profitability guarantee, a gradual roll-out to 50% of visitors, fully customisable design and wording, and an assigned support agent. Carbon at 24.99% adds automatic carbon calculation and offsetting for every delivery, with a choice of project. Pro at 44.99% puts their own agents on your shipping-claim support with 24/7 cover and ten-minute replies, and for a further 30% of upsell revenue they assume the liability for refunds and replacements as well — 74.99% in total. Volume discounts are by call for brands above $20m of online revenue. Getting in is now described as a request rather than an install: add the app, fill in an installation request form, accept a collaborator-access request, and their team does the rest; merchants not on Shopify are pointed at email, live chat and an API. No monthly minimum appears anywhere on that page, and the site's own footer still links “Download Shopify app” to the listing that no longer resolves.",
    "flags": [
     {
@@ -6963,6 +6993,10 @@
    "price_note": "(checked 2026-09-01) Pylon no longer publishes rates. usepylon.com/pricing was republished on 1 September 2026 as a \"Book a Demo\" page carrying no plans, no per-seat rates and no seat minimums; the route to a number is a scheduled demo. The figures that follow are our last reading of the published tiers and are a historical anchor, not a current quote: Starter about $59/seat/mo and Professional about $89, both on a 3-seat minimum, Enterprise about $139 on a 7-seat minimum, billed annually, with the AI metered separately (AI agents from about $100/mo scaling with volume, premium AI assistant about +$50/seat, phone about +$35/seat). Use them to sanity-check what sales quotes you, not to budget from.",
    "flags": [
     {
+     "flag": "quote_only",
+     "evidence": "No published price: pricing page now routes to a demo booking with no plans or rates shown (read 1 Sep 2026)"
+    },
+    {
      "flag": "per_seat",
      "evidence": "The per-seat sticker is the entry ticket; the AI that makes the platform sing is metered separately, so a realistic modern deployment (seats + AI agent + phone) lands well above the tier price — mode…"
     },
@@ -7031,6 +7065,10 @@
    "pricing_status": "quote_only",
    "price_note": "(2026-09-11, re-read on their own site) There is no public pricing. quartile.com/pricing serves the same page as the homepage — no tier, no rate card and no entry figure anywhere on it, and the only call to action is Request Demo. The dollar amounts the site does show are volume claims about their customer base rather than prices: over $2B in annual retail advertising spend managed and over $25B in annual managed revenue, across 5,300+ customers in more than 32 countries. Two audiences are named, Small Business and Mid-Market/Enterprise, with no rate attached to either. The 40% introductory discount that the referral route carried in August 2026 is no longer published: quartile.com/partners now rewards the referrer by an unnamed amount instead. Budget for this one from a written quote, because nothing else exists.",
    "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: quartile.com/pricing mirrors the homepage with no tier or rate card, only a Request Demo CTA (read 11 Sep 2026)"
+    },
     {
      "flag": "usage_metered",
      "evidence": "Our own dossiers have Teikametrics at $149 a month billed annually for up to $10K in monthly ad spend, plus 3% of spend above that (read 2026-08-01), and BidX at €495 a month for its self-service Ama…"
@@ -7660,6 +7698,10 @@
    "pricing_status": "quote_only",
    "price_note": "(read 2026-09-30 on seamless.ai/pricing, seamless.ai/pricing-inquiry, Seamless's help centre and seamless.ai/llms.txt) The pricing page no longer shows plans: seamless.ai/pricing now forwards the browser to seamless.ai/pricing-inquiry, a demo-request form headed 'Perfect Pricing for Startups to the Fortune 500' that offers special pricing for unlimited users, bulk credits, prospector, job changes, buyer intent and enrichment, and carries no amount, no plan table and no FAQ. Still no published price above the free plan, in a fifth reading. Seamless's help centre now states the allowances: Free is 50 Universal Credits that do not replenish; a Basic licence gets 250 Universal Credits a month and a Pro licence 10,000 a month, both refreshing on the contract date; bulk pool credits are bought up front and do not replenish. Legacy Pro accounts created before 1 April 2026 keep 1,000 credits a day, no longer sold. Researching a contact costs 1 credit for the whole profile, a Data Enrich row 1, an Autopilot contact 1, and an AI Assistant interaction or AI-written message 0.2. Buyer Intent runs on separate Intent Topics, not credits. Credit Back Protection refunds the credit when Seamless's own check flags an email as invalid, but not for soft bounces, role addresses like info@, or phone numbers. Until 7 September the pricing page's FAQ said Pro starts at 10,000 annual credits; the help article says 10,000 a month, so ask which one your quote uses. Third-party guides report an entry around $147 a month for roughly 250 credits; that matches the Basic allowance, but the dollar figure is not Seamless's number.",
    "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price above the free plan; seamless.ai/pricing forwards to a demo-request form (pricing-inquiry) with no amounts, fifth confirmed reading (read 30 Sep 2026); help centre: Basic 250 and Pro 10,000 Universal Credits a month"
+    },
     {
      "flag": "usage_metered",
      "evidence": "(read 2026-09-30 on seamless.ai/pricing, seamless.ai/pricing-inquiry, Seamless's help centre and seamless.ai/llms.txt) The pricing page no longer shows plans: seamless.ai/pricing now forwards the bro…"
@@ -8803,7 +8845,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(read 25 August 2026, re-checked 5 and 24 September 2026) Superfiliate publishes no price on its own site. superfiliate.com/pricing returns 404 with and without www, /llms.txt returns 404, there is no pricing item anywhere in the navigation, and the only commercial call to action is Book Demo. Their Shopify App Store listing (apps.shopify.com/superfiliate) publishes the shape rather than the amount: a single plan named Custom, 'Free to install. Additional charges may apply', the note that the app 'Requires an active Superfiliate subscription for app activation and use. Contact Superfiliate for plan details', and one hard fact — 'All charges are billed in USD.' So the free-to-install label covers the app, not the platform. Our dossier has carried a range of roughly $299 to $999 a month which we cannot trace to their site or to any dated reading; treat it as an unverified order of magnitude rather than a price, and ask for the number in writing on the demo call.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: superfiliate.com/pricing and /llms.txt both 404, only CTA is Book Demo; the $299-999/mo range cited elsewhere is unverified and untraceable to the vendor (read 24 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-24"
   },
@@ -8980,7 +9027,7 @@
    "from_price_usd_mo": null,
    "entry_price": null,
    "entry_price_terms": null,
-   "pricing_status": "quote_only",
+   "pricing_status": "see_details",
    "price_note": "(re-read 2026-09-19 on apps.shopify.com/tapita-ai-seo-blog-builder) The paid tier has left the listing. Where the page carried a Pro plan in August, it now publishes no plan block at all: the Pricing field in the header reads simply “Free”, the word Pricing appears exactly once on the whole page, and the only dollar figure anywhere on it belongs to a different app in the “More apps like this” rail. We checked that against the same developer's other listing in the same session — apps.shopify.com/google-seo-schema-meta-data renders its header as “Free plan available” and prints its full ladder — so this is the state of this listing rather than a page that failed to load. What that removes is everything a buyer could previously plan against: Pro at $9.99 a month on Shopify Basic rising to $14.99, $39.99 and $69.99 by Shopify plan, the $101.89 annual rate, the 250 monthly AI credits and the $0.06 charge for each credit beyond them. The free tier's own allowance is gone from the page too — the 50 non-recurring credits are no longer stated — so as the listing stands there is no published number for what the app gives you or what exceeding it costs. Read on the same day: the listing is titled Tapita SEO AI Blog Builder, carries Shopify's “Built for Shopify” badge, works with Shopify Admin and the developer's own Tapita SEO Optimizer & Speed, is offered in English only, and stands at 4.9 from 485 reviews — up from 450 in August — distributed 466 five-star, 13 four-star, 2 three-star, 1 two-star and 3 one-star.",
    "flags": [
     {
@@ -9141,6 +9188,10 @@
    "price_note": "Tellent publishes no prices. Its pricing page (read in a live browser on 9 September 2026, and separately in the served HTML) lists three ATS tiers for Recruitee — Start, Advance and Optimize — and the two Tellent HR modules, Manage (HRIS) and Grow (performance), and every one of them ends in 'Get a demo' rather than a figure; agencies are told to ask for a custom quote. Neither the rendered page nor the served HTML contains a single currency amount, and recruitee.com/pricing carries none either. What the page does state is scope: Start covers 5 active job posts and a single-page CareersHub; Advance adds unlimited posts, a multi-page branded careers site, ReferralsHub, 100 AI screening credits a month, 3 AI matching searches, workflow automations, candidate self-scheduling, offer-letter generation and up to 3 custom job fields; Optimize adds SSO, API support, a testing environment, requisition approval workflows, unlimited custom fields, 65 matching searches, onboarding support, a dedicated CSM and BI integrations. SSO, Texting, Journeys, AgencyHub and WhatsApp Hiring are optional add-ons on the lower tiers. A free trial is offered on every tier and needs only a company account; the page states no trial length. Re-read 26 September 2026: still no currency amount anywhere on the page. The pricing FAQ now states three terms that bear on the quote: annual billing saves 20% against monthly, pricing increases with your employee count, and you can upgrade or downgrade at any time.",
    "flags": [
     {
+     "flag": "quote_only",
+     "evidence": "No prices anywhere; every ATS and HR tier ends in 'Get a demo' (read 9 and 26 Sep 2026)"
+    },
+    {
      "flag": "usage_metered",
      "evidence": "What the page does state is scope: Start covers 5 active job posts and a single-page CareersHub; Advance adds unlimited posts, a multi-page branded careers site, ReferralsHub, 100 AI screening credit…"
     },
@@ -9264,6 +9315,10 @@
    "price_note": "(price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Amounts unchanged since 2026-08-01. Add-on message credits $0.03 each, bought in advance; backup message credits $0.04 each, Textline's automatic fallback when you run out mid-conversation. A $15 monthly 10DLC campaign fee applies if you use a 10DLC long code; the same page states that toll-free numbers do not carry a monthly registration fee. NEW since the last reading: the page now names three tiers with their inclusions but still no prices — Essentials (600 minimum included message credits a month, three agents, three-year conversation history), Pro (2,000 minimum credits, five agents, unlimited history, Salesforce, custom roles) and Enterprise (quote). HIPAA-compliant plans are charged an additional fee. Note for future readers: the per-feature tooltips on this page are unfilled placeholder copy, so the feature names carry no explanation.",
    "flags": [
     {
+     "flag": "quote_only",
+     "evidence": "No plan price is published: the page names Essentials, Pro and Enterprise with their inclusions but no amounts; only message credits ($0.03) and the $15 10DLC campaign fee carry a price"
+    },
+    {
      "flag": "usage_metered",
      "evidence": "Add-on message credits $0.03 each, bought in advance; backup message credits $0.04 each, Textline's automatic fallback when you run out mid-conversation."
     },
@@ -9285,7 +9340,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "(read 19 September 2026) TheTop publishes no price. The navigation carries no pricing link, every button is Book a demo, and the page this review's figures came from is gone: thetop.com/pricing returns a hard 404, as do /pricing/ and /plans.\n\nThe $8 a month and $80 a year this review used to quote were withdrawn along with the product they belonged to, and cannot be bought today. Until September this was a personal assistant on a single tier, built around a morning brief from Gmail and a calendar. TheTop is now enterprise software sold through a sales call.\n\nRead the figures on their site carefully, because it is full of dollar amounts that are not prices: the dashboard mock-ups show an AI invoice of $196,090, a month billed at $137,644 against a $176,920 baseline, and $39,276 saved. Those illustrate what the product reports, not what it costs. Nothing on the public site says what you would pay for TheTop itself.\n\nWhat the site does commit to about commercial shape: deployment is single-tenant, one dedicated instance per customer; onboarding runs in three steps that start read-only (connect analytics, watch for about a month to establish your number, then point traffic at the Engine); and no traffic migration is needed on day one. Expect a contract quoted against your own AI spend rather than a list price — ask for the pricing basis in writing before the demo, because a layer that bills against measured savings and one that bills a flat platform fee are very different deals.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price of any kind on 19 September 2026: thetop.com/pricing returns 404 and the site sells through Book a demo only. The dollar figures on the site ($196,090 of API usage, $137,644 paid, $39,276 saved) are illustrations inside dashboard mock-ups, not tariffs"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-19"
   },
@@ -9509,7 +9569,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "On monthly billing every order past the allowance costs $0.05; on annual billing there is no overage and new orders stop syncing until you upgrade."
+     "evidence": "The overage is the most expensive order on the ladder."
     },
     {
      "flag": "annual_lock",
@@ -9603,6 +9663,10 @@
    "pricing_status": "quote_only",
    "price_note": "(re-read 2026-09-18 on trainual.com/pricing) No prices at all. The page lists four plans — Core, Pro, Premium and Enterprise, grouped under a Training, an Operations and a Performance suite — and every one of them carries a “Get a demo” button where a rate would be. The only figure the page publishes is a one-time implementation fee of $1,000, stated in its own FAQ alongside a 4–6 week engagement with an implementation specialist. The FAQ also answers the sizing question directly: “Trainual is best suited for companies with 25 - 1000 employees”, and says pricing varies with team size and the features you need. Pricing is quote-only. An earlier version of this entry carried monthly figures attributed to unnamed third-party sources; those are not on the vendor's page and could not be traced to a named source, so they have been removed rather than repeated.\n\nThere is also no self-serve way to try it. The FAQ question “Can I try Trainual before committing to a subscription?” is answered with an invitation to book a demo, not with a trial, so a sales conversation is the only route in. Two things are quantified beyond the fee: the implementation team aims to have interviews completed and content in the account within 10 business days, and 500+ templates are included, with 400+ expert-built courses sold separately as a premium courses add-on whose price the page does not give.",
    "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: Core/Pro/Premium/Enterprise all route to Get a demo; only a $1,000 one-time implementation fee is disclosed (read 18 Sep 2026)"
+    },
     {
      "flag": "addons_extra",
      "evidence": "Two things are quantified beyond the fee: the implementation team aims to have interviews completed and content in the account within 10 business days, and 500+ templates are included, with 400+ expe…"
@@ -9704,12 +9768,7 @@
    "entry_price_terms": "per month (list $6.89) on the 2-year term, 1 domain, ~10,000 visits/mo",
    "pricing_status": "public",
    "price_note": "(re-verified 2026-10-01 on ultahost.com/shared-hosting, all four term tabs rendered) The term ladder is Monthly, Yearly -30%, 2 Years -40% and 3 Years -50%, and the page opens on the two-year term. At that term the shared plans are Starter $3.44/mo (list $6.89) for 1 domain, ~10,000 visits a month and 30 GB NVMe; Basic $5.18 (list $9.19) for 4 domains, ~15,000 visits and 60 GB; Business $10.35 (list $17.02) for unlimited domains, ~25,000 visits and 80 GB; and Pro $13.23 (list $21.62) for ~49,000 visits and 110 GB. Monthly billing is $4.39, $6.39, $12.29 and $16.29 (badged 'Save 25%'); one year $4.03, $6.33, $12.08 and $14.94; three years $2.88, $4.37, $8.63 and $10.93. Every card states it renews at its own rate for the same term ('Renews at $3.44/mo for 2 years. Cancel anytime.'). The banner now reads 'Starting at $3.44/mo', matching the card; on 9 September it read $4.13. 30-day money-back guarantee, free SSL, free backups, cPanel.",
-   "flags": [
-    {
-     "flag": "renewal_jump",
-     "evidence": "Every card states it renews at its own rate for the same term ('Renews at $3.44/mo for 2 years."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-10-01"
   },
@@ -9894,7 +9953,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "Quote-only. joinvelora.com (read in a browser on 5 September 2026) has no pricing page and no amount anywhere; every call to action is 'Talk to sales'. Velora bundles Keela (CRM), Aplos (accounting) and Raisely (fundraising) for nonprofits, and the individual product prices are not shown on the unified site. The products' own pricing pages still publish them — read 25 September 2026, Keela from $164 a month billed annually ($190 monthly) for up to 1,000 contacts, Aplos Lite at $79 a month, and Raisely with no monthly fee — but whether a Velora contract uses those rates is something only sales can confirm. Our earlier note of Keela 'from about $134' is out of date.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No pricing page or amount for the bundled product itself; every call to action is 'Talk to sales' (read 5 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-25"
   },
@@ -10010,7 +10074,12 @@
    "entry_price_terms": null,
    "pricing_status": "quote_only",
    "price_note": "No price is published any more, and the site has moved. Re-read on 20 September 2026: vwo.com now answers HTTP 301 and redirects to wingify.com — vwo.com/pricing/ to wingify.com/pricing/, vwo.com/free-trial/ to wingify.com/free-trial/ — and the pricing page is titled \"Pricing & Plans | Wingify Platform\", with the products named Wingify Testing, Wingify Personalization and Wingify Insights and a site-wide banner announcing that AB Tasty and VWO have united. The tier structure is unchanged: Growth, Pro and Enterprise as feature tables only, every button a Schedule a Demo, no currency amount anywhere in the rendered page and none in wingify.com/llms.txt either — the same picture as the 4 and 10 September 2026 readings. The ~$314/mo for 10k MTUs this dossier carried until 4 September 2026 was a published figure the vendor has since withdrawn. Two things are new on the page. A per-MAU meter is now visible in the comparison table — 50, 100 and 200 events stored per MAU across the tiers — under the vendor's own footnote that the limit is not implemented in the app, is representational, does not affect current pricing and will apply in future to all customers on their respective plans. And API access at Enterprise is now listed with a rate limit of 60K a month. Wandz, the AI layer the 10 September reading found sold in Core and Advanced tiers, is no longer named on the pricing page. The tier lines are unchanged: multivariate testing, guardrail metrics, advanced targeting and downloadable reports start at Pro; API access, SSO, mutually exclusive groups and a dedicated CSM only at Enterprise.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: Growth/Pro/Enterprise are feature tables only, every button is Schedule a Demo, no currency amount anywhere (read 20 Sep 2026)"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-20"
   },
@@ -10027,7 +10096,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "Neither the Shopify listing nor the vendor's own pricing section says whether the reels stop, degrade or trigger a charge when a busy month crosses the line, and no overage rate is published."
+     "evidence": "meter: unit · storefront clicks"
     },
     {
      "flag": "annual_lock",
@@ -10365,12 +10434,7 @@
    "entry_price_terms": "per year for one site",
    "pricing_status": "public",
    "price_note": "(re-verified 2026-09-14 on their own pricing page, which had not moved since our September reading: the same three licences at the same rates, the same 50/100/500 site-count selector on Multi, and all three tiers now carrying Rocket Insights at no extra cost) These are annual licences, and the page prices in the visitor's currency. Read from Europe it sets EUR and shows Single €49.95/yr (1 website), Plus €99.95/yr (3 websites) and Multi €249.95/yr, and the 95 cents matter because an earlier reading rounded all three down to whole euros. Multi carries a site-count selector at 50, 100 or 500 websites, and anything above 500 is a custom licence. The dollar storefront reads $59, $119 and $299 a year for the same three tiers. Our own pricing screenshot on this page is that USD version, captured 12 August 2026, so the figures beside it are the euro ones from the same day. The two are not a contradiction but two storefronts of the same product. All tiers are feature-identical — you pay for the number of sites. There is no trial; the page offers a 14-day refund instead, and the licence auto-renews after a year, switchable off in your account's Billing section. What the page does not say anywhere is what it renews at.",
-   "flags": [
-    {
-     "flag": "renewal_jump",
-     "evidence": "And the renewal rate is not published — the page confirms the licence auto-renews after a year but never states at what price, which is exactly where the Trustpilot complaints cluster."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-09-14"
   },
@@ -10569,6 +10633,10 @@
    "pricing_status": "quote_only",
    "price_note": "Sales-gated, and re-verified as such on 2026-08-17: no public rates, no monthly billing and no free plan, with the pricing URL refusing plain requests and neither of our monthly captures retrieving a figure. Contracts typically start around $15k and the median runs near $32k a year, climbing once seats, credits and add-ons (intent data, international coverage) stack up — but those are third-party figures, not ZoomInfo's, and every deal is negotiated annually. Expect a multi-year push and price the credits, not just the seats.",
    "flags": [
+    {
+     "flag": "quote_only",
+     "evidence": "No published price: sales-gated, no monthly billing or free plan, pricing URL refuses plain requests (read 17 Aug 2026)"
+    },
     {
      "flag": "usage_metered",
      "evidence": "Contracts typically start around $15k and the median runs near $32k a year, climbing once seats, credits and add-ons (intent data, international coverage) stack up — but those are third-party figures…"

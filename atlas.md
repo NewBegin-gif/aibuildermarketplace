@@ -48,7 +48,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Adwisely (adwisely.com)
 - **Verified pricing:** (price re-verified 2026-09-10, re-read unchanged 2026-09-27) Read on adwisely.com/pricing; every figure below stood unchanged from our previous reading on 2 August 2026.
-- **Honest take:** The honest math is the 10%-of-ad-spend fee on top of the minimum.
+- **Honest take:** It is cheap at low spend, but at higher budgets it's a real percentage cut of your marketing dollars until the cap — so calculate the effective cost at your actual spend, not the $49 sticker.
 - **Best for:** e-commerce stores (Shopify, WooCommerce, BigCommerce) that want automated, largely hands-off retargeting and prospecting ads on Meta and Google
 - **Flags:** {'f': 'usage_metered', 'ev': 'Both plans charge 10% of the ad spend Adwisely manages, with a monthly minimum that acts as a floor rather than a fee on top: $49 on Self-Serve and $…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/adwisely-review/
@@ -62,7 +62,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## AgencyAnalytics (agencyanalytics.com)
 - **Verified pricing:** One published rate: $20 USD per client / month billed annually, with no clients included in the base, so cost scales directly with your roster (a 25-client agency pays $500/mo; past that it…
-- **Honest take:** Two honest snags.
+- **Honest take:** Cost rises with every client you add, and the most-cited complaint is data connectors that disconnect without a clear warning.
 - **Best for:** marketing agencies that need white-label client reports from 85+ integrations — automated, on-brand and hands-off
 - **Flags:** {'f': 'usage_metered', 'ev': 'Add-ons on top: Rank Tracker $41.67/mo per 500 keywords, AI Tracker $20.83/mo per 250 credits.'}, {'f': 'addons_extra', 'ev': 'Add-ons on top: Rank Tracker $41.67/mo per 500 keywords, AI Tracker $20.83/mo per 250 credits.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/agencyanalytics-review/
@@ -116,7 +116,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## AISQ (aisq.com)
 - **Verified pricing:** (2026-08-30, read on plugin.squirrly.co/wordpress-seo-pricing) Squirrly SEO is billed monthly and renews at the same price.
-- **Honest take:** AISQ (the Squirrly family) evolves its pricing and product names often — the honest advice is to buy only what's currently priced in front of you, in small credit batches first, and judge output on YOUR niche …
+- **Honest take:** Marketing automation that promises to cut workload 90% still needs your strategy and editing; credits generate drafts, not customers.
 - **Best for:** solo marketers who want low-cost, pay-as-you-go AI marketing assistance (SEO + content workflows) without a subscription
 - **Flags:** {'f': 'usage_metered', 'ev': 'PRO $9.99/month: 5 sites, 50 keyword researches, 100 audit suite pages, 0 SERP checker credits.'}, {'f': 'free_tier', 'ev': 'Free $0.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/aisq-review/
@@ -129,7 +129,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Alidrop (alidrop.co)
 - **Verified pricing:** (re-verified 2026-09-13 on their own pricing page) Four monthly plans: Starter $39/mo (50 unique / 25 premium products), Professional $59/mo (500 unique / 250 premium), Empire $99/mo (5,000…
-- **Honest take:** Alidrop's pitch includes faster-shipping (including US/EU) suppliers, but the core dropshipping economics still apply: you pay the subscription plus wholesale product cost, and margins live or die on product s…
+- **Honest take:** The low Starter product cap nudges serious stores up to Pro quickly, and as with any dropshipping automation, the platform reduces but doesn't remove supplier-quality and shipping-time risk.
 - **Best for:** dropshippers who want automated product sourcing, fulfillment and inventory sync with access to faster-shipping suppliers and one-click store integration
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing is listed only from Professional up — $288, $684 and $948 a year — and the discount grows with the tier: 6 months off Professional, 5 …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/alidrop-review/
@@ -143,7 +143,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Alohi (alohi.com)
 - **Verified pricing:** (read 2026-09-10 and re-read unchanged 2026-09-27 on fax.plus/pricing and sign.plus/pricing) Priced per product, in USD, with a currency switcher offering EUR, CHF and GBP.
-- **Honest take:** The honest catch is that Alohi is a suite of separate products — Fax.Plus, Sign.Plus, Scan.Plus — each with its own subscription, so "one ecosystem" can mean several line items if you want e-signatures and fax…
+- **Honest take:** Page and member limits on the lower tiers are modest, and HIPAA/BAA sits only on the top tier.
 - **Best for:** businesses that need secure online faxing, e-signatures or scanning — especially regulated ones needing HIPAA-compliant fax on the Enterprise tier
 - **Flags:** {'f': 'per_seat', 'ev': 'Sign.Plus is a separate subscription and prints annual and monthly rates side by side: Free (3 signature requests in total, 1 template, 1 user), Pers…'}, {'f': 'usage_metered', 'ev': 'Fax.Plus — Basic $6.99 a month billed as $83.99 annually (200 pages a month, one fax number, one member, $0.10 per extra page, 60 pages maximum per f…'}, {'f': 'addons_extra', 'ev': 'Sign.Plus is a separate subscription and prints annual and monthly rates side by side: Free (3 signature requests in total, 1 template, 1 user), Pers…'}, {'f': 'annual_lock', 'ev': 'Fax.Plus — Basic $6.99 a month billed as $83.99 annually (200 pages a month, one fax number, one member, $0.10 per extra page, 60 pages maximum per f…'}, {'f': 'free_tier', 'ev': 'A free plan gives 10 pages in total, not per month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/alohi-review/
@@ -205,7 +205,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## AskNest (ecommercestorez.us)
 - **Verified pricing:** (read 2026-08-19 on apps.shopify.com/asknest-ai-faq-product-bot, re-verified unchanged 2026-09-28) Four tiers, priced by AI replies per month, and the cheapest ladder in this category.
-- **Honest take:** One review.
+- **Honest take:** One review. The app launched on 8 May 2026, and in three and a half months exactly one merchant has written about it.
 - **Best for:** small stores with repetitive product, shipping and returns questions who want a cheap multilingual FAQ widget and can test the answer quality on their own policy pages for free first
 - **Flags:** {'f': 'usage_metered', 'ev': 'What the listing never says is what happens when you run out: there is no overage rate anywhere on the page, so whether reply 501 costs money or simp…'}, {'f': 'free_tier', 'ev': 'Free: 50 AI replies a month, replies in one language you select, answers drawn from your FAQs, policy pages and product data, translated storefront w…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/asknest-review/
@@ -219,7 +219,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Assembly (assembly.com)
 - **Verified pricing:** (re-verified 28 September 2026 in a rendered browser, both billing tabs and the full comparison table) Assembly, the client-portal platform at assembly.com, publishes five tiers.
-- **Honest take:** Two meters run at once.
+- **Honest take:** Two meters run at once. Active contacts bite first: Starter stops at 50, and the step to 500 costs $70 more a month on yearly billing ($90 monthly).
 - **Best for:** agencies and professional services firms who want one branded place for clients to message, sign, pay and share files instead of four tools and an email thread
 - **Flags:** {'f': 'per_seat', 'ev': "Correction: until 28 September 2026 this field described a different company's employee-recognition plan at $3 per user; that was never the price of …"}, {'f': 'usage_metered', 'ev': 'Free, a free-forever plan: $0 with 5 active contacts, 1 internal user, 50 build credits a month and 3 apps.'}, {'f': 'free_tier', 'ev': 'Free, a free-forever plan: $0 with 5 active contacts, 1 internal user, 50 build credits a month and 3 apps.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/assembly-review/
@@ -233,14 +233,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Atria (tryatria.com)
 - **Verified pricing:** (re-verified 2026-08-17 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year.
-- **Honest take:** Two honest notes.
+- **Honest take:** Two honest notes. It's credit-metered — AI credits and brand-tracking slots cap what you can generate and monitor, so a heavy user burns through Core's allowance and steps up to Plus.
 - **Best for:** performance marketers and creative teams that want competitor ad research and AI ad-creative generation for Meta and TikTok in one platform
 - **Flags:** {'f': 'usage_metered', 'ev': 'That covers 5 seats, 4,000 AI credits a month, 50 brands followed without AI insights, 5 connected ad accounts, $500K of ad spend analysed a month, 5…'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-17 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/atria-review/
 
 ## Atto (attotime.com)
 - **Verified pricing:** (re-read 2026-09-24 from the plan data behind attotime.com/pricing; amounts unchanged since 5 Sep) Per user per month, billed annually: Starter $5.65, Plus $7.95 (job codes, breaks and note…
-- **Honest take:** Simple and honest pricing — the real conversation with any field-team tracker is the human one: GPS tracking of employees needs transparency and often consent (rules differ by country), and adoption dies the d…
+- **Honest take:** Roll it out as 'accurate paychecks and fewer timesheet fights', involve the team, and the tool pays for itself; roll it out as surveillance and no feature list saves it.
 - **Best for:** hourly and mobile crews (construction, cleaning, field service) that want dead-simple clock-in/out, GPS-verified timesheets and payroll-ready exports
 - **Flags:** {'f': 'per_seat', 'ev': '(re-read 2026-09-24 from the plan data behind attotime.com/pricing; amounts unchanged since 5 Sep) Per user per month, billed annually: Starter $5.65…'}, {'f': 'addons_extra', 'ev': 'Payroll processing is an add-on at $5.95 per payroll user a month plus a $39.95 monthly base fee, with unlimited payroll runs, and is available to US…'}, {'f': 'annual_lock', 'ev': 'Billed monthly the same tiers are $6.95, $9.95, $12.95 and $19.95, so annual billing saves about 19% on Starter, 20% on Plus and 17% on Advanced and …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/atto-review/
@@ -301,7 +301,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## BackupMaster (backupmaster.io)
 - **Verified pricing:** (read 2026-08-22 on apps.shopify.com/backup-master) Four tiers, each paid one with a 7-day free trial.
-- **Honest take:** The listing header says free to install, and there is a free tier, but it is not for you unless you are an agency: Agency is limited to Shopify Partner development stores before they are handed over to a clien…
+- **Honest take:** For a live store the entry price is $19 a month and it buys 300 orders a month.
 - **Best for:** Shopify stores under roughly 1,500 orders a month that want the whole store backed up daily — metafields, metaobjects and translations included — without anyone having to remember to trigger it
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · orders'}
 - **Full review:** https://aibuildermarketplace.com/b2b/backupmaster-review/
@@ -314,14 +314,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Beautiful.ai (beautiful.ai)
 - **Verified pricing:** (re-verified 2026-09-02 on the vendor's own pricing page, amounts unchanged on 2026-09-29) Pro is $14.50/mo billed annually, up from $12 in our July and August 2026 captures ($45 for a one-…
-- **Honest take:** The smart-template engine is the feature and the fence: decks look polished with zero design skill precisely because the system constrains you, so pixel-perfect custom layouts and heavy brand exceptions fight …
+- **Honest take:** And note the billing gap — $14.50/mo annual becomes $45 month-to-month, one of the steeper monthly premiums around.
 - **Best for:** founders, sales and small teams that want consistently good-looking decks fast, where design consistency matters more than pixel-level control
 - **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-09-02 on the vendor's own pricing page, amounts unchanged on 2026-09-29) Pro is $14.50/mo billed annually, up from $12 in our July …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/beautiful-ai-review/
 
 ## Beefree (beefree.io)
 - **Verified pricing:** (price re-verified 2026-09-10) Sold as RGE Studio since the 14 May 2026 rebrand.
-- **Honest take:** Read the seat row before the price row.
+- **Honest take:** Read the seat row before the price row. Professional and Business both cap at two full editing seats, so a "mid-sized team" plan at $134/mo annual still buys two people who can actually build.
 - **Best for:** agencies and in-house teams shipping email at volume across brands or ESPs — a dedicated builder with approvals, brand controls and one-click push to Salesforce Marketing Cloud, Pardot and HubSpot, sitting above whatever you send 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.'}, {'f': 'free_tier', 'ev': 'Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/beefree-review/
@@ -356,14 +356,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Birch (bir.ch)
 - **Verified pricing:** (price re-verified 2026-09-11 against the vendor's own pricing page) (2026, formerly Revealbot) Essential is $49/mo and Pro $99/mo up to $10K of monthly ad spend, and the price then tracks …
-- **Honest take:** The honest catch is that pricing tracks your ad spend, so a scaling advertiser's bill rises with their budget: Pro alone ladders from $99 to $1,799 a month between a $10,000 and a $500,000 ceiling, and past $5…
+- **Honest take:** Check the annual arithmetic against their own FAQ, which promises ‘12 months for the price of 10’ while the page charges eleven — $540 for Essential and $1,090 for Pro at the entry tier.
 - **Best for:** performance marketers and agencies running real ad budgets who want rule-based automation, scaling and creative insights across Meta, Google, TikTok and Snapchat
 - **Flags:** {'f': 'usage_metered', 'ev': "(price re-verified 2026-09-11 against the vendor's own pricing page) (2026, formerly Revealbot) Essential is $49/mo and Pro $99/mo up to $10K of mont…"}, {'f': 'annual_lock', 'ev': 'Annual billing is charged as eleven months ($540 Essential, $1,090 Pro at the $10K tier), though the same FAQ still claims ‘12 months for the price o…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/birch-review/
 
 ## Bitdefender (bitdefender.com)
 - **Verified pricing:** Read on their own product pages, 6 September 2026 and again, unchanged, 25 September 2026, where a configurator prices each tier by device count and term.
-- **Honest take:** The price you see is already discounted: the configurator applies 30% off list by default on all three GravityZone tiers, so compare on the discounted figure and ask what applies at renewal rather than assumin…
+- **Honest take:** Add-ons are billed separately too — web access and device control, network attack defense and risk management, and setup each carry their own line.
 - **Best for:** small businesses that want top-tier, independently-validated endpoint protection managed from one console
 - **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons are priced separately: at 10 devices, Web Access and Device Control $41.99 and Network Attack Defense and Risk Management $41.99 on Small Bus…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bitdefender-review/
@@ -377,7 +377,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Bitvavo (bitvavo.com)
 - **Verified pricing:** (re-verified 2026-08-18, read on their own fees page) No subscription — you pay per trade.
-- **Honest take:** The honest caveats are crypto-wide, not Bitvavo-specific: fees are only part of the cost (spread matters on small orders), and no exchange removes market risk — the platform being cheap and MiCA-regulated does…
+- **Honest take:** Note the disclosure: this is one of the few tools here we genuinely run — our own trading system executes on Bitvavo — which is experience, but also means we're an actual customer, not a neutral bystander.
 - **Best for:** EU-based traders and builders who want a MiCA-regulated, euro-native exchange with low tiered fees, deep EUR pairs and a solid API for automation
 - **Full review:** https://aibuildermarketplace.com/b2b/bitvavo-review/
 
@@ -390,7 +390,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Blocky (effectify.io)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial, and every amount unchanged since 22 August 2026.
-- **Honest take:** Read the plan text before you read the badge.
+- **Honest take:** Read the plan text before you read the badge. The App Store header says a free plan is available; that free plan is Development Stores, for development and partner stores only, and it starts charging the moment the store goes live.
 - **Best for:** Shopify stores below Plus that are losing time to bot traffic, repeat fraudsters or orders from regions they do not ship to, and want blocking rules they control rather than a full security suite
 - **Flags:** {'f': 'addons_extra', 'ev': 'Pro $19.99 a month or $167.92 a year adds blocking by email, name, address and phone, the Bot Killer for TOR, proxy and VPN traffic, an add-ons block…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/blocky-review/
@@ -404,7 +404,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Bolt Business (bolt.eu)
 - **Verified pricing:** No subscription, no activation cost and no minimum commitment (re-verified 2026-08-20 on Bolt's own business page): you pay per ride or rental taken, with consolidated monthly billing, spen…
-- **Honest take:** The honest boundary is geography: Bolt's network is Europe/Africa-centric across 600+ cities, so US-only operations should look elsewhere, and ride availability varies by city — pilot it on your team's actual …
+- **Honest take:** Pricing is dynamic like all ride-hailing; the business layer adds control and receipts, not fixed corporate fares, so budget-predictability comes from your spend limits, not from locked prices.
 - **Best for:** companies with European/African travel footprints that want employee rides centrally billed, policy-controlled and expense-integrated — at zero platform cost
 - **Full review:** https://aibuildermarketplace.com/b2b/bolt-business-review/
 
@@ -431,7 +431,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Boulevard (joinblvd.com)
 - **Verified pricing:** (2026-09-17, read on their own pricing page) Priced per location per month, and the page opens on its Annually tab, so the headline figures are annual-billing rates: Essentials $143, Premie…
-- **Honest take:** Two things about this price list.
+- **Honest take:** Two things about this price list. It is per location, so the arithmetic for a second salon is not a volume discount, it is double — and the add-ons are per location too, which compounds it.
 - **Best for:** salons, spas and clinics with staff to schedule and a front desk to run — the per-location pricing works out fine for one busy site
 - **Flags:** {'f': 'addons_extra', 'ev': 'Paid add-ons sit on top, also per location: Forms from $65 per month per location, QuickBooks $45, ePrescribe $45 per prescriber, and email beyond th…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/boulevard-review/
@@ -445,7 +445,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Brandye (brandye.com)
 - **Verified pricing:** (read 2026-10-02 on brandye.com/pricing and on apps.shopify.com/brandye-quiz-ai-recommendation) Every plan includes the product quiz, the AI shopping assistant and AI product questions; the…
-- **Honest take:** Read the free plan as a trial, not a tier.
+- **Honest take:** Read the free plan as a trial, not a tier. Its 100 quiz submissions and 100 chats are lifetime totals, not monthly, so a store with real traffic uses them up in days or weeks and then has to pay.
 - **Best for:** Shopify stores with a catalogue where shoppers genuinely need help choosing, such as skincare, supplements or gifts, that want a product-finder quiz, answers on product pages and a chat assistant in one app, and value a small team
 - **Flags:** {'f': 'free_tier', 'ev': 'Read the free plan as a trial, not a tier.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/brandye-review/
@@ -466,28 +466,28 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Brevo (brevo.com)
 - **Verified pricing:** Brevo serves a different price list depending on where you open the page, and the two are not each other's conversion: Starter and Standard differ by more than the exchange rate ($9 and $18…
-- **Honest take:** Charging by sends looks cheaper for a big list you email rarely, but the send tiers cap stored contacts too: 5,000 sends a month stores only 500 contacts, and a 20,000-contact list needs the 20,000-send tier w…
+- **Honest take:** Model both numbers first — and the free daily cap and add-on fees on top.
 - **Best for:** businesses with large contact lists who email selectively and want to pay by send volume, not list size
 - **Flags:** {'f': 'per_seat', 'ev': 'The Sales Essentials CRM is billed separately at €26.08 a month per seat, Sales Advanced at €53.08.'}, {'f': 'addons_extra', 'ev': 'Two things the builder now puts on the public page that we previously had to cite the help centre for: the 5,000-email step lists 500 contacts and 1,…'}, {'f': 'free_tier', 'ev': 'Read on brevo.com/pricing on 6 September 2026 with the currency switched to US dollars and the yearly tab open: Free at $0 with 300 emails a day; Sta…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/brevo-review/
 
 ## Bright Data (brightdata.com)
 - **Verified pricing:** Usage-based (re-verified 2026-09-11): residential proxies start at $4.00/GB with no commitment, against a struck-through $8 — the $2.50/GB rate the overview page leads with is the $1,999/mo…
-- **Honest take:** This is enterprise-grade web data infrastructure at enterprise-grade prices — the per-GB meter looks small until you multiply by real scraping volume, and the committed tiers only pay off if your usage is stea…
+- **Honest take:** The bigger honest note is compliance: Bright Data is strict about KYC and use-cases (a feature, not a bug), and whatever you collect still has to respect the target sites' terms and applicable law.
 - **Best for:** data teams and enterprises with real, ongoing web-data needs (pricing intelligence, market research) that justify committed volume and pass use-case vetting
 - **Flags:** {'f': 'usage_metered', 'ev': 'API side: Unlocker, Crawl and SERP APIs from $1/1k requests (free tiers available), Scraper APIs $1.50/1k records pay-as-you-go with a 5K/month free …'}, {'f': 'free_tier', 'ev': 'API side: Unlocker, Crawl and SERP APIs from $1/1k requests (free tiers available), Scraper APIs $1.50/1k records pay-as-you-go with a 5K/month free …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bright-data-review/
 
 ## Browse.ai (browse.ai)
 - **Verified pricing:** (price re-verified 2026-09-21 in a live browser on www.browse.ai/pricing, with browse.ai/llms.txt read alongside it) Credit-metered, prices in USD.
-- **Honest take:** Two honest realities of no-code scraping.
+- **Honest take:** Two honest realities of no-code scraping. Credits burn faster than expected: row counts, screenshots and 'premium' sites all multiply the meter, so monitor a big site daily and do the math first.
 - **Best for:** ops, research and growth teams that want to monitor competitors, prices or listings and pipe structured web data into sheets without writing scrapers
 - **Flags:** {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-21 in a live browser on www.browse.ai/pricing, with browse.ai/llms.txt read alongside it) Credit-metered, prices in USD.'}, {'f': 'annual_lock', 'ev': 'Premium is the one that changed: it no longer reads simply “custom” but “Starting at $500 per month, billed annually” for 600,000+ credits a year wit…'}, {'f': 'free_tier', 'ev': 'Free is $0 with 50 credits a month, 2 websites and 3 users.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/browse-ai-review/
 
 ## BrowserAct (browseract.com)
 - **Verified pricing:** (prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-metered subscription with a free tier.
-- **Honest take:** The yearly toggle wears a -20% badge and the crossed-out prices suggest much more, but read what you would actually be charged on 13 September 2026: monthly is $16, $70 and $120, and yearly is $13, $56 and $96…
+- **Honest take:** Those list prices are the discount's anchor, not a rate anyone is currently offered.
 - **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, residential proxies and CAPTCHA handling managed for them, and can commit to yearly billing -- at $13 a month Basic is a cheap way
 - **Flags:** {'f': 'usage_metered', 'ev': '(prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-mete…'}, {'f': 'free_tier', 'ev': '(prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-mete…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
@@ -508,7 +508,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Buzz.ai (buzz.ai)
 - **Verified pricing:** (price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a month, AI Employee $695 per seat a month…
-- **Honest take:** Two meters run at once: seats AND credits — the seat price includes a credit allowance (500 a month on Core, 5,000 on AI Employee, read 5 September 2026), and real outbound volume means credit packages on top,…
+- **Honest take:** And the honest fundamental for any AI-SDR: it only books meetings as good as your list and offer, so keep a human reviewing what goes out in your name.
 - **Best for:** GTM teams that want AI to run outbound end-to-end — prompt-driven prospecting of intent-ready buyers, multichannel sequences and meeting booking without adding SDR headcount
 - **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}, {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/buzz-ai-review/
@@ -521,7 +521,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Calilio (calilio.com)
 - **Verified pricing:** (re-verified 2026-08-17) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 annually ($336 a year); Enterprise custom.
-- **Honest take:** The subscription is the platform, not the talking: numbers, minutes and SMS meter separately from a credit balance, so an active calling team's real bill sits meaningfully above the per-seat sticker — model a …
+- **Honest take:** It's a young player in a crowded VoIP field; the price is keen, so test call quality on your real routes in the trial.
 - **Best for:** startups and small teams that want a modern, affordable cloud phone system with international numbers and clean dashboards
 - **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 annually ($336 a year); Ente…'}, {'f': 'usage_metered', 'ev': 'Each plan includes a stated value of free calls and SMS/MMS to US and Canada numbers — $6.75 on Standard and $33.74 on Premium — and beyond that call…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20%.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/calilio-review/
@@ -549,7 +549,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Campaigner (campaigner.com)
 - **Verified pricing:** (re-read 2026-09-05 on campaigner.com/pricing) Campaigner prices by contact count and bills per account, not per user: a slider sets the tier and there is no separate monthly/annual toggle.
-- **Honest take:** Two paragraphs of fine print worth reading.
+- **Honest take:** Contact-based pricing also means dormant subscribers bill like active ones; prune first.
 - **Best for:** mid-market senders with larger lists that want mature email plus SMS workflows and are comfortable at the Essential tier and up
 - **Flags:** {'f': 'usage_metered', 'ev': 'SMS/MMS is not bundled into any plan: pay-as-you-go from $0.009 per message, sold through sales.'}, {'f': 'addons_extra', 'ev': 'Reputation Defender is an add-on at 20% of plan cost.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/campaigner-review/
@@ -576,7 +576,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## ChatGPT AI Product Description (profitoniumapps.com)
 - **Verified pricing:** (re-verified 2026-09-20 on apps.shopify.com/automated-description-writing) Four tiers, priced in credits per month, all amounts unchanged since 19 August 2026.
-- **Honest take:** First, the name is not a name.
+- **Honest take:** Check the developer is Profitonium before you install.
 - **Best for:** Shopify stores with catalogues in the thousands that need descriptions, titles, meta tags and alt text written in bulk and in several languages, and have the discipline to check a sample before running the whole catalogue
 - **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-20 on apps.shopify.com/automated-description-writing) Four tiers, priced in credits per month, all amounts unchanged since 19 Au…'}, {'f': 'addons_extra', 'ev': "Worse, the plan price may not be the whole bill: the listing carries Shopify's usage-based-charges line, and a merchant of twelve months, in a review…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/
@@ -597,7 +597,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Circle (circle.so)
 - **Verified pricing:** (2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Enterprise around $419/mo annual, plus a custom Circle Plus tier for fully branded apps.
-- **Honest take:** The sticker is only the entry: Circle keeps a commission on every sale on top of Stripe's processing fees, and email marketing is a separate add-on — so a monetized community's real bill runs meaningfully past…
+- **Honest take:** Model it at your actual sales volume before choosing a tier.
 - **Best for:** creators and brands running a paid community — courses, memberships, events and discussions in one branded home, with a built-in payments stack and even branded mobile apps
 - **Flags:** {'f': 'usage_metered', 'ev': 'On top of the subscription Circle takes a commission on every sale you make through the platform (roughly 2% on Professional, 1% on Business, 0.5% on…'}, {'f': 'addons_extra', 'ev': 'On top of the subscription Circle takes a commission on every sale you make through the platform (roughly 2% on Professional, 1% on Business, 0.5% on…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/circle-review/
@@ -632,7 +632,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Clonable (clonable.net)
 - **Verified pricing:** (prices re-verified 2026-09-21 on clonable.net/pricing; the page blocks plain fetches and was read in a browser) Two ladders behind a Website / Online Store tab, each with a Per month / Ann…
-- **Honest take:** Two honest caveats.
+- **Honest take:** You pay every month to keep the translated clone in sync, and machine-translation quality varies by language pair.
 - **Best for:** businesses that want a fast, continuously-updated translated version of an existing website without rebuilding it as a multilingual site
 - **Full review:** https://aibuildermarketplace.com/b2b/clonable-review/
 
@@ -672,7 +672,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Cloze (cloze.bot)
 - **Verified pricing:** (read 2026-08-19, re-verified unchanged 2026-09-04 on apps.shopify.com/cloze, listed as “Cloze: AI Shopping Assistant”) Free plan available: 25 AI conversations a month, up to 100 synced pr…
-- **Honest take:** Two things to weigh, and the first is the price itself.
+- **Honest take:** Two things to weigh, and the first is the price itself. On the same day, the App Store listing sold this at $49, $99 and $199 a month for 250, 750 and 2,000 conversations.
 - **Best for:** Shopify stores with a catalogue big enough that shoppers ask which item to buy, who want a chat assistant that reads live inventory and hands off to a person, and who will watch the transcripts
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · AI conversations'}, {'f': 'free_tier', 'ev': '(read 2026-08-19, re-verified unchanged 2026-09-04 on apps.shopify.com/cloze, listed as “Cloze: AI Shopping Assistant”) Free plan available: 25 AI co…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/cloze-review/
@@ -734,7 +734,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Contractor Foreman (contractorforeman.com)
 - **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; all plan prices unchanged since 1 Aug 2026) Priced for the company rather than per seat, with unlimited projects on every tier, and every…
-- **Honest take:** Credit where it is due first: this is company pricing with unlimited projects and no per-user overage inside your tier, which is rare in construction software and genuinely cheaper than per-seat rivals for a c…
+- **Honest take:** The catch is the billing term.
 - **Best for:** small and mid-size contractors who want estimating, scheduling and daily logs in one place and can commit to a year — the company-wide fee makes it cheap per head once you have a crew
 - **Full review:** https://aibuildermarketplace.com/b2b/contractor-foreman-review/
 
@@ -747,7 +747,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## CrankWheel (crankwheel.com)
 - **Verified pricing:** (read on crankwheel.com/pricing, 2026-08-21) A free plan with no payment details required — unlimited usage for the first 15 days, then up to 15 sessions a month for life.
-- **Honest take:** It's deliberately narrow — instant, no-download screen sharing for sales calls — so it's excellent at that one job and thin everywhere else: no full video-conferencing suite, no deep collaboration or webinar t…
+- **Honest take:** Mind which plan caps what: the free plan drops to 15 sessions a month after the first fortnight and Team puts everyone on a shared pool of 100, while Solo is the one paid tier with unlimited usage.
 - **Best for:** sales reps, insurance agents and consultants who need prospects to view a screen instantly with no download or install, on any device
 - **Flags:** {'f': 'free_tier', 'ev': '(read on crankwheel.com/pricing, 2026-08-21) A free plan with no payment details required — unlimited usage for the first 15 days, then up to 15 sess…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/crankwheel-review/
@@ -768,7 +768,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## CrowdStrike (crowdstrike.com)
 - **Verified pricing:** (re-verified 2026-09-22 on crowdstrike.com/en-us/pricing/falcon-go/ from a Netherlands exit; all six amounts unchanged since 1 Aug 2026 and the page states 'All prices listed are in US Doll…
-- **Honest take:** Two numbers decide whether this is for you, and neither is the headline.
+- **Honest take:** Two numbers decide whether this is for you, and neither is the headline. The first is the 100-device ceiling on Falcon Go: it is not a soft limit you grow through, it is the point where you change product.
 - **Best for:** small and mid-size companies that want a serious endpoint agent without running a security team — Falcon Go is genuinely priced for businesses under 100 devices
 - **Full review:** https://aibuildermarketplace.com/b2b/crowdstrike-review/
 
@@ -781,7 +781,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Datarails (datarails.com)
 - **Verified pricing:** (read 2026-08-25 on www.datarails.com/pricing) There is no public price.
-- **Honest take:** You cannot find out what it costs without talking to sales, and the entry plan is smaller than it looks: Professional covers 2 users and 1 integration, so a finance team of three, or one that needs both the ER…
+- **Honest take:** There is no free plan, no free trial and no self-serve signup anywhere on the site — every path ends at Request Demo — so there is no way to try it quietly before procurement is involved.
 - **Best for:** Excel-bound finance teams that have outgrown the spreadsheet plumbing but not the spreadsheets — consolidating several entities or data sources into one governed set of numbers, with planning, reporting and dashboards on top, whil
 - **Flags:** {'f': 'addons_extra', 'ev': 'On 31 August 2026, through its partner team, Datarails told us that customers typically commit to an annual term, that billing can run monthly across…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/datarails-review/
@@ -795,7 +795,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Deputy (deputy.com)
 - **Verified pricing:** (re-read 2026-09-19 on deputy.com/pricing; amounts unchanged since the browser reading of 2026-07-31, which used both billing toggles) Three plans, per user per month and excluding tax.
-- **Honest take:** The minimum monthly spend is the number to check before anything else: at $5.50 per user on monthly billing, a team of fewer than about six people still pays the $30 floor, so the headline per-user price is mi…
+- **Honest take:** The add-ons stack per user as well, and the payroll add-on is US-only and annual-only.
 - **Best for:** shift-based businesses — hospitality, retail, healthcare, any hourly workforce — that need rostering, clocking and labour-law compliance in one system and have enough staff to clear the minimum spend
 - **Flags:** {'f': 'per_seat', 'ev': 'HR is $2 per user, Messaging+ $1.95 per user and Analytics+ $1.50 per user, and the last two are included in Pro.'}, {'f': 'addons_extra', 'ev': 'And a banner across the top offers three months free to businesses that add workforce management and Payroll before 30 November — Payroll being the $…'}, {'f': 'annual_lock', 'ev': 'On annual billing Lite is $5, Core $6.50 and Pro $9; switch the toggle to monthly and the same three read $5.50, $7.25 and $10.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/deputy-review/
@@ -886,13 +886,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Dripshipper (dripshipper.io)
 - **Verified pricing:** (re-read 2026-09-17 on apps.shopify.com/dripshipper, listed as “Dripshipper: Coffee & Tea”) Starter $30 a month, Professional $99 and Elite $197, each with a 14-day free trial — all three u…
-- **Honest take:** Read the ladder before you climb it.
+- **Honest take:** Read the ladder before you climb it. Starter already carries unlimited orders, unlimited products and automatic fulfilment — the whole product, in other words.
 - **Best for:** someone who wants a turnkey private-label coffee or tea brand on Shopify — their roasting and packaging, your label on the bag — and is content to stay inside one product category
 - **Full review:** https://aibuildermarketplace.com/b2b/dripshipper-review/
 
 ## DropGenius (dropgenius.com)
 - **Verified pricing:** Re-verified 19 September 2026 on their own pricing page, unchanged since August.
-- **Honest take:** We have to be blunt here: the dominant theme in DropGenius’s public buyer reviews is unauthorised charges continuing after cancellation with no route to a refund, and some reviewers report never reaching a das…
+- **Honest take:** An AI-generated store in 30 seconds is also just a starting template — the product selection, marketing and margins remain entirely your problem.
 - **Best for:** absolute beginners who want a pre-built Shopify dropshipping store scaffold in minutes and understand it's a starting point, not a business
 - **Flags:** {'f': 'annual_lock', 'ev': 'Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicor…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/dropgenius-review/
@@ -905,13 +905,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Dynasort (dynasort.io)
 - **Verified pricing:** (re-read 15 September 2026 on apps.shopify.com/dynasort) Four tiers, all billed in USD and recurring every 30 days.
-- **Honest take:** Sorting driven by 40+ blended signals is powerful and opaque in the same breath: a recipe that ranks by margin, velocity and stock at once will sometimes bury a product you wanted seen, and there is real trial…
+- **Honest take:** The jump from free to paid is steep at $99 a month, and it buys capacity without capability — custom attributes, partner integration and product boost all start at $249.
 - **Best for:** Shopify stores with large or fast-changing catalogues where product order is a merchandising decision — seasonal ranges, frequent stock-outs, wide margin spreads — and nobody who wants to re-order collections by hand every week.
 - **Full review:** https://aibuildermarketplace.com/b2b/dynasort-review/
 
 ## Easy Advanced Translations (northwest.dev)
 - **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/advanced-translation) Four tiers, all monthly.
-- **Honest take:** The 'free AI' is heavily quota-limited — 50 products on Free, up to 800 on Pro — so a genuinely multilingual catalogue pushes you either to a paid tier or to your own OpenAI/DeepSeek key, where you pay token c…
+- **Honest take:** Auto-translation of new or changed content is reserved for the higher plans.
 - **Best for:** small-to-mid Shopify stores that want affordable, full-store AI translation — including images and third-party-app text — and are comfortable bringing their own OpenAI or DeepSeek key for unlimited volume
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · products, metafields, variants and articles'}
 - **Full review:** https://aibuildermarketplace.com/b2b/easy-advanced-translations-review/
@@ -952,7 +952,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## ElevenLabs (elevenlabs.io)
 - **Verified pricing:** (re-verified 23 Sep 2026 on elevenlabs.io/pricing) Every rate held again, unchanged since August.
-- **Honest take:** Credits are the meter and retakes are the tax — you are charged per generation request, and a regeneration is only free while the content and settings are unchanged, so real usage lands well above the calculat…
+- **Honest take:** And read the free-tier fine print: $0 gets you 10k credits to play with, but no commercial license — anything you publish commercially needs at least the $6 Starter.
 - **Best for:** creators, developers and product teams that want the most realistic AI voices available — voiceovers, audiobooks, dubbing, conversational agents and a well-documented API
 - **Flags:** {'f': 'usage_metered', 'ev': 'Free $0 with 10k credits/mo; Starter $6/mo (30k credits, commercial license); Creator $22/mo — first month 50% off at $11 — with ~121k credits.'}, {'f': 'annual_lock', 'ev': 'Annual billing is sold as ten months rather than twelve — the FAQ writes it out as annual price = monthly price × 10, which works out to $5 for Start…'}, {'f': 'free_tier', 'ev': 'Free $0 with 10k credits/mo; Starter $6/mo (30k credits, commercial license); Creator $22/mo — first month 50% off at $11 — with ~121k credits.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/elevenlabs-review/
@@ -973,7 +973,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Employment Hero (employmenthero.com)
 - **Verified pricing:** (2026-08-28, read on their own pricing page at employmenthero.com/pricing/) EVERY PRICE ON THAT PAGE IS AUD EXCLUDING GST — the page states it in its own disclaimer.
-- **Honest take:** There is no such thing as the Employment Hero price, and the first thing to fix is the currency: the pricing page is the Australian one, its disclaimer says every figure is AUD excluding GST, and there is no U…
+- **Honest take:** Then the structure.
 - **Best for:** Australian and New Zealand employers who want HR and payroll from one vendor and will genuinely use both, where the per-employee rate beats separate systems
 - **Flags:** {'f': 'per_seat', 'ev': 'HR Essentials A$10 per employee per month, HR Engage A$14; HR Elite and Employment Unlimited are quote-only.'}, {'f': 'usage_metered', 'ev': 'Interview credits reset monthly, unused credits do not roll over, and overage is billed automatically with no hard cap.'}, {'f': 'addons_extra', 'ev': 'There is no standalone payroll tier on the page any more: payroll sits inside Employment Unlimited, and Managed Payroll is an add-on at A$20 per empl…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/employment-hero-review/
@@ -1015,7 +1015,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Essential Loyalty (essential-apps.com)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/essential-loyalty-rewards-program) Four tiers, every amount unchanged since 22 August 2026, and the meter is still the whole decision: it counts loya…
-- **Honest take:** Two things to read closely before you pay.
+- **Honest take:** Two things to read closely before you pay. The meter is honest — loyalty-influenced orders, not all orders — and that is genuinely in your favour, but it also means you cannot work out your tier from your order count.
 - **Best for:** Shopify stores with genuine repeat business that want a loyalty programme priced on the orders it influences rather than on total volume — and stores selling in person too, since POS support arrives at $10 and the free tier carrie
 - **Flags:** {'f': 'usage_metered', 'ev': 'Free covers up to 250 of those and is unusually complete: the point program, VIP tiers, a referral program, twelve-plus ways to earn points, product,…'}, {'f': 'free_tier', 'ev': "The free plan advertises an 'Advanced loyalty point program' while Starter at $10 advertises a 'Free loyalty point program', which read literally mea…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/essential-loyalty-review/
@@ -1096,7 +1096,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Feedvisor (feedvisor.com)
 - **Verified pricing:** Feedvisor publishes no price, and we checked that again on 2026-09-03 and 2026-09-29.
-- **Honest take:** The honest structure: the $100 tier is a limited on-ramp, and most of what Feedvisor is famous for (the algorithmic Buy-Box strategy that holds prices UP, ad management, analysts) lives behind the $1,500+ top …
+- **Honest take:** The honest structure: Feedvisor publishes no price, so the quote you are given is the only figure that counts — amounts circulating online come from third parties, not from Feedvisor.
 - **Best for:** mid-market and enterprise Amazon sellers with large catalogs where algorithmic repricing and ad optimization move real revenue
 - **Flags:** {'f': 'usage_metered', 'ev': 'One correction to what we wrote before: the sentence we attributed to Feedvisor, that pricing is hybrid and varies with catalogue size, ad spend and …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/feedvisor-review/
@@ -1179,7 +1179,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## FreshBooks (freshbooks.com)
 - **Verified pricing:** (2026-08-29, read on their own pricing page) Every amount is unchanged since 1 August 2026.
-- **Honest take:** Two things multiply the number you first see.
+- **Honest take:** Two things multiply the number you first see. The promotional rate is 90% off for three months, so Lite is $23 rather than $2.30 from month four.
 - **Best for:** freelancers and small service firms who bill time and want invoicing that chases payment for them — the client cap is generous enough at Plus for most one-person businesses
 - **Flags:** {'f': 'per_seat', 'ev': 'Two add-ons sit in the fine print: Advanced Payments $20 a month and Payroll $40 a month plus $6 per user.'}, {'f': 'renewal_jump', 'ev': 'The promotional rate is 90% off for three months, so Lite is $23 rather than $2.30 from month four.'}, {'f': 'addons_extra', 'ev': 'Two add-ons sit in the fine print: Advanced Payments $20 a month and Payroll $40 a month plus $6 per user.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/freshbooks-review/
@@ -1193,7 +1193,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Freshservice (freshservice.com)
 - **Verified pricing:** (price re-verified 2026-09-29 against the vendor's own pricing page) Per agent, read 29 Sep 2026 on freshworks.com/freshservice/pricing/: Starter $19/agent/mo billed annually or $29 monthly…
-- **Honest take:** The $19 headline rarely survives contact with a real deployment: the ITSM features most IT teams buy for (change/problem management, deeper analytics) live at Pro, and so does Freddy AI Copilot, a $29-an-agent…
+- **Honest take:** Orchestration runs and, from Growth up, 100 asset units come included; you pay extra only past those allowances.
 - **Best for:** IT teams that want proper ITSM (incidents, assets, changes, service catalog) running in weeks, without enterprise-suite implementation pain
 - **Flags:** {'f': 'per_seat', 'ev': "(price re-verified 2026-09-29 against the vendor's own pricing page) Per agent, read 29 Sep 2026 on freshworks.com/freshservice/pricing/: Starter $19…"}, {'f': 'usage_metered', 'ev': 'Add-ons and allowances: Freddy AI Copilot $29/agent/mo, offered on the Pro and Enterprise cards only and still an add-on on Enterprise even though th…'}, {'f': 'addons_extra', 'ev': 'The $19 headline rarely survives contact with a real deployment: the ITSM features most IT teams buy for (change/problem management, deeper analytics…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/freshservice-review/
@@ -1262,7 +1262,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Gixo (gixo.ai)
 - **Verified pricing:** (re-read 2026-09-17 on gixo.ai/pricing; the floors are unchanged since 19 August 2026) Gixo is not one product but seven, each sold separately, and the pricing page publishes only a floor f…
-- **Honest take:** Two things about this pricing are worth reading twice.
+- **Honest take:** Two things about this pricing are worth reading twice. The first is that seven products means seven subscriptions. Gixo is priced per deliverable, not per company.
 - **Best for:** teams that want one dedicated, source-grounded tool per deliverable — a deck tool, a content tool, a proposal tool — and would rather buy them separately than bend one generic generator into every shape
 - **Full review:** https://aibuildermarketplace.com/b2b/gixo-review/
 
@@ -1275,7 +1275,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Goflow (goflow.com)
 - **Verified pricing:** (re-verified 23 Sep 2026 on goflow.com/pricing; the plan ladder was restructured since 3 Sep) Goflow Core is free forever at $0/mo with no credit card, capped at 500 orders a month (new ord…
-- **Honest take:** Core is free forever but no longer the whole platform: it connects only Amazon, eBay, Shopify, TikTok and Walmart, has no API or App Store, syncs with QuickBooks Online only, and stops importing at 500 orders …
+- **Honest take:** The next step up is $499/mo for 750 orders, and Goflow states you cannot move back down to Core once you go paid.
 - **Best for:** multichannel e-commerce operations with serious order volume that want orders, inventory, purchasing, listings and shipping unified — including EDI retail
 - **Flags:** {'f': 'usage_metered', 'ev': 'Overage per additional order runs from $0.70 on the $499 plan through $0.50 and $0.30 down to $0.10, and from $8 down to $3 per wholesale order.'}, {'f': 'free_tier', 'ev': '(re-verified 23 Sep 2026 on goflow.com/pricing; the plan ladder was restructured since 3 Sep) Goflow Core is free forever at $0/mo with no credit car…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/goflow-review/
@@ -1302,7 +1302,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Gravity Forms (gravity.com)
 - **Verified pricing:** (price re-verified 2026-09-23 against the vendor's own pricing page) Annual WordPress licences, unchanged since 1 Sep 2026: Basic $59/yr (1 site, standard support), Pro $159/yr (3 sites, st…
-- **Honest take:** Two honest notes.
+- **Honest take:** Two honest notes. It's a WordPress-only plugin — no WordPress, no Gravity Forms — and its real power often lives in paid add-ons and third-party extensions, so a genuinely advanced setup can cost more than the base license suggests.
 - **Best for:** WordPress site owners and developers who want powerful, self-hosted forms with conditional logic, payments and deep integrations they fully control
 - **Flags:** {'f': 'addons_extra', 'ev': "(price re-verified 2026-09-23 against the vendor's own pricing page) Annual WordPress licences, unchanged since 1 Sep 2026: Basic $59/yr (1 site, sta…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/gravity-forms-review/
@@ -1316,7 +1316,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Gushwork (gushwork.ai)
 - **Verified pricing:** (read 21 September 2026 on www.gushwork.ai/pricing) Gushwork publishes one number and no ladder.
-- **Honest take:** One published number, and it is the floor.
+- **Honest take:** One published number, and it is the floor. $900 a month is where Gushwork starts and the pricing page never says where it stops — the FAQ puts the final figure down to page volume, growth speed and paid support, confirmed on a call.
 - **Best for:** sales-led B2B businesses with no marketer and no agency, that win work through quote requests and consultation calls, and want the research, writing, publishing and optimisation handled for them — at $900 a month and up, with the 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Third — and to their credit they say this themselves — it is slow.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/gushwork-review/
@@ -1344,7 +1344,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Hello Bar (hellobar.com)
 - **Verified pricing:** (re-verified 2026-09-24 against hellobar.com/pricing; amounts unchanged since 3 Sep 2026) Hello Bar publishes exact prices, so the ranges we carried before were wrong: they were the monthly…
-- **Honest take:** The meter is views, not results: every visitor who sees a popup counts against your quota, so a traffic spike eats the allowance regardless of how many emails you actually captured, and at the limit the campai…
+- **Honest take:** And the honest fundamental of every popup tool: it amplifies an offer, it doesn't create one.
 - **Best for:** content sites, blogs and stores that already have traffic and a genuinely worthwhile offer, and want sticky bars, popups and slide-ins with A/B testing to convert more of that traffic into subscribers
 - **Flags:** {'f': 'usage_metered', 'ev': 'When a site reaches its monthly limit its campaigns pause until the next billing cycle; the page describes no overage charge, and an upgrade takes ef…'}, {'f': 'free_tier', 'ev': 'Starter is $0 forever with 5,000 views in total rather than per month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/hello-bar-review/
@@ -1397,7 +1397,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## HubSpot (hubspot.com)
 - **Verified pricing:** (2026-08-18, read in a live browser on their own marketing pricing page, USD view) Free is $0 for up to 2 users and 1,000 marketing contacts, with no time limit.
-- **Honest take:** Three numbers on this pricing page are not what they look like, and they compound.
+- **Honest take:** Three numbers on this pricing page are not what they look like, and they compound. The first is the $7. It is the number in large black type on the Starter card, and the $20 beside it in small grey type is the list price.
 - **Best for:** teams that want marketing, sales, service and content on one contact database and will actually use more than one hub — that shared database is the real product, and it is what makes the price defensible when you use the breadth
 - **Flags:** {'f': 'per_seat', 'ev': 'Starter is advertised at $7 per seat a month against a list price of $20 per seat a month, under a banner reading “Save up to 65% on Starter — new cu…'}, {'f': 'usage_metered', 'ev': 'It includes 500 HubSpot Credits and 1,000 marketing contacts.'}, {'f': 'renewal_jump', 'ev': 'So $7 is an introductory rate and $20 is what the seat costs afterwards — a 186% step for a system that by then holds your contact database, which is…'}, {'f': 'addons_extra', 'ev': 'Enterprise does the same thing at $7,000 on top of $43,200 a year.'}, {'f': 'free_tier', 'ev': '(2026-08-18, read in a live browser on their own marketing pricing page, USD view) Free is $0 for up to 2 users and 1,000 marketing contacts, with no…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/hubspot-review/
@@ -1424,7 +1424,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## IDrive (idrive.com)
 - **Verified pricing:** (2026, re-verified 24 Sep 2026) Free 10 GB Basic tier.
-- **Honest take:** The first-year price is a teaser and the renewal is the price — IDrive says so itself under the plan table, and on the current numbers the step from discounted to standard is about 43% (Personal 5 TB goes from…
+- **Honest take:** Budget on year-two rates, not the banner, and note that the discount is for new signups only and not available through their mobile apps.
 - **Best for:** individuals and small businesses that want cheap multi-device cloud backup with versioning, snapshots and physical seed/restore shipping
 - **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons: server backup $5/month/server on Mini, Personal and Team (Business includes servers), and Microsoft 365 or Google Workspace backup at $20/se…'}, {'f': 'annual_lock', 'ev': 'IDrive Personal is $9.99/month for 5 TB, shown discounted to $6.99/month with annual billing (save 30%), scaling up to $99.99/month ($69.99 discounte…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/idrive-review/
@@ -1437,7 +1437,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## InboxAlly (inboxally.com)
 - **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit, and unchanged on 2026-09-29) Every amount unchanged and confirmed on the plan comparison tabl…
-- **Honest take:** This is a premium, seed-list-based deliverability tool, and the price reflects it — Starter alone is well above casual warm-up apps, so it only makes sense if inbox placement is genuinely costing you real reve…
+- **Honest take:** It improves sender reputation through engagement signals, but it's not a magic fix for bad content or a purchased list: deliverability still depends on how you actually send.
 - **Best for:** serious senders — email marketers and cold-outreach teams — whose deliverability problems are costing measurable revenue and who need active reputation repair
 - **Full review:** https://aibuildermarketplace.com/b2b/inboxally-review/
 
@@ -1464,7 +1464,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Instapage (instapage.com)
 - **Verified pricing:** (re-verified 24 Sep 2026; amounts unchanged since 4 Sep) Instapage does publish plan prices; they are not on the URL we had recorded.
-- **Honest take:** It's premium-priced and only justified by serious ad spend — Create is $79 a month billed annually for 15,000 unique monthly visitors, and the price per thousand barely improves as you climb, so the higher tie…
+- **Honest take:** The 14-day trial needs a card and carries its own cap of 2,500 visitors; crossing it ends the trial and starts the paid plan by itself.
 - **Best for:** marketing teams running significant paid ad campaigns who need post-click optimisation — AdMap ad-to-page personalisation, A/B testing and heatmaps
 - **Flags:** {'f': 'usage_metered', 'ev': "It's premium-priced and only justified by serious ad spend — Create is $79 a month billed annually for 15,000 unique monthly visitors, and the price …"}, {'f': 'annual_lock', 'ev': "Annual billing is advertised as 'save up to 20%', and every tier carries unlimited contacts."}
 - **Full review:** https://aibuildermarketplace.com/b2b/instapage-review/
@@ -1478,7 +1478,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## InVideo (invideo.io)
 - **Verified pricing:** Three plans priced per seat, re-verified on invideo.io/pricing on 24 September 2026; the page was rebuilt after 5 September, when it listed Plus, Max, Generative and Elite.
-- **Honest take:** The honest catch is the credit model — each plan is a fixed monthly credit allowance that different models consume at different rates, and unused credits do not roll over, so a heavy month can exhaust an allow…
+- **Honest take:** AI video is fast but generic by default: templated output needs real editing and brand direction to not look like everyone else's.
 - **Best for:** marketing teams and creators who want to turn a prompt or script into a publish-ready first-draft video fast, using templates, AI voiceover and stock
 - **Flags:** {'f': 'per_seat', 'ev': 'Three plans priced per seat, re-verified on invideo.io/pricing on 24 September 2026; the page was rebuilt after 5 September, when it listed Plus, Max…'}, {'f': 'usage_metered', 'ev': 'Starter is $20 a seat a month on either billing (400 credits a seat a month, up to 5 seats), Plus $50 a seat annually or $60 monthly (2,000 credits, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/invideo-review/
@@ -1561,7 +1561,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Kit (kit.com)
 - **Verified pricing:** (re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email broadcasts, audience tagging and segmentat…
-- **Honest take:** Three honest notes.
+- **Honest take:** Three honest notes. Subscriber-based pricing counts everyone on your list — cold subscribers cost the same as fans, so prune before you price.
 - **Best for:** creators, writers and coaches building an audience-first business who want email, landing pages, digital products and a creator network in one
 - **Flags:** {'f': 'free_tier', 'ev': '(re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email br…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/kit-review/
@@ -1582,7 +1582,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Kixie (kixie.com)
 - **Verified pricing:** (2026-09-10, read on their own pricing page) No seat price is published.
-- **Honest take:** Plan for 30-60% above the sticker: minutes, the multi-line dialer and AI human-voice-detection all bill separately, and the quarterly auto-renewing contract only allows downgrades in its final 30 days — read t…
+- **Honest take:** The dialer itself is genuinely fast and CRM-native; just buy it with the full basket priced and the calendar reminder set (our Renewal Radar exists for exactly this).
 - **Best for:** outbound sales teams living in their CRM that want a serious power dialer with local presence, SMS and automation
 - **Flags:** {'f': 'per_seat', 'ev': "The plan cards claim unlimited US/Canada minutes while the FAQ published in the page's own structured data prices unlimited US and Canada minutes at …"}, {'f': 'addons_extra', 'ev': 'There is no PowerDialer on Professional, one line on Single-Line, and up to four simultaneous lines on Multi-Line — also the only tier offering AI hu…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/kixie-review/
@@ -1603,7 +1603,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## KrispCall (krispcall.com)
 - **Verified pricing:** (re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up to 5 people; Standard $32 per user/mo a…
-- **Honest take:** Same honest math as most budget VoIP: the plan buys the platform, the meter buys the conversations — per-minute and per-SMS charges land on top of every seat, so the comparison that matters is call-rate-per-co…
+- **Honest take:** The 100+ country number coverage is genuinely the draw; verify number availability and local regulations for your specific target countries before committing.
 - **Best for:** sales and support teams that need virtual numbers across many countries with a shared dashboard, dialer and CRM hooks at a budget seat price
 - **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up…"}, {'f': 'usage_metered', 'ev': 'Annual saves 20%, which the page puts at $36 per user a year on Essential and $96 on Standard, and each plan comes with $1 of free calling and SMS cr…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/krispcall-review/
@@ -1624,14 +1624,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## LangShop (langshop.io)
 - **Verified pricing:** (read 2026-09-10 on apps.shopify.com/langshop and langshop.app/pricing) Seven published tiers, billed in USD.
-- **Honest take:** Two things sit awkwardly next to each other in the plan table.
+- **Honest take:** The headline promise is 'unlimited words', but every tier caps how many products you may translate and how many languages you may run, so the meter you actually pay is catalogue size.
 - **Best for:** Shopify merchants selling into several language markets who want machine translation they can correct by hand — glossary rules, brand terms, bulk editing — plus a geolocated language and currency switcher, and whose catalogue and 
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · translated products (and languages)'}, {'f': 'annual_lock', 'ev': 'Annual billing is described as two months free, which is the same 17% the listing quotes.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/langshop-review/
 
 ## Later (later.com)
 - **Verified pricing:** (re-verified 2026-08-17) Starter $18.75/month, Growth $37.50 and Scale $82.50, all billed yearly, which Later advertises as three months free and 25% off against monthly.
-- **Honest take:** The Starter caps are where the price really lives: 30 posts per profile and 3 months of analytics run out fast for an active brand, pushing real users toward Growth — so compare at the tier you'll actually nee…
+- **Honest take:** Later's visual-first planning (born from Instagram) is still its strength; if your world is link-in-bio commerce and grids, that focus earns its seat.
 - **Best for:** creators and visual-first brands (Instagram/TikTok-centric) that want drag-and-drop visual planning, link-in-bio and scheduling in one
 - **Flags:** {'f': 'usage_metered', 'ev': 'The add-ons are where a growing team pays more: extra Social Sets are $11.25 a month each, extra users $3.75 a month each, and extra AI credits $3.75…'}, {'f': 'addons_extra', 'ev': 'The add-ons are where a growing team pays more: extra Social Sets are $11.25 a month each, extra users $3.75 a month each, and extra AI credits $3.75…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/later-review/
@@ -1715,7 +1715,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## LumenCart (lumencart.fleeta.co.uk)
 - **Verified pricing:** (read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store;…
-- **Honest take:** Two things decide whether this is cheap, and neither is the plan price.
+- **Honest take:** The second is the one-off packs, which look like a convenient top-up and are the most expensive way to buy.
 - **Best for:** small Shopify merchants who want studio and lifestyle product shots out of the photos they already have, without hiring a photographer or a studio, and who want them published straight to the product rather than downloaded and re-
 - **Flags:** {'f': 'usage_metered', 'ev': 'Read the plans in credits rather than images, because that is what you actually buy: the monthly allowances are 75, 300, 1,000 and 2,500 credits, ref…'}, {'f': 'annual_lock', 'ev': "(read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lif…"}, {'f': 'free_tier', 'ev': "(read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lif…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/lumencart-review/
@@ -1729,13 +1729,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## MarketerHire (marketerhire.com)
 - **Verified pricing:** (price re-verified 2026-09-23 against marketerhire.com/pricing and the vendor's FAQ at marketerhire.com/faqs/all) No rates are published on the pricing page or in the FAQ.
-- **Honest take:** This is vetted senior freelance talent on a monthly retainer with no published rates — the value is speed and vetting (the pricing page promises a match within 24-48 hours, against a months-long hire), and the…
+- **Honest take:** Because it's talent, not software, outcomes depend on the individual and how well you brief them; the two-week refundable trial and rematch help, but you still own the strategy.
 - **Best for:** companies that need a vetted senior marketer (growth, paid ads, email, more) matched quickly, without the time and risk of a full-time hire
 - **Full review:** https://aibuildermarketplace.com/b2b/marketerhire-review/
 
 ## Marketing 360 (marketing360.com)
 - **Verified pricing:** Quote-based, and deliberately so (verified 6 September 2026 and again 25 September 2026 on their own site).
-- **Honest take:** Two honest cautions.
+- **Honest take:** And it's an all-in-one "we'll do it for you" model, which is great if you want a single vendor and a human team, but it can mean less flexibility and more lock-in than assembling best-of-breed tools.
 - **Best for:** small businesses that want one vendor handling website, CRM, ads, email and reputation with real humans to help, and prefer done-for-you over DIY
 - **Flags:** {'f': 'quote_only', 'ev': 'Quote-based, and deliberately so (verified 6 September 2026 and again 25 September 2026 on their own site).'}
 - **Full review:** https://aibuildermarketplace.com/b2b/marketing-360-review/
@@ -1777,21 +1777,21 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## MindStudio (mindstudio.ai)
 - **Verified pricing:** (prices re-verified 2026-09-18 on mindstudio.ai/pricing) The subscription is a floor, not the bill: every tier reads “+ usage”, so model calls are charged on top.
-- **Honest take:** The no-markup model pass-through is genuinely fair — but it also means your real cost is subscription PLUS model spend, and an agent that loops or processes big documents burns provider credits invisibly until…
+- **Honest take:** The honest build discipline: start every agent with usage caps, and treat 'no-code' as no-code for the plumbing — the logic design and prompt quality are still entirely on you.
 - **Best for:** operators and teams that want to build and deploy real AI agents and workflows visually, across many models, without engineering time
 - **Flags:** {'f': 'per_seat', 'ev': 'MindStudio states it does not mark up model cost — its FAQ says you pay exactly the same price as bringing your own API keys from the providers — and…'}, {'f': 'usage_metered', 'ev': 'Because the metered part is uncapped by the plan, the tier you pick says little about what you will actually pay — the run volume does.'}, {'f': 'free_tier', 'ev': 'Free is $0/month plus usage and caps you at one agent and 1,000 runs a month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/mindstudio-review/
 
 ## Miro (miro.com)
 - **Verified pricing:** (price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 c…
-- **Honest take:** Per-member pricing charges for every member added to the workspace, so an org-wide rollout multiplies at full headcount — and the free plan's 3-board cap is workspace-wide, not per person, so a team reaches it…
+- **Honest take:** Model who truly needs to edit before you buy seats.
 - **Best for:** teams that think visually — brainstorms, flowcharts, retros, workshops and planning on an infinite shared canvas with strong templates and facilitation tools
 - **Flags:** {'f': 'per_seat', 'ev': 'Starter $8/member/mo and Business $20/member/mo, both billed yearly; Enterprise custom priced from 30 members.'}, {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in th…'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in th…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/miro-review/
 
 ## Mktg.ai (mktg.ai)
 - **Verified pricing:** No public pricing (re-verified 25 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'.
-- **Honest take:** Two honest cautions.
+- **Honest take:** No published price: the pricing page returns a 404, and the FAQ names the tiers but no figure.
 - **Best for:** marketing teams with real media spend across channels who want an always-on AI analyst — unified creative visibility, live performance signals and plain-language questions over their own data. It layers on top of your existing pla
 - **Full review:** https://aibuildermarketplace.com/b2b/mktg-ai-review/
 
@@ -1825,7 +1825,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Moosend (moosend.com)
 - **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30) A 30-day free trial with no credit card.
-- **Honest take:** The friendly $7-9 headline is the entry rate at the smallest list size (500 contacts), and the ladder above it does not fall smoothly: paid annually, 8,000 contacts costs $51 a month while 10,000 costs $70, so…
+- **Honest take:** The same reversal repeats at 100,000 and at 600,000.
 - **Best for:** small businesses and marketers who want affordable email marketing and automation with a low entry price, a real free trial and a clean drag-and-drop builder
 - **Flags:** {'f': 'usage_metered', 'ev': 'Instead of a subscription you can buy email credits outright with no expiry: 350,000 for $350, 500,000 for $500, 750,000 for $750 and 1,000,000 for $…'}, {'f': 'addons_extra', 'ev': 'Above Pro the page shows Moosend+ (a custom plan assembled from add-ons: dedicated IPs, transactional emails, audience discovery, custom dashboards, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/moosend-review/
@@ -1858,13 +1858,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Mycroft (mycroft.io)
 - **Verified pricing:** (read 4 September 2026 on www.mycroft.io/pricing) Mycroft has no public pricing: three packages, and not one number between them.
-- **Honest take:** The pricing page is a feature list with the prices taken out, and that is a choice rather than an oversight — Mycroft publishes what is in each package down to the individual capability, then stops short of th…
+- **Honest take:** That is a services contract, and services contracts scope on your environment, so the number genuinely will differ per company.
 - **Best for:** companies chasing an attestation they cannot staff for — CMMC or FedRAMP to keep bidding on defence and public-sector work, SOC 2 or ISO 27001 to get through enterprise procurement — that would rather buy the platform, the securit
 - **Full review:** https://aibuildermarketplace.com/b2b/mycroft-review/
 
 ## Navan (navan.com)
 - **Verified pricing:** (read 24 September 2026 on navan.com/pricing) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense is free for the first 5 monthly expensin…
-- **Honest take:** 'Free' is real but has a mechanism: Navan earns commission on bookings made through its inventory, so the platform's incentive is that your travel flows through Navan, and pricing on specific routes/hotels des…
+- **Honest take:** The free Business plan stops at 300 employees and lists corporate negotiated rates as an Enterprise feature; expense management is free for 5 users and $15 per user per month after that.
 - **Best for:** companies of up to 300 employees that want self-serve travel booking with built-in policy control, free on Navan Business, and optionally unified expense management on top
 - **Flags:** {'f': 'per_seat', 'ev': '(read 24 September 2026 on navan.com/pricing) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense …'}, {'f': 'usage_metered', 'ev': "'Free' is real but has a mechanism: Navan earns commission on bookings made through its inventory, so the platform's incentive is that your travel fl…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/navan-review/
@@ -1948,7 +1948,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Omniseo (omniseo.com)
 - **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28 against the vendor's own pricing page) Essentials $89/mo (4 AI channels, 50 prompts, 5 seats), Professional $349/mo (10 AI channels, 100 prom…
-- **Honest take:** Two honest cautions.
+- **Honest take:** Two honest cautions. AI search visibility (GEO) is a young, fast-moving category.
 - **Best for:** brands and SEO teams that want to measure and improve how they show up in AI-generated answers (ChatGPT, Google AI and more) as AI search grows
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing is $890 and $3,490 a year respectively, which the page describes as two months free.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/omniseo-review/
@@ -1976,7 +1976,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Ownr (ownr.co)
 - **Verified pricing:** (prices read 22 September 2026 in a live browser on www.ownr.co/pricing, all amounts in Canadian dollars - Ownr sells into Canada only) The page has two selectors, jurisdiction and structur…
-- **Honest take:** Two honest limits.
+- **Honest take:** Two honest limits. It's Canada-only — provincial incorporation covers Ontario, Alberta, BC and Quebec — so it's no use outside Canada.
 - **Best for:** Canadian founders who want a straightforward sole proprietorship or single-shareholder incorporation done fast, without paying lawyer rates
 - **Flags:** {'f': 'renewal_jump', 'ev': 'The renewal rate is the same in every jurisdiction; only the incorporation year differs.'}, {'f': 'addons_extra', 'ev': 'Three add-ons exist and all three are locked to the Managed Corporation Plan: Managed Shareholders at CA$297 a year including three shareholders and …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/ownr-review/
@@ -2076,7 +2076,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Pingtree (pingtree.com)
 - **Verified pricing:** (2026-08-27, read on their own pricing page) Self Service is “From $199” per month with a free trial included, and Managed Services carries a starting cost of $2,500, “scoped with your acco…
-- **Honest take:** Two things about this price list will cost you money if you skim it.
+- **Honest take:** Two things about this price list will cost you money if you skim it. First, the $199 is a floor rather than a bill.
 - **Best for:** performance marketers, lead brokers and affiliate operations that already move real lead volume and want ping-tree routing, partner management, funnels and reporting in one system — the unlimited-users-with-roles policy on the sel
 - **Flags:** {'f': 'usage_metered', 'ev': 'Self Service is the whole platform driven by Pingtree Copilot, with core usage — leads, pings, clicks and storage — included each month, overage bill…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pingtree-review/
@@ -2117,7 +2117,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Plesk (plesk.com)
 - **Verified pricing:** (read 2026-08-30 on plesk.com/pricing from a US exit; re-verified 2026-09-20 from the Netherlands against the page's own PleskPricing rate card, which carries every currency) Per-server lic…
-- **Honest take:** Two honest notes.
+- **Honest take:** Two honest notes. Plesk has been raising prices steadily (the 2026 round averaged ~26%), so budget for the renewal trajectory, not today's invoice — it's a recurring theme in the ecosystem since the acquisition era.
 - **Best for:** agencies and hosters managing multiple sites on their own servers who want a mature control panel with per-domain management, security and one-click stacks
 - **Full review:** https://aibuildermarketplace.com/b2b/plesk-review/
 
@@ -2172,14 +2172,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## ProtectMyOrder (protectmyorder.com)
 - **Verified pricing:** (re-read 2026-09-18) The App Store route has closed.
-- **Honest take:** Start with what is no longer there.
+- **Honest take:** Start with what is no longer there. Read on 18 September 2026, the Shopify App Store listing for this app is gone: the page says it is not currently available and sends support questions to the vendor.
 - **Best for:** Shopify stores with a known parcel-loss rate that are willing to come in through the vendor rather than the App Store — keeping 80% of the upsell on Standard if they can settle claims in-house, or buying that work back at 44.99% i
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: revenue_share · delivery protection upsell revenue'}
 - **Full review:** https://aibuildermarketplace.com/b2b/protectmyorder-review/
 
 ## Proton (proton.me)
 - **Verified pricing:** (read 2026-08-26 on proton.me/pricing over a US connection, on the Mail tab with yearly billing) Free is $0.00 a month for 1 GB and one address.
-- **Honest take:** Storage is the axis, and the jump from Drive Plus to Unlimited is not really about storage at all: you go from 200 GB to 500 GB, but you also start paying for Mail, Calendar, Pass and VPN whether or not you wa…
+- **Honest take:** If all you need is encrypted file storage, the bundle is where the money leaks.
 - **Best for:** teams and individuals for whom encryption is an actual requirement rather than a preference — handling client material, legal or medical files, or anything where a provider being able to read your data is itself the problem
 - **Full review:** https://aibuildermarketplace.com/b2b/proton-review/
 
@@ -2199,14 +2199,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## PushOwl (pushowl.com)
 - **Verified pricing:** (prices read 2026-08-17 in a browser; a plain fetch returns only the feature matrix, not the bundle prices) This is priced per channel and then added up, which is the part worth understandi…
-- **Honest take:** The bundles are push-first: every paid tier still caps included email at 500 a month, so 'omnichannel' email at any real volume means buying separate credits — and consumption-based pricing gets harder to pred…
+- **Honest take:** It's also Shopify-exclusive, so it becomes a dead end the day you move platforms.
 - **Best for:** Shopify stores that want to win back abandoned carts and browsing sessions with one-click web push — reaching shoppers who never handed over an email — and then layer in email and SMS, starting on a free tier that genuinely does s
 - **Flags:** {'f': 'usage_metered', 'ev': 'Basic is $0 and covers 500 emails and 500 web push notifications a month with no SMS credits.'}, {'f': 'free_tier', 'ev': 'Basic is $0 and covers 500 emails and 500 web push notifications a month with no SMS credits.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pushowl-review/
 
 ## Pylon (usepylon.com)
 - **Verified pricing:** (checked 2026-09-01) Pylon no longer publishes rates.
-- **Honest take:** The per-seat sticker is the entry ticket; the AI that makes the platform sing is metered separately, so a realistic modern deployment (seats + AI agent + phone) lands well above the tier price — model your ful…
+- **Honest take:** That said, its B2B-native design (Slack/Teams-first support, account-based views) is a genuine fit gap that classic ticket tools fake with workarounds.
 - **Best for:** B2B SaaS teams supporting customers in shared Slack/Teams channels who want tickets, accounts and AI in one B2B-native platform
 - **Flags:** {'f': 'per_seat', 'ev': 'The per-seat sticker is the entry ticket; the AI that makes the platform sing is metered separately, so a realistic modern deployment (seats + AI age…'}, {'f': 'usage_metered', 'ev': 'The figures that follow are our last reading of the published tiers and are a historical anchor, not a current quote: Starter about $59/seat/mo and P…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pylon-review/
@@ -2283,7 +2283,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Readymode (readymode.com)
 - **Verified pricing:** (re-verified 2026-08-17 on their own pricing page, after the vendor announced a price change effective 1 Aug 2026) Two published plans, priced per license per month: Starter $239 for 1+ lic…
-- **Honest take:** The per-seat price is premium, and the model rewards scale — the predictive dialer, compliance tools and supervisor monitoring earn their keep on a 5-plus-agent floor, but for one or two reps it's expensive fo…
+- **Honest take:** Predictive dialing also carries compliance responsibility (TCPA and similar): the speed is only an asset if your calling practices stay compliant.
 - **Best for:** high-volume outbound call teams (insurance, real estate, collections) with 5+ agents that need predictive dialing, compliance tools and supervisor monitoring
 - **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17 on their own pricing page, after the vendor announced a price change effective 1 Aug 2026) Two published plans, priced per li…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/readymode-review/
@@ -2304,7 +2304,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Remote People (remotepeople.com)
 - **Verified pricing:** (2026-08-07, read on their own pricing page) Priced per service rather than per plan, and every figure is a floor.
-- **Honest take:** The monthly rates are the cheapest we have on file for this category, and that is worth saying plainly.
+- **Honest take:** Every rate is a 'from' price with no country-level figure, and recruitment fees charged as a share of salary can dwarf the subscription.
 - **Best for:** small and mid-size teams hiring a handful of people abroad who want to pay monthly, keep the option to stop, and not carry a five-employee minimum. EOR Flex is genuinely unusual on those terms: no setup fee, no deposit, no minimum
 - **Flags:** {'f': 'per_seat', 'ev': 'Employer of Record: EOR Flex from $199 per employee a month, billed monthly with no commitment, no setup fee and no minimum headcount; EOR Plus from …'}, {'f': 'annual_lock', 'ev': 'Employer of Record: EOR Flex from $199 per employee a month, billed monthly with no commitment, no setup fee and no minimum headcount; EOR Plus from …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/remote-people-review/
@@ -2392,14 +2392,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Salesflow (salesflow.io)
 - **Verified pricing:** (read 2026-09-09, re-read 2026-10-01) Read on Salesflow's own pricing page.
-- **Honest take:** The per-seat rate falls with team size but the monthly bill does not follow it: 19 seats on Starter is $1,330 while 20 seats on Pro is $799, so a team that stops one seat short of a tier pays $531 a month more…
+- **Honest take:** The same cliff sits at 49-to-50 seats and again at 99-to-100.
 - **Best for:** outbound sales teams and agencies running LinkedIn sequences across several seats, where the per-seat price drops and the admin panel earns its keep
 - **Flags:** {'f': 'per_seat', 'ev': 'It returns a 403 to plain fetches but renders normally in a browser, so these are their published figures rather than third-party ones: Basic $99 per…'}, {'f': 'annual_lock', 'ev': 'Agency and Enterprise require an annual commitment billed monthly, and the comparison table adds seats one at a time on Basic, Starter and Pro but in…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/salesflow-review/
 
 ## Salesmessage (salesmessage.com)
 - **Verified pricing:** (2026-08-08, re-verified 10 September 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plans plus Enterprise, metered in message cr…
-- **Honest take:** Two things changed here and both cost money.
+- **Honest take:** Two things changed here and both cost money. First, calling now runs on the same meter as texting — 1 credit a minute, 2 a minute when forwarding — so voice minutes eat the allowance you budgeted for messages.
 - **Best for:** sales and service teams that want two-way texting and calling in one CRM-linked inbox, and can estimate their monthly credit burn — messages plus call minutes — before they sign
 - **Flags:** {'f': 'usage_metered', 'ev': '(2026-08-08, re-verified 10 September 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plan…'}, {'f': 'addons_extra', 'ev': 'Both plans carry a credits dropdown that raises the allowance for a fixed add-on.'}, {'f': 'annual_lock', 'ev': 'Annual billing is shown as two months free.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/salesmessage-review/
@@ -2453,7 +2453,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Seel (seel.com)
 - **Verified pricing:** Three plans on seel.com/pricing, re-read 7 September and again 19 September 2026 (on that second reading the plan cards no longer print a monthly figure at all — all three say “Contact us” …
-- **Honest take:** Two things to weigh, and neither is the price you pay — because you do not pay one.
+- **Honest take:** Seel's algorithm prices it, so if it lands too high for your niche and shoppers stop opting in, your only lever is switching the feature off entirely.
 - **Best for:** stores selling final-sale, high-consideration or hard-to-size products, where return anxiety is the thing killing the order — merchants report conversion lifting around 5% and shoppers taking the option roughly 24% of the time
 - **Flags:** {'f': 'usage_metered', 'ev': 'Growth covers all five with capped usage — up to 100 resolved tickets, 100 listings, $500 attributed GMV, one Voice of Customer report (sentiment acr…'}, {'f': 'free_tier', 'ev': 'Three plans on seel.com/pricing, re-read 7 September and again 19 September 2026 (on that second reading the plan cards no longer print a monthly fig…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/seel-review/
@@ -2481,7 +2481,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Seller Investigators (sellerinvestigators.com)
 - **Verified pricing:** (2026-08-15, read on their own site) One number, and it is the whole model: a 25% commission, charged only after Amazon has deposited recovered funds in your account.
-- **Honest take:** Contingency pricing is the honest kind — you pay only out of money that arrived — but 25% of a recovery is not the same as 25% of a profit, and there is one question that decides whether this is worth it for y…
+- **Honest take:** Amazon reimburses some categories automatically, and its policies on that have changed more than once.
 - **Best for:** established FBA sellers with enough inventory movement that discrepancies add up and nobody in-house has time to file case-by-case claims — the contingency model means an audit costs you nothing but the access you grant
 - **Flags:** {'f': 'usage_metered', 'ev': 'Cases they say they cover fall into five groups: inbound shipments (cancelled shipments, receiving discrepancies, carrier damage), items lost in tran…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/seller-investigators-review/
@@ -2509,7 +2509,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Sentaro (sentaro.com)
 - **Verified pricing:** (read 24 September 2026 on sentaro.com/en/pricing) Priced per protected account, in USD.
-- **Honest take:** The category claim (AI catches what filters miss) is plausible — Microsoft/Google native filtering misses sophisticated BEC — but any vendor's accuracy percentage is measured on their own test set, not your ma…
+- **Honest take:** The honest procurement move: run their trial alongside your current filtering, count real catches and false positives for two weeks, and price per mailbox against the incumbents with that data in hand.
 - **Best for:** SMBs on Google Workspace/M365 that want an extra AI layer against phishing and BEC without infrastructure changes
 - **Full review:** https://aibuildermarketplace.com/b2b/sentaro-review/
 
@@ -2550,13 +2550,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Shiftie (shiftie.co)
 - **Verified pricing:** (price re-verified 24 September 2026, unchanged since 5 September) £2.75 per active employee per month for the first 30, then £1.50 for each employee above 30 — the reduced rate is marginal…
-- **Honest take:** It's focused, affordable rota software — which means it does scheduling, clock-ins, leave and swaps well, but it isn't a full HR or payroll platform, so a growing business will still bolt on payroll and HR too…
+- **Honest take:** Pricing is genuinely low, but the per-active-employee model means a large seasonal team in a busy month costs more than the headline suggests.
 - **Best for:** shift-based businesses (hospitality, retail, leisure) that want quick rota building, clock-ins and leave management without spreadsheet pain
 - **Full review:** https://aibuildermarketplace.com/b2b/shiftie-review/
 
 ## Shipdock (happyapps.cz)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/packeta) Three tiers, no free plan, every amount unchanged since 22 August 2026, and the entry tier still names its own limitation.
-- **Honest take:** Read the carrier list against your own country before anything else.
+- **Honest take:** More than twenty carriers are supported, but a US or UK merchant should confirm theirs is among them before the five-day trial starts.
 - **Best for:** Shopify merchants shipping in Central and Eastern Europe who want pickup points, multi-carrier label printing and cash-on-delivery tracking in one app rather than one integration per carrier — and who are on Shopify Plus, where th
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 10% on each.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/shipdock-review/
@@ -2589,7 +2589,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Signal House (signalhouse.io)
 - **Verified pricing:** (2026-09-11, re-read on their own pricing page) Usage-based, no platform subscription.
-- **Honest take:** Two things are missing from a page that is otherwise unusually specific.
+- **Honest take:** Two things are missing from a page that is otherwise unusually specific. The first is voice. The product is sold as an SMS and Voice API and the pricing page publishes no voice rate at all — nor short code pricing.
 - **Best for:** teams sending real SMS volume in the US who already know what an A2P 10DLC campaign is and want a cheaper per-segment rate than Twilio’s list without giving up published pricing. The volume ladder is genuinely steep — from $0.0065
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: usage · SMS segment'}
 - **Full review:** https://aibuildermarketplace.com/b2b/signal-house-review/
@@ -2631,7 +2631,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## SimplyBook.me (simplybook.me)
 - **Verified pricing:** (2026, re-read 2026-09-20 on their own pricing page; the euro ladder below was verified there on 2026-09-11 and has since stopped being shown to us) Free EUR 0: 50 bookings a month, 1 custo…
-- **Honest take:** The plan ladder is set by bookings per month and by how many custom features you may switch on, and those two ceilings move independently — so you can outgrow a plan on features while nowhere near the booking …
+- **Honest take:** Free and Basic also carry SimplyBook.me branding on your booking page; white-label starts at Premium.
 - **Best for:** service businesses that take appointments and want a booking page, reminders and online payment without building one
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 17%.'}, {'f': 'free_tier', 'ev': 'SECOND READING, SAME DAY, DIFFERENT COUNTRY: a server in Frankfurt (German IP, Accept-Language en-GB) was served the identical ladder, R$0 / R$33.75 …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/simplybook-me-review/
@@ -2644,7 +2644,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Smartli (smartli.ai)
 - **Verified pricing:** (re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each …
-- **Honest take:** Smartli bundles nine AI tools — copy, SEO, images, logos — into one suite, and that breadth is also the honest catch: each individual tool is competent rather than best-in-class, so a team that leans hard on o…
+- **Honest take:** And like all AI copy, its product descriptions and ad copy need a human edit and a fact-check — never publish specs or claims it invents about your product.
 - **Best for:** e-commerce sellers who want an affordable all-in-one AI suite to draft product listings, ad copy, SEO text and basic brand assets in one place
 - **Flags:** {'f': 'annual_lock', 'ev': 'Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicor…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/smartli-review/
@@ -2679,7 +2679,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Social Bar (effectify.io)
 - **Verified pricing:** (read 2026-09-18 on apps.shopify.com/sticky-social-media-icons-bar) Two plans, and the free one is not the one you will be on.
-- **Honest take:** This is a styling subscription, and the listing's own framing oversells it: social icons and share buttons build no trust on their own, and 'boost sales with social proof' is a claim the app has no way to supp…
+- **Honest take:** And more than 80 platform options mainly tempts you to advertise accounts you no longer maintain.
 - **Best for:** Shopify merchants who want branded social icons and a WhatsApp chat button on product pages without touching theme code, and who will use the built-in click counter to check whether anyone taps them
 - **Full review:** https://aibuildermarketplace.com/b2b/social-bar-review/
 
@@ -2713,7 +2713,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Spocket (spocket.co)
 - **Verified pricing:** (re-verified 2026-09-07 and again 2026-10-01) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products, 25 premium), Empire $99.99 (10,000 / 10…
-- **Honest take:** Spocket's pitch is faster-shipping US and EU suppliers, and that's real — but you still pay twice: the monthly subscription and the wholesale product cost, so margins depend on picking items with room to mark …
+- **Honest take:** Catalog breadth is narrower than giant AliExpress-based tools (that's the trade for vetting and shipping speed), and the low Starter product cap pushes serious stores up to Pro quickly.
 - **Best for:** dropshippers who want vetted US and EU suppliers with faster shipping and one-click store integration, prioritizing delivery speed over raw catalog size
 - **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-07 and again 2026-10-01) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products,…'}, {'f': 'addons_extra', 'ev': 'Multiple-store support is listed on all plans, but the page states a separate subscription is required for each store.'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as eight months free and the annual rates are printed on the cards: Pro $24 a month, Empire $57 and Unicorn $79, with st…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/spocket-review/
@@ -2727,14 +2727,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Stamped (stamped.io)
 - **Verified pricing:** (re-verified 12 September 2026, read in a browser on their own pricing page across every step of the order-volume selector and both the single-product and bundle tabs) There is no free plan…
-- **Honest take:** The $798/month figure that circulates for the full suite is real, but it is a floor rather than a ceiling: that is what multi-product access costs from the 5,000-order step, and below that step you cannot buy …
+- **Honest take:** So the ladder has a cliff in it rather than a slope.
 - **Best for:** mid-market Shopify brands that want reviews and loyalty in one platform instead of juggling separate apps
 - **Flags:** {'f': 'usage_metered', 'ev': 'The redesigned page no longer says anything about overage charges.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/stamped-review/
 
 ## Stampezee (stampezee.com)
 - **Verified pricing:** (read 2026-08-30 on stampezee.com/en/pricing from a US exit) Four tiers, all now named and priced on the public page.
-- **Honest take:** The category is honest and proven (digital stamp cards beat lost paper cards), and the platform is young with limited public pricing and review coverage — so start on the free plan, run one real campaign, and …
+- **Honest take:** The deeper truth of loyalty programs: the mechanics are 10% of the outcome; a reward worth returning for is the other 90%.
 - **Best for:** local businesses (cafés, salons, retail) that want a simple digital stamp-card loyalty program starting free
 - **Flags:** {'f': 'free_tier', 'ev': 'Stamp Start free: 1 branch, 1 stamp card, up to 100 customers or 100 stamps, whichever comes first.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/stampezee-review/
@@ -2782,7 +2782,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Success.co (success.co)
 - **Verified pricing:** (read 2026-08-21 in Success.co's structured data on success.co/pricing, re-read 2026-09-08 and 2026-09-26) There is a Free Forever plan at $0 with the V/TO, Accountability Chart and Organiz…
-- **Honest take:** The ladder rewards size rather than commitment: each band's rate applies only to the seats inside it, so the 26th user costs a dollar less than the 25th, and the annual discount is worth about the same single …
+- **Honest take:** So the number that decides your bill is headcount, not billing term — and at the small end, where most teams start, $12 a user is the least favourable rate on the whole page.
 - **Best for:** leadership teams that already run on goals and want one place to set objectives, track KPIs and scorecards, and keep strategy execution on cadence
 - **Flags:** {'f': 'per_seat', 'ev': 'Monthly billing: $12, $11, $9, $7 and $6 per user a month; annual billing: $11, $10, $8, $6 and $5.'}, {'f': 'addons_extra', 'ev': 'Two add-ons sit outside the plan at $250 a month each: Single Sign-On (Okta, Microsoft Entra ID, Google Workspace or any SAML/OIDC provider) and Dire…'}, {'f': 'annual_lock', 'ev': 'Monthly billing: $12, $11, $9, $7 and $6 per user a month; annual billing: $11, $10, $8, $6 and $5.'}, {'f': 'free_tier', 'ev': "(read 2026-08-21 in Success.co's structured data on success.co/pricing, re-read 2026-09-08 and 2026-09-26) There is a Free Forever plan at $0 with th…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/success-co-review/
@@ -2801,7 +2801,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Super (effectify.io)
 - **Verified pricing:** (price read 2026-09-12) Four paid tiers, billed in USD every 30 days through Shopify, and the Shopify listing prints only three of them.
-- **Honest take:** If you are on Shopify Plus, the price block on the listing is not the one you pay from — the three published tiers exclude Plus stores in their own text, and the tier that covers you is $24.99 in a help-centre…
+- **Honest take:** Beyond that, this vendor moves prices without announcing it.
 - **Best for:** Shopify stores with a real gifting season — jewellery, cosmetics, speciality food, anything bought for someone else — that want paid or free gift wrap, a gift message and a price-hiding gift receipt in the cart or on the product p
 - **Flags:** {'f': 'annual_lock', 'ev': 'The article says annual billing saves about 30%, which holds for Basic, Advanced and Pro; on its own Plus figures, $149.94 against twelve months of $…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/super-review/
@@ -2912,14 +2912,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Tellent (tellent.com)
 - **Verified pricing:** Tellent publishes no prices.
-- **Honest take:** Tellent's modular shape is genuinely useful — you can buy just the ATS, or just the HRIS — but nothing is priced in public: every tier on tellent.com/pricing ends in 'Get a demo' (read in a browser on 9 Septem…
+- **Honest take:** Ask for Start, Advance and Optimize quoted together with their renewal prices, because you have no anchor to check a single number against.
 - **Best for:** European scale-ups hiring continuously that want a collaborative ATS they can extend with HRIS and performance modules, and can put a sales call in the buying process
 - **Flags:** {'f': 'usage_metered', 'ev': 'What the page does state is scope: Start covers 5 active job posts and a single-page CareersHub; Advance adds unlimited posts, a multi-page branded c…'}, {'f': 'addons_extra', 'ev': 'SSO, Texting, Journeys, AgencyHub and WhatsApp Hiring are optional add-ons on the lower tiers.'}, {'f': 'annual_lock', 'ev': 'The pricing FAQ now states three terms that bear on the quote: annual billing saves 20% against monthly, pricing increases with your employee count, …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tellent-review/
 
 ## Tenable (tenable.com)
 - **Verified pricing:** (read 2026-08-30 on tenable.com/buy and the Nessus Essentials page) Nessus Essentials is free — a 30-day licence for 5 IPs, non-commercial only, with plugin updates delayed 30 days and no r…
-- **Honest take:** Note on how we link this one, updated 28 Jul 2026: between 21 and 28 July our partner link was dead — Tenable's shop subdomain stopped resolving, so we pointed the link at Tenable's own product page and earned…
+- **Honest take:** Tenable confirmed on 28 July that the links are repaired; we re-tested them that day and the link now works again, lands on the same Nessus product page, and does pay us a commission.
 - **Best for:** security teams and IT-mature companies that need continuous, authoritative vulnerability scanning and can remediate what it finds
 - **Flags:** {'f': 'addons_extra', 'ev': 'Advanced Support (24x365 phone, email, community and chat) is a $400/year add-on on both.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tenable-review/
@@ -2940,14 +2940,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## TextExpander (textexpander.com)
 - **Verified pricing:** (re-verified 2026-08-18 on the vendor's own pricing page; USD per user/month billed annually, excluding tax) The line-up was rebuilt since our July reading and it now starts at free.
-- **Honest take:** On a Mac the operating system already does the basic job free: Apple's built-in Text Replacement syncs static snippets across your Apple devices, though Apple's own documentation notes it is not available in e…
+- **Honest take:** And Espanso covers the power-user case free and open source on Mac, Windows and Linux.
 - **Best for:** support, clinical-admin and recruiting teams that need everyone sending identical approved wording — the shared library, permissions, auto-subscribe and SSO are what the paid tiers actually buy, and the SOC 2 and HIPAA-with-BAA po
 - **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-08-18 on the vendor's own pricing page; USD per user/month billed annually, excluding tax) The line-up was rebuilt since our July r…"}, {'f': 'annual_lock', 'ev': 'Annual billing is sold as two months free against paying monthly; the page does not print the monthly amounts next to the plans, so we do not quote t…'}, {'f': 'free_tier', 'ev': 'Free is $0 forever with no credit card, Pro $5 (billed annually at $60), Business $10 (billed annually at $120), Enterprise quoted.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/textexpander-review/
 
 ## Textline (textline.com)
 - **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Amounts unchanged since 2026-08-01.
-- **Honest take:** Two costs are easy to miss and both are monthly.
+- **Honest take:** Two costs are easy to miss and both are monthly. The credit system has two rates: $0.03 for credits you buy deliberately and $0.04 for backup credits that fire automatically when you run out — a 33% premium for not noticing.
 - **Best for:** support and sales teams that already text customers from personal phones and need a shared, compliant inbox with a record of who said what
 - **Flags:** {'f': 'usage_metered', 'ev': "Add-on message credits $0.03 each, bought in advance; backup message credits $0.04 each, Textline's automatic fallback when you run out mid-conversat…"}, {'f': 'addons_extra', 'ev': "Add-on message credits $0.03 each, bought in advance; backup message credits $0.04 each, Textline's automatic fallback when you run out mid-conversat…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/textline-review/
@@ -2973,7 +2973,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## TicketTailor (tickettailor.com)
 - **Verified pricing:** (re-verified 2026-09-09 and re-read unchanged 2026-09-26 on tickettailor.com/pricing with the currency switched to USD) No subscription and no contract: pay-as-you-sell $0.85 a ticket, or p…
-- **Honest take:** The fee honesty is the product — flat cents per ticket instead of percentage skims makes it dramatically cheaper than the big platforms on higher-priced tickets (a $0.30-0.85 fee on a $50 ticket vs a percentag…
+- **Honest take:** The trade: you bring your own audience.
 - **Best for:** event organizers with their own audience (venues, communities, creators) who want flat low per-ticket fees, full branding and no subscription
 - **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-09-09 and re-read unchanged 2026-09-26 on tickettailor.com/pricing with the currency switched to USD) No subscription and no contra…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tickettailor-review/
@@ -3034,7 +3034,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Trackr (parceltrackr.com)
 - **Verified pricing:** (price read 2026-09-12) Four tiers and no free plan, billed in USD every 30 days through Shopify: Basic $10 a month or $96 a year for 400 shipments a month, Standard $45 or $432 for 2,000, …
-- **Honest take:** The rating is 4.1 over 56 reviews on 12 September 2026, and the shape says more than the average: 45 five-star, three three-star, one two-star and seven one-star, which is a split verdict rather than a soft mi…
+- **Honest take:** The reviews name the reason.
 - **Best for:** Shopify stores shipping a few hundred to a few thousand parcels a month that want where-is-my-order traffic off the support desk — one branded tracking page across every carrier, estimated delivery dates, and proactive email, What
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: usage · shipments tracked'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20% and every tier carries a 14-day trial.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/trackr-review/
@@ -3048,7 +3048,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Trainerize (trainerize.com)
 - **Verified pricing:** (re-verified 2026-09-27 on www.trainerize.com/pricing in the browser pane, both billing toggles and every seat selector operated; prices in USD and subject to applicable taxes, annual plans…
-- **Honest take:** The client-count ladder looks gentle, but most add-ons are flat and they land hardest on the smallest coach: at five seats a $23 Pro plan dressed with nutrition, payments and video is $63, while the same three…
+- **Honest take:** Price the stack you'll actually coach with, and note that the branded app is $169 to Trainerize plus a $99/year Apple Developer Account billed by Apple.
 - **Best for:** personal trainers and studios delivering structured workout/nutrition coaching through a polished client app, scaling by client count
 - **Flags:** {'f': 'addons_extra', 'ev': 'FitMetrics is a separate add-on from $6 per client.'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 10% and there are no long-term contracts.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/trainerize-review/
@@ -3062,7 +3062,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Tresorit (tresorit.com)
 - **Verified pricing:** (re-verified 2026-08-14, read on their own business and personal pricing pages) There are three business plans: Professional for 1 user, Business from 3 users and Business Pro from 5 users.
-- **Honest take:** You pay the Swiss-E2EE premium — noticeably above mainstream clouds and above Proton Drive per GB — and the encryption trade-offs are inherent: no server-side content search, more deliberate sharing flows, and…
+- **Honest take:** For regulated teams that's exactly the deal; for casual storage it's over-engineering.
 - **Best for:** businesses and professionals with confidentiality obligations (legal, health, finance) that need end-to-end-encrypted storage, granular sharing controls and compliance features
 - **Flags:** {'f': 'per_seat', 'ev': 'Priced from our location in euros, they run €29.99, €20 and €25 per user per month on monthly billing, and €23.99, €16 and €20 on yearly — which the …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tresorit-review/
@@ -3151,7 +3151,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Velora (joinvelora.com)
 - **Verified pricing:** Quote-only.
-- **Honest take:** Velora is three acquired products (Keela, Aplos, Raisely) being unified into one platform, and that's the honest watch-out: integration between them is newer than the marketing suggests, so check how deeply th…
+- **Honest take:** Costs also stack per product and per contact count — a growing donor base raises the CRM bill.
 - **Best for:** nonprofits that want donor CRM, fund accounting and online fundraising from one vendor, purpose-built for charities rather than adapted business tools
 - **Full review:** https://aibuildermarketplace.com/b2b/velora-review/
 
@@ -3178,14 +3178,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Volza (volza.com)
 - **Verified pricing:** (price re-verified 2026-09-23 on volza.com/pricing; first read 2026-09-01) Three paid annual plans and a free trial.
-- **Honest take:** Three honest catches.
+- **Honest take:** Three honest catches. The entry plan is narrower than the marketing implies: $1,500 a year covers 182 countries and two users, while the 200-country coverage and ten seats start at $4,500.
 - **Best for:** import-export businesses and sourcing teams that want global customs-level trade data plus verified buyer/supplier contacts at a fraction of enterprise pricing
 - **Flags:** {'f': 'usage_metered', 'ev': 'Startup is $1,500 a year: 182 countries (44 export and 50 import detailed databases, 160 export and 158 import mirror databases, 7 export and 7 impor…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/volza-review/
 
 ## Voye (voyedatapool.com)
 - **Verified pricing:** Published plans (read 6 September 2026 on their plans page).
-- **Honest take:** eSIM data pooling genuinely beats classic roaming for traveling teams, but the honest homework is coverage-and-speed on YOUR corridors: quality varies by country and local carrier partner, so pilot with two or…
+- **Honest take:** And note the vendor-cited savings numbers are marketing math until your own invoice confirms them.
 - **Best for:** companies with regularly traveling teams that want one pooled global data contract, per-user controls and an end to roaming bill surprises
 - **Full review:** https://aibuildermarketplace.com/b2b/voye-review/
 
@@ -3230,7 +3230,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Weave (getweave.com)
 - **Verified pricing:** Weave sells a per-location monthly subscription and its pricing page (weavehq.com/pricing, read 5 September 2026) now states plans start from $199 per location a month, though the exact tie…
-- **Honest take:** Two honest cautions.
+- **Honest take:** Two honest cautions. The $199 starting price is a floor, not the bill: add-ons, setup and per-location fees land on top, and the full tier ladder is only shown in a demo, so get everything in writing.
 - **Best for:** dental, optometry and small healthcare practices that want phone, texting, payments and reviews unified for the front desk
 - **Flags:** {'f': 'addons_extra', 'ev': 'Practice owners commonly report all-in costs of roughly $400 to $700 a location once phones, payments and add-ons are bundled, plus a one-time setup …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/weave-review/
@@ -3251,7 +3251,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## WebinarGeek (webinargeek.com)
 - **Verified pricing:** (re-verified 2026-09-14 on the vendor's own pricing page, read in EUR) The plans are Basic, Premium and Enterprise; an earlier reading of ours called the first two Premium and Advanced, whi…
-- **Honest take:** The friendly €49 headline is the annual rate for just 50 viewers, and the real cost lives in add-ons: localisation, the AI assistant, CRM integrations, RTMP and branding profiles are each €20-59 a month on top…
+- **Honest take:** A serious webinar stack quickly doubles the base plan.
 - **Best for:** marketing and sales teams running live and automated webinars in Europe who want a polished, GDPR-friendly platform with viewer-tier pricing
 - **Flags:** {'f': 'per_seat', 'ev': 'Add-ons are billed annually on top of a Premium subscription: extra users from €10 per user per month, localisation €20, AI assistant €20, branding p…'}, {'f': 'addons_extra', 'ev': 'Add-ons are billed annually on top of a Premium subscription: extra users from €10 per user per month, localisation €20, AI assistant €20, branding p…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/webinargeek-review/
@@ -3324,14 +3324,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Xero (xero.com)
 - **Verified pricing:** (re-verified 2026-09-19 on their own US pricing page) Every headline price is still a promotion: 'Get 90% off your plan for your first 6 months when you buy by 30 September 2026'.
-- **Honest take:** Read the second number, not the first.
+- **Honest take:** Read the second number, not the first. Every plan on that page is 90% off for six months, and the price that governs the rest of your first year is ten times what the button says: $25, $55 and $90.
 - **Best for:** small businesses whose bookkeeper or accountant already works in Xero — the ecosystem and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs
 - **Flags:** {'f': 'per_seat', 'ev': 'Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or con…'}, {'f': 'addons_extra', 'ev': 'Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or con…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
 
 ## Zedonk (zedonk.co.uk)
 - **Verified pricing:** (price re-verified 2026-09-09 and re-read unchanged 2026-09-27 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building block and billed an…
-- **Honest take:** The 'starting from' wording is doing real work: £166/mo is the floor of the cheapest module, billed annually, so a working setup for a brand that sells wholesale quickly stacks toward £332/mo and beyond — abou…
+- **Honest take:** There is no trial and no public total: you find out your actual price in a demo call.
 - **Best for:** small and mid-size fashion brands that need sales, production, inventory and wholesale in one system built around size curves, seasons and linesheets
 - **Flags:** {'f': 'addons_extra', 'ev': "The 'starting from' wording is doing real work: £166/mo is the floor of the cheapest module, billed annually, so a working setup for a brand that sel…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/zedonk-review/
@@ -3352,7 +3352,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Zendesk (zendesk.com)
 - **Verified pricing:** (re-verified 2026-08-12, read on their own pricing page from two countries) Per agent per month on annual billing, US storefront: Support Team $19, Suite Team $55, Suite Professional $115.
-- **Honest take:** Three separate multipliers sit on top of the number you first see.
+- **Honest take:** The prices shown are annual-billed — the page states a 20% annual discount and never prints the monthly rate, so budgeting month-to-month means adding roughly a quarter yourself.
 - **Best for:** support teams past the point where a shared inbox works, who need routing, a help centre and reporting in one place and have the volume to justify per-agent pricing
 - **Flags:** {'f': 'per_seat', 'ev': 'Paid add-ons on top of the seat price: Copilot $50 per agent/month (€50), Workforce Engagement bundle $50 (€50), Contact Center $83 (€82).'}, {'f': 'usage_metered', 'ev': "AI agents are included in Suite and Support plans but metered by 'automated resolutions' beyond the plan allowance, and App Builder, Action Builder a…"}, {'f': 'addons_extra', 'ev': 'Paid add-ons on top of the seat price: Copilot $50 per agent/month (€50), Workforce Engagement bundle $50 (€50), Contact Center $83 (€82).'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-12, read on their own pricing page from two countries) Per agent per month on annual billing, US storefront: Support Team $19, S…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/zendesk-review/
@@ -3366,7 +3366,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## ZenZap (zenzap.co)
 - **Verified pricing:** (price re-verified 2026-09-01 against the vendor's own pricing page) (2026) Free plan: unlimited group chats, unlimited built-in to-dos, WhatsApp chat migration, AI voice-note transcription…
-- **Honest take:** The pricing genuinely undercuts Slack — the honest question is ecosystem: team chat lives or dies on integrations and habit, and ZenZap's app catalog is a fraction of Slack's, so teams glued to hundreds of int…
+- **Honest take:** For WhatsApp-refugee teams that mainly need organized channels, tasks and work/life separation, the free tier is a remarkably complete landing spot.
 - **Best for:** small teams that run work over messy WhatsApp/personal chat today and want organized, professional chat with tasks — starting free
 - **Flags:** {'f': 'per_seat', 'ev': 'Pro $3/user/mo billed yearly ($4 monthly); Business+ $8/user yearly ($10 monthly); Enterprise custom.'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-09-01 against the vendor's own pricing page) (2026) Free plan: unlimited group chats, unlimited built-in to-dos, WhatsApp cha…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/zenzap-review/

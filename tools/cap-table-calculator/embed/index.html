@@ -121,27 +121,45 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
 <p class="muted" style="margin-top:0">Founders start at 100%. Add an option pool, SAFEs or convertibles, and as many priced rounds as you like, to see who owns what after each one.</p>
-<div class="row"><div><label>Founder shares (initial)</label><input type="number" id="ct-shares" value="1000000" min="1"></div>
-<div><label>Option pool at start (% of company)</label><input type="number" id="ct-pool" value="10" min="0" max="50" step="0.5"></div></div>
+<div class="row"><div><label for="ct-shares">Founder shares (initial)</label><input type="number" id="ct-shares" value="1000000" min="1" step="1"></div>
+<div><label for="ct-pool">Option pool at start (% of company)</label><input type="number" id="ct-pool" value="10" min="0" max="50" step="0.5"></div></div>
 <label style="margin-top:10px">SAFEs / convertible notes (convert at the first priced round)</label><div id="ct-safes"></div>
 <button class="btn ghost" id="ct-addsafe" type="button">+ Add SAFE / note</button>
 <label style="margin-top:12px">Priced rounds (in order)</label><div id="ct-rounds"></div>
 <button class="btn ghost" id="ct-addround" type="button">+ Add round</button>
 <div id="ct-out" style="margin-top:18px"></div>
 <div class="row" style="margin-top:8px"><div><button class="btn ghost" id="ct-csv" type="button">Download table (CSV)</button></div></div>
-<p class="note">Post-money SAFE conversion at the cap or the round price, whichever gives the investor more shares; option pool top-ups dilute everyone pro rata. Simplified but honest &mdash; Carta and Pulley charge for the same arithmetic.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://officesoftwaremarketplace.com/tools/cap-table-calculator/?utm_source=embed&utm_medium=widget" target="_blank" rel="nofollow noopener" style="color:#8b93a7;text-decoration:none">&#9889; Cap Table & Dilution Calculator &mdash; free tool by <span style="color:#60a5fa">Office Software Marketplace</span></a></p></div><script>
+<p class="note">Post-money SAFE conversion at the cap or the round price, whichever gives the investor more shares; option pool top-ups dilute everyone pro rata. Simplified but honest &mdash; Carta and Pulley charge for the same arithmetic.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://officesoftwaremarketplace.com/tools/cap-table-calculator/?utm_source=embed&utm_medium=widget" target="_blank" rel="nofollow noopener" style="color:#8b93a7;text-decoration:none">&#9889; Cap Table & Dilution Calculator &mdash; free tool by <span style="color:#60a5fa">Office Software Marketplace</span></a></p></div><script>function veldPoort(outId,ids,wis){
+var o=document.getElementById(outId),fout=[],leeg=[],w={};
+ids.forEach(function(id){var e=document.getElementById(id);if(!e)return;
+var lb=document.querySelector('label[for="'+id+'"]')||(e.previousElementSibling&&e.previousElementSibling.tagName==='LABEL'?e.previousElementSibling:null);
+var naam=(lb?lb.textContent:(e.getAttribute('aria-label')||id)).replace(/\s*\([^)]*\)\s*$/,'').trim();
+if(e.validity&&e.validity.badInput){fout.push(naam+' must be a number.');return;}
+var raw=String(e.value).trim();if(raw===''){if(!e.hasAttribute('data-optional'))leeg.push(naam);return;}
+var n=Number(raw),mn=e.getAttribute('min'),mx=e.getAttribute('max');
+if(!isFinite(n)){fout.push(naam+' must be a number.');return;}
+if(e.getAttribute('step')==='1'&&Math.floor(n)!==n){fout.push(naam+' must be a whole number.');return;}
+if(mn!==null&&mn!==''&&n<Number(mn)){fout.push(Number(mn)===0?naam+' cannot be negative.':naam+' cannot be less than '+Number(mn).toLocaleString('en-US')+'.');return;}
+if(mx!==null&&mx!==''&&n>Number(mx)){fout.push(naam+' cannot be more than '+Number(mx).toLocaleString('en-US')+'.');return;}
+w[id]=n;});
+if(!fout.length&&!leeg.length)return w;
+(wis||[]).forEach(function(x){var e=document.getElementById(x);if(e)e.innerHTML='';});
+o.innerHTML=fout.length?'<p class="sig-n" style="grid-column:1/-1;margin:0">'+fout.join(' ')+'</p>'
+:'<p class="muted" style="grid-column:1/-1;margin:0">Fill in '+leeg.join(', ')+' to see the result. An empty field is not read as zero.</p>';
+return null;}
+
 (function(){
 var $=function(id){return document.getElementById(id);},safes=[{name:'Pre-seed SAFE',amt:250000,cap:4000000,disc:20}],rounds=[{name:'Seed',inv:500000,pre:2000000,pool:0},{name:'Series A',inv:3000000,pre:12000000,pool:10}],lastRows=[];
 function fmt(x){return x>=1e6?'$'+(x/1e6).toFixed(2)+'M':x>=1e3?'$'+Math.round(x/1e3)+'k':'$'+Math.round(x);}
 function esc(s){return String(s).replace(/</g,'&lt;').replace(/"/g,'&quot;');}
 function renderLists(){
-$('ct-safes').innerHTML=safes.map(function(s,i){return '<div class="row" style="margin-bottom:6px"><div><input type="text" data-i="'+i+'" data-k="name" class="ct-s" value="'+esc(s.name)+'" placeholder="Name"></div><div><input type="number" data-i="'+i+'" data-k="amt" class="ct-s" value="'+s.amt+'" placeholder="Amount $"></div><div><input type="number" data-i="'+i+'" data-k="cap" class="ct-s" value="'+s.cap+'" placeholder="Valuation cap $"></div><div><input type="number" data-i="'+i+'" data-k="disc" class="ct-s" value="'+s.disc+'" placeholder="Discount %"></div><div style="flex:0 0 30px"><button type="button" data-i="'+i+'" class="ct-xs" style="background:none;border:0;color:#ef4444;cursor:pointer;font-weight:700">&times;</button></div></div>';}).join('')||'<p class="muted">No SAFEs.</p>';
-$('ct-rounds').innerHTML=rounds.map(function(r,i){return '<div class="row" style="margin-bottom:6px"><div><input type="text" data-i="'+i+'" data-k="name" class="ct-r" value="'+esc(r.name)+'" placeholder="Round"></div><div><input type="number" data-i="'+i+'" data-k="inv" class="ct-r" value="'+r.inv+'" placeholder="Investment $"></div><div><input type="number" data-i="'+i+'" data-k="pre" class="ct-r" value="'+r.pre+'" placeholder="Pre-money $"></div><div><input type="number" data-i="'+i+'" data-k="pool" class="ct-r" value="'+r.pool+'" placeholder="Pool top-up % post"></div><div style="flex:0 0 30px"><button type="button" data-i="'+i+'" class="ct-xr" style="background:none;border:0;color:#ef4444;cursor:pointer;font-weight:700">&times;</button></div></div>';}).join('');
+$('ct-safes').innerHTML=safes.map(function(s,i){return '<div class="row" style="margin-bottom:6px"><div><input type="text" data-i="'+i+'" data-k="name" class="ct-s" value="'+esc(s.name)+'" placeholder="Name" aria-label="SAFE name"></div><div><input type="number" data-i="'+i+'" data-k="amt" class="ct-s" value="'+s.amt+'" placeholder="Amount $" aria-label="SAFE amount in dollars"></div><div><input type="number" data-i="'+i+'" data-k="cap" class="ct-s" value="'+s.cap+'" placeholder="Valuation cap $" aria-label="SAFE valuation cap in dollars"></div><div><input type="number" data-i="'+i+'" data-k="disc" class="ct-s" value="'+s.disc+'" placeholder="Discount %" aria-label="SAFE discount in percent"></div><div style="flex:0 0 30px"><button type="button" data-i="'+i+'" class="ct-xs" style="background:none;border:0;color:#ef4444;cursor:pointer;font-weight:700">&times;</button></div></div>';}).join('')||'<p class="muted">No SAFEs.</p>';
+$('ct-rounds').innerHTML=rounds.map(function(r,i){return '<div class="row" style="margin-bottom:6px"><div><input type="text" data-i="'+i+'" data-k="name" class="ct-r" value="'+esc(r.name)+'" placeholder="Round" aria-label="Round name"></div><div><input type="number" data-i="'+i+'" data-k="inv" class="ct-r" value="'+r.inv+'" placeholder="Investment $" aria-label="Round investment in dollars"></div><div><input type="number" data-i="'+i+'" data-k="pre" class="ct-r" value="'+r.pre+'" placeholder="Pre-money $" aria-label="Round pre-money valuation in dollars"></div><div><input type="number" data-i="'+i+'" data-k="pool" class="ct-r" value="'+r.pool+'" placeholder="Pool top-up % post" aria-label="Option pool top-up in percent post-money"></div><div style="flex:0 0 30px"><button type="button" data-i="'+i+'" class="ct-xr" style="background:none;border:0;color:#ef4444;cursor:pointer;font-weight:700">&times;</button></div></div>';}).join('');
 [].slice.call(document.querySelectorAll('.ct-s')).forEach(function(i){i.addEventListener('input',function(){var s=safes[+i.dataset.i];s[i.dataset.k]=i.dataset.k==='name'?i.value:+i.value;calc();});});
 [].slice.call(document.querySelectorAll('.ct-r')).forEach(function(i){i.addEventListener('input',function(){var r=rounds[+i.dataset.i];r[i.dataset.k]=i.dataset.k==='name'?i.value:+i.value;calc();});});
 [].slice.call(document.querySelectorAll('.ct-xs')).forEach(function(b){b.onclick=function(){safes.splice(+b.dataset.i,1);renderLists();calc();};});
 [].slice.call(document.querySelectorAll('.ct-xr')).forEach(function(b){b.onclick=function(){rounds.splice(+b.dataset.i,1);renderLists();calc();};});}
-function calc(){var f=+$('ct-shares').value||1000000,pool0=(+$('ct-pool').value||0)/100;
+function calc(){if(!veldPoort('ct-out',['ct-shares','ct-pool']))return;var f=+$('ct-shares').value,pool0=+$('ct-pool').value/100;
 var holders=[{name:'Founders',sh:f,c:'#3b82f6'}];if(pool0>0)holders.push({name:'Option pool',sh:f*pool0/(1-pool0),c:'#a1a1aa'});
 var total=function(){return holders.reduce(function(a,h){return a+h.sh;},0);};
 var history=[],colors=['#22c55e','#a78bfa','#f59e0b','#f472b6','#38bdf8','#fb7185'],ci=0,converted=false;

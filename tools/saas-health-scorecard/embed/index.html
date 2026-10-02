@@ -128,11 +128,29 @@ body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div c
 <div><label for="sc-burn">Net cash burned (year)</label><input type="number" id="sc-burn" value="600000" step="1000"></div></div>
 <div class="row"><div><label for="sc-cac">CAC (per new customer)</label><input type="number" id="sc-cac" value="8000" min="0"></div>
 <div><label for="sc-acv">ACV (avg / customer / yr)</label><input type="number" id="sc-acv" value="12000" min="0"></div></div>
-<div id="sc-out" style="margin-top:18px"></div></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/saas-health-scorecard/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; SaaS Health Scorecard &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>(function(){
+<div id="sc-out" style="margin-top:18px"></div></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/saas-health-scorecard/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; SaaS Health Scorecard &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>function veldPoort(outId,ids,wis){
+var o=document.getElementById(outId),fout=[],leeg=[],w={};
+ids.forEach(function(id){var e=document.getElementById(id);if(!e)return;
+var lb=document.querySelector('label[for="'+id+'"]')||(e.previousElementSibling&&e.previousElementSibling.tagName==='LABEL'?e.previousElementSibling:null);
+var naam=(lb?lb.textContent:(e.getAttribute('aria-label')||id)).replace(/\s*\([^)]*\)\s*$/,'').trim();
+if(e.validity&&e.validity.badInput){fout.push(naam+' must be a number.');return;}
+var raw=String(e.value).trim();if(raw===''){if(!e.hasAttribute('data-optional'))leeg.push(naam);return;}
+var n=Number(raw),mn=e.getAttribute('min'),mx=e.getAttribute('max');
+if(!isFinite(n)){fout.push(naam+' must be a number.');return;}
+if(e.getAttribute('step')==='1'&&Math.floor(n)!==n){fout.push(naam+' must be a whole number.');return;}
+if(mn!==null&&mn!==''&&n<Number(mn)){fout.push(Number(mn)===0?naam+' cannot be negative.':naam+' cannot be less than '+Number(mn).toLocaleString('en-US')+'.');return;}
+if(mx!==null&&mx!==''&&n>Number(mx)){fout.push(naam+' cannot be more than '+Number(mx).toLocaleString('en-US')+'.');return;}
+w[id]=n;});
+if(!fout.length&&!leeg.length)return w;
+(wis||[]).forEach(function(x){var e=document.getElementById(x);if(e)e.innerHTML='';});
+o.innerHTML=fout.length?'<p class="sig-n" style="grid-column:1/-1;margin:0">'+fout.join(' ')+'</p>'
+:'<p class="muted" style="grid-column:1/-1;margin:0">Fill in '+leeg.join(', ')+' to see the result. An empty field is not read as zero.</p>';
+return null;}
+(function(){
 var ids=['sc-start','sc-new','sc-exp','sc-churn','sc-margin','sc-burn','sc-cac','sc-acv'],out=document.getElementById('sc-out');
 function g(id){return +document.getElementById(id).value;}
 function card(name,val,bench,state){var c=state==='good'?'scv-g':state==='watch'?'scv-w':'scv-x';return '<div class="scv '+c+'"><div class="scv-n">'+name+'</div><div class="scv-v">'+val+'</div><div class="scv-bench">'+bench+'</div></div>';}
-function calc(){var start=g('sc-start'),nw=g('sc-new'),exp=g('sc-exp'),ch=g('sc-churn'),mp=g('sc-margin'),m=mp/100,burn=g('sc-burn'),cac=g('sc-cac'),acv=g('sc-acv');
+function calc(){if(!veldPoort('sc-out',ids))return;var start=g('sc-start'),nw=g('sc-new'),exp=g('sc-exp'),ch=g('sc-churn'),mp=g('sc-margin'),m=mp/100,burn=g('sc-burn'),cac=g('sc-cac'),acv=g('sc-acv');
 if(!(start>0)){out.innerHTML='<p class="muted">Enter your starting ARR to score your metrics.</p>';return;}
 var end=start+nw+exp-ch,netNew=end-start,growth=netNew/start*100,cards=[],good=0,bad=0;
 function push(name,val,bench,state){cards.push(card(name,val,bench,state));if(state==='good')good++;if(state==='concern')bad++;}

@@ -120,9 +120,9 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><div class="row">
-<div><label>Population size</label><input type="number" id="sv-pop" value="10000" min="1"></div>
-<div><label>Confidence</label><select id="sv-conf"><option value="1.96">95%</option><option value="1.645">90%</option><option value="2.576">99%</option></select></div>
-<div><label>Margin of error (%)</label><input type="number" id="sv-moe" value="5" min="1" step="0.5"></div></div>
+<div><label for="sv-pop">Population size</label><input type="number" id="sv-pop" value="10000" min="1"></div>
+<div><label for="sv-conf">Confidence</label><select id="sv-conf"><option value="1.96">95%</option><option value="1.645">90%</option><option value="2.576">99%</option></select></div>
+<div><label for="sv-moe">Margin of error (%)</label><input type="number" id="sv-moe" value="5" min="1" step="0.5"></div></div>
 <div id="sv-out" style="margin-top:16px"></div></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/survey-sample-size-calculator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; Survey Sample Size Calculator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 function svCalc(){var N=+document.getElementById('sv-pop').value,z=+document.getElementById('sv-conf').value,e=+document.getElementById('sv-moe').value/100,o=document.getElementById('sv-out');
 if(!(N>0&&e>0)){o.innerHTML='<p class="muted">Enter valid numbers.</p>';return;}

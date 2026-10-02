@@ -122,7 +122,7 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
 <label for="cj-in">CSV or JSON (paste, or drop a file)</label>
 <textarea id="cj-in" rows="8" spellcheck="false" placeholder="name,email&#10;Ada,ada@example.com&#10;&#10;or paste a JSON array of objects&hellip;"></textarea>
-<input type="file" id="cj-file" accept=".csv,.tsv,.txt,.json" style="margin-top:6px;padding:6px">
+<input type="file" id="cj-file" aria-label="Upload a CSV or JSON file" accept=".csv,.tsv,.txt,.json" style="margin-top:6px;padding:6px">
 <div class="row" style="margin-top:10px"><div><button class="btn" id="cj-tojson">CSV &rarr; JSON</button></div>
 <div><button class="btn ghost" id="cj-tocsv">JSON &rarr; CSV</button></div><div><button class="btn ghost" id="cj-toxlsx">JSON/CSV &rarr; Excel (.xlsx)</button></div><div><button class="btn ghost" id="cj-dl">Download result</button></div></div>
 <div class="row" style="margin-top:8px"><div><label style="font-weight:400"><input type="checkbox" id="cj-headers" checked> First row is headers</label><br><label style="font-weight:400"><input type="checkbox" id="cj-types" checked> Convert numbers and booleans</label></div>

@@ -120,12 +120,12 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><div class="row">
-<div><label>Letter or emoji</label><input type="text" id="fv-t" value="A" maxlength="2"></div>
-<div><label>Or upload an image</label><input type="file" id="fv-img" accept="image/*" style="padding:8px"></div></div>
-<div class="row"><div><label>Background</label><input type="color" id="fv-bg" value="#3b82f6" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
-<div><label>Text colour</label><input type="color" id="fv-fg" value="#ffffff" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
-<div><label>Shape</label><select id="fv-sh"><option value="round">Rounded</option><option value="circle">Circle</option><option value="square">Square</option></select></div>
-<div><label>Font</label><select id="fv-font"><option value="Inter,Arial,sans-serif">Sans</option><option value="Georgia,serif">Serif</option><option value="ui-monospace,Menlo,monospace">Mono</option></select></div></div>
+<div><label for="fv-t">Letter or emoji</label><input type="text" id="fv-t" value="A" maxlength="2"></div>
+<div><label for="fv-img">Or upload an image</label><input type="file" id="fv-img" accept="image/*" style="padding:8px"></div></div>
+<div class="row"><div><label for="fv-bg">Background</label><input type="color" id="fv-bg" value="#3b82f6" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
+<div><label for="fv-fg">Text colour</label><input type="color" id="fv-fg" value="#ffffff" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
+<div><label for="fv-sh">Shape</label><select id="fv-sh"><option value="round">Rounded</option><option value="circle">Circle</option><option value="square">Square</option></select></div>
+<div><label for="fv-font">Font</label><select id="fv-font"><option value="Inter,Arial,sans-serif">Sans</option><option value="Georgia,serif">Serif</option><option value="ui-monospace,Menlo,monospace">Mono</option></select></div></div>
 <div style="text-align:center;margin:18px 0"><canvas id="fv-cv" width="180" height="180" style="border-radius:12px"></canvas>
 <div id="fv-prev" style="display:flex;gap:14px;justify-content:center;align-items:center;margin-top:10px"></div></div>
 <button class="btn" id="fv-zip">Download the full set (.zip)</button> <button class="btn ghost" id="fv-dl">PNG 512</button> <button class="btn ghost" id="fv-dl32">PNG 32</button>

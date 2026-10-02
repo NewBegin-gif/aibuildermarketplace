@@ -120,11 +120,11 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
 body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool"><div class="row">
-<div><label>Colour 1</label><input type="color" id="gr-c1" value="#3b82f6" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
-<div><label>Colour 2</label><input type="color" id="gr-c2" value="#a78bfa" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
-<div><label>Angle: <span id="gr-av">135</span>°</label><input type="range" id="gr-a" min="0" max="360" value="135"></div></div>
+<div><label for="gr-c1">Colour 1</label><input type="color" id="gr-c1" value="#3b82f6" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
+<div><label for="gr-c2">Colour 2</label><input type="color" id="gr-c2" value="#a78bfa" style="width:70px;height:44px;border:1px solid var(--border);border-radius:9px;background:#0f0f0f"></div>
+<div><label for="gr-a">Angle: <span id="gr-av">135</span>°</label><input type="range" id="gr-a" min="0" max="360" value="135"></div></div>
 <div id="gr-prev" style="height:120px;border-radius:12px;margin:14px 0"></div>
-<input type="text" id="gr-out" class="out" readonly>
+<input aria-label="Result" type="text" id="gr-out" class="out" readonly>
 <button class="btn" id="gr-copy">Copy CSS</button></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://aibuildermarketplace.com/tools/css-gradient-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="noopener" style="color:#8b93a7;text-decoration:none">&#9889; CSS Gradient Generator &mdash; free tool by <span style="color:#60a5fa">AIBuilder Marketplace</span></a></p></div><script>
 function grCalc(){var c1=document.getElementById('gr-c1').value,c2=document.getElementById('gr-c2').value,a=document.getElementById('gr-a').value;document.getElementById('gr-av').textContent=a;
 var css='linear-gradient('+a+'deg, '+c1+', '+c2+')';document.getElementById('gr-prev').style.background=css;document.getElementById('gr-out').value='background: '+css+';';

@@ -129,7 +129,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/algomo-review/
 
 ## Alidrop (alidrop.co)
-- **Verified pricing:** (re-verified 2026-09-13 on their own pricing page) Four monthly plans: Starter $39/mo (50 unique / 25 premium products), Professional $59/mo (500 unique / 250 premium), Empire $99/mo (5,000…
+- **Verified pricing:** (re-verified 2026-10-02 on their own pricing page) Four monthly plans: Starter $39/mo (50 unique / 25 premium products), Professional $59/mo (500 unique / 250 premium), Empire $99/mo (5,000…
 - **Honest take:** You pay the subscription plus wholesale product cost, and the low Starter product cap nudges serious stores up to Pro quickly.
 - **Best for:** dropshippers who want automated product sourcing, fulfillment and inventory sync with access to faster-shipping suppliers and one-click store integration
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing is listed only from Professional up — $288, $684 and $948 a year — and the discount grows with the tier: 6 months off Professional, 5 …'}
@@ -773,10 +773,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/crowdstrike-review/
 
 ## Databox (databox.com)
-- **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers we described are gone.
+- **Verified pricing:** (re-verified 2026-10-02, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers we described are gone.
 - **Honest take:** Each plan includes a fixed number of data sources and going over means moving up a whole tier, so one extra integration can mean the $199 Team Core to $319 Team Scale step.
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
-- **Flags:** {'f': 'usage_metered', 'ev': 'Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync.'}, {'f': 'addons_extra', 'ev': 'AI credits are a shared monthly pool for Genie and the MCP server, so heavy AI use moves you up a tier as fast as data does, and 15-minute sync — onc…'}, {'f': 'annual_lock', 'ev': 'Monthly those read $249, $399 and from $99; annual billing is 20% off.'}, {'f': 'free_tier', 'ev': 'Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync.'}, {'f': 'addons_extra', 'ev': 'AI credits are a shared monthly pool for Genie and the MCP server, so heavy AI use moves you up a tier as fast as data does, and 15-minute sync — onc…'}, {'f': 'annual_lock', 'ev': 'Monthly, Analyst reads $89 and the others $249, $399 and from $99; annual billing is 20% off.'}, {'f': 'free_tier', 'ev': 'Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/databox-review/
 
 ## Datarails (datarails.com)
@@ -1247,7 +1247,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/geotargetly-review/
 
 ## GetResponse (getresponse.com)
-- **Verified pricing:** (re-verified 2026-09-14 on their own pricing page, in euros, quoted at 1,000 contacts) Starter €16/mo or €13.12/mo billed annually: 1 automation workflow, up to 3 users.
+- **Verified pricing:** (re-verified 2026-10-02 on their own pricing page, in euros, quoted at 1,000 contacts) Starter €16/mo or €13.12/mo billed annually: 1 automation workflow, up to 3 users.
 - **Honest take:** Priced by contact count, so the entry number climbs as your list grows, and the best value only shows on long (annual/24-month) commitments.
 - **Best for:** small businesses that want email plus landing pages, automation and webinars in one affordable suite
 - **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a stated 18%, and prices step up at 1k, 2.5k, 5k, 10k, 25k, 50k and 100k contacts.'}
@@ -1442,7 +1442,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/inboxally-review/
 
 ## Increff (increff.com)
-- **Verified pricing:** No public pricing, re-verified 2026-09-14 and consistent across every reading we have.
+- **Verified pricing:** No public pricing, re-verified 2026-10-02 and consistent across every reading we have.
 - **Honest take:** This is enterprise omnichannel supply-chain software, and the opaque, quote-based pricing signals the target customer: retail brands with real scale, not small stores.
 - **Best for:** retail brands and omnichannel sellers at real scale needing warehouse management plus algorithm-driven merchandising and inventory optimization
 - **Flags:** {'f': 'quote_only', 'ev': 'This is enterprise omnichannel supply-chain software, and the opaque, quote-based pricing signals the target customer: retail brands with real scale,…'}
@@ -1922,7 +1922,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/nocrm-review/
 
 ## NordVPN (nordvpn.com)
-- **Verified pricing:** (consumer plans re-verified 2026-09-14 in the browser; the page is geo-priced and served us euros from a Dutch address) Consumer two-year plans: Basic €3.49/mo, Complete €4.49/mo and Ultima…
+- **Verified pricing:** (consumer plans re-verified 2026-10-02 in the browser; the page is geo-priced and served us euros from a Dutch address) Consumer two-year plans: Basic €3.49/mo, Complete €4.49/mo and Ultima…
 - **Honest take:** The €3.49 is a two-year introductory rate: Basic renews at €139.08 a year, about €11.59 a month, roughly three times what you signed up at.
 - **Best for:** individuals and households who want an easy personal VPN and will set a reminder before the two-year plan renews
 - **Flags:** {'f': 'per_seat', 'ev': 'Per user per month: Lite $8 on annual billing or $10 month-to-month, Core $11 or $14, Premium $14 or $18, which the toggle labels as savings of 20%, …'}, {'f': 'renewal_jump', 'ev': 'Read the renewal line before you buy: those same plans renew at €139.08, €219.48 and €338.28 a year, so Basic goes from about €3.49 a month to about …'}, {'f': 'addons_extra', 'ev': 'Two endpoint add-ons sit beside the ladder: CrowdStrike Falcon Go at $2 per device a month and CrowdStrike Falcon Enterprise at $9.'}, {'f': 'annual_lock', 'ev': 'Per user per month: Lite $8 on annual billing or $10 month-to-month, Core $11 or $14, Premium $14 or $18, which the toggle labels as savings of 20%, …'}

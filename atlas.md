@@ -2040,7 +2040,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/passpack-review/
 
 ## Payoneer (payoneer.com)
-- **Verified pricing:** (re-verified 2026-09-14 on payoneer.com/about/pricing/, the canonical fee page their own llms.txt names; the page itself carries "Last updated on 1 January 2026") Free to open; the cost is …
+- **Verified pricing:** (re-verified 2026-10-02 on payoneer.com/pricing/, where the older payoneer.com/about/pricing/ address now redirects; the page itself carries "Last updated on 1 January 2026") Free to open; …
 - **Honest take:** The conversion and cross-currency withdrawal markups are where it quietly costs you — for pure currency conversion a specialist like Wise is often cheaper.
 - **Best for:** freelancers and sellers getting paid by international clients and marketplaces (Amazon, Upwork, Fiverr) who need local receiving accounts
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: percentage · transaction fees on receiving, converting and withdrawing (e.g. 1%, 1.2%-4%)'}
@@ -2656,7 +2656,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/smartli-review/
 
 ## SmartSuite (smartsuite.com)
-- **Verified pricing:** (re-verified 2026-09-14 on their own pricing page, USD; unchanged since our August reading) No free plan — a 14-day trial of Professional with no credit card, and the page states there is n…
+- **Verified pricing:** (re-verified 2026-10-02 on their own pricing page, USD; unchanged since our August reading) No free plan — a 14-day trial of Professional with no credit card, and the page states there is n…
 - **Honest take:** It's a broad, do-everything work-management platform, so the power comes with a learning curve and a per-seat cost that adds up for bigger teams.
 - **Best for:** teams consolidating projects, CRM and operations into one flexible, database-driven work-management platform
 - **Flags:** {'f': 'per_seat', 'ev': 'Team is $15 per seat a month billed annually, or $20 billed monthly, with a minimum of 3 billable users, 5,000 records per solution, 50GB of storage …'}
@@ -2883,7 +2883,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tapita-seo-optimizer-review/
 
 ## Tapstitch (tapstitch.com)
-- **Verified pricing:** (re-verified 2026-09-14 on tapstitch.com/collections/all; the site publishes no /pricing page — that URL returns 404) No subscription, no monthly fee and no minimum order quantity — you pay…
+- **Verified pricing:** (re-verified 2026-10-02 on tapstitch.com/collections/all; the site publishes no /pricing page — that URL returns 404) No subscription, no monthly fee and no minimum order quantity — you pay…
 - **Honest take:** Printify is cheaper, higher-margin and has a far bigger catalogue — if you're optimising for profit per sale or product breadth, that's the real trade-off.
 - **Best for:** creators building a real apparel or streetwear brand who care about fabric, fit and how the product feels in hand
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: usage · items produced'}
@@ -3048,10 +3048,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/trackr-review/
 
 ## Tradify (tradifyhq.com)
-- **Verified pricing:** Per user, per month, quoted in USD on tradifyhq.com/pricing and re-verified 2026-09-14: Lite $47, Pro $51 and Plus $61 per user, plus a Custom tier for large teams that is priced on request.
+- **Verified pricing:** Per user, per month, quoted in USD on tradifyhq.com/pricing and re-verified 2026-10-02: Lite $47, Pro $51 and Plus $61 per user, plus a Custom tier for large teams that is priced on request.
 - **Honest take:** Per-user pricing is honest and simple, but it means the cost scales linearly with headcount — a ten-person crew is a real monthly number, not the single-seat sticker.
 - **Best for:** electricians, plumbers, HVAC and other trades businesses that want quoting, scheduling, job tracking and invoicing from the field in one simple app
-- **Flags:** {'f': 'per_seat', 'ev': 'Per user, per month, quoted in USD on tradifyhq.com/pricing and re-verified 2026-09-14: Lite $47, Pro $51 and Plus $61 per user, plus a Custom tier f…'}, {'f': 'addons_extra', 'ev': 'The Instant Website add-on is $12 a month.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Per user, per month, quoted in USD on tradifyhq.com/pricing and re-verified 2026-10-02: Lite $47, Pro $51 and Plus $61 per user, plus a Custom tier f…'}, {'f': 'addons_extra', 'ev': 'The Instant Website add-on is $12 a month.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tradify-review/
 
 ## Trainerize (trainerize.com)
@@ -3318,7 +3318,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/world-businesses-for-sale-review/
 
 ## WP Rocket (wp-rocket.me)
-- **Verified pricing:** (re-verified 2026-09-14 on their own pricing page, which had not moved since our September reading: the same three licences at the same rates, the same 50/100/500 site-count selector on Mul…
+- **Verified pricing:** (re-verified 2026-10-02 on their own pricing page, which had not moved since our September readings: the same three licences at the same rates, the same 50/100/500 site-count selector on Mu…
 - **Honest take:** It's a subscription, not a lifetime license — you keep your settings if you stop paying but lose updates and support, and a technically-minded user can get most of the way there with a free caching plugin.
 - **Best for:** WordPress owners who want near-instant page-speed gains out of the box without touching cache config
 - **Full review:** https://aibuildermarketplace.com/b2b/wp-rocket-review/

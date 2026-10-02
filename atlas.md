@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 492 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-02.
+All 493 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-02.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1026,6 +1026,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants who want payment icons, feature icons and guarantee or shipping badges under the add-to-cart button without code, starting free, and who will pay $9.99 once they need badges in the cart, per-country badges or tra
 - **Flags:** {'f': 'usage_metered', 'ev': 'There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days the badges are unpublished until views reset on …'}, {'f': 'free_tier', 'ev': 'The free plan is generous on views and tight on badges.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/essential-trust-badges-review/
+
+## Essential Upsell & Cross Sell (essential-apps.com)
+- **Verified pricing:** (read 2026-10-02 on apps.shopify.com/essential-post-purchase-upsell and on essential-apps.com/upsell) Four plans, priced not on orders or views but on the extra revenue the app generates in…
+- **Honest take:** The plans are metered on revenue the app says it generated, and the free plan's $100 a month is a small allowance.
+- **Best for:** Shopify stores that want product-page, cart and post-purchase upsells, frequently-bought-together blocks and add-ons in one app, with a monthly bill that cannot go above $39.99 however much the offers sell
+- **Flags:** {'f': 'usage_metered', 'ev': "The plans are metered on revenue the app says it generated, and the free plan's $100 a month is a small allowance."}, {'f': 'free_tier', 'ev': "The plans are metered on revenue the app says it generated, and the free plan's $100 a month is a small allowance."}
+- **Full review:** https://aibuildermarketplace.com/b2b/essential-upsell-cross-sell-review/
 
 ## Evey Events (evey.io)
 - **Verified pricing:** (re-verified 1 October 2026 on apps.shopify.com/event-tickets; every rate unchanged since 1 September 2026) Four tiers, and every one of them charges twice: a monthly fee and a fee per tick…

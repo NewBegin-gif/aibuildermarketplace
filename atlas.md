@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 495 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-03.
+All 496 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-03.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -487,10 +487,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/browse-ai-review/
 
 ## BrowserAct (browseract.com)
-- **Verified pricing:** (prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-metered subscription with a free tier.
-- **Honest take:** The yearly toggle wears a -20% badge and the crossed-out prices suggest much more, but read what you would actually be charged on 13 September 2026: monthly is $16, $70 and $120, and yearly is $13, $56 and $96.
-- **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, residential proxies and CAPTCHA handling managed for them, and can commit to yearly billing -- at $13 a month Basic is a cheap way
-- **Flags:** {'f': 'usage_metered', 'ev': '(prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-mete…'}, {'f': 'free_tier', 'ev': '(prices read 2026-09-13 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-mete…'}
+- **Verified pricing:** (prices re-verified 2026-10-03 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-metered subscription with a free tier.
+- **Honest take:** The yearly toggle wears a -20% badge and the crossed-out prices suggest much more, but read what you would actually be charged on 3 October 2026: monthly is $16, $70 and $120, and yearly is $13, $56 and $96.
+- **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, proxies and CAPTCHA handling managed for them, and can commit to yearly billing -- at $13 a month Basic is a cheap way to run a fe
+- **Flags:** {'f': 'usage_metered', 'ev': '(prices re-verified 2026-10-03 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A cred…'}, {'f': 'addons_extra', 'ev': 'Local CLI: $0 runtime fee; credits apply only to optional add-ons, a local fingerprint browser at 100 credits, dynamic proxy at 5,000 credits per GB,…'}, {'f': 'free_tier', 'ev': '(prices re-verified 2026-10-03 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A cred…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
 
 ## BuddyPunch (buddypunch.com)
@@ -847,6 +847,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** manufacturers and distributors outgrowing spreadsheets who need inventory, production, purchasing and sales in one system, and who genuinely need lot tracking and traceability rather than just wanting them
 - **Flags:** {'f': 'addons_extra', 'ev': 'The third and each one after it is where the page disagrees with itself: the Integrations block says $100 a month, the FAQ on the same page says $125…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/digit-review/
+
+## DigitalOcean (digitalocean.com)
+- **Verified pricing:** (read 3 October 2026 on digitalocean.com/pricing and its Droplets, App Platform, GPU Droplets and Managed Databases pages) DigitalOcean is pay-as-you-go cloud infrastructure: you rent the p…
+- **Honest take:** The $4 Droplet is only the smallest server; backups (20–30% of the Droplet price), a managed database (from $15) and a load balancer (from $12) are separate line items.
+- **Best for:** developers and small teams who want to run an app, API or database on plain cloud infrastructure with published per-second prices, from a free static site on App Platform or a $4 Droplet up to managed Kubernetes and on-demand GPUs
+- **Flags:** {'f': 'usage_metered', 'ev': 'Backups cost 20% (weekly) or 30% (daily) of the Droplet price on top, a managed database starts at $15 a month and a load balancer at $12, so a small…'}, {'f': 'free_tier', 'ev': 'App Platform has a free tier for three static-site apps (1 GiB of transfer each, further static apps $3 each); apps with a server start at $5 a month…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/digitalocean-review/
 
 ## Disputifier (disputifier.com)
 - **Verified pricing:** (read 2026-08-19 and re-verified 2026-09-17 on apps.shopify.com/disputifier and disputifier.com/pricing) Free to install, with everything billed on use, and unchanged between those two read…

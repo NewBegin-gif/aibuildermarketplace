@@ -123,7 +123,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aisq-review/
 
 ## Algomo (algomo.com)
-- **Verified pricing:** (re-verified 2026-09-14 on newmode.ai/pricing and the homepage) Plans start at $200 a month with no per-seat pricing - and that single sentence is still the entire public price list, unchan…
+- **Verified pricing:** (re-verified 2026-10-03 on newmode.ai/pricing and the homepage) Plans start at $200 a month with no per-seat pricing - and that single sentence is still the entire public price list, unchan…
 - **Honest take:** Algomo is a member of the quote-only club: $200/month is the only number on the site, and the real bill for your traffic volume and feature set only emerges in a sales conversation.
 - **Best for:** B2B teams with real inbound traffic that want an AI agent qualifying visitors, personalizing the site by visitor identity and booking meetings — and don't mind a sales-led buying process
 - **Full review:** https://aibuildermarketplace.com/b2b/algomo-review/
@@ -1184,10 +1184,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/foxit-review/
 
 ## Frase (frase.io)
-- **Verified pricing:** (re-verified 2026-09-14 against Frase's own machine-readable pricing file frase.io/pricing.md; every figure below was unchanged from our 17 August reading) The headline figure is the yearly…
+- **Verified pricing:** (re-verified 2026-10-03 against Frase's own machine-readable pricing file frase.io/pricing.md and the pricing page; every plan price below was unchanged from our 17 August and 14 September …
 - **Honest take:** The article quotas pinch if you publish at volume (overage docs bill each), and it's a research-and-optimization tool, not a magic ranking button.
 - **Best for:** content teams and SEOs who want to speed up research, briefs and SERP-driven optimization in one workflow
-- **Flags:** {'f': 'usage_metered', 'ev': "The article quotas pinch if you publish at volume (overage docs bill each), and it's a research-and-optimization tool, not a magic ranking button — i…"}, {'f': 'addons_extra', 'ev': 'FraseCMS hosting is included free up to 100,000 page views a month; moving the blog to your own domain is $19/mo on top of a paid plan, or $99/mo at …'}
+- **Flags:** {'f': 'usage_metered', 'ev': "The article quotas pinch if you publish at volume (overage docs bill each), and it's a research-and-optimization tool, not a magic ranking button — i…"}, {'f': 'addons_extra', 'ev': 'FraseCMS hosting is included free up to 100,000 page views a month; Basic at $19/mo on top of a paid plan raises that to 250,000, drops the Frase bad…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/frase-review/
 
 ## FreshBooks (freshbooks.com)
@@ -1663,7 +1663,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/leadfeeder-review/
 
 ## Leadpages (leadpages.com)
-- **Verified pricing:** (re-verified 2026-09-14 against Leadpages' own machine-readable pricing file, which still carries the same 2026-07-10 update date it had in August; USD) Two lines, six paid plans, no free p…
+- **Verified pricing:** (re-verified 2026-10-03 against Leadpages' own machine-readable pricing file, which still carries the same 2026-07-10 update date it had in August and September; USD) Two lines, six paid pl…
 - **Honest take:** It's the value pick, not the optimisation pick — if you're spending big on ads, Unbounce's Smart Traffic and Instapage's 1:1 personalisation go deeper.
 - **Best for:** small businesses building landing pages and simple funnels who want unmetered traffic — no per-visitor anxiety, unlike metered rivals
 - **Flags:** {'f': 'usage_metered', 'ev': 'Add-ons: $20 a month per extra seat or extra custom domain, $40 per extra client workspace on Scale, and AI credit top-ups from $2.50 for 2,000 credi…'}, {'f': 'addons_extra', 'ev': 'Add-ons: $20 a month per extra seat or extra custom domain, $40 per extra client workspace on Scale, and AI credit top-ups from $2.50 for 2,000 credi…'}, {'f': 'annual_lock', 'ev': 'Annual billing is 20% off across the board.'}
@@ -2316,7 +2316,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/readymode-review/
 
 ## Reclaim.ai (reclaim.ai)
-- **Verified pricing:** (re-verified 2026-09-14 on their own pricing page, USD) Four levels, and the page keeps both billing terms in the markup rather than recomputing them.
+- **Verified pricing:** (re-verified 2026-10-03 on their own pricing page, USD) Four levels, and the page keeps both billing terms in the markup rather than recomputing them.
 - **Honest take:** The magic only works on a calendar it can write to.
 - **Best for:** Google Calendar teams that want AI to auto-schedule tasks, habits and meetings around their priorities
 - **Flags:** {'f': 'per_seat', 'ev': 'Billed yearly the seats are Starter $10, Business $15 and Enterprise $22 per seat a month; billed monthly Starter is $12 and Business $18, and the mo…'}, {'f': 'addons_extra', 'ev': 'Extra AUs are bought in packs on top of the seat, and the packs follow the same two terms.'}, {'f': 'free_tier', 'ev': 'Lite is free forever for a single user.'}
@@ -3123,7 +3123,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/ultahost-review/
 
 ## Unbounce (unbounce.com)
-- **Verified pricing:** (re-verified 2026-09-14 on their own pricing page, USD) Five published levels, monthly against yearly at 25% off: Starter $29 / $22, Build $99 / $74, Experiment $149 / $112, Optimize $249 /…
+- **Verified pricing:** (re-verified 2026-10-03 on their own pricing page, USD) Five published levels, monthly against yearly at 25% off: Starter $29 / $22, Build $99 / $74, Experiment $149 / $112, Optimize $249 /…
 - **Honest take:** The entry price is high for a landing-page tool, and the visitor caps bite if a campaign takes off.
 - **Best for:** PPC specialists and agencies running paid campaigns who want A/B testing and Smart Traffic (AI routing each visitor to the best-converting variant)
 - **Full review:** https://aibuildermarketplace.com/b2b/unbounce-review/

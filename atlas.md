@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 493 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-02.
+All 495 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-03.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -758,6 +758,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier.
 - **Best for:** lean marketing teams that want heatmaps, recordings and built-in A/B testing in one consolidated tool — noting that testing starts on the $99 plan, not the $29 one
 - **Full review:** https://aibuildermarketplace.com/b2b/crazy-egg-review/
+
+## Create (create.net)
+- **Verified pricing:** (read 2026-10-03 on create.net/pricing and the package pages, shown to us in euros and excluding VAT) Three packages and a tailored tier, paid monthly or yearly with no fixed contract.
+- **Honest take:** Professional's shop stops at 250 products and leaves out digital downloads, basket recovery and Google Shopping; those start on Business at twice the price.
+- **Best for:** UK sole traders, makers and small shops that want a hosted website and a modest online shop with an account manager and UK-based support, rather than a builder they have to learn alone
+- **Full review:** https://aibuildermarketplace.com/b2b/create-review/
 
 ## Credit Repair Cloud (creditrepaircloud.com)
 - **Verified pricing:** (price re-verified 2026-08-21 against the vendor's own pricing page, and now with the published limits rather than approximations) There are five plans, priced monthly.
@@ -1592,6 +1598,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The meter counts the whole value of every bundle sold through a Koala offer, not the uplift, so Kickstart's $1,000 a month is roughly fourteen $70 bundles.
 - **Best for:** Shopify merchants who want quantity breaks, multi-product bundles, cart volume discounts, BOGO offers and one-click post-purchase upsells in one app, with every feature on every plan and a price that stays small while bundle sales
 - **Full review:** https://aibuildermarketplace.com/b2b/koala-bundles-review/
+
+## Koala Gifts (profitkoala.com)
+- **Verified pricing:** (read 2026-10-03 on apps.shopify.com/upsell-koala-gift and in the vendor's billing articles at koala-gift.crisp.help) Priced on the store's Shopify plan, not on use: the four plans carry th…
+- **Honest take:** The price follows your Shopify plan, not your use: the same feature list costs $9.99 a month on Shopify Basic and $49.99 on Advanced.
+- **Best for:** Shopify stores that want free gifts with purchase, BOGO and buy-X-get-Y offers, a gift picker, product add-ons and add-to-cart upsell pop-ups for a flat monthly price, with no cap on orders or revenue
+- **Flags:** {'f': 'addons_extra', 'ev': 'A US merchant who paid $599 a year for another ProfitKoala app objected in November 2025 to needing a separate subscription for BOGO offers, and a me…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/koala-gifts-review/
 
 ## Koongo (koongo.com)
 - **Verified pricing:** (read 2026-08-23 on apps.shopify.com/koongo, listed as “Koongo: Sell on Marketplaces”, and on koongo.com/pricing) Four tiers on the listing, separated by update frequency rather than by cap…

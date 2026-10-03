@@ -511,7 +511,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a month, AI Employee $695 per seat a month…
 - **Honest take:** Two meters run at once: seats AND credits — the seat price includes a credit allowance (500 a month on Core, 5,000 on AI Employee, read 5 September 2026), and real outbound volume means credit packages on top.
 - **Best for:** GTM teams that want AI to run outbound end-to-end — prompt-driven prospecting of intent-ready buyers, multichannel sequences and meeting booking without adding SDR headcount
-- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}, {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}
+- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}, {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/buzz-ai-review/
 
 ## Bybit (bybit.com)
@@ -1104,7 +1104,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-09-28 on apps.shopify.com/facebook-pixel-conversion-api-fbtrack) Three paid plans and no free plan, each with a 14-day free trial.
 - **Honest take:** The critical reviews are about tracking that stopped without warning or events that never arrived, and with 22 reviews in eight years there is little else to weigh them against.
 - **Best for:** Shopify stores that advertise on Meta plus TikTok, Snapchat or Pinterest and want several pixels, for example one per collection or a backup pixel, with server-side events for all of them managed from one screen
-- **Flags:** {'f': 'free_tier', 'ev': "Meta's own Facebook & Instagram app for Shopify is free to install and sets up a conversion pixel, and the three apps the App Store lists next to FBt…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/fbtrack-review/
 
 ## Feedvisor (feedvisor.com)

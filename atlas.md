@@ -918,8 +918,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dryground-ai-review/
 
 ## Dynasort (dynasort.io)
-- **Verified pricing:** (re-read 15 September 2026 on apps.shopify.com/dynasort) Four tiers, all billed in USD and recurring every 30 days.
-- **Honest take:** The jump from free to paid is steep at $99 a month and buys capacity without capability: custom attributes, partner integration and product boost all start at $249.
+- **Verified pricing:** (re-read 3 October 2026 on apps.shopify.com/dynasort) Four tiers, all billed in USD and recurring every 30 days, and the cards have been rewritten since September.
+- **Honest take:** The jump from free to paid is steep at $99 a month and buys capacity rather than capability: search, recommendations and post-purchase are already in the free tier.
 - **Best for:** Shopify stores with large or fast-changing catalogues where product order is a merchandising decision — seasonal ranges, frequent stock-outs, wide margin spreads — and nobody who wants to re-order collections by hand every week
 - **Full review:** https://aibuildermarketplace.com/b2b/dynasort-review/
 
@@ -1423,7 +1423,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/hubstaff-review/
 
 ## Iconosquare (iconosquare.com)
-- **Verified pricing:** (price re-verified 2026-09-15) Read on iconosquare.com/pricing from a Netherlands connection, at the profile count each plan includes.
+- **Verified pricing:** (price re-verified 2026-10-03) Read on iconosquare.com/pricing (now served at /plans-and-pricing) from a Netherlands connection, with both billing toggles.
 - **Honest take:** Its depth is strongest on Instagram and the core networks; if your priority platform sits outside its best-supported set, coverage thins.
 - **Best for:** agencies and brands that want deep social analytics, reporting and competitor benchmarking alongside scheduling, especially Instagram-first teams
 - **Flags:** {'f': 'per_seat', 'ev': 'And the per-seat, per-profile tiering means agencies managing many brands climb toward the Custom plan quicker than the headline Starter price sugges…'}, {'f': 'free_tier', 'ev': 'Free covers 2 social profiles, 1 user and 10 posts a month per profile, with one month of analytics history.'}
@@ -1873,7 +1873,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/murf-review/
 
 ## MX AI (effectify.io)
-- **Verified pricing:** (read 2026-09-16 on apps.shopify.com/custom-background-music) Two plans, and the free one is not for you.
+- **Verified pricing:** (read 2026-09-16 and re-read unchanged on 2026-10-03 on apps.shopify.com/custom-background-music) Two plans, and the free one is not for you.
 - **Honest take:** A free app from RoarTheme does the core job with the same 4.8 rating, so the $2.99 buys player controls, extra sources and AI-generated seasonal tracks, not the background music itself.
 - **Best for:** Shopify merchants who want seasonal or ambient audio on the storefront, want a say in how the player looks and behaves, and would rather use the app's royalty-free tracks than sort out the licensing for a song of their own
 - **Full review:** https://aibuildermarketplace.com/b2b/mx-ai-review/
@@ -1900,7 +1900,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/neuroads-review/
 
 ## Nexis CRO (nexiscro.com)
-- **Verified pricing:** (read 14 September 2026 on apps.shopify.com/nexis-cro-ai-seo-aeo-audit) Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 or $344.
+- **Verified pricing:** (read 14 September 2026 and re-read unchanged on 3 October 2026 on apps.shopify.com/nexis-cro-ai-seo-aeo-audit) Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 o…
 - **Honest take:** It has no track record at all.
 - **Best for:** Shopify merchants who already care about being cited in ChatGPT, Gemini and Perplexity, and who want the audit, the schema deployment, the llms.txt file and the citation tracking in one app instead of stitching them together
 - **Flags:** {'f': 'usage_metered', 'ev': 'The meter is AI credits: Free gives 5 a month and a single audit, Pro 100 with unlimited audits and history, Growth 300, Agency 500.'}, {'f': 'free_tier', 'ev': 'The meter is AI credits: Free gives 5 a month and a single audit, Pro 100 with unlimited audits and history, Growth 300, Agency 500.'}
@@ -2081,10 +2081,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pecan-ai-review/
 
 ## PhotoGenerator (photogenerator.ai)
-- **Verified pricing:** (read 16 September 2026 in a live browser on photogenerator.ai/pricing, in all three billing modes) Credit-based, in US dollars, with no free tier among the published plans — the site offer…
-- **Honest take:** The plan cards and the comparison table on the same page disagree about what Pro costs.
+- **Verified pricing:** (read 3 October 2026 in a live browser on photogenerator.ai/pricing, with every billing mode and every credit option clicked) Credit-based, in US dollars, with no free tier among the publis…
+- **Honest take:** The credit is not a picture, and that is the thing to understand before buying.
 - **Best for:** people who want several image and video models behind one balance and one interface — switching between Nano Banana, GPT Image 2, Seedance, Kling, Veo and Wan without holding four subscriptions
-- **Flags:** {'f': 'usage_metered', 'ev': '(read 16 September 2026 in a live browser on photogenerator.ai/pricing, in all three billing modes) Credit-based, in US dollars, with no free tier am…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 3 October 2026 in a live browser on photogenerator.ai/pricing, with every billing mode and every credit option clicked) Credit-based, in US dol…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/photogenerator-review/
 
 ## Pickeasy (logbase.io)

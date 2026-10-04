@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 496 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-03.
+All 497 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-04.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1340,6 +1340,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** US small businesses that want genuinely easy full-service payroll, benefits and tax compliance in one place
 - **Flags:** {'f': 'per_seat', 'ev': 'The base-plus-per-employee model is transparent but adds up, and Gusto is US-only — excellent for straightforward US payroll and benefits, but not th…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/gusto-review/
+
+## Harbor Compliance (harborcompliance.com)
+- **Verified pricing:** (read 2026-10-04 on harborcompliance.com, service page by service page; there is no single pricing page, /pricing returns a 404) Priced per service, each with its own page.
+- **Honest take:** The $99 registered agent price is a first-year rate that renews at $159, and annual report filing adds $199 per state each year.
+- **Best for:** companies registered in several US states, and the accountants or law firms who manage entities for them, that want registered agent addresses, annual report deadlines and state filings tracked in one place
+- **Flags:** {'f': 'renewal_jump', 'ev': 'Registered agent is $99 for the first year for new customers and renews at $159 a year; paying two years up front is $198 and three years $297, both …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/harbor-compliance-review/
 
 ## Healthie (gethealthie.com)
 - **Verified pricing:** (re-verified 2026-08-17 and re-read unchanged 2026-09-28 on their own pricing page; yearly billing saves 10%) The entry tier is far lower than most summaries suggest: Core is $19.99/mo bill…

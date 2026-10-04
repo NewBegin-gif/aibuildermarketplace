@@ -1377,8 +1377,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/hello-bar-review/
 
 ## Helm (pactai.app)
-- **Verified pricing:** (read 2026-09-16 in a live browser on apps.shopify.com/helm) One plan, called Operator, at $129 a month or $1,299 a year — the listing puts the annual saving at 16% — billed in USD every 30…
-- **Honest take:** Nine days old and trading under three names.
+- **Verified pricing:** (re-read 2026-10-04 on apps.shopify.com/helm, served HTML) One plan, called Operator, at $129 a month or $1,299 a year — the listing puts the annual saving at 16% — billed in USD every 30 d…
+- **Honest take:** Four weeks old and still trading under more than one name.
 - **Best for:** Shopify stores already spending on Meta and Google Ads and keeping their books in QuickBooks Online, that want one place reading orders, ad spend
 - **Full review:** https://aibuildermarketplace.com/b2b/helm-review/
 
@@ -2239,7 +2239,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pumper-bundles-review/
 
 ## PushOwl (pushowl.com)
-- **Verified pricing:** (prices read 2026-08-17 in a browser; a plain fetch returns only the feature matrix, not the bundle prices) This is priced per channel and then added up, which is the part worth understandi…
+- **Verified pricing:** (prices read 2026-08-17 in a browser and re-read unchanged on 2026-10-04 on pushowl.com/pricing, with both billing toggles) This is priced per channel and then added up, which is the part w…
 - **Honest take:** The bundles are push-first: every paid tier still caps included email at 500 a month, so 'omnichannel' email at any real volume means buying separate credits.
 - **Best for:** Shopify stores that want to win back abandoned carts and browsing sessions with one-click web push — reaching shoppers who never handed over an email
 - **Flags:** {'f': 'usage_metered', 'ev': 'Basic is $0 and covers 500 emails and 500 web push notifications a month with no SMS credits.'}, {'f': 'free_tier', 'ev': 'Basic is $0 and covers 500 emails and 500 web push notifications a month with no SMS credits.'}
@@ -2636,10 +2636,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/signal-house-review/
 
 ## Signeasy (signeasy.com)
-- **Verified pricing:** (price re-verified 2026-08-17 against signeasy.com) (2026) Free trial.
+- **Verified pricing:** (re-read 2026-10-04 on signeasy.com/pricing, including the page's own pricing script) No free plan, a 14-day free trial and a 100-day money-back guarantee.
 - **Honest take:** The $10 Personal plan is annual-billed and single-seat.
 - **Best for:** small teams that want straightforward unlimited sending and signing per seat, with contract management one tier up
-- **Flags:** {'f': 'per_seat', 'ev': 'Business $20/mo per seat billed yearly ($240/seat) adds unlimited sending and collaboration; Business Pro $30/mo per seat ($360/seat) adds end-to-end…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Three per-seat eSignature tiers: Personal $15 a month billed monthly or $10 billed yearly ($120), single seat, 5 documents sent for signature a month…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/signeasy-review/
 
 ## Signitic (signitic.com)
@@ -2960,7 +2960,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tellent-review/
 
 ## Tenable (tenable.com)
-- **Verified pricing:** (read 2026-08-30 on tenable.com/buy and the Nessus Essentials page) Nessus Essentials is free — a 30-day licence for 5 IPs, non-commercial only, with plugin updates delayed 30 days and no r…
+- **Verified pricing:** (read 2026-08-30 and re-read unchanged on 2026-10-04 on tenable.com/buy and the Nessus Essentials page) Nessus Essentials is free — a 30-day licence for 5 IPs, non-commercial only, with plu…
 - **Honest take:** This is enterprise-grade security tooling with an enterprise price and a learning curve: you need someone who can act on the findings, or you're paying for reports nobody reads.
 - **Best for:** security teams and IT-mature companies that need continuous, authoritative vulnerability scanning and can remediate what it finds
 - **Flags:** {'f': 'addons_extra', 'ev': 'Advanced Support (24x365 phone, email, community and chat) is a $400/year add-on on both.'}
@@ -3157,7 +3157,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/unitel-voice-review/
 
 ## Unleashed Software (unleashedsoftware.com)
-- **Verified pricing:** (prices read 2026-08-17 on unleashedsoftware.com/pricing) Two bundles, in USD and excluding tax.
+- **Verified pricing:** (prices read 2026-08-17 and re-read on 2026-10-04 on unleashedsoftware.com/pricing) Two bundles, in USD and excluding tax.
 - **Honest take:** The 100 sales orders a month included on both bundles is the number that decides your bill, not the $399.
 - **Best for:** manufacturers and wholesalers who have outgrown spreadsheets and need real-time stock across multiple warehouses, with batch and serial tracking, landed costs and purchase-to-sale visibility in one system
 - **Flags:** {'f': 'addons_extra', 'ev': 'And support is a paid add-on at $99 a month for Standard or $239 for Premier.'}

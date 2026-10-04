@@ -171,10 +171,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/amplemarket-review/
 
 ## Amplitude (amplitude.com)
-- **Verified pricing:** (2026-09-17, re-read on their own pricing page) Free $0 with 2 million events a month, permanently, no card required and no time limit.
+- **Verified pricing:** (2026-09-17, re-read on their own pricing page and again on 2026-10-04, unchanged) Free $0 with 2 million events a month, permanently, no card required and no time limit.
 - **Honest take:** The cost lands on events instead of seats, and events are the thing you control least: an instrumentation change or a growth spurt moves your bill without anyone choosing to upgrade.
 - **Best for:** product teams who want everyone looking at the same behavioural data — the free 2 million events a month is a real working tier, not a demo
-- **Flags:** {'f': 'quote_only', 'ev': "No published paid amount: Free is $0, Plus 'starts at $0' but scales through an unpublished usage estimator, and Growth/Enterprise are quote-only (read 17 Sep 2026)"}, {'f': 'usage_metered', 'ev': 'Unlimited seats is genuinely unusual and worth the credit — you are not taxed for letting the whole team look.'}, {'f': 'addons_extra', 'ev': 'The published caps that do differ by tier are session replays (10,000 a month on Free and Plus, 20,000 on Growth, 50,000 on Enterprise), active exper…'}, {'f': 'free_tier', 'ev': '(2026-09-17, re-read on their own pricing page) Free $0 with 2 million events a month, permanently, no card required and no time limit.'}
+- **Flags:** {'f': 'quote_only', 'ev': "No published paid amount: Free is $0, Plus 'starts at $0' but scales through an unpublished usage estimator, and Growth/Enterprise are quote-only (read 17 Sep 2026)"}, {'f': 'usage_metered', 'ev': "Plus can also be metered on monthly tracked users instead of events: the comparison table caps Plus at 700K MTU or 70M events, and the page's estimat…"}, {'f': 'addons_extra', 'ev': 'The published caps that do differ by tier are session replays (10,000 a month on Free and Plus, 20,000 on Growth, 50,000 on Enterprise), active exper…'}, {'f': 'free_tier', 'ev': '(2026-09-17, re-read on their own pricing page and again on 2026-10-04, unchanged) Free $0 with 2 million events a month, permanently, no card requir…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/amplitude-review/
 
 ## Answering Service Care (answeringservicecare.com)
@@ -1000,10 +1000,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/engagebay-review/
 
 ## Envoy (envoy.com)
-- **Verified pricing:** (2026-08-29, read on their own pricing page and their platform page) Five products, each metered differently and all billed annually.
+- **Verified pricing:** (2026-08-29, read on their own pricing page and their platform page; re-read unchanged on 2026-10-04) Five products, each metered differently and all billed annually.
 - **Honest take:** None of the prices on that page is a price you can budget from.
 - **Best for:** companies with a real office and a front desk problem — visitor compliance, desk booking and deliveries in one system, where the per-location price is spread over enough employees to be worth it
-- **Flags:** {'f': 'per_seat', 'ev': 'Emergency Notifications $2 per user per month.'}, {'f': 'usage_metered', 'ev': '(2026-08-29, read on their own pricing page and their platform page) Five products, each metered differently and all billed annually.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Emergency Notifications $2 per user per month.'}, {'f': 'usage_metered', 'ev': '(2026-08-29, read on their own pricing page and their platform page; re-read unchanged on 2026-10-04) Five products, each metered differently and all…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/envoy-review/
 
 ## Essent Preorder Back in Stock (essential-apps.com)
@@ -1129,7 +1129,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/feedyio-review/
 
 ## Filevine (filevine.com)
-- **Verified pricing:** (2026-08-29, read on their own pricing page) No prices are shown.
+- **Verified pricing:** (2026-08-29 and 2026-10-04, read on their own pricing page) No prices are shown.
 - **Honest take:** Nothing is priced, so everything is negotiable — which cuts both ways.
 - **Best for:** law firms past the point where a general project tool works, with enough matters that case-specific workflows and intake tracking pay back a negotiated annual contract
 - **Flags:** {'f': 'quote_only', 'ev': 'No prices shown; all packages are custom-built and quoted by sales (read 29 Aug 2026); the one free way in is LOIS Explore, a free tier of the LOIS legal-AI tool with no card required (re-read 16 Sep 2026)'}
@@ -1866,7 +1866,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/moosend-review/
 
 ## Motive (gomotive.com)
-- **Verified pricing:** (2026-08-30, read on their own pricing page) No prices are shown.
+- **Verified pricing:** (2026-08-30 and 2026-10-04, read on their own pricing page) No prices are shown.
 - **Honest take:** A pricing page with a form where the prices should be.
 - **Best for:** fleets large enough that ELD compliance and dash-cam evidence are already costing you money, and who will negotiate a quote rather than accept the first one
 - **Flags:** {'f': 'quote_only', 'ev': 'No published price: pricing page resolves to a lead-capture form, no per-vehicle rate or plan names shown (read 30 Aug 2026)'}
@@ -2555,10 +2555,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sentaro-review/
 
 ## SEO Space (seospace.co)
-- **Verified pricing:** (prices read 2026-09-16 on seospace.co, where the plan cards and the page's own pricing script both carry the figures) Three named tiers plus a free plan.
+- **Verified pricing:** (prices read 2026-09-16 and re-read unchanged on 2026-10-04 on seospace.co, where the plan cards and the page's own pricing script both carry the figures) Three named tiers plus a free plan.
 - **Honest take:** Squarespace has been quietly absorbing the job this tool was invented for.
 - **Best for:** Squarespace freelancers and studios billing for several client sites. Pricing by number of websites rather than per seat
-- **Flags:** {'f': 'usage_metered', 'ev': 'The tiers buy capacity rather than capability: 1, 3 and 10 websites; 100, 500 and unlimited audited pages; 50, 200 and 500 AI credits a month; 25, 10…'}, {'f': 'addons_extra', 'ev': 'New since August: Orbit, a five-agent AI layer, is sold as a separate add-on at $119 a month or $952 a year on top of a subscription.'}, {'f': 'free_tier', 'ev': "(prices read 2026-09-16 on seospace.co, where the plan cards and the page's own pricing script both carry the figures) Three named tiers plus a free …"}
+- **Flags:** {'f': 'usage_metered', 'ev': 'The tiers buy capacity rather than capability: 1, 3 and 10 websites; 100, 500 and unlimited audited pages; 50, 200 and 500 AI credits a month; 25, 10…'}, {'f': 'addons_extra', 'ev': 'New since August: Orbit, a five-agent AI layer, is sold as a separate add-on at $119 a month or $952 a year on top of a subscription.'}, {'f': 'free_tier', 'ev': "(prices read 2026-09-16 and re-read unchanged on 2026-10-04 on seospace.co, where the plan cards and the page's own pricing script both carry the fig…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/seo-space-review/
 
 ## SEOKart (seokart.com)

@@ -431,7 +431,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bot-it-ai-review/
 
 ## Boulevard (joinblvd.com)
-- **Verified pricing:** (2026-09-17, read on their own pricing page) Priced per location per month, and the page opens on its Annually tab, so the headline figures are annual-billing rates: Essentials $143, Premie…
+- **Verified pricing:** (2026-09-17, read on their own pricing page; re-read 2026-10-04, annual amounts unchanged) Priced per location per month, and the page opens on its Annually tab, so the headline figures are…
 - **Honest take:** Two things about this price list. It is per location, so the arithmetic for a second salon is not a volume discount, it is double — and the add-ons are per location too, which compounds it.
 - **Best for:** salons, spas and clinics with staff to schedule and a front desk to run — the per-location pricing works out fine for one busy site
 - **Flags:** {'f': 'addons_extra', 'ev': 'Paid add-ons sit on top, also per location: Forms from $65 per month per location, QuickBooks $45, ePrescribe $45 per prescriber, and email beyond th…'}
@@ -938,10 +938,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/easy-bundles-review/
 
 ## EasyDMARC (easydmarc.com)
-- **Verified pricing:** (re-read 2026-09-17 on easydmarc.com/pricing, which now redirects to /pricing/easydmarc/businesses; every amount and every plan limit below is unchanged since 26 August 2026) Plus is 44.99 …
-- **Honest take:** You are buying domains and history, not features.
+- **Verified pricing:** (re-read 2026-10-04 on easydmarc.com/pricing, which now redirects to /pricing/businesses; the four amounts are unchanged since 26 August 2026, the plan structure around them is not) Plus is…
+- **Honest take:** You are buying domains and history, not features, and no longer seats, since every tier now lists unlimited users.
 - **Best for:** anyone who sends email from their own domain and has not yet got DMARC to enforcement — the reporting is the part that makes that safe rather than guesswork
-- **Flags:** {'f': 'usage_metered', 'ev': 'Their own FAQ does: you lose access to your reports and dashboard rather than being billed for overage.'}, {'f': 'annual_lock', 'ev': 'Annual billing is marked as 20% off plus bonus features, and MSPs and MSSPs get a separate tab with their own ladder.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'The former Enterprise tier is split into two quoted plans: Deliverability (up to unlimited domains, custom volume, up to three years of history, DNS …'}, {'f': 'annual_lock', 'ev': 'Annual billing is marked Save 20% plus bonus features, and MSPs get a separate tab.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/easydmarc-review/
 
 ## EcomXray (ecomxray.io)
@@ -1281,8 +1281,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/getscreen-review/
 
 ## Gixo (gixo.ai)
-- **Verified pricing:** (re-read 2026-09-17 on gixo.ai/pricing; the floors are unchanged since 19 August 2026) Gixo is not one product but seven, each sold separately, and the pricing page publishes only a floor f…
-- **Honest take:** Two things about this pricing are worth reading twice. The first is that seven products means seven subscriptions. Gixo is priced per deliverable, not per company.
+- **Verified pricing:** (re-read 2026-10-04 on gixo.ai/pricing; the per-product floors are unchanged since 19 August 2026, but the page now publishes every tier) Gixo is not one product but seven, each bought on i…
+- **Honest take:** Two things about this pricing are worth reading twice. The first is that seven products means seven subscriptions. Gixo is priced per deliverable, not per company, and one product's plan does not include the others.
 - **Best for:** teams that want one dedicated, source-grounded tool per deliverable — a deck tool, a content tool, a proposal tool — and would rather buy them separately than bend one generic generator into every shape
 - **Full review:** https://aibuildermarketplace.com/b2b/gixo-review/
 
@@ -1573,10 +1573,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/keap-review/
 
 ## Keeper Security (keepersecurity.com)
-- **Verified pricing:** (re-verified 2026-09-17 on their own business and add-on pricing pages, reading the US price list) Three business tiers, all billed annually: Business Starter at $2.00 per user per month ($…
+- **Verified pricing:** (re-verified 2026-09-17 and again on 2026-10-04 on their own business and add-on pricing pages, reading the US price list; every amount unchanged) Three business tiers, all billed annually:…
 - **Honest take:** Add-ons are priced per user per year — BreachWatch and KeeperChat $24 each, reporting $12 each — so a Business seat at $4.00 a month can quietly double, and billing is annual only.
 - **Best for:** teams that need shared credentials with real admin control and audit, and that will genuinely use the provisioning and role-based access that separate this from a consumer password manager
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-17 on their own business and add-on pricing pages, reading the US price list) Three business tiers, all billed annually: Busines…'}, {'f': 'addons_extra', 'ev': '(re-verified 2026-09-17 on their own business and add-on pricing pages, reading the US price list) Three business tiers, all billed annually: Busines…'}, {'f': 'annual_lock', 'ev': 'Annual billing is stated on every tier, so there is no month-to-month option to test with, and Business Starter is scoped at 5–10 users.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-09-17 and again on 2026-10-04 on their own business and add-on pricing pages, reading the US price list; every amount unchanged) Th…'}, {'f': 'addons_extra', 'ev': '(re-verified 2026-09-17 and again on 2026-10-04 on their own business and add-on pricing pages, reading the US price list; every amount unchanged) Th…'}, {'f': 'annual_lock', 'ev': 'Annual billing is stated on every tier, so there is no month-to-month option to test with, and Business Starter is scoped at 5–10 users.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/keeper-security-review/
 
 ## Kinsta (kinsta.com)
@@ -1831,10 +1831,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/mktg-ai-review/
 
 ## Modelize (modelize.studio)
-- **Verified pricing:** (re-read 2026-09-17 on apps.shopify.com/modelize, listed as “Modelize: AI Product Photos”) Free plan available, then Starter $19, Pro $49 and Enterprise $99 a month — the three paid rates a…
+- **Verified pricing:** (re-read 2026-09-17 and again on 2026-10-04 on apps.shopify.com/modelize, listed as “Modelize: AI Product Photos”) Free plan available, then Starter $19, Pro $49 and Enterprise $99 a month …
 - **Honest take:** The economics are flat: at roughly $0.19 to $0.20 an image on every tier, moving up the ladder buys resolution, custom presets and support, never a cheaper image.
 - **Best for:** Shopify fashion, jewellery and homeware sellers who need consistent on-model, lifestyle or flat-lay imagery across a large catalogue and cannot justify a photographer per drop
-- **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · AI images'}, {'f': 'free_tier', 'ev': '(re-read 2026-09-17 on apps.shopify.com/modelize, listed as “Modelize: AI Product Photos”) Free plan available, then Starter $19, Pro $49 and Enterpr…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · AI images'}, {'f': 'free_tier', 'ev': '(re-read 2026-09-17 and again on 2026-10-04 on apps.shopify.com/modelize, listed as “Modelize: AI Product Photos”) Free plan available, then Starter …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/modelize-review/
 
 ## Modge (modge.com)

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 497 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-04.
+All 498 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-04.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1005,6 +1005,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** companies with a real office and a front desk problem — visitor compliance, desk booking and deliveries in one system, where the per-location price is spread over enough employees to be worth it
 - **Flags:** {'f': 'per_seat', 'ev': 'Emergency Notifications $2 per user per month.'}, {'f': 'usage_metered', 'ev': '(2026-08-29, read on their own pricing page and their platform page) Five products, each metered differently and all billed annually.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/envoy-review/
+
+## Essent Preorder Back in Stock (essential-apps.com)
+- **Verified pricing:** (read 2026-10-04 on apps.shopify.com/essential-pre-order, pricing table and data-access section; the vendor's own pricing page at essential-apps.com/pricing lists the apps but no prices) Fo…
+- **Honest take:** Each paid plan charges per pre-order past its allowance, so a launch that sells 300 on the $4.95 plan adds $50 in overage.
+- **Best for:** Shopify stores running pre-orders, presales or made-to-order drops that also want a Notify me waitlist with restock emails in the same app, at a few hundred pre-orders a month or fewer
+- **Flags:** {'f': 'usage_metered', 'ev': 'Each paid plan has a monthly allowance and then charges per use: on Lite, the 101st pre-order in a month costs $0.25, and so does every one after it,…'}, {'f': 'free_tier', 'ev': 'Free covers 25 pre-orders and 300 back-in-stock notifications a month, with unlimited Notify me sign-ups, automated pre-orders and restock alerts, va…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/essent-preorder-back-in-stock-review/
 
 ## Essential Announcement Bar (essential-apps.com)
 - **Verified pricing:** (read 2026-09-29 on apps.shopify.com/essential-announcement-bar, on essential-apps.com/announcement-bar and in the vendor's help articles on bar types and on views) Four plans priced on mon…

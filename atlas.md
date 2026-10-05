@@ -1830,7 +1830,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/migrationpro-review/
 
 ## MindStudio (mindstudio.ai)
-- **Verified pricing:** (prices re-verified 2026-09-18 on mindstudio.ai/pricing) The subscription is a floor, not the bill: every tier reads “+ usage”, so model calls are charged on top.
+- **Verified pricing:** (prices re-verified 2026-09-18 and again 2026-10-05 on mindstudio.ai/pricing) The subscription is a floor, not the bill: every tier reads “+ usage”, so model calls are charged on top.
 - **Honest take:** Your real cost is subscription plus model spend, and an agent that loops or processes big documents burns provider credits invisibly until you set limits.
 - **Best for:** operators and teams that want to build and deploy real AI agents and workflows visually, across many models, without engineering time
 - **Flags:** {'f': 'per_seat', 'ev': 'MindStudio states it does not mark up model cost — its FAQ says you pay exactly the same price as bringing your own API keys from the providers — and…'}, {'f': 'usage_metered', 'ev': 'Because the metered part is uncapped by the plan, the tier you pick says little about what you will actually pay — the run volume does.'}, {'f': 'free_tier', 'ev': 'Free is $0/month plus usage and caps you at one agent and 1,000 runs a month.'}
@@ -3117,10 +3117,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/trainerize-review/
 
 ## Trainual (trainual.com)
-- **Verified pricing:** (re-read 2026-09-18 on trainual.com/pricing) No prices at all.
+- **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on trainual.com/pricing) No prices at all.
 - **Honest take:** You cannot find out what it costs without booking a demo.
 - **Best for:** growing teams (roughly 10+ staff) that need to document SOPs and onboard new hires consistently instead of training by osmosis
-- **Flags:** {'f': 'quote_only', 'ev': 'No published price: Core/Pro/Premium/Enterprise all route to Get a demo; only a $1,000 one-time implementation fee is disclosed (read 18 Sep 2026)'}, {'f': 'addons_extra', 'ev': 'Two things are quantified beyond the fee: the implementation team aims to have interviews completed and content in the account within 10 business day…'}
+- **Flags:** {'f': 'quote_only', 'ev': 'No published price: Core/Pro/Premium/Enterprise all route to Get a demo; only a $1,000 one-time implementation fee is disclosed (read 18 Sep and 5 Oct 2026)'}, {'f': 'addons_extra', 'ev': 'Two things are quantified beyond the fee: the implementation team aims to have interviews completed and content in the account within 10 business day…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/trainual-review/
 
 ## Tresorit (tresorit.com)
@@ -3360,7 +3360,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/
 
 ## Woodpecker (woodpecker.co)
-- **Verified pricing:** (price re-verified 2026-09-18 against woodpecker.co/pricing) Free trial: the pricing page and its FAQ put it at 14 days or 100 cold emails, whichever comes first (read 21 September 2026), a…
+- **Verified pricing:** (price re-verified 2026-09-18 and again 2026-10-05 against woodpecker.co/pricing) Free trial: the pricing page and its FAQ put it at 14 days or 100 cold emails, whichever comes first (read …
 - **Honest take:** The $7-per-100-prospects unit reads cheap, but a real outbound motion stacks add-ons fast.
 - **Best for:** outbound teams that want usage-priced cold email plus LinkedIn outreach, with unlimited seats and email accounts included instead of per-user fees
 - **Flags:** {'f': 'usage_metered', 'ev': 'Lead Finder credits start at 500 for $10.'}, {'f': 'addons_extra', 'ev': 'Add-ons are where an outbound motion actually gets expensive, and there are now two grades of managed sending address rather than one: LinkedIn accou…'}
@@ -3421,7 +3421,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/zendesk-review/
 
 ## Zendrop (zendrop.com)
-- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/zendrop and on zendrop.com/pricing — the two do not carry the same ladder) On the Shopify listing: free to install, with three paid tiers, Beginner $…
+- **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on apps.shopify.com/zendrop and on zendrop.com/pricing — the two do not carry the same ladder) On the Shopify listing: free to install, with thre…
 - **Honest take:** The free plan is a catalogue browser rather than a working tier: it allows no linked products, so nothing can actually be sold through it.
 - **Best for:** Shopify merchants starting or scaling a dropshipping or print-on-demand store who want sourcing, automated fulfilment, tracking and custom branding in one app
 - **Flags:** {'f': 'usage_metered', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'free_tier', 'ev': 'The free tier allows none at all (“No linked products allowed”), Beginner covers 1-20, Pro 21-100 and Plus 101 or more; the feature list on all three…'}

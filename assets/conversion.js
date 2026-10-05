@@ -41,7 +41,7 @@
        hun eerdere variant. De BANDIT-CONFIG-regel hieronder wordt wekelijks
        bijgewerkt door bandit_update.py (VPS) uit GA4 cro_-events — epsilon 1.0
        betekent koude start (zuiver uniform verkennen tot er genoeg data is). */
-    var BANDIT = { leader: 'A', epsilon: 0.25, updated: '2026-09-28' }; /* BANDIT-CONFIG */
+    var BANDIT = { leader: 'C', epsilon: 0.25, updated: '2026-10-05' }; /* BANDIT-CONFIG */
     var VARIANT = (function(){
       try {
         var v = localStorage.getItem('aibm_cta_variant');

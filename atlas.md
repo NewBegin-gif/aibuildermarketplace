@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 498 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-04.
+All 499 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-05.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -328,10 +328,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/beefree-review/
 
 ## Beehiiv (beehiiv.com)
-- **Verified pricing:** (re-verified 2026-08-16 from beehiiv's own machine-readable pricing file at beehiiv.com/pricing.md, which states USD) Subscriber-based, and you keep 100% of paid subscriptions — beehiiv tak…
+- **Verified pricing:** (re-verified 2026-10-05 on beehiiv.com/pricing, prices in USD) Subscriber-based, and you keep 100% of paid subscriptions — beehiiv shows a 0% take rate, against Substack's 10%, leaving only…
 - **Honest take:** Next to Substack it's more to learn.
 - **Best for:** newsletter operators who want growth tools, automation, SEO control and ad/referral monetisation — and to keep 100% of subscription revenue
-- **Flags:** {'f': 'free_tier', 'ev': 'Launch is $0 up to 2,500 subscribers with unlimited sends.'}
+- **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 up to 2,500 subscribers with unlimited sends.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/beehiiv-review/
 
 ## BidX (bidx.io)
@@ -1641,6 +1641,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up…"}, {'f': 'usage_metered', 'ev': 'Annual saves 20%, which the page puts at $36 per user a year on Essential and $96 on Standard, and each plan comes with $1 of free calling and SMS cr…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/krispcall-review/
 
+## Krystal (krystal.io)
+- **Verified pricing:** (read 2026-10-05 on krystal.io/hosting, /hosting/business, /hosting/wordpress/managed and /cloud-vps) All prices below are in pounds and exclude VAT: the site's Include VAT switch is off by…
+- **Honest take:** Prices on Krystal's site are shown before VAT, so a UK buyer pays 20% more than the plan cards say, and 'unlimited' storage from Emerald up stops at 2,500,000 inodes.
+- **Best for:** UK small businesses, freelancers and agencies that want cPanel or managed WordPress hosting with UK-based phone and chat support, one price per billing period without a teaser rate
+- **Flags:** {'f': 'renewal_jump', 'ev': 'Shown before VAT, Amethyst is £8.40 a month for a UK buyer and holds one site on 10GB, while budget hosts lead with multi-year introductory rates far…'}, {'f': 'annual_lock', 'ev': "Annual billing is ten months' price (Amethyst £70 a year, Emerald £190) and two-year billing is eighteen months' price (Amethyst £126, Emerald £342);…"}
+- **Full review:** https://aibuildermarketplace.com/b2b/krystal-review/
+
 ## Kumo (cloudlift.app)
 - **Verified pricing:** (read 2026-09-16 on apps.shopify.com/b2b-wholesale-tools) Two plans and no free tier: B2B at $15 a month and PLUS at $30, both with a 7-day free trial, billed in USD every 30 days.
 - **Honest take:** Five stars over nine reviews is not a track record, and the age makes that worse rather than better.
@@ -1698,10 +1705,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/leavo-review/
 
 ## lemlist (lemlist.com)
-- **Verified pricing:** (re-verified 2026-09-21 on www.lemlist.com/en/pricing; dollars again from a Dutch exit, the same numerals the earlier euro reading carried — check your own checkout) No free plan, 14-day tr…
+- **Verified pricing:** (re-verified 2026-10-05 on www.lemlist.com/en/pricing; euros from a Dutch exit, the same numerals the earlier dollar reading carried — check your own checkout) No free plan, 14-day trial.
 - **Honest take:** The per-seat plus per-email-account model makes total cost unpredictable as you scale, and reviews flag support response times and the LinkedIn Chrome-extension's reliability.
 - **Best for:** outbound teams that live in cold email and want multichannel sequences, warm-up and a big template community in one per-seat tool
-- **Flags:** {'f': 'per_seat', 'ev': 'Multichannel is $109/month per user, or $87/month yearly, with unlimited emails and messages and 5 senders per user.'}, {'f': 'usage_metered', 'ev': 'Contact data is billed separately through rechargeable credits where 1 credit = $0.01: a 1,000-credit pack is $10 and buys roughly 200 email lookups …'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Multichannel is $109/month per user, or $87/month yearly, with unlimited emails and messages and 5 senders per user.'}, {'f': 'usage_metered', 'ev': 'Contact data is a separate add-on: Lead data enrichment is €20 a month (€16 a month on yearly billing) for 2,000 credits, which the page equates to a…'}, {'f': 'addons_extra', 'ev': 'Buying-intent signals are now their own add-on: €29 a month (€21 yearly) for 100 signals.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/lemlist-review/
 
 ## LettrLabs (lettrlabs.com)

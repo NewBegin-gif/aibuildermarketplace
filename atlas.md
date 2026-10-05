@@ -53,7 +53,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Both plans charge 10% of the ad spend Adwisely manages, with a monthly minimum that acts as a floor rather than a fee on top: $49 on Self-Serve and $…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/adwisely-review/
 
-## AfterSell (aftersell.app)
+## AfterSell (aftersell.com)
 - **Verified pricing:** Three plans, each metered by monthly order volume, read on aftersell.com/pricing and on the Shopify App Store listing on 22 September 2026 (re-verified 22 September 2026 and again 27 Septem…
 - **Honest take:** Post-purchase upsells only move the needle with steady order volume and a sensible complementary-offer strategy — bolt it onto a store with little traffic and there's nothing to upsell.
 - **Best for:** Shopify stores with steady order volume that want to lift average order value with one-click post-purchase and checkout upsells

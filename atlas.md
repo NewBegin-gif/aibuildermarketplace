@@ -1006,10 +1006,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/employment-hero-review/
 
 ## EngageBay (engagebay.com)
-- **Verified pricing:** (price re-verified 2026-09-18 on engagebay.com/pricing) Genuinely free tier: $0 for 250 contacts with email marketing, CRM, helpdesk and live chat, and the plan card adds that it is free fo…
+- **Verified pricing:** (price re-verified 2026-09-18 and again on 2026-10-05 on engagebay.com/pricing, which now redirects to /pricing/all-in-one) Genuinely free tier: $0 for 250 contacts with email marketing, CR…
 - **Honest take:** The meter is contacts AND seats at once: prices are per user, and each tier caps contacts — Basic’s 500 contacts fills fast, and the Growth jump is steep ($15 → $65 per user).
 - **Best for:** small teams that want CRM, email marketing, helpdesk and live chat in one affordable suite — the free tier is a genuine trial-for-life, and it undercuts HubSpot hard at small scale
-- **Flags:** {'f': 'per_seat', 'ev': 'Single bays (Marketing or CRM & Sales) start at $11.04/user/mo on that same biennial display.'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-18 on engagebay.com/pricing) Genuinely free tier: $0 for 250 contacts with email marketing, CRM, helpdesk and live chat, a…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Single bays (Marketing or CRM & Sales) start at $11.04/user/mo on that same biennial display.'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-18 and again on 2026-10-05 on engagebay.com/pricing, which now redirects to /pricing/all-in-one) Genuinely free tier: $0 f…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/engagebay-review/
 
 ## Envoy (envoy.com)
@@ -2018,7 +2018,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/oneflow-review/
 
 ## Optizen (optizenapp.com)
-- **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell) Three tiers, billed in USD.
+- **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell; re-read 2026-09-17 and 2026-10-05, every amount unchanged) Three tiers, billed in USD.
 - **Honest take:** AI video is the reason to install this, and it is the one thing the subscription does not cover.
 - **Best for:** shopify stores that already own product video and want it working as an upsell at the product page, cart and post-purchase moments, or that want to test a handful of AI-generated clips cheaply before committing
 - **Flags:** {'f': 'usage_metered', 'ev': 'Starter is $9.99 a month and removes the campaign and conversion limits, adds AI-generated video and includes 2 AI video credits a month; extra credi…'}, {'f': 'free_tier', 'ev': 'The free tier is a demo rather than a usable floor — one campaign, five conversions, no AI at all.'}
@@ -2074,7 +2074,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/parallel-ai-review/
 
 ## Parim (parim.co)
-- **Verified pricing:** (re-read 2026-09-17 on parim.co/pricing; unchanged since 20 August 2026) One number is published and the rest is not.
+- **Verified pricing:** (re-read 2026-09-17 and again on 2026-10-05 on parim.co/pricing; unchanged since 20 August 2026) One number is published and the rest is not.
 - **Honest take:** Unlimited users sounds like the generous part, and it is — until you notice what replaces per-seat pricing: a bill that scales with shifts scheduled.
 - **Best for:** staffing agencies, security firms and event operators with large rosters of shift workers, where per-seat pricing from competitors would be punishing and the specialised modules (checkpoints, check calls
 - **Full review:** https://aibuildermarketplace.com/b2b/parim-review/
@@ -2162,7 +2162,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pixel-union-review/
 
 ## Planday (planday.com)
-- **Verified pricing:** (re-read 2026-09-17; the euro list is unchanged since 20 August 2026, but which list you see depends on the page you open) Three tiers, two of them priced.
+- **Verified pricing:** (re-read 2026-09-17 and again on 2026-10-05; the euro list is unchanged since 20 August 2026, but which list you see depends on the page you open) Three tiers, two of them priced.
 - **Honest take:** The €25 monthly platform fee on Plus is the line most comparisons miss.
 - **Best for:** shift-based businesses in hospitality and retail with 10 or more staff who need leave management and payroll integration, where the flat fee spreads thin enough to disappear
 - **Flags:** {'f': 'per_seat', 'ev': 'On the euro page, planday.com/de/preise, Starter is €2.99 per user per month with a 5-user minimum, Plus is €4.99 per user with a 10-user minimum plu…'}
@@ -2499,10 +2499,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seamless-ai-review/
 
 ## Section Library (sectionlibrary.com)
-- **Verified pricing:** (re-read 2026-09-17 on apps.shopify.com/section-library, now listed as “Section Library: AI Sections”; every amount is unchanged since 19 August 2026) Free plan: 8 credits a month, access t…
+- **Verified pricing:** (re-read 2026-09-17 and again on 2026-10-05 on apps.shopify.com/section-library, now listed as “Section Library: AI Sections”; every amount is unchanged since 19 August 2026) Free plan: 8 c…
 - **Honest take:** Almost three years on the App Store and one review.
 - **Best for:** Shopify merchants who want ready-made theme sections and the occasional AI-generated layout inside the native theme editor, and who can live with an app that has almost no public track record
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-read 2026-09-17 on apps.shopify.com/section-library, now listed as “Section Library: AI Sections”; every amount is unchanged since 19 August 2026…'}, {'f': 'free_tier', 'ev': '(re-read 2026-09-17 on apps.shopify.com/section-library, now listed as “Section Library: AI Sections”; every amount is unchanged since 19 August 2026…'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-read 2026-09-17 and again on 2026-10-05 on apps.shopify.com/section-library, now listed as “Section Library: AI Sections”; every amount is unchan…'}, {'f': 'free_tier', 'ev': '(re-read 2026-09-17 and again on 2026-10-05 on apps.shopify.com/section-library, now listed as “Section Library: AI Sections”; every amount is unchan…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/section-library-review/
 
 ## Securify (securification.ai)

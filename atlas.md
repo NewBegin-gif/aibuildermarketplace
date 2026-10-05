@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 499 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-05.
+All 500 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-05.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -402,6 +402,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** tour, activity and experience operators who want booking management plus wide OTA distribution (Viator, GetYourGuide and more) from one dashboard
 - **Flags:** {'f': 'usage_metered', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bokun-review/
+
+## Bold Subscriptions (boldcommerce.com)
+- **Verified pricing:** (read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/bold-subscriptions, prices in USD) Three plans, each a monthly fee plus a transaction fee, and each with a 30-day free …
+- **Honest take:** Every plan adds a transaction fee on top of the monthly price (2% on Launch, 1% on Grow, 0.9% on Scale), and the higher plans add nothing on the listing except that lower fee.
+- **Best for:** Shopify stores starting or running subscribe-and-save, replenishment, prepaid or subscription-box offers that want unlimited subscribers, dunning and a customer portal from the entry plan
+- **Full review:** https://aibuildermarketplace.com/b2b/bold-subscriptions-review/
 
 ## Bolt Business (bolt.eu)
 - **Verified pricing:** No subscription, no activation cost and no minimum commitment (re-verified 2026-08-20 on Bolt's own business page): you pay per ride or rental taken, with consolidated monthly billing, spen…

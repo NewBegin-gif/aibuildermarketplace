@@ -390,7 +390,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/blinq-review/
 
 ## Blocky (effectify.io)
-- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial, and every amount unchanged since 22 August 2026.
+- **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial, and every amount unchanged since 22 August …
 - **Honest take:** Read the plan text before you read the badge. The App Store header says a free plan is available; that free plan is Development Stores, for development and partner stores only, and it starts charging the moment the store goes live.
 - **Best for:** Shopify stores below Plus that are losing time to bot traffic, repeat fraudsters or orders from regions they do not ship to, and want blocking rules they control rather than a full security suite
 - **Flags:** {'f': 'addons_extra', 'ev': 'Pro $19.99 a month or $167.92 a year adds blocking by email, name, address and phone, the Bot Killer for TOR, proxy and VPN traffic, an add-ons block…'}
@@ -582,7 +582,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/carbon6-review/
 
 ## Castmagic (castmagic.io)
-- **Verified pricing:** (re-read 2026-09-18 on castmagic.io/pricing) Three published tiers plus an enterprise band.
+- **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on castmagic.io/pricing, every figure and both sets of data attributes unchanged) Three published tiers plus an enterprise band.
 - **Honest take:** The prices on the page are the annual prices.
 - **Best for:** content teams, agencies and serious podcasters with a steady flow of recorded audio or video who want a transcript plus a stack of derived assets — show notes, newsletters, social posts, clips
 - **Flags:** {'f': 'annual_lock', 'ev': 'Business & Scale from $699 a month on annual billing and $999 a month on monthly billing, by demo, for custom volume, seats, storage, SLA and dedicat…'}
@@ -1823,8 +1823,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/mera-work-review/
 
 ## MigrationPro (migrationpro.io)
-- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/migrationpro-shopify-migration-app and migrationpro.io/pricing/) The App Store listing still prints no number at all: one plan, free to install, with…
-- **Honest take:** The listing tells you nothing about what this costs.
+- **Verified pricing:** (re-read 2026-10-05 on apps.shopify.com/migrationpro-shopify-migration-app and migrationpro.io/pricing/) The App Store listing has gone.
+- **Honest take:** Start with what is no longer there. Read on 5 October 2026, the Shopify App Store listing says the app is not currently available and sends support questions to the vendor: no install button, no review page.
 - **Best for:** merchants moving an existing store into Shopify who want products, customers, orders and — critically
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: usage · products, customers and orders migrated'}, {'f': 'addons_extra', 'ev': 'The Done-for-you plan, where their team handles mapping, testing and go-live with a dedicated specialist, starts at $300 with every add-on included.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/migrationpro-review/
@@ -2011,10 +2011,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/omniseo-review/
 
 ## Oneflow (oneflow.com)
-- **Verified pricing:** (price re-verified 2026-09-18 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK, SEK and USD — these are the EUR figures) Business is €50 per u…
+- **Verified pricing:** (price re-verified 2026-09-18 and again on 2026-10-05 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK, SEK and USD — these are the EUR figure…
 - **Honest take:** The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a sales conversation.
 - **Best for:** sales and legal teams with real contract volume who want the full lifecycle — creating, negotiating, e-signing and archiving interactive contracts — in one platform with CRM integrations
-- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-18 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK, SEK and USD — these ar…'}, {'f': 'addons_extra', 'ev': 'Two features sit behind a ($) marker even on the plan that lists them, meaning a paid add-on rather than an unavailable feature: eID signature on Bus…'}, {'f': 'annual_lock', 'ev': "The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a …"}
+- **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-18 and again on 2026-10-05 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK…'}, {'f': 'addons_extra', 'ev': 'Several features sit behind a ($) marker even on the plan that lists them, meaning a paid add-on rather than an unavailable feature: eID signature on…'}, {'f': 'annual_lock', 'ev': "The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/oneflow-review/
 
 ## Optizen (optizenapp.com)
@@ -2231,8 +2231,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/process-street-review/
 
 ## ProtectMyOrder (protectmyorder.com)
-- **Verified pricing:** (re-read 2026-09-18) The App Store route has closed.
-- **Honest take:** Start with what is no longer there. Read on 18 September 2026, the Shopify App Store listing for this app is gone: the page says it is not currently available and sends support questions to the vendor.
+- **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05) The App Store route has closed.
+- **Honest take:** Start with what is no longer there. Read on 18 September and again on 5 October 2026, the Shopify App Store listing for this app is gone: the page says it is not currently available and sends support questions to the vendor.
 - **Best for:** Shopify stores with a known parcel-loss rate that are willing to come in through the vendor rather than the App Store
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: revenue_share · delivery protection upsell revenue'}
 - **Full review:** https://aibuildermarketplace.com/b2b/protectmyorder-review/

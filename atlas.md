@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 500 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-05.
+All 501 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-05.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -402,6 +402,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** tour, activity and experience operators who want booking management plus wide OTA distribution (Viator, GetYourGuide and more) from one dashboard
 - **Flags:** {'f': 'usage_metered', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bokun-review/
+
+## Bold Memberships (boldcommerce.com)
+- **Verified pricing:** (read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/recurring-memberships, prices in USD) One plan, called Scale: free to install, then $0.13 per member per month.
+- **Honest take:** You pay $0.13 a month for every member beyond the first 10, so a large free loyalty tier can cost more than the paid tiers earn; the listing does not say whether free members count.
+- **Best for:** Shopify stores that want a paid or free membership with store credit, member pricing, free shipping, gated products and checkout, POS sign-ups and wallet cards in one app
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/recurring-memberships, prices in USD) One plan, called Scale: free to install, …'}, {'f': 'usage_metered', 'ev': 'The data access is wide, including viewing sensitive customer data and editing orders and store credit.'}, {'f': 'free_tier', 'ev': 'The first 10 members are free forever, the first 30 days are free, and the listing says there is no flat monthly base fee and no transaction fee.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/bold-memberships-review/
 
 ## Bold Subscriptions (boldcommerce.com)
 - **Verified pricing:** (read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/bold-subscriptions, prices in USD) Three plans, each a monthly fee plus a transaction fee, and each with a 30-day free …

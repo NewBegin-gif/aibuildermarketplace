@@ -14,7 +14,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/1password-review/
 
 ## 800.com (800.com)
-- **Verified pricing:** (re-verified 2026-08-13, read on their own plans page with both billing tabs open) No free tier.
+- **Verified pricing:** (re-verified 2026-10-06, read on their own plans page with the full comparison open) No free tier, and the line-up is down to two self-serve plans plus Enterprise.
 - **Honest take:** It's a phone-number layer, not a full business-comms platform, so you won't get team chat, video or a contact center here.
 - **Best for:** businesses that want a professional toll-free or vanity number with call tracking, routing and analytics to look bigger and measure inbound calls
 - **Full review:** https://aibuildermarketplace.com/b2b/800-com-review/
@@ -450,10 +450,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bookx-review/
 
 ## Bookyourdata (bookyourdata.com)
-- **Verified pricing:** (re-verified 2026-08-13 and again unchanged on 2026-09-28, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.
+- **Verified pricing:** (re-verified 2026-08-13 and again unchanged on 2026-09-28 and 2026-10-06, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full contact.
 - **Honest take:** Bought lists are only as good as your targeting, and cold-emailing purchased contacts has legal boundaries that vary by country, GDPR territory especially.
 - **Best for:** sporadic, project-based prospecting where a subscription would idle — buy exactly the verified contacts you need, when you need them
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13 and again unchanged on 2026-09-28, read on their own pricing page) Pay-as-you-go, no subscription: one credit is one full con…'}, {'f': 'addons_extra', 'ev': 'BeSpoke, the hand-built private list service, is priced separately from $499 for 1,000 records.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-13 and again unchanged on 2026-09-28 and 2026-10-06, read on their own pricing page) Pay-as-you-go, no subscription: one credit …'}, {'f': 'addons_extra', 'ev': 'BeSpoke, the hand-built private list service, is priced separately from $499 for 1,000 records.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bookyourdata-review/
 
 ## Bot It AI (botitai.com)
@@ -713,7 +713,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/cloze-review/
 
 ## Clutch (clutch.co)
-- **Verified pricing:** (re-verified 2026-10-02, read in their own help centre) Free for buyers.
+- **Verified pricing:** (re-verified 2026-10-02 and again on 2026-10-06, read in their own help centre) Free for buyers.
 - **Honest take:** It's genuinely free to submit a brief — but be clear on what it is: a lead-generation marketplace, not a neutral directory.
 - **Best for:** businesses that want to skip manual agency research and get matched quickly with vetted, best-fit service providers for a specific project
 - **Full review:** https://aibuildermarketplace.com/b2b/clutch-review/
@@ -2391,7 +2391,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/reditus-review/
 
 ## Remote People (remotepeople.com)
-- **Verified pricing:** (2026-08-07, read on their own pricing page) Priced per service rather than per plan, and every figure is a floor.
+- **Verified pricing:** (2026-08-07, read on their own pricing page; re-verified unchanged on 2026-10-06) Priced per service rather than per plan, and every figure is a floor.
 - **Honest take:** Every rate is a 'from' price with no country-level figure, and recruitment fees charged as a share of salary can dwarf the subscription.
 - **Best for:** small and mid-size teams hiring a handful of people abroad who want to pay monthly, keep the option to stop, and not carry a five-employee minimum. EOR Flex is genuinely unusual on those terms: no setup fee, no deposit
 - **Flags:** {'f': 'per_seat', 'ev': 'Employer of Record: EOR Flex from $199 per employee a month, billed monthly with no commitment, no setup fee and no minimum headcount; EOR Plus from …'}, {'f': 'annual_lock', 'ev': 'Employer of Record: EOR Flex from $199 per employee a month, billed monthly with no commitment, no setup fee and no minimum headcount; EOR Plus from …'}
@@ -2459,7 +2459,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/rocketreach-review/
 
 ## Ruby (ruby.com)
-- **Verified pricing:** Read on their own plans-and-pricing page, 6 September 2026.
+- **Verified pricing:** Read on their own plans-and-pricing page, 6 September 2026, and unchanged on 6 October 2026.
 - **Honest take:** You're paying premium rates for real human receptionists billed per minute.
 - **Best for:** client-driven service businesses (law, home services, clinics) where a live human answering every call directly wins business
 - **Flags:** {'f': 'usage_metered', 'ev': "You're paying premium rates for real human receptionists billed per minute — worth it when a missed call is a lost client, but expensive if your call…"}

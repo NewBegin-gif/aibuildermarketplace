@@ -199,7 +199,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/apollo-review/
 
 ## Arbor (joinarbor.com)
-- **Verified pricing:** Free for households, and re-verified as such on 2026-08-17.
+- **Verified pricing:** Free for households, and re-verified as such on 2026-08-17 and again on 2026-10-06.
 - **Honest take:** The honest catches: it only exists in deregulated US states, and it only touches the supply rate, since delivery charges stay with your utility.
 - **Best for:** US households and renters in deregulated states who want set-and-forget savings on the electric bill without becoming rate-shopping hobbyists
 - **Full review:** https://aibuildermarketplace.com/b2b/arbor-review/
@@ -554,10 +554,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bybit-review/
 
 ## Calilio (calilio.com)
-- **Verified pricing:** (re-verified 2026-08-17) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 annually ($336 a year); Enterprise custom.
+- **Verified pricing:** (re-verified 2026-08-17; plan prices unchanged on 2026-10-06, included allowance changed) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 ann…
 - **Honest take:** The subscription is the platform, not the talking: numbers, minutes and SMS meter separately from a credit balance, so an active calling team's real bill sits meaningfully above the per-seat sticker.
 - **Best for:** startups and small teams that want a modern, affordable cloud phone system with international numbers and clean dashboards
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 annually ($336 a year); Ente…'}, {'f': 'usage_metered', 'ev': 'Each plan includes a stated value of free calls and SMS/MMS to US and Canada numbers — $6.75 on Standard and $33.74 on Premium — and beyond that call…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20%.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17; plan prices unchanged on 2026-10-06, included allowance changed) Standard $15 per user/mo, or $12 billed annually ($144 a ye…'}, {'f': 'usage_metered', 'ev': 'Beyond the allowance, calls and SMS draw from a wallet: the subscription includes a $1 credit, after which you must load the wallet, and further numb…'}, {'f': 'annual_lock', 'ev': 'Annual billing saves 20%.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/calilio-review/
 
 ## CallHippo (callhippo.com)
@@ -1026,7 +1026,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/emergent-review/
 
 ## Employment Hero (employmenthero.com)
-- **Verified pricing:** (2026-08-28, read on their own pricing page at employmenthero.com/pricing/) EVERY PRICE ON THAT PAGE IS AUD EXCLUDING GST — the page states it in its own disclaimer.
+- **Verified pricing:** (2026-08-28, read on their own pricing page at employmenthero.com/pricing/; re-verified 2026-10-06) EVERY PRICE ON THAT PAGE IS AUD EXCLUDING GST — the page states it in its own disclaimer.
 - **Honest take:** Every figure on the pricing page is AUD excluding GST with no US page, and HR, recruitment, chat and payroll are separate subscriptions with a minimum of ten users.
 - **Best for:** Australian and New Zealand employers who want HR and payroll from one vendor and will genuinely use both, where the per-employee rate beats separate systems
 - **Flags:** {'f': 'per_seat', 'ev': 'HR Essentials A$10 per employee per month, HR Engage A$14; HR Elite and Employment Unlimited are quote-only.'}, {'f': 'usage_metered', 'ev': 'Interview credits reset monthly, unused credits do not roll over, and overage is billed automatically with no hard cap.'}, {'f': 'addons_extra', 'ev': 'There is no standalone payroll tier on the page any more: payroll sits inside Employment Unlimited, and Managed Payroll is an add-on at A$20 per empl…'}
@@ -1169,7 +1169,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/feedyio-review/
 
 ## Filevine (filevine.com)
-- **Verified pricing:** (2026-08-29 and 2026-10-04, read on their own pricing page) No prices are shown.
+- **Verified pricing:** (2026-08-29 to 2026-10-06, read on their own pricing page) No prices are shown.
 - **Honest take:** Nothing is priced, so everything is negotiable — which cuts both ways.
 - **Best for:** law firms past the point where a general project tool works, with enough matters that case-specific workflows and intake tracking pay back a negotiated annual contract
 - **Flags:** {'f': 'quote_only', 'ev': 'No prices shown; all packages are custom-built and quoted by sales (read 29 Aug 2026); the one free way in is LOIS Explore, a free tier of the LOIS legal-AI tool with no card required (re-read 16 Sep 2026)'}
@@ -3109,10 +3109,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/toggl-review/
 
 ## Top Echelon (topechelon.com)
-- **Verified pricing:** (2026-09-10, read on their own pricing page, both billing toggles) TE Recruit (the ATS and CRM) runs $79 per seat per month billed annually or $95 month-to-month on Standard, and $95 billed…
+- **Verified pricing:** (2026-09-10, read on their own pricing page, both billing toggles; re-verified unchanged on 2026-10-06) TE Recruit (the ATS and CRM) runs $79 per seat per month billed annually or $95 month…
 - **Honest take:** Almost everything people shop for sits in Professional, not Standard: Smart-TE AI, automations, sequences, inbound email sync and API access are all one tier up, so Standard is a competent but plain ATS.
 - **Best for:** recruiting agencies and SMB staffing firms that want an applicant tracking system and CRM in one place, especially ones that would actually work split placements with other recruiters
-- **Flags:** {'f': 'per_seat', 'ev': '(2026-09-10, read on their own pricing page, both billing toggles) TE Recruit (the ATS and CRM) runs $79 per seat per month billed annually or $95 mo…'}, {'f': 'addons_extra', 'ev': 'The bigger thing to price honestly is that TE Recruit and TE Network are two separate subscriptions.'}, {'f': 'annual_lock', 'ev': 'And taking the network month-to-month adds a $350 one-time startup fee that annual billing waives.'}
+- **Flags:** {'f': 'per_seat', 'ev': '(2026-09-10, read on their own pricing page, both billing toggles; re-verified unchanged on 2026-10-06) TE Recruit (the ATS and CRM) runs $79 per sea…'}, {'f': 'addons_extra', 'ev': 'The bigger thing to price honestly is that TE Recruit and TE Network are two separate subscriptions.'}, {'f': 'annual_lock', 'ev': 'And taking the network month-to-month adds a $350 one-time startup fee that annual billing waives.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/top-echelon-review/
 
 ## Track123 (track123.com)

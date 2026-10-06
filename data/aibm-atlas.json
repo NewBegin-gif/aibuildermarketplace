@@ -10,7 +10,7 @@
   "generated_at": "2026-10-06",
   "notes": "Prices are the entry prices we found at research time; always check live pricing. Every flag carries the evidence sentence from our hand-researched dossier.",
   "tool_count": 506,
-  "flag_count": 853
+  "flag_count": 824
  },
  "tools": [
   {
@@ -311,7 +311,12 @@
    "entry_price_terms": "a month per active Spend user plus a team-size platform fee",
    "pricing_status": "public",
    "price_note": "(2026-08-28, read off their own pricing page and fee table; no rate below has changed since 1 Aug 2026) FX conversion 0.5% above the interbank rate for major currencies and 1% for all others. Local transfers to 120+ countries free; SWIFT transfers $15–$25 each. Payment acceptance 2.8% + $0.30 on domestic cards and 4.30% + $0.30 on international cards; local payment methods $0.30 plus method-specific fees. Corporate cards carry no international fees and up to 2% cash rebate on local USD spend. Account plans: Explore free, Grow $12 per active Spend user/month plus a platform fee that varies with team size, Accelerate custom. Their table adds limits the earlier reading did not record: the first 10 Spend users are free and the $12 rate runs to 250 Spend users; the monthly fee is charged per business legal entity, with up to 3 entities included and $1,000 per additional entity; subscription and usage-based billing cost 0.50% per successful transaction while invoicing is free; and USD balances earn a Yield rate that Airwallex restamps daily rather than fixing per plan — on 5 September 2026 the page showed 3.22% on Explore, 3.37% on Grow and 3.49% on Accelerate, and its own footnote reads that the indicative rate is the 7-day annualised historical rate of the underlying funds as of 4 September 2026, net of fees. Read those three figures as a moving number carrying the date the page gave it, not as a plan feature: they were 3.21%, 3.36% and 3.48% when we first recorded them on 28 August 2026. (yield re-verified 5 Sep 2026) Platform API and embedded finance are quote-only. Two gaps we had left open got a partial answer on 17 September 2026, when Airwallex pointed us at its fee schedule. Dispute handling does carry a price, but only the Canadian entity publishes it: airwallex.com/en-ca/terms/fee-schedule prints 15 CAD per chargeback request and 0.30 CAD per refund request, both excluding whatever the card network passes on. The US pricing page lists dispute management as a feature with no fee beside it, so treat the Canadian figures as the shape of the charge rather than as your rate. The Grow platform fee is still not a number anywhere: both the US pricing page and the Canadian schedule say only that it is based on the total number of Spend users, so ask for it before you budget. Re-verified 2026-09-19 on airwallex.com/en-us/pricing: every published rate above is unchanged — FX, transfers, acquiring, the 0.50% on subscription billing, the free first 10 Spend users, the 250-user ceiling on the $12 rate and the $1,000 per entity beyond three. The yield figures still read 3.22%, 3.37% and 3.49%, but their footnote now dates the seven-day annualised rate to 18 September 2026 instead of 4 September. That is the clearest evidence yet that these three numbers are a daily restamp rather than a plan feature: same values, new date. The Grow platform fee is still not printed anywhere.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "usage_metered",
+     "evidence": "Their table adds limits the earlier reading did not record: the first 10 Spend users are free and the $12 rate runs to 250 Spend users; the monthly fee is charged per business legal entity, with up t…"
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-19"
   },
@@ -677,10 +682,6 @@
    "price_note": "(re-verified 28 September 2026 in a rendered browser, both billing tabs and the full comparison table) Assembly, the client-portal platform at assembly.com, publishes five tiers. Free, a free-forever plan: $0 with 5 active contacts, 1 internal user, 50 build credits a month and 3 apps. Starter: $29 a month billed yearly or $49 monthly, 50 active contacts, 1 internal user. Professional: $99 billed yearly or $139 monthly, 500 active contacts, 3 internal users included and each extra one +$29 a month yearly or +$39 monthly. Advanced: $499 billed yearly or $599 monthly, unlimited active contacts, 5 internal users included and each extra one +$59 or +$79. Enterprise is quoted after a demo. Every paid plan includes 200 build credits a month and 5 apps; extra credits are $0.60 each up to 10,000 a month, unused credits roll over for one month, and extra apps are $5 a month each. If you bill clients through Assembly, cards cost 2.9% + $0.30 on every plan and ACH 1% (capped at $10 from Professional up); the table also lists store fees of 2.0%, 1.5%, 1% and 0.7% from Free to Advanced, invoices at +0.7% down to +0.3% and recurring subscriptions at +1.1% down to +0.5%. The FAQ says there are no setup, hosting or per-client fees, no contracts on self-serve plans, and downgrades take effect at the end of the billing period. Correction: until 28 September 2026 this field described a different company's employee-recognition plan at $3 per user; that was never the price of Assembly's client portal.",
    "flags": [
     {
-     "flag": "per_seat",
-     "evidence": "Correction: until 28 September 2026 this field described a different company's employee-recognition plan at $3 per user; that was never the price of Assembly's client portal."
-    },
-    {
      "flag": "usage_metered",
      "evidence": "Free, a free-forever plan: $0 with 5 active contacts, 1 internal user, 50 build credits a month and 3 apps."
     },
@@ -983,10 +984,6 @@
    "price_note": "(price re-verified 2026-09-10) Sold as RGE Studio since the 14 May 2026 rebrand. Starter free — up to 10 designs, 6 exports/mo, landing-page builder, custom subdomain, 20GB/mo image traffic, unlimited users but no roles or permissions. Professional $25/mo billed yearly ($30/mo monthly) — unlimited designs and folders, unlimited reusable blocks, 2 editing users plus 4 view-only, AI writing assistant. Business $134/mo billed yearly ($160/mo monthly) — 2 editing users plus 10 view-only, 2 workspaces, approval workflows, advanced brand controls, QA assistant. Enterprise: custom, quoted by sales. The free trial is 15 days on the Business plan. The embeddable Beefree SDK is a separate product on its own price list (developers.beefree.io) and is not covered by these numbers. Every tier and both billing rates stood unchanged on reallygoodemails.com/pricing between our readings on 21 July, 2 August and 10 September 2026.",
    "flags": [
     {
-     "flag": "usage_metered",
-     "evidence": "Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests."
-    },
-    {
      "flag": "free_tier",
      "evidence": "Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests."
     }
@@ -1057,7 +1054,7 @@
     },
     {
      "flag": "usage_metered",
-     "evidence": "The separate Spend and Expense product is $0 per user per month and carries credit lines the page advertises as $1,000-$5M, not guaranteed and set on approval."
+     "evidence": "A second fee block, easy to miss under the payment table, prices the paperwork and the mistakes: 1099 e-filing to the IRS is $2.99 per form ($1.99 through an accountant console), state filing $1.49 a…"
     },
     {
      "flag": "addons_extra",
@@ -1077,12 +1074,7 @@
    "entry_price_terms": "a month, or $99.90 a year ($8.33/mo), 3-day trial, no card required",
    "pricing_status": "public",
    "price_note": "(re-verified 2026-08-20, read on their own site) Two plans, both carrying the identical feature list with no limits: $9.99 a month, or $99.90 a year which the page itself works out to $8.33 a month and labels 'Save 17%'. Both include unlimited invoices, expenses, client relations, users, estimates and credit notes, plus payment tracking, tax rates, PDF export and the AI assistant. There are no per-user fees and no feature-gated tier. The trial is 3 days and the page states three separate times that no credit card is required to start it. SOC 2 Type II certified with European-standard compliant invoices.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "Both include unlimited invoices, expenses, client relations, users, estimates and credit notes, plus payment tracking, tax rates, PDF export and the AI assistant."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-08-20"
   },
@@ -1209,7 +1201,7 @@
    "flags": [
     {
      "flag": "addons_extra",
-     "evidence": "Pro $19.99 a month or $167.92 a year adds blocking by email, name, address and phone, the Bot Killer for TOR, proxy and VPN traffic, an add-ons blocker, a right-click blocker and unlimited visitor an…"
+     "evidence": "For that you need a separate dispute tool, which is a second subscription on top of this one."
     }
    ],
    "researched": "2026-07",
@@ -1268,10 +1260,6 @@
      "evidence": "(read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/recurring-memberships, prices in USD) One plan, called Scale: free to install, then $0.13 per member per month."
     },
     {
-     "flag": "usage_metered",
-     "evidence": "The data access is wide, including viewing sensitive customer data and editing orders and store credit."
-    },
-    {
      "flag": "free_tier",
      "evidence": "The first 10 members are free forever, the first 30 days are free, and the listing says there is no flat monthly base fee and no transaction fee."
     }
@@ -1303,12 +1291,7 @@
    "entry_price_terms": "Shopify Basic · per month, the price follows your Shopify plan: $24.99 on Grow, $74.99 on…",
    "pricing_status": "public",
    "price_note": "(read 2026-10-06 on the Shopify App Store listing at apps.shopify.com/product-upsell, prices in USD) Four plans, and you do not choose between them: each is named after a Shopify plan, so the app costs what your store's own Shopify plan dictates. Shopify Basic is $4.99 a month, Shopify Grow $24.99, Shopify Advanced $74.99 and Shopify Plus $399.99. Each carries a 7-day free trial. The feature list is the same on the first three: Smart AI upsell offers, cart page and cart drawer offers, custom cross-sells and 'true' upsells, funnel offers, post-purchase offers, free gift offers, subscription offers and a rewards announcement bar. The Plus plan adds checkout offers, the only feature that appears on one card alone. The listing calls this flat-rate monthly pricing: nothing is metered on orders, views or the revenue the app generates. All charges are billed in USD, and recurring and usage-based charges are billed every 30 days.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "The listing calls this flat-rate monthly pricing: nothing is metered on orders, views or the revenue the app generates."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-10-06"
   },
@@ -1557,7 +1540,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "API side: Unlocker, Crawl and SERP APIs from $1/1k requests (free tiers available), Scraper APIs $1.50/1k records pay-as-you-go with a 5K/month free tier and a $499 Scale plan bundling 384,000 record…"
+     "evidence": "Usage-based (re-verified 2026-10-02): residential proxies start at $4.00/GB with no commitment, against a struck-through $8 — the $2.50/GB rate the overview page leads with is the $1,999/month tier, …"
     },
     {
      "flag": "free_tier",
@@ -2034,6 +2017,10 @@
      "evidence": "Team is for teams of 2 to 150: a standard seat is $20/seat/month billed annually ($25 monthly), and a premium seat is $100/seat/month billed annually ($125 monthly) for 5x the usage of a standard sea…"
     },
     {
+     "flag": "usage_metered",
+     "evidence": "The API is separate and billed per token across the Opus, Sonnet and Haiku models, with platform features priced on top: Managed Agents at $0.08 per session-hour of active runtime, web search at $10 …"
+    },
+    {
      "flag": "free_tier",
      "evidence": "(price re-verified 2026-08-27 on their own pricing page) The free tier is $0."
     }
@@ -2358,10 +2345,6 @@
    "price_note": "(2026-07-29, re-verified 2026-08-05, read in a live browser session on their own pricing page, both billing toggles) The published price list covers one product only: TIN-match volume. Billed annually, Essential 25 is $16.95/mo for 25 monthly TIN verifications ($0.67 per match), Essential 50 $32.54/mo ($0.65), Essential 75 $45.79/mo ($0.61), Plus 100 $57.99/mo ($0.57) and Plus 250 $135.04/mo ($0.54). Switch the toggle to monthly billing and the same five tiers read $19.95, $38.49, $53.95, $67.95 and $159.95 per month, at $0.79 down to $0.63 per match. The page advertises 15% off for annual billing, and the real gap holds at roughly 15% on every tier. Enterprise is quote-only. Everything else Compliancely sells carries no public price at all: the business verification and credit-risk report packages, address verification, Form I-9, IRS tax transcripts and income verification each end in Contact Sales or Book a Demo rather than a number. Compliancely's partner team told us on 5 August 2026 that the published tiers are meant for buyers up to roughly 3,000 checks and that anything above that moves to a custom quote — that threshold is theirs, not a number the pricing page states. They confirmed on 11 August 2026 that buyers over that line are sent to their demo-request form at compliancely.com/demo-request, where the quote is written by hand; there is no published rate card for that range at all.",
    "flags": [
     {
-     "flag": "usage_metered",
-     "evidence": "Everything else Compliancely sells carries no public price at all: the business verification and credit-risk report packages, address verification, Form I-9, IRS tax transcripts and income verificati…"
-    },
-    {
      "flag": "annual_lock",
      "evidence": "The page advertises 15% off for annual billing, and the real gap holds at roughly 15% on every tier."
     }
@@ -2525,10 +2508,6 @@
    "pricing_status": "public",
    "price_note": "(price re-verified 2026-08-21 against the vendor's own pricing page, and now with the published limits rather than approximations) There are five plans, priced monthly. Personal is $49 for 1 user and up to 3 friends and family, and Start $179 for up to 3 users and 300 active clients. Grow is $299 for 6 users and 600 clients, and Scale $399 for 12 users and 1,200 clients. Enterprise is $599 for 24 users and 2,400 clients. Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20. Every plan carries a 30-day free trial, the vendor states it charges no startup fees, and monthly plans have no long-term contract while annual plans require a one-year term.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "This is business-in-a-box software for starting a credit-repair company, not a tool that repairs your own credit — the price only makes sense if you're actually building a client business on it."
-    },
     {
      "flag": "annual_lock",
      "evidence": "Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20."
@@ -2825,7 +2804,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "Backups cost 20% (weekly) or 30% (daily) of the Droplet price on top, a managed database starts at $15 a month and a load balancer at $12, so a small production app is several line items rather than …"
+     "evidence": "Since 1 January 2026 Droplets are billed per second, with a minimum of 60 seconds or $0.01."
     },
     {
      "flag": "free_tier",
@@ -3054,11 +3033,11 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "It does not publish what happens when you pass $10,000 of bundle sales in a month, and it does not publish an overage rate; the plan table simply ends there and links out to see all pricing options."
+     "evidence": "A revenue meter reads as generous at the bottom — $500 of bundle sales a month free is a real trial, not a crippled one — but it means every tier upgrade is triggered by the app working, and the publ…"
     },
     {
      "flag": "addons_extra",
-     "evidence": "Two smaller things: the features most merchants picture when they think bundles are all paid: the guided single- and multi-step build-your-own-box builders sit on Essential at $29, and subscription b…"
+     "evidence": "Features climb the same ladder: free gives mix-and-match, fixed and volume bundles with templates and a custom or template design; Essential adds the single-step and multi-step bundle builders, landi…"
     },
     {
      "flag": "annual_lock",
@@ -3394,7 +3373,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "Free covers up to 250 of those and is unusually complete: the point program, VIP tiers, a referral program, twelve-plus ways to earn points, product, cart, popup and account placements, built-in emai…"
+     "evidence": "meter: unit · loyalty-influenced orders"
     },
     {
      "flag": "free_tier",
@@ -3575,11 +3554,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "Its comparison table shows what the free tier gives up: volume discounts and product add-ons on selected products only rather than collections or the whole catalogue, no AI frequently-bought-together…"
-    },
-    {
-     "flag": "addons_extra",
-     "evidence": "All three paid tiers carry a 7-day free trial and the same feature list: unlimited bundles, upsells and cross-sells, mix and match, volume-discount upsell, BOGO and Buy X Get Y, unlimited AI frequent…"
+     "evidence": "Fast Bundle's own FAQ defines the metered revenue as sales through bundles, volume discounts, product add-ons, mix and match, Buy X Get Y, frequently bought together and other offers created with the…"
     },
     {
      "flag": "annual_lock",
@@ -3631,10 +3606,6 @@
     {
      "flag": "quote_only",
      "evidence": "No published price: feedvisor.com/pricing returns a 404 and the plan comparison page routes every tier to Request Demo (read 3 Sep 2026)"
-    },
-    {
-     "flag": "usage_metered",
-     "evidence": "One correction to what we wrote before: the sentence we attributed to Feedvisor, that pricing is hybrid and varies with catalogue size, ad spend and complexity, is no longer anywhere on their site."
     }
    ],
    "researched": "2026-07",
@@ -4036,12 +4007,7 @@
    "entry_price_terms": "Basic · per year, per background check, current county of residence only",
    "pricing_status": "public",
    "price_note": "(read 2026-09-29 on gcheck.com/pricing-packages, including its FAQ) Three packages, each priced per background check, with no setup fees, no minimums and no long-term contracts. Basic is $19.95 per check and covers an SSN trace and address history, a national criminal database search, the nationwide sex offender registry, the OIG excluded parties list, OFAC sanctions lists, global watchlists and a county criminal search in the candidate's current county of residence only. Standard, marked Most Popular, is $39.95 per check and adds biometric identity verification and county criminal searches in every county on the candidate's seven-year address history. Advanced, marked Recommended, is $49.95 per check and adds a federal criminal search across every federal district on that same seven-year history. An asterisk on all three prices reads: additional third-party fees may apply to some products and are passed through with no markup; the page does not list those fees. Employers running more than 50 checks a year are pointed to a custom quote, which is where the page places ATS and HRIS integrations and customised workflows, and GCheck states that volume pricing and merit-based nonprofit discounts exist without publishing either. Everything else in the catalogue — drug tests (DOT, 5-panel and 10-panel), motor vehicle and CDL records, employment, education and reference verification, credit, bankruptcy, eviction, liens and judgments searches, fingerprinting, Form I-9 and E-Verify, and international searches — carries no public price. GCheck is based at 8335 W Sunset Blvd, Los Angeles, and gives its phone number as 844-424-3254.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "Everything else in the catalogue — drug tests (DOT, 5-panel and 10-panel), motor vehicle and CDL records, employment, education and reference verification, credit, bankruptcy, eviction, liens and jud…"
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-09-29"
   },
@@ -4307,12 +4273,7 @@
    "entry_price_terms": "a month, billed monthly, cancel anytime",
    "pricing_status": "public",
    "price_note": "(read 21 September 2026 on www.gushwork.ai/pricing) Gushwork publishes one number and no ladder. The page states “Pricing starts at $900 /month”, billed monthly, cancel anytime, and the FAQ on the same page repeats it: “$900 is the starting point, with every agent and feature switched on.” Everything above that rung is quoted rather than published — “Talk to us, and we’ll recommend the right plan based on your business, goals, and lead potential” — and the FAQ names the three things that move the figure: how many pages you want published, how fast you want to grow, and how much paid support you add, with the exact number confirmed on a call.\n\nThere are no named tiers, no annual rate, no free plan and no trial. The only button on the pricing page is Book a Demo. What the $900 covers, per that FAQ: setup, page creation, optimisation, tracking and support, with the full agent suite active — Gushwork states it is not sold agent by agent, so there is no cheaper subset to buy.\n\nOne figure on that page is not a price and should not be read as one: the $500K+ in contracts belongs to a named customer (Fraxtional), under the page’s own note that results vary with market, competition and available search demand.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "Third — and to their credit they say this themselves — it is slow."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-09-21"
   },
@@ -4408,6 +4369,10 @@
    "price_note": "(re-verified 2026-09-24 against hellobar.com/pricing; amounts unchanged since 3 Sep 2026) Hello Bar publishes exact prices, so the ranges we carried before were wrong: they were the monthly and the annual rate side by side. Paid tiers meter monthly popup VIEWS. Growth is $39 a month billed monthly or $29 billed annually, up to 50,000 views a month; Premium $69 or $49, up to 150,000; Elite $129 or $99, up to 500,000, with unlimited seats. The annual feature table states the same quotas as 600,000, 1.8 million and 6 million views a year. Starter is $0 forever with 5,000 views in total rather than per month. The view limit applies per website, and only a custom agency or enterprise plan can move it to a per-account basis. A view is one display per page load per visitor. When a site reaches its monthly limit its campaigns pause until the next billing cycle; the page describes no overage charge, and an upgrade takes effect immediately. Seats: 1 on Starter, 3 on Growth, unlimited on Premium and Elite. Monthly plans stay active to the end of the period after cancelling, annual plans to the end of the term, and a cancelled account drops to Starter with campaigns and subscriber data kept. No credit card is needed to start, and first-time customers on an annual plan get a 30-day money-back guarantee.",
    "flags": [
     {
+     "flag": "usage_metered",
+     "evidence": "The meter is views, not results: every visitor who sees a popup counts against your quota, so a traffic spike eats the allowance regardless of how many emails you actually captured, and at the limit …"
+    },
+    {
      "flag": "free_tier",
      "evidence": "Starter is $0 forever with 5,000 views in total rather than per month."
     }
@@ -4442,7 +4407,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "meter: unit · tickets"
+     "evidence": "(re-read 2026-08-29 on apps.shopify.com/helpcenter) Free to install, and the meter is tickets rather than agents — Basic already gives unlimited support agents, then bills for every ticket over the a…"
     },
     {
      "flag": "free_tier",
@@ -4608,10 +4573,6 @@
      "evidence": "Billed annually: Starter $4.99, Grow $7.50, Team $10, Enterprise $25 per seat per month."
     },
     {
-     "flag": "usage_metered",
-     "evidence": "The seat definition is the whole story and they state it plainly, which deserves credit: you pay for every seat you have created, not every person actually being tracked."
-    },
-    {
      "flag": "addons_extra",
      "evidence": "Re-verified 2026-09-19, reading the plan cards as they render rather than as they ship: every figure above is unchanged — $4.99/$7.50/$10/$25 annual against $7/$9/$12 monthly, the two-seat minimum on…"
     }
@@ -4761,10 +4722,6 @@
      "evidence": "Workforce Analytics $8/seat/mo, Workflow Optimization $12/seat/mo (a beta open to selected customers), or both bundled at $16/seat/mo (saves 20%); Enterprise custom, and that is where audit logs and …"
     },
     {
-     "flag": "usage_metered",
-     "evidence": "New on the page since the last reading: a '7-Day ROI Promise', a conditional offer whose only remedy is a 30-day service credit."
-    },
-    {
      "flag": "addons_extra",
      "evidence": "Add-ons: Workspace Security $4/seat/mo, screen recording $4, on-demand screenshots $4, higher-frequency screenshots $3 (up to 120 an hour), data-warehouse integration $0.50 for the whole bundle of cu…"
     }
@@ -4783,10 +4740,6 @@
    "pricing_status": "public",
    "price_note": "(re-verified 24 Sep 2026; amounts unchanged since 4 Sep) Instapage does publish plan prices; they are not on the URL we had recorded. instapage.com/en/pricing redirects to the homepage at instapage.com/lp, and the plan table sits at instapage.com/plans. Our 26 August reading landed on the redirect, found no figures and concluded that prices had been withdrawn; the figures below match the last published rates this dossier already held, so the more likely explanation is a moved page rather than a withdrawal. Three tiers sit there. Create is $99 a month month-to-month or $79 billed annually, for 15,000 unique monthly visitors. Optimize is $199 or $159 annually for 30,000 unique monthly visitors, with selectors for 50,000 and for a custom volume — the custom option defaults to 50,000 and hands you to sales. Convert is quote-only. Annual billing is advertised as 'save up to 20%', and every tier carries unlimited contacts. The 14-day free trial asks for a credit card and is capped at 2,500 unique monthly visitors; Instapage's own FAQ states that exceeding that cap ends the trial automatically and moves you onto the paid plan you selected. The comparison table on the same page lists 10 team members on every self-serve column; 2 subdomains and 1 workspace on both Create and the 30,000-visitor Optimize, rising to 10 subdomains and 5 workspaces at 50,000 visitors; and 15, 30 and 50 pages per Collection. Publishing to the root domain (yoursite.com) is listed only under Convert. The FAQ says custom usage is not offered below the 50,000-visitor Optimize option.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "It's premium-priced and only justified by serious ad spend — Create is $79 a month billed annually for 15,000 unique monthly visitors, and the price per thousand barely improves as you climb, so the …"
-    },
     {
      "flag": "annual_lock",
      "evidence": "Annual billing is advertised as 'save up to 20%', and every tier carries unlimited contacts."
@@ -5013,10 +4966,6 @@
      "evidence": "The add-ons are priced separately: Manufacturing Management (routings and insights) $199/mo, Traceability via batch or serial numbers $249/mo and Warehouse Management $149/mo; a Shop Floor app is lis…"
     },
     {
-     "flag": "annual_lock",
-     "evidence": "Annual billing is not a discount: the FAQ says it includes \"a small premium\" because Katana absorbs usage swings, and usage more than 20% over your estimate reopens the price."
-    },
-    {
      "flag": "free_tier",
      "evidence": "(re-verified 2026-09-23) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all Katana features, add-ons and API access, then Core starting at $299/month with unlimite…"
     }
@@ -5199,7 +5148,12 @@
    "entry_price_terms": "Kickstart · per month for up to $1,000 of bundle offer revenue, or $131.88 a year",
    "pricing_status": "public",
    "price_note": "(read 2026-09-30 on apps.shopify.com/profitkoala-upsell-bundle and in the vendor's billing articles at koala-bundles.crisp.help) Priced on the revenue its offers bring in, not on features: the help centre says all plans include the same features. Kickstart is $12.99 a month, or $131.88 a year at a stated 15% saving, for up to $1,000 of bundle offer revenue a month, and the listing marks it with a discounted price for first-time users. Scale Koala is $19.99 a month or $191.88 a year for up to $5,000. Unlimited is $59.99 a month or $575.88 a year with no revenue ceiling. Every paid plan has a 14-day free trial. The listing also shows a free tier, described as 'perfect for development stores'; the billing article lists only the three paid plans for a live store. Bundle offer revenue is the full value of a bundle bought through a Koala block or post-purchase offer, not the extra amount it earned: a $70 three-pack counts as $70. At 80% of the cap the store owner gets a warning email, at 100% a second email, and if nothing changes within 24 hours the offers are paused until the first day of the next month. All charges are in USD, billed through Shopify every 30 days. Developer ProfitKoala, with an address in Vilnius, Lithuania; the listing gives a launch date of 11 March 2024 and shows 811 reviews.",
-   "flags": [],
+   "flags": [
+    {
+     "flag": "usage_metered",
+     "evidence": "The meter is revenue, and it counts more of it than you might expect."
+    }
+   ],
    "researched": "2026-07",
    "price_verified_at": "2026-09-30"
   },
@@ -5276,10 +5230,6 @@
    "price_note": "(read 2026-10-05 on krystal.io/hosting, /hosting/business, /hosting/wordpress/managed and /cloud-vps) All prices below are in pounds and exclude VAT: the site's Include VAT switch is off by default, so UK buyers add 20%. Shared cPanel hosting comes in six plans: Amethyst £7 a month (1 site, 10GB NVMe storage, 2GB RAM, 1 CPU, daily backups), Ruby £11 (5 sites, 25GB, free domain), Emerald £19 (unlimited sites and NVMe storage, 4-hourly backups, PCI DSS scan compliance), then Sapphire £37, Diamond £67 and Tanzanite £97, each adding CPU and RAM. Annual billing is ten months' price (Amethyst £70 a year, Emerald £190) and two-year billing is eighteen months' price (Amethyst £126, Emerald £342); the page shows no introductory rate. Managed WordPress is £270 for two years on Personal (1 site, 20,000 visits, 5GB), £630 on Business and £900 on Agency, each with a 30-day free trial. A VPS starts at £10 a month (£12 including VAT) for 1 core, 1GB RAM and 25GB, plus £5 per extra core, £3 per extra GB of RAM and £0.20 per extra GB of disk; a cPanel licence is from £18 a month and management from £80 a month. Hosting and VPS carry a 60-day money-back guarantee, less any domain costs.",
    "flags": [
     {
-     "flag": "renewal_jump",
-     "evidence": "Shown before VAT, Amethyst is £8.40 a month for a UK buyer and holds one site on 10GB, while budget hosts lead with multi-year introductory rates far below that (which then renew higher)."
-    },
-    {
      "flag": "annual_lock",
      "evidence": "Annual billing is ten months' price (Amethyst £70 a year, Emerald £190) and two-year billing is eighteen months' price (Amethyst £126, Emerald £342); the page shows no introductory rate."
     }
@@ -5297,12 +5247,7 @@
    "entry_price_terms": "B2B · per month with unlimited pricing rules",
    "pricing_status": "public",
    "price_note": "(read 2026-09-16 on apps.shopify.com/b2b-wholesale-tools) Two plans and no free tier: B2B at $15 a month and PLUS at $30, both with a 7-day free trial, billed in USD every 30 days. B2B carries the whole working app — wholesale pricing, volume pricing, customer registration forms and the approval workflow — and pricing rules are unlimited rather than metered, so the ladder is not a volume ladder. PLUS adds exactly three things, and all three are Shopify Plus features: company registration, product catalog assignment and checkout integration. If you are not on Shopify Plus, the $30 tier has nothing to sell you. The app is Built for Shopify, launched on 21 November 2024, and shows 5.0 stars over 9 reviews.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "B2B carries the whole working app — wholesale pricing, volume pricing, customer registration forms and the approval workflow — and pricing rules are unlimited rather than metered, so the ladder is no…"
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-09-16"
   },
@@ -5319,7 +5264,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "Custom domains are metered: 1 on Build, 3 on Optimize, 10 on Scale and 100 on Enterprise, with extras at $5 a month each."
+     "evidence": "AI credits come with the plan (2,500, 10,000, 20,000 and 60,000 a month) and top-ups are pay-as-you-go at $15 for 5,000, $25 for 10,000 and $40 for 20,000."
     },
     {
      "flag": "renewal_jump",
@@ -5513,10 +5458,6 @@
    "pricing_status": "public",
    "price_note": "(price re-verified 2026-09-22 against the vendor's own pricing page; EVERY rate identical to the 31 Aug 2026 reading, to the cent) (2026) Postage is included in every per-piece rate. Three PURCHASABLE tiers: Starter is free and pay-as-you-go; Premium is $399/month billed annually or $449 month-to-month; Enterprise is custom-priced. On Starter, postcards are $0.76 (4x6), $0.79 (6x9), $0.85 (6x11) and $1.15 (11x18 tri-fold), and handwritten pieces are $1.56 (handwritten envelope with printed letter), $1.66 (handwritten postcard), $2.86 (card and envelope) and $3.11 (bi-fold card and envelope). Premium's card shows $0.54-$0.88 for postcards and $0.85-$1.71 for handwritten, Enterprise's $0.56-$0.88 and $0.81-$1.52 - but both are labelled 'as low as with spend commitment', so those floors need volume as well as the subscription. Handwritten insert media (a card with no envelope, shipped inside a package rather than mailed) is listed from $0.49 and is not offered on Starter. New accounts get $30 in free credit. FOURTH TIER, NOT PURCHASABLE FROM THIS PAGE (first recorded 22 Sep 2026): every comparison header reads 'Starter | Core | Premium | Enterprise', and Core carries a full rate column of its own - $0.61 (4x6), $0.68 (6x9), $0.75 (6x11), $0.98 (tri-fold), and handwritten $1.22 / $1.26 / $2.05 / $2.30, taken from the page's own core-*-m data attributes - while the price row above it holds only three cells (FREE, $449/$399, Custom Pricing). Core has no card, no button and no monthly fee anywhere on the page. VENDOR SELF-CONTRADICTION in the 'as low as' summaries: the Starter card sums its list up as 'Printed: $0.73 / Handwritten: $2.83' at the top of the page and as 'Printed: $0.76 / Handwritten: $2.86' lower down, while the list itself never goes below $0.76 / $2.86; the Enterprise column does the same ($0.53 / $1.24 against its own floor of $0.56 / $1.27). Only Premium's summary ($0.54 / $1.46) matches its rate list. Add-on rows publish two numbers and then 'Custom' without labelling which tier each column is: LeadReveal $0.50 and $0.25 per card, double-sided printing $0.12 and $0.07, NCOA address verification $0.03 and $0.025, data enrichment $0.20 and $0.12, custom mailing-list contacts $0.20 and $0.12. Also on the page: special discounts for 501(c)(3) organisations (separate nonprofit pricing page); a 'Powered by LettrLabs' white-label track for resellers and agencies at custom partner pricing, described as everything in Enterprise plus client sub-accounts and reseller billing; storm-triggered mailing powered by HailTrace, absent on Starter; and two Enterprise-column features still marked 'Coming Soon!' - A/B testing and third-party attribution via SearchLight.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "New accounts get $30 in free credit."
-    },
     {
      "flag": "addons_extra",
      "evidence": "Add-on rows publish two numbers and then 'Custom' without labelling which tier each column is: LeadReveal $0.50 and $0.25 per card, double-sided printing $0.12 and $0.07, NCOA address verification $0…"
@@ -5737,7 +5678,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "It carries unlimited subscribers and segmentation, the abandoned-cart recovery campaign, scheduled promotional campaigns, AI-generated campaign content, intelligent delivery timing and basic email su…"
+     "evidence": "meter: unit · push notification impressions"
     },
     {
      "flag": "free_tier",
@@ -5764,7 +5705,7 @@
     },
     {
      "flag": "usage_metered",
-     "evidence": "That sounds generous until you count the meetings you would actually record — a sales rep on four calls a day passes it in the first week, and the overage is $0.50 an hour."
+     "evidence": "The meter is transcription hours and Pro gives you twenty a month, which is about an hour a working day."
     },
     {
      "flag": "annual_lock",
@@ -5833,7 +5774,7 @@
     },
     {
      "flag": "addons_extra",
-     "evidence": "The Done-for-you plan, where their team handles mapping, testing and go-live with a dedicated specialist, starts at $300 with every add-on included."
+     "evidence": "The add-on structure used to be the unknowable part, and as of 18 September 2026 it is not: the pricing page lists every add-on with a price, from $19 to $39, and marks all of them included on the ma…"
     }
    ],
    "researched": "2026-07",
@@ -5850,10 +5791,6 @@
    "pricing_status": "public",
    "price_note": "(prices re-verified 2026-09-18 and again 2026-10-05 on mindstudio.ai/pricing) The subscription is a floor, not the bill: every tier reads “+ usage”, so model calls are charged on top. Free is $0/month plus usage and caps you at one agent and 1,000 runs a month. Individual is $20/month plus usage, or $16/month plus usage billed yearly, a stated 20% saving, and lifts both caps to unlimited agents and unlimited runs. Business is quote-based. Because the metered part is uncapped by the plan, the tier you pick says little about what you will actually pay — the run volume does.\n\nThe metered half is more governable than that makes it sound, and the page is specific about it. A run is one execution of an agent, triggered manually or automatically. MindStudio states it does not mark up model cost — its FAQ says you pay exactly the same price as bringing your own API keys from the providers — and that you can set per-agent and total spend limits and track run cost per agent. All tiers reach 200+ models through its Service Router without API keys of your own, with bring-your-own keys as an option, and hitting a run limit triggers a notification with the choice of upgrading or buying additional runs rather than a hard stop mid-month.",
    "flags": [
-    {
-     "flag": "per_seat",
-     "evidence": "MindStudio states it does not mark up model cost — its FAQ says you pay exactly the same price as bringing your own API keys from the providers — and that you can set per-agent and total spend limits…"
-    },
     {
      "flag": "usage_metered",
      "evidence": "Because the metered part is uncapped by the plan, the tier you pick says little about what you will actually pay — the run volume does."
@@ -6386,14 +6323,6 @@
    "pricing_status": "public",
    "price_note": "(2026-08-12, read on their own pricing page; re-verified 2026-08-26 and again 2026-09-05) Four tiers, billed monthly: Starter at 0$/month, Essential at 19.99$/month and Pro at 49.99$/month, printed as “49,99$” with a comma on the page itself. Enterprise is “Contact us for custom plan”, with no figure at all. A banner offers the first 30 days of the Enterprise plan free if you book a demo now. The Monthly / Yearly toggle advertised Yearly (-20%) on 12 Aug, was absent on 18 Aug, and has read Yearly (-17%) since 26 Aug. What it does not do is print an annual figure — with Yearly selected, every paid card still reads “billed monthly” at the monthly price, so the page offers 17% off and never says off what. Nouswise confirmed on 18 Aug that annual billing exists, so ask for the annual rate in writing before you commit to it. What you get per tier is capped rather than priced separately, and two rows moved between 26 Aug and 5 Sep: sources now run 100 on Starter (was 50) and 300 on Essential, unlimited above that; and audio recap now runs 5 / 20 / 120 per day plus unlimited on Enterprise, so the old anomaly where Essential's ceiling sat above Pro's is gone. File size runs 100 MB / 300 MB / 2 GB / unlimited. Video recap and discover sources carry a tick on all four tiers. Reports, flashcards, quizzes, mind maps, deep research, data tables, infographics and slide decks run 8 / 25 / 120 per day, unlimited on Enterprise, under a footnote reading “Limits are accumulative”. Projects are unlimited everywhere. Three capabilities are not metered but switched off lower down: MCP tools, web search and the shared workspace carry a cross on Starter and Essential and appear from Pro up. Six more are Enterprise-only — dashboard and analytics, knowledge gap analysis, access management, custom data sources, connectors and enterprise data security carry a cross on Starter, Essential and Pro alike. Customer support is Discord on Starter, Discord + email on both Essential and Pro, and an SLA on Enterprise. Workflow customization reads Limited on all three paid-visible tiers and Custom on Enterprise. Read the caps before the price: on the individual tiers the source limit and the per-day ceilings, not the monthly fee, decide whether this fits.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "Three capabilities are not metered but switched off lower down: MCP tools, web search and the shared workspace carry a cross on Starter and Essential and appear from Pro up."
-    },
-    {
-     "flag": "addons_extra",
-     "evidence": "What you get per tier is capped rather than priced separately, and two rows moved between 26 Aug and 5 Sep: sources now run 100 on Starter (was 50) and 300 on Essential, unlimited above that; and aud…"
-    },
     {
      "flag": "annual_lock",
      "evidence": "Nouswise confirmed on 18 Aug that annual billing exists, so ask for the annual rate in writing before you commit to it."
@@ -6980,7 +6909,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "meter: unit · unique monthly visitor (counted per browser, once per 30 days)"
+     "evidence": "The meter is unique monthly visitors, and their FAQ defines it: anyone who loads a page carrying the snippet in the last 30 days, counted once however many sessions or pages they open — unless they c…"
     },
     {
      "flag": "free_tier",
@@ -7006,10 +6935,6 @@
      "evidence": "meter: percentage · upsell revenue generated by the app"
     },
     {
-     "flag": "addons_extra",
-     "evidence": "On discounted or thin-margin add-ons the same percentage is a far bigger share of the profit, and the meter reads revenue either way."
-    },
-    {
      "flag": "free_tier",
      "evidence": "(re-verified 2026-09-19 on apps.shopify.com/post-purchase-upsell-hero and the vendor's own site; amounts unchanged since 31 August, USD) One plan, Performance, free to install, at $0 a month plus usa…"
     }
@@ -7030,7 +6955,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "The free trial is a credit equal to $100 against message and carrier fees during your first 30 days; exhaust it and you are billed at the Free package rate unless you select another package."
+     "evidence": "Read the tiers as what they are: a platform fee plus a per-message rate plus carrier fees."
     },
     {
      "flag": "free_tier",
@@ -7074,10 +6999,6 @@
    "pricing_status": "public",
    "price_note": "(re-verified 2026-08-17 and again on 2026-09-28) A genuinely free tier: $0 for up to 50 SKUs, 5 competitors, daily price updates and AI automatch. Paid, with yearly billing saving 25%: Starter $49/mo ($37 annually), Pro $99/mo ($74), Business $189/mo ($142) and Enterprise $499/mo ($374). Starter covers 100 SKUs, Pro 2,000, Business 15,000 and Enterprise 25,000. Every paid plan adds unlimited competitors, twice-daily updates, email alerts and Excel/CSV reports; dynamic repricing starts on Pro, and autopilot repricing with MAP/MSRP monitoring on Business. Every plan, free included, carries AI product matching, competitor monitoring and daily price updates — what you buy going up is SKU volume and automation, not the core.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "Credit where due: the free tier is real."
-    },
     {
      "flag": "annual_lock",
      "evidence": "The headline prices are monthly rates; the advertised savings require annual commitment."
@@ -7233,7 +7154,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "Basic is $0 and covers 500 emails and 500 web push notifications a month with no SMS credits."
+     "evidence": "The bundles are push-first: every paid tier still caps included email at 500 a month, so 'omnichannel' email at any real volume means buying separate credits — and consumption-based pricing gets hard…"
     },
     {
      "flag": "free_tier",
@@ -7305,10 +7226,6 @@
      "evidence": "Add-ons are priced per year on top: payroll 120 SAR per active employee (~$32), POS 600 SAR per user (~$160), extra system users 240 SAR each (~$64) and extra locations 480 SAR each (~$128)."
     },
     {
-     "flag": "usage_metered",
-     "evidence": "Basic is 1,200 SAR (~$320) for 1 user and 1 location, covering ZATCA Phase 1, invoices, payments and credit notes."
-    },
-    {
      "flag": "addons_extra",
      "evidence": "Add-ons are priced per year on top: payroll 120 SAR per active employee (~$32), POS 600 SAR per user (~$160), extra system users 240 SAR each (~$64) and extra locations 480 SAR each (~$128)."
     }
@@ -7330,10 +7247,6 @@
     {
      "flag": "quote_only",
      "evidence": "No published price: quartile.com/pricing mirrors the homepage with no tier or rate card, only a Request Demo CTA (read 11 Sep 2026)"
-    },
-    {
-     "flag": "usage_metered",
-     "evidence": "Our own dossiers have Teikametrics at $149 a month billed annually for up to $10K in monthly ad spend, plus 3% of spend above that (read 2026-08-01), and BidX at €495 a month for its self-service Ama…"
     }
    ],
    "researched": "2026-07",
@@ -7467,7 +7380,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "That is more honest than a surprise overage, but it means the best month of the year is the month your search can quietly downgrade itself."
+     "evidence": "meter: unit · sessions"
     },
     {
      "flag": "annual_lock",
@@ -7828,10 +7741,6 @@
     {
      "flag": "usage_metered",
      "evidence": "Lead credits are part of the ladder rather than an add-on — 5 on Growth, 100 on Pro, 250 on Enterprise."
-    },
-    {
-     "flag": "addons_extra",
-     "evidence": "Lead credits are part of the ladder rather than an add-on — 5 on Growth, 100 on Pro, 250 on Enterprise."
     }
    ],
    "researched": "2026-07",
@@ -8116,12 +8025,7 @@
    "entry_price_terms": null,
    "pricing_status": "see_details",
    "price_note": "(2026-08-15, read on their own site) One number, and it is the whole model: a 25% commission, charged only after Amazon has deposited recovered funds in your account. We found it stated twice. Once on the home page — “only pay a 25% commission fee when your money is back with you” — and again in the FAQ: “no risk or upfront commitment, with a 25% recovery fee only after Amazon deposits recovered funds into your account”. The audit is free, takes 48 hours and carries no obligation. There is no subscription and no /pricing page, because there is nothing else to price. Cases they say they cover fall into five groups: inbound shipments (cancelled shipments, receiving discrepancies, carrier damage), items lost in transit or in the warehouse, items damaged or disposed of by Amazon, customer returns (refunds not returned within 60 days, overpayments, the wrong item returned, chargebacks), and overages and discrepancies (removal orders, incorrect weights or dimensions, overcharged orders); unfair reimbursement appears as a sub-case under both the lost and the damaged group. Re-read 29 August 2026: the 25% figure, the free 48-hour audit and the absence of any subscription are unchanged.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "Cases they say they cover fall into five groups: inbound shipments (cancelled shipments, receiving discrepancies, carrier damage), items lost in transit or in the warehouse, items damaged or disposed…"
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-08-29"
   },
@@ -8443,7 +8347,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "meter: usage · SMS segment"
+     "evidence": "(2026-09-11, re-read on their own pricing page) Usage-based, no platform subscription."
     }
    ],
    "researched": "2026-07",
@@ -8847,12 +8751,7 @@
    "entry_price_terms": "Growth · per month, or $199.99 a year",
    "pricing_status": "public",
    "price_note": "(prices read 2026-09-06 on apps.shopify.com/stackable-discounts) Two paid tiers, billed in USD every 30 days, and no free plan. Growth is $19.99 a month, or $199.99 a year with the annual saving the listing puts at 17%, and covers unlimited combined discounts; that plan carries the label 'For Non-Plus'. Unlimited is $99.99 a month, or $999.99 a year on the same 17%, and adds unlimited checkout upsells and unlimited linked discounts on top of the same combined discounts. Both tiers come with a 7-day free trial. The plan table lists no order caps, credit allowances or per-use charges, so what the tier costs is what the app costs.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "The plan table lists no order caps, credit allowances or per-use charges, so what the tier costs is what the app costs."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-09-17"
   },
@@ -8869,7 +8768,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "The redesigned page no longer says anything about overage charges."
+     "evidence": "meter: unit · monthly orders"
     }
    ],
    "researched": "2026-07",
@@ -9142,10 +9041,6 @@
     {
      "flag": "per_seat",
      "evidence": "Month to month, Startup is $20/seat/month and Enterprise is $25/seat/month."
-    },
-    {
-     "flag": "usage_metered",
-     "evidence": "Billing runs through Stripe, you can switch between monthly and annual at any time with a prorated credit, and plan changes take effect immediately."
     }
    ],
    "researched": "2026-07",
@@ -9162,10 +9057,6 @@
    "pricing_status": "public",
    "price_note": "(re-read 2026-09-19 on surferseo.com/pricing from the Netherlands; earlier reads 2026-08-25 from the Netherlands and 2026-08-26 over a US connection) Billed yearly: Discovery $49/mo, Standard $99/mo, Pro $182/mo and Peace of Mind $299/mo, with Enterprise at $999/mo and AI Search Analytics sold on its own from $82/mo. Monthly billing is on the same cards behind the toggle and is no longer something you have to work out: $59, $119, $219, $359 and $95, with the annual commitment saving between $120 and $720 a year, up to 17 percent by their own FAQ.\n\nAI Search Analytics is a ladder rather than a single price, which is the part that catches people out. Its card carries a prompt dropdown and each step is a complete monthly price: 50 prompts at $82 a month on the annual commitment or $95 monthly, 100 prompts at $158 or $185, 200 prompts at $308 or $365. The tier the card opens on changed on 8 September 2026 from 100 prompts to 50, so a quote of $158 from August and a quote of $82 from today are both correct readings of the same unchanged ladder — they are different rungs. Check which rung your checkout page is on before you compare it with anything.\n\nWorth knowing if you are outside the US: we read this page from both sides and the numbers do not convert. A European is quoted €49 to €299 where an American is quoted $49 to $299, which at today's rate makes the same subscription materially more expensive in Europe.",
    "flags": [
-    {
-     "flag": "addons_extra",
-     "evidence": "And the AI-visibility tracking that the product now leads with is capped by prompt count per tier, so watching more of your market costs a step up rather than an add-on."
-    },
     {
      "flag": "annual_lock",
      "evidence": "Monthly billing is on the same cards behind the toggle and is no longer something you have to work out: $59, $119, $219, $359 and $95, with the annual commitment saving between $120 and $720 a year, …"
@@ -9208,10 +9099,6 @@
    "pricing_status": "public",
    "price_note": "(re-verified 20 September 2026 from a US exit in New York; the euro ladder was read 14 September 2026 from Europe) SurveySparrow bills quarterly or yearly — there is no monthly option — and the two differ far more than the wording suggests. On yearly billing the survey line runs Basic $19, Starter $39 and Business $79 a month, above a forever-free plan (75 responses a quarter, 3 active surveys, 10 questions each) and below a custom-priced Enterprise tier. On quarterly billing those same three plans are $39, $59 and $149 a month — roughly double — and they carry fewer responses a year rather than more: Basic goes from 2,500 a year to 600 a quarter, Starter from 15,000 to 3,600, while Business's 9,000 a quarter matches its 36,000. Users are 1, 1 and 3 respectively, with extra users $49 each a month.\n\nThe currency question is settled. Read from New York the page shows the identical digits with a dollar sign, so a European is quoted €19/€39/€79 where an American is quoted $19/$39/$79. That is the same number rather than a conversion, which makes the euro ladder the dearer of the two in real terms. There are separate product lines for CX, brand, research, documents and 360 assessment, each with its own ladder. Discounts: yearly saves up to 40%, students and education 50%, nonprofits 15%, and a startup programme offers $2,000 of credit for $500.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "Discounts: yearly saves up to 40%, students and education 50%, nonprofits 15%, and a startup programme offers $2,000 of credit for $500."
-    },
     {
      "flag": "free_tier",
      "evidence": "On yearly billing the survey line runs Basic $19, Starter $39 and Business $79 a month, above a forever-free plan (75 responses a quarter, 3 active surveys, 10 questions each) and below a custom-pric…"
@@ -10246,12 +10133,7 @@
    "entry_price_terms": "Pilot · a one-off scoped pilot, credited toward the first month in production",
    "pricing_status": "public",
    "price_note": "(price re-verified 2026-09-10) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate. Every deployment starts with a scoped pilot from $1,500, credited toward your first month in production, and the production price arrives as a quote afterwards. Its pricing page sells that process — a discovery call of twenty to thirty minutes, scoping and a proof of concept in one to two business days that you sign off before anything is built, an agent build and live pilot in two to ten business days, then production — while the feature table beneath it lists agent, reseller, support and compliance capabilities with no price attached to any of them. All plans are subject to fair use, and the page warns that SMS campaign registration may take up to two weeks. Read 10 September 2026 across vida.io/pricing, /partners, /affiliates, /platform, /features and /faq, all reached from the site's own sitemap: that pilot figure is the only customer-facing number on the site, and the commission tiers on /affiliates are what a reseller earns rather than what a buyer pays. Correction to our own earlier dossier: an agency ladder of about $750 a month for 5 agents and roughly 2,500 AI voice minutes, plus platform plans from about $2,500 and the per-minute rate we derived from them, appear nowhere on vida.io.",
-   "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "(price re-verified 2026-09-10) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate."
-    }
-   ],
+   "flags": [],
    "researched": "2026-07",
    "price_verified_at": "2026-09-10"
   },
@@ -10370,7 +10252,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "meter: unit · storefront clicks"
+     "evidence": "The meter is clicks, and nobody says what happens when you run out."
     },
     {
      "flag": "annual_lock",
@@ -10674,7 +10556,7 @@
    "flags": [
     {
      "flag": "usage_metered",
-     "evidence": "Lead Finder credits start at 500 for $10."
+     "evidence": "Usage-priced: $7.00 per 100 contacted prospects, and the smallest volume the slider offers is 500 — so $35 a month is the practical entry rather than the $7 headline."
     },
     {
      "flag": "addons_extra",
@@ -10788,10 +10670,6 @@
    "pricing_status": "see_details",
    "price_note": "(re-verified 2026-09-09 and re-read 2026-09-27 on zeffy.com/home/free-online-fundraising-platform) Still genuinely $0 for nonprofits: no platform fee, no transaction fee and no card-processing fee on donations, ticketing, shops, raffles, auctions, peer-to-peer or memberships. Zeffy states it covers transaction and credit-card fees itself and earns only from the optional tip donors are offered at checkout. Their own scale claim on that page: 100,000 nonprofits have raised $2B on Zeffy over seven years without paying a fee.",
    "flags": [
-    {
-     "flag": "usage_metered",
-     "evidence": "Zeffy states it covers transaction and credit-card fees itself and earns only from the optional tip donors are offered at checkout."
-    },
     {
      "flag": "free_tier",
      "evidence": "(re-verified 2026-09-09 and re-read 2026-09-27 on zeffy.com/home/free-online-fundraising-platform) Still genuinely $0 for nonprofits: no platform fee, no transaction fee and no card-processing fee on…"

@@ -12,6 +12,7 @@ Checklist version 1.0 (2026-09-26), AI Builder Marketplace. Full test report: ht
 - `test-data.csv`: made-up test data (example.com addresses cannot receive mail)
 - `expected-results.csv`: every check with its pass condition and room for your result
 - `checklist.html`: the same checks as a printable page
+- `decision-brief.html`: one printable page to record your must-haves, results, costs, open questions and decision
 - `our-results.csv`: what we saw on 2026-09-26 (per builder where we compared several)
 - `simultaneous-bookings.js`: the ten-requests-at-once test for check T05
 

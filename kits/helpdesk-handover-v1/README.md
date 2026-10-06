@@ -12,6 +12,7 @@ Checklist version 1.0 (2026-10-06), AI Builder Marketplace. Guide based on docum
 - `test-data.csv`: made-up test data
 - `expected-results.csv`: every check with its pass condition and room for your result
 - `checklist.html`: the same checks as a printable page
+- `decision-brief.html`: one printable page to record your must-haves, results, costs, open questions and decision
 
 ## Sources (read 2026-10-06)
 

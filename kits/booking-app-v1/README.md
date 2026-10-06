@@ -9,7 +9,7 @@ Checklist version 1.0 (2026-09-26), AI Builder Marketplace. Full test report: ht
 ## Files
 
 - `prompt.txt`: the build prompt, send it word for word
-- `test-data.csv`: made-up names and example.com addresses (they cannot receive mail)
+- `test-data.csv`: made-up test data (example.com addresses cannot receive mail)
 - `expected-results.csv`: every check with its pass condition and room for your result
 - `checklist.html`: the same checks as a printable page
 - `our-results.csv`: what we saw on 26 September 2026, per builder (first version and after repairs)

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 501 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-05.
+All 506 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-06.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -403,6 +403,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': "Distribution to Viator and 2,600+ resellers is excellent, but you're building your booking backbone inside one OTA's ecosystem, and the per-booking s…"}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bokun-review/
 
+## Bold Custom Pricing (boldcommerce.com)
+- **Verified pricing:** (read 2026-10-06 on the Shopify App Store listing at apps.shopify.com/customer-pricing, where the app is titled Custom Pricing: Wholesale B2B; prices in USD) Three plans, each with a 14-day…
+- **Honest take:** Priced by customer group: a second price list moves you from $29 to $69 a month, and POS and bulk CSV pricing need the $129 plan.
+- **Best for:** Shopify stores that want to sell wholesale, B2B or VIP prices from their existing storefront without Shopify Plus, with quantity breaks and one or a few customer groups
+- **Full review:** https://aibuildermarketplace.com/b2b/bold-custom-pricing-review/
+
 ## Bold Memberships (boldcommerce.com)
 - **Verified pricing:** (read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/recurring-memberships, prices in USD) One plan, called Scale: free to install, then $0.13 per member per month.
 - **Honest take:** You pay $0.13 a month for every member beyond the first 10, so a large free loyalty tier can cost more than the paid tiers earn; the listing does not say whether free members count.
@@ -416,11 +422,25 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores starting or running subscribe-and-save, replenishment, prepaid or subscription-box offers that want unlimited subscribers, dunning and a customer portal from the entry plan
 - **Full review:** https://aibuildermarketplace.com/b2b/bold-subscriptions-review/
 
+## Bold Upsell (boldcommerce.com)
+- **Verified pricing:** (read 2026-10-06 on the Shopify App Store listing at apps.shopify.com/product-upsell, prices in USD) Four plans, and you do not choose between them: each is named after a Shopify plan, so t…
+- **Honest take:** The price follows your Shopify plan, not your use: $4.99 on Basic but $74.99 on Advanced for the same features, and checkout offers only on Plus at $399.99 a month.
+- **Best for:** Shopify stores on the Basic or Grow plan that want upsells, cross-sells, free gifts and post-purchase offers across product page, cart and thank-you page for a flat monthly fee that does not grow with order volume
+- **Flags:** {'f': 'usage_metered', 'ev': 'The listing calls this flat-rate monthly pricing: nothing is metered on orders, views or the revenue the app generates.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/bold-upsell-review/
+
 ## Bolt Business (bolt.eu)
 - **Verified pricing:** No subscription, no activation cost and no minimum commitment (re-verified 2026-08-20 on Bolt's own business page): you pay per ride or rental taken, with consolidated monthly billing, spen…
 - **Honest take:** The honest boundary is geography: Bolt's network is Europe/Africa-centric across 600+ cities, so US-only operations should look elsewhere, and ride availability varies by city.
 - **Best for:** companies with European/African travel footprints that want employee rides centrally billed, policy-controlled and expense-integrated — at zero platform cost
 - **Full review:** https://aibuildermarketplace.com/b2b/bolt-business-review/
+
+## bOnline (bonline.com)
+- **Verified pricing:** (read 2026-10-06 on bonline.com/pricing, prices in GBP excluding VAT) Three plans, priced per user a month.
+- **Honest take:** The pricing page does not state a contract length, Starter includes only 100 outbound minutes a month, and every price is excluding VAT.
+- **Best for:** UK sole traders and small businesses of one to a few people who want a business number on their mobile, a desk phone if needed, and unlimited UK calls for under £14 a user a month
+- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-10-06 on bonline.com/pricing, prices in GBP excluding VAT) Three plans, priced per user a month.'}, {'f': 'addons_extra', 'ev': 'Add-ons are billed monthly: AI call recording £8, CRM integrations £8 (HubSpot, Zoho, Odoo, Pipedrive, Salesforce and 200 more), and international bu…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/bonline-review/
 
 ## BookX (logbase.io)
 - **Verified pricing:** (read 2026-09-08 on apps.shopify.com/appointment-booking-bookeasy and checked against the vendor's own pricing section on logbase.io, which lists the same tiers) Four tiers billed in USD ev…
@@ -791,6 +811,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Two numbers decide whether this is for you, and neither is the headline. The first is the 100-device ceiling on Falcon Go: it is not a soft limit you grow through, it is the point where you change product.
 - **Best for:** small and mid-size companies that want a serious endpoint agent without running a security team — Falcon Go is genuinely priced for businesses under 100 devices
 - **Full review:** https://aibuildermarketplace.com/b2b/crowdstrike-review/
+
+## Database Mart (databasemart.com)
+- **Verified pricing:** (read 2026-10-06 on databasemart.com/pricing, which lists every server row with its monthly price, and on databasemart.com/gpu-server) Flat monthly prices per server, billed in advance.
+- **Honest take:** Older Xeon E3/E5 processors sit under most GPU servers, many with a 100Mbps port, and every server is in Dallas, Texas.
+- **Best for:** developers, trading desks and small AI teams that want a cheap US-hosted VPS, a Windows VPS with the licence included, or a GPU server that runs all month at a flat price
+- **Flags:** {'f': 'addons_extra', 'ev': 'The FAQ says standard VPS rows carry no setup fee but some dedicated or custom GPU builds may show a one-time provisioning line, and that add-ons suc…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/database-mart-review/
 
 ## Databox (databox.com)
 - **Verified pricing:** (re-verified 2026-10-02, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers we described are gone.
@@ -3440,3 +3467,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** enterprise go-to-market teams that need the deepest US database, buyer-intent signals and conversation intelligence — and can absorb the contract
 - **Flags:** {'f': 'quote_only', 'ev': 'No published price: sales-gated, no monthly billing or free plan, pricing URL refuses plain requests (read 17 Aug 2026)'}, {'f': 'usage_metered', 'ev': 'Contracts typically start around $15k and the median runs near $32k a year, climbing once seats, credits and add-ons (intent data, international cove…'}, {'f': 'addons_extra', 'ev': 'Contracts typically start around $15k and the median runs near $32k a year, climbing once seats, credits and add-ons (intent data, international cove…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/zoominfo-review/
+
+## Zoviz (zoviz.com)
+- **Verified pricing:** (read 2026-10-06 on zoviz.com/pricing from a Netherlands connection; the page says prices are shown in EUR based on your location) Three plans, monthly or yearly, with yearly marked -43%.
+- **Honest take:** Designing is free but downloading is paid, and once you download you lose the refund; there is no one-off logo price.
+- **Best for:** small businesses, solo founders and agencies that want a logo, a matching brand kit and on-brand social posts, bio pages and a simple website from one tool, and want to try the design before paying
+- **Flags:** {'f': 'usage_metered', 'ev': 'Starter is €29 a month or €199 a year, for 1 brand, 10GB storage, 300 AI credits a month, 1 link-in-bio page, 1 digital business card, the website bu…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/zoviz-review/

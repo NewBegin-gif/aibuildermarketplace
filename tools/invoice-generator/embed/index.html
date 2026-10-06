@@ -119,63 +119,581 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:v
 .dg-tool-txt b{color:var(--text);font-size:.95rem}
 .dg-tool-d{color:var(--text2);font-size:.8rem;line-height:1.4;margin-top:2px}
 .dg-arrow{color:var(--accent);font-weight:800;flex-shrink:0}
-body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><div class="tool">
-<div class="row"><div><label for="iv-from">Your business</label><input type="text" id="iv-from" value="Your Company"><textarea id="iv-from-addr" aria-label="Your business address" rows="2" placeholder="Address, VAT number, IBAN&hellip;" style="margin-top:6px"></textarea></div>
-<div><label for="iv-to">Bill to (client)</label><input type="text" id="iv-to" value="Client Name"><textarea id="iv-to-addr" aria-label="Client address" rows="2" placeholder="Client address" style="margin-top:6px"></textarea></div></div>
-<div class="row"><div><label for="iv-num">Invoice #</label><input type="text" id="iv-num" value="INV-001"></div>
-<div><label for="iv-date">Date</label><input type="date" id="iv-date"></div>
-<div><label for="iv-due">Due date</label><input type="date" id="iv-due"></div></div>
-<div class="row"><div><label for="iv-cur">Currency</label><select id="iv-cur"><option value="EUR">EUR &euro;</option><option value="USD">USD $</option><option value="GBP">GBP &pound;</option><option value="CHF">CHF</option><option value="AUD">AUD $</option><option value="CAD">CAD $</option><option value="INR">INR &#8377;</option><option value="JPY">JPY &yen;</option><option value="SEK">SEK kr</option><option value="PLN">PLN z&#322;</option></select></div>
-<div><label for="iv-taxname">Tax label</label><input type="text" id="iv-taxname" value="VAT"></div>
-<div><label for="iv-tax">Tax %</label><input type="number" id="iv-tax" value="21" min="0" step="0.1"></div>
-<div><label>Discount</label><div style="display:flex;gap:6px"><input type="number" id="iv-disc" aria-label="Discount" value="0" min="0" step="0.01"><select id="iv-disctype" aria-label="Discount type" style="max-width:70px"><option value="pct">%</option><option value="abs">amt</option></select></div></div></div>
-<div class="row"><div><label for="iv-stamp">Status stamp</label><select id="iv-stamp"><option value="">none</option><option value="PAID">PAID</option><option value="DUE">DUE</option><option value="OVERDUE">OVERDUE</option><option value="DRAFT">DRAFT</option></select></div>
-<div><label for="iv-logo">Your logo (optional)</label><input type="file" id="iv-logo" accept="image/*" style="padding:8px"></div></div>
-<label style="margin-top:10px">Line items</label><div id="iv-items"></div>
-<button class="btn ghost" id="iv-add" type="button">+ Add line</button>
-<label for="iv-notes" style="margin-top:12px">Notes / payment terms</label><textarea id="iv-notes" rows="2">Payment within 14 days by bank transfer. Thank you for your business.</textarea>
-<div id="iv-total" style="margin-top:12px"></div>
-<button class="btn" id="iv-pdf" style="margin-top:8px">Download PDF</button> <button class="btn ghost" id="iv-reset" type="button">Start a new invoice</button>
-<p class="note">Everything you type is kept in this browser (localStorage) so the next invoice starts pre-filled and the number counts up. Nothing is sent to us. Unlimited invoices, no account, no watermark.</p></div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://officesoftwaremarketplace.com/tools/invoice-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="nofollow noopener" style="color:#8b93a7;text-decoration:none">&#9889; Free Invoice Generator &mdash; free tool by <span style="color:#60a5fa">Office Software Marketplace</span></a></p></div><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+body{padding:6px 10px}.wrap{padding:0;max-width:none}</style></head><body><div class="wrap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<style id="ivs-paper-css">
+.pp{--pa:#4f46e5;width:794px;min-height:1123px;padding:57px 57px 76px;background:#fff;color:#1f2328;font:13px/1.45 Roboto,Inter,Arial,sans-serif;position:relative;font-variant-numeric:tabular-nums;box-sizing:border-box;text-align:left}
+.pp *{box-sizing:border-box}
+.pp.st-modern::before{content:"";position:absolute;left:0;right:0;top:0;height:13px;background:var(--pa)}
+.pp-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin:0 0 34px}
+.pp-title{font-size:28px;font-weight:700;letter-spacing:.08em;line-height:1.1;color:#1f2328;margin:0}
+.pp.st-modern .pp-title{color:var(--pa);letter-spacing:.02em}
+.pp-logo img{display:block;max-width:181px;max-height:68px;object-fit:contain}
+.pp-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px;margin:0 0 30px}
+.pp-lbl{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#646c76;margin:0 0 6px}
+.pp-name{font-weight:700;overflow-wrap:anywhere}
+.pp-addr{white-space:pre-wrap;overflow-wrap:anywhere;color:#3d444d}
+.pp-kv{display:flex;justify-content:space-between;gap:10px}
+.pp-kv span:first-child{color:#646c76}
+.pp-kv span:last-child{text-align:right;overflow-wrap:anywhere}
+.pp table.pp-t{width:100%;border-collapse:collapse;margin:0}
+.pp-t th{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#646c76;text-align:left;padding:0 0 8px;border-bottom:1.5px solid #1f2328;background:none}
+.pp.st-modern .pp-t th{background:color-mix(in srgb,var(--pa) 12%,#fff);color:var(--pa);border-bottom:0;padding:8px}
+.pp-t td{padding:9px 0;border-bottom:1px solid #e3e6ea;vertical-align:top;color:#1f2328}
+.pp.st-modern .pp-t td{padding:9px 8px}
+.pp-t .n{text-align:right;white-space:nowrap}
+.pp-t th.n{text-align:right}
+.pp-t .d{white-space:pre-wrap;overflow-wrap:anywhere}
+.pp-t col.c-q{width:76px}.pp-t col.c-u{width:113px}.pp-t col.c-a{width:113px}
+.pp-tot{margin:16px 0 0 auto;width:300px}
+.pp-tr{display:flex;justify-content:space-between;gap:12px;padding:4px 0;color:#3d444d}
+.pp-tr span:last-child{color:#1f2328;white-space:nowrap}
+.pp-grand{font-weight:700;font-size:16px;color:#1f2328;border-top:1.5px solid #1f2328;margin-top:6px;padding-top:9px}
+.pp.st-modern .pp-grand{border-top:0;background:color-mix(in srgb,var(--pa) 12%,#fff);color:var(--pa);padding:10px 8px;margin-top:8px}
+.pp.st-modern .pp-grand span:last-child{color:var(--pa)}
+.pp-sec{margin-top:28px}
+.pp-sec p{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;color:#3d444d;max-width:560px}
+.pp-hr{display:flex;align-items:flex-start;gap:38px}
+.pp-stamp{border:2.3px solid currentColor;border-radius:5px;padding:2px 9px;font-weight:700;font-size:20px;line-height:1.25;margin-top:4px}
+.pp-stamp.s-paid{color:#15803d}.pp-stamp.s-overdue{color:#c62828}.pp-stamp.s-due,.pp-stamp.s-draft{color:#6b7280}
+.pp.st-compact{font-size:11.5px;padding:45px 49px 60px}
+.pp.st-compact .pp-title{font-size:21px}
+.pp.st-compact .pp-hd{margin-bottom:22px}
+.pp.st-compact .pp-cols{gap:16px;margin-bottom:20px}
+.pp.st-compact .pp-t td{padding:5px 0}
+.pp.st-compact .pp-grand{font-size:14px}
+.pp.st-compact .pp-sec{margin-top:18px}
+.pp-ex{position:absolute;top:22px;left:50%;transform:translateX(-50%);background:#fef3c7;color:#92400e;border:1px solid #f59e0b;border-radius:999px;font-size:11px;font-weight:700;padding:3px 12px;white-space:nowrap}
+.pp-empty{color:#9aa1a9}
+</style>
+<style>
+.ivs{width:min(1200px,calc(100vw - 32px));margin:22px 0 26px calc(50% - min(600px,50vw - 16px));color:var(--text);font-size:15px;line-height:1.5}
+.ivs *{box-sizing:border-box}
+.ivs [hidden]{display:none !important}
+.ivs-grid{display:grid;grid-template-columns:minmax(0,44fr) minmax(0,56fr);gap:20px;align-items:start}
+.ivs-panel{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:18px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 24px 50px -30px rgba(0,0,0,.7)}
+.ivs-edit{padding:8px 20px 20px}
+.ivs-sec{border:0;border-bottom:1px solid var(--border);margin:0;padding:16px 0 18px;min-width:0}
+.ivs-sec:last-of-type{border-bottom:0}
+.ivs-sec legend{float:left;width:100%;padding:0;margin:0 0 10px;font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--text2);display:flex;align-items:center;gap:8px}
+.ivs-sec legend::before{content:"";width:6px;height:6px;border-radius:2px;background:var(--accent)}
+.ivs-sec legend~*{clear:both}
+.ivs-f{margin:0 0 12px;min-width:0}
+.ivs-f:last-child{margin-bottom:0}
+.ivs label{display:block;font-size:.84rem;font-weight:600;color:var(--text);margin:0 0 6px}
+.ivs .ivs-hint{display:block;font-size:.78rem;color:var(--muted);margin:5px 0 0;line-height:1.4}
+.ivs input[type=text],.ivs input[type=date],.ivs select,.ivs textarea{width:100%;min-height:44px;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--text);padding:10px 12px;font:inherit;font-size:.95rem;line-height:1.4;margin:0;transition:border-color .15s,box-shadow .15s}
+.ivs textarea{resize:vertical;min-height:72px}
+.ivs select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--text2) 50%),linear-gradient(135deg,var(--text2) 50%,transparent 50%);background-position:calc(100% - 17px) 19px,calc(100% - 12px) 19px;background-size:5px 5px;background-repeat:no-repeat;padding-right:32px}
+.ivs input:focus,.ivs select:focus,.ivs textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 28%,transparent)}
+.ivs input[aria-invalid=true]{border-color:#f87171;box-shadow:0 0 0 3px rgba(248,113,113,.18)}
+.ivs input[type=date]{color-scheme:dark}
+.ivs-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ivs-three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.ivs-line{display:grid;grid-template-columns:minmax(0,1fr) 72px 104px 96px 36px;gap:8px;align-items:start;padding:10px 0;border-top:1px dashed var(--border)}
+.ivs-line:first-child{border-top:0;padding-top:0}
+.ivs-lhead{display:grid;grid-template-columns:minmax(0,1fr) 72px 104px 96px 36px;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.ivs-lhead span:nth-child(n+2),.ivs-amt{text-align:right}
+.ivs-line textarea{min-height:44px;height:44px;resize:none;overflow:hidden}
+.ivs-line input{text-align:right;font-variant-numeric:tabular-nums}
+.ivs-amt{padding:11px 0 0;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.92rem}
+.ivs-ml{display:none;font-size:.72rem !important;color:var(--muted) !important;margin:0 0 4px !important}
+.ivs-x{width:36px;height:44px;border:1px solid transparent;border-radius:10px;background:none;color:var(--muted);font-size:1.25rem;line-height:1;cursor:pointer;margin:0}
+.ivs-x:hover{color:#f87171;border-color:var(--border)}
+.ivs-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:11px;border:1px solid var(--border);background:var(--card);color:var(--text);font:inherit;font-weight:700;font-size:.9rem;cursor:pointer;margin:0;transition:border-color .15s,background .15s,transform .1s}
+.ivs-btn:hover{border-color:var(--accent)}
+.ivs-btn:active{transform:translateY(1px)}
+.ivs-btn.prim{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 10px 24px -12px var(--accent)}
+.ivs-btn.prim:hover{filter:brightness(1.08)}
+.ivs-btn[disabled]{opacity:.45;cursor:not-allowed}
+.ivs-btn.link{border:0;background:none;color:var(--accent);padding:0 4px;min-height:36px}
+.ivs-btn.danger{color:#fca5a5}
+.ivs :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ivs-add{margin-top:10px}
+.ivs-chk{display:flex !important;gap:10px;align-items:flex-start;font-weight:600 !important;cursor:pointer}
+.ivs-chk input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--accent);flex-shrink:0}
+.ivs-store{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:10px}
+.ivs-msg{font-size:.82rem;color:var(--text2);min-height:1.2em;margin:8px 0 0}
+.ivs-prev{position:sticky;top:72px;padding:14px;display:flex;flex-direction:column;gap:12px}
+.ivs-bar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
+.ivs-seg{display:inline-flex;background:var(--bg);border:1px solid var(--border);border-radius:11px;padding:3px;margin:0}
+.ivs-seg label{margin:0;position:relative}
+.ivs-seg input{position:absolute;opacity:0;width:1px;height:1px}
+.ivs-seg span{display:block;padding:7px 14px;border-radius:8px;font-size:.84rem;font-weight:700;color:var(--text2);cursor:pointer}
+.ivs-seg input:checked+span{background:var(--card2);color:var(--text);box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 2px 8px rgba(0,0,0,.35)}
+.ivs-seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:1px}
+.ivs-sw{display:flex;gap:7px;align-items:center;margin:0;border:0;padding:0}
+.ivs-sw label{margin:0;position:relative}
+.ivs-sw input[type=radio]{position:absolute;opacity:0;width:1px;height:1px}
+.ivs-sw i{display:block;width:24px;height:24px;border-radius:50%;cursor:pointer;box-shadow:0 0 0 2px var(--card),0 0 0 3px transparent}
+.ivs-sw input:checked+i{box-shadow:0 0 0 2px var(--card),0 0 0 4px var(--text)}
+.ivs-sw input:focus-visible+i{outline:2px solid var(--accent);outline-offset:3px}
+.ivs-sw input[type=color]{width:28px;height:28px;padding:0;border:1px solid var(--border);border-radius:50%;background:none;cursor:pointer;min-height:0}
+.ivs-desk{border-radius:14px;padding:22px;background:radial-gradient(120% 70% at 50% 0%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 62%),var(--bg);border:1px solid var(--border);max-height:calc(100vh - 300px);min-height:360px;overflow:auto;overscroll-behavior:contain}
+.ivs-scale{position:relative;overflow:hidden;margin:0 auto}
+.ivs-scale .pp{position:absolute;top:0;left:0;transform-origin:top left;box-shadow:0 1px 2px rgba(0,0,0,.25),0 30px 70px -24px rgba(0,0,0,.75);border-radius:2px}
+.ivs-check{border-radius:12px;padding:12px 14px;border:1px solid var(--border);background:var(--bg);font-size:.88rem}
+.ivs-check b{display:flex;align-items:center;gap:8px;color:var(--text)}
+.ivs-check ul{margin:8px 0 0;padding-left:20px}
+.ivs-check li{color:var(--text2);margin:3px 0}
+.ivs-check.ok b::before{content:"";width:9px;height:9px;border-radius:50%;background:#22c55e}
+.ivs-check.warn b::before{content:"";width:9px;height:9px;border-radius:50%;background:#f59e0b}
+.ivs-check.err b::before{content:"";width:9px;height:9px;border-radius:50%;background:#f87171}
+.ivs-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ivs-actions .prim{flex:1 1 200px}
+.ivs-fine{font-size:.8rem;color:var(--muted);margin:0}
+.ivs-exbar{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:space-between;margin:12px 0 0;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,#f59e0b 12%,transparent);border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);font-size:.86rem;color:var(--text)}
+.ivs-exbar[hidden]{display:none}
+.ivs-tabs{display:none;gap:4px;background:var(--card);border:1px solid var(--border);border-radius:13px;padding:4px;margin:0 0 12px}
+.ivs-tabs button{flex:1;min-height:42px;border:0;border-radius:10px;background:none;color:var(--text2);font:inherit;font-weight:700;cursor:pointer;margin:0}
+.ivs-tabs button[aria-selected=true]{background:var(--card2);color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.ivs-topv{display:none;margin-top:16px;width:100%}
+.ivs-toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:80;display:flex;gap:14px;align-items:center;background:#111827;color:#f9fafb;border:1px solid #374151;border-radius:12px;padding:10px 12px 10px 16px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6);font-size:.9rem}
+.ivs-toast[hidden]{display:none}
+.ivs-toast button{background:none;border:0;color:#93c5fd;font:inherit;font-weight:800;cursor:pointer;min-height:36px;padding:0 6px;margin:0}
+.ivs-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:959px){
+ .ivs{width:auto;margin:18px 0 24px}
+ .ivs-grid{grid-template-columns:minmax(0,1fr)}
+ .ivs-tabs{display:flex}
+ .ivs[data-view=edit] .ivs-prev{display:none}
+ .ivs[data-view=preview] .ivs-edit{display:none}
+ .ivs-prev{position:static}
+ .ivs-desk{max-height:none;min-height:0;padding:12px}
+ .ivs-topv{display:inline-flex}
+}
+@media (max-width:640px){
+ .ivs-edit{padding:4px 14px 16px}
+ .ivs-two,.ivs-three{grid-template-columns:1fr}
+ .ivs-lhead{display:none}
+ .ivs-line{grid-template-columns:1fr 1fr 36px;grid-template-areas:"d d d" "q u x" "a a a";row-gap:8px}
+ .ivs-line>.l-d{grid-area:d}.ivs-line>.l-q{grid-area:q}.ivs-line>.l-u{grid-area:u}.ivs-line>.ivs-x{grid-area:x;align-self:end}
+ .ivs-line>.ivs-amt{grid-area:a;padding:0;text-align:right;color:var(--text2)}
+ .ivs-ml{display:block}
+ .ivs-bar{flex-direction:column;align-items:stretch}
+ .ivs-seg{display:flex}.ivs-seg label{flex:1;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.ivs *{transition:none !important}}
+</style>
+<div class="ivs" id="ivs" data-view="edit">
+<div class="ivs-tabs" role="tablist" aria-label="Invoice studio">
+<button type="button" role="tab" id="iv-tab-edit" aria-selected="true" aria-controls="iv-edit">Edit</button>
+<button type="button" role="tab" id="iv-tab-prev" aria-selected="false" aria-controls="iv-prev">Preview &amp; download</button>
+</div>
+<div class="ivs-grid">
+<section class="ivs-panel ivs-edit" id="iv-edit" aria-label="Invoice details">
+<div class="ivs-exbar" id="iv-exbar" hidden><span>You are looking at example data, so you can see how it works.</span><button type="button" class="ivs-btn link" id="iv-empty">Start with an empty invoice</button></div>
+<fieldset class="ivs-sec"><legend>Your business</legend>
+<div class="ivs-f"><label for="iv-from">Business name</label><input type="text" id="iv-from" autocomplete="organization"></div>
+<div class="ivs-f"><label for="iv-from-addr">Address and tax details</label><textarea id="iv-from-addr" aria-label="Your business address" rows="3" placeholder="Street and number&#10;Postcode and city, country&#10;VAT or company number"></textarea></div>
+<div class="ivs-f"><label for="iv-logo">Logo <span style="font-weight:400;color:var(--muted)">(optional, PNG or JPG)</span></label><input type="file" id="iv-logo" accept="image/png,image/jpeg" style="font-size:.85rem;color:var(--text2);max-width:100%"><button type="button" class="ivs-btn link danger" id="iv-logo-x" hidden>Remove logo</button></div>
+</fieldset>
+<fieldset class="ivs-sec"><legend>Client</legend>
+<div class="ivs-f"><label for="iv-to">Client name</label><input type="text" id="iv-to"></div>
+<div class="ivs-f"><label for="iv-to-addr">Client address</label><textarea id="iv-to-addr" aria-label="Client address" rows="3" placeholder="Street and number&#10;Postcode and city, country&#10;Client VAT number, if needed"></textarea></div>
+</fieldset>
+<fieldset class="ivs-sec"><legend>Invoice details</legend>
+<div class="ivs-two"><div class="ivs-f"><label for="iv-num">Invoice number</label><input type="text" id="iv-num"></div>
+<div class="ivs-f"><label for="iv-ref">Reference or PO <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input type="text" id="iv-ref"></div></div>
+<div class="ivs-two"><div class="ivs-f"><label for="iv-date">Issue date</label><input type="date" id="iv-date"></div>
+<div class="ivs-f"><label for="iv-due">Due date</label><input type="date" id="iv-due"></div></div>
+<div class="ivs-three"><div class="ivs-f"><label for="iv-cur">Currency</label><select id="iv-cur"><option value="EUR">EUR €</option><option value="USD">USD $</option><option value="GBP">GBP £</option><option value="CHF">CHF</option><option value="AUD">AUD A$</option><option value="CAD">CAD C$</option><option value="NZD">NZD NZ$</option><option value="SGD">SGD S$</option><option value="INR">INR ₹</option><option value="JPY">JPY ¥</option><option value="SEK">SEK kr</option><option value="DKK">DKK kr</option><option value="NOK">NOK kr</option><option value="PLN">PLN zł</option><option value="CZK">CZK Kč</option><option value="ZAR">ZAR R</option></select></div>
+<div class="ivs-f"><label for="iv-numfmt">Number format</label><select id="iv-numfmt"><option value="en">1,234.56</option><option value="eu">1.234,56</option><option value="sp">1 234,56</option></select></div>
+<div class="ivs-f"><label for="iv-stamp">Status stamp</label><select id="iv-stamp"><option value="">None</option><option value="PAID">Paid</option><option value="DUE">Due</option><option value="OVERDUE">Overdue</option><option value="DRAFT">Draft</option></select></div></div>
+</fieldset>
+<fieldset class="ivs-sec"><legend>Line items</legend>
+<div class="ivs-lhead" aria-hidden="true"><span>Description</span><span>Qty</span><span>Unit price</span><span>Amount</span><span></span></div>
+<div id="iv-items"></div>
+<button type="button" class="ivs-btn ivs-add" id="iv-add">+ Add line</button>
+<span class="ivs-hint">Numbers follow the number format above; 1250,50 and 1250.50 both work.</span>
+</fieldset>
+<fieldset class="ivs-sec"><legend>Tax and discount</legend>
+<div class="ivs-three"><div class="ivs-f"><label for="iv-taxname">Tax name</label><input type="text" id="iv-taxname"></div>
+<div class="ivs-f"><label for="iv-tax">Tax rate (%)</label><input type="text" id="iv-tax" inputmode="decimal"></div>
+<div class="ivs-f"><label for="iv-disc">Discount</label><div style="display:flex;gap:6px"><input type="text" id="iv-disc" aria-label="Discount" inputmode="decimal" aria-describedby="iv-disc-h"><select id="iv-disctype" aria-label="Discount type" style="max-width:84px"><option value="pct">%</option><option value="abs">amount</option></select></div></div></div>
+<span class="ivs-hint" id="iv-disc-h">The discount comes off the subtotal before tax. One tax rate applies to the whole invoice.</span>
+</fieldset>
+<fieldset class="ivs-sec"><legend>Payment and notes</legend>
+<div class="ivs-f"><label for="iv-pay">Payment details</label><textarea id="iv-pay" rows="3" placeholder="Bank name, IBAN, BIC&#10;Payment reference"></textarea></div>
+<div class="ivs-f"><label for="iv-notes">Notes and terms</label><textarea id="iv-notes" rows="2"></textarea></div>
+</fieldset>
+<fieldset class="ivs-sec"><legend>Save on this device</legend>
+<label class="ivs-chk" for="iv-remember"><input type="checkbox" id="iv-remember"><span>Remember my business details on this device</span></label>
+<span class="ivs-hint">Keeps your business name, address, payment details, logo, invoice style and the next invoice number in this browser, so the next invoice starts pre-filled. Client details and line items are never saved. Nothing is sent to us.</span>
+<div class="ivs-store"><button type="button" class="ivs-btn link danger" id="iv-forget">Forget saved details</button></div>
+<p class="ivs-msg" id="iv-store-msg" role="status" aria-live="polite"></p>
+</fieldset>
+<button type="button" class="ivs-btn prim ivs-topv" id="iv-go-prev">Preview and download</button>
+</section>
+<section class="ivs-panel ivs-prev" id="iv-prev" aria-label="Invoice preview">
+<div class="ivs-bar">
+<div class="ivs-seg" role="radiogroup" aria-label="Invoice style">
+<label><input type="radio" name="iv-style" value="modern" checked><span>Modern</span></label>
+<label><input type="radio" name="iv-style" value="plain"><span>Plain</span></label>
+<label><input type="radio" name="iv-style" value="compact"><span>Compact</span></label>
+</div>
+<fieldset class="ivs-sw" aria-label="Accent colour">
+<label title="Indigo"><input type="radio" name="iv-acc" value="#4f46e5" aria-label="Indigo" checked><i style="background:#4f46e5"></i></label>
+<label title="Teal"><input type="radio" name="iv-acc" value="#0f766e" aria-label="Teal"><i style="background:#0f766e"></i></label>
+<label title="Blue"><input type="radio" name="iv-acc" value="#1d4ed8" aria-label="Blue"><i style="background:#1d4ed8"></i></label>
+<label title="Plum"><input type="radio" name="iv-acc" value="#86198f" aria-label="Plum"><i style="background:#86198f"></i></label>
+<label title="Graphite"><input type="radio" name="iv-acc" value="#334155" aria-label="Graphite"><i style="background:#334155"></i></label>
+<label title="Your own colour"><input type="color" id="iv-acc-own" value="#c2410c" aria-label="Your own accent colour"></label>
+</fieldset>
+</div>
+<div class="ivs-desk"><div class="ivs-scale" id="iv-scale"><div class="pp st-modern" id="iv-paper" aria-hidden="true"></div></div></div>
+<p class="ivs-sr" id="iv-sum" aria-live="polite"></p>
+<div class="ivs-check" id="iv-check" aria-live="polite"></div>
+<div class="ivs-actions"><button type="button" class="ivs-btn prim" id="iv-pdf">Download PDF</button><button type="button" class="ivs-btn" id="iv-print">Print</button><button type="button" class="ivs-btn" id="iv-new">New invoice</button></div>
+<p class="ivs-fine">Runs in your browser; nothing you type is sent to us. Unlimited invoices, no account, no watermark.</p>
+</section>
+</div>
+<div class="ivs-toast" id="iv-toast" role="status" aria-live="polite" hidden><span id="iv-toast-t"></span><button type="button" id="iv-undo">Undo</button></div>
+</div><p style="margin:10px 0 4px;font-size:.78rem;text-align:right"><a href="https://officesoftwaremarketplace.com/tools/invoice-generator/?utm_source=embed&utm_medium=widget" target="_blank" rel="nofollow noopener" style="color:#8b93a7;text-decoration:none">&#9889; Free Invoice Generator &mdash; free tool by <span style="color:#60a5fa">Office Software Marketplace</span></a></p></div><script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <script>
 (function(){
-var $=function(id){return document.getElementById(id);},itemsEl=$('iv-items'),logo=null;
-var SYM={EUR:'\u20ac',USD:'$',GBP:'\u00a3',CHF:'CHF ',AUD:'A$',CAD:'C$',INR:'\u20b9',JPY:'\u00a5',SEK:'kr ',PLN:'z\u0142 '};
-var FIELDS=['iv-from','iv-from-addr','iv-to','iv-to-addr','iv-num','iv-date','iv-due','iv-cur','iv-taxname','iv-tax','iv-disc','iv-disctype','iv-stamp','iv-notes'];
-function money(v){var c=$('iv-cur').value;return SYM[c]+(c==='JPY'?Math.round(v).toString():v.toFixed(2));}
-function addRow(desc,qty,price){var d=document.createElement('div');d.className='row';d.style.marginBottom='6px';
-d.innerHTML='<div style="flex:2"><input type="text" placeholder="Description"></div><div><input type="number" placeholder="Qty" min="0" step="0.01"></div><div><input type="number" placeholder="Unit price" min="0" step="0.01"></div><div style="flex:0 0 34px"><button type="button" class="iv-x" style="background:none;border:0;color:#ef4444;cursor:pointer;font-weight:700;font-size:1.1rem">&times;</button></div>';
-var i=d.querySelectorAll('input');i[0].value=desc||'';i[1].value=qty==null?1:qty;i[2].value=price==null?0:price;
-Array.prototype.forEach.call(i,function(x){x.addEventListener('input',calc);});d.querySelector('.iv-x').onclick=function(){d.remove();calc();};itemsEl.appendChild(d);calc();}
-function rows(){return Array.prototype.map.call(itemsEl.children,function(r){var i=r.querySelectorAll('input');return{desc:i[0].value,qty:+i[1].value||0,price:+i[2].value||0};});}
-function totals(){var sub=rows().reduce(function(a,r){return a+r.qty*r.price;},0);var dv=+$('iv-disc').value||0;var disc=$('iv-disctype').value==='pct'?sub*dv/100:Math.min(dv,sub);var net=sub-disc;var tax=net*(+$('iv-tax').value||0)/100;return{sub:sub,disc:disc,net:net,tax:tax,total:net+tax};}
-function calc(){var t=totals();$('iv-total').innerHTML='<p>Subtotal: <b>'+money(t.sub)+'</b>'+(t.disc?' \u00b7 Discount: <b>\u2212'+money(t.disc)+'</b>':'')+' \u00b7 '+($('iv-taxname').value||'Tax')+' '+(+$('iv-tax').value||0)+'%: <b>'+money(t.tax)+'</b> \u00b7 <span class="big">Total: '+money(t.total)+'</span></p>';save();}
-function save(){try{var o={};FIELDS.forEach(function(f){o[f]=$(f).value;});o.rows=rows();localStorage.setItem('aibm_invoice',JSON.stringify(o));}catch(e){}}
-function load(){try{var o=JSON.parse(localStorage.getItem('aibm_invoice')||'null');if(!o)return false;FIELDS.forEach(function(f){if(o[f]!=null)$(f).value=o[f];});(o.rows||[]).forEach(function(r){addRow(r.desc,r.qty,r.price);});return true;}catch(e){return false;}}
-function bump(n){var m=/(\\d+)(?!.*\\d)/.exec(n);if(!m)return n+'-2';var z=m[1],nx=String(+z+1);while(nx.length<z.length)nx='0'+nx;return n.slice(0,m.index)+nx+n.slice(m.index+z.length);}
-FIELDS.forEach(function(f){$(f).addEventListener('input',calc);$(f).addEventListener('change',calc);});
-$('iv-add').onclick=function(){addRow('',1,0);};
-$('iv-logo').addEventListener('change',function(){var f=this.files&&this.files[0];if(!f){logo=null;return;}var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){logo=im;};im.src=r.result;};r.readAsDataURL(f);});
-$('iv-reset').onclick=function(){itemsEl.innerHTML='';$('iv-num').value=bump($('iv-num').value);var d=new Date();$('iv-date').value=d.toISOString().slice(0,10);d.setDate(d.getDate()+14);$('iv-due').value=d.toISOString().slice(0,10);$('iv-stamp').value='';addRow('',1,0);};
-if(!load()){var d=new Date();$('iv-date').value=d.toISOString().slice(0,10);d.setDate(d.getDate()+14);$('iv-due').value=d.toISOString().slice(0,10);addRow('Consulting',10,100);}else{calc();}
-$('iv-pdf').onclick=function(){var J=window.jspdf.jsPDF,doc=new J(),y=20,cur=$('iv-cur').value,sym=SYM[cur];
-function m(v){return (cur==='JPY'?Math.round(v).toString():v.toFixed(2))+' '+cur;}
-if(logo){var w=40,h=Math.min(22,w*logo.height/logo.width);try{doc.addImage(logo,'PNG',150,12,w,h);}catch(e){}}
-doc.setFontSize(22);doc.text('INVOICE',20,y);
-var st=$('iv-stamp').value;if(st){doc.setFontSize(26);doc.setTextColor(st==='PAID'?22:st==='OVERDUE'?220:120,st==='PAID'?163:st==='OVERDUE'?38:120,st==='PAID'?74:st==='OVERDUE'?38:120);doc.text(st,110,y);doc.setTextColor(0,0,0);}
-doc.setFontSize(10);y+=10;
-var L=function(t,x,yy){String(t||'').split(String.fromCharCode(10)).forEach(function(s,i){doc.text(s,x,yy+i*5);});return yy+5*String(t||'').split(String.fromCharCode(10)).length;};
-doc.setFont(undefined,'bold');doc.text('From',20,y);doc.text('Bill to',110,y);doc.setFont(undefined,'normal');y+=6;
-var y1=L($('iv-from').value+String.fromCharCode(10)+$('iv-from-addr').value,20,y),y2=L($('iv-to').value+String.fromCharCode(10)+$('iv-to-addr').value,110,y);y=Math.max(y1,y2)+4;
-doc.text('Invoice #: '+$('iv-num').value,20,y);doc.text('Date: '+$('iv-date').value,80,y);doc.text('Due: '+$('iv-due').value,140,y);y+=10;
-doc.setFont(undefined,'bold');doc.text('Description',20,y);doc.text('Qty',120,y);doc.text('Unit',140,y);doc.text('Amount',170,y);doc.setFont(undefined,'normal');y+=2;doc.line(20,y,195,y);y+=7;
-rows().forEach(function(r){var amt=r.qty*r.price;doc.text(String(r.desc).slice(0,60),20,y);doc.text(String(r.qty),120,y);doc.text(m(r.price),140,y);doc.text(m(amt),170,y);y+=7;if(y>265){doc.addPage();y=20;}});
-var t=totals();y+=2;doc.line(120,y,195,y);y+=7;doc.text('Subtotal',120,y);doc.text(m(t.sub),170,y);y+=6;
-if(t.disc){doc.text('Discount',120,y);doc.text('-'+m(t.disc),170,y);y+=6;}
-doc.text(($('iv-taxname').value||'Tax')+' '+(+$('iv-tax').value||0)+'%',120,y);doc.text(m(t.tax),170,y);y+=7;
-doc.setFont(undefined,'bold');doc.setFontSize(12);doc.text('Total',120,y);doc.text(m(t.total),170,y);doc.setFont(undefined,'normal');doc.setFontSize(10);y+=12;
-if($('iv-notes').value){doc.setTextColor(90,90,90);L($('iv-notes').value,20,y);doc.setTextColor(0,0,0);}
-doc.save(($('iv-num').value||'invoice').replace(/[^A-Za-z0-9_-]+/g,'-')+'.pdf');
-if(typeof gtag==='function')gtag('event','tool_download',{event_label:'invoice_pdf'});};
+"use strict";
+var $=function(id){return document.getElementById(id);};
+var root=$('ivs');if(!root||root.getAttribute('data-ready'))return;root.setAttribute('data-ready','1');
+var KEY='aibm_invoice_v2',OLD='aibm_invoice';
+var FONT_R='https://cdn.jsdelivr.net/gh/googlefonts/roboto@v2.138/src/hinted/Roboto-Regular.ttf';
+var FONT_B='https://cdn.jsdelivr.net/gh/googlefonts/roboto@v2.138/src/hinted/Roboto-Bold.ttf';
+var CUR={EUR:['€',''],USD:['$',''],GBP:['£',''],CHF:['CHF ',''],AUD:['A$',''],CAD:['C$',''],NZD:['NZ$',''],SGD:['S$',''],INR:['₹',''],JPY:['¥',''],SEK:['',' kr'],DKK:['',' kr'],NOK:['',' kr'],PLN:['',' zł'],CZK:['',' Kč'],ZAR:['R ','']};
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var EX={from:'Northwind Studio',fromAddr:'12 Harbour Street\n3011 AB Rotterdam, Netherlands\nVAT NL000000000B01',to:'Example Client Ltd',toAddr:'48 Market Road\nLondon N1 7AA, United Kingdom',num:'INV-2026-001',ref:'PO 4471',taxname:'VAT',tax:'21',disc:'0',pay:'Bank: Example Bank\nIBAN NL00 BANK 0000 0000 00 · BIC BANKNL2A\nReference: INV-2026-001',notes:'Payment within 14 days. Thank you for your business.',lines:[['Website design: homepage and four subpages','1','1200'],['Copywriting, per hour','6','65']]};
+var BUS=['iv-from','iv-from-addr','iv-pay','iv-notes','iv-cur','iv-numfmt','iv-taxname','iv-tax'];
+var FIELDS=['iv-from','iv-from-addr','iv-to','iv-to-addr','iv-num','iv-ref','iv-date','iv-due','iv-cur','iv-numfmt','iv-stamp','iv-taxname','iv-tax','iv-disc','iv-disctype','iv-pay','iv-notes'];
+var itemsEl=$('iv-items'),paper=$('iv-paper'),scaleBox=$('iv-scale');
+var logo=null,logoImg=null,example=false,started=false,fontCache=null,toastTimer=null,undoFn=null,downloaded=null;
+document.body.appendChild($('iv-toast'));
+
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function val(id){return $(id).value;}
+function today(off){var d=new Date();d.setDate(d.getDate()+(off||0));var m=d.getMonth()+1,dd=d.getDate();return d.getFullYear()+'-'+(m<10?'0':'')+m+'-'+(dd<10?'0':'')+dd;}
+function fmtDate(s){if(!s)return '';var p=s.split('-');if(p.length!==3)return s;return (+p[2])+' '+MON[(+p[1])-1]+' '+p[0];}
+function style(){var r=root.querySelector('input[name=iv-style]:checked');return r?r.value:'modern';}
+function accent(){var r=root.querySelector('input[name=iv-acc]:checked');return r?r.value:$('iv-acc-own').value;}
+function decSep(){return val('iv-numfmt')==='en'?'.':',';}
+function decimals(){return val('iv-cur')==='JPY'?0:2;}
+function r2(v){var f=Math.pow(10,decimals());return Math.round((v+1e-9*(v<0?-1:1))*f)/f;}
+
+// Parse a typed number. Returns NaN for anything that is not a plain number, so nothing is guessed.
+function num(s){
+ s=String(s==null?'':s).trim().replace(/[\s'’]/g,'');
+ if(s==='')return 0;
+ var d=decSep(),o=d==='.'?',':'.';
+ var lc=s.lastIndexOf(','),ld=s.lastIndexOf('.');
+ if(lc>-1&&ld>-1){d=lc>ld?',':'.';o=d===','?'.':',';}
+ else{var only=lc>-1?',':(ld>-1?'.':'');
+  if(only&&only!==d){var parts=s.split(only);if(parts.length===2&&parts[1].length>0&&parts[1].length<=2){d=only;o=d===','?'.':',';}}}
+ s=s.split(o).join('');if(d===',')s=s.replace(',','.');
+ if(!/^-?\d*\.?\d+$/.test(s))return NaN;
+ return parseFloat(s);
+}
+function fmtNum(v){
+ var dec=decimals(),f=val('iv-numfmt'),G=f==='en'?',':(f==='eu'?'.':' '),D=f==='en'?'.':',';
+ var neg=v<0,s=Math.abs(v).toFixed(dec).split('.');
+ var i=s[0].replace(/\B(?=(\d{3})+(?!\d))/g,G);
+ return (neg?'-':'')+i+(dec?D+s[1]:'');
+}
+function money(v){var c=CUR[val('iv-cur')]||['',''];var n=fmtNum(Math.abs(v));return (v<0?'-':'')+c[0]+n+c[1];}
+
+function lines(){
+ return Array.prototype.map.call(itemsEl.querySelectorAll('.ivs-line'),function(r,i){
+  var q=r.querySelector('.l-q input'),u=r.querySelector('.l-u input'),d=r.querySelector('.l-d textarea');
+  var qn=num(q.value),un=num(u.value);
+  return {i:i,el:r,desc:d.value,q:q.value,u:u.value,qn:qn,un:un,qEl:q,uEl:u,amt:(isNaN(qn)||isNaN(un))?NaN:r2(qn*un)};
+ });
+}
+function totals(L){
+ var bad=[];
+ L.forEach(function(l){if(isNaN(l.qn))bad.push(['Line '+(l.i+1)+': the quantity “'+l.q+'” is not a number.',l.qEl]);if(isNaN(l.un))bad.push(['Line '+(l.i+1)+': the unit price “'+l.u+'” is not a number.',l.uEl]);});
+ var tax=num(val('iv-tax')),dv=num(val('iv-disc'));
+ if(isNaN(tax))bad.push(['The tax rate “'+val('iv-tax')+'” is not a number.',$('iv-tax')]);
+ if(isNaN(dv))bad.push(['The discount “'+val('iv-disc')+'” is not a number.',$('iv-disc')]);
+ if(!isNaN(dv)&&dv<0)bad.push(['The discount cannot be negative.',$('iv-disc')]);
+ if(bad.length)return {bad:bad};
+ var sub=r2(L.reduce(function(a,l){return a+l.amt;},0));
+ var pct=val('iv-disctype')==='pct';
+ var disc=pct?r2(sub*dv/100):r2(Math.min(dv,Math.max(sub,0)));
+ var base=r2(sub-disc),tx=r2(base*tax/100);
+ return {bad:[],sub:sub,disc:disc,pct:pct,dv:dv,base:base,rate:tax,tax:tx,total:r2(base+tx)};
+}
+
+function addLine(desc,q,u,at){
+ var r=document.createElement('div');r.className='ivs-line';
+ r.innerHTML='<div class="l-d"><label class="ivs-ml" aria-hidden="true">Description</label><textarea rows="1" aria-label="Description"></textarea></div>'+
+  '<div class="l-q"><label class="ivs-ml" aria-hidden="true">Qty</label><input type="text" inputmode="decimal" aria-label="Quantity"></div>'+
+  '<div class="l-u"><label class="ivs-ml" aria-hidden="true">Unit price</label><input type="text" inputmode="decimal" aria-label="Unit price"></div>'+
+  '<div class="ivs-amt" aria-hidden="true"></div><button type="button" class="ivs-x" aria-label="Remove line">×</button>';
+ var t=r.querySelector('textarea');t.value=desc||'';r.querySelector('.l-q input').value=q==null?'1':q;r.querySelector('.l-u input').value=u==null?'':u;
+ r.querySelector('.ivs-x').addEventListener('click',function(){removeLine(r);});
+ t.addEventListener('input',function(){grow(t);});
+ if(at!=null&&itemsEl.children[at])itemsEl.insertBefore(r,itemsEl.children[at]);else itemsEl.appendChild(r);
+ grow(t);return r;
+}
+function grow(t){t.style.height='44px';t.style.height=Math.max(44,t.scrollHeight+2)+'px';}
+function removeLine(r){
+ var idx=Array.prototype.indexOf.call(itemsEl.children,r),d=r.querySelector('textarea').value,q=r.querySelector('.l-q input').value,u=r.querySelector('.l-u input').value;
+ r.remove();if(!itemsEl.children.length)addLine('','1','');touch();render();
+ toast('Line '+(idx+1)+' removed',function(){var L=lines();if(L.length===1&&!L[0].desc&&!L[0].u)itemsEl.innerHTML='';addLine(d,q,u,idx);render();});
+}
+function toast(msg,undo){
+ $('iv-toast-t').textContent=msg;undoFn=undo;$('iv-undo').hidden=!undo;$('iv-toast').hidden=false;
+ clearTimeout(toastTimer);toastTimer=setTimeout(function(){$('iv-toast').hidden=true;undoFn=null;},7000);
+}
+$('iv-undo').addEventListener('click',function(){if(undoFn)undoFn();undoFn=null;$('iv-toast').hidden=true;});
+
+function exampleLeft(){
+ if(!example)return [];var out=[];
+ if(val('iv-from')===EX.from)out.push('your business name');
+ if(val('iv-to')===EX.to)out.push('the client');
+ if(val('iv-pay')===EX.pay)out.push('the payment details');
+ var L=lines();if(L.some(function(l){return EX.lines.some(function(e){return e[0]===l.desc;});}))out.push('the line items');
+ return out;
+}
+
+function checks(L,T){
+ var err=[],warn=[];
+ Array.prototype.forEach.call(root.querySelectorAll('[aria-invalid=true]'),function(e){e.removeAttribute('aria-invalid');});
+ if(T.bad.length){T.bad.forEach(function(b){err.push(b[0]);b[1].setAttribute('aria-invalid','true');});}
+ var ex=exampleLeft();if(ex.length)warn.push('Example data is still in '+ex.join(', ')+'.');
+ if(!val('iv-from').trim())warn.push('Add your business name.');
+ if(!val('iv-to').trim())warn.push('Add the client’s name.');
+ if(!val('iv-num').trim())warn.push('Add an invoice number.');
+ if(!val('iv-date'))warn.push('Add the issue date.');
+ if(val('iv-date')&&val('iv-due')&&val('iv-due')<val('iv-date'))warn.push('The due date is before the issue date.');
+ if(!L.some(function(l){return l.desc.trim()&&!isNaN(l.amt)&&l.amt!==0;}))warn.push('Add at least one line with a description and an amount.');
+ L.forEach(function(l){if(!l.desc.trim()&&!isNaN(l.amt)&&l.amt!==0)warn.push('Line '+(l.i+1)+' has an amount but no description.');});
+ if(!T.bad.length&&T.total<=0&&L.some(function(l){return l.amt;}))warn.push('The total is zero or negative. If this corrects an earlier invoice, call it a credit note.');
+ if(!T.bad.length&&T.rate===0&&L.some(function(l){return l.amt;}))warn.push('The tax rate is 0%. If that is because of an exemption or reverse charge, say so in the notes.');
+ return {err:err,warn:warn};
+}
+
+function render(){
+ var L=lines(),T=totals(L),C=checks(L,T);
+ L.forEach(function(l){l.el.querySelector('.ivs-amt').textContent=isNaN(l.amt)?'–':money(l.amt);});
+ var st=style(),acc=accent(),cur=val('iv-cur');
+ paper.className='pp st-'+st;paper.style.setProperty('--pa',acc);
+ var stamp=val('iv-stamp'),h='';
+ if(example&&exampleLeft().length)h+='<div class="pp-ex">Example data – not your invoice yet</div>';
+ h+='<div class="pp-hd"><div class="pp-title">INVOICE</div><div class="pp-hr">'+(stamp?'<div class="pp-stamp s-'+stamp.toLowerCase()+'">'+esc(stamp)+'</div>':'')+(logo?'<div class="pp-logo"><img src="'+logo+'" alt=""></div>':'')+'</div></div>';
+ var from=val('iv-from'),to=val('iv-to');
+ h+='<div class="pp-cols"><div><div class="pp-lbl">From</div><div class="pp-name">'+(from?esc(from):'<span class="pp-empty">Your business</span>')+'</div><div class="pp-addr">'+esc(val('iv-from-addr'))+'</div></div>'+
+  '<div><div class="pp-lbl">Bill to</div><div class="pp-name">'+(to?esc(to):'<span class="pp-empty">Client</span>')+'</div><div class="pp-addr">'+esc(val('iv-to-addr'))+'</div></div>'+
+  '<div><div class="pp-lbl">Details</div>'+kv('Invoice no.',val('iv-num'))+kv('Issue date',fmtDate(val('iv-date')))+kv('Due date',fmtDate(val('iv-due')))+(val('iv-ref')?kv('Reference',val('iv-ref')):'')+'</div></div>';
+ h+='<table class="pp-t"><colgroup><col><col class="c-q"><col class="c-u"><col class="c-a"></colgroup><thead><tr><th>Description</th><th class="n">Qty</th><th class="n">Unit price</th><th class="n">Amount</th></tr></thead><tbody>';
+ L.forEach(function(l){if(!l.desc.trim()&&(!l.u||l.un===0))return;h+='<tr><td class="d">'+esc(l.desc)+'</td><td class="n">'+(isNaN(l.qn)?'–':esc(fmtQty(l.qn)))+'</td><td class="n">'+(isNaN(l.un)?'–':money(l.un))+'</td><td class="n">'+(isNaN(l.amt)?'–':money(l.amt))+'</td></tr>';});
+ h+='</tbody></table><div class="pp-tot">';
+ if(T.bad.length){h+='<div class="pp-tr"><span>Total</span><span>–</span></div>';}
+ else{h+=tr('Subtotal',money(T.sub));
+  if(T.disc)h+=tr('Discount'+(T.pct?' ('+fmtPct(T.dv)+'%)':''),'-'+money(T.disc))+tr('Taxable amount',money(T.base));
+  h+=tr((val('iv-taxname')||'Tax')+' '+fmtPct(T.rate)+'%',money(T.tax));
+  h+='<div class="pp-tr pp-grand"><span>Total due</span><span>'+money(T.total)+'</span></div>';}
+ h+='</div>';
+ if(val('iv-pay').trim())h+='<div class="pp-sec"><div class="pp-lbl">Payment details</div><p>'+esc(val('iv-pay'))+'</p></div>';
+ if(val('iv-notes').trim())h+='<div class="pp-sec"><div class="pp-lbl">Notes</div><p>'+esc(val('iv-notes'))+'</p></div>';
+ paper.innerHTML=h;
+ fit();
+ var ck=$('iv-check');
+ if(C.err.length){ck.className='ivs-check err';ck.innerHTML='<b>Fix '+C.err.length+' thing'+(C.err.length>1?'s':'')+' before downloading</b><ul>'+C.err.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>';}
+ else if(C.warn.length){ck.className='ivs-check warn';ck.innerHTML='<b>Check before you send ('+C.warn.length+')</b><ul>'+C.warn.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>';}
+ else{ck.className='ivs-check ok';ck.innerHTML='<b>Ready to download</b>';}
+ $('iv-pdf').disabled=!!C.err.length;$('iv-print').disabled=!!C.err.length;
+ $('iv-sum').textContent=T.bad.length?'The total cannot be worked out until the marked fields are fixed.':'Total due '+money(T.total)+'.';
+ $('iv-exbar').hidden=!(example&&exampleLeft().length);
+ save();
+ return {L:L,T:T,C:C};
+}
+function kv(k,v){return '<div class="pp-kv"><span>'+esc(k)+'</span><span>'+(v?esc(v):'<span class="pp-empty">–</span>')+'</span></div>';}
+function tr(k,v){return '<div class="pp-tr"><span>'+esc(k)+'</span><span>'+esc(v)+'</span></div>';}
+function fmtPct(v){var s=String(Math.round(v*100)/100);return val('iv-numfmt')==='en'?s:s.replace('.',',');}
+function fmtQty(v){var s=String(Math.round(v*1000)/1000);return val('iv-numfmt')==='en'?s:s.replace('.',',');}
+
+function fit(){
+ var w=scaleBox.parentNode.clientWidth-parseFloat(getComputedStyle(scaleBox.parentNode).paddingLeft)*2;if(w<=0)return;
+ var s=Math.min(1,w/794);paper.style.transform='scale('+s+')';
+ scaleBox.style.width=(794*s)+'px';scaleBox.style.height=(paper.offsetHeight*s)+'px';
+}
+if(window.ResizeObserver)new ResizeObserver(fit).observe(scaleBox.parentNode);else window.addEventListener('resize',fit);
+
+// ---------- saving: only with explicit consent ----------
+function store(){try{return window.localStorage;}catch(e){return null;}}
+function save(){
+ var ls=store();if(!ls)return;
+ if(!$('iv-remember').checked)return;
+ // The next number only moves on once this invoice has actually been downloaded.
+ var o={v:2,business:{},style:style(),accent:accent(),next:downloaded&&downloaded===val('iv-num')?bump(val('iv-num')):val('iv-num'),logo:null};
+ BUS.forEach(function(f){o.business[f]=val(f);});
+ if(logo&&logo.length<400000)o.logo=logo;
+ try{ls.setItem(KEY,JSON.stringify(o));}catch(e){$('iv-store-msg').textContent='Your browser refused to save (storage full or blocked). Nothing was saved.';}
+}
+function loadSaved(){
+ var ls=store();if(!ls)return false;var o=null,msg='';
+ try{o=JSON.parse(ls.getItem(KEY)||'null');}catch(e){o=null;}
+ if(!o){var old=null;try{old=JSON.parse(ls.getItem(OLD)||'null');}catch(e){}
+  if(old){o={v:2,business:{'iv-from':old['iv-from'],'iv-from-addr':old['iv-from-addr'],'iv-notes':old['iv-notes'],'iv-cur':old['iv-cur'],'iv-taxname':old['iv-taxname'],'iv-tax':old['iv-tax']},next:bump(old['iv-num']||'INV-001')};
+   try{ls.removeItem(OLD);ls.setItem(KEY,JSON.stringify(o));}catch(e){}
+   msg='The earlier version of this tool saved everything you typed. We kept only your business details and deleted the client details and line items.';}}
+ if(!o)return false;
+ Object.keys(o.business||{}).forEach(function(f){if(o.business[f]!=null&&$(f))$(f).value=o.business[f];});
+ if(o.style){var s=root.querySelector('input[name=iv-style][value='+o.style+']');if(s)s.checked=true;}
+ if(o.accent)setAccent(o.accent);
+ if(o.logo){setLogo(o.logo);}
+ $('iv-num').value=o.next||'INV-001';
+ $('iv-remember').checked=true;
+ $('iv-store-msg').textContent=msg||'Your saved business details are filled in. Client details and line items start empty.';
+ return true;
+}
+function setAccent(c){var r=root.querySelector('input[name=iv-acc][value="'+c+'"]');if(r)r.checked=true;else{Array.prototype.forEach.call(root.querySelectorAll('input[name=iv-acc]'),function(x){x.checked=false;});$('iv-acc-own').value=c;}}
+$('iv-remember').addEventListener('change',function(){
+ var ls=store();
+ if(this.checked){save();$('iv-store-msg').textContent=ls?'Saved on this device. It updates as you type.':'This browser blocks local storage, so nothing can be saved.';}
+ else{try{ls&&ls.removeItem(KEY);}catch(e){}$('iv-store-msg').textContent='Not saving. Anything saved earlier has been removed from this browser.';}
+});
+$('iv-forget').addEventListener('click',function(){var ls=store();try{ls&&ls.removeItem(KEY);ls&&ls.removeItem(OLD);}catch(e){}$('iv-remember').checked=false;$('iv-store-msg').textContent='Saved details removed from this browser.';});
+
+// ---------- logo ----------
+function setLogo(dataUrl){logo=dataUrl;logoImg=null;if(!dataUrl){$('iv-logo-x').hidden=true;render();return;}var im=new Image();im.onload=function(){logoImg=im;render();};im.src=dataUrl;$('iv-logo-x').hidden=false;}
+$('iv-logo').addEventListener('change',function(){var f=this.files&&this.files[0];if(!f)return;
+ if(!/^image\/(png|jpeg)$/.test(f.type)){$('iv-store-msg').textContent='Use a PNG or JPG file for the logo.';this.value='';return;}
+ if(f.size>2000000){$('iv-store-msg').textContent='That logo is over 2 MB; please use a smaller file.';this.value='';return;}
+ var r=new FileReader();r.onload=function(){touch();setLogo(r.result);};r.readAsDataURL(f);});
+$('iv-logo-x').addEventListener('click',function(){$('iv-logo').value='';setLogo(null);});
+
+// ---------- state changes ----------
+function touch(){if(!started){started=true;if(typeof gtag==='function')gtag('event','tool_start',{event_label:'invoice'});}}
+root.addEventListener('input',function(e){if(e.target.id==='iv-logo')return;touch();render();});
+root.addEventListener('change',function(e){if(e.target.name==='iv-acc'||e.target.id==='iv-acc-own'){if(e.target.id==='iv-acc-own')Array.prototype.forEach.call(root.querySelectorAll('input[name=iv-acc]'),function(x){x.checked=false;});}if(e.target.id!=='iv-logo')render();});
+$('iv-add').addEventListener('click',function(){var r=addLine('','1','');r.querySelector('textarea').focus();render();});
+function bump(n){var m=/(\d+)(?!.*\d)/.exec(n||'');if(!m)return (n||'INV')+'-2';var z=m[1],nx=String(+z+1);while(nx.length<z.length)nx='0'+nx;return n.slice(0,m.index)+nx+n.slice(m.index+z.length);}
+function snapshot(){var o={f:{},lines:lines().map(function(l){return [l.desc,l.q,l.u];}),example:example};FIELDS.forEach(function(f){o.f[f]=val(f);});return o;}
+function restore(o){FIELDS.forEach(function(f){$(f).value=o.f[f];});itemsEl.innerHTML='';o.lines.forEach(function(l){addLine(l[0],l[1],l[2]);});example=o.example;render();}
+function clearClient(keepBusiness){
+ ['iv-to','iv-to-addr','iv-ref'].forEach(function(f){$(f).value='';});
+ $('iv-date').value=today(0);$('iv-due').value=today(14);$('iv-stamp').value='';$('iv-disc').value='0';
+ if(!keepBusiness){['iv-from','iv-from-addr','iv-pay'].forEach(function(f){$(f).value='';});$('iv-notes').value='Payment within 14 days. Thank you for your business.';$('iv-num').value='INV-001';}
+ itemsEl.innerHTML='';addLine('','1','');
+}
+$('iv-empty').addEventListener('click',function(){var s=snapshot();example=false;clearClient(false);render();$('iv-from').focus();toast('Example cleared',function(){restore(s);});});
+$('iv-new').addEventListener('click',function(){var s=snapshot();var ex=example;example=false;clearClient(!ex);if(!ex)$('iv-num').value=bump(s.f['iv-num']);render();toast('New invoice started',function(){restore(s);});});
+
+// ---------- mobile tabs ----------
+function view(v){root.setAttribute('data-view',v);$('iv-tab-edit').setAttribute('aria-selected',v==='edit');$('iv-tab-prev').setAttribute('aria-selected',v==='preview');if(v==='preview')fit();}
+$('iv-tab-edit').addEventListener('click',function(){view('edit');});
+$('iv-tab-prev').addEventListener('click',function(){view('preview');});
+$('iv-go-prev').addEventListener('click',function(){view('preview');root.scrollIntoView({behavior:'smooth',block:'start'});});
+
+// ---------- print ----------
+$('iv-print').addEventListener('click',function(){
+ var f=document.createElement('iframe');f.setAttribute('aria-hidden','true');f.style.cssText='position:fixed;right:0;bottom:0;width:0;height:0;border:0';document.body.appendChild(f);
+ var css=$('ivs-paper-css').textContent+'@page{size:A4;margin:0}html,body{margin:0;background:#fff}.pp{width:210mm;min-height:0;box-shadow:none}.pp-ex{display:none}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}';
+ var d=f.contentWindow.document;d.open();d.write('<!doctype html><html><head><meta charset="utf-8"><title>'+esc(val('iv-num')||'Invoice')+'</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"><style>'+css+'</style></head><body>'+paper.outerHTML.replace(/style="[^"]*transform[^"]*"/,'style="--pa:'+accent()+'"')+'</body></html>');d.close();
+ setTimeout(function(){try{f.contentWindow.focus();f.contentWindow.print();}catch(e){}setTimeout(function(){f.remove();},1500);},450);
+ if(typeof gtag==='function')gtag('event','tool_download',{event_label:'invoice_print'});
+});
+
+// ---------- PDF ----------
+function b64(buf){var u=new Uint8Array(buf),s='';for(var i=0;i<u.length;i+=32768)s+=String.fromCharCode.apply(null,u.subarray(i,i+32768));return btoa(s);}
+function getFonts(){
+ if(fontCache!==null)return Promise.resolve(fontCache);
+ function one(u){return fetch(u).then(function(r){if(!r.ok)throw new Error('font');return r.arrayBuffer();}).then(b64);}
+ return Promise.all([one(FONT_R),one(FONT_B)]).then(function(x){fontCache={r:x[0],b:x[1]};return fontCache;},function(){fontCache=false;return false;});
+}
+function rgb(h){h=h.replace('#','');if(h.length===3)h=h.split('').map(function(c){return c+c;}).join('');return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];}
+function tint(c,a){return c.map(function(x){return Math.round(255-(255-x)*a);});}
+$('iv-pdf').addEventListener('click',function(){
+ var J=window.jspdf&&window.jspdf.jsPDF,btn=this;
+ if(!J){$('iv-check').className='ivs-check err';$('iv-check').innerHTML='<b>The PDF library did not load.</b><ul><li>Check your connection and reload the page, or use Print and choose “Save as PDF”.</li></ul>';return;}
+ var R=render();if(R.C.err.length)return;
+ btn.disabled=true;var lbl=btn.textContent;btn.textContent='Preparing PDF…';
+ getFonts().then(function(fonts){
+  try{build(J,fonts,R);}catch(e){$('iv-check').className='ivs-check err';$('iv-check').innerHTML='<b>The PDF could not be made.</b><ul><li>'+esc(e&&e.message||e)+'</li></ul>';}
+  btn.disabled=false;btn.textContent=lbl;
+ });
+});
+function build(J,fonts,R){
+ var doc=new J({unit:'mm',format:'a4'}),F='helvetica';
+ if(fonts){doc.addFileToVFS('Roboto-Regular.ttf',fonts.r);doc.addFont('Roboto-Regular.ttf','Roboto','normal');doc.addFileToVFS('Roboto-Bold.ttf',fonts.b);doc.addFont('Roboto-Bold.ttf','Roboto','bold');F='Roboto';}
+ var st=style(),mod=st==='modern',cmp=st==='compact',acc=rgb(accent()),ink=[31,35,40],grey=[100,108,118],soft=[61,68,77],rule=[227,230,234];
+ var K=cmp?{b:8.6,t:16,lh:3.9,pad:1.5,m:13}:{b:9.75,t:21,lh:4.5,pad:2.3,m:15};
+ var W=210,M=K.m,X=W-M,BOT=297-17,y=M,P=mod?2:0;
+ function set(sz,bold,col){doc.setFont(F,bold?'bold':'normal');doc.setFontSize(sz);doc.setTextColor(col[0],col[1],col[2]);}
+ function lbl(t,x,yy,right,th){set(K.b-2.2,true,mod&&th?acc:grey);doc.text(t.toUpperCase(),x,yy,right?{align:'right'}:{charSpace:.3});}
+ if(mod){doc.setFillColor(acc[0],acc[1],acc[2]);doc.rect(0,0,W,3.4,'F');}
+ // header
+ var titleH=K.t*.3528,logoH=0;
+ set(K.t,true,mod?acc:ink);doc.text('INVOICE',M,y+titleH,{charSpace:mod?.3:1.2});
+ if(logoImg){var mw=48,mh=cmp?14:18,w=mw,h=mw*logoImg.height/logoImg.width;if(h>mh){h=mh;w=h*logoImg.width/logoImg.height;}
+  try{doc.addImage(logo,/^data:image\/png/.test(logo)?'PNG':'JPEG',X-w,y,w,h);}catch(e){}logoH=h;}
+ var stp=val('iv-stamp'),logoW=logoImg?Math.min(48,(cmp?14:18)*logoImg.width/logoImg.height):0;
+ if(stp){var sc=stp==='PAID'?[21,128,61]:stp==='OVERDUE'?[198,40,40]:[107,114,128];set(16,true,sc);
+  var sw=doc.getTextWidth(stp),sx=X-(logoW?logoW+10:0)-sw-4,sy=y+titleH;
+  doc.setDrawColor(sc[0],sc[1],sc[2]);doc.setLineWidth(.6);doc.roundedRect(sx-2.5,sy-6,sw+5,8.2,1.2,1.2,'S');doc.text(stp,sx,sy);}
+ y+=Math.max(titleH,logoH)+(cmp?8:11);
+ // three columns
+ var gap=cmp?4.5:6,cw=(X-M-2*gap)/3,cx=[M,M+cw+gap,M+2*(cw+gap)],ends=[];
+ function party(x,label,name,addr){var yy=y;lbl(label,x,yy);yy+=4.6;set(K.b,true,ink);var n=doc.splitTextToSize(name||'',cw);doc.text(n,x,yy);yy+=n.length*K.lh;
+  if(addr){set(K.b,false,soft);var a=doc.splitTextToSize(addr,cw);doc.text(a,x,yy);yy+=a.length*K.lh;}return yy;}
+ ends.push(party(cx[0],'From',val('iv-from'),val('iv-from-addr')));
+ ends.push(party(cx[1],'Bill to',val('iv-to'),val('iv-to-addr')));
+ var yy=y;lbl('Details',cx[2],yy);yy+=4.6;
+ [['Invoice no.',val('iv-num')],['Issue date',fmtDate(val('iv-date'))],['Due date',fmtDate(val('iv-due'))]].concat(val('iv-ref')?[['Reference',val('iv-ref')]]:[]).forEach(function(p){
+  set(K.b,false,grey);doc.text(p[0],cx[2],yy);set(K.b,false,ink);var v=doc.splitTextToSize(p[1]||'–',cw*.55);doc.text(v,cx[2]+cw,yy,{align:'right'});yy+=v.length*K.lh;});
+ ends.push(yy);y=Math.max.apply(null,ends)+(cmp?6:9);
+ // table
+ var cQ=X-62,cU=X-31,cA=X-P,dW=cQ-18-M-P;
+ function head(){
+  if(mod){var t=tint(acc,.12);doc.setFillColor(t[0],t[1],t[2]);doc.rect(M,y-4.4,X-M,7,'F');}
+  lbl('Description',M+P,y,false,true);lbl('Qty',cQ,y,true,true);lbl('Unit price',cU,y,true,true);lbl('Amount',cA,y,true,true);
+  y+=mod?2.6:2;if(!mod){doc.setDrawColor(ink[0],ink[1],ink[2]);doc.setLineWidth(.4);doc.line(M,y,X,y);}
+  y+=K.pad+K.lh*.85;
+ }
+ function page(){doc.addPage();y=M+6;}
+ head();
+ R.L.forEach(function(l){
+  if(!l.desc.trim()&&(!l.u||l.un===0))return;
+  set(K.b,false,ink);var d=doc.splitTextToSize(l.desc||'',dW),hgt=(d.length-1)*K.lh+K.pad*2;
+  if(y+hgt>BOT){page();head();}
+  set(K.b,false,ink);
+  doc.text(d,M+P,y);doc.text(fmtQty(l.qn),cQ,y,{align:'right'});doc.text(money(l.un),cU,y,{align:'right'});doc.text(money(l.amt),cA,y,{align:'right'});
+  y+=(d.length-1)*K.lh+K.pad;doc.setDrawColor(rule[0],rule[1],rule[2]);doc.setLineWidth(.2);doc.line(M,y,X,y);y+=K.pad+K.lh*.85;
+ });
+ // totals
+ var T=R.T,rows=[['Subtotal',money(T.sub)]];
+ if(T.disc){rows.push(['Discount'+(T.pct?' ('+fmtPct(T.dv)+'%)':''),'-'+money(T.disc)]);rows.push(['Taxable amount',money(T.base)]);}
+ rows.push([(val('iv-taxname')||'Tax')+' '+fmtPct(T.rate)+'%',money(T.tax)]);
+ var need=rows.length*(K.lh+1)+14;if(y+need>BOT)page();
+ var tx=X-80;y+=1;
+ rows.forEach(function(r){set(K.b,false,soft);doc.text(r[0],tx,y);set(K.b,false,ink);doc.text(r[1],X-P,y,{align:'right'});y+=K.lh+1;});
+ if(mod){var t=tint(acc,.12);doc.setFillColor(t[0],t[1],t[2]);doc.rect(tx-2,y-2.2,X-tx+2,9.5,'F');y+=4.2;set(K.b+2.5,true,acc);}
+ else{doc.setDrawColor(ink[0],ink[1],ink[2]);doc.setLineWidth(.4);doc.line(tx,y-1.6,X,y-1.6);y+=4.2;set(K.b+2.5,true,ink);}
+ doc.text('Total due',tx,y);doc.text(money(T.total),X-P,y,{align:'right'});y+=cmp?9:12;
+ // payment + notes
+ [['Payment details',val('iv-pay')],['Notes',val('iv-notes')]].forEach(function(s){
+  if(!s[1].trim())return;if(y+10>BOT)page();lbl(s[0],M,y);y+=4.6;set(K.b,false,soft);
+  doc.splitTextToSize(s[1],140).forEach(function(line){if(y>BOT){page();set(K.b,false,soft);}doc.text(line,M,y);y+=K.lh;});y+=cmp?4:6;
+ });
+ // footer on every page
+ var n=doc.getNumberOfPages(),foot=[val('iv-num')?'Invoice '+val('iv-num'):'',val('iv-from')].filter(Boolean).join(' · ');
+ for(var i=1;i<=n;i++){doc.setPage(i);set(7.5,false,grey);if(foot){var fl=doc.splitTextToSize(foot,120);doc.text(fl[0]+(fl.length>1?'…':''),M,297-9);}doc.text('Page '+i+' of '+n,X,297-9,{align:'right'});}
+ var name=[val('iv-num')||'invoice',val('iv-to')].filter(Boolean).join('-').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/ł/g,'l').replace(/Ł/g,'L').replace(/ß/g,'ss').replace(/[^A-Za-z0-9_-]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'').slice(0,80)||'invoice';
+ doc.save(name+'.pdf');
+ if(typeof gtag==='function')gtag('event','tool_download',{event_label:'invoice_pdf'});
+ if(!fonts){$('iv-store-msg').textContent='';$('iv-check').insertAdjacentHTML('beforeend','<ul><li>The PDF font did not load, so a standard font was used. Letters outside Western European languages may be missing; Print → Save as PDF keeps them.</li></ul>');}
+ downloaded=val('iv-num');save();
+}
+
+// ---------- start ----------
+if(!loadSaved()){
+ example=true;
+ $('iv-from').value=EX.from;$('iv-from-addr').value=EX.fromAddr;$('iv-to').value=EX.to;$('iv-to-addr').value=EX.toAddr;
+ $('iv-num').value=EX.num;$('iv-ref').value=EX.ref;$('iv-taxname').value=EX.taxname;$('iv-tax').value=EX.tax;$('iv-disc').value=EX.disc;
+ $('iv-pay').value=EX.pay;$('iv-notes').value=EX.notes;
+ EX.lines.forEach(function(l){addLine(l[0],l[1],l[2]);});
+}else{
+ if(!val('iv-taxname'))$('iv-taxname').value='VAT';if(!val('iv-tax'))$('iv-tax').value='0';$('iv-disc').value='0';addLine('','1','');
+}
+$('iv-date').value=today(0);$('iv-due').value=today(14);
+render();
 })();
 </script></body></html>

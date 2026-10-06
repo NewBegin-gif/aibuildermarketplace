@@ -685,10 +685,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/close-review/
 
 ## CloudTalk (cloudtalk.io)
-- **Verified pricing:** Lite €19, Starter €25, Essential €29 and Expert €49 per user/mo on annual billing, and Expert needs at least 3 licences (re-verified 2026-08-16).
+- **Verified pricing:** Lite €19, Starter €25, Essential €29 and Expert €49 per user/mo on annual billing, or €27, €34, €39 and €69 billed monthly, and Expert needs at least 3 licences (re-verified 2026-08-16 and …
 - **Honest take:** The per-seat price is only part of it — number rental, outbound minutes and the AI add-ons stack on top, so a call-heavy team's real bill runs above the plan rate.
 - **Best for:** support and sales teams that want a cloud call center with strong CRM integrations and call analytics
-- **Flags:** {'f': 'per_seat', 'ev': 'Lite €19, Starter €25, Essential €29 and Expert €49 per user/mo on annual billing, and Expert needs at least 3 licences (re-verified 2026-08-16).'}, {'f': 'usage_metered', 'ev': 'AI voice agents are separate subscriptions: AI Receptionist from €99/mo with 200 minutes, AI Specialist €349/mo with 1,000 minutes, and above 10,000 …'}, {'f': 'addons_extra', 'ev': 'AI voice agents are separate subscriptions: AI Receptionist from €99/mo with 200 minutes, AI Specialist €349/mo with 1,000 minutes, and above 10,000 …'}, {'f': 'annual_lock', 'ev': 'Lite €19, Starter €25, Essential €29 and Expert €49 per user/mo on annual billing, and Expert needs at least 3 licences (re-verified 2026-08-16).'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Lite €19, Starter €25, Essential €29 and Expert €49 per user/mo on annual billing, or €27, €34, €39 and €69 billed monthly, and Expert needs at least…'}, {'f': 'usage_metered', 'ev': 'AI voice agents are separate subscriptions: the add-on card lists them from €99/mo with 200 minutes (on 6 October 2026 the AI Receptionist card itsel…'}, {'f': 'addons_extra', 'ev': 'AI voice agents are separate subscriptions: the add-on card lists them from €99/mo with 200 minutes (on 6 October 2026 the AI Receptionist card itsel…'}, {'f': 'annual_lock', 'ev': 'Lite €19, Starter €25, Essential €29 and Expert €49 per user/mo on annual billing, or €27, €34, €39 and €69 billed monthly, and Expert needs at least…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/cloudtalk-review/
 
 ## CloudTask (cloudtask.com)
@@ -819,7 +819,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/database-mart-review/
 
 ## Databox (databox.com)
-- **Verified pricing:** (re-verified 2026-10-02, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers we described are gone.
+- **Verified pricing:** (re-verified 2026-10-02 and 2026-10-06, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers we described …
 - **Honest take:** Each plan includes a fixed number of data sources and going over means moving up a whole tier, so one extra integration can mean the $199 Team Core to $319 Team Scale step.
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
 - **Flags:** {'f': 'usage_metered', 'ev': 'Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync.'}, {'f': 'addons_extra', 'ev': 'AI credits are a shared monthly pool for Genie and the MCP server, so heavy AI use moves you up a tier as fast as data does, and 15-minute sync — onc…'}, {'f': 'annual_lock', 'ev': 'Monthly, Analyst reads $89 and the others $249, $399 and from $99; annual billing is 20% off.'}, {'f': 'free_tier', 'ev': 'Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync.'}
@@ -1400,7 +1400,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/healthie-review/
 
 ## Heard (joinheard.com)
-- **Verified pricing:** (re-verified 2026-09-05 on their own pricing page) Three plans, billed upfront per year with the monthly equivalent shown: Lite $129/mo or $1,548 a year, Essential $169/mo or $2,028, Premiu…
+- **Verified pricing:** (re-verified 2026-09-05 and 2026-10-06 on their own pricing page) Three plans, billed upfront per year with the monthly equivalent shown: Lite $129/mo or $1,548 a year, Essential $169/mo or…
 - **Honest take:** Mind the fine print between tiers: the entry plan does not include your annual tax filing (a ~$750 one-off on Lite), it is annual billing only, and messy back-months cost extra as catch-up fees.
 - **Best for:** therapists and health-and-wellness practice owners — SLPs, dieticians, chiropractors, audiologists, coaches, massage and physical therapists
 - **Flags:** {'f': 'addons_extra', 'ev': 'Annual tax prep and filing is a $750 one-off add-on on Lite.'}, {'f': 'annual_lock', 'ev': 'Mind the fine print between tiers: the entry plan does not include your annual tax filing (a ~$750 one-off on Lite), it is annual billing only, and m…'}
@@ -1569,10 +1569,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/jibble-review/
 
 ## Joiin (joiin.co)
-- **Verified pricing:** (re-verified 2026-08-17 against Joiin's own machine-readable pricing page) 14-day free trial, no credit card; unlimited users and reports on every plan.
-- **Honest take:** The $23 headline covers a single company on annual billing — but consolidation is the whole point of Joiin, and a real group of 10-20 entities lands at $92-139 a month.
+- **Verified pricing:** (re-verified 2026-10-06 in a browser render of joiin.co/pricing and the price table in its own pricing script, in US dollars) Joiin now sells three plans, Core, Pro and Max, each priced by …
+- **Honest take:** The headline now hides a three-way split.
 - **Best for:** finance teams and accountants consolidating multi-entity, multi-currency group reporting from Xero, QuickBooks or Sage without hand-built spreadsheets
-- **Flags:** {'f': 'annual_lock', 'ev': 'The $23 headline covers a single company on annual billing — but consolidation is the whole point of Joiin, and a real group of 10-20 entities lands …'}
+- **Flags:** {'f': 'annual_lock', 'ev': 'Above 100 companies you pay the 100-company price plus, for each extra company, $3 / $4 / $5 a month on monthly billing or $28 / $35 / $49 a year on …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/joiin-review/
 
 ## Jotform AI Agents (jotform.com)
@@ -2251,7 +2251,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** Process Street publishes no prices.
 - **Honest take:** Pricing is opaque and jumps steeply from Startup to Pro, with seat minimums that push the real cost above the headline per-member rate — you'll need a sales call to price it.
 - **Best for:** operations-driven teams that run recurring, checklist-based processes and want them tracked and auditable
-- **Flags:** {'f': 'quote_only', 'ev': 'Re-verified 2026-08-17 and again 2026-09-30: every tier on their pricing page, Startup included, shows Contact sales rather than a figure, and our mo…'}, {'f': 'per_seat', 'ev': 'Figures quoted elsewhere — roughly $100 a month for Startup, the $1,500 range for Pro, per-member rates around $12.50 to $15 — do not come from Proce…'}
+- **Flags:** {'f': 'quote_only', 'ev': 'Re-verified 2026-08-17, 2026-09-30 and 2026-10-06: every tier on their pricing page, Startup included, shows Contact sales rather than a figure, and …'}, {'f': 'per_seat', 'ev': 'Figures quoted elsewhere — roughly $100 a month for Startup, the $1,500 range for Pro, per-member rates around $12.50 to $15 — do not come from Proce…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/process-street-review/
 
 ## ProtectMyOrder (protectmyorder.com)

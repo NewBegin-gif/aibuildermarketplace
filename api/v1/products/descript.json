@@ -73,5 +73,65 @@
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Descript",
+    "product_id": "descript",
+    "run_date": "2026-09-30",
+    "what": "Two sessions on the free plan. On 7 September we ran it by hand: Daan logged in, and we read every counter against a test file of exactly five minutes that we built inside the page; Descript was not a partner of ours then and contributed nothing. On 30 September, by then a PartnerStack partner, we drove Descript from Claude through Descript's connector, for Descript's partner content challenge, which pays the first five entries $250: we uploaded one of our own five-minute review videos and asked for vertical clips in plain sentences, once directly and once from a claude.ai chat.",
+    "findings": [
+     "The free plan's 100 AI credits are one-time, not monthly. Descript says so itself in two places: the plan card reads \"100 AI credits at signup\" for Free against \"400 AI credits / month\" for Hobbyist, and the usage screen inside the app puts \"Lifetime AI credits used 0/100\" next to \"Monthly media minutes used 0/60\". That pair of words -- lifetime against monthly -- is the whole answer.",
+     "Media minutes come off at IMPORT, not at export, and per minute of media. Two five-minute files took the counter from 60m to 50m. Their own upload dialog says it too: \"Each file added uses media minutes\". Exporting costs no minutes and no credits, according to Descript itself.",
+     "The AI assistant, Underlord, charges per instruction, and it does run on the free plan. Importing and transcribing cost 3 credits, Studio Sound over a ten-minute track 9 credits, and a question about the export settings 6 credits.",
+     "An instruction that returns nothing still costs credits. \"Remove all filler words\" answered \"No filler words were found -- the script shows 0 words, so there's nothing to remove\" and deducted 2 credits anyway.",
+     "Five instructions without a single real edit spent 20 of the 100 one-time credits. Anyone using the free plan as a trial is through it in an afternoon, and no more arrive.",
+     "Studio Sound ran on Free, while the pricing table presents it as a Hobbyist benefit (\"Studio Sound, Remove Filler Words, Create Clips, and more\"). The line \"Limited use of Underlord\" on the free card is therefore more generous than the comparison table suggests.",
+     "In onboarding, the consent \"Our team analyzes your project information\" is TICKED BY DEFAULT, in a step most people click straight through. You can turn it off, but you have to do it yourself.",
+     "The watermark on the free plan sits in the bottom right of the frame; paid plans do not have it.",
+     "Through Claude's Descript connector, a 5:15 review video of ours (94 MB) uploaded and transcribed in about 30 seconds. The import used 315 media seconds, consistent with minutes being charged at import.",
+     "One sentence to Underlord through Claude (a vertical 9:16 clip of about 30 seconds on the price and the 90-day data limit, with captions, keeping the words and numbers as spoken) produced a new 24-second vertical composition in two and a half minutes for 48.3 AI credits. The original composition was left untouched, and the clip's transcript matched the source word for word, numbers included.",
+     "From a claude.ai chat, Claude asked permission before each Descript action, read the transcript itself, chose the passage from 01:15 to 01:40 and had Underlord cut a 21-second vertical clip with burned-in captions in about three minutes. It also fixed the transcript's misspelling of the product name in the captions and said that it had.",
+     "The vertical version is a centre crop. On our 16:9 video it cut off the text card at the side of the frame, and because our video already carries subtitles, Descript's captions landed on top of them. Ask for the full frame on a blurred background, and skip added captions when your source already has them.",
+     "Our request to fix that was refused because the free plan had run out of AI credits: the one-time 100 were gone after our first session plus these two edits. Real editing work through Claude needs a paid plan.",
+     "Publishing gave an unlisted share link and an MP4 download in about a minute and a half. We asked for 1080p and received 720x1280 with the watermark in the bottom right, so the 720p cap on the Free plan card is what applies, not the 4K that Descript's own assistant named in our first session."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "descript:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "descript:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "descript:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "descript:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

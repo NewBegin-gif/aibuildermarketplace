@@ -93,5 +93,56 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Bitscale",
+    "product_id": "bitscale",
+    "run_date": "2026-09-11",
+    "what": "Daan created the free account and logged in; everything after that was read inside the workspace on 11 September 2026 -- the credit screen, the plans and billing screen and the upgrade panel -- alongside Bitscale's own credit documentation. Two limits worth stating plainly. We did not run an enrichment: the grid renders in a canvas our browser panel could not drive, so the per-record credit costs below come from Bitscale's published credit table and not from a meter we moved ourselves. And Bitscale is an affiliate partner of ours; their partner manager offered 2,000 bonus credits that same morning, which had not been added when we looked -- the account was on the ordinary free allowance of 200, which is what a new reader gets.",
+    "findings": [
+     "The free tier runs two meters, not one, and the account screen shows both: 200 platform credits and 2,000 search credits, each resetting monthly, with the next search reset dated on the page. Enriching a record spends platform credits; finding one through Find People or Find Companies spends a search credit, one per record. A reader budgeting on \"200 credits\" is reading half the meter, and it is the half that runs out first.",
+     "On Free, nothing carries over. The billing screen states it twice -- \"Rolled-Over Credits: Not included in the plan\" and \"Rollover Limit: Not included in the plan\" -- so an unused month is gone rather than banked. Rollover is listed among the things the first paid plan unlocks, next to credit rollover, the 100+ providers, action columns beyond 20 per grid, and the inbound integrations (RB2B, Factors, Vector).",
+     "What one enriched record costs is published, and the range is the whole story: one to twelve platform credits per successful email or phone lookup, depending on how many providers the waterfall is allowed to try. An AI enrichment is one to two credits a run, a BitAgent website scrape one per query, and anything arriving through the API is free. On Growth that turns 15,000 credits into anywhere between 1,250 and 15,000 enriched contacts -- 2.3 cents each at one credit, 28 cents at twelve.",
+     "The in-app upgrade panel carries a Growth benefit the public plan cards do not mention: three hours a quarter with a GTM engineer, alongside the 15,000 credits. Worth knowing before you compare the $349 against a pure data vendor, because it is consulting time rather than volume.",
+     "The two meters are set to become convertible. Bitscale's documentation announces 1 platform credit = 10 search credits as an upcoming feature, handled manually for enterprise accounts today. Until that ships, a month where you burn the enrichment pool cannot be topped up from the search pool, however much of it is left."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "bitscale:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "bitscale:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "bitscale:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "bitscale:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

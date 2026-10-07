@@ -98,5 +98,57 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Clonable",
+    "product_id": "clonable",
+    "run_date": "2026-10-01",
+    "what": "A fresh WordPress 7.1.2 test site, the Clonable plugin from the WordPress directory and a new free Clonable account. We cloned the site into German, wrote and then changed a page of our own, corrected a translation by hand and connected the plugin, checking each result on the live pages and in WordPress.",
+    "findings": [
+     "From typing the site address to a working German preview took under five minutes, about two of them waiting for the build. No DNS change or plugin is needed for the preview.",
+     "We changed a price on the English page from 49 to 59 euros; the German page showed the new price on our first reload, within fifteen seconds.",
+     "WordPress still listed the same three English pages afterwards. Clonable added no translated copies to the database; the only addition was its plugin. The other side of that: all clone traffic runs through Clonable's servers, which its own setup guide tells you to whitelist.",
+     "Connecting the plugin with an API key put hreflang tags for x-default, en-us and de-de in the head of both the original and the clone straight away. The URL slug stayed English; URL translation is a separate feature.",
+     "Correcting a single translation in the Clone editor works on the free plan. Translation Replacements and the Glossary, the tools for fixing a term everywhere at once, ask for an upgrade.",
+     "The plan picker inside the app showed one clone on every plan and 25 free pages, while the public pricing page the same day listed 3 to 20 clones per plan and 20 free pages."
+    ],
+    "not_tested": "Going live on our own domain or a subfolder, WooCommerce and multi-currency, more than one short page, languages other than German, and WPML itself side by side. Choosing German in the floating language switcher did not navigate in our automated browser session, so we could not confirm that click-through.",
+    "report": "/research/clonable-wordpress-test/",
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "clonable:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "clonable:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "clonable:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "clonable:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

@@ -93,5 +93,58 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "BrowserAct",
+    "product_id": "browseract",
+    "run_date": "2026-09-04",
+    "what": "Historical test data: these are measurements from 4 September 2026, at that day's free allowance and meters, not today's Free plan or the standard cost of every Bot. We ran the reproducible test BrowserAct's own partner team proposed, on a free account with the 1,500 sign-up credits the card offered at the time. The prompt, verbatim: open books.toscrape.com, collect the first 20 books in listing order, open each detail page and return full title, displayed price, availability and source URL, leave unavailable fields blank, infer nothing. Before touching BrowserAct we fetched the same 20 pages with plain HTTP and saved the four fields as ground truth, so every value below was checked against the source, not against BrowserAct's own claims. Then we built the Bot from the prompt, ran it twice from the published version, and read the credit meter after each step.",
+    "findings": [
+     "Accuracy: 80 of 80 fields correct, three times over. The build's own verification output, run 1 and run 2 each returned 20 rows with title, price, availability and URL identical to our ground truth, including the parenthetical stock counts ('In stock (22 available)') and the currency symbol, which the Bot kept as displayed rather than converting.",
+     "The build costs more than the runs. Building the Bot took 4 minutes 59 seconds and 278 credits; the agent inspected the listing and a detail page, wrote a small package (a SKILL.md, a run.py and two DOM helpers), compiled it, and ran it end to end before declaring it ready. On that day's free tier that was about a fifth of the sign-up credits spent before the first real run. The pricing page now estimates 300 to 500 credits for a simple Agent build, and today's free card lists 2 free Agent Builds alongside its 200 credits.",
+     "Runs are cheap but not deterministic in cost. Run 1 used 21 credits in 1 minute 56 seconds; run 2, the same Bot on the same 20 pages, used 27 credits in 3 minutes 12 seconds. Identical output, 29% more credits and 65% more wall time. At Basic's 10,000 credits for $13 a month on yearly billing, a run of this size is roughly three cents, so the variance is small in money and worth knowing about in budgeting.",
+     "The meter is honest at the account level and confusing at the task level. Balance went 1,500 to 1,222 after the build, 1,201 after run 1 and 1,174 after run 2, which reconciles exactly with the per-task figures in the history list. But the task detail panel showed 'Credits used: 0' for a run that the history list, seconds later, priced at 21. Trust the list and the balance, not the panel.",
+     "The agent made one silent design decision. The prompt said 'the first 20 books', and the Bot was built with no parameters and 'first 20' hard-coded; it says so in its own summary and offers to change it on request. Fine for this test, but a Bot you intend to reuse should be built with the count as an input, and you have to ask for that.",
+     "Historical: on 4 September the app and the website showed different prices. On first login the app opened a '7-days free trial' panel listing Basic at $16, Essential at $70 and Advanced at $120 a month, with $20, $100 and $200 struck through, while the public pricing page, read the day before, still charged $20, $100 and $200 monthly. That gap closed by 13 September: the public page now shows the same $16, $70 and $120.",
+     "What this test does not show. books.toscrape.com is a static sandbox with no login, no JavaScript rendering and no anti-bot measures, so none of the managed-browser, proxy or CAPTCHA infrastructure in BrowserAct's pitch was exercised. It proves the no-code loop from plain prompt to reusable Bot; it says nothing about hostile sites, where proxy use starts to matter -- free in the cloud for a limited time, 5,000 credits per gigabyte of dynamic proxy traffic on the Local CLI."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "browseract:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "browseract:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "browseract:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "browseract:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

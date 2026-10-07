@@ -110,5 +110,58 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Databox",
+    "product_id": "databox",
+    "run_date": "2026-09-25",
+    "what": "We opened a new Databox account through the 'Get started' button under the Free plan on databox.com/pricing, connected Google Analytics 4 and Google Search Console for our own site, asked Genie two questions about that data, let Genie try to build a dashboard, and read the credit meter under Settings → Billing after every step. One account, one evening, our own traffic data — not a month of team use.",
+    "findings": [
+     "The Free button does not give you Free. The account opened as a 14-day trial of Team Core at $249 a month, billed monthly. Free was listed in the app as a 'Downgrade'. Databox's own FAQ says that if no payment details are added by the end of the trial, syncing stops and reports pause, so anyone who wanted Free has to downgrade by hand before day 14.",
+     "The downgrade was blocked until we deleted Databox's own sample data. The message: 'You have 1 connected Spreadsheets, but the Free plan is limited to 0.' That one spreadsheet was the Sample dataset Databox adds at sign-up. Free allows no spreadsheets at all: Excel and Google Sheets both open an 'Upgrade to Analyst' wall at $89 a month, something the pricing page does not say.",
+     "Your one free dashboard is already taken. Databox's own Sample Dashboard stays after the downgrade and fills the plan's single dashboard slot. 'Create New Databoard' opened the $89 upgrade wall, and so did the button that would hang the sample dashboard on your own data.",
+     "What a Genie question costs: 3.7 credits for a simple one ('which pages got the most views in August'), 3.8 for a heavier week-by-week comparison. On Free's 50 a month that is about thirteen questions. The onboarding had already spent 1.9 credits by sending our four setup answers to Genie as a first question we never asked, and the app showed 'Buy more to keep Genie running' at 48 left.",
+     "Genie spends credits on things the plan will not allow. It offered to build a dashboard, tried three times, reported that Databox 'rejected the request as invalid' without naming the one-dashboard limit, and charged 5.2 credits for nothing. After one hour we had used 14.6 of the month's 50 credits.",
+     "Genie's diagnoses need checking. It called a half-finished Search Console connection 'broken' because 'the login expires' (the data manager said 'Unfinished connection'), and it flagged one of our real review URLs as a typo. The traffic figures themselves came back fast and were usefully broken down, including pages counted twice because of query strings.",
+     "What held up: connecting a data source cost no credits, the unfinished connection still counted against the three-source limit, and the plan prices inside the app matched the public pricing page ($89 / $249 / $399 monthly; $71 / $199 / $319 billed annually)."
+    ],
+    "not_tested": "We did not add a fourth data source past the limit, did not build our own dashboard after deleting the sample one, and could not check how fresh each source's data is: the app shows sync frequency but no last-synced time.",
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "databox:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "databox:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "databox:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "databox:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

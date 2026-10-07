@@ -106,5 +106,57 @@
   "Pricing status is 'see_details': no single public entry price.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Capsule",
+    "product_id": "capsule",
+    "run_date": "2026-09-07",
+    "what": "We ran the import ourselves instead of summarising Capsule's help pages. Daan created the account; everything after that was measured in the product. We built a deliberately messy CSV — 24 rows, one row repeated with a different job title and phone number, and one row carrying nothing but an organisation name — imported it with “Import and update duplicates” and the overwrite box ticked, and then tried to undo it. The account was a fresh one on the 14-day premium trial, so nothing below is a free-plan restriction.",
+    "findings": [
+     "24 rows became 34 contacts. Capsule creates a separate Organisation record for every distinct organisation name in the file — 22 people plus 12 organisations. Nobody warns you, and it matters: the free plan stops at 250 contacts, so a 24-row spreadsheet costs 34 of them.",
+     "A row with only the Organisation column filled does build a company record on its own. Our “Solitary Holdings BV” row arrived as an organisation with its phone number attached.",
+     "The duplicate row wins. Anna Bakker went in twice, second time as “Head of Marketing” instead of “Marketing Lead”, and the record ended up with the later title. So the last occurrence in the file overwrites the earlier one, inside a single import.",
+     "But “overwrite” means exactly the four fields it names — name, job title, organisation and custom fields — and nothing else. The two rows carried different phone numbers and the contact now holds BOTH, sitting side by side. Contact channels are appended, not replaced, so a bad update pass leaves duplicate numbers on the record rather than wrong ones.",
+     "There is no undo, and that is worth knowing before you press Import. The import history logs “34 total imported, 34 contacts created” and offers exactly two things: View and Close. View opens a saved filter holding precisely those 34 contacts — which looks like the undo route until you select all of them and find the only bulk actions are Tag, Create Campaign and Export. No delete. Not on that list, not on the full contact list, not on the contact record, and not on its edit screen. We could not reach a delete anywhere in the interface.",
+     "So the practical rule is the opposite of reassuring: an import is one-way. Test on a handful of rows first, because the clean-up you are counting on does not exist where you would look for it."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "capsule:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "capsule:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "capsule:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "capsule:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

@@ -80,5 +80,57 @@
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "FreshBooks",
+    "product_id": "freshbooks",
+    "run_date": "2026-09-07",
+    "what": "Daan started the 30-day trial; everything after that was measured inside the account. The first question the protocol asked was whether the trial takes a card, because their pricing page does not say. It does not — but the answer is on the signup page, not the pricing page, which is a small lesson in where vendors put the reassuring sentence.",
+    "findings": [
+     "No card for the trial. The signup page states it plainly — “Try it free for 30 days. No credit card required. Cancel anytime.” — and the form asks only for an email address and a password. The pricing page, where you would actually look, says nothing about it.",
+     "The prices inside the account are not the prices on the pricing page. The public page leads with the promotional rate, currently a limited-time 90% off for three months. The in-app upgrade screen quotes the real thing: Lite $23, Plus $43, Premium $70 a month, with a Yearly toggle marked “Save 10%”. Sign up on the strength of $2.30 and the first screen you see afterwards is $23.",
+     "Two add-ons ride along on every tier, and they are easy to miss: Team Members at $11 per user a month, and Advanced Payments at $20 a month. They are listed under Lite, Plus and Premium alike.",
+     "Removing FreshBooks branding from the emails your client receives is not a paid feature — it is a quote-only one. It appears only on the top “Let's Talk” tier, alongside lower card fees and two included team members. On Lite, Plus and Premium your invoice mail carries their brand.",
+     "The client ceiling that decides the tier is not testable during the trial. Lite stops at 5 clients, Plus at 50, Premium unlimited — but the trial runs with full features, as the upgrade screen says in as many words (“Upgrade to a paid plan to continue using all of FreshBooks' great features”). We fed the client importer a six-client CSV and it accepted the file and moved straight to field matching, with no limit warning at the point where a Lite account would have stopped. So the meter that will actually bite you is the one you cannot feel while you are evaluating.",
+     "Prices are shown in USD on a Netherlands account, and the plan screen carries the note “Features vary by region.”"
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "freshbooks:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "freshbooks:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "freshbooks:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "freshbooks:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

@@ -93,5 +93,58 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Synthesia",
+    "product_id": "synthesia",
+    "run_date": "2026-10-01",
+    "what": "A new free Basic account. We made one 29-second video from a blank template with a stock avatar and our own 99-word script, read the credit meter on the Billing page before and after, then changed one word and generated it again. The same day we compared the app's upgrade window with the public pricing page.",
+    "findings": [
+     "Onboarding knew who we were before we told it. We skipped the company-website question, yet the prompt box was pre-filled with a brief about our own site, with suggestions such as 'Introduce the Tool Finder', and four draft videos about us appeared in the library without being asked for. They used no credits.",
+     "The meter charges by the second. Our 29-second video took the Billing page from 0 to 59 of 1,200 credits, about 2 credits a second, and the app's banner went from '600 seconds' to '571 seconds of video creation time left'. In this account the free month is 10 minutes of finished video. The public pricing page the same day prices video at 100 credits a minute, which would make 59 credits about 35 seconds.",
+     "A small edit did not cost the whole video again. After changing one word and generating again, the meter moved from 59 to 63 credits. The second time, though, the button read 'Generate in 15 minutes' instead of 'Generate' and the job went into a queue. Each version took about eight to nine minutes from the click to a finished video.",
+     "An upgrade window ('You only have 600 seconds of video creation time left') opened the moment we clicked Generate, and again on every reload of the video page.",
+     "On Basic the video carries the Synthesia logo. 'Remove watermark' is marked as paid in the Generate window, and the Billing page lists 'Download your videos' as a Starter feature; we did not try to download.",
+     "The app and the public pricing page described different plans on the same day. The app's upgrade window offered Starter at €19 a month or €12 billed yearly with 15,500 credits a year, and Creator at €79 or €49 with 72,500 credits a year. The public pricing page, read without signing in and served in dollars, lists Starter at $29 or $18 with 1,250 credits a month and a Pro plan at $89 or $64 with 6,000 credits a month where Creator used to be; its own comparison table still says 'Free, Starter, and Creator'.",
+     "Not tested: downloading, dubbing, personal avatars, longer videos and the paid plans. The AI Assistant page that should have built a video from our prompt stayed on a loading screen for over 90 seconds in our session, so we built the video from a blank template instead."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "synthesia:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "synthesia:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "synthesia:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "synthesia:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

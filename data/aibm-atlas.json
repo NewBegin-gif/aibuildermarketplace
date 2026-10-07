@@ -18,7 +18,7 @@
   },
   "notes": "Prices are the entry prices we found at research time; always check live pricing. Every flag carries the evidence sentence from our hand-researched dossier.",
   "tool_count": 511,
-  "flag_count": 831
+  "flag_count": 833
  },
  "tools": [
   {
@@ -960,7 +960,7 @@
    "entry_price": "$129",
    "entry_price_terms": "a month, billed annually (a stated $360/yr saving), 5 seats",
    "pricing_status": "public",
-   "price_note": "(re-verified 2026-08-17 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year. That covers 5 seats, 4,000 AI credits a month, 50 brands followed without AI insights, 5 connected ad accounts, $500K of ad spend analysed a month, 5GB of asset storage and 3 brand profiles. Plus $479/mo (a stated $1,440 saving): 8 seats, 10,000 credits, 100 brands with AI insights, 10 ad accounts, $1M of ad spend, 1TB storage, 8 brand profiles. Business $959/mo (a stated $2,880 saving): unlimited ad spend. Enterprise is custom. Extra seats are $20 each a month on every tier. Note the step from Core to Plus is far steeper than the tier names suggest — it is roughly 3.7x the price for 2.5x the credits.",
+   "price_note": "(re-verified 2026-08-17 and 2026-10-07 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year. That covers 5 seats, 4,000 AI credits a month, 50 brands followed without AI insights, 5 connected ad accounts, $500K of ad spend analysed a month, 5GB of asset storage and 3 brand profiles. Plus $479/mo (a stated $1,440 saving): 8 seats, 10,000 credits, 100 brands with AI insights, 10 ad accounts, $1M of ad spend, 1TB storage, 8 brand profiles. Business $959/mo (a stated $2,880 saving): 15 seats, 25,000 credits, 200 brands with AI insights, unlimited ad accounts and ad spend. Enterprise is custom. Extra seats are $20 each a month on every tier. Note the step from Core to Plus is far steeper than the tier names suggest — it is roughly 3.7x the price for 2.5x the credits. Billed monthly, read 7 October 2026: Core $159, Plus $599, Business $1,199. Against those monthly rates annual billing saves 18.9% on Core ($360 a year) and 20.0% on Plus and Business, so the 'Save 20%' label is slightly generous on Core. Core also includes 600 MCP calls and 1,200 REST API calls a month, and each call over the cap costs 1 AI credit; on Plus and above both are unlimited.",
    "flags": [
     {
      "flag": "usage_metered",
@@ -968,19 +968,19 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     },
     {
      "flag": "annual_lock",
-     "evidence": "(re-verified 2026-08-17 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year.",
+     "evidence": "(re-verified 2026-08-17 and 2026-10-07 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year.",
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-08-17"
+   "price_verified_at": "2026-10-07"
   },
   {
    "name": "Atto",
@@ -1533,35 +1533,43 @@
    "entry_price": "$9.99",
    "entry_price_terms": "Premium, for individuals · billed monthly",
    "pricing_status": "public",
-   "price_note": "(re-verified 2026-08-17) Free forever for individuals (2 cards, unlimited QR sharing). For individuals, Premium is $9.99 a month billed monthly or $7.33 billed annually. For teams, Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a 5-user minimum, adding CRM sync, templates and custom reporting. Enterprise is custom. A lead-capture add-on for events starts around $199/mo. Note the individual plan costs more per person than the team plan — if there are five of you, the team tier is both cheaper per head and more capable.",
+   "price_note": "(re-verified 2026-08-17 and 2026-10-07) Free forever for individuals (2 cards, unlimited QR sharing). For individuals, Premium is $9.99 a month billed monthly or $7.33 billed annually. For teams, Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a minimum charge of five cards, adding CRM sync, templates, the admin platform and team analytics; custom reporting sits on Enterprise. Enterprise is custom. Event lead capture is no longer a separate add-on: it is part of Business and billed per lead, 1 credit at $9.99 for each lead captured and enriched (0.75 credit when Blinq adds no email or phone, none for a duplicate), invoiced monthly in arrears on top of the seats; bulk and unlimited lead packages are quote-only. In August 2026 we recorded the add-on as starting around $199 a month (historical). Note the individual plan costs more per person than the team plan — if there are five of you, the team tier is both cheaper per head and more capable.",
    "flags": [
     {
      "flag": "per_seat",
-     "evidence": "For teams, Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a 5-user minimum, adding CRM sync, templates and custom reporting.",
-     "evidence_excerpt": null,
+     "evidence": "For teams, Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a minimum charge of five cards, adding CRM sync, templates, the admin platform and team analytics; custom reporting sits on Enterprise.",
+     "evidence_excerpt": "For teams, Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a minimum charge of five cards, adding CRM sync, templates, the admin platform and team analytics;…",
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
+    },
+    {
+     "flag": "usage_metered",
+     "evidence": "Event lead capture is no longer a separate add-on: it is part of Business and billed per lead, 1 credit at $9.99 for each lead captured and enriched (0.75 credit when Blinq adds no email or phone, none for a duplicate), invoiced monthly in arrears on top of the seats; bulk and unlimited lead packages are quote-only.",
+     "evidence_excerpt": "Event lead capture is no longer a separate add-on: it is part of Business and billed per lead, 1 credit at $9.99 for each lead captured and enriched (0.75 credit when Blinq adds no email or phone, no…",
+     "source_url": null,
+     "evidence_field": "dossier pricing notes and honest knock",
+     "verified_at": "2026-10-07"
     },
     {
      "flag": "addons_extra",
-     "evidence": "A lead-capture add-on for events starts around $199/mo.",
+     "evidence": "In August 2026 we recorded the add-on as starting around $199 a month (historical).",
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     },
     {
      "flag": "free_tier",
-     "evidence": "(re-verified 2026-08-17) Free forever for individuals (2 cards, unlimited QR sharing).",
+     "evidence": "(re-verified 2026-08-17 and 2026-10-07) Free forever for individuals (2 cards, unlimited QR sharing).",
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-08-17"
+   "price_verified_at": "2026-10-07"
   },
   {
    "name": "Blocky",
@@ -3066,7 +3074,7 @@
    "entry_price": "$239",
    "entry_price_terms": "a month at 1,000 MAU billed yearly ($298.75 monthly)",
    "pricing_status": "public",
-   "price_note": "(re-verified 2026-08-17 against CometChat's own machine-readable pricing reference, which they publish for AI agents and last verified themselves on 2026-05-20; USD) Build is free for development: all features, up to 100 users and 25 concurrent connections, no card. Paid Chat plans are priced by monthly active users. Billed yearly, shown as a monthly equivalent: at 1,000 MAU Basic is $239 and Advanced $359; at 10,000 MAU Basic $299, Advanced $399 and Enterprise $999; at 25,000 MAU $699 and $949; at 50,000 MAU $1,349 and $1,649. Paying monthly costs about 20% more — $298.75 and $448.75 at 1,000 MAU. Above 50,000 MAU everything is quote-only. Concurrency is included at 5% of your MAU on Basic and Advanced and 10% on Enterprise. On overage CometChat charges $0.10 per extra MAU (falling at higher tiers) or $1 per extra concurrent connection — and where both are exceeded it bills the higher of the two, not both. Enterprise has no listed overage; usage above the plan is upgraded to the appropriate plan instead. Messages and storage are unlimited on every plan, and message retention is 6 months across the board, extendable at extra cost.",
+   "price_note": "(re-verified 2026-08-17 and 2026-10-07 against CometChat's own machine-readable pricing reference, which they publish for AI agents and last verified themselves on 2026-05-20, and on 2026-10-07 also against the live pricing page; USD) Build is free for development: all features, up to 100 users and 25 concurrent connections, no card. Paid Chat plans are priced by monthly active users. Billed yearly, shown as a monthly equivalent: at 1,000 MAU Basic is $239 and Advanced $359; at 10,000 MAU Basic $299, Advanced $399 and Enterprise $999; at 25,000 MAU $699 and $949; at 50,000 MAU $1,349 and $1,649. Paying monthly costs 25% more — $298.75 and $448.75 at 1,000 MAU; the 'Save 20%' on the toggle is the same gap measured from the monthly price. Above 50,000 MAU everything is quote-only. Concurrency is included at 5% of your MAU on Basic and Advanced and 10% on Enterprise. On overage CometChat charges $0.10 per extra MAU (falling at higher tiers) or $1 per extra concurrent connection — and where both are exceeded it bills the higher of the two, not both. Enterprise has no listed overage; usage above the plan is upgraded to the appropriate plan instead. Messages and storage are unlimited on every plan, and message retention is 6 months across the board, extendable at extra cost.",
    "flags": [
     {
      "flag": "usage_metered",
@@ -3074,7 +3082,7 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     },
     {
      "flag": "addons_extra",
@@ -3082,7 +3090,7 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     },
     {
      "flag": "free_tier",
@@ -3090,11 +3098,11 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-08-17"
+   "price_verified_at": "2026-10-07"
   },
   {
    "name": "Compliancely",
@@ -4554,7 +4562,7 @@
    "entry_price": "$99",
    "entry_price_terms": "Business · per month, month-to-month",
    "pricing_status": "public",
-   "price_note": "(re-verified 2026-08-17) 7-day free trial, no free plan. Business is $99 per month month-to-month; paying a year up front takes 20% off, which their own page describes as two months free, so roughly $79 a month equivalent. Pricing is per seat and Expandi states that the discount grows with the number of seats you buy, so a multi-seat agency quote is not simply the seat price multiplied. Higher tiers add role and permission management and centralised billing. Taxes vary by country and are added on top.",
+   "price_note": "(re-verified 2026-08-17 and 2026-10-07) 7-day free trial, no free plan. Business is $99 per month month-to-month; paying a year up front takes 20% off, $79 a month equivalent. The same page also calls this two months free; on its own figures it is $948 a year against $1,188, a saving of $240, which is closer to two and a half months of the $99 fee than two. Pricing is per seat and Expandi states that the discount grows with the number of seats you buy, so a multi-seat agency quote is not simply the seat price multiplied. Higher tiers add role and permission management and centralised billing. Taxes vary by country and are added on top.",
    "flags": [
     {
      "flag": "per_seat",
@@ -4562,7 +4570,7 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     },
     {
      "flag": "annual_lock",
@@ -4570,11 +4578,11 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-08-17"
+     "verified_at": "2026-10-07"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-08-17"
+   "price_verified_at": "2026-10-07"
   },
   {
    "name": "ExpertEx",
@@ -4639,10 +4647,19 @@
    "entry_price": "$450",
    "entry_price_terms": "published floor ('from $450 USD' on the home page); the actual price is quote-based",
    "pricing_status": "public",
-   "price_note": "(re-verified 10 September 2026 on expertsender.com — on the home page, because the pricing page is gone: /pricing, /pricing-plans/ and /en/pricing/ all return 404) (2026) Quote-based with a documented floor: their home page says 'Start growing your eCommerce business from $450 USD', scaling with volume and channels, and they explicitly target stores with at least 30,000 unique monthly visits. No free tier — a free consultation is the entry point.",
-   "flags": [],
+   "price_note": "(re-verified 10 September 2026 and 7 October 2026 on expertsender.com — on the home page, because the pricing page is gone: /pricing, /pricing-plans/ and /en/pricing/ all return 404) (2026) Quote-based with a documented floor: their home page says 'Start growing your eCommerce business from $450 USD', scaling with volume and channels, and they explicitly target stores with at least 30,000 unique monthly visits. No free tier — a free consultation is the entry point. Its help centre (read 7 October 2026) names the two meters behind the quote: the number of customers with at least one marketing consent, and engaged sessions on your site, billed on the highest value recorded in the month; product recommendations are priced separately on page views and active users. The service regulations set a 30-day billing cycle, net amounts plus VAT and payment within 14 days of the invoice.",
+   "flags": [
+    {
+     "flag": "addons_extra",
+     "evidence": "Its help centre (read 7 October 2026) names the two meters behind the quote: the number of customers with at least one marketing consent, and engaged sessions on your site, billed on the highest value recorded in the month; product recommendations are priced separately on page views and active users.",
+     "evidence_excerpt": "Its help centre (read 7 October 2026) names the two meters behind the quote: the number of customers with at least one marketing consent, and engaged sessions on your site, billed on the highest valu…",
+     "source_url": null,
+     "evidence_field": "dossier pricing notes and honest knock",
+     "verified_at": "2026-10-07"
+    }
+   ],
    "researched": "2026-07",
-   "price_verified_at": "2026-08-17"
+   "price_verified_at": "2026-10-07"
   },
   {
    "name": "Fast Bundle",

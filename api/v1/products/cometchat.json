@@ -15,31 +15,10 @@
   "entry_price": "$239",
   "entry_price_terms": "a month at 1,000 MAU billed yearly ($298.75 monthly)",
   "from_price_usd_month": 239.0,
-  "plans": [
-   {
-    "name": "Build",
-    "price": "free",
-    "includes": "all features, up to 100 users, 25 concurrent connections, no card"
-   },
-   {
-    "name": "Basic",
-    "price": "$239 at 1,000 MAU; $299 at 10,000 MAU; $699 at 25,000 MAU; $1,349 at 50,000 MAU (billed yearly)",
-    "includes": "concurrency included at 5% of MAU; unlimited messages/storage; 6 month retention"
-   },
-   {
-    "name": "Advanced",
-    "price": "$359 at 1,000 MAU; $399 at 10,000 MAU; $949 at 25,000 MAU; $1,649 at 50,000 MAU (billed yearly)",
-    "includes": "concurrency included at 5% of MAU; unlimited messages/storage; 6 month retention"
-   },
-   {
-    "name": "Enterprise",
-    "price": "$999 at 10,000 MAU",
-    "includes": "concurrency included at 10% of MAU; no listed overage, usage upgrades plan instead"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-08-17 against CometChat's own machine-readable pricing reference, which they publish for AI agents and last verified themselves on 2026-05-20; USD) Build is free for development: all features, up to 100 users and 25 concurrent connections, no card. Paid Chat plans are priced by monthly active users. Billed yearly, shown as a monthly equivalent: at 1,000 MAU Basic is $239 and Advanced $359; at 10,000 MAU Basic $299, Advanced $399 and Enterprise $999; at 25,000 MAU $699 and $949; at 50,000 MAU $1,349 and $1,649. Paying monthly costs about 20% more — $298.75 and $448.75 at 1,000 MAU. Above 50,000 MAU everything is quote-only. Concurrency is included at 5% of your MAU on Basic and Advanced and 10% on Enterprise. On overage CometChat charges $0.10 per extra MAU (falling at higher tiers) or $1 per extra concurrent connection — and where both are exceeded it bills the higher of the two, not both. Enterprise has no listed overage; usage above the plan is upgraded to the appropriate plan instead. Messages and storage are unlimited on every plan, and message retention is 6 months across the board, extendable at extra cost.",
-  "verified_at": "2026-08-17",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-08-17 and 2026-10-07 against CometChat's own machine-readable pricing reference, which they publish for AI agents and last verified themselves on 2026-05-20, and on 2026-10-07 also against the live pricing page; USD) Build is free for development: all features, up to 100 users and 25 concurrent connections, no card. Paid Chat plans are priced by monthly active users. Billed yearly, shown as a monthly equivalent: at 1,000 MAU Basic is $239 and Advanced $359; at 10,000 MAU Basic $299, Advanced $399 and Enterprise $999; at 25,000 MAU $699 and $949; at 50,000 MAU $1,349 and $1,649. Paying monthly costs 25% more — $298.75 and $448.75 at 1,000 MAU; the 'Save 20%' on the toggle is the same gap measured from the monthly price. Above 50,000 MAU everything is quote-only. Concurrency is included at 5% of your MAU on Basic and Advanced and 10% on Enterprise. On overage CometChat charges $0.10 per extra MAU (falling at higher tiers) or $1 per extra concurrent connection — and where both are exceeded it bills the higher of the two, not both. Enterprise has no listed overage; usage above the plan is upgraded to the appropriate plan instead. Messages and storage are unlimited on every plan, and message retention is 6 months across the board, extendable at extra cost.",
+  "verified_at": "2026-10-07",
   "source_url": null
  },
  "free_plan": true,
@@ -49,14 +28,14 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "On overage CometChat charges $0.10 per extra MAU (falling at higher tiers) or $1 per extra concurrent connection — and where both are exceeded it bills the higher of the two, not both.",
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-07",
    "source_url": null
   },
   {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "Messages and storage are unlimited on every plan, and message retention is 6 months across the board, extendable at extra cost.",
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-07",
    "source_url": null
   }
  ],
@@ -91,6 +70,7 @@
   "growth": null
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

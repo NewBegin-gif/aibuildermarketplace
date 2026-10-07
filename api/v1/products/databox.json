@@ -102,14 +102,509 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free is $0 forever: 1 user, 3 data sources, 1 dashboard, 10 custom metrics, 50 AI credits a month, daily sync"
+    },
+    {
+     "id": "analyst",
+     "name": "Analyst",
+     "model": "flat",
+     "included_units": 1,
+     "max_units": 1,
+     "annual_month": 71,
+     "monthly": 89,
+     "evidence": "Analyst $71/mo (1 user, 5 sources, unlimited dashboards and reports, 150 credits, hourly sync)"
+    },
+    {
+     "id": "team-core",
+     "name": "Team Core",
+     "model": "flat",
+     "included_units": 3,
+     "max_units": 3,
+     "annual_month": 199,
+     "monthly": 249,
+     "evidence": "Team Core $199/mo (3 users, 10 sources, 500 credits)"
+    },
+    {
+     "id": "team-scale",
+     "name": "Team Scale",
+     "model": "flat",
+     "included_units": 10,
+     "max_units": 10,
+     "annual_month": 319,
+     "monthly": 399,
+     "evidence": "Team Scale $319/mo (10 users, 30 sources, 1,000 credits, sub-accounts)"
+    },
+    {
+     "id": "agency",
+     "name": "Agency",
+     "model": "flat",
+     "annual_month": 79,
+     "monthly": 99,
+     "evidence": "Agency from $79/mo (unlimited users, 4 clients, 20 sources, 300 credits)"
+    },
+    {
+     "id": "custom",
+     "name": "Custom",
+     "model": "quote",
+     "evidence": "plus a quoted Custom tier"
+    }
+   ],
+   "extra_evidence": "Monthly, Analyst reads $89 and the others $249, $399 and from $99; annual billing is 20% off",
+   "notes": [
+    "Agency's $79 a month ($99 monthly) is a 'from' price, a floor for 4 clients; Databox states it does not charge per seat.",
+    "Each plan includes a fixed number of data sources; more sources means moving up a tier, except on Agency."
+   ],
+   "not_computable": [
+    "Agency client packs (1 client, 5 sources, 50 credits for $20/mo annually, $25 monthly) depend on the number of clients, not users.",
+    "Add-ons (branding and white-labeling, advanced security management, OKRs, fiscal calendar, 15-minute sync per source) and flexible AI credit top-ups are not in the computed price."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "databox",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "analyst": 71.0,
+       "team-core": 199.0,
+       "team-scale": 319.0,
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": 199.0,
+       "team-scale": 319.0,
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": 199.0,
+       "team-scale": 319.0,
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": 319.0,
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": 319.0,
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 79.0,
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "agency",
+      "from_plan_name": "Free",
+      "to_plan_name": "Agency"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Agency client packs (1 client, 5 sources, 50 credits for $20/mo annually, $25 monthly) depend on the number of clients, not users.",
+     "Add-ons (branding and white-labeling, advanced security management, OKRs, fiscal calendar, 15-minute sync per source) and flexible AI credit top-ups are not in the computed price."
+    ]
+   },
+   "monthly": {
+    "product_id": "databox",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "analyst": 89.0,
+       "team-core": 249.0,
+       "team-scale": 399.0,
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": 249.0,
+       "team-scale": 399.0,
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": 249.0,
+       "team-scale": 399.0,
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": 399.0,
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": 399.0,
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Agency",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "analyst": "not_eligible",
+       "team-core": "not_eligible",
+       "team-scale": "not_eligible",
+       "agency": 99.0,
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "agency",
+      "from_plan_name": "Free",
+      "to_plan_name": "Agency"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Agency client packs (1 client, 5 sources, 50 credits for $20/mo annually, $25 monthly) depend on the number of clients, not users.",
+     "Add-ons (branding and white-labeling, advanced security management, OKRs, fiscal calendar, 15-minute sync per source) and flexible AI credit top-ups are not in the computed price."
+    ]
+   }
+  }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
  "task_evidence": {
   "structured_checks": [],
@@ -157,9 +652,15 @@
    "status": "open"
   },
   {
-   "question_id": "databox:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "databox:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Agency client packs (1 client, 5 sources, 50 credits for $20/mo annually, $25 monthly) depend on the number of clients, not users. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "databox:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Add-ons (branding and white-labeling, advanced security management, OKRs, fiscal calendar, 15-minute sync per source) and flexible AI credit top-ups are not in the computed price. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

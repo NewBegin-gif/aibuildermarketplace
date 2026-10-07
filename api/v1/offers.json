@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "built_at": "2026-10-07T19:19:12Z",
+ "built_at": "2026-10-07T20:10:55Z",
  "about": "Reader offers and vendor offers on our deal pages, one record each. verification_status says whether the vendor confirmed it; checkout_tested_at stays null because we do not test offers at a checkout. expires_at is UTC; compare it with the current time yourself, time_status_at_build is only the state when this file was built. null means the vendor did not say, never 'no limit'. Opening handoff_url is not an activation or a purchase.",
  "offer_types": {
   "price_discount": "Price discount",
@@ -1537,47 +1537,54 @@
    "product": "VidPal",
    "offer_type": "price_discount",
    "type_label": "Price discount",
-   "benefit": "10% off with a reader code",
-   "duration": "Not stated",
+   "benefit": "10% off all paid plans, on every renewal",
+   "duration": "Every renewal, no end date",
    "code": "AIBUILDERMARKETPLACE",
    "claim_mechanism": "code",
    "claim_steps": "Enter the code at checkout and check that the 10% shows before you pay.",
    "limits": [
-    "VidPal has not confirmed the code to us; plans and end date unknown"
+    "Paid plans only (Starter, Pro, Business); the free plan has nothing to discount"
    ],
    "eligibility": {
     "customer": null,
-    "plans": null,
-    "billing": null,
+    "plans": [
+     "Starter",
+     "Pro",
+     "Business"
+    ],
+    "billing": [
+     "monthly",
+     "annual"
+    ],
     "regions": null
    },
    "structure": {
     "kind": "percent",
     "percent": 10,
     "months": null,
-    "ongoing": false
+    "ongoing": true
    },
    "starts_at": null,
    "expires_at": null,
    "expires_as_stated": null,
    "evidence": {
-    "kind": "our_records_only",
-    "by": "VidPal",
-    "summary": "In our records; not confirmed by VidPal"
+    "kind": "vendor_in_writing",
+    "by": "John, VidPal",
+    "summary": "Confirmed in writing by John, VidPal, 7 Oct 2026"
    },
-   "confirmed_at": null,
+   "confirmed_at": "2026-10-07",
    "checked_at": "2026-10-07",
-   "verification_status": "needs_confirmation",
+   "verification_status": "vendor_confirmed",
    "checkout_tested_at": null,
    "stacking": "unknown",
    "exclusive_to_our_readers": true,
    "published_by_vendor": false,
    "post_offer_price": null,
-   "terms": "10% off. The code has been in our records since July 2026, after we joined VidPal's partner programme on 28 June, but VidPal has not confirmed it to us in writing; we asked them to on 27 September 2026. Until they answer, we cannot say which plans it covers or when it ends, so check that the 10% shows at checkout before you pay.",
+   "terms": "10% off all paid VidPal plans (Starter, Pro and Business), on monthly and annual billing, and on every renewal, not only the first payment. VidPal confirmed in writing on 7 October 2026 that the code is active and has no end date.",
    "handoff_url": "https://vidpal.ai?atp=h2U5ra",
    "affiliate": true,
    "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
-   "test_before_you_pay": "Check that the 10% shows at checkout before you pay: VidPal has not confirmed the code.",
+   "test_before_you_pay": "Check that the 10% shows at checkout before you pay.",
    "trial_kit": null,
    "site_membership": [
     "aibm",
@@ -1587,7 +1594,7 @@
     "https://aibuildermarketplace.com/deals/#q=vidpal",
     "https://marketingandsalessoftware.com/deals.html#q=vidpal"
    ],
-   "version": "8fad1ceaff",
+   "version": "adec03aab9",
    "time_status_at_build": "no_deadline_known"
   },
   {

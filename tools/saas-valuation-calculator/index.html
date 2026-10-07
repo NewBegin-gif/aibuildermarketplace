@@ -255,7 +255,7 @@ document.addEventListener('click',function(e){if(!n.contains(e.target)){zetMeer(
 <div><label for="va-growth">YoY growth rate (%)</label><input type="number" id="va-growth" value="60" min="-100"></div>
 <div><label for="va-margin">Net profit margin (%)</label><input type="number" id="va-margin" value="-10" max="100" step="any"></div></div>
 <div id="va-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:12px;margin:18px 0"></div>
-<div id="va-note"></div></div></div><div class="box fun"><span class="fun-tag">Free vs paid — when to upgrade</span><p class="fun-p"><b>What this free tool is great for:</b> a quick, one-off job with no signup — it runs in your browser and there's nothing to manage.</p><p class="fun-p"><b>Its honest limit:</b> it's a one-off calculation in your browser — it doesn't save your scenarios, update as your real numbers change, or connect to your live accounts, so you re-enter the figures every time and can't watch how they move.</p><div class="fun-hd"><div class="aff-logo"><img src="https://www.google.com/s2/favicons?sz=128&domain=flippa.com" alt="Flippa" loading="lazy" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=flippa.com&amp;sz=128'"></div><div><b>Where Flippa does more:</b> A number on a screen is one thing; a real offer is another. When you're ready to sell, a marketplace like Flippa connects you with vetted buyers for online businesses and SaaS.</div></div><a class="cta" href="https://referral.flippa.com/423fnj9u9lh5" target="_blank" rel="sponsored noopener nofollow" onclick="gtag('event','affiliate_click',{event_label:'Flippa'})">Try Flippa &rarr;</a><a class="fun-review" href="/b2b/flippa-review/">Read our full Flippa review &rarr;</a><div class="muted">Affiliate link — we may earn a commission if you sign up, at no cost to you. It never changes our honest take.</div></div>
+<div id="va-note"></div></div></div><div class="box fun"><span class="fun-tag">Free vs paid — when to upgrade</span><p class="fun-p"><b>What this free tool is great for:</b> a quick, one-off job with no signup — it runs in your browser and there's nothing to manage.</p><p class="fun-p"><b>Its honest limit:</b> you can compare up to three scenarios during this visit, but they are not kept after you leave, they won't update as your real numbers change, and this tool does not connect to your live accounts.</p><div class="fun-hd"><div class="aff-logo"><img src="https://www.google.com/s2/favicons?sz=128&domain=flippa.com" alt="Flippa" loading="lazy" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=flippa.com&amp;sz=128'"></div><div><b>Where Flippa does more:</b> A number on a screen is one thing; a real offer is another. When you're ready to sell, a marketplace like Flippa connects you with vetted buyers for online businesses and SaaS.</div></div><a class="cta" href="https://referral.flippa.com/423fnj9u9lh5" target="_blank" rel="sponsored noopener nofollow" onclick="gtag('event','affiliate_click',{event_label:'Flippa'})">Try Flippa &rarr;</a><a class="fun-review" href="/b2b/flippa-review/">Read our full Flippa review &rarr;</a><div class="muted">Affiliate link — we may earn a commission if you sign up, at no cost to you. It never changes our honest take.</div></div>
 <h2>How software businesses actually get valued</h2>
 <p>Most SaaS companies aren't valued on profit the way a traditional business is — they're valued on a multiple of revenue, usually annual recurring revenue. The logic is that recurring, predictable subscription income is worth paying a premium for, so buyers price it as a multiple of that revenue base. The entire game, then, is what multiple applies. The same million in ARR might be worth two times that in one company and twelve times in another, and understanding what drives the multiple up or down is the difference between a realistic expectation and a fantasy.</p><p>This calculator gives you a starting range; the rest is understanding why the range is so wide.</p>
 <h2>What drives the multiple</h2>
@@ -425,6 +425,11 @@ function velden(){
 }
 function uitkomst(){
  var paren=[];
+ // Contract (zware audit 7 okt 2026, A07-01): een tool die zijn uitkomstvelden benoemt met data-k (en eventueel een
+ // korte waarde in data-v) krijgt precies die velden in scenario's, kopie en PDF. De generieke terugval hieronder
+ // bewaarde bij de A/B-tool alleen 'Result 10.00%' (de controlwaarde) en gooide uplift, p-waarde en conclusie weg.
+ var benoemd=[];res.forEach(function(r){Array.prototype.forEach.call(r.querySelectorAll('[data-k]'),function(e){benoemd.push([e.getAttribute('data-k'),(e.getAttribute('data-v')||e.textContent).replace(/\s+/g,' ').trim()]);});});
+ if(benoemd.length)return benoemd;
  res.forEach(function(r){
   var kaarten=r.querySelectorAll('.scv');
   if(kaarten.length){Array.prototype.forEach.call(kaarten,function(k){var n=k.querySelector('.scv-n'),v=k.querySelector('.scv-v');if(n&&v)paren.push([n.textContent.trim(),v.textContent.trim()]);});return;}
@@ -437,12 +442,23 @@ function uitkomst(){
   if(!tekst.length)return;
   var big=r.querySelector('.big,.pl-big,.sig-y,.sig-n,b,strong');
   paren.push(['Result',big&&big.textContent.trim()?big.textContent.trim():tekst[0]]);
-  tekst.slice(big?0:1).forEach(function(x){if(big&&x===big.textContent.trim())return;if(paren.length<9)paren.push(['',x]);});
+  tekst.slice(big?0:1).forEach(function(x){if(big&&x===big.textContent.trim())return;if(paren.length<12)paren.push(['',x]);});
  });
- return paren;
+ // Zware audit 7 okt 2026 (A07-01, vervolg): regels zonder naam vielen uit scenario's en de PDF-tabel, zodat 19 van
+ // de 28 rekentools daar alleen 'Result' bewaarden (btw zonder bruto, CAC zonder LTV). Nu: 'Label: waarde'-stukken
+ // (gescheiden door een middenpunt) worden benoemde velden, een kort label met daarna een getalregel wordt een paar
+ // (cap table), en wat dan nog zonder naam is blijft staan; bewaar() neemt het mee als 'Details'.
+ var uit=[];
+ for(var i=0;i<paren.length;i++){var p=paren[i];if(p[0]){uit.push(p);continue;}
+  var x=p[1],vlg=paren[i+1];
+  if(x.length<=32&&!/\d/.test(x)&&vlg&&!vlg[0]&&/^[\d$€£+\-−(]/.test(vlg[1])){uit.push([x,vlg[1].replace(/\s+/g,' ')]);i++;continue;}
+  var los=[];x.split(/\s*·\s*/).forEach(function(s){var m=s.match(/^([A-Z][A-Za-z ()\/%-]{1,40}):\s+(\S.*)$/);if(m)uit.push([m[1].trim(),m[2].replace(/\s+/g,' ').trim()]);else if(s.trim())los.push(s.replace(/\s+/g,' ').trim());});
+  if(los.length)uit.push(['',los.join(' · ')]);}
+ return uit;
 }
 function tekst(){var t=[naam+', '+PL.today(),''];velden().forEach(function(v){t.push(v[0]+': '+v[1]);});t.push('');uitkomst().forEach(function(p){t.push((p[0]?p[0]+': ':'')+p[1]);});
  var l=document.querySelector('link[rel=canonical]');t.push('','Calculated with '+((l&&l.href)||location.href).replace(/\/embed\/?$/,'/'));return t.join('\n');}
+window.__wsUitkomst=uitkomst;  // voor de regressiecontrole op scenariovelden (check_tool_scenarios.py)
 var acts=document.createElement('div');acts.className='ws-acts';
 acts.innerHTML=type==='calc'?'<button type="button" class="ws-b prim" data-a="pdf">Download PDF</button><button type="button" class="ws-b" data-a="copy">Copy result</button><button type="button" class="ws-b" data-a="save">Save as scenario</button>'
  :'<button type="button" class="ws-b" data-a="copy">Copy result</button>';
@@ -450,6 +466,8 @@ paneel.appendChild(acts);
 var cmp=null,S=[];
 if(type==='calc'){cmp=document.createElement('section');cmp.className='ws-cmp';cmp.hidden=true;cmp.setAttribute('aria-label','Saved scenarios');ws.appendChild(cmp);}
 function url(){var l=document.querySelector('link[rel=canonical]');return ((l&&l.href)||location.href).replace(/\/embed\/?$/,'/');}
+function bewaar(o){var n=o.filter(function(p){return p[0];}),r=o.filter(function(p){return !p[0];}).map(function(p){return p[1];});
+ if(r.length)n.push(['Details',r.join(' / ')]);return n;}
 function tabel(){
  var lbl=[];S.forEach(function(s){s.in.forEach(function(v){if(lbl.indexOf(v[0])<0)lbl.push(v[0]);});});
  var uitl=[];S.forEach(function(s){s.out.forEach(function(p){if(p[0]&&uitl.indexOf(p[0])<0)uitl.push(p[0]);});});
@@ -470,7 +488,7 @@ if(cmp)cmp.addEventListener('click',function(e){var z=e.target.getAttribute('dat
 function knop(){var b=acts.querySelector('[data-a=save]');if(b){b.disabled=S.length>=3;b.textContent=S.length>=3?'Three scenarios saved':'Save as scenario';}}
 acts.addEventListener('click',function(e){var a=e.target.getAttribute('data-a');if(!a)return;
  if(a==='copy'){PL.copy(type==='calc'?tekst():res.map(function(r){return (r.tagName==='INPUT'||r.tagName==='TEXTAREA')?r.value:(r.innerText||'').trim();}).filter(Boolean).join('\n\n'));if(typeof gtag==='function')gtag('event','tool_download',{event_label:'copy_'+(ws.getAttribute('data-slug')||'')});}
- if(a==='save'){if(S.length>=3)return;S.push({in:velden(),out:uitkomst().filter(function(p){return p[0];})});toonCmp();knop();PL.toast('Saved as scenario '+S.length);}
+ if(a==='save'){if(S.length>=3)return;S.push({in:velden(),out:bewaar(uitkomst())});toonCmp();knop();PL.toast('Saved as scenario '+S.length);}
  if(a==='pdf'){var blocks=[];
   if(S.length>1){var T=tabel();blocks.push({h:'Scenarios',table:{head:T.head,rows:T.rows,strong:T.rows.map(function(r,i){return i;}).filter(function(i){return i>=T.nIn;})}});}
   else{blocks.push({h:'Your figures',kv:velden().map(function(v){return [v[0],v[1]||'–'];})});

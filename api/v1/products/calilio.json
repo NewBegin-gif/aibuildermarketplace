@@ -71,15 +71,415 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "annual_month": 12,
+     "monthly": 15,
+     "max_units": 10,
+     "evidence": "Standard $15 per user/mo, or $12 billed annually ($144 a year)"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "per_unit",
+     "annual_month": 28,
+     "monthly": 35,
+     "evidence": "Premium $35 per user/mo, or $28 annually ($336 a year)"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise custom"
+    }
+   ],
+   "limits_evidence": "Standard has a 10-user limit; Premium has none.",
+   "not_computable": [
+    "Calls and SMS beyond each plan's included allowance draw from a prepaid wallet (the subscription includes a $1 credit), and further numbers are billed separately; usage beyond the allowance is not in these prices."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "calilio",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 12.0,
+      "billed": {
+       "amount": 144.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 12.0,
+       "premium": 28.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 24.0,
+       "premium": 56.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 36.0,
+      "billed": {
+       "amount": 432.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 36.0,
+       "premium": 84.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 720.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 60.0,
+       "premium": 140.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 1440.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 120.0,
+       "premium": 280.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 420.0,
+      "billed": {
+       "amount": 5040.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 420.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 560.0,
+      "billed": {
+       "amount": 6720.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 560.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 700.0,
+      "billed": {
+       "amount": 8400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 700.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 1400.0,
+      "billed": {
+       "amount": 16800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 1400.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 2800.0,
+      "billed": {
+       "amount": 33600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 2800.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "standard",
+      "to_plan": "premium",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Premium"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Calls and SMS beyond each plan's included allowance draw from a prepaid wallet (the subscription includes a $1 credit), and further numbers are billed separately; usage beyond the allowance is not in these prices."
+    ]
+   },
+   "monthly": {
+    "product_id": "calilio",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 15.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 15.0,
+       "premium": 35.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 30.0,
+       "premium": 70.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 45.0,
+      "billed": {
+       "amount": 45.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 45.0,
+       "premium": 105.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 75.0,
+       "premium": 175.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 150.0,
+       "premium": 350.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 525.0,
+      "billed": {
+       "amount": 525.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 525.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 700.0,
+      "billed": {
+       "amount": 700.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 700.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 875.0,
+      "billed": {
+       "amount": 875.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 875.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 1750.0,
+      "billed": {
+       "amount": 1750.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 1750.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 3500.0,
+      "billed": {
+       "amount": 3500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "premium": 3500.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "standard",
+      "to_plan": "premium",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Premium"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Calls and SMS beyond each plan's included allowance draw from a prepaid wallet (the subscription includes a $1 credit), and further numbers are billed separately; usage beyond the allowance is not in these prices."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -103,9 +503,9 @@
    "status": "open"
   },
   {
-   "question_id": "calilio:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "calilio:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Calls and SMS beyond each plan's included allowance draw from a prepaid wallet (the subscription includes a $1 credit), and further numbers are billed separately; usage beyond the allowance is not in these prices. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -98,5 +98,59 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Nextify.ai",
+    "product_id": "nextify-ai",
+    "run_date": "2026-09-07",
+    "what": "We did not summarise the marketing. Nextify.ai gave us Pro access for this test — disclosed here and in the video that goes with this review — and nothing else was agreed: no copy approval, and no draft shared before publication. On 7 September 2026 we generated a real ad from a product image inside that account, read the credit cost the app charges for every model it offers, and checked the pricing page both signed in and signed out. Everything below is what the product did and charged, not what the site says it does.",
+    "findings": [
+     "Credits are charged per second of output, not per video. A four-second 720p clip on Seedance 2.0 — the model the editor pre-selects — cost 48 credits and took the balance from 3,000 to 2,952. The app's own credit table prices that combination at 12 a second, and the Generate button reads 48 before you commit, so the arithmetic is visible if you know to look for it.",
+     "Every tier's video count assumes 20 credits a video. Starter's 1,000 credits are sold as 50 videos, Pro's 3,000 as 150 and Business's 8,000 as 400 — all exactly 20 apiece, which is four seconds on the cheapest 5-credit-a-second model. On the model the editor actually opens with, Pro is 62 clips; at the 15-second maximum it is 16.",
+     "No image model costs what the image counts assume. Those counts work out at 2 credits an image on every tier, including the free one. The cheapest image model in the table is Nano Banana 2 at 1k for 7 credits, and the pre-selected GPT Image 2 is 10 — the button literally reads “Generate Image 10”. Starter's “up to 500 images” is about 100.",
+     "The avatar tools are the expensive ones, and they are the reason most people arrive. UGC Product Video and Lip-sync run on HeyGen AV4 at 6.7 credits a second, identical at 720p and 1080p, over 3 to 120 seconds. A 30-second avatar ad is 201 credits and a 60-second one is 402, so a Pro month is fourteen or seven of them.",
+     "Free users cannot reach the Seedance models at all. The model configuration marks seedance-2.0, seedance-2.0-fast and seedance-2.0-mini as unavailable on the free plan, so the 50 free credits run on Kling or MiniMax with a watermark — about two three-second clips.",
+     "“In seconds” is not what happens, but “three minutes” is fair. Our four-second clip took 126 seconds from submit to finished file, against the app's own on-screen estimate of four minutes. The homepage claim “Product Image to Viral Ad in 3 Minutes” holds up; the “in seconds” line on the same page does not.",
+     "The output was accurate to the prompt. We asked for a stainless steel insulated bottle on a kitchen counter in morning light, a hand picking it up, clean styling and no text overlay, and that is what came back — 9:16, 720p, four seconds, with generated audio. Nothing in the result argued against the tool; the argument is with the pricing page.",
+     "The pricing page hides the free plan once you sign in. Signed out, Free sits at the head of the ladder; signed in, the same URL starts at Starter."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "nextify-ai:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "nextify-ai:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "nextify-ai:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "nextify-ai:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

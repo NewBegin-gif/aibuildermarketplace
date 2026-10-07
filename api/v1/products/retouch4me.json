@@ -82,5 +82,56 @@
   "Pricing status is 'see_details': no single public entry price.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Retouch4me",
+    "product_id": "retouch4me",
+    "run_date": "2026-09-08",
+    "what": "Online Retouch (retouch4.me/onlineretouch) on a partner test account holding 300 retouching credits, 10 culling credits and 10 colour credits; one JPEG uploaded, meter read before and after.",
+    "findings": [
+     "One upload cost exactly one retouching credit: the counter went from 300 to 299. The charge is taken on upload, before you see the result, and it was taken for a non-portrait image (a UI screenshot) just the same.",
+     "That single credit ran eight plugins in one pass: Heal, Mattifier, Dodge & Burn, Portrait Volumes, Skin Tone, Eye Vessels, Eye Brilliance and White Teeth were all switched on by default; Fabric and Clean Backdrop off. So 1 retouch = 1 credit regardless of how many plugins run holds for the web tool.",
+     "The six sample photos on the page can be tried without spending a credit; the counter stayed at 300.",
+     "The account page offers a free trial pack of 20 cloud retouches without a card, which the public pricing page does not mention.",
+     "Not tested: Apex, Arams and the Photoshop Panel (desktop apps) and the culling and colour credits."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "retouch4me:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "retouch4me:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "retouch4me:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "retouch4me:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

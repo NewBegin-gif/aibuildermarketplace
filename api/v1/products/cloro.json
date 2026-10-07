@@ -63,5 +63,57 @@
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Cloro",
+    "product_id": "cloro",
+    "run_date": "2026-08-19",
+    "what": "We did not just read the docs: we ran 40 pricing queries across 20 tools and two engines through the async batch endpoint for a research report of our own, then spent a further handful of credits measuring what individual requests actually cost. Cloro is an affiliate partner of ours, which is why we checked their credit table against the meter instead of quoting it.",
+    "findings": [
+     "A plain async ChatGPT task billed 5 credits, not the 7 the pricing table lists for a full ChatGPT response — that is the web-search rate. It held over 20 requests in a batch and again on a single measured call. Budget from 5 and the free tier is 100 ChatGPT answers, not 71.",
+     "The credit meter lags. Straight after a completed ChatGPT task the balance was unchanged; the charge landed about 90 seconds later. If you gate your own spending on a balance read immediately after a call, you will overshoot.",
+     "The harvest does not echo your request back: task.payload comes back null. Submit a batch of 40 and nothing in the response tells you which answer belongs to which query — you have to keep your own map of task id to question. This cost us a wrong result on the first pass.",
+     "The response shape differs per engine, so there is no single schema to code against. ChatGPT returned text, sources, citationPills and model; Perplexity returned no model but added related_queries, search_model_queries and shopping_cards.",
+     "Async tasks came back in roughly 30 to 40 seconds each, and on the free tier's single concurrent job a 40-task batch is a queue, not a burst — budget wall-clock time as well as credits.",
+     "Source counts swing wildly and that is the engine, not the API: one Perplexity call returned 10 sources, while in our 20-tool batch 14 of 20 Perplexity answers returned no sources at all."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "cloro:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "cloro:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "cloro:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "cloro:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

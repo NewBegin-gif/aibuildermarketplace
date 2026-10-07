@@ -103,5 +103,59 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
- ]
+ ],
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Pangram",
+    "product_id": "pangram",
+    "run_date": "2026-10-01",
+    "what": "A new free account, with no payment method asked for. We ran nine texts whose authorship we knew before we started: three passages from public-domain books (Darwin and William James), a paragraph one of us typed for the test, typos included, three paragraphs a language model wrote for our own reviews, one paragraph Claude wrote on the spot, and one of those machine paragraphs with three of its five sentences rewritten by Claude. We read the credit meter after every check and ran it into the daily limit.",
+    "findings": [
+     "Nine for nine. All four human texts came back 'Human Written', including the 71-word paragraph typed for the test, and all five machine texts came back 'AI Generated', including the paragraph Claude wrote on the spot. Every result put the whole text on one side: the gauge read 100% each time. That figure is the share of the text it assigns to each side, not a confidence score.",
+     "A machine rewrite did not shake it. With three of its five sentences rewritten by a second model, the paragraph from our Hubstaff review still scored 100% AI. That measures a model paraphrasing a model; we did not test text a person had edited by hand.",
+     "Later the same day we gave it a tenth text: a deliberately clichéd AI paragraph after QuillBot's AI Humanizer had rewritten it (the Humanizer reported '0 AI signals'). Pangram still scored it 100% AI and added a note that the text 'appears to have been paraphrased or rewritten', pointing to one rewritten segment. Our own Claude rewrite of a review paragraph, earlier in the test, did not get that note.",
+     "Short texts carry a caveat, and very short ones are refused. Every text of 190 words or fewer was marked 'Confidence limited — short text'; the 224-word passage was not. Below 50 words the button stays grey, with 'Minimum 50 words required for accurate detection', and nothing is charged.",
+     "The 2,000 words a day are 20 credits of 100 words, rounded up per check. A 190-word text cost 2 credits and a 222-word text cost 3. Our first six checks came to 1,014 words and used 13 credits, the allowance for 1,300 words. At around 150 words a check, a day holds ten checks, not twenty. The cost shows next to the button before you click, and the balance sits at the top of the page.",
+     "Hitting the limit loses nothing. With 3 credits left, a 333-word text (4 credits) could still be submitted. A window then said the entry would cost 4 credits against the 3 remaining and offered the paid plans. Nothing was scanned and nothing was charged: the balance stayed at 3. The window does not say when the credits come back, and it does not offer to trim the text to what you have left.",
+     "Signed in and signed out, the pricing page shows the same amounts. The Professional button now reads 'Upgrade to Professional', with '$65 billed now' underneath, so that tier still has no trial.",
+     "Not tested: text that mixes human and AI writing, text a person edited by hand, languages other than English, anything longer than 224 words, the plagiarism check (paid plans only), image detection and the API. Three of the four human texts are famous public-domain passages a detector may well have seen before. The paragraph typed for the test is the stronger evidence, and it is a single paragraph of 71 words."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "pangram:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "pangram:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "pangram:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "pangram:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": []
 }

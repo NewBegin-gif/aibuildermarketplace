@@ -80,6 +80,9 @@
 
     // ---- Primaire affiliate-CTA: eerste echte sponsored-link (werkt voor ELKE affiliate) ----
     function findCTA(){
+      // 7 okt 2026: overzichten (deals) zetten de vaste productbalk uit; die wees naar de eerste partnerlink,
+      // niet naar wat de bezoeker zocht (Bolt op AIBM, Lucrovox op ZTS).
+      if (document.querySelector('meta[name="aibm-sticky-cta"][content="off"]')) return null;
       var a = document.querySelector('a[rel~="sponsored"][href^="http"]');
       if (a) return a.href;
       // 15 sep 2026 (audit R3-11): geen terugval op een willekeurige merklink --

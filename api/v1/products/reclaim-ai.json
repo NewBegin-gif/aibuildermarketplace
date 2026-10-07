@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "reclaim-ai",
  "name": "Reclaim.ai",
+ "research_status": "researched",
  "vendor_domain": "reclaim.ai",
  "category": "Operations & Workflow",
  "task": "Projects, planning & team workflow",
@@ -42,6 +43,7 @@
   "source_url": null
  },
  "free_plan": true,
+ "free_plan_evidence": "Lite is free forever for a single user.",
  "cost_traps": [
   {
    "id": "per_seat",
@@ -81,6 +83,460 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "rules_verified_at": "2026-10-03",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Lite is free forever for a single user"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "annual_month": 10,
+     "monthly": 12,
+     "max_units": 10,
+     "evidence": "Billed yearly the seats are Starter $10, Business $15 and Enterprise $22 per seat a month; billed monthly Starter is $12 and Business $18"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 15,
+     "monthly": 18,
+     "max_units": 100,
+     "evidence": "Billed yearly the seats are Starter $10, Business $15 and Enterprise $22 per seat a month; billed monthly Starter is $12 and Business $18"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "annual_month": 22,
+     "monthly_status": "unknown",
+     "eligible_from": 101,
+     "evidence": "Billed yearly the seats are Starter $10, Business $15 and Enterprise $22 per seat a month"
+    }
+   ],
+   "limits_evidence": "1 user on Lite, up to 10 on Starter, up to 100 on Business and over 100 on Enterprise",
+   "not_computable": [
+    "Attendee Unit packs, needed when you schedule Smart Meetings of 3+ with people who have no seat, are not modelled here; see pricing.notes."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "reclaim-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "starter": 10.0,
+       "business": 15.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 20.0,
+       "business": 30.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 30.0,
+       "business": 45.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 50.0,
+       "business": 75.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 100.0,
+       "business": 150.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 225.0,
+      "billed": {
+       "amount": 2700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 225.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 3600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 300.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 375.0,
+      "billed": {
+       "amount": 4500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 375.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 750.0,
+      "billed": {
+       "amount": 9000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 750.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1500.0,
+      "billed": {
+       "amount": 18000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 1500.0,
+       "enterprise": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "lite",
+      "to_plan": "starter",
+      "from_plan_name": "Lite",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "starter",
+      "to_plan": "business",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Attendee Unit packs, needed when you schedule Smart Meetings of 3+ with people who have no seat, are not modelled here; see pricing.notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "reclaim-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "starter": 12.0,
+       "business": 18.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 24.0,
+       "business": 36.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 36.0,
+      "billed": {
+       "amount": 36.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 36.0,
+       "business": 54.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 60.0,
+       "business": 90.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 120.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 120.0,
+       "business": 180.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 270.0,
+      "billed": {
+       "amount": 270.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 270.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 360.0,
+      "billed": {
+       "amount": 360.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 360.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 450.0,
+      "billed": {
+       "amount": 450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 450.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 900.0,
+      "billed": {
+       "amount": 900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 900.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1800.0,
+      "billed": {
+       "amount": 1800.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "business": 1800.0,
+       "enterprise": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "lite",
+      "to_plan": "starter",
+      "from_plan_name": "Lite",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "starter",
+      "to_plan": "business",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Attendee Unit packs, needed when you schedule Smart Meetings of 3+ with people who have no seat, are not modelled here; see pricing.notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "frase",
  "name": "Frase",
+ "research_status": "researched",
  "vendor_domain": "frase.io",
  "category": "Growth & Revenue",
  "task": "SEO, content & landing pages",
@@ -37,6 +38,7 @@
   "source_url": null
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "usage_metered",
@@ -76,6 +78,425 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "rules_verified_at": "2026-10-03",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "included_units": 1,
+     "max_units": 1,
+     "annual_month": 39,
+     "monthly": 49,
+     "evidence": "Starter $39/mo billed yearly against $49/mo monthly: 1 seat, 1 site"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "included_units": 3,
+     "annual_month": 103,
+     "monthly": 129,
+     "extra_unit": {
+      "price_month": 29,
+      "billing": "unspecified"
+     },
+     "evidence": "Professional $103/mo yearly against $129/mo monthly: 3 seats, 5 sites, 40 articles and 250 audit pages, extra seats $29/mo"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "flat",
+     "included_units": 5,
+     "annual_month": 239,
+     "monthly": 299,
+     "extra_unit": {
+      "price_month": 29,
+      "billing": "unspecified"
+     },
+     "evidence": "Scale $239/mo yearly against $299/mo monthly: 5 seats, up to 10 domains, 100 articles and 1,000 audit pages, Content Guard watching 300 pages, extra seats $29/mo"
+    }
+   ],
+   "not_computable": [
+    "On Professional and Scale, pay-as-you-go capacity (extra articles, audit pages, AI prompts) can be switched on, so the price is a floor there."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "frase",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 468.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.0,
+       "professional": 103.0,
+       "scale": 239.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 103.0,
+      "billed": {
+       "amount": 1236.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 103.0,
+       "scale": 239.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 103.0,
+      "billed": {
+       "amount": 1236.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 103.0,
+       "scale": 239.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 161.0,
+      "billed": {
+       "amount": 1932.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 161.0,
+       "scale": 239.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 306.0,
+      "billed": {
+       "amount": 3672.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 306.0,
+       "scale": 384.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 451.0,
+      "billed": {
+       "amount": 5412.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 451.0,
+       "scale": 529.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 596.0,
+      "billed": {
+       "amount": 7152.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 596.0,
+       "scale": 674.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 741.0,
+      "billed": {
+       "amount": 8892.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 741.0,
+       "scale": 819.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 1466.0,
+      "billed": {
+       "amount": 17592.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 1466.0,
+       "scale": 1544.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 2916.0,
+      "billed": {
+       "amount": 34992.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 2916.0,
+       "scale": 2994.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "professional",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Professional"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "On Professional and Scale, pay-as-you-go capacity (extra articles, audit pages, AI prompts) can be switched on, so the price is a floor there."
+    ]
+   },
+   "monthly": {
+    "product_id": "frase",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 49.0,
+       "professional": 129.0,
+       "scale": 299.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 129.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 129.0,
+       "scale": 299.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 129.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 129.0,
+       "scale": 299.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 187.0,
+      "billed": {
+       "amount": 187.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 187.0,
+       "scale": 299.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 332.0,
+      "billed": {
+       "amount": 332.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 332.0,
+       "scale": 444.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 477.0,
+      "billed": {
+       "amount": 477.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 477.0,
+       "scale": 589.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 622.0,
+      "billed": {
+       "amount": 622.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 622.0,
+       "scale": 734.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 767.0,
+      "billed": {
+       "amount": 767.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 767.0,
+       "scale": 879.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 1492.0,
+      "billed": {
+       "amount": 1492.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 1492.0,
+       "scale": 1604.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 2942.0,
+      "billed": {
+       "amount": 2942.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 2942.0,
+       "scale": 3054.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "professional",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Professional"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "On Professional and Scale, pay-as-you-go capacity (extra articles, audit pages, AI prompts) can be switched on, so the price is a floor there."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

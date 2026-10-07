@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "signnow",
  "name": "SignNow",
+ "research_status": "researched",
  "vendor_domain": "signnow.com",
  "category": "Operations & Workflow",
  "task": "Documents, PDF & e-signing",
@@ -47,6 +48,7 @@
   "source_url": null
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
@@ -86,6 +88,423 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "EUR",
+   "unit": "account",
+   "axis": "users",
+   "rules_verified_at": "2026-09-26",
+   "plans": [
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "annual_month": 8,
+     "monthly": 20,
+     "evidence": "Business EUR 8, Business Premium EUR 15 and Enterprise EUR 30 a month billed annually, against EUR 20, EUR 30 and EUR 50 month-to-month"
+    },
+    {
+     "id": "business-premium",
+     "name": "Business Premium",
+     "model": "flat",
+     "annual_month": 15,
+     "monthly": 30,
+     "evidence": "Business EUR 8, Business Premium EUR 15 and Enterprise EUR 30 a month billed annually, against EUR 20, EUR 30 and EUR 50 month-to-month"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "flat",
+     "annual_month": 30,
+     "monthly": 50,
+     "evidence": "Business EUR 8, Business Premium EUR 15 and Enterprise EUR 30 a month billed annually, against EUR 20, EUR 30 and EUR 50 month-to-month"
+    }
+   ],
+   "conflicts": [
+    {
+     "about": "per user or per account",
+     "evidence": "signnow.com/pricing.md, read the same day, gives the annual rates as $8, $15 and $30 per user a month"
+    },
+    {
+     "about": "per user or per account",
+     "evidence": "Every card says 'Unlimited users' and 'Get 100 invites per year'"
+    }
+   ],
+   "not_computable": [
+    "Signature invites beyond 100 a year (annual) or 10 a month (monthly) are pay-as-you-go at a rate the page does not state."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "signnow",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "account",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 8.0,
+       "business-premium": 15.0,
+       "enterprise": 30.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [
+     {
+      "about": "per user or per account",
+      "evidence": "signnow.com/pricing.md, read the same day, gives the annual rates as $8, $15 and $30 per user a month"
+     },
+     {
+      "about": "per user or per account",
+      "evidence": "Every card says 'Unlimited users' and 'Get 100 invites per year'"
+     }
+    ],
+    "unknowns": [
+     "Signature invites beyond 100 a year (annual) or 10 a month (monthly) are pay-as-you-go at a rate the page does not state."
+    ]
+   },
+   "monthly": {
+    "product_id": "signnow",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "account",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 20.0,
+       "business-premium": 30.0,
+       "enterprise": 50.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [
+     {
+      "about": "per user or per account",
+      "evidence": "signnow.com/pricing.md, read the same day, gives the annual rates as $8, $15 and $30 per user a month"
+     },
+     {
+      "about": "per user or per account",
+      "evidence": "Every card says 'Unlimited users' and 'Get 100 invites per year'"
+     }
+    ],
+    "unknowns": [
+     "Signature invites beyond 100 a year (annual) or 10 a month (monthly) are pay-as-you-go at a rate the page does not state."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

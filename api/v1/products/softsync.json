@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "softsync",
  "name": "SoftSync",
+ "research_status": "researched",
  "vendor_domain": "softsync.ai",
  "category": "Growth & Revenue",
  "task": "Sales outreach, leads & CRM",
@@ -37,6 +38,7 @@
   "source_url": "https://softsync.ai/pricing"
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
@@ -76,6 +78,415 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "rules_verified_at": "2026-09-26",
+   "plans": [
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 29,
+     "monthly": 39,
+     "max_units": 5,
+     "evidence": "Pro is $29 per seat a month billed yearly or $39 billed monthly"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 59,
+     "monthly": 79,
+     "max_units": 25,
+     "evidence": "Business is $59 per seat a month billed yearly or $79 monthly"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is custom-priced"
+    }
+   ],
+   "limits_evidence": "Pro allows at most 5 team members",
+   "limits_evidence_2": "Business raises those to 25 team members",
+   "notes": [
+    "Prices exclude VAT (vendor FAQ)."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "softsync",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 348.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 29.0,
+       "business": 59.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 58.0,
+      "billed": {
+       "amount": 696.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 58.0,
+       "business": 118.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 87.0,
+      "billed": {
+       "amount": 1044.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 87.0,
+       "business": 177.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 145.0,
+      "billed": {
+       "amount": 1740.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 145.0,
+       "business": 295.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 590.0,
+      "billed": {
+       "amount": 7080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": 590.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 885.0,
+      "billed": {
+       "amount": 10620.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": 885.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1180.0,
+      "billed": {
+       "amount": 14160.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": 1180.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1475.0,
+      "billed": {
+       "amount": 17700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": 1475.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "pro",
+      "to_plan": "business",
+      "from_plan_name": "Pro",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "softsync",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 39.0,
+       "business": 79.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 78.0,
+      "billed": {
+       "amount": 78.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 78.0,
+       "business": 158.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 117.0,
+      "billed": {
+       "amount": 117.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 117.0,
+       "business": 237.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 195.0,
+      "billed": {
+       "amount": 195.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 195.0,
+       "business": 395.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 790.0,
+      "billed": {
+       "amount": 790.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": 790.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1185.0,
+      "billed": {
+       "amount": 1185.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": 1185.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1580.0,
+      "billed": {
+       "amount": 1580.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": 1580.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1975.0,
+      "billed": {
+       "amount": 1975.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": 1975.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "pro",
+      "to_plan": "business",
+      "from_plan_name": "Pro",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

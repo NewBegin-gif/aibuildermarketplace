@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "track123",
  "name": "Track123",
+ "research_status": "researched",
  "vendor_domain": "track123.com",
  "category": "E-commerce",
  "task": "E-commerce & inventory ops",
@@ -42,6 +43,7 @@
   "source_url": "https://intercom.help/track123/en/articles/5920187-track123-pricing-plan"
  },
  "free_plan": true,
+ "free_plan_evidence": "The pricing article says annual plans have no overage: once the allowance is used up, new orders stop syncing until you upgrade, and the free plan stops the same way until the next cycle.",
  "cost_traps": [
   {
    "id": "usage_metered",
@@ -81,6 +83,514 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "order a month",
+   "axis": "orders_per_month",
+   "rules_verified_at": "2026-09-27",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "free",
+     "max_units": 50,
+     "evidence": "Starter is free for 50 orders a month, and orders past that do not sync until the next billing cycle"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 300,
+       "monthly": 9,
+       "annual_year": 84
+      },
+      {
+       "units": 700,
+       "monthly": 19,
+       "annual_year": 180
+      },
+      {
+       "units": 1000,
+       "monthly": 29,
+       "annual_year": 276
+      }
+     ],
+     "evidence": "Growth starts at $9 a month or $84 a year for 300 orders, with 700 orders at $19 ($180 a year) and 1,000 at $29 ($276 a year)"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 2000,
+       "monthly": 49,
+       "annual_year": 468
+      },
+      {
+       "units": 3000,
+       "monthly": 69
+      },
+      {
+       "units": 5000,
+       "monthly": 99
+      },
+      {
+       "units": 7000,
+       "monthly": 129
+      },
+      {
+       "units": 10000,
+       "monthly": 179
+      },
+      {
+       "units": 15000,
+       "monthly": 249
+      },
+      {
+       "units": 20000,
+       "monthly": 299
+      },
+      {
+       "units": 50000,
+       "monthly": 599,
+       "annual_year": 5748
+      }
+     ],
+     "gap_after": 20000,
+     "evidence": "Advanced starts at $49 a month or $468 a year for 2,000 orders and climbs through 3,000 ($69), 5,000 ($99), 7,000 ($129), 10,000 ($179), 15,000 ($249) and 20,000 ($299), then in $50 steps to $599 a month, or $5,748 a year, for 50,000 orders"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Above 50,000 orders Enterprise is quoted on request"
+    }
+   ],
+   "overage": {
+    "monthly_per_unit": 0.05,
+    "annual": "none_stops_syncing",
+    "evidence": "On monthly billing every order past the allowance costs $0.05; on annual billing there is no overage and new orders stop syncing until you upgrade"
+   },
+   "notes": [
+    "Between 20,000 and 50,000 orders the page gives $50 steps but not the order count of each step."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "track123",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 0.0,
+       "growth": 7.0,
+       "advanced": 39.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 0.0,
+       "growth": 7.0,
+       "advanced": 39.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 7.0,
+      "billed": {
+       "amount": 84.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 7.0,
+       "advanced": 39.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 180.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 15.0,
+       "advanced": 39.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 23.0,
+      "billed": {
+       "amount": 276.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 23.0,
+       "advanced": 39.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "advanced",
+      "cheapest_plan_name": "Advanced",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 468.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": 39.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 1000,
+      "to_units": 2000,
+      "from_plan": "growth",
+      "to_plan": "advanced",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Advanced"
+     },
+     {
+      "from_units": 2000,
+      "to_units": 5000,
+      "from_plan": "advanced",
+      "to_plan": null,
+      "from_plan_name": "Advanced",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "track123",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 0.0,
+       "growth": 9.0,
+       "advanced": 49.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 0.0,
+       "growth": 9.0,
+       "advanced": 49.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 9.0,
+      "billed": {
+       "amount": 9.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 9.0,
+       "advanced": 49.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 19.0,
+       "advanced": 49.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 29.0,
+       "advanced": 49.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "advanced",
+      "cheapest_plan_name": "Advanced",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": 49.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "advanced",
+      "cheapest_plan_name": "Advanced",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": 99.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "advanced",
+      "cheapest_plan_name": "Advanced",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": 179.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "advanced",
+      "cheapest_plan_name": "Advanced",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 299.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": 299.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [
+       {
+        "plan_id": "advanced",
+        "range": [
+         299.0,
+         599.0
+        ]
+       }
+      ],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "advanced": "range",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 1000,
+      "to_units": 2000,
+      "from_plan": "growth",
+      "to_plan": "advanced",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Advanced"
+     },
+     {
+      "from_units": 20000,
+      "to_units": 50000,
+      "from_plan": "advanced",
+      "to_plan": null,
+      "from_plan_name": "Advanced",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

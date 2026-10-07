@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "bill-com",
  "name": "Bill.com",
+ "research_status": "researched",
  "vendor_domain": "bill.com",
  "category": "Financial Operations",
  "task": "Paying bills & getting paid",
@@ -57,6 +58,7 @@
   "source_url": null
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
@@ -103,6 +105,444 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "rules_verified_at": "2026-09-15",
+   "plans": [
+    {
+     "id": "essentials",
+     "name": "Essentials",
+     "model": "per_unit",
+     "price_month": 49,
+     "billing": "unspecified",
+     "evidence": "Essentials $49, Team $65 and Corporate $89 per user per month"
+    },
+    {
+     "id": "team",
+     "name": "Team",
+     "model": "per_unit",
+     "price_month": 65,
+     "billing": "unspecified",
+     "evidence": "Essentials $49, Team $65 and Corporate $89 per user per month"
+    },
+    {
+     "id": "corporate",
+     "name": "Corporate",
+     "model": "per_unit",
+     "price_month": 89,
+     "billing": "unspecified",
+     "evidence": "Essentials $49, Team $65 and Corporate $89 per user per month"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "plus a quote-only Enterprise"
+    }
+   ],
+   "usage": [
+    {
+     "id": "ach_payments",
+     "label": "ACH or ePayment",
+     "unit": "payment",
+     "price": 0.59,
+     "evidence": "ACH or ePayment is $0.59"
+    },
+    {
+     "id": "mailed_checks",
+     "label": "Mailed check",
+     "unit": "check",
+     "price": 1.99,
+     "evidence": "a mailed check $1.99"
+    },
+    {
+     "id": "intl_usd_wires",
+     "label": "International USD wire",
+     "unit": "wire",
+     "price": 19.99,
+     "evidence": "an international USD wire $19.99"
+    }
+   ],
+   "not_computable": [
+    "FX wires and virtual cards carry an exchange-rate margin disclosed only at the time of the transaction."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "bill-com",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 49.0,
+       "team": 65.0,
+       "corporate": 89.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 98.0,
+      "billed": {
+       "amount": 98.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 98.0,
+       "team": 130.0,
+       "corporate": 178.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 147.0,
+      "billed": {
+       "amount": 147.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 147.0,
+       "team": 195.0,
+       "corporate": 267.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 245.0,
+      "billed": {
+       "amount": 245.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 245.0,
+       "team": 325.0,
+       "corporate": 445.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 490.0,
+      "billed": {
+       "amount": 490.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 490.0,
+       "team": 650.0,
+       "corporate": 890.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 735.0,
+      "billed": {
+       "amount": 735.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 735.0,
+       "team": 975.0,
+       "corporate": 1335.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 980.0,
+      "billed": {
+       "amount": 980.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 980.0,
+       "team": 1300.0,
+       "corporate": 1780.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 1225.0,
+      "billed": {
+       "amount": 1225.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 1225.0,
+       "team": 1625.0,
+       "corporate": 2225.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 2450.0,
+      "billed": {
+       "amount": 2450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 2450.0,
+       "team": 3250.0,
+       "corporate": 4450.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 4900.0,
+      "billed": {
+       "amount": 4900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 4900.0,
+       "team": 6500.0,
+       "corporate": 8900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "FX wires and virtual cards carry an exchange-rate margin disclosed only at the time of the transaction."
+    ]
+   },
+   "monthly": {
+    "product_id": "bill-com",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 49.0,
+       "team": 65.0,
+       "corporate": 89.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 98.0,
+      "billed": {
+       "amount": 98.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 98.0,
+       "team": 130.0,
+       "corporate": 178.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 147.0,
+      "billed": {
+       "amount": 147.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 147.0,
+       "team": 195.0,
+       "corporate": 267.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 245.0,
+      "billed": {
+       "amount": 245.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 245.0,
+       "team": 325.0,
+       "corporate": 445.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 490.0,
+      "billed": {
+       "amount": 490.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 490.0,
+       "team": 650.0,
+       "corporate": 890.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 735.0,
+      "billed": {
+       "amount": 735.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 735.0,
+       "team": 975.0,
+       "corporate": 1335.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 980.0,
+      "billed": {
+       "amount": 980.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 980.0,
+       "team": 1300.0,
+       "corporate": 1780.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 1225.0,
+      "billed": {
+       "amount": 1225.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 1225.0,
+       "team": 1625.0,
+       "corporate": 2225.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 2450.0,
+      "billed": {
+       "amount": 2450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 2450.0,
+       "team": 3250.0,
+       "corporate": 4450.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 4900.0,
+      "billed": {
+       "amount": 4900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 4900.0,
+       "team": 6500.0,
+       "corporate": 8900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "FX wires and virtual cards carry an exchange-rate margin disclosed only at the time of the transaction."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

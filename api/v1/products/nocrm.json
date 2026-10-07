@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "nocrm",
  "name": "noCRM",
+ "research_status": "researched",
  "vendor_domain": "nocrm.io",
  "category": "Sales & CRM",
  "task": "Sales outreach, leads & CRM",
@@ -37,6 +38,7 @@
   "source_url": "https://www.nocrm.io/pricing"
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
@@ -76,6 +78,393 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "EUR",
+   "unit": "user",
+   "axis": "users",
+   "rules_verified_at": "2026-09-16",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "annual_month": 11,
+     "monthly": 19,
+     "new_customers_only": true,
+     "evidence": "Starter is €11, Expert €22 and Dream €33 per user a month; switch the toggle to monthly and the same tiers are €19, €29 and €39"
+    },
+    {
+     "id": "expert",
+     "name": "Expert",
+     "model": "per_unit",
+     "annual_month": 22,
+     "monthly": 29,
+     "evidence": "Starter is €11, Expert €22 and Dream €33 per user a month; switch the toggle to monthly and the same tiers are €19, €29 and €39"
+    },
+    {
+     "id": "dream",
+     "name": "Dream",
+     "model": "per_unit",
+     "annual_month": 33,
+     "monthly": 39,
+     "evidence": "Starter is €11, Expert €22 and Dream €33 per user a month; switch the toggle to monthly and the same tiers are €19, €29 and €39"
+    }
+   ],
+   "notes": [
+    "All users on one account must sit on the same plan.",
+    "20% VAT is added for French companies and for EU businesses without a valid VAT number."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "nocrm",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 11.0,
+      "billed": {
+       "amount": 132.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 11.0,
+       "expert": 22.0,
+       "dream": 33.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 22.0,
+       "expert": 44.0,
+       "dream": 66.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 33.0,
+      "billed": {
+       "amount": 396.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 33.0,
+       "expert": 66.0,
+       "dream": 99.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 55.0,
+       "expert": 110.0,
+       "dream": 165.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 110.0,
+      "billed": {
+       "amount": 1320.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 110.0,
+       "expert": 220.0,
+       "dream": 330.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 165.0,
+      "billed": {
+       "amount": 1980.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 165.0,
+       "expert": 330.0,
+       "dream": 495.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 220.0,
+      "billed": {
+       "amount": 2640.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 220.0,
+       "expert": 440.0,
+       "dream": 660.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 275.0,
+      "billed": {
+       "amount": 3300.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 275.0,
+       "expert": 550.0,
+       "dream": 825.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 550.0,
+      "billed": {
+       "amount": 6600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 550.0,
+       "expert": 1100.0,
+       "dream": 1650.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1100.0,
+      "billed": {
+       "amount": 13200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1100.0,
+       "expert": 2200.0,
+       "dream": 3300.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "nocrm",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.0,
+       "expert": 29.0,
+       "dream": 39.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 38.0,
+      "billed": {
+       "amount": 38.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 38.0,
+       "expert": 58.0,
+       "dream": 78.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 57.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 57.0,
+       "expert": 87.0,
+       "dream": 117.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 95.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 95.0,
+       "expert": 145.0,
+       "dream": 195.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 190.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 190.0,
+       "expert": 290.0,
+       "dream": 390.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 285.0,
+      "billed": {
+       "amount": 285.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 285.0,
+       "expert": 435.0,
+       "dream": 585.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 380.0,
+      "billed": {
+       "amount": 380.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 380.0,
+       "expert": 580.0,
+       "dream": 780.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 475.0,
+      "billed": {
+       "amount": 475.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 475.0,
+       "expert": 725.0,
+       "dream": 975.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 950.0,
+      "billed": {
+       "amount": 950.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 950.0,
+       "expert": 1450.0,
+       "dream": 1950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1900.0,
+      "billed": {
+       "amount": 1900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1900.0,
+       "expert": 2900.0,
+       "dream": 3900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

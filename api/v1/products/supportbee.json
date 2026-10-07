@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "supportbee",
  "name": "SupportBee",
+ "research_status": "researched",
  "vendor_domain": "supportbee.com",
  "category": "Customer Support",
  "task": "A help desk, tickets or a shared inbox",
@@ -32,6 +33,7 @@
   "source_url": "https://supportbee.com/pricing"
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
@@ -61,6 +63,360 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "rules_verified_at": "2026-10-06",
+   "plans": [
+    {
+     "id": "startup",
+     "name": "Startup",
+     "model": "per_unit",
+     "monthly": 20,
+     "annual_year": 204,
+     "evidence": "Startup is $20/seat/month and Enterprise is $25/seat/month. Switch the toggle to annual and the page shows a total of $204 per seat billed annually on Startup and $252 on Enterprise"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "monthly": 25,
+     "annual_year": 252,
+     "evidence": "Startup is $20/seat/month and Enterprise is $25/seat/month. Switch the toggle to annual and the page shows a total of $204 per seat billed annually on Startup and $252 on Enterprise"
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "supportbee",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 17.0,
+      "billed": {
+       "amount": 204.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 17.0,
+       "enterprise": 21.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 34.0,
+      "billed": {
+       "amount": 408.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 34.0,
+       "enterprise": 42.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 51.0,
+      "billed": {
+       "amount": 612.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 51.0,
+       "enterprise": 63.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 85.0,
+      "billed": {
+       "amount": 1020.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 85.0,
+       "enterprise": 105.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 170.0,
+      "billed": {
+       "amount": 2040.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 170.0,
+       "enterprise": 210.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 255.0,
+      "billed": {
+       "amount": 3060.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 255.0,
+       "enterprise": 315.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 340.0,
+      "billed": {
+       "amount": 4080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 340.0,
+       "enterprise": 420.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 425.0,
+      "billed": {
+       "amount": 5100.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 425.0,
+       "enterprise": 525.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 850.0,
+      "billed": {
+       "amount": 10200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 850.0,
+       "enterprise": 1050.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 1700.0,
+      "billed": {
+       "amount": 20400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 1700.0,
+       "enterprise": 2100.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "supportbee",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 20.0,
+       "enterprise": 25.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 40.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 60.0,
+       "enterprise": 75.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 100.0,
+       "enterprise": 125.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 200.0,
+       "enterprise": 250.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 300.0,
+       "enterprise": 375.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 400.0,
+       "enterprise": 500.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 500.0,
+       "enterprise": 625.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 1000.0,
+       "enterprise": 1250.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 2000.0,
+      "billed": {
+       "amount": 2000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 2000.0,
+       "enterprise": 2500.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "digitalocean",
  "name": "DigitalOcean",
+ "research_status": "researched",
  "vendor_domain": "digitalocean.com",
  "category": "Developer Tools",
  "task": "Hosting & websites",
@@ -47,6 +48,7 @@
   "source_url": "https://www.digitalocean.com/pricing/droplets"
  },
  "free_plan": true,
+ "free_plan_evidence": "App Platform has a free tier for three static-site apps (1 GiB of transfer each, further static apps $3 each); apps with a server start at $5 a month for a fixed container with 1 vCPU and 512 MiB, limited to one instance, then $10, $12, $25 and $50, with a $7 development database, a $25 dedicated egress IP and $0.02 per GiB beyond the bandwidth allowance.",
  "cost_traps": [
   {
    "id": "usage_metered",
@@ -80,7 +82,14 @@
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ]
 }

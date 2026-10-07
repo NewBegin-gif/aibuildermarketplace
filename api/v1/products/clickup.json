@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "clickup",
  "name": "ClickUp",
+ "research_status": "researched",
  "vendor_domain": "clickup.com",
  "category": "Operations & Workflow",
  "task": "Projects, planning & team workflow",
@@ -42,6 +43,7 @@
   "source_url": "https://clickup.com/pricing"
  },
  "free_plan": true,
+ "free_plan_evidence": "(re-verified 2026-08-13, read on their own pricing page with both billing tabs open; every amount unchanged on 2026-09-30) A Free Forever plan with unlimited tasks but 60MB of storage; Unlimited $7 and Business $12 per user/month billed yearly, which are $10 and $19 billed monthly; Enterprise is quote-only.",
  "cost_traps": [
   {
    "id": "per_seat",
@@ -88,6 +90,440 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "rules_verified_at": "2026-09-30",
+   "plans": [
+    {
+     "id": "free-forever",
+     "name": "Free Forever",
+     "model": "free",
+     "evidence": "A Free Forever plan with unlimited tasks but 60MB of storage"
+    },
+    {
+     "id": "unlimited",
+     "name": "Unlimited",
+     "model": "per_unit",
+     "annual_month": 7,
+     "monthly": 10,
+     "evidence": "Unlimited $7 and Business $12 per user/month billed yearly, which are $10 and $19 billed monthly"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 12,
+     "monthly": 19,
+     "evidence": "Unlimited $7 and Business $12 per user/month billed yearly, which are $10 and $19 billed monthly"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quote-only"
+    }
+   ],
+   "addons": [
+    {
+     "id": "brain-ai",
+     "label": "Brain AI",
+     "per": "unit",
+     "price_month": 9,
+     "billing": "unspecified",
+     "evidence": "Brain AI $9 and Everything AI $28 per user/month"
+    },
+    {
+     "id": "everything-ai",
+     "label": "Everything AI",
+     "per": "unit",
+     "price_month": 28,
+     "billing": "unspecified",
+     "evidence": "Brain AI $9 and Everything AI $28 per user/month"
+    }
+   ],
+   "not_computable": [
+    {
+     "text": "Free Forever's limits beyond storage (members, features) are not in our notes.",
+     "affects_cost": false
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "clickup",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 7.0,
+       "business": 12.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 14.0,
+       "business": 24.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 21.0,
+       "business": 36.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 35.0,
+       "business": 60.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 70.0,
+       "business": 120.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 105.0,
+       "business": 180.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 140.0,
+       "business": 240.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 175.0,
+       "business": 300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 350.0,
+       "business": 600.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 700.0,
+       "business": 1200.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Free Forever's limits beyond storage (members, features) are not in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "clickup",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 10.0,
+       "business": 19.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 20.0,
+       "business": 38.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 30.0,
+       "business": 57.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 50.0,
+       "business": 95.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 100.0,
+       "business": 190.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 150.0,
+       "business": 285.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 200.0,
+       "business": 380.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 250.0,
+       "business": 475.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 500.0,
+       "business": 950.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free-forever",
+      "cheapest_plan_name": "Free Forever",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free-forever": 0.0,
+       "unlimited": 1000.0,
+       "business": 1900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Free Forever's limits beyond storage (members, features) are not in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

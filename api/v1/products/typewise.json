@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "typewise",
  "name": "Typewise",
+ "research_status": "researched",
  "vendor_domain": "typewise.app",
  "category": "Customer Support",
  "task": "A help desk, tickets or a shared inbox",
@@ -42,6 +43,7 @@
   "source_url": null
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
@@ -88,6 +90,449 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "rules_verified_at": "2026-09-27",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "included_units": 1,
+     "monthly": 99,
+     "annual_year": 999,
+     "extra_unit": {
+      "price_month": 89,
+      "billing": "unspecified"
+     },
+     "evidence": "Starter is $99 a month or $999 a year with 1 user"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "included_units": 5,
+     "monthly": 599,
+     "annual_year": 5999,
+     "extra_unit": {
+      "price_month": 89,
+      "billing": "unspecified"
+     },
+     "evidence": "Growth is $599 a month or $5,999 a year with 5 users"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "included_units": 5,
+     "annual_month": 2000,
+     "monthly_status": "not_offered",
+     "extra_unit": {
+      "price_month": 89,
+      "billing": "unspecified"
+     },
+     "evidence": "Business is $2,000 a month billed annually with 5 users"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quoted"
+    }
+   ],
+   "extra_evidence": "Additional users are $89 a month on every plan",
+   "usage": [
+    {
+     "id": "resolutions",
+     "label": "AI resolutions (Starter, pay-as-you-go)",
+     "unit": "resolution",
+     "price": 2,
+     "only_on": [
+      "starter"
+     ],
+     "evidence": "pay-as-you-go resolutions at $2 each"
+    }
+   ],
+   "not_computable": [
+    "Growth resolution packages go down to $1 a resolution; the package sizes are not in our notes."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "typewise",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 83.25,
+      "billed": {
+       "amount": 999.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 83.25,
+       "growth": 499.92,
+       "business": 2000.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 172.25,
+      "billed": {
+       "amount": 2067.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 172.25,
+       "growth": 499.92,
+       "business": 2000.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 261.25,
+      "billed": {
+       "amount": 3135.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 261.25,
+       "growth": 499.92,
+       "business": 2000.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 439.25,
+      "billed": {
+       "amount": 5271.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 439.25,
+       "growth": 499.92,
+       "business": 2000.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 884.25,
+      "billed": {
+       "amount": 10611.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 884.25,
+       "growth": 944.92,
+       "business": 2445.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1329.25,
+      "billed": {
+       "amount": 15951.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1329.25,
+       "growth": 1389.92,
+       "business": 2890.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1774.25,
+      "billed": {
+       "amount": 21291.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1774.25,
+       "growth": 1834.92,
+       "business": 3335.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2219.25,
+      "billed": {
+       "amount": 26631.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 2219.25,
+       "growth": 2279.92,
+       "business": 3780.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 4444.25,
+      "billed": {
+       "amount": 53331.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 4444.25,
+       "growth": 4504.92,
+       "business": 6005.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 8894.25,
+      "billed": {
+       "amount": 106731.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 8894.25,
+       "growth": 8954.92,
+       "business": 10455.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Growth resolution packages go down to $1 a resolution; the package sizes are not in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "typewise",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 99.0,
+       "growth": 599.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 188.0,
+      "billed": {
+       "amount": 188.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 188.0,
+       "growth": 599.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 277.0,
+      "billed": {
+       "amount": 277.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 277.0,
+       "growth": 599.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 455.0,
+      "billed": {
+       "amount": 455.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 455.0,
+       "growth": 599.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 900.0,
+      "billed": {
+       "amount": 900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 900.0,
+       "growth": 1044.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1345.0,
+      "billed": {
+       "amount": 1345.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1345.0,
+       "growth": 1489.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1790.0,
+      "billed": {
+       "amount": 1790.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1790.0,
+       "growth": 1934.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2235.0,
+      "billed": {
+       "amount": 2235.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 2235.0,
+       "growth": 2379.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 4460.0,
+      "billed": {
+       "amount": 4460.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 4460.0,
+       "growth": 4604.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 8910.0,
+      "billed": {
+       "amount": 8910.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 8910.0,
+       "growth": 9054.0,
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Growth resolution packages go down to $1 a resolution; the package sizes are not in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

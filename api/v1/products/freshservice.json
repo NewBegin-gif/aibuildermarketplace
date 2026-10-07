@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "freshservice",
  "name": "Freshservice",
+ "research_status": "researched",
  "vendor_domain": "freshservice.com",
  "category": "IT & Productivity",
  "task": "A help desk, tickets or a shared inbox",
@@ -42,6 +43,7 @@
   "source_url": null
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
@@ -88,6 +90,435 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "agent",
+   "axis": "users",
+   "rules_verified_at": "2026-09-29",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "annual_month": 19,
+     "monthly": 29,
+     "evidence": "Starter $19/agent/mo billed annually or $29 monthly"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "annual_month": 49,
+     "monthly": 59,
+     "evidence": "Growth $49 or $59"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 99,
+     "monthly": 119,
+     "evidence": "Pro $99 or $119"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quote-only again"
+    }
+   ],
+   "addons": [
+    {
+     "id": "freddy-ai-copilot",
+     "label": "Freddy AI Copilot",
+     "per": "unit",
+     "price_month": 29,
+     "billing": "unspecified",
+     "only_on": [
+      "pro",
+      "enterprise"
+     ],
+     "evidence": "Freddy AI Copilot $29/agent/mo, offered on the Pro and Enterprise cards only"
+    }
+   ],
+   "not_computable": [
+    "Orchestration transactions, MCP actions, asset units and app tasks beyond the included allowances are sold in packs; see pricing.notes."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "freshservice",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 228.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.0,
+       "growth": 49.0,
+       "pro": 99.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 38.0,
+      "billed": {
+       "amount": 456.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 38.0,
+       "growth": 98.0,
+       "pro": 198.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 684.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 57.0,
+       "growth": 147.0,
+       "pro": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 1140.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 95.0,
+       "growth": 245.0,
+       "pro": 495.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 2280.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 190.0,
+       "growth": 490.0,
+       "pro": 990.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 285.0,
+      "billed": {
+       "amount": 3420.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 285.0,
+       "growth": 735.0,
+       "pro": 1485.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 380.0,
+      "billed": {
+       "amount": 4560.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 380.0,
+       "growth": 980.0,
+       "pro": 1980.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 475.0,
+      "billed": {
+       "amount": 5700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 475.0,
+       "growth": 1225.0,
+       "pro": 2475.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 950.0,
+      "billed": {
+       "amount": 11400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 950.0,
+       "growth": 2450.0,
+       "pro": 4950.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1900.0,
+      "billed": {
+       "amount": 22800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1900.0,
+       "growth": 4900.0,
+       "pro": 9900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Orchestration transactions, MCP actions, asset units and app tasks beyond the included allowances are sold in packs; see pricing.notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "freshservice",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "growth": 59.0,
+       "pro": 119.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 58.0,
+      "billed": {
+       "amount": 58.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 58.0,
+       "growth": 118.0,
+       "pro": 238.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 87.0,
+      "billed": {
+       "amount": 87.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 87.0,
+       "growth": 177.0,
+       "pro": 357.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 145.0,
+      "billed": {
+       "amount": 145.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 145.0,
+       "growth": 295.0,
+       "pro": 595.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 290.0,
+      "billed": {
+       "amount": 290.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 290.0,
+       "growth": 590.0,
+       "pro": 1190.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 435.0,
+      "billed": {
+       "amount": 435.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 435.0,
+       "growth": 885.0,
+       "pro": 1785.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 580.0,
+      "billed": {
+       "amount": 580.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 580.0,
+       "growth": 1180.0,
+       "pro": 2380.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 725.0,
+      "billed": {
+       "amount": 725.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 725.0,
+       "growth": 1475.0,
+       "pro": 2975.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1450.0,
+      "billed": {
+       "amount": 1450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1450.0,
+       "growth": 2950.0,
+       "pro": 5950.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2900.0,
+      "billed": {
+       "amount": 2900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 2900.0,
+       "growth": 5900.0,
+       "pro": 11900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Orchestration transactions, MCP actions, asset units and app tasks beyond the included allowances are sold in packs; see pricing.notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

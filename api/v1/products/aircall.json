@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "aircall",
  "name": "Aircall",
+ "research_status": "researched",
  "vendor_domain": "aircall.io",
  "category": "Communication & Voice",
  "task": "A business phone system",
@@ -37,6 +38,7 @@
   "source_url": null
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
@@ -83,6 +85,426 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "licence",
+   "axis": "users",
+   "rules_verified_at": "2026-09-27",
+   "plans": [
+    {
+     "id": "essentials",
+     "name": "Essentials",
+     "model": "per_unit",
+     "annual_month": 30,
+     "monthly": 40,
+     "evidence": "Essentials is $30 per license a month and Professional $50, both on annual billing, which the page marks as 25% off monthly. Flip that toggle and the monthly rates read $40 and $70 per license"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "annual_month": 50,
+     "monthly": 70,
+     "evidence": "Essentials is $30 per license a month and Professional $50, both on annual billing, which the page marks as 25% off monthly. Flip that toggle and the monthly rates read $40 and $70 per license"
+    },
+    {
+     "id": "custom",
+     "name": "Custom",
+     "model": "quote",
+     "eligible_from": 25,
+     "evidence": "Custom starts at 25 licenses"
+    }
+   ],
+   "addons": [
+    {
+     "id": "ai-assist",
+     "label": "AI Assist",
+     "per": "unit",
+     "price_month": 9,
+     "billing": "unspecified",
+     "included_on": [
+      "professional"
+     ],
+     "evidence": "AI Assist is $9 per licence a month and AI Assist Pro $49, though Professional includes the AI Assist features"
+    },
+    {
+     "id": "ai-assist-pro",
+     "label": "AI Assist Pro",
+     "per": "unit",
+     "price_month": 49,
+     "billing": "unspecified",
+     "evidence": "AI Assist is $9 per licence a month and AI Assist Pro $49"
+    },
+    {
+     "id": "analytics-plus",
+     "label": "Analytics+",
+     "per": "unit",
+     "price_month": 15,
+     "billing": "unspecified",
+     "evidence": "Analytics+ $15"
+    }
+   ],
+   "not_computable": [
+    "The plan cards price 3 licences together; whether 3 is a minimum is not stated in our notes.",
+    "AI Voice Agent minutes beyond the free allowance and WhatsApp messaging rates depend on usage."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "aircall",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "licence",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 30.0,
+       "professional": 50.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 720.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 60.0,
+       "professional": 100.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 1080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 90.0,
+       "professional": 150.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 1800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 150.0,
+       "professional": 250.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 3600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 300.0,
+       "professional": 500.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 450.0,
+      "billed": {
+       "amount": 5400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 450.0,
+       "professional": 750.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 7200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 600.0,
+       "professional": 1000.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 750.0,
+      "billed": {
+       "amount": 9000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 750.0,
+       "professional": 1250.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 1500.0,
+      "billed": {
+       "amount": 18000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 1500.0,
+       "professional": 2500.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 3000.0,
+      "billed": {
+       "amount": 36000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 3000.0,
+       "professional": 5000.0,
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The plan cards price 3 licences together; whether 3 is a minimum is not stated in our notes.",
+     "AI Voice Agent minutes beyond the free allowance and WhatsApp messaging rates depend on usage."
+    ]
+   },
+   "monthly": {
+    "product_id": "aircall",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "licence",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 40.0,
+       "professional": 70.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 80.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 80.0,
+       "professional": 140.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 120.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 120.0,
+       "professional": 210.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 200.0,
+       "professional": 350.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 400.0,
+       "professional": 700.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 600.0,
+       "professional": 1050.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 800.0,
+      "billed": {
+       "amount": 800.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 800.0,
+       "professional": 1400.0,
+       "custom": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 1000.0,
+       "professional": 1750.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 2000.0,
+      "billed": {
+       "amount": 2000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 2000.0,
+       "professional": 3500.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 4000.0,
+      "billed": {
+       "amount": 4000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 4000.0,
+       "professional": 7000.0,
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The plan cards price 3 licences together; whether 3 is a minimum is not stated in our notes.",
+     "AI Voice Agent minutes beyond the free allowance and WhatsApp messaging rates depend on usage."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "sendcloud",
  "name": "Sendcloud",
+ "research_status": "researched",
  "vendor_domain": "sendcloud.com",
  "category": "Operations & Workflow",
  "task": "E-commerce & inventory ops",
@@ -47,6 +48,7 @@
   "source_url": null
  },
  "free_plan": true,
+ "free_plan_evidence": "(price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 31 Aug 2026 reading) Free plan €0/mo: up to 20 parcels a month, no courier contract, no subscription, €0.50 a label beyond that.",
  "cost_traps": [
   {
    "id": "usage_metered",
@@ -80,7 +82,14 @@
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ]
 }

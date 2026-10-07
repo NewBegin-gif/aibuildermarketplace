@@ -2,6 +2,7 @@
  "schema_version": "1.0",
  "id": "joiin",
  "name": "Joiin",
+ "research_status": "researched",
  "vendor_domain": "joiin.co",
  "category": "Finance & Accounting",
  "task": "Something else",
@@ -37,6 +38,7 @@
   "source_url": null
  },
  "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "annual_lock",
@@ -69,6 +71,431 @@
   "method": "https://aibuildermarketplace.com/how-we-review/",
   "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "company",
+   "axis": "companies",
+   "rules_verified_at": "2026-10-06",
+   "plans": [
+    {
+     "id": "core",
+     "name": "Core",
+     "model": "steps",
+     "column": 0
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "steps",
+     "column": 1
+    },
+    {
+     "id": "max",
+     "name": "Max",
+     "model": "steps",
+     "column": 2
+    }
+   ],
+   "steps": [
+    {
+     "upto": 1,
+     "annual_month": [
+      28,
+      34,
+      45
+     ],
+     "monthly": [
+      35,
+      42,
+      49
+     ]
+    },
+    {
+     "upto": 2,
+     "annual_month": [
+      32,
+      36,
+      47
+     ]
+    },
+    {
+     "upto": 5,
+     "annual_month": [
+      62,
+      66,
+      77
+     ]
+    },
+    {
+     "upto": 10,
+     "annual_month": [
+      97,
+      104,
+      115
+     ],
+     "monthly": [
+      122,
+      130,
+      144
+     ]
+    },
+    {
+     "upto": 20,
+     "annual_month": [
+      147,
+      155,
+      168
+     ]
+    },
+    {
+     "upto": 50,
+     "annual_month": [
+      179,
+      189,
+      202
+     ]
+    },
+    {
+     "upto": 100,
+     "annual_month": [
+      280,
+      297,
+      325
+     ],
+     "monthly": [
+      350,
+      371,
+      406
+     ]
+    }
+   ],
+   "beyond": {
+    "after": 100,
+    "per_extra_unit_monthly": [
+     3,
+     4,
+     5
+    ],
+    "per_extra_unit_annual_year": [
+     28,
+     35,
+     49
+    ]
+   },
+   "steps_evidence": "Billed annually, per month: 1 company $28 / $34 / $45, 2 companies $32 / $36 / $47, 5 companies $62 / $66 / $77, 10 companies $97 / $104 / $115, 20 companies $147 / $155 / $168, 50 companies $179 / $189 / $202 and 100 companies $280 / $297 / $325. Billed monthly: $35 / $42 / $49 for one company, $122 / $130 / $144 for ten and $350 / $371 / $406 for a hundred.",
+   "beyond_evidence": "Above 100 companies you pay the 100-company price plus, for each extra company, $3 / $4 / $5 a month on monthly billing or $28 / $35 / $49 a year on annual billing",
+   "between_steps": "range",
+   "notes": [
+    "Users, reports and clients are unlimited on every plan; the price scales with the number of companies consolidated."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "joiin",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "company",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 28.0,
+      "billed": {
+       "amount": 336.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 28.0,
+       "pro": 34.0,
+       "max": 45.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 32.0,
+      "billed": {
+       "amount": 384.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 32.0,
+       "pro": 36.0,
+       "max": 47.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 62.0,
+      "billed": {
+       "amount": 744.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 62.0,
+       "pro": 66.0,
+       "max": 77.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 97.0,
+      "billed": {
+       "amount": 1164.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 97.0,
+       "pro": 104.0,
+       "max": 115.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 147.0,
+      "billed": {
+       "amount": 1764.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 147.0,
+       "pro": 155.0,
+       "max": 168.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 2148.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 179.0,
+       "pro": 189.0,
+       "max": 202.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 280.0,
+      "billed": {
+       "amount": 3360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 280.0,
+       "pro": 297.0,
+       "max": 325.0
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 396.67,
+      "billed": {
+       "amount": 4760.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 396.67,
+       "pro": 442.83,
+       "max": 529.17
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "joiin",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "company",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 35.0,
+      "billed": {
+       "amount": 35.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 35.0,
+       "pro": 42.0,
+       "max": 49.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "max": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "max": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 122.0,
+      "billed": {
+       "amount": 122.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 122.0,
+       "pro": 130.0,
+       "max": 144.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "max": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "max": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 350.0,
+      "billed": {
+       "amount": 350.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 350.0,
+       "pro": 371.0,
+       "max": 406.0
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 500.0,
+       "pro": 571.0,
+       "max": 656.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "core",
+      "to_plan": null,
+      "from_plan_name": "Core",
+      "to_plan_name": null
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": null,
+      "to_plan": "core",
+      "from_plan_name": null,
+      "to_plan_name": "Core"
+     },
+     {
+      "from_units": 10,
+      "to_units": 20,
+      "from_plan": "core",
+      "to_plan": null,
+      "from_plan_name": "Core",
+      "to_plan_name": null
+     },
+     {
+      "from_units": 50,
+      "to_units": 100,
+      "from_plan": null,
+      "to_plan": "core",
+      "from_plan_name": null,
+      "to_plan_name": "Core"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."

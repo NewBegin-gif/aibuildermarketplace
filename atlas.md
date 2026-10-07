@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 506 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-06.
+All 511 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-07.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -24,6 +24,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** In January 2025 the FTC ordered accessiBe to pay $1 million to settle allegations that it misrepresented what accessWidget does, including that its AI plug-in could make any website WCAG-compliant.
 - **Best for:** small and medium sites on ordinary CMS templates whose owners want a visible, cheap first step — contrast, text sizing, keyboard hints and an accessibility statement
 - **Full review:** https://aibuildermarketplace.com/b2b/accessibe-review/
+
+## AccuWeb Hosting (accuwebhosting.com)
+- **Verified pricing:** (read 2026-10-07 on accuwebhosting.com/pricing/vps-hosting in a browser render from a Netherlands connection, which showed euros, with the 24-month term and the New York location selected) …
+- **Honest take:** Prices are 24-month introductory rates that renew at about two to four times as much.
+- **Best for:** developers and small businesses that want a cheap Linux or Windows VPS, or a dedicated server in a specific region, and will compare hosts on the renewal price
+- **Flags:** {'f': 'renewal_jump', 'ev': 'VPS Edge is €4.42 a month and renews at €8.91: 4 GB RAM, 1 vCPU, 50 GB storage, 250 GB bandwidth, 1 IP.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/accuweb-hosting-review/
 
 ## ActiveCampaign (activecampaign.com)
 - **Verified pricing:** (re-verified 2026-08-17 and again 2026-09-29 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan, trial only.
@@ -1943,6 +1950,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'quote_only', 'ev': 'No published price: none of the three tiers (Platform, Scale, Managed) shows a figure anywhere on the site, including the self-serve entry tier (read 4 Sep 2026)'}
 - **Full review:** https://aibuildermarketplace.com/b2b/mycroft-review/
 
+## NameRobot (namerobot.com)
+- **Verified pricing:** (read 2026-10-07 on namerobot.com in a browser render, USD) NameRobot sells several naming tools.
+- **Honest take:** NameScore prices are offers against regular prices twice as high, and the checks are a screening, not legal trademark clearance.
+- **Best for:** founders, agencies and marketers naming a company or product who want generators plus a paid availability and sound check per name, without a subscription
+- **Full review:** https://aibuildermarketplace.com/b2b/namerobot-review/
+
 ## Navan (navan.com)
 - **Verified pricing:** (read 24 September 2026 on navan.com/pricing) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense is free for the first 5 monthly expensin…
 - **Honest take:** 'Free' is real but has a mechanism: Navan earns commission on bookings made through its inventory.
@@ -2211,6 +2224,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** sites that want popups, forms and coupons with a genuinely usable free tier and a cheap first paid rung — $20 a month for 10,000 visitors, unlimited popups and no Poptin branding
 - **Flags:** {'f': 'usage_metered', 'ev': 'The meter is unique monthly visitors, and their FAQ defines it: anyone who loads a page carrying the snippet in the last 30 days, counted once howeve…'}, {'f': 'free_tier', 'ev': 'Free is $0 forever with 1,000 unique visitors a month, one domain and unlimited poptins.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/poptin-review/
+
+## Positive User (user.com)
+- **Verified pricing:** (read 2026-10-07 on user.com/pricing in a browser render, prices in EUR as the page prints them, billed annually) Positive User, the platform formerly called User.com and now part of the Fr…
+- **Honest take:** Every plan caps email at 60,000 a year, only annual prices are printed, and auto-renewal needs 30 days notice to stop.
+- **Best for:** European small and mid-sized businesses that want email, SMS, WhatsApp and website behaviour tracking in one EU-hosted platform, with a modest sending volume and a small marketing team
+- **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons: Loyalty Program €199 a month, Sales €59, Customer Service €59 and Mobile App Marketing €59, all billed annually; on Campaigns, forms and lan…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/positive-user-review/
 
 ## Post Purchase Upsell Hero (postpurchaseupsellhero.com)
 - **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/post-purchase-upsell-hero and the vendor's own site; amounts unchanged since 31 August, USD) One plan, Performance, free to install, at $0 a mont…
@@ -3016,10 +3036,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/testdriver-ai-review/
 
 ## TestGorilla (testgorilla.com)
-- **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) Free $0 with 10 credits a month, no card needed, including preset custom questions and 1 full-access seat.
-- **Honest take:** Both paid tiers are annual-commitment only.
-- **Best for:** companies hiring steadily enough that a year of testing is cheaper than one bad hire, and who will actually use the library rather than writing their own questions
-- **Flags:** {'f': 'usage_metered', 'ev': '(2026-08-30, re-read on their own pricing page from a US exit) Free $0 with 10 credits a month, no card needed, including preset custom questions and…'}, {'f': 'annual_lock', 'ev': 'Core $142/month on an annual commitment, $1,704 billed annually, with the full test library, analytics and 2 full-access seats; the Core card carries…'}, {'f': 'free_tier', 'ev': '(2026-08-30, re-read on their own pricing page from a US exit) Free $0 with 10 credits a month, no card needed, including preset custom questions and…'}
+- **Verified pricing:** (re-verified 2026-10-07 in a browser render of testgorilla.com/pricing with the currency set to USD; the page defaults to euros from a European connection) TestGorilla now sells two product…
+- **Honest take:** The Assessments bill is set by credits, and the page does not say how many credits its 'from' prices include.
+- **Best for:** companies that screen enough candidates to use a credit pool every month, and who will use the 350+ test library rather than writing their own questions
+- **Flags:** {'f': 'per_seat', 'ev': 'Get the credit allowance in writing before you compare it with a per-seat tool.'}, {'f': 'usage_metered', 'ev': 'Gorilla Assessments, the skills-testing product, priced per account: Free $0 with 10 credits a month (5 essential tests with unlimited use, 180+ test…'}, {'f': 'annual_lock', 'ev': 'Annual billing is advertised as saving 25%.'}, {'f': 'free_tier', 'ev': 'Gorilla Sourcing, a candidate-search product priced per Sourcing seat: Free $0 (browse and preview only, no invites); Core $74 a month per seat bille…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/testgorilla-review/
 
 ## TextExpander (textexpander.com)
@@ -3225,6 +3245,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** solo builders and small teams monitoring sites, ports and APIs at 60-second resolution with status pages — and honestly, the free 50-monitor tier covers most hobby stacks
 - **Flags:** {'f': 'usage_metered', 'ev': 'The famous free tier is real — but the paid ladder has quiet extras: extra login seats cost $15-19 per month EACH beyond the included ones, and SMS o…'}, {'f': 'free_tier', 'ev': 'The famous free tier is real — but the paid ladder has quiet extras: extra login seats cost $15-19 per month EACH beyond the included ones, and SMS o…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/uptimerobot-review/
+
+## UserTrail (usertrail.io)
+- **Verified pricing:** (read 2026-10-07 on usertrail.io/pricing in a browser render, USD, with both the yearly and the monthly toggle) Four plans, priced by monthly sessions.
+- **Honest take:** Sessions are shared across all your sites, and tracking pauses until next month when they run out.
+- **Best for:** small and mid-sized websites that want heatmaps, session replays, funnels and form analytics in one tool, with a free plan to try it on real traffic
+- **Flags:** {'f': 'free_tier', 'ev': 'Free is $0 forever: 500 sessions a month, 1 website, sessions up to 5 minutes and 1 month of data retention.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/usertrail-review/
 
 ## VEA (vea.ai)
 - **Verified pricing:** (re-verified 2026-09-29 on the pricing section of VEA's own site, vea.ai; amounts unchanged since 2026-09-02) Four tiers, per user per month, monthly against annual: Business Class $30 / $2…
@@ -3447,6 +3474,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants starting or scaling a dropshipping or print-on-demand store who want sourcing, automated fulfilment, tracking and custom branding in one app
 - **Flags:** {'f': 'usage_metered', 'ev': 'Product and shipping cost is charged per order on top of every plan, and the listing states that external charges may be billed by Zendrop separately…'}, {'f': 'free_tier', 'ev': 'The free tier allows none at all (“No linked products allowed”), Beginner covers 1-20, Pro 21-100 and Plus 101 or more; the feature list on all three…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/zendrop-review/
+
+## Zenind (zenind.com)
+- **Verified pricing:** (read 2026-10-07 on zenind.com/pricing in a browser render, USD) Three US company formation packages, each a one-time fee plus state filing fees, which the page showed as $120.00 as it load…
+- **Honest take:** The $0 package excludes the state fee, the $99-a-year registered agent and the operating agreement.
+- **Best for:** founders, including non-US founders, who want to form a US LLC or corporation online and compare a clear one-time package price, and who will check the yearly add-ons
+- **Flags:** {'f': 'free_tier', 'ev': 'The $0 Basic package covers filing only.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/zenind-review/
 
 ## ZenZap (zenzap.co)
 - **Verified pricing:** (price re-verified 2026-09-01 against the vendor's own pricing page) (2026) Free plan: unlimited group chats, unlimited built-in to-dos, WhatsApp chat migration, AI voice-note transcription…

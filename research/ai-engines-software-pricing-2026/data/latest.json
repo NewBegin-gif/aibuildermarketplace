@@ -1,0 +1,114 @@
+{
+ "study_id": "aibm-r02-ai-engine-citations",
+ "slug": "ai-engines-software-pricing-2026",
+ "title": "Report 02: who do AI engines cite for software pricing?",
+ "type": "market_observation",
+ "edition": "2026-10-01",
+ "first_published": "2026-08-19",
+ "edition_published": "2026-10-01",
+ "population": "40 answers: the query '[tool] pricing' for 20 business tools from our corpus, asked once to each of Chatgpt, Perplexity, US locale.",
+ "population_short": "40 answers, 20 tools",
+ "selection": "The same 20 tools and the same query every month; one run per engine per tool.",
+ "measurement_period": {
+  "start": "2026-10-01",
+  "end": "2026-10-01"
+ },
+ "headline": {
+  "text": "citations in AI answers about software prices pointed at the vendor's own site",
+  "numerator": 73,
+  "denominator": 227,
+  "metric": "vendor_citation_share"
+ },
+ "metrics": [
+  {
+   "id": "cat_vendor",
+   "label": "Vendor's own site",
+   "numerator": 73,
+   "denominator": 227
+  },
+  {
+   "id": "cat_possible_vendor",
+   "label": "Possibly the vendor (unverified domain)",
+   "numerator": 1,
+   "denominator": 227
+  },
+  {
+   "id": "cat_review_or_comparison",
+   "label": "Review or comparison site",
+   "numerator": 19,
+   "denominator": 227
+  },
+  {
+   "id": "cat_community",
+   "label": "Community or social",
+   "numerator": 4,
+   "denominator": 227
+  },
+  {
+   "id": "cat_other",
+   "label": "Other (not the vendor's own site)",
+   "numerator": 130,
+   "denominator": 227
+  },
+  {
+   "id": "no_source",
+   "label": "answers with no cited source",
+   "numerator": 1,
+   "denominator": 40
+  }
+ ],
+ "limitations": [
+  "One run per tool and engine per month: a pattern, not a precise rate.",
+  "Citations are not independent observations: one vendor site can account for many.",
+  "Correctness of the answers was not tested in this study.",
+  "'Not the vendor's own site' is not the same as independent."
+ ],
+ "method_url": "#method",
+ "evidence_url": "#who",
+ "verification": {
+  "last_verified": "2026-10-01"
+ },
+ "next_full_recheck": "monthly: new run on the 1st",
+ "corrections": [
+  {
+   "date": "2026-10-07",
+   "previous_version": null,
+   "what": "Citations re-classified with the vendor's own domain from our database instead of matching the tool name inside the domain. This round was published on 2026-10-01 as 34% vendor citations; with the stricter rule it is 32%. 'Independent' became 'not the vendor's own site'."
+  }
+ ],
+ "schema": "aibm-research-manifest/1",
+ "files": [
+  {
+   "name": "answers.json",
+   "url": "/research/ai-engines-software-pricing-2026/data/2026-10-01/answers.json",
+   "bytes": 86496,
+   "sha256": "a4a755688aa56b1d5f38edb26ebf80ed39b5ee5b9c697dfa0110f8f8ca5823eb"
+  },
+  {
+   "name": "citations.csv",
+   "url": "/research/ai-engines-software-pricing-2026/data/2026-10-01/citations.csv",
+   "bytes": 24682,
+   "sha256": "ea41f97ff6a3add14245fec2d247161b670126ebeff7be59e15c5724b62e4c96"
+  },
+  {
+   "name": "classification.json",
+   "url": "/research/ai-engines-software-pricing-2026/data/2026-10-01/classification.json",
+   "bytes": 2037,
+   "sha256": "a59792d16d88c80615b5e75a63ac84cd063c24ad1342dff0a1085c167cd92055"
+  }
+ ],
+ "author": {
+  "name": "Daniel Haket",
+  "url": "https://aibuildermarketplace.com/about/",
+  "email": "daniel@aibuildermarketplace.com"
+ },
+ "reviewer": null,
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "scope": "Our own data, analysis, tables and charts. Quoted vendor text and screenshots of vendor pages remain the vendor's; we reproduce them as evidence."
+ },
+ "contact": "daniel@aibuildermarketplace.com",
+ "fingerprint": "976f9d441cc2cbad",
+ "status": "current"
+}

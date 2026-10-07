@@ -116,5 +116,21 @@
    "status": "open"
   }
  ],
- "vendor_answers": []
+ "vendor_answers": [],
+ "agent_channels": {
+  "vendor_mcp": {
+   "what": "Two servers. A hosted remote server at mcp.hubspot.com gives any MCP client read and write access to CRM records, marketing and content objects and full activity history over OAuth 2.1 with PKCE; a local Developer MCP server drives the HubSpot Developer Platform through the CLI.",
+   "plan": "Their changelog: the remote server graduated from beta and is \"generally available to all HubSpot accounts\" as of 13 April 2026. No separate price is named, your existing HubSpot permissions apply, and accounts with sensitive data switched on have activity objects blocked from the server.",
+   "status": "Live",
+   "source": "https://developers.hubspot.com/ai-tools/mcp",
+   "checked": "2026-07-28",
+   "note": "The vendor's own MCP server, from our MCP research; it works with your own account at the vendor."
+  },
+  "agent_checkout": {
+   "status": "not_found",
+   "detail": "No explicit support for purchases by AI agents on the vendor's own pages.",
+   "checked_at": "2026-10-07",
+   "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
+  }
+ }
 }

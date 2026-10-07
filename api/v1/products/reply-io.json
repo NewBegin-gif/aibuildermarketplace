@@ -109,5 +109,21 @@
    "status": "open"
   }
  ],
- "vendor_answers": []
+ "vendor_answers": [],
+ "agent_channels": {
+  "vendor_mcp": {
+   "what": "Reply MCP: een officiële, live remote server op mcp.reply.io met 70 tools over sequences (16), contacten (8), inbox en gesprekken (3), de Jason AI SDR (31), taken (3), workspace-resolvers (5) en help/meta (4). Elke tool draagt een veiligheidslabel — 31 zijn readOnlyHint, 39 destructiveHint — zodat een client kan aftoppen vóór er iets met gevolgen draait. Streamable HTTP (JSON-RPC 2.0 over SSE), MCP-protocol 2025-06-18. Inloggen met een scoped persoonlijke API-sleutel (Authorization: Bearer) waarop je per gebied rechten zet, of met OAuth voor clients die geen headers ondersteunen — OAuth geeft wel meteen de volledige toolcatalogus. Limiet ~3000 calls per uur.",
+   "plan": "Niet vermeld in hun eigen documentatie. Reply schrijft alleen dat MCP en de REST-API twee oppervlakken op één product zijn: hetzelfde account en hetzelfde creditsysteem. Er staat geen plan-eis of prijs voor de MCP-server zelf; je hebt wel een Reply.io-API-sleutel nodig.",
+   "status": "Live",
+   "source": "https://docs.reply.io/mcp/overview",
+   "checked": "2026-07-28",
+   "note": "The vendor's own MCP server, from our MCP research; it works with your own account at the vendor."
+  },
+  "agent_checkout": {
+   "status": "not_checked",
+   "detail": "We could not read the vendor's pages as plain HTML.",
+   "checked_at": "2026-10-07",
+   "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
+  }
+ }
 }

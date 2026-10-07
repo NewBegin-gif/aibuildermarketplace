@@ -112,5 +112,21 @@
    "status": "open"
   }
  ],
- "vendor_answers": []
+ "vendor_answers": [],
+ "agent_channels": {
+  "vendor_mcp": {
+   "what": "Server at app.castmagic.io/mcp over OAuth, with no API key to copy: search transcripts, recordings and content, list spaces and recordings, and fetch a recording's transcript or generated content.",
+   "plan": "Their MCP page states the same plan gating as the REST API applies to each tool. On their plan-tier page the core tier — reads, transcripts and search, which is what the MCP exposes — is \"Starter and up\", and an account with no active subscription gets a 403 reading \"Your plan does not include API access.\"",
+   "status": "Live",
+   "source": "https://docs.castmagic.io/reference/mcp",
+   "checked": "2026-07-28",
+   "note": "The vendor's own MCP server, from our MCP research; it works with your own account at the vendor."
+  },
+  "agent_checkout": {
+   "status": "not_checked",
+   "detail": "We could not read the vendor's pages as plain HTML.",
+   "checked_at": "2026-10-07",
+   "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
+  }
+ }
 }

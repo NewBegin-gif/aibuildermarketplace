@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "catalog_version": "2026-10-07.9eb8bc6edc",
+ "catalog_version": "2026-10-07.cbb24499c7",
  "updated_at": "2026-10-07",
  "publisher": "AIBuilder Marketplace",
  "docs": "https://aibuildermarketplace.com/agents/",
@@ -19,8 +19,8 @@
   "products": 563,
   "researched": 511,
   "listed_not_researched": 52,
-  "with_plans": 207,
-  "with_cost_rules": 24,
+  "with_plans": 206,
+  "with_cost_rules": 26,
   "with_task_evidence": 25,
   "with_vendor_mcp": 78,
   "with_plan_links": 2,
@@ -30,7 +30,7 @@
   "test_sessions": 25,
   "with_public_price": 432,
   "with_review": 511,
-  "cost_traps": 660
+  "cost_traps": 662
  },
  "endpoints": {
   "index": "https://aibuildermarketplace.com/api/v1/index.json",
@@ -38,6 +38,44 @@
   "tasks": "https://aibuildermarketplace.com/api/v1/tasks.json",
   "offers": "https://aibuildermarketplace.com/api/v1/offers.json",
   "categories": "https://aibuildermarketplace.com/api/v1/categories.json"
+ },
+ "task_scopes": {
+  "intents": {
+   "customer_support_helpdesk": {
+    "label": "A help desk for supporting external customers: a shared inbox and tickets",
+    "phrases": [
+     "help desk",
+     "helpdesk",
+     "shared inbox",
+     "team inbox",
+     "customer support",
+     "customer service",
+     "support inbox",
+     "support tickets",
+     "ticketing"
+    ]
+   },
+   "it_service_desk": {
+    "label": "An internal IT service desk (ITSM): incidents, assets and requests from employees",
+    "phrases": [
+     "it service",
+     "itsm",
+     "service desk",
+     "it support",
+     "it helpdesk",
+     "it help desk",
+     "internal it",
+     "asset management",
+     "incident management"
+    ]
+   }
+  },
+  "labels": {
+   "customer_support_helpdesk": "Customer-support help desk",
+   "it_service_desk": "Internal IT service desk (ITSM)",
+   "support_ai_agent": "AI agent for customer service (works next to or instead of a help desk)"
+  },
+  "note": "task_scope says what a product is within a domain (for example a customer-support help desk versus an internal IT service desk). It is separate from text match and from price-rule coverage; a product without price rules is never left out for that reason."
  },
  "products": [
   {
@@ -61,7 +99,9 @@
    "review": "https://aibuildermarketplace.com/b2b/1password-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/1password.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "800-com",
@@ -81,7 +121,9 @@
    "review": "https://zerotouchsupport.com/800-com-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/800-com.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "accessibe",
@@ -101,7 +143,9 @@
    "review": "https://officesoftwaremarketplace.com/accessibe-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/accessibe.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "accuweb-hosting",
@@ -123,7 +167,9 @@
    "review": "https://officesoftwaremarketplace.com/accuweb-hosting-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/accuweb-hosting.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "activecampaign",
@@ -146,7 +192,9 @@
    "review": "https://aibuildermarketplace.com/b2b/activecampaign-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/activecampaign.json",
    "has_task_evidence": true,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "adcreative-ai",
@@ -168,7 +216,9 @@
    "review": "https://marketingandsalessoftware.com/adcreative-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/adcreative-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "adp",
@@ -191,7 +241,9 @@
    "review": "https://officesoftwaremarketplace.com/adp-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/adp.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "adwisely",
@@ -213,7 +265,9 @@
    "review": "https://aibuildermarketplace.com/b2b/adwisely-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/adwisely.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aftersell",
@@ -235,7 +289,9 @@
    "review": "https://aibuildermarketplace.com/b2b/aftersell-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/aftersell.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "agencyanalytics",
@@ -258,7 +314,9 @@
    "review": "https://marketingandsalessoftware.com/agencyanalytics-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/agencyanalytics.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "agentnest",
@@ -280,7 +338,9 @@
    "review": "https://marketingandsalessoftware.com/agentnest-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/agentnest.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "ahaslides",
@@ -302,7 +362,9 @@
    "review": "https://aibuildermarketplace.com/b2b/ahaslides-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/ahaslides.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aira",
@@ -324,7 +386,9 @@
    "review": "https://marketingandsalessoftware.com/aira-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/aira.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aircall",
@@ -348,7 +412,9 @@
    "review": "https://zerotouchsupport.com/aircall-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/aircall.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "airia",
@@ -370,7 +436,9 @@
    "review": "https://officesoftwaremarketplace.com/airia-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/airia.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "airwallex",
@@ -392,7 +460,9 @@
    "review": "https://aibuildermarketplace.com/b2b/airwallex-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/airwallex.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aisdr",
@@ -414,7 +484,9 @@
    "review": "https://marketingandsalessoftware.com/aisdr-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/aisdr.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aisq",
@@ -436,7 +508,9 @@
    "review": "https://marketingandsalessoftware.com/aisq-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/aisq.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "algomo",
@@ -456,7 +530,9 @@
    "review": "https://aibuildermarketplace.com/b2b/algomo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/algomo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "alidrop",
@@ -478,7 +554,9 @@
    "review": "https://aibuildermarketplace.com/b2b/alidrop-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/alidrop.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "alli-ai",
@@ -500,7 +578,9 @@
    "review": "https://aibuildermarketplace.com/b2b/alli-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/alli-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "alohi",
@@ -525,7 +605,9 @@
    "review": "https://aibuildermarketplace.com/b2b/alohi-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/alohi.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "alttext-ai",
@@ -547,7 +629,9 @@
    "review": "https://marketingandsalessoftware.com/alttext-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/alttext-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "alvys",
@@ -570,7 +654,9 @@
    "review": "https://aibuildermarketplace.com/b2b/alvys-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/alvys.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "amplemarket",
@@ -594,7 +680,9 @@
    "review": "https://marketingandsalessoftware.com/amplemarket-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/amplemarket.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "amplitude",
@@ -618,7 +706,9 @@
    "review": "https://aibuildermarketplace.com/b2b/amplitude-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/amplitude.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "answering-service-care",
@@ -640,7 +730,9 @@
    "review": "https://zerotouchsupport.com/answering-service-care-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/answering-service-care.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aplos",
@@ -657,12 +749,14 @@
    ],
    "research_status": "researched",
    "has_plans": false,
-   "has_cost_rules": false,
+   "has_cost_rules": true,
    "verified_at": "2026-09-10",
    "review": "https://officesoftwaremarketplace.com/aplos-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/aplos.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "apollo",
@@ -685,7 +779,9 @@
    "review": "https://aibuildermarketplace.com/b2b/apollo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/apollo.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "arbor",
@@ -705,7 +801,9 @@
    "review": "https://officesoftwaremarketplace.com/arbor-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/arbor.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "asknest",
@@ -727,7 +825,9 @@
    "review": "https://zerotouchsupport.com/asknest-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/asknest.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aspire",
@@ -747,7 +847,9 @@
    "review": "https://aibuildermarketplace.com/b2b/aspire-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/aspire.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "assembly",
@@ -769,7 +871,9 @@
    "review": "https://aibuildermarketplace.com/b2b/assembly-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/assembly.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "atlas-ai-store-builder",
@@ -791,7 +895,9 @@
    "review": "https://marketingandsalessoftware.com/atlas-ai-store-builder-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/atlas-ai-store-builder.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "atria",
@@ -810,11 +916,13 @@
    "research_status": "researched",
    "has_plans": false,
    "has_cost_rules": false,
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-07",
    "review": "https://marketingandsalessoftware.com/atria-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/atria.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "atto",
@@ -838,7 +946,9 @@
    "review": "https://aibuildermarketplace.com/b2b/atto-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/atto.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "attribuly",
@@ -861,7 +971,9 @@
    "review": "https://marketingandsalessoftware.com/attribuly-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/attribuly.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "audiorista",
@@ -883,7 +995,9 @@
    "review": "https://aibuildermarketplace.com/b2b/audiorista-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/audiorista.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aura",
@@ -903,7 +1017,9 @@
    "review": "https://marketingandsalessoftware.com/aura-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/aura.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "autowrite",
@@ -925,7 +1041,9 @@
    "review": "https://marketingandsalessoftware.com/autowrite-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/autowrite.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "auware",
@@ -947,7 +1065,9 @@
    "review": "https://aibuildermarketplace.com/b2b/auware-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/auware.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "ava-ai",
@@ -969,7 +1089,9 @@
    "review": "https://marketingandsalessoftware.com/ava-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/ava-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "aweber",
@@ -991,7 +1113,9 @@
    "review": "https://aibuildermarketplace.com/b2b/aweber-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/aweber.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "babylovegrowth",
@@ -1011,7 +1135,9 @@
    "review": "https://aibuildermarketplace.com/b2b/babylovegrowth-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/babylovegrowth.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "backupmaster",
@@ -1033,7 +1159,9 @@
    "review": "https://officesoftwaremarketplace.com/backupmaster-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/backupmaster.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "barcodes-talk",
@@ -1053,7 +1181,9 @@
    "review": "https://aibuildermarketplace.com/b2b/barcodes-talk-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/barcodes-talk.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "beautiful-ai",
@@ -1075,7 +1205,9 @@
    "review": "https://aibuildermarketplace.com/b2b/beautiful-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/beautiful-ai.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "beefree",
@@ -1095,7 +1227,9 @@
    "review": "https://marketingandsalessoftware.com/beefree-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/beefree.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "beehiiv",
@@ -1115,7 +1249,9 @@
    "review": "https://marketingandsalessoftware.com/beehiiv-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/beehiiv.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bidx",
@@ -1139,7 +1275,9 @@
    "review": "https://marketingandsalessoftware.com/bidx-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bidx.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bill-com",
@@ -1163,7 +1301,9 @@
    "review": "https://officesoftwaremarketplace.com/bill-com-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bill-com.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "billingnow",
@@ -1183,7 +1323,9 @@
    "review": "https://officesoftwaremarketplace.com/billingnow-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/billingnow.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "birch",
@@ -1206,7 +1348,9 @@
    "review": "https://marketingandsalessoftware.com/birch-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/birch.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bitdefender",
@@ -1228,7 +1372,9 @@
    "review": "https://aibuildermarketplace.com/b2b/bitdefender-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/bitdefender.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bitscale",
@@ -1251,7 +1397,9 @@
    "review": "https://marketingandsalessoftware.com/bitscale-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bitscale.json",
    "has_task_evidence": true,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bitvavo",
@@ -1271,7 +1419,9 @@
    "review": "https://officesoftwaremarketplace.com/bitvavo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bitvavo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "blinq",
@@ -1285,16 +1435,19 @@
    "free_plan": true,
    "cost_traps": [
     "per_seat",
+    "usage_metered",
     "addons_extra"
    ],
    "research_status": "researched",
    "has_plans": false,
    "has_cost_rules": false,
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-07",
    "review": "https://officesoftwaremarketplace.com/blinq-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/blinq.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "blocky",
@@ -1316,7 +1469,9 @@
    "review": "https://aibuildermarketplace.com/b2b/blocky-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/blocky.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bokun",
@@ -1338,7 +1493,9 @@
    "review": "https://aibuildermarketplace.com/b2b/bokun-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/bokun.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bold-custom-pricing",
@@ -1358,7 +1515,9 @@
    "review": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bold-custom-pricing.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bold-memberships",
@@ -1380,7 +1539,9 @@
    "review": "https://marketingandsalessoftware.com/bold-memberships-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bold-memberships.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bold-subscriptions",
@@ -1400,7 +1561,9 @@
    "review": "https://marketingandsalessoftware.com/bold-subscriptions-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bold-subscriptions.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bold-upsell",
@@ -1420,7 +1583,9 @@
    "review": "https://marketingandsalessoftware.com/bold-upsell-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bold-upsell.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bolt-business",
@@ -1440,7 +1605,9 @@
    "review": "https://officesoftwaremarketplace.com/bolt-business-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bolt-business.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bonline",
@@ -1463,7 +1630,9 @@
    "review": "https://zerotouchsupport.com/bonline-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bonline.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bookx",
@@ -1483,7 +1652,9 @@
    "review": "https://officesoftwaremarketplace.com/bookx-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bookx.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bookyourdata",
@@ -1506,7 +1677,9 @@
    "review": "https://aibuildermarketplace.com/b2b/bookyourdata-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/bookyourdata.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bot-it-ai",
@@ -1526,7 +1699,9 @@
    "review": "https://marketingandsalessoftware.com/bot-it-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bot-it-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "boulevard",
@@ -1548,7 +1723,9 @@
    "review": "https://aibuildermarketplace.com/b2b/boulevard-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/boulevard.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bouncer",
@@ -1570,7 +1747,9 @@
    "review": "https://marketingandsalessoftware.com/bouncer-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bouncer.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "brandye",
@@ -1590,7 +1769,9 @@
    "review": "https://marketingandsalessoftware.com/brandye-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/brandye.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bread-butter",
@@ -1613,7 +1794,9 @@
    "review": "https://aibuildermarketplace.com/b2b/bread-butter-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/bread-butter.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "breezy-hr",
@@ -1635,7 +1818,9 @@
    "review": "https://aibuildermarketplace.com/b2b/breezy-hr-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/breezy-hr.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "brevo",
@@ -1658,7 +1843,9 @@
    "review": "https://aibuildermarketplace.com/b2b/brevo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/brevo.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bright-data",
@@ -1680,7 +1867,9 @@
    "review": "https://aibuildermarketplace.com/b2b/bright-data-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/bright-data.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "browse-ai",
@@ -1703,7 +1892,9 @@
    "review": "https://aibuildermarketplace.com/b2b/browse-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/browse-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "browseract",
@@ -1726,7 +1917,9 @@
    "review": "https://aibuildermarketplace.com/b2b/browseract-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/browseract.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "buddypunch",
@@ -1750,7 +1943,9 @@
    "review": "https://aibuildermarketplace.com/b2b/buddypunch-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/buddypunch.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bugherd",
@@ -1773,7 +1968,9 @@
    "review": "https://officesoftwaremarketplace.com/bugherd-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bugherd.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "buzz-ai",
@@ -1796,7 +1993,9 @@
    "review": "https://aibuildermarketplace.com/b2b/buzz-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/buzz-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "bybit",
@@ -1816,7 +2015,9 @@
    "review": "https://officesoftwaremarketplace.com/bybit-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/bybit.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "calilio",
@@ -1840,7 +2041,9 @@
    "review": "https://zerotouchsupport.com/calilio-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/calilio.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "callhippo",
@@ -1865,7 +2068,9 @@
    "review": "https://zerotouchsupport.com/callhippo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/callhippo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "callrail",
@@ -1888,7 +2093,9 @@
    "review": "https://marketingandsalessoftware.com/callrail-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/callrail.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "campaign-monitor",
@@ -1911,7 +2118,9 @@
    "review": "https://marketingandsalessoftware.com/campaign-monitor-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/campaign-monitor.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "campaigner",
@@ -1934,7 +2143,9 @@
    "review": "https://marketingandsalessoftware.com/campaigner-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/campaigner.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "capsule",
@@ -1958,7 +2169,9 @@
    "review": "https://marketingandsalessoftware.com/capsule-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/capsule.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "carbon6",
@@ -1978,7 +2191,9 @@
    "review": "https://officesoftwaremarketplace.com/carbon6-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/carbon6.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "castmagic",
@@ -2000,7 +2215,9 @@
    "review": "https://aibuildermarketplace.com/b2b/castmagic-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/castmagic.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "chatgpt-ai-product-description",
@@ -2023,7 +2240,9 @@
    "review": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/chatgpt-ai-product-description.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "checkr",
@@ -2045,7 +2264,9 @@
    "review": "https://aibuildermarketplace.com/b2b/checkr-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/checkr.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "chemicloud",
@@ -2067,7 +2288,9 @@
    "review": "https://officesoftwaremarketplace.com/chemicloud-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/chemicloud.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "circle",
@@ -2090,7 +2313,9 @@
    "review": "https://marketingandsalessoftware.com/circle-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/circle.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "claap",
@@ -2115,7 +2340,9 @@
    "review": "https://marketingandsalessoftware.com/claap-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/claap.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "claude",
@@ -2138,7 +2365,9 @@
    "review": "https://officesoftwaremarketplace.com/claude-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/claude.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "clay",
@@ -2161,7 +2390,9 @@
    "review": "https://marketingandsalessoftware.com/clay-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/clay.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "clickup",
@@ -2185,7 +2416,9 @@
    "review": "https://aibuildermarketplace.com/b2b/clickup-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/clickup.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "clonable",
@@ -2205,7 +2438,9 @@
    "review": "https://aibuildermarketplace.com/b2b/clonable-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/clonable.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "cloro",
@@ -2227,7 +2462,9 @@
    "review": "https://marketingandsalessoftware.com/cloro-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/cloro.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "close",
@@ -2251,7 +2488,9 @@
    "review": "https://marketingandsalessoftware.com/close-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/close.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "cloudtalk",
@@ -2276,7 +2515,9 @@
    "review": "https://zerotouchsupport.com/cloudtalk-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/cloudtalk.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "cloudtask",
@@ -2296,7 +2537,9 @@
    "review": "https://officesoftwaremarketplace.com/cloudtask-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/cloudtask.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "cloudways",
@@ -2318,7 +2561,9 @@
    "review": "https://officesoftwaremarketplace.com/cloudways-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/cloudways.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "cloze",
@@ -2340,7 +2585,9 @@
    "review": "https://zerotouchsupport.com/cloze-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/cloze.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "clutch",
@@ -2360,7 +2607,9 @@
    "review": "https://aibuildermarketplace.com/b2b/clutch-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/clutch.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "code-bulk-discounts",
@@ -2380,7 +2629,9 @@
    "review": "https://marketingandsalessoftware.com/code-bulk-discounts-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/code-bulk-discounts.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "cognism",
@@ -2405,7 +2656,9 @@
    "review": "https://marketingandsalessoftware.com/cognism-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/cognism.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "cometchat",
@@ -2422,13 +2675,15 @@
     "addons_extra"
    ],
    "research_status": "researched",
-   "has_plans": true,
+   "has_plans": false,
    "has_cost_rules": false,
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-07",
    "review": "https://zerotouchsupport.com/cometchat-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/cometchat.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "compliancely",
@@ -2450,7 +2705,9 @@
    "review": "https://officesoftwaremarketplace.com/compliancely-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/compliancely.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "connecteam",
@@ -2472,7 +2729,9 @@
    "review": "https://aibuildermarketplace.com/b2b/connecteam-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/connecteam.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "consensus",
@@ -2494,7 +2753,9 @@
    "review": "https://aibuildermarketplace.com/b2b/consensus-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/consensus.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "consentmo",
@@ -2514,7 +2775,9 @@
    "review": "https://marketingandsalessoftware.com/consentmo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/consentmo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "contractor-foreman",
@@ -2534,7 +2797,9 @@
    "review": "https://officesoftwaremarketplace.com/contractor-foreman-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/contractor-foreman.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "convert",
@@ -2556,7 +2821,9 @@
    "review": "https://aibuildermarketplace.com/b2b/convert-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/convert.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "crankwheel",
@@ -2576,7 +2843,9 @@
    "review": "https://zerotouchsupport.com/crankwheel-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/crankwheel.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "crazy-egg",
@@ -2596,7 +2865,9 @@
    "review": "https://marketingandsalessoftware.com/crazy-egg-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/crazy-egg.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "create",
@@ -2616,7 +2887,9 @@
    "review": "https://aibuildermarketplace.com/b2b/create-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/create.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "credit-repair-cloud",
@@ -2638,7 +2911,9 @@
    "review": "https://officesoftwaremarketplace.com/credit-repair-cloud-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/credit-repair-cloud.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "crowdstrike",
@@ -2658,7 +2933,9 @@
    "review": "https://aibuildermarketplace.com/b2b/crowdstrike-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/crowdstrike.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "database-mart",
@@ -2680,7 +2957,9 @@
    "review": "https://officesoftwaremarketplace.com/database-mart-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/database-mart.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "databox",
@@ -2699,12 +2978,14 @@
    ],
    "research_status": "researched",
    "has_plans": true,
-   "has_cost_rules": false,
+   "has_cost_rules": true,
    "verified_at": "2026-10-06",
    "review": "https://aibuildermarketplace.com/b2b/databox-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/databox.json",
    "has_task_evidence": true,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "datarails",
@@ -2727,7 +3008,9 @@
    "review": "https://officesoftwaremarketplace.com/datarails-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/datarails.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "deel",
@@ -2750,7 +3033,9 @@
    "review": "https://officesoftwaremarketplace.com/deel-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/deel.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "deputy",
@@ -2774,7 +3059,9 @@
    "review": "https://aibuildermarketplace.com/b2b/deputy-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/deputy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "descript",
@@ -2797,7 +3084,9 @@
    "review": "https://aibuildermarketplace.com/b2b/descript-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/descript.json",
    "has_task_evidence": true,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "devs-ai",
@@ -2821,7 +3110,9 @@
    "review": "https://officesoftwaremarketplace.com/devs-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/devs-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "dext",
@@ -2844,7 +3135,9 @@
    "review": "https://officesoftwaremarketplace.com/dext-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/dext.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "dify",
@@ -2866,7 +3159,9 @@
    "review": "https://officesoftwaremarketplace.com/dify-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/dify.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "diginius",
@@ -2888,7 +3183,9 @@
    "review": "https://marketingandsalessoftware.com/diginius-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/diginius.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "digit",
@@ -2910,7 +3207,9 @@
    "review": "https://officesoftwaremarketplace.com/digit-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/digit.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "digitalocean",
@@ -2932,7 +3231,9 @@
    "review": "https://aibuildermarketplace.com/b2b/digitalocean-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/digitalocean.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "disputifier",
@@ -2954,7 +3255,9 @@
    "review": "https://officesoftwaremarketplace.com/disputifier-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/disputifier.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "docsend",
@@ -2977,7 +3280,9 @@
    "review": "https://officesoftwaremarketplace.com/docsend-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/docsend.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "dondy",
@@ -2999,7 +3304,9 @@
    "review": "https://marketingandsalessoftware.com/dondy-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/dondy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "doola",
@@ -3019,7 +3326,9 @@
    "review": "https://officesoftwaremarketplace.com/doola-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/doola.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "drip",
@@ -3041,7 +3350,9 @@
    "review": "https://marketingandsalessoftware.com/drip-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/drip.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "dripify",
@@ -3064,7 +3375,9 @@
    "review": "https://marketingandsalessoftware.com/dripify-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/dripify.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "dripshipper",
@@ -3084,7 +3397,9 @@
    "review": "https://marketingandsalessoftware.com/dripshipper-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/dripshipper.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "dropgenius",
@@ -3106,7 +3421,9 @@
    "review": "https://marketingandsalessoftware.com/dropgenius-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/dropgenius.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "dryground-ai",
@@ -3128,7 +3445,9 @@
    "review": "https://officesoftwaremarketplace.com/dryground-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/dryground-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "dynasort",
@@ -3148,7 +3467,9 @@
    "review": "https://aibuildermarketplace.com/b2b/dynasort-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/dynasort.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "easy-advanced-translations",
@@ -3170,7 +3491,9 @@
    "review": "https://marketingandsalessoftware.com/easy-advanced-translations-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/easy-advanced-translations.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "easy-bundles",
@@ -3194,7 +3517,9 @@
    "review": "https://marketingandsalessoftware.com/easy-bundles-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/easy-bundles.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "easydmarc",
@@ -3217,7 +3542,9 @@
    "review": "https://aibuildermarketplace.com/b2b/easydmarc-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/easydmarc.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "ecomxray",
@@ -3237,7 +3564,9 @@
    "review": "https://marketingandsalessoftware.com/ecomxray-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/ecomxray.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "edesk",
@@ -3261,7 +3590,9 @@
    "review": "https://zerotouchsupport.com/edesk-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/edesk.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": "customer_support_helpdesk",
+   "has_feature_evidence": false
   },
   {
    "id": "elevateforward",
@@ -3281,7 +3612,9 @@
    "review": "https://aibuildermarketplace.com/b2b/elevateforward-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/elevateforward.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "elevenlabs",
@@ -3304,7 +3637,9 @@
    "review": "https://aibuildermarketplace.com/b2b/elevenlabs-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/elevenlabs.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "emaillistverify",
@@ -3326,7 +3661,9 @@
    "review": "https://aibuildermarketplace.com/b2b/emaillistverify-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/emaillistverify.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "emergent",
@@ -3349,7 +3686,9 @@
    "review": "https://officesoftwaremarketplace.com/emergent-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/emergent.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "employment-hero",
@@ -3373,7 +3712,9 @@
    "review": "https://officesoftwaremarketplace.com/employment-hero-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/employment-hero.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "engagebay",
@@ -3395,7 +3736,9 @@
    "review": "https://aibuildermarketplace.com/b2b/engagebay-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/engagebay.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "envoy",
@@ -3418,7 +3761,9 @@
    "review": "https://aibuildermarketplace.com/b2b/envoy-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/envoy.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "essent-preorder-back-in-stock",
@@ -3440,7 +3785,9 @@
    "review": "https://marketingandsalessoftware.com/essent-preorder-back-in-stock-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/essent-preorder-back-in-stock.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "essential-announcement-bar",
@@ -3460,7 +3807,9 @@
    "review": "https://marketingandsalessoftware.com/essential-announcement-bar-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/essential-announcement-bar.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "essential-countdown-timer-bar",
@@ -3480,7 +3829,9 @@
    "review": "https://marketingandsalessoftware.com/essential-countdown-timer-bar-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/essential-countdown-timer-bar.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "essential-free-shipping-bar",
@@ -3500,7 +3851,9 @@
    "review": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/essential-free-shipping-bar.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "essential-loyalty",
@@ -3522,7 +3875,9 @@
    "review": "https://marketingandsalessoftware.com/essential-loyalty-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/essential-loyalty.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "essential-trust-badges",
@@ -3542,7 +3897,9 @@
    "review": "https://marketingandsalessoftware.com/essential-trust-badges-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/essential-trust-badges.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "essential-upsell-cross-sell",
@@ -3564,7 +3921,9 @@
    "review": "https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/essential-upsell-cross-sell.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "evey-events",
@@ -3584,7 +3943,9 @@
    "review": "https://marketingandsalessoftware.com/evey-events-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/evey-events.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "evolve",
@@ -3606,7 +3967,9 @@
    "review": "https://aibuildermarketplace.com/b2b/evolve-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/evolve.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "expandi",
@@ -3625,11 +3988,13 @@
    "research_status": "researched",
    "has_plans": false,
    "has_cost_rules": false,
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-07",
    "review": "https://marketingandsalessoftware.com/expandi-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/expandi.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "expertex",
@@ -3651,7 +4016,9 @@
    "review": "https://officesoftwaremarketplace.com/expertex-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/expertex.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "expertise-ai",
@@ -3674,7 +4041,9 @@
    "review": "https://officesoftwaremarketplace.com/expertise-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/expertise-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "expertsender",
@@ -3686,15 +4055,19 @@
    "pricing_status": "public",
    "from_price_usd_month": null,
    "free_plan": false,
-   "cost_traps": [],
+   "cost_traps": [
+    "addons_extra"
+   ],
    "research_status": "researched",
    "has_plans": false,
    "has_cost_rules": false,
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-07",
    "review": "https://marketingandsalessoftware.com/expertsender-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/expertsender.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "fast-bundle",
@@ -3717,7 +4090,9 @@
    "review": "https://marketingandsalessoftware.com/fast-bundle-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/fast-bundle.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "fastmail",
@@ -3737,7 +4112,9 @@
    "review": "https://aibuildermarketplace.com/b2b/fastmail-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/fastmail.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "fbtrack",
@@ -3757,7 +4134,9 @@
    "review": "https://marketingandsalessoftware.com/fbtrack-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/fbtrack.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "feedvisor",
@@ -3779,7 +4158,9 @@
    "review": "https://marketingandsalessoftware.com/feedvisor-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/feedvisor.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "feedyio",
@@ -3801,7 +4182,9 @@
    "review": "https://marketingandsalessoftware.com/feedyio-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/feedyio.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "filevine",
@@ -3823,7 +4206,9 @@
    "review": "https://aibuildermarketplace.com/b2b/filevine-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/filevine.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "finale-inventory",
@@ -3845,7 +4230,9 @@
    "review": "https://officesoftwaremarketplace.com/finale-inventory-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/finale-inventory.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "fireflies-ai",
@@ -3868,7 +4255,9 @@
    "review": "https://zerotouchsupport.com/fireflies-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/fireflies-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "flatpay",
@@ -3888,7 +4277,9 @@
    "review": "https://officesoftwaremarketplace.com/flatpay-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/flatpay.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "flexiquiz",
@@ -3908,7 +4299,9 @@
    "review": "https://officesoftwaremarketplace.com/flexiquiz-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/flexiquiz.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "flippa",
@@ -3930,7 +4323,9 @@
    "review": "https://aibuildermarketplace.com/b2b/flippa-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/flippa.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "flocksy",
@@ -3952,7 +4347,9 @@
    "review": "https://marketingandsalessoftware.com/flocksy-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/flocksy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "folk",
@@ -3974,7 +4371,9 @@
    "review": "https://marketingandsalessoftware.com/folk-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/folk.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "foxit",
@@ -3998,7 +4397,9 @@
    "review": "https://officesoftwaremarketplace.com/foxit-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/foxit.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "frase",
@@ -4021,7 +4422,9 @@
    "review": "https://marketingandsalessoftware.com/frase-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/frase.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "freshbooks",
@@ -4045,7 +4448,9 @@
    "review": "https://officesoftwaremarketplace.com/freshbooks-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/freshbooks.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "freshchat",
@@ -4068,7 +4473,9 @@
    "review": "https://zerotouchsupport.com/freshchat-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/freshchat.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "freshservice",
@@ -4092,7 +4499,9 @@
    "review": "https://officesoftwaremarketplace.com/freshservice-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/freshservice.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": "it_service_desk",
+   "has_feature_evidence": false
   },
   {
    "id": "freshworks",
@@ -4116,7 +4525,9 @@
    "review": "https://zerotouchsupport.com/freshworks-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/freshworks.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": "customer_support_helpdesk",
+   "has_feature_evidence": true
   },
   {
    "id": "fullenrich",
@@ -4138,7 +4549,9 @@
    "review": "https://aibuildermarketplace.com/b2b/fullenrich-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/fullenrich.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gamma",
@@ -4162,7 +4575,9 @@
    "review": "https://aibuildermarketplace.com/b2b/gamma-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/gamma.json",
    "has_task_evidence": true,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gcheck",
@@ -4182,7 +4597,9 @@
    "review": "https://officesoftwaremarketplace.com/gcheck-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/gcheck.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gelato",
@@ -4202,7 +4619,9 @@
    "review": "https://aibuildermarketplace.com/b2b/gelato-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/gelato.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "geostock",
@@ -4222,7 +4641,9 @@
    "review": "https://aibuildermarketplace.com/b2b/geostock-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/geostock.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "geotargetly",
@@ -4244,7 +4665,9 @@
    "review": "https://aibuildermarketplace.com/b2b/geotargetly-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/geotargetly.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "getresponse",
@@ -4266,7 +4689,9 @@
    "review": "https://aibuildermarketplace.com/b2b/getresponse-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/getresponse.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "getscreen",
@@ -4286,7 +4711,9 @@
    "review": "https://aibuildermarketplace.com/b2b/getscreen-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/getscreen.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gixo",
@@ -4306,7 +4733,9 @@
    "review": "https://aibuildermarketplace.com/b2b/gixo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/gixo.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "glide",
@@ -4331,7 +4760,9 @@
    "review": "https://officesoftwaremarketplace.com/glide-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/glide.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "goflow",
@@ -4353,7 +4784,9 @@
    "review": "https://officesoftwaremarketplace.com/goflow-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/goflow.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gorgias",
@@ -4375,7 +4808,9 @@
    "review": "https://zerotouchsupport.com/gorgias-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/gorgias.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": "customer_support_helpdesk",
+   "has_feature_evidence": true
   },
   {
    "id": "grapeleads",
@@ -4397,7 +4832,9 @@
    "review": "https://marketingandsalessoftware.com/grapeleads-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/grapeleads.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "grapevine",
@@ -4417,7 +4854,9 @@
    "review": "https://marketingandsalessoftware.com/grapevine-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/grapevine.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gravity-forms",
@@ -4439,7 +4878,9 @@
    "review": "https://officesoftwaremarketplace.com/gravity-forms-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/gravity-forms.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "guesty",
@@ -4461,7 +4902,9 @@
    "review": "https://officesoftwaremarketplace.com/guesty-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/guesty.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gushwork",
@@ -4481,7 +4924,9 @@
    "review": "https://marketingandsalessoftware.com/gushwork-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/gushwork.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gusto",
@@ -4503,7 +4948,9 @@
    "review": "https://officesoftwaremarketplace.com/gusto-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/gusto.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "harbor-compliance",
@@ -4525,7 +4972,9 @@
    "review": "https://officesoftwaremarketplace.com/harbor-compliance-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/harbor-compliance.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "healthie",
@@ -4547,7 +4996,9 @@
    "review": "https://aibuildermarketplace.com/b2b/healthie-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/healthie.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "heard",
@@ -4570,7 +5021,9 @@
    "review": "https://officesoftwaremarketplace.com/heard-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/heard.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hello-bar",
@@ -4592,7 +5045,9 @@
    "review": "https://aibuildermarketplace.com/b2b/hello-bar-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/hello-bar.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "helm",
@@ -4612,7 +5067,9 @@
    "review": "https://aibuildermarketplace.com/b2b/helm-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/helm.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "helpcenter",
@@ -4634,7 +5091,9 @@
    "review": "https://zerotouchsupport.com/helpcenter-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/helpcenter.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": "customer_support_helpdesk",
+   "has_feature_evidence": true
   },
   {
    "id": "hibob",
@@ -4658,7 +5117,9 @@
    "review": "https://aibuildermarketplace.com/b2b/hibob-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/hibob.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hive",
@@ -4682,7 +5143,9 @@
    "review": "https://officesoftwaremarketplace.com/hive-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/hive.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hopp",
@@ -4702,7 +5165,9 @@
    "review": "https://officesoftwaremarketplace.com/hopp-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/hopp.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hostinger",
@@ -4724,7 +5189,9 @@
    "review": "https://officesoftwaremarketplace.com/hostinger-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/hostinger.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "housecall-pro",
@@ -4744,7 +5211,9 @@
    "review": "https://officesoftwaremarketplace.com/housecall-pro-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/housecall-pro.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hubspot",
@@ -4769,7 +5238,9 @@
    "review": "https://marketingandsalessoftware.com/hubspot-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/hubspot.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hubstaff",
@@ -4792,7 +5263,9 @@
    "review": "https://officesoftwaremarketplace.com/hubstaff-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/hubstaff.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "iconosquare",
@@ -4814,7 +5287,9 @@
    "review": "https://aibuildermarketplace.com/b2b/iconosquare-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/iconosquare.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "icontact",
@@ -4834,7 +5309,9 @@
    "review": "https://aibuildermarketplace.com/b2b/icontact-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/icontact.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "idrive",
@@ -4857,7 +5334,9 @@
    "review": "https://officesoftwaremarketplace.com/idrive-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/idrive.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "imgify",
@@ -4877,7 +5356,9 @@
    "review": "https://aibuildermarketplace.com/b2b/imgify-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/imgify.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "inboxally",
@@ -4897,7 +5378,9 @@
    "review": "https://aibuildermarketplace.com/b2b/inboxally-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/inboxally.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "increff",
@@ -4919,7 +5402,9 @@
    "review": "https://aibuildermarketplace.com/b2b/increff-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/increff.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "influencer-hero",
@@ -4941,7 +5426,9 @@
    "review": "https://marketingandsalessoftware.com/influencer-hero-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/influencer-hero.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "insightful",
@@ -4964,7 +5451,9 @@
    "review": "https://aibuildermarketplace.com/b2b/insightful-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/insightful.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "instapage",
@@ -4986,7 +5475,9 @@
    "review": "https://aibuildermarketplace.com/b2b/instapage-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/instapage.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "intelis",
@@ -5008,7 +5499,9 @@
    "review": "https://aibuildermarketplace.com/b2b/intelis-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/intelis.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "invideo",
@@ -5031,7 +5524,9 @@
    "review": "https://officesoftwaremarketplace.com/invideo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/invideo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "involve-me",
@@ -5054,7 +5549,9 @@
    "review": "https://aibuildermarketplace.com/b2b/involve-me-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/involve-me.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "jane",
@@ -5076,7 +5573,9 @@
    "review": "https://officesoftwaremarketplace.com/jane-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/jane.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "jibble",
@@ -5099,7 +5598,9 @@
    "review": "https://officesoftwaremarketplace.com/jibble-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/jibble.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "joiin",
@@ -5121,7 +5622,9 @@
    "review": "https://officesoftwaremarketplace.com/joiin-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/joiin.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "jotform-ai-agents",
@@ -5145,7 +5648,9 @@
    "review": "https://zerotouchsupport.com/jotform-ai-agents-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/jotform-ai-agents.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "jubilee",
@@ -5168,7 +5673,9 @@
    "review": "https://officesoftwaremarketplace.com/jubilee-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/jubilee.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kartra",
@@ -5188,7 +5695,9 @@
    "review": "https://aibuildermarketplace.com/b2b/kartra-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/kartra.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "katana-mrp",
@@ -5211,7 +5720,9 @@
    "review": "https://aibuildermarketplace.com/b2b/katana-mrp-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/katana-mrp.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "keap",
@@ -5234,7 +5745,9 @@
    "review": "https://aibuildermarketplace.com/b2b/keap-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/keap.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "keeper-security",
@@ -5258,7 +5771,9 @@
    "review": "https://aibuildermarketplace.com/b2b/keeper-security-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/keeper-security.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kinsta",
@@ -5281,7 +5796,9 @@
    "review": "https://aibuildermarketplace.com/b2b/kinsta-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/kinsta.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kit",
@@ -5301,7 +5818,9 @@
    "review": "https://marketingandsalessoftware.com/kit-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/kit.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kite",
@@ -5321,7 +5840,9 @@
    "review": "https://marketingandsalessoftware.com/kite-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/kite.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kiwi-sizing",
@@ -5344,7 +5865,9 @@
    "review": "https://aibuildermarketplace.com/b2b/kiwi-sizing-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/kiwi-sizing.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kixie",
@@ -5368,7 +5891,9 @@
    "review": "https://zerotouchsupport.com/kixie-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/kixie.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "koala-bundles",
@@ -5390,7 +5915,9 @@
    "review": "https://marketingandsalessoftware.com/koala-bundles-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/koala-bundles.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "koala-gifts",
@@ -5412,7 +5939,9 @@
    "review": "https://marketingandsalessoftware.com/koala-gifts-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/koala-gifts.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "koongo",
@@ -5434,7 +5963,9 @@
    "review": "https://marketingandsalessoftware.com/koongo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/koongo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "krispcall",
@@ -5457,7 +5988,9 @@
    "review": "https://zerotouchsupport.com/krispcall-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/krispcall.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "krystal",
@@ -5479,7 +6012,9 @@
    "review": "https://officesoftwaremarketplace.com/krystal-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/krystal.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kumo",
@@ -5499,7 +6034,9 @@
    "review": "https://marketingandsalessoftware.com/kumo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/kumo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "landingi",
@@ -5523,7 +6060,9 @@
    "review": "https://aibuildermarketplace.com/b2b/landingi-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/landingi.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "langshop",
@@ -5546,7 +6085,9 @@
    "review": "https://marketingandsalessoftware.com/langshop-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/langshop.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "later",
@@ -5569,7 +6110,9 @@
    "review": "https://marketingandsalessoftware.com/later-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/later.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "leadfeeder",
@@ -5589,7 +6132,9 @@
    "review": "https://marketingandsalessoftware.com/leadfeeder-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/leadfeeder.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "leadpages",
@@ -5613,7 +6158,9 @@
    "review": "https://aibuildermarketplace.com/b2b/leadpages-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/leadpages.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "learnworlds",
@@ -5637,7 +6184,9 @@
    "review": "https://aibuildermarketplace.com/b2b/learnworlds-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/learnworlds.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "leavo",
@@ -5660,7 +6209,9 @@
    "review": "https://officesoftwaremarketplace.com/leavo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/leavo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "lemlist",
@@ -5684,7 +6235,9 @@
    "review": "https://marketingandsalessoftware.com/lemlist-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/lemlist.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "lettrlabs",
@@ -5706,7 +6259,9 @@
    "review": "https://aibuildermarketplace.com/b2b/lettrlabs-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/lettrlabs.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "lindy-ai",
@@ -5729,7 +6284,9 @@
    "review": "https://aibuildermarketplace.com/b2b/lindy-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/lindy-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "livestorm",
@@ -5751,7 +6308,9 @@
    "review": "https://aibuildermarketplace.com/b2b/livestorm-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/livestorm.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "lovable",
@@ -5773,7 +6332,9 @@
    "review": "https://aibuildermarketplace.com/b2b/lovable-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/lovable.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "loyalino",
@@ -5796,7 +6357,9 @@
    "review": "https://marketingandsalessoftware.com/loyalino-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/loyalino.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "lucrovox",
@@ -5818,7 +6381,9 @@
    "review": "https://zerotouchsupport.com/lucrovox-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/lucrovox.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "lumencart",
@@ -5841,7 +6406,9 @@
    "review": "https://aibuildermarketplace.com/b2b/lumencart-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/lumencart.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "manychat",
@@ -5863,7 +6430,9 @@
    "review": "https://aibuildermarketplace.com/b2b/manychat-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/manychat.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "marketerhire",
@@ -5885,7 +6454,9 @@
    "review": "https://aibuildermarketplace.com/b2b/marketerhire-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/marketerhire.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "marketing-360",
@@ -5907,7 +6478,9 @@
    "review": "https://aibuildermarketplace.com/b2b/marketing-360-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/marketing-360.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "meeri",
@@ -5929,7 +6502,9 @@
    "review": "https://aibuildermarketplace.com/b2b/meeri-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/meeri.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "meetgeek",
@@ -5953,7 +6528,9 @@
    "review": "https://aibuildermarketplace.com/b2b/meetgeek-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/meetgeek.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "melio",
@@ -5975,7 +6552,9 @@
    "review": "https://officesoftwaremarketplace.com/melio-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/melio.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "mera-work",
@@ -5997,7 +6576,9 @@
    "review": "https://officesoftwaremarketplace.com/mera-work-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/mera-work.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "migrationpro",
@@ -6020,7 +6601,9 @@
    "review": "https://aibuildermarketplace.com/b2b/migrationpro-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/migrationpro.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "mindstudio",
@@ -6042,7 +6625,9 @@
    "review": "https://aibuildermarketplace.com/b2b/mindstudio-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/mindstudio.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "miro",
@@ -6065,7 +6650,9 @@
    "review": "https://aibuildermarketplace.com/b2b/miro-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/miro.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "mktg-ai",
@@ -6087,7 +6674,9 @@
    "review": "https://aibuildermarketplace.com/b2b/mktg-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/mktg-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "modelize",
@@ -6109,7 +6698,9 @@
    "review": "https://aibuildermarketplace.com/b2b/modelize-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/modelize.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "modge",
@@ -6133,7 +6724,9 @@
    "review": "https://officesoftwaremarketplace.com/modge-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/modge.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "momence",
@@ -6155,7 +6748,9 @@
    "review": "https://aibuildermarketplace.com/b2b/momence-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/momence.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "monday-com",
@@ -6179,7 +6774,9 @@
    "review": "https://aibuildermarketplace.com/b2b/monday-com-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/monday-com.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "moosend",
@@ -6202,7 +6799,9 @@
    "review": "https://aibuildermarketplace.com/b2b/moosend-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/moosend.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "motive",
@@ -6224,7 +6823,9 @@
    "review": "https://aibuildermarketplace.com/b2b/motive-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/motive.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "mrpeasy",
@@ -6246,7 +6847,9 @@
    "review": "https://aibuildermarketplace.com/b2b/mrpeasy-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/mrpeasy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "murf",
@@ -6269,7 +6872,9 @@
    "review": "https://aibuildermarketplace.com/b2b/murf-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/murf.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "mx-ai",
@@ -6289,7 +6894,9 @@
    "review": "https://aibuildermarketplace.com/b2b/mx-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/mx-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "mycroft",
@@ -6311,7 +6918,9 @@
    "review": "https://officesoftwaremarketplace.com/mycroft-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/mycroft.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "namerobot",
@@ -6331,7 +6940,9 @@
    "review": "https://aibuildermarketplace.com/b2b/namerobot-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/namerobot.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "navan",
@@ -6354,7 +6965,9 @@
    "review": "https://officesoftwaremarketplace.com/navan-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/navan.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "neuroads",
@@ -6376,7 +6989,9 @@
    "review": "https://zerotouchsupport.com/neuroads-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/neuroads.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nexis-cro",
@@ -6398,7 +7013,9 @@
    "review": "https://aibuildermarketplace.com/b2b/nexis-cro-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/nexis-cro.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nextify-ai",
@@ -6421,7 +7038,9 @@
    "review": "https://marketingandsalessoftware.com/nextify-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/nextify-ai.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "ngram",
@@ -6444,7 +7063,9 @@
    "review": "https://officesoftwaremarketplace.com/ngram-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/ngram.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nicejob",
@@ -6466,7 +7087,9 @@
    "review": "https://marketingandsalessoftware.com/nicejob-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/nicejob.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "niural-ai",
@@ -6490,7 +7113,9 @@
    "review": "https://officesoftwaremarketplace.com/niural-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/niural-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nocrm",
@@ -6513,7 +7138,9 @@
    "review": "https://marketingandsalessoftware.com/nocrm-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/nocrm.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nordvpn",
@@ -6538,7 +7165,9 @@
    "review": "https://aibuildermarketplace.com/b2b/nordvpn-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/nordvpn.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "notify-me",
@@ -6560,7 +7189,9 @@
    "review": "https://aibuildermarketplace.com/b2b/notify-me-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/notify-me.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nouswise",
@@ -6582,7 +7213,9 @@
    "review": "https://officesoftwaremarketplace.com/nouswise-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/nouswise.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nutshell",
@@ -6606,7 +7239,9 @@
    "review": "https://marketingandsalessoftware.com/nutshell-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/nutshell.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "omniseo",
@@ -6628,7 +7263,9 @@
    "review": "https://aibuildermarketplace.com/b2b/omniseo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/omniseo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "oneflow",
@@ -6652,7 +7289,9 @@
    "review": "https://aibuildermarketplace.com/b2b/oneflow-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/oneflow.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "optizen",
@@ -6674,7 +7313,9 @@
    "review": "https://aibuildermarketplace.com/b2b/optizen-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/optizen.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "outgrow",
@@ -6696,7 +7337,9 @@
    "review": "https://aibuildermarketplace.com/b2b/outgrow-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/outgrow.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "ownr",
@@ -6718,7 +7361,9 @@
    "review": "https://aibuildermarketplace.com/b2b/ownr-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/ownr.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "oyster",
@@ -6740,7 +7385,9 @@
    "review": "https://officesoftwaremarketplace.com/oyster-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/oyster.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pagepulse",
@@ -6763,7 +7410,9 @@
    "review": "https://marketingandsalessoftware.com/pagepulse-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/pagepulse.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pangram",
@@ -6786,7 +7435,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pangram-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pangram.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "papaya-global",
@@ -6808,7 +7459,9 @@
    "review": "https://aibuildermarketplace.com/b2b/papaya-global-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/papaya-global.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "parallel-ai",
@@ -6831,7 +7484,9 @@
    "review": "https://marketingandsalessoftware.com/parallel-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/parallel-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "parim",
@@ -6851,7 +7506,9 @@
    "review": "https://aibuildermarketplace.com/b2b/parim-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/parim.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "partnerstack",
@@ -6873,7 +7530,9 @@
    "review": "https://marketingandsalessoftware.com/partnerstack-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/partnerstack.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "passpack",
@@ -6895,7 +7554,9 @@
    "review": "https://aibuildermarketplace.com/b2b/passpack-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/passpack.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "payoneer",
@@ -6917,7 +7578,9 @@
    "review": "https://aibuildermarketplace.com/b2b/payoneer-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/payoneer.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pdware",
@@ -6939,7 +7602,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pdware-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pdware.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pecan-ai",
@@ -6961,7 +7626,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pecan-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pecan-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "photogenerator",
@@ -6983,7 +7650,9 @@
    "review": "https://aibuildermarketplace.com/b2b/photogenerator-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/photogenerator.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pickeasy",
@@ -7003,7 +7672,9 @@
    "review": "https://marketingandsalessoftware.com/pickeasy-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/pickeasy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "piktochart",
@@ -7027,7 +7698,9 @@
    "review": "https://aibuildermarketplace.com/b2b/piktochart-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/piktochart.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pingtree",
@@ -7049,7 +7722,9 @@
    "review": "https://marketingandsalessoftware.com/pingtree-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/pingtree.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pipedrive",
@@ -7073,7 +7748,9 @@
    "review": "https://marketingandsalessoftware.com/pipedrive-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/pipedrive.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pippit",
@@ -7095,7 +7772,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pippit-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pippit.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pixel-union",
@@ -7115,7 +7794,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pixel-union-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pixel-union.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "planday",
@@ -7137,7 +7818,9 @@
    "review": "https://aibuildermarketplace.com/b2b/planday-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/planday.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "plansom",
@@ -7159,7 +7842,9 @@
    "review": "https://aibuildermarketplace.com/b2b/plansom-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/plansom.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "plesk",
@@ -7179,7 +7864,9 @@
    "review": "https://aibuildermarketplace.com/b2b/plesk-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/plesk.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "poptin",
@@ -7201,7 +7888,9 @@
    "review": "https://marketingandsalessoftware.com/poptin-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/poptin.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "positive-user",
@@ -7223,7 +7912,9 @@
    "review": "https://marketingandsalessoftware.com/positive-user-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/positive-user.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "post-purchase-upsell-hero",
@@ -7245,7 +7936,9 @@
    "review": "https://aibuildermarketplace.com/b2b/post-purchase-upsell-hero-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/post-purchase-upsell-hero.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "postscript",
@@ -7267,7 +7960,9 @@
    "review": "https://aibuildermarketplace.com/b2b/postscript-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/postscript.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "prezi",
@@ -7289,7 +7984,9 @@
    "review": "https://aibuildermarketplace.com/b2b/prezi-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/prezi.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pricefy",
@@ -7311,7 +8008,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pricefy-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pricefy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "printify",
@@ -7333,7 +8032,9 @@
    "review": "https://aibuildermarketplace.com/b2b/printify-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/printify.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "process-street",
@@ -7356,7 +8057,9 @@
    "review": "https://aibuildermarketplace.com/b2b/process-street-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/process-street.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "protectmyorder",
@@ -7378,7 +8081,9 @@
    "review": "https://aibuildermarketplace.com/b2b/protectmyorder-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/protectmyorder.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "proton",
@@ -7398,7 +8103,9 @@
    "review": "https://officesoftwaremarketplace.com/proton-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/proton.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "proton-drive",
@@ -7420,7 +8127,9 @@
    "review": "https://officesoftwaremarketplace.com/proton-drive-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/proton-drive.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pumper-bundles",
@@ -7442,7 +8151,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pumper-bundles-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pumper-bundles.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pushowl",
@@ -7464,7 +8175,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pushowl-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pushowl.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pylon",
@@ -7488,7 +8201,9 @@
    "review": "https://zerotouchsupport.com/pylon-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/pylon.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": "customer_support_helpdesk",
+   "has_feature_evidence": false
   },
   {
    "id": "pythago",
@@ -7510,7 +8225,9 @@
    "review": "https://aibuildermarketplace.com/b2b/pythago-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/pythago.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "qoyod",
@@ -7533,7 +8250,9 @@
    "review": "https://aibuildermarketplace.com/b2b/qoyod-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/qoyod.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "quartile",
@@ -7555,7 +8274,9 @@
    "review": "https://marketingandsalessoftware.com/quartile-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/quartile.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "quickbooks-uk",
@@ -7577,7 +8298,9 @@
    "review": "https://officesoftwaremarketplace.com/quickbooks-uk-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/quickbooks-uk.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "quicksigner",
@@ -7601,7 +8324,9 @@
    "review": "https://aibuildermarketplace.com/b2b/quicksigner-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/quicksigner.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "quillbot",
@@ -7621,7 +8346,9 @@
    "review": "https://aibuildermarketplace.com/b2b/quillbot-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/quillbot.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "quo",
@@ -7644,7 +8371,9 @@
    "review": "https://zerotouchsupport.com/quo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/quo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "rank-math",
@@ -7666,7 +8395,9 @@
    "review": "https://marketingandsalessoftware.com/rank-math-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/rank-math.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "rapid-search",
@@ -7689,7 +8420,9 @@
    "review": "https://marketingandsalessoftware.com/rapid-search-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/rapid-search.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "reachstream",
@@ -7712,7 +8445,9 @@
    "review": "https://aibuildermarketplace.com/b2b/reachstream-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/reachstream.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "readymode",
@@ -7734,7 +8469,9 @@
    "review": "https://zerotouchsupport.com/readymode-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/readymode.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "reclaim-ai",
@@ -7757,7 +8494,9 @@
    "review": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/reclaim-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "reditus",
@@ -7779,7 +8518,9 @@
    "review": "https://marketingandsalessoftware.com/reditus-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/reditus.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "remote-people",
@@ -7802,7 +8543,9 @@
    "review": "https://officesoftwaremarketplace.com/remote-people-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/remote-people.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "repete",
@@ -7824,7 +8567,9 @@
    "review": "https://marketingandsalessoftware.com/repete-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/repete.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "replit",
@@ -7846,7 +8591,9 @@
    "review": "https://aibuildermarketplace.com/b2b/replit-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/replit.json",
    "has_task_evidence": true,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "reply-io",
@@ -7870,7 +8617,9 @@
    "review": "https://marketingandsalessoftware.com/reply-io-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/reply-io.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "respond-io",
@@ -7890,7 +8639,9 @@
    "review": "https://zerotouchsupport.com/respond-io-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/respond-io.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "restream",
@@ -7912,7 +8663,9 @@
    "review": "https://aibuildermarketplace.com/b2b/restream-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/restream.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "retouch4me",
@@ -7934,7 +8687,9 @@
    "review": "https://aibuildermarketplace.com/b2b/retouch4me-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/retouch4me.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "rippling",
@@ -7956,7 +8711,9 @@
    "review": "https://officesoftwaremarketplace.com/rippling-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/rippling.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "riverside",
@@ -7979,7 +8736,9 @@
    "review": "https://aibuildermarketplace.com/b2b/riverside-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/riverside.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "rocketreach",
@@ -7999,7 +8758,9 @@
    "review": "https://aibuildermarketplace.com/b2b/rocketreach-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/rocketreach.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "ruby",
@@ -8021,7 +8782,9 @@
    "review": "https://zerotouchsupport.com/ruby-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/ruby.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "runpod",
@@ -8041,7 +8804,9 @@
    "review": "https://aibuildermarketplace.com/b2b/runpod-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/runpod.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "salesflare",
@@ -8064,7 +8829,9 @@
    "review": "https://aibuildermarketplace.com/b2b/salesflare-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/salesflare.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "salesflow",
@@ -8087,7 +8854,9 @@
    "review": "https://aibuildermarketplace.com/b2b/salesflow-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/salesflow.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "salesmessage",
@@ -8111,7 +8880,9 @@
    "review": "https://zerotouchsupport.com/salesmessage-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/salesmessage.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "salestarget-ai",
@@ -8133,7 +8904,9 @@
    "review": "https://marketingandsalessoftware.com/salestarget-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/salestarget-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "sanebox",
@@ -8153,7 +8926,9 @@
    "review": "https://aibuildermarketplace.com/b2b/sanebox-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/sanebox.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "scarcity-ai",
@@ -8173,7 +8948,9 @@
    "review": "https://marketingandsalessoftware.com/scarcity-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/scarcity-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "scrolly",
@@ -8193,7 +8970,9 @@
    "review": "https://aibuildermarketplace.com/b2b/scrolly-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/scrolly.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "seamless-ai",
@@ -8216,7 +8995,9 @@
    "review": "https://aibuildermarketplace.com/b2b/seamless-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/seamless-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "section-library",
@@ -8238,7 +9019,9 @@
    "review": "https://aibuildermarketplace.com/b2b/section-library-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/section-library.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "securify",
@@ -8258,7 +9041,9 @@
    "review": "https://aibuildermarketplace.com/b2b/securify-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/securify.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "seel",
@@ -8280,7 +9065,9 @@
    "review": "https://aibuildermarketplace.com/b2b/seel-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/seel.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "seele",
@@ -8302,7 +9089,9 @@
    "review": "https://aibuildermarketplace.com/b2b/seele-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/seele.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "selixer",
@@ -8324,7 +9113,9 @@
    "review": "https://aibuildermarketplace.com/b2b/selixer-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/selixer.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "selleasy",
@@ -8346,7 +9137,9 @@
    "review": "https://marketingandsalessoftware.com/selleasy-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/selleasy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "seller-investigators",
@@ -8366,7 +9159,9 @@
    "review": "https://marketingandsalessoftware.com/seller-investigators-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/seller-investigators.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "seller-snap",
@@ -8388,7 +9183,9 @@
    "review": "https://marketingandsalessoftware.com/seller-snap-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/seller-snap.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "sellfy",
@@ -8410,7 +9207,9 @@
    "review": "https://aibuildermarketplace.com/b2b/sellfy-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/sellfy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "sendcloud",
@@ -8432,7 +9231,9 @@
    "review": "https://aibuildermarketplace.com/b2b/sendcloud-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/sendcloud.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "sentaro",
@@ -8452,7 +9253,9 @@
    "review": "https://aibuildermarketplace.com/b2b/sentaro-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/sentaro.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "seo-space",
@@ -8475,7 +9278,9 @@
    "review": "https://aibuildermarketplace.com/b2b/seo-space-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/seo-space.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "seokart",
@@ -8498,7 +9303,9 @@
    "review": "https://marketingandsalessoftware.com/seokart-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/seokart.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "seomatic",
@@ -8520,7 +9327,9 @@
    "review": "https://aibuildermarketplace.com/b2b/seomatic-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/seomatic.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "serpstat",
@@ -8543,7 +9352,9 @@
    "review": "https://aibuildermarketplace.com/b2b/serpstat-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/serpstat.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "servicem8",
@@ -8565,7 +9376,9 @@
    "review": "https://aibuildermarketplace.com/b2b/servicem8-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/servicem8.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "shiftie",
@@ -8585,7 +9398,9 @@
    "review": "https://aibuildermarketplace.com/b2b/shiftie-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/shiftie.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "shipdock",
@@ -8607,7 +9422,9 @@
    "review": "https://aibuildermarketplace.com/b2b/shipdock-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/shipdock.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "shippo",
@@ -8630,7 +9447,9 @@
    "review": "https://aibuildermarketplace.com/b2b/shippo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/shippo.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "shoeboxed",
@@ -8652,7 +9471,9 @@
    "review": "https://officesoftwaremarketplace.com/shoeboxed-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/shoeboxed.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "shorby",
@@ -8672,7 +9493,9 @@
    "review": "https://aibuildermarketplace.com/b2b/shorby-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/shorby.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "shore",
@@ -8692,7 +9515,9 @@
    "review": "https://aibuildermarketplace.com/b2b/shore-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/shore.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "signal-house",
@@ -8714,7 +9539,9 @@
    "review": "https://zerotouchsupport.com/signal-house-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/signal-house.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "signeasy",
@@ -8736,7 +9563,9 @@
    "review": "https://aibuildermarketplace.com/b2b/signeasy-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/signeasy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "signitic",
@@ -8758,7 +9587,9 @@
    "review": "https://marketingandsalessoftware.com/signitic-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/signitic.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "signnow",
@@ -8781,7 +9612,9 @@
    "review": "https://aibuildermarketplace.com/b2b/signnow-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/signnow.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "similarweb",
@@ -8804,7 +9637,9 @@
    "review": "https://marketingandsalessoftware.com/similarweb-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/similarweb.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "simpletexting",
@@ -8828,7 +9663,9 @@
    "review": "https://aibuildermarketplace.com/b2b/simpletexting-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/simpletexting.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "simplybook-me",
@@ -8850,7 +9687,9 @@
    "review": "https://aibuildermarketplace.com/b2b/simplybook-me-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/simplybook-me.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "skip-to-checkout",
@@ -8870,7 +9709,9 @@
    "review": "https://marketingandsalessoftware.com/skip-to-checkout-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/skip-to-checkout.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "smartli",
@@ -8892,7 +9733,9 @@
    "review": "https://aibuildermarketplace.com/b2b/smartli-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/smartli.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "smartsuite",
@@ -8914,7 +9757,9 @@
    "review": "https://aibuildermarketplace.com/b2b/smartsuite-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/smartsuite.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "smarty-discounts",
@@ -8934,7 +9779,9 @@
    "review": "https://marketingandsalessoftware.com/smarty-discounts-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/smarty-discounts.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "smtp-com",
@@ -8957,7 +9804,9 @@
    "review": "https://aibuildermarketplace.com/b2b/smtp-com-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/smtp-com.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "smtp2go",
@@ -8979,7 +9828,9 @@
    "review": "https://aibuildermarketplace.com/b2b/smtp2go-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/smtp2go.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "social-bar",
@@ -8999,7 +9850,9 @@
    "review": "https://marketingandsalessoftware.com/social-bar-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/social-bar.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "socialbee",
@@ -9021,7 +9874,9 @@
    "review": "https://aibuildermarketplace.com/b2b/socialbee-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/socialbee.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "softr",
@@ -9044,7 +9899,9 @@
    "review": "https://aibuildermarketplace.com/b2b/softr-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/softr.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "softsync",
@@ -9067,7 +9924,9 @@
    "review": "https://marketingandsalessoftware.com/softsync-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/softsync.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "spiky-ai",
@@ -9090,7 +9949,9 @@
    "review": "https://marketingandsalessoftware.com/spiky-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/spiky-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "spocket",
@@ -9114,7 +9975,9 @@
    "review": "https://aibuildermarketplace.com/b2b/spocket-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/spocket.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "stackable",
@@ -9134,7 +9997,9 @@
    "review": "https://marketingandsalessoftware.com/stackable-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/stackable.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "stamped",
@@ -9156,7 +10021,9 @@
    "review": "https://marketingandsalessoftware.com/stamped-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/stamped.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "stampezee",
@@ -9176,7 +10043,9 @@
    "review": "https://aibuildermarketplace.com/b2b/stampezee-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/stampezee.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "storefaq",
@@ -9198,7 +10067,9 @@
    "review": "https://zerotouchsupport.com/storefaq-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/storefaq.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "storelock",
@@ -9218,7 +10089,9 @@
    "review": "https://aibuildermarketplace.com/b2b/storelock-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/storelock.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "storeseo",
@@ -9240,7 +10113,9 @@
    "review": "https://aibuildermarketplace.com/b2b/storeseo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/storeseo.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "storista",
@@ -9262,7 +10137,9 @@
    "review": "https://marketingandsalessoftware.com/storista-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/storista.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "storylane",
@@ -9284,7 +10161,9 @@
    "review": "https://aibuildermarketplace.com/b2b/storylane-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/storylane.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "streak",
@@ -9308,7 +10187,9 @@
    "review": "https://aibuildermarketplace.com/b2b/streak-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/streak.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "success-co",
@@ -9332,7 +10213,9 @@
    "review": "https://aibuildermarketplace.com/b2b/success-co-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/success-co.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "sunsama",
@@ -9352,7 +10235,9 @@
    "review": "https://aibuildermarketplace.com/b2b/sunsama-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/sunsama.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "supaeasy",
@@ -9372,7 +10257,9 @@
    "review": "https://aibuildermarketplace.com/b2b/supaeasy-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/supaeasy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "super",
@@ -9394,7 +10281,9 @@
    "review": "https://marketingandsalessoftware.com/super-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/super.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "superfiliate",
@@ -9416,7 +10305,9 @@
    "review": "https://aibuildermarketplace.com/b2b/superfiliate-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/superfiliate.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "supportbee",
@@ -9438,7 +10329,9 @@
    "review": "https://zerotouchsupport.com/supportbee-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/supportbee.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": "customer_support_helpdesk",
+   "has_feature_evidence": true
   },
   {
    "id": "surfer-surferseo",
@@ -9460,7 +10353,9 @@
    "review": "https://aibuildermarketplace.com/b2b/surfer-surferseo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/surfer-surferseo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "surveymonkey",
@@ -9482,7 +10377,9 @@
    "review": "https://aibuildermarketplace.com/b2b/surveymonkey-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/surveymonkey.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "surveysparrow",
@@ -9502,7 +10399,9 @@
    "review": "https://aibuildermarketplace.com/b2b/surveysparrow-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/surveysparrow.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "survicate",
@@ -9525,7 +10424,9 @@
    "review": "https://aibuildermarketplace.com/b2b/survicate-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/survicate.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "switcher-studio",
@@ -9547,7 +10448,9 @@
    "review": "https://aibuildermarketplace.com/b2b/switcher-studio-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/switcher-studio.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "synthesia",
@@ -9570,7 +10473,9 @@
    "review": "https://aibuildermarketplace.com/b2b/synthesia-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/synthesia.json",
    "has_task_evidence": true,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tapita-ai-seo-blog-builder",
@@ -9592,7 +10497,9 @@
    "review": "https://aibuildermarketplace.com/b2b/tapita-ai-seo-blog-builder-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/tapita-ai-seo-blog-builder.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tapita-seo-optimizer",
@@ -9614,7 +10521,9 @@
    "review": "https://marketingandsalessoftware.com/tapita-seo-optimizer-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/tapita-seo-optimizer.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tapstitch",
@@ -9636,7 +10545,9 @@
    "review": "https://aibuildermarketplace.com/b2b/tapstitch-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/tapstitch.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tax1099",
@@ -9659,7 +10570,9 @@
    "review": "https://aibuildermarketplace.com/b2b/tax1099-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/tax1099.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "taxcycle",
@@ -9682,7 +10595,9 @@
    "review": "https://aibuildermarketplace.com/b2b/taxcycle-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/taxcycle.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "team-pulse",
@@ -9704,7 +10619,9 @@
    "review": "https://aibuildermarketplace.com/b2b/team-pulse-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/team-pulse.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "teikametrics",
@@ -9727,7 +10644,9 @@
    "review": "https://aibuildermarketplace.com/b2b/teikametrics-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/teikametrics.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tellent",
@@ -9752,7 +10671,9 @@
    "review": "https://aibuildermarketplace.com/b2b/tellent-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/tellent.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tenable",
@@ -9774,7 +10695,9 @@
    "review": "https://aibuildermarketplace.com/b2b/tenable-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/tenable.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "testdriver-ai",
@@ -9797,7 +10720,9 @@
    "review": "https://aibuildermarketplace.com/b2b/testdriver-ai-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/testdriver-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "testgorilla",
@@ -9821,7 +10746,9 @@
    "review": "https://officesoftwaremarketplace.com/testgorilla-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/testgorilla.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "textexpander",
@@ -9844,7 +10771,9 @@
    "review": "https://officesoftwaremarketplace.com/textexpander-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/textexpander.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "textline",
@@ -9868,7 +10797,9 @@
    "review": "https://zerotouchsupport.com/textline-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/textline.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "thetop",
@@ -9890,7 +10821,9 @@
    "review": "https://aibuildermarketplace.com/b2b/thetop-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/thetop.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "thordata",
@@ -9912,7 +10845,9 @@
    "review": "https://aibuildermarketplace.com/b2b/thordata-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/thordata.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "thryv",
@@ -9932,7 +10867,9 @@
    "review": "https://aibuildermarketplace.com/b2b/thryv-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/thryv.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tickettailor",
@@ -9954,7 +10891,9 @@
    "review": "https://aibuildermarketplace.com/b2b/tickettailor-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/tickettailor.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tidio",
@@ -9977,7 +10916,9 @@
    "review": "https://zerotouchsupport.com/tidio-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/tidio.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "timesact-preorder",
@@ -10000,7 +10941,9 @@
    "review": "https://marketingandsalessoftware.com/timesact-preorder-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/timesact-preorder.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tixel",
@@ -10020,7 +10963,9 @@
    "review": "https://aibuildermarketplace.com/b2b/tixel-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/tixel.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tnc",
@@ -10040,7 +10985,9 @@
    "review": "https://marketingandsalessoftware.com/tnc-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/tnc.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "todoist",
@@ -10062,7 +11009,9 @@
    "review": "https://aibuildermarketplace.com/b2b/todoist-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/todoist.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "toggl",
@@ -10084,7 +11033,9 @@
    "review": "https://aibuildermarketplace.com/b2b/toggl-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/toggl.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "top-echelon",
@@ -10108,7 +11059,9 @@
    "review": "https://officesoftwaremarketplace.com/top-echelon-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/top-echelon.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "track123",
@@ -10131,7 +11084,9 @@
    "review": "https://marketingandsalessoftware.com/track123-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/track123.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "trackr",
@@ -10154,7 +11109,9 @@
    "review": "https://zerotouchsupport.com/trackr-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/trackr.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tradify",
@@ -10177,7 +11134,9 @@
    "review": "https://aibuildermarketplace.com/b2b/tradify-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/tradify.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "trainerize",
@@ -10200,7 +11159,9 @@
    "review": "https://aibuildermarketplace.com/b2b/trainerize-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/trainerize.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "trainual",
@@ -10223,7 +11184,9 @@
    "review": "https://aibuildermarketplace.com/b2b/trainual-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/trainual.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tresorit",
@@ -10245,7 +11208,9 @@
    "review": "https://officesoftwaremarketplace.com/tresorit-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/tresorit.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "turbotic",
@@ -10268,7 +11233,9 @@
    "review": "https://aibuildermarketplace.com/b2b/turbotic-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/turbotic.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "typewise",
@@ -10292,7 +11259,9 @@
    "review": "https://zerotouchsupport.com/typewise-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/typewise.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": "support_ai_agent",
+   "has_feature_evidence": false
   },
   {
    "id": "ueni",
@@ -10312,7 +11281,9 @@
    "review": "https://aibuildermarketplace.com/b2b/ueni-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/ueni.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "ultahost",
@@ -10332,7 +11303,9 @@
    "review": "https://aibuildermarketplace.com/b2b/ultahost-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/ultahost.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "unbounce",
@@ -10352,7 +11325,9 @@
    "review": "https://aibuildermarketplace.com/b2b/unbounce-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/unbounce.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "uniqode",
@@ -10375,7 +11350,9 @@
    "review": "https://marketingandsalessoftware.com/uniqode-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/uniqode.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "unitel-voice",
@@ -10399,7 +11376,9 @@
    "review": "https://zerotouchsupport.com/unitel-voice-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/unitel-voice.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "unleashed-software",
@@ -10421,7 +11400,9 @@
    "review": "https://aibuildermarketplace.com/b2b/unleashed-software-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/unleashed-software.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "upsell-com",
@@ -10443,7 +11424,9 @@
    "review": "https://aibuildermarketplace.com/b2b/upsell-com-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/upsell-com.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "upsellplus",
@@ -10465,7 +11448,9 @@
    "review": "https://aibuildermarketplace.com/b2b/upsellplus-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/upsellplus.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "uptimerobot",
@@ -10487,7 +11472,9 @@
    "review": "https://aibuildermarketplace.com/b2b/uptimerobot-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/uptimerobot.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "usertrail",
@@ -10507,7 +11494,9 @@
    "review": "https://marketingandsalessoftware.com/usertrail-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/usertrail.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "vea",
@@ -10530,7 +11519,9 @@
    "review": "https://aibuildermarketplace.com/b2b/vea-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/vea.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "velora",
@@ -10552,7 +11543,9 @@
    "review": "https://aibuildermarketplace.com/b2b/velora-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/velora.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "vida-ai",
@@ -10572,7 +11565,9 @@
    "review": "https://zerotouchsupport.com/vida-ai-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/vida-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "vidpal",
@@ -10594,7 +11589,9 @@
    "review": "https://aibuildermarketplace.com/b2b/vidpal-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/vidpal.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "vista-social",
@@ -10618,7 +11615,9 @@
    "review": "https://aibuildermarketplace.com/b2b/vista-social-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/vista-social.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "volza",
@@ -10640,7 +11639,9 @@
    "review": "https://aibuildermarketplace.com/b2b/volza-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/volza.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "voye",
@@ -10660,7 +11661,9 @@
    "review": "https://zerotouchsupport.com/voye-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/voye.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "vwo",
@@ -10682,7 +11685,9 @@
    "review": "https://aibuildermarketplace.com/b2b/vwo-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/vwo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "vyreel",
@@ -10705,7 +11710,9 @@
    "review": "https://marketingandsalessoftware.com/vyreel-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/vyreel.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "warmup-inbox",
@@ -10725,7 +11732,9 @@
    "review": "https://aibuildermarketplace.com/b2b/warmup-inbox-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/warmup-inbox.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "warn",
@@ -10745,7 +11754,9 @@
    "review": "https://marketingandsalessoftware.com/warn-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/warn.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wati",
@@ -10769,7 +11780,9 @@
    "review": "https://zerotouchsupport.com/wati-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/wati.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "way",
@@ -10792,7 +11805,9 @@
    "review": "https://aibuildermarketplace.com/b2b/way-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/way.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "weave",
@@ -10814,7 +11829,9 @@
    "review": "https://zerotouchsupport.com/weave-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/weave.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "webcatalog",
@@ -10836,7 +11853,9 @@
    "review": "https://aibuildermarketplace.com/b2b/webcatalog-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/webcatalog.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "webflow",
@@ -10860,7 +11879,9 @@
    "review": "https://aibuildermarketplace.com/b2b/webflow-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/webflow.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "webinargeek",
@@ -10883,7 +11904,9 @@
    "review": "https://aibuildermarketplace.com/b2b/webinargeek-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/webinargeek.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wegic",
@@ -10905,7 +11928,9 @@
    "review": "https://aibuildermarketplace.com/b2b/wegic-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/wegic.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "whatconverts",
@@ -10927,7 +11952,9 @@
    "review": "https://aibuildermarketplace.com/b2b/whatconverts-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/whatconverts.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wholesale-gorilla",
@@ -10947,7 +11974,9 @@
    "review": "https://aibuildermarketplace.com/b2b/wholesale-gorilla-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/wholesale-gorilla.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wing-assistant",
@@ -10967,7 +11996,9 @@
    "review": "https://aibuildermarketplace.com/b2b/wing-assistant-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/wing-assistant.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wistia",
@@ -10989,7 +12020,9 @@
    "review": "https://aibuildermarketplace.com/b2b/wistia-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/wistia.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wiz-checkout-upsell",
@@ -11009,7 +12042,9 @@
    "review": "https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/wiz-checkout-upsell.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "woodpecker",
@@ -11032,7 +12067,9 @@
    "review": "https://aibuildermarketplace.com/b2b/woodpecker-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/woodpecker.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "world-businesses-for-sale",
@@ -11052,7 +12089,9 @@
    "review": "https://officesoftwaremarketplace.com/world-businesses-for-sale-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/world-businesses-for-sale.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wp-rocket",
@@ -11072,7 +12111,9 @@
    "review": "https://aibuildermarketplace.com/b2b/wp-rocket-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/wp-rocket.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wrike",
@@ -11094,7 +12135,9 @@
    "review": "https://aibuildermarketplace.com/b2b/wrike-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/wrike.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "xero",
@@ -11117,7 +12160,9 @@
    "review": "https://aibuildermarketplace.com/b2b/xero-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/xero.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "zedonk",
@@ -11139,7 +12184,9 @@
    "review": "https://aibuildermarketplace.com/b2b/zedonk-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/zedonk.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "zeffy",
@@ -11159,7 +12206,9 @@
    "review": "https://aibuildermarketplace.com/b2b/zeffy-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/zeffy.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "zenbusiness",
@@ -11179,7 +12228,9 @@
    "review": "https://aibuildermarketplace.com/b2b/zenbusiness-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/zenbusiness.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "zendesk",
@@ -11204,7 +12255,9 @@
    "review": "https://zerotouchsupport.com/zendesk-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/zendesk.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": "customer_support_helpdesk",
+   "has_feature_evidence": true
   },
   {
    "id": "zendrop",
@@ -11226,7 +12279,9 @@
    "review": "https://aibuildermarketplace.com/b2b/zendrop-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/zendrop.json",
    "has_task_evidence": false,
-   "vendor_mcp": true
+   "vendor_mcp": true,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "zenind",
@@ -11246,7 +12301,9 @@
    "review": "https://officesoftwaremarketplace.com/zenind-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/zenind.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "zenzap",
@@ -11271,7 +12328,9 @@
    "review": "https://zerotouchsupport.com/zenzap-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/zenzap.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "zoominfo",
@@ -11295,7 +12354,9 @@
    "review": "https://marketingandsalessoftware.com/zoominfo-review.html",
    "record": "https://aibuildermarketplace.com/api/v1/products/zoominfo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "zoviz",
@@ -11317,7 +12378,9 @@
    "review": "https://aibuildermarketplace.com/b2b/zoviz-review/",
    "record": "https://aibuildermarketplace.com/api/v1/products/zoviz.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tklive",
@@ -11337,7 +12400,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/tklive.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "demucs-online",
@@ -11357,7 +12422,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/demucs-online.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "omni-flash-geminiomniflash-io",
@@ -11377,7 +12444,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/omni-flash-geminiomniflash-io.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "gfx-forge",
@@ -11397,7 +12466,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/gfx-forge.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "tonesmatch",
@@ -11417,7 +12488,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/tonesmatch.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "forge-gui",
@@ -11437,7 +12510,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/forge-gui.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "capvant",
@@ -11457,7 +12532,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/capvant.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "autymate",
@@ -11477,7 +12554,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/autymate.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "exytex",
@@ -11497,7 +12576,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/exytex.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "menlo-insurance-mcp",
@@ -11517,7 +12598,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/menlo-insurance-mcp.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "ai-text-watermark-remover",
@@ -11537,7 +12620,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/ai-text-watermark-remover.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "billcove",
@@ -11557,7 +12642,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/billcove.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "charasync",
@@ -11577,7 +12664,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/charasync.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "claude-code-reset-tracker",
@@ -11597,7 +12686,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/claude-code-reset-tracker.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "devkinsta",
@@ -11617,7 +12708,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/devkinsta.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "digibouquet-ai",
@@ -11637,7 +12730,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/digibouquet-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "easypanel",
@@ -11657,7 +12752,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/easypanel.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "file-maktab",
@@ -11677,7 +12774,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/file-maktab.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "fiscus-ai",
@@ -11697,7 +12796,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/fiscus-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "flux-klein-ai",
@@ -11717,7 +12818,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/flux-klein-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hellomatik",
@@ -11737,7 +12840,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/hellomatik.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hol-guard",
@@ -11757,7 +12862,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/hol-guard.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "hol-plugins",
@@ -11777,7 +12884,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/hol-plugins.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kling-4",
@@ -11797,7 +12906,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/kling-4.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kling-ai-video",
@@ -11817,7 +12928,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/kling-ai-video.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "kling4",
@@ -11837,7 +12950,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/kling4.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "manga-translator",
@@ -11857,7 +12972,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/manga-translator.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "manga-translator-ai",
@@ -11877,7 +12994,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/manga-translator-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "minimax-h3",
@@ -11897,7 +13016,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/minimax-h3.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "mixdesk",
@@ -11917,7 +13038,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/mixdesk.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "music-video-ai",
@@ -11937,7 +13060,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/music-video-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nanopic-ai",
@@ -11957,7 +13082,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/nanopic-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "neuronto",
@@ -11977,7 +13104,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/neuronto.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "nursevi",
@@ -11997,7 +13126,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/nursevi.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "octa-flow",
@@ -12017,7 +13148,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/octa-flow.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "orkas",
@@ -12037,7 +13170,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/orkas.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "outreachgenie",
@@ -12057,7 +13192,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/outreachgenie.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "pepys",
@@ -12077,7 +13214,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/pepys.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "productshot-ai",
@@ -12097,7 +13236,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/productshot-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "salesmsg",
@@ -12117,7 +13258,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/salesmsg.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "sendhq",
@@ -12137,7 +13280,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/sendhq.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "sevalla",
@@ -12157,7 +13302,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/sevalla.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "shoutyard",
@@ -12177,7 +13324,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/shoutyard.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "socialecho",
@@ -12197,7 +13346,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/socialecho.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "softsync-ai",
@@ -12217,7 +13368,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/softsync-ai.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "solice",
@@ -12237,7 +13390,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/solice.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "supportyourapp",
@@ -12257,7 +13412,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/supportyourapp.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "verimails",
@@ -12277,7 +13434,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/verimails.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "videoupscaler",
@@ -12297,7 +13456,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/videoupscaler.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "vocemo",
@@ -12317,7 +13478,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/vocemo.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "wan-3-0-video",
@@ -12337,7 +13500,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/wan-3-0-video.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   },
   {
    "id": "what-s-trending",
@@ -12357,7 +13522,9 @@
    "review": null,
    "record": "https://aibuildermarketplace.com/api/v1/products/what-s-trending.json",
    "has_task_evidence": false,
-   "vendor_mcp": false
+   "vendor_mcp": false,
+   "task_scope": null,
+   "has_feature_evidence": false
   }
  ]
 }

@@ -196,6 +196,16 @@ a.cta:hover{background:linear-gradient(120deg,#7b82ff,#a77cff)}
 .twee .dos{margin:0;border-color:rgba(61,220,151,.28);background:linear-gradient(180deg,rgba(61,220,151,.05),rgba(61,220,151,.01)),var(--srf);border-radius:18px}
 .twee .dos h2{color:#9ff3cf}
 .shots{margin:12px 0}
+/* open vragen en vendorantwoorden (agent-API fase 3) */
+.vq{border:1px solid rgba(255,198,92,.28);border-radius:18px;padding:20px 22px;margin:18px 0 0;background:var(--srf)}
+.vq h2{margin:0 0 8px;font-size:1.15rem}.vq-l{margin:0;padding-left:20px;color:#cdd3e4}.vq-l li{margin:5px 0}
+.va{border-left:3px solid #c9cdff;padding:4px 0 4px 12px;margin:10px 0}.va-q{font-weight:700;margin:0 0 4px}.va p{margin:0 0 4px}
+.va-m{font-size:.8rem;color:var(--mu2)}
+.va-form{margin-top:16px}.va-form summary{cursor:pointer;font-weight:700}
+.va-f{display:grid;gap:10px;margin-top:8px}.va-f label{display:grid;gap:4px;font-size:.8rem;color:var(--mu2);font-weight:700}
+.va-f input,.va-f select,.va-f textarea{background:#0a0f1d;border:1px solid var(--bd2);border-radius:10px;color:var(--tx);padding:9px 11px;font:inherit;font-size:.92rem;width:100%}
+.va-f .btn{justify-self:start}.va-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.va-uit{font-size:.88rem;color:var(--mu);margin:0}
+@media(max-width:600px){.va-2{grid-template-columns:1fr}}
 /* kosten bij groei (agent-API fase 2) */
 .kb{border:1px solid rgba(61,220,151,.28);border-radius:18px;padding:20px 22px;margin:0 0 18px;
  background:linear-gradient(180deg,rgba(61,220,151,.05),rgba(61,220,151,.01)),var(--srf)}
@@ -253,5 +263,13 @@ var u=location.origin+location.pathname,t=document.title;
 if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
 (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){b.textContent='Link copied';},
 function(){window.prompt('Copy this link:',u);});});
+</script><script>
+document.addEventListener('submit',function(ev){var f=ev.target.closest('.va-f');if(!f)return;ev.preventDefault();
+var d={product_id:f.getAttribute('data-product')};new FormData(f).forEach(function(v,k){d[k]=v;});
+var uit=f.querySelector('.va-uit');uit.textContent='Sending…';
+fetch('https://api.aibuildermarketplace.com/answer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+.then(function(r){return r.json().then(function(j){return [r.ok,j];});}).then(function(x){
+ uit.textContent=x[0]?(x[1].msg||'Received.'):('Not sent: '+(x[1].error||'please try again'));if(x[0])f.reset();})
+.catch(function(){uit.textContent='Not sent: the connection failed. Please try again.';});});
 </script><script src="/assets/conversion.js?v=2" defer></script>
 </body></html>

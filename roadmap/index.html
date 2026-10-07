@@ -181,6 +181,7 @@ function render(){
    '<p style="color:var(--muted);font-size:.8rem;margin:8px 0 0">'+(hrs===null?'You chose 15+ hours, so we do not guess: enter your own number.':'The hours field starts at the middle of the range you chose ('+HOURS[ans.hours][0].toLowerCase()+'). Change it to your real number.')+' Monthly = hours a week &times; rate &times; 4.33 weeks.</p>'+
    '<p style="color:var(--muted);font-size:.82rem;margin:12px 0 0">That is the honest comparison for any subscription below: does the tool remove a real chunk of that cost? We never publish invented savings percentages &mdash; check each tool&rsquo;s live pricing and do this math yourself.</p></div>'+
 
+   (ans.pain==='support'?'<p style="color:var(--text2);font-size:.92rem">For a help desk sized to your exact team, channels and budget, use the <a href="/build/support-plan/">support planner</a>.</p>':'')+
    '<div class="phase"><div class="phase-h">Days 1-30 &mdash; one tool, one win<span>Fix the biggest leak first. One tool, fully adopted, beats five half-used.</span></div><div class="phase-b">'+
    toolCard(primary)+
    '<ol class="steps"><li>Take the free trial and set it up for one real workflow (not a test).</li><li>Write down your baseline first: hours spent, errors, missed follow-ups this week.</li><li>Check the trial length on the pricing page before you start: some trials run 7 or 14 days, not 30.</li><li>Decide before the trial ends and before the first charge: keep (subscribe) or stop (cancel the trial). Both are wins.</li></ol></div></div>'+

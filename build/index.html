@@ -168,6 +168,7 @@ function finish(){
   out.innerHTML='<div class="res" style="--ac:'+b.accent+'"><div class="res-head"><div><div class="res-kicker">Suggested blueprint</div><div class="res-title">'+esc(b.title)+'</div></div><a class="res-cta" href="/build/'+b.slug+'/">Open full blueprint &rarr;</a></div>'+
     '<p class="res-sub">A suggested blueprint for '+bizNote+', not a fit we have checked against your setup. '+
     '<strong>How these tools charge:</strong> '+esc(b.cost)+(/[.!?]$/.test(b.cost)?'':'.')+' This is a pricing structure, not a cost estimate: open a tool\'s dossier to price it for your team.</p>'+
+    (b.slug==='customer-support-system'?'<p class="res-sub"><a href="/build/support-plan/"><strong>Plan it for your exact team, channels and budget &rarr;</strong></a> Picks one help desk that fits, with the cost per line.</p>':'')+
     (onbekend.length?'<p class="res-sub">Not matched to this blueprint: <strong>'+esc(onbekend.join(', '))+'</strong>. We have not checked whether these work with the tools below; confirm the integrations before you rely on them.</p>':'')+
     '<div class="t-list">'+rows+'</div>'+
     '<p class="res-fine">Honest note: these are the tools I\'d actually use for this, with affiliate links (no extra cost to you). Start with what you need — you don\'t have to buy all of it on day one.</p></div>';

@@ -9,7 +9,7 @@
  "summary": "Helpdesk built for ecommerce: tickets, automations and an AI agent, priced by volume rather than by seat -- though the entry tier caps you at three users.",
  "best_for": "ecommerce support teams with seasonal or spiky volume, where per-agent pricing punishes you for having enough people on a busy week",
  "skip_if": "your volume is steady and low — 50 tickets a month is the entry allowance, and below that a shared inbox costs nothing; also skip the AI agent until you know your automated-interaction count, since that is the meter that runs away",
- "honest_knock": "Never priced per agent is a real advantage, but it starts one tier up: the comparison table caps Starter at 3 user seats, and only Basic and above open the inbox to 500. On Basic upwards your whole team can be in there without the bill moving, which is the main reason to choose this over a per-seat helpdesk.\n\nThe cost sits on two meters instead, and both bite. Tickets beyond your allowance are $0.40 each on Starter and Basic, $0.36 on Pro and Advanced, so a bad week costs money rather than attention. And the AI agent -- the thing the homepage leads with -- is a separate $30 a month on the entry plan, which is three times the helpdesk it sits on. So the honest entry price for the product as advertised is $40, not $10.\n\nCount a normal month's tickets and a busy month's, and price both. Then check the AI meter separately: the plan cards charge $1.50 per automated interaction past the included allowance while the comparison table on the same page says $1.00 to $0.85 depending on tier. When a vendor publishes two rates for the same meter, get the one that will be on your invoice in writing before you switch the agent on.",
+ "honest_knock": "Never priced per agent is a real advantage, but it starts one tier up: the comparison table caps Starter at 3 user seats, and only Basic and above open the inbox to 500. On Basic upwards your whole team can be in there without the bill moving, which is the main reason to choose this over a per-seat helpdesk.\n\nThe cost sits on two meters instead, and both bite. Tickets beyond your allowance are $0.40 each on Starter and Basic, $0.36 on Pro and Advanced, so a bad week costs money rather than attention. And the AI agent -- the thing the homepage leads with -- is a separate $30 a month on the entry plan, which is three times the helpdesk it sits on. So the honest entry price for the product as advertised is $40, not $10.\n\nCount a normal month's tickets and a busy month's, and price both. Then check the AI meter separately: past the included allowance the comparison table charges $1.00 per automated interaction on Starter, $0.90 on Basic and Pro and $0.85 on Advanced (read 7 October 2026). Price your expected volume at that rate before you switch the agent on.",
  "pricing": {
   "status": "public",
   "entry_price": "$90",
@@ -17,8 +17,8 @@
   "from_price_usd_month": 90.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 8 September 2026 on their own pricing page) Not priced per agent -- their own line -- but the seats are capped: the comparison table gives Starter 3 user seats and Basic, Pro and Advanced 500 each. Two meters stack. Starter is $40/month all in, monthly billing only: a $10/month helpdesk with 50 tickets included and $0.40 per ticket beyond, plus the AI Agent at $30/month with 30 automated interactions. Basic is $90/month month-to-month or $77/month billed annually ($924 a year), including 300 tickets and 30 automated interactions with the same $0.40 ticket overage; the $50 helpdesk and $27 AI Agent printed on that card sum to the annual rate, not the monthly one. Pro is $550/month or $471/month billed annually ($5,652 a year) -- $300 helpdesk plus $171 AI Agent -- including 2,000 tickets and 190 automated interactions, with ticket overage falling to $0.36. Advanced is $1,430/month or $1,227/month billed annually ($14,724 a year) -- $750 plus $477 -- including 5,000 tickets and 530 automated interactions, also at $0.36. Above 5,000 conversations a month it is quote-only, and that custom tier is the only one with SSO via SAML, audit logs and an API above the 2 requests a second every listed plan gets. The page contradicts itself on the AI meter: every plan card says $1.50 per automated interaction past the limit, while the comparison table on the same page prices it at $1.00 on Starter, $0.90 on Basic and Pro and $0.85 on Advanced.",
-  "verified_at": "2026-09-08",
+  "notes": "(re-verified 7 October 2026 on their own pricing page; figures unchanged since 8 September) Not priced per agent -- their own line -- but the seats are capped: the comparison table gives Starter 3 user seats and Basic, Pro and Advanced 500 each. Two meters stack. Starter is $40/month all in, monthly billing only: a $10/month helpdesk with 50 tickets included and $0.40 per ticket beyond, plus the AI Agent at $30/month with 30 automated interactions. Basic is $90/month month-to-month or $77/month billed annually ($924 a year), including 300 tickets and 30 automated interactions with the same $0.40 ticket overage; the $50 helpdesk and $27 AI Agent printed on that card sum to the annual rate, not the monthly one. Pro is $550/month or $471/month billed annually ($5,652 a year) -- $300 helpdesk plus $171 AI Agent -- including 2,000 tickets and 190 automated interactions, with ticket overage falling to $0.36. Advanced is $1,430/month or $1,227/month billed annually ($14,724 a year) -- $750 plus $477 -- including 5,000 tickets and 530 automated interactions, also at $0.36. Above 5,000 conversations a month it is quote-only, and that custom tier is the only one with SSO via SAML, audit logs and an API above the 2 requests a second every listed plan gets. Past the included interactions the comparison table prices the AI meter at $1.00 on Starter, $0.90 on Basic and Pro and $0.85 on Advanced. On 8 September the plan cards said $1.50; on 7 October that card rate was no longer on the page.",
+  "verified_at": "2026-10-07",
   "source_url": null
  },
  "free_plan": false,
@@ -28,7 +28,7 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "Basic is $90/month month-to-month or $77/month billed annually ($924 a year), including 300 tickets and 30 automated interactions with the same $0.40 ticket overage; the $50 helpdesk and $27 AI Agent printed on that card sum to the annual rate, not the monthly one.",
-   "verified_at": "2026-09-08",
+   "verified_at": "2026-10-07",
    "source_url": null
   }
  ],
@@ -57,15 +57,470 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 3,
+     "monthly": 40,
+     "annual_status": "not_offered",
+     "evidence": "Starter is $40/month all in, monthly billing only"
+    },
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "flat",
+     "max_units": 500,
+     "monthly": 90,
+     "annual_month": 77,
+     "annual_year": 924,
+     "evidence": "Basic is $90/month month-to-month or $77/month billed annually ($924 a year)"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 500,
+     "monthly": 550,
+     "annual_month": 471,
+     "annual_year": 5652,
+     "evidence": "Pro is $550/month or $471/month billed annually ($5,652 a year)"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "flat",
+     "max_units": 500,
+     "monthly": 1430,
+     "annual_month": 1227,
+     "annual_year": 14724,
+     "evidence": "Advanced is $1,430/month or $1,227/month billed annually ($14,724 a year)"
+    },
+    {
+     "id": "custom",
+     "name": "Custom",
+     "model": "quote",
+     "evidence": "Above 5,000 conversations a month it is quote-only"
+    }
+   ],
+   "not_computable": [
+    "The bill is driven by tickets, not users: each plan includes a ticket allowance (50, 300, 2,000, 5,000) and charges $0.40 per ticket beyond it on Starter and Basic and $0.36 on Pro and Advanced. Price the plan against your own monthly ticket count.",
+    "AI Agent interactions over the plan limit: the page contradicts itself, $1.50 on the plan cards and $0.85 to $1.00 in the comparison table."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "gorgias",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 77.0,
+      "billed": {
+       "amount": 924.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 77.0,
+       "pro": 471.0,
+       "advanced": 1227.0,
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The bill is driven by tickets, not users: each plan includes a ticket allowance (50, 300, 2,000, 5,000) and charges $0.40 per ticket beyond it on Starter and Basic and $0.36 on Pro and Advanced. Price the plan against your own monthly ticket count.",
+     "AI Agent interactions over the plan limit: the page contradicts itself, $1.50 on the plan cards and $0.85 to $1.00 in the comparison table."
+    ]
+   },
+   "monthly": {
+    "product_id": "gorgias",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 40.0,
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 40.0,
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 40.0,
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "basic": 90.0,
+       "pro": 550.0,
+       "advanced": 1430.0,
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "starter",
+      "to_plan": "basic",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Basic"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The bill is driven by tickets, not users: each plan includes a ticket allowance (50, 300, 2,000, 5,000) and charges $0.40 per ticket beyond it on Starter and Basic and $0.36 on Pro and Advanced. Price the plan against your own monthly ticket count.",
+     "AI Agent interactions over the plan limit: the page contradicts itself, $1.50 on the plan cards and $0.85 to $1.00 in the comparison table."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -89,9 +544,15 @@
    "status": "open"
   },
   {
-   "question_id": "gorgias:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "gorgias:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The bill is driven by tickets, not users: each plan includes a ticket allowance (50, 300, 2,000, 5,000) and charges $0.40 per ticket beyond it on Starter and Basic and $0.36 on Pro and Advanced. Price the plan against your own monthly ticket count. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "gorgias:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: AI Agent interactions over the plan limit: the page contradicts itself, $1.50 on the plan cards and $0.85 to $1.00 in the comparison table. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

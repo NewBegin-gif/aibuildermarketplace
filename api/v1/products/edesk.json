@@ -18,7 +18,7 @@
   "plans": null,
   "plans_source": null,
   "notes": "(re-verified 2026-09-29) No free plan: 'Start for free' opens a 14-day full-feature trial with no credit card. Essential $39 per agent/mo, Growth $89, Professional $119 (the plan eDesk marks Most Popular), Enterprise custom — all billed annually. Billed monthly the same plans cost $49, $115 and $149; the annual rate is the '20% off' eDesk advertises. The AI Agent is included on every plan, but its automated resolutions bill separately at $0.99 per outcome: you pay when it actually resolves a query, not per attempt. eDesk claims the agent can automate up to 65% of support across channels, so model the outcome fee against your ticket volume — at 1,000 resolved tickets a month that is $990 on top of the seats.",
-  "verified_at": "2026-09-29",
+  "verified_at": "2026-10-07",
   "source_url": null
  },
  "free_plan": false,
@@ -28,21 +28,21 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "Essential $39 per agent/mo, Growth $89, Professional $119 (the plan eDesk marks Most Popular), Enterprise custom — all billed annually.",
-   "verified_at": "2026-09-29",
+   "verified_at": "2026-10-07",
    "source_url": null
   },
   {
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "meter: unit · agent seats and resolved AI outcomes",
-   "verified_at": "2026-09-29",
+   "verified_at": "2026-10-07",
    "source_url": null
   },
   {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "eDesk claims the agent can automate up to 65% of support across channels, so model the outcome fee against your ticket volume — at 1,000 resolved tickets a month that is $990 on top of the seats.",
-   "verified_at": "2026-09-29",
+   "verified_at": "2026-10-07",
    "source_url": null
   }
  ],
@@ -71,15 +71,425 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "agent",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "essential",
+     "name": "Essential",
+     "model": "per_unit",
+     "annual_month": 39,
+     "monthly": 49,
+     "evidence": "Essential $39 per agent/mo, Growth $89, Professional $119 (the plan eDesk marks Most Popular), Enterprise custom — all billed annually. Billed monthly the same plans cost $49, $115 and $149"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "annual_month": 89,
+     "monthly": 115,
+     "evidence": "Essential $39 per agent/mo, Growth $89, Professional $119 (the plan eDesk marks Most Popular), Enterprise custom — all billed annually. Billed monthly the same plans cost $49, $115 and $149"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "annual_month": 119,
+     "monthly": 149,
+     "evidence": "Essential $39 per agent/mo, Growth $89, Professional $119 (the plan eDesk marks Most Popular), Enterprise custom — all billed annually. Billed monthly the same plans cost $49, $115 and $149"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise custom"
+    }
+   ],
+   "usage": [
+    {
+     "id": "ai_resolutions",
+     "label": "AI Agent resolutions",
+     "unit": "resolution",
+     "price": 0.99,
+     "evidence": "its automated resolutions bill separately at $0.99 per outcome"
+    }
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "edesk",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 468.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 39.0,
+       "growth": 89.0,
+       "professional": 119.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 78.0,
+      "billed": {
+       "amount": 936.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 78.0,
+       "growth": 178.0,
+       "professional": 238.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 117.0,
+      "billed": {
+       "amount": 1404.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 117.0,
+       "growth": 267.0,
+       "professional": 357.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 195.0,
+      "billed": {
+       "amount": 2340.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 195.0,
+       "growth": 445.0,
+       "professional": 595.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 390.0,
+      "billed": {
+       "amount": 4680.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 390.0,
+       "growth": 890.0,
+       "professional": 1190.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 585.0,
+      "billed": {
+       "amount": 7020.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 585.0,
+       "growth": 1335.0,
+       "professional": 1785.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 780.0,
+      "billed": {
+       "amount": 9360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 780.0,
+       "growth": 1780.0,
+       "professional": 2380.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 975.0,
+      "billed": {
+       "amount": 11700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 975.0,
+       "growth": 2225.0,
+       "professional": 2975.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 1950.0,
+      "billed": {
+       "amount": 23400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 1950.0,
+       "growth": 4450.0,
+       "professional": 5950.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 3900.0,
+      "billed": {
+       "amount": 46800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 3900.0,
+       "growth": 8900.0,
+       "professional": 11900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "edesk",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 49.0,
+       "growth": 115.0,
+       "professional": 149.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 98.0,
+      "billed": {
+       "amount": 98.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 98.0,
+       "growth": 230.0,
+       "professional": 298.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 147.0,
+      "billed": {
+       "amount": 147.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 147.0,
+       "growth": 345.0,
+       "professional": 447.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 245.0,
+      "billed": {
+       "amount": 245.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 245.0,
+       "growth": 575.0,
+       "professional": 745.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 490.0,
+      "billed": {
+       "amount": 490.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 490.0,
+       "growth": 1150.0,
+       "professional": 1490.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 735.0,
+      "billed": {
+       "amount": 735.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 735.0,
+       "growth": 1725.0,
+       "professional": 2235.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 980.0,
+      "billed": {
+       "amount": 980.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 980.0,
+       "growth": 2300.0,
+       "professional": 2980.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 1225.0,
+      "billed": {
+       "amount": 1225.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 1225.0,
+       "growth": 2875.0,
+       "professional": 3725.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 2450.0,
+      "billed": {
+       "amount": 2450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 2450.0,
+       "growth": 5750.0,
+       "professional": 7450.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 4900.0,
+      "billed": {
+       "amount": 4900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 4900.0,
+       "growth": 11500.0,
+       "professional": 14900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -100,12 +510,6 @@
    "question_id": "edesk:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "edesk:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],
@@ -131,5 +535,64 @@
    "customer service",
    "support inbox"
   ]
+ },
+ "feature_evidence": {
+  "features": {
+   "gmail_integration": {
+    "label": "Gmail integration",
+    "phrases": [
+     "gmail",
+     "gmail integration",
+     "works with gmail",
+     "connect gmail"
+    ]
+   },
+   "outlook_integration": {
+    "label": "Outlook integration",
+    "phrases": [
+     "outlook",
+     "outlook integration",
+     "works with outlook",
+     "office 365 email",
+     "microsoft 365 email"
+    ]
+   },
+   "shopify_integration": {
+    "label": "Shopify integration",
+    "phrases": [
+     "shopify",
+     "shopify integration",
+     "works with shopify",
+     "shopify orders"
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "feature": "shopify_integration",
+    "plans": null,
+    "quote": "Streamline Shopify customer support with smart, centralized support in eDesk.",
+    "context": "eDesk app store; no plan is named.",
+    "source": "https://www.edesk.com/appstore/",
+    "read_on": "2026-10-07"
+   },
+   {
+    "feature": "outlook_integration",
+    "plans": null,
+    "quote": "Automatically forward emails from Outlook into eDesk.",
+    "context": "eDesk app store; no plan is named.",
+    "source": "https://www.edesk.com/appstore/",
+    "read_on": "2026-10-07"
+   },
+   {
+    "feature": "gmail_integration",
+    "plans": null,
+    "quote": "Gmail",
+    "context": "Listed as an app under 'Support Email & Comms' in the eDesk app store, but its card repeats the Outlook text, so the page names the integration without describing it.",
+    "source": "https://www.edesk.com/appstore/",
+    "read_on": "2026-10-07"
+   }
+  ],
+  "note": "From the vendor's own pages, with plan, source and reading date. Documented by the vendor, not tested by us; our own tests are in task_evidence."
  }
 }

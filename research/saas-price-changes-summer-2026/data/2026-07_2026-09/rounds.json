@@ -1,0 +1,34 @@
+{
+ "definition_comparable_page_pair": "A tool's pricing page that carried readable amounts in the first month's capture and was read again in the second month's capture.",
+ "change_types": {
+  "increase": "an amount went up",
+  "decrease": "an amount went down",
+  "restructure": "the plan ladder was rebuilt (tiers added, removed or renamed with new amounts)",
+  "withdrawn": "a published price was taken off the page"
+ },
+ "rounds": [
+  {
+   "from": "2026-07",
+   "to": "2026-08",
+   "reviewed_on": "2026-08-22",
+   "comparable_page_pairs": 150,
+   "in_both_captures": 237,
+   "readable_in_both": 145,
+   "candidates_flagged_by_diff": 24,
+   "changes_published": 9,
+   "excluded_and_why": "Currency selectors (Rank Math $118 → €118, FullEnrich €720 → $720 — same digits, different setting on the page). Captures that failed (Freshservice returned four lines in July and nine in August, one of them raw Next.js JSON). Annual rates shown for the first time (Beehiiv, VidPal). A feature change with no price change (Leadpages went from 500 pages to unlimited; its '13-year track record' also became '14-year'). Promotional churn (Hostinger). Amounts that were never prices — Emergent's pricing page was announcing a $130M Series C. Too small to bother reporting (Notify Me, $9.99 → $9.90). And six where two captures weren't enough to tell what had happened (Flippa, Kartra, Aspire, Pangram, Trainerize, ZenZap). One more I held back at first: UENI clearly restructured, but my own notes on it were a month out of date, and publishing would have contradicted my own writeup. I re-read the page in a browser, corrected the notes from one subscription to four tiers, and it's in the list above."
+  },
+  {
+   "from": "2026-08",
+   "to": "2026-09",
+   "reviewed_on": "2026-09-02",
+   "comparable_page_pairs": 280,
+   "in_both_captures": 421,
+   "readable_in_both": 280,
+   "candidates_flagged_by_diff": 30,
+   "changes_published": 10,
+   "excluded_and_why": "Sixty-two pages where amounts were only added or removed, not changed (new annual rates shown, a tier's card no longer captured). BuddyPunch: the capture shows two rate rows side by side and, without a browser, we cannot tell which row is annual and which is monthly, so a possible second increase stays unreported until we read the page live. Glide: the August capture caught only the add-on lines, so there is nothing to compare. Hostinger: promotional churn, all three renewal rates unchanged. Amounts identical with different formatting (Leadfeeder, Housecall Pro, Calilio, KrispCall, Compliancely, Heard, UENI). Amounts that were never prices (Printify's page shows an $813 order example; Vida AI's a $1,500 pilot). Too small to report (Notify Me)."
+  }
+ ],
+ "selection_lists": "Round 2026-07->2026-08: the pages confirmed unchanged are listed one by one in /data/aibm-pricewatch.csv. Round 2026-08->2026-09: only the counts above were kept; the page-by-page list of unchanged pages was not exported for this round."
+}

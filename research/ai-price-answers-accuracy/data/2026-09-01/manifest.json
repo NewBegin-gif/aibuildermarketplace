@@ -1,0 +1,97 @@
+{
+ "study_id": "aibm-r05-ai-price-answer-accuracy",
+ "slug": "ai-price-answers-accuracy",
+ "title": "Report 05: do AI answers get software prices right?",
+ "type": "market_observation",
+ "edition": "2026-09-01",
+ "first_published": "2026-10-07",
+ "edition_published": "2026-10-07",
+ "population": "40 answers to '[tool] pricing' for 20 business tools, one per tool on each of ChatGPT, Perplexity, US locale, 2026-09-01.",
+ "population_short": "30 assessable answers",
+ "selection": "The same 20 tools every month (the Report 02 set). An answer is assessable when our Price Watch captured the vendor's pricing page with readable amounts on the same date.",
+ "measurement_period": {
+  "start": "2026-09-01",
+  "end": "2026-09-01"
+ },
+ "headline": {
+  "text": "assessable AI answers stated at least one price we could not find on the vendor's pricing page that morning",
+  "numerator": 13,
+  "denominator": 30,
+  "metric": "answers_with_amount_not_on_page"
+ },
+ "metrics": [
+  {
+   "id": "all_on_page",
+   "label": "every amount appears on the vendor's pricing page captured that morning",
+   "numerator": 15,
+   "denominator": 40
+  },
+  {
+   "id": "some_not_on_page",
+   "label": "at least one amount does not appear on that page",
+   "numerator": 13,
+   "denominator": 40
+  },
+  {
+   "id": "currency_differs",
+   "label": "amounts match only in another currency (our capture showed a different price list)",
+   "numerator": 2,
+   "denominator": 40
+  },
+  {
+   "id": "no_amounts",
+   "label": "the answer states no amount other than $0 / free",
+   "numerator": 0,
+   "denominator": 40
+  },
+  {
+   "id": "not_assessable",
+   "label": "no usable capture of the vendor's pricing page from the same day",
+   "numerator": 10,
+   "denominator": 40
+  }
+ ],
+ "limitations": [
+  "'Not on the page' is not the same as wrong: the amount may come from another page, a region or a conversion.",
+  "Our capture reads the pricing page as it first loads; prices behind tabs or toggles (annual/monthly, site/workspace plans) can be missing from it.",
+  "$0 ('free') claims are not scored: the capture records amounts, and free plans are often shown as the word Free.",
+  "Only amounts with a currency sign are compared; plan names, billing terms and included usage are not scored yet.",
+  "Our capture runs from a server in the EU; some vendors then show a euro price list ('currency differs').",
+  "One answer per tool and engine per month."
+ ],
+ "method_url": "#method",
+ "evidence_url": "#answers",
+ "verification": {
+  "last_verified": "2026-09-01"
+ },
+ "next_full_recheck": "monthly: AI run on the 1st, compared with the same day's capture",
+ "schema": "aibm-research-manifest/1",
+ "files": [
+  {
+   "name": "answers-checked.json",
+   "url": "/research/ai-price-answers-accuracy/data/2026-09-01/answers-checked.json",
+   "bytes": 75739,
+   "sha256": "243d0c7b2a11be1191a9b704805583bf25685c910a576294fbb16df3cd58d283"
+  },
+  {
+   "name": "claims.csv",
+   "url": "/research/ai-price-answers-accuracy/data/2026-09-01/claims.csv",
+   "bytes": 15315,
+   "sha256": "8808b096f4a990dab4df1dae7bd73ac20be39d01e7ce442aee6e317f254e2c39"
+  }
+ ],
+ "author": {
+  "name": "Daniel Haket",
+  "url": "https://aibuildermarketplace.com/about/",
+  "email": "daniel@aibuildermarketplace.com"
+ },
+ "reviewer": null,
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "scope": "Our own data, analysis, tables and charts. Quoted vendor text and screenshots of vendor pages remain the vendor's; we reproduce them as evidence."
+ },
+ "contact": "daniel@aibuildermarketplace.com",
+ "corrections": [],
+ "fingerprint": "0cd1c2a89e31fa46"
+}

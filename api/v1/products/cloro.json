@@ -1,0 +1,67 @@
+{
+ "schema_version": "1.0",
+ "id": "cloro",
+ "name": "Cloro",
+ "research_status": "researched",
+ "vendor_domain": "cloro.dev",
+ "category": "Marketing",
+ "task": "SEO, content & landing pages",
+ "summary": "API that reads AI search engines — ChatGPT, Perplexity, Copilot, Gemini, Grok, AI Overview and Google Search — and returns the sources and citations behind every query as structured JSON.",
+ "best_for": "SEO and marketing teams who need AI-search visibility as structured data — who gets cited for which query on ChatGPT, Perplexity, Copilot, Gemini and Google's AI Overview — rather than as a dashboard someone else designed",
+ "skip_if": "you want a finished rank-tracking dashboard rather than an API; this returns JSON with markdown, sources and citations, and you build the reporting yourself",
+ "honest_knock": "The free tier is a sampler, not a trial of the real thing: 500 credits is about 100 async ChatGPT answers at the 5-credit rate we were actually charged, and their table lists 7 for a full response. Fewer, if you call it synchronously -- and one concurrent job means you queue. Anyone running a daily visibility check across a hundred keywords burns through it in about two days. Read the credit table before the price table -- the same $100 buys 250,000 credits, which is 35,700 full ChatGPT calls or 62,500 Perplexity ones, so your engine mix decides your bill more than your plan does. And nothing carries: their FAQ, read 17 September 2026, states that unused credits expire at the end of every cycle, so a quiet month is money gone rather than headroom for a busy one.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$30",
+  "entry_price_terms": "Lite · per month for 37,500 credits",
+  "from_price_usd_month": 30.0,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(prices re-read 2026-09-17 on cloro.dev/pricing) Credit-metered, and the credit table matters more than the plan price. Free is $0 for 500 credits a month, one concurrent job and one seat. Paid runs Lite $30 (37,500 credits, $0.80 per 1k, 10 concurrent jobs), Hobby $100 (250,000, $0.40, 20 jobs) and Starter $250 (650,000, $0.39, 50 jobs). Above that come Growth $500 (1,350,000, $0.37, 75 jobs) and Business $1,000 (2,800,000, $0.36, 100 jobs). Four self-serve Enterprise steps follow: $2,000 for 5,871,025 credits at $0.34, $3,000 for 9,306,606 at $0.32, $4,000 for 12,756,261 at $0.31 and $5,000 for 16,391,783 at $0.31, where concurrency reaches 255. Seats are unlimited from Lite up. What a request costs varies by engine. ChatGPT full response is 7 credits, ChatGPT web search 5, Copilot 5, and AI Overview including the SERP 5. Perplexity, Grok, AI Mode and Gemini are 4, and Google Search and Google News 3 plus 2 per extra page. A synchronous call adds 2 credits on top of all of those. Perplexity stood at 3 credits when we read the same table on 17 August 2026. Grok is marked temporarily unavailable, with the page warning that requests to it fail. Credits do not roll over: unused credits expire at the end of the billing cycle, and at zero the API returns 403 until you upgrade or the cycle resets.",
+  "verified_at": "2026-09-17",
+  "source_url": null
+ },
+ "free_plan": true,
+ "free_plan_evidence": "Free is $0 for 500 credits a month, one concurrent job and one seat.",
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "(prices re-read 2026-09-17 on cloro.dev/pricing) Credit-metered, and the credit table matters more than the plan price.",
+   "verified_at": "2026-09-17",
+   "source_url": null
+  }
+ ],
+ "compare_with": null,
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/cloro.json",
+  "review": "https://marketingandsalessoftware.com/cloro-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/cloro/",
+  "vendor_site": "https://cloro.dev"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://cloro.dev?fpr=d3dq9l",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

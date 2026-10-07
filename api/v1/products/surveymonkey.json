@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0",
+ "id": "surveymonkey",
+ "name": "SurveyMonkey",
+ "research_status": "researched",
+ "vendor_domain": "surveymonkey.com",
+ "category": "Operations & Workflow",
+ "task": null,
+ "summary": "Survey and feedback platform: build surveys, collect responses at scale and analyze results for market research, CX and employee feedback. A native Salesforce integration pushes responses straight into Salesforce, triggers workflows off the answers themselves (churn-risk follow-up or an NPS detractor landing on a rep's desk, for instance) and ties feedback back to accounts and pipeline, so sales and CS read it inside the tool they already work in rather than in a separate reporting dashboard.",
+ "best_for": "teams that need research-grade survey logic (skip logic, randomisation, quotas) with compliance (HIPAA, GDPR, SOC 2) and 200+ integrations",
+ "skip_if": "you just need a simple form (Google Forms is free) or you're cost-sensitive with high response volumes — the overage fees add up",
+ "honest_knock": "The free tier is a teaser. Response caps on the self-serve plans trigger $0.15-per-response overages (US rate; Enterprise contracts set their own limits) that become a hidden cost on big studies. Branding and customisation are limited, and a lot of the good analytics and logic sit behind higher tiers.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$30",
+  "entry_price_terms": "per user a month, billed annually",
+  "from_price_usd_month": 30.0,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-10-01 in surveymonkey.com/pricing.md, whose header now dates the content 2026-09-22, and on surveymonkey.com/pricing/ as served to a euro storefront) Team plans are billed annually and need three or more users; pricing.md no longer lists any monthly Team variant. Every Team seat costs the same, the first one included: in the US table Team Advantage Annual is $360 a user a year and Team Premier Annual $1,104, the $30 and $92 a month the SurveyMonkey partner team quoted by email on 24 September 2026, so three seats come to $1,080 or $3,312 a year. Euro storefronts read €360 and €900 a user a year, shown on the page as €30 and €75 a month. The euro pricing page states the included responses: 50,000 a year on Team Advantage and 100,000 on Team Premier, counted across all surveys and users; Enterprise (five or more users, custom quote) has a custom limit. Overage above the limit is priced per storefront: $0.15 a response in dollar countries, €0.10 in euro countries, £0.15 in sterling; SurveyMonkey Audience responses are sold separately. Individual plans in the US table: Standard Monthly $149 a month, Standard Annual $300 a year (US, GB and AU only, not offered to churned Basic users), Advantage Annual $468 and Premier Annual $1,668 a year. The partner team quoted Standard Monthly at $99 a month two days after this edition of pricing.md, so confirm that one at checkout. The free Basic plan allows 10 questions per survey, and pricing.md now shows its response limit as 10 outside Canada, where Basic users keep 25.",
+  "verified_at": "2026-10-01",
+  "source_url": null
+ },
+ "free_plan": true,
+ "free_plan_evidence": "The free tier is a teaser.",
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "Overage above the limit is priced per storefront: $0.15 a response in dollar countries, €0.10 in euro countries, £0.15 in sterling; SurveyMonkey Audience responses are sold separately.",
+   "verified_at": "2026-10-01",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "Google Forms or Typeform",
+  "why": "the free-basic and the design-led form tools"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/surveymonkey.json",
+  "review": "https://aibuildermarketplace.com/b2b/surveymonkey-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/surveymonkey/",
+  "vendor_site": "https://surveymonkey.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://get.surveymonkey.com/j2075v4d79vk",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "schema_version": "1.0",
+ "id": "shippo",
+ "name": "Shippo",
+ "research_status": "researched",
+ "vendor_domain": "goshippo.com",
+ "category": "Operations & Workflow",
+ "task": "E-commerce & inventory ops",
+ "summary": "Multi-carrier shipping software for e-commerce. Compare rates, print discounted labels and automate tracking across carriers — shipping that scales with your store.",
+ "best_for": "e-commerce sellers shipping across multiple carriers who want rate comparison, label printing and tracking in one place with genuine rate discounts",
+ "skip_if": "you ship a handful of packages monthly through one carrier (their native tools are fine), or you're big enough for direct carrier contracts to beat aggregated rates",
+ "honest_knock": "The pricing is honest but layered. The free tier stops at 30 labels a month, and its 5¢ per label on your own carrier accounts quietly adds up. Pro looks like a flat $17 a month until you read the comparison table: it covers up to 10,000 shipments and then bills $0.08 for every label beyond that, so a good sales month adds a variable line to a subscription that reads as fixed. Address validation outside the US is metered too, at 9¢, 8¢ or 6¢ depending on plan. The real money is elsewhere anyway — in the carrier rate discounts, which vary by lane and weight. Run your five most common shipments through it against your current rates; that comparison decides, not the subscription price.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$19",
+  "entry_price_terms": "per month for 1-200 labels, or $205/yr",
+  "from_price_usd_month": 19.0,
+  "plans": null,
+  "plans_source": null,
+  "notes": "Read on their own pricing page, re-verified 25 September 2026. Starter is free: up to 30 labels a month, discounted USPS, UPS, FedEx and DHL Express rates, 1 user login, and 5¢ per label if you connect your own carrier account. Pro is banded by monthly label volume, priced monthly or annually: 1-200 labels $19/mo or $205/yr; 201-500 $29 or $313; 501-1,000 $54 or $583; 1,001-2,500 $79 or $853; 2,501-5,000 $139 or $1,501; 5,001-10,000 $199 or $2,149. Annual billing saves about 10% at every band. Labels beyond 10,000 a month cost $0.08 each. Pro makes your own carrier accounts free and adds branded tracking, chat and phone support. Premier is contact-us: unlimited shipments, 15+ logins, a dedicated account manager. Non-US address validation is metered separately at 9¢, 8¢ and 6¢ per validation on Starter, Pro and Premier. API calls not tied to a Shippo label, and the Estimate API, bill at API Starter rates.",
+  "verified_at": "2026-09-25",
+  "source_url": null
+ },
+ "free_plan": true,
+ "free_plan_evidence": "Starter is free: up to 30 labels a month, discounted USPS, UPS, FedEx and DHL Express rates, 1 user login, and 5¢ per label if you connect your own carrier account.",
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "Non-US address validation is metered separately at 9¢, 8¢ and 6¢ per validation on Starter, Pro and Premier.",
+   "verified_at": "2026-09-25",
+   "source_url": null
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "Annual billing saves about 10% at every band.",
+   "verified_at": "2026-09-25",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "ShipStation or EasyPost",
+  "why": "the direct shipping-software peers — compare discounted rates on your actual lanes and the workflow features your volume needs"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/shippo.json",
+  "review": "https://aibuildermarketplace.com/b2b/shippo-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/shippo/",
+  "vendor_site": "https://goshippo.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://try.shippo.com/bt14md940onh",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "schema_version": "1.0",
+ "id": "testdriver-ai",
+ "name": "TestDriver.ai",
+ "research_status": "researched",
+ "vendor_domain": "testdriver.ai",
+ "category": "Developer Tools",
+ "task": "AI development, agents & data",
+ "summary": "AI QA engineer that lives in GitHub: mention @testdriverai in a pull request or issue and it starts a real desktop sandbox, runs your application, writes and runs an end-to-end UI test, posts a recording, and commits the test file to your repository — then reruns it on every pull request that touches the same ground. Tests are written against behaviour rather than selectors (find “signup button”, assert “dashboard is visible”). Covers web apps, Chrome and VSCode extensions, Windows desktop and Linux; Mac, iOS and Android are Enterprise-only and marked coming soon. By Haxor Inc.",
+ "best_for": "teams already living inside GitHub pull requests who want end-to-end tests to exist at all — mention @testdriverai in a PR, get a written, run and committed test back with a recording — and who would otherwise keep postponing a Playwright suite nobody has time to maintain",
+ "skip_if": "your contributor list is much longer than your test needs, because seats are billed per GitHub user who touches a PR rather than per tester; you ship a Mac, iOS or Android app, which Pro does not cover at all; or your suite is long enough that sandbox minutes, not seats, become the real bill",
+ "honest_knock": "You do not control your own seat count. The pricing page says a seat is billed automatically for every GitHub user who gets a pull-request review or runs a test — so the bill is set by who touches your repository, not by a number you chose. On a team of ten that is $200 a month before a single test has run, and it scales with contributors rather than with usage.\n\nThe included allowance is thinner than it looks. 120 testing minutes at the published $0.14 overage rate is $16.80 of metered value against a $20 seat, so the bundle is close to a rounding error on the seat itself. Worse, the meter runs on sandbox uptime rather than test duration: the clock covers booting the machine and loading your app, not only the part where it clicks things. A suite that takes eight minutes of wall time per pull request exhausts 120 minutes in fifteen pull requests.\n\nAnd the page never says whether those 120 minutes are per seat or per account. At $0.14 a minute that ambiguity is worth $151.20 a month on a ten-person team — the difference between 120 minutes and 1,200. It is the first thing to put in writing before you turn this on, and it is not answerable from anything they publish.\n\nOne coverage trap: if you ship a Mac desktop app, or anything on iOS or Android, Pro does not cover you. Those platforms are marked coming soon and sit under Enterprise, which is quote-only.\n\nWhat is genuinely good here is the part that usually breaks. Tests are written against what a user does rather than against selectors — the generated file reads `td.find(\"signup button\").click()` and `td.assert(\"dashboard is visible\")` — and the documentation tells you to describe behaviour instead of implementation, which is the opposite of the brittle CSS-selector suites this category is famous for. That is also the risk: an element resolved by an AI from a description can drift for reasons a diff will not show you.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$20",
+  "entry_price_terms": "Pro · per seat a month, plus $0.14 per testing minute beyond the 120 included",
+  "from_price_usd_month": 20.0,
+  "plans": [
+   {
+    "name": "Pro",
+    "price": "$20 per seat a month plus $0.14 per testing minute, 120 testing minutes included, 14-day free trial",
+    "includes": "Cloud-hosted; web apps, Chrome/VSCode extensions, Windows desktop, Linux/Windows; unlimited team users, AI generation and test runs"
+   },
+   {
+    "name": "Enterprise",
+    "price": "no published price",
+    "includes": "Self-hosted; unlimited testing minutes, root access, custom VM images, BYO keys, VPN, private Slack support, tests built by Haxor"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(read 18 September 2026 in a live browser on testdriver.ai/pricing) Two tiers. Pro is $20 per seat a month plus $0.14 for every testing minute, with 120 testing minutes included and a 14-day free trial. Read the seat rule carefully, because you do not choose it: the page states that seats are automatically billed for every GitHub user who gets a pull-request review or runs a test. Testing minutes are billed for as long as the sandbox is running — which starts automatically on pull-request generation and on test runs — so the meter covers the machine's uptime rather than the duration of your assertions. Pro is cloud-hosted and covers web apps, Chrome extensions, VSCode extensions, Windows desktop apps, Linux and Windows, with unlimited team users and unlimited AI generation and test runs. Enterprise is quote-only and self-hosted, with unlimited testing minutes, root access, custom VM images, bring-your-own-keys, VPN deployment and private Slack Connect support — and it is the tier where Haxor's team builds and maintains the tests for you. Mac desktop, Android and iOS are listed as coming soon, and only under Enterprise. The company is Haxor Inc.",
+  "verified_at": "2026-09-18",
+  "source_url": "https://testdriver.ai/pricing"
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Pro is $20 per seat a month plus $0.14 for every testing minute, with 120 testing minutes included and a 14-day free trial.",
+   "verified_at": "2026-09-18",
+   "source_url": "https://testdriver.ai/pricing"
+  },
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "120 testing minutes at the published $0.14 overage rate is $16.80 of metered value against a $20 seat, so the bundle is close to a rounding error on the seat itself.",
+   "verified_at": "2026-09-18",
+   "source_url": "https://testdriver.ai/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "BugHerd",
+  "why": "These solve the same problem from opposite ends, and we carry no direct automated-QA competitor to put beside this one — worth saying plainly rather than inventing a peer. BugHerd, from our own dossiers (re-verified 5 September 2026), is where humans report what they found: about $42 a month for 5 members, $67 for 10 and $125 for 25, with unlimited projects and unlimited client users, and extra members at $6.60 each billed annually. It is a fixed, predictable bill and it catches what a person noticed.\n\nTestDriver is the machine doing the looking, and its bill moves with your team and your runtime rather than staying still. At ten seats it is $200 a month before minutes, against BugHerd's $67 for the same headcount — but BugHerd never opens your app, and nothing in it stops a regression merging. The honest comparison is not really between these two: it is between TestDriver and the Playwright suite you would write yourself, where the software is free and the cost is the engineer-weeks to build it and the maintenance nobody budgets for. Price that against $20 a seat before deciding."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/testdriver-ai.json",
+  "review": "https://aibuildermarketplace.com/b2b/testdriver-ai-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/testdriver-ai/",
+  "vendor_site": "https://testdriver.ai"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://get.testdriver.ai/gc1hssxgvwa8",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

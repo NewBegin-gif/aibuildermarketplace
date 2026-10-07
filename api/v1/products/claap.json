@@ -1,0 +1,111 @@
+{
+ "schema_version": "1.0",
+ "id": "claap",
+ "name": "Claap",
+ "research_status": "researched",
+ "vendor_domain": "claap.io",
+ "category": "Sales & CRM",
+ "task": "Sales outreach, leads & CRM",
+ "summary": "AI sales intelligence that records calls without putting a bot in the meeting, then turns them into CRM fields, follow-up emails, deal scoring and coaching.",
+ "best_for": "revenue teams that want every call captured — by default with no notetaker bot in the meeting, though a customisable bot is there for teams that prefer one — and want those calls to end up as CRM fields, coaching and deal signals rather than as transcripts nobody reopens, with enough seats to make a sales conversation worth having",
+ "skip_if": "you want to buy and test the product yourself, because the tier with the CRM and coaching features is quote-led and even its trial runs through sales; you need a long retention window, since recordings age out after 2 or 3 years below Enterprise; or you need to be billed in dollars",
+ "honest_knock": "The four tiers sell two different products, and only one of them is self-serve. Pro at €24 is the recorder and note-taker. Everything Claap actually markets itself on — CRM auto-complete, AI coaching, deal insights, asking Claap AI a question across all your meetings — starts at Business, €48 per license a month on annual billing, and Business is the only paid tier with no Start now button: it says Contact us. The pricing FAQ closes the other door too, stating that a free trial of a paid plan has to be unlocked by their sales team. So the features you came for cannot be bought or tested without a sales conversation.\n\nYour recordings also expire. Storage runs 3 months on Basic, 2 years on Pro and 3 years on Business; only Enterprise is unlimited. If the call archive is meant to be your evidence trail, that is a deletion date on your own data, and it is in the comparison table rather than in the plan cards.\n\nTwo smaller things worth reading twice, and one correction we owe you. The AI credits — 500 per license on Pro, 1,000 on Business, pooled across the workspace — do not meter the summaries: the tooltip is explicit that summaries, chapters and the AI companion use no credits, and a credit is spent on a Claap AI chat, an AI email follow-up, the coaching tab or a generated insight. What is missing is the rate: no price for an extra credit appears anywhere on the page, so a heavy month of coaching and insights cannot be costed before you commit, and the same tooltip layer is where you find the one dollar-priced item, a $20 per seat Power Recorder add-on on a euro-priced plan. And the free tier's 300 minutes is a total, not a monthly allowance: it is a sample, not a plan you can sit on.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "€24",
+  "entry_price_terms": "Pro · per month, annual",
+  "from_price_usd_month": null,
+  "plans": [
+   {
+    "name": "Basic",
+    "price": "€0 per license/month",
+    "includes": "10 videos per user, 300 minutes total (not per month), calendar and conf-call sync, 99-language transcript, basic AI summary, Chrome recorder, collaborative workspace; 5 licenses, 0 guests, 3 months storage"
+   },
+   {
+    "name": "Pro",
+    "price": "€24/license/month yearly, €30 monthly",
+    "includes": "unlimited recordings, 1,000 minutes a month, 500 AI credits per license, advanced AI summaries, meeting insights, AI video editing, 10+ integrations, private channels; 50 licenses, 50 guests, 2 years storage"
+   },
+   {
+    "name": "Business",
+    "price": "€48/license/month yearly, €60 monthly — Contact us",
+    "includes": "unlimited recording time, 1,000 AI credits per license, Claap AI across meetings, CRM auto-complete, AI-generated emails, AI coaching, deal insights, smart tables, priority support; 3 years storage"
+   },
+   {
+    "name": "Enterprise",
+    "price": "custom — Contact us",
+    "includes": "everything in Business plus SSO (Okta), SCIM provisioning, unlimited Basic licenses, white-glove onboarding and migration support; unlimited storage"
+   }
+  ],
+  "plans_source": "hand-curated from the vendor's pricing page",
+  "notes": "(read 2026-09-04 on claap.io/pricing, both billing toggles and the full comparison table; re-verified 2026-09-08) Licenses are priced per license per month in euros. The only dollar figure on the page belongs to an add-on rather than a plan: a tooltip offers the Power Recorder, which adds unlimited recording length to any paid seat for $20 per seat a month. Basic is €0: 10 videos per user, 300 minutes of recording in total rather than per month, calendar and conference-call sync, 99-language transcript, basic AI summary, the Chrome recorder extension, a collaborative workspace and — listed on every tier including this free one — an unlimited-usage API and the Claap MCP connector, capped at 5 licenses, no guests, one team, one channel, 3 video uploads and 3 months of recording storage. Pro is €24 per license a month billed yearly or €30 monthly: unlimited recordings, 1,000 minutes a month, 500 AI credits per license pooled across the workspace, advanced AI summaries, meeting insights, AI video editing, 10+ integrations, speaker and video insights and private channels, with 50 licenses, 50 guests, 10 uploads a month and 2 years of storage. What those credits buy is spelled out in a tooltip rather than in the plan card: one credit is one Claap AI chat, AI email follow-up, coaching tab or generated insight, and summaries, chapters and the AI companion do not consume credits at all. Business is €48 per license a month yearly or €60 monthly: unlimited recording time, 1,000 AI credits per license, Claap AI across all meetings, CRM auto-complete, AI-generated emails, AI coaching, deal insights, smart tables, admin recording controls and priority support, with 50 uploads a month and 3 years of storage. Enterprise is a custom price and adds SSO through Okta, SCIM provisioning, unlimited Basic licenses, white-glove onboarding and migration support. Basic carries a Try for free button and Pro a Start now button; Business and Enterprise both say Contact us, and the pricing FAQ states that a free trial of a paid plan has to be unlocked by their sales team.",
+  "verified_at": "2026-09-08",
+  "source_url": "https://www.claap.io/pricing"
+ },
+ "free_plan": true,
+ "free_plan_evidence": "And the free tier's 300 minutes is a total, not a monthly allowance: it is a sample, not a plan you can sit on.",
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "The only dollar figure on the page belongs to an add-on rather than a plan: a tooltip offers the Power Recorder, which adds unlimited recording length to any paid seat for $20 per seat a month.",
+   "verified_at": "2026-09-08",
+   "source_url": "https://www.claap.io/pricing"
+  },
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "Pro is €24 per license a month billed yearly or €30 monthly: unlimited recordings, 1,000 minutes a month, 500 AI credits per license pooled across the workspace, advanced AI summaries, meeting insights, AI video editing, 10+ integrations, speaker and video insights and private channels, with 50 licenses, 50 guests, 10 uploads a month and 2 years of storage.",
+   "verified_at": "2026-09-08",
+   "source_url": "https://www.claap.io/pricing"
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "What is missing is the rate: no price for an extra credit appears anywhere on the page, so a heavy month of coaching and insights cannot be costed before you commit, and the same tooltip layer is where you find the one dollar-priced item, a $20 per seat Power Recorder add-on on a euro-priced plan.",
+   "verified_at": "2026-09-08",
+   "source_url": "https://www.claap.io/pricing"
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "Everything Claap actually markets itself on — CRM auto-complete, AI coaching, deal insights, asking Claap AI a question across all your meetings — starts at Business, €48 per license a month on annual billing, and Business is the only paid tier with no Start now button: it says Contact us.",
+   "verified_at": "2026-09-08",
+   "source_url": "https://www.claap.io/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "Fireflies.ai",
+  "why": "Both record and transcribe meetings and both sit in our database, but they aim at different jobs. Fireflies is the cheaper, broader meeting assistant: it joins the call as a bot, transcribes and summarises, and works for any team that takes notes. Claap is built for revenue teams specifically, records without a bot in the conversation, and puts its money on what happens after the call — CRM fields, deal scoring against MEDDIC or BANT, coaching. Pick Fireflies if you want meetings captured cheaply across the company; pick Claap if your problem is an empty CRM and untrained reps, and you can live with the sales-led purchase."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/claap.json",
+  "review": "https://marketingandsalessoftware.com/claap-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/claap/",
+  "vendor_site": "https://claap.io"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://get.claap.io/43c2npncjv1f",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

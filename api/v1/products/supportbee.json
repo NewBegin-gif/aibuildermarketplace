@@ -1,0 +1,424 @@
+{
+ "schema_version": "1.0",
+ "id": "supportbee",
+ "name": "SupportBee",
+ "research_status": "researched",
+ "vendor_domain": "supportbee.com",
+ "category": "Customer Support",
+ "task": "A help desk, tickets or a shared inbox",
+ "summary": "Email ticketing for collaborative customer service: a shared team inbox where every agent has their own login, plus an integrated knowledge base and, on the upper tier, a customer portal. Per seat, no free plan.",
+ "best_for": "small support teams working out of a shared email inbox who want assignment, internal comments and a knowledge base without dragging customers into a portal or learning a helpdesk suite",
+ "skip_if": "your customers reach you on chat, phone or WhatsApp, or support and billing need separate queues with their own rules; this is one channel, one team and one knowledge base on both published plans",
+ "honest_knock": "It is an email helpdesk and only an email helpdesk. There is no live chat, no phone, no WhatsApp and no social inbox, and the integration list confirms it: Asana, Trello, ClickUp, Linear, Notion, GitHub Issues, Pipedrive, Insightly, Capsule, Customer.io, QuickBooks, PostHog, Slack and webhooks are all places to push a ticket outward, not channels a customer can arrive on. Read the two published plans as printed and neither lifts the cap of one knowledge base and one team, even though the vendor's own FAQ describes teams as the way you mirror departments. Enterprise is listed as everything in Startup plus five named items, and more teams is not one of them. Watch the seat count too. The pricing FAQ defines users as everyone with access across all three permission levels, collaborators included, and the docs add a collaborator through the same add-a-user flow. So the invite-the-whole-company pitch runs through the same per-seat meter, and collaborator activity does not even show up in reports. And the two pages disagree about leaving: the pricing FAQ says you can cancel your subscription anytime, while the billing doc routes cancellation through contact us, which is the one billing action on that page that is not self service.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$20",
+  "entry_price_terms": "Startup · per seat per month with no commitment, Enterprise at 25",
+  "from_price_usd_month": 20.0,
+  "plans": [
+   {
+    "name": "Startup",
+    "price": "$20/seat/month month to month, or $204 per seat billed annually",
+    "includes": "shared inbox, snippets, filters, basic integrations, API access, unlimited email inboxes and tickets, satisfaction ratings, customer management, audit trails, one knowledge base and one team"
+   },
+   {
+    "name": "Enterprise",
+    "price": "$25/seat/month month to month, or $252 per seat billed annually",
+    "includes": "everything in Startup plus enterprise integrations, business hours, the customer portal, an audit log with data history, and portal access for customer groups"
+   }
+  ],
+  "plans_source": "hand-curated from the vendor's pricing page",
+  "notes": "(read 2026-08-27 on supportbee.com/pricing) Two plans, both priced per seat, and no free tier. Month to month, Startup is $20/seat/month and Enterprise is $25/seat/month. Switch the toggle to annual and the page shows a total of $204 per seat billed annually on Startup and $252 on Enterprise, a saving it advertises as 20 per cent, which works out at effective rates of 17 and 21 dollars a seat a month. On those figures the saving is 15 per cent on Startup ($204 against $240) and 16 per cent on Enterprise ($252 against $300). Re-checked unchanged on 6 October 2026. Startup covers the shared inbox, snippets, filters, basic integrations, API access, unlimited email inboxes and tickets, customer satisfaction ratings, customer management, audit trails and one knowledge base with one team. Enterprise is described as everything in Startup plus five things: enterprise integrations, business hours, the customer portal, an audit log with data history, and portal access for customer groups. The trial is 14 days and the home page says no credit card is required. Billing runs through Stripe, you can switch between monthly and annual at any time with a prorated credit, and plan changes take effect immediately.",
+  "verified_at": "2026-10-06",
+  "source_url": "https://supportbee.com/pricing"
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Month to month, Startup is $20/seat/month and Enterprise is $25/seat/month.",
+   "verified_at": "2026-10-06",
+   "source_url": "https://supportbee.com/pricing"
+  }
+ ],
+ "compare_with": null,
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/supportbee.json",
+  "review": "https://zerotouchsupport.com/supportbee-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/supportbee/",
+  "vendor_site": "https://supportbee.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://try.supportbee.com/ewmir3q4j35f",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "rules_verified_at": "2026-10-06",
+   "plans": [
+    {
+     "id": "startup",
+     "name": "Startup",
+     "model": "per_unit",
+     "monthly": 20,
+     "annual_year": 204,
+     "evidence": "Startup is $20/seat/month and Enterprise is $25/seat/month. Switch the toggle to annual and the page shows a total of $204 per seat billed annually on Startup and $252 on Enterprise"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "monthly": 25,
+     "annual_year": 252,
+     "evidence": "Startup is $20/seat/month and Enterprise is $25/seat/month. Switch the toggle to annual and the page shows a total of $204 per seat billed annually on Startup and $252 on Enterprise"
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "supportbee",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 17.0,
+      "billed": {
+       "amount": 204.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 17.0,
+       "enterprise": 21.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 34.0,
+      "billed": {
+       "amount": 408.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 34.0,
+       "enterprise": 42.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 51.0,
+      "billed": {
+       "amount": 612.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 51.0,
+       "enterprise": 63.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 85.0,
+      "billed": {
+       "amount": 1020.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 85.0,
+       "enterprise": 105.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 170.0,
+      "billed": {
+       "amount": 2040.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 170.0,
+       "enterprise": 210.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 255.0,
+      "billed": {
+       "amount": 3060.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 255.0,
+       "enterprise": 315.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 340.0,
+      "billed": {
+       "amount": 4080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 340.0,
+       "enterprise": 420.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 425.0,
+      "billed": {
+       "amount": 5100.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 425.0,
+       "enterprise": 525.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 850.0,
+      "billed": {
+       "amount": 10200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 850.0,
+       "enterprise": 1050.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 1700.0,
+      "billed": {
+       "amount": 20400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 1700.0,
+       "enterprise": 2100.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "supportbee",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 20.0,
+       "enterprise": 25.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 40.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 60.0,
+       "enterprise": 75.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 100.0,
+       "enterprise": 125.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 200.0,
+       "enterprise": 250.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 300.0,
+       "enterprise": 375.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 400.0,
+       "enterprise": 500.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 500.0,
+       "enterprise": 625.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 1000.0,
+       "enterprise": 1250.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "startup",
+      "cheapest_plan_name": "Startup",
+      "total_month": 2000.0,
+      "billed": {
+       "amount": 2000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "startup": 2000.0,
+       "enterprise": 2500.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

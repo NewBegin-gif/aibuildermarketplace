@@ -1,0 +1,70 @@
+{
+ "schema_version": "1.0",
+ "id": "database-mart",
+ "name": "Database Mart",
+ "research_status": "researched",
+ "vendor_domain": "databasemart.com",
+ "category": "IT & Productivity",
+ "task": "Hosting & websites",
+ "summary": "US hosting company running its own servers in Dallas: Linux and Windows VPS, dedicated servers and NVIDIA GPU servers from entry cards to A100 and H100, with root access, a 24-hour trial on request and round-the-clock human support.",
+ "best_for": "developers, trading desks and small AI teams that want a cheap US-hosted VPS, a Windows VPS with the licence included, or a GPU server that runs all month at a flat price",
+ "skip_if": "your users are outside North America and need a nearby region; your GPU sits idle much of the day, so hourly billing elsewhere would cost less; or you need current-generation CPUs and fast networking around a high-end GPU",
+ "honest_knock": "Database Mart is cheap partly because the hardware is older. Most GPU and dedicated rows pair the card with Xeon E3 and E5 processors, and even the $2,099-a-month H100 server lists two E5-2697v4 CPUs from 2016 and a 100Mbps port, which is slow for moving model weights or datasets. Every server is in Dallas, Texas, so there is no second region for European or Asian users. Many rows carry 26% to 54% discounts, which makes the table hard to compare: some smaller plans cost more than larger ones. The trust signals on the home page, 500K+ customers and 21 years in business, are the company's own and we could not check them, and we found no independent benchmark. Some dedicated and GPU builds may add a one-time provisioning fee that the table does not show.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$2.88",
+  "entry_price_terms": "Express Linux VPS · per month, 2 CPU cores, 4GB RAM, 60GB SSD, marked save 51%",
+  "from_price_usd_month": 2.88,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 2026-10-06 on databasemart.com/pricing, which lists every server row with its monthly price, and on databasemart.com/gpu-server) Flat monthly prices per server, billed in advance. Linux VPS runs from $2.88 a month for Express (2 cores, 4GB RAM, 60GB SSD, marked save 51%) through $7.99, $5.85, $12.99, $10.80, $27.99 and $31.99 to $28.80 for Advanced Plus (16 cores, 32GB, 400GB); several rows are discounted, which is why some larger plans cost less than smaller ones. Windows VPS, which includes the Microsoft licence, runs from $5.99 to $63.99. GPU VPS starts at $21 a month for a 2GB GT730, P600 or K620 card and climbs through an RTX 5060 at $85, an RTX 5090 at $419 and an RTX Pro 6000 with 96GB at $649. Dedicated GPU servers run from $37 (P1000, discounted) and $49 (P600) to $409 for an RTX 4090, $479 for an RTX 5090, $639 for a 40GB A100, $1,559 for an 80GB A100 and $2,099 for an H100, with multi-GPU boxes up to $1,899 for four A100s. Plain dedicated servers start at $36 a month for a 4-core E3-1220 with 16GB. On the dedicated rows the discount is labelled recurring. The FAQ says standard VPS rows carry no setup fee but some dedicated or custom GPU builds may show a one-time provisioning line, and that add-ons such as extra IPs, backups and bandwidth are billed monthly on top. A 24-hour free trial is available on request, with no payment, through a note at checkout.",
+  "verified_at": "2026-10-06",
+  "source_url": "https://www.databasemart.com/pricing"
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "The FAQ says standard VPS rows carry no setup fee but some dedicated or custom GPU builds may show a one-time provisioning line, and that add-ons such as extra IPs, backups and bandwidth are billed monthly on top.",
+   "verified_at": "2026-10-06",
+   "source_url": "https://www.databasemart.com/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "Runpod",
+  "why": "Runpod is in our dossiers too, and it rents the same top cards by the hour instead of by the month. Read on 24 September 2026, an H100 PCIe pod on Runpod's Secure Cloud is $2.89 an hour, about $2,080 for a full 720-hour month, and $1.99 an hour on Community Cloud, about $1,433; serverless bills only while it computes. Database Mart's dedicated H100 is $2,099 a month whether it is busy or not. Run around the clock, the two land within a few dollars of each other on Secure Cloud; used part-time, Runpod is far cheaper, because you stop paying when the pod stops. Database Mart's case is a whole server with root access, its own disks and a fixed bill, plus much cheaper entry options (an RTX 4090 box at $409 a month) for teams that want one machine they keep."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/database-mart.json",
+  "review": "https://officesoftwaremarketplace.com/database-mart-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/database-mart/",
+  "vendor_site": "https://databasemart.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://www.awin1.com/cread.php?awinmid=116629&awinaffid=2880219",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "schema_version": "1.0",
+ "id": "keeper-security",
+ "name": "Keeper Security",
+ "research_status": "researched",
+ "vendor_domain": "keepersecurity.com",
+ "category": "Security",
+ "task": "Security, backup & privacy",
+ "summary": "Password manager and privileged access management for teams, with a zero-knowledge architecture.",
+ "best_for": "teams that need shared credentials with real admin control and audit, and that will genuinely use the provisioning and role-based access that separate this from a consumer password manager",
+ "skip_if": "you are under five people wanting a shared vault, since Business Starter is scoped at 5-10 users and Keeper's own Personal plan at $42.99 a year, or Family at $91.99, covers that case for less",
+ "honest_knock": "The per-user price is the smallest part of the bill. Read the add-ons page next to the plan page and the shape becomes clear: BreachWatch and KeeperChat are $24 per user per year each, Advanced Reporting & Alerts and Compliance Reports $12 per user per year each, endpoint privilege management $36 per endpoint per year — so a Business seat at $4.00 a month can quietly double once you add the monitoring and reporting most buyers assume is included, and Connection Manager and Secrets Manager are not even priced. Annual billing is stated on every tier, so there is no month-to-month option to test with, and Business Starter is scoped at 5–10 users. Ask for the base plan and each add-on you need as separate lines, because a bundled quote here hides which part is actually costing you.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$2",
+  "entry_price_terms": "per user per month billed yearly ($4 and $6 above it), add-ons extra",
+  "from_price_usd_month": 2.0,
+  "plans": [
+   {
+    "name": "Business Starter",
+    "price": "$2.00 per user per month ($24 a year)",
+    "includes": "protection for 5-10 users"
+   },
+   {
+    "name": "Business",
+    "price": "$4.00 per user per month ($48 a year)",
+    "includes": ""
+   },
+   {
+    "name": "Enterprise",
+    "price": "$6.00 per user per month ($72 a year)",
+    "includes": "sold through Request a Quote"
+   },
+   {
+    "name": "Personal (Keeper Unlimited)",
+    "price": "$42.99 billed annually",
+    "includes": ""
+   },
+   {
+    "name": "Family",
+    "price": "$91.99 billed annually",
+    "includes": ""
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(re-verified 2026-09-17 and again on 2026-10-04 on their own business and add-on pricing pages, reading the US price list; every amount unchanged) Three business tiers, all billed annually: Business Starter at $2.00 per user per month ($24 a year), described as protection for 5-10 users; Business at $4.00 per user per month ($48 a year); Enterprise at $6.00 per user per month ($72 a year), sold through Request a Quote. The amounts are injected by script, so a page fetched without rendering shows the tiers with the figures missing. Personal and family plans are priced on their own page: Personal (Keeper Unlimited) $42.99 billed annually and Family $91.99 billed annually. CURRENCY WARNING, corrected 2026-09-17: the same pages served to a Dutch visitor carry a different euro list, not a conversion of the dollar one — Business Starter €2.00 and Business €4.00 match, but Enterprise is €5.50 against $6.00, Personal €52.02 against $42.99 and Family €111.31 against $91.99. The dossier previously carried those last two euro figures as dollar amounts. Re-read 4 October 2026, the checkout data behind the personal page explains that gap: for a Dutch visitor it flags prices as VAT-inclusive and shows 52.02 and 111.31 even with USD selected, which are exactly $42.99 and $91.99 plus 21% Dutch VAT. The same data gives the business seats as $48 and $72 a year, without that uplift. The add-ons carry their own list, also in US dollars: BreachWatch and KeeperChat $24 per user per year (€22 on the euro list), Advanced Reporting & Alerts and Compliance Reports $12 per user per year (€11), Endpoint Privilege Manager $36 per endpoint per year, Secure File Storage from $132 per year for 100GB (€108), Professional Services from $270 per year, with Connection Manager and Keeper Secrets Manager priced only on request.",
+  "verified_at": "2026-10-04",
+  "source_url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "(re-verified 2026-09-17 and again on 2026-10-04 on their own business and add-on pricing pages, reading the US price list; every amount unchanged) Three business tiers, all billed annually: Business Starter at $2.00 per user per month ($24 a year), described as protection for 5-10 users; Business at $4.00 per user per month ($48 a year); Enterprise at $6.00 per user per month ($72 a year), sold through Request a Quote.",
+   "verified_at": "2026-10-04",
+   "source_url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "(re-verified 2026-09-17 and again on 2026-10-04 on their own business and add-on pricing pages, reading the US price list; every amount unchanged) Three business tiers, all billed annually: Business Starter at $2.00 per user per month ($24 a year), described as protection for 5-10 users; Business at $4.00 per user per month ($48 a year); Enterprise at $6.00 per user per month ($72 a year), sold through Request a Quote.",
+   "verified_at": "2026-10-04",
+   "source_url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "Annual billing is stated on every tier, so there is no month-to-month option to test with, and Business Starter is scoped at 5–10 users.",
+   "verified_at": "2026-10-04",
+   "source_url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+  }
+ ],
+ "compare_with": {
+  "name": "1Password or Bitwarden",
+  "why": "the direct team password-manager comparison — both publish per-user prices, so use those as the anchor for Keeper's quote"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/keeper-security.json",
+  "review": "https://aibuildermarketplace.com/b2b/keeper-security-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/keeper-security/",
+  "vendor_site": "https://keepersecurity.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://keepersecurity.partnerlinks.io/mvk1pbff4v7g-yt56o",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

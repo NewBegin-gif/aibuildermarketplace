@@ -1,0 +1,92 @@
+{
+ "schema_version": "1.0",
+ "id": "xero",
+ "name": "Xero",
+ "research_status": "researched",
+ "vendor_domain": "xero.com",
+ "category": "Financial Operations",
+ "task": "Paying bills & getting paid",
+ "summary": "Cloud accounting for small business: bank reconciliation, invoicing, bills and reporting.",
+ "best_for": "small businesses whose bookkeeper or accountant already works in Xero — the ecosystem and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs",
+ "skip_if": "you invoice a handful of clients and reconcile by hand — the entry tier at $25 after the promo is buying automation you may not need yet, and simpler invoicing tools cost less",
+ "honest_knock": "Read the second number, not the first. Every plan on that page is 90% off for six months, and the price that governs the rest of your first year is ten times what the button says: $25, $55 and $90. That is not hidden — it is printed right there — but it is printed smaller, and the plan people pick on the strength of $2.50 a month is the one that becomes $25. Then read the notice further down, because it undercuts even that: Xero says subscription prices are increasing from 1 October 2026, the day after the offer closes, without printing the new rates. So month seven costs $25 or more, and the page will not tell you which. The second thing to check is the entry tier's ceiling: Early is 20 invoices and 5 bills a month, the limit counts approving as well as sending, and connected apps can eat into it on your behalf — which makes Growing at $55 the realistic starting price for anyone billing through other software. And check which country's page you are on, because Xero's tiers and prices differ by market.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$25",
+  "entry_price_terms": "per month ($2.50 for the first 6 months)",
+  "from_price_usd_month": 25.0,
+  "plans": [
+   {
+    "name": "Early",
+    "price": "$2.50 a month for the first six months and then $25",
+    "includes": "Capped at 20 invoices and 5 bills a month"
+   },
+   {
+    "name": "Growing",
+    "price": "$5.50 and then $55",
+    "includes": ""
+   },
+   {
+    "name": "Established",
+    "price": "$9 and then $90",
+    "includes": "Includes multi-currency and project tracking"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(re-verified 2026-09-19 on their own US pricing page) Every headline price is still a promotion: 'Get 90% off your plan for your first 6 months when you buy by 30 September 2026'. Early is $2.50 a month for the first six months and then $25. Growing is $5.50 and then $55. Established is $9 and then $90. New on this reading: the same page carries a notice that Xero subscription prices are increasing from 1 October 2026 — the day after the offer closes — and does not print the new rates. Also new: the tier limits. Early is capped at 20 invoices and 5 bills a month, and the footnote states the invoice limit counts both approving and sending, and that transactions initiated by app partners may automatically contribute to it. Multi-currency and project tracking remain on Established only. The offer terms restrict it to new US customers buying their first organisation with code DC90626308US, cover the base subscription only, and auto-renew monthly at the regular price. Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or contractor, which the discount does not cover. Standard ACH bill payments are included; fees apply for other methods, same-day ACH and cross-border. Prices are USD and exclude tax; a downgrade is only allowed one month after an upgrade. Xero prices differently by country.",
+  "verified_at": "2026-09-19",
+  "source_url": null
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or contractor, which the discount does not cover.",
+   "verified_at": "2026-09-19",
+   "source_url": null
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or contractor, which the discount does not cover.",
+   "verified_at": "2026-09-19",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "QuickBooks or FreshBooks",
+  "why": "the standing comparison in small-business accounting — compare the post-promotional price on all three, because all three lead with a discounted rate"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/xero.json",
+  "review": "https://aibuildermarketplace.com/b2b/xero-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/xero/",
+  "vendor_site": "https://xero.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://referrals.xero.com/dvdd0cpkh6ky",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

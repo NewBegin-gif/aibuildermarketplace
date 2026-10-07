@@ -1,0 +1,71 @@
+{
+ "schema_version": "1.0",
+ "id": "signal-house",
+ "name": "Signal House",
+ "research_status": "researched",
+ "vendor_domain": "signalhouse.io",
+ "category": "Communication & Voice",
+ "task": "WhatsApp, SMS & social messaging",
+ "summary": "SMS and Voice API positioned as a Twilio alternative. A2P 10DLC fees are published; voice rates are not.",
+ "best_for": "teams sending real SMS volume in the US who already know what an A2P 10DLC campaign is and want a cheaper per-segment rate than Twilio’s list without giving up published pricing. The volume ladder is genuinely steep — from $0.0065 down to $0.0030 — so the case gets stronger the more you send, and the number discounts above 500 numbers suit anyone running many local presences",
+ "skip_if": "you are mainly buying voice, because there is no published rate to compare and no way to model the cost. Skip it too if your volume is small: at a few thousand messages a month the per-segment saving against Twilio is a few dollars, and you would be trading a mature ecosystem and documentation for that. And if you are not already registered for A2P 10DLC, budget the brand and campaign fees plus the approval wait before you compare anything — those apply wherever you send from",
+ "honest_knock": "Two things are missing from a page that is otherwise unusually specific. The first is voice. The product is sold as an SMS and Voice API and the pricing page publishes no voice rate at all — nor short code pricing. If the voice half is why you are looking, you cannot budget it from public information and will have to ask.\n\nThe second is the arithmetic behind the Twilio comparison, which is the whole pitch. Take the entry rate with no minimum. Signal House is $0.0065 a segment against Twilio’s $0.0083, which reads as a 22% saving. But carrier fees are a pass-through and identical either way: add T-Mobile’s $0.0045 to both and you get $0.0110 against $0.0128 — about 14%, not 22%. Numbers narrow it further, $1.00 against $1.15. So the saving is real and it is worth having at volume, but it is a discount on the platform margin rather than on your bill, and the headline does not make that distinction. On a million segments a month that difference is roughly $1,800 a month against Twilio’s list — worth switching for, provided the voice side does not turn out to be where the money goes.\n\nWorth noting on the other side: Signal House prints its A2P 10DLC registration fees on the pricing page, and Twilio’s equivalent page says only that fees apply and points elsewhere. Being able to see the whole bill before you sign is not nothing.",
+ "pricing": {
+  "status": "see_details",
+  "entry_price": null,
+  "entry_price_terms": null,
+  "from_price_usd_month": null,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(2026-09-11, re-read on their own pricing page) Usage-based, no platform subscription. SMS on a 10DLC local number costs $0.0065 per segment with no minimum, falling on volume: $0.0050 from 500k segments a month, $0.0045 from 1m, $0.0040 from 2m, $0.0035 from 5m and $0.0030 from 10m. Numbers are $1.00 a month, dropping to $0.50 between 500 and 1,000 numbers and $0.25 above 1,000. MMS is $0.0200 per segment, $0.0170 above 500k. Toll-free numbers are $1.00 a month with SMS from $0.0079 down to $0.0050. Number lookup is $0.005. A2P 10DLC registration is billed separately: $4.50 for the brand, $15 one-time per campaign, then $1.50 a month for a low-volume campaign or $10 a month for a standard one. Carrier fees are passed through on top and are published per carrier for both directions: outbound SMS is AT&T $0.0035, Verizon $0.0045, T-Mobile $0.0045 and US Cellular $0.0025, while outbound MMS costs two to three times as much — AT&T $0.009, Verizon $0.007, T-Mobile $0.01, US Cellular $0.005. Inbound SMS is AT&T $0.0035, T-Mobile $0.0025, US Cellular $0.0025 and free on Verizon. A2P approval is quoted at 72 hours or less, dropping to 48 hours above 500k segments a month. Every rate table carries the note that all rates are negotiable on volume and agreement terms, and the site's roadmap still lists Voice, Short Code, RCS and Alphanumeric as Coming Soon.",
+  "verified_at": "2026-09-11",
+  "source_url": null
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "(2026-09-11, re-read on their own pricing page) Usage-based, no platform subscription.",
+   "verified_at": "2026-09-11",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "Twilio",
+  "why": "the comparison Signal House invites, and it is checkable. On the entry tier Signal House charges $0.0065 a segment against Twilio’s $0.0083, and $1.00 a month for a local number against $1.15. Carrier fees are pass-through and the same on both, so the all-in gap is nearer 14% than the 22% the message rate alone suggests. What Twilio has that does not show up in a rate table is depth: a far larger ecosystem, more documentation and a longer track record, plus voice pricing you can actually read. Both price lists here were read on 2026-08-07 — verify them yourself, because usage-based rates move and neither vendor publishes every fee in one place."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/signal-house.json",
+  "review": "https://zerotouchsupport.com/signal-house-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/signal-house/",
+  "vendor_site": "https://signalhouse.io"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://try.signalhouse.io/wqnlthk1tjwi",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Pricing status is 'see_details': no single public entry price.",
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

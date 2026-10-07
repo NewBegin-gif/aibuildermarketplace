@@ -1,0 +1,86 @@
+{
+ "schema_version": "1.0",
+ "id": "partnerstack",
+ "name": "PartnerStack",
+ "research_status": "researched",
+ "vendor_domain": "partnerstack.com",
+ "category": "Marketing",
+ "task": "Sales outreach, leads & CRM",
+ "summary": "The partner platform we run our own 58 programmes on: affiliate tracking, lead and deal registration, partner payments and a marketplace where B2B partners find you. Quote-only at every tier.",
+ "best_for": "B2B SaaS teams that want partner payments, lead and deal registration and a marketplace of active B2B partners in one place, and are prepared to go through a demo to find out what it costs",
+ "skip_if": "you want to know the price before you talk to anyone, you need click-level attribution back to the page that earned it, or you only need a simple affiliate link tracker",
+ "honest_knock": "The reporting counts clicks and calls them customers. A record in the Partner API's customers endpoint is a tracked click, not a signup: on 29 July 2026 a single bare curl against one tracking link at 07:09:01 UTC produced a customer record at 07:09:02, with no browser, no account and has_paid false. Read that endpoint's length as signups and you will report volume that never existed. The second half of the problem is that there is no referring-URL field anywhere in the partnership data, so you can see that a link was clicked and never learn which of your pages earned it — which is exactly the thing you need to decide what to write next.",
+ "pricing": {
+  "status": "quote_only",
+  "entry_price": null,
+  "entry_price_terms": null,
+  "from_price_usd_month": null,
+  "plans": [
+   {
+    "name": "Launch",
+    "price": "quoted — book a demo",
+    "includes": "pick affiliate link tracking OR lead and deal registration, not both; marketplace access, partner payments, CRM integrations, AI + MCP connector"
+   },
+   {
+    "name": "Growth",
+    "price": "quoted — book a demo",
+    "includes": "adds advanced integrations, a learning-management solution, partner challenges and incentives, MDF management and segmentation"
+   },
+   {
+    "name": "Enterprise",
+    "price": "quoted — book a demo",
+    "includes": "the only tier with tracking and both registration motions together, plus custom workflows, a designated CSM and priority support"
+   }
+  ],
+  "plans_source": "hand-curated from the vendor's pricing page",
+  "notes": "(read 2026-08-26 on partnerstack.com/pricing) There is no public price at any tier. PartnerStack publishes three plans — Launch, Growth and Enterprise — and every one of them carries a Book your demo button where the number would be; /plans is a 404. What the page does publish is what moves between tiers, and it is unusually specific. Launch gives you affiliate link tracking OR lead and deal registration — you pick one — plus marketplace access, partner payments built for B2B sales cycles, onboarding and enablement tooling, CRM integrations and their AI and MCP connector. Growth adds deeper integration support, a learning-management solution, partner challenges and incentives, MDF management and payments, and segmentation by performance or strategy. Enterprise is the only tier with full access to link tracking AND both registration motions at once, and adds custom workflows, a designated CSM with semi-annual business reviews, partner introductions and priority support. So the meter is not seats or volume as far as the page will say — it is which partner motions you are allowed to run, and the choice between tracking and registration on the entry tier is the line worth reading twice.",
+  "verified_at": "2026-08-27",
+  "source_url": null
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "quote_only",
+   "label": "Quote-only pricing",
+   "evidence": "No published price: Launch, Growth and Enterprise all route to Book your demo and /plans is a 404 (read 26 Aug 2026)",
+   "verified_at": "2026-08-27",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "Reditus",
+  "why": "the alternative people weigh this against — Reditus publishes its entry price ($99/mo billed annually) where PartnerStack quotes every tier, and the split is whether you want a number you can budget against or a marketplace with the volume of B2B partners PartnerStack has"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/partnerstack.json",
+  "review": "https://marketingandsalessoftware.com/partnerstack-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/partnerstack/",
+  "vendor_site": "https://partnerstack.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://try.partnerstack.com/oj4obett8k3n",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Pricing status is 'quote_only': no single public entry price.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "schema_version": "1.0",
+ "id": "easydmarc",
+ "name": "EasyDMARC",
+ "research_status": "researched",
+ "vendor_domain": "easydmarc.com",
+ "category": "Security",
+ "task": "Security, backup & privacy",
+ "summary": "DMARC, SPF and DKIM monitoring — stop others sending email as your domain.",
+ "best_for": "anyone who sends email from their own domain and has not yet got DMARC to enforcement — the reporting is the part that makes that safe rather than guesswork",
+ "skip_if": "you have one domain, send little email, and are willing to read raw XML reports yourself, because EasyDMARC's free record checkers and XML report analyzer plus patience cover the same ground",
+ "honest_knock": "You are buying domains and history, not features, and no longer seats, since every tier now lists unlimited users. Plus covers two domains. Subdomains do not count toward that, the page says they are detected automatically, but a company with a main domain, a second brand and a legacy domain it forgot about is already over. The history window is the part that bites later: three months on Plus means that when you are investigating a spoofing campaign that started in the spring, the reports are gone. And watch the volume ceiling. Read on 4 October 2026, the page's own tooltip says that once you pass your monthly quota, additional reports are not processed until the next billing cycle. There is no overage charge, just a gap in the data, and it opens precisely when a spoofing run inflates your report volume. Size the plan on your busiest month, not your average.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$35.99",
+  "entry_price_terms": "a month billed annually ($44.99 monthly) for 2 domains",
+  "from_price_usd_month": 35.99,
+  "plans": [
+   {
+    "name": "Plus",
+    "price": "$US 35.99/mo billed annually",
+    "includes": "$44.99 monthly; 2 domains, 3 months of report history, unlimited users"
+   },
+   {
+    "name": "Premium",
+    "price": "$US 71.99/mo billed annually",
+    "includes": "$89.99 monthly; 4 domains, a year of history, EasySPF and AI agents"
+   },
+   {
+    "name": "Deliverability / Enterprise: Email Trust",
+    "price": "quoted",
+    "includes": "up to unlimited domains and 3 years of history; SSO, API and audit logs only on Email Trust"
+   }
+  ],
+  "plans_source": "hand-curated from the vendor's pricing page",
+  "notes": "(re-read 2026-10-04 on easydmarc.com/pricing, which now redirects to /pricing/businesses; the four amounts are unchanged since 26 August 2026, the plan structure around them is not) Plus is 44.99 a month, or 35.99 billed annually, for 2 domains, three months of report history and a monthly volume selector of 100,000, 500,000 or 1,000,000 messages. Premium is 89.99, or 71.99 annually, for 4 domains, a year of history and up to 5,000,000 messages, adding AI agents that read the reports, proactive DMARC alerts, EasySPF, email support and a dedicated CS manager on the yearly plan only. Both open with a free trial and no credit card. Users are now unlimited on every tier, where on 17 September Plus allowed one invited user. The former Enterprise tier is split into two quoted plans: Deliverability (up to unlimited domains, custom volume, up to three years of history, DNS Manager and Sender Insights, delivery analytics, reputation monitoring and inbox placement tests, a dedicated DMARC engineer as a paid add-on) and Enterprise: Email Trust (adding Threat Intelligence, an included DMARC engineer, SSO, API access and audit logs). The page no longer lists a Free plan. Subdomains are detected automatically and do not count toward the domain limit. Past the monthly quota, the page's own tooltip says additional reports are not processed until the next billing cycle. Annual billing is marked Save 20% plus bonus features, and MSPs get a separate tab. On the currency: read from the Netherlands the page prints these as euro amounts and read over a US connection as the identical dollar figures, so €44.99 there is $44.99 here: the symbol changes and the number does not.",
+  "verified_at": "2026-10-04",
+  "source_url": null
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "The former Enterprise tier is split into two quoted plans: Deliverability (up to unlimited domains, custom volume, up to three years of history, DNS Manager and Sender Insights, delivery analytics, reputation monitoring and inbox placement tests, a dedicated DMARC engineer as a paid add-on) and Enterprise: Email Trust (adding Threat Intelligence, an included DMARC engineer, SSO, API access and audit logs).",
+   "verified_at": "2026-10-04",
+   "source_url": null
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "Annual billing is marked Save 20% plus bonus features, and MSPs get a separate tab.",
+   "verified_at": "2026-10-04",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "Valimail or dmarcian",
+  "why": "the direct DMARC-platform peers — compare on domains included and history retention, not on the feature list"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/easydmarc.json",
+  "review": "https://aibuildermarketplace.com/b2b/easydmarc-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/easydmarc/",
+  "vendor_site": "https://easydmarc.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://partners.easydmarc.com/r4hlk5r7tqr6",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

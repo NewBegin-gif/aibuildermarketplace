@@ -1,0 +1,77 @@
+{
+ "schema_version": "1.0",
+ "id": "envoy",
+ "name": "Envoy",
+ "research_status": "researched",
+ "vendor_domain": "envoy.com",
+ "category": "Business Operations",
+ "task": null,
+ "summary": "Workplace platform for visitor sign-in, desk and room booking, deliveries and emergency notifications.",
+ "best_for": "companies with a real office and a front desk problem — visitor compliance, desk booking and deliveries in one system, where the per-location price is spread over enough employees to be worth it",
+ "skip_if": "you are remote-first or have one small office — a visitor log and a shared calendar cover the same ground, and the per-location floor is priced for buildings rather than teams",
+ "honest_knock": "None of the prices on that page is a price you can budget from. Four of the five product cards are followed by 'Price excludes platform fee', and the platform page says outright that the platform is required to use Envoy products and is charged as a flat annual fee — with its own Premium and Enterprise tiers to pick first, and no number published anywhere on the site. That is the first thing to ask for. The second is how the meters stack, because they are all in different units: per location, per user, per bookable resource, per device, per delivery location. An office with forty bookable desks, six screens and one delivery point is paying on four clocks at once: $362 for the location, $200 for the desks, $250 for deliveries, and $180 for the screens rather than the $72 the card implies, because Envoy's own llms.txt sets a 15-device minimum that the pricing page never mentions. That is $992 a month before the platform fee, and before emergency notifications, which the same file bills at $2 a head across your entire employee directory rather than across the people who use them. Price the combination you actually want, not the product you came for.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$362",
+  "entry_price_terms": "Visitors Premium · per location per month, billed annually…",
+  "from_price_usd_month": 362.0,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(2026-08-29, read on their own pricing page and their platform page; re-read unchanged on 2026-10-04) Five products, each metered differently and all billed annually. Visitors: Basic free, Premium $362 per location per month, Enterprise quote-only. Emergency Notifications $2 per user per month. Reservations $5 per bookable resource per month. Screens $12 per device per month. Deliveries $250 per delivery location per month. All five amounts are unchanged since 1 August 2026, and the pricing page now publishes the Visitors Premium rate in JSON-LD with a billingDuration of one year. The line 'Price excludes platform fee' appears exactly four times, on Emergency Notifications, Reservations, Screens and Deliveries — not on the Visitors card. The platform page supplies the shape of that fee without its number: the platform is required to use Envoy products, it is 'priced as a flat annual fee', and it has its own Premium and Enterprise tiers that you choose before adding modules. That page also lists visitor management as one of the modules. Invoicing by ACH is offered only on Enterprise or with three or more Premium Yearly locations.",
+  "verified_at": "2026-10-04",
+  "source_url": null
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Emergency Notifications $2 per user per month.",
+   "verified_at": "2026-10-04",
+   "source_url": null
+  },
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "(2026-08-29, read on their own pricing page and their platform page; re-read unchanged on 2026-10-04) Five products, each metered differently and all billed annually.",
+   "verified_at": "2026-10-04",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "Robin or OfficeSpace",
+  "why": "the direct workplace-platform peers — compare the total across every module you would switch on, and get all three to name their platform fee"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/envoy.json",
+  "review": "https://aibuildermarketplace.com/b2b/envoy-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/envoy/",
+  "vendor_site": "https://envoy.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://envoy.partnerlinks.io/miq6ie5n78yq",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

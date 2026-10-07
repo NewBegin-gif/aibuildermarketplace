@@ -1,0 +1,91 @@
+{
+ "schema_version": "1.0",
+ "id": "zendesk",
+ "name": "Zendesk",
+ "research_status": "researched",
+ "vendor_domain": "zendesk.com",
+ "category": "Customer Support",
+ "task": "A help desk, tickets or a shared inbox",
+ "summary": "Customer service suite: ticketing, messaging, voice, help centre and AI agents.",
+ "best_for": "support teams past the point where a shared inbox works, who need routing, a help centre and reporting in one place and have the volume to justify per-agent pricing",
+ "skip_if": "you are a small team handling support out of email. The entry tier is email and ticketing only, the features people buy Zendesk for start at $55 a seat, and the Copilot AI is not available below $115. Also skip it if your case volume is low enough that per-resolution AI metering is more admin than benefit",
+ "honest_knock": "Three separate multipliers sit on top of the number you first see. The prices shown are annual-billed — the page states a 20% annual discount and never prints the monthly rate, so budgeting month-to-month means adding roughly a quarter yourself. Copilot, the AI the product is currently sold on, is a $50 per-agent add-on that their own page restricts to Professional and higher: the $19 and $55 tiers cannot have it at any price, and on the $115 Professional seat it is a 43% uplift. And the AI agents that are included are metered by automated resolutions: past the allowance you pay per resolution, so the bill moves with how well the AI works rather than with how many people you hire. App Builder, Action Builder and Voice are metered on consumption alongside it. Price the tier you need with the add-ons you actually want switched on, because the $19 entry and a working configuration are far apart.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$19",
+  "entry_price_terms": "per agent a month, annual billing (US storefront)",
+  "from_price_usd_month": 19.0,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-08-12, read on their own pricing page from two countries) Per agent per month on annual billing, US storefront: Support Team $19, Suite Team $55, Suite Professional $115. Suite Enterprise + Copilot is quote-only. The page geo-prices — read from Europe the same three tiers show €19, €55 and €115 — so check which storefront your quote came from. Annual billing carries a stated 20% discount and the monthly rate is never printed. Paid add-ons on top of the seat price: Copilot $50 per agent/month (€50), Workforce Engagement bundle $50 (€50), Contact Center $83 (€82). Copilot can be attached to Professional and higher only. AI agents are included in Suite and Support plans but metered by 'automated resolutions' beyond the plan allowance, and App Builder, Action Builder and Voice are billed on consumption above their own allowances.",
+  "verified_at": "2026-09-05",
+  "source_url": "https://www.zendesk.com/pricing/"
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Paid add-ons on top of the seat price: Copilot $50 per agent/month (€50), Workforce Engagement bundle $50 (€50), Contact Center $83 (€82).",
+   "verified_at": "2026-09-05",
+   "source_url": "https://www.zendesk.com/pricing/"
+  },
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "AI agents are included in Suite and Support plans but metered by 'automated resolutions' beyond the plan allowance, and App Builder, Action Builder and Voice are billed on consumption above their own allowances.",
+   "verified_at": "2026-09-05",
+   "source_url": "https://www.zendesk.com/pricing/"
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Paid add-ons on top of the seat price: Copilot $50 per agent/month (€50), Workforce Engagement bundle $50 (€50), Contact Center $83 (€82).",
+   "verified_at": "2026-09-05",
+   "source_url": "https://www.zendesk.com/pricing/"
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "(re-verified 2026-08-12, read on their own pricing page from two countries) Per agent per month on annual billing, US storefront: Support Team $19, Suite Team $55, Suite Professional $115.",
+   "verified_at": "2026-09-05",
+   "source_url": "https://www.zendesk.com/pricing/"
+  }
+ ],
+ "compare_with": {
+  "name": "Freshdesk or Intercom",
+  "why": "the usual head-to-heads — compare at the tier that includes the AI you actually want, since that is where the price gap opens"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/zendesk.json",
+  "review": "https://zerotouchsupport.com/zendesk-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/zendesk/",
+  "vendor_site": "https://zendesk.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://www.zendesk.com/",
+  "affiliate": false,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

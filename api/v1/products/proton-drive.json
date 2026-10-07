@@ -1,0 +1,543 @@
+{
+ "schema_version": "1.0",
+ "id": "proton-drive",
+ "name": "Proton Drive",
+ "research_status": "researched",
+ "vendor_domain": "proton.me",
+ "category": "IT & Productivity",
+ "task": "Security, backup & privacy",
+ "summary": "End-to-end encrypted cloud storage from a Swiss provider. Because Proton cannot read your files there is no server-side search inside documents, integrations are thinner, and losing your credentials without recovery loses the data.",
+ "best_for": "privacy-conscious individuals and businesses that want genuinely end-to-end-encrypted storage from a Swiss provider, ideally as part of the wider Proton suite",
+ "skip_if": "your workflow lives on deep integrations, shared-drive collaboration and full-text search (mainstream clouds do that better), or you'd never set up account recovery",
+ "honest_knock": "End-to-end encryption is the point and the price. Because Proton can't read your files, there's no server-side search inside documents. Previews and third-party integrations are more limited than Google Drive or Dropbox, and losing your credentials without recovery set up means losing data — by design. You trade convenience for the mathematical guarantee that nobody, including Proton, can look inside.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$3.99",
+  "entry_price_terms": "per month for 200GB (20% off $4.99), billed $47.88 a year",
+  "from_price_usd_month": 3.99,
+  "plans": [
+   {
+    "name": "Proton Free",
+    "price": "$0",
+    "includes": "5 GB"
+   },
+   {
+    "name": "Drive Plus",
+    "price": "$3.99/mo billed yearly",
+    "includes": "200 GB — the only tier that is storage on its own"
+   },
+   {
+    "name": "Proton Unlimited",
+    "price": "$9.99/mo billed yearly",
+    "includes": "500 GB plus the VPN, Mail and Calendar"
+   },
+   {
+    "name": "Proton Duo",
+    "price": "$14.99/mo billed yearly",
+    "includes": "2 TB across two users"
+   },
+   {
+    "name": "Proton Family",
+    "price": "$23.99/mo billed yearly",
+    "includes": "3 TB, up to six users"
+   },
+   {
+    "name": "Drive Professional",
+    "price": "$7.99 per user/mo",
+    "includes": "for teams, 1 TB each"
+   }
+  ],
+  "plans_source": "hand-curated from the vendor's pricing page",
+  "notes": "(read 2026-08-26 on proton.me/drive/pricing over a US connection, on the Individuals view with yearly billing) Proton Free gives 5 GB. Drive Plus is $3.99 a month for 200 GB, marked 20% off $4.99 and billed at $47.88 every twelve months. Proton Unlimited is $9.99 for 500 GB and folds in the VPN, Mail and Calendar, billed at $119.88 a year. Proton Duo is $14.99 for 2 TB across two users at $179.88 a year, and Proton Family $23.99 for 3 TB and up to six. Teams get Drive Professional at $7.99 per user a month for 1 TB each. The page carries its own currency selector with CHF, EUR and USD, so these are the US default rather than a conversion. The thing worth seeing in that ladder: Drive Plus is the only tier that is storage on its own — every step above it bundles the rest of Proton, so you are buying a suite the moment you need more than 200 GB.",
+  "verified_at": "2026-08-26",
+  "source_url": "https://proton.me/drive/pricing"
+ },
+ "free_plan": true,
+ "free_plan_evidence": "(read 2026-08-26 on proton.me/drive/pricing over a US connection, on the Individuals view with yearly billing) Proton Free gives 5 GB.",
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Teams get Drive Professional at $7.99 per user a month for 1 TB each.",
+   "verified_at": "2026-08-26",
+   "source_url": "https://proton.me/drive/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "Tresorit or Google Drive",
+  "why": "Tresorit is the enterprise E2EE peer; Google Drive is the convenience default — Proton wins on suite value per euro for individuals"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/proton-drive.json",
+  "review": "https://officesoftwaremarketplace.com/proton-drive-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/proton-drive/",
+  "vendor_site": "https://proton.me"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://now.getproton.me/xtd5ynchlrma",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "rules_verified_at": "2026-08-26",
+   "plans": [
+    {
+     "id": "proton-free",
+     "name": "Proton Free",
+     "audience": "personal",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Proton Free gives 5 GB"
+    },
+    {
+     "id": "drive-plus",
+     "name": "Drive Plus",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 1,
+     "annual_month": 3.99,
+     "annual_year": 47.88,
+     "monthly_status": "unknown",
+     "evidence": "Drive Plus is $3.99 a month for 200 GB, marked 20% off $4.99 and billed at $47.88 every twelve months"
+    },
+    {
+     "id": "proton-unlimited",
+     "name": "Proton Unlimited",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 1,
+     "annual_month": 9.99,
+     "annual_year": 119.88,
+     "monthly_status": "unknown",
+     "evidence": "Proton Unlimited is $9.99 for 500 GB and folds in the VPN, Mail and Calendar, billed at $119.88 a year"
+    },
+    {
+     "id": "proton-duo",
+     "name": "Proton Duo",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 2,
+     "annual_month": 14.99,
+     "annual_year": 179.88,
+     "monthly_status": "unknown",
+     "evidence": "Proton Duo is $14.99 for 2 TB across two users at $179.88 a year"
+    },
+    {
+     "id": "proton-family",
+     "name": "Proton Family",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 6,
+     "annual_month": 23.99,
+     "monthly_status": "unknown",
+     "evidence": "Proton Family $23.99 for 3 TB and up to six"
+    },
+    {
+     "id": "drive-professional",
+     "name": "Drive Professional",
+     "model": "per_unit",
+     "annual_month": 7.99,
+     "monthly_status": "unknown",
+     "evidence": "Teams get Drive Professional at $7.99 per user a month for 1 TB each"
+    }
+   ],
+   "notes": [
+    "Read on the yearly-billing view; monthly-billing prices are not in our notes."
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "proton-drive",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 7.99,
+      "billed": {
+       "amount": 95.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 7.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 15.98,
+      "billed": {
+       "amount": 191.76,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 15.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 23.97,
+      "billed": {
+       "amount": 287.64,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 23.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 39.95,
+      "billed": {
+       "amount": 479.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 39.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 79.9,
+      "billed": {
+       "amount": 958.8,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 79.9
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 119.85,
+      "billed": {
+       "amount": 1438.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 119.85
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 159.8,
+      "billed": {
+       "amount": 1917.6,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 159.8
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 199.75,
+      "billed": {
+       "amount": 2397.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 199.75
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 399.5,
+      "billed": {
+       "amount": 4794.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 399.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "drive-professional",
+      "cheapest_plan_name": "Drive Professional",
+      "total_month": 799.0,
+      "billed": {
+       "amount": 9588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": 799.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "proton-drive",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "proton-free": "not_eligible",
+       "drive-plus": "not_eligible",
+       "proton-unlimited": "not_eligible",
+       "proton-duo": "not_eligible",
+       "proton-family": "not_eligible",
+       "drive-professional": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "schema_version": "1.0",
+ "id": "browseract",
+ "name": "BrowserAct",
+ "research_status": "researched",
+ "vendor_domain": "browseract.com",
+ "category": "Developer Tools",
+ "task": "AI development, agents & data",
+ "summary": "No-code web scraper and browser-automation bots from one prompt, with managed browsers, residential proxies and CAPTCHA solving in one credit pool. Monthly billing costs 20 to 25 percent more than yearly.",
+ "best_for": "teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, proxies and CAPTCHA handling managed for them, and can commit to yearly billing -- at $13 a month Basic is a cheap way to run a few scheduled bots",
+ "skip_if": "you will bill month to month (20 to 25 percent more than yearly, not the doubling the struck-through prices suggest), you plan to run proxy-heavy jobs on the Local CLI (one gigabyte of dynamic proxy traffic is 5,000 credits, half of Basic's monthly pool) or to rely on the cloud proxy staying free, which the page says is for a limited time only, or you need a published overage rate before you commit, because the credit-pack price is not on the page",
+ "honest_knock": "The yearly toggle wears a -20% badge and the crossed-out prices suggest much more, but read what you would actually be charged on 3 October 2026: monthly is $16, $70 and $120, and yearly is $13, $56 and $96, so paying month to month costs roughly 20 to 25 percent more -- not the doubling the struck-through $20, $100 and $200 imply. Those list prices are the discount's anchor, not a rate anyone is currently charged. The free tier is the bigger catch: its card reads 200 signup credits where it read 1,500 on 2 September, about 66 workflow steps at 3 credits a step, while the vendor's own llms.txt still advertises 2,000. And the 'as low as' step rate does not come from these tiers: llms.txt puts a step at about $0.0019, but at Advanced a credit works out to about $0.00096, so a 3-credit step is roughly $0.0029 -- the lower number must belong to a credit pack whose price the page does not show. In our hands-on run of 4 September (historical test data, priced at the meters of that day) the meter was honest at account level (1,500 to 1,174 credits over one build and two runs, reconciling exactly with the history list), but the same Bot cost 21 credits on one run and 27 on the next for identical output, and the task panel briefly reported 0 credits for a run the list priced at 21.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$13",
+  "entry_price_terms": "Basic · per month, annual",
+  "from_price_usd_month": 13.0,
+  "plans": [
+   {
+    "name": "Free Trial",
+    "price": "$0",
+    "includes": "200 credits on signup, 2 free Agent Builds, 2 simultaneous tasks, 5 free local browsers, community support (the vendor's llms.txt says 2,000 signup credits; the pricing card says 200)"
+   },
+   {
+    "name": "Basic",
+    "price": "$16/mo monthly ($20 struck through) or $13/mo yearly ($156)",
+    "includes": "10,000 credits/mo, 10 simultaneous tasks, unlimited MCP servers, up to 5 static proxies, 10 local browsers, 7-day trial with 1,000 credits"
+   },
+   {
+    "name": "Essential",
+    "price": "$70/mo monthly ($100 struck through) or $56/mo yearly ($672)",
+    "includes": "50,000 credits/mo, 20 tasks, unlimited MCP servers, up to 25 static proxies, 50 local browsers, 7-day trial with 1,500 credits"
+   },
+   {
+    "name": "Advanced",
+    "price": "$120/mo monthly ($200 struck through) or $96/mo yearly ($1,152)",
+    "includes": "100,000 credits/mo, 40 tasks, unlimited MCP servers, up to 50 static proxies, 100 local browsers, 7-day trial with 2,000 credits"
+   }
+  ],
+  "plans_source": "hand-curated from the vendor's pricing page",
+  "notes": "(prices re-verified 2026-10-03 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-metered subscription with a free tier. Yearly billing: Basic $13/month ($156), Essential $56/month ($672) and Advanced $96/month ($1,152). Monthly billing: Basic $16 a month with $20 struck through, Essential $70 with $100 struck through, Advanced $120 with $200 struck through. Unchanged since 2026-09-13; before that, on 2026-09-02, the public page charged the struck-through list prices on the monthly tab. The Free Trial card reads 200 Free Credits on signup, 2 Free Agent Builds, 2 simultaneous tasks and 5 free local browsers (1,500 on 2026-09-02); the vendor's own llms.txt still says 2,000 free credits, and both llms.txt and BrowserAct in writing name the pricing page as the source of truth, so we quote the card. Paid allowances: 10,000, 50,000 and 100,000 credits a month with 10, 20 and 40 simultaneous tasks, unlimited MCP servers, up to 5, 25 and 50 static proxies, 10, 50 and 100 free local browsers, a 7-day free trial per paid tier (1,000, 1,500 and 2,000 credits) and access to extra credit packs. CHANGED SINCE 2026-09-20: a Workflow Bot step now costs 3 credits instead of 5. The page splits usage in two. Cloud SaaS: Workflow Bots at 3 credits per executed step, Agent Bots estimated at 300-500 credits to build and 10-20 a run for a simple task, 800-1,500 to build and 20-30 a run for a complex one; the 24/7 cloud browser and the built-in dynamic proxy are free for a limited time, and a static proxy is optional. Local CLI: $0 runtime fee; credits apply only to optional add-ons, a local fingerprint browser at 100 credits, dynamic proxy at 5,000 credits per GB, static proxies priced by location and tier without a figure.",
+  "verified_at": "2026-10-03",
+  "source_url": "https://www.browseract.com/pricing"
+ },
+ "free_plan": true,
+ "free_plan_evidence": "(prices re-verified 2026-10-03 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-metered subscription with a free tier.",
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "(prices re-verified 2026-10-03 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-metered subscription with a free tier.",
+   "verified_at": "2026-10-03",
+   "source_url": "https://www.browseract.com/pricing"
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Local CLI: $0 runtime fee; credits apply only to optional add-ons, a local fingerprint browser at 100 credits, dynamic proxy at 5,000 credits per GB, static proxies priced by location and tier without a figure.",
+   "verified_at": "2026-10-03",
+   "source_url": "https://www.browseract.com/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "Browse.ai",
+  "why": "Both turn a website into a scheduled, reusable data robot without code. Browse.ai is the older name and prices per robot run on a credit ladder that starts at $19 a month on annual billing, $48 monthly; BrowserAct starts lower at $13 yearly and bundles managed browsers, proxies and CAPTCHA solving into the same credit pool. If your bottleneck is blocked pages, BrowserAct's infrastructure is the difference; if it is simply extracting a table on a schedule, either does the job and Browse.ai has the longer track record."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/browseract.json",
+  "review": "https://aibuildermarketplace.com/b2b/browseract-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/browseract/",
+  "vendor_site": "https://browseract.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://browseract.com?fpr=aibuildermarketplace",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+ ]
+}

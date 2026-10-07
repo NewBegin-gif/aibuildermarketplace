@@ -78,15 +78,396 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "agent",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "support-team",
+     "name": "Support Team",
+     "model": "per_unit",
+     "annual_month": 19,
+     "monthly_status": "unknown",
+     "evidence": "Support Team $19, Suite Team $55, Suite Professional $115"
+    },
+    {
+     "id": "suite-team",
+     "name": "Suite Team",
+     "model": "per_unit",
+     "annual_month": 55,
+     "monthly_status": "unknown",
+     "evidence": "Support Team $19, Suite Team $55, Suite Professional $115"
+    },
+    {
+     "id": "suite-professional",
+     "name": "Suite Professional",
+     "model": "per_unit",
+     "annual_month": 115,
+     "monthly_status": "unknown",
+     "evidence": "Support Team $19, Suite Team $55, Suite Professional $115"
+    },
+    {
+     "id": "suite-enterprise",
+     "name": "Suite Enterprise + Copilot",
+     "model": "quote",
+     "evidence": "Suite Enterprise + Copilot is quote-only"
+    }
+   ],
+   "notes": [
+    "US storefront prices; Zendesk geo-prices, and read from Europe the same tiers show in euros. The monthly rate is never printed."
+   ],
+   "not_computable": [
+    "Paid add-ons (Copilot, Workforce Engagement, Contact Center) and AI agents, App Builder, Action Builder and Voice beyond their allowances are charged on top and are not in these totals."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "zendesk",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 228.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 19.0,
+       "suite-team": 55.0,
+       "suite-professional": 115.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 38.0,
+      "billed": {
+       "amount": 456.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 38.0,
+       "suite-team": 110.0,
+       "suite-professional": 230.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 684.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 57.0,
+       "suite-team": 165.0,
+       "suite-professional": 345.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 1140.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 95.0,
+       "suite-team": 275.0,
+       "suite-professional": 575.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 2280.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 190.0,
+       "suite-team": 550.0,
+       "suite-professional": 1150.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 285.0,
+      "billed": {
+       "amount": 3420.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 285.0,
+       "suite-team": 825.0,
+       "suite-professional": 1725.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 380.0,
+      "billed": {
+       "amount": 4560.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 380.0,
+       "suite-team": 1100.0,
+       "suite-professional": 2300.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 475.0,
+      "billed": {
+       "amount": 5700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 475.0,
+       "suite-team": 1375.0,
+       "suite-professional": 2875.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 950.0,
+      "billed": {
+       "amount": 11400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 950.0,
+       "suite-team": 2750.0,
+       "suite-professional": 5750.0,
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "support-team",
+      "cheapest_plan_name": "Support Team",
+      "total_month": 1900.0,
+      "billed": {
+       "amount": 22800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "support-team": 1900.0,
+       "suite-team": 5500.0,
+       "suite-professional": 11500.0,
+       "suite-enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Paid add-ons (Copilot, Workforce Engagement, Contact Center) and AI agents, App Builder, Action Builder and Voice beyond their allowances are charged on top and are not in these totals."
+    ]
+   },
+   "monthly": {
+    "product_id": "zendesk",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "support-team": "price_unknown_on_billing",
+       "suite-team": "price_unknown_on_billing",
+       "suite-professional": "price_unknown_on_billing",
+       "suite-enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Paid add-ons (Copilot, Workforce Engagement, Contact Center) and AI agents, App Builder, Action Builder and Voice beyond their allowances are charged on top and are not in these totals."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -110,9 +491,15 @@
    "status": "open"
   },
   {
-   "question_id": "zendesk:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "zendesk:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "zendesk:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Paid add-ons (Copilot, Workforce Engagement, Contact Center) and AI agents, App Builder, Action Builder and Voice beyond their allowances are charged on top and are not in these totals. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

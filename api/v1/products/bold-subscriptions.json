@@ -49,15 +49,238 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "launch",
+     "name": "Launch",
+     "model": "per_unit",
+     "monthly": 24.99,
+     "annual_status": "unknown",
+     "evidence": "Launch is $24.99 a month plus a 2% transaction fee"
+    },
+    {
+     "id": "grow",
+     "name": "Grow",
+     "model": "per_unit",
+     "monthly": 49.99,
+     "annual_status": "unknown",
+     "evidence": "Grow is $49.99 a month plus 1%"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "per_unit",
+     "monthly": 74.99,
+     "annual_status": "unknown",
+     "evidence": "and Scale is $74.99 a month plus 0.9%"
+    }
+   ],
+   "usage": [
+    {
+     "id": "revenue_processed",
+     "label": "Transaction fee on revenue processed",
+     "unit": "USD of revenue a month",
+     "percent_by_plan": {
+      "launch": 2,
+      "grow": 1,
+      "scale": 0.9
+     },
+     "evidence": "Launch is $24.99 a month plus a 2% transaction fee and already includes the working core: subscription maximizers, customizable frequencies, order-based and fixed-date billing, dunning, prepaid subscriptions, unlimited subscribers and standard support. Grow is $49.99 a month plus 1%, and Scale is $74.99 a month plus 0.9%"
+    }
+   ],
+   "notes": [
+    "A Shopify app is billed per store that installs it; charges are billed in USD every 30 days."
+   ],
+   "not_computable": [
+    "The listing does not say which transactions the fee is charged on; the revenue you enter is treated as the subscription revenue the app processes."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "bold-subscriptions",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "launch": "price_unknown_on_billing",
+       "grow": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "launch": "price_unknown_on_billing",
+       "grow": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "launch": "price_unknown_on_billing",
+       "grow": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "launch": "price_unknown_on_billing",
+       "grow": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "launch": "price_unknown_on_billing",
+       "grow": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The listing does not say which transactions the fee is charged on; the revenue you enter is treated as the subscription revenue the app processes."
+    ]
+   },
+   "monthly": {
+    "product_id": "bold-subscriptions",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 24.99,
+      "billed": {
+       "amount": 24.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "launch": 24.99,
+       "grow": 49.99,
+       "scale": 74.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 49.98,
+      "billed": {
+       "amount": 49.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "launch": 49.98,
+       "grow": 99.98,
+       "scale": 149.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 74.97,
+      "billed": {
+       "amount": 74.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "launch": 74.97,
+       "grow": 149.97,
+       "scale": 224.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 124.95,
+      "billed": {
+       "amount": 124.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "launch": 124.95,
+       "grow": 249.95,
+       "scale": 374.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 249.9,
+      "billed": {
+       "amount": 249.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "launch": 249.9,
+       "grow": 499.9,
+       "scale": 749.9
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The listing does not say which transactions the fee is charged on; the revenue you enter is treated as the subscription revenue the app processes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -81,9 +304,9 @@
    "status": "open"
   },
   {
-   "question_id": "bold-subscriptions:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "bold-subscriptions:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The listing does not say which transactions the fee is charged on; the revenue you enter is treated as the subscription revenue the app processes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

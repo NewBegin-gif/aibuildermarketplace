@@ -1,0 +1,113 @@
+{
+ "study_id": "aibm-r04-price-changes",
+ "slug": "saas-price-changes-summer-2026",
+ "title": "Report 04: how often does a SaaS pricing page change its price?",
+ "type": "market_observation",
+ "edition": "2026-07_2026-09",
+ "first_published": "2026-09-02",
+ "edition_published": "2026-09-15",
+ "population": "Pricing pages of the tools in our review corpus, captured automatically on the 2nd of each month; only pages with readable amounts in the first month and a fresh read in the second count.",
+ "population_short": "430 monthly page comparisons",
+ "selection": "Automated diff flags candidates; a person reads the captured lines of both months and publishes only real price changes. Currency switches, failed captures, newly shown annual rates and promotions are excluded.",
+ "measurement_period": {
+  "start": "2026-07-02",
+  "end": "2026-09-02"
+ },
+ "headline": {
+  "text": "monthly page comparisons showed a price change (all change types together)",
+  "numerator": 19,
+  "denominator": 430,
+  "metric": "change_share_pooled"
+ },
+ "metrics": [
+  {
+   "id": "round_2026-07_2026-08",
+   "label": "changes in round 2026-07 to 2026-08",
+   "numerator": 9,
+   "denominator": 150
+  },
+  {
+   "id": "round_2026-08_2026-09",
+   "label": "changes in round 2026-08 to 2026-09",
+   "numerator": 10,
+   "denominator": 280
+  },
+  {
+   "id": "increase",
+   "label": "increase changes",
+   "numerator": 8,
+   "denominator": 19
+  },
+  {
+   "id": "decrease",
+   "label": "decrease changes",
+   "numerator": 3,
+   "denominator": 19
+  },
+  {
+   "id": "restructure",
+   "label": "restructure changes",
+   "numerator": 7,
+   "denominator": 19
+  },
+  {
+   "id": "withdrawn",
+   "label": "withdrawn changes",
+   "numerator": 1,
+   "denominator": 19
+  },
+  {
+   "id": "vendors",
+   "label": "distinct vendors with a change",
+   "numerator": 18,
+   "denominator": null
+  }
+ ],
+ "limitations": [
+  "Not a random sample: the tools we review.",
+  "The pooled rate adds two rounds of different size; each round is also reported on its own.",
+  "The 19 changes are four different kinds (increase, decrease, restructure, withdrawal), not 19 comparable price rises.",
+  "For the second round the page-by-page list of unchanged pages was not kept."
+ ],
+ "method_url": "#method",
+ "evidence_url": "#changes",
+ "verification": {
+  "last_verified": "2026-09-02"
+ },
+ "next_full_recheck": "monthly: capture on the 2nd, published after review",
+ "corrections": [
+  {
+   "date": "2026-09-15",
+   "previous_version": null,
+   "what": "The first version (2 September 2026) divided the 19 changes by 567 pages, which counted pages that could not show a change. The denominator is now the 430 comparable page pairs; the headline went from '1 in 30' to '1 in 23'."
+  }
+ ],
+ "schema": "aibm-research-manifest/1",
+ "files": [
+  {
+   "name": "changes.csv",
+   "url": "/research/saas-price-changes-summer-2026/data/2026-07_2026-09/changes.csv",
+   "bytes": 9818,
+   "sha256": "8c25020473e6a36e3589efc49a1bdc167ab67291a7fe0664d7c70f5898d1c48c"
+  },
+  {
+   "name": "rounds.json",
+   "url": "/research/saas-price-changes-summer-2026/data/2026-07_2026-09/rounds.json",
+   "bytes": 2991,
+   "sha256": "ca1ce787b56d3457f37ad277c47a1373f8058440f3cd40ae7288c280a266ab1a"
+  }
+ ],
+ "author": {
+  "name": "Daniel Haket",
+  "url": "https://aibuildermarketplace.com/about/",
+  "email": "daniel@aibuildermarketplace.com"
+ },
+ "reviewer": null,
+ "license": {
+  "name": "CC BY 4.0",
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "scope": "Our own data, analysis, tables and charts. Quoted vendor text and screenshots of vendor pages remain the vendor's; we reproduce them as evidence."
+ },
+ "contact": "daniel@aibuildermarketplace.com",
+ "fingerprint": "a3510ba757086d26"
+}

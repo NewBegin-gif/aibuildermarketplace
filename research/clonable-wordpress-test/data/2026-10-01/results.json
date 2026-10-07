@@ -1,0 +1,35 @@
+{
+ "title": "Clonable on WordPress (hands-on test)",
+ "run_date": "2026-10-01",
+ "publisher": "AIBuilder Marketplace",
+ "licence": "CC BY 4.0",
+ "page": "https://aibuildermarketplace.com/research/clonable-wordpress-test/",
+ "source": "Our own measurement log of 1 October 2026 (times in UTC, taken from the screenshot timestamps). Written up as structured data on 7 October 2026; the test itself is unchanged. The private preview link and its access code are left out.",
+ "affiliate_relationship": {"Clonable": "affiliate programme on Reditus, we may be paid; this page is also our entry in Clonable's review content campaign on Reditus (one-off EUR 30 if approved). Clonable did not see the page before it went live."},
+ "method": {
+  "site": "fresh WordPress 7.1.2 on PHP 8.5, Twenty Twenty-Three theme, temporary TasteWP sandbox, no other translation plugin",
+  "own_content": "one page 'WordPress maintenance plans' (intro, heading, three-item list, prices 49 and 89 euro, closing line) plus WordPress's sample post and page",
+  "plan": "Clonable free plan, new account, no card",
+  "plugin": "Clonable 2.13.3 from the WordPress plugin directory",
+  "language": "German (de_DE), formality 'Same as original'",
+  "launch_method": "Preview first (no DNS change)"
+ },
+ "steps": [
+  {"step": "scan", "time_utc": "18:58:22-18:58:42", "observed": "Site scan completed in about 10 s: WordPress, English (United States), plugins sorted into Not supported 0 / Has overlap 0 / Supported 1 / Unknown 0; warning that Cloudflare may make detection less accurate.", "result": "worked"},
+  {"step": "language and context", "observed": "German chosen; a formality setting appeared; context step offers an AI Context Assistant ('Takes 5-10 minutes') or a free text field; we wrote two sentences.", "result": "worked"},
+  {"step": "preview build", "time_utc": "build started ~19:00:56, preview ready 19:03:09", "observed": "Preview ready about 2 min 13 s after the build started, about 4 min 45 s after typing the address.", "result": "worked"},
+  {"step": "translation", "observed": "Test page fully in German, menu included, formal 'Sie'; URL slug stayed English; the sample 'Hello world' post came out informal, mirroring its casual original.", "result": "worked, with notes"},
+  {"step": "sync", "time_utc": "saved 19:04:46, visible 19:05:01", "observed": "Price changed from 49 to 59 euro on the English page; the German clone showed '59 Euro' on the first reload.", "result": "worked (under 15 s)"},
+  {"step": "WordPress after translating", "observed": "Pages = 3 before and after (Privacy Policy draft, Sample Page, our page); no German copies in WordPress; the only addition to the install was the Clonable plugin.", "result": "worked"},
+  {"step": "manual correction", "time_utc": "visible 19:09:29", "observed": "'Hallo Welt!' changed to 'Hallo, Welt!' in the clone editor; 'Translation saved successfully'; the public preview showed the change.", "result": "worked"},
+  {"step": "plugin connected", "time_utc": "19:14:50", "observed": "API key pasted (by Daniel, not by Claude); 'successfully connected'; hreflang x-default/en-us/de-de present in the head of original and clone.", "result": "worked"},
+  {"step": "language switcher", "time_utc": "opened 19:17:29", "observed": "Floating switcher shows both languages; clicking German did not navigate in our automated session (iframe and postMessage).", "result": "not confirmed"},
+  {"step": "bulk correction tools", "observed": "Translation Replacements and Glossary show 'Plan upgrade required' on the free plan.", "result": "paid feature"}
+ ],
+ "plans_seen": {
+  "in_app_1_oct": "Free: Translated pages 0/25, Proofreading 0/500, Sites 1/1, Clones 1/1. Starter 1 clone 50 pages EUR 25/mo, Business 400 pages EUR 49, Pro 1,200 EUR 79, Expert 5,000 EUR 249, Premium 50,000 EUR 999.",
+  "public_pricing_page_1_oct": "Free EUR 0, 1 clone, 20 pages; Business EUR 49, 3 clones, 400 pages; Pro EUR 79, 5 clones, 1,200 pages (Recommended); Expert EUR 249, 10 clones, 5,000 pages; Premium EUR 999, 20 clones, 50,000 pages.",
+  "difference": "The free plan's page limit is 25 in the app and 20 on the public pricing page; the app marks Business as recommended, the public page marks Pro."
+ },
+ "not_covered": ["more than one language", "WooCommerce and multi-currency", "a site with real traffic", "DNS go-live on a production domain", "translated URL slugs"]
+}

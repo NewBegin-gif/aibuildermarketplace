@@ -119,7 +119,29 @@ document.addEventListener('click',function(e){if(!n.contains(e.target)){zetMeer(
 <div class="wrap">
 <p style="font-size:.8rem;color:#737373;margin:14px 0"><a href="/">Home</a> &rsaquo; <a href="/research/">Research</a> &rsaquo; Hands-on test</p>
 <span class="pill">Hands-on test &middot; run on 2026-09-26</span>
-<h1>One booking app. Three AI builders. Here is what actually worked.</h1>
+<h1>One booking app. Three AI builders. Here is what actually worked.</h1><!--rk-kaart-start--><style id="rk-css">
+.rk{border:1px solid var(--border,#262626);border-radius:16px;background:linear-gradient(180deg,var(--card2,#1a1a1a),var(--card,#141414));margin:22px 0 28px;overflow:hidden}
+.rk-kop{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--border,#262626);font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;font-weight:800;color:var(--text2,#a3a3a3)}
+.rk-kop b{color:#60a5fa}.rk-kop .rk-st{margin-left:auto;color:#34d399}.rk-kop .rk-st.corr{color:#fbbf24}
+.rk-hoofd{padding:16px 18px 6px}
+.rk-hoofd .rk-n{font-size:1.9rem;font-weight:900;letter-spacing:-.02em;line-height:1.1}
+.rk-hoofd p{margin:6px 0 0;color:var(--text,#fafafa);font-size:1rem;line-height:1.55}
+.rk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--border,#262626);margin-top:12px}
+@media(max-width:640px){.rk-grid{grid-template-columns:minmax(0,1fr)}.rk-hoofd .rk-n{font-size:1.6rem}}
+.rk-grid>div{padding:12px 18px;border-right:1px solid var(--border,#262626);border-bottom:1px solid var(--border,#262626)}
+.rk-grid h4{margin:0 0 4px;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2,#a3a3a3)}
+.rk-grid p{margin:0;font-size:.9rem;line-height:1.5;color:var(--text,#fafafa)}
+.rk-acts{display:flex;flex-wrap:wrap;gap:8px;padding:12px 18px}
+.rk-acts a,.rk-acts button{font:inherit;font-size:.84rem;font-weight:700;border:1px solid var(--border,#262626);border-radius:9px;padding:7px 12px;color:var(--text,#fafafa);background:transparent;cursor:pointer;text-decoration:none}
+.rk-acts a:hover,.rk-acts button:hover{border-color:#3b82f6}
+.rk-acts .rk-dl{background:#2563eb;border-color:#2563eb;color:#fff}
+.rk-pak table{width:100%;border-collapse:collapse;font-size:.88rem}.rk-pak td,.rk-pak th{padding:7px 10px 7px 0;border-bottom:1px solid var(--border,#262626);text-align:left;vertical-align:top}
+.rk-pak th{font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--text2,#a3a3a3)}
+.rk-pak code{font-size:.75rem;color:var(--text2,#a3a3a3);word-break:break-all}
+.rk-tabel{overflow-x:auto}
+</style><section class="rk" aria-label="Study card"><div class="rk-kop"><b>Hands-on test</b><span>Edition 2026-09-26</span><span>3 builders, 1 run each</span><span class="rk-st">Current edition</span></div><div class="rk-hoofd"><div class="rk-n">2 of 3</div><p>first versions let ten simultaneous bookings into an eight-spot class (check T05)</p></div><div class="rk-grid"><div><h4>What it means</h4><p>If people can book the last spots at the same moment, test that case yourself: the builders&#x27; own tests did not catch it.</p></div><div><h4>Main limitation</h4><p>One run per builder on one day: a case study, not a ranking of the tools.</p></div><div><h4>Measured</h4><p>26 September 2026</p></div><div><h4>Last verified &middot; next full re-check</h4><p>26 September 2026 &middot; re-test after a relevant product change; repeat runs are planned as a protocol series</p></div></div><div class="rk-acts"><a class="rk-dl" href="/research/one-booking-app-three-ai-builders/data/2026-09-26/package.zip" download>Download the study package (.zip)</a><a href="#how-we-tested">Method</a><a href="#evidence">Evidence</a><a href="#editions">Editions &amp; corrections</a><button type="button" data-rk-cite="AIBuilder Marketplace Research (Daniel Haket), “Hands-on: one booking app, three AI builders”, edition 2026-09-26. https://aibuildermarketplace.com/research/one-booking-app-three-ai-builders/ (data: https://aibuildermarketplace.com/research/one-booking-app-three-ai-builders/data/2026-09-26/manifest.json). CC BY 4.0.">Copy citation</button></div></section><script>document.addEventListener('click',function(e){var b=e.target.closest('[data-rk-cite]');if(!b)return;
+var t=b.getAttribute('data-rk-cite');(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Citation copied';},
+function(){window.prompt('Copy this citation:',t);});});</script><!--rk-kaart-eind-->
 <p class="lede">On the morning of 26 September 2026 we gave Lovable, Replit and Emergent the same prompt for a small class-booking web app, on each one's free plan, and then tested what they built against 18 checks we wrote down before the first build. Where a check failed, the builder got up to three repair prompts, always in the same words. This is one run per builder: a case study, not a ranking.</p>
 
 <blockquote class="cite">When ten people tried to book the last spots of an eight-person class at the same moment, only Lovable's first version stopped at eight. Replit's and Emergent's first versions accepted all ten, and Replit's public schedule then went blank. Both were fixed after we described the failure, Replit in one repair prompt and Emergent in two.<small>AIBuilder Marketplace, hands-on test, 2026-09-26. Free to quote with attribution.</small></blockquote>
@@ -152,7 +174,7 @@ Requirements:
 Do not add payments, email sending or user accounts.</pre>
 <p>Small enough for a free plan, but it contains the things that separate a demo from something a studio could use: a hard capacity limit, a private link, a protected admin page, an export, and data that has to survive a redeploy. Payments and email were left out on purpose, because they need accounts with third parties and would have made this a test of those services instead.</p>
 
-<h2>How we tested</h2>
+<h2 id="how-we-tested">How we tested</h2>
 <ul class="tight">
 <li><b>Same start.</b> Three new free accounts, prompts sent between 12:11 and 12:14 Amsterdam time, default mode in each builder (Replit's only option on the free plan is its "Free" agent mode; Lovable in Build mode; Emergent as a web app). When a builder asked questions, we let it decide for itself.</li>
 <li><b>Prompts only.</b> We did not touch the code. Clicks on a builder's own buttons (create project, publish) were allowed and are recorded below.</li>
@@ -161,7 +183,7 @@ Do not add payments, email sending or user accounts.</pre>
 <li><b>Repairs</b> used one template for every builder: <i>&ldquo;These tests fail: [test, what we did, what we saw]. Fix only these, change nothing else, and republish.&rdquo;</i> Maximum three per builder.</li>
 </ul>
 
-<h2>Results, check by check</h2>
+<h2 id="evidence">Results, check by check</h2>
 <p>First version, and where it changed, the result after a repair prompt.</p>
 <div class="tw"><table>
 <thead><tr><th>Check</th><th>Lovable</th><th>Replit</th><th>Emergent</th></tr></thead>
@@ -230,7 +252,7 @@ Do not add payments, email sending or user accounts.</pre>
 </ul>
 <p>Our full reviews: <a href="/b2b/lovable-review/">Lovable</a> &middot; <a href="/b2b/replit-review/">Replit</a> &middot; <a href="/b2b/emergent-review/">Emergent</a>. How we separate researched reviews from hands-on ones: <a href="/how-we-review/">how we review</a>.</p>
 
-<h2>Citation</h2>
+<!--rk-pakket-start--><h2 id="editions">Data, editions and corrections</h2><div class="rk-pak"><p><a class="rk-zip" href="/research/one-booking-app-three-ai-builders/data/2026-09-26/package.zip" download><b>Download everything for edition 2026-09-26 (.zip)</b></a></p><p>Edition <b>2026-09-26</b>. Every file below is the analysis input or output of this edition; the <a href="/research/one-booking-app-three-ai-builders/data/2026-09-26/checksums.txt">checksums</a> let you confirm you have the same bytes we published. The <a href="/research/one-booking-app-three-ai-builders/data/2026-09-26/manifest.json">manifest</a> carries the population, period, definitions and counts. A rebuild of this page is not a new measurement: new rounds become new editions, and a changed edition carries a correction note.</p><div class="rk-tabel"><table><tr><th>File</th><th>Size</th><th>SHA-256</th></tr><tr><td><a href="/research/one-booking-app-three-ai-builders/data/2026-09-26/results.json">results.json</a></td><td>11,865 bytes</td><td><code>10aae28cb5803d8c&hellip;</code></td></tr></table></div><h3 style="font-size:1rem;margin:18px 0 6px">Editions</h3><div class="rk-tabel"><table><tr><th>Edition</th><th>Status</th><th>Headline</th><th>Data</th></tr><tr><td>2026-09-26</td><td>current</td><td>2 of 3: first versions let ten simultaneous bookings into an eight-spot class (check T05)</td><td><a href="/research/one-booking-app-three-ai-builders/data/2026-09-26/manifest.json">manifest</a></td></tr></table></div><p style="font-size:.88rem;color:var(--text2,#a3a3a3)">Licence: CC BY 4.0 &mdash; Our own data, analysis, tables and charts. Quoted vendor text and screenshots of vendor pages remain the vendor&#x27;s; we reproduce them as evidence. Questions, corrections or a vendor response: <a href="mailto:daniel@aibuildermarketplace.com">daniel@aibuildermarketplace.com</a> &middot; <a href="/research/press/">press &amp; data</a>.</p></div><!--rk-pakket-eind--><h2>Citation</h2>
 <p>AIBuilder Marketplace, &ldquo;One Booking App, Three AI Builders: What Actually Worked&rdquo;, hands-on test run on 2026-09-26. Free to quote and reproduce with attribution (CC BY 4.0).</p>
 </div>
 <footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. This page contains no affiliate links.<!--sister-net-start-->

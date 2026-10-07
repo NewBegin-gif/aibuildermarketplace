@@ -17,18 +17,18 @@
   "from_price_usd_month": 20.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-08-17 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that. Core is $25/mo, or $20 billed annually, with 20 free ACH a month; Boost $55/mo, or $44 annually, with 50 free ACH; Unlimited $80/mo. The detail our earlier note missed: every paid plan adds $10 a month per additional user, or $8 on annual billing, so a three-person finance team on Core is $45 a month rather than $25. Card payments carry a flat 2.9% fee and check and wire payments have their own charges. There is a 30-day trial.",
-  "verified_at": "2026-08-17",
+  "notes": "(re-verified 2026-08-17 and 2026-10-07 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that. Core is $25/mo, or $20 billed annually, with 20 free ACH a month; Boost $55/mo, or $44 annually, with 50 free ACH; Unlimited $80/mo, or $64 annually, with unlimited users. Go is limited to one user. The detail our earlier note missed: every paid plan adds $10 a month per additional user, or $8 on annual billing, so a three-person finance team on Core is $45 a month rather than $25. Card payments carry a flat 2.9% fee; a standard paper check is $1.50 and a wire $10 per payment, with faster options priced higher. Paid plans now start with 90 days free rather than the 30 days we noted earlier: the page offers 90 days of unlimited free ACH payments with no card, and an account that has not subscribed by then drops to Go, losing premium features and the data held in them.",
+  "verified_at": "2026-10-07",
   "source_url": null
  },
  "free_plan": true,
- "free_plan_evidence": "(re-verified 2026-08-17 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that.",
+ "free_plan_evidence": "(re-verified 2026-08-17 and 2026-10-07 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that.",
  "cost_traps": [
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "The detail our earlier note missed: every paid plan adds $10 a month per additional user, or $8 on annual billing, so a three-person finance team on Core is $45 a month rather than $25.",
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-07",
    "source_url": null
   }
  ],
@@ -57,15 +57,476 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "go",
+     "name": "Go",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that."
+    },
+    {
+     "id": "core",
+     "name": "Core",
+     "model": "flat",
+     "included_units": 1,
+     "annual_month": 20,
+     "monthly": 25,
+     "extra_unit": {
+      "annual_month": 8,
+      "monthly": 10
+     },
+     "evidence": "Core is $25/mo, or $20 billed annually, with 20 free ACH a month"
+    },
+    {
+     "id": "boost",
+     "name": "Boost",
+     "model": "flat",
+     "included_units": 1,
+     "annual_month": 44,
+     "monthly": 55,
+     "extra_unit": {
+      "annual_month": 8,
+      "monthly": 10
+     },
+     "evidence": "Boost $55/mo, or $44 annually, with 50 free ACH"
+    },
+    {
+     "id": "unlimited",
+     "name": "Unlimited",
+     "model": "flat",
+     "annual_month": 64,
+     "monthly": 80,
+     "evidence": "Unlimited $80/mo, or $64 annually, with unlimited users"
+    }
+   ],
+   "extra_evidence": "every paid plan adds $10 a month per additional user, or $8 on annual billing",
+   "notes": [
+    "The per-user add-on applies to Core and Boost; Unlimited includes unlimited users.",
+    "Whether approve-only or view-only users count as paid users is not stated."
+   ],
+   "not_computable": [
+    "ACH payments beyond the plan allowance cost $0.50 each; card payments 2.9%; checks and wires per payment.",
+    "Paid plans start with 90 days free, which the computed price ignores."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "melio",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "go",
+      "cheapest_plan_name": "Go",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": 0.0,
+       "core": 20.0,
+       "boost": 44.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 28.0,
+      "billed": {
+       "amount": 336.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 28.0,
+       "boost": 52.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 36.0,
+      "billed": {
+       "amount": 432.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 36.0,
+       "boost": 60.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 52.0,
+       "boost": 76.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 64.0,
+      "billed": {
+       "amount": 768.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 92.0,
+       "boost": 116.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 64.0,
+      "billed": {
+       "amount": 768.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 132.0,
+       "boost": 156.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 64.0,
+      "billed": {
+       "amount": 768.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 172.0,
+       "boost": 196.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 64.0,
+      "billed": {
+       "amount": 768.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 212.0,
+       "boost": 236.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 64.0,
+      "billed": {
+       "amount": 768.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 412.0,
+       "boost": 436.0,
+       "unlimited": 64.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 64.0,
+      "billed": {
+       "amount": 768.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 812.0,
+       "boost": 836.0,
+       "unlimited": 64.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "go",
+      "to_plan": "core",
+      "from_plan_name": "Go",
+      "to_plan_name": "Core"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "core",
+      "to_plan": "unlimited",
+      "from_plan_name": "Core",
+      "to_plan_name": "Unlimited"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "ACH payments beyond the plan allowance cost $0.50 each; card payments 2.9%; checks and wires per payment.",
+     "Paid plans start with 90 days free, which the computed price ignores."
+    ]
+   },
+   "monthly": {
+    "product_id": "melio",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "go",
+      "cheapest_plan_name": "Go",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": 0.0,
+       "core": 25.0,
+       "boost": 55.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 35.0,
+      "billed": {
+       "amount": 35.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 35.0,
+       "boost": 65.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 45.0,
+      "billed": {
+       "amount": 45.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 45.0,
+       "boost": 75.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 65.0,
+      "billed": {
+       "amount": 65.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 65.0,
+       "boost": 95.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 80.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 115.0,
+       "boost": 145.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 80.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 165.0,
+       "boost": 195.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 80.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 215.0,
+       "boost": 245.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 80.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 265.0,
+       "boost": 295.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 80.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 515.0,
+       "boost": 545.0,
+       "unlimited": 80.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 80.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "go": "not_eligible",
+       "core": 1015.0,
+       "boost": 1045.0,
+       "unlimited": 80.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "go",
+      "to_plan": "core",
+      "from_plan_name": "Go",
+      "to_plan_name": "Core"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "core",
+      "to_plan": "unlimited",
+      "from_plan_name": "Core",
+      "to_plan_name": "Unlimited"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "ACH payments beyond the plan allowance cost $0.50 each; card payments 2.9%; checks and wires per payment.",
+     "Paid plans start with 90 days free, which the computed price ignores."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -89,9 +550,15 @@
    "status": "open"
   },
   {
-   "question_id": "melio:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "melio:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: ACH payments beyond the plan allowance cost $0.50 each; card payments 2.9%; checks and wires per payment. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "melio:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Paid plans start with 90 days free, which the computed price ignores. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

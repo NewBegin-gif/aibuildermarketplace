@@ -1,0 +1,88 @@
+{
+ "schema_version": "1.0",
+ "id": "cometchat",
+ "name": "CometChat",
+ "vendor_domain": "cometchat.com",
+ "category": "Communication & Voice",
+ "task": "Chat inside my own app",
+ "summary": "In-app text, voice and video chat infrastructure to embed into your own software — secure and scalable, with a free developer plan and, via the new Air release, fully on-prem or air-gapped deployment for regulated enterprises.",
+ "best_for": "product teams that want proven in-app text/voice/video chat with SDKs for every major framework, without building messaging infrastructure themselves",
+ "skip_if": "your app is pre-revenue with growing users (the free-to-paid cliff will hit mid-growth), or chat is peripheral enough that a support widget covers it",
+ "honest_knock": "The pricing cliff is the honest headline: from a 100-MAU free tier straight to ~$239/mo is a brutal jump for an early-stage app, and users report plan structures changing under them. Model your MAU growth curve and the overage math before you architect around it. Chat infrastructure is sticky by nature; the time to compare vendors is before launch, not after.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$239",
+  "entry_price_terms": "a month at 1,000 MAU billed yearly ($298.75 monthly)",
+  "from_price_usd_month": 239.0,
+  "plans": [
+   {
+    "name": "Build",
+    "price": "free",
+    "includes": "all features, up to 100 users, 25 concurrent connections, no card"
+   },
+   {
+    "name": "Basic",
+    "price": "$239 at 1,000 MAU; $299 at 10,000 MAU; $699 at 25,000 MAU; $1,349 at 50,000 MAU (billed yearly)",
+    "includes": "concurrency included at 5% of MAU; unlimited messages/storage; 6 month retention"
+   },
+   {
+    "name": "Advanced",
+    "price": "$359 at 1,000 MAU; $399 at 10,000 MAU; $949 at 25,000 MAU; $1,649 at 50,000 MAU (billed yearly)",
+    "includes": "concurrency included at 5% of MAU; unlimited messages/storage; 6 month retention"
+   },
+   {
+    "name": "Enterprise",
+    "price": "$999 at 10,000 MAU",
+    "includes": "concurrency included at 10% of MAU; no listed overage, usage upgrades plan instead"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(re-verified 2026-08-17 against CometChat's own machine-readable pricing reference, which they publish for AI agents and last verified themselves on 2026-05-20; USD) Build is free for development: all features, up to 100 users and 25 concurrent connections, no card. Paid Chat plans are priced by monthly active users. Billed yearly, shown as a monthly equivalent: at 1,000 MAU Basic is $239 and Advanced $359; at 10,000 MAU Basic $299, Advanced $399 and Enterprise $999; at 25,000 MAU $699 and $949; at 50,000 MAU $1,349 and $1,649. Paying monthly costs about 20% more — $298.75 and $448.75 at 1,000 MAU. Above 50,000 MAU everything is quote-only. Concurrency is included at 5% of your MAU on Basic and Advanced and 10% on Enterprise. On overage CometChat charges $0.10 per extra MAU (falling at higher tiers) or $1 per extra concurrent connection — and where both are exceeded it bills the higher of the two, not both. Enterprise has no listed overage; usage above the plan is upgraded to the appropriate plan instead. Messages and storage are unlimited on every plan, and message retention is 6 months across the board, extendable at extra cost.",
+  "verified_at": "2026-08-17",
+  "source_url": null
+ },
+ "free_plan": true,
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "On overage CometChat charges $0.10 per extra MAU (falling at higher tiers) or $1 per extra concurrent connection — and where both are exceeded it bills the higher of the two, not both.",
+   "verified_at": "2026-08-17",
+   "source_url": null
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Messages and storage are unlimited on every plan, and message retention is 6 months across the board, extendable at extra cost.",
+   "verified_at": "2026-08-17",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "Stream or Sendbird",
+  "why": "the premium chat-SDK peers — all three are MAU-priced; compare at YOUR projected MAU including overages, not at the entry tier"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/cometchat.json",
+  "review": "https://zerotouchsupport.com/cometchat-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/cometchat/",
+  "vendor_site": "https://cometchat.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://try.cometchat.com/155dumgioc1q",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

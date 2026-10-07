@@ -1,0 +1,95 @@
+{
+ "schema_version": "1.0",
+ "id": "devs-ai",
+ "name": "Devs.ai",
+ "vendor_domain": "devs.ai",
+ "category": "IT & Productivity",
+ "task": "AI development, agents & data",
+ "summary": "Build and ship AI agents and apps across many models without engineering work.",
+ "best_for": "teams that want to prototype and ship AI agents and apps across multiple models without engineering overhead, and that can absorb model usage metered on top of the per-seat fee",
+ "skip_if": "you need SSO, access control lists or white-labelling without going through an Enterprise contract, or you need one predictable all-in bill rather than a seat fee plus metered usage",
+ "honest_knock": "The seat price is the smaller half of the bill. Personal includes $10 of usage a month and Business $21, with model usage metered on top of the seat. The plan cards state the included amount without stating the rate you pay once it runs out — which is exactly the number you need to forecast a real workload. The free plan is a demo rather than a working tier: both builders are limited to \"Core\", and workflows, APIs and integrations are absent entirely, which is much of what would make the platform useful past a first agent. And for a product sold on IT governance, the governance controls are the ones you cannot buy with a card — SSO, access control lists and white-labelling sit on the Enterprise tier, behind a custom annual contract.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$15",
+  "entry_price_terms": "Personal, per seat · per seat per month billed annually ($18 billed monthly)",
+  "from_price_usd_month": 15.0,
+  "plans": [
+   {
+    "name": "Free",
+    "price": "$0 forever",
+    "includes": "Core Agent Builder and App Builder; 2 GB data upload; no workflows, APIs or integrations"
+   },
+   {
+    "name": "Personal",
+    "price": "$15 per seat / month billed annually or $18 billed monthly",
+    "includes": "Includes $10 of usage per month; 10 GB data upload"
+   },
+   {
+    "name": "Business",
+    "price": "$30 per seat / month billed annually or $36 billed monthly",
+    "includes": "Includes $21 of usage per month; 20 GB data upload; team governance and collaboration"
+   },
+   {
+    "name": "Enterprise",
+    "price": "custom annual contract",
+    "includes": "Custom data upload; SSO (OpenID/SAML), access control lists, custom connectors, white-labelling"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(re-verified 2026-08-26, read in a live browser session on devs.ai/home/pricing with both billing toggles) Devs.ai does publish its pricing — on the marketing site at devs.ai/home/pricing, not at the app's /pricing route, which bounces you to a login screen. Free is $0 forever, but Agent Builder and App Builder appear there in \"Core\" rather than \"Full\" form, data upload is capped at 2 GB, and workflows, APIs and integrations are marked absent. Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a custom annual contract. The seat fee is not the whole bill: Personal includes $10 of usage per month and Business $21, with model usage metered on top of the seat. Data upload runs 2 GB, 10 GB, 20 GB and custom across the four tiers. Team governance and collaboration start at Business, while SSO (OpenID/SAML), access control lists, custom connectors and white-labelling are Enterprise-only. Separately, Devs.ai told us by email on 5 August 2026 that organisations upgrading to a paid Personal or Business plan can earn up to $100 in usage credits for completing setup steps: starting a conversation, creating an agent, connecting an integration, deploying an app. The credits are shared org-wide and do not expire. Enterprise is excluded, and orgs already on a paid plan before July 2026 are not enrolled by default. That last paragraph is the vendor's own statement to us, not something we found published on the pricing page.",
+  "verified_at": "2026-08-26",
+  "source_url": null
+ },
+ "free_plan": true,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a custom annual contract.",
+   "verified_at": "2026-08-26",
+   "source_url": null
+  },
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "The seat fee is not the whole bill: Personal includes $10 of usage per month and Business $21, with model usage metered on top of the seat.",
+   "verified_at": "2026-08-26",
+   "source_url": null
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a custom annual contract.",
+   "verified_at": "2026-08-26",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "MindStudio or Dify",
+  "why": "the agent-builder field — all three meter model usage differently on top of their base price, so compare on the metered layer rather than on the seat fee"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/devs-ai.json",
+  "review": "https://officesoftwaremarketplace.com/devs-ai-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/devs-ai/",
+  "vendor_site": "https://devs.ai"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://join.devs.ai/exn0gdsa9tab",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

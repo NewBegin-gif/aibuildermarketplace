@@ -1,0 +1,78 @@
+{
+ "schema_version": "1.0",
+ "id": "runpod",
+ "name": "Runpod",
+ "vendor_domain": "runpod.io",
+ "category": "IT & Productivity",
+ "task": "AI development, agents & data",
+ "summary": "Serverless GPU compute platform. Rent high-end NVIDIA GPUs by the hour to train and deploy your own machine learning models.",
+ "best_for": "developers and ML teams that want cheap, per-second GPU compute for inference and experiments without committing to hyperscaler contracts",
+ "skip_if": "you need enterprise SLAs, compliance guarantees and managed everything (hyperscalers exist for that), or your workload is steady enough that owned/reserved hardware wins",
+ "honest_knock": "The honest math is utilization. On the same card serverless runs roughly 1.7x the pod rate per compute-hour: $4.79 against $2.89 for an H100, $2.72 against $1.59 for an A100 PCIe. That is brilliant for spiky inference and wasteful for steady training, so pick the mode per workload, not per habit. And like all GPU clouds, the meter never sleeps: an idle pod you forgot is the cloud version of the subscription graveyard. Set spend alerts before the first experiment, not after the first invoice.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$0.27",
+  "entry_price_terms": "RTX A5000 pod, Secure… · per hour, billed per second",
+  "from_price_usd_month": null,
+  "plans": [
+   {
+    "name": "Pods — Secure Cloud",
+    "price": "$0.27–$7.89 per hour",
+    "includes": "dedicated GPU instances from RTX A5000 to B300, billed per second, in vetted data centres"
+   },
+   {
+    "name": "Pods — Community Cloud",
+    "price": "$0.16–$6.94 per hour",
+    "includes": "the same GPU models on community hosts; roughly 10–55% cheaper per card"
+   },
+   {
+    "name": "Serverless",
+    "price": "$0.58–$9.98 per hour",
+    "includes": "per-second billing, sub-200ms cold starts, autoscaling workers from 16GB to B300"
+   },
+   {
+    "name": "Clusters",
+    "price": "$1.79/hr per A100 SXM, $4.31/hr per H200 SXM",
+    "includes": "multi-node jobs up to 64 GPUs; H100 SXM, L40S and B200 are quote-only"
+   },
+   {
+    "name": "Reserved clusters",
+    "price": "quote — talk to an engineer",
+    "includes": "1, 3, 6, 12 and 12+ month commitments with SLA-backed uptime"
+   }
+  ],
+  "plans_source": "hand-curated from the vendor's pricing page",
+  "notes": "Pay-per-use GPU cloud (re-verified 24 September 2026 against runpod.io/pricing). Secure Cloud on-demand pods run from $0.27/hr (RTX A5000) and $0.49/hr (L4) up to $2.89/hr for an H100 PCIe, $3.49/hr H100 SXM, $4.59/hr H200, $6.79/hr B200 and $7.89/hr B300. Four of those moved up between July and late August — L4 from $0.39, H100 SXM from $2.99, H200 from $4.39 and B300 from $7.39 — and by 24 September the H100 SXM had moved again, from $3.29 to $3.49, while the A100 PCIe pod read $1.59 against the $1.39 in our 5 September notes. The A5000 and the H100 PCIe did not move at all. The page's own structured data publishes the Community Cloud column beside every card, and that is where the real discount sits: RTX 4090 $0.34 against $0.74 on Secure, RTX 3090 $0.22 against $0.50, RTX A6000 $0.33 against $0.53, H100 PCIe $1.99 against $2.89, H100 SXM $2.69 against $3.49. Serverless bills per second at a premium over pods in exchange for sub-200ms cold starts and autoscaling: $0.58/hr for the 16GB tier, $2.72/hr for an A100, $4.79/hr for an 80GB H100 (was $4.55) and $9.98/hr at the top for a B300. Multi-node Clusters now publish two rates — $1.79/hr per A100 SXM and $4.31/hr per H200 SXM — while H100 SXM, L40S and B200 clusters plus all reserved capacity stay quote-only. Storage is billed on top and is easy to miss: container disk $0.10/GB/month, volume disk $0.10 while running and $0.20 while idle, network storage $0.07/GB under 1TB and $0.05 over it, $0.14 for the high-performance tier.",
+  "verified_at": "2026-09-24",
+  "source_url": null
+ },
+ "free_plan": false,
+ "cost_traps": [],
+ "compare_with": {
+  "name": "Lambda or Vast.ai",
+  "why": "close GPU-cloud rivals — compare per-GPU-hour on the exact card you need and whether serverless cold-start speed matters for your workload"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/runpod.json",
+  "review": "https://aibuildermarketplace.com/b2b/runpod-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/runpod/",
+  "vendor_site": "https://runpod.io"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://get.runpod.io/dai55gii8gxb",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

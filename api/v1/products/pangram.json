@@ -1,0 +1,98 @@
+{
+ "schema_version": "1.0",
+ "id": "pangram",
+ "name": "Pangram",
+ "vendor_domain": "pangram.com",
+ "category": "Operations & Workflow",
+ "task": "SEO, content & landing pages",
+ "summary": "AI content detector. Identifies AI-generated text with a focus on minimizing false positives — used by educators, publishers and platforms to verify whether writing is human or machine, via web app and API. The vendor's Pangram 4.0 release (July 2026) claims a false-positive rate of 1 in 10,000, detection of output from the newest frontier models, resistance to \"humanized\" text written to evade detection, and improved boundary detection between human and AI passages. An early research preview adds AI image detection, flagging which segments of an image appear AI-generated and verifying C2PA content credentials where present.",
+ "best_for": "educators, publishers and platforms that need a low-false-positive signal on whether text is AI-generated, at web-app or API scale",
+ "skip_if": "you'd use a detection score as final proof for a serious decision (no detector is safe for that), or your volume is tiny enough for the free tier",
+ "honest_knock": "The unavoidable honest limit of every AI detector, including accurate ones: it is never infallible. It will occasionally flag genuinely human writing as AI (false positives) and miss some AI text, so it must be used as a signal, never as sole proof for high-stakes calls like academic penalties or hiring. Pangram's pitch is fewer false positives than rivals, which is real progress — but 'fewer' is not 'none'. Pair it with human judgment and the credit meter with your actual volume: the free tier's 2,000 words a day are 20 credits rounded up per check, which in our test meant ten checks of 150 words rather than twenty.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$20",
+  "entry_price_terms": "per month ($15 billed yearly)",
+  "from_price_usd_month": 20.0,
+  "plans": [
+   {
+    "name": "Free",
+    "price": "$0",
+    "includes": "up to 2,000 words a day, 3 image scans a day"
+   },
+   {
+    "name": "Individual",
+    "price": "$20/mo or $15/mo billed annually ($180 a year)",
+    "includes": "up to 300,000 words a month, 100 image scans a month"
+   },
+   {
+    "name": "Professional",
+    "price": "$65/mo or $45/mo annually ($540 a year)",
+    "includes": "up to 1,500,000 words a month, 500 image scans, $200 of API usage included"
+   },
+   {
+    "name": "Team",
+    "price": "$20 per seat/mo or $15 annually",
+    "includes": "from 2 seats, 300,000 words per seat"
+   },
+   {
+    "name": "Educational Institution",
+    "price": "no published price",
+    "includes": ""
+   },
+   {
+    "name": "Enterprise",
+    "price": "no published price",
+    "includes": "progressive discounting beyond the developer tier"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(re-verified 6 September and again 30 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Free: $0, no payment method, up to 2,000 words a day (20 credits of 100 words, rounded up per check: ten checks of 150 words in our test of 1 October 2026) and 3 image scans a day. Individual $20/mo or $15/mo billed annually ($180 a year) for up to 300,000 words a month and 100 image scans a month. Professional $65/mo or $45/mo annually ($540 a year) for up to 1,500,000 words a month, 500 image scans and $200 of API usage included. Team $20 per seat/mo or $15 annually, from 2 seats, 300,000 words per seat. Educational Institution and Enterprise are both quote-only; the Enterprise card offers progressive discounting beyond the developer tier. The Developer API is prepaid pay-as-you-go: llms.txt says funds from $5 to $2,000, while the page's own top-up buttons start at $25 ($25/$50/$100/$250/$500/$1,000, with auto-refill). Realtime checks on Pangram 4 cost $0.05 per 100 words where Pangram 3 charged $0.05 per 1,000, and bulk document scans are 20% cheaper than realtime. A 7-day free trial is offered on Individual and on Team, but not on Professional, whose button read 'Start with Professional' on 6 September and reads 'Upgrade to Professional', with '$65 billed now', on 1 October 2026.",
+  "verified_at": "2026-09-30",
+  "source_url": null
+ },
+ "free_plan": true,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Team $20 per seat/mo or $15 annually, from 2 seats, 300,000 words per seat.",
+   "verified_at": "2026-09-30",
+   "source_url": null
+  },
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "(re-verified 6 September and again 30 September 2026 on pangram.com/pricing and pangram.com/llms.txt, which agree with each other on every figure) Free: $0, no payment method, up to 2,000 words a day (20 credits of 100 words, rounded up per check: ten checks of 150 words in our test of 1 October 2026) and 3 image scans a day.",
+   "verified_at": "2026-09-30",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "GPTZero or Originality.ai",
+  "why": "close AI-detection peers — Pangram competes on lower false positives; compare accuracy claims and per-word credit cost for your volume"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/pangram.json",
+  "review": "https://aibuildermarketplace.com/b2b/pangram-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/pangram/",
+  "vendor_site": "https://pangram.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://affiliate.pangram.com/x1xctagyhhbz",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

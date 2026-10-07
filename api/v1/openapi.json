@@ -1,0 +1,403 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "AIBuilder Marketplace software records",
+  "version": "1.0",
+  "description": "Read-only records of hand-researched B2B and AI software: prices per plan where structured, cost traps with their full evidence sentence, the date the pricing was read, what is unknown, and the vendor handoff with affiliate disclosure. Static JSON; no authentication.",
+  "license": {
+   "name": "CC BY 4.0",
+   "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "contact": {
+   "url": "https://aibuildermarketplace.com/agents/"
+  }
+ },
+ "servers": [
+  {
+   "url": "https://aibuildermarketplace.com/api/v1"
+  }
+ ],
+ "paths": {
+  "/index.json": {
+   "get": {
+    "operationId": "listProducts",
+    "summary": "Catalog: one compact row per product, plus policy and counts",
+    "responses": {
+     "200": {
+      "description": "Catalog",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Catalog"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/products/{id}.json": {
+   "get": {
+    "operationId": "getProduct",
+    "summary": "Full record for one product",
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "pattern": "^[a-z0-9-]+$"
+      },
+      "description": "Product id from index.json (lowercase name with dashes)"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Product record",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Product"
+        }
+       }
+      }
+     },
+     "404": {
+      "description": "Unknown product id; check index.json"
+     }
+    }
+   }
+  },
+  "/categories.json": {
+   "get": {
+    "operationId": "listCategories",
+    "summary": "Categories with their product ids",
+    "responses": {
+     "200": {
+      "description": "Categories"
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "Catalog": {
+    "type": "object",
+    "required": [
+     "catalog_version",
+     "products"
+    ],
+    "properties": {
+     "catalog_version": {
+      "type": "string"
+     },
+     "updated_at": {
+      "type": "string",
+      "format": "date"
+     },
+     "policy": {
+      "type": "object"
+     },
+     "counts": {
+      "type": "object"
+     },
+     "products": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "name": {
+         "type": "string"
+        },
+        "category": {
+         "type": "string"
+        },
+        "task": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "entry_price": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "entry_price_terms": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "pricing_status": {
+         "type": "string"
+        },
+        "from_price_usd_month": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "free_plan": {
+         "type": "boolean"
+        },
+        "cost_traps": {
+         "type": "array",
+         "items": {
+          "type": "string"
+         }
+        },
+        "has_plans": {
+         "type": "boolean"
+        },
+        "verified_at": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "review": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "record": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   },
+   "CostTrap": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "enum": [
+       "quote_only",
+       "per_seat",
+       "usage_metered",
+       "renewal_jump",
+       "addons_extra",
+       "annual_lock"
+      ]
+     },
+     "label": {
+      "type": "string"
+     },
+     "evidence": {
+      "type": "string",
+      "description": "Full evidence sentence from the dossier, never truncated"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "source_url": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    }
+   },
+   "Plan": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "price": {
+      "type": "string"
+     },
+     "includes": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    }
+   },
+   "Product": {
+    "type": "object",
+    "required": [
+     "id",
+     "name",
+     "pricing",
+     "purchase",
+     "unknowns"
+    ],
+    "properties": {
+     "schema_version": {
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "vendor_domain": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "category": {
+      "type": "string"
+     },
+     "task": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "summary": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "best_for": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "skip_if": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "honest_knock": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "pricing": {
+      "type": "object",
+      "properties": {
+       "status": {
+        "type": "string"
+       },
+       "entry_price": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "entry_price_terms": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "from_price_usd_month": {
+        "type": [
+         "number",
+         "null"
+        ],
+        "description": "Only when the entry price is US dollars per month"
+       },
+       "plans": {
+        "type": [
+         "array",
+         "null"
+        ],
+        "items": {
+         "$ref": "#/components/schemas/Plan"
+        }
+       },
+       "plans_source": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "notes": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "verified_at": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "source_url": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     },
+     "free_plan": {
+      "type": "boolean"
+     },
+     "cost_traps": {
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/CostTrap"
+      }
+     },
+     "compare_with": {
+      "type": [
+       "object",
+       "null"
+      ]
+     },
+     "links": {
+      "type": "object"
+     },
+     "purchase": {
+      "type": "object",
+      "properties": {
+       "seller": {
+        "type": "string"
+       },
+       "how": {
+        "type": "string"
+       },
+       "handoff_url": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "affiliate": {
+        "type": "boolean"
+       },
+       "disclosure": {
+        "type": "string"
+       }
+      }
+     },
+     "unknowns": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "provenance": {
+      "type": "object"
+     }
+    }
+   }
+  }
+ }
+}

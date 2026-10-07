@@ -1,0 +1,76 @@
+{
+ "schema_version": "1.0",
+ "id": "mindstudio",
+ "name": "MindStudio",
+ "vendor_domain": "mindstudio.ai",
+ "category": "IT & Productivity",
+ "task": "AI development, agents & data",
+ "summary": "Visual builder for AI agents and workflows across 200+ models, with model usage passed through at provider cost and no markup.",
+ "best_for": "operators and teams that want to build and deploy real AI agents and workflows visually, across many models, without engineering time",
+ "skip_if": "you need one simple chatbot (simpler tools exist) or deeply custom logic that ends up easier in actual code",
+ "honest_knock": "The no-markup model pass-through is genuinely fair — but it also means your real cost is subscription PLUS model spend, and an agent that loops or processes big documents burns provider credits invisibly until you set limits. The honest build discipline: start every agent with usage caps, and treat 'no-code' as no-code for the plumbing — the logic design and prompt quality are still entirely on you.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$20",
+  "entry_price_terms": "a month plus usage ($16 billed yearly)",
+  "from_price_usd_month": 20.0,
+  "plans": [
+   {
+    "name": "Free",
+    "price": "$0/month plus usage",
+    "includes": "caps at one agent and 1,000 runs a month"
+   },
+   {
+    "name": "Individual",
+    "price": "$20/month plus usage, or $16/month plus usage billed yearly (20% saving)",
+    "includes": "unlimited agents and unlimited runs"
+   },
+   {
+    "name": "Business",
+    "price": "quote-based",
+    "includes": ""
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(prices re-verified 2026-09-18 and again 2026-10-05 on mindstudio.ai/pricing) The subscription is a floor, not the bill: every tier reads “+ usage”, so model calls are charged on top. Free is $0/month plus usage and caps you at one agent and 1,000 runs a month. Individual is $20/month plus usage, or $16/month plus usage billed yearly, a stated 20% saving, and lifts both caps to unlimited agents and unlimited runs. Business is quote-based. Because the metered part is uncapped by the plan, the tier you pick says little about what you will actually pay — the run volume does.\n\nThe metered half is more governable than that makes it sound, and the page is specific about it. A run is one execution of an agent, triggered manually or automatically. MindStudio states it does not mark up model cost — its FAQ says you pay exactly the same price as bringing your own API keys from the providers — and that you can set per-agent and total spend limits and track run cost per agent. All tiers reach 200+ models through its Service Router without API keys of your own, with bring-your-own keys as an option, and hitting a run limit triggers a notification with the choice of upgrading or buying additional runs rather than a hard stop mid-month.",
+  "verified_at": "2026-10-05",
+  "source_url": null
+ },
+ "free_plan": true,
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "Because the metered part is uncapped by the plan, the tier you pick says little about what you will actually pay — the run volume does.",
+   "verified_at": "2026-10-05",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "Zapier Agents or Dify",
+  "why": "adjacent agent-builders — MindStudio's edge is the multi-model router and transparent model pricing; compare on the integrations you need"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/mindstudio.json",
+  "review": "https://aibuildermarketplace.com/b2b/mindstudio-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/mindstudio/",
+  "vendor_site": "https://mindstudio.ai"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://get.mindstudio.ai/sw4f21ihy5xi",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

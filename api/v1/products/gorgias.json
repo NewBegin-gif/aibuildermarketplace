@@ -1,0 +1,61 @@
+{
+ "schema_version": "1.0",
+ "id": "gorgias",
+ "name": "Gorgias",
+ "vendor_domain": "gorgias.com",
+ "category": "Customer Support",
+ "task": "A help desk, tickets or a shared inbox",
+ "summary": "Helpdesk built for ecommerce: tickets, automations and an AI agent, priced by volume rather than by seat -- though the entry tier caps you at three users.",
+ "best_for": "ecommerce support teams with seasonal or spiky volume, where per-agent pricing punishes you for having enough people on a busy week",
+ "skip_if": "your volume is steady and low — 50 tickets a month is the entry allowance, and below that a shared inbox costs nothing; also skip the AI agent until you know your automated-interaction count, since that is the meter that runs away",
+ "honest_knock": "Never priced per agent is a real advantage, but it starts one tier up: the comparison table caps Starter at 3 user seats, and only Basic and above open the inbox to 500. On Basic upwards your whole team can be in there without the bill moving, which is the main reason to choose this over a per-seat helpdesk.\n\nThe cost sits on two meters instead, and both bite. Tickets beyond your allowance are $0.40 each on Starter and Basic, $0.36 on Pro and Advanced, so a bad week costs money rather than attention. And the AI agent -- the thing the homepage leads with -- is a separate $30 a month on the entry plan, which is three times the helpdesk it sits on. So the honest entry price for the product as advertised is $40, not $10.\n\nCount a normal month's tickets and a busy month's, and price both. Then check the AI meter separately: the plan cards charge $1.50 per automated interaction past the included allowance while the comparison table on the same page says $1.00 to $0.85 depending on tier. When a vendor publishes two rates for the same meter, get the one that will be on your invoice in writing before you switch the agent on.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$90",
+  "entry_price_terms": "Basic · per month, month-to-month",
+  "from_price_usd_month": 90.0,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 8 September 2026 on their own pricing page) Not priced per agent -- their own line -- but the seats are capped: the comparison table gives Starter 3 user seats and Basic, Pro and Advanced 500 each. Two meters stack. Starter is $40/month all in, monthly billing only: a $10/month helpdesk with 50 tickets included and $0.40 per ticket beyond, plus the AI Agent at $30/month with 30 automated interactions. Basic is $90/month month-to-month or $77/month billed annually ($924 a year), including 300 tickets and 30 automated interactions with the same $0.40 ticket overage; the $50 helpdesk and $27 AI Agent printed on that card sum to the annual rate, not the monthly one. Pro is $550/month or $471/month billed annually ($5,652 a year) -- $300 helpdesk plus $171 AI Agent -- including 2,000 tickets and 190 automated interactions, with ticket overage falling to $0.36. Advanced is $1,430/month or $1,227/month billed annually ($14,724 a year) -- $750 plus $477 -- including 5,000 tickets and 530 automated interactions, also at $0.36. Above 5,000 conversations a month it is quote-only, and that custom tier is the only one with SSO via SAML, audit logs and an API above the 2 requests a second every listed plan gets. The page contradicts itself on the AI meter: every plan card says $1.50 per automated interaction past the limit, while the comparison table on the same page prices it at $1.00 on Starter, $0.90 on Basic and Pro and $0.85 on Advanced.",
+  "verified_at": "2026-09-08",
+  "source_url": null
+ },
+ "free_plan": false,
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "Basic is $90/month month-to-month or $77/month billed annually ($924 a year), including 300 tickets and 30 automated interactions with the same $0.40 ticket overage; the $50 helpdesk and $27 AI Agent printed on that card sum to the annual rate, not the monthly one.",
+   "verified_at": "2026-09-08",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "Zendesk or Freshdesk",
+  "why": "the standing comparison — Gorgias wins when your team is larger than your ticket volume suggests, and loses when your volume is high and steady"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/gorgias.json",
+  "review": "https://zerotouchsupport.com/gorgias-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/gorgias/",
+  "vendor_site": "https://gorgias.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://partner.gorgias.com/53p147fye0wv",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

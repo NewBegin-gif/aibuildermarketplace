@@ -1,0 +1,88 @@
+{
+ "schema_version": "1.0",
+ "id": "bitscale",
+ "name": "Bitscale",
+ "vendor_domain": "bitscale.ai",
+ "category": "Growth & Revenue",
+ "task": "Sales outreach, leads & CRM",
+ "summary": "GTM data layer that sits on top of your CRM: enrich records through waterfalls across 100+ B2B sources, track buying signals and run AI agents against the result.",
+ "best_for": "sales and RevOps teams that already run enrichment across several vendors and want the waterfall, the signals and the CRM sync in one place, with enough monthly volume to put 15,000 credits to work",
+ "skip_if": "you enrich a few hundred records a month -- the free 200 credits or a per-lookup tool costs a fraction -- or you need a flat, predictable bill, because credits are consumption and consumption moves with your prospecting",
+ "honest_knock": "The free tier is real and needs no card, which makes Bitscale unusually easy to judge for yourself before paying. What to check during that trial is not the feature list but your own burn rate, and Bitscale's credit table tells you the range in advance: one to twelve credits for every email or phone the waterfall finds, depending on how many providers you let it try. That is the whole budget question. The same 15,000 credits on Growth are 15,000 enriched contacts at one credit and 1,250 at twelve, so the plan you buy matters less than the depth you configure. Run fifty real records on the free 200 credits, read the meter before and after, and multiply by your monthly volume -- that number, not the plan price, is your bill.\n\nOne free-tier number is worth holding against the other. The plan table gives Free a 50,000-row grid, while Bitscale's own onboarding mail says the free plan scores up to 200 rows at a time -- and both are true, because a Score column, which grades every row against an ideal-customer profile you describe in plain English, is an AI enrichment at one to two credits a run. The grid is not the ceiling, the 200 credits are. Finding the names draws on the separate pool of 2,000 search credits, so building the list is the cheap half; asking the product to judge it is the half that runs out.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$349",
+  "entry_price_terms": "per month for 15,000 (Booster $799 for 50,000)",
+  "from_price_usd_month": 349.0,
+  "plans": [
+   {
+    "name": "Free",
+    "price": "$0",
+    "includes": "200 credits, no card required, 20 action columns per grid, 50,000 rows"
+   },
+   {
+    "name": "Growth",
+    "price": "$349 a month",
+    "includes": "15,000 credits, 30 action columns, 100,000 rows, HubSpot integration, inbound integrations"
+   },
+   {
+    "name": "Booster",
+    "price": "$799",
+    "includes": "50,000 credits, 50 action columns, scraping scripts, private Slack, Salesforce integration"
+   },
+   {
+    "name": "Enterprise",
+    "price": "quote-only; annual billing at $15,000 and above",
+    "includes": "SOC 2, SSO, priority support, role-based access, Snowflake pipelines"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(re-verified 13 September 2026 on bitscale.ai/pricing, extended on 11 September 2026 from inside a free account; every headline figure unchanged since 1 September 2026) The meter is credits. Free is $0 with 200 credits, no card required, capped at 20 action columns per grid and 50,000 rows. Growth is $349 a month for 15,000 credits, 30 action columns and 100,000 rows, with a two-way HubSpot integration and inbound integrations like RB2B, Factors and Vector. Booster is $799 for 50,000 credits and 50 action columns, adding curated scraping scripts, a private Slack channel and Salesforce integration. Enterprise is quote-only but publishes a floor most vendors hide: annual billing at $15,000 and above, adding SOC 2 and SSO, priority support, role-based team access and Snowflake pipelines. Annual billing takes 10% off. Two lines in the plan table change the arithmetic and are easy to miss. Credits roll over up to three times the plan allowance on Growth and Booster, and not at all on Free, so a quiet month is banked rather than lost. And a credit is spent only when a data provider returns a valid result -- the pricing FAQ says failed lookups, formula columns and CRM syncs are always free -- so a waterfall that finds nothing costs nothing. The page also contradicts itself twice: the comparison table gives all four tiers 100+ data sources while the Free card says 10+ B2B data sources, and the Growth and Booster cards both promise Unlimited Actions while the same page's table caps action columns per grid at 30 and 50. The step from Free to Growth is still the one to plan for: 200 credits to 15,000 with nothing in between, so the bill goes from nothing to $4,188 a year in one move. Monthly company and people search is metered separately at 2,000 on Free, 15,000 on Growth and 50,000 on Booster. Two things the pricing page does not tell you, both read on 11 September 2026. First, what a credit actually buys: Bitscale's own credit documentation prices a found email or phone number at one to twelve platform credits per successful result, depending on how many providers the waterfall is allowed to try, with an AI enrichment at one to two credits a run and a BitAgent website scrape at one. Calls that come in through the API cost nothing. Second, the free tier runs two meters rather than one, and the account screen shows both: 200 platform credits for enrichment and a separate 2,000 search credits for Find People and Find Companies, each resetting monthly. The upgrade panel inside the product also carries a Growth benefit the plan cards leave out -- three hours a quarter with a GTM engineer -- and states plainly what Free locks: credit rollover, more than 20 action columns per grid, the 100+ providers and the inbound integrations.",
+  "verified_at": "2026-09-13",
+  "source_url": "https://bitscale.ai/pricing"
+ },
+ "free_plan": true,
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "(re-verified 13 September 2026 on bitscale.ai/pricing, extended on 11 September 2026 from inside a free account; every headline figure unchanged since 1 September 2026) The meter is credits.",
+   "verified_at": "2026-09-13",
+   "source_url": "https://bitscale.ai/pricing"
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "Enterprise is quote-only but publishes a floor most vendors hide: annual billing at $15,000 and above, adding SOC 2 and SSO, priority support, role-based team access and Snowflake pipelines.",
+   "verified_at": "2026-09-13",
+   "source_url": "https://bitscale.ai/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "Clay or Apollo",
+  "why": "the flexible enrichment platforms -- Clay is closest in shape, and Apollo publishes its prices, which makes it the honest benchmark for what Bitscale credits really cost you"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/bitscale.json",
+  "review": "https://marketingandsalessoftware.com/bitscale-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/bitscale/",
+  "vendor_site": "https://bitscale.ai"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://join.bitscale.ai/wg8nzhxu9cfm",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

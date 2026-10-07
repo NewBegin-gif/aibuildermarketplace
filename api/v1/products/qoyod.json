@@ -1,0 +1,85 @@
+{
+ "schema_version": "1.0",
+ "id": "qoyod",
+ "name": "Qoyod",
+ "vendor_domain": "qoyod.com",
+ "category": "Financial Operations",
+ "task": "Tax & compliance",
+ "summary": "Saudi accounting and e-invoicing platform built around ZATCA compliance, used by 25,000+ businesses.",
+ "best_for": "Saudi businesses that need ZATCA-compliant e-invoicing from software built for that regime rather than retrofitted to it, and who have counted their users, locations and POS terminals before choosing a tier",
+ "skip_if": "you operate outside Saudi Arabia — the entire value proposition is ZATCA compliance and Arabic-first accounting — or you are a single operator whose invoicing needs are met by a general tool at a fraction of the price",
+ "honest_knock": "The entry tier does not do the thing the product is sold on. Qoyod's pitch is surviving Saudi e-invoicing, but Basic covers ZATCA Phase 1 only — Phase 2 is the integration phase, where invoices are cleared with the tax authority in real time, and that starts at Pro. If Phase 2 applies to you, your actual floor is 1,800 SAR and not 1,200. The second thing to price before you sign: Basic is genuinely one user and one location, and every extra seat is 240 SAR a year, which is a fifth of the whole Basic plan per person. A four-person shop on Basic pays 1,200 + 3×240 = 1,920 SAR, more than Pro costs while still sitting on Phase 1. Add a single POS user at 600 SAR and the arithmetic tips further. Work out your seat and location count first, then pick the tier — doing it the other way round is how the add-on line becomes the biggest number on the invoice.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$320",
+  "entry_price_terms": "Basic · per YEAR (1,200 SAR at the 3.75 peg) for 1 user and 1 location",
+  "from_price_usd_month": null,
+  "plans": [
+   {
+    "name": "Basic",
+    "price": "1,200 SAR",
+    "includes": "1 user, 1 location; ZATCA Phase 1, invoices, payments, credit notes"
+   },
+   {
+    "name": "Pro",
+    "price": "1,800 SAR",
+    "includes": "3 users, 3 locations; ZATCA Phase 2, quotations, full procurement cycle"
+   },
+   {
+    "name": "Advanced",
+    "price": "2,211 SAR",
+    "includes": "5 users, 5 locations; fixed-asset management, depreciation, accounting dimensions"
+   },
+   {
+    "name": "Enterprise",
+    "price": "no published price",
+    "includes": "unlimited users, custom API integrations, dedicated account manager"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
+  "notes": "(prices read 2026-08-18 in-browser on app.qoyod.com/home/select_plan_en; the marketing site returns 403 to plain fetches) Billed in Saudi riyal, which is pegged to the dollar at 3.75, so the conversion is exact rather than approximate. Annual pricing runs four tiers. Basic is 1,200 SAR (~$320) for 1 user and 1 location, covering ZATCA Phase 1, invoices, payments and credit notes. Pro is 1,800 SAR (~$480) for 3 users and 3 locations, adding ZATCA Phase 2, quotations and the full procurement cycle. Advanced is 2,211 SAR (~$590) for 5 users and 5 locations, adding fixed-asset management, depreciation and accounting dimensions; that price is shown struck through from 3,300 SAR (~$880) under a “33% off for a 3-year term” banner. Enterprise is quote-only, with unlimited users, custom API integrations and a dedicated account manager. A free trial is offered, and the monthly toggle costs more — the site advertises “save up to 20%” on annual. Add-ons are priced per year on top: payroll 120 SAR per active employee (~$32), POS 600 SAR per user (~$160), extra system users 240 SAR each (~$64) and extra locations 480 SAR each (~$128). (Re-verified 2026-09-18 on app.qoyod.com/home/select_plan, where the _en path then redirected to the Arabic view, and again on 2026-10-05, when the _en path served the English page: every tier and add-on unchanged, and the page names the trial as 14 days with no credit card required. Note for the next reader that the page renders the riyal sign as a glyph font rather than text, so copied text shows bare numbers -- read the currency from the markup, because mistaking these for dollars is a factor of 3.75.)",
+  "verified_at": "2026-10-05",
+  "source_url": "https://app.qoyod.com/home/select_plan_en"
+ },
+ "free_plan": false,
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Add-ons are priced per year on top: payroll 120 SAR per active employee (~$32), POS 600 SAR per user (~$160), extra system users 240 SAR each (~$64) and extra locations 480 SAR each (~$128).",
+   "verified_at": "2026-10-05",
+   "source_url": "https://app.qoyod.com/home/select_plan_en"
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Add-ons are priced per year on top: payroll 120 SAR per active employee (~$32), POS 600 SAR per user (~$160), extra system users 240 SAR each (~$64) and extra locations 480 SAR each (~$128).",
+   "verified_at": "2026-10-05",
+   "source_url": "https://app.qoyod.com/home/select_plan_en"
+  }
+ ],
+ "compare_with": null,
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/qoyod.json",
+  "review": "https://aibuildermarketplace.com/b2b/qoyod-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/qoyod/",
+  "vendor_site": "https://qoyod.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://affiliates.qoyod.com/uc1w70s60dgo",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

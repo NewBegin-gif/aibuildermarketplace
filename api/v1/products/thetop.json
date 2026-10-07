@@ -1,0 +1,62 @@
+{
+ "schema_version": "1.0",
+ "id": "thetop",
+ "name": "TheTop",
+ "vendor_domain": "thetop.com",
+ "category": "IT & Productivity",
+ "task": "AI development, agents & data",
+ "summary": "An enterprise layer in front of your AI providers: it attributes spend by department, reuses repeated work, routes each task to a cheaper model and applies policy before execution. Sold by demo only — no published price since the pricing page went.",
+ "best_for": "enterprises running AI across several departments, models and applications that cannot answer what the bill bought — organisations with a real AI invoice to explain, a CFO asking for return per team, and a security function that wants oversight without reading employees' conversations",
+ "skip_if": "you are one person or a small team looking for an assistant: this is no longer that product. The $8 morning-brief tool this page used to describe has been withdrawn, there is no self-serve plan, no published price and no signup — the only route in is a sales call about your existing AI estate",
+ "honest_knock": "The price is the knock, because there isn't one. TheTop publishes no rate of any kind: no list price, no per-seat figure, no percentage, and no pricing page — we checked on 19 September 2026 and the old one returns a 404. Everything runs through Book a demo, so the first number you hear will be quoted to you, with your own AI spend already on the table. That is a weak position to negotiate from, and it is worth asking for the basis (flat platform fee, per request, or a share of measured savings) before you show anyone your invoice.\n\nThe savings claim is measured by the vendor, against a baseline the vendor computes. The site says eligible traffic is priced against your own baseline and shows 22% and 43% saved in its examples, but the party doing the measuring is also the party being paid. Ask how baseline is defined, which traffic counts as eligible, and whether you can audit the calculation — a reuse or reroute that quietly swaps a frontier model for a cheaper one also changes the output, and only your own evaluation will tell you whether that trade was worth it.\n\nOne more thing to weigh: this product sits in the request path. The Engine applies memory, caching, routing and policy before traffic reaches the model, which is exactly where the savings come from and also exactly where an outage or a bad routing rule lands on every AI feature you run. The vendor's answer is that you start read-only and move traffic when you choose, which is the right shape — but the day you point production at it, a middle layer has become a dependency.",
+ "pricing": {
+  "status": "quote_only",
+  "entry_price": null,
+  "entry_price_terms": null,
+  "from_price_usd_month": null,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 19 September 2026) TheTop publishes no price. The navigation carries no pricing link, every button is Book a demo, and the page this review's figures came from is gone: thetop.com/pricing returns a hard 404, as do /pricing/ and /plans.\n\nThe $8 a month and $80 a year this review used to quote were withdrawn along with the product they belonged to, and cannot be bought today. Until September this was a personal assistant on a single tier, built around a morning brief from Gmail and a calendar. TheTop is now enterprise software sold through a sales call.\n\nRead the figures on their site carefully, because it is full of dollar amounts that are not prices: the dashboard mock-ups show an AI invoice of $196,090, a month billed at $137,644 against a $176,920 baseline, and $39,276 saved. Those illustrate what the product reports, not what it costs. Nothing on the public site says what you would pay for TheTop itself.\n\nWhat the site does commit to about commercial shape: deployment is single-tenant, one dedicated instance per customer; onboarding runs in three steps that start read-only (connect analytics, watch for about a month to establish your number, then point traffic at the Engine); and no traffic migration is needed on day one. Expect a contract quoted against your own AI spend rather than a list price — ask for the pricing basis in writing before the demo, because a layer that bills against measured savings and one that bills a flat platform fee are very different deals.",
+  "verified_at": "2026-09-19",
+  "source_url": null
+ },
+ "free_plan": false,
+ "cost_traps": [
+  {
+   "id": "quote_only",
+   "label": "Quote-only pricing",
+   "evidence": "No published price of any kind on 19 September 2026: thetop.com/pricing returns 404 and the site sells through Book a demo only. The dollar figures on the site ($196,090 of API usage, $137,644 paid, $39,276 saved) are illustrations inside dashboard mock-ups, not tariffs",
+   "verified_at": "2026-09-19",
+   "source_url": null
+  }
+ ],
+ "compare_with": {
+  "name": "LangSmith",
+  "why": "Both sit between your teams and the models, but they are sold to different buyers. LangSmith is developer tooling for tracing, evaluating and debugging LLM applications, with published per-seat and usage pricing you can start on your own. TheTop is an enterprise layer pitched at the CFO, the Head of AI and the CISO together — spend attribution by department, policy before execution, sensitive-data detection in stream, and reuse and routing meant to lower the bill — sold only through a demo with no public price. If you want to debug your own agents, LangSmith is the cheaper and faster answer; if you need to explain a six-figure AI invoice to finance, that is the question TheTop is built for."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/thetop.json",
+  "review": "https://aibuildermarketplace.com/b2b/thetop-review/",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/thetop/",
+  "vendor_site": "https://thetop.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://join.thetop.com/bvtsnmltfl93",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Pricing status is 'quote_only': no single public entry price.",
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

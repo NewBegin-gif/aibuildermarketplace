@@ -1,0 +1,53 @@
+{
+ "schema_version": "1.0",
+ "id": "pickeasy",
+ "name": "Pickeasy",
+ "vendor_domain": "logbase.io",
+ "category": "E-commerce",
+ "task": "E-commerce & inventory ops",
+ "summary": "Shopify local pickup and delivery scheduler (by Logbase): customers pick a date and time slot, with cut-off and preparation times, blackout dates, per-slot order limits and zip-code checks, across one to twenty locations. Tiers are gated on locations and rate rules, and the app's own delivery rates need Shopify's carrier-calculated shipping.",
+ "best_for": "Florists, bakeries, butchers, grocers and restaurants on Shopify that sell for local pickup or delivery and need customers to choose a date and time slot, with cut-off and preparation times, blackout dates, per-slot order limits and zip-code checks, across one to twenty locations",
+ "skip_if": "you need your own delivery rates and your Shopify plan does not include carrier-calculated shipping, which those rates depend on; you ship parcels nationally and have no use for dates and slots; or you need the picker inside checkout and are not on Shopify Plus",
+ "honest_knock": "The rate features depend on something Pickeasy does not sell. Charging your own delivery or shipping rates through the app needs Shopify's Carrier Calculated Shipping API, and Shopify, not Logbase, decides whether your plan includes it. The vendor says so itself in a public reply from November 2025: the API is needed only for rates set inside Pickeasy, and the rest of the app works without it. That still covers a large part of the ladder, from rates by price and weight on Starter to multi-condition and day-of-week rates on Premium. Reviewers from January 2024, June 2025 and August 2025 say they set the app up before finding that their Shopify plan did not include the API, and one wrote that getting it would have meant at least $100 a month more to Shopify on top of the app's own fee. Check your plan for carrier-calculated shipping before you build rates.\n\nThe free plan counts your whole store. Its limit is 10 orders a month, and the vendor's pricing page says that means total store orders, not orders that book a pickup or delivery slot. A live store that sells at all is on Starter within days, so treat $9.99 as the entry price and the free tier as a way to build the setup on a development store, where there is no limit.\n\nTheme and checkout trouble is the recurring complaint. Below Premium on Shopify Plus, the date and slot picker lives on the cart page, not in checkout. In February 2026 a merchant wrote that the address field locked up past the cart and cost them a day of sales; the vendor replied that it had been resolved. A florist wrote in January 2026 that zip-code validation could be bypassed and that they reproduced it on the demo store, and a store with more than two years on the app wrote in July 2026 that Pickeasy breaks their checkout, while praising the support. Test the full path, cart to paid order, on a duplicate theme before you publish. Support runs 20 hours a day and is offline from 3:00 to 7:00 AM India time, according to a vendor reply from May 2026. We have not installed the app.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$9.99",
+  "entry_price_terms": "Starter · a month for one location with delivery, pickup and shipping slots…",
+  "from_price_usd_month": 9.99,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 2026-09-27 on apps.shopify.com/order-delivery-date-time and on the vendor's pricing page at logbase.io/pickeasy-pricing-plan) Five tiers, gated on features and store locations rather than on how many deliveries you schedule, except at the bottom. Free covers one location and up to 10 orders a month, which the vendor's page defines as total store orders, with date and time slots, order limits, preparation time and cut-off, blocked dates and times and zip-code validation; development stores have no limit. Starter is $9.99 a month and adds Shopify POS, slots for shipping, day-wise cut-off and product limits, product-specific fulfilment methods, preparation times and availability, and delivery rates by price and weight. Smart is $19.99 a month for up to four locations and adds rates by time, product and delivery speed, Google Calendar and Google Maps, a home-page zip-code checker and real-time inventory. Premium is $29.99 a month for 5 to 20 locations and adds multi-condition rates, rates by day of week, specific dates and location, and a checkout-page widget for Shopify Plus stores. The vendor's page adds a Custom tier at $59.99 a month for more than 20 locations and bespoke customisation, where the listing says to contact them. Yearly billing saves 10%: $215.99 for Smart, $323.99 for Premium and $647.99 for Custom, while Starter is $107.99 a year on the listing and $105.99 on the vendor's page. Paid tiers have a 14-day free trial. All charges are in USD through Shopify's billing, every 30 days.",
+  "verified_at": "2026-09-27",
+  "source_url": null
+ },
+ "free_plan": false,
+ "cost_traps": [],
+ "compare_with": {
+  "name": "Shopify's own local delivery and pickup",
+  "why": "Shopify's built-in local delivery and pickup settings cost nothing and already let you offer collection from a location and delivery to areas you define, with a minimum order and a delivery price. What they do not give the shopper is a calendar: no date, no time slot, no cut-off and no per-slot limit. That calendar is what Pickeasy sells on its first rung, so the question is not features but whether your customers need to book a moment. A bakery with fixed collection windows, a florist delivering on named days or a butcher with a few van slots does; a shop that hands over anything, any day, during opening hours does not, and can stay on Shopify's own settings."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/pickeasy.json",
+  "review": "https://marketingandsalessoftware.com/pickeasy-review.html",
+  "marketplace": "https://aibuildermarketplace.com/marketplace/pickeasy/",
+  "vendor_site": "https://logbase.io"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://platform.shoffi.app/r/rl_ghBEvFHp",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+ ]
+}

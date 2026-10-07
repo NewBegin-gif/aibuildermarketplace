@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "catalog_version": "2026-10-07.536d75a3c5",
+ "catalog_version": "2026-10-07.4d4a94ca8f",
  "updated_at": "2026-10-07",
  "publisher": "AIBuilder Marketplace",
  "docs": "https://aibuildermarketplace.com/agents/",
@@ -28,9 +28,9 @@
   "offers_vendor_confirmed": 24,
   "task_checks": 131,
   "test_sessions": 25,
-  "with_public_price": 432,
+  "with_public_price": 431,
   "with_review": 511,
-  "cost_traps": 662
+  "cost_traps": 663
  },
  "endpoints": {
   "index": "https://aibuildermarketplace.com/api/v1/index.json",
@@ -68,12 +68,187 @@
      "asset management",
      "incident management"
     ]
+   },
+   "crm": {
+    "label": "A CRM: one place for contacts, deals and the sales pipeline",
+    "phrases": [
+     "crm",
+     "a crm",
+     "sales crm",
+     "simple crm",
+     "small business crm",
+     "customer relationship management",
+     "pipeline management",
+     "sales pipeline",
+     "deal pipeline",
+     "track deals",
+     "manage deals",
+     "contact management"
+    ]
+   },
+   "sales_outreach": {
+    "label": "Outbound sales: sending cold email or LinkedIn sequences to prospects",
+    "phrases": [
+     "cold email",
+     "cold emails",
+     "cold outreach",
+     "sales outreach",
+     "outbound sales",
+     "outbound",
+     "email sequences",
+     "sales sequences",
+     "linkedin outreach",
+     "linkedin automation",
+     "sales engagement",
+     "ai sdr"
+    ]
+   },
+   "b2b_contact_data": {
+    "label": "B2B contact and company data: finding and enriching prospects' emails and phone numbers",
+    "phrases": [
+     "contact data",
+     "b2b data",
+     "b2b contact data",
+     "lead database",
+     "contact database",
+     "email finder",
+     "find emails",
+     "prospect list",
+     "prospect lists",
+     "lead lists",
+     "data enrichment",
+     "contact enrichment",
+     "sales intelligence"
+    ]
+   },
+   "email_marketing": {
+    "label": "Email marketing to your own subscribers: newsletters, campaigns and automations",
+    "phrases": [
+     "email marketing",
+     "newsletter",
+     "newsletters",
+     "email newsletter",
+     "email campaigns",
+     "marketing emails",
+     "mailing list",
+     "email list",
+     "autoresponder",
+     "email marketing platform"
+    ]
+   },
+   "email_deliverability": {
+    "label": "Email deliverability: verifying lists and warming up inboxes so mail is not marked as spam",
+    "phrases": [
+     "email verification",
+     "verify emails",
+     "email list verification",
+     "list cleaning",
+     "clean my email list",
+     "deliverability",
+     "email deliverability",
+     "email warm up",
+     "email warmup",
+     "inbox warmup",
+     "spam folder"
+    ]
+   },
+   "business_phone": {
+    "label": "A business phone system: numbers, calling and routing for your team",
+    "phrases": [
+     "business phone",
+     "business phone system",
+     "phone system",
+     "voip",
+     "cloud phone",
+     "virtual number",
+     "virtual phone number",
+     "business number",
+     "toll free number",
+     "call center",
+     "call centre",
+     "dialer",
+     "power dialer",
+     "phone line"
+    ]
+   },
+   "ai_voice_agent": {
+    "label": "An AI voice agent that answers (or makes) calls by itself",
+    "phrases": [
+     "ai voice agent",
+     "voice agent",
+     "ai receptionist",
+     "ai phone agent",
+     "ai answering",
+     "voice ai",
+     "ai calls",
+     "ai to answer calls",
+     "ai answers calls",
+     "ai virtual receptionist",
+     "ai answering service",
+     "virtual ai receptionist"
+    ]
+   },
+   "answering_service": {
+    "label": "A live answering service: human receptionists who answer your calls",
+    "phrases": [
+     "answering service",
+     "live answering",
+     "live receptionist",
+     "human receptionist",
+     "call answering service",
+     "virtual receptionist",
+     "receptionist service"
+    ]
+   },
+   "partner_program": {
+    "label": "Software to run your own affiliate or partner programme",
+    "phrases": [
+     "affiliate program",
+     "affiliate programme",
+     "affiliate software",
+     "partner program",
+     "partner programme",
+     "referral program",
+     "affiliate tracking",
+     "partner management"
+    ]
+   },
+   "sales_call_intelligence": {
+    "label": "Recording and analysing sales calls (conversation intelligence)",
+    "phrases": [
+     "conversation intelligence",
+     "sales call recording",
+     "record sales calls",
+     "call coaching",
+     "meeting intelligence"
+    ]
+   },
+   "support_ai_agent": {
+    "label": "An AI agent that answers customer-service requests (next to or instead of a help desk)",
+    "phrases": [
+     "ai agent for customer service",
+     "ai support agent",
+     "customer service ai",
+     "ai customer service agent",
+     "ai customer support",
+     "support automation ai"
+    ]
    }
   },
   "labels": {
    "customer_support_helpdesk": "Customer-support help desk",
    "it_service_desk": "Internal IT service desk (ITSM)",
-   "support_ai_agent": "AI agent for customer service (works next to or instead of a help desk)"
+   "support_ai_agent": "AI agent for customer service (works next to or instead of a help desk)",
+   "crm": "CRM (contacts, deals and pipeline)",
+   "sales_outreach": "Outbound sales outreach (cold email and LinkedIn sequences)",
+   "b2b_contact_data": "B2B contact data and enrichment",
+   "email_marketing": "Email marketing to your own subscribers",
+   "email_deliverability": "Email verification and deliverability",
+   "business_phone": "Business phone system",
+   "ai_voice_agent": "AI voice agent that answers calls",
+   "answering_service": "Live answering service (human receptionists)",
+   "partner_program": "Affiliate or partner programme software",
+   "sales_call_intelligence": "Sales call recording and analysis"
   },
   "note": "task_scope says what a product is within a domain (for example a customer-support help desk versus an internal IT service desk). It is separate from text match and from price-rule coverage; a product without price rules is never left out for that reason."
  },
@@ -101,6 +276,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -122,7 +298,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/800-com.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [
+    "ai_voice_agent"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -145,6 +324,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -169,6 +349,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -193,8 +374,11 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/activecampaign.json",
    "has_task_evidence": true,
    "vendor_mcp": true,
-   "task_scope": null,
-   "has_feature_evidence": false
+   "task_scope": "email_marketing",
+   "task_scope_also": [
+    "crm"
+   ],
+   "has_feature_evidence": true
   },
   {
    "id": "adcreative-ai",
@@ -218,6 +402,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -243,6 +428,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -267,6 +453,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -291,6 +478,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -316,6 +504,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -340,6 +529,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -364,6 +554,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -387,7 +578,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/aira.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -413,8 +605,9 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/aircall.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
-   "has_feature_evidence": false
+   "task_scope": "business_phone",
+   "task_scope_also": [],
+   "has_feature_evidence": true
   },
   {
    "id": "airia",
@@ -438,6 +631,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -462,6 +656,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -485,7 +680,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/aisdr.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -510,6 +706,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -532,6 +729,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -556,6 +754,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -580,6 +779,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -607,6 +807,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -631,6 +832,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -656,6 +858,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -681,7 +884,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/amplemarket.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [
+    "b2b_contact_data"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -708,6 +914,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -731,7 +938,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/answering-service-care.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "answering_service",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -756,6 +964,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -780,7 +989,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/apollo.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [
+    "sales_outreach"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -803,6 +1015,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -827,6 +1040,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -849,6 +1063,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -873,6 +1088,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -897,6 +1113,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -922,6 +1139,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -948,6 +1166,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -973,6 +1192,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -997,6 +1217,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1019,6 +1240,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1043,6 +1265,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1067,6 +1290,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1090,7 +1314,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/ava-ai.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "ai_voice_agent",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1114,8 +1339,9 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/aweber.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
-   "has_feature_evidence": false
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
+   "has_feature_evidence": true
   },
   {
    "id": "babylovegrowth",
@@ -1137,6 +1363,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1161,6 +1388,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1183,6 +1411,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1207,6 +1436,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1229,6 +1459,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1250,7 +1481,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/beehiiv.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1277,6 +1509,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1303,6 +1536,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1325,6 +1559,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1350,6 +1585,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1374,6 +1610,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1398,7 +1635,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/bitscale.json",
    "has_task_evidence": true,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1421,6 +1659,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1447,6 +1686,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1471,6 +1711,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1495,6 +1736,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1517,6 +1759,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1541,6 +1784,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1563,6 +1807,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1585,6 +1830,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1607,6 +1853,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1631,7 +1878,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/bonline.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1654,6 +1902,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1678,7 +1927,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/bookyourdata.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1701,6 +1951,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1725,6 +1976,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1748,7 +2000,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/bouncer.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_deliverability",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1771,6 +2024,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1796,6 +2050,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1820,6 +2075,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1844,7 +2100,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/brevo.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1869,6 +2126,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1894,6 +2152,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1919,6 +2178,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1945,6 +2205,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1970,6 +2231,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -1994,7 +2256,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/buzz-ai.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2017,6 +2280,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2042,8 +2306,9 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/calilio.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
-   "has_feature_evidence": false
+   "task_scope": "business_phone",
+   "task_scope_also": [],
+   "has_feature_evidence": true
   },
   {
    "id": "callhippo",
@@ -2069,7 +2334,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/callhippo.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [
+    "ai_voice_agent"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -2095,6 +2363,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2119,7 +2388,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/campaign-monitor.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2144,7 +2414,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/campaigner.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2170,7 +2441,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/capsule.json",
    "has_task_evidence": true,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2193,6 +2465,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2217,6 +2490,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2242,6 +2516,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2266,6 +2541,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2290,6 +2566,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2315,6 +2592,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2341,7 +2619,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/claap.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "sales_call_intelligence",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2367,6 +2646,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2391,7 +2671,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/clay.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2418,6 +2699,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2440,6 +2722,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2464,6 +2747,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2489,7 +2773,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/close.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2516,8 +2801,11 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/cloudtalk.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
-   "has_feature_evidence": false
+   "task_scope": "business_phone",
+   "task_scope_also": [
+    "ai_voice_agent"
+   ],
+   "has_feature_evidence": true
   },
   {
    "id": "cloudtask",
@@ -2539,6 +2827,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2563,6 +2852,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2587,6 +2877,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2609,6 +2900,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2631,6 +2923,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2657,7 +2950,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/cognism.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2683,6 +2977,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2707,6 +3002,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2731,6 +3027,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2755,6 +3052,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2777,6 +3075,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2799,6 +3098,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2823,6 +3123,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2845,6 +3146,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2867,6 +3169,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2889,6 +3192,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2913,6 +3217,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2935,6 +3240,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2959,6 +3265,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -2985,6 +3292,7 @@
    "has_task_evidence": true,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3010,6 +3318,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3035,6 +3344,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3061,6 +3371,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3086,6 +3397,7 @@
    "has_task_evidence": true,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3112,6 +3424,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3137,6 +3450,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3161,6 +3475,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3185,6 +3500,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3209,6 +3525,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3233,6 +3550,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3257,6 +3575,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3282,6 +3601,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3306,6 +3626,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3328,6 +3649,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3351,7 +3673,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/drip.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3376,7 +3699,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/dripify.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3399,6 +3723,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3423,6 +3748,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3447,6 +3773,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3469,6 +3796,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3493,6 +3821,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3519,6 +3848,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3544,6 +3874,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3566,6 +3897,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3592,6 +3924,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": "customer_support_helpdesk",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3614,6 +3947,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3639,6 +3973,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3662,7 +3997,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/emaillistverify.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_deliverability",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3688,6 +4024,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3714,6 +4051,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3737,7 +4075,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/engagebay.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [
+    "email_marketing"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -3763,6 +4104,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3787,6 +4129,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3809,6 +4152,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3831,6 +4175,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3853,6 +4198,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3877,6 +4223,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3899,6 +4246,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3923,6 +4271,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3945,6 +4294,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3969,6 +4319,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -3993,7 +4344,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/expandi.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4018,6 +4370,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4025,12 +4378,13 @@
    "name": "Expertise AI",
    "category": "IT & Productivity",
    "task": "Sales outreach, leads & CRM",
-   "entry_price": "$2,000",
-   "entry_price_terms": "per month)",
-   "pricing_status": "public",
-   "from_price_usd_month": 2000.0,
+   "entry_price": null,
+   "entry_price_terms": null,
+   "pricing_status": "quote_only",
+   "from_price_usd_month": null,
    "free_plan": false,
    "cost_traps": [
+    "quote_only",
     "per_seat",
     "usage_metered"
    ],
@@ -4043,6 +4397,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4066,7 +4421,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/expertsender.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4092,6 +4448,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4114,6 +4471,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4136,6 +4494,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4160,6 +4519,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4184,6 +4544,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4208,6 +4569,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4232,6 +4594,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4257,6 +4620,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4279,6 +4643,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4301,6 +4666,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4325,6 +4691,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4349,6 +4716,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4372,7 +4740,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/folk.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4399,6 +4768,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4424,6 +4794,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4450,6 +4821,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4475,6 +4847,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4501,6 +4874,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": "it_service_desk",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4527,6 +4901,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": "customer_support_helpdesk",
+   "task_scope_also": [],
    "has_feature_evidence": true
   },
   {
@@ -4550,7 +4925,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/fullenrich.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4577,6 +4953,7 @@
    "has_task_evidence": true,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4599,6 +4976,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4621,6 +4999,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4643,6 +5022,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4667,6 +5047,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4690,7 +5071,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/getresponse.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4713,6 +5095,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4735,6 +5118,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4762,6 +5146,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4786,6 +5171,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4810,6 +5196,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": "customer_support_helpdesk",
+   "task_scope_also": [],
    "has_feature_evidence": true
   },
   {
@@ -4834,6 +5221,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4856,6 +5244,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4880,6 +5269,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4904,6 +5294,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4926,6 +5317,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4950,6 +5342,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4974,6 +5367,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -4998,6 +5392,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5023,6 +5418,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5047,6 +5443,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5069,6 +5466,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5093,6 +5491,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": "customer_support_helpdesk",
+   "task_scope_also": [],
    "has_feature_evidence": true
   },
   {
@@ -5119,6 +5518,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5145,6 +5545,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5167,6 +5568,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5191,6 +5593,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5213,6 +5616,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5239,7 +5643,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/hubspot.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [
+    "email_marketing"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -5265,6 +5672,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5289,6 +5697,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5310,7 +5719,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/icontact.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5336,6 +5746,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5358,6 +5769,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5379,7 +5791,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/inboxally.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_deliverability",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5404,6 +5817,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5428,6 +5842,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5453,6 +5868,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5477,6 +5893,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5501,6 +5918,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5526,6 +5944,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5551,6 +5970,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5575,6 +5995,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5600,6 +6021,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5624,6 +6046,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5650,6 +6073,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5675,6 +6099,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5697,6 +6122,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5722,6 +6148,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5746,7 +6173,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/keap.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [
+    "email_marketing"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -5773,6 +6203,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5798,6 +6229,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5819,8 +6251,9 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/kit.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
-   "has_feature_evidence": false
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
+   "has_feature_evidence": true
   },
   {
    "id": "kite",
@@ -5842,6 +6275,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5867,6 +6301,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5892,7 +6327,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/kixie.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5917,6 +6353,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5941,6 +6378,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5965,6 +6403,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -5989,7 +6428,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/krispcall.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6014,6 +6454,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6036,6 +6477,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6062,6 +6504,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6087,6 +6530,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6112,6 +6556,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6134,6 +6579,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6160,6 +6606,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6186,6 +6633,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6211,6 +6659,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6236,7 +6685,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/lemlist.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6261,6 +6711,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6286,6 +6737,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6310,6 +6762,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6334,6 +6787,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6359,6 +6813,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6382,7 +6837,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/lucrovox.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "ai_voice_agent",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6408,6 +6864,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6432,6 +6889,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6456,6 +6914,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6480,6 +6939,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6504,6 +6964,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6530,6 +6991,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6554,6 +7016,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6578,6 +7041,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6603,6 +7067,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6627,6 +7092,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6652,6 +7118,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6676,6 +7143,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6700,6 +7168,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6726,6 +7195,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6750,6 +7220,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6776,6 +7247,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6800,7 +7272,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/moosend.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6825,6 +7298,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6849,6 +7323,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6874,6 +7349,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6896,6 +7372,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6920,6 +7397,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6942,6 +7420,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6967,6 +7446,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -6991,6 +7471,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7015,6 +7496,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7040,6 +7522,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7065,6 +7548,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7089,6 +7573,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7115,6 +7600,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7139,8 +7625,9 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/nocrm.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
-   "has_feature_evidence": false
+   "task_scope": "crm",
+   "task_scope_also": [],
+   "has_feature_evidence": true
   },
   {
    "id": "nordvpn",
@@ -7167,6 +7654,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7191,6 +7679,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7215,6 +7704,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7240,7 +7730,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/nutshell.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [
+    "email_marketing"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -7265,6 +7758,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7291,6 +7785,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7315,6 +7810,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7339,6 +7835,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7363,6 +7860,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7387,6 +7885,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7412,6 +7911,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7437,6 +7937,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7461,6 +7962,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7486,6 +7988,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7508,6 +8011,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7531,7 +8035,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/partnerstack.json",
    "has_task_evidence": true,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "partner_program",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7556,6 +8061,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7580,6 +8086,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7604,6 +8111,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7628,6 +8136,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7652,6 +8161,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7674,6 +8184,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7700,6 +8211,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7724,6 +8236,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7749,7 +8262,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/pipedrive.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7774,6 +8288,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7796,6 +8311,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7820,6 +8336,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7844,6 +8361,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7866,6 +8384,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7890,6 +8409,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7913,7 +8433,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/positive-user.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_marketing",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7938,6 +8459,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7962,6 +8484,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -7986,6 +8509,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8010,6 +8534,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8034,6 +8559,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8059,6 +8585,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8083,6 +8610,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8105,6 +8633,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8129,6 +8658,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8153,6 +8683,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8177,6 +8708,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8203,6 +8735,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": "customer_support_helpdesk",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8227,6 +8760,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8252,6 +8786,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8276,6 +8811,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8300,6 +8836,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8326,6 +8863,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8348,6 +8886,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8372,7 +8911,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/quo.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8397,6 +8937,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8422,6 +8963,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8446,7 +8988,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/reachstream.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8470,7 +9013,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/readymode.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8496,6 +9040,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8519,7 +9064,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/reditus.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "partner_program",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8545,6 +9091,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8569,6 +9116,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8593,6 +9141,7 @@
    "has_task_evidence": true,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8618,7 +9167,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/reply-io.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8641,6 +9191,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8665,6 +9216,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8689,6 +9241,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8713,6 +9266,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8738,6 +9292,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8759,7 +9314,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/rocketreach.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8783,7 +9339,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/ruby.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "answering_service",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8806,6 +9363,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8830,7 +9388,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/salesflare.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8855,7 +9414,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/salesflow.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8882,6 +9442,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8905,7 +9466,10 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/salestarget-ai.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [
+    "b2b_contact_data"
+   ],
    "has_feature_evidence": false
   },
   {
@@ -8928,6 +9492,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8950,6 +9515,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8972,6 +9538,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -8996,7 +9563,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/seamless-ai.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9021,6 +9589,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9043,6 +9612,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9067,6 +9637,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9091,6 +9662,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9115,6 +9687,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9139,6 +9712,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9161,6 +9735,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9185,6 +9760,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9209,6 +9785,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9233,6 +9810,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9255,6 +9833,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9280,6 +9859,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9305,6 +9885,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9329,6 +9910,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9354,6 +9936,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9378,6 +9961,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9400,6 +9984,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9424,6 +10009,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9449,6 +10035,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9473,6 +10060,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9495,6 +10083,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9517,6 +10106,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9541,6 +10131,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9565,6 +10156,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9589,6 +10181,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9614,6 +10207,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9639,6 +10233,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9665,6 +10260,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9689,6 +10285,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9711,6 +10308,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9735,6 +10333,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9759,6 +10358,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9781,6 +10381,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9806,6 +10407,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9830,6 +10432,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9852,6 +10455,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9876,6 +10480,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9901,6 +10506,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9925,8 +10531,9 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/softsync.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
-   "has_feature_evidence": false
+   "task_scope": "crm",
+   "task_scope_also": [],
+   "has_feature_evidence": true
   },
   {
    "id": "spiky-ai",
@@ -9950,7 +10557,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/spiky-ai.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "sales_call_intelligence",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9977,6 +10585,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -9999,6 +10608,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10023,6 +10633,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10045,6 +10656,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10069,6 +10681,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10091,6 +10704,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10115,6 +10729,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10139,6 +10754,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10163,6 +10779,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10188,7 +10805,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/streak.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10215,6 +10833,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10237,6 +10856,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10259,6 +10879,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10283,6 +10904,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10307,6 +10929,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10331,6 +10954,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": "customer_support_helpdesk",
+   "task_scope_also": [],
    "has_feature_evidence": true
   },
   {
@@ -10355,6 +10979,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10379,6 +11004,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10401,6 +11027,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10426,6 +11053,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10450,6 +11078,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10475,6 +11104,7 @@
    "has_task_evidence": true,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10499,6 +11129,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10523,6 +11154,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10547,6 +11179,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10572,6 +11205,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10597,6 +11231,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10621,6 +11256,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10646,6 +11282,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10673,6 +11310,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10697,6 +11335,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10722,6 +11361,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10748,6 +11388,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10773,6 +11414,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10799,6 +11441,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10823,6 +11466,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10847,6 +11491,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10868,7 +11513,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/thryv.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "crm",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10893,6 +11539,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10918,6 +11565,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10943,6 +11591,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10965,6 +11614,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -10987,6 +11637,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11011,6 +11662,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11035,6 +11687,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11061,6 +11714,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11086,6 +11740,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11111,6 +11766,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11136,6 +11792,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11161,6 +11818,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11186,6 +11844,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11210,6 +11869,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11235,6 +11895,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11261,6 +11922,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": "support_ai_agent",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11283,6 +11945,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11305,6 +11968,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11327,6 +11991,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11352,6 +12017,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11377,7 +12043,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/unitel-voice.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11402,6 +12069,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11426,6 +12094,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11450,6 +12119,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11474,6 +12144,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11496,6 +12167,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11521,6 +12193,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11545,6 +12218,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11566,7 +12240,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/vida-ai.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "ai_voice_agent",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11591,6 +12266,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11617,6 +12293,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11641,6 +12318,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11663,6 +12341,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11687,6 +12366,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11712,6 +12392,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11733,7 +12414,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/warmup-inbox.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "email_deliverability",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11756,6 +12438,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11782,6 +12465,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11807,6 +12491,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11830,7 +12515,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/weave.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "business_phone",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11855,6 +12541,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11881,6 +12568,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11906,6 +12594,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11930,6 +12619,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11954,6 +12644,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11976,6 +12667,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -11998,6 +12690,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12022,6 +12715,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12044,6 +12738,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12068,7 +12763,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/woodpecker.json",
    "has_task_evidence": false,
    "vendor_mcp": true,
-   "task_scope": null,
+   "task_scope": "sales_outreach",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12091,6 +12787,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12113,6 +12810,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12137,6 +12835,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12162,6 +12861,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12186,6 +12886,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12208,6 +12909,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12230,6 +12932,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12257,6 +12960,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": "customer_support_helpdesk",
+   "task_scope_also": [],
    "has_feature_evidence": true
   },
   {
@@ -12281,6 +12985,7 @@
    "has_task_evidence": false,
    "vendor_mcp": true,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12303,6 +13008,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12330,6 +13036,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12355,7 +13062,8 @@
    "record": "https://aibuildermarketplace.com/api/v1/products/zoominfo.json",
    "has_task_evidence": false,
    "vendor_mcp": false,
-   "task_scope": null,
+   "task_scope": "b2b_contact_data",
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12380,6 +13088,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12402,6 +13111,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12424,6 +13134,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12446,6 +13157,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12468,6 +13180,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12490,6 +13203,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12512,6 +13226,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12534,6 +13249,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12556,6 +13272,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12578,6 +13295,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12600,6 +13318,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12622,6 +13341,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12644,6 +13364,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12666,6 +13387,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12688,6 +13410,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12710,6 +13433,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12732,6 +13456,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12754,6 +13479,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12776,6 +13502,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12798,6 +13525,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12820,6 +13548,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12842,6 +13571,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12864,6 +13594,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12886,6 +13617,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12908,6 +13640,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12930,6 +13663,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12952,6 +13686,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12974,6 +13709,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -12996,6 +13732,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13018,6 +13755,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13040,6 +13778,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13062,6 +13801,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13084,6 +13824,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13106,6 +13847,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13128,6 +13870,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13150,6 +13893,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13172,6 +13916,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13194,6 +13939,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13216,6 +13962,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13238,6 +13985,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13260,6 +14008,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13282,6 +14031,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13304,6 +14054,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13326,6 +14077,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13348,6 +14100,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13370,6 +14123,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13392,6 +14146,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13414,6 +14169,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13436,6 +14192,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13458,6 +14215,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13480,6 +14238,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13502,6 +14261,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   },
   {
@@ -13524,6 +14284,7 @@
    "has_task_evidence": false,
    "vendor_mcp": false,
    "task_scope": null,
+   "task_scope_also": [],
    "has_feature_evidence": false
   }
  ]

@@ -112,14 +112,426 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "AUD",
+   "unit": "employee",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "hr-essentials",
+     "name": "HR Essentials",
+     "model": "per_unit",
+     "price_month": 10,
+     "billing": "unspecified",
+     "min_units": 10,
+     "evidence": "HR Essentials A$10 per employee per month, HR Engage A$14"
+    },
+    {
+     "id": "hr-engage",
+     "name": "HR Engage",
+     "model": "per_unit",
+     "price_month": 14,
+     "billing": "unspecified",
+     "min_units": 10,
+     "evidence": "HR Essentials A$10 per employee per month, HR Engage A$14"
+    },
+    {
+     "id": "hr-elite",
+     "name": "HR Elite",
+     "model": "quote",
+     "evidence": "HR Elite and Employment Unlimited are quote-only"
+    },
+    {
+     "id": "employment-unlimited",
+     "name": "Employment Unlimited",
+     "model": "quote",
+     "evidence": "HR Elite and Employment Unlimited are quote-only"
+    }
+   ],
+   "min_evidence": "A minimum of 10 Users applies, billed on the higher of the users named in your agreement or the active users.",
+   "notes": [
+    "Prices are in Australian dollars excluding GST, from the Australian pricing page; there is no US pricing page."
+   ],
+   "not_computable": [
+    "Payroll is not in these modules: Managed Payroll is an add-on at A$20 per employee per month with a A$400 monthly minimum, and the other add-ons (Chat, Rostering, HR Advisory, Learning, EAP) each carry their own per-employee price and monthly minimum."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "employment-hero",
+    "currency": "AUD",
+    "axis": "users",
+    "unit": "employee",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 150.0,
+       "hr-engage": 210.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 200.0,
+       "hr-engage": 280.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 250.0,
+       "hr-engage": 350.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 500.0,
+       "hr-engage": 700.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 1000.0,
+       "hr-engage": 1400.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Payroll is not in these modules: Managed Payroll is an add-on at A$20 per employee per month with a A$400 monthly minimum, and the other add-ons (Chat, Rostering, HR Advisory, Learning, EAP) each carry their own per-employee price and monthly minimum."
+    ]
+   },
+   "monthly": {
+    "product_id": "employment-hero",
+    "currency": "AUD",
+    "axis": "users",
+    "unit": "employee",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 100.0,
+       "hr-engage": 140.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 150.0,
+       "hr-engage": 210.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 200.0,
+       "hr-engage": 280.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 250.0,
+       "hr-engage": 350.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 500.0,
+       "hr-engage": 700.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "hr-essentials",
+      "cheapest_plan_name": "HR Essentials",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr-essentials": 1000.0,
+       "hr-engage": 1400.0,
+       "hr-elite": "quote",
+       "employment-unlimited": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Payroll is not in these modules: Managed Payroll is an add-on at A$20 per employee per month with a A$400 monthly minimum, and the other add-ons (Chat, Rostering, HR Advisory, Learning, EAP) each carry their own per-employee price and monthly minimum."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -143,9 +555,9 @@
    "status": "open"
   },
   {
-   "question_id": "employment-hero:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "employment-hero:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Payroll is not in these modules: Managed Payroll is an add-on at A$20 per employee per month with a A$400 monthly minimum, and the other add-ons (Chat, Rostering, HR Advisory, Learning, EAP) each carry their own per-employee price and monthly minimum. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

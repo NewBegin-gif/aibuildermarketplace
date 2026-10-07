@@ -78,14 +78,354 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "location",
+   "axis": "locations",
+   "plans": [
+    {
+     "id": "essentials",
+     "name": "Essentials",
+     "model": "per_unit",
+     "annual_month": 143,
+     "monthly": 159,
+     "evidence": "the headline figures are annual-billing rates: Essentials $143, Premier $234 and Prestige $328 per location"
+    },
+    {
+     "id": "premier",
+     "name": "Premier",
+     "model": "per_unit",
+     "annual_month": 234,
+     "monthly": 260,
+     "evidence": "the headline figures are annual-billing rates: Essentials $143, Premier $234 and Prestige $328 per location"
+    },
+    {
+     "id": "prestige",
+     "name": "Prestige",
+     "model": "per_unit",
+     "annual_month": 328,
+     "monthly": 364,
+     "evidence": "the headline figures are annual-billing rates: Essentials $143, Premier $234 and Prestige $328 per location"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is a bespoke quote"
+    }
+   ],
+   "extra_evidence": "switched to Monthly on 4 October 2026 the cards read $159, $260 (normally $325) and $364 (normally $455)",
+   "addons": [
+    {
+     "id": "forms",
+     "label": "Forms",
+     "price_month": 65,
+     "per": "unit",
+     "from": true,
+     "evidence": "Paid add-ons sit on top, also per location: Forms from $65 per month per location, QuickBooks $45"
+    },
+    {
+     "id": "quickbooks",
+     "label": "QuickBooks",
+     "price_month": 45,
+     "per": "unit",
+     "evidence": "Paid add-ons sit on top, also per location: Forms from $65 per month per location, QuickBooks $45"
+    }
+   ],
+   "usage": [
+    {
+     "id": "extra_emails",
+     "label": "Email beyond the included allowance",
+     "unit": "email",
+     "price": 0.01,
+     "evidence": "email beyond the included allowance at $0.01 each"
+    }
+   ],
+   "notes": [
+    "Premier and Prestige are shown as limited-time prices for new customers (normally $293 and $410 annual, $325 and $455 monthly); the rules use the price on the card.",
+    "Every tier's button is 'Get a demo': there is no self-serve checkout."
+   ],
+   "not_computable": [
+    "ePrescribe is $45 per prescriber, not per location, so it is left out of the per-location total.",
+    "The separate Medspa tab carries its own bundles."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "boulevard",
+    "currency": "USD",
+    "axis": "locations",
+    "unit": "location",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 143.0,
+      "billed": {
+       "amount": 1716.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 143.0,
+       "premier": 234.0,
+       "prestige": 328.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 286.0,
+      "billed": {
+       "amount": 3432.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 286.0,
+       "premier": 468.0,
+       "prestige": 656.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 429.0,
+      "billed": {
+       "amount": 5148.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 429.0,
+       "premier": 702.0,
+       "prestige": 984.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 715.0,
+      "billed": {
+       "amount": 8580.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 715.0,
+       "premier": 1170.0,
+       "prestige": 1640.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 1430.0,
+      "billed": {
+       "amount": 17160.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 1430.0,
+       "premier": 2340.0,
+       "prestige": 3280.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 2860.0,
+      "billed": {
+       "amount": 34320.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 2860.0,
+       "premier": 4680.0,
+       "prestige": 6560.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 7150.0,
+      "billed": {
+       "amount": 85800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 7150.0,
+       "premier": 11700.0,
+       "prestige": 16400.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "ePrescribe is $45 per prescriber, not per location, so it is left out of the per-location total.",
+     "The separate Medspa tab carries its own bundles."
+    ]
+   },
+   "monthly": {
+    "product_id": "boulevard",
+    "currency": "USD",
+    "axis": "locations",
+    "unit": "location",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 159.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 159.0,
+       "premier": 260.0,
+       "prestige": 364.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 318.0,
+      "billed": {
+       "amount": 318.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 318.0,
+       "premier": 520.0,
+       "prestige": 728.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 477.0,
+      "billed": {
+       "amount": 477.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 477.0,
+       "premier": 780.0,
+       "prestige": 1092.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 795.0,
+      "billed": {
+       "amount": 795.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 795.0,
+       "premier": 1300.0,
+       "prestige": 1820.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 1590.0,
+      "billed": {
+       "amount": 1590.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 1590.0,
+       "premier": 2600.0,
+       "prestige": 3640.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 3180.0,
+      "billed": {
+       "amount": 3180.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 3180.0,
+       "premier": 5200.0,
+       "prestige": 7280.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 7950.0,
+      "billed": {
+       "amount": 7950.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 7950.0,
+       "premier": 13000.0,
+       "prestige": 18200.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "ePrescribe is $45 per prescriber, not per location, so it is left out of the per-location total.",
+     "The separate Medspa tab carries its own bundles."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -109,9 +449,15 @@
    "status": "open"
   },
   {
-   "question_id": "boulevard:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "boulevard:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: ePrescribe is $45 per prescriber, not per location, so it is left out of the per-location total. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "boulevard:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The separate Medspa tab carries its own bundles. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

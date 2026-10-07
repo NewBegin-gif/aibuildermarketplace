@@ -1681,10 +1681,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/koongo-review/
 
 ## KrispCall (krispcall.com)
-- **Verified pricing:** (re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up to 5 people; Standard $32 per user/mo a…
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07 against the vendor's own pricing page) Since our August reading the plans have been renamed and a tier added: Starter $12 per user/mo billed annually …
 - **Honest take:** Same honest math as most budget VoIP: the plan buys the platform, the meter buys the conversations — per-minute and per-SMS charges land on top of every seat.
 - **Best for:** sales and support teams that need virtual numbers across many countries with a shared dashboard, dialer and CRM hooks at a budget seat price
-- **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-08-17 against the vendor's own pricing page) Essential $12 per user/mo billed annually or $15 monthly, for solo agents and teams up…"}, {'f': 'usage_metered', 'ev': 'Annual saves 20%, which the page puts at $36 per user a year on Essential and $96 on Standard, and each plan comes with $1 of free calling and SMS cr…'}
+- **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-08-17 and 2026-10-07 against the vendor's own pricing page) Since our August reading the plans have been renamed and a tier added: …"}, {'f': 'usage_metered', 'ev': 'Additional calls, SMS and numbers are billed at usage rates from a separate credit balance.'}, {'f': 'addons_extra', 'ev': 'Subscriptions carry a 14-day unconditional refund; add-ons, numbers and credits are non-refundable.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/krispcall-review/
 
 ## Krystal (krystal.io)
@@ -1715,10 +1715,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/langshop-review/
 
 ## Later (later.com)
-- **Verified pricing:** (re-verified 2026-08-17) Starter $18.75/month, Growth $37.50 and Scale $82.50, all billed yearly, which Later advertises as three months free and 25% off against monthly.
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) Starter $18.75/month, Growth $37.50 and Scale $82.50, all billed yearly, which Later advertises as three months free and 25% off against monthly.
 - **Honest take:** The Starter caps are where the price really lives: 30 posts per profile and 3 months of analytics run out fast for an active brand, pushing real users toward Growth.
 - **Best for:** creators and visual-first brands (Instagram/TikTok-centric) that want drag-and-drop visual planning, link-in-bio and scheduling in one
-- **Flags:** {'f': 'usage_metered', 'ev': 'The add-ons are where a growing team pays more: extra Social Sets are $11.25 a month each, extra users $3.75 a month each, and extra AI credits $3.75…'}, {'f': 'addons_extra', 'ev': 'The add-ons are where a growing team pays more: extra Social Sets are $11.25 a month each, extra users $3.75 a month each, and extra AI credits $3.75…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Included per plan: Starter 1 Social Set (one profile on each of eight networks), 1 user, 30 posts per profile a month and 5 AI credits; Growth 2 sets…'}, {'f': 'addons_extra', 'ev': 'Add-ons are sold on Growth and Scale only; the Starter card says extra Social Sets, users and AI credits are not available.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/later-review/
 
 ## Leadfeeder (leadfeeder.com)
@@ -1743,10 +1743,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/learnworlds-review/
 
 ## Leavo (leavo.com)
-- **Verified pricing:** (price re-verified 2026-08-17 against leavo.com) (2026) 30-day free trial with unlimited members (a trial, not a permanent free plan).
-- **Honest take:** The tidy per-user numbers are annual-billed, and it's priced per seat — every employee you track adds to the bill, with no volume break shown.
+- **Verified pricing:** (price re-verified 2026-08-17 and 2026-10-07 against leavo.com) (2026) 30-day free trial with unlimited members (a trial, not a permanent free plan).
+- **Honest take:** The tidy per-user numbers are annual-billed, and it's priced per seat — every employee you track adds to the bill, with no volume break published (large teams are told to ask sales).
 - **Best for:** teams that want straightforward time-tracking, attendance and overtime banking with transparent per-user pricing
-- **Flags:** {'f': 'per_seat', 'ev': 'Professional $2.49/user/mo billed yearly (about $448/yr for 15 users) adds unlimited features and overtime banking; Premium $4.15/user/mo yearly (abo…'}, {'f': 'annual_lock', 'ev': 'Priced per user, annual billing.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Professional $2.49/user/mo billed yearly (about $448/yr for 15 users) adds unlimited features and overtime banking; Premium $4.15/user/mo yearly (abo…'}, {'f': 'annual_lock', 'ev': 'Priced per user, annual billing.'}, {'f': 'free_tier', 'ev': "Leavo's own llms.txt still describes a free plan for up to 9 members at $2.50 and $4.17 per user; the pricing page, which we follow, shows only the 3…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/leavo-review/
 
 ## lemlist (lemlist.com)
@@ -1841,10 +1841,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/meetgeek-review/
 
 ## Melio (meliopayments.com)
-- **Verified pricing:** (re-verified 2026-08-17 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that.
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that.
 - **Honest take:** The free plan suits low bill volume, but the value narrows as you scale into paid tiers, and the 2.9% card fee only makes sense when you deliberately float cash on a card.
 - **Best for:** small businesses that want to pay bills by bank transfer or card and get paid, starting free with no subscription
-- **Flags:** {'f': 'annual_lock', 'ev': 'The detail our earlier note missed: every paid plan adds $10 a month per additional user, or $8 on annual billing, so a three-person finance team on …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one after that.'}
+- **Flags:** {'f': 'annual_lock', 'ev': 'The detail our earlier note missed: every paid plan adds $10 a month per additional user, or $8 on annual billing, so a three-person finance team on …'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17 and 2026-10-07 on their own pricing page) A free Go plan, $0 forever, with 5 free ACH payments a month and $0.50 for each one…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/melio-review/
 
 ## Mera Work (mera.work)
@@ -1986,10 +1986,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/nextify-ai-review/
 
 ## Ngram (ngram.com)
-- **Verified pricing:** (re-verified 2026-08-17) Credit-based, three published tiers plus a quote-only Enterprise, with annual billing 20% off.
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) Credit-based, three published tiers plus a quote-only Enterprise, with annual billing 20% off.
 - **Honest take:** The sticker price buys a credit allowance, not finished video, and the two are easy to confuse.
 - **Best for:** product and marketing teams that want to turn docs, screenshots and recordings into polished, on-brand videos quickly and repeatably
-- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-17) Credit-based, three published tiers plus a quote-only Enterprise, with annual billing 20% off.'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-17) Credit-based, three published tiers plus a quote-only Enterprise, with annual billing 20% off.'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(re-verified 2026-08-17 and 2026-10-07) Credit-based, three published tiers plus a quote-only Enterprise, with annual billing 20% off.'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-17 and 2026-10-07) Credit-based, three published tiers plus a quote-only Enterprise, with annual billing 20% off.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/ngram-review/
 
 ## NiceJob (nicejob.com)
@@ -3275,10 +3275,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vida-ai-review/
 
 ## VidPal (vidpal.ai)
-- **Verified pricing:** (price re-verified 2026-09-01 against the vendor's own pricing page) (2026) Free: 4 lifetime credits, standard-quality exports, "Made with Vidpal.ai" watermark, no card.
+- **Verified pricing:** (price re-verified 2026-10-07 against the vendor's own pricing page and confirmed by VidPal in writing) (2026) Free: 4 lifetime credits, standard-quality exports, "Made with Vidpal.ai" wate…
 - **Honest take:** Credits don't carry over month to month, and a few users report slow support/account responses — so run the free plan through a full create-and-publish loop before you pay.
 - **Best for:** creators and small brands running faceless or topic-based channels that want the trend-find, generate and auto-publish loop handled in one tool across TikTok, Instagram and YouTube
-- **Flags:** {'f': 'usage_metered', 'ev': '(price re-verified 2026-09-01 against the vendor\'s own pricing page) (2026) Free: 4 lifetime credits, standard-quality exports, "Made with Vidpal.ai"…'}, {'f': 'free_tier', 'ev': '(price re-verified 2026-09-01 against the vendor\'s own pricing page) (2026) Free: 4 lifetime credits, standard-quality exports, "Made with Vidpal.ai"…'}
+- **Flags:** {'f': 'usage_metered', 'ev': "(price re-verified 2026-10-07 against the vendor's own pricing page and confirmed by VidPal in writing) (2026) Free: 4 lifetime credits, standard-qua…"}, {'f': 'free_tier', 'ev': "(price re-verified 2026-10-07 against the vendor's own pricing page and confirmed by VidPal in writing) (2026) Free: 4 lifetime credits, standard-qua…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/vidpal-review/
 
 ## Vista Social (vistasocial.com)

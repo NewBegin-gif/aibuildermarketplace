@@ -87,7 +87,7 @@ h2{font-size:1.25rem;letter-spacing:-.02em;margin:30px 0 4px}.sub{color:var(--mu
 @media(max-width:1020px){.sp{grid-template-columns:minmax(0,1fr)}.sp-stap{display:none}.sp-uit{position:static}}
 </style></head><body><nav class="nav"><div class="nav-in"><a href="/" class="logo-t">AIBuilder Marketplace</a><div><a href="/marketplace/">Marketplace</a><a href="/check/">Check</a><a href="/agents/">For agents</a></div></div></nav><main class="wrap"><span class="kicker">Customer support · pilot</span><h1>Plan your support setup</h1><p class="lede">Answer five questions. You get the smallest setup that covers your channels within your budget, at most two alternatives, the cost per line, and what we could not confirm. Prices come from the same researched rules as our purchase files; nothing is guessed.</p><div class="sp"><nav class="sp-stap" aria-label="Steps"><a href="#st1"><b>1</b>Team</a><a href="#st2"><b>2</b>Channels</a><a href="#st3"><b>3</b>Volume</a><a href="#st4"><b>4</b>Your tools</a><a href="#st5"><b>5</b>Budget</a></nav><form id="spf" class="sp-in" autocomplete="off"><fieldset id="st1"><legend>How many people answer customers?</legend><p class="hulp">Count the people who will need a login, not the whole company.</p><div class="rij2"><div><label for="units">People</label><input id="units" name="units" type="number" min="1" max="500" value="3"></div></div></fieldset><fieldset id="st2"><legend>Where do customers reach you?</legend><p class="hulp">Phone only comes into the plan if you tick it.</p><label class="k"><input type="checkbox" name="ch" value="email" checked> Email</label><label class="k"><input type="checkbox" name="ch" value="chat"> Website chat</label><label class="k"><input type="checkbox" name="ch" value="phone"> Phone calls</label><label class="k"><input type="checkbox" name="ch" value="marketplace"> Marketplace messages (Amazon, eBay)</label><label class="k"><input type="checkbox" name="ch" value="social"> Social media DMs</label></fieldset><fieldset id="st3"><legend>How many conversations a month?</legend><p class="hulp">A rough number is fine. It decides whether automation is worth testing.</p><div class="rij2"><div><label for="vol">Conversations a month</label><input id="vol" name="vol" type="number" min="0" placeholder="e.g. 400"></div></div><label class="k"><input type="checkbox" name="help" value="1"> We have help articles that answer the common questions</label></fieldset><fieldset id="st4"><legend>What do you use now?</legend><div class="rij2"><div><label for="mail">Support email lives in</label><select id="mail" name="mail"><option value="">Choose…</option><option value="gmail">Gmail / Google Workspace</option><option value="outlook">Outlook / Microsoft 365</option><option value="other">Something else</option></select></div></div><label class="k"><input type="checkbox" name="shopify" value="1"> We sell through a Shopify store</label><label class="k"><input type="checkbox" name="slack" value="1"> The team works in Slack and wants alerts there</label></fieldset><fieldset id="st5"><legend>Budget</legend><p class="hulp">A limit, not a wish: the plan has to fit it.</p><div class="rij2"><div><label for="budget">Per month</label><input id="budget" name="budget" type="number" min="0" step="any" value="100"></div><div><label for="cur">Currency</label><select id="cur" name="cur"><option>USD</option><option>EUR</option></select></div><div><label for="billing">Billing</label><select id="billing" name="billing"><option value="annual">Annual (cheaper, 12 months)</option><option value="monthly">Monthly</option></select></div></div><p class="hulp">Most prices we hold are in US dollars; a euro budget only matches euro-priced plans, we do not convert.</p></fieldset></form><aside class="sp-uit" id="spuit" aria-live="polite"></aside></div><section id="spres" aria-live="polite"></section><p class="omslag">This is a pilot of one shared decision layer for our build and roadmap tools. It covers customer support first. Your answers stay in this page and its address; we only count that a plan was built.</p></main><script>
 (function(){
-var KOP='<h2>'+'Your setup</h2>',API="https://api.aibuildermarketplace.com",HD=[{"id": "supportbee", "waar": "altijd"}, {"id": "freshworks", "waar": "altijd"}, {"id": "zendesk", "waar": "altijd"}, {"id": "edesk", "waar": "ecommerce"}, {"id": "gorgias", "waar": "ecommerce"}, {"id": "helpcenter", "waar": "shopify"}],TEL=["aircall", "cloudtalk", "calilio", "800-com", "krispcall"],AI=["typewise", "edesk"],NAAM={"supportbee": "SupportBee", "freshworks": "Freshworks", "zendesk": "Zendesk", "edesk": "eDesk", "gorgias": "Gorgias", "helpcenter": "HelpCenter"};
+var KOP='<h2>'+'Your setup</h2>',API="https://api.aibuildermarketplace.com",HD=[{"id": "supportbee", "waar": "altijd"}, {"id": "freshworks", "waar": "altijd"}, {"id": "zendesk", "waar": "altijd"}, {"id": "edesk", "waar": "ecommerce", "marketplace": true}, {"id": "gorgias", "waar": "ecommerce"}, {"id": "helpcenter", "waar": "shopify"}],TEL=["aircall", "cloudtalk", "calilio", "800-com", "krispcall"],AI=["typewise", "edesk"],NAAM={"supportbee": "SupportBee", "freshworks": "Freshworks", "zendesk": "Zendesk", "edesk": "eDesk", "gorgias": "Gorgias", "helpcenter": "HelpCenter"};
 var f=document.getElementById('spf'),uit=document.getElementById('spuit'),res=document.getElementById('spres'),stap=[].slice.call(document.querySelectorAll('.sp-stap a'));
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function geld(v,c){return v==null?'—':(c==='EUR'?'€':c==='USD'?'$':c==='GBP'?'£':c+' ')+Number(v).toLocaleString('en-US',{minimumFractionDigits:v%1?2:0,maximumFractionDigits:2});}
@@ -95,6 +95,8 @@ function invoer(){var d=new FormData(f);return{units:parseInt(d.get('units'),10)
  mail:d.get('mail')||'',shopify:d.get('shopify')==='1',slack:d.get('slack')==='1',help:d.get('help')==='1',
  budget:parseFloat(d.get('budget'))||0,cur:d.get('cur')||'USD',billing:d.get('billing')||'annual'};}
 function kandidaten(i){var ecom=i.shopify||i.ch.indexOf('marketplace')>-1;
+ // marktplaatsberichten: alleen helpdesks waarvan ons dossier Amazon/eBay noemt; anders niet als passend presenteren
+ if(i.ch.indexOf('marketplace')>-1)return HD.filter(function(k){return k.marketplace;}).map(function(k){return k.id;});
  return HD.filter(function(k){return k.waar==='altijd'||(k.waar==='ecommerce'&&ecom)||(k.waar==='shopify'&&i.shopify);}).map(function(k){return k.id;});}
 function eisen(i){var e=['shared inbox','ticketing'];if(i.mail==='gmail')e.push('gmail');if(i.mail==='outlook')e.push('outlook');
  if(i.shopify)e.push('shopify');if(i.slack)e.push('slack');return e;}
@@ -106,12 +108,13 @@ function status(k,naam){var r=(k.requirements||[]).filter(function(x){return x.r
  if(!r)return '';var s=r.status==='documented'||r.status==='fits'?r.status:'not';
  return '<span class="st s-'+s+'">'+(s==='not'?'Not confirmed':r.status==='fits'?'Fits':'Documented')+'</span> '+esc(naam);}
 function kost(k){if(!k||!k.cost)return null;var c=k.cost;return c;}
+function budgetzin(k){var b=eis(k,'budget');return b.status==='fits'?'<small>Within your budget.</small>':b.status==='unknown'?'<small>The plan price is within your budget; the extras under "not included" are not counted, so check them.</small>':'';}
 function regel(k,rol,soort,i){var c=kost(k);var plan=c?esc(c.plan):'no computable plan';
  var bed=c&&c.per_month!=null?geld(c.per_month,c.currency)+'/mo':'unknown';
  var det=c?('Plan '+plan+(c.billed?', billed '+geld(c.billed.amount,c.currency)+' per '+esc(c.billed.every):'')+(i.billing==='annual'?', 12-month commitment':', month to month')+', '+c.units+' '+esc(c.unit)+(c.units===1?'':'s')):'We cannot price this for your inputs; open the purchase file.';
  var ni=c&&c.not_included&&c.not_included.length?'<small>Not included: '+esc(c.not_included.join('; '))+'</small>':'';
  return '<div class="mod"><div class="r"><span class="n">'+esc(k.name)+'</span><span class="p">'+bed+'</span></div>'+
-  '<span class="lbl '+(soort==='kern'?'kern':'opt')+'">'+esc(rol)+'</span><small>'+det+'</small>'+ni+'</div>';}
+  '<span class="lbl '+(soort==='kern'?'kern':'opt')+'">'+esc(rol)+'</span><small>'+det+'</small>'+(soort==='kern'?budgetzin(k):'')+ni+'</div>';}
 function bouw(){var i=invoer();voortgang(i);
  if(!(i.units>0)||!i.ch.length||!(i.budget>0)){uit.innerHTML=KOP+'<p class="sub">Fill in the number of people, the channels and a monthly budget. Nothing is sent anywhere except the choices you see in the address bar.</p>';res.innerHTML='';return;}
  history.replaceState(null,'','?'+new URLSearchParams(new FormData(f)).toString());
@@ -120,10 +123,19 @@ function bouw(){var i=invoer();voortgang(i);
  var vragen=[haal(q(ids,i,feat,i.budget))];
  if(tel)vragen.push(haal(q(TEL,i,['call recording','ivr'],null)));
  Promise.all(vragen).then(function(a){toon(i,a[0],tel?a[1]:null,feat);}).catch(function(){uit.innerHTML=KOP+'<p class="fout">The service did not answer. Try again in a minute.</p>';});}
-function past(k,i){return k.found&&k.outcome==='no_blocking_requirement_found'&&k.cost&&k.cost.per_month!=null&&k.cost.currency===i.cur&&k.cost.per_month<=i.budget;}
+// Een niet-gedocumenteerde integratie maakt de uitkomst 'insufficient_evidence'; dat is geen reden om een helpdesk
+// weg te laten, alleen om 'not confirmed' te tonen. Uitsluiten doet alleen een echt blokkerende eis of een basisprijs
+// boven het budget. Volgorde: budget past volgens de motor, dan meer gedocumenteerde eisen, dan prijs.
+function eis(k,n){return (k.requirements||[]).filter(function(x){return x.requirement===n;})[0]||{};}
+// alleen de eisen die van jouw situatie afhangen tellen voor de volgorde; inbox en tickets zijn helpdeskkern
+var SPECIFIEK=['feature:gmail','feature:outlook','feature:shopify','feature:slack'];
+function gedoc(k){return (k.requirements||[]).filter(function(x){return SPECIFIEK.indexOf(x.requirement)>-1&&(x.status==='documented'||x.status==='fits');}).length;}
+function past(k,i){return k.found&&k.outcome!=='blocking_requirement_found'&&k.cost&&k.cost.per_month!=null&&k.cost.currency===i.cur&&k.cost.per_month<=i.budget;}
+function rang(a,b){var fa=eis(a,'budget').status==='fits'?0:1,fb=eis(b,'budget').status==='fits'?0:1;return gedoc(b)-gedoc(a)||fa-fb||a.cost.per_month-b.cost.per_month;}
 function toon(i,d,dt,feat){
+ var marktnoot=i.ch.indexOf('marketplace')>-1?'<p class="sub">Marketplace messages: we only consider help desks whose dossier covers Amazon and eBay messages. Today that is eDesk.</p>':'';
  var K=(d.candidates||[]).filter(function(k){return k.found;});
- var passend=K.filter(function(k){return past(k,i);}),kern=passend[0]||null,varianten=passend.slice(1,3);
+ var passend=K.filter(function(k){return past(k,i);}).sort(rang),kern=passend[0]||null,varianten=passend.slice(1,3);
  var telK=dt?(dt.candidates||[]).filter(function(k){return k.found&&k.cost&&k.cost.per_month!=null;}).sort(function(a,b){return a.cost.per_month-b.cost.per_month;}):[];
  var tel=telK[0]||null;
  var h=KOP+'';
@@ -140,7 +152,7 @@ function toon(i,d,dt,feat){
   r+='<div class="waarsch"><b>Nothing we can price fits this budget.</b> Start without a new subscription: one shared address or label in your current inbox, one named owner per day, and a simple log of the questions that come back. Revisit when that log shows the gap.'+
    (goedkoop?' The lowest-priced candidate for your inputs is '+esc(goedkoop.name)+' at '+geld(goedkoop.cost.per_month,goedkoop.cost.currency)+' a month.':'')+'</div>';}
  r+='<h2>How it fits together</h2><div class="stroom">'+
-  '<div class="nd"><b>Customer question</b><span>'+esc(i.ch.map(function(c){return {email:'email',chat:'website chat',phone:'phone',marketplace:'marketplace messages',social:'social DMs'}[c]||c;}).join(', '))+'</span></div><span class="pijl">&rarr;</span>'+
+  ''+'<div class="nd"><b>Customer question</b><span>'+esc(i.ch.map(function(c){return {email:'email',chat:'website chat',phone:'phone',marketplace:'marketplace messages',social:'social DMs'}[c]||c;}).join(', '))+'</span></div><span class="pijl">&rarr;</span>'+
   '<div class="nd"><b>'+(kern?esc(kern.name):'Your current inbox')+'</b><span>One queue for every channel above. Check: every message gets an owner.</span></div><span class="pijl">&rarr;</span>'+
   '<div class="nd"><b>Owner</b><span>One named person per shift for '+i.units+' '+(i.units===1?'person':'people')+'. Check: nothing waits unassigned overnight.</span></div><span class="pijl">&rarr;</span>'+
   (i.vol>=300&&i.help?'<div class="nd"><b>Automation (optional)</b><span>Only for repeat questions your help articles already answer. Check: the handover to a person works.</span></div><span class="pijl">&rarr;</span>':'')+
@@ -159,7 +171,7 @@ function toon(i,d,dt,feat){
   '<li><b>Expand only for a named gap.</b> Chat, phone or AI come in only when the log shows a problem the core does not solve.</li></ol>';
  r+='<p><a class="knop2" href="'+esc(d.share_url)+'">Open the full purchase file &rarr;</a> <span class="sub">Same candidates and requirements, with the evidence for every line, a download and a re-check later.</span></p>'+
   '<p class="omslag">'+esc(d.disclosure)+' '+esc(d.order)+'</p>';
- res.innerHTML=r;
+ res.innerHTML=marktnoot+r;
  if(window.gtag)gtag('event','support_plan_built');}
 var t=null;f.addEventListener('change',function(){clearTimeout(t);t=setTimeout(bouw,250);});
 f.addEventListener('submit',function(e){e.preventDefault();bouw();});

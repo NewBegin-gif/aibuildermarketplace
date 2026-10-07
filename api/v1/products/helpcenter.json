@@ -54,15 +54,423 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "agent",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free covers 10 tickets a month"
+    },
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "flat",
+     "monthly": 5.99,
+     "annual_year": 59.99,
+     "evidence": "Basic is $5.99 a month or $59.99 a year"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "flat",
+     "monthly": 19.99,
+     "annual_year": 199.99,
+     "evidence": "Standard is $19.99 or $199.99 a year for 300 tickets"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "flat",
+     "monthly": 49.99,
+     "annual_year": 498.96,
+     "evidence": "Advanced is $49.99 or $498.96 a year for 1,000 tickets"
+    }
+   ],
+   "not_computable": [
+    "The meter is tickets, not agents: every tier includes a ticket allowance (10, 50, 300, 1,000) and bills each ticket beyond it ($0.25, $0.16, $0.15, $0.10). Price the tier against your own ticket count rather than the entry rate."
+   ],
+   "rules_verified_at": "2026-10-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "helpcenter",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.0,
+       "standard": 16.67,
+       "advanced": 41.58
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The meter is tickets, not agents: every tier includes a ticket allowance (10, 50, 300, 1,000) and bills each ticket beyond it ($0.25, $0.16, $0.15, $0.10). Price the tier against your own ticket count rather than the entry rate."
+    ]
+   },
+   "monthly": {
+    "product_id": "helpcenter",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 5.99,
+       "standard": 19.99,
+       "advanced": 49.99
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The meter is tickets, not agents: every tier includes a ticket allowance (10, 50, 300, 1,000) and bills each ticket beyond it ($0.25, $0.16, $0.15, $0.10). Price the tier against your own ticket count rather than the entry rate."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -86,9 +494,9 @@
    "status": "open"
   },
   {
-   "question_id": "helpcenter:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "helpcenter:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The meter is tickets, not agents: every tier includes a ticket allowance (10, 50, 300, 1,000) and bills each ticket beyond it ($0.25, $0.16, $0.15, $0.10). Price the tier against your own ticket count rather than the entry rate. Can you publish the price or the rule?",
    "status": "open"
   }
  ],
@@ -117,6 +525,15 @@
  },
  "feature_evidence": {
   "features": {
+   "shopify_integration": {
+    "label": "Shopify integration",
+    "phrases": [
+     "shopify",
+     "shopify integration",
+     "works with shopify",
+     "shopify orders"
+    ]
+   },
    "ticketing": {
     "label": "Ticketing",
     "phrases": [
@@ -137,6 +554,14 @@
     "plans": null,
     "quote": "Ticketing",
     "context": "Feature list on the Shopify App Store listing; every plan states a monthly helpdesk ticket allowance (10, 50, 300 or 1,000)",
+    "source": "https://apps.shopify.com/helpcenter",
+    "read_on": "2026-10-07"
+   },
+   {
+    "feature": "shopify_integration",
+    "plans": null,
+    "quote": "Built for Shopify",
+    "context": "It is a Shopify App Store app that installs into your Shopify store; the badge is Shopify's own.",
     "source": "https://apps.shopify.com/helpcenter",
     "read_on": "2026-10-07"
    }

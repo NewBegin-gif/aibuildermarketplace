@@ -241,10 +241,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/atlas-ai-store-builder-review/
 
 ## Atria (tryatria.com)
-- **Verified pricing:** (re-verified 2026-08-17 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year.
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year.
 - **Honest take:** Two honest notes. It's credit-metered — AI credits and brand-tracking slots cap what you can generate and monitor, so a heavy user burns through Core's allowance and steps up to Plus.
 - **Best for:** performance marketers and creative teams that want competitor ad research and AI ad-creative generation for Meta and TikTok in one platform
-- **Flags:** {'f': 'usage_metered', 'ev': 'That covers 5 seats, 4,000 AI credits a month, 50 brands followed without AI insights, 5 connected ad accounts, $500K of ad spend analysed a month, 5…'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-17 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 saving a year.'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'That covers 5 seats, 4,000 AI credits a month, 50 brands followed without AI insights, 5 connected ad accounts, $500K of ad spend analysed a month, 5…'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-17 and 2026-10-07 on their own pricing page, annual billing, which Atria advertises as 20% off) Core is $129/mo, a stated $360 s…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/atria-review/
 
 ## Atto (attotime.com)
@@ -303,7 +303,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aweber-review/
 
 ## BabyLoveGrowth (babylovegrowth.ai)
-- **Verified pricing:** (prices re-verified 2026-09-19 on babylovegrowth.ai/en/pricing from a European connection, where it prices in euros) Two plans and a Monthly/Yearly toggle that swaps the amounts.
+- **Verified pricing:** (prices re-verified 2026-10-07 on babylovegrowth.ai/en/pricing from a European connection, where it prices in euros) Two plans and a Monthly/Yearly toggle that swaps the amounts.
 - **Honest take:** The honest concern here isn't the price — it's the model, and the guarantee that is supposed to cover you if the model fails.
 - **Best for:** solo founders and lean startups who want hands-off SEO content velocity fast, are comfortable with AI-generated articles at scale, and value the 90-day guarantee as a safety net
 - **Full review:** https://aibuildermarketplace.com/b2b/babylovegrowth-review/
@@ -390,10 +390,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bitvavo-review/
 
 ## Blinq (blinq.me)
-- **Verified pricing:** (re-verified 2026-08-17) Free forever for individuals (2 cards, unlimited QR sharing).
-- **Honest take:** The core product is honestly cheap — the price jump hides in the event lead-capture add-on (~$199/mo), which is where teams that live on trade shows actually get value.
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) Free forever for individuals (2 cards, unlimited QR sharing).
+- **Honest take:** A truth about all digital cards: the wow factor works precisely because adoption is still low; the durable value is the CRM sync (contacts flowing automatically into your pipeline).
 - **Best for:** teams and field-sales orgs that want consistent, branded digital cards with contacts syncing straight into the CRM — and events teams via the capture add-on
-- **Flags:** {'f': 'per_seat', 'ev': 'For teams, Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a 5-user minimum, adding CRM sync, templates and…'}, {'f': 'addons_extra', 'ev': 'A lead-capture add-on for events starts around $199/mo.'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17) Free forever for individuals (2 cards, unlimited QR sharing).'}
+- **Flags:** {'f': 'per_seat', 'ev': 'For teams, Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a minimum charge of five cards, adding CRM sync,…'}, {'f': 'usage_metered', 'ev': 'Event lead capture is no longer a separate add-on: it is part of Business and billed per lead, 1 credit at $9.99 for each lead captured and enriched …'}, {'f': 'addons_extra', 'ev': 'In August 2026 we recorded the add-on as starting around $199 a month (historical).'}, {'f': 'free_tier', 'ev': '(re-verified 2026-08-17 and 2026-10-07) Free forever for individuals (2 cards, unlimited QR sharing).'}
 - **Full review:** https://aibuildermarketplace.com/b2b/blinq-review/
 
 ## Blocky (effectify.io)
@@ -739,7 +739,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/cognism-review/
 
 ## CometChat (cometchat.com)
-- **Verified pricing:** (re-verified 2026-08-17 against CometChat's own machine-readable pricing reference, which they publish for AI agents and last verified themselves on 2026-05-20; USD) Build is free for devel…
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07 against CometChat's own machine-readable pricing reference, which they publish for AI agents and last verified themselves on 2026-05-20, and on 2026-1…
 - **Honest take:** The pricing cliff is the honest headline: from a 100-MAU free tier straight to ~$239/mo is a brutal jump for an early-stage app, and users report plan structures changing under them.
 - **Best for:** product teams that want proven in-app text/voice/video chat with SDKs for every major framework, without building messaging infrastructure themselves
 - **Flags:** {'f': 'usage_metered', 'ev': 'On overage CometChat charges $0.10 per extra MAU (falling at higher tiers) or $1 per extra concurrent connection — and where both are exceeded it bil…'}, {'f': 'addons_extra', 'ev': 'Messages and storage are unlimited on every plan, and message retention is 6 months across the board, extendable at extra cost.'}, {'f': 'free_tier', 'ev': 'The pricing cliff is the honest headline: from a 100-MAU free tier straight to ~$239/mo is a brutal jump for an early-stage app, and users report pla…'}
@@ -1115,7 +1115,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/evolve-review/
 
 ## Expandi (expandi.io)
-- **Verified pricing:** (re-verified 2026-08-17) 7-day free trial, no free plan.
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) 7-day free trial, no free plan.
 - **Honest take:** There is no free tier and no cheap entry — Expandi starts at $99 a month per seat, and the friendlier $79 assumes annual commitment.
 - **Best for:** sales teams and agencies running LinkedIn (and email) outreach at scale who want smart sending limits, warm-up and multi-account management
 - **Flags:** {'f': 'per_seat', 'ev': 'There is no free tier and no cheap entry — Expandi starts at $99 a month per seat, and the friendlier $79 assumes annual commitment.'}, {'f': 'annual_lock', 'ev': 'There is no free tier and no cheap entry — Expandi starts at $99 a month per seat, and the friendlier $79 assumes annual commitment.'}
@@ -1129,16 +1129,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/expertex-review/
 
 ## Expertise AI (expertise.ai)
-- **Verified pricing:** (re-verified 2026-09-03; the ladder itself is unchanged since our 15 August read, but the Business conversation allowance is not) The ladder was rebuilt since our July read: the Growth tier…
-- **Honest take:** The $500/mo Growth tier has been withdrawn, so the ladder runs straight from a Free Preview capped at 10 conversations to Business at $2,000/mo.
+- **Verified pricing:** Quote-only since our October reading.
+- **Honest take:** Since October 2026 no tier shows a price: Premier, Enterprise and Unlimited all go through a demo, and the last published paid plan was $2,000 a month.
 - **Best for:** B2B software teams (especially HubSpot-first) that want a live AI sales agent to qualify website visitors, hold buying conversations and route leads to reps
-- **Flags:** {'f': 'per_seat', 'ev': 'Two side products are priced separately on the same page: the booking system is free or $30/mo ($24/mo billed yearly), and the Expertise Assistant is…'}, {'f': 'usage_metered', 'ev': 'Its Voice AI carries 300 voice minutes a month, and $0.25 per minute after that.'}, {'f': 'addons_extra', 'ev': 'Two side products are priced separately on the same page: the booking system is free or $30/mo ($24/mo billed yearly), and the Expertise Assistant is…'}
+- **Flags:** {'f': 'quote_only', 'ev': 'No published price: Premier, Enterprise and Unlimited all route to Book a demo (read 7 Oct 2026); the last published Business rate was $2,000/mo (3 Sep 2026)'}, {'f': 'per_seat', 'ev': 'The booking system was free or $30/mo ($24 billed yearly) and the Expertise Assistant free or $50/mo per user ($40 billed yearly).'}, {'f': 'usage_metered', 'ev': 'The last ladder Expertise AI published itself, read 3 September 2026: Free Preview at no cost (1 AI agent, 10 conversations, up to 50 training materi…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/expertise-ai-review/
 
 ## ExpertSender (expertsender.com)
-- **Verified pricing:** (re-verified 10 September 2026 on expertsender.com — on the home page, because the pricing page is gone: /pricing, /pricing-plans/ and /en/pricing/ all return 404) (2026) Quote-based with a…
+- **Verified pricing:** (re-verified 10 September 2026 and 7 October 2026 on expertsender.com — on the home page, because the pricing page is gone: /pricing, /pricing-plans/ and /en/pricing/ all return 404) (2026)…
 - **Honest take:** The $450/mo floor and the 30k-monthly-visits target make this an established-store tool, not a starter one.
 - **Best for:** e-commerce stores from 10,000+ monthly visitors (the vendor's own stated ICP) and high-volume senders doing 100k+ emails a month, who want email, SMS
+- **Flags:** {'f': 'addons_extra', 'ev': 'Its help centre (read 7 October 2026) names the two meters behind the quote: the number of customers with at least one marketing consent, and engaged…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/expertsender-review/
 
 ## Fast Bundle (fastbundle.co)
@@ -1244,10 +1245,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/frase-review/
 
 ## FreshBooks (freshbooks.com)
-- **Verified pricing:** (2026-08-29, read on their own pricing page) Every amount is unchanged since 1 August 2026.
-- **Honest take:** Two things multiply the number you first see. The promotional rate is 90% off for three months, so Lite is $23 rather than $2.30 from month four.
+- **Verified pricing:** (2026-10-07, read on their own pricing page) The regular rates have not moved since 1 August 2026 — Lite $23, Plus $43, Premium $70 a month — but the promotion in front of them changed.
+- **Honest take:** Two things multiply the number you first see. The promotional rates end: Lite is $1 a month for the first year and $23 after that, and Plus and Premium are 80% off for three months only.
 - **Best for:** freelancers and small service firms who bill time and want invoicing that chases payment for them — the client cap is generous enough at Plus for most one-person businesses
-- **Flags:** {'f': 'per_seat', 'ev': 'Two add-ons sit in the fine print: Advanced Payments $20 a month and Payroll $40 a month plus $6 per user.'}, {'f': 'renewal_jump', 'ev': 'The promotional rate is 90% off for three months, so Lite is $23 rather than $2.30 from month four.'}, {'f': 'addons_extra', 'ev': 'Two add-ons sit in the fine print: Advanced Payments $20 a month and Payroll $40 a month plus $6 per user.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Two add-ons sit in the fine print: Advanced Payments $20 a month (included on Select) and Payroll $40 a month plus $6 per user.'}, {'f': 'renewal_jump', 'ev': 'The promotional rates end: Lite is $1 a month for the first year and $23 after that, and Plus and Premium are 80% off for three months only.'}, {'f': 'addons_extra', 'ev': 'Two add-ons sit in the fine print: Advanced Payments $20 a month (included on Select) and Payroll $40 a month plus $6 per user.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/freshbooks-review/
 
 ## Freshchat (freshchat.com)
@@ -2172,8 +2173,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/piktochart-review/
 
 ## Pingtree (pingtree.com)
-- **Verified pricing:** (2026-08-27, read on their own pricing page) Self Service is “From $199” per month with a free trial included, and Managed Services carries a starting cost of $2,500, “scoped with your acco…
-- **Honest take:** Two things about this price list will cost you money if you skim it. First, the $199 is a floor rather than a bill.
+- **Verified pricing:** (2026-10-07, read on their own pricing page) Self Service is “From $499” per month with a free trial included, and Managed Services carries a starting cost of $2,500, “scoped with your acco…
+- **Honest take:** Two things about this price list will cost you money if you skim it. First, the $499 is a floor rather than a bill.
 - **Best for:** performance marketers, lead brokers and affiliate operations that already move real lead volume and want ping-tree routing, partner management, funnels and reporting in one system
 - **Flags:** {'f': 'usage_metered', 'ev': 'Self Service is the whole platform driven by Pingtree Copilot, with core usage — leads, pings, clicks and storage — included each month, overage bill…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/pingtree-review/
@@ -2591,10 +2592,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seller-investigators-review/
 
 ## Seller Snap (sellersnap.io)
-- **Verified pricing:** (re-verified 2026-08-26 on their own pricing page, both the monthly and the annual column; every figure below was read again on that date and none of them had moved since 24 Jul 2026) There…
+- **Verified pricing:** (re-verified 2026-10-07 on their own pricing page, both the monthly and the annual column) There are four tiers, and the axis that sets your price is capacity, not features.
 - **Honest take:** The revenue caps — $15,000 on Starter, $30,000 on Accelerator — are per month, as the vendor confirmed in writing, so a seller clearing $500 a day is already above Starter.
 - **Best for:** Amazon and Walmart sellers past the hobby stage who compete for the Buy Box on a catalog of up to a few thousand SKUs
-- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing saves a flat $900 a year on both Accelerator and Standard — the same money, but 30 percent off the smaller plan against 15 percent off…'}
+- **Flags:** {'f': 'annual_lock', 'ev': 'Starter is $100 a month on annual billing only: 1,000 SKUs, one marketplace, one user and up to $15K a month in revenue.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/seller-snap-review/
 
 ## Sellfy (sellfy.com)
@@ -3483,10 +3484,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/zenind-review/
 
 ## ZenZap (zenzap.co)
-- **Verified pricing:** (price re-verified 2026-09-01 against the vendor's own pricing page) (2026) Free plan: unlimited group chats, unlimited built-in to-dos, WhatsApp chat migration, AI voice-note transcription…
+- **Verified pricing:** (re-read 2026-10-07 on the vendor's own pricing page) The per-seat prices are gone.
 - **Honest take:** The pricing genuinely undercuts Slack — the honest question is ecosystem: team chat lives or dies on integrations and habit, and ZenZap's app catalog is a fraction of Slack's.
 - **Best for:** small teams that run work over messy WhatsApp/personal chat today and want organized, professional chat with tasks — starting free
-- **Flags:** {'f': 'per_seat', 'ev': 'Pro $3/user/mo billed yearly ($4 monthly); Business+ $8/user yearly ($10 monthly); Enterprise custom.'}, {'f': 'free_tier', 'ev': "(price re-verified 2026-09-01 against the vendor's own pricing page) (2026) Free plan: unlimited group chats, unlimited built-in to-dos, WhatsApp cha…"}
+- **Flags:** {'f': 'per_seat', 'ev': "(re-read 2026-10-07 on the vendor's own pricing page) The per-seat prices are gone."}, {'f': 'usage_metered', 'ev': "Under 'AI agents in chat': Free at $0 with 'every feature, every integration', unlimited users and 100 AI credits a month; and Business+ at $50 a mon…"}, {'f': 'addons_extra', 'ev': 'Add-ons are listed without prices: extra AI credits, extra storage, an HR-system integration and HIPAA compliance with a signed BAA.'}, {'f': 'annual_lock', 'ev': "Under 'Just chat': Free at $0, 'forever free for your whole team', with group chats and DMs, built-in to-dos, scheduled messages, calendar integratio…"}, {'f': 'free_tier', 'ev': "Under 'Just chat': Free at $0, 'forever free for your whole team', with group chats and DMs, built-in to-dos, scheduled messages, calendar integratio…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/zenzap-review/
 
 ## ZoomInfo (zoominfo.com)

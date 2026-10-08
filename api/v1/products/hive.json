@@ -15,8 +15,29 @@
   "entry_price": "$5",
   "entry_price_terms": "per user a month, yearly billing",
   "from_price_usd_month": 5.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Free",
+    "price": "Free forever",
+    "includes": "Up to 10 workspace members, 1,000 AI credits/month, 200MB storage"
+   },
+   {
+    "name": "Starter",
+    "price": "$5 per user a month",
+    "includes": "Unlimited storage, 3,000 AI credits/month, 10-member cap, 10-project cap"
+   },
+   {
+    "name": "Teams",
+    "price": "$12 per user a month",
+    "includes": "5,000 AI credits, unlimited workspace members"
+   },
+   {
+    "name": "Enterprise",
+    "price": "no published price",
+    "includes": "Custom"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(re-verified 2026-09-03) Free forever for up to 10 workspace members, with 1,000 AI credits a month and 200MB of storage; Starter $5 per user a month and Teams $12 per user a month on yearly billing, which the page states saves 33% against monthly; Enterprise is custom. Read the Starter row before you pay for it: it lifts storage to unlimited and AI credits to 3,000 a month, but it keeps the same 10-member cap as Free and adds a 10-project cap. Only Teams, at $12 with 5,000 AI credits, gives unlimited workspace members. The add-ons are the part to budget: proofing and approvals, timesheets, team resourcing, advanced dashboards, SSO and enterprise controls, and external users each cost $5 per user a month on top, which their own calculator confirms. Two further add-ons, CRM and Finance, are listed on the page with no price at all. The external-user add-on includes 5 external licences per seat.",
   "verified_at": "2026-09-03",
   "source_url": null
@@ -77,7 +98,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

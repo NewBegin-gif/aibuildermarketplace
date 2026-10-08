@@ -15,8 +15,24 @@
   "entry_price": "$362",
   "entry_price_terms": "Visitors Premium · per location per month, billed annually (the pricing page's JSON-LD gives billingDuration P1Y)",
   "from_price_usd_month": 362.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Basic",
+    "price": "free",
+    "includes": ""
+   },
+   {
+    "name": "Premium",
+    "price": "$362 per location per month",
+    "includes": ""
+   },
+   {
+    "name": "Enterprise",
+    "price": "quote-only",
+    "includes": ""
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(2026-08-29, read on their own pricing page and their platform page; re-read unchanged on 2026-10-04) Five products, each metered differently and all billed annually. Visitors: Basic free, Premium $362 per location per month, Enterprise quote-only. Emergency Notifications $2 per user per month. Reservations $5 per bookable resource per month. Screens $12 per device per month. Deliveries $250 per delivery location per month. All five amounts are unchanged since 1 August 2026, and the pricing page now publishes the Visitors Premium rate in JSON-LD with a billingDuration of one year. The line 'Price excludes platform fee' appears exactly four times, on Emergency Notifications, Reservations, Screens and Deliveries — not on the Visitors card. The platform page supplies the shape of that fee without its number: the platform is required to use Envoy products, it is 'priced as a flat annual fee', and it has its own Premium and Enterprise tiers that you choose before adding modules. That page also lists visitor management as one of the modules. Invoicing by ACH is offered only on Enterprise or with three or more Premium Yearly locations.",
   "verified_at": "2026-10-04",
   "source_url": null
@@ -70,7 +86,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

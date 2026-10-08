@@ -15,8 +15,24 @@
   "entry_price": "$49",
   "entry_price_terms": "a month, up to $10K monthly ad spend (price then scales with spend)",
   "from_price_usd_month": 49.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Essential",
+    "price": "$49/mo up to $10K; $149 at $30K; $299 at $75K; $499 at $150K",
+    "includes": "Price tracks total ad spend across accounts; no overages apply"
+   },
+   {
+    "name": "Pro",
+    "price": "$99/mo up to $10K; $249 at $30K; $499 at $75K; $799 at $150K; $1,299 at $300K; $1,799 at $500K",
+    "includes": "Price tracks total ad spend across accounts; no overages apply"
+   },
+   {
+    "name": "Enterprise",
+    "price": "priced on request",
+    "includes": "No spend limit; no overages apply"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(price re-verified 2026-09-11 against the vendor's own pricing page) (2026, formerly Revealbot) Essential is $49/mo and Pro $99/mo up to $10K of monthly ad spend, and the price then tracks total spend across all connected accounts. Essential steps to $149 at $30K, $299 at $75K and $499 at $150K, where the tier stops; Pro steps to $249, $499, $799, $1,299 and $1,799 against $30K, $75K, $150K, $300K and $500K. Above $500K only Enterprise remains, priced on request with no spend limit. Every current tier card reads ‘No overages apply’ — the percentage-of-overspend meter now applies to legacy monthly plans only, and the pricing FAQ’s own ‘About overages’ link 301-redirects to an article titled about-additional-charges-legacy-plans. 14-day free trial, no card required. Annual billing is charged as eleven months ($540 Essential, $1,090 Pro at the $10K tier), though the same FAQ still claims ‘12 months for the price of 10’.",
   "verified_at": "2026-09-11",
   "source_url": null
@@ -70,7 +86,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

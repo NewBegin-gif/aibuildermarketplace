@@ -15,8 +15,24 @@
   "entry_price": "$19",
   "entry_price_terms": "per month for 10,000 web push messages",
   "from_price_usd_month": 19.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Basic",
+    "price": "$0",
+    "includes": "500 emails and 500 web push notifications a month, no SMS credits"
+   },
+   {
+    "name": "Plus",
+    "price": "$19/month",
+    "includes": "10,000 web push (10,000-30,000 band), abandoned-cart automation"
+   },
+   {
+    "name": "Power",
+    "price": "$79/month",
+    "includes": "25,000 up to unlimited web push, flash-sale and browse-abandonment triggers, segmentation"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(prices read 2026-08-17 in a browser and re-read unchanged on 2026-10-04 on pushowl.com/pricing, with both billing toggles) This is priced per channel and then added up, which is the part worth understanding before you compare it with anything. Each bundle sets a separate rate for email, web push and SMS, and the monthly figure is their sum. Basic is $0 and covers 500 emails and 500 web push notifications a month with no SMS credits. Plus is $19/month for 10,000 web push (10,000-30,000 band) and adds abandoned-cart automation. Power is $79/month for 25,000 up to unlimited web push, with flash-sale and browse-abandonment triggers, segmentation and custom attribution windows. Yearly billing is advertised at 10% off, and 20% on the web push side of Plus: billed yearly, Plus shows $15 a month and Power $71, with email still $0 for 500 sends and SMS still zero credits in every bundle. It is Shopify-only.",
   "verified_at": "2026-10-04",
   "source_url": null
@@ -63,7 +79,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

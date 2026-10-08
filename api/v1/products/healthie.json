@@ -15,8 +15,34 @@
   "entry_price": "$19.99",
   "entry_price_terms": "Core · billed monthly — $18 is the yearly rate",
   "from_price_usd_month": 19.99,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Core",
+    "price": "$19.99/mo billed monthly or $18 billed yearly",
+    "includes": ""
+   },
+   {
+    "name": "Essentials",
+    "price": "$49.99 billed monthly or $45 billed yearly",
+    "includes": ""
+   },
+   {
+    "name": "Plus",
+    "price": "$129.99 billed monthly or $115 billed yearly",
+    "includes": "14-day free trial offered on this plan"
+   },
+   {
+    "name": "Group",
+    "price": "$149.99+ billed monthly or $135+ billed yearly",
+    "includes": "full API access sits above this tier"
+   },
+   {
+    "name": "Enterprise",
+    "price": "no published price",
+    "includes": "scales above the Group tier"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(re-verified 2026-08-17 and re-read unchanged 2026-09-28 on their own pricing page; yearly billing saves 10%) The entry tier is far lower than most summaries suggest: Core is $19.99/mo billed monthly or $18 billed yearly, Essentials $49.99 or $45, Plus $129.99 or $115, and Group $149.99+ or $135+ per month. Enterprise scales above that. Two costs sit outside the tier and matter for a practice: additional team members are $50 per clinician per month, and the ClaimMD billing integration starts at $30 a month. There is a 14-day free trial, and full API access sits above the standard group tier. The same page, read 28 September 2026, offers the 14-day trial on the Plus plan, lists DoseSpot ePrescribing at $40 per clinician a month with no setup fee, card payments at 2.9% + $0.30 and API access as an add-on with additional fees. It is not consistent on one add-on: the plan table puts ClaimMD at from $30 a month, while the integrations section describes it as from $25 a month plus a $50-$100 setup fee.",
   "verified_at": "2026-09-28",
   "source_url": null
@@ -63,7 +89,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

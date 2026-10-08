@@ -15,8 +15,24 @@
   "entry_price": "$5",
   "entry_price_terms": "per user a month ($48/yr), unlimited documents",
   "from_price_usd_month": 5.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Personal",
+    "price": "free",
+    "includes": "5 documents/month, 3 signers, 1 document per request, 5 MB, PDF only"
+   },
+   {
+    "name": "Business",
+    "price": "$5 per user a month ($48 a year)",
+    "includes": "Unlimited documents, 10 signers, 3 per request, 10 MB, Word files"
+   },
+   {
+    "name": "Professional",
+    "price": "$15 per user a month ($144 a year)",
+    "includes": "50 signers, 10 per request, 15 MB, OTP verification, bulk send, teams"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(re-verified 2026-08-17 and re-read unchanged 2026-09-27 against QuickSigner's own machine-readable pricing page and pricing table) Personal is free: 5 documents a month, 3 signers and 1 document per request, 5 MB maximum, PDF only, with signature and stamp fields and AATL sealing. Business is $5 per user a month ($48 a year) and is where documents become unlimited — 10 signers and 3 documents per request, 10 MB, Word files, 10 saved templates, reminders and signing order. Professional is $15 per user a month ($144 a year): 50 signers and 10 documents per request, 15 MB, OTP phone verification, bulk send, teams and the eSign API. Annual billing saves 20% and paid plans carry a 14-day trial. The API has a free developer account with unlimited test requests; production costs from $0.30 per signed document and requires Professional, whose card includes 50 free API credits before that rate; completed test documents are watermarked. ISO/IEC 27001:2022-certified and AATL, legally binding in the US, UK and EU.",
   "verified_at": "2026-09-27",
   "source_url": null
@@ -77,7 +93,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

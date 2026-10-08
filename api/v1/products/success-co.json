@@ -15,8 +15,24 @@
   "entry_price": "$12",
   "entry_price_terms": "per user a month for the first 25 users on monthly billing ($11 annual), less for each band above",
   "from_price_usd_month": 12.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Free Forever plan",
+    "price": "$0",
+    "includes": "V/TO, Accountability Chart, Organizational Checkup, no time limit, no card"
+   },
+   {
+    "name": "All Inclusive Plan",
+    "price": "Monthly: $12, $11, $9, $7, $6 per user a month; Annual: $11, $10, $8, $6, $5 per user a month",
+    "includes": "Per user graduated bands: First 1-25, Next 26-75, Next 76-125, Next 126-250, Next 251-1000 users"
+   },
+   {
+    "name": "custom plan",
+    "price": "no published price",
+    "includes": "More than 1,000 users"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(read 2026-08-21 in Success.co's structured data on success.co/pricing, re-read 2026-09-08 and 2026-09-26) There is a Free Forever plan at $0 with the V/TO, Accountability Chart and Organizational Checkup, no time limit and no card. The paid All Inclusive Plan is priced per user in graduated bands: the visible table labels them 'First 1-25 users', 'Next 26-75', 'Next 76-125', 'Next 126-250' and 'Next 251-1000', so each rate applies to the seats inside its band. Monthly billing: $12, $11, $9, $7 and $6 per user a month; annual billing: $11, $10, $8, $6 and $5. More than 1,000 users is a custom plan. Two add-ons sit outside the plan at $250 a month each: Single Sign-On (Okta, Microsoft Entra ID, Google Workspace or any SAML/OIDC provider) and Directory Sync via SCIM. A 30-day free trial needs no credit card, data migration is done free of charge, and 501(c)(3) or similar nonprofits get 50% off.",
   "verified_at": "2026-09-26",
   "source_url": null
@@ -77,7 +93,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

@@ -15,8 +15,29 @@
   "entry_price": "$29",
   "entry_price_terms": "per month (preview tier, no publishing or monetization)",
   "from_price_usd_month": 29.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Demo",
+    "price": "$29/mo",
+    "includes": "All Lite features except app store publishing; monetization disabled; catalogue capped at 100 titles"
+   },
+   {
+    "name": "Lite",
+    "price": "$240/mo",
+    "includes": "iOS and Android apps; 200 monthly active users; catalogue capped at 100 titles"
+   },
+   {
+    "name": "Business",
+    "price": "from $400/mo per app, plus from $0.80 per monthly active user",
+    "includes": "Unlimited users; catalogue capped at 10,000 items"
+   },
+   {
+    "name": "Enterprise",
+    "price": "$400 per app plus further fees, floor $5,000/mo",
+    "includes": "Unlimited users and catalogue; fees based on services, features, extensions, commitment"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(re-verified 2026-09-14 and re-read unchanged 2026-09-27 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps. Business is from $400/mo per app, plus a tiered variable fee from $0.80 per monthly active user. Enterprise sits on that same $400 per app with further fees based on services, features, extensions and commitment, and the plan card quotes a floor of $5,000/mo. 30-day free trial. Demo carries all Lite features except publishing to the App Store and Google Play, and monetization is disabled on it — a preview tier rather than a product. Paid app sales, RevenueCat in-app subscriptions and Zapier webshop sync start at Lite; the web app, Stripe web payments and push-notification campaigns start at Business. Read the quotas beside the prices, because they decide the tier as much as the money does: Demo and Lite both cap the catalogue at 100 titles, Lite includes only 200 monthly active users, Business lifts users to unlimited but caps the catalogue at 10,000 items, and only Enterprise is unlimited on both counts. Push notifications are still marked Coming Soon on Demo and Lite.",
   "verified_at": "2026-09-27",
   "source_url": null
@@ -63,7 +84,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

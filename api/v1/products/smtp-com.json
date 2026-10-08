@@ -15,8 +15,34 @@
   "entry_price": "$25",
   "entry_price_terms": "per month (50,000 emails, shared IP)",
   "from_price_usd_month": 25.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Essential",
+    "price": "$25",
+    "includes": "50,000 emails, shared IP"
+   },
+   {
+    "name": "Starter",
+    "price": "$80",
+    "includes": "100,000 emails, dedicated IP begins here"
+   },
+   {
+    "name": "Growth",
+    "price": "$300",
+    "includes": "500,000 emails"
+   },
+   {
+    "name": "Business",
+    "price": "$500",
+    "includes": "1,000,000 emails"
+   },
+   {
+    "name": "High Volume Senders",
+    "price": "no published price",
+    "includes": "quote-only, minimum 250 million emails/month, dedicated platform, IP and MTA"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(price re-verified 24 September 2026, unchanged since 5 September) Fixed-volume plans, all billed monthly: Essential $25 (50,000 emails, shared IP), Starter $80 (100,000, dedicated IP begins here), Growth $300 (500,000), Business $500 (1,000,000). Above that, High Volume Senders is quote-only and starts at a minimum of 250 million emails a month, with a dedicated platform instance, dedicated IP and MTA and no shared mail queue. Reputation Defender and Insight Engine are optional add-ons at 20% of plan cost each, available on all plans. No free tier or published trial. The terms (effective 28 July 2025 for new subscribers) add three things the pricing page leaves out: email above the plan's allowance is charged automatically as a usage fee at a rate the page does not publish, unused allowance does not carry over, and cancelling takes 30 days' notice by phone or by email to support@smtp.com. Payment by card or PayPal. The site is operated by J2 Global Canada, a Ziff Davis company.",
   "verified_at": "2026-09-24",
   "source_url": null
@@ -70,7 +96,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

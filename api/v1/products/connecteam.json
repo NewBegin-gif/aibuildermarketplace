@@ -15,8 +15,29 @@
   "entry_price": "$29",
   "entry_price_terms": "per month billed yearly ($35 monthly), covers first 30 users",
   "from_price_usd_month": 29.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Small Business Plan",
+    "price": "$0 for life",
+    "includes": "Up to 10 users, includes all hubs and features"
+   },
+   {
+    "name": "Basic",
+    "price": "$29/mo yearly billed; $35/mo monthly billed",
+    "includes": "Flat base covers first 30 users per hub; surcharge from user 31 ($0.80 Operations, $0.50 Communications/HR&Skills)"
+   },
+   {
+    "name": "Advanced",
+    "price": "$49/mo yearly billed; $59/mo monthly billed",
+    "includes": "Flat base covers first 30 users per hub; surcharge from user 31 ($2.50 Operations, $1.50 Communications/HR&Skills)"
+   },
+   {
+    "name": "Expert",
+    "price": "$99/mo yearly billed; $119/mo monthly billed",
+    "includes": "Flat base covers first 30 users per hub; surcharge from user 31 ($4.20 Operations, $3.00 Communications/HR&Skills)"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(re-verified 2026-10-03 on their own pricing page, USD) The free tier is real and not a trial: the Small Business Plan is $0 for life, covers up to 10 users and includes all hubs and features. Above that you buy per hub — Operations, Communications or HR & Skills — and each hub carries a flat base price covering the first 30 users, plus a per-user surcharge only from user 31 onward. Billed yearly that base is $29/mo at Basic, $49 at Advanced and $99 at Expert; billed monthly it is $35, $59 and $119. The surcharge is where the hubs diverge: on the yearly plans Operations adds $0.80, $2.50 and $4.20 per extra user a month, while Communications and HR & Skills add $0.50, $1.50 and $3.00. Quoting only the per-user rate understates a small team's bill, because a shop of 30 or fewer pays the flat base either way. Price it per hub you will actually switch on, not per user. Re-read on 3 October 2026 with every figure unchanged; the yearly toggle is now labelled \"save 18%\", and the 14-day trial still needs no credit card.",
   "verified_at": "2026-10-03",
   "source_url": null
@@ -63,7 +84,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

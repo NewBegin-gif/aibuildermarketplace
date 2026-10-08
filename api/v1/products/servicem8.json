@@ -15,8 +15,34 @@
   "entry_price": null,
   "entry_price_terms": null,
   "from_price_usd_month": null,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Free",
+    "price": "$0",
+    "includes": "1 user, 30 jobs a month, SMS at 10c each"
+   },
+   {
+    "name": "Starter",
+    "price": "$29",
+    "includes": "unlimited users, 50 jobs"
+   },
+   {
+    "name": "Growing",
+    "price": "$79",
+    "includes": "150 jobs"
+   },
+   {
+    "name": "Premium",
+    "price": "$149",
+    "includes": "500 jobs"
+   },
+   {
+    "name": "Premium Plus",
+    "price": "$349",
+    "includes": "1,500+ jobs, additional jobs at 20c each"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(re-verified 2026-09-19 on their own pricing page, USD) Priced by jobs per month, with unlimited users on every paid tier. Free $0: 1 user, 30 jobs a month, SMS at 10c each. Starter $29: unlimited users, 50 jobs. Growing $79: 150 jobs. Premium $149: 500 jobs. Premium Plus $349: 1,500+ jobs, with additional jobs at 20c each — the only tier where the page prices an overage. Text messaging is listed as free on all four paid tiers, but the FAQ states there is an overage fee per SMS above each plan's monthly SMS cap, and neither the caps nor that fee are printed. Going over the job ceiling is not a hard stop: the FAQ gives seven further days of normal use, after which you either reach your monthly reset or are prompted to upgrade. A 14-day free trial with full feature access is offered and needs no card; there are no lock-ins and changes are pro-rata. The AI Smart Helper is listed as available on All Plans and the page prints no daily usage cap for it (our August reading recorded ten uses a day on Free; that limit no longer appears on this page). The full app is iOS; Android is served by the cut-down ServiceM8 Lite.",
   "verified_at": "2026-09-19",
   "source_url": null
@@ -64,7 +90,6 @@
  },
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

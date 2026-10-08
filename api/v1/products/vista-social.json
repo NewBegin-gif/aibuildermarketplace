@@ -15,8 +15,29 @@
   "entry_price": "$80",
   "entry_price_terms": "per month billed yearly ($99 monthly), 15 profiles, 2 users",
   "from_price_usd_month": 80.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Professional",
+    "price": "$99/mo ($950/yr, shown as $80/mo on yearly billing)",
+    "includes": "15 profiles, 2 users, 10,000 DM contacts, 1,000 AI credits/mo, Ask Vista + MCP"
+   },
+   {
+    "name": "Advanced",
+    "price": "$199/mo ($1,910/yr, $160/mo)",
+    "includes": "30 profiles, 4 users, 25,000 contacts, 2,000 credits, Zapier/Make integrations"
+   },
+   {
+    "name": "Scale",
+    "price": "$449/mo ($4,310/yr, $360/mo)",
+    "includes": "70 profiles, 8 users, 100,000 contacts, 3,500 credits, white label and client connect"
+   },
+   {
+    "name": "Enterprise",
+    "price": "custom",
+    "includes": "unlimited profiles and users"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(price re-verified 2026-09-25 against the vendor's own pricing page; every list price rose after the 23 Sep 2026 reading) (2026) Professional $99/mo ($950/yr, shown as $80/mo on yearly billing) — 15 profiles, 2 users, 10,000 DM contacts, 1,000 AI credits/mo, Ask Vista + MCP; Advanced $199/mo ($1,910/yr, $160/mo) — 30 profiles, 4 users, 25,000 contacts, 2,000 credits, Zapier/Make integrations; Scale $449/mo ($4,310/yr, $360/mo) — 70 profiles, 8 users, 100,000 contacts, 3,500 credits, white label and client connect; Enterprise custom with unlimited profiles and users. Yearly billing is 20% off on all three priced plans. Add-ons on every tier: listening across social, web and news from $75/mo, X (Twitter) $29/mo, Employee Advocacy free for 3 advocates then from $199/mo for 25. 14-day trial, no card. Extra profiles (in increments of 10) and extra users are sold only on Scale and Enterprise; the comparison table leaves those rows empty for Professional and Advanced. Annual billing is one upfront payment for the term. Nonprofit pricing exists on Professional and Advanced for US nonprofits.",
   "verified_at": "2026-09-25",
   "source_url": null
@@ -77,7 +98,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

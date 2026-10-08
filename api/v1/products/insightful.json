@@ -15,8 +15,29 @@
   "entry_price": "$8",
   "entry_price_terms": "per seat a month, billed annually",
   "from_price_usd_month": 8.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Workforce Analytics",
+    "price": "$8/seat/mo",
+    "includes": ""
+   },
+   {
+    "name": "Workflow Optimization",
+    "price": "$12/seat/mo",
+    "includes": "beta open to selected customers"
+   },
+   {
+    "name": "both bundled",
+    "price": "$16/seat/mo",
+    "includes": "saves 20%"
+   },
+   {
+    "name": "Enterprise",
+    "price": "custom",
+    "includes": "includes audit logs and SSO"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(price re-verified 2026-09-09 against the vendor's own pricing page, re-read unchanged 2026-09-26) (2026) Per seat; the rates below are the annual ones. Workforce Analytics $8/seat/mo, Workflow Optimization $12/seat/mo (a beta open to selected customers), or both bundled at $16/seat/mo (saves 20%); Enterprise custom, and that is where audit logs and SSO sit. Add-ons: Workspace Security $4/seat/mo, screen recording $4, on-demand screenshots $4, higher-frequency screenshots $3 (up to 120 an hour), data-warehouse integration $0.50 for the whole bundle of custom API access, BigQuery and Snowflake. The page adds one line under the plan cards: month-to-month billing is available on select plans, without naming a monthly rate. A 7-day free trial gives full access except Automatic Time Mapping, no card. Admin, manager and client users are not billed unless you also track them, and users added mid-cycle are prorated. On-premise deployment requires at least 250 licences. New on the page since the last reading: a '7-Day ROI Promise', a conditional offer whose only remedy is a 30-day service credit.",
   "verified_at": "2026-09-26",
   "source_url": null
@@ -70,7 +91,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

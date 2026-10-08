@@ -15,8 +15,19 @@
   "entry_price": null,
   "entry_price_terms": null,
   "from_price_usd_month": null,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Startup",
+    "price": "Contact sales",
+    "includes": "5 users, 10 guests, 5,000 Data Set records, 10 automation apps, 100 actions/month, API 50 calls/month"
+   },
+   {
+    "name": "Pro",
+    "price": "Contact sales",
+    "includes": "14-day free trial, no credit card needed"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "Process Street publishes no prices. Re-verified 2026-08-17, 2026-09-30 and 2026-10-06: every tier on their pricing page, Startup included, shows Contact sales rather than a figure, and our monthly captures from July and August 2026 are byte-for-byte identical and contain no amount. What the page does publish are the limits. Startup is capped at 5 users and 10 guests, with 5,000 Data Set records, 10 automation apps, 100 automation actions a month and a public API limited to 50 calls a month. The page describes it as a simplified Pro plan for startups. Pro comes with a 14-day free trial that needs no credit card. Figures quoted elsewhere — roughly $100 a month for Startup, the $1,500 range for Pro, per-member rates around $12.50 to $15 — do not come from Process Street and we could not verify any of them. The FAQ on the same page adds one lever the plan cards do not show: discounts for registered non-profits, arranged through sales.",
   "verified_at": "2026-10-06",
   "source_url": "https://www.process.st/pricing/"
@@ -71,7 +82,6 @@
  },
  "unknowns": [
   "Pricing status is 'quote_only': no single public entry price.",
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

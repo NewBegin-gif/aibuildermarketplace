@@ -15,8 +15,24 @@
   "entry_price": "$14",
   "entry_price_terms": "per month at 1,000 contacts, but automation starts on Advanced at $35/mo",
   "from_price_usd_month": 14.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Essentials",
+    "price": "from $14 a month at 1,000 contacts ($38 at 5,000, $158 at 25,000, $409 at 100,000)",
+    "includes": "Excludes automation workflows and conversion tracking; includes REST API, webhooks and SFTP"
+   },
+   {
+    "name": "Advanced",
+    "price": "from $35 a month at 1,000 contacts ($70 at 5,000, $258 at 25,000, $649 at 100,000)",
+    "includes": ""
+   },
+   {
+    "name": "Custom",
+    "price": "no published price",
+    "includes": "Landing pages, sub-accounts and white-label are Custom only"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(re-read 2026-09-05 on campaigner.com/pricing) Campaigner prices by contact count and bills per account, not per user: a slider sets the tier and there is no separate monthly/annual toggle. Two self-serve plans: Essentials from $14 a month at 1,000 contacts ($38 at 5,000, $158 at 25,000, $409 at 100,000) and Advanced from $35 a month at 1,000 contacts ($70 at 5,000, $258 at 25,000, $649 at 100,000), plus a quote-only Custom tier. Essentials excludes automation workflows and conversion tracking but includes the REST API, webhooks and SFTP; landing pages, sub-accounts and white-label are Custom only. SMS/MMS is not bundled into any plan: pay-as-you-go from $0.009 per message, sold through sales. Reputation Defender is an add-on at 20% of plan cost. The 30-day trial is full-feature but takes a card and auto-charges when it ends. History: until July 2026 the page carried a Starter/Essential/Advanced ladder at about $59, $179 and $649 a month; the current ladder starts far lower and moves with the contact count.",
   "verified_at": "2026-09-05",
   "source_url": null
@@ -70,7 +86,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

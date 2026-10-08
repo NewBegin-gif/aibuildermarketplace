@@ -100,7 +100,7 @@ function kandidaten(i){var ecom=i.shopify||i.ch.indexOf('marketplace')>-1;
  if(i.ch.indexOf('marketplace')>-1)return HD.filter(function(k){return k.marketplace;}).map(function(k){return k.id;});
  return HD.filter(function(k){return k.waar==='altijd'||(k.waar==='ecommerce'&&ecom)||(k.waar==='shopify'&&i.shopify);}).map(function(k){return k.id;});}
 function eisen(i){var e=['shared inbox','ticketing'];if(i.mail==='gmail')e.push('gmail');if(i.mail==='outlook')e.push('outlook');
- if(i.shopify)e.push('shopify');if(i.slack)e.push('slack');return e;}
+ if(i.shopify)e.push('shopify');if(i.slack)e.push('slack');if(i.ch.indexOf('chat')>-1)e.push('live chat');return e;}
 function q(ids,i,feat,budget){var p=new URLSearchParams();p.set('ids',ids.join(','));p.set('units',String(i.units));p.set('billing',i.billing);
  if(budget)p.set('budget',String(budget));p.set('currency',i.cur);if(feat.length)p.set('features',feat.join(','));return p;}
 function haal(p){return fetch(API+'/v1/dossier?'+p.toString()).then(function(r){return r.json();});}
@@ -129,7 +129,7 @@ function bouw(){var i=invoer();voortgang(i);
 // boven het budget. Volgorde: budget past volgens de motor, dan meer gedocumenteerde eisen, dan prijs.
 function eis(k,n){return (k.requirements||[]).filter(function(x){return x.requirement===n;})[0]||{};}
 // alleen de eisen die van jouw situatie afhangen tellen voor de volgorde; inbox en tickets zijn helpdeskkern
-var SPECIFIEK=['feature:gmail','feature:outlook','feature:shopify','feature:slack'];
+var SPECIFIEK=['feature:gmail','feature:outlook','feature:shopify','feature:slack','feature:live chat'];
 function gedoc(k){return (k.requirements||[]).filter(function(x){return SPECIFIEK.indexOf(x.requirement)>-1&&(x.status==='documented'||x.status==='fits');}).length;}
 function past(k,i){return k.found&&k.outcome!=='blocking_requirement_found'&&k.cost&&k.cost.per_month!=null&&k.cost.currency===i.cur&&k.cost.per_month<=i.budget;}
 function rang(a,b){var fa=eis(a,'budget').status==='fits'?0:1,fb=eis(b,'budget').status==='fits'?0:1;return gedoc(b)-gedoc(a)||fa-fb||a.cost.per_month-b.cost.per_month;}
@@ -162,7 +162,7 @@ function toon(i,d,dt,feat){
   '<p class="sub">Documented means the vendor\'s own page lists it, with the date we read it; we have not tested it. Not confirmed means we found no documentation: test it in the trial before you rely on it.</p>';}
  if(varianten.length){r+='<h2>Other fits</h2>';varianten.forEach(function(k){r+='<div class="var"><h3>'+esc(k.name)+' &middot; '+geld(k.cost.per_month,k.cost.currency)+'/mo</h3><p class="sub" style="margin:0">'+feat.map(function(n){return status(k,n);}).filter(Boolean).join(' &middot; ')+'</p>'+(k.review?'<p class="sub" style="margin:6px 0 0"><a href="'+esc(k.review)+'">Read the review</a></p>':'')+'</div>';});}
  var opt=[];
- if(i.ch.indexOf('chat')>-1)opt.push('<li><b>Website chat:</b> several help desks sell chat as part of a plan, but we have not checked chat per plan yet. Treat it as not confirmed and check it in the trial.</li>');
+ if(i.ch.indexOf('chat')>-1&&kern&&!/Documented live chat|Fits live chat/.test(feat.map(function(n){return status(kern,n).replace(/<[^>]+>/g,'');}).join(' ')))opt.push('<li><b>Website chat:</b> we found no documentation that '+esc(kern.name)+' includes live chat on this plan. Check it in the trial, or compare the alternatives above that document it.</li>');
  if(i.vol>=300&&i.help)opt.push('<li><b>AI answers for repeat questions:</b> worth testing at your volume because you have help articles. It is billed per resolution on top of the plan; price it in the purchase file with your own resolved volume. Typewise and eDesk publish that rate.</li>');
  else if(i.vol>=300)opt.push('<li><b>AI answers:</b> not yet. Without help articles that answer the repeat questions, an AI agent has nothing reliable to answer from.</li>');
  if(opt.length)r+='<h2>Optional, only if it applies</h2><ul class="sub">'+opt.join('')+'</ul>';

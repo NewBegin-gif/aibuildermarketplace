@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 511 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-07.
+All 516 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-08.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -12,6 +12,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams that want the most polished, secure password manager with solid admin controls and integrations
 - **Flags:** {'f': 'per_seat', 'ev': 'Teams Starter Pack about $24.95/mo flat for 10 members (billed annually, $29.95 month-to-month), with up to 10 further seats at $4.99 each per month …'}, {'f': 'annual_lock', 'ev': 'Teams Starter Pack about $24.95/mo flat for 10 members (billed annually, $29.95 month-to-month), with up to 10 further seats at $4.99 each per month …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/1password-review/
+
+## 24-7PressRelease (24-7pressrelease.com)
+- **Verified pricing:** (read 2026-10-08 on 24-7pressrelease.com/pricing, USD, prices per release) Six plans, each paid per press release rather than by subscription.
+- **Honest take:** Priced per release; the $29 plan only posts on their own site, without distribution.
+- **Best for:** small businesses, authors and local firms that send an occasional announcement and want a fixed per-release price instead of a PR subscription
+- **Full review:** https://aibuildermarketplace.com/b2b/24-7pressrelease-review/
 
 ## 800.com (800.com)
 - **Verified pricing:** (re-verified 2026-10-06, read on their own plans page with the full comparison open) No free tier, and the line-up is down to two self-serve plans plus Enterprise.
@@ -773,6 +779,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'free_tier', 'ev': "And the free tier puts Consentmo's own branding on the banner your visitors see first."}
 - **Full review:** https://aibuildermarketplace.com/b2b/consentmo-review/
 
+## Contabo (contabo.com)
+- **Verified pricing:** (read 2026-10-08 on contabo.com/en/vps and contabo.com/en/pricing in a browser render from a Netherlands connection, EUR, excluding VAT; the site has its own currency selector) The Core Clo…
+- **Honest take:** The headline price needs a prepaid 24-month term; backups and panels cost extra.
+- **Best for:** developers and small teams who are comfortable running their own Linux server and want the most RAM and CPU for the money, and can commit to a longer term
+- **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons in that configurator: a United Kingdom location €5.80 a month (EU free), Windows Server €53.00, cPanel €21.75, Plesk with Linux €12.00, Auto …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/contabo-review/
+
 ## Contractor Foreman (contractorforeman.com)
 - **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; all plan prices unchanged since 1 Aug 2026) Priced for the company rather than per seat, with unlimited projects on every tier, and every…
 - **Honest take:** Quarterly costs 26% more than annual on the same plan — $132 against $105 on Standard — and Basic is not sold quarterly at all, so the cheapest way in requires a year paid up front.
@@ -1347,7 +1360,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/goflow-review/
 
 ## Gorgias (gorgias.com)
-- **Verified pricing:** (re-verified 8 September 2026 on their own pricing page) Not priced per agent -- their own line -- but the seats are capped: the comparison table gives Starter 3 user seats and Basic, Pro a…
+- **Verified pricing:** (re-verified 7 October 2026 on their own pricing page; figures unchanged since 8 September) Not priced per agent -- their own line -- but the seats are capped: the comparison table gives St…
 - **Honest take:** Never priced per agent is a real advantage, but it starts one tier up: the comparison table caps Starter at 3 user seats, and only Basic and above open the inbox to 500.
 - **Best for:** ecommerce support teams with seasonal or spiky volume, where per-agent pricing punishes you for having enough people on a busy week
 - **Flags:** {'f': 'usage_metered', 'ev': 'Basic is $90/month month-to-month or $77/month billed annually ($924 a year), including 300 tickets and 30 automated interactions with the same $0.40…'}
@@ -2013,6 +2026,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'per_seat', 'ev': 'The page opens on annual billing, where Starter is €11, Expert €22 and Dream €33 per user a month; switch the toggle to monthly and the same tiers ar…'}, {'f': 'annual_lock', 'ev': 'The page opens on annual billing, where Starter is €11, Expert €22 and Dream €33 per user a month; switch the toggle to monthly and the same tiers ar…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/nocrm-review/
 
+## NordPass (nordpass.com)
+- **Verified pricing:** (read 2026-10-08 on nordpass.com/pricing in a browser render from a Netherlands connection, EUR, excluding VAT, on the 2-year, 1-year and 1-month tabs) Personal plans: Premium is €1.99 a mo…
+- **Honest take:** Teams only comes as a 10-user pack; Business and Enterprise need 5 users minimum.
+- **Best for:** small and mid-sized companies that want a simple password manager with sharing and breach monitoring, and individuals who want a cheap first year of Premium
+- **Flags:** {'f': 'per_seat', 'ev': 'Business plans, per user per month: Teams €1.99 on 1 year, €1.79 on 2 years and €2.49 billed monthly, sold as a 10-user pack only; Business €3.99, €3…'}, {'f': 'renewal_jump', 'ev': 'The personal prices are introductory for the first term; the page shows the higher regular figure next to each.'}, {'f': 'free_tier', 'ev': 'The Free plan has autosave, autofill and secure storage, but not access on multiple devices, password health or the breach scanner, and includes a 30…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/nordpass-review/
+
 ## NordVPN (nordvpn.com)
 - **Verified pricing:** (consumer plans re-verified 2026-10-02 in the browser; the page is geo-priced and served us euros from a Dutch address) Consumer two-year plans: Basic €3.49/mo, Complete €4.49/mo and Ultima…
 - **Honest take:** The €3.49 is a two-year introductory rate: Basic renews at €139.08 a year, about €11.59 a month, roughly three times what you signed up at.
@@ -2388,10 +2408,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/reachstream-review/
 
 ## Readymode (readymode.com)
-- **Verified pricing:** (re-verified 2026-08-17 on their own pricing page, after the vendor announced a price change effective 1 Aug 2026) Two published plans, priced per license per month: Starter $239 for 1+ lic…
+- **Verified pricing:** (re-verified 2026-10-07 on readymode.com/demo/pricing-readymode/, the page titled 'Readymode Pricing and Flexible Plans'; first read at these amounts on 2026-08-17, after the vendor announc…
 - **Honest take:** The per-seat price is premium: the dialer earns its keep on a 5-plus-agent floor, but for one or two reps it's expensive for what a lighter dialer would do.
 - **Best for:** high-volume outbound call teams (insurance, real estate, collections) with 5+ agents that need predictive dialing, compliance tools and supervisor monitoring
-- **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17 on their own pricing page, after the vendor announced a price change effective 1 Aug 2026) Two published plans, priced per li…'}
+- **Flags:** {'f': 'per_seat', 'ev': "(re-verified 2026-10-07 on readymode.com/demo/pricing-readymode/, the page titled 'Readymode Pricing and Flexible Plans'; first read at these amounts…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/readymode-review/
 
 ## Reclaim.ai (reclaim.ai)
@@ -2402,7 +2422,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/reclaim-ai-review/
 
 ## Reditus (getreditus.com)
-- **Verified pricing:** (re-verified 2026-08-17) 14-day free trial, no credit card.
+- **Verified pricing:** (re-verified 2026-10-07; figures unchanged since 2026-08-17) 14-day free trial, no credit card.
 - **Honest take:** The advertised $99 is the annual-commitment rate — month-to-month is $149.
 - **Best for:** B2B SaaS teams with a product-led motion that want to launch an affiliate program and tap an affiliate-discovery network, and are comfortable committing annually
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: percentage · payout processing on commissions paid (5% card, 2% invoice)'}
@@ -3268,6 +3288,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'quote_only', 'ev': "No pricing page or amount for the bundled product itself; every call to action is 'Talk to sales' (read 5 Sep 2026)"}
 - **Full review:** https://aibuildermarketplace.com/b2b/velora-review/
 
+## Vendoo (vendoo.co)
+- **Verified pricing:** (read 2026-10-08 on vendoo.co/pricing from a US connection, USD, with both the monthly and the yearly toggle) Vendoo sells three self-serve plans for resellers.
+- **Honest take:** The 14-day trial needs a card and converts automatically; paid charges are non-refundable.
+- **Best for:** resellers listing on several marketplaces such as eBay, Poshmark, Mercari and Depop who want one inventory with automatic delisting when an item sells
+- **Flags:** {'f': 'free_tier', 'ev': 'From a Netherlands connection the same URL redirects to vendoo.co/uk/pricing, a different model priced in pounds by new items per month: Free £0 for …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/vendoo-review/
+
 ## Vida AI (vida.io)
 - **Verified pricing:** (price re-verified 2026-09-10) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate.
 - **Honest take:** This is priced for agencies and telecoms reselling AI phone agents, not for a single small business wanting one receptionist bot.
@@ -3369,6 +3396,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons are priced per month on annual billing, with monthly in brackets: extra user €10 (€15), localisation €20 (€25), AI assistant €20 (€25), brand…'}, {'f': 'annual_lock', 'ev': 'Add-ons are priced per month on annual billing, with monthly in brackets: extra user €10 (€15), localisation €20 (€25), AI assistant €20 (€25), brand…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/webinargeek-review/
 
+## Weblium (weblium.com)
+- **Verified pricing:** (read 2026-10-08 on weblium.com/pricing in a browser render, USD; the FAQ says all prices are in USD) Three plans, each for one website.
+- **Honest take:** Starter stops at 10 pages with no blog or shop, and each subscription covers one site.
+- **Best for:** small businesses and freelancers who want a template-based site with forms and integrations for one business, at a low yearly price
+- **Flags:** {'f': 'free_tier', 'ev': "The Free plan is limited to 3 pages, 100 MB storage and 100 MB bandwidth, and its card carries a '60 days' label the page does not explain."}
+- **Full review:** https://aibuildermarketplace.com/b2b/weblium-review/
+
 ## Wegic (wegic.ai)
 - **Verified pricing:** (re-verified 19 September 2026 on wegic.ai/pricing in a browser; the monthly headline figures stand on the 30 August reading from a US exit, see below) Credit-based AI website builder, pric…
 - **Honest take:** Everything is credits, and generating a site burns them fast — Wegic's own page notes a single generation can cost over $10 in credits, while the free plan gives 100 credits once.
@@ -3464,9 +3498,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Zendesk (zendesk.com)
 - **Verified pricing:** (re-verified 2026-08-12, read on their own pricing page from two countries) Per agent per month on annual billing, US storefront: Support Team $19, Suite Team $55, Suite Professional $115.
-- **Honest take:** The prices shown are annual-billed — the page states a 20% annual discount and never prints the monthly rate, so budgeting month-to-month means adding roughly a quarter yourself.
+- **Honest take:** Three separate multipliers sit on top of the number you first see. The prices shown are annual-billed — month-to-month costs more: €25, €69 and €149 per agent against €19, €55 and €115, read from the Netherlands on 7 October 2026.
 - **Best for:** support teams past the point where a shared inbox works, who need routing, a help centre and reporting in one place and have the volume to justify per-agent pricing
-- **Flags:** {'f': 'per_seat', 'ev': 'Paid add-ons on top of the seat price: Copilot $50 per agent/month (€50), Workforce Engagement bundle $50 (€50), Contact Center $83 (€82).'}, {'f': 'usage_metered', 'ev': "AI agents are included in Suite and Support plans but metered by 'automated resolutions' beyond the plan allowance, and App Builder, Action Builder a…"}, {'f': 'addons_extra', 'ev': 'Paid add-ons on top of the seat price: Copilot $50 per agent/month (€50), Workforce Engagement bundle $50 (€50), Contact Center $83 (€82).'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-12, read on their own pricing page from two countries) Per agent per month on annual billing, US storefront: Support Team $19, S…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Read again from the Netherlands on 7 October 2026: the euro tiers are unchanged, and the page now also prints monthly rates of €25, €69 and €149 per …'}, {'f': 'usage_metered', 'ev': "AI agents are included in Suite and Support plans but metered by 'automated resolutions' beyond the plan allowance, and App Builder, Action Builder a…"}, {'f': 'addons_extra', 'ev': 'Paid add-ons on top of the seat price: Copilot $50 per agent/month (€50), Workforce Engagement bundle $50 (€50), Contact Center $83 (€82).'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-12, read on their own pricing page from two countries) Per agent per month on annual billing, US storefront: Support Team $19, S…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/zendesk-review/
 
 ## Zendrop (zendrop.com)

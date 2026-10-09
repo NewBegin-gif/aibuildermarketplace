@@ -521,10 +521,33 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Freshservice",
+    "product_id": "freshservice",
+    "run_date": "2026-10-08",
+    "what": "A 14-day trial of Freshservice for Business Teams on the Pro plan, set up for an HR team. Note the variant: this is Freshworks' service desk for HR, finance and facilities, priced separately from the IT edition whose plans this review lists. We sent six HR requests by email to the desk's default address: a missing payslip, a parental-leave request with a date, 'URGENT: my salary was not paid today' (rent due tomorrow), a request to change the bank account for salary payments, a remote-work policy question, and the payslip email a second time as a duplicate. We changed no default setting first, so this is what a team gets on day one.",
+    "findings": [
+     "Email-to-ticket worked: all six emails became tickets (CASE-1 to CASE-6) within seconds, and the sender got a 'Ticket Received' confirmation for each within the same minute.",
+     "Every ticket came in at priority Low with the same deadlines: first response by 13 October, five days and seven hours after we wrote, and resolution by 20 October. That includes the unpaid-salary email, which the subject line itself marked URGENT. Out of the box nothing reads urgency from the text; you have to build rules for it.",
+     "Freddy AI Copilot, available in the Pro trial, summarised the urgent ticket correctly in two lines and named the urgency ('an urgent need as his rent is due tomorrow'). The summary did not change the priority or the deadline: the AI saw what the triage did not act on.",
+     "The duplicate was not caught. The second identical payslip email opened its own ticket, and its Related tickets tab read 'No related tickets yet'.",
+     "The bank-account change, a request payroll teams treat as a fraud risk, was handled like any other ticket: same priority, no verification step, no flag.",
+     "Not tested: the IT edition, the paid plans after the trial, the employee portal, approvals, automation rules we could have written ourselves, and replies sent from the desk."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "freshservice:cancellation_terms",

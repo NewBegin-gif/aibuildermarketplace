@@ -3214,6 +3214,27 @@
   },
   {
    "source": "session",
+   "product_name": "accessiBe",
+   "product_id": "accessibe",
+   "run_date": "2026-10-08",
+   "what": "accessiBe's free accessScan scanner, not the paid accessWidget overlay this review prices. We built two versions of the same small landing page: one with 20 accessibility errors we placed on purpose and wrote down beforehand (missing page language and title, images without text alternatives, unlabelled form fields, low contrast, a skipped heading level, a table without header cells, a clickable div, a positive tabindex, an unlabelled iframe and more), and a twin with all 20 fixed. We scanned both and, as a reference, ran the free open-source checker axe-core 4.10.2 over the same two pages.",
+   "findings": [
+    "The verdict was right both ways. The broken page came back 'Non-compliant' with 14 issues (10 critical, 3 serious, 1 moderate); the fixed twin came back 'Accessible'.",
+    "Of our 20 planted errors, the full report identified 7 correctly: the missing language, the empty title, the unlabelled button, the unlabelled iframe, aria-hidden on a link, the missing main landmark and the clickable div. An eighth, a link containing only an image without alt text, was flagged under the wrong diagnosis: the report called the image decorative and advised hiding it, which would leave the link with no name at all. axe-core found 13 of the same 20.",
+    "What it missed: the form had an email field and a dropdown without labels and a phone field labelled only by its placeholder, and the report's Forms category read 0. It also missed the image with no alt text, the alt text that was a filename, the low-contrast text, the skipped heading level, the table without header cells and the positive tabindex. For the filename alt text and the 'click here' link the report has a rule, but marked it 'Relevant: No'.",
+    "The report contradicts itself on the title: the empty <title> fails one rule ('titles aren't descriptive') and passes another ('missing page title'). It also flagged the correctly hidden icon inside our button and the page's <body> element.",
+    "The scan itself is free, but the breakdown sits blurred behind a form. To see it you give your name and a business email and tick: 'I agree to enter into a contract with accessiBe under its Terms of Service, under which accessiBe will process my personal data for marketing purposes, for 6 months'. The same page says 'Always free'. The report arrived by email within a minute, with buttons to sign up and to install the widget.",
+    "It would not scan W3C's own before-and-after accessibility demo ('The scanner doesn't have permission to access this URL'), which is why we used pages of our own.",
+    "Not tested: accessWidget itself, any paid tier, accessFlow, multi-page scans and real sites. One page pair is a spot check of the free scanner, not a verdict on the product line."
+   ],
+   "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Jibble",
    "product_id": "jibble",
    "run_date": "2026-09-25",
@@ -3294,6 +3315,27 @@
   },
   {
    "source": "session",
+   "product_name": "PagePulse",
+   "product_id": "pagepulse",
+   "run_date": "2026-10-08",
+   "what": "The free plan, on a test landing page of our own with PagePulse's tracking script pasted before </body>, as its setup screen instructs. We then sent scripted visits whose every detail we logged: 10 visitors in 11 sessions (one came back in a new tab), 4 arriving from google.com, 3 from x.com and the rest direct, 3 on a phone-sized screen, 6 clicks on 'Start free trial', 3 clicks on 'Book a demo' that led to a second page, and visits of 35, 20 or 5 seconds. A second, smaller run of 3 visitors with one click each followed later, with every message the script sent logged. We compared the dashboard with what we had done.",
+   "findings": [
+    "The counts were right. Visitors 10 and page views 14 matched exactly, as did the source split (Google 4, X 3, direct 4 of 14 views) and the device split (3 mobile, 7 desktop). In the second run every number moved by exactly what we sent: visitors 10 to 13, page views 14 to 17, 'Start free trial' clicks up by exactly 3.",
+    "Clicks on links and buttons are captured without extra setup and named by their text ('Start free trial', 'Book a demo'). The script itself sent one event per click.",
+    "Engagement does not follow its own definition. The tooltip defines an engaged session as one lasting 10+ seconds, with 2+ page views, or a conversion. By that rule 8 of our first 11 sessions qualify, as they lasted 20 to 35 seconds. The dashboard showed 27%: exactly the 3 sessions with two page views. The 20-second sessions of the second run did not count either.",
+    "A click from our page to our own thank-you page shows up as a traffic source, listed as the site's own domain at 21% next to Google and X.",
+    "The 'Here's what we found' analysis was general copywriting advice drawn from the page text (move the call to action, add testimonials), not from the visit data, and it sat under the line 'Once your tracking is set up', while tracking demonstrably worked.",
+    "The free script records page views, clicks, time on page through a ping every 15 seconds, and load times. It does not record scroll depth, and conversions need your own trackConversion call, which the dashboard says is part of Starter and above.",
+    "Not tested: heatmaps and conversion tracking (paid plans), traffic beyond a few dozen events, and real visitors."
+   ],
+   "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Clonable",
    "product_id": "clonable",
    "run_date": "2026-10-01",
@@ -3353,6 +3395,26 @@
     "But “overwrite” means exactly the four fields it names — name, job title, organisation and custom fields — and nothing else. The two rows carried different phone numbers and the contact now holds BOTH, sitting side by side. Contact channels are appended, not replaced, so a bad update pass leaves duplicate numbers on the record rather than wrong ones.",
     "There is no undo, and that is worth knowing before you press Import. The import history logs “34 total imported, 34 contacts created” and offers exactly two things: View and Close. View opens a saved filter holding precisely those 34 contacts — which looks like the undo route until you select all of them and find the only bulk actions are Tag, Create Campaign and Export. No delete. Not on that list, not on the full contact list, not on the contact record, and not on its edit screen. We could not reach a delete anywhere in the interface.",
     "So the practical rule is the opposite of reassuring: an import is one-way. Test on a handful of rows first, because the clean-up you are counting on does not exist where you would look for it."
+   ],
+   "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Freshservice",
+   "product_id": "freshservice",
+   "run_date": "2026-10-08",
+   "what": "A 14-day trial of Freshservice for Business Teams on the Pro plan, set up for an HR team. Note the variant: this is Freshworks' service desk for HR, finance and facilities, priced separately from the IT edition whose plans this review lists. We sent six HR requests by email to the desk's default address: a missing payslip, a parental-leave request with a date, 'URGENT: my salary was not paid today' (rent due tomorrow), a request to change the bank account for salary payments, a remote-work policy question, and the payslip email a second time as a duplicate. We changed no default setting first, so this is what a team gets on day one.",
+   "findings": [
+    "Email-to-ticket worked: all six emails became tickets (CASE-1 to CASE-6) within seconds, and the sender got a 'Ticket Received' confirmation for each within the same minute.",
+    "Every ticket came in at priority Low with the same deadlines: first response by 13 October, five days and seven hours after we wrote, and resolution by 20 October. That includes the unpaid-salary email, which the subject line itself marked URGENT. Out of the box nothing reads urgency from the text; you have to build rules for it.",
+    "Freddy AI Copilot, available in the Pro trial, summarised the urgent ticket correctly in two lines and named the urgency ('an urgent need as his rent is due tomorrow'). The summary did not change the priority or the deadline: the AI saw what the triage did not act on.",
+    "The duplicate was not caught. The second identical payslip email opened its own ticket, and its Related tickets tab read 'No related tickets yet'.",
+    "The bank-account change, a request payroll teams treat as a fraud risk, was handled like any other ticket: same priority, no verification step, no flag.",
+    "Not tested: the IT edition, the paid plans after the trial, the employee portal, approvals, automation rules we could have written ourselves, and replies sent from the desk."
    ],
    "not_tested": null,
    "report": null,
@@ -3540,6 +3602,26 @@
    ],
    "not_tested": "One account, one morning, one run per task (two for the campaign). Real sends and deliverability, content performance with a send history and the limits of Starter and Plus remain untested.",
    "report": "/research/activecampaign-active-intelligence-new-account/",
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Freshchat",
+   "product_id": "freshchat",
+   "run_date": "2026-10-08",
+   "what": "The Freddy AI Agent in a Freshchat trial account, built in AI Agent Studio. We wrote a short help page for a made-up headset shop (shipping, returns, warranty, two products, opening hours: about 250 words) and gave the agent its URL as the only knowledge source; learning finished in about two minutes. We then ran 13 customer questions through the studio's Test screen: 10 whose answer is on the page, one that needs a small inference (shipping to Japan when the page lists only three countries) and two whose answer is not on the page at all (PayPal, and battery life with noise cancelling on). We scored every reply against the page.",
+   "findings": [
+    "11 of the 13 replies were correct, and every factual reply linked the help page as its source. That includes the trickier ones: an order at 4pm on a Tuesday ships on Wednesday because of the 15:00 cut-off, a cable broken by pulling is excluded from the warranty, and 'Do you ship to Japan?' got a clear no with the three countries we do ship to.",
+    "It did not invent anything where the page was silent. Asked about PayPal, it said the help centre has no information on payment methods. Asked for battery life with noise cancelling on, it gave the documented 40 hours, said that figure is with noise cancelling off, and declined to give a number for the other case.",
+    "The one wrong reply was 'Can I call you?'. The page says there is no phone support; the agent answered 'Sure! Assigning your chat to our support agent.' It treated the question as a request for a human and started a handover, and the 'Sure!' reads as a yes. The Test dashboard still counted this reply as Answered.",
+    "One reply added something the page does not contain: after correctly refusing the warranty claim, it offered to explain 'replacing the cable at your own cost', which our page never mentions.",
+    "The dashboard's totals (12 answered, 1 unanswered) are a useful first filter, but you have to read the replies: the handover counted as an answer, and the correct 'I don't know' about PayPal counted as unanswered.",
+    "Not tested: real chats through the website widget, other languages, larger or contradictory knowledge bases, and what the replies cost, because the Test screen is not live AI Agent sessions."
+   ],
+   "not_tested": null,
+   "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true

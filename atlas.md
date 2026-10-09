@@ -213,23 +213,23 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/apollo-review/
 
 ## Arbor (joinarbor.com)
-- **Verified pricing:** Free for households, and re-verified as such on 2026-08-17 and again on 2026-10-06.
+- **Verified pricing:** Free for households, and re-verified as such on 2026-08-17, on 2026-10-06 and again on 2026-10-09.
 - **Honest take:** The honest catches: it only exists in deregulated US states, and it only touches the supply rate, since delivery charges stay with your utility.
 - **Best for:** US households and renters in deregulated states who want set-and-forget savings on the electric bill without becoming rate-shopping hobbyists
 - **Full review:** https://aibuildermarketplace.com/b2b/arbor-review/
 
 ## AskNest (ecommercestorez.us)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/asknest-ai-faq-product-bot, re-verified unchanged 2026-09-28) Four tiers, priced by AI replies per month, and the cheapest ladder in this category.
+- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/asknest-ai-faq-product-bot, re-verified unchanged 2026-09-28 and 2026-10-09) Four tiers, priced by AI replies per month, and the cheapest ladder in this…
 - **Honest take:** One review. The app launched on 8 May 2026, and in three and a half months exactly one merchant has written about it.
 - **Best for:** small stores with repetitive product, shipping and returns questions who want a cheap multilingual FAQ widget and can test the answer quality on their own policy pages for free first
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · AI replies'}, {'f': 'free_tier', 'ev': 'Free: 50 AI replies a month, replies in one language you select, answers drawn from your FAQs, policy pages and product data, translated storefront w…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/asknest-review/
 
 ## Aspire (aspireapp.com)
-- **Verified pricing:** (price re-verified 2026-10-02 against the vendor's own pricing page) SGD $0 monthly fee on Basic, no minimum balance and no deposit to open.
+- **Verified pricing:** (price re-verified 2026-10-09 against the vendor's own pricing page, in a browser and by plain fetch) SGD $0 monthly fee on Basic, no minimum balance and no deposit to open.
 - **Honest take:** It's a fintech account (strongest in Southeast Asia), not a full bank.
 - **Best for:** startups and SMBs that want an all-in-one business account with $0 monthly fees and built-in spend management
-- **Flags:** {'f': 'free_tier', 'ev': "(price re-verified 2026-10-02 against the vendor's own pricing page) SGD $0 monthly fee on Basic, no minimum balance and no deposit to open."}
+- **Flags:** {'f': 'free_tier', 'ev': "(price re-verified 2026-10-09 against the vendor's own pricing page, in a browser and by plain fetch) SGD $0 monthly fee on Basic, no minimum balance…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/aspire-review/
 
 ## Assembly (assembly.com)

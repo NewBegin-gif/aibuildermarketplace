@@ -93,14 +93,431 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "worker",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "eor",
+     "name": "EOR",
+     "service": "eor",
+     "model": "per_unit",
+     "price_month": 499,
+     "billing": "unspecified",
+     "evidence": "EOR from $499 per employee/month"
+    },
+    {
+     "id": "cor",
+     "name": "Contractor of Record",
+     "service": "contractor_of_record",
+     "model": "per_unit",
+     "price_month": 199,
+     "billing": "unspecified",
+     "evidence": "Contractor of Record from $199 per contractor/month"
+    },
+    {
+     "id": "contractor",
+     "name": "Contractor solution",
+     "service": "contractor",
+     "model": "per_unit",
+     "price_month": 5,
+     "billing": "unspecified",
+     "evidence": "the lighter Contractor solution from $5 per contractor/month"
+    },
+    {
+     "id": "payroll-plus",
+     "name": "Payroll Plus",
+     "service": "global_payroll",
+     "model": "per_unit",
+     "price_month": 29,
+     "billing": "unspecified",
+     "evidence": "Payroll Plus from $29 per employee/month"
+    }
+   ],
+   "notes": [
+    "These are 'starting from' floors under a 'Get a Quote' button, not a rate card."
+   ],
+   "not_computable": [
+    "Third-party reports describe a typical two-year agreement and bills above quote plus setup, FX and filing fees; Papaya publishes none of these."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "papaya-global",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "worker",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 5.0,
+      "billed": {
+       "amount": 5.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 499.0,
+       "cor": 199.0,
+       "contractor": 5.0,
+       "payroll-plus": 29.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 998.0,
+       "cor": 398.0,
+       "contractor": 10.0,
+       "payroll-plus": 58.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 15.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 1497.0,
+       "cor": 597.0,
+       "contractor": 15.0,
+       "payroll-plus": 87.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 25.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 2495.0,
+       "cor": 995.0,
+       "contractor": 25.0,
+       "payroll-plus": 145.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 4990.0,
+       "cor": 1990.0,
+       "contractor": 50.0,
+       "payroll-plus": 290.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 7485.0,
+       "cor": 2985.0,
+       "contractor": 75.0,
+       "payroll-plus": 435.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 9980.0,
+       "cor": 3980.0,
+       "contractor": 100.0,
+       "payroll-plus": 580.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 125.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 12475.0,
+       "cor": 4975.0,
+       "contractor": 125.0,
+       "payroll-plus": 725.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 24950.0,
+       "cor": 9950.0,
+       "contractor": 250.0,
+       "payroll-plus": 1450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 49900.0,
+       "cor": 19900.0,
+       "contractor": 500.0,
+       "payroll-plus": 2900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Third-party reports describe a typical two-year agreement and bills above quote plus setup, FX and filing fees; Papaya publishes none of these."
+    ]
+   },
+   "monthly": {
+    "product_id": "papaya-global",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "worker",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 5.0,
+      "billed": {
+       "amount": 5.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 499.0,
+       "cor": 199.0,
+       "contractor": 5.0,
+       "payroll-plus": 29.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 998.0,
+       "cor": 398.0,
+       "contractor": 10.0,
+       "payroll-plus": 58.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 15.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 1497.0,
+       "cor": 597.0,
+       "contractor": 15.0,
+       "payroll-plus": 87.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 25.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 2495.0,
+       "cor": 995.0,
+       "contractor": 25.0,
+       "payroll-plus": 145.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 4990.0,
+       "cor": 1990.0,
+       "contractor": 50.0,
+       "payroll-plus": 290.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 7485.0,
+       "cor": 2985.0,
+       "contractor": 75.0,
+       "payroll-plus": 435.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 9980.0,
+       "cor": 3980.0,
+       "contractor": 100.0,
+       "payroll-plus": 580.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 125.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 12475.0,
+       "cor": 4975.0,
+       "contractor": 125.0,
+       "payroll-plus": 725.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 24950.0,
+       "cor": 9950.0,
+       "contractor": 250.0,
+       "payroll-plus": 1450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "contractor",
+      "cheapest_plan_name": "Contractor solution",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 49900.0,
+       "cor": 19900.0,
+       "contractor": 500.0,
+       "payroll-plus": 2900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Third-party reports describe a typical two-year agreement and bills above quote plus setup, FX and filing fees; Papaya publishes none of these."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -124,9 +541,9 @@
    "status": "open"
   },
   {
-   "question_id": "papaya-global:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "papaya-global:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Third-party reports describe a typical two-year agreement and bills above quote plus setup, FX and filing fees; Papaya publishes none of these. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

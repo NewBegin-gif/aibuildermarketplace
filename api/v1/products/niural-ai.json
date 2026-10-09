@@ -71,15 +71,461 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "worker",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "contractor",
+     "name": "Contractor Management",
+     "service": "contractor",
+     "model": "per_unit",
+     "price_month": 49,
+     "billing": "unspecified",
+     "evidence": "Contractor Management is $49 per contractor a month"
+    },
+    {
+     "id": "cor",
+     "name": "Contractor of Record (Niural Armor)",
+     "service": "contractor_of_record",
+     "model": "per_unit",
+     "price_month": 299,
+     "billing": "unspecified",
+     "evidence": "Contractor of Record (branded Niural Armor) is $299 per employee a month"
+    },
+    {
+     "id": "eor",
+     "name": "Employer of Record",
+     "service": "eor",
+     "model": "per_unit",
+     "price_month": 299,
+     "billing": "unspecified",
+     "evidence": "Employer of Record starts at $299 per employee a month across 150-plus countries"
+    },
+    {
+     "id": "global-payroll",
+     "name": "Global Payroll",
+     "service": "global_payroll",
+     "model": "per_unit",
+     "price_month": 29,
+     "billing": "unspecified",
+     "evidence": "Global Payroll for entities you already own starts at $29 per employee a month"
+    },
+    {
+     "id": "peo-basic",
+     "name": "PEO Basic",
+     "service": "us_peo",
+     "model": "per_unit",
+     "price_month": 59,
+     "billing": "unspecified",
+     "evidence": "PEO Basic starts at $59 per employee a month without benefits"
+    }
+   ],
+   "notes": [
+    "The pricing page adjusts by company size; these are the figures shown for companies under 25 people."
+   ],
+   "not_computable": [
+    "US Payroll Standard ($100 a month platform fee plus $20 per employee) and US Payroll Enterprise (custom) are not in this rule."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "niural-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "worker",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 49.0,
+       "cor": 299.0,
+       "eor": 299.0,
+       "global-payroll": 29.0,
+       "peo-basic": 59.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 58.0,
+      "billed": {
+       "amount": 58.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 98.0,
+       "cor": 598.0,
+       "eor": 598.0,
+       "global-payroll": 58.0,
+       "peo-basic": 118.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 87.0,
+      "billed": {
+       "amount": 87.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 147.0,
+       "cor": 897.0,
+       "eor": 897.0,
+       "global-payroll": 87.0,
+       "peo-basic": 177.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 145.0,
+      "billed": {
+       "amount": 145.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 245.0,
+       "cor": 1495.0,
+       "eor": 1495.0,
+       "global-payroll": 145.0,
+       "peo-basic": 295.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 290.0,
+      "billed": {
+       "amount": 290.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 490.0,
+       "cor": 2990.0,
+       "eor": 2990.0,
+       "global-payroll": 290.0,
+       "peo-basic": 590.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 435.0,
+      "billed": {
+       "amount": 435.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 735.0,
+       "cor": 4485.0,
+       "eor": 4485.0,
+       "global-payroll": 435.0,
+       "peo-basic": 885.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 580.0,
+      "billed": {
+       "amount": 580.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 980.0,
+       "cor": 5980.0,
+       "eor": 5980.0,
+       "global-payroll": 580.0,
+       "peo-basic": 1180.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 725.0,
+      "billed": {
+       "amount": 725.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 1225.0,
+       "cor": 7475.0,
+       "eor": 7475.0,
+       "global-payroll": 725.0,
+       "peo-basic": 1475.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 1450.0,
+      "billed": {
+       "amount": 1450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 2450.0,
+       "cor": 14950.0,
+       "eor": 14950.0,
+       "global-payroll": 1450.0,
+       "peo-basic": 2950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 2900.0,
+      "billed": {
+       "amount": 2900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 4900.0,
+       "cor": 29900.0,
+       "eor": 29900.0,
+       "global-payroll": 2900.0,
+       "peo-basic": 5900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "US Payroll Standard ($100 a month platform fee plus $20 per employee) and US Payroll Enterprise (custom) are not in this rule."
+    ]
+   },
+   "monthly": {
+    "product_id": "niural-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "worker",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 49.0,
+       "cor": 299.0,
+       "eor": 299.0,
+       "global-payroll": 29.0,
+       "peo-basic": 59.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 58.0,
+      "billed": {
+       "amount": 58.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 98.0,
+       "cor": 598.0,
+       "eor": 598.0,
+       "global-payroll": 58.0,
+       "peo-basic": 118.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 87.0,
+      "billed": {
+       "amount": 87.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 147.0,
+       "cor": 897.0,
+       "eor": 897.0,
+       "global-payroll": 87.0,
+       "peo-basic": 177.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 145.0,
+      "billed": {
+       "amount": 145.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 245.0,
+       "cor": 1495.0,
+       "eor": 1495.0,
+       "global-payroll": 145.0,
+       "peo-basic": 295.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 290.0,
+      "billed": {
+       "amount": 290.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 490.0,
+       "cor": 2990.0,
+       "eor": 2990.0,
+       "global-payroll": 290.0,
+       "peo-basic": 590.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 435.0,
+      "billed": {
+       "amount": 435.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 735.0,
+       "cor": 4485.0,
+       "eor": 4485.0,
+       "global-payroll": 435.0,
+       "peo-basic": 885.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 580.0,
+      "billed": {
+       "amount": 580.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 980.0,
+       "cor": 5980.0,
+       "eor": 5980.0,
+       "global-payroll": 580.0,
+       "peo-basic": 1180.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 725.0,
+      "billed": {
+       "amount": 725.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 1225.0,
+       "cor": 7475.0,
+       "eor": 7475.0,
+       "global-payroll": 725.0,
+       "peo-basic": 1475.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 1450.0,
+      "billed": {
+       "amount": 1450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 2450.0,
+       "cor": 14950.0,
+       "eor": 14950.0,
+       "global-payroll": 1450.0,
+       "peo-basic": 2950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global Payroll",
+      "total_month": 2900.0,
+      "billed": {
+       "amount": 2900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "contractor": 4900.0,
+       "cor": 29900.0,
+       "eor": 29900.0,
+       "global-payroll": 2900.0,
+       "peo-basic": 5900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "US Payroll Standard ($100 a month platform fee plus $20 per employee) and US Payroll Enterprise (custom) are not in this rule."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -103,9 +549,9 @@
    "status": "open"
   },
   {
-   "question_id": "niural-ai:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "niural-ai:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: US Payroll Standard ($100 a month platform fee plus $20 per employee) and US Payroll Enterprise (custom) are not in this rule. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

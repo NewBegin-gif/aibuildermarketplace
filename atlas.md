@@ -867,10 +867,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/datarails-review/
 
 ## Deel (deel.com)
-- **Verified pricing:** (re-verified 2026-08-17) Pricing is per worker and demo-led, and each product is priced separately.
+- **Verified pricing:** (re-verified 2026-10-09; the figures are unchanged since 2026-08-17) Pricing is per worker and demo-led, and each product is priced separately.
 - **Honest take:** Every price is a ‘starting at’ and every button says ‘book a demo’ — the real bill depends on countries, benefits and add-ons, and only firms up in a sales conversation.
 - **Best for:** companies hiring internationally without local entities — contractors paid compliantly in 150+ countries, or full EOR employment where you need someone on the ground fast
-- **Flags:** {'f': 'per_seat', 'ev': 'US PEO starts at $125 per employee a month.'}, {'f': 'addons_extra', 'ev': '(re-verified 2026-08-17) Pricing is per worker and demo-led, and each product is priced separately.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'US PEO starts at $125 per employee a month.'}, {'f': 'addons_extra', 'ev': '(re-verified 2026-10-09; the figures are unchanged since 2026-08-17) Pricing is per worker and demo-led, and each product is priced separately.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/deel-review/
 
 ## Deputy (deputy.com)
@@ -2125,10 +2125,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/ownr-review/
 
 ## Oyster (oysterhr.com)
-- **Verified pricing:** (re-verified 2026-08-14, read on their own pricing page) Employer of Record USD 699 per employee per month, with annual discounts available; Global Contractors free for 30 days, then USD 29…
+- **Verified pricing:** (re-verified 2026-10-09 on their own pricing page; the figures are unchanged since 2026-08-14) Employer of Record USD 699 per employee per month, with annual discounts available; Global Con…
 - **Honest take:** Oyster holds a refundable deposit per EOR employee and takes an FX fee when currencies differ, and neither has a published figure, so $699 is the floor.
 - **Best for:** companies hiring their first employees in countries where they have no legal entity, and who would otherwise spend more on local counsel and payroll setup than the monthly fee
-- **Flags:** {'f': 'per_seat', 'ev': 'So the honest position is that $699 is the floor, and the real per-employee cost depends on a deposit and a spread you have to ask for.'}
+- **Flags:** {'f': 'per_seat', 'ev': 'So the honest position is that $699 is the floor, and the real per-employee cost depends on a deposit and a spread you have to ask for.'}, {'f': 'addons_extra', 'ev': 'Oyster Shell, listed as an add-on to Global Contractors with no published price, carries aggregate misclassification protection up to USD $500,000.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/oyster-review/
 
 ## PagePulse (getpagepulse.io)

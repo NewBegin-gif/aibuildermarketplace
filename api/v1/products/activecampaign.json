@@ -15,31 +15,10 @@
   "entry_price": "$15",
   "entry_price_terms": "per month billed annually (1 user)",
   "from_price_usd_month": 15.0,
-  "plans": [
-   {
-    "name": "Starter",
-    "price": "$15/mo",
-    "includes": "1 user, limited segmentation, 5 actions per automation"
-   },
-   {
-    "name": "Plus",
-    "price": "$49/mo",
-    "includes": "1 user, standard segmentation, unlimited automation actions, landing pages"
-   },
-   {
-    "name": "Pro",
-    "price": "$79/mo",
-    "includes": "3 users, advanced segmentation, predictive and conditional content, attribution tracking"
-   },
-   {
-    "name": "Enterprise",
-    "price": "$145/mo",
-    "includes": "5 users, premium segmentation, SSO, custom objects, dedicated account team"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-08-17 and again 2026-09-29 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan, trial only. There are four tiers. Starter is from $15/mo with 1 user, limited segmentation and 5 actions per automation. Plus is from $49/mo with 1 user, standard segmentation, unlimited automation actions and landing pages. Pro is from $79/mo with 3 users, advanced segmentation, predictive and conditional content and attribution tracking. Enterprise is from $145/mo with 5 users, premium segmentation, SSO, custom objects and a dedicated account team. Your email send allowance is a multiple of your contact count — 10x on Starter and Plus, 12x on Pro, 15x on Enterprise. The bill then scales with list size, and the ladder only renders after you select a contact count: at 10,000 contacts on 2026-09-29 it read Starter $149, Plus $189, Pro $375 and Enterprise $589 a month on annual billing. A separate Email + WhatsApp plan starts at $112 (Plus), $142 (Pro) and $284 (Enterprise) a month, each with up to 5 WhatsApp lines. CRM pipelines, SMS and extra users remain paid add-ons.",
-  "verified_at": "2026-09-29",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-08-17 and again 2026-09-29 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan, trial only. There are four tiers. Starter is from $15/mo with 1 user, limited segmentation and 5 actions per automation. Plus is from $49/mo with 1 user, standard segmentation, unlimited automation actions and landing pages. Pro is from $79/mo with 3 users, advanced segmentation, predictive and conditional content and attribution tracking. Enterprise is from $145/mo with 5 users, premium segmentation, SSO, custom objects and a dedicated account team. Your email send allowance is a multiple of your contact count — 10x on Starter and Plus, 12x on Pro, 15x on Enterprise. The bill then scales with list size, and the ladder only renders after you select a contact count: at 10,000 contacts on 2026-09-29 it read Starter $149, Plus $189, Pro $375 and Enterprise $589 a month on annual billing. A separate Email + WhatsApp plan starts at $112 (Plus), $142 (Pro) and $284 (Enterprise) a month, each with up to 5 WhatsApp lines. CRM pipelines, SMS and extra users remain paid add-ons. Read again on 9 October 2026 with the contact selector, billed annually (the page offers no monthly option). Starter $15 at 1,000, $39 at 2,500, $79 at 5,000, $109 at 7,500, $149 at 10,000, $231 at 15,000, $311 at 20,000, $391 at 25,000 contacts, and 'Only available on plans with 25,000 contacts or less'. Plus $49 at 1,000, $95 at 2,500, $145 at 5,000, $169 at 7,500, $189 at 10,000, $265 at 15,000, $329 at 20,000, $389 at 25,000, $449 at 30,000, $549 at 40,000, $609 at 50,000. Pro $79 at 1,000, $149 at 2,500, $205 at 5,000, $289 at 7,500, $375 at 10,000, $465 at 15,000, $549 at 20,000, $629 at 25,000, $709 at 30,000, $879 at 40,000, $969 at 50,000. Enterprise $145 at 1,000, $255 at 2,500, $375 at 5,000, $479 at 7,500, $589 at 10,000, $689 at 15,000, $785 at 20,000, $879 at 25,000, $949 at 30,000, $1,095 at 40,000, $1,169 at 50,000. Above 50,000 contacts the page shows no price.",
+  "verified_at": "2026-10-09",
   "source_url": "https://www.activecampaign.com/pricing"
  },
  "free_plan": false,
@@ -49,14 +28,14 @@
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "CRM pipelines, SMS and extra users remain paid add-ons.",
-   "verified_at": "2026-09-29",
+   "verified_at": "2026-10-09",
    "source_url": "https://www.activecampaign.com/pricing"
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "(re-verified 2026-08-17 and again 2026-09-29 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan, trial only.",
-   "verified_at": "2026-09-29",
+   "verified_at": "2026-10-09",
    "source_url": "https://www.activecampaign.com/pricing"
   }
  ],
@@ -85,14 +64,532 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "contact",
+   "axis": "contacts",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "ladder",
+     "monthly_status": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "annual_month": 15
+      },
+      {
+       "units": 2500,
+       "annual_month": 39
+      },
+      {
+       "units": 5000,
+       "annual_month": 79
+      },
+      {
+       "units": 7500,
+       "annual_month": 109
+      },
+      {
+       "units": 10000,
+       "annual_month": 149
+      },
+      {
+       "units": 15000,
+       "annual_month": 231
+      },
+      {
+       "units": 20000,
+       "annual_month": 311
+      },
+      {
+       "units": 25000,
+       "annual_month": 391
+      }
+     ],
+     "evidence": "Read again on 9 October 2026 with the contact selector, billed annually (the page offers no monthly option). Starter $15 at 1,000, $39 at 2,500, $79 at 5,000, $109 at 7,500, $149 at 10,000, $231 at 15,000, $311 at 20,000, $391 at 25,000 contacts, and 'Only available on plans with 25,000 contacts or less'. Plus $49 at 1,000, $95 at 2,500, $145 at 5,000, $169 at 7,500, $189 at 10,000, $265 at 15,000, $329 at 20,000, $389 at 25,000, $449 at 30,000, $549 at 40,000, $609 at 50,000. Pro $79 at 1,000, $149 at 2,500, $205 at 5,000, $289 at 7,500, $375 at 10,000, $465 at 15,000, $549 at 20,000, $629 at 25,000, $709 at 30,000, $879 at 40,000, $969 at 50,000. Enterprise $145 at 1,000, $255 at 2,500, $375 at 5,000, $479 at 7,500, $589 at 10,000, $689 at 15,000, $785 at 20,000, $879 at 25,000, $949 at 30,000, $1,095 at 40,000, $1,169 at 50,000. Above 50,000 contacts the page shows no price."
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "ladder",
+     "monthly_status": "unknown",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "annual_month": 49
+      },
+      {
+       "units": 2500,
+       "annual_month": 95
+      },
+      {
+       "units": 5000,
+       "annual_month": 145
+      },
+      {
+       "units": 7500,
+       "annual_month": 169
+      },
+      {
+       "units": 10000,
+       "annual_month": 189
+      },
+      {
+       "units": 15000,
+       "annual_month": 265
+      },
+      {
+       "units": 20000,
+       "annual_month": 329
+      },
+      {
+       "units": 25000,
+       "annual_month": 389
+      },
+      {
+       "units": 30000,
+       "annual_month": 449
+      },
+      {
+       "units": 40000,
+       "annual_month": 549
+      },
+      {
+       "units": 50000,
+       "annual_month": 609
+      }
+     ],
+     "evidence": "Read again on 9 October 2026 with the contact selector, billed annually (the page offers no monthly option). Starter $15 at 1,000, $39 at 2,500, $79 at 5,000, $109 at 7,500, $149 at 10,000, $231 at 15,000, $311 at 20,000, $391 at 25,000 contacts, and 'Only available on plans with 25,000 contacts or less'. Plus $49 at 1,000, $95 at 2,500, $145 at 5,000, $169 at 7,500, $189 at 10,000, $265 at 15,000, $329 at 20,000, $389 at 25,000, $449 at 30,000, $549 at 40,000, $609 at 50,000. Pro $79 at 1,000, $149 at 2,500, $205 at 5,000, $289 at 7,500, $375 at 10,000, $465 at 15,000, $549 at 20,000, $629 at 25,000, $709 at 30,000, $879 at 40,000, $969 at 50,000. Enterprise $145 at 1,000, $255 at 2,500, $375 at 5,000, $479 at 7,500, $589 at 10,000, $689 at 15,000, $785 at 20,000, $879 at 25,000, $949 at 30,000, $1,095 at 40,000, $1,169 at 50,000. Above 50,000 contacts the page shows no price."
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "ladder",
+     "monthly_status": "unknown",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "annual_month": 79
+      },
+      {
+       "units": 2500,
+       "annual_month": 149
+      },
+      {
+       "units": 5000,
+       "annual_month": 205
+      },
+      {
+       "units": 7500,
+       "annual_month": 289
+      },
+      {
+       "units": 10000,
+       "annual_month": 375
+      },
+      {
+       "units": 15000,
+       "annual_month": 465
+      },
+      {
+       "units": 20000,
+       "annual_month": 549
+      },
+      {
+       "units": 25000,
+       "annual_month": 629
+      },
+      {
+       "units": 30000,
+       "annual_month": 709
+      },
+      {
+       "units": 40000,
+       "annual_month": 879
+      },
+      {
+       "units": 50000,
+       "annual_month": 969
+      }
+     ],
+     "evidence": "Read again on 9 October 2026 with the contact selector, billed annually (the page offers no monthly option). Starter $15 at 1,000, $39 at 2,500, $79 at 5,000, $109 at 7,500, $149 at 10,000, $231 at 15,000, $311 at 20,000, $391 at 25,000 contacts, and 'Only available on plans with 25,000 contacts or less'. Plus $49 at 1,000, $95 at 2,500, $145 at 5,000, $169 at 7,500, $189 at 10,000, $265 at 15,000, $329 at 20,000, $389 at 25,000, $449 at 30,000, $549 at 40,000, $609 at 50,000. Pro $79 at 1,000, $149 at 2,500, $205 at 5,000, $289 at 7,500, $375 at 10,000, $465 at 15,000, $549 at 20,000, $629 at 25,000, $709 at 30,000, $879 at 40,000, $969 at 50,000. Enterprise $145 at 1,000, $255 at 2,500, $375 at 5,000, $479 at 7,500, $589 at 10,000, $689 at 15,000, $785 at 20,000, $879 at 25,000, $949 at 30,000, $1,095 at 40,000, $1,169 at 50,000. Above 50,000 contacts the page shows no price."
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "ladder",
+     "monthly_status": "unknown",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "annual_month": 145
+      },
+      {
+       "units": 2500,
+       "annual_month": 255
+      },
+      {
+       "units": 5000,
+       "annual_month": 375
+      },
+      {
+       "units": 7500,
+       "annual_month": 479
+      },
+      {
+       "units": 10000,
+       "annual_month": 589
+      },
+      {
+       "units": 15000,
+       "annual_month": 689
+      },
+      {
+       "units": 20000,
+       "annual_month": 785
+      },
+      {
+       "units": 25000,
+       "annual_month": 879
+      },
+      {
+       "units": 30000,
+       "annual_month": 949
+      },
+      {
+       "units": 40000,
+       "annual_month": 1095
+      },
+      {
+       "units": 50000,
+       "annual_month": 1169
+      }
+     ],
+     "evidence": "Read again on 9 October 2026 with the contact selector, billed annually (the page offers no monthly option). Starter $15 at 1,000, $39 at 2,500, $79 at 5,000, $109 at 7,500, $149 at 10,000, $231 at 15,000, $311 at 20,000, $391 at 25,000 contacts, and 'Only available on plans with 25,000 contacts or less'. Plus $49 at 1,000, $95 at 2,500, $145 at 5,000, $169 at 7,500, $189 at 10,000, $265 at 15,000, $329 at 20,000, $389 at 25,000, $449 at 30,000, $549 at 40,000, $609 at 50,000. Pro $79 at 1,000, $149 at 2,500, $205 at 5,000, $289 at 7,500, $375 at 10,000, $465 at 15,000, $549 at 20,000, $629 at 25,000, $709 at 30,000, $879 at 40,000, $969 at 50,000. Enterprise $145 at 1,000, $255 at 2,500, $375 at 5,000, $479 at 7,500, $589 at 10,000, $689 at 15,000, $785 at 20,000, $879 at 25,000, $949 at 30,000, $1,095 at 40,000, $1,169 at 50,000. Above 50,000 contacts the page shows no price."
+    }
+   ],
+   "notes": [
+    "Billed annually; the pricing page offers no monthly option. Starter stops at 25,000 contacts."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "activecampaign",
+    "currency": "USD",
+    "axis": "contacts",
+    "unit": "contact",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "plus": 49.0,
+       "pro": 79.0,
+       "enterprise": 145.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "activecampaign",
+    "currency": "USD",
+    "axis": "contacts",
+    "unit": "contact",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
  "task_evidence": {
   "structured_checks": [
@@ -543,9 +1040,9 @@
    "status": "open"
   },
   {
-   "question_id": "activecampaign:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "activecampaign:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
    "status": "open"
   }
  ],

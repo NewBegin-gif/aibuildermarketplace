@@ -15,26 +15,10 @@
   "entry_price": "$39",
   "entry_price_terms": "Creator · billed monthly",
   "from_price_usd_month": 39.0,
-  "plans": [
-   {
-    "name": "Free",
-    "price": "$0/mo",
-    "includes": "Up to 10,000 subscribers; unlimited landing pages, forms, broadcasts, tagging, digital products"
-   },
-   {
-    "name": "Creator",
-    "price": "$39/mo billed monthly, or $33/mo billed yearly ($390/year)",
-    "includes": "Unlimited Visual Automations, email sequences, Kit MCP, SMS marketing, branding removal"
-   },
-   {
-    "name": "Pro",
-    "price": "$79/mo billed monthly, or $66/mo billed yearly ($790/year)",
-    "includes": "Subscriber Signals, engagement analytics, deliverability reporting, referral system, unlimited users"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email broadcasts, audience tagging and segmentation, and digital products and subscriptions. Kit renamed the old Newsletter plan to Free and took automation out of it: Visual Automations and email sequences are now Creator-and-above, and Kit's affiliate briefing of 2 September 2026 adds that new free accounts open with a 14-day Creator trial and that accounts already on the Newsletter plan keep what they had. Creator is $39/mo billed monthly, or $33/mo billed yearly ($390 a year, saving $78), and adds unlimited Visual Automations, unlimited email sequences, Kit MCP, SMS marketing and branding removal. Pro — the tier that adds Subscriber Signals, engagement analytics, deliverability reporting, a newsletter referral system and unlimited users — is $79/mo billed monthly, or $66/mo billed yearly ($790 a year, saving $158). Paying yearly saves 17%. Every paid price on the page is quoted for 1,000 email subscribers and Kit bills by list size, so read the tier for your own list before you budget. Paid plans open with a 14-day free trial without a card, and migrations are free.",
-  "verified_at": "2026-09-02",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email broadcasts, audience tagging and segmentation, and digital products and subscriptions. Kit renamed the old Newsletter plan to Free and took automation out of it: Visual Automations and email sequences are now Creator-and-above, and Kit's affiliate briefing of 2 September 2026 adds that new free accounts open with a 14-day Creator trial and that accounts already on the Newsletter plan keep what they had. Creator is $39/mo billed monthly, or $33/mo billed yearly ($390 a year, saving $78), and adds unlimited Visual Automations, unlimited email sequences, Kit MCP, SMS marketing and branding removal. Pro — the tier that adds Subscriber Signals, engagement analytics, deliverability reporting, a newsletter referral system and unlimited users — is $79/mo billed monthly, or $66/mo billed yearly ($790 a year, saving $158). Paying yearly saves 17%. Every paid price on the page is quoted for 1,000 email subscribers and Kit bills by list size, so read the tier for your own list before you budget. Paid plans open with a 14-day free trial without a card, and migrations are free. Read again on 9 October 2026 with the slider, step by step. Creator billed monthly: $39 up to 1,000, $59 up to 3,000, $89 up to 5,000, $119 up to 8,000, $139 up to 10,000, $169 up to 15,000, $189 up to 20,000, $199 up to 25,000, $259 up to 35,000, $319 up to 45,000, $379 up to 55,000, $439 up to 65,000, $499 up to 75,000, $559 up to 85,000, $619 up to 95,000, $679 up to 105,000 subscribers; billed yearly, per month, at the same steps: $33, $50, $75, $100, $116, $141, $158, $166, $216, $266, $316, $366, $416, $466, $516, $566. Pro billed monthly at the same steps: $79, $99, $139, $169, $189, $249, $269, $279, $363, $447, $519, $591, $663, $735, $807, $879; billed yearly, per month: $66, $83, $116, $141, $158, $208, $225, $233, $303, $373, $433, $493, $553, $613, $673, $733. The page carried a 'LIMITED TIME PRO OFFER' banner on that reading.",
+  "verified_at": "2026-10-09",
   "source_url": null
  },
  "free_plan": true,
@@ -65,14 +49,554 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "subscriber",
+   "axis": "contacts",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 10000,
+     "evidence": "The free plan is $0/mo and covers up to 10,000 email subscribers"
+    },
+    {
+     "id": "creator",
+     "name": "Creator",
+     "model": "ladder",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "monthly": 39,
+       "annual_month": 33
+      },
+      {
+       "units": 3000,
+       "monthly": 59,
+       "annual_month": 50
+      },
+      {
+       "units": 5000,
+       "monthly": 89,
+       "annual_month": 75
+      },
+      {
+       "units": 8000,
+       "monthly": 119,
+       "annual_month": 100
+      },
+      {
+       "units": 10000,
+       "monthly": 139,
+       "annual_month": 116
+      },
+      {
+       "units": 15000,
+       "monthly": 169,
+       "annual_month": 141
+      },
+      {
+       "units": 20000,
+       "monthly": 189,
+       "annual_month": 158
+      },
+      {
+       "units": 25000,
+       "monthly": 199,
+       "annual_month": 166
+      },
+      {
+       "units": 35000,
+       "monthly": 259,
+       "annual_month": 216
+      },
+      {
+       "units": 45000,
+       "monthly": 319,
+       "annual_month": 266
+      },
+      {
+       "units": 55000,
+       "monthly": 379,
+       "annual_month": 316
+      },
+      {
+       "units": 65000,
+       "monthly": 439,
+       "annual_month": 366
+      },
+      {
+       "units": 75000,
+       "monthly": 499,
+       "annual_month": 416
+      },
+      {
+       "units": 85000,
+       "monthly": 559,
+       "annual_month": 466
+      },
+      {
+       "units": 95000,
+       "monthly": 619,
+       "annual_month": 516
+      },
+      {
+       "units": 105000,
+       "monthly": 679,
+       "annual_month": 566
+      }
+     ],
+     "evidence": "Creator billed monthly: $39 up to 1,000, $59 up to 3,000, $89 up to 5,000, $119 up to 8,000, $139 up to 10,000, $169 up to 15,000, $189 up to 20,000, $199 up to 25,000, $259 up to 35,000, $319 up to 45,000, $379 up to 55,000, $439 up to 65,000, $499 up to 75,000, $559 up to 85,000, $619 up to 95,000, $679 up to 105,000 subscribers; billed yearly, per month, at the same steps: $33, $50, $75, $100, $116, $141, $158, $166, $216, $266, $316, $366, $416, $466, $516, $566."
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "ladder",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "monthly": 79,
+       "annual_month": 66
+      },
+      {
+       "units": 3000,
+       "monthly": 99,
+       "annual_month": 83
+      },
+      {
+       "units": 5000,
+       "monthly": 139,
+       "annual_month": 116
+      },
+      {
+       "units": 8000,
+       "monthly": 169,
+       "annual_month": 141
+      },
+      {
+       "units": 10000,
+       "monthly": 189,
+       "annual_month": 158
+      },
+      {
+       "units": 15000,
+       "monthly": 249,
+       "annual_month": 208
+      },
+      {
+       "units": 20000,
+       "monthly": 269,
+       "annual_month": 225
+      },
+      {
+       "units": 25000,
+       "monthly": 279,
+       "annual_month": 233
+      },
+      {
+       "units": 35000,
+       "monthly": 363,
+       "annual_month": 303
+      },
+      {
+       "units": 45000,
+       "monthly": 447,
+       "annual_month": 373
+      },
+      {
+       "units": 55000,
+       "monthly": 519,
+       "annual_month": 433
+      },
+      {
+       "units": 65000,
+       "monthly": 591,
+       "annual_month": 493
+      },
+      {
+       "units": 75000,
+       "monthly": 663,
+       "annual_month": 553
+      },
+      {
+       "units": 85000,
+       "monthly": 735,
+       "annual_month": 613
+      },
+      {
+       "units": 95000,
+       "monthly": 807,
+       "annual_month": 673
+      },
+      {
+       "units": 105000,
+       "monthly": 879,
+       "annual_month": 733
+      }
+     ],
+     "evidence": "Pro billed monthly at the same steps: $79, $99, $139, $169, $189, $249, $269, $279, $363, $447, $519, $591, $663, $735, $807, $879; billed yearly, per month: $66, $83, $116, $141, $158, $208, $225, $233, $303, $373, $433, $493, $553, $613, $673, $733."
+    }
+   ],
+   "notes": [
+    "Ladder read with the slider on 9 October 2026, up to 105,000 subscribers; the slider goes further."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "kit",
+    "currency": "USD",
+    "axis": "contacts",
+    "unit": "subscriber",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 33.0,
+       "pro": 66.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "kit",
+    "currency": "USD",
+    "axis": "contacts",
+    "unit": "subscriber",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "creator": 39.0,
+       "pro": 79.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -93,12 +617,6 @@
    "question_id": "kit:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "kit:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

@@ -3503,10 +3503,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wrike-review/
 
 ## Xero (xero.com)
-- **Verified pricing:** (re-verified 2026-09-19 on their own US pricing page) Every headline price is still a promotion: 'Get 90% off your plan for your first 6 months when you buy by 30 September 2026'.
-- **Honest take:** Read the second number, not the first. Every plan on that page is 90% off for six months, and the price that governs the rest of your first year is ten times what the button says: $25, $55 and $90.
+- **Verified pricing:** (re-verified 2026-10-09 in a browser render of their own US pricing page) The 1 October price increase the page announced in September has happened.
+- **Honest take:** Read the second number, not the first. Every plan on the US page is 80% off for three months, and the price after that is five times what the button says: $27, $59 and $97 a month.
 - **Best for:** small businesses whose bookkeeper or accountant already works in Xero — the ecosystem and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs
-- **Flags:** {'f': 'per_seat', 'ev': 'Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or con…'}, {'f': 'addons_extra', 'ev': 'Optional add-ons: Inventory Plus (no price shown, and excluded on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or con…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'Optional add-ons: Inventory Plus (no price shown, not on Early) and Xero Payroll powered by Gusto at $36 a month plus $6 per employee or contractor.'}, {'f': 'addons_extra', 'ev': 'New on Early: auto-reconcile is an optional add-on at $5.00 a month (included on Growing and Established).'}
 - **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
 
 ## Zedonk (zedonk.co.uk)

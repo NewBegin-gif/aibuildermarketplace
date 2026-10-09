@@ -78,15 +78,366 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "workspace",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free: 5 build credits a day, capped at 30 a month"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 25,
+     "annual_status": "unknown",
+     "evidence": "Pro starts at 25 euros a month for 100 credits"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 50,
+     "annual_status": "unknown",
+     "evidence": "Business starts at 50 euros a month for the same 100 credits"
+    }
+   ],
+   "notes": [
+    "Prices shown in euros including VAT from a European exit. Pro and Business include 100 credits; larger credit tiers cost more (200 credits for 50 euros on Pro, and so on).",
+    "Yearly billing is advertised as two months free; the yearly figure is not in our notes."
+   ],
+   "not_computable": [
+    "Credits beyond the monthly allowance (top-ups and larger credit tiers) are not in these figures."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "lovable",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "workspace",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credits beyond the monthly allowance (top-ups and larger credit tiers) are not in these figures."
+    ]
+   },
+   "monthly": {
+    "product_id": "lovable",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "workspace",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 25.0,
+       "business": 50.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credits beyond the monthly allowance (top-ups and larger credit tiers) are not in these figures."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
  "task_evidence": {
   "structured_checks": [
@@ -565,9 +916,9 @@
    "status": "open"
   },
   {
-   "question_id": "lovable:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "lovable:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Credits beyond the monthly allowance (top-ups and larger credit tiers) are not in these figures. Can you publish the price or the rule?",
    "status": "open"
   }
  ],
@@ -580,5 +931,90 @@
    "checked_at": "2026-10-07",
    "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
   }
+ },
+ "feature_evidence": {
+  "features": {
+   "code_export": {
+    "label": "Code to GitHub or download",
+    "phrases": [
+     "code export",
+     "github",
+     "github sync",
+     "export code",
+     "code on github"
+    ]
+   },
+   "custom_domain": {
+    "label": "Your own domain",
+    "phrases": [
+     "custom domain",
+     "custom domains",
+     "own domain",
+     "your own domain"
+    ]
+   },
+   "remove_badge": {
+    "label": "No builder badge on the app",
+    "phrases": [
+     "remove badge",
+     "no badge",
+     "remove the badge",
+     "no builder badge"
+    ]
+   },
+   "team_builders": {
+    "label": "Several people building",
+    "phrases": [
+     "several builders",
+     "collaborators",
+     "team builders",
+     "multiple builders"
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "feature": "custom_domain",
+    "plans": [
+     "Pro",
+     "Business"
+    ],
+    "quote": "Custom domains",
+    "context": "On the Pro card; Business is 'All Pro features'.",
+    "source": "https://lovable.dev/pricing",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "remove_badge",
+    "plans": [
+     "Pro",
+     "Business"
+    ],
+    "quote": "Remove the Lovable badge",
+    "context": "On the Pro card; Business is 'All Pro features'.",
+    "source": "https://lovable.dev/pricing",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "team_builders",
+    "plans": [
+     "Pro",
+     "Business"
+    ],
+    "quote": "Unlimited users",
+    "context": "On the Pro and Business cards.",
+    "source": "https://lovable.dev/pricing",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "code_export",
+    "plans": null,
+    "quote": "This is a Git sync integration for Lovable projects. You can export and two-way sync your Lovable project code with github.com, GitHub Enterprise Cloud, or GitHub Enterprise Server.",
+    "context": "The github.com connection is marked 'available on all plans'; downloading the codebase directly is marked 'paid plans'.",
+    "source": "https://docs.lovable.dev/integrations/github",
+    "read_on": "2026-10-09"
+   }
+  ],
+  "note": "From the vendor's own pages, with plan, source and reading date. Documented by the vendor, not tested by us; our own tests are in task_evidence."
  }
 }

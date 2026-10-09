@@ -78,14 +78,456 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "included_units": 5,
+     "monthly": 400,
+     "annual_month": 320,
+     "extra_unit": {
+      "monthly": 63,
+      "annual_status": "unknown"
+     },
+     "evidence": "Starter $400/month including 5 users, Growth $750 including 10, Professional $1,300 including 15, and Enterprise on quote. Extra users are $63/month each on every tier. Paying quarterly takes 10% off — $360, $675 and $1,170 a month, shown with the quarter total beside it — and annually 20%, which is $320, $600 and $1,040"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "included_units": 10,
+     "monthly": 750,
+     "annual_month": 600,
+     "extra_unit": {
+      "monthly": 63,
+      "annual_status": "unknown"
+     },
+     "evidence": "Starter $400/month including 5 users, Growth $750 including 10, Professional $1,300 including 15, and Enterprise on quote. Extra users are $63/month each on every tier. Paying quarterly takes 10% off — $360, $675 and $1,170 a month, shown with the quarter total beside it — and annually 20%, which is $320, $600 and $1,040"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "included_units": 15,
+     "monthly": 1300,
+     "annual_month": 1040,
+     "extra_unit": {
+      "monthly": 63,
+      "annual_status": "unknown"
+     },
+     "evidence": "Starter $400/month including 5 users, Growth $750 including 10, Professional $1,300 including 15, and Enterprise on quote. Extra users are $63/month each on every tier. Paying quarterly takes 10% off — $360, $675 and $1,170 a month, shown with the quarter total beside it — and annually 20%, which is $320, $600 and $1,040"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "and Enterprise on quote"
+    }
+   ],
+   "not_computable": [
+    "Quarterly billing (10% off: $360, $675 and $1,170 a month).",
+    "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month."
+   ],
+   "notes": [
+    "Whether the $63 extra-user rate is discounted on annual billing is not stated."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "digit",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 320.0,
+      "billed": {
+       "amount": 3840.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 320.0,
+       "growth": 600.0,
+       "professional": 1040.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 320.0,
+      "billed": {
+       "amount": 3840.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 320.0,
+       "growth": 600.0,
+       "professional": 1040.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 320.0,
+      "billed": {
+       "amount": 3840.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 320.0,
+       "growth": 600.0,
+       "professional": 1040.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 320.0,
+      "billed": {
+       "amount": 3840.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 320.0,
+       "growth": 600.0,
+       "professional": 1040.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 7200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "growth": 600.0,
+       "professional": 1040.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 1040.0,
+      "billed": {
+       "amount": 12480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "professional": 1040.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "growth",
+      "to_plan": "professional",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Professional"
+     },
+     {
+      "from_units": 15,
+      "to_units": 20,
+      "from_plan": "professional",
+      "to_plan": null,
+      "from_plan_name": "Professional",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Quarterly billing (10% off: $360, $675 and $1,170 a month).",
+     "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month."
+    ]
+   },
+   "monthly": {
+    "product_id": "digit",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 400.0,
+       "growth": 750.0,
+       "professional": 1300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 400.0,
+       "growth": 750.0,
+       "professional": 1300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 400.0,
+       "growth": 750.0,
+       "professional": 1300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 400.0,
+       "growth": 750.0,
+       "professional": 1300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 715.0,
+      "billed": {
+       "amount": 715.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 715.0,
+       "growth": 750.0,
+       "professional": 1300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1030.0,
+      "billed": {
+       "amount": 1030.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1030.0,
+       "growth": 1065.0,
+       "professional": 1300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1345.0,
+      "billed": {
+       "amount": 1345.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1345.0,
+       "growth": 1380.0,
+       "professional": 1615.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1660.0,
+      "billed": {
+       "amount": 1660.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1660.0,
+       "growth": 1695.0,
+       "professional": 1930.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 3235.0,
+      "billed": {
+       "amount": 3235.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 3235.0,
+       "growth": 3270.0,
+       "professional": 3505.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 6385.0,
+      "billed": {
+       "amount": 6385.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 6385.0,
+       "growth": 6420.0,
+       "professional": 6655.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Quarterly billing (10% off: $360, $675 and $1,170 a month).",
+     "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -109,9 +551,15 @@
    "status": "open"
   },
   {
-   "question_id": "digit:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "digit:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Quarterly billing (10% off: $360, $675 and $1,170 a month). Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "digit:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

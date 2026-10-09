@@ -13,36 +13,43 @@
  "pricing": {
   "status": "public",
   "entry_price": "$49",
-  "entry_price_terms": "Email Volume, 1,000 active contacts · per month, pay-as-you-go by active contacts",
+  "entry_price_terms": "Email Volume, 1,000 active contacts · per user per month billed annually, by active contacts (per user up to 5,000 contacts, unlimited users from 10,000)",
   "from_price_usd_month": 49.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-08-17 against Reply's own machine-readable plan breakdown) Three separate tracks, and the one you pick changes the arithmetic completely. Email Volume is pay-as-you-go by active contacts: 1,000 for $49/mo, 2,000 for $59, 3,000 for $69, 5,000 for $89, 10,000 for $159, 25,000 for $259 and 50,000 for $459, with 100,000+ quoted. Multichannel is all-inclusive from $89/month billed annually ($99 monthly) with unlimited active contacts, adding LinkedIn, SMS, calls and WhatsApp, 10 mailboxes (5 on monthly) and 50 live data credits. AI SDR (Jason) runs $500 to $1,000 a month billed annually at Starter (1,000-3,000 contacts) and $1,500 to $3,000 at Growth (5,000-10,000), with Enterprise quoted. Agency Core starts at $210/month and Agency AI SDR at $500 per client. Add-ons on top of the Email track: LinkedIn automation $69/month per account, calls and SMS $29/month per account, AI/live-data credits from $39/month and email validation from $20/month.",
-  "verified_at": "2026-08-17",
+  "notes": "(re-verified 2026-10-09 in a browser on reply.io/pricing/ and in Reply's own machine-readable pricing file) Three separate tracks, and the one you pick changes the arithmetic completely. Email Volume is priced by active contacts. Billed annually it is $49, $59, $69 and $89 per user a month for 1,000, 2,000, 3,000 and 5,000 contacts, then, for unlimited users, $159 for 10,000, $259 for 25,000, $459 for 50,000 and $899 for 100,000, with 200,000 and up quoted; month to month the same tiers are $59, $69, $79, $99, $179, $299, $499 and $999. Multichannel is all-inclusive from $89 per user a month billed annually ($99 monthly) with unlimited active contacts, adding LinkedIn, SMS, calls and WhatsApp, 10 mailboxes (5 on monthly) and 50 live data credits. AI SDR (Jason) runs $500, $800 or $1,000 a month billed annually at Starter (1,000, 2,000 or 3,000 contacts) and $1,500 or $3,000 at Growth (5,000 or 10,000), $800 to $5,000 month to month, with Enterprise quoted. Agency Core starts at $210/month and Agency AI SDR at $500 per client. Add-ons on top of the Email track: LinkedIn automation $69/month per account, calls and SMS $29/month per account, AI/live-data credits from $39/month and email validation from $20/month. Each mailbox beyond the number a plan includes also needs a $29/month email account seat on top of the mailbox price.",
+  "verified_at": "2026-10-09",
   "source_url": null
  },
  "free_plan": false,
  "free_plan_evidence": null,
  "cost_traps": [
   {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Billed annually it is $49, $59, $69 and $89 per user a month for 1,000, 2,000, 3,000 and 5,000 contacts, then, for unlimited users, $159 for 10,000, $259 for 25,000, $459 for 50,000 and $899 for 100,000, with 200,000 and up quoted; month to month the same tiers are $59, $69, $79, $99, $179, $299, $499 and $999.",
+   "verified_at": "2026-10-09",
+   "source_url": null
+  },
+  {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "Multichannel is all-inclusive from $89/month billed annually ($99 monthly) with unlimited active contacts, adding LinkedIn, SMS, calls and WhatsApp, 10 mailboxes (5 on monthly) and 50 live data credits.",
-   "verified_at": "2026-08-17",
+   "evidence": "Multichannel is all-inclusive from $89 per user a month billed annually ($99 monthly) with unlimited active contacts, adding LinkedIn, SMS, calls and WhatsApp, 10 mailboxes (5 on monthly) and 50 live data credits.",
+   "verified_at": "2026-10-09",
    "source_url": null
   },
   {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "The trap is the cheaper Email track: it starts at $49 for 1,000 contacts, but LinkedIn automation ($69 per account) and calls and SMS ($29) are add-ons there, so one seat with both is $147 against $89 for Multichannel.",
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-09",
    "source_url": null
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "The $89 is the Multichannel track on annual billing, and it does include LinkedIn, calls, SMS and WhatsApp — $99 month to month.",
-   "verified_at": "2026-08-17",
+   "verified_at": "2026-10-09",
    "source_url": null
   }
  ],
@@ -71,15 +78,424 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "email-volume-1000",
+     "name": "Email Volume (1,000 active contacts)",
+     "model": "per_unit",
+     "annual_month": 49,
+     "monthly": 59,
+     "evidence": "Billed annually it is $49, $59, $69 and $89 per user a month for 1,000, 2,000, 3,000 and 5,000 contacts, then, for unlimited users, $159 for 10,000, $259 for 25,000, $459 for 50,000 and $899 for 100,000, with 200,000 and up quoted; month to month the same tiers are $59, $69, $79, $99, $179, $299, $499 and $999."
+    },
+    {
+     "id": "email-volume-10000",
+     "name": "Email Volume (10,000 active contacts, unlimited users)",
+     "model": "flat",
+     "annual_month": 159,
+     "monthly": 179,
+     "evidence": "Billed annually it is $49, $59, $69 and $89 per user a month for 1,000, 2,000, 3,000 and 5,000 contacts, then, for unlimited users, $159 for 10,000, $259 for 25,000, $459 for 50,000 and $899 for 100,000, with 200,000 and up quoted; month to month the same tiers are $59, $69, $79, $99, $179, $299, $499 and $999."
+    },
+    {
+     "id": "multichannel",
+     "name": "Multichannel",
+     "model": "per_unit",
+     "annual_month": 89,
+     "monthly": 99,
+     "evidence": "Multichannel is all-inclusive from $89 per user a month billed annually ($99 monthly) with unlimited active contacts"
+    }
+   ],
+   "not_computable": [
+    "Email Volume tiers between 2,000 and 5,000 contacts and from 25,000 up: the price depends on active contacts as well as users; only the 1,000- and 10,000-contact rungs are modelled here.",
+    "Add-ons on Email Volume: LinkedIn $69 and calls & SMS $29 per account a month; extra mailboxes need a $29/month seat on top of the mailbox price.",
+    "AI SDR (Jason) and Agency plans: priced per contact volume or per client, not per user."
+   ],
+   "notes": [
+    "Multichannel is a 'from' price (a floor). Email Volume is per user up to 5,000 contacts and covers unlimited users from 10,000."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "reply-io",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "email-volume-1000",
+      "cheapest_plan_name": "Email Volume (1,000 active contacts)",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 49.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 89.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "email-volume-1000",
+      "cheapest_plan_name": "Email Volume (1,000 active contacts)",
+      "total_month": 98.0,
+      "billed": {
+       "amount": 1176.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 98.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 178.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "email-volume-1000",
+      "cheapest_plan_name": "Email Volume (1,000 active contacts)",
+      "total_month": 147.0,
+      "billed": {
+       "amount": 1764.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 147.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 267.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 245.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 445.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 490.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 890.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 735.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 1335.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 980.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 1780.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 1225.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 2225.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 2450.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 4450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 4900.0,
+       "email-volume-10000": 159.0,
+       "multichannel": 8900.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "email-volume-1000",
+      "to_plan": "email-volume-10000",
+      "from_plan_name": "Email Volume (1,000 active contacts)",
+      "to_plan_name": "Email Volume (10,000 active contacts, unlimited users)"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Email Volume tiers between 2,000 and 5,000 contacts and from 25,000 up: the price depends on active contacts as well as users; only the 1,000- and 10,000-contact rungs are modelled here.",
+     "Add-ons on Email Volume: LinkedIn $69 and calls & SMS $29 per account a month; extra mailboxes need a $29/month seat on top of the mailbox price.",
+     "AI SDR (Jason) and Agency plans: priced per contact volume or per client, not per user."
+    ]
+   },
+   "monthly": {
+    "product_id": "reply-io",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "email-volume-1000",
+      "cheapest_plan_name": "Email Volume (1,000 active contacts)",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 59.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "email-volume-1000",
+      "cheapest_plan_name": "Email Volume (1,000 active contacts)",
+      "total_month": 118.0,
+      "billed": {
+       "amount": 118.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 118.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 198.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "email-volume-1000",
+      "cheapest_plan_name": "Email Volume (1,000 active contacts)",
+      "total_month": 177.0,
+      "billed": {
+       "amount": 177.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 177.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 297.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 295.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 590.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 990.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 885.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 1485.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 1180.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 1980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 1475.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 2475.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 2950.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 4950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "email-volume-10000",
+      "cheapest_plan_name": "Email Volume (10,000 active contacts, unlimited users)",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email-volume-1000": 5900.0,
+       "email-volume-10000": 179.0,
+       "multichannel": 9900.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "email-volume-1000",
+      "to_plan": "email-volume-10000",
+      "from_plan_name": "Email Volume (1,000 active contacts)",
+      "to_plan_name": "Email Volume (10,000 active contacts, unlimited users)"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Email Volume tiers between 2,000 and 5,000 contacts and from 25,000 up: the price depends on active contacts as well as users; only the 1,000- and 10,000-contact rungs are modelled here.",
+     "Add-ons on Email Volume: LinkedIn $69 and calls & SMS $29 per account a month; extra mailboxes need a $29/month seat on top of the mailbox price.",
+     "AI SDR (Jason) and Agency plans: priced per contact volume or per client, not per user."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -103,9 +519,21 @@
    "status": "open"
   },
   {
-   "question_id": "reply-io:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "reply-io:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Email Volume tiers between 2,000 and 5,000 contacts and from 25,000 up: the price depends on active contacts as well as users; only the 1,000- and 10,000-contact rungs are modelled here. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "reply-io:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Add-ons on Email Volume: LinkedIn $69 and calls & SMS $29 per account a month; extra mailboxes need a $29/month seat on top of the mailbox price. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "reply-io:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: AI SDR (Jason) and Agency plans: priced per contact volume or per client, not per user. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

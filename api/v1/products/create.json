@@ -49,15 +49,436 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "website administrator",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 19.99,
+     "annual_month": 16.66,
+     "evidence": "Professional is €19.99, or €16.66 billed yearly, for 50 pages, 10GB, 50 custom HTML integrations, 3 custom forms, one website administrator"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "max_units": 3,
+     "monthly": 39.99,
+     "annual_month": 33.33,
+     "evidence": "Business is €39.99, or €33.33 billed yearly, for unlimited pages and products, 20GB, 200 HTML integrations, 15 forms, three administrators"
+    },
+    {
+     "id": "tailored",
+     "name": "Tailored",
+     "model": "flat",
+     "monthly": 79.99,
+     "annual_month": 69.99,
+     "evidence": "Tailored starts at €79.99, or €69.99 billed yearly, with all limits removable and permissions for unlimited staff"
+    }
+   ],
+   "not_computable": [
+    "Portfolio (€9.99 a month, €8.33 billed yearly): the number of administrators is not stated, so it is left out of team calculations."
+   ],
+   "notes": [
+    "Prices exclude VAT, which is added at your country's rate. Tailored is a 'from' price (a floor)."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "create",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "website administrator",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 16.66,
+      "billed": {
+       "amount": 199.92,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 16.66,
+       "business": 33.33,
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 33.33,
+      "billed": {
+       "amount": 399.96,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": 33.33,
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 33.33,
+      "billed": {
+       "amount": 399.96,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": 33.33,
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 69.99,
+      "billed": {
+       "amount": 839.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 69.99,
+      "billed": {
+       "amount": 839.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 69.99,
+      "billed": {
+       "amount": 839.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 69.99,
+      "billed": {
+       "amount": 839.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 69.99,
+      "billed": {
+       "amount": 839.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 69.99,
+      "billed": {
+       "amount": 839.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 69.99
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 69.99,
+      "billed": {
+       "amount": 839.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 69.99
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "professional",
+      "to_plan": "business",
+      "from_plan_name": "Professional",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "business",
+      "to_plan": "tailored",
+      "from_plan_name": "Business",
+      "to_plan_name": "Tailored"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Portfolio (€9.99 a month, €8.33 billed yearly): the number of administrators is not stated, so it is left out of team calculations."
+    ]
+   },
+   "monthly": {
+    "product_id": "create",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "website administrator",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 19.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 19.99,
+       "business": 39.99,
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": 39.99,
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": 39.99,
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 79.99
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "tailored",
+      "cheapest_plan_name": "Tailored",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "business": "not_eligible",
+       "tailored": 79.99
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "professional",
+      "to_plan": "business",
+      "from_plan_name": "Professional",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "business",
+      "to_plan": "tailored",
+      "from_plan_name": "Business",
+      "to_plan_name": "Tailored"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Portfolio (€9.99 a month, €8.33 billed yearly): the number of administrators is not stated, so it is left out of team calculations."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -81,9 +502,9 @@
    "status": "open"
   },
   {
-   "question_id": "create:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "create:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Portfolio (€9.99 a month, €8.33 billed yearly): the number of administrators is not stated, so it is left out of team calculations. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

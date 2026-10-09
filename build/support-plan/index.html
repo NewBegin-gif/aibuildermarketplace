@@ -123,7 +123,7 @@ var DEKKING=(function(){
  function eenwachtrij(R){var m=R.map(function(r){return r.module;});return R.every(function(r){return r.status==='documented';})&&m.every(function(x){return x&&x===m[0];});}
  function som(mods){var s={};mods.forEach(function(k){if(k&&k.cost&&k.cost.per_month!=null){s[k.cost.currency]=(s[k.cost.currency]||0)+k.cost.per_month;}});return s;}
  function chip(s){return '<span class="st s-'+(s==='documented'?'documented':s==='uncovered'?'does_not_fit':'unknown')+'">'+LBL[s]+'</span>';}
- function tabel(R,esc){return '<div class="scroll"><table class="tabel dek"><thead><tr><th>Channel</th><th>Handled by</th><th>Status</th><th>What that means</th></tr></thead><tbody>'+
+ function tabel(R,esc,kop){return '<div class="scroll"><table class="tabel dek"><thead><tr><th>'+(kop||'Channel')+'</th><th>Handled by</th><th>Status</th><th>What that means</th></tr></thead><tbody>'+
   R.map(function(r){return '<tr><td>'+esc(r.naam)+'</td><td>'+(r.module?esc(r.module):'—')+'</td><td>'+chip(r.status)+'</td><td><small>'+esc(r.uitleg)+'</small></td></tr>';}).join('')+'</tbody></table></div>';}
  return {KAN:KAN,rijen:rijen,stand:stand,somkop:somkop,eenwachtrij:eenwachtrij,som:som,tabel:tabel,chip:chip};
 })();

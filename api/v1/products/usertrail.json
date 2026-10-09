@@ -77,10 +77,31 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "UserTrail",
+    "product_id": "usertrail",
+    "run_date": "2026-10-09",
+    "what": "A new account, which starts on a 14-day trial with paid-plan limits (10,000 sessions a month), not on the Free plan. We put the tracking snippet on a two-page test page of our own, with a sign-up form, a button, a link to a pricing page and an element that looks clickable but does nothing. Then we sent scripted visits whose every step we logged: eight visitors on desktop and phone who clicked, scrolled, filled in the form and gave up halfway, rage-clicked the dead element or left after five seconds, plus two later visits spaced more than a minute apart. We compared the recordings and the friction report with that log.",
+    "findings": [
+     "Recording is off after installation. The dashboard confirmed 'Your tracking code is installed', but nothing was captured until we pressed 'Activate tracking'. Our first round of eight visits was lost that way.",
+     "After activation, only the first three visits of the second round were recorded. The other five, and two later visits spaced more than a minute apart, never appeared, while the billing page showed 3 of 10,000 sessions used and the recording rate stood at 100%. All visits came from one address and a scripted browser, so this may be a filter on repeated visits rather than a fault; we could not tell which, and the form, drop-off and rage-click checks could not be scored.",
+     "The recordings that did arrive were partly right. The visit that went on to the pricing page showed 2 pages and the phone visit was marked as mobile. The first visitor clicked the main button and scrolled to the bottom over about half a minute, yet the list showed 9 seconds and the friction report counted it as a bounce.",
+     "Not tested: the Free plan itself, heatmaps over many visits, funnels, surveys, and real visitors from many addresses."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "usertrail:cancellation_terms",

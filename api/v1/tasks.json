@@ -3153,6 +3153,24 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "UserTrail",
+   "product_id": "usertrail",
+   "run_date": "2026-10-09",
+   "what": "A new account, which starts on a 14-day trial with paid-plan limits (10,000 sessions a month), not on the Free plan. We put the tracking snippet on a two-page test page of our own, with a sign-up form, a button, a link to a pricing page and an element that looks clickable but does nothing. Then we sent scripted visits whose every step we logged: eight visitors on desktop and phone who clicked, scrolled, filled in the form and gave up halfway, rage-clicked the dead element or left after five seconds, plus two later visits spaced more than a minute apart. We compared the recordings and the friction report with that log.",
+   "findings": [
+    "Recording is off after installation. The dashboard confirmed 'Your tracking code is installed', but nothing was captured until we pressed 'Activate tracking'. Our first round of eight visits was lost that way.",
+    "After activation, only the first three visits of the second round were recorded. The other five, and two later visits spaced more than a minute apart, never appeared, while the billing page showed 3 of 10,000 sessions used and the recording rate stood at 100%. All visits came from one address and a scripted browser, so this may be a filter on repeated visits rather than a fault; we could not tell which, and the form, drop-off and rage-click checks could not be scored.",
+    "The recordings that did arrive were partly right. The visit that went on to the pricing page showed 2 pages and the phone visit was marked as mobile. The first visitor clicked the main button and scrolled to the bottom over about half a minute, yet the list showed 9 seconds and the friction report counted it as a bounce.",
+    "Not tested: the Free plan itself, heatmaps over many visits, funnels, surveys, and real visitors from many addresses."
+   ],
+   "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Nextify.ai",
    "product_id": "nextify-ai",
    "run_date": "2026-09-07",
@@ -3446,6 +3464,25 @@
   },
   {
    "source": "session",
+   "product_name": "Proton Drive",
+   "product_id": "proton-drive",
+   "run_date": "2026-10-09",
+   "what": "A new free account, used in the web app in Chrome. We uploaded four files we made ourselves with known SHA-256 checksums: a 9.6 KB text note, 1 MB and 8 MB files of random bytes, and a small text file named 'naam met spaties en é.txt' to test spaces and an accented letter. We created a public link for the 1 MB file, opened it in a separate browser that was not signed in to Proton, then downloaded all four files again and compared them byte for byte with the originals.",
+   "findings": [
+    "All four files came back identical: the same size and the same SHA-256 checksum as the originals, and the file name with spaces and an accented letter was unchanged, byte for byte.",
+    "The new account started at 2 GB, not 5 GB. A pop-up offered a 3 GB welcome bonus, and after we uploaded files and created a share link the meter showed 5 GB. The same pop-up still said '29 days left to claim' afterwards.",
+    "The public link opened for a visitor without a Proton account and offered the file for download. The decryption key is the part of the link after the '#': the same link without it showed a password prompt instead, so a chat app or mail client that cuts off that part leaves the recipient stuck.",
+    "Setting an expiry date and a password on a link is available on the free plan; we opened both settings but did not save them.",
+    "Not tested: the desktop and mobile apps, sync, photo backup, version history, sharing with another Proton user, and large uploads."
+   ],
+   "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Beautiful.ai",
    "product_id": "beautiful-ai",
    "run_date": "2026-09-28",
@@ -3518,6 +3555,26 @@
     "The visuals were motion graphics: the log showed ngram writing the scenes as an HTML animation and recording that, not generated camera footage. That suits explainers and product walkthroughs; it is not the tool for filmed-looking scenes.",
     "Videos are private by default; sharing offers a public link, an embed, a download and direct posting to LinkedIn, X and YouTube, and captions are included.",
     "Not tested: the export itself (so neither the 720p cap nor the Free-plan watermark was checked on a file), the paid plans, manual scene editing, avatars, and sources other than a web page."
+   ],
+   "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Jotform AI Agents",
+   "product_id": "jotform-ai-agents",
+   "run_date": "2026-10-09",
+   "what": "We built a support agent from scratch with the description 'A customer support agent for Acme Headsets that answers customer questions using the attached help centre page', and gave it one public help-centre page of our own as its only knowledge: shipping countries and times, a 15:00 dispatch cut-off, returns, warranty, spare parts, two headsets with prices and support hours, with no phone line. We asked 13 questions, each in a new conversation on the agent's standalone chat page: ten the page answers, and three it does not (Japan, PayPal, and battery life with noise cancelling on). The first round ran without an account; after about ten conversations it stopped with 'This AI Agent has reached its conversation limit', so the last three, plus two repeats, ran on a new agent built the same way in a free Starter account.",
+   "findings": [
+    "Eleven of 13 answers were right. Delivery times, the free-shipping threshold, the return window, free returns, the warranty exclusion, spare-part and headset prices and the 40-hour battery figure all matched the page.",
+    "It did not make things up when the page had no answer. It said it could not confirm PayPal, gave the 40-hour figure only for noise cancelling off and said it had no figure for it on, and inferred correctly that it does not ship to Japan because only the Netherlands, Belgium and Germany are listed.",
+    "It got the dispatch cut-off wrong. Asked about an order at 4 pm on a Tuesday, the first agent said it would not ship that day but not when it would; the second said it would ship the same day, because orders before 15:00 leave that day. The correct answer is Wednesday. The same question gave a different answer on a near-identical agent.",
+    "Asked 'Can I call you?', both agents said a representative had been asked to join and asked for an email address, instead of saying there is no phone support. With no live team behind it, that promise goes nowhere.",
+    "Adding the page once showed '2 links' in the knowledge base both times. The guest agent's conversation limit arrived after about ten chats; the free Starter plan lists 100 conversations a month.",
+    "Not tested: the website widget, WhatsApp, voice and phone channels, forms inside the chat, handover to a real person, or a larger knowledge base."
    ],
    "not_tested": null,
    "report": null,

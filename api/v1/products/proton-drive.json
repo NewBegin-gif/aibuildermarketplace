@@ -538,10 +538,32 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Proton Drive",
+    "product_id": "proton-drive",
+    "run_date": "2026-10-09",
+    "what": "A new free account, used in the web app in Chrome. We uploaded four files we made ourselves with known SHA-256 checksums: a 9.6 KB text note, 1 MB and 8 MB files of random bytes, and a small text file named 'naam met spaties en é.txt' to test spaces and an accented letter. We created a public link for the 1 MB file, opened it in a separate browser that was not signed in to Proton, then downloaded all four files again and compared them byte for byte with the originals.",
+    "findings": [
+     "All four files came back identical: the same size and the same SHA-256 checksum as the originals, and the file name with spaces and an accented letter was unchanged, byte for byte.",
+     "The new account started at 2 GB, not 5 GB. A pop-up offered a 3 GB welcome bonus, and after we uploaded files and created a share link the meter showed 5 GB. The same pop-up still said '29 days left to claim' afterwards.",
+     "The public link opened for a visitor without a Proton account and offered the file for download. The decryption key is the part of the link after the '#': the same link without it showed a password prompt instead, so a chat app or mail client that cuts off that part leaves the recipient stuck.",
+     "Setting an expiry date and a password on a link is available on the free plan; we opened both settings but did not save them.",
+     "Not tested: the desktop and mobile apps, sync, photo backup, version history, sharing with another Proton user, and large uploads."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "proton-drive:cancellation_terms",

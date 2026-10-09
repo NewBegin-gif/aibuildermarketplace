@@ -7,9 +7,9 @@
  "category": "E-commerce",
  "task": "E-commerce growth",
  "summary": "Shopify app that builds a full store or product page from a single product link — layout, copy and images generated automatically, plus bundle and cart upsells.",
- "best_for": "sellers testing many product ideas quickly who want a full Shopify storefront from a single product link, and who will genuinely stay inside 5 pages and 250 orders a month or have priced the overage",
+ "best_for": "sellers testing many product ideas quickly who want a full Shopify storefront from a single product link, and who will genuinely stay inside 10 pages and 250 orders a month or have priced the overage",
  "skip_if": "you run one established store with real order volume — the caps turn a $39 tool into a variable bill exactly when the store starts working — or you want a page builder you keep after you stop paying",
- "honest_knock": "The meter runs on your success, not your usage. $1,000 of bundle revenue and 250 cart orders is a rounding error for a store that is actually working. So the $39 headline describes the bill of a store that has not started selling yet. Price the tier you expect to be on in month three, not the one you sign up on. Two other things worth knowing before you install. The rating is 4.7 from 389 reviews, but 17 of those are one star and the recent ones are about billing rather than the product: one seller writes “cancelled it, uninstalled it, but still getting charged” after two months. And the listing carries a line Shopify does not require of most apps: “Atlas must not be used to copy, duplicate, or reproduce products, product listings, images, or store content from any website, or marketplace without the explicit permission of the rights holder”. That tells you what a paste-a-product-link builder gets used for.",
+ "honest_knock": "The meter runs on your success, not your usage. $1,000 of bundle revenue and 250 cart orders is a rounding error for a store that is actually working. So the $39 headline describes the bill of a store that has not started selling yet. Price the tier you expect to be on in month three, not the one you sign up on. Two other things worth knowing before you install. The rating is 4.6 from 374 reviews on 9 October 2026, but 25 of those are one star and the recent ones are about billing rather than the product: one seller writes “cancelled it, uninstalled it, but still getting charged” after two months. And the listing carries a line Shopify does not require of most apps: “Atlas must not be used to copy, duplicate, or reproduce products, product listings, images, or store content from any website, or marketplace without the explicit permission of the rights holder”. That tells you what a paste-a-product-link builder gets used for.",
  "pricing": {
   "status": "public",
   "entry_price": "$39",
@@ -17,8 +17,8 @@
   "from_price_usd_month": 39.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(prices read 2026-08-18 on apps.shopify.com/dropshipt and helloatlas.io) The listing says “Free to install”, but that is the development-store tier. A real store runs on the All-in-One plan at $39 a month, billed in USD with a 7-day free trial. Their own partners page says 5 days, so check which you get. What $39 buys is capped rather than unlimited: 5 published pages, $1,000 of bundle revenue, 250 cart orders and 50 AI photos a month. Their pricing page states it plainly: “you’ll be charged the base plan fees and given access to features to a limit, any additional uses for those features can be purchased as shown in the per feature pricing”. The App Store listing adds that “additional charges apply as your store generates revenue and impact”.",
-  "verified_at": "2026-08-19",
+  "notes": "(re-verified 2026-10-09 on apps.shopify.com/dropshipt and helloatlas.io; first read 2026-08-18) The listing says “Free to install”, but that is the development-store tier. A real store runs on the All-in-One plan at $39 a month, billed in USD with a 7-day free trial. What $39 buys is capped rather than unlimited. On 9 October 2026 the vendor's pricing section lists up to 10 published pages (it was 5 on 18 August), up to $1,000 of bundle revenue and up to 250 cart orders; AI photos, listed at 50 in August, no longer appear in that list. Their pricing page states it plainly: “you’ll be charged the base plan fees and given access to features to a limit, any additional uses for those features can be purchased as shown in the per feature pricing”, but the rendered page showed no per-feature prices on 9 October. The App Store listing adds that “additional charges apply as your store generates revenue and impact”, and that recurring and usage-based charges are billed every 30 days.",
+  "verified_at": "2026-10-09",
   "source_url": "https://apps.shopify.com/dropshipt"
  },
  "free_plan": false,
@@ -27,8 +27,8 @@
   {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "meter: unit · published pages, bundle revenue, cart orders, AI photos",
-   "verified_at": "2026-08-19",
+   "evidence": "meter: unit · published pages, bundle revenue, cart orders",
+   "verified_at": "2026-10-09",
    "source_url": "https://apps.shopify.com/dropshipt"
   }
  ],
@@ -54,15 +54,210 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "development-stores",
+     "name": "Development stores",
+     "model": "free",
+     "audience": "personal",
+     "evidence": "The listing says “Free to install”, but that is the development-store tier."
+    },
+    {
+     "id": "all-in-one",
+     "name": "All-in-One",
+     "model": "per_unit",
+     "monthly": 39,
+     "annual_status": "unknown",
+     "evidence": "A real store runs on the All-in-One plan at $39 a month, billed in USD with a 7-day free trial."
+    }
+   ],
+   "notes": [
+    "A Shopify app is billed per store that installs it; recurring and usage-based charges are billed every 30 days.",
+    "$39 covers up to 10 published pages, $1,000 of bundle revenue and 250 cart orders a month."
+   ],
+   "not_computable": [
+    {
+     "text": "Use above the caps (pages, bundle revenue, cart orders) is charged at per-feature rates that were not visible on the pricing page on 9 October 2026; the listing says additional charges apply as the store generates revenue.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "atlas-ai-store-builder",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Use above the caps (pages, bundle revenue, cart orders) is charged at per-feature rates that were not visible on the pricing page on 9 October 2026; the listing says additional charges apply as the store generates revenue."
+    ]
+   },
+   "monthly": {
+    "product_id": "atlas-ai-store-builder",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "all-in-one",
+      "cheapest_plan_name": "All-in-One",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": 39.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "all-in-one",
+      "cheapest_plan_name": "All-in-One",
+      "total_month": 78.0,
+      "billed": {
+       "amount": 78.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": 78.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "all-in-one",
+      "cheapest_plan_name": "All-in-One",
+      "total_month": 117.0,
+      "billed": {
+       "amount": 117.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": 117.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "all-in-one",
+      "cheapest_plan_name": "All-in-One",
+      "total_month": 195.0,
+      "billed": {
+       "amount": 195.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": 195.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "all-in-one",
+      "cheapest_plan_name": "All-in-One",
+      "total_month": 390.0,
+      "billed": {
+       "amount": 390.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "development-stores": "not_eligible",
+       "all-in-one": 390.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Use above the caps (pages, bundle revenue, cart orders) is charged at per-feature rates that were not visible on the pricing page on 9 October 2026; the listing says additional charges apply as the store generates revenue."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -86,9 +281,9 @@
    "status": "open"
   },
   {
-   "question_id": "atlas-ai-store-builder:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "atlas-ai-store-builder:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Use above the caps (pages, bundle revenue, cart orders) is charged at per-feature rates that were not visible on the pricing page on 9 October 2026; the listing says additional charges apply as the store generates revenue. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

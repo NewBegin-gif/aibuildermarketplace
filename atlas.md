@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 516 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-08.
+All 521 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-09.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -524,6 +524,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Usage-based (re-verified 2026-10-02): residential proxies start at $4.00/GB with no commitment, against a struck-through $8 — the $2.50/GB rate the o…'}, {'f': 'free_tier', 'ev': 'API side: Unlocker, Crawl and SERP APIs from $1/1k requests (free tiers available), Scraper APIs $1.50/1k records pay-as-you-go with a 5K/month free …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/bright-data-review/
 
+## Brizy (brizy.io)
+- **Verified pricing:** (read 2026-10-09 in a browser render of brizy.io/pricing-cloud, USD, both billing toggles; taxes not included) Brizy Cloud is the hosted version.
+- **Honest take:** One site on Personal; each extra site is $17 a month.
+- **Best for:** freelancers and agencies that build several client websites and want hosting included, with a white-label option to resell the builder under their own brand
+- **Flags:** {'f': 'addons_extra', 'ev': 'E-commerce sites are priced separately under Brizy Shops, and the WordPress plugin has its own pricing; neither was read.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/brizy-review/
+
 ## Browse.ai (browse.ai)
 - **Verified pricing:** (price re-verified 2026-09-21 in a live browser on www.browse.ai/pricing, with browse.ai/llms.txt read alongside it) Credit-metered, prices in USD.
 - **Honest take:** Two honest realities of no-code scraping. Credits burn faster than expected: row counts, screenshots and 'premium' sites all multiply the meter, so monitor a big site daily and do the math first.
@@ -729,6 +736,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's genuinely free to submit a brief — but be clear on what it is: a lead-generation marketplace, not a neutral directory.
 - **Best for:** businesses that want to skip manual agency research and get matched quickly with vetted, best-fit service providers for a specific project
 - **Full review:** https://aibuildermarketplace.com/b2b/clutch-review/
+
+## CO2 Impact (co2impact.co.uk)
+- **Verified pricing:** (read 2026-10-09 in a browser render of the pricing table on co2impact.co.uk's homepage, GBP, all prices exclude VAT) Every licence has a 12-month commitment, with an option to pay monthly.
+- **Honest take:** 12-month commitment on every plan; automated meter data costs extra per meter.
+- **Best for:** UK small and mid-sized businesses that need a first carbon footprint, Scope 1-3 reporting or a carbon reduction plan for customers and tenders, without hiring a consultant
+- **Flags:** {'f': 'addons_extra', 'ev': 'Automated meter data is an add-on priced per meter per year and gets cheaper on bigger plans: electricity £36, £33, £30 and £24, gas £15.60, £14.40, …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/co2-impact-review/
 
 ## Code Bulk Discounts (discountkit.app)
 - **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/code-bulk and re-verified there on 2026-09-16, unchanged) Two plans, billed in USD every 30 days.
@@ -1575,6 +1589,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'usage_metered', 'ev': 'Two meters that decide more than the funnel count does are still missing from the tier pages: funnel visits a month (10,000 / 25,000 / 100,000) and c…'}, {'f': 'annual_lock', 'ev': 'Enterprise is from $499/mo on annual contracts only.'}, {'f': 'free_tier', 'ev': "(re-verified 19 September 2026 on the public pricing page; the free plan's feature set was measured inside the product, because the plan cards still …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/involve-me-review/
 
+## iubenda (iubenda.com)
+- **Verified pricing:** (read 2026-10-09 on iubenda.com/en/pricing, browser render plus the page source for the monthly and USD figures; prices exclude VAT) All plans are priced per site per month; yearly billing …
+- **Honest take:** Per-site pricing with a pageview quota; one language on Essentials.
+- **Best for:** website owners and small businesses in the EU and elsewhere that want a cookie banner, consent records and generated privacy and cookie policies in one subscription
+- **Flags:** {'f': 'usage_metered', 'ev': 'Essentials is €4.99 billed yearly or €5.99 monthly ($5.99 / $6.99) for up to 25K pageviews, a standard privacy and cookie policy with up to 20 clause…'}, {'f': 'free_tier', 'ev': 'A free plan exists (its limits are not on the pricing page), every paid plan can be tried for 14 days, and agency and enterprise plans are quoted sep…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/iubenda-review/
+
 ## Jane (jane.app)
 - **Verified pricing:** (read 2026-10-01 on jane.app/pricing with the US locale; the same page shows CAD to Canadian visitors and much lower GBP prices to UK visitors) Three plans, billed monthly.
 - **Honest take:** Practice at $79 covers one full-time practitioner, and every other person who takes bookings adds $35 a month, or $17.50 under 24 booked hours a week.
@@ -2060,6 +2081,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small sales teams that want a friendly CRM with unlimited contacts and full API access on every tier, including the cheapest
 - **Flags:** {'f': 'per_seat', 'ev': '(re-verified 2026-08-17) Five CRM tiers on annual billing: Foundation $13, Growth $25, Pro $42, Business $59 and Enterprise $79 per user a month, wit…'}, {'f': 'addons_extra', 'ev': 'Marketing at $49/mo and Engagement at $16/user/mo sit on top of the seat price, and email and SMS are billed by contact count and message volume, so …'}, {'f': 'annual_lock', 'ev': '(re-verified 2026-08-17) Five CRM tiers on annual billing: Foundation $13, Growth $25, Pro $42, Business $59 and Enterprise $79 per user a month, wit…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/nutshell-review/
+
+## Omneky (omneky.com)
+- **Verified pricing:** (read 2026-10-09 in a browser render of the pricing section on omneky.com, USD, monthly view; omneky.com/pricing itself rendered empty) Lite is $29 a month with 200 credits a month, 1 brand…
+- **Honest take:** Credits per month are listed, but not what an ad costs in credits.
+- **Best for:** e-commerce brands and performance marketers who want AI-generated image and video ads launched and measured across Meta, Google, TikTok and other channels from one place
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-10-09 in a browser render of the pricing section on omneky.com, USD, monthly view; omneky.com/pricing itself rendered empty) Lite is $29 a…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/omneky-review/
 
 ## Omniseo (omniseo.com)
 - **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28 against the vendor's own pricing page) Essentials $89/mo (4 AI channels, 50 prompts, 5 seats), Professional $349/mo (10 AI channels, 100 prom…
@@ -3441,6 +3469,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The name says checkout, but the $49 Essential plan does not include checkout upsells.
 - **Best for:** shopify merchants who want checkout-stage upsells, banners, trust badges and gift messages alongside post-purchase and thank-you page offers from a single app, and whose order volume already makes $99 a month a rounding error
 - **Full review:** https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/
+
+## Wondershare PDFelement (pdf.wondershare.com)
+- **Verified pricing:** (read 2026-10-09 in a browser render of pdf.wondershare.com/store/windows-individuals.html, USD, Windows, individuals, single-platform tab) All three prices are shown as a PDFelement 13 lau…
+- **Honest take:** Launch-discount prices; 50 AI uses and 3 eSign requests per paid plan.
+- **Best for:** individuals and small offices on Windows or Mac who want a full PDF editor with OCR, forms and conversion, and prefer a one-time licence over an Acrobat subscription
+- **Full review:** https://aibuildermarketplace.com/b2b/wondershare-pdfelement-review/
 
 ## Woodpecker (woodpecker.co)
 - **Verified pricing:** (price re-verified 2026-09-18 and again 2026-10-05 against woodpecker.co/pricing) Free trial: the pricing page and its FAQ put it at 14 days or 100 cold emails, whichever comes first (read …

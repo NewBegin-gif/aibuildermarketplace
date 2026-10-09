@@ -15,31 +15,10 @@
   "entry_price": "€13.12",
   "entry_price_terms": "per month billed annually (€16 monthly), quoted at 1,000 contacts",
   "from_price_usd_month": null,
-  "plans": [
-   {
-    "name": "Starter",
-    "price": "€16/mo or €13.12/mo billed annually",
-    "includes": "1 automation workflow, up to 3 users"
-   },
-   {
-    "name": "Marketer",
-    "price": "€54/mo or €44.28 annual",
-    "includes": "unlimited workflows, ecommerce tools, advanced segmentation, abandoned-cart recovery"
-   },
-   {
-    "name": "Creator",
-    "price": "€62/mo or €50.84 annual",
-    "includes": "website builder, course creator up to 500 students, webinars"
-   },
-   {
-    "name": "Enterprise",
-    "price": "no published price",
-    "includes": "adds SMS, dedicated IP and sending domain, SSO, unlimited users"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-10-02 on their own pricing page, in euros, quoted at 1,000 contacts) Starter €16/mo or €13.12/mo billed annually: 1 automation workflow, up to 3 users. Marketer €54/mo or €44.28 annual: unlimited workflows, ecommerce tools, advanced segmentation, abandoned-cart recovery. Creator €62/mo or €50.84 annual: website builder, course creator up to 500 students, webinars. Enterprise is quote-only and adds SMS, a dedicated IP and sending domain, SSO and unlimited users. Annual billing saves a stated 18%, and prices step up at 1k, 2.5k, 5k, 10k, 25k, 50k and 100k contacts. What changed since our August 2026 reading is the free tier: the pricing page no longer sells one. It opens with a 14-day trial that needs no card, and nine fresh loads on 14 September 2026 each showed the same four plan cards with no free option among them. Free accounts have not been withdrawn altogether — the FAQ on that same page still describes a Free account that keeps working once the trial lapses, with limits on webinars, messages, landing pages, marketing automation and chats — but it is no longer a tier you can pick from the grid, so treat it as what the trial decays into rather than as a plan. One currency warning survives unchanged: that same FAQ quotes the entry plan at $19 a month for 1,000 subscribers while the plan grid served us euros, so check which currency your own checkout uses before you budget. Charities and NGOs are offered 50% off every monthly plan. Re-read on 2 October 2026: every amount above unchanged and still no Free card in the grid; the help article the FAQ links to describes the Free account as capped at 500 contacts, 2,500 messages a month and 1,000 unique visits across all landing pages, after which those pages go offline.",
-  "verified_at": "2026-10-02",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-10-02 on their own pricing page, in euros, quoted at 1,000 contacts) Starter €16/mo or €13.12/mo billed annually: 1 automation workflow, up to 3 users. Marketer €54/mo or €44.28 annual: unlimited workflows, ecommerce tools, advanced segmentation, abandoned-cart recovery. Creator €62/mo or €50.84 annual: website builder, course creator up to 500 students, webinars. Enterprise is quote-only and adds SMS, a dedicated IP and sending domain, SSO and unlimited users. Annual billing saves a stated 18%, and prices step up at 1k, 2.5k, 5k, 10k, 25k, 50k and 100k contacts. What changed since our August 2026 reading is the free tier: the pricing page no longer sells one. It opens with a 14-day trial that needs no card, and nine fresh loads on 14 September 2026 each showed the same four plan cards with no free option among them. Free accounts have not been withdrawn altogether — the FAQ on that same page still describes a Free account that keeps working once the trial lapses, with limits on webinars, messages, landing pages, marketing automation and chats — but it is no longer a tier you can pick from the grid, so treat it as what the trial decays into rather than as a plan. One currency warning survives unchanged: that same FAQ quotes the entry plan at $19 a month for 1,000 subscribers while the plan grid served us euros, so check which currency your own checkout uses before you budget. Charities and NGOs are offered 50% off every monthly plan. Re-read on 2 October 2026: every amount above unchanged and still no Free card in the grid; the help article the FAQ links to describes the Free account as capped at 500 contacts, 2,500 messages a month and 1,000 unique visits across all landing pages, after which those pages go offline. Read again on 9 October 2026 with the list-size selector, in euros, monthly / billed yearly per month: Starter €16 / €13.12 at 1,000, €27 / €22.14 at 2,500, €48 / €39.36 at 5,000, €69 / €56.58 at 10,000, €149 / €122.18 at 25,000, €259 / €212.38 at 50,000, €469 / €384.58 at 100,000; Marketer €54 / €44.28 at 1,000, €69 / €56.58 at 2,500, €82 / €67.24 at 5,000, €99 / €81.18 at 10,000, €189 / €154.98 at 25,000, €319 / €261.58 at 50,000, €519 / €425.58 at 100,000; Creator €62 / €50.84 at 1,000, €79 / €64.78 at 2,500, €94 / €77.08 at 5,000, €114 / €93.48 at 10,000, €219 / €179.58 at 25,000, €369 / €302.58 at 50,000, €599 / €491.18 at 100,000. The selector ends at '100,000+', which showed the 100,000 prices.",
+  "verified_at": "2026-10-09",
   "source_url": null
  },
  "free_plan": false,
@@ -49,7 +28,7 @@
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "Annual billing saves a stated 18%, and prices step up at 1k, 2.5k, 5k, 10k, 25k, 50k and 100k contacts.",
-   "verified_at": "2026-10-02",
+   "verified_at": "2026-10-09",
    "source_url": null
   }
  ],
@@ -78,14 +57,471 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "contact",
+   "axis": "contacts",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "ladder",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "monthly": 16,
+       "annual_month": 13.12
+      },
+      {
+       "units": 2500,
+       "monthly": 27,
+       "annual_month": 22.14
+      },
+      {
+       "units": 5000,
+       "monthly": 48,
+       "annual_month": 39.36
+      },
+      {
+       "units": 10000,
+       "monthly": 69,
+       "annual_month": 56.58
+      },
+      {
+       "units": 25000,
+       "monthly": 149,
+       "annual_month": 122.18
+      },
+      {
+       "units": 50000,
+       "monthly": 259,
+       "annual_month": 212.38
+      },
+      {
+       "units": 100000,
+       "monthly": 469,
+       "annual_month": 384.58
+      }
+     ],
+     "evidence": "Read again on 9 October 2026 with the list-size selector, in euros, monthly / billed yearly per month: Starter €16 / €13.12 at 1,000, €27 / €22.14 at 2,500, €48 / €39.36 at 5,000, €69 / €56.58 at 10,000, €149 / €122.18 at 25,000, €259 / €212.38 at 50,000, €469 / €384.58 at 100,000; Marketer €54 / €44.28 at 1,000, €69 / €56.58 at 2,500, €82 / €67.24 at 5,000, €99 / €81.18 at 10,000, €189 / €154.98 at 25,000, €319 / €261.58 at 50,000, €519 / €425.58 at 100,000; Creator €62 / €50.84 at 1,000, €79 / €64.78 at 2,500, €94 / €77.08 at 5,000, €114 / €93.48 at 10,000, €219 / €179.58 at 25,000, €369 / €302.58 at 50,000, €599 / €491.18 at 100,000. The selector ends at '100,000+', which showed the 100,000 prices."
+    },
+    {
+     "id": "marketer",
+     "name": "Marketer",
+     "model": "ladder",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "monthly": 54,
+       "annual_month": 44.28
+      },
+      {
+       "units": 2500,
+       "monthly": 69,
+       "annual_month": 56.58
+      },
+      {
+       "units": 5000,
+       "monthly": 82,
+       "annual_month": 67.24
+      },
+      {
+       "units": 10000,
+       "monthly": 99,
+       "annual_month": 81.18
+      },
+      {
+       "units": 25000,
+       "monthly": 189,
+       "annual_month": 154.98
+      },
+      {
+       "units": 50000,
+       "monthly": 319,
+       "annual_month": 261.58
+      },
+      {
+       "units": 100000,
+       "monthly": 519,
+       "annual_month": 425.58
+      }
+     ],
+     "evidence": "Read again on 9 October 2026 with the list-size selector, in euros, monthly / billed yearly per month: Starter €16 / €13.12 at 1,000, €27 / €22.14 at 2,500, €48 / €39.36 at 5,000, €69 / €56.58 at 10,000, €149 / €122.18 at 25,000, €259 / €212.38 at 50,000, €469 / €384.58 at 100,000; Marketer €54 / €44.28 at 1,000, €69 / €56.58 at 2,500, €82 / €67.24 at 5,000, €99 / €81.18 at 10,000, €189 / €154.98 at 25,000, €319 / €261.58 at 50,000, €519 / €425.58 at 100,000; Creator €62 / €50.84 at 1,000, €79 / €64.78 at 2,500, €94 / €77.08 at 5,000, €114 / €93.48 at 10,000, €219 / €179.58 at 25,000, €369 / €302.58 at 50,000, €599 / €491.18 at 100,000. The selector ends at '100,000+', which showed the 100,000 prices."
+    },
+    {
+     "id": "creator",
+     "name": "Creator",
+     "model": "ladder",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 1000,
+       "monthly": 62,
+       "annual_month": 50.84
+      },
+      {
+       "units": 2500,
+       "monthly": 79,
+       "annual_month": 64.78
+      },
+      {
+       "units": 5000,
+       "monthly": 94,
+       "annual_month": 77.08
+      },
+      {
+       "units": 10000,
+       "monthly": 114,
+       "annual_month": 93.48
+      },
+      {
+       "units": 25000,
+       "monthly": 219,
+       "annual_month": 179.58
+      },
+      {
+       "units": 50000,
+       "monthly": 369,
+       "annual_month": 302.58
+      },
+      {
+       "units": 100000,
+       "monthly": 599,
+       "annual_month": 491.18
+      }
+     ],
+     "evidence": "Read again on 9 October 2026 with the list-size selector, in euros, monthly / billed yearly per month: Starter €16 / €13.12 at 1,000, €27 / €22.14 at 2,500, €48 / €39.36 at 5,000, €69 / €56.58 at 10,000, €149 / €122.18 at 25,000, €259 / €212.38 at 50,000, €469 / €384.58 at 100,000; Marketer €54 / €44.28 at 1,000, €69 / €56.58 at 2,500, €82 / €67.24 at 5,000, €99 / €81.18 at 10,000, €189 / €154.98 at 25,000, €319 / €261.58 at 50,000, €519 / €425.58 at 100,000; Creator €62 / €50.84 at 1,000, €79 / €64.78 at 2,500, €94 / €77.08 at 5,000, €114 / €93.48 at 10,000, €219 / €179.58 at 25,000, €369 / €302.58 at 50,000, €599 / €491.18 at 100,000. The selector ends at '100,000+', which showed the 100,000 prices."
+    }
+   ],
+   "notes": [
+    "Euro view served from the Netherlands."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "getresponse",
+    "currency": "EUR",
+    "axis": "contacts",
+    "unit": "contact",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.12,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.12,
+       "marketer": 44.28,
+       "creator": 50.84
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "getresponse",
+    "currency": "EUR",
+    "axis": "contacts",
+    "unit": "contact",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 16.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.0,
+       "marketer": 54.0,
+       "creator": 62.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -106,12 +542,6 @@
    "question_id": "getresponse:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "getresponse:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],
@@ -142,5 +572,67 @@
    "autoresponder",
    "email marketing platform"
   ]
+ },
+ "feature_evidence": {
+  "features": {
+   "automation": {
+    "label": "Automations (workflows)",
+    "phrases": [
+     "automation",
+     "automations",
+     "marketing automation",
+     "email automation",
+     "email automations",
+     "workflow automation",
+     "sales automation",
+     "automated workflows",
+     "visual automations"
+    ]
+   },
+   "landing_pages": {
+    "label": "Landing pages",
+    "phrases": [
+     "landing pages",
+     "landing page",
+     "landing page builder"
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "feature": "automation",
+    "plans": [
+     "Starter"
+    ],
+    "quote": "1 custom automation workflow",
+    "context": "On the Starter card: one workflow only.",
+    "source": "https://www.getresponse.com/pricing",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "automation",
+    "plans": [
+     "Marketer",
+     "Creator"
+    ],
+    "quote": "Unlimited automation workflows",
+    "context": "On the Marketer and Creator cards.",
+    "source": "https://www.getresponse.com/pricing",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "landing_pages",
+    "plans": [
+     "Starter",
+     "Marketer",
+     "Creator"
+    ],
+    "quote": "Landing page builder",
+    "context": "On all three cards.",
+    "source": "https://www.getresponse.com/pricing",
+    "read_on": "2026-10-09"
+   }
+  ],
+  "note": "From the vendor's own pages, with plan, source and reading date. Documented by the vendor, not tested by us; our own tests are in task_evidence."
  }
 }

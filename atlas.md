@@ -2457,7 +2457,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/reditus-review/
 
 ## Remote People (remotepeople.com)
-- **Verified pricing:** (2026-08-07, read on their own pricing page; re-verified unchanged on 2026-10-06) Priced per service rather than per plan, and every figure is a floor.
+- **Verified pricing:** (2026-08-07, read on their own pricing page; re-verified unchanged on 2026-10-06 and again on 2026-10-09) Priced per service rather than per plan, and every figure is a floor.
 - **Honest take:** Every rate is a 'from' price with no country-level figure, and recruitment fees charged as a share of salary can dwarf the subscription.
 - **Best for:** small and mid-size teams hiring a handful of people abroad who want to pay monthly, keep the option to stop, and not carry a five-employee minimum. EOR Flex is genuinely unusual on those terms: no setup fee, no deposit
 - **Flags:** {'f': 'per_seat', 'ev': 'Employer of Record: EOR Flex from $199 per employee a month, billed monthly with no commitment, no setup fee and no minimum headcount; EOR Plus from …'}, {'f': 'annual_lock', 'ev': 'Employer of Record: EOR Flex from $199 per employee a month, billed monthly with no commitment, no setup fee and no minimum headcount; EOR Plus from …'}

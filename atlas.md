@@ -363,7 +363,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bill-com-review/
 
 ## BillingNow (billingnow.com)
-- **Verified pricing:** (re-verified 2026-08-20, read on their own site) Two plans, both carrying the identical feature list with no limits: $9.99 a month, or $99.90 a year which the page itself works out to $8.33…
+- **Verified pricing:** (re-verified 2026-10-09 on their own pricing FAQ and refund policy; first verified 2026-08-20) Two plans, both carrying the identical feature list with no limits: $9.99 a month, or $99.90 a…
 - **Honest take:** The trial is three days and there is no import path: the help centre documents CSV and Excel export but no import, so an existing client list has to be retyped.
 - **Best for:** freelancers and small teams that want unlimited invoicing, expenses and client management with zero per-user maths — users are unlimited on both plans, so a five-person team pays $2.00 a head
 - **Full review:** https://aibuildermarketplace.com/b2b/billingnow-review/
@@ -442,7 +442,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bold-upsell-review/
 
 ## Bolt Business (bolt.eu)
-- **Verified pricing:** No subscription, no activation cost and no minimum commitment (re-verified 2026-08-20 on Bolt's own business page): you pay per ride or rental taken, with consolidated monthly billing, spen…
+- **Verified pricing:** No subscription and, in the words of Bolt's business page, no upfront fees (re-verified 2026-10-09; on 2026-08-20 the page also said no minimum commitment): you pay per ride or rental taken…
 - **Honest take:** The honest boundary is geography: Bolt's network is Europe/Africa-centric across 600+ cities, so US-only operations should look elsewhere, and ride availability varies by city.
 - **Best for:** companies with European/African travel footprints that want employee rides centrally billed, policy-controlled and expense-integrated — at zero platform cost
 - **Full review:** https://aibuildermarketplace.com/b2b/bolt-business-review/
@@ -1999,8 +1999,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/navan-review/
 
 ## NeuroAds (neuroadsinc.com)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/neuroads-chatbot) Four tiers, priced by conversations per month.
-- **Honest take:** The app is ten weeks old.
+- **Verified pricing:** (read 2026-08-19 and re-verified unchanged 2026-10-09 on apps.shopify.com/neuroads-chatbot) Four tiers, priced by conversations per month.
+- **Honest take:** The app is young.
 - **Best for:** small and mid-size Shopify stores that want a multilingual, catalogue-aware chat widget with product cards, order tracking and add-to-cart, and want to judge it on the genuinely usable free tier of 200 conversations a month
 - **Flags:** {'f': 'usage_metered', 'ev': 'meter: unit · conversations'}, {'f': 'free_tier', 'ev': 'Free: 200 conversations, AI answers about products, collections and orders, rich product cards with add-to-cart, order status and tracking in chat, r…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/neuroads-review/
@@ -2892,10 +2892,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/stampezee-review/
 
 ## StoreFAQ (storefaq.io)
-- **Verified pricing:** (read 2026-08-21 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversations rather than on the number of FAQs.
+- **Verified pricing:** (read 2026-08-21 and re-verified unchanged 2026-10-09 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversations rather than on the number of FAQs.
 - **Honest take:** The meter is FAQ page views, and that is the thing this app exists to increase.
 - **Best for:** small Shopify stores that want SEO-tagged FAQ pages with JSON-LD schema and a light AI chatbot for deflection, without standing up a full support stack
-- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-21 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversations rather than on the number of FAQs.'}, {'f': 'free_tier', 'ev': 'Free: 100 FAQ page views, unlimited FAQs and FAQ groups, the AI chatbot and AI-written FAQs, 25 AI conversations for the lifetime of the account, AI …'}
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-08-21 and re-verified unchanged 2026-10-09 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversation…'}, {'f': 'free_tier', 'ev': 'Free: 100 FAQ page views, unlimited FAQs and FAQ groups, the AI chatbot and AI-written FAQs, 25 AI conversations for the lifetime of the account, AI …'}
 - **Full review:** https://aibuildermarketplace.com/b2b/storefaq-review/
 
 ## StoreLock (storelock.app)
@@ -3022,10 +3022,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tapita-ai-seo-blog-builder-review/
 
 ## Tapita SEO Optimizer (tapita.io)
-- **Verified pricing:** (read 2026-08-21 on apps.shopify.com/google-seo-schema-meta-data) Three tiers.
+- **Verified pricing:** (read 2026-10-09 on apps.shopify.com/google-seo-schema-meta-data) Three tiers.
 - **Honest take:** The price on the listing is a Shopify-Basic price, and almost nobody reads the line underneath it.
 - **Best for:** Shopify merchants on the Basic or Grow plan who want SEO audits, bulk metadata, image alt text and speed fixes out of one app instead of hiring a specialist
-- **Flags:** {'f': 'usage_metered', 'ev': 'Basic $9.99 a month or $101.88 a year, a 15% saving, adds SEO audit and LLMs.txt on main pages, auto image optimisation 100 a day, 100 AI metadata cr…'}, {'f': 'free_tier', 'ev': 'Free: SEO audit and LLMs.txt on basic pages, unlimited on-page SEO audit, essential JSON-LD schemas, and image compression 900 a month capped at 30 a…'}
+- **Flags:** {'f': 'usage_metered', 'ev': 'Business $9.99 a month or $101.88 a year, advertised as a 15% saving (it checks out: $101.88 against $119.88), adds full features, support to fix all…'}, {'f': 'free_tier', 'ev': 'Free: SEO audit and LLMs.txt on basic pages, unlimited on-page SEO audit, essential JSON-LD schemas, image compression 900 a month capped at 30 a day…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/tapita-seo-optimizer-review/
 
 ## Tapstitch (tapstitch.com)

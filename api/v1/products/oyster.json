@@ -17,8 +17,8 @@
   "from_price_usd_month": 699.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-08-14, read on their own pricing page) Employer of Record USD 699 per employee per month, with annual discounts available; Global Contractors free for 30 days, then USD 29 per contractor per month; People Partner Services USD 300 per hour, project-based. Creating an account is free, there is no minimum team size, and Oyster states there are no setup or onboarding fees. Two costs still carry no figure anywhere: Oyster requires a refundable deposit for EOR team members, and charges a currency-conversion fee when you pay in a currency other than the contract currency (it accepts USD, EUR, GBP and CAD). Oyster Shell, included with a Global Contractors subscription, carries aggregate misclassification protection up to USD $500,000.",
-  "verified_at": "2026-08-29",
+  "notes": "(re-verified 2026-10-09 on their own pricing page; the figures are unchanged since 2026-08-14) Employer of Record USD 699 per employee per month, with annual discounts available; Global Contractors free for 30 days, then USD 29 per contractor per month; People Partner Services USD 300 per hour, project-based. Creating an account is free, there is no minimum team size, and Oyster states there are no setup or onboarding fees. Two costs still carry no figure anywhere: Oyster requires a refundable deposit for EOR team members, and charges a currency-conversion fee when you pay in a currency other than the contract currency (it accepts USD, EUR, GBP and CAD). Oyster Shell, listed as an add-on to Global Contractors with no published price, carries aggregate misclassification protection up to USD $500,000.",
+  "verified_at": "2026-10-09",
   "source_url": null
  },
  "free_plan": false,
@@ -28,7 +28,14 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "So the honest position is that $699 is the floor, and the real per-employee cost depends on a deposit and a spread you have to ask for.",
-   "verified_at": "2026-08-29",
+   "verified_at": "2026-10-09",
+   "source_url": null
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Oyster Shell, listed as an add-on to Global Contractors with no published price, carries aggregate misclassification protection up to USD $500,000.",
+   "verified_at": "2026-10-09",
    "source_url": null
   }
  ],
@@ -472,5 +479,63 @@
    "checked_at": "2026-10-07",
    "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
   }
+ },
+ "feature_evidence": {
+  "features": {
+   "expenses": {
+    "label": "Expense reimbursement in the platform",
+    "phrases": [
+     "expenses",
+     "expense reimbursement",
+     "expense reimbursements",
+     "reimbursements",
+     "expense approvals"
+    ]
+   },
+   "time_off": {
+    "label": "Time off in the platform",
+    "phrases": [
+     "time off",
+     "time-off",
+     "pto",
+     "paid time off",
+     "leave requests",
+     "time off requests"
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "feature": "time_off",
+    "plans": [
+     "Employer of Record"
+    ],
+    "quote": "Automated expenses, time-off, and reports",
+    "context": "On the Employer of Record card.",
+    "source": "https://www.oysterhr.com/pricing",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "expenses",
+    "plans": [
+     "Employer of Record"
+    ],
+    "quote": "Automated expenses, time-off, and reports",
+    "context": "On the Employer of Record card. Global Contractors lists 'Invoice, expense, and contract management'.",
+    "source": "https://www.oysterhr.com/pricing",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "expenses",
+    "plans": [
+     "Global Contractors"
+    ],
+    "quote": "Invoice, expense, and contract management",
+    "context": "On the Global Contractors card. Misclassification protection (Oyster Shell) is listed there as an add-on, not as part of the plan.",
+    "source": "https://www.oysterhr.com/pricing",
+    "read_on": "2026-10-09"
+   }
+  ],
+  "note": "From the vendor's own pages, with plan, source and reading date. Documented by the vendor, not tested by us; our own tests are in task_evidence."
  }
 }

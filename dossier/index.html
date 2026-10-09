@@ -118,6 +118,7 @@ function lees(){var f=new FormData(form),q=new URLSearchParams(),k=[];
  q.set('ids',k.join(','));['units','billing','budget','currency','features','question'].forEach(function(n){if(f.get(n))q.set(n,f.get(n));});
  if(f.get('monthly'))q.set('monthly','1');if(f.get('free'))q.set('free','1');var t=f.getAll('avoid');if(t.length)q.set('avoid',t.join(','));
  if(CTX){q.set('stack',CTX.stack.map(function(x){return x.id+(x.rol?':'+x.rol:'');}).join(','));if(CTX.ch.length)q.set('ch',CTX.ch.join(','));if(CTX.from)q.set('from',CTX.from);}
+ var sv=new URLSearchParams(location.search).get('service');if(sv)q.set('service',sv);
  return q;}
 function vul(q){var k=(q.get('ids')||'').split(',').filter(Boolean),v=form.querySelectorAll('[name=k]');k.forEach(function(id,i){if(v[i])v[i].value=namen[id]||id;});
  ['units','billing','budget','currency','features','question'].forEach(function(n){if(q.get(n))form[n].value=q.get(n);});

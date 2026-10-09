@@ -78,14 +78,364 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "workspace",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "The free Starter plan is no longer shown there but still exists in Replit's documentation"
+    },
+    {
+     "id": "core",
+     "name": "Core",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 20,
+     "annual_month": 18,
+     "evidence": "Core is $20/month, or $18/month billed annually"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 100,
+     "annual_month": 90,
+     "evidence": "Pro starts at $100/month, or $90/month billed annually"
+    }
+   ],
+   "notes": [
+    "Core includes $20 and Pro $100 of credits a month; paid requests are priced by effort."
+   ],
+   "not_computable": [
+    "Usage beyond the included credits is billed on top; Replit asks before each paid request and lets you set a budget."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "replit",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "workspace",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 0.0,
+       "core": 18.0,
+       "pro": 90.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": null,
+      "from_plan_name": "Starter",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Usage beyond the included credits is billed on top; Replit asks before each paid request and lets you set a budget."
+    ]
+   },
+   "monthly": {
+    "product_id": "replit",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "workspace",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 0.0,
+       "core": 20.0,
+       "pro": 100.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "core": "not_eligible",
+       "pro": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": null,
+      "from_plan_name": "Starter",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Usage beyond the included credits is billed on top; Replit asks before each paid request and lets you set a budget."
+    ]
+   }
+  }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
  "task_evidence": {
   "structured_checks": [
@@ -563,9 +913,9 @@
    "status": "open"
   },
   {
-   "question_id": "replit:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "replit:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Usage beyond the included credits is billed on top; Replit asks before each paid request and lets you set a budget. Can you publish the price or the rule?",
    "status": "open"
   }
  ],
@@ -585,5 +935,70 @@
    "checked_at": "2026-10-07",
    "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
   }
+ },
+ "feature_evidence": {
+  "features": {
+   "more_published_apps": {
+    "label": "More than one published app",
+    "phrases": [
+     "more published apps",
+     "several published apps",
+     "unlimited published apps"
+    ]
+   },
+   "remove_badge": {
+    "label": "No builder badge on the app",
+    "phrases": [
+     "remove badge",
+     "no badge",
+     "remove the badge",
+     "no builder badge"
+    ]
+   },
+   "team_builders": {
+    "label": "Several people building",
+    "phrases": [
+     "several builders",
+     "collaborators",
+     "team builders",
+     "multiple builders"
+    ]
+   }
+  },
+  "evidence": [
+   {
+    "feature": "remove_badge",
+    "plans": [
+     "Core",
+     "Pro"
+    ],
+    "quote": "Removing the “Made with Replit” badge from your published apps requires Core.",
+    "context": "Starter plan documentation; Pro includes everything in Core.",
+    "source": "https://docs.replit.com/billing/plans/starter-plan",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "more_published_apps",
+    "plans": [
+     "Core",
+     "Pro"
+    ],
+    "quote": "Additional published apps beyond this require Core or Pro.",
+    "context": "Starter gets one free published app, and 'This published link will automatically go down after 30 days.'",
+    "source": "https://docs.replit.com/billing/plans/starter-plan",
+    "read_on": "2026-10-09"
+   },
+   {
+    "feature": "team_builders",
+    "plans": [
+     "Pro"
+    ],
+    "quote": "Up to 15 collaborators",
+    "context": "On the Pro card of the pricing page.",
+    "source": "https://replit.com/pricing",
+    "read_on": "2026-10-09"
+   }
+  ],
+  "note": "From the vendor's own pages, with plan, source and reading date. Documented by the vendor, not tested by us; our own tests are in task_evidence."
  }
 }

@@ -57,15 +57,377 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "worker",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "eor",
+     "name": "Employer of Record",
+     "service": "eor",
+     "model": "per_unit",
+     "price_month": 699,
+     "billing": "unspecified",
+     "evidence": "Employer of Record USD 699 per employee per month, with annual discounts available"
+    },
+    {
+     "id": "contractors",
+     "name": "Global Contractors",
+     "service": "contractor",
+     "model": "per_unit",
+     "price_month": 29,
+     "billing": "unspecified",
+     "evidence": "Global Contractors free for 30 days, then USD 29 per contractor per month"
+    }
+   ],
+   "notes": [
+    "Global Contractors is free for the first 30 days; the monthly figure applies after that."
+   ],
+   "not_computable": [
+    "Oyster requires a refundable deposit for EOR team members and charges a currency-conversion fee outside the contract currency; neither has a published figure.",
+    "Annual discounts on EOR are mentioned without a figure."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "oyster",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "worker",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 699.0,
+       "contractors": 29.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 58.0,
+      "billed": {
+       "amount": 58.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 1398.0,
+       "contractors": 58.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 87.0,
+      "billed": {
+       "amount": 87.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 2097.0,
+       "contractors": 87.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 145.0,
+      "billed": {
+       "amount": 145.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 3495.0,
+       "contractors": 145.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 290.0,
+      "billed": {
+       "amount": 290.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 6990.0,
+       "contractors": 290.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 435.0,
+      "billed": {
+       "amount": 435.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 10485.0,
+       "contractors": 435.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 580.0,
+      "billed": {
+       "amount": 580.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 13980.0,
+       "contractors": 580.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 725.0,
+      "billed": {
+       "amount": 725.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 17475.0,
+       "contractors": 725.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 1450.0,
+      "billed": {
+       "amount": 1450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 34950.0,
+       "contractors": 1450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 2900.0,
+      "billed": {
+       "amount": 2900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 69900.0,
+       "contractors": 2900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Oyster requires a refundable deposit for EOR team members and charges a currency-conversion fee outside the contract currency; neither has a published figure.",
+     "Annual discounts on EOR are mentioned without a figure."
+    ]
+   },
+   "monthly": {
+    "product_id": "oyster",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "worker",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 699.0,
+       "contractors": 29.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 58.0,
+      "billed": {
+       "amount": 58.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 1398.0,
+       "contractors": 58.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 87.0,
+      "billed": {
+       "amount": 87.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 2097.0,
+       "contractors": 87.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 145.0,
+      "billed": {
+       "amount": 145.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 3495.0,
+       "contractors": 145.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 290.0,
+      "billed": {
+       "amount": 290.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 6990.0,
+       "contractors": 290.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 435.0,
+      "billed": {
+       "amount": 435.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 10485.0,
+       "contractors": 435.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 580.0,
+      "billed": {
+       "amount": 580.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 13980.0,
+       "contractors": 580.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 725.0,
+      "billed": {
+       "amount": 725.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 17475.0,
+       "contractors": 725.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 1450.0,
+      "billed": {
+       "amount": 1450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 34950.0,
+       "contractors": 1450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "contractors",
+      "cheapest_plan_name": "Global Contractors",
+      "total_month": 2900.0,
+      "billed": {
+       "amount": 2900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "eor": 69900.0,
+       "contractors": 2900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Oyster requires a refundable deposit for EOR team members and charges a currency-conversion fee outside the contract currency; neither has a published figure.",
+     "Annual discounts on EOR are mentioned without a figure."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -89,9 +451,15 @@
    "status": "open"
   },
   {
-   "question_id": "oyster:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "oyster:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Oyster requires a refundable deposit for EOR team members and charges a currency-conversion fee outside the contract currency; neither has a published figure. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "oyster:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Annual discounts on EOR are mentioned without a figure. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

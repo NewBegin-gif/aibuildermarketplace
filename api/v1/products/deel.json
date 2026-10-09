@@ -64,15 +64,461 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "worker",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "hr",
+     "name": "HR and hiring tools",
+     "service": "hr",
+     "model": "per_unit",
+     "price_month": 14,
+     "billing": "unspecified",
+     "evidence": "HR and hiring tools start at $14 per worker a month"
+    },
+    {
+     "id": "contractor",
+     "name": "Contractor management",
+     "service": "contractor",
+     "model": "per_unit",
+     "price_month": 49,
+     "billing": "unspecified",
+     "evidence": "Contractor management is $49 per contractor a month"
+    },
+    {
+     "id": "cor",
+     "name": "Contractor of Record",
+     "service": "contractor_of_record",
+     "model": "per_unit",
+     "price_month": 325,
+     "billing": "unspecified",
+     "evidence": "$325 per month per Contractor of Record if you want Deel to carry the compliance risk"
+    },
+    {
+     "id": "us-peo",
+     "name": "US PEO",
+     "service": "us_peo",
+     "model": "per_unit",
+     "price_month": 125,
+     "billing": "unspecified",
+     "evidence": "US PEO starts at $125 per employee a month"
+    },
+    {
+     "id": "eor",
+     "name": "EOR",
+     "service": "eor",
+     "model": "per_unit",
+     "price_month": 599,
+     "billing": "unspecified",
+     "evidence": "EOR, where Deel employs your international hire, starts at $599 per employee a month"
+    }
+   ],
+   "notes": [
+    "Every figure is a 'starts at' price and final quotes come through sales, so these totals are floors."
+   ],
+   "not_computable": [
+    "Final prices per country come from a sales quote; benefits, deposits and other fees are not in these figures."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "deel",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "worker",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 14.0,
+      "billed": {
+       "amount": 14.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 14.0,
+       "contractor": 49.0,
+       "cor": 325.0,
+       "us-peo": 125.0,
+       "eor": 599.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 28.0,
+      "billed": {
+       "amount": 28.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 28.0,
+       "contractor": 98.0,
+       "cor": 650.0,
+       "us-peo": 250.0,
+       "eor": 1198.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 42.0,
+      "billed": {
+       "amount": 42.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 42.0,
+       "contractor": 147.0,
+       "cor": 975.0,
+       "us-peo": 375.0,
+       "eor": 1797.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 70.0,
+      "billed": {
+       "amount": 70.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 70.0,
+       "contractor": 245.0,
+       "cor": 1625.0,
+       "us-peo": 625.0,
+       "eor": 2995.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 140.0,
+      "billed": {
+       "amount": 140.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 140.0,
+       "contractor": 490.0,
+       "cor": 3250.0,
+       "us-peo": 1250.0,
+       "eor": 5990.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 210.0,
+      "billed": {
+       "amount": 210.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 210.0,
+       "contractor": 735.0,
+       "cor": 4875.0,
+       "us-peo": 1875.0,
+       "eor": 8985.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 280.0,
+      "billed": {
+       "amount": 280.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 280.0,
+       "contractor": 980.0,
+       "cor": 6500.0,
+       "us-peo": 2500.0,
+       "eor": 11980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 350.0,
+      "billed": {
+       "amount": 350.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 350.0,
+       "contractor": 1225.0,
+       "cor": 8125.0,
+       "us-peo": 3125.0,
+       "eor": 14975.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 700.0,
+      "billed": {
+       "amount": 700.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 700.0,
+       "contractor": 2450.0,
+       "cor": 16250.0,
+       "us-peo": 6250.0,
+       "eor": 29950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 1400.0,
+      "billed": {
+       "amount": 1400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 1400.0,
+       "contractor": 4900.0,
+       "cor": 32500.0,
+       "us-peo": 12500.0,
+       "eor": 59900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Final prices per country come from a sales quote; benefits, deposits and other fees are not in these figures."
+    ]
+   },
+   "monthly": {
+    "product_id": "deel",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "worker",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 14.0,
+      "billed": {
+       "amount": 14.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 14.0,
+       "contractor": 49.0,
+       "cor": 325.0,
+       "us-peo": 125.0,
+       "eor": 599.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 28.0,
+      "billed": {
+       "amount": 28.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 28.0,
+       "contractor": 98.0,
+       "cor": 650.0,
+       "us-peo": 250.0,
+       "eor": 1198.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 42.0,
+      "billed": {
+       "amount": 42.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 42.0,
+       "contractor": 147.0,
+       "cor": 975.0,
+       "us-peo": 375.0,
+       "eor": 1797.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 70.0,
+      "billed": {
+       "amount": 70.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 70.0,
+       "contractor": 245.0,
+       "cor": 1625.0,
+       "us-peo": 625.0,
+       "eor": 2995.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 140.0,
+      "billed": {
+       "amount": 140.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 140.0,
+       "contractor": 490.0,
+       "cor": 3250.0,
+       "us-peo": 1250.0,
+       "eor": 5990.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 210.0,
+      "billed": {
+       "amount": 210.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 210.0,
+       "contractor": 735.0,
+       "cor": 4875.0,
+       "us-peo": 1875.0,
+       "eor": 8985.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 280.0,
+      "billed": {
+       "amount": 280.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 280.0,
+       "contractor": 980.0,
+       "cor": 6500.0,
+       "us-peo": 2500.0,
+       "eor": 11980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 350.0,
+      "billed": {
+       "amount": 350.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 350.0,
+       "contractor": 1225.0,
+       "cor": 8125.0,
+       "us-peo": 3125.0,
+       "eor": 14975.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 700.0,
+      "billed": {
+       "amount": 700.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 700.0,
+       "contractor": 2450.0,
+       "cor": 16250.0,
+       "us-peo": 6250.0,
+       "eor": 29950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "hr",
+      "cheapest_plan_name": "HR and hiring tools",
+      "total_month": 1400.0,
+      "billed": {
+       "amount": 1400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hr": 1400.0,
+       "contractor": 4900.0,
+       "cor": 32500.0,
+       "us-peo": 12500.0,
+       "eor": 59900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Final prices per country come from a sales quote; benefits, deposits and other fees are not in these figures."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -96,9 +542,9 @@
    "status": "open"
   },
   {
-   "question_id": "deel:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "deel:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Final prices per country come from a sales quote; benefits, deposits and other fees are not in these figures. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

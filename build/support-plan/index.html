@@ -86,8 +86,48 @@ h2{font-size:1.25rem;letter-spacing:-.02em;margin:30px 0 4px}.sub{color:var(--mu
 .var h3{margin:0 0 4px;font-size:1rem}
 .waarsch{border-left:3px solid var(--warn);padding:8px 12px;background:rgba(255,198,92,.06);border-radius:8px;margin:10px 0}
 @media(max-width:1020px){.sp{grid-template-columns:minmax(0,1fr)}.sp-stap{display:none}.sp-uit{position:static}}
+
+.tabel.dek{width:100%;border-collapse:collapse;font-size:.86rem}
+.tabel.dek th,.tabel.dek td{text-align:left;vertical-align:top;padding:8px 10px;border-top:1px solid var(--bd)}
+.tabel.dek small{color:var(--mu2)}
 </style></head><body><nav class="nav"><div class="nav-in"><a href="/" class="logo-t">AIBuilder Marketplace</a><div><a href="/marketplace/">Marketplace</a><a href="/check/">Check</a><a href="/agents/">For agents</a></div></div></nav><main class="wrap"><span class="kicker">Customer support · pilot</span><h1>Plan your support setup</h1><p class="lede">Answer five questions. You get the smallest setup that covers your channels within your budget, at most two alternatives, the cost per line, and what we could not confirm. Prices come from the same researched rules as our purchase files; nothing is guessed.</p><div class="sp"><nav class="sp-stap" aria-label="Steps"><a href="#st1"><b>1</b>Team</a><a href="#st2"><b>2</b>Channels</a><a href="#st3"><b>3</b>Volume</a><a href="#st4"><b>4</b>Your tools</a><a href="#st5"><b>5</b>Budget</a></nav><form id="spf" class="sp-in" autocomplete="off"><fieldset id="st1"><legend>How many people answer customers?</legend><p class="hulp">Count the people who will need a login, not the whole company.</p><div class="rij2"><div><label for="units">People</label><input id="units" name="units" type="number" min="1" max="500" value="3"></div></div></fieldset><fieldset id="st2"><legend>Where do customers reach you?</legend><p class="hulp">Phone only comes into the plan if you tick it.</p><label class="k"><input type="checkbox" name="ch" value="email" checked> Email</label><label class="k"><input type="checkbox" name="ch" value="chat"> Website chat</label><label class="k"><input type="checkbox" name="ch" value="phone"> Phone calls</label><label class="k"><input type="checkbox" name="ch" value="marketplace"> Marketplace messages (Amazon, eBay)</label><label class="k"><input type="checkbox" name="ch" value="social"> Social media DMs</label></fieldset><fieldset id="st3"><legend>How many conversations a month?</legend><p class="hulp">A rough number is fine. It decides whether automation is worth testing.</p><div class="rij2"><div><label for="vol">Conversations a month</label><input id="vol" name="vol" type="number" min="0" placeholder="e.g. 400"></div></div><label class="k"><input type="checkbox" name="help" value="1"> We have help articles that answer the common questions</label></fieldset><fieldset id="st4"><legend>What do you use now?</legend><div class="rij2"><div><label for="mail">Support email lives in</label><select id="mail" name="mail"><option value="">Choose…</option><option value="gmail">Gmail / Google Workspace</option><option value="outlook">Outlook / Microsoft 365</option><option value="other">Something else</option></select></div></div><label class="k"><input type="checkbox" name="shopify" value="1"> We sell through a Shopify store</label><label class="k"><input type="checkbox" name="slack" value="1"> The team works in Slack and wants alerts there</label></fieldset><fieldset id="st5"><legend>Budget</legend><p class="hulp">A limit, not a wish: the plan has to fit it.</p><div class="rij2"><div><label for="budget">Per month</label><input id="budget" name="budget" type="number" min="0" step="any" value="100"></div><div><label for="cur">Currency</label><select id="cur" name="cur"><option>USD</option><option>EUR</option></select></div><div><label for="billing">Billing</label><select id="billing" name="billing"><option value="annual">Annual (12 months)</option><option value="monthly">Monthly</option></select></div></div><p class="hulp">Most prices we hold are in US dollars; a euro budget only matches euro-priced plans, we do not convert.</p></fieldset></form><aside class="sp-uit" id="spuit" aria-live="polite"></aside></div><section id="spres" aria-live="polite"></section><p class="omslag">This is a pilot of one shared decision layer for our build and roadmap tools. It covers customer support first. Your answers stay in this page and its address; we only count that a plan was built.</p></main><script>
 (function(){
+
+var DEKKING=(function(){
+ var KAN={email:'Email',chat:'Website chat',phone:'Phone calls',marketplace:'Marketplace messages',social:'Social media DMs'};
+ var MARKT=["edesk"];
+ var LBL={documented:'Documented',unknown:'Not confirmed',separate:'Separate phone system',manual:'Manual, no new tool',uncovered:'Not covered'};
+ function st(k,n){if(!k)return null;var r=(k.requirements||[]).filter(function(x){return x.requirement==='feature:'+n;})[0];return r?r.status:null;}
+ function ok(s){return s==='documented'||s==='fits';}
+ function woord(s){return ok(s)?'documented':s==='mentioned'?'mentioned, not documented':'not confirmed';}
+ function rij(c,kern,tel){var r={kanaal:c,naam:KAN[c]||c,module:null,status:'uncovered',uitleg:''};
+  if(c==='phone'){if(!tel){r.uitleg='No phone tool we can price for your inputs.';return r;}
+   r.module=tel.name;r.status='separate';
+   r.uitleg='A separate phone system. Call recording: '+woord(st(tel,'call recording'))+'; IVR: '+woord(st(tel,'ivr'))+
+    '. We found no documented link to '+(kern?kern.name:'a help desk')+', so calls are a second queue to watch.';return r;}
+  if(!kern){if(c==='email'){r.module='Your current inbox';r.status='manual';r.uitleg='No new tool: one shared address or label in the inbox you have, and a named owner per day.';}
+   else if(c==='social')r.uitleg='No help desk in this budget. Answer DMs in each platform\'s own inbox for now; that is manual and outside any queue.';
+   else r.uitleg='This channel needs a help desk, and none we can price fits this budget.';return r;}
+  r.module=kern.name;
+  if(c==='email'){var s=st(kern,'shared inbox');r.status=ok(s)?'documented':'unknown';r.uitleg=ok(s)?'Shared inbox is documented on the vendor\'s page.':'We found no documentation of a shared inbox.';return r;}
+  if(c==='chat'){var s2=st(kern,'live chat');r.status=ok(s2)?'documented':'unknown';r.uitleg=ok(s2)?'Live chat is documented on the vendor\'s page.':'We found no documentation that '+kern.name+' includes live chat on this plan.';return r;}
+  if(c==='marketplace'){if(MARKT.indexOf(kern.product_id)>-1){r.status='documented';r.uitleg='Our dossier lists Amazon and eBay messages in its inbox.';}
+   else{r.module=null;r.status='uncovered';r.uitleg='Our dossier does not show '+kern.name+' receiving marketplace messages.';}return r;}
+  if(c==='social'){var s3=st(kern,'social dms');if(ok(s3)){r.status='documented';r.uitleg='Social DMs are documented on the vendor\'s page.';}
+   else{r.status='unknown';r.uitleg='We found no documentation that '+kern.name+' receives social DMs. Until you confirm it, answer them in each platform\'s own inbox.';}return r;}
+  r.status='unknown';r.uitleg='Not checked.';return r;}
+ function rijen(ch,kern,tel){return ch.map(function(c){return rij(c,kern,tel);});}
+ function stand(R){if(R.some(function(r){return r.status==='uncovered';}))return 'incomplete';
+  if(R.some(function(r){return r.status==='unknown'||r.status==='manual';}))return 'unconfirmed';return 'complete';}
+ function somkop(R){var s=stand(R);return s==='complete'?'Total, known costs':s==='incomplete'?'Known subtotal · incomplete setup':'Known subtotal · coverage not confirmed';}
+ function eenwachtrij(R){var m=R.map(function(r){return r.module;});return R.every(function(r){return r.status==='documented';})&&m.every(function(x){return x&&x===m[0];});}
+ function som(mods){var s={};mods.forEach(function(k){if(k&&k.cost&&k.cost.per_month!=null){s[k.cost.currency]=(s[k.cost.currency]||0)+k.cost.per_month;}});return s;}
+ function chip(s){return '<span class="st s-'+(s==='documented'?'documented':s==='uncovered'?'does_not_fit':'unknown')+'">'+LBL[s]+'</span>';}
+ function tabel(R,esc){return '<div class="scroll"><table class="tabel dek"><thead><tr><th>Channel</th><th>Handled by</th><th>Status</th><th>What that means</th></tr></thead><tbody>'+
+  R.map(function(r){return '<tr><td>'+esc(r.naam)+'</td><td>'+(r.module?esc(r.module):'—')+'</td><td>'+chip(r.status)+'</td><td><small>'+esc(r.uitleg)+'</small></td></tr>';}).join('')+'</tbody></table></div>';}
+ return {KAN:KAN,rijen:rijen,stand:stand,somkop:somkop,eenwachtrij:eenwachtrij,som:som,tabel:tabel,chip:chip};
+})();
+
 var KOP='<h2>'+'Your setup</h2>',API="https://api.aibuildermarketplace.com",HD=[{"id": "supportbee", "waar": "altijd"}, {"id": "freshworks", "waar": "altijd"}, {"id": "zendesk", "waar": "altijd"}, {"id": "edesk", "waar": "ecommerce", "marketplace": true}, {"id": "gorgias", "waar": "ecommerce"}, {"id": "helpcenter", "waar": "shopify"}],TEL=["aircall", "cloudtalk", "calilio", "800-com", "krispcall"],AI=["typewise", "edesk"],NAAM={"supportbee": "SupportBee", "freshworks": "Freshworks", "zendesk": "Zendesk", "edesk": "eDesk", "gorgias": "Gorgias", "helpcenter": "HelpCenter"};
 var f=document.getElementById('spf'),uit=document.getElementById('spuit'),res=document.getElementById('spres'),stap=[].slice.call(document.querySelectorAll('.sp-stap a'));
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
@@ -100,10 +140,11 @@ function kandidaten(i){var ecom=i.shopify||i.ch.indexOf('marketplace')>-1;
  if(i.ch.indexOf('marketplace')>-1)return HD.filter(function(k){return k.marketplace;}).map(function(k){return k.id;});
  return HD.filter(function(k){return k.waar==='altijd'||(k.waar==='ecommerce'&&ecom)||(k.waar==='shopify'&&i.shopify);}).map(function(k){return k.id;});}
 function eisen(i){var e=['shared inbox','ticketing'];if(i.mail==='gmail')e.push('gmail');if(i.mail==='outlook')e.push('outlook');
- if(i.shopify)e.push('shopify');if(i.slack)e.push('slack');if(i.ch.indexOf('chat')>-1)e.push('live chat');return e;}
+ if(i.shopify)e.push('shopify');if(i.slack)e.push('slack');if(i.ch.indexOf('chat')>-1)e.push('live chat');if(i.ch.indexOf('social')>-1)e.push('social dms');return e;}
 function q(ids,i,feat,budget){var p=new URLSearchParams();p.set('ids',ids.join(','));p.set('units',String(i.units));p.set('billing',i.billing);
  if(budget)p.set('budget',String(budget));p.set('currency',i.cur);if(feat.length)p.set('features',feat.join(','));return p;}
-function haal(p){return fetch(API+'/v1/dossier?'+p.toString()).then(function(r){return r.json();});}
+var GEN=0,AB=null;
+function haal(p,sig){return fetch(API+'/v1/dossier?'+p.toString(),{signal:sig}).then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json();}).then(function(d){if(d&&d.error)throw new Error(d.error);return d;});}
 function voortgang(i){var v=[i.units>0,i.ch.length>0,true,!!i.mail,i.budget>0];stap.forEach(function(a,n){a.classList.toggle('klaar',!!v[n]);});}
 function status(k,naam){var r=(k.requirements||[]).filter(function(x){return x.requirement==='feature:'+naam;})[0];
  if(!r)return '';var s=r.status==='documented'||r.status==='fits'?r.status:'not';
@@ -121,9 +162,10 @@ function bouw(){var i=invoer();voortgang(i);
  history.replaceState(null,'','?'+new URLSearchParams(new FormData(f)).toString());
  uit.innerHTML=KOP+'<p class="sub">Checking candidates against your requirements…</p>';
  var tel=i.ch.indexOf('phone')>-1,feat=eisen(i),ids=kandidaten(i);
- var vragen=[haal(q(ids,i,feat,i.budget))];
- if(tel)vragen.push(haal(q(TEL,i,['call recording','ivr'],null)));
- Promise.all(vragen).then(function(a){toon(i,a[0],tel?a[1]:null,feat);}).catch(function(){uit.innerHTML=KOP+'<p class="fout">The service did not answer. Try again in a minute.</p>';});}
+ var mijn=++GEN;if(AB)AB.abort();AB=window.AbortController?new AbortController():null;var sig=AB?AB.signal:undefined;
+ var vragen=[haal(q(ids,i,feat,i.budget),sig)];
+ if(tel)vragen.push(haal(q(TEL,i,['call recording','ivr'],null),sig));
+ Promise.all(vragen).then(function(a){if(mijn!==GEN)return;toon(i,a[0],tel?a[1]:null,feat);}).catch(function(e){if(mijn!==GEN||(e&&e.name==='AbortError'))return;uit.innerHTML=KOP+'<p class="fout">The service did not answer. Try again in a minute.</p>';res.innerHTML='';});}
 // Een niet-gedocumenteerde integratie maakt de uitkomst 'insufficient_evidence'; dat is geen reden om een helpdesk
 // weg te laten, alleen om 'not confirmed' te tonen. Uitsluiten doet alleen een echt blokkerende eis of een basisprijs
 // boven het budget. Volgorde: budget past volgens de motor, dan meer gedocumenteerde eisen, dan prijs.
@@ -139,38 +181,58 @@ function toon(i,d,dt,feat){
  var passend=K.filter(function(k){return past(k,i);}).sort(rang),kern=passend[0]||null,varianten=passend.slice(1,3);
  var telK=dt?(dt.candidates||[]).filter(function(k){return k.found&&k.cost&&k.cost.per_month!=null;}).sort(function(a,b){return a.cost.per_month-b.cost.per_month;}):[];
  var tel=telK[0]||null;
+ var R=DEKKING.rijen(i.ch,kern,tel),stand=DEKKING.stand(R);
  var h=KOP+'';
  if(kern)h+=regel(kern,'Help desk · core','kern',i);
  else h+='<div class="mod"><span class="lbl kern">Help desk · core</span><small>No help desk we can price fits '+geld(i.budget,i.cur)+' a month for '+i.units+' '+(i.units===1?'person':'people')+' with these requirements. See the route below.</small></div>';
- if(tel)h+=regel(tel,'Phone · optional, you said customers call','opt',i);
- var som={};[kern,tel].forEach(function(k){if(k&&k.cost&&k.cost.per_month!=null){som[k.cost.currency]=(som[k.cost.currency]||0)+k.cost.per_month;}});
- h+='<div class="som">'+(Object.keys(som).length?Object.keys(som).map(function(c){return '<div class="r" style="display:flex;justify-content:space-between"><span>Total, '+c+'</span><b>'+geld(som[c],c)+'/mo</b></div>';}).join('')+(Object.keys(som).length>1?'<small>Different currencies are shown separately, not added up.</small>':''):'<small>No total: nothing could be priced.</small>')+
+ if(tel)h+=regel(tel,'Phone · separate system, you said customers call','opt',i);
+ var som=DEKKING.som([kern,tel]),open=R.filter(function(r){return r.status==='uncovered';}).map(function(r){return r.naam;}),
+  onzeker=R.filter(function(r){return r.status==='unknown';}).map(function(r){return r.naam;});
+ h+='<div class="som">'+(Object.keys(som).length?Object.keys(som).map(function(c){return '<div class="r" style="display:flex;justify-content:space-between"><span>'+DEKKING.somkop(R)+', '+c+'</span><b>'+geld(som[c],c)+'/mo</b></div>';}).join('')+(Object.keys(som).length>1?'<small>Different currencies are shown separately, not added up.</small>':''):'<small>No total: nothing could be priced.</small>')+
+  (open.length?'<small style="color:var(--warn)">Not covered by any tool in this setup: '+esc(open.join(', '))+'. The amount is not the cost of a complete setup.</small>':'')+
+  (onzeker.length?'<small style="color:var(--warn)">Not confirmed: '+esc(onzeker.join(', '))+'. See the channel table.</small>':'')+
   '<small>Monthly equivalent of the plans above. Usage, add-ons and tax are not in it; see each line.</small>'+
-  (som[i.cur]!=null&&som[i.cur]>i.budget?'<small style="color:var(--warn)">Above your '+geld(i.budget,i.cur)+' budget with the optional phone line; the help desk on its own fits.</small>':'')+'</div>';
+  (som[i.cur]!=null&&som[i.cur]>i.budget?'<small style="color:var(--warn)">This setup as a whole is above your '+geld(i.budget,i.cur)+' budget'+(kern&&kern.cost&&kern.cost.per_month<=i.budget?'; the help desk on its own fits.':'.')+'</small>':'')+'</div>';
  uit.innerHTML=h;
  var r='';
  if(!kern){var goedkoop=K.filter(function(k){return k.cost&&k.cost.per_month!=null;}).sort(function(a,b){return a.cost.per_month-b.cost.per_month;})[0];
-  r+='<div class="waarsch"><b>Nothing we can price fits this budget.</b> Start without a new subscription: one shared address or label in your current inbox, one named owner per day, and a simple log of the questions that come back. Revisit when that log shows the gap.'+
-   (goedkoop?' The lowest-priced candidate for your inputs is '+esc(goedkoop.name)+' at '+geld(goedkoop.cost.per_month,goedkoop.cost.currency)+' a month.':'')+'</div>';}
+  r+='<div class="waarsch"><b>No help desk we can price fits this budget.</b> Start without a new help desk: one shared address or label in your current inbox, one named owner per day, and a simple log of the questions that come back. Revisit when that log shows the gap.'+
+   (goedkoop?' The lowest-priced help desk for your inputs is '+esc(goedkoop.name)+' at '+geld(goedkoop.cost.per_month,goedkoop.cost.currency)+' a month.':'')+
+   (tel?' The phone line above is priced on its own; it does not answer email'+(i.ch.indexOf('social')>-1?' or social DMs':'')+'.':'')+'</div>';}
+ r+='<h2>Every channel, and what handles it</h2>'+DEKKING.tabel(R,esc)+
+  '<p class="sub">Documented means the vendor\'s own page lists it, with the date we read it; we have not tested it. Not confirmed means we found no documentation: check it before you rely on it.</p>';
+ var queues={};R.forEach(function(x){var m=x.module||'no tool';(queues[m]=queues[m]||[]).push(x.naam.toLowerCase()+(x.status==='unknown'?' (not confirmed)':''));});
+ var qtekst=DEKKING.eenwachtrij(R)?'One queue for every channel above; each is documented for this tool. Check: every message gets an owner.':
+  Object.keys(queues).map(function(m){return esc(m)+': '+esc(queues[m].join(', '));}).join(' · ')+'. These are separate queues; nothing documents that they meet in one place. Check: someone owns each one.';
  r+='<h2>How it fits together</h2><div class="stroom">'+
-  ''+'<div class="nd"><b>Customer question</b><span>'+esc(i.ch.map(function(c){return {email:'email',chat:'website chat',phone:'phone',marketplace:'marketplace messages',social:'social DMs'}[c]||c;}).join(', '))+'</span></div><span class="pijl">&rarr;</span>'+
-  '<div class="nd"><b>'+(kern?esc(kern.name):'Your current inbox')+'</b><span>One queue for every channel above. Check: every message gets an owner.</span></div><span class="pijl">&rarr;</span>'+
+  '<div class="nd"><b>Customer question</b><span>'+esc(i.ch.map(function(c){return (DEKKING.KAN[c]||c).toLowerCase();}).join(', '))+'</span></div><span class="pijl">&rarr;</span>'+
+  '<div class="nd"><b>'+(DEKKING.eenwachtrij(R)?esc(kern.name):'Where each channel lands')+'</b><span>'+qtekst+'</span></div><span class="pijl">&rarr;</span>'+
   '<div class="nd"><b>Owner</b><span>One named person per shift for '+i.units+' '+(i.units===1?'person':'people')+'. Check: nothing waits unassigned overnight.</span></div><span class="pijl">&rarr;</span>'+
-  (i.vol>=300&&i.help?'<div class="nd"><b>Automation (optional)</b><span>Only for repeat questions your help articles already answer. Check: the handover to a person works.</span></div><span class="pijl">&rarr;</span>':'')+
+  (i.vol>=300&&i.help&&kern?'<div class="nd"><b>Automation (optional)</b><span>Only for repeat questions your help articles already answer. Check: the handover to a person works.</span></div><span class="pijl">&rarr;</span>':'')+
   '<div class="nd"><b>Human follow-up</b><span>Anything unanswered or unhappy goes back to the owner. Check: reopened tickets are counted.</span></div></div>';
- if(kern){r+='<h2>Requirements for '+esc(kern.name)+'</h2><p class="sub">'+feat.map(function(n){return status(kern,n);}).filter(Boolean).join(' &middot; ')+'</p>'+
-  '<p class="sub">Documented means the vendor\'s own page lists it, with the date we read it; we have not tested it. Not confirmed means we found no documentation: test it in the trial before you rely on it.</p>';}
+ if(kern){r+='<h2>Requirements for '+esc(kern.name)+'</h2><p class="sub">'+feat.map(function(n){return status(kern,n);}).filter(Boolean).join(' &middot; ')+'</p>';}
  if(varianten.length){r+='<h2>Other fits</h2>';varianten.forEach(function(k){r+='<div class="var"><h3>'+esc(k.name)+' &middot; '+geld(k.cost.per_month,k.cost.currency)+'/mo</h3><p class="sub" style="margin:0">'+feat.map(function(n){return status(k,n);}).filter(Boolean).join(' &middot; ')+'</p>'+(k.review?'<p class="sub" style="margin:6px 0 0"><a href="'+esc(k.review)+'">Read the review</a></p>':'')+'</div>';});}
  var opt=[];
- if(i.ch.indexOf('chat')>-1&&kern&&!/Documented live chat|Fits live chat/.test(feat.map(function(n){return status(kern,n).replace(/<[^>]+>/g,'');}).join(' ')))opt.push('<li><b>Website chat:</b> we found no documentation that '+esc(kern.name)+' includes live chat on this plan. Check it in the trial, or compare the alternatives above that document it.</li>');
- if(i.vol>=300&&i.help)opt.push('<li><b>AI answers for repeat questions:</b> worth testing at your volume because you have help articles. It is billed per resolution on top of the plan; price it in the purchase file with your own resolved volume. Typewise and eDesk publish that rate.</li>');
- else if(i.vol>=300)opt.push('<li><b>AI answers:</b> not yet. Without help articles that answer the repeat questions, an AI agent has nothing reliable to answer from.</li>');
+ if(i.vol>=300&&i.help&&kern)opt.push('<li><b>AI answers for repeat questions:</b> worth testing at your volume because you have help articles. It is billed per resolution on top of the plan; price it in the purchase file with your own resolved volume. Typewise and eDesk publish that rate.</li>');
+ else if(i.vol>=300&&kern)opt.push('<li><b>AI answers:</b> not yet. Without help articles that answer the repeat questions, an AI agent has nothing reliable to answer from.</li>');
  if(opt.length)r+='<h2>Optional, only if it applies</h2><ul class="sub">'+opt.join('')+'</ul>';
- r+='<h2>Go / no-go</h2><ol class="go"><li><b>Test one workflow in the trial.</b> Route one real channel (for example the support address) and handle a week of real messages. Note the baseline first: messages per day, first-reply time.</li>'+
+ r+='<h2>Go / no-go</h2><ol class="go">'+(kern?
+  '<li><b>Test one workflow in the trial.</b> Route one real channel (for example the support address) and handle a week of real messages. Note the baseline first: messages per day, first-reply time.</li>'+
   '<li><b>Check the exits.</b> Export a few tickets, set permissions for each person, and test the handover between two people. A tool you cannot leave cleanly is a risk.</li>'+
-  '<li><b>Decide before the trial ends.</b> Keep it only if the baseline improved; cancel before the first charge if not. Trial lengths differ per vendor; check the pricing page.</li>'+
+  '<li><b>Decide before the trial ends.</b> Keep it only if the baseline improved; cancel before the first charge if not. Trial lengths differ per vendor; check the pricing page.</li>':
+  '<li><b>Run a two-week trial process in your current inbox.</b> One shared address or label, one named owner per day. Note the baseline: messages per day, first-reply time.</li>'+
+  '<li><b>Keep a log of what goes wrong.</b> Missed messages, slow replies, questions nobody owned. That log is what a future tool has to fix.</li>'+
+  '<li><b>Decide on evidence.</b> Only when the log shows a gap the inbox cannot close, and the budget allows it, compare the help desks in the purchase file.</li>')+
+  (tel?'<li><b>Phone is its own system.</b> '+esc(tel.name)+' is a separate queue; nothing we hold documents a link to '+(kern?esc(kern.name):'your inbox')+'. Decide who answers calls and where call notes go.</li>':'')+
   '<li><b>Expand only for a named gap.</b> Chat, phone or AI come in only when the log shows a problem the core does not solve.</li></ol>';
- r+='<p><a class="knop2" href="'+esc(d.share_url)+'">Open the full purchase file &rarr;</a> <span class="sub">Same candidates and requirements, with the evidence for every line, a download and a re-check later.</span></p>'+
+ var stack=[];if(kern)stack.push(kern.product_id+':helpdesk');else stack.push('inbox');if(tel)stack.push(tel.product_id+':phone');
+ var did=[];if(kern)did.push(kern.product_id);if(tel)did.push(tel.product_id);
+ K.forEach(function(k){if(did.length<6&&did.indexOf(k.product_id)<0)did.push(k.product_id);});
+ var dfeat=feat.slice();if(tel)['call recording','ivr'].forEach(function(x){if(dfeat.indexOf(x)<0)dfeat.push(x);});
+ var dq=q(did,i,dfeat,i.budget);dq.set('stack',stack.join(','));dq.set('ch',i.ch.join(','));dq.set('from','support-plan');
+ var dlink='/dossier/?'+dq.toString();
+ r+='<p><a class="knop2" href="'+esc(dlink)+'">Open the purchase file for this setup &rarr;</a> <span class="sub">'+(kern?'Your setup ('+esc([kern.name].concat(tel?[tel.name]:[]).join(' + '))+') with all '+i.ch.length+' channels, '+i.units+' people and your budget, plus the other help desks as alternatives.':'No help desk fits; the file shows the help desks we checked against your budget'+(tel?', and the phone line on its own':'')+'.')+
+  ' The file compares each product on its own and adds up only your setup, with the evidence for every line, a download and a re-check later.</span></p>'+
   '<p class="omslag">'+esc(d.disclosure)+' '+esc(d.order)+'</p>';
  res.innerHTML=marktnoot+r;
  if(window.gtag)gtag('event','support_plan_built');}

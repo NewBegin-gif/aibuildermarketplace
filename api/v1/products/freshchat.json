@@ -72,10 +72,33 @@
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Freshchat",
+    "product_id": "freshchat",
+    "run_date": "2026-10-08",
+    "what": "The Freddy AI Agent in a Freshchat trial account, built in AI Agent Studio. We wrote a short help page for a made-up headset shop (shipping, returns, warranty, two products, opening hours: about 250 words) and gave the agent its URL as the only knowledge source; learning finished in about two minutes. We then ran 13 customer questions through the studio's Test screen: 10 whose answer is on the page, one that needs a small inference (shipping to Japan when the page lists only three countries) and two whose answer is not on the page at all (PayPal, and battery life with noise cancelling on). We scored every reply against the page.",
+    "findings": [
+     "11 of the 13 replies were correct, and every factual reply linked the help page as its source. That includes the trickier ones: an order at 4pm on a Tuesday ships on Wednesday because of the 15:00 cut-off, a cable broken by pulling is excluded from the warranty, and 'Do you ship to Japan?' got a clear no with the three countries we do ship to.",
+     "It did not invent anything where the page was silent. Asked about PayPal, it said the help centre has no information on payment methods. Asked for battery life with noise cancelling on, it gave the documented 40 hours, said that figure is with noise cancelling off, and declined to give a number for the other case.",
+     "The one wrong reply was 'Can I call you?'. The page says there is no phone support; the agent answered 'Sure! Assigning your chat to our support agent.' It treated the question as a request for a human and started a handover, and the 'Sure!' reads as a yes. The Test dashboard still counted this reply as Answered.",
+     "One reply added something the page does not contain: after correctly refusing the warranty claim, it offered to explain 'replacing the cable at your own cost', which our page never mentions.",
+     "The dashboard's totals (12 answered, 1 unanswered) are a useful first filter, but you have to read the replies: the handover counted as an answer, and the correct 'I don't know' about PayPal counted as unanswered.",
+     "Not tested: real chats through the website widget, other languages, larger or contradictory knowledge bases, and what the replies cost, because the Test screen is not live AI Agent sessions."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "freshchat:cancellation_terms",

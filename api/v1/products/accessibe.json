@@ -77,10 +77,34 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "accessiBe",
+    "product_id": "accessibe",
+    "run_date": "2026-10-08",
+    "what": "accessiBe's free accessScan scanner, not the paid accessWidget overlay this review prices. We built two versions of the same small landing page: one with 20 accessibility errors we placed on purpose and wrote down beforehand (missing page language and title, images without text alternatives, unlabelled form fields, low contrast, a skipped heading level, a table without header cells, a clickable div, a positive tabindex, an unlabelled iframe and more), and a twin with all 20 fixed. We scanned both and, as a reference, ran the free open-source checker axe-core 4.10.2 over the same two pages.",
+    "findings": [
+     "The verdict was right both ways. The broken page came back 'Non-compliant' with 14 issues (10 critical, 3 serious, 1 moderate); the fixed twin came back 'Accessible'.",
+     "Of our 20 planted errors, the full report identified 7 correctly: the missing language, the empty title, the unlabelled button, the unlabelled iframe, aria-hidden on a link, the missing main landmark and the clickable div. An eighth, a link containing only an image without alt text, was flagged under the wrong diagnosis: the report called the image decorative and advised hiding it, which would leave the link with no name at all. axe-core found 13 of the same 20.",
+     "What it missed: the form had an email field and a dropdown without labels and a phone field labelled only by its placeholder, and the report's Forms category read 0. It also missed the image with no alt text, the alt text that was a filename, the low-contrast text, the skipped heading level, the table without header cells and the positive tabindex. For the filename alt text and the 'click here' link the report has a rule, but marked it 'Relevant: No'.",
+     "The report contradicts itself on the title: the empty <title> fails one rule ('titles aren't descriptive') and passes another ('missing page title'). It also flagged the correctly hidden icon inside our button and the page's <body> element.",
+     "The scan itself is free, but the breakdown sits blurred behind a form. To see it you give your name and a business email and tick: 'I agree to enter into a contract with accessiBe under its Terms of Service, under which accessiBe will process my personal data for marketing purposes, for 6 months'. The same page says 'Always free'. The report arrived by email within a minute, with buttons to sign up and to install the widget.",
+     "It would not scan W3C's own before-and-after accessibility demo ('The scanner doesn't have permission to access this URL'), which is why we used pages of our own.",
+     "Not tested: accessWidget itself, any paid tier, accessFlow, multi-page scans and real sites. One page pair is a spot check of the free scanner, not a verdict on the product line."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "accessibe:cancellation_terms",

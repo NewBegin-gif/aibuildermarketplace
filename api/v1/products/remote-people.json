@@ -68,12 +68,13 @@
   "engine": "https://aibuildermarketplace.com/agents/#cost",
   "rules": {
    "currency": "USD",
-   "unit": "employee",
+   "unit": "worker",
    "axis": "users",
    "plans": [
     {
      "id": "eor-flex",
      "name": "EOR Flex",
+     "service": "eor",
      "model": "per_unit",
      "monthly": 199,
      "annual_status": "unknown",
@@ -82,348 +83,465 @@
     {
      "id": "eor-plus",
      "name": "EOR Plus",
+     "service": "eor",
      "model": "per_unit",
      "annual_month": 399,
      "monthly_status": "not_offered",
      "min_units": 5,
      "evidence": "EOR Plus from $399 with an annual commitment, a dedicated account manager and a minimum of 5 employees"
+    },
+    {
+     "id": "cor",
+     "name": "Contractor of Record",
+     "service": "contractor_of_record",
+     "model": "per_unit",
+     "price_month": 199,
+     "billing": "unspecified",
+     "evidence": "Contractor of Record from $199 a month including misclassification cover"
+    },
+    {
+     "id": "contractor",
+     "name": "Contractor management",
+     "service": "contractor",
+     "model": "per_unit",
+     "price_month": 29,
+     "billing": "unspecified",
+     "evidence": "plain contractor management from $29"
+    },
+    {
+     "id": "us-peo",
+     "name": "US PEO",
+     "service": "us_peo",
+     "model": "per_unit",
+     "price_month": 99,
+     "billing": "unspecified",
+     "evidence": "US PEO from $99 per employee a month"
+    },
+    {
+     "id": "global-payroll",
+     "name": "Global payroll",
+     "service": "global_payroll",
+     "model": "per_unit",
+     "price_month": 25,
+     "billing": "unspecified",
+     "evidence": "Global payroll from $25 per employee a month, with volume discounts quoted above 50 employees"
     }
    ],
    "notes": [
     "Every figure on the page is a 'from' price, so these totals are floors."
    ],
    "not_computable": [
-    "Contractor of Record, contractor management, US PEO, payroll, recruitment fees (2% to 25% of salary), legal help and benefits are priced separately and are not included in the Employer of Record prices."
+    "Recruitment fees (2% to 25% of salary), legal help, benefits, equity, incorporation, entity management and visas are priced separately or by quote and are not included."
    ],
-   "rules_verified_at": "2026-10-07"
+   "rules_verified_at": "2026-10-09"
   },
   "growth": {
    "annual": {
     "product_id": "remote-people",
     "currency": "USD",
     "axis": "users",
-    "unit": "employee",
+    "unit": "worker",
     "billing": "annual",
     "rows": [
      {
       "units": 1,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 1995.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 25.0,
       "billed": {
-       "amount": 23940.0,
-       "every": "year"
+       "amount": 25.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 1995.0
+       "eor-plus": 1995.0,
+       "cor": 199.0,
+       "contractor": 29.0,
+       "us-peo": 99.0,
+       "global-payroll": 25.0
       }
      },
      {
       "units": 2,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 1995.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 50.0,
       "billed": {
-       "amount": 23940.0,
-       "every": "year"
+       "amount": 50.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 1995.0
+       "eor-plus": 1995.0,
+       "cor": 398.0,
+       "contractor": 58.0,
+       "us-peo": 198.0,
+       "global-payroll": 50.0
       }
      },
      {
       "units": 3,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 1995.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 75.0,
       "billed": {
-       "amount": 23940.0,
-       "every": "year"
+       "amount": 75.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 1995.0
+       "eor-plus": 1995.0,
+       "cor": 597.0,
+       "contractor": 87.0,
+       "us-peo": 297.0,
+       "global-payroll": 75.0
       }
      },
      {
       "units": 5,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 1995.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 125.0,
       "billed": {
-       "amount": 23940.0,
-       "every": "year"
+       "amount": 125.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 1995.0
+       "eor-plus": 1995.0,
+       "cor": 995.0,
+       "contractor": 145.0,
+       "us-peo": 495.0,
+       "global-payroll": 125.0
       }
      },
      {
       "units": 10,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 3990.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 250.0,
       "billed": {
-       "amount": 47880.0,
-       "every": "year"
+       "amount": 250.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 3990.0
+       "eor-plus": 3990.0,
+       "cor": 1990.0,
+       "contractor": 290.0,
+       "us-peo": 990.0,
+       "global-payroll": 250.0
       }
      },
      {
       "units": 15,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 5985.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 375.0,
       "billed": {
-       "amount": 71820.0,
-       "every": "year"
+       "amount": 375.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 5985.0
+       "eor-plus": 5985.0,
+       "cor": 2985.0,
+       "contractor": 435.0,
+       "us-peo": 1485.0,
+       "global-payroll": 375.0
       }
      },
      {
       "units": 20,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 7980.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 500.0,
       "billed": {
-       "amount": 95760.0,
-       "every": "year"
+       "amount": 500.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 7980.0
+       "eor-plus": 7980.0,
+       "cor": 3980.0,
+       "contractor": 580.0,
+       "us-peo": 1980.0,
+       "global-payroll": 500.0
       }
      },
      {
       "units": 25,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 9975.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 625.0,
       "billed": {
-       "amount": 119700.0,
-       "every": "year"
+       "amount": 625.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 9975.0
+       "eor-plus": 9975.0,
+       "cor": 4975.0,
+       "contractor": 725.0,
+       "us-peo": 2475.0,
+       "global-payroll": 625.0
       }
      },
      {
       "units": 50,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 19950.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 1250.0,
       "billed": {
-       "amount": 239400.0,
-       "every": "year"
+       "amount": 1250.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 19950.0
+       "eor-plus": 19950.0,
+       "cor": 9950.0,
+       "contractor": 1450.0,
+       "us-peo": 4950.0,
+       "global-payroll": 1250.0
       }
      },
      {
       "units": 100,
-      "cheapest_plan": "eor-plus",
-      "cheapest_plan_name": "EOR Plus",
-      "total_month": 39900.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 2500.0,
       "billed": {
-       "amount": 478800.0,
-       "every": "year"
+       "amount": 2500.0,
+       "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": "price_unknown_on_billing",
-       "eor-plus": 39900.0
+       "eor-plus": 39900.0,
+       "cor": 19900.0,
+       "contractor": 2900.0,
+       "us-peo": 9900.0,
+       "global-payroll": 2500.0
       }
      }
     ],
     "switch_points": [],
     "conflicts": [],
     "unknowns": [
-     "Contractor of Record, contractor management, US PEO, payroll, recruitment fees (2% to 25% of salary), legal help and benefits are priced separately and are not included in the Employer of Record prices."
+     "Recruitment fees (2% to 25% of salary), legal help, benefits, equity, incorporation, entity management and visas are priced separately or by quote and are not included."
     ]
    },
    "monthly": {
     "product_id": "remote-people",
     "currency": "USD",
     "axis": "users",
-    "unit": "employee",
+    "unit": "worker",
     "billing": "monthly",
     "rows": [
      {
       "units": 1,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 199.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 25.0,
       "billed": {
-       "amount": 199.0,
+       "amount": 25.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 199.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 199.0,
+       "contractor": 29.0,
+       "us-peo": 99.0,
+       "global-payroll": 25.0
       }
      },
      {
       "units": 2,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 398.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 50.0,
       "billed": {
-       "amount": 398.0,
+       "amount": 50.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 398.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 398.0,
+       "contractor": 58.0,
+       "us-peo": 198.0,
+       "global-payroll": 50.0
       }
      },
      {
       "units": 3,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 597.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 75.0,
       "billed": {
-       "amount": 597.0,
+       "amount": 75.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 597.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 597.0,
+       "contractor": 87.0,
+       "us-peo": 297.0,
+       "global-payroll": 75.0
       }
      },
      {
       "units": 5,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 995.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 125.0,
       "billed": {
-       "amount": 995.0,
+       "amount": 125.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 995.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 995.0,
+       "contractor": 145.0,
+       "us-peo": 495.0,
+       "global-payroll": 125.0
       }
      },
      {
       "units": 10,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 1990.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 250.0,
       "billed": {
-       "amount": 1990.0,
+       "amount": 250.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 1990.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 1990.0,
+       "contractor": 290.0,
+       "us-peo": 990.0,
+       "global-payroll": 250.0
       }
      },
      {
       "units": 15,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 2985.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 375.0,
       "billed": {
-       "amount": 2985.0,
+       "amount": 375.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 2985.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 2985.0,
+       "contractor": 435.0,
+       "us-peo": 1485.0,
+       "global-payroll": 375.0
       }
      },
      {
       "units": 20,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 3980.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 500.0,
       "billed": {
-       "amount": 3980.0,
+       "amount": 500.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 3980.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 3980.0,
+       "contractor": 580.0,
+       "us-peo": 1980.0,
+       "global-payroll": 500.0
       }
      },
      {
       "units": 25,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 4975.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 625.0,
       "billed": {
-       "amount": 4975.0,
+       "amount": 625.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 4975.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 4975.0,
+       "contractor": 725.0,
+       "us-peo": 2475.0,
+       "global-payroll": 625.0
       }
      },
      {
       "units": 50,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 9950.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 1250.0,
       "billed": {
-       "amount": 9950.0,
+       "amount": 1250.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 9950.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 9950.0,
+       "contractor": 1450.0,
+       "us-peo": 4950.0,
+       "global-payroll": 1250.0
       }
      },
      {
       "units": 100,
-      "cheapest_plan": "eor-flex",
-      "cheapest_plan_name": "EOR Flex",
-      "total_month": 19900.0,
+      "cheapest_plan": "global-payroll",
+      "cheapest_plan_name": "Global payroll",
+      "total_month": 2500.0,
       "billed": {
-       "amount": 19900.0,
+       "amount": 2500.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
        "eor-flex": 19900.0,
-       "eor-plus": "not_offered_on_billing"
+       "eor-plus": "not_offered_on_billing",
+       "cor": 19900.0,
+       "contractor": 2900.0,
+       "us-peo": 9900.0,
+       "global-payroll": 2500.0
       }
      }
     ],
     "switch_points": [],
     "conflicts": [],
     "unknowns": [
-     "Contractor of Record, contractor management, US PEO, payroll, recruitment fees (2% to 25% of salary), legal help and benefits are priced separately and are not included in the Employer of Record prices."
+     "Recruitment fees (2% to 25% of salary), legal help, benefits, equity, incorporation, entity management and visas are priced separately or by quote and are not included."
     ]
    }
   }
@@ -456,7 +574,7 @@
   {
    "question_id": "remote-people:pricing_gap_1",
    "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: Contractor of Record, contractor management, US PEO, payroll, recruitment fees (2% to 25% of salary), legal help and benefits are priced separately and are not included in the Employer of Record prices. Can you publish the price or the rule?",
+   "question": "Our price check could not put a number on this part of the cost: Recruitment fees (2% to 25% of salary), legal help, benefits, equity, incorporation, entity management and visas are priced separately or by quote and are not included. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

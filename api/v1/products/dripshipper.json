@@ -62,14 +62,400 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "order",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "monthly": 30,
+     "annual_year": 240,
+     "evidence": "Starter $30 a month, Professional $99 and Elite $197, each with a 14-day free trial — all three unchanged since 19 August 2026. Starter is also sold annually at $240 a year"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "monthly": 99,
+     "annual_status": "unknown",
+     "evidence": "Starter $30 a month, Professional $99 and Elite $197"
+    },
+    {
+     "id": "elite",
+     "name": "Elite",
+     "model": "flat",
+     "monthly": 197,
+     "annual_status": "unknown",
+     "evidence": "Starter $30 a month, Professional $99 and Elite $197"
+    }
+   ],
+   "notes": [
+    "Starter carries unlimited orders and the higher tiers add training, priority support and coaching, so the subscription does not grow with order volume.",
+    "Starter is the only tier with a published annual rate."
+   ],
+   "not_computable": [
+    "Product and shipping cost is charged per order on top of the subscription and depends on what you sell."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "dripshipper",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "professional": "price_unknown_on_billing",
+       "elite": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Product and shipping cost is charged per order on top of the subscription and depends on what you sell."
+    ]
+   },
+   "monthly": {
+    "product_id": "dripshipper",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "professional": 99.0,
+       "elite": 197.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Product and shipping cost is charged per order on top of the subscription and depends on what you sell."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -93,9 +479,9 @@
    "status": "open"
   },
   {
-   "question_id": "dripshipper:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "dripshipper:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Product and shipping cost is charged per order on top of the subscription and depends on what you sell. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

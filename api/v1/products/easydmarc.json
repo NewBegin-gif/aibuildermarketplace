@@ -80,14 +80,430 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "flat",
+     "monthly": 44.99,
+     "annual_month": 35.99,
+     "evidence": "Plus is 44.99 a month, or 35.99 billed annually, for 2 domains"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "flat",
+     "monthly": 89.99,
+     "annual_month": 71.99,
+     "evidence": "Premium is 89.99, or 71.99 annually, for 4 domains"
+    },
+    {
+     "id": "deliverability",
+     "name": "Deliverability",
+     "model": "quote",
+     "evidence": "The former Enterprise tier is split into two quoted plans"
+    },
+    {
+     "id": "enterprise-email-trust",
+     "name": "Enterprise: Email Trust",
+     "model": "quote",
+     "evidence": "The former Enterprise tier is split into two quoted plans"
+    }
+   ],
+   "notes": [
+    "Users are unlimited on every tier; the price scales with domains (2 on Plus, 4 on Premium) and monthly message volume.",
+    "The page prints the same numbers as euros from the Netherlands and as dollars from the US."
+   ],
+   "not_computable": [
+    "Plus offers a monthly volume selector (100,000, 500,000 or 1,000,000 messages); the price at each volume step is not in our notes.",
+    "Past the monthly quota, additional reports are not processed until the next billing cycle.",
+    "A dedicated DMARC engineer is a paid add-on on Deliverability, price not stated."
+   ],
+   "rules_verified_at": "2026-10-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "easydmarc",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 35.99,
+      "billed": {
+       "amount": 431.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 35.99,
+       "premium": 71.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Plus offers a monthly volume selector (100,000, 500,000 or 1,000,000 messages); the price at each volume step is not in our notes.",
+     "Past the monthly quota, additional reports are not processed until the next billing cycle.",
+     "A dedicated DMARC engineer is a paid add-on on Deliverability, price not stated."
+    ]
+   },
+   "monthly": {
+    "product_id": "easydmarc",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 44.99,
+      "billed": {
+       "amount": 44.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 44.99,
+       "premium": 89.99,
+       "deliverability": "quote",
+       "enterprise-email-trust": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Plus offers a monthly volume selector (100,000, 500,000 or 1,000,000 messages); the price at each volume step is not in our notes.",
+     "Past the monthly quota, additional reports are not processed until the next billing cycle.",
+     "A dedicated DMARC engineer is a paid add-on on Deliverability, price not stated."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -111,9 +527,21 @@
    "status": "open"
   },
   {
-   "question_id": "easydmarc:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "easydmarc:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Plus offers a monthly volume selector (100,000, 500,000 or 1,000,000 messages); the price at each volume step is not in our notes. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "easydmarc:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Past the monthly quota, additional reports are not processed until the next billing cycle. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "easydmarc:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: A dedicated DMARC engineer is a paid add-on on Deliverability, price not stated. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

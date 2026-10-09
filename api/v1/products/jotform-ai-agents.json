@@ -104,10 +104,33 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Jotform AI Agents",
+    "product_id": "jotform-ai-agents",
+    "run_date": "2026-10-09",
+    "what": "We built a support agent from scratch with the description 'A customer support agent for Acme Headsets that answers customer questions using the attached help centre page', and gave it one public help-centre page of our own as its only knowledge: shipping countries and times, a 15:00 dispatch cut-off, returns, warranty, spare parts, two headsets with prices and support hours, with no phone line. We asked 13 questions, each in a new conversation on the agent's standalone chat page: ten the page answers, and three it does not (Japan, PayPal, and battery life with noise cancelling on). The first round ran without an account; after about ten conversations it stopped with 'This AI Agent has reached its conversation limit', so the last three, plus two repeats, ran on a new agent built the same way in a free Starter account.",
+    "findings": [
+     "Eleven of 13 answers were right. Delivery times, the free-shipping threshold, the return window, free returns, the warranty exclusion, spare-part and headset prices and the 40-hour battery figure all matched the page.",
+     "It did not make things up when the page had no answer. It said it could not confirm PayPal, gave the 40-hour figure only for noise cancelling off and said it had no figure for it on, and inferred correctly that it does not ship to Japan because only the Netherlands, Belgium and Germany are listed.",
+     "It got the dispatch cut-off wrong. Asked about an order at 4 pm on a Tuesday, the first agent said it would not ship that day but not when it would; the second said it would ship the same day, because orders before 15:00 leave that day. The correct answer is Wednesday. The same question gave a different answer on a near-identical agent.",
+     "Asked 'Can I call you?', both agents said a representative had been asked to join and asked for an email address, instead of saying there is no phone support. With no live team behind it, that promise goes nowhere.",
+     "Adding the page once showed '2 links' in the knowledge base both times. The guest agent's conversation limit arrived after about ten chats; the free Starter plan lists 100 conversations a month.",
+     "Not tested: the website widget, WhatsApp, voice and phone channels, forms inside the chat, handover to a real person, or a larger knowledge base."
+    ],
+    "not_tested": null,
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "jotform-ai-agents:cancellation_terms",

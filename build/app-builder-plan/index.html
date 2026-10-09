@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Plan your AI app build</title><meta name="description" content="Pick an AI app builder for what you need: publishing, your own domain, code on GitHub and a team, with the plan and price each needs and how each did in our own 18-check build test."><link rel="canonical" href="https://aibuildermarketplace.com/build/app-builder-plan/"><meta name="robots" content="max-image-preview:large"><link rel="service-desc" type="application/vnd.oai.openapi+json" href="https://aibuildermarketplace.com/api/v1/openapi.json"><meta property="og:title" content="Plan your AI app build"><meta property="og:description" content="Pick an AI app builder for what you need: publishing, your own domain, code on GitHub and a team, with the plan and price each needs and how each did in our own 18-check build test."><meta property="og:image" content="https://aibuildermarketplace.com/og/aibm-default.png"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>
+:root{--bg:#06080f;--ink:#0b1020;--srf:#0f1526;--srf2:#141b30;--bd:#1f2840;--bd2:#2c3757;--tx:#eef1f8;--mu:#a7b1c6;--mu2:#8b96ad;
+--ac:#8b93ff;--ok:#3ddc97;--warn:#ffc65c;--bad:#ff7a7a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#a5adff}.nav{border-bottom:1px solid var(--bd);padding:0 24px}.nav-in{max-width:1100px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav a{color:var(--mu);font-size:.85rem;font-weight:600;margin-left:16px;text-decoration:none}.logo-t{font-weight:800!important;color:var(--tx)!important;margin-left:0!important}
+.wrap{max-width:1100px;margin:0 auto;padding:34px 24px 90px}
+.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9ff3cf;border:1px solid rgba(61,220,151,.35);border-radius:999px;padding:5px 12px}
+h1{font-size:clamp(2rem,4.6vw,3.1rem);letter-spacing:-.035em;line-height:1.05;margin:14px 0 10px;text-wrap:balance}
+.lede{color:var(--mu);max-width:720px;font-size:1.06rem;margin:0}
+.paneel{margin-top:26px;border:1px solid var(--bd);border-radius:20px;background:linear-gradient(180deg,var(--srf2),var(--srf));padding:22px}
+.rij{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:14px}
+label{display:block;font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mu2);margin-bottom:6px}
+input,select{width:100%;background:#0a0f1d;border:1px solid var(--bd2);border-radius:11px;color:var(--tx);padding:11px 12px;font:inherit;font-size:.97rem}
+input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.budget{display:flex;gap:8px}.budget select{width:92px}
+.eisen{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;color:#cdd3e4;font-size:.92rem}
+.eisen label{display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;font-weight:500;font-size:.92rem;color:#cdd3e4;margin:0}
+.eisen input{width:auto}
+details.meer{margin-top:14px}details.meer summary{cursor:pointer;color:var(--mu);font-size:.9rem}
+.trap{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:10px}
+.knop{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#7c6cff,#9b8cff);color:#fff;border:0;border-radius:12px;padding:12px 20px;font:inherit;font-weight:800;cursor:pointer}
+.uit{margin-top:22px}
+.oordeel{border-radius:16px;padding:16px 18px;border:1px solid;font-weight:700;display:flex;gap:12px;align-items:flex-start}
+.oordeel small{display:block;font-weight:500;color:var(--mu);margin-top:3px}
+.o-ok{border-color:rgba(61,220,151,.45);background:rgba(61,220,151,.07)}.o-blok{border-color:rgba(255,122,122,.5);background:rgba(255,122,122,.07)}
+.o-onb{border-color:rgba(255,198,92,.45);background:rgba(255,198,92,.06)}
+.tabel{width:100%;border-collapse:collapse;margin-top:14px;font-size:.92rem}
+.tabel th{text-align:left;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu2);padding:8px 10px;border-bottom:1px solid var(--bd)}
+.tabel td{padding:10px;border-bottom:1px solid var(--bd);vertical-align:top}
+.tabel td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.scroll{overflow-x:auto}
+.st{display:inline-block;font-size:.74rem;font-weight:800;border-radius:999px;padding:3px 10px;border:1px solid;white-space:nowrap}
+.s-fits,.s-ok{color:#9ff3cf;border-color:rgba(61,220,151,.45)}.s-does_not_fit,.s-not_eligible{color:#ffb4b4;border-color:rgba(255,122,122,.5)}
+.s-unknown,.s-price_unknown_on_billing,.s-range,.s-quote,.s-not_offered_on_billing,.s-mentioned,.s-not_flagged{color:#ffd68a;border-color:rgba(255,198,92,.45)}
+.s-conflicting,.s-recheck_needed{color:#ffd68a;border-color:rgba(255,198,92,.7);border-style:dashed}
+.bewijs{margin-top:6px}.bewijs summary{cursor:pointer;color:var(--mu2);font-size:.82rem}.bewijs q{display:block;color:#c9d0e0;font-size:.86rem;margin:6px 0;padding-left:10px;border-left:2px solid var(--bd2)}
+h2{font-size:1.25rem;letter-spacing:-.02em;margin:30px 0 4px}.sub{color:var(--mu);font-size:.92rem;margin:0}
+.omslag{margin-top:10px;color:#cdd3e4;font-size:.92rem}
+.lijst{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.lijst a{border:1px solid var(--bd2);border-radius:999px;padding:5px 12px;font-size:.86rem;text-decoration:none;color:#cdd3e4}
+.lijst a:hover{border-color:var(--ac)}
+.voet{margin-top:34px;color:var(--mu2);font-size:.88rem;border-top:1px solid var(--bd);padding-top:16px}
+.fout{color:#ffb4b4}
+@media(max-width:820px){.rij{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.rij{grid-template-columns:1fr}.wrap{padding:24px 16px 70px}.paneel{padding:16px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.vraag{margin-top:6px;font-size:.84rem;color:#c9cdff}.vraag button{margin-left:6px;background:none;border:1px solid var(--bd2);border-radius:8px;color:var(--mu);font:inherit;font-size:.76rem;padding:1px 8px;cursor:pointer}
+.s-vendor_states{color:#c9cdff;border-color:rgba(139,147,255,.5)}
+
+.sp{display:grid;grid-template-columns:200px minmax(0,1fr) 340px;gap:22px;align-items:start;margin-top:22px}
+.sp-stap{position:sticky;top:76px;display:flex;flex-direction:column;gap:6px}
+.sp-stap a{display:flex;gap:10px;align-items:center;color:var(--mu);text-decoration:none;font-size:.88rem;padding:7px 10px;border-radius:10px;border:1px solid transparent}
+.sp-stap a b{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;background:var(--srf2);border:1px solid var(--bd2);color:var(--mu)}
+.sp-stap a.klaar b{background:var(--ac);border-color:var(--ac);color:#0b1020}
+.sp-stap a.nu{border-color:var(--bd2);color:var(--tx)}
+.sp-in fieldset{border:1px solid var(--bd);border-radius:16px;padding:18px 20px;margin:0 0 14px;background:var(--srf)}
+.sp-in legend{font-weight:800;padding:0 6px}
+.sp-in .hulp{color:var(--mu2);font-size:.84rem;margin:2px 0 10px}
+.sp-in label.k{display:flex;gap:10px;align-items:center;justify-content:flex-start;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;margin:6px 0;cursor:pointer;text-transform:none;letter-spacing:0;font-size:.95rem;font-weight:500;color:var(--tx)}
+.sp-in label.k input{width:18px;height:18px;flex:none;margin:0;padding:0;accent-color:var(--ac)}
+.sp-in label.k:has(input:checked){border-color:var(--ac);background:rgba(139,147,255,.08)}
+.sp-in .rij2{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.sp-in input[type=number],.sp-in select{width:100%;background:var(--ink);border:1px solid var(--bd2);color:var(--tx);border-radius:10px;padding:10px 12px;font:inherit}
+.sp-uit{position:sticky;top:76px;background:var(--srf);border:1px solid var(--bd2);border-radius:16px;padding:16px 18px}
+.sp-uit h2{font-size:1rem;margin:0 0 8px}
+.mod{border-top:1px solid var(--bd);padding:10px 0}
+.mod:first-of-type{border-top:0}
+.mod .r{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.mod .n{font-weight:800}.mod .p{font-variant-numeric:tabular-nums;font-weight:800}
+.mod small{display:block;color:var(--mu2);font-size:.78rem;line-height:1.45}
+.lbl{display:inline-block;font-size:.7rem;font-weight:800;border-radius:999px;padding:1px 8px;border:1px solid var(--bd2);color:var(--mu)}
+.lbl.kern{border-color:var(--ac);color:var(--ac)}.lbl.opt{color:var(--warn);border-color:rgba(255,198,92,.4)}
+.som{border-top:1px solid var(--bd2);margin-top:6px;padding-top:10px}
+.stroom{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:12px 0}
+.stroom .nd{flex:1 1 150px;background:var(--srf);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;font-size:.84rem}
+.stroom .nd b{display:block;font-size:.9rem}.stroom .nd span{display:block;color:var(--mu2);font-size:.78rem;margin-top:3px}
+.stroom .pijl{align-self:center;color:var(--mu2)}
+.go{counter-reset:g;list-style:none;padding:0;margin:10px 0}
+.go li{counter-increment:g;position:relative;padding:10px 12px 10px 44px;border:1px solid var(--bd);border-radius:12px;margin:8px 0;background:var(--srf)}
+.go li::before{content:counter(g);position:absolute;left:12px;top:10px;width:22px;height:22px;border-radius:50%;background:var(--srf2);border:1px solid var(--bd2);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800}
+.st{display:inline-block;font-size:.72rem;font-weight:800;border-radius:999px;padding:1px 8px}
+.st.s-documented,.st.s-fits{background:rgba(61,220,151,.12);color:var(--ok)}
+.st.s-unknown,.st.s-not{background:rgba(255,198,92,.12);color:var(--warn)}
+.st.s-does_not_fit{background:rgba(255,122,122,.12);color:var(--bad)}
+.var{border:1px solid var(--bd);border-radius:14px;padding:12px 14px;margin:10px 0;background:var(--srf)}
+.var h3{margin:0 0 4px;font-size:1rem}
+.waarsch{border-left:3px solid var(--warn);padding:8px 12px;background:rgba(255,198,92,.06);border-radius:8px;margin:10px 0}
+@media(max-width:1020px){.sp{grid-template-columns:minmax(0,1fr)}.sp-stap{display:none}.sp-uit{position:static}}
+
+.tabel.dek{width:100%;border-collapse:collapse;font-size:.86rem}
+.tabel.dek th,.tabel.dek td{text-align:left;vertical-align:top;padding:8px 10px;border-top:1px solid var(--bd)}
+.tabel.dek small{color:var(--mu2)}
+.sp.sp2{grid-template-columns:minmax(0,1fr) 340px}@media(max-width:1020px){.sp.sp2{grid-template-columns:minmax(0,1fr)}}</style></head><body><nav class="nav"><div class="nav-in"><a href="/" class="logo-t">AIBuilder Marketplace</a><div><a href="/marketplace/">Marketplace</a><a href="/check/">Check</a><a href="/agents/">For agents</a></div></div></nav><main class="wrap"><span class="kicker">AI app builders · planner</span><h1>Plan your AI app build</h1><p class="lede">Tick what your app needs. You get the builder and plan that cover it, the monthly price, what each vendor documents for that plan, and how each builder did when we built the same booking app on all three. Nothing is guessed.</p><div class="sp sp2"><form id="abp" class="sp-in" autocomplete="off"><fieldset><legend>What does the app need?</legend><p class="hulp">Publishing online is always checked. Tick what else you need.</p><label class="k"><input type="checkbox" name="customdomain" value="1" checked> Your own domain</label><label class="k"><input type="checkbox" name="github" value="1" checked> Code to GitHub or download</label><label class="k"><input type="checkbox" name="removebadge" value="1"> No builder badge on the app</label><label class="k"><input type="checkbox" name="collaborators" value="1"> Several people building</label><label class="k"><input type="checkbox" name="morepublishedapps" value="1"> More than one published app</label></fieldset><fieldset><legend>Billing</legend><div class="rij2"><div><label for="billing">Billing</label><select id="billing" name="billing"><option value="monthly">Monthly</option><option value="annual">Annual</option></select></div></div></fieldset></form><aside class="sp-uit" id="abpuit" aria-live="polite"><h2>Your setup</h2><p class="sub">This planner needs JavaScript. Our test results are in the table below.</p></aside></div><section id="abpres" aria-live="polite"></section><h2>Our build test, in short</h2><div class="scroll"><table class="tabel"><thead><tr><th>Builder</th><th>Checks passed after repairs</th><th>Publishing</th><th>Price read</th></tr></thead><tbody><tr><td><a href="/b2b/lovable-review/">Lovable</a></td><td class="g">18 of 18</td><td>published on the free plan</td><td class="g">2026-09-26</td></tr><tr><td><a href="/b2b/replit-review/">Replit</a></td><td class="g">17 of 18</td><td>partly published on the free plan</td><td class="g">2026-09-26</td></tr><tr><td><a href="https://officesoftwaremarketplace.com/emergent-review.html">Emergent</a></td><td class="g">15 of 18</td><td>could not publish on the free plan</td><td class="g">2026-08-31</td></tr></tbody></table></div><p class="sub">One booking app from one identical prompt, 26 September 2026, free plans. <a href="/research/one-booking-app-three-ai-builders/">The full test</a>.</p><p class="omslag">Your choices stay in this page and its address; we only count that a plan was built. Agents can do the same through <code>/v1/dossier</code>; see <a href="/agents/">For agents</a>.</p></main><script>
+(function(){
+
+var DEKKING=(function(){
+ var KAN={email:'Email',chat:'Website chat',phone:'Phone calls',marketplace:'Marketplace messages',social:'Social media DMs'};
+ var MARKT=["edesk"];
+ var LBL={documented:'Documented',tested:'Passed our test',unknown:'Not confirmed',separate:'Separate phone system',manual:'Manual, no new tool',uncovered:'Not covered'};
+ function st(k,n){if(!k)return null;var r=(k.requirements||[]).filter(function(x){return x.requirement==='feature:'+n;})[0];return r?r.status:null;}
+ function ok(s){return s==='documented'||s==='fits';}
+ function woord(s){return ok(s)?'documented':s==='mentioned'?'mentioned, not documented':'not confirmed';}
+ function rij(c,kern,tel){var r={kanaal:c,naam:KAN[c]||c,module:null,status:'uncovered',uitleg:''};
+  if(c==='phone'){if(!tel){r.uitleg='No phone tool we can price for your inputs.';return r;}
+   r.module=tel.name;r.status='separate';
+   r.uitleg='A separate phone system. Call recording: '+woord(st(tel,'call recording'))+'; IVR: '+woord(st(tel,'ivr'))+
+    '. We found no documented link to '+(kern?kern.name:'a help desk')+', so calls are a second queue to watch.';return r;}
+  if(!kern){if(c==='email'){r.module='Your current inbox';r.status='manual';r.uitleg='No new tool: one shared address or label in the inbox you have, and a named owner per day.';}
+   else if(c==='social')r.uitleg='No help desk in this budget. Answer DMs in each platform\'s own inbox for now; that is manual and outside any queue.';
+   else r.uitleg='This channel needs a help desk, and none we can price fits this budget.';return r;}
+  r.module=kern.name;
+  if(c==='email'){var s=st(kern,'shared inbox');r.status=ok(s)?'documented':'unknown';r.uitleg=ok(s)?'Shared inbox is documented on the vendor\'s page.':'We found no documentation of a shared inbox.';return r;}
+  if(c==='chat'){var s2=st(kern,'live chat');r.status=ok(s2)?'documented':'unknown';r.uitleg=ok(s2)?'Live chat is documented on the vendor\'s page.':'We found no documentation that '+kern.name+' includes live chat on this plan.';return r;}
+  if(c==='marketplace'){if(MARKT.indexOf(kern.product_id)>-1){r.status='documented';r.uitleg='Our dossier lists Amazon and eBay messages in its inbox.';}
+   else{r.module=null;r.status='uncovered';r.uitleg='Our dossier does not show '+kern.name+' receiving marketplace messages.';}return r;}
+  if(c==='social'){var s3=st(kern,'social dms');if(ok(s3)){r.status='documented';r.uitleg='Social DMs are documented on the vendor\'s page.';}
+   else{r.status='unknown';r.uitleg='We found no documentation that '+kern.name+' receives social DMs. Until you confirm it, answer them in each platform\'s own inbox.';}return r;}
+  r.status='unknown';r.uitleg='Not checked.';return r;}
+ function rijen(ch,kern,tel){return ch.map(function(c){return rij(c,kern,tel);});}
+ function stand(R){if(R.some(function(r){return r.status==='uncovered';}))return 'incomplete';
+  if(R.some(function(r){return r.status==='unknown'||r.status==='manual';}))return 'unconfirmed';return 'complete';}
+ function somkop(R){var s=stand(R);return s==='complete'?'Total, known costs':s==='incomplete'?'Known subtotal · incomplete setup':'Known subtotal · coverage not confirmed';}
+ function eenwachtrij(R){var m=R.map(function(r){return r.module;});return R.every(function(r){return r.status==='documented';})&&m.every(function(x){return x&&x===m[0];});}
+ function som(mods){var s={};mods.forEach(function(k){if(k&&k.cost&&k.cost.per_month!=null){s[k.cost.currency]=(s[k.cost.currency]||0)+k.cost.per_month;}});return s;}
+ function chip(s){return '<span class="st s-'+(s==='documented'||s==='tested'?'documented':s==='uncovered'?'does_not_fit':'unknown')+'">'+LBL[s]+'</span>';}
+ function tabel(R,esc,kop){return '<div class="scroll"><table class="tabel dek"><thead><tr><th>'+(kop||'Channel')+'</th><th>Handled by</th><th>Status</th><th>What that means</th></tr></thead><tbody>'+
+  R.map(function(r){return '<tr><td>'+esc(r.naam)+'</td><td>'+(r.module?esc(r.module):'—')+'</td><td>'+chip(r.status)+'</td><td><small>'+esc(r.uitleg)+'</small></td></tr>';}).join('')+'</tbody></table></div>';}
+ return {KAN:KAN,rijen:rijen,stand:stand,somkop:somkop,eenwachtrij:eenwachtrij,som:som,tabel:tabel,chip:chip};
+})();
+
+var API="https://api.aibuildermarketplace.com",IDS=["lovable", "replit", "emergent"],REV={"lovable": "/b2b/lovable-review/", "replit": "/b2b/replit-review/", "emergent": "https://officesoftwaremarketplace.com/emergent-review.html"},EISEN=[["custom domain", "Your own domain"], ["github", "Code to GitHub or download"], ["remove badge", "No builder badge on the app"], ["collaborators", "Several people building"], ["more published apps", "More than one published app"]],TEST={"lovable": {"ok": 18, "nt": 0, "publiceer": "passed_in_this_test", "plan": "Free"}, "replit": {"ok": 17, "nt": 0, "publiceer": "partial_in_this_test", "plan": "Starter (free), separate new account"}, "emergent": {"ok": 15, "nt": 2, "publiceer": "failed_in_this_test", "plan": "Free"}},STUDIE="/research/one-booking-app-three-ai-builders/",KOP='<h2>Your setup</h2>';
+var f=document.getElementById('abp'),uit=document.getElementById('abpuit'),res=document.getElementById('abpres');
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function geld(v,c){return v==null?'—':(c==='EUR'?'€':'$')+Number(v).toLocaleString('en-US',{minimumFractionDigits:v%1?2:0,maximumFractionDigits:2});}
+function sl(n){return n.replace(/[^a-z]/g,'');}
+function invoer(){var d=new FormData(f);return{billing:d.get('billing')||'monthly',eis:EISEN.filter(function(e){return d.get(sl(e[0]))==='1';}).map(function(e){return e[0];})};}
+var GEN=0,AB=null;
+function bouw(){var i=invoer();history.replaceState(null,'','?'+new URLSearchParams(new FormData(f)).toString());
+ uit.innerHTML=KOP+'<p class="sub">Checking three builders…</p>';
+ var p=new URLSearchParams();p.set('ids',IDS.join(','));p.set('units','1');p.set('billing',i.billing);if(i.eis.length)p.set('features',i.eis.join(','));
+ var mijn=++GEN;if(AB)AB.abort();AB=window.AbortController?new AbortController():null;
+ fetch(API+'/v1/dossier?'+p.toString(),{signal:AB?AB.signal:undefined}).then(function(x){if(!x.ok)throw new Error('http '+x.status);return x.json();})
+  .then(function(d){if(mijn!==GEN)return;if(d.error)throw new Error(d.error);toon(i,d,p);})
+  .catch(function(e){if(mijn!==GEN||(e&&e.name==='AbortError'))return;uit.innerHTML=KOP+'<p class="fout">The service did not answer. Try again in a minute.</p>';res.innerHTML='';});}
+function req(k,n){return (k.requirements||[]).filter(function(x){return x.requirement===n;})[0]||{};}
+function stat(r){if(r.status==='documented')return 'documented';if(r.status==='fits'&&/^passed/.test(r.detail||''))return 'tested';if(r.status==='does_not_fit')return 'no';return 'unknown';}
+function woord(r){var s=stat(r);return s==='documented'?'documented':s==='tested'?'passed in our test':s==='no'?'failed in our test':'not confirmed';}
+function telt(k,i){return i.eis.filter(function(e){var s=stat(req(k,'feature:'+e));return s==='documented'||s==='tested';}).length;}
+function toon(i,d,p){
+ var K=(d.candidates||[]).filter(function(k){return k.found;});
+ // eerst wat bevestigd is voor het plan, dan ons testresultaat; geen prijsrangorde over euro en dollar heen
+ K.sort(function(a,b){return (telt(b,i)-telt(a,i))||((TEST[b.product_id]||{}).ok-(TEST[a.product_id]||{}).ok);});
+ var kern=K[0]||null,alles=kern&&telt(kern,i)===i.eis.length;
+ var R=[];
+ if(kern){var t=TEST[kern.product_id]||{};
+  R.push({naam:'Publish online',module:kern.name,status:t.publiceer==='passed_in_this_test'?'tested':'unknown',
+   uitleg:'In our test on the free plan: '+(t.publiceer==='passed_in_this_test'?'published at a public URL without logging in.':t.publiceer==='partial_in_this_test'?'partly; see the test.':'not publishable without upgrading.')});}
+ i.eis.forEach(function(e){var nm=EISEN.filter(function(x){return x[0]===e;})[0][1],r=kern?req(kern,'feature:'+e):{},s=kern?stat(r):'';
+  R.push({naam:nm,module:kern?kern.name+(kern.cost?' · '+kern.cost.plan:''):null,status:!kern?'uncovered':s==='tested'?'tested':s==='documented'?'documented':'unknown',
+   uitleg:!kern?'':s==='tested'?'Passed in our own test.':s==='documented'?'On the vendor\'s own page for this plan.':'Not confirmed for this plan. Check it in the trial.'});});
+ var h=KOP;
+ if(kern){var c=kern.cost;h+='<div class="mod"><div class="r"><span class="n">'+esc(kern.name)+(c?' · '+esc(c.plan):'')+'</span><span class="p">'+(c&&c.per_month!=null?geld(c.per_month,c.currency)+'/mo':'not priced')+'</span></div>'+
+  '<small>'+(alles?'Covers everything you ticked':'Covers '+telt(kern,i)+' of '+i.eis.length+' things you ticked')+'; in our test it passed '+(TEST[kern.product_id]||{}).ok+' of 18 checks after repairs.'+(c&&c.currency==='EUR'?' Price in euros including VAT.':'')+'</small></div>'+
+  '<div class="som"><small>Ranked by what is confirmed for the plan, then by our test. Prices are in each vendor\'s own currency and not converted, so they are not ranked against each other. Credits beyond the monthly allowance are on top.</small></div>';}
+ uit.innerHTML=h;
+ var r='<h2>What you need, and what handles it</h2>'+DEKKING.tabel(R,esc,'Need');
+ r+='<h2>The three builders</h2><div class="scroll"><table class="tabel"><thead><tr><th>Builder</th><th>Plan you need</th><th>Per month</th><th>Our test</th>'+
+  EISEN.filter(function(e){return i.eis.indexOf(e[0])>-1;}).map(function(e){return '<th>'+esc(e[1])+'</th>';}).join('')+'</tr></thead><tbody>'+
+  K.map(function(k){var c=k.cost,t=TEST[k.product_id]||{};return '<tr><td>'+(REV[k.product_id]?'<a href="'+esc(REV[k.product_id])+'">'+esc(k.name)+'</a>':esc(k.name))+'</td><td>'+(c?esc(c.plan):'—')+'</td><td class="g">'+
+   (c&&c.per_month!=null?geld(c.per_month,c.currency):'<small>'+(i.billing==='annual'?'yearly price not in our notes':'not priced')+'</small>')+'</td><td><small>'+t.ok+' of 18 passed'+(t.nt?', '+t.nt+' not tested':'')+'</small></td>'+
+   EISEN.filter(function(e){return i.eis.indexOf(e[0])>-1;}).map(function(e){return '<td><small>'+esc(woord(req(k,'feature:'+e[0])))+'</small></td>';}).join('')+'</tr>';}).join('')+
+  '</tbody></table></div><p class="sub">Our test: the same booking app built from one prompt on each free plan on 26 September 2026, scored on 18 checks written down beforehand (<a href="'+STUDIE+'">method and results</a>). "Documented" means the vendor\'s own page lists it for that plan; we have not bought it.</p>'+(i.billing==='annual'?'<p class="sub">Lovable advertises yearly billing as two months free without a figure, so on annual billing we can only price its free plan; switch to monthly to see Pro and Business.</p>':'');
+ r+='<h2>Go / no-go</h2><ol class="go">'+
+  '<li><b>Build one real screen on the free plan first.</b> Note how many credits it takes; every builder meters work in credits and the allowance on the plan is a starting balance, not a budget.</li>'+
+  '<li><b>Publish before you pay.</b> Check that the app works for someone who is not logged in, and what happens to the link on the free plan.</li>'+
+  '<li><b>Test the exit.</b> Push the code to GitHub or download it, and check you can run it without the builder.</li>'+
+  '<li><b>Ask your own repair questions.</b> In our test the first version of two builders let a full class be overbooked; give the app a hard case before real users do.</li></ol>';
+ r+='<p><a class="knop2" href="/dossier/?'+esc(p.toString())+'">Open the purchase file &rarr;</a> <span class="sub">The three builders side by side with the evidence for every line, a download and a re-check later.</span></p>'+
+  '<p class="omslag">'+esc(d.disclosure||'')+' '+esc(d.order||'')+'</p>';
+ res.innerHTML=r;
+ if(window.gtag)gtag('event','app_builder_plan_built');}
+var t=null;f.addEventListener('change',function(){clearTimeout(t);t=setTimeout(bouw,250);});f.addEventListener('submit',function(e){e.preventDefault();bouw();});
+var q=new URLSearchParams(location.search);
+if([].some.call(f.elements,function(x){return x.name&&q.has(x.name);}))[].forEach.call(f.querySelectorAll('input[type=checkbox]'),function(x){x.checked=false;});
+q.forEach(function(v,k){[].forEach.call(f.querySelectorAll('[name="'+k+'"]'),function(x){if(x.type==='checkbox'){x.checked=(x.value===v);}else x.value=v;});});
+bouw();
+})();
+</script><!--sister-net-start-->
+<nav aria-label="Sister sites" style="display:block;max-width:1100px;margin:28px auto 0;padding:16px 20px 4px;border-top:1px solid rgba(128,128,128,.22);font-size:.8rem;line-height:2;text-align:center;opacity:.8"><span style="display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.66rem;opacity:.7;margin-bottom:4px">Part of the network</span><a href="https://officesoftwaremarketplace.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">Office Software</a> <span style="opacity:.4">&middot;</span> <a href="https://marketingandsalessoftware.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">Marketing & Sales Software</a> <span style="opacity:.4">&middot;</span> <a href="https://theweeklyaiedge.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">The Weekly AI Edge</a> <span style="opacity:.4">&middot;</span> <a href="https://theweekly2pctedge.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">The Weekly 2% Edge</a> <span style="opacity:.4">&middot;</span> <a href="https://zerotouchsupport.com/?utm_source=aibuildermarketplace&utm_medium=footer_net&utm_campaign=cross_brand" target="_blank" rel="nofollow noopener" style="color:inherit;text-decoration:underline;white-space:nowrap">ZeroTouch Support</a><span style="display:block;margin-top:6px;font-size:.72rem;opacity:.65">Six sites, one owner &mdash; all built and run by <a href="/about/" style="color:inherit">Daniel Haket</a>.</span></nav>
+<!--sister-net-end-->
+</body></html>

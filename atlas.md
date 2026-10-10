@@ -896,7 +896,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/devs-ai-review/
 
 ## Dext (dext.com)
-- **Verified pricing:** (re-verified 2026-08-21, read in a browser on dext.com/en/business/pricing because the price panel renders client-side) Dext has moved off named tiers: you choose a region and a billing per…
+- **Verified pricing:** (re-verified 2026-10-10, read in a browser on dext.com/en/business/pricing because the price panel renders client-side) Dext has moved off named tiers: you choose a region and a billing per…
 - **Honest take:** It's a data-capture layer, not accounting software — it feeds Xero, QuickBooks or Sage, so you still need one of those.
 - **Best for:** accountants, bookkeepers and growing businesses drowning in receipts who want fast, accurate capture flowing straight into Xero, QuickBooks or Sage
 - **Flags:** Usage-metered, Add-ons extra
@@ -1153,7 +1153,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-08-22 in a live browser on expertex.ai/pricing -- plain fetches return an empty page, so this is the first reading we have of the real ladder) There are four credit tiers, monthl…
 - **Honest take:** The plan cards and the calculator on the same page do not agree, and the gap is large enough to pick the wrong tier.
 - **Best for:** online stores that need a steady stream of product photos and short video ads and would otherwise pay a studio or a freelancer per shoot -- the e-commerce studio pushes results straight to the live store on Ultra and above
-- **Flags:** Usage-metered
+- **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/expertex-review/
 
 ## Expertise AI (expertise.ai)
@@ -2608,7 +2608,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sanebox-review/
 
 ## Scarcity.AI (effectify.io)
-- **Verified pricing:** (read 2026-08-22 on apps.shopify.com, across all three listings) These are three separate apps from one developer, each installed and billed on its own.
+- **Verified pricing:** (read 2026-10-10 on apps.shopify.com, across all three listings) These are three separate apps from one developer, each installed and billed on its own.
 - **Honest take:** All three read real data, which is worth saying before anything else — the low stock counter shows inventory levels and the visitors counter reads unique visitors, live traffic and product views.
 - **Best for:** Shopify merchants who genuinely run low stock or timed promotions and want to surface that on the product page
 - **Full review:** https://aibuildermarketplace.com/b2b/scarcity-ai-review/
@@ -2948,10 +2948,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/storeseo-review/
 
 ## Storista (storista.io)
-- **Verified pricing:** (read 2026-08-23 on apps.shopify.com/storista-stories, listed as “Storista Shoppable Video UGC”) Four tiers.
-- **Honest take:** The first thing to know is that the brand sells two different products, and the one you find by searching the name is not the one this link installs.
+- **Verified pricing:** (read 2026-10-10 on apps.shopify.com/storista-stories, listed as “Storista Shoppable Videos UGC”, and on storista.io/pricing) Four tiers.
+- **Honest take:** The first thing to know is how much this ladder has moved.
 - **Best for:** Shopify stores that already produce TikTok or Reels content and want it on the storefront as shoppable video, with the free tier's unlimited views making it cheap to test whether social video converts on your product pages at all
-- **Flags:** Usage-metered, Free tier
+- **Flags:** Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/storista-review/
 
 ## Storylane (storylane.io)

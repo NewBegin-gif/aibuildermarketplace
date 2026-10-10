@@ -60,14 +60,194 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "monthly-plan",
+     "name": "Monthly Plan",
+     "model": "per_unit",
+     "monthly": 2.99,
+     "annual_year": 28.7,
+     "evidence": "Monthly Plan is $2.99 a month, or $28.70 a year with the annual saving the listing puts at 20%"
+    }
+   ],
+   "notes": "The free Development plan is limited to development and partner stores, so a live shop starts on the paid plan.",
+   "rules_verified_at": "2026-10-11"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "imgify",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 2.39,
+      "billed": {
+       "amount": 28.7,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 2.39
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 4.78,
+      "billed": {
+       "amount": 57.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 4.78
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 7.18,
+      "billed": {
+       "amount": 86.1,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 7.18
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 11.96,
+      "billed": {
+       "amount": 143.5,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 11.96
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 23.92,
+      "billed": {
+       "amount": 287.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 23.92
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "imgify",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 2.99,
+      "billed": {
+       "amount": 2.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 2.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 5.98,
+      "billed": {
+       "amount": 5.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 5.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 8.97,
+      "billed": {
+       "amount": 8.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 8.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 14.95,
+      "billed": {
+       "amount": 14.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 14.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "monthly-plan",
+      "cheapest_plan_name": "Monthly Plan",
+      "total_month": 29.9,
+      "billed": {
+       "amount": 29.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "monthly-plan": 29.9
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -88,12 +268,6 @@
    "question_id": "imgify:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "imgify:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

@@ -73,14 +73,399 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "practitioner",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "balance",
+     "name": "Balance",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 59,
+     "annual_status": "unknown",
+     "evidence": "Balance is $59 a month for a single practitioner profile and is capped at 20 appointments a month"
+    },
+    {
+     "id": "practice",
+     "name": "Practice",
+     "model": "flat",
+     "included_units": 1,
+     "monthly": 79,
+     "annual_status": "unknown",
+     "extra_unit": {
+      "monthly": 35,
+      "annual_status": "unknown"
+     },
+     "evidence": "Practice is $79 a month with one full-time practitioner included, unlimited appointments and staff profiles, free unlimited SMS reminders where SMS is available, and timesheets; each extra practitioner costs $35 a month full-time (24 or more booked hours a week) or $17.50 part-time."
+    },
+    {
+     "id": "thrive",
+     "name": "Thrive",
+     "model": "flat",
+     "included_units": 1,
+     "monthly": 99,
+     "annual_status": "unknown",
+     "extra_unit": {
+      "monthly": 40,
+      "annual_status": "unknown"
+     },
+     "evidence": "Thrive is $99 a month with the same one practitioner included, adds rooms and equipment, availability tagging, in-person self check-in, an automated waitlist, return-visit reminders, packages and memberships, and ratings and reviews; extra practitioners cost $40 full-time or $20 part-time."
+    }
+   ],
+   "notes": [
+    "US price list. Extra practitioners are counted full-time ($35 on Practice, $40 on Thrive); part-time practitioners cost half ($17.50 and $20). Admin and support staff without bookable hours are free on every plan.",
+    "Balance is capped at 20 appointments a month."
+   ],
+   "not_computable": [
+    "part-time practitioner pricing",
+    "add-ons: AI Scribe, Group Telehealth, Insurance Billing, Jane Websites",
+    "card processing fees through Jane Payments",
+    "CAD and GBP price lists"
+   ],
+   "rules_verified_at": "2026-10-11"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "jane",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "practitioner",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "price_unknown_on_billing",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": "price_unknown_on_billing",
+       "thrive": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "part-time practitioner pricing",
+     "add-ons: AI Scribe, Group Telehealth, Insurance Billing, Jane Websites",
+     "card processing fees through Jane Payments",
+     "CAD and GBP price lists"
+    ]
+   },
+   "monthly": {
+    "product_id": "jane",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "practitioner",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "balance",
+      "cheapest_plan_name": "Balance",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": 59.0,
+       "practice": 79.0,
+       "thrive": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 114.0,
+      "billed": {
+       "amount": 114.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 114.0,
+       "thrive": 139.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 149.0,
+      "billed": {
+       "amount": 149.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 149.0,
+       "thrive": 179.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 219.0,
+      "billed": {
+       "amount": 219.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 219.0,
+       "thrive": 259.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 394.0,
+      "billed": {
+       "amount": 394.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 394.0,
+       "thrive": 459.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 569.0,
+      "billed": {
+       "amount": 569.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 569.0,
+       "thrive": 659.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 744.0,
+      "billed": {
+       "amount": 744.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 744.0,
+       "thrive": 859.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 919.0,
+      "billed": {
+       "amount": 919.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 919.0,
+       "thrive": 1059.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 1794.0,
+      "billed": {
+       "amount": 1794.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 1794.0,
+       "thrive": 2059.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "practice",
+      "cheapest_plan_name": "Practice",
+      "total_month": 3544.0,
+      "billed": {
+       "amount": 3544.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "balance": "not_eligible",
+       "practice": 3544.0,
+       "thrive": 4059.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "balance",
+      "to_plan": "practice",
+      "from_plan_name": "Balance",
+      "to_plan_name": "Practice"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "part-time practitioner pricing",
+     "add-ons: AI Scribe, Group Telehealth, Insurance Billing, Jane Websites",
+     "card processing fees through Jane Payments",
+     "CAD and GBP price lists"
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -104,9 +489,27 @@
    "status": "open"
   },
   {
-   "question_id": "jane:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "jane:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: part-time practitioner pricing. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "jane:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: add-ons: AI Scribe, Group Telehealth, Insurance Billing, Jane Websites. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "jane:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: card processing fees through Jane Payments. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "jane:pricing_gap_4",
+   "key": "pricing_gap_4",
+   "question": "Our price check could not put a number on this part of the cost: CAD and GBP price lists. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

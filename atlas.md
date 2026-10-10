@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 525 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-10.
+All 526 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2592,6 +2592,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small sales teams and agencies that want a B2B lead database, cold email with unlimited inboxes and warm-up, LinkedIn automation and a basic CRM under one login, priced per organisation with 3 seats included rather than per seat
 - **Flags:** {'f': 'usage_metered', 'ev': "All In One, the default tab with a 'Super Saver' badge: Growth $169 a month (1 LinkedIn automation, 5,000 emails a month, 2,000 enrichment credits), …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/salestarget-ai-review/
+
+## Samsara (samsara.com)
+- **Verified pricing:** (read 2026-10-10 on samsara.com/pricing and samsara.com/resources/plans, US site) No prices are shown.
+- **Honest take:** No public prices; the licence auto-renews unless you cancel in writing 30 days before it ends.
+- **Best for:** fleets that want safety cameras, telematics and equipment tracking from one vendor and are prepared to negotiate a multi-package quote
+- **Flags:** {'f': 'quote_only', 'ev': 'No published price: samsara.com/pricing is a fleet-size form and samsara.com/resources/plans names seven packages, each with a Get pricing button and no amount (read 10 Oct 2026)'}
+- **Full review:** https://aibuildermarketplace.com/b2b/samsara-review/
 
 ## SaneBox (sanebox.com)
 - **Verified pricing:** (amounts unchanged since 18 Aug 2026; re-verified 24 September 2026 against the plan data that sanebox.com/pricing embeds for its client-side price cards) Three plans, and the advertised pr…

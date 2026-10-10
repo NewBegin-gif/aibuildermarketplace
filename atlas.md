@@ -95,10 +95,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/ahaslides-review/
 
 ## Aira (aira.app)
-- **Verified pricing:** (read 2026-08-26 on aira.app/pricing) Aira is €149 per user a month, billed monthly, for the company database, AI prospecting, monitoring and on-demand research.
+- **Verified pricing:** (re-verified 2026-10-10 on aira.app/pricing) Aira now sells one product on its pricing page: Aira Connect at €499 a month, billed annually (€5,988 a year).
 - **Honest take:** Young product, sharp focus: European B2B prospecting on a 65-million-company database with meeting notes flowing into records automatically.
 - **Best for:** European B2B sales teams that want AI-assisted prospecting and automatic meeting/CRM hygiene from a Europe-native database
-- **Flags:** {'f': 'per_seat', 'ev': '(read 2026-08-26 on aira.app/pricing) Aira is €149 per user a month, billed monthly, for the company database, AI prospecting, monitoring and on-dema…'}
+- **Flags:** {'f': 'per_seat', 'ev': 'The €149 per user a month plan we read in July and August is no longer on the pricing page, the homepage or the about page.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/aira-review/
 
 ## Aircall (aircall.io)
@@ -109,7 +109,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aircall-review/
 
 ## Airia (airia.com)
-- **Verified pricing:** (re-verified 2026-09-10) Quote-only.
+- **Verified pricing:** (re-verified 2026-10-10) Quote-only.
 - **Honest take:** Airia no longer publishes a price: since 20 August 2026 the pricing page redirects into developer documentation, so you cannot budget before a sales conversation.
 - **Best for:** enterprises that need to find the AI already running across their organisation, enforce policy on it at runtime, and build and govern their own agents, with auditability and compliance evidence built in
 - **Flags:** {'f': 'quote_only', 'ev': 'No published price: pricing page redirects to developer docs, and no amount was found anywhere on the site (read 10 Sep 2026)'}
@@ -814,16 +814,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/convert-review/
 
 ## CrankWheel (crankwheel.com)
-- **Verified pricing:** (read on crankwheel.com/pricing, 2026-08-21) A free plan with no payment details required — unlimited usage for the first 15 days, then up to 15 sessions a month for life.
+- **Verified pricing:** (read on crankwheel.com/pricing, 2026-08-21, re-verified unchanged 2026-10-09) A free plan with no payment details required — unlimited usage for the first 15 days, then up to 15 sessions a…
 - **Honest take:** It's deliberately narrow — instant, no-download screen sharing for sales calls — so it's excellent at that one job and thin everywhere else.
 - **Best for:** sales reps, insurance agents and consultants who need prospects to view a screen instantly with no download or install, on any device
-- **Flags:** {'f': 'free_tier', 'ev': '(read on crankwheel.com/pricing, 2026-08-21) A free plan with no payment details required — unlimited usage for the first 15 days, then up to 15 sess…'}
+- **Flags:** {'f': 'free_tier', 'ev': '(read on crankwheel.com/pricing, 2026-08-21, re-verified unchanged 2026-10-09) A free plan with no payment details required — unlimited usage for the…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/crankwheel-review/
 
 ## Crazy Egg (crazyegg.com)
-- **Verified pricing:** (2026-08-21, read on their own pricing page) Three plans, all billed annually, with a 30-day free trial and — in the vendor's words — no overages, ever.
+- **Verified pricing:** (read 2026-10-10 on crazyegg.com/pricing, in a browser and by plain fetch, both showing the same ladder) Four plans, all billed annually, each with a 30-day free trial and, in the vendor's …
 - **Honest take:** The entry plan is thin on recordings — 50 a month against Hotjar's far more generous free tier.
-- **Best for:** lean marketing teams that want heatmaps, recordings and built-in A/B testing in one consolidated tool — noting that testing starts on the $99 plan, not the $29 one
+- **Best for:** lean marketing teams that want heatmaps, recordings and built-in A/B testing in one consolidated tool — noting that testing starts on the $99 Plus plan, not the $29 Starter
+- **Flags:** {'f': 'addons_extra', 'ev': 'More heatmaps or recordings are sold as add-ons through sales, with no price printed.'}, {'f': 'free_tier', 'ev': 'A Free plan, no card required, covers web analytics, instant heatmaps, conversion analytics and surveys.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/crazy-egg-review/
 
 ## Create (create.net)
@@ -836,7 +837,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-08-21 against the vendor's own pricing page, and now with the published limits rather than approximations) There are five plans, priced monthly.
 - **Honest take:** This is business-in-a-box software for starting a credit-repair company, not a tool that repairs your own credit — the price only makes sense if you're actually building a client business on it.
 - **Best for:** entrepreneurs building or running a credit-repair business who need client management, dispute automation and done-for-you letter workflows
-- **Flags:** {'f': 'annual_lock', 'ev': 'Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20.'}
+- **Flags:** {'f': 'addons_extra', 'ev': 'Add-ons are priced per plan: one extra team member or 100 extra client slots costs $50 a month on Start, $40 on Grow, $30 on Scale and $20 on Enterpr…'}, {'f': 'annual_lock', 'ev': 'Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20.'}
 - **Full review:** https://aibuildermarketplace.com/b2b/credit-repair-cloud-review/
 
 ## CrowdStrike (crowdstrike.com)
@@ -984,10 +985,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dropgenius-review/
 
 ## Dryground AI (dryground.ai)
-- **Verified pricing:** (2026-08-17, read in a browser because the site renders client-side and a plain fetch returns only the title) There is no public pricing anywhere, and we checked before saying so.
+- **Verified pricing:** (2026-08-17, read in a browser because the site renders client-side and a plain fetch returns only the title) There is no public pricing for the consulting work anywhere on dryground.ai, an…
 - **Honest take:** This is consulting, not a tool you log into: best when you want AI designed and built for you, not when you'd rather DIY with software.
 - **Best for:** businesses that want AI solutions built for them as a services engagement rather than assembling tools themselves
-- **Flags:** {'f': 'quote_only', 'ev': 'No public pricing anywhere: /pricing and related paths 404, no dollar amounts anywhere on the site, budgeted as a scoped consulting engagement (read 17 Aug 2026)'}
+- **Flags:** {'f': 'addons_extra', 'ev': "The firm's own product, CompanyClaw, is priced separately on companyclaw.ai/plans: Core $99, Pro $297 and Enterprise $1,497 a month, each plus usage …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/dryground-ai-review/
 
 ## Dynasort (dynasort.io)

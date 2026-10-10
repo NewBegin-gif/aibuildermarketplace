@@ -15,26 +15,10 @@
   "entry_price": "$12",
   "entry_price_terms": "per user a month billed annually ($15 monthly)",
   "from_price_usd_month": 12.0,
-  "plans": [
-   {
-    "name": "Standard",
-    "price": "$15 per user/mo, or $12 billed annually ($144 a year)",
-    "includes": "200 outgoing/100 incoming minutes, 100 outbound/100 inbound SMS; 10-user limit"
-   },
-   {
-    "name": "Premium",
-    "price": "$35 per user/mo, or $28 annually ($336 a year)",
-    "includes": "1,000 outgoing/500 incoming minutes plus 500 outbound/500 inbound SMS; no user limit"
-   },
-   {
-    "name": "Enterprise",
-    "price": "custom",
-    "includes": ""
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-08-17; plan prices unchanged on 2026-10-06, included allowance changed) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 annually ($336 a year); Enterprise custom. Annual billing saves 20%. Each plan now includes a monthly allowance for US and Canada numbers: on Standard 200 outgoing and 100 incoming minutes plus 100 outbound and 100 inbound SMS, on Premium 1,000 and 500 minutes plus 500 and 500 SMS. With free minutes of call recording, call storage, AI transcription and AI voice agent and one free UK, US or Canada number added, the page values the bundle at $12.52 on Standard and $59.74 on Premium (read 6 October 2026; in August it quoted $6.75 and $33.74 for calls and SMS alone). Beyond the allowance, calls and SMS draw from a wallet: the subscription includes a $1 credit, after which you must load the wallet, and further numbers are billed separately. Standard has a 10-user limit; Premium has none. Standard suits solopreneurs and small businesses; Premium is aimed at growing businesses, franchises and call centres.",
-  "verified_at": "2026-10-06",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-08-17; plan prices unchanged on 2026-10-06, included allowance changed) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 annually ($336 a year); Enterprise custom. Annual billing saves 20%. Each plan now includes a monthly allowance for US and Canada numbers: on Standard 200 outgoing and 100 incoming minutes plus 100 outbound and 100 inbound SMS, on Premium 1,000 and 500 minutes plus 500 and 500 SMS. With free minutes of call recording, call storage, AI transcription and AI voice agent and one free UK, US or Canada number added, the page values the bundle at $12.52 on Standard and $59.74 on Premium (read 6 October 2026; in August it quoted $6.75 and $33.74 for calls and SMS alone). Beyond the allowance, calls and SMS draw from a wallet: the subscription includes a $1 credit, after which you must load the wallet, and further numbers are billed separately. Standard has a 10-user limit; Premium has none. Standard suits solopreneurs and small businesses; Premium is aimed at growing businesses, franchises and call centres. Re-read 10 October 2026: the amounts are unchanged. Standard is capped at 10 users (User Limit: 10) and Premium has unlimited users; IVR with business hours, call transfer, a power dialer, bulk SMS and live call monitoring are listed under Premium, not Standard. The page mentions no shared inbox.",
+  "verified_at": "2026-10-10",
   "source_url": null
  },
  "free_plan": false,
@@ -44,21 +28,21 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "(re-verified 2026-08-17; plan prices unchanged on 2026-10-06, included allowance changed) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 annually ($336 a year); Enterprise custom.",
-   "verified_at": "2026-10-06",
+   "verified_at": "2026-10-10",
    "source_url": null
   },
   {
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "Beyond the allowance, calls and SMS draw from a wallet: the subscription includes a $1 credit, after which you must load the wallet, and further numbers are billed separately.",
-   "verified_at": "2026-10-06",
+   "verified_at": "2026-10-10",
    "source_url": null
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "Annual billing saves 20%.",
-   "verified_at": "2026-10-06",
+   "verified_at": "2026-10-10",
    "source_url": null
   }
  ],
@@ -98,8 +82,9 @@
      "id": "standard",
      "name": "Standard",
      "model": "per_unit",
-     "annual_month": 12,
      "monthly": 15,
+     "annual_month": 12,
+     "annual_year": 144,
      "max_units": 10,
      "evidence": "Standard $15 per user/mo, or $12 billed annually ($144 a year)"
     },
@@ -107,8 +92,9 @@
      "id": "premium",
      "name": "Premium",
      "model": "per_unit",
-     "annual_month": 28,
      "monthly": 35,
+     "annual_month": 28,
+     "annual_year": 336,
      "evidence": "Premium $35 per user/mo, or $28 annually ($336 a year)"
     },
     {
@@ -118,11 +104,8 @@
      "evidence": "Enterprise custom"
     }
    ],
-   "limits_evidence": "Standard has a 10-user limit; Premium has none.",
-   "not_computable": [
-    "Calls and SMS beyond each plan's included allowance draw from a prepaid wallet (the subscription includes a $1 credit), and further numbers are billed separately; usage beyond the allowance is not in these prices."
-   ],
-   "rules_verified_at": "2026-10-07"
+   "not_computable": "Calls and SMS beyond the monthly allowance are paid from a prepaid wallet at per-minute and per-segment rates that depend on the country, and phone numbers are billed separately; the engine prices the subscription only.",
+   "rules_verified_at": "2026-10-10"
   },
   "growth": {
    "annual": {
@@ -305,7 +288,225 @@
     ],
     "conflicts": [],
     "unknowns": [
-     "Calls and SMS beyond each plan's included allowance draw from a prepaid wallet (the subscription includes a $1 credit), and further numbers are billed separately; usage beyond the allowance is not in these prices."
+     "C",
+     "a",
+     "l",
+     "l",
+     "s",
+     " ",
+     "a",
+     "n",
+     "d",
+     " ",
+     "S",
+     "M",
+     "S",
+     " ",
+     "b",
+     "e",
+     "y",
+     "o",
+     "n",
+     "d",
+     " ",
+     "t",
+     "h",
+     "e",
+     " ",
+     "m",
+     "o",
+     "n",
+     "t",
+     "h",
+     "l",
+     "y",
+     " ",
+     "a",
+     "l",
+     "l",
+     "o",
+     "w",
+     "a",
+     "n",
+     "c",
+     "e",
+     " ",
+     "a",
+     "r",
+     "e",
+     " ",
+     "p",
+     "a",
+     "i",
+     "d",
+     " ",
+     "f",
+     "r",
+     "o",
+     "m",
+     " ",
+     "a",
+     " ",
+     "p",
+     "r",
+     "e",
+     "p",
+     "a",
+     "i",
+     "d",
+     " ",
+     "w",
+     "a",
+     "l",
+     "l",
+     "e",
+     "t",
+     " ",
+     "a",
+     "t",
+     " ",
+     "p",
+     "e",
+     "r",
+     "-",
+     "m",
+     "i",
+     "n",
+     "u",
+     "t",
+     "e",
+     " ",
+     "a",
+     "n",
+     "d",
+     " ",
+     "p",
+     "e",
+     "r",
+     "-",
+     "s",
+     "e",
+     "g",
+     "m",
+     "e",
+     "n",
+     "t",
+     " ",
+     "r",
+     "a",
+     "t",
+     "e",
+     "s",
+     " ",
+     "t",
+     "h",
+     "a",
+     "t",
+     " ",
+     "d",
+     "e",
+     "p",
+     "e",
+     "n",
+     "d",
+     " ",
+     "o",
+     "n",
+     " ",
+     "t",
+     "h",
+     "e",
+     " ",
+     "c",
+     "o",
+     "u",
+     "n",
+     "t",
+     "r",
+     "y",
+     ",",
+     " ",
+     "a",
+     "n",
+     "d",
+     " ",
+     "p",
+     "h",
+     "o",
+     "n",
+     "e",
+     " ",
+     "n",
+     "u",
+     "m",
+     "b",
+     "e",
+     "r",
+     "s",
+     " ",
+     "a",
+     "r",
+     "e",
+     " ",
+     "b",
+     "i",
+     "l",
+     "l",
+     "e",
+     "d",
+     " ",
+     "s",
+     "e",
+     "p",
+     "a",
+     "r",
+     "a",
+     "t",
+     "e",
+     "l",
+     "y",
+     ";",
+     " ",
+     "t",
+     "h",
+     "e",
+     " ",
+     "e",
+     "n",
+     "g",
+     "i",
+     "n",
+     "e",
+     " ",
+     "p",
+     "r",
+     "i",
+     "c",
+     "e",
+     "s",
+     " ",
+     "t",
+     "h",
+     "e",
+     " ",
+     "s",
+     "u",
+     "b",
+     "s",
+     "c",
+     "r",
+     "i",
+     "p",
+     "t",
+     "i",
+     "o",
+     "n",
+     " ",
+     "o",
+     "n",
+     "l",
+     "y",
+     "."
     ]
    },
    "monthly": {
@@ -488,12 +689,231 @@
     ],
     "conflicts": [],
     "unknowns": [
-     "Calls and SMS beyond each plan's included allowance draw from a prepaid wallet (the subscription includes a $1 credit), and further numbers are billed separately; usage beyond the allowance is not in these prices."
+     "C",
+     "a",
+     "l",
+     "l",
+     "s",
+     " ",
+     "a",
+     "n",
+     "d",
+     " ",
+     "S",
+     "M",
+     "S",
+     " ",
+     "b",
+     "e",
+     "y",
+     "o",
+     "n",
+     "d",
+     " ",
+     "t",
+     "h",
+     "e",
+     " ",
+     "m",
+     "o",
+     "n",
+     "t",
+     "h",
+     "l",
+     "y",
+     " ",
+     "a",
+     "l",
+     "l",
+     "o",
+     "w",
+     "a",
+     "n",
+     "c",
+     "e",
+     " ",
+     "a",
+     "r",
+     "e",
+     " ",
+     "p",
+     "a",
+     "i",
+     "d",
+     " ",
+     "f",
+     "r",
+     "o",
+     "m",
+     " ",
+     "a",
+     " ",
+     "p",
+     "r",
+     "e",
+     "p",
+     "a",
+     "i",
+     "d",
+     " ",
+     "w",
+     "a",
+     "l",
+     "l",
+     "e",
+     "t",
+     " ",
+     "a",
+     "t",
+     " ",
+     "p",
+     "e",
+     "r",
+     "-",
+     "m",
+     "i",
+     "n",
+     "u",
+     "t",
+     "e",
+     " ",
+     "a",
+     "n",
+     "d",
+     " ",
+     "p",
+     "e",
+     "r",
+     "-",
+     "s",
+     "e",
+     "g",
+     "m",
+     "e",
+     "n",
+     "t",
+     " ",
+     "r",
+     "a",
+     "t",
+     "e",
+     "s",
+     " ",
+     "t",
+     "h",
+     "a",
+     "t",
+     " ",
+     "d",
+     "e",
+     "p",
+     "e",
+     "n",
+     "d",
+     " ",
+     "o",
+     "n",
+     " ",
+     "t",
+     "h",
+     "e",
+     " ",
+     "c",
+     "o",
+     "u",
+     "n",
+     "t",
+     "r",
+     "y",
+     ",",
+     " ",
+     "a",
+     "n",
+     "d",
+     " ",
+     "p",
+     "h",
+     "o",
+     "n",
+     "e",
+     " ",
+     "n",
+     "u",
+     "m",
+     "b",
+     "e",
+     "r",
+     "s",
+     " ",
+     "a",
+     "r",
+     "e",
+     " ",
+     "b",
+     "i",
+     "l",
+     "l",
+     "e",
+     "d",
+     " ",
+     "s",
+     "e",
+     "p",
+     "a",
+     "r",
+     "a",
+     "t",
+     "e",
+     "l",
+     "y",
+     ";",
+     " ",
+     "t",
+     "h",
+     "e",
+     " ",
+     "e",
+     "n",
+     "g",
+     "i",
+     "n",
+     "e",
+     " ",
+     "p",
+     "r",
+     "i",
+     "c",
+     "e",
+     "s",
+     " ",
+     "t",
+     "h",
+     "e",
+     " ",
+     "s",
+     "u",
+     "b",
+     "s",
+     "c",
+     "r",
+     "i",
+     "p",
+     "t",
+     "i",
+     "o",
+     "n",
+     " ",
+     "o",
+     "n",
+     "l",
+     "y",
+     "."
     ]
    }
   }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
@@ -520,7 +940,1315 @@
   {
    "question_id": "calilio:pricing_gap_1",
    "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: Calls and SMS beyond each plan's included allowance draw from a prepaid wallet (the subscription includes a $1 credit), and further numbers are billed separately; usage beyond the allowance is not in these prices. Can you publish the price or the rule?",
+   "question": "Our price check could not put a number on this part of the cost: C. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_4",
+   "key": "pricing_gap_4",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_5",
+   "key": "pricing_gap_5",
+   "question": "Our price check could not put a number on this part of the cost: s. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_6",
+   "key": "pricing_gap_6",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_7",
+   "key": "pricing_gap_7",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_8",
+   "key": "pricing_gap_8",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_9",
+   "key": "pricing_gap_9",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_10",
+   "key": "pricing_gap_10",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_11",
+   "key": "pricing_gap_11",
+   "question": "Our price check could not put a number on this part of the cost: S. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_12",
+   "key": "pricing_gap_12",
+   "question": "Our price check could not put a number on this part of the cost: M. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_13",
+   "key": "pricing_gap_13",
+   "question": "Our price check could not put a number on this part of the cost: S. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_14",
+   "key": "pricing_gap_14",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_15",
+   "key": "pricing_gap_15",
+   "question": "Our price check could not put a number on this part of the cost: b. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_16",
+   "key": "pricing_gap_16",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_17",
+   "key": "pricing_gap_17",
+   "question": "Our price check could not put a number on this part of the cost: y. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_18",
+   "key": "pricing_gap_18",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_19",
+   "key": "pricing_gap_19",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_20",
+   "key": "pricing_gap_20",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_21",
+   "key": "pricing_gap_21",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_22",
+   "key": "pricing_gap_22",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_23",
+   "key": "pricing_gap_23",
+   "question": "Our price check could not put a number on this part of the cost: h. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_24",
+   "key": "pricing_gap_24",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_25",
+   "key": "pricing_gap_25",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_26",
+   "key": "pricing_gap_26",
+   "question": "Our price check could not put a number on this part of the cost: m. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_27",
+   "key": "pricing_gap_27",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_28",
+   "key": "pricing_gap_28",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_29",
+   "key": "pricing_gap_29",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_30",
+   "key": "pricing_gap_30",
+   "question": "Our price check could not put a number on this part of the cost: h. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_31",
+   "key": "pricing_gap_31",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_32",
+   "key": "pricing_gap_32",
+   "question": "Our price check could not put a number on this part of the cost: y. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_33",
+   "key": "pricing_gap_33",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_34",
+   "key": "pricing_gap_34",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_35",
+   "key": "pricing_gap_35",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_36",
+   "key": "pricing_gap_36",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_37",
+   "key": "pricing_gap_37",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_38",
+   "key": "pricing_gap_38",
+   "question": "Our price check could not put a number on this part of the cost: w. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_39",
+   "key": "pricing_gap_39",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_40",
+   "key": "pricing_gap_40",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_41",
+   "key": "pricing_gap_41",
+   "question": "Our price check could not put a number on this part of the cost: c. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_42",
+   "key": "pricing_gap_42",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_43",
+   "key": "pricing_gap_43",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_44",
+   "key": "pricing_gap_44",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_45",
+   "key": "pricing_gap_45",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_46",
+   "key": "pricing_gap_46",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_47",
+   "key": "pricing_gap_47",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_48",
+   "key": "pricing_gap_48",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_49",
+   "key": "pricing_gap_49",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_50",
+   "key": "pricing_gap_50",
+   "question": "Our price check could not put a number on this part of the cost: i. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_51",
+   "key": "pricing_gap_51",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_52",
+   "key": "pricing_gap_52",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_53",
+   "key": "pricing_gap_53",
+   "question": "Our price check could not put a number on this part of the cost: f. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_54",
+   "key": "pricing_gap_54",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_55",
+   "key": "pricing_gap_55",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_56",
+   "key": "pricing_gap_56",
+   "question": "Our price check could not put a number on this part of the cost: m. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_57",
+   "key": "pricing_gap_57",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_58",
+   "key": "pricing_gap_58",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_59",
+   "key": "pricing_gap_59",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_60",
+   "key": "pricing_gap_60",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_61",
+   "key": "pricing_gap_61",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_62",
+   "key": "pricing_gap_62",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_63",
+   "key": "pricing_gap_63",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_64",
+   "key": "pricing_gap_64",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_65",
+   "key": "pricing_gap_65",
+   "question": "Our price check could not put a number on this part of the cost: i. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_66",
+   "key": "pricing_gap_66",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_67",
+   "key": "pricing_gap_67",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_68",
+   "key": "pricing_gap_68",
+   "question": "Our price check could not put a number on this part of the cost: w. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_69",
+   "key": "pricing_gap_69",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_70",
+   "key": "pricing_gap_70",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_71",
+   "key": "pricing_gap_71",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_72",
+   "key": "pricing_gap_72",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_73",
+   "key": "pricing_gap_73",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_74",
+   "key": "pricing_gap_74",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_75",
+   "key": "pricing_gap_75",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_76",
+   "key": "pricing_gap_76",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_77",
+   "key": "pricing_gap_77",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_78",
+   "key": "pricing_gap_78",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_79",
+   "key": "pricing_gap_79",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_80",
+   "key": "pricing_gap_80",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_81",
+   "key": "pricing_gap_81",
+   "question": "Our price check could not put a number on this part of the cost: -. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_82",
+   "key": "pricing_gap_82",
+   "question": "Our price check could not put a number on this part of the cost: m. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_83",
+   "key": "pricing_gap_83",
+   "question": "Our price check could not put a number on this part of the cost: i. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_84",
+   "key": "pricing_gap_84",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_85",
+   "key": "pricing_gap_85",
+   "question": "Our price check could not put a number on this part of the cost: u. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_86",
+   "key": "pricing_gap_86",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_87",
+   "key": "pricing_gap_87",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_88",
+   "key": "pricing_gap_88",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_89",
+   "key": "pricing_gap_89",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_90",
+   "key": "pricing_gap_90",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_91",
+   "key": "pricing_gap_91",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_92",
+   "key": "pricing_gap_92",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_93",
+   "key": "pricing_gap_93",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_94",
+   "key": "pricing_gap_94",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_95",
+   "key": "pricing_gap_95",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_96",
+   "key": "pricing_gap_96",
+   "question": "Our price check could not put a number on this part of the cost: -. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_97",
+   "key": "pricing_gap_97",
+   "question": "Our price check could not put a number on this part of the cost: s. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_98",
+   "key": "pricing_gap_98",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_99",
+   "key": "pricing_gap_99",
+   "question": "Our price check could not put a number on this part of the cost: g. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_100",
+   "key": "pricing_gap_100",
+   "question": "Our price check could not put a number on this part of the cost: m. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_101",
+   "key": "pricing_gap_101",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_102",
+   "key": "pricing_gap_102",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_103",
+   "key": "pricing_gap_103",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_104",
+   "key": "pricing_gap_104",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_105",
+   "key": "pricing_gap_105",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_106",
+   "key": "pricing_gap_106",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_107",
+   "key": "pricing_gap_107",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_108",
+   "key": "pricing_gap_108",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_109",
+   "key": "pricing_gap_109",
+   "question": "Our price check could not put a number on this part of the cost: s. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_110",
+   "key": "pricing_gap_110",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_111",
+   "key": "pricing_gap_111",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_112",
+   "key": "pricing_gap_112",
+   "question": "Our price check could not put a number on this part of the cost: h. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_113",
+   "key": "pricing_gap_113",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_114",
+   "key": "pricing_gap_114",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_115",
+   "key": "pricing_gap_115",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_116",
+   "key": "pricing_gap_116",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_117",
+   "key": "pricing_gap_117",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_118",
+   "key": "pricing_gap_118",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_119",
+   "key": "pricing_gap_119",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_120",
+   "key": "pricing_gap_120",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_121",
+   "key": "pricing_gap_121",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_122",
+   "key": "pricing_gap_122",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_123",
+   "key": "pricing_gap_123",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_124",
+   "key": "pricing_gap_124",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_125",
+   "key": "pricing_gap_125",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_126",
+   "key": "pricing_gap_126",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_127",
+   "key": "pricing_gap_127",
+   "question": "Our price check could not put a number on this part of the cost: h. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_128",
+   "key": "pricing_gap_128",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_129",
+   "key": "pricing_gap_129",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_130",
+   "key": "pricing_gap_130",
+   "question": "Our price check could not put a number on this part of the cost: c. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_131",
+   "key": "pricing_gap_131",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_132",
+   "key": "pricing_gap_132",
+   "question": "Our price check could not put a number on this part of the cost: u. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_133",
+   "key": "pricing_gap_133",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_134",
+   "key": "pricing_gap_134",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_135",
+   "key": "pricing_gap_135",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_136",
+   "key": "pricing_gap_136",
+   "question": "Our price check could not put a number on this part of the cost: y. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_137",
+   "key": "pricing_gap_137",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_138",
+   "key": "pricing_gap_138",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_139",
+   "key": "pricing_gap_139",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_140",
+   "key": "pricing_gap_140",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_141",
+   "key": "pricing_gap_141",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_142",
+   "key": "pricing_gap_142",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_143",
+   "key": "pricing_gap_143",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_144",
+   "key": "pricing_gap_144",
+   "question": "Our price check could not put a number on this part of the cost: h. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_145",
+   "key": "pricing_gap_145",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_146",
+   "key": "pricing_gap_146",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_147",
+   "key": "pricing_gap_147",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_148",
+   "key": "pricing_gap_148",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_149",
+   "key": "pricing_gap_149",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_150",
+   "key": "pricing_gap_150",
+   "question": "Our price check could not put a number on this part of the cost: u. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_151",
+   "key": "pricing_gap_151",
+   "question": "Our price check could not put a number on this part of the cost: m. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_152",
+   "key": "pricing_gap_152",
+   "question": "Our price check could not put a number on this part of the cost: b. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_153",
+   "key": "pricing_gap_153",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_154",
+   "key": "pricing_gap_154",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_155",
+   "key": "pricing_gap_155",
+   "question": "Our price check could not put a number on this part of the cost: s. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_156",
+   "key": "pricing_gap_156",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_157",
+   "key": "pricing_gap_157",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_158",
+   "key": "pricing_gap_158",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_159",
+   "key": "pricing_gap_159",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_160",
+   "key": "pricing_gap_160",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_161",
+   "key": "pricing_gap_161",
+   "question": "Our price check could not put a number on this part of the cost: b. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_162",
+   "key": "pricing_gap_162",
+   "question": "Our price check could not put a number on this part of the cost: i. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_163",
+   "key": "pricing_gap_163",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_164",
+   "key": "pricing_gap_164",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_165",
+   "key": "pricing_gap_165",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_166",
+   "key": "pricing_gap_166",
+   "question": "Our price check could not put a number on this part of the cost: d. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_167",
+   "key": "pricing_gap_167",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_168",
+   "key": "pricing_gap_168",
+   "question": "Our price check could not put a number on this part of the cost: s. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_169",
+   "key": "pricing_gap_169",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_170",
+   "key": "pricing_gap_170",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_171",
+   "key": "pricing_gap_171",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_172",
+   "key": "pricing_gap_172",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_173",
+   "key": "pricing_gap_173",
+   "question": "Our price check could not put a number on this part of the cost: a. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_174",
+   "key": "pricing_gap_174",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_175",
+   "key": "pricing_gap_175",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_176",
+   "key": "pricing_gap_176",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_177",
+   "key": "pricing_gap_177",
+   "question": "Our price check could not put a number on this part of the cost: y. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_178",
+   "key": "pricing_gap_178",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_179",
+   "key": "pricing_gap_179",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_180",
+   "key": "pricing_gap_180",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_181",
+   "key": "pricing_gap_181",
+   "question": "Our price check could not put a number on this part of the cost: h. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_182",
+   "key": "pricing_gap_182",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_183",
+   "key": "pricing_gap_183",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_184",
+   "key": "pricing_gap_184",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_185",
+   "key": "pricing_gap_185",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_186",
+   "key": "pricing_gap_186",
+   "question": "Our price check could not put a number on this part of the cost: g. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_187",
+   "key": "pricing_gap_187",
+   "question": "Our price check could not put a number on this part of the cost: i. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_188",
+   "key": "pricing_gap_188",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_189",
+   "key": "pricing_gap_189",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_190",
+   "key": "pricing_gap_190",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_191",
+   "key": "pricing_gap_191",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_192",
+   "key": "pricing_gap_192",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_193",
+   "key": "pricing_gap_193",
+   "question": "Our price check could not put a number on this part of the cost: i. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_194",
+   "key": "pricing_gap_194",
+   "question": "Our price check could not put a number on this part of the cost: c. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_195",
+   "key": "pricing_gap_195",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_196",
+   "key": "pricing_gap_196",
+   "question": "Our price check could not put a number on this part of the cost: s. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_197",
+   "key": "pricing_gap_197",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_198",
+   "key": "pricing_gap_198",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_199",
+   "key": "pricing_gap_199",
+   "question": "Our price check could not put a number on this part of the cost: h. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_200",
+   "key": "pricing_gap_200",
+   "question": "Our price check could not put a number on this part of the cost: e. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_201",
+   "key": "pricing_gap_201",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_202",
+   "key": "pricing_gap_202",
+   "question": "Our price check could not put a number on this part of the cost: s. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_203",
+   "key": "pricing_gap_203",
+   "question": "Our price check could not put a number on this part of the cost: u. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_204",
+   "key": "pricing_gap_204",
+   "question": "Our price check could not put a number on this part of the cost: b. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_205",
+   "key": "pricing_gap_205",
+   "question": "Our price check could not put a number on this part of the cost: s. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_206",
+   "key": "pricing_gap_206",
+   "question": "Our price check could not put a number on this part of the cost: c. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_207",
+   "key": "pricing_gap_207",
+   "question": "Our price check could not put a number on this part of the cost: r. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_208",
+   "key": "pricing_gap_208",
+   "question": "Our price check could not put a number on this part of the cost: i. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_209",
+   "key": "pricing_gap_209",
+   "question": "Our price check could not put a number on this part of the cost: p. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_210",
+   "key": "pricing_gap_210",
+   "question": "Our price check could not put a number on this part of the cost: t. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_211",
+   "key": "pricing_gap_211",
+   "question": "Our price check could not put a number on this part of the cost: i. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_212",
+   "key": "pricing_gap_212",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_213",
+   "key": "pricing_gap_213",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_214",
+   "key": "pricing_gap_214",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_215",
+   "key": "pricing_gap_215",
+   "question": "Our price check could not put a number on this part of the cost: o. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_216",
+   "key": "pricing_gap_216",
+   "question": "Our price check could not put a number on this part of the cost: n. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_217",
+   "key": "pricing_gap_217",
+   "question": "Our price check could not put a number on this part of the cost: l. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_218",
+   "key": "pricing_gap_218",
+   "question": "Our price check could not put a number on this part of the cost: y. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "calilio:pricing_gap_219",
+   "key": "pricing_gap_219",
+   "question": "Our price check could not put a number on this part of the cost: . Can you publish the price or the rule?",
    "status": "open"
   }
  ],
@@ -584,6 +2312,16 @@
      "record calls"
     ]
    },
+   "call_transfer": {
+    "label": "Call transfer to a colleague",
+    "phrases": [
+     "call transfer",
+     "transfer calls",
+     "warm transfer",
+     "hand off a call",
+     "transfer a call"
+    ]
+   },
    "ivr": {
     "label": "IVR / call menu",
     "phrases": [
@@ -609,54 +2347,70 @@
     "feature": "call_recording",
     "plans": [
      "Standard",
-     "Premium"
+     "Premium",
+     "Enterprise"
     ],
     "quote": "Call Recordings",
-    "context": "Free up to 100 minutes per user a month, then $0.003 per minute (comparison table). Premium includes 1,000 free recording minutes.",
+    "context": "Listed under Standard; Premium and Enterprise include everything in Standard.",
     "source": "https://www.calilio.com/calilio-pricing",
-    "read_on": "2026-10-07"
-   },
-   {
-    "feature": "ivr",
-    "plans": [
-     "Premium"
-    ],
-    "quote": "IVR, Business hours",
-    "context": "Listed under Premium ('Everything in the Standard Plan, plus').",
-    "source": "https://www.calilio.com/calilio-pricing",
-    "read_on": "2026-10-07"
+    "read_on": "2026-10-10"
    },
    {
     "feature": "business_sms",
     "plans": [
      "Standard",
-     "Premium"
+     "Premium",
+     "Enterprise"
     ],
     "quote": "100 outbound SMS & 100 inbound SMS",
-    "context": "Standard bundle; Premium includes 500 each way. Beyond the bundle SMS is paid from the wallet.",
+    "context": "Standard's monthly allowance (US/Canada); Premium lists 500 and 500. Beyond it SMS is paid from the wallet.",
     "source": "https://www.calilio.com/calilio-pricing",
-    "read_on": "2026-10-07"
-   },
-   {
-    "feature": "power_dialer",
-    "plans": [
-     "Premium"
-    ],
-    "quote": "Power dialer, Call disposition",
-    "context": "Listed under Premium.",
-    "source": "https://www.calilio.com/calilio-pricing",
-    "read_on": "2026-10-07"
+    "read_on": "2026-10-10"
    },
    {
     "feature": "ai_voice_agent",
     "plans": [
      "Standard",
-     "Premium"
+     "Premium",
+     "Enterprise"
     ],
     "quote": "AI Voice Agent",
-    "context": "Comparison table: free up to 10 minutes per user a month, then $0.25 per minute; Premium lists 100 free minutes.",
+    "context": "In the free-minutes table: 10 minutes on Standard, 100 on Premium; usage beyond that is billed.",
     "source": "https://www.calilio.com/calilio-pricing",
-    "read_on": "2026-10-07"
+    "read_on": "2026-10-10"
+   },
+   {
+    "feature": "ivr",
+    "plans": [
+     "Premium",
+     "Enterprise"
+    ],
+    "quote": "IVR, Business hours",
+    "context": "Listed under Premium ('Everything in the Standard Plan, plus'), not under Standard.",
+    "source": "https://www.calilio.com/calilio-pricing",
+    "read_on": "2026-10-10"
+   },
+   {
+    "feature": "call_transfer",
+    "plans": [
+     "Premium",
+     "Enterprise"
+    ],
+    "quote": "Call Transfer",
+    "context": "Listed under Premium; the human handover between colleagues on a call. Not listed under Standard.",
+    "source": "https://www.calilio.com/calilio-pricing",
+    "read_on": "2026-10-10"
+   },
+   {
+    "feature": "power_dialer",
+    "plans": [
+     "Premium",
+     "Enterprise"
+    ],
+    "quote": "Power dialer, Call disposition",
+    "context": "Listed under Premium.",
+    "source": "https://www.calilio.com/calilio-pricing",
+    "read_on": "2026-10-10"
    }
   ],
   "note": "From the vendor's own pages, with plan, source and reading date. Documented by the vendor, not tested by us; our own tests are in task_evidence."

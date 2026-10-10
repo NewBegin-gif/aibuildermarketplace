@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 521 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-09.
+All 525 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1454,6 +1454,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores already spending on Meta and Google Ads and keeping their books in QuickBooks Online, that want one place reading orders, ad spend
 - **Full review:** https://aibuildermarketplace.com/b2b/helm-review/
 
+## Help Scout (helpscout.com)
+- **Verified pricing:** (read 2026-10-10 on helpscout.com/pricing with the monthly and annual toggles, USD) Free covers up to 5 users, 1 Inbox, 1 Docs site and 100 contacts a month, with 10 saved replies and 10 ta…
+- **Honest take:** Free stops at 100 contacts a month; Pro needs at least 10 users.
+- **Best for:** small and mid-sized support teams that want an email-first shared inbox with live chat and a help centre, priced per user without a minimum below Pro
+- **Flags:** {'f': 'per_seat', 'ev': 'Standard is $25 per user a month billed annually or $30 monthly, for up to 25 users: 2 Inboxes, live chat, WhatsApp, Instagram and Messenger, multipl…'}, {'f': 'addons_extra', 'ev': 'AI Answers, the autonomous assistant, is an add-on at $0.75 per resolution billed monthly, with a 3-month free trial.'}, {'f': 'annual_lock', 'ev': 'Annual billing is labelled 16% off; SMS and phone calls run through integrations.'}, {'f': 'free_tier', 'ev': '(read 2026-10-10 on helpscout.com/pricing with the monthly and annual toggles, USD) Free covers up to 5 users, 1 Inbox, 1 Docs site and 100 contacts …'}
+- **Full review:** https://aibuildermarketplace.com/b2b/help-scout-review/
+
 ## HelpCenter (helpcenterapp.com)
 - **Verified pricing:** (re-read 2026-08-29 on apps.shopify.com/helpcenter) Free to install, and the meter is tickets rather than agents — Basic already gives unlimited support agents, then bills for every ticket …
 - **Honest take:** The meter is tickets, not agents: Basic charges $0.16 for every ticket past fifty, so 300 tickets a month cost $45.99 against $19.99 on Standard.
@@ -1669,7 +1676,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email broadcasts, audience tagging and segmentat…
 - **Honest take:** Three honest notes. Subscriber-based pricing counts everyone on your list — cold subscribers cost the same as fans, so prune before you price.
 - **Best for:** creators, writers and coaches building an audience-first business who want email, landing pages, digital products and a creator network in one
-- **Flags:** {'f': 'free_tier', 'ev': '(re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email br…'}
+- **Flags:** {'f': 'renewal_jump', 'ev': "The page carried a 'LIMITED TIME PRO OFFER' banner on that reading; read again on 10 October 2026, the yearly view spells it out as an extra 25% off …"}, {'f': 'free_tier', 'ev': '(re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email br…'}
 - **Full review:** https://aibuildermarketplace.com/b2b/kit-review/
 
 ## Kite (kite.skailama.app)
@@ -1797,6 +1804,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** {'f': 'addons_extra', 'ev': "Add-on rows publish two numbers and then 'Custom' without labelling which tier each column is: LeadReveal $0.50 and $0.25 per card, double-sided prin…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/lettrlabs-review/
 
+## LifterLMS (lifterlms.com)
+- **Verified pricing:** (read 2026-10-10 on lifterlms.com/pricing, USD) The LifterLMS core plugin for WordPress is free and open source, with unlimited courses, memberships, students and teachers.
+- **Honest take:** Checkout add-ons need a paid bundle, and renewals cost double the first year.
+- **Best for:** course creators and training businesses already on WordPress who want to own their course site and pay a yearly licence instead of a monthly platform fee
+- **Flags:** {'f': 'renewal_jump', 'ev': 'Taking payments needs a paid bundle, and every bundle renews at twice the first-year price: Earth $398, Universe $598 and Infinity $1,598 a year.'}, {'f': 'addons_extra', 'ev': 'A 30-day demo site with every add-on costs $1, and purchases carry a 30-day, 100% money-back guarantee with no setup fees.'}
+- **Full review:** https://aibuildermarketplace.com/b2b/lifterlms-review/
+
 ## Lindy.ai (lindy.ai)
 - **Verified pricing:** (re-verified 2026-10-02, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, and the credit allowance is published ag…
 - **Honest take:** Cost tracks headcount rather than output: every colleague who so much as @mentions Lindy in Slack takes a paid seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration.
@@ -1838,6 +1852,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small Shopify merchants who want studio and lifestyle product shots out of the photos they already have, without hiring a photographer or a studio
 - **Flags:** {'f': 'usage_metered', 'ev': 'Read the plans in credits rather than images, because that is what you actually buy: the monthly allowances are 75, 300, 1,000 and 2,500 credits, ref…'}, {'f': 'annual_lock', 'ev': "(read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lif…"}, {'f': 'free_tier', 'ev': "(read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lif…"}
 - **Full review:** https://aibuildermarketplace.com/b2b/lumencart-review/
+
+## Lusha (lusha.com)
+- **Verified pricing:** (read 2026-10-10 on lusha.com/pricing with both billing toggles, at the credit-slider position the page opened on, USD, and on lusha.com/faq) Free is $0 with 40 credits a month, 1 seat and …
+- **Honest take:** A phone number costs 5 credits; Starter's 400 monthly credits buy 80 phones.
+- **Best for:** sales reps and small B2B teams who want verified emails and direct dials from a Chrome extension on LinkedIn and company sites, paid by the credit
+- **Flags:** {'f': 'usage_metered', 'ev': '(read 2026-10-10 on lusha.com/pricing with both billing toggles, at the credit-slider position the page opened on, USD, and on lusha.com/faq) Free is…'}, {'f': 'free_tier', 'ev': '(read 2026-10-10 on lusha.com/pricing with both billing toggles, at the credit-slider position the page opened on, USD, and on lusha.com/faq) Free is…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/lusha-review/
 
 ## ManyChat (manychat.com)
 - **Verified pricing:** Read on their own pricing page, 6 September 2026, and again, unchanged, 25 September 2026.
@@ -2102,6 +2123,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** sales and legal teams with real contract volume who want the full lifecycle — creating, negotiating, e-signing and archiving interactive contracts — in one platform with CRM integrations
 - **Flags:** {'f': 'per_seat', 'ev': '(price re-verified 2026-09-18 and again on 2026-10-05 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK…'}, {'f': 'addons_extra', 'ev': 'Several features sit behind a ($) marker even on the plan that lists them, meaning a paid add-on rather than an unavailable feature: eID signature on…'}, {'f': 'annual_lock', 'ev': "The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a …"}
 - **Full review:** https://aibuildermarketplace.com/b2b/oneflow-review/
+
+## Optery (optery.com)
+- **Verified pricing:** (read 2026-10-10 on optery.com/pricing, US view, USD, monthly and yearly figures) Optery sells personal data-broker removal in four tiers.
+- **Honest take:** Core removes one name and one address only; variations and past cities need Extended.
+- **Best for:** people in the US who want their home address and phone number off people-search sites, from a free self-service scan up to a managed service with a human agent
+- **Flags:** {'f': 'per_seat', 'ev': 'Core is $3.99 a month, or $3.25 a month billed yearly ($39 a year): automated monthly removals from 380+ sites (150+ without enabling Expanded Reach)…'}
+- **Full review:** https://aibuildermarketplace.com/b2b/optery-review/
 
 ## Optizen (optizenapp.com)
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell; re-read 2026-09-17 and 2026-10-05, every amount unchanged) Three tiers, billed in USD.

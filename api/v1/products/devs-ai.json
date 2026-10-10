@@ -15,31 +15,10 @@
   "entry_price": "$15",
   "entry_price_terms": "Personal, per seat · per seat per month billed annually ($18 billed monthly)",
   "from_price_usd_month": 15.0,
-  "plans": [
-   {
-    "name": "Free",
-    "price": "$0 forever",
-    "includes": "Core Agent Builder and App Builder; 2 GB data upload; no workflows, APIs or integrations"
-   },
-   {
-    "name": "Personal",
-    "price": "$15 per seat / month billed annually or $18 billed monthly",
-    "includes": "Includes $10 of usage per month; 10 GB data upload"
-   },
-   {
-    "name": "Business",
-    "price": "$30 per seat / month billed annually or $36 billed monthly",
-    "includes": "Includes $21 of usage per month; 20 GB data upload; team governance and collaboration"
-   },
-   {
-    "name": "Enterprise",
-    "price": "custom annual contract",
-    "includes": "Custom data upload; SSO (OpenID/SAML), access control lists, custom connectors, white-labelling"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-08-26, read in a live browser session on devs.ai/home/pricing with both billing toggles) Devs.ai does publish its pricing — on the marketing site at devs.ai/home/pricing, not at the app's /pricing route, which bounces you to a login screen. Free is $0 forever, but Agent Builder and App Builder appear there in \"Core\" rather than \"Full\" form, data upload is capped at 2 GB, and workflows, APIs and integrations are marked absent. Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a custom annual contract. The seat fee is not the whole bill: Personal includes $10 of usage per month and Business $21, with model usage metered on top of the seat. Data upload runs 2 GB, 10 GB, 20 GB and custom across the four tiers. Team governance and collaboration start at Business, while SSO (OpenID/SAML), access control lists, custom connectors and white-labelling are Enterprise-only. Separately, Devs.ai told us by email on 5 August 2026 that organisations upgrading to a paid Personal or Business plan can earn up to $100 in usage credits for completing setup steps: starting a conversation, creating an agent, connecting an integration, deploying an app. The credits are shared org-wide and do not expire. Enterprise is excluded, and orgs already on a paid plan before July 2026 are not enrolled by default. That last paragraph is the vendor's own statement to us, not something we found published on the pricing page.",
-  "verified_at": "2026-08-26",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-10-11 and 2026-08-26, read in a live browser session on devs.ai/home/pricing with both billing toggles) Devs.ai does publish its pricing — on the marketing site at devs.ai/home/pricing, not at the app's /pricing route, which bounces you to a login screen. Free is $0 forever, but Agent Builder and App Builder appear there in \"Core\" rather than \"Full\" form, data upload is capped at 2 GB, and workflows, APIs and integrations are marked absent. Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a custom annual contract. The seat fee is not the whole bill: Personal includes $10 of usage per month and Business $21, with model usage metered on top of the seat. Data upload runs 2 GB, 10 GB, 20 GB and custom across the four tiers. Team governance and collaboration start at Business, while SSO (SAML 2.0 only, per the SSO documentation), access control lists, custom connectors and white-labelling are Enterprise-only. Separately, Devs.ai told us by email on 5 August 2026 that organisations upgrading to a paid Personal or Business plan can earn up to $100 in usage credits for completing setup steps: starting a conversation, creating an agent, connecting an integration, deploying an app. The credits are shared org-wide and do not expire. Enterprise is excluded, and orgs already on a paid plan before July 2026 are not enrolled by default. That last paragraph is the vendor's own statement to us, not something we found published on the pricing page.",
+  "verified_at": "2026-10-11",
   "source_url": null
  },
  "free_plan": true,
@@ -49,21 +28,21 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a custom annual contract.",
-   "verified_at": "2026-08-26",
+   "verified_at": "2026-10-11",
    "source_url": null
   },
   {
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "The seat fee is not the whole bill: Personal includes $10 of usage per month and Business $21, with model usage metered on top of the seat.",
-   "verified_at": "2026-08-26",
+   "verified_at": "2026-10-11",
    "source_url": null
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "Personal is $15 per seat / month billed annually or $18 billed monthly; Business is $30 per seat / month annually or $36 monthly; Enterprise is a custom annual contract.",
-   "verified_at": "2026-08-26",
+   "verified_at": "2026-10-11",
    "source_url": null
   }
  ],
@@ -98,6 +77,7 @@
   "growth": null
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

@@ -102,7 +102,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aira-review/
 
 ## Aircall (aircall.io)
-- **Verified pricing:** (read 2026-08-26 on aircall.io/pricing over a US connection, with their own country selector on United States) Essentials is $30 per license a month and Professional $50, both on annual bil…
+- **Verified pricing:** (read 2026-10-10 on aircall.io/pricing in a live browser, with Aircall's own country selector on United States) Essentials is $30 per license a month and Professional $50, both on annual bi…
 - **Honest take:** Two structural catches: the 3-seat minimum makes the real starting price triple the sticker, and the annual-vs-monthly gap is steep (Professional: $50 vs $70).
 - **Best for:** sales and support teams (3+ seats) that want a polished cloud phone system embedded in their CRM/helpdesk, with call routing, analytics and 250+ integrations
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
@@ -2297,9 +2297,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/plesk-review/
 
 ## Poptin (poptin.com)
-- **Verified pricing:** (read 18 September 2026 in a live browser on poptin.com/pricing, in both product modes and both billing cycles, with the in-app billing page at app.popt.in checked alongside it) The page op…
-- **Honest take:** The plan Poptin recommends does not have a price on it.
-- **Best for:** sites that want popups, forms and coupons with a genuinely usable free tier and a cheap first paid rung — $20 a month for 10,000 visitors, unlimited popups and no Poptin branding
+- **Verified pricing:** (re-verified 10 October 2026 in a live browser on poptin.com/pricing, in both product modes; first read 18 September 2026, with the in-app billing page at app.popt.in checked alongside it) …
+- **Honest take:** Poptin sells two products behind one toggle, and the catch depends on which one you buy.
+- **Best for:** sites that want popups, forms and coupons with a genuinely usable free tier and a cheap first paid rung — $20 a month billed annually for 10,000 visitors, unlimited popups and no Poptin branding
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/poptin-review/
 

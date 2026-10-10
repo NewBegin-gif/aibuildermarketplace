@@ -57,15 +57,450 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 649,
+     "annual_month": 454,
+     "evidence": "Billed monthly: Standard $649, Pro $1,049, Business $2,490. Billed quarterly: $519, $839 and $1,992 — and this is the column the public pricing page leads with, which is why $519 is the number most people quote. Billed annually: $454, $734 and $1,743."
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 3,
+     "monthly": 1049,
+     "annual_month": 734,
+     "evidence": "Billed monthly: Standard $649, Pro $1,049, Business $2,490. Billed quarterly: $519, $839 and $1,992 — and this is the column the public pricing page leads with, which is why $519 is the number most people quote. Billed annually: $454, $734 and $1,743."
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "max_units": 8,
+     "monthly": 2490,
+     "annual_month": 1743,
+     "evidence": "Billed monthly: Standard $649, Pro $1,049, Business $2,490. Billed quarterly: $519, $839 and $1,992 — and this is the column the public pricing page leads with, which is why $519 is the number most people quote. Billed annually: $454, $734 and $1,743."
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is custom on every other axis."
+    }
+   ],
+   "notes": [
+    "Seats per plan: Standard is one seat, Pro three, Business eight. Every plan carries a three-month minimum term and there is no free trial.",
+    "A quarterly price exists ($519, $839 and $1,992 a month for Standard, Pro and Business); the motor computes only monthly and annual billing."
+   ],
+   "not_computable": [
+    "quarterly billing column",
+    "price of seats beyond a plan's included seats (not in our notes)",
+    "reach-out and payout quotas per plan"
+   ],
+   "rules_verified_at": "2026-10-11"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "influencer-hero",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 454.0,
+      "billed": {
+       "amount": 5448.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 454.0,
+       "pro": 734.0,
+       "business": 1743.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 734.0,
+      "billed": {
+       "amount": 8808.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": 734.0,
+       "business": 1743.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 734.0,
+      "billed": {
+       "amount": 8808.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": 734.0,
+       "business": 1743.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1743.0,
+      "billed": {
+       "amount": 20916.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": 1743.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "standard",
+      "to_plan": "pro",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Pro"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "pro",
+      "to_plan": "business",
+      "from_plan_name": "Pro",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "quarterly billing column",
+     "price of seats beyond a plan's included seats (not in our notes)",
+     "reach-out and payout quotas per plan"
+    ]
+   },
+   "monthly": {
+    "product_id": "influencer-hero",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 649.0,
+      "billed": {
+       "amount": 649.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 649.0,
+       "pro": 1049.0,
+       "business": 2490.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1049.0,
+      "billed": {
+       "amount": 1049.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": 1049.0,
+       "business": 2490.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1049.0,
+      "billed": {
+       "amount": 1049.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": 1049.0,
+       "business": 2490.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 2490.0,
+      "billed": {
+       "amount": 2490.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": 2490.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "standard",
+      "to_plan": "pro",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Pro"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "pro",
+      "to_plan": "business",
+      "from_plan_name": "Pro",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "quarterly billing column",
+     "price of seats beyond a plan's included seats (not in our notes)",
+     "reach-out and payout quotas per plan"
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -89,9 +524,21 @@
    "status": "open"
   },
   {
-   "question_id": "influencer-hero:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "influencer-hero:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: quarterly billing column. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "influencer-hero:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: price of seats beyond a plan's included seats (not in our notes). Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "influencer-hero:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: reach-out and payout quotas per plan. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

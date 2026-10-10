@@ -46,15 +46,204 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "base",
+     "name": "Base Plan",
+     "model": "flat",
+     "monthly": 9.99,
+     "annual_status": "unknown",
+     "evidence": "Base Plan $9.99 a month and Plus Plan $29.99 a month, both with a 14-day free trial, billed in USD every 30 days",
+     "max_units": 1
+    },
+    {
+     "id": "plus",
+     "name": "Plus Plan",
+     "model": "flat",
+     "monthly": 29.99,
+     "annual_status": "unknown",
+     "evidence": "Base Plan $9.99 a month and Plus Plan $29.99 a month, both with a 14-day free trial, billed in USD every 30 days",
+     "max_units": 1
+    }
+   ],
+   "notes": "Shopify app: a subscription covers the store it is installed on, billed every 30 days; our notes do not say what Plus adds over Base, so pick the plan from the listing feature table.",
+   "not_computable": [
+    "differences between Base and Plus are not in our pricing notes"
+   ],
+   "rules_verified_at": "2026-10-10"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "geostock",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "not_eligible",
+       "plus": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "differences between Base and Plus are not in our pricing notes"
+    ]
+   },
+   "monthly": {
+    "product_id": "geostock",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "base",
+      "cheapest_plan_name": "Base Plan",
+      "total_month": 9.99,
+      "billed": {
+       "amount": 9.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "base": 9.99,
+       "plus": 29.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "base": "not_eligible",
+       "plus": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "base",
+      "to_plan": null,
+      "from_plan_name": "Base Plan",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "differences between Base and Plus are not in our pricing notes"
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -78,9 +267,9 @@
    "status": "open"
   },
   {
-   "question_id": "geostock:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "geostock:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: differences between Base and Plus are not in our pricing notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

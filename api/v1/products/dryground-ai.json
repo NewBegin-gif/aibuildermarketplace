@@ -11,24 +11,24 @@
  "skip_if": "you're looking for self-serve software with published pricing — this is custom, quote-based consulting",
  "honest_knock": "This is consulting, not a tool you log into: best when you want AI designed and built for you, not when you'd rather DIY with software. Read the headline numbers carefully too. The 20-50% efficiency and 10-20% revenue figures on their homepage carry the caption “2025 industry benchmarks”, so they describe the market rather than this firm's own results. And the case studies underneath them name no clients.",
  "pricing": {
-  "status": "quote_only",
+  "status": "see_details",
   "entry_price": null,
   "entry_price_terms": null,
   "from_price_usd_month": null,
   "plans": null,
   "plans_source": null,
-  "notes": "(2026-08-17, read in a browser because the site renders client-side and a plain fetch returns only the title) There is no public pricing anywhere, and we checked before saying so. /pricing, /plans, /services, /about and /contact all return 404. The words “pricing”, “price” and “$” appear zero times on the homepage, and the navigation carries no pricing entry at all — it runs Solutions, Products, Verticals, Case Studies, Research, Book a Consultation. Tiers do exist with no numbers attached: the AI Velocity line is described as “six tiers from pilot to full enterprise transformation” on 90-day outcome cycles. Budget this as a consulting engagement scoped per project, not a subscription you can read off a page.",
-  "verified_at": "2026-08-21",
+  "notes": "(2026-08-17, read in a browser because the site renders client-side and a plain fetch returns only the title) There is no public pricing for the consulting work anywhere on dryground.ai, and we checked before saying so. /pricing, /plans, /services, /about and /contact all return 404. The words “pricing”, “price” and “$” appear zero times on the homepage, and the navigation carries no pricing entry at all — it runs Solutions, Products, Verticals, Case Studies, Research, Book a Consultation. Tiers do exist with no numbers attached: the AI Velocity line is described as “six tiers from pilot to full enterprise transformation” on 90-day outcome cycles. Budget this as a consulting engagement scoped per project, not a subscription you can read off a page. Re-checked 10 October 2026: /pricing and /plans still return 404 and the llms.txt still carries no consulting price. The firm's own product, CompanyClaw, is priced separately on companyclaw.ai/plans: Core $99, Pro $297 and Enterprise $1,497 a month, each plus usage from a prepaid token wallet.",
+  "verified_at": "2026-10-10",
   "source_url": "https://dryground.ai/"
  },
  "free_plan": false,
  "free_plan_evidence": null,
  "cost_traps": [
   {
-   "id": "quote_only",
-   "label": "Quote-only pricing",
-   "evidence": "No public pricing anywhere: /pricing and related paths 404, no dollar amounts anywhere on the site, budgeted as a scoped consulting engagement (read 17 Aug 2026)",
-   "verified_at": "2026-08-21",
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "The firm's own product, CompanyClaw, is priced separately on companyclaw.ai/plans: Core $99, Pro $297 and Enterprise $1,497 a month, each plus usage from a prepaid token wallet.",
+   "verified_at": "2026-10-10",
    "source_url": "https://dryground.ai/"
   }
  ],
@@ -60,7 +60,7 @@
   "growth": null
  },
  "unknowns": [
-  "Pricing status is 'quote_only': no single public entry price.",
+  "Pricing status is 'see_details': no single public entry price.",
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
@@ -68,12 +68,6 @@
  ],
  "task_evidence": null,
  "open_questions": [
-  {
-   "question_id": "dryground-ai:public_price",
-   "key": "public_price",
-   "question": "Can you publish a price, or a starting price, for the plans that are quote-only?",
-   "status": "open"
-  },
   {
    "question_id": "dryground-ai:cancellation_terms",
    "key": "cancellation_terms",

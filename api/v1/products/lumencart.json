@@ -90,14 +90,277 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free $0 with 25 lifetime image generations for a new store"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "monthly": 9,
+     "annual_status": "unknown",
+     "evidence": "then Starter $9, Growth $29, Pro $79 and Scale $199 a month"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "monthly": 29,
+     "annual_status": "unknown",
+     "evidence": "then Starter $9, Growth $29, Pro $79 and Scale $199 a month"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 79,
+     "annual_status": "unknown",
+     "evidence": "then Starter $9, Growth $29, Pro $79 and Scale $199 a month"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "per_unit",
+     "monthly": 199,
+     "annual_status": "unknown",
+     "evidence": "then Starter $9, Growth $29, Pro $79 and Scale $199 a month"
+    }
+   ],
+   "notes": [
+    "Plans differ by monthly credits (75, 300, 1,000 and 2,500); an image costs 1 credit at standard quality or 2 at the highest.",
+    "The Free plan's 25 generations are lifetime, not monthly. Billed in USD through Shopify."
+   ],
+   "not_computable": [
+    "Annual billing is stated as 15% off without printed annual amounts; the rules price monthly billing only.",
+    "One-off credit packs (25 for $22 up to 1,000 for $749, valid 12 months) depend on usage."
+   ],
+   "rules_verified_at": "2026-10-11"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "lumencart",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Annual billing is stated as 15% off without printed annual amounts; the rules price monthly billing only.",
+     "One-off credit packs (25 for $22 up to 1,000 for $749, valid 12 months) depend on usage."
+    ]
+   },
+   "monthly": {
+    "product_id": "lumencart",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 9.0,
+       "growth": 29.0,
+       "pro": 79.0,
+       "scale": 199.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 18.0,
+       "growth": 58.0,
+       "pro": 158.0,
+       "scale": 398.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 27.0,
+       "growth": 87.0,
+       "pro": 237.0,
+       "scale": 597.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 45.0,
+       "growth": 145.0,
+       "pro": 395.0,
+       "scale": 995.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 90.0,
+       "growth": 290.0,
+       "pro": 790.0,
+       "scale": 1990.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Annual billing is stated as 15% off without printed annual amounts; the rules price monthly billing only.",
+     "One-off credit packs (25 for $22 up to 1,000 for $749, valid 12 months) depend on usage."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -121,9 +384,15 @@
    "status": "open"
   },
   {
-   "question_id": "lumencart:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "lumencart:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Annual billing is stated as 15% off without printed annual amounts; the rules price monthly billing only. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "lumencart:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: One-off credit packs (25 for $22 up to 1,000 for $749, valid 12 months) depend on usage. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

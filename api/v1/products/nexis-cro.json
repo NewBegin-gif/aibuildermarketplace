@@ -54,15 +54,250 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free gives 5 a month and a single audit"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 9,
+     "annual_year": 99,
+     "evidence": "Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 or $344"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "monthly": 21,
+     "annual_year": 121,
+     "evidence": "Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 or $344"
+    },
+    {
+     "id": "agency",
+     "name": "Agency",
+     "model": "per_unit",
+     "monthly": 44,
+     "annual_year": 344,
+     "evidence": "Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 or $344"
+    }
+   ],
+   "notes": [
+    "The meter is AI credits a month: 5 on Free, 100 on Pro, 300 on Growth and 500 on Agency; Agency's 'unlimited usage' is capped by those 500 credits.",
+    "Billed in USD every 30 days; 2-day free trial on the paid tiers."
+   ],
+   "rules_verified_at": "2026-10-11"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "nexis-cro",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 8.25,
+       "growth": 10.08,
+       "agency": 28.67
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 16.5,
+       "growth": 20.17,
+       "agency": 57.33
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 24.75,
+       "growth": 30.25,
+       "agency": 86.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 41.25,
+       "growth": 50.42,
+       "agency": 143.33
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 82.5,
+       "growth": 100.83,
+       "agency": 286.67
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "nexis-cro",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 9.0,
+       "growth": 21.0,
+       "agency": 44.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 18.0,
+       "growth": 42.0,
+       "agency": 88.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 27.0,
+       "growth": 63.0,
+       "agency": 132.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 45.0,
+       "growth": 105.0,
+       "agency": 220.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 90.0,
+       "growth": 210.0,
+       "agency": 440.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -83,12 +318,6 @@
    "question_id": "nexis-cro:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "nexis-cro:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

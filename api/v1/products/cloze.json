@@ -38,8 +38,8 @@
    }
   ],
   "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(read 2026-08-19, re-verified unchanged 2026-09-04 on apps.shopify.com/cloze, listed as “Cloze: AI Shopping Assistant”) Free plan available: 25 AI conversations a month, up to 100 synced products, core assistant customisation and 7 days of conversation history. Paid tiers are Starter $49, Pro $99 and Scale $199 a month, each with $0.10 per additional AI conversation and a 3-day free trial. Starter covers 250 conversations a month and 1,000 synced products, with full customisation and 30 days of insights. Pro covers 750 conversations and 10,000 products with advanced insights and 90 days of history, and Scale 2,000 conversations, unlimited products, a year of history and priority support. All charges are billed in USD and recur every 30 days. Worth knowing before you install. The vendor's own site, cloze.bot/pricing, advertised a different and cheaper ladder on the same day: Free forever with 50 conversations a month, Pro $29 a month and Business $79 a month. On that page both paid tiers say unlimited conversations rather than a monthly allowance. Our link goes to the App Store listing, so the $49/$99/$199 ladder, with its caps of 250, 750 and 2,000 conversations, is what you pay when you install there. The screenshot further down is their own page exactly as we captured it. Developer Optify, Lyon, France; the app launched 24 April 2026, carries Shopify's “Built for Shopify” badge and had no reviews at all at the time of writing. Re-read on 4 September 2026: both ladders still stood exactly as described above, and the listing had gained its first review — a single five-star note left on 14 August 2026 by a French store eight days in.",
-  "verified_at": "2026-09-04",
+  "notes": "(read 2026-08-19, re-verified unchanged 2026-09-04 on apps.shopify.com/cloze, listed as “Cloze: AI Shopping Assistant”) Free plan available: 25 AI conversations a month, up to 100 synced products, core assistant customisation and 7 days of conversation history. Paid tiers are Starter $49, Pro $99 and Scale $199 a month, each with $0.10 per additional AI conversation and a 3-day free trial. Starter covers 250 conversations a month and 1,000 synced products, with full customisation and 30 days of insights. Pro covers 750 conversations and 10,000 products with advanced insights and 90 days of history, and Scale 2,000 conversations, unlimited products, a year of history and priority support. All charges are billed in USD and recur every 30 days. Worth knowing before you install. The vendor's own site, cloze.bot/pricing, advertised a different and cheaper ladder on the same day: Free forever with 50 conversations a month, Pro $29 a month and Business $79 a month. On that page both paid tiers say unlimited conversations rather than a monthly allowance. Our link goes to the App Store listing, so the $49/$99/$199 ladder, with its caps of 250, 750 and 2,000 conversations, is what you pay when you install there. The screenshot further down is their own page exactly as we captured it. Developer Optify, Lyon, France; the app launched 24 April 2026, carries Shopify's “Built for Shopify” badge and had no reviews at all at the time of writing. Re-read on 4 September 2026: both ladders still stood exactly as described above, and the listing had gained its first review — a single five-star note left on 14 August 2026 by a French store eight days in. Re-verified 11 October 2026: the App Store ladder (Free 25, Starter $49 for 250, Pro $99 for 750, Scale $199 for 2,000 conversations, $0.10 each beyond, 3-day trials) is unchanged, and so is the different ladder on cloze.bot/pricing (Free 50 conversations, Pro $29 and Business $79 with unlimited conversations). The listing still carries one review, dated 14 August 2026.",
+  "verified_at": "2026-10-11",
   "source_url": "https://apps.shopify.com/cloze"
  },
  "free_plan": true,
@@ -49,7 +49,7 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "meter: unit · AI conversations",
-   "verified_at": "2026-09-04",
+   "verified_at": "2026-10-11",
    "source_url": "https://apps.shopify.com/cloze"
   }
  ],
@@ -75,14 +75,256 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free plan available: 25 AI conversations a month, up to 100 synced products"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "monthly": 49,
+     "annual_status": "unknown",
+     "evidence": "Paid tiers are Starter $49, Pro $99 and Scale $199 a month, each with $0.10 per additional AI conversation and a 3-day free trial"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 99,
+     "annual_status": "unknown",
+     "evidence": "Paid tiers are Starter $49, Pro $99 and Scale $199 a month, each with $0.10 per additional AI conversation and a 3-day free trial"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "per_unit",
+     "monthly": 199,
+     "annual_status": "unknown",
+     "evidence": "Paid tiers are Starter $49, Pro $99 and Scale $199 a month, each with $0.10 per additional AI conversation and a 3-day free trial"
+    }
+   ],
+   "notes": [
+    "These are the App Store listing prices; plans differ by AI conversations a month (25, 250, 750 and 2,000) and synced products. Billed in USD every 30 days.",
+    "The vendor's own site lists a different ladder (Pro $29 and Business $79 with unlimited conversations); which one bills a Shopify install is not stated."
+   ],
+   "not_computable": [
+    "Each AI conversation beyond the plan allowance costs $0.10 and depends on traffic."
+   ],
+   "rules_verified_at": "2026-10-11"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "cloze",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Each AI conversation beyond the plan allowance costs $0.10 and depends on traffic."
+    ]
+   },
+   "monthly": {
+    "product_id": "cloze",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 49.0,
+       "pro": 99.0,
+       "scale": 199.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 98.0,
+       "pro": 198.0,
+       "scale": 398.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 147.0,
+       "pro": 297.0,
+       "scale": 597.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 245.0,
+       "pro": 495.0,
+       "scale": 995.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 490.0,
+       "pro": 990.0,
+       "scale": 1990.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Each AI conversation beyond the plan allowance costs $0.10 and depends on traffic."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -106,9 +348,9 @@
    "status": "open"
   },
   {
-   "question_id": "cloze:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "cloze:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Each AI conversation beyond the plan allowance costs $0.10 and depends on traffic. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

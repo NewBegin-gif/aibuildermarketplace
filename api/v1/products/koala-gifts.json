@@ -78,14 +78,258 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "per_unit",
+     "monthly": 9.99,
+     "annual_year": 95.88,
+     "evidence": "Basic is $9.99 a month or $95.88 a year"
+    },
+    {
+     "id": "shopify",
+     "name": "Shopify",
+     "model": "per_unit",
+     "monthly": 29.99,
+     "annual_year": 287.88,
+     "evidence": "Shopify $29.99 or $287.88"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "per_unit",
+     "monthly": 49.99,
+     "annual_year": 479.88,
+     "evidence": "Advanced $49.99 or $479.88"
+    },
+    {
+     "id": "shopify-plus",
+     "name": "Shopify Plus",
+     "model": "per_unit",
+     "monthly": 99.99,
+     "annual_year": 959.88,
+     "evidence": "Shopify Plus $99.99 or $959.88"
+    }
+   ],
+   "notes": [
+    "The plan is set by the store's own Shopify plan, not chosen by usage: the four plans carry the names of Shopify's plans and the same feature list.",
+    "No usage limits per the help centre: unlimited orders and revenue at an unchanged price. Billed in USD through Shopify every 30 days."
+   ],
+   "not_computable": [
+    "Special pricing for owners of several stores is on request from support; the rules price each store at the list rate."
+   ],
+   "rules_verified_at": "2026-10-11"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "koala-gifts",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 7.99,
+      "billed": {
+       "amount": 95.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 7.99,
+       "shopify": 23.99,
+       "advanced": 39.99,
+       "shopify-plus": 79.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 15.98,
+      "billed": {
+       "amount": 191.76,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 15.98,
+       "shopify": 47.98,
+       "advanced": 79.98,
+       "shopify-plus": 159.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 23.97,
+      "billed": {
+       "amount": 287.64,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 23.97,
+       "shopify": 71.97,
+       "advanced": 119.97,
+       "shopify-plus": 239.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 39.95,
+      "billed": {
+       "amount": 479.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 39.95,
+       "shopify": 119.95,
+       "advanced": 199.95,
+       "shopify-plus": 399.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 79.9,
+      "billed": {
+       "amount": 958.8,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 79.9,
+       "shopify": 239.9,
+       "advanced": 399.9,
+       "shopify-plus": 799.9
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Special pricing for owners of several stores is on request from support; the rules price each store at the list rate."
+    ]
+   },
+   "monthly": {
+    "product_id": "koala-gifts",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 9.99,
+      "billed": {
+       "amount": 9.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 9.99,
+       "shopify": 29.99,
+       "advanced": 49.99,
+       "shopify-plus": 99.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 19.98,
+      "billed": {
+       "amount": 19.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 19.98,
+       "shopify": 59.98,
+       "advanced": 99.98,
+       "shopify-plus": 199.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 29.97,
+      "billed": {
+       "amount": 29.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 29.97,
+       "shopify": 89.97,
+       "advanced": 149.97,
+       "shopify-plus": 299.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 49.95,
+      "billed": {
+       "amount": 49.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 49.95,
+       "shopify": 149.95,
+       "advanced": 249.95,
+       "shopify-plus": 499.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 99.9,
+      "billed": {
+       "amount": 99.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 99.9,
+       "shopify": 299.9,
+       "advanced": 499.9,
+       "shopify-plus": 999.9
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Special pricing for owners of several stores is on request from support; the rules price each store at the list rate."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -109,9 +353,9 @@
    "status": "open"
   },
   {
-   "question_id": "koala-gifts:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "koala-gifts:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Special pricing for owners of several stores is on request from support; the rules price each store at the list rate. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

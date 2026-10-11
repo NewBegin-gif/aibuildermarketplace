@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 526 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-11.
+All 531 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-11.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2160,6 +2160,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/oyster-review/
 
+## Pagecloud (pagecloud.com)
+- **Verified pricing:** (read 2026-10-11 on pagecloud.com/pricing, USD, with the monthly and annual toggle and the FAQ opened) Three plans, each with Pagecloud AI, hosting, SSL, your own domain, inquiry forms with…
+- **Honest take:** No native blog or store on any plan, and AI usage is given only as multipliers.
+- **Best for:** small businesses, consultants and creatives who want a brochure site with inquiry forms, built and edited by chatting with AI, with hosting and analytics in one bill
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/pagecloud-review/
+
 ## PagePulse (getpagepulse.io)
 - **Verified pricing:** (read 10 September 2026 on getpagepulse.io — the plans sit on the home page under the #pricing anchor; /pricing itself returns 404.) Five tiers, and the meter is pages plus AI insights rath…
 - **Honest take:** The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages.
@@ -2764,6 +2771,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/shoeboxed-review/
 
+## Shopmonkey (shopmonkey.io)
+- **Verified pricing:** (read 2026-10-11 on shopmonkey.io/pricing, USD) Three published plans for auto repair shops and a Multi-Shop plan on quote.
+- **Honest take:** Payment processing rates are not published, and inventory and purchase orders start on the $359 Clever plan.
+- **Best for:** independent auto repair, tire and fleet service shops with roughly 3 to 6 staff who want estimates, inspections, customer texting, parts ordering and payments in one system
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/shopmonkey-review/
+
 ## Shorby (shorby.com)
 - **Verified pricing:** (re-verified 2026-09-25 at dash.shorby.com/pricing) Three paid plans, no free plan on the table.
 - **Honest take:** In a category where the market leader has a generous free plan, Shorby charges from day one, so it has to earn the gap.
@@ -3310,6 +3324,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/unleashed-software-review/
 
+## Upsell & Cross Sell - AW (csell.io)
+- **Verified pricing:** (read 2026-10-11 on the Shopify App Store listing apps.shopify.com/cross-sell and on the developer's own pricing page csell.io/pricing, USD; the listing says all charges are billed in USD a…
+- **Honest take:** Priced by recommendation clicks: 50 a month free, 2,500 on the $29.99 plan, and all 8 placements only from $49.99.
+- **Best for:** Shopify stores that want related-product, upsell and frequently-bought-together recommendations on product pages and cart, with hand-picked control, at a fixed monthly price for a known click volume
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/upsell-cross-sell-aw-review/
+
 ## Upsell.com (upsell.com)
 - **Verified pricing:** (prices re-verified 2026-09-19 on upsell.com/pricing and on the Shopify listing apps.shopify.com/reconvert-upsell-cross-sell; both now show the same ladder, which replaces the $4.99/$9.99/$…
 - **Honest take:** The ladder is public now, and that removes the complaint we had in September, but it leaves a cliff where the old one had a gap.
@@ -3337,6 +3358,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small and mid-sized websites that want heatmaps, session replays, funnels and form analytics in one tool, with a free plan to try it on real traffic
 - **Flags:** Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/usertrail-review/
+
+## Vanity Number (vanitynumber.com)
+- **Verified pricing:** (read 2026-10-11 on vanitynumber.com and its FAQ page, USD) VanityNumber.com sells memorable North American local and toll-free phone numbers as a one-time purchase, not phone service.
+- **Honest take:** A one-time fee buys the number only; your carrier still bills the line, and refunds are not possible.
+- **Best for:** US and Canadian businesses that want a memorable local or toll-free number for advertising, vehicles or signage and keep it on the carrier they already use
+- **Full review:** https://aibuildermarketplace.com/b2b/vanity-number-review/
 
 ## VEA (vea.ai)
 - **Verified pricing:** (re-verified 2026-09-29 on the pricing section of VEA's own site, vea.ai; amounts unchanged since 2026-09-02) Four tiers, per user per month, monthly against annual: Business Class $30 / $2…
@@ -3371,6 +3398,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators and small brands running faceless or topic-based channels that want the trend-find, generate and auto-publish loop handled in one tool across TikTok, Instagram and YouTube
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/vidpal-review/
+
+## Vify Order Printer (vify.io)
+- **Verified pricing:** (read 2026-10-11 on the Shopify App Store listing apps.shopify.com/vify-order-printer, USD; the listing says recurring charges are billed every 30 days) Four plans.
+- **Honest take:** Free covers only the 50 latest orders; automatic invoice emails and unlimited orders start at $10.99 a month.
+- **Best for:** Shopify stores that want branded PDF invoices, packing slips and refunds emailed automatically with each order, including B2B and multi-language invoices
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/vify-order-printer-review/
 
 ## Vista Social (vistasocial.com)
 - **Verified pricing:** (price re-verified 2026-09-25 against the vendor's own pricing page; every list price rose after the 23 Sep 2026 reading) (2026) Professional $99/mo ($950/yr, shown as $80/mo on yearly bill…

@@ -116,21 +116,21 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/airia-review/
 
 ## Airwallex (airwallex.com)
-- **Verified pricing:** (2026-08-28, read off their own pricing page and fee table; no rate below has changed since 1 Aug 2026) FX conversion 0.5% above the interbank rate for major currencies and 1% for all other…
+- **Verified pricing:** (2026-08-28, read off their own pricing page and fee table; re-read 2026-10-11 on airwallex.com/en-us/pricing: plans, FX, transfer, card and billing rates unchanged) FX conversion 0.5% abov…
 - **Honest take:** The honest headline here is that the FX markup is published at all — 0.5% and 1% above interbank is a real number, and most competitors will not print one.
 - **Best for:** companies invoicing or paying in several currencies, where a 0.5% spread against your bank's 2–3% is the whole business case
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/airwallex-review/
 
 ## AISDR (aisdr.com)
-- **Verified pricing:** (re-verified 2026-09-09 on AiSDR's own pricing page) There are three published plans.
+- **Verified pricing:** (re-verified 2026-10-11 on AiSDR's own pricing page) There are three published plans.
 - **Honest take:** It's priced like an SDR salary because it's meant to replace part of that function — so judge it on cost-per-meeting, not the sticker, and expect a quarterly commitment rather than a flip-the-switch monthly.
 - **Best for:** sales teams with a clear ICP and offer that want autonomous AI to qualify leads, personalize outreach and book meetings around the clock
 - **Flags:** Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/aisdr-review/
 
 ## AISQ (aisq.com)
-- **Verified pricing:** (2026-08-30, read on plugin.squirrly.co/wordpress-seo-pricing) Squirrly SEO is billed monthly and renews at the same price.
+- **Verified pricing:** (re-read 2026-10-11 on plugin.squirrly.co/wordpress-seo-pricing) Free $0.
 - **Honest take:** AISQ (the Squirrly family) evolves its pricing and product names often.
 - **Best for:** solo marketers who want low-cost, pay-as-you-go AI marketing assistance (SEO + content workflows) without a subscription
 - **Flags:** Usage-metered, Free tier

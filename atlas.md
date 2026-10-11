@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 526 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-10.
+All 526 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-11.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -164,7 +164,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/alohi-review/
 
 ## AltText.ai (alttext.ai)
-- **Verified pricing:** (re-verified 26 Aug 2026) Credit-metered — one credit = one image.
+- **Verified pricing:** (re-verified 10 Oct 2026; figures unchanged since 26 Aug 2026) Credit-metered — one credit = one image.
 - **Honest take:** The headline ‘5¢ per image’ only holds for a plain JPG in one language.
 - **Best for:** image-heavy sites that need alt text written back into the CMS automatically: e-commerce catalogues, publishers and long-running blogs on WordPress, Shopify, WooCommerce, Magento, BigCommerce, Contentful
 - **Flags:** Usage-metered
@@ -615,7 +615,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/capsule-review/
 
 ## Carbon6 (carbon6.io)
-- **Verified pricing:** What we can verify on the vendor’s own pages today (re-checked 26 Aug 2026): carbon6.io/pricing now redirects to the tool list, so there is no suite-level price at all.
+- **Verified pricing:** What we can verify on the vendor’s own pages today (re-checked 10 Oct 2026; unchanged since 26 Aug 2026): carbon6.io/pricing now redirects to the tool list, so there is no suite-level price…
 - **Honest take:** Ownership has moved twice: SPS Commerce bought Carbon6 in February 2025, then on 30 June 2026 sold the 3P revenue-recovery business, which now runs under the Carbon6 name again.
 - **Best for:** Amazon sellers who want reimbursements, advertising, inventory and sourcing tools from one vendor and are content to buy them tool by tool
 - **Full review:** https://aibuildermarketplace.com/b2b/carbon6-review/
@@ -663,7 +663,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/claap-review/
 
 ## Claude (claude.ai)
-- **Verified pricing:** (price re-verified 2026-08-27 on their own pricing page) The free tier is $0.
+- **Verified pricing:** (price re-verified 2026-10-11 on their own pricing page; unchanged since 2026-08-27) The free tier is $0.
 - **Honest take:** The honest catch is usage limits: even on Pro you can hit a ceiling mid-session on a heavy day, and the step up to Max is a real $100 to $200 a month — you're buying headroom, not extra features.
 - **Best for:** developers, writers, analysts and researchers who want best-in-class reasoning, coding and long-document work — and a model that's careful and direct rather than eager to please
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
@@ -889,7 +889,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/descript-review/
 
 ## Devs.ai (devs.ai)
-- **Verified pricing:** (re-verified 2026-08-26, read in a live browser session on devs.ai/home/pricing with both billing toggles) Devs.ai does publish its pricing — on the marketing site at devs.ai/home/pricing, …
+- **Verified pricing:** (re-verified 2026-10-11 and 2026-08-26, read in a live browser session on devs.ai/home/pricing with both billing toggles) Devs.ai does publish its pricing — on the marketing site at devs.ai…
 - **Honest take:** The seat price is the smaller half of the bill.
 - **Best for:** teams that want to prototype and ship AI agents and apps across multiple models without engineering overhead, and that can absorb model usage metered on top of the per-seat fee
 - **Flags:** Per-seat pricing, Usage-metered, Annual commit, Free tier
@@ -1174,7 +1174,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-08-24 on apps.shopify.com/fast-bundle-product-bundles, listed as “FBP | Fast Bundle & Upsell App”, and on fastbundle.co/pricing) The meter here is not your catalogue, your traffi…
 - **Honest take:** On 17 July 2026, after what its own status page calls a security attack, Shopify removed the app from the App Store and deactivated it on existing stores; it was fully searchable again on 3 August.
 - **Best for:** Shopify merchants who want every bundle and upsell format from one app — mix-and-match, build-your-own, BOGO, volume breaks, AI frequently-bought-together
-- **Flags:** Usage-metered, Annual commit
+- **Flags:** Usage-metered, Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/fast-bundle-review/
 
 ## Fastmail (fastmail.com)
@@ -1717,7 +1717,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Koongo (koongo.com)
 - **Verified pricing:** (read 2026-08-23 on apps.shopify.com/koongo, listed as “Koongo: Sell on Marketplaces”, and on koongo.com/pricing) Four tiers on the listing, separated by update frequency rather than by cap…
-- **Honest take:** Each paid plan includes 1,000 items, 5 feeds, two marketplace wizards and 100 orders a month, with surcharges for extras on all four, so $39 is a base, not a bill.
+- **Honest take:** Each paid plan includes 1,000 items, 5 feeds, one marketplace wizard and 100 orders a month, with surcharges for extras on all four, so $39 is a base, not a bill.
 - **Best for:** Shopify merchants selling across several European marketplaces — Bol, Zalando, Allegro, Cdiscount, Miinto and the rest
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/koongo-review/
@@ -2363,7 +2363,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-08-26 on proton.me/pricing over a US connection, on the Mail tab with yearly billing) Free is $0.00 a month for 1 GB and one address.
 - **Honest take:** Storage is the axis, and the jump from Drive Plus to Unlimited is not really about storage at all.
 - **Best for:** teams and individuals for whom encryption is an actual requirement rather than a preference — handling client material, legal or medical files, or anything where a provider being able to read your data is itself the problem
-- **Flags:** Free tier
+- **Flags:** Per-seat pricing, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/proton-review/
 
 ## Proton Drive (proton.me)

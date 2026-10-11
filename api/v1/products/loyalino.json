@@ -90,14 +90,517 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "loyalty order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 200,
+     "evidence": "Free: $0 for up to 200 loyalty orders a month"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 500,
+     "monthly": 29,
+     "annual_year": 290,
+     "evidence": "Starter: $29 a month or $290 a year for up to 500"
+    },
+    {
+     "id": "essential",
+     "name": "Essential",
+     "model": "flat",
+     "max_units": 2000,
+     "monthly": 129,
+     "annual_year": 1290,
+     "evidence": "Essential: $129 or $1,290 for up to 2,000"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "max_units": 7000,
+     "monthly": 499,
+     "annual_year": 4990,
+     "evidence": "Growth: $499 or $4,990 for up to 7,000"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "flat",
+     "monthly": 999,
+     "annual_year": 9990,
+     "evidence": "Enterprise: $999 or $9,990 for unlimited orders with no cap"
+    }
+   ],
+   "notes": [
+    "A monthly loyalty order is one distinct Shopify order that creates a loyalty-points transaction in that calendar month, counted once.",
+    "Every paid plan carries the same paid feature set; the plan is chosen by volume, not by features."
+   ],
+   "rules_verified_at": "2026-10-11"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "loyalino",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "loyalty order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 24.17,
+       "essential": 107.5,
+       "growth": 415.83,
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 24.17,
+       "essential": 107.5,
+       "growth": 415.83,
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.17,
+      "billed": {
+       "amount": 290.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.17,
+       "essential": 107.5,
+       "growth": 415.83,
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 107.5,
+      "billed": {
+       "amount": 1290.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": 107.5,
+       "growth": 415.83,
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 107.5,
+      "billed": {
+       "amount": 1290.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": 107.5,
+       "growth": 415.83,
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 107.5,
+      "billed": {
+       "amount": 1290.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": 107.5,
+       "growth": 415.83,
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 415.83,
+      "billed": {
+       "amount": 4990.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": 415.83,
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 832.5,
+      "billed": {
+       "amount": 9990.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 832.5,
+      "billed": {
+       "amount": 9990.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": 832.5
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 832.5,
+      "billed": {
+       "amount": 9990.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": 832.5
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 300,
+      "to_units": 700,
+      "from_plan": "starter",
+      "to_plan": "essential",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Essential"
+     },
+     {
+      "from_units": 2000,
+      "to_units": 5000,
+      "from_plan": "essential",
+      "to_plan": "growth",
+      "from_plan_name": "Essential",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 5000,
+      "to_units": 10000,
+      "from_plan": "growth",
+      "to_plan": "enterprise",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Enterprise"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "loyalino",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "loyalty order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 29.0,
+       "essential": 129.0,
+       "growth": 499.0,
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 29.0,
+       "essential": 129.0,
+       "growth": 499.0,
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "essential": 129.0,
+       "growth": 499.0,
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 129.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": 129.0,
+       "growth": 499.0,
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 129.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": 129.0,
+       "growth": 499.0,
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 129.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": 129.0,
+       "growth": 499.0,
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": 499.0,
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 999.0,
+      "billed": {
+       "amount": 999.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 999.0,
+      "billed": {
+       "amount": 999.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": 999.0
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 999.0,
+      "billed": {
+       "amount": 999.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": 999.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 300,
+      "to_units": 700,
+      "from_plan": "starter",
+      "to_plan": "essential",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Essential"
+     },
+     {
+      "from_units": 2000,
+      "to_units": 5000,
+      "from_plan": "essential",
+      "to_plan": "growth",
+      "from_plan_name": "Essential",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 5000,
+      "to_units": 10000,
+      "from_plan": "growth",
+      "to_plan": "enterprise",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Enterprise"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -118,12 +621,6 @@
    "question_id": "loyalino:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "loyalino:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

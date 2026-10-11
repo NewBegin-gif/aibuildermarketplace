@@ -15,8 +15,29 @@
   "entry_price": "$79",
   "entry_price_terms": "Starter · per month",
   "from_price_usd_month": 79.0,
-  "plans": null,
-  "plans_source": null,
+  "plans": [
+   {
+    "name": "Starter",
+    "price": "$79/month yearly billing or $99/month monthly billing",
+    "includes": "Team/custom inboxes, mobile app, AI Prompt, AI Assist, basic reports, 2FA; unlimited contacts, 5 users"
+   },
+   {
+    "name": "Growth",
+    "price": "$159/month yearly billing or $199/month monthly billing",
+    "includes": "Adds workflows automation, broadcasts, AI Agents, advanced reports, API, Zapier/Make; 10 users, starts at 1,000 contacts"
+   },
+   {
+    "name": "Advanced",
+    "price": "$279/month yearly billing or $349/month monthly billing",
+    "includes": "Adds multiple workspaces, SSO, webhooks, HTTP requests, phone-number masking; 10 users, starts at 1,000 contacts"
+   },
+   {
+    "name": "Enterprise",
+    "price": "no published price",
+    "includes": "On quote; button says “Talk to Sales”"
+   }
+  ],
+  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(2026-08-13, read off respond.io/pricing) Four tiers, billed on monthly active contacts rather than seats: Starter $79/month, Growth $159, Advanced $279, and Enterprise on quote. Paying yearly takes roughly 20% off — $948, $1,908 and $3,348 a year against $1,188, $2,388 and $4,188 monthly. The trial is 7 days and takes no card. What separates the tiers is not volume but capability, and the line matters: Starter buys team and custom inboxes, the mobile app, AI Prompt, AI Assist, basic reports and 2FA. **Workflows automation, broadcasts, AI Agents, advanced reports, the developer API and the Zapier and Make integrations all start at Growth.** Advanced adds multiple workspaces, SSO, webhooks, HTTP requests in workflows and phone-number masking, and although a figure is shown its button says “Talk to Sales”. One thing we could not pin down. The page carries a selector for 1,000 / 2,500 / 5,000 / 10,000 / more than 10,000 monthly active contacts under the heading “pay only for the contacts you talk to”, but the prices we read did not move between those settings. Ask what your contact volume actually costs before you sign — that is the meter you are buying. Re-verified 11 October 2026 on respond.io/pricing: the yearly totals ($948, $1,908, $3,348) and the monthly totals ($1,188, $2,388, $4,188) are unchanged. Read them carefully: the $79, $159 and $279 shown per month are the yearly rates, and the page data gives $99, $199 and $349 for month-to-month billing. The plan comparison now lists users per tier — 5 on Starter, 10 on Growth and Advanced, extra users at $12, $20 and $24 a month on yearly billing ($15, $25 and $30 monthly) — plus AI Credits of 5,000, 10,000, 20,000 and 40,000. In that same table Starter shows unlimited monthly active contacts, while Growth and Advanced 'start with 1,000', so the contact meter applies from Growth up. The trial gives Growth features for 5 users and 1,000 contacts, without broadcasts.",
   "verified_at": "2026-10-11",
   "source_url": null
@@ -63,7 +84,6 @@
   "growth": null
  },
  "unknowns": [
-  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

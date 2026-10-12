@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 531 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-12.
+All 535 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-12.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1497,6 +1497,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Renewal jump
 - **Full review:** https://aibuildermarketplace.com/b2b/hostinger-review/
 
+## HostPapa (hostpapa.com)
+- **Verified pricing:** (read 2026-10-12 in a live browser on hostpapa.com/web-hosting-plan and hostpapa.com/renewal-pricing; US site, prices in US dollars excluding taxes) Shared web hosting comes in four cPanel …
+- **Honest take:** $2.95 is a 3-year first-term price for one site; it renews at $8.99 a month on 3 years or $12.99 month to month, and backups are free for the first year only.
+- **Best for:** small businesses and first-time site owners in North America who want cPanel shared or WordPress hosting with phone, chat and email support, free migration, and a host that publishes its renewal prices in a table
+- **Flags:** Renewal jump
+- **Full review:** https://aibuildermarketplace.com/b2b/hostpapa-review/
+
 ## Housecall Pro (housecallpro.com)
 - **Verified pricing:** (re-verified 2026-09-29) Basic $59/month billed annually ($79 month-to-month, advertised as 'save $20/mo') for ONE user, with no GPS tracking and no QuickBooks Online sync; Essentials $149/…
 - **Honest take:** The Basic tier is a trap for real field teams — it omits GPS tracking and QuickBooks sync, so most businesses need Essentials or up.
@@ -2284,6 +2291,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** online retailers and larger-catalog stores that want a professionally designed, conversion-focused Shopify storefront without paying for custom development
 - **Full review:** https://aibuildermarketplace.com/b2b/pixel-union-review/
 
+## Pixlr (pixlr.com)
+- **Verified pricing:** (read 2026-10-12 in a live browser on pixlr.com/pricing, monthly and yearly views, from a Netherlands connection, which shows euros; the English home page says plans start at $1.99 a month)…
+- **Honest take:** No refunds once a payment is processed, and monthly AI credits reset to the plan allowance at renewal and fall to zero if you cancel.
+- **Best for:** people who edit photos and make quick social and marketing images in the browser and want a cheap ad-free editor, with optional AI image, video and voice generation on the same account across web, desktop and mobile
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/pixlr-review/
+
 ## Planday (planday.com)
 - **Verified pricing:** (re-read 2026-09-17 and again on 2026-10-05; the euro list is unchanged since 20 August 2026, but which list you see depends on the page you open) Three tiers, two of them priced.
 - **Honest take:** The €25 monthly platform fee on Plus is the line most comparisons miss.
@@ -2324,6 +2338,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** shopify stores that want post-purchase upsells with no fixed monthly cost, where the bill only exists once the app has already added revenue, and that are comfortable being early on an app a few months old
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/post-purchase-upsell-hero-review/
+
+## PostOnce (postonce.app)
+- **Verified pricing:** (read 2026-10-12 in a live browser on postonce.app and postonce.app/pricing, monthly and yearly views, and in the terms at postonce.app/terms) Two plans, priced in euros including VAT, with…
+- **Honest take:** No trial and no refunds: billing starts when you subscribe, and the EU withdrawal right lapses once you use the service.
+- **Best for:** creators, small businesses and small agencies in Europe that post the same content to Instagram, TikTok, YouTube, LinkedIn and other networks and want one flat price without per-channel fees
+- **Flags:** Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/postonce-review/
 
 ## Postscript (postscript.io)
 - **Verified pricing:** (Re-verified 19 September 2026 on their own pricing page; every figure below is unchanged from the 30 August reading.) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0…
@@ -3566,6 +3587,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's a subscription, not a lifetime license — you keep your settings if you stop paying but lose updates and support, and a technically-minded user can get most of the way there with a free caching plugin.
 - **Best for:** WordPress owners who want near-instant page-speed gains out of the box without touching cache config
 - **Full review:** https://aibuildermarketplace.com/b2b/wp-rocket-review/
+
+## WPLP (wplegalpages.com)
+- **Verified pricing:** (read 2026-10-12 in a live browser on wplegalpages.com/pricing, every option in the site selector chosen, and on the two plugin pages at wordpress.org/plugins/wplegalpages and wordpress.org…
+- **Honest take:** The free cookie plugin already covers banner, scanning, script blocking and Consent Mode v2; the paid tiers only add sites, TCF, geo-targeting and a dashboard, and automatic policy updates are still marked coming soon.
+- **Best for:** WordPress site owners and small agencies that want cookie consent and generated legal pages inside WordPress, with consent records in their own database
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/wplp-review/
 
 ## Wrike (wrike.com)
 - **Verified pricing:** (price re-verified 2026-09-25) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 to 15 users; Business $25 per user a month for …

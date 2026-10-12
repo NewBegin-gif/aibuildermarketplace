@@ -57,15 +57,413 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "team seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "flat",
+     "included_units": 1,
+     "max_units": 1,
+     "monthly": 29,
+     "annual_status": "unknown",
+     "evidence": "Lite is $29 a month with 200 credits a month, 1 brand, 1 team seat"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "flat",
+     "included_units": 3,
+     "max_units": 3,
+     "monthly": 99,
+     "annual_status": "unknown",
+     "evidence": "Standard is $99 a month with 1,000 credits, 3 brands and 3 seats"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "included_units": 5,
+     "max_units": 5,
+     "monthly": 249,
+     "annual_status": "unknown",
+     "evidence": "Pro is $249 a month with 4,000 credits, 5 brands and 5 seats"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is custom"
+    }
+   ],
+   "notes": [
+    "Seats are fixed per plan in our notes; no price for an extra seat is published, so a larger team moves up a plan.",
+    "All plans include a 7-day free trial and can be cancelled any time."
+   ],
+   "not_computable": [
+    "Yearly billing is said to save up to 20%, but we did not read the yearly prices.",
+    "Usage is metered in credits (200, 1,000 and 4,000 a month) and the page does not say how many credits an image or a video costs."
+   ],
+   "rules_verified_at": "2026-10-12"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "omneky",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "team seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Yearly billing is said to save up to 20%, but we did not read the yearly prices.",
+     "Usage is metered in credits (200, 1,000 and 4,000 a month) and the page does not say how many credits an image or a video costs."
+    ]
+   },
+   "monthly": {
+    "product_id": "omneky",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "team seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 29.0,
+       "standard": 99.0,
+       "pro": 249.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": 99.0,
+       "pro": 249.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": 99.0,
+       "pro": 249.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": 249.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "standard": "not_eligible",
+       "pro": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "lite",
+      "to_plan": "standard",
+      "from_plan_name": "Lite",
+      "to_plan_name": "Standard"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "standard",
+      "to_plan": "pro",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Pro"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "pro",
+      "to_plan": null,
+      "from_plan_name": "Pro",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Yearly billing is said to save up to 20%, but we did not read the yearly prices.",
+     "Usage is metered in credits (200, 1,000 and 4,000 a month) and the page does not say how many credits an image or a video costs."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -89,9 +487,15 @@
    "status": "open"
   },
   {
-   "question_id": "omneky:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "omneky:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Yearly billing is said to save up to 20%, but we did not read the yearly prices. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "omneky:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Usage is metered in credits (200, 1,000 and 4,000 a month) and the page does not say how many credits an image or a video costs. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

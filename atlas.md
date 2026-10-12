@@ -3095,21 +3095,21 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tapita-ai-seo-blog-builder-review/
 
 ## Tapita SEO Optimizer (tapita.io)
-- **Verified pricing:** (read 2026-10-09 on apps.shopify.com/google-seo-schema-meta-data) Three tiers.
+- **Verified pricing:** (read 2026-10-09 and re-read 2026-10-12 on apps.shopify.com/google-seo-schema-meta-data, English listing) Three tiers.
 - **Honest take:** The price on the listing is a Shopify-Basic price, and almost nobody reads the line underneath it.
 - **Best for:** Shopify merchants on the Basic or Grow plan who want SEO audits, bulk metadata, image alt text and speed fixes out of one app instead of hiring a specialist
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/tapita-seo-optimizer-review/
 
 ## Tapstitch (tapstitch.com)
-- **Verified pricing:** (re-verified 2026-10-02 on tapstitch.com/collections/all; the site publishes no /pricing page — that URL returns 404) No subscription, no monthly fee and no minimum order quantity — you pay…
+- **Verified pricing:** (re-verified 2026-10-12 on tapstitch.com/collections/all; the site publishes no /pricing page — that URL returns 404) No subscription, no monthly fee and no minimum order quantity — you pay…
 - **Honest take:** Printify is cheaper, higher-margin and has a far bigger catalogue — if you're optimising for profit per sale or product breadth, that's the real trade-off.
 - **Best for:** creators building a real apparel or streetwear brand who care about fabric, fit and how the product feels in hand
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/tapstitch-review/
 
 ## Tax1099 (tax1099.com)
-- **Verified pricing:** (read 2026-09-08 and re-read 2026-10-01 on tax1099.com/tax-1099-efile-pricing) Filing is graduated volume pricing, not a flat rate that falls: each band is billed at its own rate and the bi…
+- **Verified pricing:** (read 2026-09-08, re-read 2026-10-01 and 2026-10-12 on tax1099.com/tax-1099-efile-pricing) Filing is graduated volume pricing, not a flat rate that falls: each band is billed at its own rat…
 - **Honest take:** Per-form pricing is genuinely cheap for a handful of 1099s, but it's metered: TIN matching, W-9 requests, state filing and corrections can each carry their own charge.
 - **Best for:** businesses and accountants who need to e-file 1099s, W-2s and related forms accurately and cheaply, especially seasonal or higher-volume filers
 - **Flags:** Usage-metered, Add-ons extra

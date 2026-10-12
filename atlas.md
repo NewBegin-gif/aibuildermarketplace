@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 531 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-11.
+All 531 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-12.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -801,9 +801,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/contabo-review/
 
 ## Contractor Foreman (contractorforeman.com)
-- **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; all plan prices unchanged since 1 Aug 2026) Priced for the company rather than per seat, with unlimited projects on every tier, and every…
-- **Honest take:** Quarterly costs 26% more than annual on the same plan — $132 against $105 on Standard — and Basic is not sold quarterly at all, so the cheapest way in requires a year paid up front.
+- **Verified pricing:** (re-verified 11 Oct 2026 on their own pricing page: annual prices unchanged since 1 Aug 2026; the quarterly option recorded on 28 Aug 2026 has been replaced by monthly billing) Priced for t…
+- **Honest take:** Monthly costs 20% to 32% more than annual on the same plan — $139 against $105 on Standard — and Basic is sold on annual billing only, so the cheapest way in requires a year paid up front.
 - **Best for:** small and mid-size contractors who want estimating, scheduling and daily logs in one place and can commit to a year — the company-wide fee makes it cheap per head once you have a crew
+- **Flags:** Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/contractor-foreman-review/
 
 ## Convert (convert.com)
@@ -2524,6 +2525,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-08-13, read off respond.io/pricing) Four tiers, billed on monthly active contacts rather than seats: Starter $79/month, Growth $159, Advanced $279, and Enterprise on quote.
 - **Honest take:** The entry plan is the inbox without the engine.
 - **Best for:** a small team that already lives in WhatsApp and Instagram DMs and has outgrown a shared phone
+- **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/respond-io-review/
 
 ## Restream (restream.io)
@@ -2765,7 +2767,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/shippo-review/
 
 ## Shoeboxed (shoeboxed.com)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page) (2026) Four plans, each quoted both yearly and monthly: Starter $97/yr or $9/mo (30 digital scans/mo, 20 paper scans/yr,…
+- **Verified pricing:** (price re-verified 2026-10-11 against the vendor's own pricing page; prices unchanged since 31 Aug 2026, allowances and overage rates changed) Four plans, each quoted both yearly and monthl…
 - **Honest take:** Its unique trick is the Magic Envelope, where you literally mail a stuffed envelope of paper receipts and humans digitize them.
 - **Best for:** businesses drowning in PAPER receipts — trades, field crews, owners with shoeboxes of history — who want them humanly digitized, verified and IRS-ready
 - **Flags:** Usage-metered

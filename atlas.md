@@ -2170,8 +2170,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Pagecloud (pagecloud.com)
 - **Verified pricing:** (read 2026-10-11 on pagecloud.com/pricing, USD, with the monthly and annual toggle and the FAQ opened) Three plans, each with Pagecloud AI, hosting, SSL, your own domain, inquiry forms with…
-- **Honest take:** No native blog or store on any plan, and AI usage is given only as multipliers.
-- **Best for:** small businesses, consultants and creatives who want a brochure site with inquiry forms, built and edited by chatting with AI, with hosting and analytics in one bill
+- **Honest take:** Pagecloud AI has no native blog or store on Launch, Grow or Optimize; AI usage is given only as multipliers.
+- **Best for:** small businesses, consultants and creatives who want a brochure site with inquiry forms, built and edited by chatting with Pagecloud AI, with hosting and analytics in one bill
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/pagecloud-review/
 

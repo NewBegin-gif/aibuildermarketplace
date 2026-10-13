@@ -199,10 +199,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/answering-service-care-review/
 
 ## Aplos (aplos.com)
-- **Verified pricing:** (2026-09-10, read on their own pricing page) Three published tiers, billed monthly: Lite at $79/month, Core at $129 and Advanced at $229, plus a fourth Custom tier with tailored pricing aim…
-- **Honest take:** The $39.50 headline is a three-month rate against a $79 list price, so the bill doubles in month four, and Lite includes only two users.
+- **Verified pricing:** (2026-10-13, read on their own pricing page and in their help centre) Three published tiers, billed monthly: Lite at $79/month, Core at $129 and Advanced at $229, plus a fourth Custom tier …
+- **Honest take:** The $39.50 headline is a three-month rate against a $79 list price, so the bill doubles in month four; users beyond the two included cost $20 a month each.
 - **Best for:** small nonprofits and faith-based organisations that need true fund accounting rather than general small-business bookkeeping — tracking restricted and unrestricted funds separately is the thing generic tools genuinely cannot do
-- **Flags:** Per-seat pricing
+- **Flags:** Per-seat pricing, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/aplos-review/
 
 ## Apollo (apollo.io)
@@ -335,7 +335,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/beautiful-ai-review/
 
 ## Beefree (beefree.io)
-- **Verified pricing:** (price re-verified 2026-09-10) Sold as RGE Studio since the 14 May 2026 rebrand.
+- **Verified pricing:** (price re-verified 2026-10-13) Sold as RGE Studio since the 14 May 2026 rebrand.
 - **Honest take:** Read the seat row before the price row. Professional and Business both cap at two full editing seats, so a "mid-sized team" plan at $134/mo annual still buys two people who can actually build.
 - **Best for:** agencies and in-house teams shipping email at volume across brands or ESPs
 - **Flags:** Free tier
@@ -1724,8 +1724,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/kiwi-sizing-review/
 
 ## Kixie (kixie.com)
-- **Verified pricing:** (2026-09-10, read on their own pricing page) No seat price is published.
-- **Honest take:** Plan for 30-60% above the sticker: minutes, the multi-line dialer and AI human-voice-detection all bill separately, and the quarterly auto-renewing contract only allows downgrades in its final 30 days.
+- **Verified pricing:** (2026-10-13, read on their own pricing page) No seat price is published.
+- **Honest take:** Then read the contract term before you sign.
 - **Best for:** outbound sales teams living in their CRM that want a serious power dialer with local presence, SMS and automation
 - **Flags:** Hidden pricing, Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/kixie-review/
@@ -3438,7 +3438,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vendoo-review/
 
 ## Vida AI (vida.io)
-- **Verified pricing:** (price re-verified 2026-09-10) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate.
+- **Verified pricing:** (price re-verified 2026-10-13) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate.
 - **Honest take:** This is priced for agencies and telecoms reselling AI phone agents, not for a single small business wanting one receptionist bot.
 - **Best for:** agencies, MSPs and service providers that want to deploy and resell white-label AI voice agents at volume, and that can absorb a scoped pilot before they ever see a production price
 - **Full review:** https://aibuildermarketplace.com/b2b/vida-ai-review/
@@ -3604,7 +3604,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/woodpecker-review/
 
 ## World Businesses for Sale (worldbusinessesforsale.com)
-- **Verified pricing:** (2026, re-verified 2026-09-10 on their own selling pages) Browsing is free for buyers.
+- **Verified pricing:** (2026, re-verified 2026-10-13 on their own selling pages) Browsing is free for buyers.
 - **Honest take:** On the broker plans you pay twice: a listing fee up front AND commission when it sells — 3% on Basic, 2% on Standard, 1% on Premium — on contracts of 6, 9 and 12 months.
 - **Best for:** owners selling established, often brick-and-mortar businesses — restaurants, shops, services, small manufacturers — who want international buyer exposure with hands-on guidance
 - **Full review:** https://aibuildermarketplace.com/b2b/world-businesses-for-sale-review/

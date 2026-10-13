@@ -553,7 +553,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/buddypunch-review/
 
 ## BugHerd (bugherd.com)
-- **Verified pricing:** Standard about $42/mo (5 members), Studio ~$67/mo (10), Premium ~$125/mo (25), plus custom Enterprise — all with unlimited projects and unlimited client users; annual billing runs $500/$800…
+- **Verified pricing:** Standard $42/mo billed yearly or $50 month-to-month (5 members, 10 GB), Studio $67 or $80 (10 members, 25 GB), Premium $125 or $150 (25 members, 50 GB), plus a custom tier quoted as "Let's …
 - **Honest take:** The per-team-member tiers are the thing to size honestly: your clients report for free as guests, but everyone on your side who works the feedback needs a seat, so a growing agency steps up tiers.
 - **Best for:** web agencies and site teams that want clients to point-and-click feedback directly on the page
 - **Flags:** Per-seat pricing, Annual commit
@@ -587,7 +587,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/callhippo-review/
 
 ## CallRail (callrail.com)
-- **Verified pricing:** Four plans, read on callrail.com/pricing on 5 September 2026, each 'plus usage': Lead Tracking $55 a month, Lead Tracking Complete $105, Lead Conversion $165 and Lead Conversion Complete $2…
+- **Verified pricing:** Four plans, read on callrail.com/pricing on 13 October 2026 in a live browser, each 'plus additional usage': Lead Tracking $55 a month, Lead Tracking Complete $105, Lead Conversion $165 and…
 - **Honest take:** The headline price is a floor, not a ceiling — the included minutes, numbers and SMS are modest, so an active campaign quickly hits metered overages that meaningfully lift the bill.
 - **Best for:** marketers and agencies that need to prove which campaigns, keywords and ads drive phone calls and form leads, with recordings and multi-touch attribution
 - **Flags:** Usage-metered, Add-ons extra
@@ -1779,7 +1779,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/landingi-review/
 
 ## LangShop (langshop.io)
-- **Verified pricing:** (read 2026-09-10 on apps.shopify.com/langshop and langshop.app/pricing) Seven published tiers, billed in USD.
+- **Verified pricing:** (read 2026-10-13 on apps.shopify.com/langshop and langshop.app/pricing) Seven published tiers, billed in USD.
 - **Honest take:** The headline promise is 'unlimited words', but every tier caps how many products you may translate and how many languages you may run, so the meter you actually pay is catalogue size.
 - **Best for:** Shopify merchants selling into several language markets who want machine translation they can correct by hand — glossary rules, brand terms, bulk editing
 - **Flags:** Usage-metered, Annual commit
@@ -2959,7 +2959,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/softsync-review/
 
 ## Spiky.ai (spiky.ai)
-- **Verified pricing:** (re-verified 28 Aug 2026 on their own pricing page; unchanged since 31 Jul 2026) Read across both billing toggles.
+- **Verified pricing:** (re-verified 13 October 2026 on spiky.ai/en/pricing; unchanged since 31 Jul 2026) Read across both billing toggles.
 - **Honest take:** Plus and Pro both stop at 30 meetings per user per month, so a rep taking two calls a day is pushed to Premium at $40, nearly triple the entry price.
 - **Best for:** sales and customer-facing teams that already run most conversations on video and want the coaching layer — talk-time, keyword tracking and call review — without buying a full revenue-intelligence platform
 - **Flags:** Per-seat pricing, Annual commit, Free tier
@@ -3472,7 +3472,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/volza-review/
 
 ## Voye (voyedatapool.com)
-- **Verified pricing:** Published plans (read 6 September 2026 on their plans page).
+- **Verified pricing:** Published plans (read 13 October 2026 on voyedatapool.com/plans, which now has two switches).
 - **Honest take:** eSIM data pooling genuinely beats classic roaming for traveling teams, but the honest homework is coverage-and-speed on YOUR corridors: quality varies by country and local carrier partner.
 - **Best for:** companies with regularly traveling teams that want one pooled global data contract, per-user controls and an end to roaming bill surprises
 - **Full review:** https://aibuildermarketplace.com/b2b/voye-review/
@@ -3518,10 +3518,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/way-review/
 
 ## Weave (getweave.com)
-- **Verified pricing:** Weave sells a per-location monthly subscription and its pricing page (weavehq.com/pricing, read 5 September 2026) now states plans start from $199 per location a month, though the exact tie…
-- **Honest take:** Two honest cautions. The $199 starting price is a floor, not the bill: add-ons, setup and per-location fees land on top, and the full tier ladder is only shown in a demo, so get everything in writing.
+- **Verified pricing:** Weave's plans page (getweave.com/plans, read 13 October 2026) is now a configurator: the base plan starts at $199 a month, and two pre-built bundles cost $149 a month each — Coordinate (onl…
+- **Honest take:** It's deeply tuned for healthcare and appointment-based practices; a general small business will find much of the workflow assumes a front desk and a patient schedule.
 - **Best for:** dental, optometry and small healthcare practices that want phone, texting, payments and reviews unified for the front desk
-- **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/weave-review/
 
 ## WebCatalog (webcatalog.io)

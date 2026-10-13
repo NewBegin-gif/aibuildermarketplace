@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 535 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-13.
+All 540 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -634,6 +634,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/
 
+## Chatwith (chatwith.tools)
+- **Verified pricing:** (read 2026-10-13 in a live browser on chatwith.tools/pricing and in the terms at chatwith.tools/terms) Four plans in US dollars, excluding taxes, with annual billing at ten times the monthl…
+- **Honest take:** You pay in message credits, roughly five per conversation by the page's own estimate, and the terms make fees non-refundable.
+- **Best for:** small and mid-sized businesses, SaaS teams and agencies that want an AI agent trained on their website, docs and connected apps to answer customer questions, collect leads and hand over to a person, at a low entry price
+- **Flags:** Usage-metered, Add-ons extra, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/chatwith-review/
+
 ## Checkr (checkr.com)
 - **Verified pricing:** (re-verified 2026-08-17 and again 2026-09-30) Pay-as-you-go per report, no subscription: Basic $29.99, Essential $59.99 and Complete $94.99 per report, with Enterprise quote-only.
 - **Honest take:** The headline per-check price is rarely what you actually pay — passthrough fees vary wildly by county and search type, so budget for the effective cost, not the advertised one.
@@ -654,6 +661,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators and brands running a paid community — courses, memberships, events and discussions in one branded home, with a built-in payments stack and even branded mobile apps
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/circle-review/
+
+## CiteRoute (citeroute.com)
+- **Verified pricing:** (read 2026-10-13 in a live browser on citeroute.com/pricing, the home page and the terms of service dated 10 September 2026) Four plans, billed monthly.
+- **Honest take:** The GEO score is CiteRoute's own model and its terms rule out any citation guarantee; real AI-crawler data starts at $79 a month for one site.
+- **Best for:** founders and marketers who want to see whether AI crawlers visit their site and how ready their pages look for AI answers, and agencies that want white-label GEO reports for a handful of client sites
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/citeroute-review/
 
 ## Claap (claap.io)
 - **Verified pricing:** (read 2026-09-04 on claap.io/pricing, both billing toggles and the full comparison table; re-verified 2026-09-08) Licenses are priced per license per month in euros.
@@ -916,6 +930,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** lean teams and agencies that want PPC, SEO and lead intelligence consolidated in one affordable dashboard instead of five subscriptions
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/diginius-review/
+
+## DigiParser (digiparser.com)
+- **Verified pricing:** (read 2026-10-13 in a live browser on digiparser.com/pricing in both the monthly and the yearly view, with the FAQ opened, and on the home page) Three self-serve plans, priced by pages proc…
+- **Honest take:** Billed per page, not per document; unused pages expire monthly even on yearly plans, and a charged subscription is not refunded.
+- **Best for:** manufacturers and distributors that retype customer purchase orders or supplier invoices and want the fields and line items extracted for review, then sent to Sheets, Xero, an ERP via Zapier or Make
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/digiparser-review/
 
 ## Digit (heysutton.com)
 - **Verified pricing:** (re-read 2026-09-17 in a rendered browser on heysutton.com/pricing, the rebranded site; unchanged from the 5 September reading on digit-software.com) Four tiers with three published: Starte…
@@ -2726,6 +2747,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/sendcloud-review/
 
+## Sender (sender.net)
+- **Verified pricing:** (read 2026-10-13 in a live browser on sender.net/pricing from a Netherlands connection, which shows euros, in both the annual and the monthly view with the FAQ opened; the US copy of the sa…
+- **Honest take:** Free covers 2,500 subscribers, but the paid prices on the cards are for 500; slide to your list size, and the 30% annual discount is for the first year only.
+- **Best for:** small businesses, shops and creators with lists up to a few thousand subscribers who want newsletters, automation, forms and SMS at a low price, starting on a free plan that is generous on volume
+- **Flags:** Usage-metered, Annual commit, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/sender-review/
+
 ## Sentaro (sentaro.com)
 - **Verified pricing:** (read 24 September 2026 on sentaro.com/en/pricing) Priced per protected account, in USD.
 - **Honest take:** The honest procurement move: run their trial alongside your current filtering, count real catches and false positives for two weeks, and price per mailbox against the incumbents with that data in hand.
@@ -3608,6 +3636,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small businesses whose bookkeeper or accountant already works in Xero — the ecosystem and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
+
+## xTiles (xtiles.app)
+- **Verified pricing:** (read 2026-10-13 in a live browser on xtiles.app/en/pricing, prices in US dollars, with the comparison table and FAQ) Four plans, priced per user.
+- **Honest take:** Free keeps two weeks of planner history; monthly plans are refundable for only 72 hours, and several of Pro's AI permissions are still marked soon.
+- **Best for:** individuals, coaches and small teams who want notes, tasks and a daily planner in one visual workspace, and who want to connect ChatGPT or Claude to their projects
+- **Flags:** Per-seat pricing, Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/xtiles-review/
 
 ## Zedonk (zedonk.co.uk)
 - **Verified pricing:** (price re-verified 2026-09-09 and re-read unchanged 2026-09-27 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building block and billed an…

@@ -78,14 +78,441 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "included_units": 5,
+     "annual_month": 79,
+     "monthly": 99,
+     "extra_unit": {
+      "annual_month": 12,
+      "monthly": 15
+     },
+     "evidence": "the $79, $159 and $279 shown per month are the yearly rates, and the page data gives $99, $199 and $349 for month-to-month billing. The plan comparison now lists users per tier — 5 on Starter, 10 on Growth and Advanced, extra users at $12, $20 and $24 a month on yearly billing ($15, $25 and $30 monthly)"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "included_units": 10,
+     "annual_month": 159,
+     "monthly": 199,
+     "extra_unit": {
+      "annual_month": 20,
+      "monthly": 25
+     },
+     "evidence": "the $79, $159 and $279 shown per month are the yearly rates, and the page data gives $99, $199 and $349 for month-to-month billing. The plan comparison now lists users per tier — 5 on Starter, 10 on Growth and Advanced, extra users at $12, $20 and $24 a month on yearly billing ($15, $25 and $30 monthly)"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "flat",
+     "included_units": 10,
+     "annual_month": 279,
+     "monthly": 349,
+     "extra_unit": {
+      "annual_month": 24,
+      "monthly": 30
+     },
+     "evidence": "the $79, $159 and $279 shown per month are the yearly rates, and the page data gives $99, $199 and $349 for month-to-month billing. The plan comparison now lists users per tier — 5 on Starter, 10 on Growth and Advanced, extra users at $12, $20 and $24 a month on yearly billing ($15, $25 and $30 monthly)"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise on quote"
+    }
+   ],
+   "notes": [
+    "Advanced shows a price but its button says 'Talk to Sales'.",
+    "Starter shows unlimited monthly active contacts; Growth and Advanced 'start with 1,000', so a contact meter applies from Growth up and its price per step is not in our notes."
+   ],
+   "not_computable": [
+    "Monthly active contacts above 1,000 on Growth and Advanced: the selector exists but the prices we read did not move with it."
+   ],
+   "rules_verified_at": "2026-10-13"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "respond-io",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 79.0,
+       "growth": 159.0,
+       "advanced": 279.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 79.0,
+       "growth": 159.0,
+       "advanced": 279.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 79.0,
+       "growth": 159.0,
+       "advanced": 279.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 79.0,
+       "growth": 159.0,
+       "advanced": 279.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 1668.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 139.0,
+       "growth": 159.0,
+       "advanced": 279.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 2388.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 199.0,
+       "growth": 259.0,
+       "advanced": 399.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 259.0,
+      "billed": {
+       "amount": 3108.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 259.0,
+       "growth": 359.0,
+       "advanced": 519.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 319.0,
+      "billed": {
+       "amount": 3828.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 319.0,
+       "growth": 459.0,
+       "advanced": 639.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 619.0,
+      "billed": {
+       "amount": 7428.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 619.0,
+       "growth": 959.0,
+       "advanced": 1239.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1219.0,
+      "billed": {
+       "amount": 14628.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1219.0,
+       "growth": 1959.0,
+       "advanced": 2439.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Monthly active contacts above 1,000 on Growth and Advanced: the selector exists but the prices we read did not move with it."
+    ]
+   },
+   "monthly": {
+    "product_id": "respond-io",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 99.0,
+       "growth": 199.0,
+       "advanced": 349.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 99.0,
+       "growth": 199.0,
+       "advanced": 349.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 99.0,
+       "growth": 199.0,
+       "advanced": 349.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 99.0,
+       "growth": 199.0,
+       "advanced": 349.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 174.0,
+      "billed": {
+       "amount": 174.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 174.0,
+       "growth": 199.0,
+       "advanced": 349.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 249.0,
+       "growth": 324.0,
+       "advanced": 499.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 324.0,
+      "billed": {
+       "amount": 324.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 324.0,
+       "growth": 449.0,
+       "advanced": 649.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 399.0,
+       "growth": 574.0,
+       "advanced": 799.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 774.0,
+      "billed": {
+       "amount": 774.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 774.0,
+       "growth": 1199.0,
+       "advanced": 1549.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1524.0,
+      "billed": {
+       "amount": 1524.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1524.0,
+       "growth": 2449.0,
+       "advanced": 3049.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Monthly active contacts above 1,000 on Growth and Advanced: the selector exists but the prices we read did not move with it."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -109,9 +536,9 @@
    "status": "open"
   },
   {
-   "question_id": "respond-io:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "respond-io:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Monthly active contacts above 1,000 on Growth and Advanced: the selector exists but the prices we read did not move with it. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

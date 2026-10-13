@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 535 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-12.
+All 535 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -649,7 +649,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/chemicloud-review/
 
 ## Circle (circle.so)
-- **Verified pricing:** (2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Enterprise around $419/mo annual, plus a custom Circle Plus tier for fully branded apps.
+- **Verified pricing:** (2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Scale $419/mo annual, plus a custom Circle Plus tier for fully branded apps.
 - **Honest take:** The sticker is only the entry: Circle keeps a commission on every sale on top of Stripe's processing fees, and email marketing is a separate add-on.
 - **Best for:** creators and brands running a paid community — courses, memberships, events and discussions in one branded home, with a built-in payments stack and even branded mobile apps
 - **Flags:** Usage-metered, Add-ons extra
@@ -1773,9 +1773,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Leadfeeder (leadfeeder.com)
 - **Verified pricing:** (read 2026-08-26 on leadfeeder.com/pricing over a US connection) Lite is free forever with a 14-day full trial, seven days of visitor history and the last 100 companies a month.
-- **Honest take:** The price is set by how many companies you identify a month, and the page shows that allowance as 'Tiered' with no figures, so €79 is only the floor of the smallest bucket.
+- **Honest take:** The price is set by how many companies Leadfeeder identifies a month: €79 covers up to 50 on Discover billed annually, and 501-1,000 companies cost €309 (€441 month to month).
 - **Best for:** B2B teams with real website traffic and a sales team that will actually work the list — the free tier is enough to find out whether your traffic contains anyone worth calling
-- **Flags:** Free tier
+- **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/leadfeeder-review/
 
 ## Leadpages (leadpages.com)

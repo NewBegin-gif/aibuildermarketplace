@@ -82,14 +82,384 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "SAR",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "flat",
+     "included_units": 1,
+     "annual_year": 1200,
+     "monthly_status": "unknown",
+     "extra_unit": {
+      "annual_year": 240,
+      "monthly_status": "unknown"
+     },
+     "evidence": "Basic is 1,200 SAR (~$320) for 1 user and 1 location"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "included_units": 3,
+     "annual_year": 1800,
+     "monthly_status": "unknown",
+     "extra_unit": {
+      "annual_year": 240,
+      "monthly_status": "unknown"
+     },
+     "evidence": "Pro is 1,800 SAR (~$480) for 3 users and 3 locations"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quote-only, with unlimited users"
+    }
+   ],
+   "notes": [
+    "Billed in Saudi riyal; the dollar figures in the notes are the 3.75 peg, not a separate price."
+   ],
+   "not_computable": [
+    "Advanced (5 users) shows 2,211 SAR struck through from 3,300 SAR under a 33% off for a 3-year term banner, so its one-year price is not settled in our notes.",
+    "The monthly toggle costs more, but monthly amounts are not in our notes.",
+    "Payroll, POS and extra locations are priced per year on top."
+   ],
+   "extra_evidence": "extra system users 240 SAR each (~$64)",
+   "rules_verified_at": "2026-10-13"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "qoyod",
+    "currency": "SAR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 100.0,
+       "pro": 150.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 1440.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 120.0,
+       "pro": 150.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 140.0,
+      "billed": {
+       "amount": 1680.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 140.0,
+       "pro": 150.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 180.0,
+      "billed": {
+       "amount": 2160.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 180.0,
+       "pro": 190.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 280.0,
+      "billed": {
+       "amount": 3360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 280.0,
+       "pro": 290.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 380.0,
+      "billed": {
+       "amount": 4560.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 380.0,
+       "pro": 390.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 480.0,
+      "billed": {
+       "amount": 5760.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 480.0,
+       "pro": 490.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 580.0,
+      "billed": {
+       "amount": 6960.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 580.0,
+       "pro": 590.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 1080.0,
+      "billed": {
+       "amount": 12960.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 1080.0,
+       "pro": 1090.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 2080.0,
+      "billed": {
+       "amount": 24960.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 2080.0,
+       "pro": 2090.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Advanced (5 users) shows 2,211 SAR struck through from 3,300 SAR under a 33% off for a 3-year term banner, so its one-year price is not settled in our notes.",
+     "The monthly toggle costs more, but monthly amounts are not in our notes.",
+     "Payroll, POS and extra locations are priced per year on top."
+    ]
+   },
+   "monthly": {
+    "product_id": "qoyod",
+    "currency": "SAR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Advanced (5 users) shows 2,211 SAR struck through from 3,300 SAR under a 33% off for a 3-year term banner, so its one-year price is not settled in our notes.",
+     "The monthly toggle costs more, but monthly amounts are not in our notes.",
+     "Payroll, POS and extra locations are priced per year on top."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -113,9 +483,27 @@
    "status": "open"
   },
   {
-   "question_id": "qoyod:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "qoyod:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "qoyod:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Advanced (5 users) shows 2,211 SAR struck through from 3,300 SAR under a 33% off for a 3-year term banner, so its one-year price is not settled in our notes. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "qoyod:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The monthly toggle costs more, but monthly amounts are not in our notes. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "qoyod:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Payroll, POS and extra locations are priced per year on top. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

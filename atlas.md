@@ -3151,14 +3151,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/taxcycle-review/
 
 ## Team Pulse (goteampulse.io)
-- **Verified pricing:** (re-verified 2026-09-22 in the site's own plan-config array) Genuinely free tier: $0/mo for 1 member, 2 projects, unlimited collaborators, chat/tasks/files, 3 private notes, 15 AI credits a…
+- **Verified pricing:** (re-verified 2026-09-22 and 2026-10-13 in the site's own plan-config array; goteampulse.io/pricing itself returns 404, the plans sit on the home page) Genuinely free tier: $0/mo for 1 membe…
 - **Honest take:** The tiers gate on TWO axes at once — member count and project/pipeline count — so you can hit a wall on either.
 - **Best for:** solo operators and small teams who want projects, tasks, chat AND a lightweight CRM pipeline with AI in one simple tool, and value the real free tier to start
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/team-pulse-review/
 
 ## Teikametrics (teikametrics.com)
-- **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) Essentials, for up to $10K a month in ad spend: $149 a month billed annually, or $179 billed monthly.
+- **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit; unchanged on 2026-10-13) Essentials, for up to $10K a month in ad spend: $149 a month billed annually, or $179 billed monthly.
 - **Honest take:** Read the Advanced tier carefully, because it is not a subscription — it is a subscription plus a percentage.
 - **Best for:** Amazon and Walmart sellers spending enough on ads that a few points of efficiency covers the fee — under $10K a month the flat $149 is straightforward
 - **Flags:** Usage-metered, Add-ons extra

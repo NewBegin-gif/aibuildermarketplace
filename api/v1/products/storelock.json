@@ -60,14 +60,203 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "per_unit",
+     "monthly": 19,
+     "annual_status": "unknown",
+     "evidence": "Premium is $19 a month with a 3-day free trial"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "monthly": 399,
+     "annual_status": "unknown",
+     "evidence": "Enterprise is $399 a month"
+    }
+   ],
+   "not_computable": [
+    "On Premium, Image Monitoring is billed on top at $0.20 per image scan; the first 25 scans are free and usage charges have a $20 monthly spending cap by default, which you can change in the app. Enterprise includes unlimited image monitoring."
+   ],
+   "rules_verified_at": "2026-10-14"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "storelock",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "premium": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "premium": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "premium": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "premium": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "premium": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "On Premium, Image Monitoring is billed on top at $0.20 per image scan; the first 25 scans are free and usage charges have a $20 monthly spending cap by default, which you can change in the app. Enterprise includes unlimited image monitoring."
+    ]
+   },
+   "monthly": {
+    "product_id": "storelock",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "premium": 19.0,
+       "enterprise": 399.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 38.0,
+      "billed": {
+       "amount": 38.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "premium": 38.0,
+       "enterprise": 798.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 57.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "premium": 57.0,
+       "enterprise": 1197.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 95.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "premium": 95.0,
+       "enterprise": 1995.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 190.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "premium": 190.0,
+       "enterprise": 3990.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "On Premium, Image Monitoring is billed on top at $0.20 per image scan; the first 25 scans are free and usage charges have a $20 monthly spending cap by default, which you can change in the app. Enterprise includes unlimited image monitoring."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -91,9 +280,9 @@
    "status": "open"
   },
   {
-   "question_id": "storelock:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "storelock:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: On Premium, Image Monitoring is billed on top at $0.20 per image scan; the first 25 scans are free and usage charges have a $20 monthly spending cap by default, which you can change in the app. Enterprise includes unlimited image monitoring. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

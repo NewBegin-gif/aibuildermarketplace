@@ -19,7 +19,7 @@
   },
   "notes": "Prices are the entry prices we found at research time; always check live pricing. Every flag carries the evidence sentence from our hand-researched dossier.",
   "tool_count": 545,
-  "flag_count": 898
+  "flag_count": 900
  },
  "tools": [
   {
@@ -4091,19 +4091,35 @@
    "entry_price": "$400",
    "entry_price_terms": "Starter · per month including 5 users",
    "pricing_status": "public",
-   "price_note": "(re-read 2026-09-17 in a rendered browser on heysutton.com/pricing, the rebranded site; unchanged from the 5 September reading on digit-software.com) Four tiers with three published: Starter $400/month including 5 users, Growth $750 including 10, Professional $1,300 including 15, and Enterprise on quote. Extra users are $63/month each on every tier. Paying quarterly takes 10% off — $360, $675 and $1,170 a month, shown with the quarter total beside it — and annually 20%, which is $320, $600 and $1,040 with the year total beside it; the page now opens on Monthly, so the first figure you see is the real monthly rate. Two integrations are included on every plan. The third and each one after it is where the page disagrees with itself: the Integrations block says $100 a month, the FAQ on the same page says $125, and the add-on cards side with the FAQ — API access $125 a month, MCP access $125, push notifications and webhooks $63, all the same price on Starter, Growth and Professional. Customer portals are $18.75 per portal per month on every tier, Enterprise included. We asked Digit which of the two they bill on 5 September 2026 and had no answer; twelve days later, on the rebranded site, both figures were still there.",
+   "price_note": "(re-read 2026-09-17 in a rendered browser on heysutton.com/pricing, the rebranded site; unchanged from the 5 September reading on digit-software.com) Four tiers with three published: Starter $400/month including 5 users, Growth $750 including 10, Professional $1,300 including 15, and Enterprise on quote. Extra users are $63/month each on every tier. Paying quarterly takes 10% off — $360, $675 and $1,170 a month, shown with the quarter total beside it — and annually 20%, which is $320, $600 and $1,040 with the year total beside it; the page now opens on Monthly, so the first figure you see is the real monthly rate. Two integrations are included on every plan. The third and each one after it is where the page disagrees with itself: the Integrations block says $100 a month, the FAQ on the same page says $125, and the add-on cards side with the FAQ — API access $125 a month, MCP access $125, push notifications and webhooks $63, all the same price on Starter, Growth and Professional. Customer portals are $18.75 per portal per month on monthly billing, on every tier, Enterprise included. We asked Digit which of the two they bill on 5 September 2026 and had no answer; twelve days later, on the rebranded site, both figures were still there. Re-read on 14 October 2026 in the raw HTML of heysutton.com/pricing: the tier prices, the 10% and 20% term discounts and every add-on price are unchanged, and the $100-versus-$125 integration conflict is still there. One thing is new. The FAQ still says additional users are $63 per month each, but the plan cards now carry an extra-user price per billing term: $63 on monthly, $56 on quarterly and $50 on annual billing. The visible line on every card, Growth and Professional included, reads “5 users included, then $50/mo each”, although those two tiers include 10 and 15 users. Customer portals follow the same pattern, with $17 and $15 per portal per month alongside the $18.75, matching the quarterly and annual discounts. Which extra-user figure Sutton bills is not confirmed.",
    "flags": [
+    {
+     "flag": "per_seat",
+     "evidence": "The FAQ still says additional users are $63 per month each, but the plan cards now carry an extra-user price per billing term: $63 on monthly, $56 on quarterly and $50 on annual billing.",
+     "evidence_excerpt": null,
+     "source_url": null,
+     "evidence_field": "dossier pricing notes and honest knock",
+     "verified_at": "2026-10-14"
+    },
     {
      "flag": "addons_extra",
      "evidence": "The third and each one after it is where the page disagrees with itself: the Integrations block says $100 a month, the FAQ on the same page says $125, and the add-on cards side with the FAQ — API access $125 a month, MCP access $125, push notifications and webhooks $63, all the same price on Starter, Growth and Professional.",
      "evidence_excerpt": "The third and each one after it is where the page disagrees with itself: the Integrations block says $100 a month, the FAQ on the same page says $125, and the add-on cards side with the FAQ — API acc…",
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-17"
+     "verified_at": "2026-10-14"
+    },
+    {
+     "flag": "annual_lock",
+     "evidence": "The FAQ still says additional users are $63 per month each, but the plan cards now carry an extra-user price per billing term: $63 on monthly, $56 on quarterly and $50 on annual billing.",
+     "evidence_excerpt": null,
+     "source_url": null,
+     "evidence_field": "dossier pricing notes and honest knock",
+     "verified_at": "2026-10-14"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-17",
+   "price_verified_at": "2026-10-14",
    "first_observed_at": "2026-09-17"
   },
   {
@@ -6141,12 +6157,12 @@
    "review_url": "https://aibuildermarketplace.com/b2b/gushwork-review/",
    "from_price_usd_mo": 900.0,
    "entry_price": "$900",
-   "entry_price_terms": "a month, billed monthly, cancel anytime",
+   "entry_price_terms": "a month, billed monthly",
    "pricing_status": "public",
-   "price_note": "(read 21 September 2026 on www.gushwork.ai/pricing) Gushwork publishes one number and no ladder. The page states “Pricing starts at $900 /month”, billed monthly, cancel anytime, and the FAQ on the same page repeats it: “$900 is the starting point, with every agent and feature switched on.” Everything above that rung is quoted rather than published — “Talk to us, and we’ll recommend the right plan based on your business, goals, and lead potential” — and the FAQ names the three things that move the figure: how many pages you want published, how fast you want to grow, and how much paid support you add, with the exact number confirmed on a call.\n\nThere are no named tiers, no annual rate, no free plan and no trial. The only button on the pricing page is Book a Demo. What the $900 covers, per that FAQ: setup, page creation, optimisation, tracking and support, with the full agent suite active — Gushwork states it is not sold agent by agent, so there is no cheaper subset to buy.\n\nOne figure on that page is not a price and should not be read as one: the $500K+ in contracts belongs to a named customer (Fraxtional), under the page’s own note that results vary with market, competition and available search demand.",
+   "price_note": "(read 21 September 2026 on www.gushwork.ai/pricing) Gushwork publishes one number and no ladder. The page states “Pricing starts at $900 /month”, billed monthly, cancel anytime, and the FAQ on the same page repeats it: “$900 is the starting point, with every agent and feature switched on.” Everything above that rung is quoted rather than published — “Talk to us, and we’ll recommend the right plan based on your business, goals, and lead potential” — and the FAQ names the three things that move the figure: how many pages you want published, how fast you want to grow, and how much paid support you add, with the exact number confirmed on a call.\n\nThere are no named tiers, no annual rate, no free plan and no trial. The only button on the pricing page is Book a Demo. What the $900 covers, per that FAQ: setup, page creation, optimisation, tracking and support, with the full agent suite active — Gushwork states it is not sold agent by agent, so there is no cheaper subset to buy.\n\nOne figure on that page is not a price and should not be read as one: the $500K+ in contracts belongs to a named customer (Fraxtional), under the page’s own note that results vary with market, competition and available search demand.\n\nThe contract says something the pricing page does not. Gushwork's Master Services Terms, version 3.0, effective 31 July 2026 and read on 14 October 2026, give an agreement an initial term of twelve months that renews automatically for further twelve-month periods unless either side gives notice at least 30 days before it ends. They also set a minimum lock-in of six months from the start of each term, during which the agreement may not be terminated for convenience; after that you can end it on 30 days' written notice, subject to a joint performance review. The pricing page's “Cancel anytime” and “No contracts” mention none of this. The terms are applied through an Order Form, which sets the term of your own deal, so read that before you sign.",
    "flags": [],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-21",
+   "price_verified_at": "2026-10-14",
    "first_observed_at": null
   },
   {
@@ -8038,7 +8054,7 @@
      "evidence_excerpt": null,
      "source_url": "https://loyalino.io/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-22"
+     "verified_at": "2026-10-14"
     },
     {
      "flag": "annual_lock",
@@ -8046,7 +8062,7 @@
      "evidence_excerpt": null,
      "source_url": "https://loyalino.io/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-22"
+     "verified_at": "2026-10-14"
     },
     {
      "flag": "free_tier",
@@ -8054,11 +8070,11 @@
      "evidence_excerpt": null,
      "source_url": "https://loyalino.io/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-22"
+     "verified_at": "2026-10-14"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-22",
+   "price_verified_at": "2026-10-14",
    "first_observed_at": null
   },
   {
@@ -13975,10 +13991,10 @@
    "entry_price": "$6.99",
    "entry_price_terms": "Basic Plan · per month on the App Store listing, or $67.10 a year, for the checkbox…",
    "pricing_status": "public",
-   "price_note": "(read 2026-08-25, re-verified 2026-09-09 and again on 2026-09-29 on apps.shopify.com/terms-and-conditions-checkbox, listed as “TnC: Terms and Conditions Box”, and in the vendor's own pricing article at www.effectify.help) The monthly ladder is $6.99, $10.99 and $12.99, and the annual prices are $67.10, $92.32 and $109.12. The listing puts the annual saving at 20% on Basic and 30% on Advanced and Pro.\n\nThis ladder has moved three times in five weeks, each time with the same feature lists. On 24 August 2026 the monthly plans were $6.99, $9.99 and $12.99. On 25 August they were $7.99, $12.99 and $14.99, with annual rates of $67.12, $109.12 and $125.92. By 9 September the annual rates had been cut to $47.94, $77.94 and $89.94 under a “save 50%” label while the monthly ones held. On 29 September both columns had changed again, with the monthly rates back down to $6.99, $10.99 and $12.99. Treat any figure here, ours included, as the price on the day it was read, and check the listing before you install.\n\nFour plans on the listing, and the free one is not for you. Development Stores is free and carries every Pro feature, but the listing states it is for development and partner stores only and that payment will be activated on upgrade — so the “Free plan available” line at the top of the listing describes a partner sandbox rather than a free tier for a store that takes orders. Basic is $6.99 a month or $67.10 a year and covers the AI terms-and-conditions checkbox with support for Buy It Now and express checkout buttons. Advanced is $10.99 a month or $92.32 a year and adds the consent date logged into the order's details plus the ability to show the checkbox for specific countries and products. Pro is $12.99 a month or $109.12 a year and adds newsletter and contact forms, translation of the checkbox into multiple languages, the checkbox in Shopify POS and an AI-powered policies generator. Every paid tier carries a 7-day free trial, and the listing states charges are billed in USD and recur every 30 days.\n\nThe vendor's own pricing article, re-read on 29 September 2026, now prints the same monthly and annual rates as the listing for all three plans; on 9 September the two pages disagreed on the annual price. The article still puts the annual saving at approximately 30%, which holds for Advanced and Pro and not for Basic, and still answers its own question “are there any hidden fees?” with “No. All pricing is transparent and listed above”. It is also the only page where a fifth plan appears at all: a Plus Plan at $19.99 a month or $167.92 a year, for Shopify Plus merchants only, adding “the ability to show the checkbox in the actual Checkout page of your store”. The Plus Plan is the one rate that has not moved in any of our readings, so it now sits $7 above Pro. The article also notes that uninstalling during an ongoing billing period still incurs that period's charge.\n\nDeveloper Effective Apps, trading as Effectify, at 13 Max Nordau, Ashdod, Israel; the app launched on 2 December 2019, carries Shopify's Built for Shopify badge, and stood at 557 listing reviews with a 4.9 average on 29 September 2026, up from 550 on 9 September.",
+   "price_note": "(read 2026-08-25, re-verified 2026-09-09 and again on 2026-09-29 on apps.shopify.com/terms-and-conditions-checkbox, listed as “TnC: Terms and Conditions Box”, and in the vendor's own pricing article at www.effectify.help) The monthly ladder is $6.99, $10.99 and $12.99, and the annual prices are $67.10, $92.32 and $109.12. The listing puts the annual saving at 20% on Basic and 30% on Advanced and Pro.\n\nThis ladder has moved three times in five weeks, each time with the same feature lists. On 24 August 2026 the monthly plans were $6.99, $9.99 and $12.99. On 25 August they were $7.99, $12.99 and $14.99, with annual rates of $67.12, $109.12 and $125.92. By 9 September the annual rates had been cut to $47.94, $77.94 and $89.94 under a “save 50%” label while the monthly ones held. On 29 September both columns had changed again, with the monthly rates back down to $6.99, $10.99 and $12.99. Treat any figure here, ours included, as the price on the day it was read, and check the listing before you install.\n\nFour plans on the listing, and the free one is not for you. Development Stores is free and carries every Pro feature, but the listing states it is for development and partner stores only and that payment will be activated on upgrade — so the “Free plan available” line at the top of the listing describes a partner sandbox rather than a free tier for a store that takes orders. Basic is $6.99 a month or $67.10 a year and covers the AI terms-and-conditions checkbox with support for Buy It Now and express checkout buttons. Advanced is $10.99 a month or $92.32 a year and adds the consent date logged into the order's details plus the ability to show the checkbox for specific countries and products. Pro is $12.99 a month or $109.12 a year and adds newsletter and contact forms, translation of the checkbox into multiple languages, the checkbox in Shopify POS and an AI-powered policies generator. Every paid tier carries a 7-day free trial, and the listing states charges are billed in USD and recur every 30 days.\n\nThe vendor's own pricing article, re-read on 29 September 2026, now prints the same monthly and annual rates as the listing for all three plans; on 9 September the two pages disagreed on the annual price. The article still puts the annual saving at approximately 30%, which holds for Advanced and Pro and not for Basic, and still answers its own question “are there any hidden fees?” with “No. All pricing is transparent and listed above”. It is also the only page where a fifth plan appears at all: a Plus Plan at $19.99 a month or $167.92 a year, for Shopify Plus merchants only, adding “the ability to show the checkbox in the actual Checkout page of your store”. The Plus Plan is the one rate that has not moved in any of our readings, so it now sits $7 above Pro. The article also notes that uninstalling during an ongoing billing period still incurs that period's charge.\n\nDeveloper Effective Apps, trading as Effectify, at 13 Max Nordau, Ashdod, Israel; the app launched on 2 December 2019, carries Shopify's Built for Shopify badge, and stood at 565 listing reviews with a 4.9 average on 14 October 2026, up from 557 on 29 September and 550 on 9 September.\n\nRe-read on 14 October 2026: the listing and the vendor's pricing article (updated 17 September 2026) show the same three monthly and annual rates as on 29 September, and the article still lists the Plus Plan at $19.99 a month or $167.92 a year.",
    "flags": [],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-29",
+   "price_verified_at": "2026-10-14",
    "first_observed_at": "2026-08-25"
   },
   {
@@ -14962,7 +14978,7 @@
    "price_note": "(prices read 2026-09-20 on apps.shopify.com/product-notes) Billed in USD, every 30 days, and the ladder has three steps rather than the two the app's own summary suggests. Free gives you one textual warning across unlimited products, with the styling, per-product targeting and per-country targeting included. Premium is $6.99 a month or $41.94 a year, and the annual figure really is half of twelve monthly payments. It lifts the cap to unlimited warnings, notes and pop-ups, adds cart and checkout warnings, targeting by product or collection, and US-state geo-targeting on top of country targeting — but the plan is labelled for all stores EXCEPT Shopify Plus. Plus Plan is $12.99 a month or $77.94 a year, again exactly half of twelve monthly payments, and it is the Shopify Plus plan: the same feature list, plus warnings shown on the Checkout itself and the rule that lets a warning block checkout when configured. Both paid plans carry a 7-day free trial.",
    "flags": [],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-20",
+   "price_verified_at": "2026-10-14",
    "first_observed_at": "2026-09-20"
   },
   {

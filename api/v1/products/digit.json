@@ -15,41 +15,34 @@
   "entry_price": "$400",
   "entry_price_terms": "Starter · per month including 5 users",
   "from_price_usd_month": 400.0,
-  "plans": [
-   {
-    "name": "Starter",
-    "price": "$400/month",
-    "includes": "Includes 5 users"
-   },
-   {
-    "name": "Growth",
-    "price": "$750/month",
-    "includes": "Includes 10 users"
-   },
-   {
-    "name": "Professional",
-    "price": "$1,300/month",
-    "includes": "Includes 15 users"
-   },
-   {
-    "name": "Enterprise",
-    "price": "no published price",
-    "includes": "On quote"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-read 2026-09-17 in a rendered browser on heysutton.com/pricing, the rebranded site; unchanged from the 5 September reading on digit-software.com) Four tiers with three published: Starter $400/month including 5 users, Growth $750 including 10, Professional $1,300 including 15, and Enterprise on quote. Extra users are $63/month each on every tier. Paying quarterly takes 10% off — $360, $675 and $1,170 a month, shown with the quarter total beside it — and annually 20%, which is $320, $600 and $1,040 with the year total beside it; the page now opens on Monthly, so the first figure you see is the real monthly rate. Two integrations are included on every plan. The third and each one after it is where the page disagrees with itself: the Integrations block says $100 a month, the FAQ on the same page says $125, and the add-on cards side with the FAQ — API access $125 a month, MCP access $125, push notifications and webhooks $63, all the same price on Starter, Growth and Professional. Customer portals are $18.75 per portal per month on every tier, Enterprise included. We asked Digit which of the two they bill on 5 September 2026 and had no answer; twelve days later, on the rebranded site, both figures were still there.",
-  "verified_at": "2026-09-17",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-read 2026-09-17 in a rendered browser on heysutton.com/pricing, the rebranded site; unchanged from the 5 September reading on digit-software.com) Four tiers with three published: Starter $400/month including 5 users, Growth $750 including 10, Professional $1,300 including 15, and Enterprise on quote. Extra users are $63/month each on every tier. Paying quarterly takes 10% off — $360, $675 and $1,170 a month, shown with the quarter total beside it — and annually 20%, which is $320, $600 and $1,040 with the year total beside it; the page now opens on Monthly, so the first figure you see is the real monthly rate. Two integrations are included on every plan. The third and each one after it is where the page disagrees with itself: the Integrations block says $100 a month, the FAQ on the same page says $125, and the add-on cards side with the FAQ — API access $125 a month, MCP access $125, push notifications and webhooks $63, all the same price on Starter, Growth and Professional. Customer portals are $18.75 per portal per month on monthly billing, on every tier, Enterprise included. We asked Digit which of the two they bill on 5 September 2026 and had no answer; twelve days later, on the rebranded site, both figures were still there. Re-read on 14 October 2026 in the raw HTML of heysutton.com/pricing: the tier prices, the 10% and 20% term discounts and every add-on price are unchanged, and the $100-versus-$125 integration conflict is still there. One thing is new. The FAQ still says additional users are $63 per month each, but the plan cards now carry an extra-user price per billing term: $63 on monthly, $56 on quarterly and $50 on annual billing. The visible line on every card, Growth and Professional included, reads “5 users included, then $50/mo each”, although those two tiers include 10 and 15 users. Customer portals follow the same pattern, with $17 and $15 per portal per month alongside the $18.75, matching the quarterly and annual discounts. Which extra-user figure Sutton bills is not confirmed.",
+  "verified_at": "2026-10-14",
   "source_url": null
  },
  "free_plan": false,
  "free_plan_evidence": null,
  "cost_traps": [
   {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "The FAQ still says additional users are $63 per month each, but the plan cards now carry an extra-user price per billing term: $63 on monthly, $56 on quarterly and $50 on annual billing.",
+   "verified_at": "2026-10-14",
+   "source_url": null
+  },
+  {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "The third and each one after it is where the page disagrees with itself: the Integrations block says $100 a month, the FAQ on the same page says $125, and the add-on cards side with the FAQ — API access $125 a month, MCP access $125, push notifications and webhooks $63, all the same price on Starter, Growth and Professional.",
-   "verified_at": "2026-09-17",
+   "verified_at": "2026-10-14",
+   "source_url": null
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "The FAQ still says additional users are $63 per month each, but the plan cards now carry an extra-user price per billing term: $63 on monthly, $56 on quarterly and $50 on annual billing.",
+   "verified_at": "2026-10-14",
    "source_url": null
   }
  ],
@@ -133,12 +126,12 @@
    ],
    "not_computable": [
     "Quarterly billing (10% off: $360, $675 and $1,170 a month).",
-    "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month."
+    "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month on monthly billing ($17 and $15 alongside it on the plan cards)."
    ],
    "notes": [
-    "Whether the $63 extra-user rate is discounted on annual billing is not stated."
+    "Extra-user price on annual billing is unresolved: the FAQ says $63 per month each, the plan cards (read 14 October 2026) carry $56 on quarterly and $50 on annual billing. The engine prices extra users only on monthly billing."
    ],
-   "rules_verified_at": "2026-10-09"
+   "rules_verified_at": "2026-10-14"
   },
   "growth": {
    "annual": {
@@ -336,7 +329,7 @@
     "conflicts": [],
     "unknowns": [
      "Quarterly billing (10% off: $360, $675 and $1,170 a month).",
-     "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month."
+     "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month on monthly billing ($17 and $15 alongside it on the plan cards)."
     ]
    },
    "monthly": {
@@ -521,12 +514,13 @@
     "conflicts": [],
     "unknowns": [
      "Quarterly billing (10% off: $360, $675 and $1,170 a month).",
-     "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month."
+     "Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month on monthly billing ($17 and $15 alongside it on the plan cards)."
     ]
    }
   }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
@@ -559,7 +553,7 @@
   {
    "question_id": "digit:pricing_gap_2",
    "key": "pricing_gap_2",
-   "question": "Our price check could not put a number on this part of the cost: Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month. Can you publish the price or the rule?",
+   "question": "Our price check could not put a number on this part of the cost: Integrations beyond the two included: the page says both $100 and $125 a month; API and MCP access $125 each, webhooks $63, customer portals $18.75 per portal a month on monthly billing ($17 and $15 alongside it on the plan cards). Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -261,9 +261,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/atto-review/
 
 ## Attribuly (attribuly.com)
-- **Verified pricing:** (re-verified 2026-09-13 on apps.shopify.com/attribuly; every amount unchanged since 2026-08-18) A free plan that covers the first $1,000 of recovered email revenue, then Capture at $450 a m…
-- **Honest take:** This is the most expensive app in its category on the Shopify store by a wide margin, and the jump is not gradual — free to $450 a month with nothing in between.
-- **Best for:** stores already running Klaviyo at volume, where a few percent more recovered carts is worth $450 a month and the identity-resolution layer has enough traffic to work with
+- **Verified pricing:** (re-read 2026-10-14 on apps.shopify.com/attribuly and attribuly.com/pricing-retention/; the plan ladder changed after 13 September 2026) A free plan that recovers the first $1,000 of email …
+- **Honest take:** The pricing has moved within two months.
+- **Best for:** stores already running Klaviyo or Omnisend at volume, with enough traffic for identity resolution to work and a recovery figure they can check against their own email platform before a 10% share of it becomes the bill
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/attribuly-review/
 
@@ -580,7 +580,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/calilio-review/
 
 ## CallHippo (callhippo.com)
-- **Verified pricing:** (re-verified 2026-09-15 in a browser on callhippo.com/pricing, currency selector on USD, phone-number region US/CA, team size 1-4) Starter is $19 per user per month on annual billing and $2…
+- **Verified pricing:** (re-verified 2026-10-14 in a browser on callhippo.com/pricing, currency selector switched to USD, phone-number region US/CA: plan grid, both billing tabs and fair-usage notes re-read; the a…
 - **Honest take:** 'Unlimited calling' is unlimited to the US and Canada — international minutes meter separately, so teams calling Europe or Asia should price their real destinations first.
 - **Best for:** budget-conscious sales/support teams wanting virtual numbers in 50+ countries with a free entry point and CRM integrations
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit
@@ -1268,9 +1268,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/fireflies-ai-review/
 
 ## Flatpay (flatpay.com)
-- **Verified pricing:** (re-verified 2026-09-13 on flatpay.com/en-gb/pricing and their separate /pricelist page; every amount unchanged since 2026-08-13) Flatpay charges one rate per transaction on every card type…
-- **Honest take:** There is no subscription, but miss £995 of card turnover in a month and you are charged £39, which for a quiet month is a monthly fee wearing a different hat.
-- **Best for:** a physical shop, café or bar with steady card turnover above £995 a month that wants one predictable rate on every card type instead of a pricing table full of card categories
+- **Verified pricing:** (re-verified 2026-10-14 on flatpay.com/en-gb/pricing and their separate /pricelist page; the four transaction rates and up-front fees unchanged since 2026-08-13, the minimum monthly turnove…
+- **Honest take:** There is no subscription, but miss £1,100 of card turnover in a month and you are charged £39, which for a quiet month is a monthly fee wearing a different hat.
+- **Best for:** a physical shop, café or bar with steady card turnover above £1,100 a month that wants one predictable rate on every card type instead of a pricing table full of card categories
 - **Full review:** https://aibuildermarketplace.com/b2b/flatpay-review/
 
 ## FlexiQuiz (flexiquiz.com)
@@ -1506,7 +1506,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/help-scout-review/
 
 ## HelpCenter (helpcenterapp.com)
-- **Verified pricing:** (re-read 2026-08-29 on apps.shopify.com/helpcenter) Free to install, and the meter is tickets rather than agents — Basic already gives unlimited support agents, then bills for every ticket …
+- **Verified pricing:** (re-read 2026-08-29 on apps.shopify.com/helpcenter, re-verified unchanged 2026-10-14) Free to install, and the meter is tickets rather than agents — Basic already gives unlimited support ag…
 - **Honest take:** The meter is tickets, not agents: Basic charges $0.16 for every ticket past fifty, so 300 tickets a month cost $45.99 against $19.99 on Standard.
 - **Best for:** small Shopify stores that want ticketing, live chat and a searchable FAQ page from one app rather than bolting three together
 - **Flags:** Usage-metered, Free tier
@@ -2796,7 +2796,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seo-space-review/
 
 ## SEOKart (seokart.com)
-- **Verified pricing:** (price read 2026-09-12, re-verified 2026-09-15) Two publishers, and they do not publish the same ladder.
+- **Verified pricing:** (price read 2026-09-12, re-verified 2026-09-15 and again unchanged on 2026-10-14) Two publishers, and they do not publish the same ladder.
 - **Honest take:** The rank tracker checks monthly on Free and weekly on Pro and above, so it is a trend line, not a daily rank check, and more than 100 tracked keywords is a priced step on the vendor's own site.
 - **Best for:** Shopify or BigCommerce merchants with a few hundred to a few thousand products who want on-page SEO cleaned up in bulk
 - **Flags:** Usage-metered, Annual commit, Free tier

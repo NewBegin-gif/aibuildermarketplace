@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 540 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-14.
+All 545 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-14.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -539,8 +539,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/browse-ai-review/
 
 ## BrowserAct (browseract.com)
-- **Verified pricing:** (prices re-verified 2026-10-03 on browseract.com/pricing, both billing tabs open, and cross-read against browseract.com/llms.txt the same day) A credit-metered subscription with a free tier.
-- **Honest take:** The yearly toggle wears a -20% badge and the crossed-out prices suggest much more, but read what you would actually be charged on 3 October 2026: monthly is $16, $70 and $120, and yearly is $13, $56 and $96.
+- **Verified pricing:** (prices re-verified 2026-10-14 on browseract.com/pricing in a live browser, both billing tabs open, and cross-read against browseract.com/llms.txt the same day; the plan amounts and credit …
+- **Honest take:** The free tier is the catch: its card reads 200 signup credits where it read 1,500 on 2 September, about 66 workflow steps at 3 credits a step, while the vendor's own llms.txt still advertises 2,000.
 - **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, proxies and CAPTCHA handling managed for them, and can commit to yearly billing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
@@ -814,6 +814,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/contabo-review/
 
+## Content Raptor (contentraptor.com)
+- **Verified pricing:** (read 2026-10-14 in a live browser on contentraptor.com/pricing, the home page, the about page and the terms and conditions last updated 15 May 2023) Three options.
+- **Honest take:** Priced per site with 150 tracked keywords each, and the terms make every purchase non-refundable.
+- **Best for:** site owners and small agencies with established Search Console traffic who want a prioritised list of pages to improve, an editor to add missing keywords, and A/B tests and rank tracking to check the result
+- **Flags:** Annual commit, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/content-raptor-review/
+
 ## Contractor Foreman (contractorforeman.com)
 - **Verified pricing:** (re-verified 11 Oct 2026 on their own pricing page: annual prices unchanged since 1 Aug 2026; the quarterly option recorded on 28 Aug 2026 has been replaced by monthly billing) Priced for t…
 - **Honest take:** Monthly costs 20% to 32% more than annual on the same plan — $139 against $105 on Standard — and Basic is sold on annual billing only, so the cheapest way in requires a year paid up front.
@@ -888,6 +895,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** companies hiring internationally without local entities — contractors paid compliantly in 150+ countries, or full EOR employment where you need someone on the ground fast
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/deel-review/
+
+## Deftform (deftform.com)
+- **Verified pricing:** (read 2026-10-14 in a live browser on deftform.com, pricing section, and the legal notice) Three packages, base prices in euros excluding VAT, invoiced by a merchant of record.
+- **Honest take:** Priced per form, monthly or once; Lifetime excludes the €18-a-month Business add-on, and Mailchimp is still planned.
+- **Best for:** small businesses, agencies and EU-based teams that want a clean hosted form builder with unlimited responses and team members, EU data storage and a choice between per-form, monthly or one-time pricing
+- **Flags:** Usage-metered, Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/deftform-review/
 
 ## Deputy (deputy.com)
 - **Verified pricing:** (re-read 2026-09-19 on deputy.com/pricing; amounts unchanged since the browser reading of 2026-07-31, which used both billing toggles) Three plans, per user per month and excluding tax.
@@ -1210,6 +1224,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The critical reviews are about tracking that stopped without warning or events that never arrived, and with 22 reviews in eight years there is little else to weigh them against.
 - **Best for:** Shopify stores that advertise on Meta plus TikTok, Snapchat or Pinterest and want several pixels, for example one per collection or a backup pixel, with server-side events for all of them managed from one screen
 - **Full review:** https://aibuildermarketplace.com/b2b/fbtrack-review/
+
+## FeedbackGate (feedbackgate.com)
+- **Verified pricing:** (read 2026-10-14 in a live browser on feedbackgate.com/pricing, the home page, the about page and the terms of service dated 1 January 2025) Three monthly plans, each with a 14-day free tri…
+- **Honest take:** Its rating gate routes happy customers to Google, which Google's policy on selectively soliciting reviews forbids; overage rates are unpublished.
+- **Best for:** small local businesses that want automated email and SMS review requests with alerts on negative feedback, and that will offer every customer the public review link
+- **Flags:** Usage-metered, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/feedbackgate-review/
 
 ## Feedvisor (feedvisor.com)
 - **Verified pricing:** Feedvisor publishes no price, and we checked that again on 2026-09-03 and 2026-09-29.
@@ -2423,6 +2444,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/proton-drive-review/
 
+## PulseMonitor (pulsemonitor.io)
+- **Verified pricing:** (read 2026-10-14 in a live browser on pulsemonitor.io/pricing, the home page and the refund policy dated 14 October 2026) Two plans, no per-seat pricing.
+- **Honest take:** Paid fees are non-refundable, and the terms do not say which company runs it; Slack, PagerDuty and status pages need Pro.
+- **Best for:** developers and small teams who want HTTP, API, SSL and keyword uptime checks plus a basic SEO audit in one cheap tool, with a free plan that covers 50 monitors
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/pulsemonitor-review/
+
 ## Pumper Bundles (pumper.run)
 - **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/pumper-quantity-breaks-product-bundles-discounts AND on the vendor's own site, USD; listed amounts unchanged since 2 September) Four tiers on the…
 - **Honest take:** Every tier ships the same four features, so what you are buying is a ceiling on the revenue the app is allowed to earn you.
@@ -3564,6 +3592,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** agencies and lead-gen businesses that want every lead — calls, forms, chats — attributed to its source and campaign without enterprise-suite prices
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/whatconverts-review/
+
+## WhisperTranscribe (whispertranscribe.com)
+- **Verified pricing:** (read 2026-10-14 in a live browser on whispertranscribe.com/pricing and the terms of use last updated 28 October 2025) Two products.
+- **Honest take:** Starter's $2.80-an-hour claim works out to about $3.75; monthly billing doubles the price and fees are non-refundable.
+- **Best for:** podcasters, YouTubers, researchers and small teams who transcribe a predictable number of hours a month, want unlimited users without seat fees, and prefer a service that does not keep their files
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/whispertranscribe-review/
 
 ## Wholesale Gorilla (wholesalegorilla.com)
 - **Verified pricing:** (read 2026-09-08 and re-read 2026-09-19 on apps.shopify.com/wholesale-gorilla and checked against the vendor's own plan-comparison page at wholesalegorilla.com/plan-comparison/, which lists…

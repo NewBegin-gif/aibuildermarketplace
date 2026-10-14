@@ -956,7 +956,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-read 2026-09-17 in a rendered browser on heysutton.com/pricing, the rebranded site; unchanged from the 5 September reading on digit-software.com) Four tiers with three published: Starte…
 - **Honest take:** The tier price is a floor, not a ceiling, and the add-ons are where an inventory system quietly doubles.
 - **Best for:** manufacturers and distributors outgrowing spreadsheets who need inventory, production, purchasing and sales in one system, and who genuinely need lot tracking and traceability rather than just wanting them
-- **Flags:** Add-ons extra
+- **Flags:** Per-seat pricing, Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/digit-review/
 
 ## DigitalOcean (digitalocean.com)

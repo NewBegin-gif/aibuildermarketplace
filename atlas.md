@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 540 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-13.
+All 540 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-14.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -192,7 +192,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/amplitude-review/
 
 ## Answering Service Care (answeringservicecare.com)
-- **Verified pricing:** (2026-09-10, read off their own pricing page, both billing toggles) Four plans, priced on included minutes.
+- **Verified pricing:** (2026-09-10, re-verified 13 October 2026 on their own pricing page, both billing toggles) Four plans, priced on included minutes.
 - **Honest take:** Starter buys the line and nothing else: at $40 plus $1.75 a minute it stays the cheapest option only up to roughly 79 minutes a month, and there is a $50 start-up fee on top.
 - **Best for:** a small business that loses money when a call goes to voicemail — trades, clinics, law and property firms
 - **Flags:** Usage-metered
@@ -349,7 +349,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/beehiiv-review/
 
 ## BidX (bidx.io)
-- **Verified pricing:** (re-verified 2026-09-11, read in a live browser on their own pricing page, EUR view; every figure unchanged since 6 Aug 2026) Amazon PPC is sold in three tiers, and every one of them is a m…
+- **Verified pricing:** (re-verified 2026-10-13 on their own pricing page, EUR view; every figure unchanged since 6 Aug 2026) Amazon PPC is sold in three tiers, and every one of them is a monthly fee plus an unspe…
 - **Honest take:** Every Amazon PPC and DSP tier adds a percentage of connected ad spend that appears nowhere on the page, so €495 is a floor, not a price, and the commitment is annual.
 - **Best for:** brands and agencies already spending well past €10,000 a month on Amazon ads, who want bid, budget and campaign automation
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
@@ -369,7 +369,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/billingnow-review/
 
 ## Birch (bir.ch)
-- **Verified pricing:** (price re-verified 2026-09-11 against the vendor's own pricing page) (2026, formerly Revealbot) Essential is $49/mo and Pro $99/mo up to $10K of monthly ad spend, and the price then tracks …
+- **Verified pricing:** (price re-verified 2026-10-13 against the vendor's own pricing page) (2026, formerly Revealbot) Essential is $49/mo and Pro $99/mo up to $10K of monthly ad spend, and the price then tracks …
 - **Honest take:** The honest catch is that pricing tracks your ad spend.
 - **Best for:** performance marketers and agencies running real ad budgets who want rule-based automation, scaling and creative insights across Meta, Google, TikTok and Snapchat
 - **Flags:** Usage-metered, Annual commit
@@ -483,7 +483,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/boulevard-review/
 
 ## Bouncer (usebouncer.com)
-- **Verified pricing:** Email verification credits, pay-as-you-go and never expiring (re-verified 2026-09-11): $8 per 1,000 credits is the minimum purchase.
+- **Verified pricing:** Email verification credits, pay-as-you-go and never expiring (re-verified 2026-10-13): $8 per 1,000 credits is the minimum purchase.
 - **Honest take:** It removes invalid addresses, which protects deliverability, but it can't make a cold list warm or a purchased list legitimate, and 'accept-all' results are a gamble, not verified.
 - **Best for:** email marketers and outbound teams that clean lists regularly and want accurate verification with fair credit mechanics (no expiry, no double-charging)
 - **Flags:** Usage-metered
@@ -2078,8 +2078,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/ngram-review/
 
 ## NiceJob (nicejob.com)
-- **Verified pricing:** (re-verified 2026-09-11 on their own pricing page) Software plans are Reviews at $75/mo and Pro at $125/mo, both USD, with a 14-day free trial, no credit card up front and no contracts.
-- **Honest take:** Reporting and customization are fairly basic and there's a setup fee on top of the monthly.
+- **Verified pricing:** (re-verified 2026-10-13 on their own pricing page) Two software plans, both USD per month with a 14-day free trial, no contract and cancel anytime: Starter at $75 (SMS and email review requ…
+- **Honest take:** Reporting and customization are fairly basic, and the Sites website add-on carries a $199 setup fee on top of its $99 a month.
 - **Best for:** local and service businesses that want reputation marketing on offense — automatically asking happy customers for reviews and showcasing them — rather than only managing damage when a bad review lands
 - **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/nicejob-review/
@@ -2459,7 +2459,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/qoyod-review/
 
 ## Quartile (quartile.com)
-- **Verified pricing:** (2026-09-11, re-read on their own site) There is no public pricing.
+- **Verified pricing:** (2026-09-11, re-read on their own site and again on 13 October 2026) There is no public pricing.
 - **Honest take:** Everything about the sales motion here is a conversation.
 - **Best for:** brands and sellers already running paid media across several retail networks at once
 - **Flags:** Hidden pricing
@@ -2632,7 +2632,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/salesflow-review/
 
 ## Salesmessage (salesmessage.com)
-- **Verified pricing:** (2026-08-08, re-verified 10 September 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plans plus Enterprise, metered in message cr…
+- **Verified pricing:** (2026-08-08, re-verified 10 September 2026 and again 13 October 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plans plus Enterpr…
 - **Honest take:** Two things changed here and both cost money. First, calling now runs on the same meter as texting — 1 credit a minute, 2 a minute when forwarding — so voice minutes eat the allowance you budgeted for messages.
 - **Best for:** sales and service teams that want two-way texting and calling in one CRM-linked inbox, and can estimate their monthly credit burn — messages plus call minutes — before they sign
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
@@ -2842,8 +2842,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/shore-review/
 
 ## Signal House (signalhouse.io)
-- **Verified pricing:** (2026-09-11, re-read on their own pricing page) Usage-based, no platform subscription.
-- **Honest take:** Two things are missing from a page that is otherwise unusually specific. The first is voice. The product is sold as an SMS and Voice API and the pricing page publishes no voice rate at all — nor short code pricing.
+- **Verified pricing:** (2026-09-11, re-read on their own pricing page and again on 13 October 2026) Usage-based, no platform subscription.
+- **Honest take:** The product is sold as an SMS and Voice API and the pricing page publishes no voice rate at all (short code pricing was added by 13 October 2026; voice still has none).
 - **Best for:** teams sending real SMS volume in the US who already know what an A2P 10DLC campaign is and want a cheaper per-segment rate than Twilio’s list without giving up published pricing. The volume ladder is genuinely steep
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/signal-house-review/
@@ -3053,7 +3053,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/
 
 ## Super (effectify.io)
-- **Verified pricing:** (price read 2026-09-12) Four paid tiers, billed in USD every 30 days through Shopify, and the Shopify listing prints only three of them.
+- **Verified pricing:** (price re-read 2026-10-13, unchanged) Four paid tiers, billed in USD every 30 days through Shopify, and the Shopify listing prints only three of them.
 - **Honest take:** If you are on Shopify Plus, the price block on the listing is not the one you pay from.
 - **Best for:** Shopify stores with a real gifting season — jewellery, cosmetics, speciality food, anything bought for someone else
 - **Flags:** Annual commit
@@ -3288,7 +3288,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/track123-review/
 
 ## Trackr (parceltrackr.com)
-- **Verified pricing:** (price read 2026-09-12) Four tiers and no free plan, billed in USD every 30 days through Shopify: Basic $10 a month or $96 a year for 400 shipments a month, Standard $45 or $432 for 2,000, …
+- **Verified pricing:** (price re-read 2026-10-13) Four tiers and no free plan, billed in USD every 30 days through Shopify: Basic $10 a month or $96 a year for 400 shipments a month, Standard $45 or $432 for 2,00…
 - **Honest take:** The reviews are split rather than soft, 45 five-star and seven one-star of 56 on 12 September 2026, and the complaints name downtime on the page customers open when they are already worried about a parcel.
 - **Best for:** Shopify stores shipping a few hundred to a few thousand parcels a month that want where-is-my-order traffic off the support desk
 - **Flags:** Usage-metered, Annual commit

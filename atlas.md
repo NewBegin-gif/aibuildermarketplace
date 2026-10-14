@@ -2113,21 +2113,21 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/niural-ai-review/
 
 ## noCRM (nocrm.io)
-- **Verified pricing:** (read 9 September 2026 on www.nocrm.io/pricing, in both billing modes) Three per-seat tiers and no free plan.
+- **Verified pricing:** (read 9 September 2026 and re-read 14 October 2026 on www.nocrm.io/pricing, in both billing modes; unchanged) Three per-seat tiers and no free plan.
 - **Honest take:** Almost everything a sales team needs sits on the top tier: two-way email sync is Dream at €33 a user, and on Starter and Expert email is BCC only.
 - **Best for:** solo sellers, small outbound teams and telesales operations that want a list of leads each carrying a next step, rather than a CRM to configure
 - **Flags:** Per-seat pricing, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/nocrm-review/
 
 ## NordPass (nordpass.com)
-- **Verified pricing:** (read 2026-10-08 on nordpass.com/pricing in a browser render from a Netherlands connection, EUR, excluding VAT, on the 2-year, 1-year and 1-month tabs) Personal plans: Premium is €1.99 a mo…
+- **Verified pricing:** (read 2026-10-08 and re-read 2026-10-14, unchanged, on nordpass.com/pricing in a browser render from a Netherlands connection, EUR, excluding VAT, on the 2-year, 1-year and 1-month tabs) Pe…
 - **Honest take:** Teams only comes as a 10-user pack; Business and Enterprise need 5 users minimum.
 - **Best for:** small and mid-sized companies that want a simple password manager with sharing and breach monitoring, and individuals who want a cheap first year of Premium
 - **Flags:** Per-seat pricing, Renewal jump, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/nordpass-review/
 
 ## NordVPN (nordvpn.com)
-- **Verified pricing:** (consumer plans re-verified 2026-10-02 in the browser; the page is geo-priced and served us euros from a Dutch address) Consumer two-year plans: Basic €3.49/mo, Complete €4.49/mo and Ultima…
+- **Verified pricing:** (consumer plans re-verified 2026-10-02 and 2026-10-14 in the browser, unchanged; the page is geo-priced and served us euros from a Dutch address) Consumer two-year plans: Basic €3.49/mo, Co…
 - **Honest take:** The €3.49 is a two-year introductory rate: Basic renews at €139.08 a year, about €11.59 a month, roughly three times what you signed up at.
 - **Best for:** individuals and households who want an easy personal VPN and will set a reminder before the two-year plan renews
 - **Flags:** Per-seat pricing, Renewal jump, Add-ons extra, Annual commit

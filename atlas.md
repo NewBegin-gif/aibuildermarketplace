@@ -1214,7 +1214,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/fast-bundle-review/
 
 ## Fastmail (fastmail.com)
-- **Verified pricing:** (read 2026-08-26 on fastmail.com/pricing over a US connection, with their country selector on United States and the 12-month term chosen; re-read 2026-09-29 from a Dutch connection, where t…
+- **Verified pricing:** (read 2026-08-26 on fastmail.com/pricing over a US connection, with their country selector on United States and the 12-month term chosen; re-read 2026-09-29 from a Dutch connection, and aga…
 - **Honest take:** You're paying for what the free giants monetize differently: no ads, no profiling, real support and standards-first email (JMAP/IMAP everywhere).
 - **Best for:** individuals and small businesses that want fast, private, ad-free email on their own domain with proper support and masked-email aliases
 - **Full review:** https://aibuildermarketplace.com/b2b/fastmail-review/

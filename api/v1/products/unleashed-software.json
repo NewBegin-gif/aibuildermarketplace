@@ -65,14 +65,398 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "core",
+     "name": "Unleashed Core",
+     "model": "flat",
+     "included_units": 3,
+     "monthly": 399,
+     "annual_year": 4389,
+     "annual_month": 366,
+     "extra_unit": {
+      "monthly": 69,
+      "billing": "unspecified"
+     },
+     "evidence": "Unleashed Core is $399 a month, or $4,389 a year which the page itself puts at $366 equivalent monthly"
+    },
+    {
+     "id": "pro",
+     "name": "Unleashed Pro",
+     "model": "flat",
+     "included_units": 5,
+     "monthly": 729,
+     "annual_year": 8019,
+     "annual_month": 668,
+     "extra_unit": {
+      "monthly": 89,
+      "billing": "unspecified"
+     },
+     "evidence": "Unleashed Pro is $729 a month, or $8,019 a year at $668 equivalent monthly"
+    }
+   ],
+   "not_computable": [
+    {
+     "text": "Only 100 sales orders a month are included; order upgrades run $70 to $490 a month.",
+     "affects_cost": true
+    },
+    {
+     "text": "Support is a paid add-on ($99 Standard, $239 Premier a month) and onboarding a one-off fee ($449 to $5,549).",
+     "affects_cost": true
+    },
+    {
+     "text": "Optional modules (inventory, warehouse, B2B eCommerce, CRM and more) are priced on top.",
+     "affects_cost": false
+    }
+   ],
+   "notes": [
+    "Prices exclude tax. Extra users are $69 a month on Core and $89 on Pro."
+   ],
+   "extra_evidence": "Extra users are $69 a month on Core and $89 on Pro",
+   "rules_verified_at": "2026-10-15"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "unleashed-software",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 365.75,
+      "billed": {
+       "amount": 4389.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 365.75,
+       "pro": 668.25
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 365.75,
+      "billed": {
+       "amount": 4389.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 365.75,
+       "pro": 668.25
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 365.75,
+      "billed": {
+       "amount": 4389.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 365.75,
+       "pro": 668.25
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Unleashed Pro",
+      "total_month": 668.25,
+      "billed": {
+       "amount": 8019.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": 668.25
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "core",
+      "to_plan": "pro",
+      "from_plan_name": "Unleashed Core",
+      "to_plan_name": "Unleashed Pro"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "pro",
+      "to_plan": null,
+      "from_plan_name": "Unleashed Pro",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Only 100 sales orders a month are included; order upgrades run $70 to $490 a month.",
+     "Support is a paid add-on ($99 Standard, $239 Premier a month) and onboarding a one-off fee ($449 to $5,549).",
+     "Optional modules (inventory, warehouse, B2B eCommerce, CRM and more) are priced on top."
+    ]
+   },
+   "monthly": {
+    "product_id": "unleashed-software",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 399.0,
+       "pro": 729.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 399.0,
+       "pro": 729.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 399.0,
+       "pro": 729.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 537.0,
+      "billed": {
+       "amount": 537.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 537.0,
+       "pro": 729.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 882.0,
+      "billed": {
+       "amount": 882.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 882.0,
+       "pro": 1174.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 1227.0,
+      "billed": {
+       "amount": 1227.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 1227.0,
+       "pro": 1619.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 1572.0,
+      "billed": {
+       "amount": 1572.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 1572.0,
+       "pro": 2064.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 1917.0,
+      "billed": {
+       "amount": 1917.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 1917.0,
+       "pro": 2509.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 3642.0,
+      "billed": {
+       "amount": 3642.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 3642.0,
+       "pro": 4734.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Unleashed Core",
+      "total_month": 7092.0,
+      "billed": {
+       "amount": 7092.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 7092.0,
+       "pro": 9184.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Only 100 sales orders a month are included; order upgrades run $70 to $490 a month.",
+     "Support is a paid add-on ($99 Standard, $239 Premier a month) and onboarding a one-off fee ($449 to $5,549).",
+     "Optional modules (inventory, warehouse, B2B eCommerce, CRM and more) are priced on top."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -96,9 +480,15 @@
    "status": "open"
   },
   {
-   "question_id": "unleashed-software:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "unleashed-software:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Only 100 sales orders a month are included; order upgrades run $70 to $490 a month. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "unleashed-software:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Support is a paid add-on ($99 Standard, $239 Premier a month) and onboarding a one-off fee ($449 to $5,549). Can you publish the price or the rule?",
    "status": "open"
   }
  ],

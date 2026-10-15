@@ -57,15 +57,426 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "annual_month": 18,
+     "monthly": 20,
+     "evidence": "Starter is $18 per user a month billed annually or $20 monthly"
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "per_unit",
+     "annual_month": 28,
+     "monthly": 35,
+     "evidence": "Plus is $28 annually or $35 monthly"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "annual_month": 42,
+     "monthly": 50,
+     "evidence": "Professional is $42 annually or $50 monthly"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise, with SSO, SCIM and on-premise deployment, is priced by sales"
+    }
+   ],
+   "notes": [
+    "Plus and Professional are read as per user, like Starter: the notes give 'Three plans priced per user'."
+   ],
+   "not_computable": [
+    "Student, nonprofit and open-source discounts are on request by email."
+   ],
+   "rules_verified_at": "2026-10-15"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "inbox-zero",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 18.0,
+      "billed": {
+       "amount": 216.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 18.0,
+       "plus": 28.0,
+       "professional": 42.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 36.0,
+      "billed": {
+       "amount": 432.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 36.0,
+       "plus": 56.0,
+       "professional": 84.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 54.0,
+      "billed": {
+       "amount": 648.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 54.0,
+       "plus": 84.0,
+       "professional": 126.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 1080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 90.0,
+       "plus": 140.0,
+       "professional": 210.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 180.0,
+      "billed": {
+       "amount": 2160.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 180.0,
+       "plus": 280.0,
+       "professional": 420.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 270.0,
+      "billed": {
+       "amount": 3240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 270.0,
+       "plus": 420.0,
+       "professional": 630.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 360.0,
+      "billed": {
+       "amount": 4320.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 360.0,
+       "plus": 560.0,
+       "professional": 840.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 450.0,
+      "billed": {
+       "amount": 5400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 450.0,
+       "plus": 700.0,
+       "professional": 1050.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 900.0,
+      "billed": {
+       "amount": 10800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 900.0,
+       "plus": 1400.0,
+       "professional": 2100.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1800.0,
+      "billed": {
+       "amount": 21600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1800.0,
+       "plus": 2800.0,
+       "professional": 4200.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Student, nonprofit and open-source discounts are on request by email."
+    ]
+   },
+   "monthly": {
+    "product_id": "inbox-zero",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "plus": 35.0,
+       "professional": 50.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 40.0,
+       "plus": 70.0,
+       "professional": 100.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 60.0,
+       "plus": 105.0,
+       "professional": 150.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 100.0,
+       "plus": 175.0,
+       "professional": 250.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 200.0,
+       "plus": 350.0,
+       "professional": 500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 300.0,
+       "plus": 525.0,
+       "professional": 750.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 400.0,
+       "plus": 700.0,
+       "professional": 1000.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 500.0,
+       "plus": 875.0,
+       "professional": 1250.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1000.0,
+       "plus": 1750.0,
+       "professional": 2500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2000.0,
+      "billed": {
+       "amount": 2000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 2000.0,
+       "plus": 3500.0,
+       "professional": 5000.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Student, nonprofit and open-source discounts are on request by email."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -89,9 +500,9 @@
    "status": "open"
   },
   {
-   "question_id": "inbox-zero:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "inbox-zero:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Student, nonprofit and open-source discounts are on request by email. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

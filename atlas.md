@@ -123,10 +123,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/airwallex-review/
 
 ## AISDR (aisdr.com)
-- **Verified pricing:** (re-verified 2026-10-11 on AiSDR's own pricing page) There are three published plans.
-- **Honest take:** It's priced like an SDR salary because it's meant to replace part of that function — so judge it on cost-per-meeting, not the sticker, and expect a quarterly commitment rather than a flip-the-switch monthly.
+- **Verified pricing:** (re-verified 2026-10-15 on aisdr.com/pricing and AiSDR's plain-text pricing reference for AI assistants, aisdr.com/pricing-for-llms, marked 'Last updated: 2026-10-15') AiSDR has replaced it…
+- **Honest take:** Judge it on cost per meeting, not the sticker.
 - **Best for:** sales teams with a clear ICP and offer that want autonomous AI to qualify leads, personalize outreach and book meetings around the clock
-- **Flags:** Annual commit
+- **Flags:** Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/aisdr-review/
 
 ## AISQ (aisq.com)
@@ -2225,7 +2225,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pagecloud-review/
 
 ## PagePulse (getpagepulse.io)
-- **Verified pricing:** (read 10 September 2026 on getpagepulse.io — the plans sit on the home page under the #pricing anchor; /pricing itself returns 404.) Five tiers, and the meter is pages plus AI insights rath…
+- **Verified pricing:** (re-verified 15 October 2026 on getpagepulse.io, all five tiers unchanged since our 10 September 2026 reading — the plans sit on the home page under the #pricing anchor; /pricing itself ret…
 - **Honest take:** The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages.
 - **Best for:** solos and small teams who want simple per-page analytics — heatmaps, visitor behavior and AI-summarized insights — with a genuinely free single-page tier to start
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -3653,7 +3653,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/woodpecker-review/
 
 ## World Businesses for Sale (worldbusinessesforsale.com)
-- **Verified pricing:** (2026, re-verified 2026-10-13 on their own selling pages) Browsing is free for buyers.
+- **Verified pricing:** (2026, re-verified 2026-10-15 on their own store and selling pages) Browsing is free for buyers.
 - **Honest take:** On the broker plans you pay twice: a listing fee up front AND commission when it sells — 3% on Basic, 2% on Standard, 1% on Premium — on contracts of 6, 9 and 12 months.
 - **Best for:** owners selling established, often brick-and-mortar businesses — restaurants, shops, services, small manufacturers — who want international buyer exposure with hands-on guidance
 - **Full review:** https://aibuildermarketplace.com/b2b/world-businesses-for-sale-review/

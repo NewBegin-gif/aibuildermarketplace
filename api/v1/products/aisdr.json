@@ -8,33 +8,40 @@
  "task": "Sales outreach, leads & CRM",
  "summary": "Deploy an autonomous AI Sales Development Rep. It qualifies leads, books meetings, and handles initial outreach conversations 24/7.",
  "best_for": "sales teams with a clear ICP and offer that want autonomous AI to qualify leads, personalize outreach and book meetings around the clock",
- "skip_if": "you haven't nailed your targeting and messaging yet (automation will scale the wrong thing), or your volume can't justify a ~$900/mo quarterly commitment",
- "honest_knock": "It's priced like an SDR salary because it's meant to replace part of that function — so judge it on cost-per-meeting, not the sticker, and expect a quarterly commitment rather than a flip-the-switch monthly. Autonomous AI outreach is only as good as your targeting, list quality and messaging guardrails; point it at a bad list and you'll automate bad outreach (and risk your sending reputation). For teams with a solid ICP and offer, it can book meetings at a real cost-per-meeting; for those still figuring out messaging, it's premature. Checked again on 9 September 2026, after AiSDR shipped Ami, the GTM agent it now puts in front of every plan: you hand it your website, it comes back with a target list and a live campaign, and it keeps adjusting the ones that stall. The genuinely new part is memory - your ICP, your exclusions and what a past campaign taught it carry over instead of resetting with each new campaign - and Ami sits inside Solo at $250/mo with no sales call, so the cheapest way in no longer runs through a demo. The scale numbers on the launch page (17,150 campaigns learned from, 19,501 meetings behind them, a rolling 30-day pipeline counter) are AiSDR's own and unaudited, so read them as marketing rather than evidence. And Ami changes none of the deliverability arithmetic: AiSDR's own pricing page still says it takes 30+ days to get multiple inboxes safely warmed, so a first campaign in 20 minutes is the launch, not the result.",
+ "skip_if": "you haven't nailed your targeting and messaging yet (automation will scale the wrong thing, and you pay $1.50 for every person it reaches), or you need a published team-plan price before talking to sales",
+ "honest_knock": "Judge it on cost per meeting, not the sticker. Pay as you go at $1.50 per person contacted removes the old entry barrier, but the bill grows with every person you contact, so a weak list costs you money as well as sender reputation. Autonomous AI outreach is only as good as your targeting, list quality and messaging guardrails; point it at a bad list and you'll automate bad outreach. For teams with a solid ICP and offer it can book meetings at a real cost per meeting; for those still figuring out messaging, it's premature. Ami, the GTM agent AiSDR shipped in September 2026, is now the front door on every route: you hand it your website, it comes back with a target list and a campaign, and it keeps adjusting the ones that stall, with your ICP, exclusions and past lessons carried over between campaigns. The scale numbers on the launch page (17,150 campaigns learned from, 19,501 meetings behind them, a rolling 30-day pipeline counter) are AiSDR's own and unaudited, so read them as marketing rather than evidence. And Ami changes none of the deliverability arithmetic: a first campaign in minutes is the launch, not the result.",
  "pricing": {
   "status": "public",
-  "entry_price": "$250",
-  "entry_price_terms": "a month (or $2,400 a year), 1 user",
-  "from_price_usd_month": 250.0,
+  "entry_price": "$1.50",
+  "entry_price_terms": "per person contacted (charged daily, no subscription)",
+  "from_price_usd_month": null,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-10-11 on AiSDR's own pricing page) There are three published plans. Solo is $250/mo or $2,400/yr for a sales team of one: 200 AI-researched contacts a month, 1 user, 1 domain, 3 mailboxes, 1 LinkedIn account, month-to-month. Explore is $900/mo or $8,640/yr (800 contacts a month, unlimited users, 2 domains, 6 mailboxes, 5 LinkedIn accounts), and Scale $2,500/mo or $24,000/yr (2,500 contacts a month, unlimited users, 6 domains, 18 mailboxes, 20 LinkedIn accounts). Annual billing takes 20% off. Explore and Scale carry a quarterly commitment, paid in advance; Solo runs month to month. Managed service is extra: +$149 per campaign on Explore, or fully managed from +$2,500/mo on Scale. The page no longer mentions an Enterprise plan; our 9 September reading listed Enterprise as custom. Priced by contact volume rather than by seat above Solo.",
-  "verified_at": "2026-10-11",
+  "notes": "(re-verified 2026-10-15 on aisdr.com/pricing and AiSDR's plain-text pricing reference for AI assistants, aisdr.com/pricing-for-llms, marked 'Last updated: 2026-10-15') AiSDR has replaced its published plan ladder with two routes. Pay as you go: $1.50 per person contacted, charged daily for the people contacted that day, with no subscription, no monthly fee, no contract and no sales call. You pick a pace of 5, 10 or 20 people a day, which the page itself works out as $7.50, $15 or $30 a day, and research, lists and writing are included in the $1.50. The reference says campaigns start from as little as $3; another FAQ on the main pricing page says from $7.50. Team plans are for teams contacting 1,000+ people a month: priced on volume with 'up to 40% lower price per contact', no amount published, billed monthly from the day you sign up on a quarterly or annual contract, with annual 20% cheaper than quarterly. Each team plan includes a monthly contact limit; extra contacts are bought in the app at a price the page does not publish. Add-ons: warmed-up mailbox $33 per mailbox setup, per-campaign managed service $149 per campaign, fully managed service $2,500 per month. Historical: until at least 11 October 2026 AiSDR published Solo at $250/mo, Explore at $900/mo and Scale at $2,500/mo; none of those plans appears on either page on 15 October 2026.",
+  "verified_at": "2026-10-15",
   "source_url": null
  },
  "free_plan": false,
  "free_plan_evidence": null,
  "cost_traps": [
   {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Add-ons: warmed-up mailbox $33 per mailbox setup, per-campaign managed service $149 per campaign, fully managed service $2,500 per month.",
+   "verified_at": "2026-10-15",
+   "source_url": null
+  },
+  {
    "id": "annual_lock",
    "label": "Annual commitment",
-   "evidence": "Annual billing takes 20% off.",
-   "verified_at": "2026-10-11",
+   "evidence": "Team plans are for teams contacting 1,000+ people a month: priced on volume with 'up to 40% lower price per contact', no amount published, billed monthly from the day you sign up on a quarterly or annual contract, with annual 20% cheaper than quarterly.",
+   "verified_at": "2026-10-15",
    "source_url": null
   }
  ],
  "compare_with": {
   "name": "11x or a human SDR / Instantly-style stack",
-  "why": "other AI-SDR tools or a human rep — compare cost-per-meeting; AISDR bills by message volume with unlimited seats"
+  "why": "other AI-SDR tools or a human rep — compare cost per meeting; AiSDR now bills $1.50 per person contacted on pay as you go, with volume-priced team plans on contract"
  },
  "links": {
   "record": "https://aibuildermarketplace.com/api/v1/products/aisdr.json",

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 545 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-14.
+All 547 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-15.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1592,8 +1592,15 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** shopify stores that want their own logo falling down the page, or a marquee of partner, payment and press logos, rather than generic snow
 - **Full review:** https://aibuildermarketplace.com/b2b/imgify-review/
 
+## Inbox Zero (getinboxzero.com)
+- **Verified pricing:** (read 2026-10-15 in a live browser on getinboxzero.com/pricing with its comparison table and FAQ, the home page, the terms of service dated 16 July 2023 and the privacy policy) Three plans …
+- **Honest take:** The 7-day trial needs a card and converts to paid; a second mailbox per user needs the $28 Plus plan.
+- **Best for:** busy founders, executives and small teams on Gmail or Outlook who want their inbox sorted, replies drafted and newsletters cleared by AI, and who like that the code is open source and can be self-hosted
+- **Flags:** Per-seat pricing
+- **Full review:** https://aibuildermarketplace.com/b2b/inbox-zero-review/
+
 ## InboxAlly (inboxally.com)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit, and unchanged on 2026-09-29) Every amount unchanged and confirmed on the plan comparison tabl…
+- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit, and unchanged on 2026-09-29 and 2026-10-14) Every amount unchanged and confirmed on the plan …
 - **Honest take:** This is a premium, seed-list-based deliverability tool, and the price reflects it — Starter alone is well above casual warm-up apps.
 - **Best for:** serious senders — email marketers and cold-outreach teams — whose deliverability problems are costing measurable revenue and who need active reputation repair
 - **Full review:** https://aibuildermarketplace.com/b2b/inboxally-review/
@@ -1821,7 +1828,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/leadfeeder-review/
 
 ## Leadpages (leadpages.com)
-- **Verified pricing:** (re-verified 2026-10-03 against Leadpages' own machine-readable pricing file, which still carries the same 2026-07-10 update date it had in August and September; USD) Two lines, six paid pl…
+- **Verified pricing:** (re-verified 2026-10-15 against Leadpages' own machine-readable pricing file at leadpages.com/pricing.md, dated 2026-10-10, and the pricing page in a live browser; USD) The Starter plan is …
 - **Honest take:** It's the value pick, not the optimisation pick — if you're spending big on ads, Unbounce's Smart Traffic and Instapage's 1:1 personalisation go deeper.
 - **Best for:** small businesses building landing pages and simple funnels who want unmetered traffic — no per-visitor anxiety, unlike metered rivals
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
@@ -2307,7 +2314,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/piktochart-review/
 
 ## Pingtree (pingtree.com)
-- **Verified pricing:** (2026-10-07, read on their own pricing page) Self Service is “From $499” per month with a free trial included, and Managed Services carries a starting cost of $2,500, “scoped with your acco…
+- **Verified pricing:** (2026-10-07, read on their own pricing page; unchanged on 2026-10-15) Self Service is “From $499” per month with a free trial included, and Managed Services carries a starting cost of $2,50…
 - **Honest take:** Two things about this price list will cost you money if you skim it. First, the $499 is a floor rather than a bill.
 - **Best for:** performance marketers, lead brokers and affiliate operations that already move real lead volume and want ping-tree routing, partner management, funnels and reporting in one system
 - **Flags:** Usage-metered
@@ -2755,7 +2762,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seller-investigators-review/
 
 ## Seller Snap (sellersnap.io)
-- **Verified pricing:** (re-verified 2026-10-07 on their own pricing page, both the monthly and the annual column) There are four tiers, and the axis that sets your price is capacity, not features.
+- **Verified pricing:** (re-verified 2026-10-07 on their own pricing page, both the monthly and the annual column; unchanged on 2026-10-15) There are four tiers, and the axis that sets your price is capacity, not …
 - **Honest take:** The revenue caps — $15,000 on Starter, $30,000 on Accelerator — are per month, as the vendor confirmed in writing, so a seller clearing $500 a day is already above Starter.
 - **Best for:** Amazon and Walmart sellers past the hobby stage who compete for the Buy Box on a catalog of up to a few thousand SKUs
 - **Flags:** Annual commit
@@ -3108,6 +3115,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/surfer-surferseo-review/
 
+## SurFox AI (getsurfox.com)
+- **Verified pricing:** (read 2026-10-15 in a live browser on getsurfox.com/pricing with its FAQ, the home page and the terms of service last updated 22 September 2026) Four monthly plans, priced by message volume…
+- **Honest take:** You pay from signup but cannot text until carriers approve your A2P registration, and the money-back guarantee needs 80% of your messages used.
+- **Best for:** US staffing agencies, real estate investors and home-services firms with a steady flow of opted-in leads who want an AI to text them back within minutes, qualify them and put calls on the calendar
+- **Flags:** Usage-metered, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/surfox-ai-review/
+
 ## SurveyMonkey (surveymonkey.com)
 - **Verified pricing:** (re-verified 2026-10-01 in surveymonkey.com/pricing.md, whose header now dates the content 2026-09-22, and on surveymonkey.com/pricing/ as served to a euro storefront) Team plans are billed…
 - **Honest take:** Response caps on the self-serve plans trigger $0.15-per-response overages (US rate), and much of the good analytics and logic sits behind higher tiers.
@@ -3214,7 +3228,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/testdriver-ai-review/
 
 ## TestGorilla (testgorilla.com)
-- **Verified pricing:** (re-verified 2026-10-07 in a browser render of testgorilla.com/pricing with the currency set to USD; the page defaults to euros from a European connection) TestGorilla now sells two product…
+- **Verified pricing:** (re-verified 2026-10-07 in a browser render of testgorilla.com/pricing with the currency set to USD; the page defaults to euros from a European connection; re-verified unchanged 2026-10-15 …
 - **Honest take:** The Assessments bill is set by credits, and the page does not say how many credits its 'from' prices include.
 - **Best for:** companies that screen enough candidates to use a credit pool every month, and who will use the 350+ test library rather than writing their own questions
 - **Flags:** Per-seat pricing, Usage-metered, Annual commit, Free tier
@@ -3721,7 +3735,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/zenind-review/
 
 ## ZenZap (zenzap.co)
-- **Verified pricing:** (re-read 2026-10-07 on the vendor's own pricing page) The per-seat prices are gone.
+- **Verified pricing:** (re-read 2026-10-07 on the vendor's own pricing page; unchanged on 2026-10-15) The per-seat prices are gone.
 - **Honest take:** The pricing genuinely undercuts Slack — the honest question is ecosystem: team chat lives or dies on integrations and habit, and ZenZap's app catalog is a fraction of Slack's.
 - **Best for:** small teams that run work over messy WhatsApp/personal chat today and want organized, professional chat with tasks — starting free
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit, Free tier

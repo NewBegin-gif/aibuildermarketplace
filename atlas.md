@@ -3158,7 +3158,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/synthesia-review/
 
 ## Tapita AI SEO Blog Builder (tapita.io)
-- **Verified pricing:** (re-read 2026-09-19 on apps.shopify.com/tapita-ai-seo-blog-builder) The paid tier has left the listing.
+- **Verified pricing:** (re-read 2026-09-19 on apps.shopify.com/tapita-ai-seo-blog-builder, and again on 2026-10-15 with the same result: no plan block, the header Price field reads Free, and the only dollar figur…
 - **Honest take:** Publishing volume is the trap this tool makes cheap.
 - **Best for:** Shopify stores that want structured, product-linked blog drafts and a publishing schedule, and that will edit what comes out before it goes live
 - **Flags:** Usage-metered, Free tier

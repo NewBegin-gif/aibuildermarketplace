@@ -90,14 +90,442 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 20,
+     "evidence": "Free costs $0 and covers 20 orders a month"
+    },
+    {
+     "id": "core-flexible",
+     "name": "CORE Flexible",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 10,
+       "monthly": 5
+      },
+      {
+       "units": 50,
+       "monthly": 11
+      },
+      {
+       "units": 100,
+       "monthly": 17
+      },
+      {
+       "units": 250,
+       "monthly": 37
+      },
+      {
+       "units": 500,
+       "monthly": 73
+      },
+      {
+       "units": 1000,
+       "monthly": 107
+      }
+     ],
+     "evidence": "CORE Flexible starts at $5 a month for 10 orders and adds deposits, split payments, $0-down pre-orders, CSV upload, pre-order by product tag, SMS, 30 days of analytics and branding removal, at $0.20 per order past the volume you pick; PRO Flexible starts at $7 for 10 orders and adds market and location targeting, storewide automatic back-in-stock and low-stock, charge on fulfilment and analytics without a time window, at $0.30 per order past your volume. The volume selector on the pricing page lists CORE Flexible at $11 for 50 orders, $17 for 100, $37 for 250, $73 for 500 and $107 for 1,000"
+    },
+    {
+     "id": "pro-flexible",
+     "name": "PRO Flexible",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 10,
+       "monthly": 7
+      },
+      {
+       "units": 50,
+       "monthly": 17
+      },
+      {
+       "units": 100,
+       "monthly": 27
+      },
+      {
+       "units": 250,
+       "monthly": 57
+      },
+      {
+       "units": 500,
+       "monthly": 87
+      },
+      {
+       "units": 1000,
+       "monthly": 127
+      }
+     ],
+     "evidence": "PRO Flexible starts at $7 for 10 orders and adds market and location targeting, storewide automatic back-in-stock and low-stock, charge on fulfilment and analytics without a time window, at $0.30 per order past your volume. The volume selector on the pricing page lists CORE Flexible at $11 for 50 orders, $17 for 100, $37 for 250, $73 for 500 and $107 for 1,000, and PRO Flexible at $17, $27, $57, $87 and $127 for the same volumes"
+    }
+   ],
+   "not_computable": [
+    {
+     "text": "Orders past the chosen volume cost $0.20 each on CORE Flexible and $0.30 on PRO Flexible.",
+     "affects_cost": true
+    },
+    {
+     "text": "Fixed plans (unlimited orders) are priced by the merchant's Shopify plan, not by order volume, and are marked as a limited-time deal.",
+     "affects_cost": false
+    },
+    {
+     "text": "SMS from $0.02 a message and the $10 Merchandising add-on are optional extras.",
+     "affects_cost": false
+    }
+   ],
+   "rules_verified_at": "2026-10-15"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "timesact-preorder",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "core-flexible": "price_unknown_on_billing",
+       "pro-flexible": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "price_unknown_on_billing",
+       "pro-flexible": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "price_unknown_on_billing",
+       "pro-flexible": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "price_unknown_on_billing",
+       "pro-flexible": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "price_unknown_on_billing",
+       "pro-flexible": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 0,
+      "to_units": 50,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Orders past the chosen volume cost $0.20 each on CORE Flexible and $0.30 on PRO Flexible.",
+     "Fixed plans (unlimited orders) are priced by the merchant's Shopify plan, not by order volume, and are marked as a limited-time deal.",
+     "SMS from $0.02 a message and the $10 Merchandising add-on are optional extras."
+    ]
+   },
+   "monthly": {
+    "product_id": "timesact-preorder",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "core-flexible": 5.0,
+       "pro-flexible": 7.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "core-flexible",
+      "cheapest_plan_name": "CORE Flexible",
+      "total_month": 11.0,
+      "billed": {
+       "amount": 11.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": 11.0,
+       "pro-flexible": 17.0
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "core-flexible",
+      "cheapest_plan_name": "CORE Flexible",
+      "total_month": 73.0,
+      "billed": {
+       "amount": 73.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": 73.0,
+       "pro-flexible": 87.0
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "core-flexible",
+      "cheapest_plan_name": "CORE Flexible",
+      "total_month": 107.0,
+      "billed": {
+       "amount": 107.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": 107.0,
+       "pro-flexible": 127.0
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "core-flexible",
+      "cheapest_plan_name": "CORE Flexible",
+      "total_month": 107.0,
+      "billed": {
+       "amount": 107.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": 107.0,
+       "pro-flexible": 127.0
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "core-flexible": "not_eligible",
+       "pro-flexible": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 0,
+      "to_units": 50,
+      "from_plan": "free",
+      "to_plan": "core-flexible",
+      "from_plan_name": "Free",
+      "to_plan_name": "CORE Flexible"
+     },
+     {
+      "from_units": 1000,
+      "to_units": 2000,
+      "from_plan": "core-flexible",
+      "to_plan": null,
+      "from_plan_name": "CORE Flexible",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Orders past the chosen volume cost $0.20 each on CORE Flexible and $0.30 on PRO Flexible.",
+     "Fixed plans (unlimited orders) are priced by the merchant's Shopify plan, not by order volume, and are marked as a limited-time deal.",
+     "SMS from $0.02 a message and the $10 Merchandising add-on are optional extras."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -121,9 +549,9 @@
    "status": "open"
   },
   {
-   "question_id": "timesact-preorder:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "timesact-preorder:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Orders past the chosen volume cost $0.20 each on CORE Flexible and $0.30 on PRO Flexible. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

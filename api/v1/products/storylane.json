@@ -57,15 +57,495 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free $0: 1 seat, 1 published demo live at a time, unlimited views"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "included_units": 1,
+     "monthly": 50,
+     "annual_month": 40,
+     "extra_unit": {
+      "monthly": 40,
+      "billing": "unspecified"
+     },
+     "evidence": "Starter $50/month ($40 annual), 1 seat, extra seats $40 each"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "included_units": 5,
+     "monthly": 625,
+     "annual_month": 500,
+     "extra_unit": {
+      "monthly": 100,
+      "billing": "unspecified"
+     },
+     "evidence": "Growth $625/month ($500 annual), 5 seats, extra seats $100 each"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "flat",
+     "max_units": 10,
+     "monthly": 1500,
+     "annual_month": 1200,
+     "evidence": "Premium $1,500/month ($1,200 annual), 10 seats"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise quote-only"
+    }
+   ],
+   "not_computable": [
+    {
+     "text": "Visitor de-anonymisation caps (250, 2,500 and 10,000 a month) limit usage but carry no published overage price.",
+     "affects_cost": false
+    },
+    {
+     "text": "The RepX AI sales-agent product is priced separately on monthly visitors, not seats.",
+     "affects_cost": false
+    },
+    {
+     "text": "Premium's price for seats beyond 10 is not in our notes.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-10-15"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "storylane",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 40.0,
+       "growth": 500.0,
+       "premium": 1200.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 6000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": 500.0,
+       "premium": 1200.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 6000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": 500.0,
+       "premium": 1200.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 6000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": 500.0,
+       "premium": 1200.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 1200.0,
+      "billed": {
+       "amount": 14400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "premium": 1200.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "growth",
+      "from_plan_name": "Free",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "growth",
+      "to_plan": "premium",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Premium"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "premium",
+      "to_plan": null,
+      "from_plan_name": "Premium",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Visitor de-anonymisation caps (250, 2,500 and 10,000 a month) limit usage but carry no published overage price.",
+     "The RepX AI sales-agent product is priced separately on monthly visitors, not seats.",
+     "Premium's price for seats beyond 10 is not in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "storylane",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 50.0,
+       "growth": 625.0,
+       "premium": 1500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 90.0,
+       "growth": 625.0,
+       "premium": 1500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 130.0,
+      "billed": {
+       "amount": 130.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 130.0,
+       "growth": 625.0,
+       "premium": 1500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 210.0,
+      "billed": {
+       "amount": 210.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 210.0,
+       "growth": 625.0,
+       "premium": 1500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 410.0,
+      "billed": {
+       "amount": 410.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 410.0,
+       "growth": 1125.0,
+       "premium": 1500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 610.0,
+      "billed": {
+       "amount": 610.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 610.0,
+       "growth": 1625.0,
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 810.0,
+      "billed": {
+       "amount": 810.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 810.0,
+       "growth": 2125.0,
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1010.0,
+      "billed": {
+       "amount": 1010.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 1010.0,
+       "growth": 2625.0,
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2010.0,
+      "billed": {
+       "amount": 2010.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 2010.0,
+       "growth": 5125.0,
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 4010.0,
+      "billed": {
+       "amount": 4010.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 4010.0,
+       "growth": 10125.0,
+       "premium": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Visitor de-anonymisation caps (250, 2,500 and 10,000 a month) limit usage but carry no published overage price.",
+     "The RepX AI sales-agent product is priced separately on monthly visitors, not seats.",
+     "Premium's price for seats beyond 10 is not in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -89,9 +569,9 @@
    "status": "open"
   },
   {
-   "question_id": "storylane:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "storylane:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Premium's price for seats beyond 10 is not in our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

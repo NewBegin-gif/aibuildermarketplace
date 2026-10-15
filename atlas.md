@@ -95,7 +95,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/ahaslides-review/
 
 ## Aira (aira.app)
-- **Verified pricing:** (re-verified 2026-10-10 on aira.app/pricing) Aira now sells one product on its pricing page: Aira Connect at €499 a month, billed annually (€5,988 a year).
+- **Verified pricing:** (re-verified 2026-10-15 on aira.app/pricing; first read in this form 2026-10-10) Aira now sells one product on its pricing page: Aira Connect at €499 a month, billed annually (€5,988 a year…
 - **Honest take:** Young product, sharp focus: European B2B prospecting on a 65-million-company database with meeting notes flowing into records automatically.
 - **Best for:** European B2B sales teams that want AI-assisted prospecting and automatic meeting/CRM hygiene from a Europe-native database
 - **Flags:** Per-seat pricing
@@ -2550,7 +2550,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/reachstream-review/
 
 ## Readymode (readymode.com)
-- **Verified pricing:** (re-verified 2026-10-07 on readymode.com/demo/pricing-readymode/, the page titled 'Readymode Pricing and Flexible Plans'; first read at these amounts on 2026-08-17, after the vendor announc…
+- **Verified pricing:** (re-verified 2026-10-15 on readymode.com/demo/pricing-readymode/, the page titled 'Readymode Pricing and Flexible Plans'; first read at $239/$299 on 2026-08-17, after the vendor announced a…
 - **Honest take:** The per-seat price is premium: the dialer earns its keep on a 5-plus-agent floor, but for one or two reps it's expensive for what a lighter dialer would do.
 - **Best for:** high-volume outbound call teams (insurance, real estate, collections) with 5+ agents that need predictive dialing, compliance tools and supervisor monitoring
 - **Flags:** Per-seat pricing

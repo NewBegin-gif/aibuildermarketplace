@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 545 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-14.
+All 547 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-15.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1592,6 +1592,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** shopify stores that want their own logo falling down the page, or a marquee of partner, payment and press logos, rather than generic snow
 - **Full review:** https://aibuildermarketplace.com/b2b/imgify-review/
 
+## Inbox Zero (getinboxzero.com)
+- **Verified pricing:** (read 2026-10-15 in a live browser on getinboxzero.com/pricing with its comparison table and FAQ, the home page, the terms of service dated 16 July 2023 and the privacy policy) Three plans …
+- **Honest take:** The 7-day trial needs a card and converts to paid; a second mailbox per user needs the $28 Plus plan.
+- **Best for:** busy founders, executives and small teams on Gmail or Outlook who want their inbox sorted, replies drafted and newsletters cleared by AI, and who like that the code is open source and can be self-hosted
+- **Flags:** Per-seat pricing
+- **Full review:** https://aibuildermarketplace.com/b2b/inbox-zero-review/
+
 ## InboxAlly (inboxally.com)
 - **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit, and unchanged on 2026-09-29) Every amount unchanged and confirmed on the plan comparison tabl…
 - **Honest take:** This is a premium, seed-list-based deliverability tool, and the price reflects it — Starter alone is well above casual warm-up apps.
@@ -1821,7 +1828,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/leadfeeder-review/
 
 ## Leadpages (leadpages.com)
-- **Verified pricing:** (re-verified 2026-10-03 against Leadpages' own machine-readable pricing file, which still carries the same 2026-07-10 update date it had in August and September; USD) Two lines, six paid pl…
+- **Verified pricing:** (re-verified 2026-10-15 against Leadpages' own machine-readable pricing file at leadpages.com/pricing.md, dated 2026-10-10, and the pricing page in a live browser; USD) The Starter plan is …
 - **Honest take:** It's the value pick, not the optimisation pick — if you're spending big on ads, Unbounce's Smart Traffic and Instapage's 1:1 personalisation go deeper.
 - **Best for:** small businesses building landing pages and simple funnels who want unmetered traffic — no per-visitor anxiety, unlike metered rivals
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
@@ -3107,6 +3114,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** content marketers, SEO specialists and agencies that need on-page optimization against live SERP data and want to start tracking how often they are cited in AI answers
 - **Flags:** Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/surfer-surferseo-review/
+
+## SurFox AI (getsurfox.com)
+- **Verified pricing:** (read 2026-10-15 in a live browser on getsurfox.com/pricing with its FAQ, the home page and the terms of service last updated 22 September 2026) Four monthly plans, priced by message volume…
+- **Honest take:** You pay from signup but cannot text until carriers approve your A2P registration, and the money-back guarantee needs 80% of your messages used.
+- **Best for:** US staffing agencies, real estate investors and home-services firms with a steady flow of opted-in leads who want an AI to text them back within minutes, qualify them and put calls on the calendar
+- **Flags:** Usage-metered, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/surfox-ai-review/
 
 ## SurveyMonkey (surveymonkey.com)
 - **Verified pricing:** (re-verified 2026-10-01 in surveymonkey.com/pricing.md, whose header now dates the content 2026-09-22, and on surveymonkey.com/pricing/ as served to a euro storefront) Team plans are billed…

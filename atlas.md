@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 547 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-16.
+All 548 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1778,6 +1778,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants selling across several European marketplaces — Bol, Zalando, Allegro, Cdiscount, Miinto and the rest
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/koongo-review/
+
+## Kopage (kopage.com)
+- **Verified pricing:** (read 2026-10-16 in a browser on kopage.com/pricing and kopage.com/pricing-self-hosted, from a Netherlands connection, prices shown in euros; local sales tax, GST or VAT may apply) Kopage s…
+- **Honest take:** Solo covers 5 client sites; refunds are generally not given.
+- **Best for:** freelancers and small agencies that build simple websites for local clients and want to sell them under their own brand, with hosting included
+- **Full review:** https://aibuildermarketplace.com/b2b/kopage-review/
 
 ## KrispCall (krispcall.com)
 - **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07 against the vendor's own pricing page) Since our August reading the plans have been renamed and a tier added: Starter $12 per user/mo billed annually …

@@ -70,14 +70,288 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "client",
+   "axis": "companies",
+   "plans": [
+    {
+     "id": "agency",
+     "name": "Per client",
+     "model": "per_unit",
+     "max_units": 25,
+     "annual_month": 20,
+     "monthly": 25,
+     "evidence": "One published rate: $20 USD per client / month billed annually, with no clients included in the base, so cost scales directly with your roster (a 25-client agency pays $500/mo; past that it is a quote). Month to month is $25 per client"
+    }
+   ],
+   "not_computable": [
+    "More than 25 clients: AgencyAnalytics quotes instead of publishing a price.",
+    "Rank Tracker ($41.67/mo per 500 keywords) and AI Tracker ($20.83/mo per 250 credits) add-ons scale with keywords and credits, not clients."
+   ],
+   "rules_verified_at": "2026-10-16"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "agencyanalytics",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "client",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 20.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 40.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 100.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 2400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 200.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 4800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 400.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "agency": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "agency": "not_eligible"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "agency": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 20,
+      "to_units": 50,
+      "from_plan": "agency",
+      "to_plan": null,
+      "from_plan_name": "Per client",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "More than 25 clients: AgencyAnalytics quotes instead of publishing a price.",
+     "Rank Tracker ($41.67/mo per 500 keywords) and AI Tracker ($20.83/mo per 250 credits) add-ons scale with keywords and credits, not clients."
+    ]
+   },
+   "monthly": {
+    "product_id": "agencyanalytics",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "client",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 25.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 25.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 50.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 125.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 125.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 250.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "agency",
+      "cheapest_plan_name": "Per client",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "agency": 500.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "agency": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "agency": "not_eligible"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "agency": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 20,
+      "to_units": 50,
+      "from_plan": "agency",
+      "to_plan": null,
+      "from_plan_name": "Per client",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "More than 25 clients: AgencyAnalytics quotes instead of publishing a price.",
+     "Rank Tracker ($41.67/mo per 500 keywords) and AI Tracker ($20.83/mo per 250 credits) add-ons scale with keywords and credits, not clients."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -101,9 +375,15 @@
    "status": "open"
   },
   {
-   "question_id": "agencyanalytics:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "agencyanalytics:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: More than 25 clients: AgencyAnalytics quotes instead of publishing a price. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "agencyanalytics:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Rank Tracker ($41.67/mo per 500 keywords) and AI Tracker ($20.83/mo per 250 credits) add-ons scale with keywords and credits, not clients. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

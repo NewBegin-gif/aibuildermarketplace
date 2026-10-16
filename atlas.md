@@ -1261,10 +1261,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/finale-inventory-review/
 
 ## Fireflies.ai (fireflies.ai)
-- **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page, read from a European exit) Free $0 — unlimited transcription, limited AI summaries, 400 mins storage per team, 20 AI cre…
+- **Verified pricing:** (price re-verified 2026-10-16 against the vendor's own pricing page and help guide) Free $0 — free forever, unlimited transcription, limited AI summaries, 400 mins of storage per team, 20 A…
 - **Honest take:** The advertised $10 and $19 are annual-billing rates; month-to-month is $18 and $29.
 - **Best for:** teams that want every meeting transcribed and searchable automatically — the free unlimited-transcription tier is genuinely rare
-- **Flags:** Per-seat pricing, Usage-metered, Free tier
+- **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/fireflies-ai-review/
 
 ## Flatpay (flatpay.com)
@@ -2268,7 +2268,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-08-26 on partnerstack.com/pricing) There is no public price at any tier.
 - **Honest take:** The reporting counts clicks and calls them customers.
 - **Best for:** B2B SaaS teams that want partner payments, lead and deal registration and a marketplace of active B2B partners in one place, and are prepared to go through a demo to find out what it costs
-- **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/partnerstack-review/
 
 ## Passpack (passpack.com)

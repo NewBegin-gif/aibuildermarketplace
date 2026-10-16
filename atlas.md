@@ -2939,10 +2939,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/simpletexting-review/
 
 ## SimplyBook.me (simplybook.me)
-- **Verified pricing:** (re-verified 2026-10-16 on simplybook.me/en/pricing, EUR, priceCurrency 'EUR' in the page's own markup) Free EUR 0: 50 bookings a month, 1 custom feature, 1 provider, no card needed.
+- **Verified pricing:** (re-verified 2026-10-16 on simplybook.me/en/pricing, EUR, priceCurrency 'EUR' in the page's own markup) Free plan, EUR 0 a month: 50 bookings a month, 1 custom feature, 1 provider, no card …
 - **Honest take:** The plan ladder is set by bookings per month and by how many custom features you may switch on, and those two ceilings move independently.
 - **Best for:** service businesses that take appointments and want a booking page, reminders and online payment without building one
-- **Flags:** Annual commit
+- **Flags:** Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/simplybook-me-review/
 
 ## Skip To Checkout (effectify.io)

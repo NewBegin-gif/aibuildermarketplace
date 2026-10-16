@@ -1358,7 +1358,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gamma-review/
 
 ## GCheck (gcheck.com)
-- **Verified pricing:** (read 2026-09-29 on gcheck.com/pricing-packages, including its FAQ) Three packages, each priced per background check, with no setup fees, no minimums and no long-term contracts.
+- **Verified pricing:** (re-verified 2026-10-16 on gcheck.com/pricing-packages after GCheck's partner mail announced a lower Basic price; first read 2026-09-29, including its FAQ) Three packages, each priced per b…
 - **Honest take:** The pricing page reads like self-serve and is not.
 - **Best for:** US employers running a steady number of hires, especially in healthcare, nonprofits, education and staffing
 - **Full review:** https://aibuildermarketplace.com/b2b/gcheck-review/

@@ -2541,10 +2541,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/quo-review/
 
 ## Rank Math (rankmath.com)
-- **Verified pricing:** (read 2026-08-26 on rankmath.com/pricing) Pro is €7.99 a month, Business €24.99 and Agency €54.99, each billed annually and excluding VAT, against list prices of €8.99, €27.99 and €64.99.
+- **Verified pricing:** (re-verified 2026-10-16 on rankmath.com/pricing with its FAQ; first read 2026-08-26) Pro is €7.99 a month, Business €24.99 and Agency €54.99, each billed annually and excluding VAT, renewin…
 - **Honest take:** The free version is so generous that many sites never need to upgrade — PRO mainly earns its keep once you want built-in rank tracking, Content AI credits or to manage many sites.
 - **Best for:** WordPress site owners who want a powerful, feature-rich SEO plugin — the free version alone beats most paid rivals
-- **Flags:** Usage-metered, Free tier
+- **Flags:** Usage-metered, Renewal jump, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/rank-math-review/
 
 ## Rapid Search (rapidsearch.app)

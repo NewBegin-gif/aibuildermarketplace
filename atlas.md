@@ -2231,7 +2231,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pagecloud-review/
 
 ## PagePulse (getpagepulse.io)
-- **Verified pricing:** (re-verified 15 October 2026 on getpagepulse.io, all five tiers unchanged since our 10 September 2026 reading — the plans sit on the home page under the #pricing anchor; /pricing itself ret…
+- **Verified pricing:** (re-read 16 October 2026 on getpagepulse.io/#pricing in both billing states; the page opens on Annual billing, marked Save 20%.
 - **Honest take:** The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages.
 - **Best for:** solos and small teams who want simple per-page analytics — heatmaps, visitor behavior and AI-summarized insights — with a genuinely free single-page tier to start
 - **Flags:** Usage-metered, Annual commit, Free tier

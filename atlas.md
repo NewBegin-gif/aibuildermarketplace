@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 547 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-15.
+All 548 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -295,7 +295,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/auware-review/
 
 ## Ava AI (avasales.ai)
-- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/ava-ai and avasales.ai) Three paid tiers, no free plan, each with a 7-day trial.
+- **Verified pricing:** (verified 2026-10-16 on apps.shopify.com/ava-ai and avasales.ai) Three paid tiers, no free plan, each with a 7-day trial.
 - **Honest take:** The monthly price is a minutes allowance, not a flat fee — every minute past the bucket bills at $0.07 to $0.10, so a busy support line can cost far more than the headline.
 - **Best for:** Shopify DTC and cash-on-delivery stores with real inbound call volume that want 24/7 phone support and outbound cart-recovery automated, and are comfortable with per-minute economics
 - **Flags:** Usage-metered
@@ -1779,6 +1779,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/koongo-review/
 
+## Kopage (kopage.com)
+- **Verified pricing:** (read 2026-10-16 in a browser on kopage.com/pricing and kopage.com/pricing-self-hosted, from a Netherlands connection, prices shown in euros; local sales tax, GST or VAT may apply) Kopage s…
+- **Honest take:** Solo covers 5 client sites; refunds are generally not given.
+- **Best for:** freelancers and small agencies that build simple websites for local clients and want to sell them under their own brand, with hosting included
+- **Full review:** https://aibuildermarketplace.com/b2b/kopage-review/
+
 ## KrispCall (krispcall.com)
 - **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07 against the vendor's own pricing page) Since our August reading the plans have been renamed and a tier added: Starter $12 per user/mo billed annually …
 - **Honest take:** Same honest math as most budget VoIP: the plan buys the platform, the meter buys the conversations — per-minute and per-SMS charges land on top of every seat.
@@ -2919,10 +2925,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/simpletexting-review/
 
 ## SimplyBook.me (simplybook.me)
-- **Verified pricing:** (2026, re-read 2026-09-20 on their own pricing page; the euro ladder below was verified there on 2026-09-11 and has since stopped being shown to us) Free EUR 0: 50 bookings a month, 1 custo…
+- **Verified pricing:** (re-verified 2026-10-16 on simplybook.me/en/pricing, EUR, priceCurrency 'EUR' in the page's own markup) Free EUR 0: 50 bookings a month, 1 custom feature, 1 provider, no card needed.
 - **Honest take:** The plan ladder is set by bookings per month and by how many custom features you may switch on, and those two ceilings move independently.
 - **Best for:** service businesses that take appointments and want a booking page, reminders and online payment without building one
-- **Flags:** Annual commit, Free tier
+- **Flags:** Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/simplybook-me-review/
 
 ## Skip To Checkout (effectify.io)
@@ -3082,7 +3088,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sunsama-review/
 
 ## SupaEasy (supaeasy.com)
-- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing, and unchanged when re-read on 2026-09-29) A free plan plus three paid monthly tiers, each with a 7-day trial.
+- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-16 on both) A free plan plus three paid monthly tiers; Premium and Advanced carry a 7-day tri…
 - **Honest take:** The 'free' plan is development-stores only, so any live use is paid, and the AI generator that headlines the app is not in Premium ($49) but in Advanced ($99), plus AI credits bought separately ($25 per 50).
 - **Best for:** Shopify merchants — especially non-Plus stores — who want custom discount, checkout, payment and shipping logic without hiring a developer
 - **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/

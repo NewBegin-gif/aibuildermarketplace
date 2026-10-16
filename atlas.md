@@ -98,7 +98,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-15 on aira.app/pricing; first read in this form 2026-10-10) Aira now sells one product on its pricing page: Aira Connect at €499 a month, billed annually (€5,988 a year…
 - **Honest take:** Young product, sharp focus: European B2B prospecting on a 65-million-company database with meeting notes flowing into records automatically.
 - **Best for:** European B2B sales teams that want AI-assisted prospecting and automatic meeting/CRM hygiene from a Europe-native database
-- **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/aira-review/
 
 ## Aircall (aircall.io)

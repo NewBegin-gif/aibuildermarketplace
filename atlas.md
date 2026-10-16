@@ -131,7 +131,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## AISQ (aisq.com)
 - **Verified pricing:** (re-read 2026-10-11 on plugin.squirrly.co/wordpress-seo-pricing) Free $0.
 - **Honest take:** AISQ (the Squirrly family) evolves its pricing and product names often.
-- **Best for:** solo marketers who want low-cost, pay-as-you-go AI marketing assistance (SEO + content workflows) without a subscription
+- **Best for:** solo marketers and small WordPress site owners who want AI-assisted SEO and content workflows on the free plan or a low-cost entry plan
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/aisq-review/
 
@@ -566,7 +566,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/buzz-ai-review/
 
 ## Bybit (bybit.com)
-- **Verified pricing:** No subscription — per-trade fees, re-verified 2026-09-05 against Bybit's own fee schedule, which the page says was last updated on 2 September 2026.
+- **Verified pricing:** No subscription — per-trade fees, re-verified 2026-10-16 against Bybit's own fee schedule, which still says it was last updated on 2 September 2026; the base VIP table below is unchanged si…
 - **Honest take:** Derivatives are the draw and the danger: leverage cuts both ways, and funding rates on perpetuals are a real recurring cost the fee table doesn't show.
 - **Best for:** active traders who want deep liquidity, low derivatives fees and a broad product range (spot, perps, options) with volume-tiered discounts
 - **Full review:** https://aibuildermarketplace.com/b2b/bybit-review/
@@ -1457,7 +1457,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gushwork-review/
 
 ## Gusto (gusto.com)
-- **Verified pricing:** Read in a browser on gusto.com/pricing on 5 September 2026; the page blocks plain fetches.
+- **Verified pricing:** Read in a browser on gusto.com/product/pricing on 16 October 2026; the page blocks plain fetches.
 - **Honest take:** The base-plus-per-employee model is transparent but adds up, and Gusto is US-only — excellent for straightforward US payroll and benefits, but not the pick for international teams or complex multi-entity HR.
 - **Best for:** US small businesses that want genuinely easy full-service payroll, benefits and tax compliance in one place
 - **Flags:** Per-seat pricing
@@ -2008,7 +2008,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/modelize-review/
 
 ## Modge (modge.com)
-- **Verified pricing:** (read 2026-09-03 on modge.com/pricing, both billing toggles and the comparison table) Per-seat plans with a full-feature 14-day trial and no card.
+- **Verified pricing:** (read 2026-09-03 and re-verified 2026-10-16 on modge.com/pricing, both billing toggles and the comparison table; every amount unchanged) Per-seat plans with a full-feature 14-day trial and …
 - **Honest take:** The numbers on Modge's own pages do not agree with each other.
 - **Best for:** desk-bound remote or hybrid teams of a few to a few hundred people who want time tracking, app classification, shift adherence, leave and payroll-ready timesheets in one seat priced between $4 and $7 a month
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
@@ -2160,7 +2160,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/nouswise-review/
 
 ## Nutshell (nutshell.com)
-- **Verified pricing:** (re-verified 2026-08-17) Five CRM tiers on annual billing: Foundation $13, Growth $25, Pro $42, Business $59 and Enterprise $79 per user a month, with monthly billing about 15% higher (the …
+- **Verified pricing:** (re-verified 2026-10-16 on nutshell.com/pricing, both billing toggles) Five CRM tiers, per user a month: Foundation $13 on annual billing or $19 billed monthly, Growth $25 or $32, Pro $42 o…
 - **Honest take:** Full API access is included on every plan, so integrations are not the cost trap here — the add-ons are.
 - **Best for:** small sales teams that want a friendly CRM with unlimited contacts and full API access on every tier, including the cheapest
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
@@ -3382,7 +3382,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/trainual-review/
 
 ## Tresorit (tresorit.com)
-- **Verified pricing:** (re-verified 2026-08-14, read on their own business and personal pricing pages) There are three business plans: Professional for 1 user, Business from 3 users and Business Pro from 5 users.
+- **Verified pricing:** (business plans re-verified 2026-10-16 on tresorit.com/pricing/business in a browser, both billing toggles, all amounts unchanged since 14 August 2026; personal plans last read 2026-08-14) …
 - **Honest take:** You pay the Swiss-E2EE premium — noticeably above mainstream clouds and above Proton Drive per GB — and the encryption trade-offs are inherent.
 - **Best for:** businesses and professionals with confidentiality obligations (legal, health, finance) that need end-to-end-encrypted storage, granular sharing controls and compliance features
 - **Flags:** Per-seat pricing

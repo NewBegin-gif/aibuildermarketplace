@@ -1322,7 +1322,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/freshbooks-review/
 
 ## Freshchat (freshchat.com)
-- **Verified pricing:** Read 1 Sep 2026 on freshworks.com/live-chat-software/pricing/ (USD fields of the page own plan data).
+- **Verified pricing:** Read 1 Sep 2026 and re-read 16 Oct 2026 on freshworks.com/live-chat-software/pricing/ (USD, both the Annually and Monthly views).
 - **Honest take:** The free tier is genuinely useful for small teams, but AI features and higher-tier routing sit behind paid plans and add-ons.
 - **Best for:** small-to-mid support teams that want live chat and messaging with a real free tier to start
 - **Flags:** Per-seat pricing, Add-ons extra, Free tier
@@ -2456,7 +2456,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/proton-review/
 
 ## Proton Drive (proton.me)
-- **Verified pricing:** (read 2026-08-26 on proton.me/drive/pricing over a US connection, on the Individuals view with yearly billing) Proton Free gives 5 GB.
+- **Verified pricing:** (read 2026-08-26 over a US connection and re-read 2026-10-16 with USD selected, on proton.me/drive/pricing, Individuals view with yearly billing) Proton Free gives 5 GB.
 - **Honest take:** Because Proton can't read your files, there's no server-side search inside documents, previews and integrations are more limited, and lost credentials without recovery mean lost data.
 - **Best for:** privacy-conscious individuals and businesses that want genuinely end-to-end-encrypted storage from a Swiss provider, ideally as part of the wider Proton suite
 - **Flags:** Per-seat pricing, Free tier

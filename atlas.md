@@ -3141,7 +3141,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/surfer-surferseo-review/
 
 ## SurFox AI (getsurfox.com)
-- **Verified pricing:** (read 2026-10-15 in a live browser on getsurfox.com/pricing with its FAQ, the home page and the terms of service last updated 22 September 2026) Four monthly plans, priced by message volume…
+- **Verified pricing:** (re-verified 2026-10-16 on getsurfox.com/pricing and the terms of service, still dated 22 September 2026, after SurFox aligned the two pages; first read 2026-10-15 in a live browser with th…
 - **Honest take:** You pay from signup but cannot text until carriers approve your A2P registration, and the money-back guarantee needs 80% of your messages used.
 - **Best for:** US staffing agencies, real estate investors and home-services firms with a steady flow of opted-in leads who want an AI to text them back within minutes, qualify them and put calls on the calendar
 - **Flags:** Usage-metered, Annual commit

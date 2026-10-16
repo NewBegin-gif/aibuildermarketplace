@@ -98,7 +98,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-15 on aira.app/pricing; first read in this form 2026-10-10) Aira now sells one product on its pricing page: Aira Connect at €499 a month, billed annually (€5,988 a year…
 - **Honest take:** Young product, sharp focus: European B2B prospecting on a 65-million-company database with meeting notes flowing into records automatically.
 - **Best for:** European B2B sales teams that want AI-assisted prospecting and automatic meeting/CRM hygiene from a Europe-native database
-- **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/aira-review/
 
 ## Aircall (aircall.io)
@@ -2924,7 +2923,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/signnow-review/
 
 ## Similarweb (similarweb.com)
-- **Verified pricing:** (read 2026-08-25 on their own pricing page) The entrepreneur plans are published: $125 per month on annual billing for Competitive Intelligence, $333 for Competitive Intel & SEO & AEO, and …
+- **Verified pricing:** (re-verified 2026-10-16 on their own pricing page; first read 2026-08-25) The entrepreneur plans are published: $125 per month on annual billing for Competitive Intelligence, $333 for Compe…
 - **Honest take:** Similarweb does publish a price — $125 a month for one seat on annual billing, or $199 if you pay monthly.
 - **Best for:** a single analyst or marketer who needs competitor traffic and channel estimates often enough to justify $125 a month, and teams who are prepared to negotiate an annual contract for more than one seat
 - **Flags:** Add-ons extra, Annual commit

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 548 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-16.
+All 551 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2285,6 +2285,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/payoneer-review/
 
+## Pdfdodo (pdfdodo.com)
+- **Verified pricing:** (read 2026-10-16 in a browser on pdfdodo.com, monthly and yearly view of the pricing block; the cards show a $ sign without naming the currency) Four plans metered by pages analysed per mon…
+- **Honest take:** Free has every feature for 25 pages; FAQ and terms disagree on refunds.
+- **Best for:** bookkeepers, accountants and small businesses that turn bank statements, invoices and receipts in PDF or scan form into spreadsheets a few hundred pages a month
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/pdfdodo-review/
+
 ## PDWare (pdware.com)
 - **Verified pricing:** Quote-only, re-confirmed 25 September 2026: pdware.com has no pricing page (/pricing returns 404) and every route ends in a 'Request pricing' form or a guided demo, with no amount anywhere …
 - **Honest take:** This is genuine enterprise software with enterprise buying: opaque pricing, demo-first sales and implementation effort — appropriate for portfolio offices planning hundreds of resources, overkill below that.
@@ -2882,6 +2889,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** salons, barbers, spas, wellness studios, physical therapists, craftspeople and local retailers that want bookings via Google and Instagram, no-show-reducing reminders, marketing and (optionally) POS in one fixed-price system
 - **Full review:** https://aibuildermarketplace.com/b2b/shore-review/
 
+## ShortlistIQ (shortlistiq.com)
+- **Verified pricing:** (read 2026-10-16 in a browser on shortlistiq.com/pricing; the cards show a $ sign without naming the currency, and clicking Pay annually did not change the amounts) Three paid plans, each l…
+- **Honest take:** Free for 10 applicants; Basic covers 20 a month; no refunds on early cancellation.
+- **Best for:** small and mid-size teams and recruitment agencies that get more applicants than they can screen and want an AI to run the first-round interview and score each candidate
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/shortlistiq-review/
+
 ## Signal House (signalhouse.io)
 - **Verified pricing:** (2026-09-11, re-read on their own pricing page and again on 13 October 2026) Usage-based, no platform subscription.
 - **Honest take:** The product is sold as an SMS and Voice API and the pricing page publishes no voice rate at all (short code pricing was added by 13 October 2026; voice still has none).
@@ -3106,6 +3120,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** e-commerce brands turning customers and creators into affiliates with branded co-branded storefronts — if the volume justifies a demo-quoted platform fee
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/superfiliate-review/
+
+## Superlines (superlines.io)
+- **Verified pricing:** (read 2026-10-16 in a browser on superlines.io/pricing, For brands tab, monthly and yearly view, prices shown in euros; the terms say VAT is added where required) Three self-service plans a…
+- **Honest take:** Starter has no exports and 1 month of history; 30 days' notice to stop renewal.
+- **Best for:** marketing teams and agencies in Europe that want to track how ChatGPT, Gemini, Perplexity and other AI engines mention and cite their brands, with unlimited seats
+- **Full review:** https://aibuildermarketplace.com/b2b/superlines-review/
 
 ## SupportBee (supportbee.com)
 - **Verified pricing:** (read 2026-08-27 on supportbee.com/pricing) Two plans, both priced per seat, and no free tier.

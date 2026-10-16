@@ -1034,8 +1034,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dynasort-review/
 
 ## Easy Advanced Translations (northwest.dev)
-- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/advanced-translation) Four tiers, all monthly.
-- **Honest take:** Auto-translation of new or changed content is reserved for the higher plans.
+- **Verified pricing:** (re-verified 2026-10-16 on apps.shopify.com/advanced-translation) Four tiers, all monthly and billed in USD.
+- **Honest take:** The 'free AI' is quota-limited — 50 products on Free, up to 3,000 on Pro — and past the quota the paid plans bill pay-as-you-go (with a spend limit).
 - **Best for:** small-to-mid Shopify stores that want affordable, full-store AI translation — including images and third-party-app text — and are comfortable bringing their own OpenAI or DeepSeek key for unlimited volume
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/easy-advanced-translations-review/
@@ -2633,8 +2633,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/retouch4me-review/
 
 ## Rippling (rippling.com)
-- **Verified pricing:** (verified 2026-08-27) Rippling is modular and mostly quote-led.
-- **Honest take:** The published '$8 per user a month' is real but it's only the floor, and it's the HR-and-payroll entry — not the price of the platform.
+- **Verified pricing:** (re-verified 2026-10-16) Rippling is modular and mostly quote-led.
+- **Honest take:** The published '$8 per employee a month' is real but it's only the floor, it comes with a monthly base fee ($40 on the small-business page), and it's the HR-and-payroll entry — not the price of the platform.
 - **Best for:** growing companies that want HR, IT and Finance on one employee record — so a single hire can trigger payroll, a provisioned laptop and app access at once, and offboarding claws it all back automatically
 - **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/rippling-review/

@@ -1358,7 +1358,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gamma-review/
 
 ## GCheck (gcheck.com)
-- **Verified pricing:** (read 2026-09-29 on gcheck.com/pricing-packages, including its FAQ) Three packages, each priced per background check, with no setup fees, no minimums and no long-term contracts.
+- **Verified pricing:** (re-verified 2026-10-16 on gcheck.com/pricing-packages after GCheck's partner mail announced a lower Basic price; first read 2026-09-29, including its FAQ) Three packages, each priced per b…
 - **Honest take:** The pricing page reads like self-serve and is not.
 - **Best for:** US employers running a steady number of hires, especially in healthcare, nonprofits, education and staffing
 - **Full review:** https://aibuildermarketplace.com/b2b/gcheck-review/
@@ -2231,7 +2231,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pagecloud-review/
 
 ## PagePulse (getpagepulse.io)
-- **Verified pricing:** (re-verified 15 October 2026 on getpagepulse.io, all five tiers unchanged since our 10 September 2026 reading — the plans sit on the home page under the #pricing anchor; /pricing itself ret…
+- **Verified pricing:** (re-read 16 October 2026 on getpagepulse.io/#pricing in both billing states; the page opens on Annual billing, marked Save 20%.
 - **Honest take:** The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages.
 - **Best for:** solos and small teams who want simple per-page analytics — heatmaps, visitor behavior and AI-summarized insights — with a genuinely free single-page tier to start
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -2541,10 +2541,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/quo-review/
 
 ## Rank Math (rankmath.com)
-- **Verified pricing:** (read 2026-08-26 on rankmath.com/pricing) Pro is €7.99 a month, Business €24.99 and Agency €54.99, each billed annually and excluding VAT, against list prices of €8.99, €27.99 and €64.99.
+- **Verified pricing:** (re-verified 2026-10-16 on rankmath.com/pricing with its FAQ; first read 2026-08-26) Pro is €7.99 a month, Business €24.99 and Agency €54.99, each billed annually and excluding VAT, renewin…
 - **Honest take:** The free version is so generous that many sites never need to upgrade — PRO mainly earns its keep once you want built-in rank tracking, Content AI credits or to manage many sites.
 - **Best for:** WordPress site owners who want a powerful, feature-rich SEO plugin — the free version alone beats most paid rivals
-- **Flags:** Usage-metered, Free tier
+- **Flags:** Usage-metered, Renewal jump, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/rank-math-review/
 
 ## Rapid Search (rapidsearch.app)
@@ -3141,7 +3141,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/surfer-surferseo-review/
 
 ## SurFox AI (getsurfox.com)
-- **Verified pricing:** (read 2026-10-15 in a live browser on getsurfox.com/pricing with its FAQ, the home page and the terms of service last updated 22 September 2026) Four monthly plans, priced by message volume…
+- **Verified pricing:** (re-verified 2026-10-16 on getsurfox.com/pricing and the terms of service, still dated 22 September 2026, after SurFox aligned the two pages; first read 2026-10-15 in a live browser with th…
 - **Honest take:** You pay from signup but cannot text until carriers approve your A2P registration, and the money-back guarantee needs 80% of your messages used.
 - **Best for:** US staffing agencies, real estate investors and home-services firms with a steady flow of opted-in leads who want an AI to text them back within minutes, qualify them and put calls on the calendar
 - **Flags:** Usage-metered, Annual commit

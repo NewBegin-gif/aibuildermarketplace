@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 551 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-16.
+All 555 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -618,6 +618,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Ownership has moved twice: SPS Commerce bought Carbon6 in February 2025, then on 30 June 2026 sold the 3P revenue-recovery business, which now runs under the Carbon6 name again.
 - **Best for:** Amazon sellers who want reimbursements, advertising, inventory and sourcing tools from one vendor and are content to buy them tool by tool
 - **Full review:** https://aibuildermarketplace.com/b2b/carbon6-review/
+
+## CarouselBot (carouselbot.app)
+- **Verified pricing:** (read 2026-10-17 in a browser on carouselbot.app/pricing, Monthly and Annual views; the cards show a $ sign without naming the currency) Free is $0 forever: 3 carousels a month, plus 3 card…
+- **Honest take:** Free exports carry a watermark; Creator caps batches at 3 a month; refunds only within 7 days.
+- **Best for:** solo creators, consultants and small marketing teams who post LinkedIn and Instagram carousels every week and want to turn articles and ideas into branded slides without designing them by hand
+- **Flags:** Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/carouselbot-review/
 
 ## Castmagic (castmagic.io)
 - **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on castmagic.io/pricing, every figure and both sets of data attributes unchanged) Three published tiers plus an enterprise band.
@@ -1585,6 +1592,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/idrive-review/
 
+## Imagify (imagify.io)
+- **Verified pricing:** (read 2026-10-17 in a browser on imagify.io/pricing in the yearly view, with the monthly rates read on the same page on 15 October 2026; the terms name US dollars, excluding tax) Starter is…
+- **Honest take:** Free tier is 20MB a month; Growth charges $5 per extra GB; no refund on yearly plans.
+- **Best for:** WordPress site owners with image-heavy pages, such as blogs, stores and portfolios, who want images compressed and converted to WebP or AVIF by a plugin instead of by hand
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/imagify-review/
+
 ## Imgify (effectify.io)
 - **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/custom-falling-effect) Billed in USD, with recurring charges billed every 30 days.
 - **Honest take:** The free plan is development and partner stores only, so a real storefront pays $2.99 from the first day after a 7-day trial, while a free app in the same category has a far deeper public record.
@@ -2207,6 +2221,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** marketers who want quizzes, calculators and assessments that earn the lead by giving genuine value — with logic, integrations and templates handled
 - **Flags:** Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/outgrow-review/
+
+## OutSends (outsends.com)
+- **Verified pricing:** (read 2026-10-17 in a browser on outsends.com/pricing, monthly view; the cards show a $ sign without naming the currency, and the page says prices exclude VAT) Four fixed plans, each with u…
+- **Honest take:** Non-refundable; one seat below the $199 Team plan; trial only on monthly plans.
+- **Best for:** founders, freelancers and small agencies who run cold email from Gmail and want flat monthly plans by email volume, with warm-up and follow-up sequences included
+- **Flags:** Usage-metered, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/outsends-review/
 
 ## Ownr (ownr.co)
 - **Verified pricing:** (prices read 22 September 2026 in a live browser on www.ownr.co/pricing, all amounts in Canadian dollars - Ownr sells into Canada only) The page has two selectors, jurisdiction and structur…
@@ -3468,6 +3489,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** solo builders and small teams monitoring sites, ports and APIs at 60-second resolution with status pages — and honestly, the free 50-monitor tier covers most hobby stacks
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/uptimerobot-review/
+
+## UserHelp.co (userhelp.co)
+- **Verified pricing:** (read 2026-10-17 in a browser on userhelp.co/pricing; the card shows a $ sign without naming the currency) Two plans.
+- **Honest take:** Free for one project with a watermark; Pro is $59 once, with no stated refund rule.
+- **Best for:** freelancers, small agencies and site owners who want a feedback button on their websites that collects annotated screenshots and bug reports, and who prefer one payment to a subscription
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/userhelp-co-review/
 
 ## UserTrail (usertrail.io)
 - **Verified pricing:** (read 2026-10-07 on usertrail.io/pricing in a browser render, USD, with both the yearly and the monthly toggle) Four plans, priced by monthly sessions.

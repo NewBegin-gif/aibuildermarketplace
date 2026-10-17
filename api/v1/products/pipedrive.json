@@ -92,14 +92,431 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "per_unit",
+     "annual_month": 14,
+     "monthly": 24,
+     "annual_year": 168,
+     "evidence": "Billed annually they are €14, €39, €59 and €79 per seat per month for Lite, Growth, Premium and Ultimate, which is one payment of €168, €468, €708 or €948 per seat per year, since Pipedrive charges the year up front. Billed monthly the same plans are €24, €49, €79 and €99 per seat."
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "annual_month": 39,
+     "monthly": 49,
+     "annual_year": 468,
+     "evidence": "Billed annually they are €14, €39, €59 and €79 per seat per month for Lite, Growth, Premium and Ultimate, which is one payment of €168, €468, €708 or €948 per seat per year, since Pipedrive charges the year up front. Billed monthly the same plans are €24, €49, €79 and €99 per seat."
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "per_unit",
+     "annual_month": 59,
+     "monthly": 79,
+     "annual_year": 708,
+     "evidence": "Billed annually they are €14, €39, €59 and €79 per seat per month for Lite, Growth, Premium and Ultimate, which is one payment of €168, €468, €708 or €948 per seat per year, since Pipedrive charges the year up front. Billed monthly the same plans are €24, €49, €79 and €99 per seat."
+    },
+    {
+     "id": "ultimate",
+     "name": "Ultimate",
+     "model": "per_unit",
+     "annual_month": 79,
+     "monthly": 99,
+     "annual_year": 948,
+     "evidence": "Billed annually they are €14, €39, €59 and €79 per seat per month for Lite, Growth, Premium and Ultimate, which is one payment of €168, €468, €708 or €948 per seat per year, since Pipedrive charges the year up front. Billed monthly the same plans are €24, €49, €79 and €99 per seat."
+    }
+   ],
+   "not_computable": [
+    "Five add-ons are priced only 'starting from' (LeadBooster €32.50, Projects €16.66, Campaigns €13.33, Web Visitors €41, Smart Docs €32.50) without a stated unit or billing term; LeadBooster, Projects and Smart Docs are included on Premium and Ultimate, Campaigns and Web Visitors are always extra. The seat price is a floor when you need them.",
+    "Prices are VAT exclusive."
+   ],
+   "rules_verified_at": "2026-10-17"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "pipedrive",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 14.0,
+      "billed": {
+       "amount": 168.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 14.0,
+       "growth": 39.0,
+       "premium": 59.0,
+       "ultimate": 79.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 28.0,
+      "billed": {
+       "amount": 336.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 28.0,
+       "growth": 78.0,
+       "premium": 118.0,
+       "ultimate": 158.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 42.0,
+      "billed": {
+       "amount": 504.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 42.0,
+       "growth": 117.0,
+       "premium": 177.0,
+       "ultimate": 237.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 70.0,
+      "billed": {
+       "amount": 840.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 70.0,
+       "growth": 195.0,
+       "premium": 295.0,
+       "ultimate": 395.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 140.0,
+      "billed": {
+       "amount": 1680.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 140.0,
+       "growth": 390.0,
+       "premium": 590.0,
+       "ultimate": 790.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 210.0,
+      "billed": {
+       "amount": 2520.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 210.0,
+       "growth": 585.0,
+       "premium": 885.0,
+       "ultimate": 1185.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 280.0,
+      "billed": {
+       "amount": 3360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 280.0,
+       "growth": 780.0,
+       "premium": 1180.0,
+       "ultimate": 1580.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 350.0,
+      "billed": {
+       "amount": 4200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 350.0,
+       "growth": 975.0,
+       "premium": 1475.0,
+       "ultimate": 1975.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 700.0,
+      "billed": {
+       "amount": 8400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 700.0,
+       "growth": 1950.0,
+       "premium": 2950.0,
+       "ultimate": 3950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 1400.0,
+      "billed": {
+       "amount": 16800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 1400.0,
+       "growth": 3900.0,
+       "premium": 5900.0,
+       "ultimate": 7900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Five add-ons are priced only 'starting from' (LeadBooster €32.50, Projects €16.66, Campaigns €13.33, Web Visitors €41, Smart Docs €32.50) without a stated unit or billing term; LeadBooster, Projects and Smart Docs are included on Premium and Ultimate, Campaigns and Web Visitors are always extra. The seat price is a floor when you need them.",
+     "Prices are VAT exclusive."
+    ]
+   },
+   "monthly": {
+    "product_id": "pipedrive",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 24.0,
+       "growth": 49.0,
+       "premium": 79.0,
+       "ultimate": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 48.0,
+      "billed": {
+       "amount": 48.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 48.0,
+       "growth": 98.0,
+       "premium": 158.0,
+       "ultimate": 198.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 72.0,
+      "billed": {
+       "amount": 72.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 72.0,
+       "growth": 147.0,
+       "premium": 237.0,
+       "ultimate": 297.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 120.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 120.0,
+       "growth": 245.0,
+       "premium": 395.0,
+       "ultimate": 495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 240.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 240.0,
+       "growth": 490.0,
+       "premium": 790.0,
+       "ultimate": 990.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 360.0,
+      "billed": {
+       "amount": 360.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 360.0,
+       "growth": 735.0,
+       "premium": 1185.0,
+       "ultimate": 1485.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 480.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 480.0,
+       "growth": 980.0,
+       "premium": 1580.0,
+       "ultimate": 1980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 600.0,
+       "growth": 1225.0,
+       "premium": 1975.0,
+       "ultimate": 2475.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 1200.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 1200.0,
+       "growth": 2450.0,
+       "premium": 3950.0,
+       "ultimate": 4950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 2400.0,
+      "billed": {
+       "amount": 2400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 2400.0,
+       "growth": 4900.0,
+       "premium": 7900.0,
+       "ultimate": 9900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Five add-ons are priced only 'starting from' (LeadBooster €32.50, Projects €16.66, Campaigns €13.33, Web Visitors €41, Smart Docs €32.50) without a stated unit or billing term; LeadBooster, Projects and Smart Docs are included on Premium and Ultimate, Campaigns and Web Visitors are always extra. The seat price is a floor when you need them.",
+     "Prices are VAT exclusive."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -123,9 +540,15 @@
    "status": "open"
   },
   {
-   "question_id": "pipedrive:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "pipedrive:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Five add-ons are priced only 'starting from' (LeadBooster €32.50, Projects €16.66, Campaigns €13.33, Web Visitors €41, Smart Docs €32.50) without a stated unit or billing term; LeadBooster, Projects and Smart Docs are included on Premium and Ultimate, Campaigns and Web Visitors are always extra. The seat price is a floor when you need them. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "pipedrive:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Prices are VAT exclusive. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

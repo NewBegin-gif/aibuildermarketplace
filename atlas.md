@@ -607,7 +607,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/campaigner-review/
 
 ## Capsule (capsulecrm.com)
-- **Verified pricing:** (price page re-read 2026-09-11) The free tier covers two users and 250 contacts, and every paid card is quoted per user a month with a 14-day trial that needs no card.
+- **Verified pricing:** (price page re-read 2026-10-17 from the Netherlands, annual billing; first US reading 2026-08-26) The free tier covers two users and 250 contacts, and every paid card is quoted per user a m…
 - **Honest take:** Capsule's simplicity is the product: it deliberately does less than the CRM giants, which is why small teams actually use it.
 - **Best for:** small businesses that want a clean, genuinely simple CRM for contacts, pipeline and tasks — one the team will actually keep updated
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit, Free tier
@@ -676,7 +676,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/citeroute-review/
 
 ## Claap (claap.io)
-- **Verified pricing:** (read 2026-09-04 on claap.io/pricing, both billing toggles and the full comparison table; re-verified 2026-09-08) Licenses are priced per license per month in euros.
+- **Verified pricing:** (re-read 2026-10-17 on claap.io/pricing, plan cards, FAQ and the full comparison table; first read 2026-09-04) Licenses are priced per license per month, and the page now prints dollars bes…
 - **Honest take:** The four tiers sell two different products, and only one of them is self-serve.
 - **Best for:** revenue teams that want every call captured — by default with no notetaker bot in the meeting, though a customisable bot is there for teams that prefer one
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit, Free tier
@@ -1061,7 +1061,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/easydmarc-review/
 
 ## EcomXray (ecomxray.io)
-- **Verified pricing:** (re-verified 8 September 2026 on apps.shopify.com/ecomxray; unchanged since 21 August 2026) Two tiers.
+- **Verified pricing:** (re-verified 17 October 2026 on apps.shopify.com/ecomxray; unchanged since 21 August 2026) Two tiers.
 - **Honest take:** The split between the two tiers is unusually clean, and worth seeing clearly: everything this app is described as doing, the margins, the net units, the restock advice, is free.
 - **Best for:** small and mid-size Shopify merchants who want cost price, gross margin, clean net unit sales and restock advice inside the admin instead of exporting to a spreadsheet
 - **Flags:** Free tier
@@ -1410,7 +1410,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gixo-review/
 
 ## Glide (glideapps.com)
-- **Verified pricing:** (Classic re-verified 2026-09-03 in a live browser session on both tabs and both billing toggles, unchanged since 2026-08-04; the GlideOS plans were re-read the same day after a restructure)…
+- **Verified pricing:** (GlideOS plans and the classic Business tab re-read 2026-10-17 and unchanged; the classic Explorer and Maker amounts were not printed in the page we fetched that day and were last read 2026…
 - **Honest take:** Glide meters updates, not just seats.
 - **Best for:** teams that already run operations out of spreadsheets and want a real app on top — internal tools, field data capture, client portals — without hiring a developer
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit, Free tier
@@ -2111,7 +2111,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/nexis-cro-review/
 
 ## Nextify.ai (nextify.ai)
-- **Verified pricing:** (read 7 September 2026 on nextify.ai/pricing, signed in and signed out, in both billing modes) Five ways to pay, and the free plan is only visible when you are logged out — the signed-in pr…
+- **Verified pricing:** (read 7 September 2026 on nextify.ai/pricing, signed in and signed out, in both billing modes; re-read 17 October 2026 signed out, where the annual figures, the $29, $79 and $189 monthly ra…
 - **Honest take:** The plans are sold in videos and images; the meter runs in credits per second, and the two do not reconcile.
 - **Best for:** advertisers who need a steady stream of short product clips and will deliberately choose the cheap model for drafts, and teams who would rather have video, avatars
 - **Flags:** Usage-metered, Add-ons extra, Free tier

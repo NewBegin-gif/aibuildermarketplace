@@ -3532,9 +3532,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vendoo-review/
 
 ## Vida AI (vida.io)
-- **Verified pricing:** (price re-verified 2026-10-13) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate.
-- **Honest take:** This is priced for agencies and telecoms reselling AI phone agents, not for a single small business wanting one receptionist bot.
-- **Best for:** agencies, MSPs and service providers that want to deploy and resell white-label AI voice agents at volume, and that can absorb a scoped pilot before they ever see a production price
+- **Verified pricing:** (re-verified 2026-10-17 in a browser on vida.io/pricing with its FAQ and on vida.io/rate-card; the page has changed since our reading of 13 October 2026, when it published no plans and only…
+- **Honest take:** The $250 Starter fee buys the platform and one agent, not the calls.
+- **Best for:** service businesses, agencies and MSPs that want AI phone agents to answer, qualify or schedule calls, with enough call volume to plan usage month by month and someone to set the agent up
+- **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/vida-ai-review/
 
 ## VidPal (vidpal.ai)

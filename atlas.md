@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 551 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-16.
+All 555 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -619,6 +619,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Amazon sellers who want reimbursements, advertising, inventory and sourcing tools from one vendor and are content to buy them tool by tool
 - **Full review:** https://aibuildermarketplace.com/b2b/carbon6-review/
 
+## CarouselBot (carouselbot.app)
+- **Verified pricing:** (read 2026-10-17 in a browser on carouselbot.app/pricing, Monthly and Annual views; the cards show a $ sign without naming the currency) Free is $0 forever: 3 carousels a month, plus 3 card…
+- **Honest take:** Free exports carry a watermark; Creator caps batches at 3 a month; refunds only within 7 days.
+- **Best for:** solo creators, consultants and small marketing teams who post LinkedIn and Instagram carousels every week and want to turn articles and ideas into branded slides without designing them by hand
+- **Flags:** Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/carouselbot-review/
+
 ## Castmagic (castmagic.io)
 - **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on castmagic.io/pricing, every figure and both sets of data attributes unchanged) Three published tiers plus an enterprise band.
 - **Honest take:** The prices on the page are the annual prices.
@@ -1088,8 +1095,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/emaillistverify-review/
 
 ## Emergent (emergent.sh)
-- **Verified pricing:** (re-verified 2026-08-31 on emergent.sh/pricing) Free $0 (10 credits/mo); Standard $20/mo, or $17/mo billed annually, for 100 credits (the page states a $36 annual saving, 15%); Pro $200/mo,…
-- **Honest take:** The real cost is credit consumption, not the flat sticker -- a genuinely complex app burns 10-20+ credits per big change, so serious builders move up tiers faster than the price list implies.
+- **Verified pricing:** (re-verified 2026-10-17 on emergent.sh/pricing in the monthly view, with the annual rates from the same page read on 16 October 2026, and on Emergent's help pages on managing credit usage a…
+- **Honest take:** The real cost is credit consumption, not the flat sticker.
 - **Best for:** founders, PMs and builders who want to turn a prompt into a working full-stack web app or MVP fast, without writing the code themselves
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/emergent-review/
@@ -1584,6 +1591,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** individuals and small businesses that want cheap multi-device cloud backup with versioning, snapshots and physical seed/restore shipping
 - **Flags:** Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/idrive-review/
+
+## Imagify (imagify.io)
+- **Verified pricing:** (read 2026-10-17 in a browser on imagify.io/pricing in the yearly view, with the monthly rates read on the same page on 15 October 2026; the terms name US dollars, excluding tax) Starter is…
+- **Honest take:** Free tier is 20MB a month; Growth charges $5 per extra GB; no refund on yearly plans.
+- **Best for:** WordPress site owners with image-heavy pages, such as blogs, stores and portfolios, who want images compressed and converted to WebP or AVIF by a plugin instead of by hand
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/imagify-review/
 
 ## Imgify (effectify.io)
 - **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/custom-falling-effect) Billed in USD, with recurring charges billed every 30 days.
@@ -2208,6 +2222,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/outgrow-review/
 
+## OutSends (outsends.com)
+- **Verified pricing:** (read 2026-10-17 in a browser on outsends.com/pricing, monthly view; the cards show a $ sign without naming the currency, and the page says prices exclude VAT) Four fixed plans, each with u…
+- **Honest take:** Non-refundable; one seat below the $199 Team plan; trial only on monthly plans.
+- **Best for:** founders, freelancers and small agencies who run cold email from Gmail and want flat monthly plans by email volume, with warm-up and follow-up sequences included
+- **Flags:** Usage-metered, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/outsends-review/
+
 ## Ownr (ownr.co)
 - **Verified pricing:** (prices read 22 September 2026 in a live browser on www.ownr.co/pricing, all amounts in Canadian dollars - Ownr sells into Canada only) The page has two selectors, jurisdiction and structur…
 - **Honest take:** Two honest limits. It's Canada-only — provincial incorporation covers Ontario, Alberta, BC and Quebec — so it's no use outside Canada.
@@ -2332,7 +2353,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pingtree-review/
 
 ## Pipedrive (pipedrive.com)
-- **Verified pricing:** (read 2026-08-26 on pipedrive.com/pricing over a US connection; the monthly column below is our 2026-08-16 reading from the EU) Four seat-based plans.
+- **Verified pricing:** (re-verified 2026-10-17 in a browser on pipedrive.com/en/pricing from the Netherlands, both billing views, with Pipedrive's help article on plan features; our 26 August 2026 reading over a …
 - **Honest take:** Pipedrive manages what happens after a lead enters your pipeline — it doesn't do outbound prospecting or marketing, so you'll pair it with a separate tool for that.
 - **Best for:** sales teams that want a simple, visual pipeline they can use on day one, with a separate marketing tool already in place
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
@@ -3469,6 +3490,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/uptimerobot-review/
 
+## UserHelp.co (userhelp.co)
+- **Verified pricing:** (read 2026-10-17 in a browser on userhelp.co/pricing; the card shows a $ sign without naming the currency) Two plans.
+- **Honest take:** Free for one project with a watermark; Pro is $59 once, with no stated refund rule.
+- **Best for:** freelancers, small agencies and site owners who want a feedback button on their websites that collects annotated screenshots and bug reports, and who prefer one payment to a subscription
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/userhelp-co-review/
+
 ## UserTrail (usertrail.io)
 - **Verified pricing:** (read 2026-10-07 on usertrail.io/pricing in a browser render, USD, with both the yearly and the monthly toggle) Four plans, priced by monthly sessions.
 - **Honest take:** Sessions are shared across all your sites, and tracking pauses until next month when they run out.
@@ -3504,9 +3532,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vendoo-review/
 
 ## Vida AI (vida.io)
-- **Verified pricing:** (price re-verified 2026-10-13) Vida publishes no public pricing: no plan ladder, no monthly tier and no per-minute rate.
-- **Honest take:** This is priced for agencies and telecoms reselling AI phone agents, not for a single small business wanting one receptionist bot.
-- **Best for:** agencies, MSPs and service providers that want to deploy and resell white-label AI voice agents at volume, and that can absorb a scoped pilot before they ever see a production price
+- **Verified pricing:** (re-verified 2026-10-17 in a browser on vida.io/pricing with its FAQ and on vida.io/rate-card; the page has changed since our reading of 13 October 2026, when it published no plans and only…
+- **Honest take:** The $250 Starter fee buys the platform and one agent, not the calls.
+- **Best for:** service businesses, agencies and MSPs that want AI phone agents to answer, qualify or schedule calls, with enough call volume to plan usage month by month and someone to set the agent up
+- **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/vida-ai-review/
 
 ## VidPal (vidpal.ai)

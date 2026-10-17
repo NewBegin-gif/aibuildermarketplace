@@ -78,14 +78,423 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free $0: 25 GB storage, 1 user, 200 GB bandwidth"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "included_units": 3,
+     "annual_month": 79,
+     "monthly": 99,
+     "extra_unit": {
+      "annual_month": 25,
+      "monthly": 31
+     },
+     "evidence": "Business $79: 250 GB+ storage, 3 users"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quote-only"
+    }
+   ],
+   "extra_evidence": "Switch that toggle to Monthly and the same three cards read $0, $99 and $412 a month, with the per-extra-user rate moving from $25 to $31",
+   "not_computable": [
+    "Business + Lead gen ($329 a month annual, $412 monthly): the notes do not say how many users it includes, so it is left out of the per-user calculation.",
+    "Bandwidth and storage beyond the included amounts, webinar attendees ($0.20 each) and extra webinar minutes ($2.00 each) are usage charges outside the seat price."
+   ],
+   "notes": [
+    "Rates are the annual figures with the monthly rates read from the page's Monthly toggle on 2026-09-19."
+   ],
+   "rules_verified_at": "2026-10-17"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "wistia",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "business": 79.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 79.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 79.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 1548.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 129.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 254.0,
+      "billed": {
+       "amount": 3048.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 254.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 379.0,
+      "billed": {
+       "amount": 4548.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 379.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 504.0,
+      "billed": {
+       "amount": 6048.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 504.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 629.0,
+      "billed": {
+       "amount": 7548.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 629.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1254.0,
+      "billed": {
+       "amount": 15048.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 1254.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 2504.0,
+      "billed": {
+       "amount": 30048.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 2504.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "business",
+      "from_plan_name": "Free",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Business + Lead gen ($329 a month annual, $412 monthly): the notes do not say how many users it includes, so it is left out of the per-user calculation.",
+     "Bandwidth and storage beyond the included amounts, webinar attendees ($0.20 each) and extra webinar minutes ($2.00 each) are usage charges outside the seat price."
+    ]
+   },
+   "monthly": {
+    "product_id": "wistia",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "business": 99.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 99.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 99.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 161.0,
+      "billed": {
+       "amount": 161.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 161.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 316.0,
+      "billed": {
+       "amount": 316.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 316.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 471.0,
+      "billed": {
+       "amount": 471.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 471.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 626.0,
+      "billed": {
+       "amount": 626.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 626.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 781.0,
+      "billed": {
+       "amount": 781.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 781.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1556.0,
+      "billed": {
+       "amount": 1556.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 1556.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 3106.0,
+      "billed": {
+       "amount": 3106.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 3106.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "business",
+      "from_plan_name": "Free",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Business + Lead gen ($329 a month annual, $412 monthly): the notes do not say how many users it includes, so it is left out of the per-user calculation.",
+     "Bandwidth and storage beyond the included amounts, webinar attendees ($0.20 each) and extra webinar minutes ($2.00 each) are usage charges outside the seat price."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -109,9 +518,15 @@
    "status": "open"
   },
   {
-   "question_id": "wistia:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "wistia:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Business + Lead gen ($329 a month annual, $412 monthly): the notes do not say how many users it includes, so it is left out of the per-user calculation. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "wistia:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Bandwidth and storage beyond the included amounts, webinar attendees ($0.20 each) and extra webinar minutes ($2.00 each) are usage charges outside the seat price. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

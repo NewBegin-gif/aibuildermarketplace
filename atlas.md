@@ -655,7 +655,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/checkr-review/
 
 ## ChemiCloud (chemicloud.com)
-- **Verified pricing:** (re-verified 2026-09-02) Shared hosting starts at $1.95/mo on the September campaign: ChemiCloud's Back to Build sale runs from 2 September 4:00 AM EST to 30 September 11:59 PM EST and pric…
+- **Verified pricing:** (re-verified 2026-10-17) Shared hosting starts at $1.95/mo on ChemiCloud's Back to Build sale, which was still running when we read the hosting page on 17 October 2026: Starter, Pro and Tur…
 - **Honest take:** The honest catch is the one every budget host shares: the headline price is an introductory rate, and renewals land roughly three times higher, so judge it on the renewal cost, not the sign-up teaser.
 - **Best for:** small businesses, freelancers and growing sites that want fast, well-supported managed shared or WordPress hosting at a low starting price
 - **Flags:** Renewal jump

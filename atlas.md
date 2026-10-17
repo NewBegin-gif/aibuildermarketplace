@@ -2252,7 +2252,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## PagePulse (getpagepulse.io)
 - **Verified pricing:** (re-read 16 October 2026 on getpagepulse.io/#pricing in both billing states; the page opens on Annual billing, marked Save 20%.
-- **Honest take:** The tiers gate on two axes at once — members AND tracked pages — so either one forces the upgrade: Starter buys one person just two pages.
+- **Honest take:** The ladder is metered on tracked pages, not people: Starter buys two pages, and every card below Scale lists unlimited collaborators, although the FAQ says workspace members are what you pay for.
 - **Best for:** solos and small teams who want simple per-page analytics — heatmaps, visitor behavior and AI-summarized insights — with a genuinely free single-page tier to start
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/pagepulse-review/

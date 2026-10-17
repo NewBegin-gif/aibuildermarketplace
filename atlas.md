@@ -1095,8 +1095,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/emaillistverify-review/
 
 ## Emergent (emergent.sh)
-- **Verified pricing:** (re-verified 2026-08-31 on emergent.sh/pricing) Free $0 (10 credits/mo); Standard $20/mo, or $17/mo billed annually, for 100 credits (the page states a $36 annual saving, 15%); Pro $200/mo,…
-- **Honest take:** The real cost is credit consumption, not the flat sticker -- a genuinely complex app burns 10-20+ credits per big change, so serious builders move up tiers faster than the price list implies.
+- **Verified pricing:** (re-verified 2026-10-17 on emergent.sh/pricing in the monthly view, with the annual rates from the same page read on 16 October 2026, and on Emergent's help pages on managing credit usage a…
+- **Honest take:** The real cost is credit consumption, not the flat sticker.
 - **Best for:** founders, PMs and builders who want to turn a prompt into a working full-stack web app or MVP fast, without writing the code themselves
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/emergent-review/
@@ -2353,7 +2353,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pingtree-review/
 
 ## Pipedrive (pipedrive.com)
-- **Verified pricing:** (read 2026-08-26 on pipedrive.com/pricing over a US connection; the monthly column below is our 2026-08-16 reading from the EU) Four seat-based plans.
+- **Verified pricing:** (re-verified 2026-10-17 in a browser on pipedrive.com/en/pricing from the Netherlands, both billing views, with Pipedrive's help article on plan features; our 26 August 2026 reading over a …
 - **Honest take:** Pipedrive manages what happens after a lead enters your pipeline — it doesn't do outbound prospecting or marketing, so you'll pair it with a separate tool for that.
 - **Best for:** sales teams that want a simple, visual pipeline they can use on day one, with a separate marketing tool already in place
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit

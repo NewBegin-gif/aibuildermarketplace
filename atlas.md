@@ -3535,7 +3535,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-17 in a browser on vida.io/pricing with its FAQ and on vida.io/rate-card; the page has changed since our reading of 13 October 2026, when it published no plans and only…
 - **Honest take:** The $250 Starter fee buys the platform and one agent, not the calls.
 - **Best for:** service businesses, agencies and MSPs that want AI phone agents to answer, qualify or schedule calls, with enough call volume to plan usage month by month and someone to set the agent up
-- **Flags:** Per-seat pricing, Add-ons extra
+- **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/vida-ai-review/
 
 ## VidPal (vidpal.ai)

@@ -64,15 +64,412 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "included_units": 1,
+     "max_units": 1,
+     "monthly": 19,
+     "annual_status": "unknown",
+     "evidence": "Starter is $19 a month for 20,000 emails a month and 10,000 active contacts, 1 seat"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "included_units": 1,
+     "max_units": 1,
+     "monthly": 49,
+     "annual_status": "unknown",
+     "evidence": "Pro is $49 for 100,000 emails and 50,000 contacts, 1 seat"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "included_units": 1,
+     "max_units": 1,
+     "monthly": 99,
+     "annual_status": "unknown",
+     "evidence": "Growth is $99 for 200,000 emails and 100,000 contacts, 1 seat"
+    },
+    {
+     "id": "team-agency",
+     "name": "Team / Agency",
+     "model": "flat",
+     "included_units": 10,
+     "max_units": 10,
+     "monthly": 199,
+     "annual_status": "unknown",
+     "evidence": "Team / Agency is $199 for 350,000 emails, 200,000 contacts, 10 team seats"
+    }
+   ],
+   "notes": [
+    "Prices exclude VAT. Each plan also caps emails and active contacts a month; pick the plan on volume as well as seats.",
+    "Annual billing is advertised as two months free, but the annual totals were not shown in our reading."
+   ],
+   "not_computable": [
+    {
+     "text": "Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails; seats on Custom are not stated.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-10-18"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "outsends",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing",
+       "team-agency": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails; seats on Custom are not stated."
+    ]
+   },
+   "monthly": {
+    "product_id": "outsends",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.0,
+       "pro": 49.0,
+       "growth": 99.0,
+       "team-agency": 199.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team-agency",
+      "cheapest_plan_name": "Team / Agency",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": 199.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team-agency",
+      "cheapest_plan_name": "Team / Agency",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": 199.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team-agency",
+      "cheapest_plan_name": "Team / Agency",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": 199.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team-agency",
+      "cheapest_plan_name": "Team / Agency",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": 199.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "growth": "not_eligible",
+       "team-agency": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "team-agency",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Team / Agency"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "team-agency",
+      "to_plan": null,
+      "from_plan_name": "Team / Agency",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails; seats on Custom are not stated."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -96,9 +493,9 @@
    "status": "open"
   },
   {
-   "question_id": "outsends:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "outsends:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails; seats on Custom are not stated. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

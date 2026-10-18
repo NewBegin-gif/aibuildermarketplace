@@ -1532,7 +1532,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/hibob-review/
 
 ## Hive (hive.com)
-- **Verified pricing:** (re-verified 2026-09-03) Free forever for up to 10 workspace members, with 1,000 AI credits a month and 200MB of storage; Starter $5 per user a month and Teams $12 per user a month on yearl…
+- **Verified pricing:** (re-verified 2026-10-18) Free forever for up to 10 workspace members, with 1,000 AI credits a month and 200MB of storage; Starter $5 per user a month and Teams $12 per user a month on yearl…
 - **Honest take:** The seat price is honest bait, the add-on grid is the business model: switch on three add-ons and your $12 seat becomes $27 — a la carte flexibility that punishes teams who need the full toolkit.
 - **Best for:** project teams that want flexible PM (Gantt, Kanban, forms, chat) and only pay for the modules they actually use
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier

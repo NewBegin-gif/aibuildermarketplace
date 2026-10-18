@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 555 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-17.
+All 559 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-18.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -487,6 +487,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** email marketers and outbound teams that clean lists regularly and want accurate verification with fair credit mechanics (no expiry, no double-charging)
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/bouncer-review/
+
+## Brand24 (brand24.com)
+- **Verified pricing:** (read 2026-10-18 in a browser on brand24.com/prices in the monthly and annual view, USD) Five plans, priced per month.
+- **Honest take:** No free plan; Individual covers 3 keywords and 1 user.
+- **Best for:** marketing and PR teams, agencies and growing businesses that want to track mentions of their brand, competitors and campaigns across social media, news, blogs and Reddit, with AI sentiment analysis
+- **Full review:** https://aibuildermarketplace.com/b2b/brand24-review/
 
 ## Brandye (brandye.com)
 - **Verified pricing:** (read 2026-10-02 on brandye.com/pricing and on apps.shopify.com/brandye-quiz-ai-recommendation) Every plan includes the product quiz, the AI shopping assistant and AI product questions; the…
@@ -3202,6 +3208,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/synthesia-review/
 
+## Tapform (tapform.com)
+- **Verified pricing:** (read 2026-10-18 in a browser on tapform.com/pricing in the monthly and yearly view; the page shows $ without naming a currency) Two plans.
+- **Honest take:** Free is 5 leads a month; the trial bills unless you cancel.
+- **Best for:** small businesses, solo marketers and agencies that want multi-step lead capture forms on any website for a few dollars a month, without a developer
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/tapform-review/
+
 ## Tapita AI SEO Blog Builder (tapita.io)
 - **Verified pricing:** (re-read 2026-09-19 on apps.shopify.com/tapita-ai-seo-blog-builder, and again on 2026-10-15 with the same result: no plan block, the header Price field reads Free, and the only dollar figur…
 - **Honest take:** Publishing volume is the trap this tool makes cheap.
@@ -3538,6 +3551,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/vida-ai-review/
 
+## VideoScribe (videoscribe.co)
+- **Verified pricing:** (read 2026-10-18 in a browser on videoscribe.co/pricing in the monthly and annual view, from a Netherlands connection, prices shown in euros; the cards do not say whether tax is included) T…
+- **Honest take:** Non-refundable; Lite watermarks premium images, 5 downloads a month.
+- **Best for:** trainers and L&D, HR and marketing teams that want hand-drawn whiteboard explainer videos without hiring an animator
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/videoscribe-review/
+
 ## VidPal (vidpal.ai)
 - **Verified pricing:** (price re-verified 2026-10-07 against the vendor's own pricing page and confirmed by VidPal in writing) (2026) Free: 4 lifetime credits, standard-quality exports, "Made with Vidpal.ai" wate…
 - **Honest take:** Credits don't carry over month to month, and a few users report slow support/account responses — so run the free plan through a full create-and-publish loop before you pay.
@@ -3744,6 +3764,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** individuals, coaches and small teams who want notes, tasks and a daily planner in one visual workspace, and who want to connect ChatGPT or Claude to their projects
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/xtiles-review/
+
+## Your Company Formations (yourcompanyformations.co.uk)
+- **Verified pricing:** (read 2026-10-18 in a browser on yourcompanyformations.co.uk/packages/compare-packages/, prices in pounds) One-off packages for forming a UK limited company, each plus the £100 Companies Ho…
+- **Honest take:** £100 Companies House fee and VAT on top; address services renew yearly.
+- **Best for:** UK and overseas founders who want to form a UK limited company online for a small fee, with the option of a London registered office and service address instead of their home address
+- **Flags:** Renewal jump
+- **Full review:** https://aibuildermarketplace.com/b2b/your-company-formations-review/
 
 ## Zedonk (zedonk.co.uk)
 - **Verified pricing:** (price re-verified 2026-09-09 and re-read unchanged 2026-09-27 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building block and billed an…

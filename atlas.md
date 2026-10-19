@@ -696,7 +696,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/claude-review/
 
 ## Clay (clay.com)
-- **Verified pricing:** (re-verified 2026-09-14 on their own pricing page; both billing terms read from the page markup, and no figure has moved since our August reading) Clay meters two things separately — action…
+- **Verified pricing:** (re-verified 2026-10-19 on clay.com/pricing; both billing terms read from the page markup, no figure has moved since our August reading, and our reading of the headline prices was corrected…
 - **Honest take:** Two honest catches: a steep learning curve (expect 2–4 weeks, many teams need a dedicated Clay expert), and credits that are hard to forecast at scale.
 - **Best for:** modern GTM and ops teams who want best-in-class waterfall enrichment and custom research workflows — and have someone to own it
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -717,14 +717,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clonable-review/
 
 ## Cloro (cloro.dev)
-- **Verified pricing:** (prices re-read 2026-09-17 on cloro.dev/pricing) Credit-metered, and the credit table matters more than the plan price.
+- **Verified pricing:** (prices re-read 2026-10-19 on cloro.dev/pricing, unchanged since 2026-09-17 except that Grok has left the credit table) Credit-metered, and the credit table matters more than the plan price.
 - **Honest take:** The free tier is a sampler, not a trial of the real thing: 500 credits is about 100 async ChatGPT answers at the 5-credit rate we were actually charged, and their table lists 7 for a full response.
 - **Best for:** SEO and marketing teams who need AI-search visibility as structured data — who gets cited for which query on ChatGPT, Perplexity, Copilot, Gemini and Google's AI Overview — rather than as a dashboard someone else designed
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/cloro-review/
 
 ## Close (close.com)
-- **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed annually — the same twel…
+- **Verified pricing:** (re-verified 2026-10-19 on close.com/pricing and close.com/pricing.md, unchanged) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed…
 - **Honest take:** The built-in calling is the draw, but call and SMS credits stack on top of the seat price — a '$99' plan can effectively cost ~$160/user once a rep dials 50+ times a day.
 - **Best for:** inside-sales teams that live on the phone and want calling, SMS and CRM in one place
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -979,7 +979,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/digitalocean-review/
 
 ## Disputifier (disputifier.com)
-- **Verified pricing:** (read 2026-08-19 and re-verified 2026-09-17 on apps.shopify.com/disputifier and disputifier.com/pricing) Free to install, with everything billed on use, and unchanged between those two read…
+- **Verified pricing:** (read 2026-08-19, re-verified 2026-09-17, and re-verified 2026-10-19 on apps.shopify.com/disputifier and disputifier.com/pricing: the 20% recovery fee, the $250 cap and the $17-$27.50 alert…
 - **Honest take:** All four services bill per event — a fifth of each recovery, $17 to $27.50 an alert, five cents an order twice over — so the cost scales with exactly the thing you are trying to reduce.
 - **Best for:** Shopify stores with a chargeback problem big enough to cost real money and nobody in-house to fight disputes, who would rather pay a share of what is recovered than a monthly fee
 - **Flags:** Usage-metered
@@ -1020,9 +1020,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dripify-review/
 
 ## Dripshipper (dripshipper.io)
-- **Verified pricing:** (re-read 2026-09-17 on apps.shopify.com/dripshipper, listed as “Dripshipper: Coffee & Tea”) Starter $30 a month, Professional $99 and Elite $197, each with a 14-day free trial — all three u…
+- **Verified pricing:** (re-read 2026-10-19 on apps.shopify.com/dripshipper, listed as “Dripshipper: Coffee & Tea”, and on dripshipper.io/pricing) Starter $30 a month, Professional $99 and Elite $197, each listed …
 - **Honest take:** Read the ladder before you climb it. Starter already carries unlimited orders, unlimited products and automatic fulfilment — the whole product, in other words.
 - **Best for:** someone who wants a turnkey private-label coffee or tea brand on Shopify — their roasting and packaging, your label on the bag — and is content to stay inside one product category
+- **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/dripshipper-review/
 
 ## DropGenius (dropgenius.com)

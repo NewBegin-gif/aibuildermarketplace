@@ -49,15 +49,477 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "individual",
+     "name": "Individual",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 249,
+     "annual_month": 199,
+     "evidence": "Individual is $249 a month billed monthly or $199 a month billed annually"
+    },
+    {
+     "id": "team",
+     "name": "Team",
+     "model": "flat",
+     "monthly": 349,
+     "annual_month": 299,
+     "evidence": "Team is $349 or $299"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "monthly": 499,
+     "annual_month": 399,
+     "evidence": "Pro is $499 or $399"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "monthly": 699,
+     "annual_month": 599,
+     "evidence": "Business is $699 or $599"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise starts at $1,499 a month billed annually"
+    }
+   ],
+   "notes": [
+    "Plans differ by keywords and mentions a month (3/2K, 7/10k, 12/40K, 25/100K), not by seat; Team lists unlimited users, and our notes do not state a user limit for Pro or Business.",
+    "Enterprise is a 'starts at' floor of $1,499 a month billed annually, so it is treated as a quote."
+   ],
+   "not_computable": [
+    "API access at an additional fee of $149; the page does not say for what period",
+    "Keyword and mention limits per plan"
+   ],
+   "rules_verified_at": "2026-10-19"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "brand24",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "individual",
+      "cheapest_plan_name": "Individual",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 2388.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": 199.0,
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 299.0,
+       "pro": 399.0,
+       "business": 599.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "individual",
+      "to_plan": "team",
+      "from_plan_name": "Individual",
+      "to_plan_name": "Team"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "API access at an additional fee of $149; the page does not say for what period",
+     "Keyword and mention limits per plan"
+    ]
+   },
+   "monthly": {
+    "product_id": "brand24",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "individual",
+      "cheapest_plan_name": "Individual",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": 249.0,
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 349.0,
+      "billed": {
+       "amount": 349.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 349.0,
+       "pro": 499.0,
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "individual",
+      "to_plan": "team",
+      "from_plan_name": "Individual",
+      "to_plan_name": "Team"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "API access at an additional fee of $149; the page does not say for what period",
+     "Keyword and mention limits per plan"
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -81,9 +543,15 @@
    "status": "open"
   },
   {
-   "question_id": "brand24:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "brand24:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: API access at an additional fee of $149; the page does not say for what period. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "brand24:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Keyword and mention limits per plan. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 559 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-18.
+All 559 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-19.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1867,10 +1867,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/learnworlds-review/
 
 ## Leavo (leavo.com)
-- **Verified pricing:** (price re-verified 2026-08-17 and 2026-10-07 against leavo.com) (2026) 30-day free trial with unlimited members (a trial, not a permanent free plan).
+- **Verified pricing:** (price re-verified 2026-08-17, 2026-10-07 and 2026-10-19 against leavo.com/en/pricing) (2026) 30-day free trial with unlimited members and no credit card (a trial, not a permanent free plan…
 - **Honest take:** The tidy per-user numbers are annual-billed, and it's priced per seat — every employee you track adds to the bill, with no volume break published (large teams are told to ask sales).
 - **Best for:** teams that want straightforward time-tracking, attendance and overtime banking with transparent per-user pricing
-- **Flags:** Per-seat pricing, Annual commit, Free tier
+- **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/leavo-review/
 
 ## lemlist (lemlist.com)

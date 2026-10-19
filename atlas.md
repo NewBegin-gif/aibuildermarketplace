@@ -2972,7 +2972,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/simplybook-me-review/
 
 ## Skip To Checkout (effectify.io)
-- **Verified pricing:** (read 2026-09-18 on apps.shopify.com/cart-auto-update) Free, and free is the only plan.
+- **Verified pricing:** (re-verified 2026-10-19 on apps.shopify.com/cart-auto-update, where the listing now names the app PF: Skip To Checkout/Skip Cart; first read 2026-09-18) Free, and free is the only plan.
 - **Honest take:** The cart skip blinds the measurement you would use to judge it.
 - **Best for:** Shopify merchants who want a free sticky buy button, or who need to hide add-to-cart and express-payment buttons on products they list online but sell in person
 - **Full review:** https://aibuildermarketplace.com/b2b/skip-to-checkout-review/
@@ -3013,7 +3013,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/smtp2go-review/
 
 ## Social Bar (effectify.io)
-- **Verified pricing:** (read 2026-09-18 on apps.shopify.com/sticky-social-media-icons-bar) Two plans, and the free one is not the one you will be on.
+- **Verified pricing:** (re-verified 2026-10-19 on apps.shopify.com/sticky-social-media-icons-bar; first read 2026-09-18) Two plans, and the free one is not the one you will be on.
 - **Honest take:** This is a styling subscription, and the listing's own framing oversells it.
 - **Best for:** Shopify merchants who want branded social icons and a WhatsApp chat button on product pages without touching theme code, and who will use the built-in click counter to check whether anyone taps them
 - **Full review:** https://aibuildermarketplace.com/b2b/social-bar-review/
@@ -3067,9 +3067,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/stamped-review/
 
 ## Stampezee (stampezee.com)
-- **Verified pricing:** (read 2026-08-30 on stampezee.com/en/pricing from a US exit) Four tiers, all now named and priced on the public page.
-- **Honest take:** The category is honest and proven (digital stamp cards beat lost paper cards), and the platform is young with limited public pricing and review coverage.
-- **Best for:** local businesses (cafés, salons, retail) that want a simple digital stamp-card loyalty program starting free
+- **Verified pricing:** (re-verified 2026-10-19 on stampezee.com/en/pricing, the plan cards plus the plan data behind them) The free tier is gone from the page.
+- **Honest take:** The category is honest and proven (digital stamp cards beat lost paper cards), and the platform is young with limited public review coverage.
+- **Best for:** local businesses (cafés, salons, retail) that want a simple digital stamp-card loyalty program and can judge it inside a 14-day trial
 - **Flags:** Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/stampezee-review/
 
@@ -3668,7 +3668,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/weblium-review/
 
 ## Wegic (wegic.ai)
-- **Verified pricing:** (re-verified 19 September 2026 on wegic.ai/pricing in a browser; the monthly headline figures stand on the 30 August reading from a US exit, see below) Credit-based AI website builder, pric…
+- **Verified pricing:** (re-verified 19 October 2026 against the plan table in Wegic's help centre, help.wegic.ai/welcome-to-wegic/plan-and-credits, which prints all four figures as text — 39.9 and 69.9 USD a mont…
 - **Honest take:** Everything is credits, and generating a site burns them fast — Wegic's own page notes a single generation can cost over $10 in credits, while the free plan gives 100 credits once.
 - **Best for:** non-technical founders who want an AI to build and host a simple site fast, and are comfortable with usage-based credit pricing
 - **Flags:** Usage-metered, Free tier
@@ -3701,10 +3701,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wing-assistant-review/
 
 ## Wistia (wistia.com)
-- **Verified pricing:** (re-verified 2026-09-19 on wistia.com/pricing, Video Platform tab; the monthly rates below were read with the page's billing toggle set to Monthly) Four tiers, and the headline numbers are …
+- **Verified pricing:** (re-verified 2026-10-19 on wistia.com/pricing, Video Platform tab; the monthly-toggle rates below are from the 19 September 2026 reading and were not re-read, because the page renders them …
 - **Honest take:** Bandwidth is the meter that decides your bill, and it is the one number you cannot predict before you publish.
 - **Best for:** marketing teams who want video on their own site with real analytics and lead capture, and who care that the player does not recommend a competitor's video afterwards
-- **Flags:** Usage-metered, Free tier
+- **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/wistia-review/
 
 ## Wiz Checkout Upsell (skailama.com)

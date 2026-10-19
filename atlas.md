@@ -778,7 +778,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/code-bulk-discounts-review/
 
 ## Cognism (cognism.com)
-- **Verified pricing:** (2026-09-17, re-read on their own pricing page) No prices are shown.
+- **Verified pricing:** (2026-10-19, re-read on their own pricing page) No prices are shown, and the packages and the credit model are as we read them on 17 September 2026.
 - **Honest take:** No price, no credit allowance, and a five-seat minimum on both named plans.
 - **Best for:** outbound sales teams in Europe who need mobile numbers that are actually verified and care about GDPR provenance — that is the specific thing this is better at
 - **Flags:** Hidden pricing, Per-seat pricing, Usage-metered, Add-ons extra
@@ -1819,7 +1819,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/krystal-review/
 
 ## Kumo (cloudlift.app)
-- **Verified pricing:** (read 2026-09-16 on apps.shopify.com/b2b-wholesale-tools) Two plans and no free tier: B2B at $15 a month and PLUS at $30, both with a 7-day free trial, billed in USD every 30 days.
+- **Verified pricing:** (read 2026-09-16 on apps.shopify.com/b2b-wholesale-tools; re-verified 2026-10-19, unchanged) Two plans and no free tier: B2B at $15 a month and PLUS at $30, both with a 7-day free trial, bi…
 - **Honest take:** Five stars over nine reviews is not a track record, and the age makes that worse rather than better.
 - **Best for:** Shopify merchants on a standard plan who need wholesale prices for named customer groups, with CSV price lists and a registration form that someone approves
 - **Full review:** https://aibuildermarketplace.com/b2b/kumo-review/
@@ -2936,7 +2936,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/signeasy-review/
 
 ## Signitic (signitic.com)
-- **Verified pricing:** (price read 2026-09-14) Signitic's own pricing page, read in euros from a European connection, carries three tiers.
+- **Verified pricing:** (price read 2026-09-14; re-verified 2026-10-19 on signitic.com/en/pricing, unchanged) Signitic's own pricing page, read in euros from a European connection, carries three tiers.
 - **Honest take:** The homepage sells deployment 'without going through IT', and Signitic's own help centre contradicts that on every path in.
 - **Best for:** European organisations of roughly twenty people and up, on Google Workspace or Microsoft 365, that want every signature centrally controlled and the banner slot run as a measurable campaign channel
 - **Flags:** Per-seat pricing

@@ -57,15 +57,404 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "licence",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "per_unit",
+     "monthly": 34.0,
+     "annual_month": 13.75,
+     "annual_year": 165.0,
+     "evidence": "Lite is €34.00 a month billed monthly, or €13.75 a month billed annually at €165.00"
+    },
+    {
+     "id": "core",
+     "name": "Core",
+     "model": "per_unit",
+     "monthly": 55.0,
+     "annual_month": 22.92,
+     "annual_year": 275.0,
+     "evidence": "Core is €55.00 monthly, or €22.92 a month at €275.00 a year"
+    },
+    {
+     "id": "max",
+     "name": "Max",
+     "model": "per_unit",
+     "monthly": 70.0,
+     "annual_month": 29.17,
+     "annual_year": 350.0,
+     "evidence": "Max is €70.00 monthly, or €29.17 a month at €350.00 a year"
+    }
+   ],
+   "notes": [
+    "Priced per licence, read from a Netherlands connection in euros; the cards do not say whether tax is included.",
+    "Downloads, video length and AI minutes are capped per plan (Lite 5 downloads, Core 30, Max unlimited)."
+   ],
+   "not_computable": [
+    "Metered AI tools (image generation, script minutes, voiceover minutes) beyond the monthly plan allowance"
+   ],
+   "rules_verified_at": "2026-10-19"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "videoscribe",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "licence",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 13.75,
+      "billed": {
+       "amount": 165.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 13.75,
+       "core": 22.92,
+       "max": 29.17
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 27.5,
+      "billed": {
+       "amount": 330.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 27.5,
+       "core": 45.83,
+       "max": 58.33
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 41.25,
+      "billed": {
+       "amount": 495.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 41.25,
+       "core": 68.75,
+       "max": 87.5
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 68.75,
+      "billed": {
+       "amount": 825.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 68.75,
+       "core": 114.58,
+       "max": 145.83
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 137.5,
+      "billed": {
+       "amount": 1650.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 137.5,
+       "core": 229.17,
+       "max": 291.67
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 206.25,
+      "billed": {
+       "amount": 2475.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 206.25,
+       "core": 343.75,
+       "max": 437.5
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 275.0,
+      "billed": {
+       "amount": 3300.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 275.0,
+       "core": 458.33,
+       "max": 583.33
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 343.75,
+      "billed": {
+       "amount": 4125.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 343.75,
+       "core": 572.92,
+       "max": 729.17
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 687.5,
+      "billed": {
+       "amount": 8250.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 687.5,
+       "core": 1145.83,
+       "max": 1458.33
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 1375.0,
+      "billed": {
+       "amount": 16500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 1375.0,
+       "core": 2291.67,
+       "max": 2916.67
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Metered AI tools (image generation, script minutes, voiceover minutes) beyond the monthly plan allowance"
+    ]
+   },
+   "monthly": {
+    "product_id": "videoscribe",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "licence",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 34.0,
+      "billed": {
+       "amount": 34.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 34.0,
+       "core": 55.0,
+       "max": 70.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 68.0,
+      "billed": {
+       "amount": 68.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 68.0,
+       "core": 110.0,
+       "max": 140.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 102.0,
+      "billed": {
+       "amount": 102.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 102.0,
+       "core": 165.0,
+       "max": 210.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 170.0,
+      "billed": {
+       "amount": 170.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 170.0,
+       "core": 275.0,
+       "max": 350.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 340.0,
+      "billed": {
+       "amount": 340.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 340.0,
+       "core": 550.0,
+       "max": 700.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 510.0,
+      "billed": {
+       "amount": 510.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 510.0,
+       "core": 825.0,
+       "max": 1050.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 680.0,
+      "billed": {
+       "amount": 680.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 680.0,
+       "core": 1100.0,
+       "max": 1400.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 850.0,
+      "billed": {
+       "amount": 850.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 850.0,
+       "core": 1375.0,
+       "max": 1750.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 1700.0,
+      "billed": {
+       "amount": 1700.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 1700.0,
+       "core": 2750.0,
+       "max": 3500.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 3400.0,
+      "billed": {
+       "amount": 3400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 3400.0,
+       "core": 5500.0,
+       "max": 7000.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Metered AI tools (image generation, script minutes, voiceover minutes) beyond the monthly plan allowance"
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -89,9 +478,9 @@
    "status": "open"
   },
   {
-   "question_id": "videoscribe:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "videoscribe:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Metered AI tools (image generation, script minutes, voiceover minutes) beyond the monthly plan allowance. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

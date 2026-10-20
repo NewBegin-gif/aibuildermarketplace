@@ -9,7 +9,7 @@
  "summary": "AI voiceover generation for explainers, courses and product video.",
  "best_for": "creators, trainers and product teams that need studio-quality voiceovers in many languages without booking voice actors — explainers, courses, product videos",
  "skip_if": "you need real emotional acting range for premium brand work (humans still win), or your volume is tiny enough that free TTS built into your video tool suffices",
- "honest_knock": "The meter is generation hours per YEAR, not per month — 24 hours sounds generous until you count retakes, and regenerating a script three times bills three times. Voice quality is genuinely strong, but the honest test for any TTS is your specific language, names and jargon: generate your hardest paragraph in the trial before subscribing, because demo voices always sound better than your edge cases.",
+ "honest_knock": "The meter is generation hours per YEAR, not per month — 24 hours sounds generous until you count retakes, because every text edit regenerates the whole sub-block and bills again. Replaying is free, and in our test on 20 October 2026 the on-screen meter only caught up after a page reload. Voice quality is genuinely strong, but the honest test for any TTS is your specific language, names and jargon: generate your hardest paragraph in the trial before subscribing, because demo voices always sound better than your edge cases.",
  "pricing": {
   "status": "public",
   "entry_price": "$19",
@@ -92,10 +92,38 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Murf",
+    "product_id": "murf",
+    "run_date": "2026-10-20",
+    "what": "Tested by our team on 20 October 2026 on the free Studio trial: Daan created the account and our AI assistant ran the test in his browser. We generated a two-sentence script ('Dr. Maya Chen checked seventeen cobalt valves in Rotterdam. The warranty lasts thirty-seven days.'), replayed it, changed only the speed, then changed only one word, reading the voice-generation meter after each step, and opened the export dialog.",
+    "findings": [
+     "The script stayed in one sub-block. The default voice was Ruby (US English) in the 'Angry' style, and the meter started at 00:10:00.",
+     "Three generations of 7.1, 6.4 and 6.3 seconds of audio (19.8 seconds in total) took the meter from 10:00 to 9:46, so 14 seconds of the free 10 minutes were used.",
+     "Replaying the same audio cost nothing: the meter stayed at 00:09:59.",
+     "The on-screen meter lags. After the one-word change it still showed 00:09:52, and only after a page reload did it show 00:09:46, so read it after reloading.",
+     "Because of that lag we cannot split the 14 seconds exactly per step. The most likely split, about 8 seconds for the first generation, nothing for the speed change and about 6 for the word change, fits Murf's help text: delivery settings on unchanged text are free, and a text edit regenerates the whole sub-block.",
+     "Downloads are blocked on the free trial. The export dialog lists MP3, WAV, FLAC, OGG and other formats up to 48 kHz, but has no download button, only 'Unlock unlimited downloads - You are on free plan' with 'Upgrade Plan'."
+    ],
+    "not_tested": [
+     "How the name, the place and the numbers were pronounced: our AI assistant cannot listen to the audio",
+     "Other voices and styles, pitch, pauses and emphasis",
+     "Paid plans and their quotas",
+     "Downloading, which is blocked on the free trial"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "murf:cancellation_terms",

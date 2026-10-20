@@ -908,7 +908,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/database-mart-review/
 
 ## Databox (databox.com)
-- **Verified pricing:** (re-verified 2026-10-02 and 2026-10-06, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers we described …
+- **Verified pricing:** (re-verified 2026-10-02, 2026-10-06 and 2026-10-20, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers w…
 - **Honest take:** Each plan includes a fixed number of data sources and going over means moving up a whole tier, so one extra integration can mean the $199 Team Core to $319 Team Scale step.
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
@@ -1840,7 +1840,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/krispcall-review/
 
 ## Krystal (krystal.io)
-- **Verified pricing:** (read 2026-10-05 on krystal.io/hosting, /hosting/business, /hosting/wordpress/managed and /cloud-vps) All prices below are in pounds and exclude VAT: the site's Include VAT switch is off by…
+- **Verified pricing:** (read 2026-10-05 on krystal.io/hosting, /hosting/business, /hosting/wordpress/managed and /cloud-vps; shared plans and backup frequencies re-read 2026-10-20 on /hosting and /hosting/busines…
 - **Honest take:** Prices on Krystal's site are shown before VAT, so a UK buyer pays 20% more than the plan cards say, and 'unlimited' storage from Emerald up stops at 2,500,000 inodes.
 - **Best for:** UK small businesses, freelancers and agencies that want cPanel or managed WordPress hosting with UK-based phone and chat support, one price per billing period without a teaser rate
 - **Flags:** Annual commit
@@ -2036,7 +2036,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Miro (miro.com)
 - **Verified pricing:** (price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 c…
-- **Honest take:** Per-member pricing charges for every member added to the workspace, so an org-wide rollout multiplies at full headcount — and the free plan's 3-board cap is workspace-wide, not per person.
+- **Honest take:** Per-member pricing charges for every member added to the workspace, so an org-wide rollout multiplies at full headcount — and the free plan's cap of 3 editable boards is workspace-wide, not per person.
 - **Best for:** teams that think visually — brainstorms, flowcharts, retros, workshops and planning on an infinite shared canvas with strong templates and facilitation tools
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/miro-review/
@@ -2099,7 +2099,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Murf (murf.ai)
 - **Verified pricing:** (re-verified 2026-10-03 in a browser; the page renders client-side and opens on annual billing, so check which column you are reading) Studio plans: Free $0 for 10 projects, 10 minutes of v…
-- **Honest take:** The meter is generation hours per YEAR, not per month — 24 hours sounds generous until you count retakes, and regenerating a script three times bills three times.
+- **Honest take:** The meter is generation hours per YEAR, not per month — 24 hours sounds generous until you count retakes, because every text edit regenerates the whole sub-block and bills again.
 - **Best for:** creators, trainers and product teams that need studio-quality voiceovers in many languages without booking voice actors — explainers, courses, product videos
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/murf-review/

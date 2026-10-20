@@ -72,7 +72,7 @@
   "/categories.json": {
    "get": {
     "operationId": "listCategories",
-    "summary": "Categories with their product ids",
+    "summary": "Categories with their product ids and a 'before you sign' buyer_checklist built from our dossiers (count + evidence)",
     "responses": {
      "200": {
       "description": "Categories"
@@ -353,6 +353,71 @@
         "type": [
          "string",
          "null"
+        ]
+       },
+       "source_quotes": {
+        "type": [
+         "array",
+         "null"
+        ],
+        "description": "Verbatim lines from the vendor's own pages (max 200 characters), each matched word for word against the live page on read_on. Only quotes that still agree with pricing.notes.",
+        "items": {
+         "type": "object",
+         "properties": {
+          "field": {
+           "type": "string",
+           "enum": [
+            "price",
+            "free_trial",
+            "refund"
+           ]
+          },
+          "plan": {
+           "type": [
+            "string",
+            "null"
+           ]
+          },
+          "quote": {
+           "type": "string"
+          },
+          "source_url": {
+           "type": "string"
+          },
+          "read_on": {
+           "type": "string"
+          }
+         }
+        }
+       }
+      }
+     },
+     "verification": {
+      "type": "object",
+      "description": "Per core field: 'quoted' (a verbatim vendor line is in pricing.source_quotes), 'read' (read on the vendor's page on pricing.verified_at, summarised in pricing.notes) or 'being_verified' (not yet matched; not the same as 'does not exist').",
+      "properties": {
+       "price": {
+        "type": "string",
+        "enum": [
+         "quoted",
+         "read",
+         "being_verified"
+        ]
+       },
+       "free_trial": {
+        "type": "string",
+        "enum": [
+         "quoted",
+         "read",
+         "being_verified"
+        ]
+       },
+       "refund": {
+        "type": "string",
+        "enum": [
+         "quoted",
+         "read",
+         "being_verified"
         ]
        }
       }

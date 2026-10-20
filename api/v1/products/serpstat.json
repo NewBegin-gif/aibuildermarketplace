@@ -40,7 +40,8 @@
   "plans_source": "hand-curated from the vendor's pricing page",
   "notes": "(2026-07-24, read on their own pricing page) Four plans, and the page opens on the annual view — so the first number you see is not the month-to-month price. Individual $69/month, or $50 on annual billing. Team $129, or $100 annually. Team x2 $209, or $169. Agency $499, or $410. There is a hidden middle step: two dropdowns inside the Team column (position checks 50,000 or 99,999, API credits 200,000 or 400,000) move Team to $169/month monthly or $135 annually, so Team is really three price points. Seats are capped rather than sold: Individual is single-user, Team 3, Team x2 6, Agency 30, and no per-seat price is published anywhere — a fourth user means the next tier. The limits matter more than the prices: 100 searches a day on Individual (500 / 1,000 / 5,000 above it), export rows 50,000 a month, and no API at all on the entry plan. The 7-day trial takes a card, charges $1 to verify, turns on auto-renewal and bills the plan after seven days unless you cancel. Re-verified 2026-08-26: the four annual prices are unchanged, and the page now heads the table with 'save up to 27% with annual discount' and prints the saving per plan — $228, $348, $484 and $1,068 a year. That is the arithmetic that turns $50, $100, $169 and $410 back into $69, $129, $209 and $499, which matters because the monthly column itself is not in the page's HTML at all; only the annual one renders. The comparison table still carries the two-value Team column (position checks 50,000 or 99,999, API credits 200,000 or 400,000), so the hidden middle step is still there, but its price is printed nowhere on the page today. Three limits worth reading before anyone picks Individual: Site Audit does no JavaScript rendering on that plan, it scans at most 5,000 pages, and its data retention figure is 2 where Team gets 10 and Agency 100. Re-verified 2026-09-19 on the same page: the four annual figures, the four annual savings and the two-value Team column are all unchanged, as are the seat caps of 1, 3, 6 and 30 and the seven-day trial with its $1 card verification and automatic renewal. What is new on the page is what the plans now sell rather than what they cost — Team upward advertises a ChatGPT and Claude integration over MCP and an AI Overview brand-opportunities report, and a separate LLM Brand Monitor is promoted underneath the plans with its own free scan and no price attached to it.",
   "verified_at": "2026-09-19",
-  "source_url": "https://serpstat.com/page/pricing-plans/"
+  "source_url": "https://serpstat.com/page/pricing-plans/",
+  "source_quotes": null
  },
  "free_plan": false,
  "free_plan_evidence": null,
@@ -92,9 +93,15 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
+ "verification": {
+  "price": "read",
+  "free_trial": "being_verified",
+  "refund": "being_verified"
+ },
  "task_evidence": null,
  "open_questions": [
   {

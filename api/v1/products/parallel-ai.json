@@ -40,7 +40,8 @@
   "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(read on 11 September 2026 on parallellabs.app/pricing, which stamps itself 'Last updated: 2026-08-18') The meter is credits, and there are two separate pools. Plan credits come with the subscription: Pay As You Go is $0 with 50 credits and no card, Entrepreneur $99 a month for 2,000 credits and 2 companies, Business $297 for 9,000 credits and 10 companies, and Enterprise is quote-only with SSO, on-premise deployment and dedicated support. Data credits are a different pool, bought once and never expiring, and they are the only part of the product priced per action: 1 data credit per lead or contact returned, 2 per matched enrichment lookup through the API or an agent, and a lookup that finds nothing is free. They run $25 for 500 down to $175 for 5,000, so between 5.0 and 3.5 cents a lead. The two pools expire differently, and the page says so in two places that sit far apart: plan credits 'reset on the 1st of each month', while purchased credit packs and data credits never expire. What the page never says is how many PLATFORM credits an action costs. Content generation, an agent conversation and an outreach step are all simply 'credits' with no published rate, so the 2,000 on Entrepreneur is a quantity without a unit until you have run your own work through it. Per credit the tiers differ by a third: 5.0 cents on Entrepreneur against 3.3 on Business, which is three times the price for four and a half times the credits. Running out has a tier-shaped answer -- the FAQ offers extra credit packages on the Business plan and the Pay-As-You-Go card offers top-ups, but Entrepreneur sits between them with no stated top-up route, so the $99 tier's answer to an empty meter appears to be the $297 one. Seats do not add capacity: every seat in a company shares one monthly pool, and extra seats are $15 a month ($12 annual). The add-ons are where the bill can outgrow the plan -- an extra company is $20 a month ($16 annual), an extra white-label instance $50, and anonymous website pixel identification runs $75, $250 or $500 a month for 500, 2,000 or 5,000 resolutions. On the free tier the limits are real: a 200k context window against 1M on every paid plan, 30 days of chat history instead of unlimited, no App Builder, and model access listed as 'Limited' with response times 'limited on bandwidth and availability'.",
   "verified_at": "2026-09-16",
-  "source_url": "https://parallellabs.app/pricing"
+  "source_url": "https://parallellabs.app/pricing",
+  "source_quotes": null
  },
  "free_plan": true,
  "free_plan_evidence": "Plan credits come with the subscription: Pay As You Go is $0 with 50 credits and no card, Entrepreneur $99 a month for 2,000 credits and 2 companies, Business $297 for 9,000 credits and 10 companies, and Enterprise is quote-only with SSO, on-premise deployment and dedicated support.",
@@ -403,8 +404,14 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
+ "verification": {
+  "price": "read",
+  "free_trial": "being_verified",
+  "refund": "being_verified"
+ },
  "task_evidence": null,
  "open_questions": [
   {

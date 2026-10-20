@@ -45,7 +45,8 @@
   "plans_source": "hand-curated from the vendor's pricing page",
   "notes": "Pay-per-use GPU cloud (re-verified 24 September 2026 against runpod.io/pricing). Secure Cloud on-demand pods run from $0.27/hr (RTX A5000) and $0.49/hr (L4) up to $2.89/hr for an H100 PCIe, $3.49/hr H100 SXM, $4.59/hr H200, $6.79/hr B200 and $7.89/hr B300. Four of those moved up between July and late August — L4 from $0.39, H100 SXM from $2.99, H200 from $4.39 and B300 from $7.39 — and by 24 September the H100 SXM had moved again, from $3.29 to $3.49, while the A100 PCIe pod read $1.59 against the $1.39 in our 5 September notes. The A5000 and the H100 PCIe did not move at all. The page's own structured data publishes the Community Cloud column beside every card, and that is where the real discount sits: RTX 4090 $0.34 against $0.74 on Secure, RTX 3090 $0.22 against $0.50, RTX A6000 $0.33 against $0.53, H100 PCIe $1.99 against $2.89, H100 SXM $2.69 against $3.49. Serverless bills per second at a premium over pods in exchange for sub-200ms cold starts and autoscaling: $0.58/hr for the 16GB tier, $2.72/hr for an A100, $4.79/hr for an 80GB H100 (was $4.55) and $9.98/hr at the top for a B300. Multi-node Clusters now publish two rates — $1.79/hr per A100 SXM and $4.31/hr per H200 SXM — while H100 SXM, L40S and B200 clusters plus all reserved capacity stay quote-only. Storage is billed on top and is easy to miss: container disk $0.10/GB/month, volume disk $0.10 while running and $0.20 while idle, network storage $0.07/GB under 1TB and $0.05 over it, $0.14 for the high-performance tier.",
   "verified_at": "2026-09-24",
-  "source_url": null
+  "source_url": null,
+  "source_quotes": null
  },
  "free_plan": false,
  "free_plan_evidence": null,
@@ -82,9 +83,15 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
+ "verification": {
+  "price": "read",
+  "free_trial": "being_verified",
+  "refund": "being_verified"
+ },
  "task_evidence": null,
  "open_questions": [
   {

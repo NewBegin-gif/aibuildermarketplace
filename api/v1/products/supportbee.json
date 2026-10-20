@@ -30,7 +30,8 @@
   "plans_source": "hand-curated from the vendor's pricing page",
   "notes": "(read 2026-08-27 on supportbee.com/pricing) Two plans, both priced per seat, and no free tier. Month to month, Startup is $20/seat/month and Enterprise is $25/seat/month. Switch the toggle to annual and the page shows a total of $204 per seat billed annually on Startup and $252 on Enterprise, a saving it advertises as 20 per cent, which works out at effective rates of 17 and 21 dollars a seat a month. On those figures the saving is 15 per cent on Startup ($204 against $240) and 16 per cent on Enterprise ($252 against $300). Re-checked unchanged on 6 October 2026. Startup covers the shared inbox, snippets, filters, basic integrations, API access, unlimited email inboxes and tickets, customer satisfaction ratings, customer management, audit trails and one knowledge base with one team. Enterprise is described as everything in Startup plus five things: enterprise integrations, business hours, the customer portal, an audit log with data history, and portal access for customer groups. The trial is 14 days and the home page says no credit card is required. Billing runs through Stripe, you can switch between monthly and annual at any time with a prorated credit, and plan changes take effect immediately.",
   "verified_at": "2026-10-06",
-  "source_url": "https://supportbee.com/pricing"
+  "source_url": "https://supportbee.com/pricing",
+  "source_quotes": null
  },
  "free_plan": false,
  "free_plan_evidence": null,
@@ -419,8 +420,14 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
+ "verification": {
+  "price": "read",
+  "free_trial": "being_verified",
+  "refund": "being_verified"
+ },
  "task_evidence": {
   "structured_checks": [],
   "sessions": [
@@ -429,17 +436,20 @@
     "product_name": "SupportBee",
     "product_id": "supportbee",
     "run_date": "2026-10-20",
-    "what": "Tested by our team on 20 October 2026 on the 14-day trial: Daan created the account and our AI assistant ran the test in his browser. The test stopped at the first step, creating a ticket, because the trial needs a connected mailbox first and we did not give an outside service access to a real mailbox. Everything after that step is untested.",
+    "what": "Tested by our team on 20 October 2026 on the 14-day trial: Daan created the account and our AI assistant ran the test in his browser. We could not create a ticket ourselves without connecting a mailbox, so Daan sent two test tickets with made-up details through SupportBee's own contact form, solving its reCAPTCHA himself. On those we added an internal comment, labels and a snippet, then edited the snippet and inserted it again. Nothing was sent to a customer.",
     "findings": [
-     "The trial opened with one example ticket from SupportBee ('Sample Ticket: How to use SupportBee') and one default label, IMPORTANT.",
      "No ticket can be created before a mailbox is connected. '+ Ticket' showed 'Please connect an email address to create tickets. New tickets can't be created without a connected email address.'",
      "Admin > Emails > Add email offers only 'Gmail / Google Workspace' and 'Microsoft Outlook / Office 365', through a connection that copies your support mail into SupportBee. For any other provider the screen says 'Please contact us at support@supportbee.com'.",
-     "The contact form is the other way in: it has its own reply address on supportbeemail.com, an embed code and a preview, and asks for name, email, subject and message, with a reCAPTCHA on by default. Setting 'Show captcha' to No did not stay saved, and we did not send the form."
+     "The contact form is the way in without a mailbox. It has a reCAPTCHA on by default, and setting 'Show captcha' to No did not stay saved. Both test tickets arrived as 'Unanswered', source 'Web Ticket', with a customer profile (name and email).",
+     "Internal comments sit in the right-hand sidebar, apart from the reply box. A comment was saved, the ticket stayed 'Unanswered', and SupportBee then assigned the ticket to the person who wrote the comment.",
+     "A label without a colour was not created and no error appeared (two tries, the list stayed at 1 label); with a colour it worked at once. Labels set from the ticket header showed in the list view and the sidebar.",
+     "A snippet ('Lila heeft 37 dagen garantie.') was found with 'Search snippets' above the reply box and inserted as a draft. After we changed 37 to 41 and clicked Update Snippet, the second ticket showed the new text straight away and inserted 'Lila heeft 41 dagen garantie.'",
+     "The trial opened with an example ticket ('Sample Ticket: How to use SupportBee'), a default label IMPORTANT and an example snippet ('Send your browser details')."
     ],
     "not_tested": [
-     "Internal comments, labels on tickets, and inserting or editing snippets (all need a ticket)",
-     "How SupportBee behaves once Gmail or Outlook is connected",
-     "KBee (the knowledge base), the customer portal and reports"
+     "A real Gmail or Outlook connection, and sending email to customers",
+     "KBee (the knowledge base), the customer portal, reports, teams and filters",
+     "What happens when the 14-day trial ends"
     ],
     "report": null,
     "result": "reported",

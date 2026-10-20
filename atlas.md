@@ -908,7 +908,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/database-mart-review/
 
 ## Databox (databox.com)
-- **Verified pricing:** (re-verified 2026-10-02 and 2026-10-06, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers we described …
+- **Verified pricing:** (re-verified 2026-10-02, 2026-10-06 and 2026-10-20, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers w…
 - **Honest take:** Each plan includes a fixed number of data sources and going over means moving up a whole tier, so one extra integration can mean the $199 Team Core to $319 Team Scale step.
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
@@ -1840,7 +1840,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/krispcall-review/
 
 ## Krystal (krystal.io)
-- **Verified pricing:** (read 2026-10-05 on krystal.io/hosting, /hosting/business, /hosting/wordpress/managed and /cloud-vps) All prices below are in pounds and exclude VAT: the site's Include VAT switch is off by…
+- **Verified pricing:** (read 2026-10-05 on krystal.io/hosting, /hosting/business, /hosting/wordpress/managed and /cloud-vps; shared plans and backup frequencies re-read 2026-10-20 on /hosting and /hosting/busines…
 - **Honest take:** Prices on Krystal's site are shown before VAT, so a UK buyer pays 20% more than the plan cards say, and 'unlimited' storage from Emerald up stops at 2,500,000 inodes.
 - **Best for:** UK small businesses, freelancers and agencies that want cPanel or managed WordPress hosting with UK-based phone and chat support, one price per billing period without a teaser rate
 - **Flags:** Annual commit

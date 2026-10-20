@@ -45,7 +45,8 @@
   "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
   "notes": "(re-verified 2026-09-17 and again on 2026-10-04 on their own business and add-on pricing pages, reading the US price list; every amount unchanged) Three business tiers, all billed annually: Business Starter at $2.00 per user per month ($24 a year), described as protection for 5-10 users; Business at $4.00 per user per month ($48 a year); Enterprise at $6.00 per user per month ($72 a year), sold through Request a Quote. The amounts are injected by script, so a page fetched without rendering shows the tiers with the figures missing. Personal and family plans are priced on their own page: Personal (Keeper Unlimited) $42.99 billed annually and Family $91.99 billed annually. CURRENCY WARNING, corrected 2026-09-17: the same pages served to a Dutch visitor carry a different euro list, not a conversion of the dollar one — Business Starter €2.00 and Business €4.00 match, but Enterprise is €5.50 against $6.00, Personal €52.02 against $42.99 and Family €111.31 against $91.99. The dossier previously carried those last two euro figures as dollar amounts. Re-read 4 October 2026, the checkout data behind the personal page explains that gap: for a Dutch visitor it flags prices as VAT-inclusive and shows 52.02 and 111.31 even with USD selected, which are exactly $42.99 and $91.99 plus 21% Dutch VAT. The same data gives the business seats as $48 and $72 a year, without that uplift. The add-ons carry their own list, also in US dollars: BreachWatch and KeeperChat $24 per user per year (€22 on the euro list), Advanced Reporting & Alerts and Compliance Reports $12 per user per year (€11), Endpoint Privilege Manager $36 per endpoint per year, Secure File Storage from $132 per year for 100GB (€108), Professional Services from $270 per year, with Connection Manager and Keeper Secrets Manager priced only on request.",
   "verified_at": "2026-10-04",
-  "source_url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html"
+  "source_url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html",
+  "source_quotes": null
  },
  "free_plan": false,
  "free_plan_evidence": null,
@@ -465,8 +466,14 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
+ "verification": {
+  "price": "read",
+  "free_trial": "being_verified",
+  "refund": "being_verified"
+ },
  "task_evidence": null,
  "open_questions": [
   {

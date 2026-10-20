@@ -19,7 +19,37 @@
   "plans_source": null,
   "notes": "(re-verified 2026-10-17 on emergent.sh/pricing in the monthly view, with the annual rates from the same page read on 16 October 2026, and on Emergent's help pages on managing credit usage and on cancellation and refunds) Free $0 (10 credits/mo); Standard $20/mo, or $17/mo billed annually, for 100 credits (the page states a $36 annual saving, 15%); Pro $200/mo, or $167/mo billed annually, for 750 credits (a $396 saving, 16.5%). Above Pro the ladder is quote-only: Business and Enterprise both show 'Custom' and route to Book a demo, adding RBAC, SSO, shared workspaces and co-editing (Business) and user-level credit limits, audit logs, self-hosted database support, VPC deployment and priority SLAs (Enterprise). The $300/mo Team tier with 1,250 shared credits is no longer offered. Monthly subscription credits do not roll over: the balance refills to the plan amount at each renewal. Extra credits come as top-up packs, from 250 credits for $50 up to 10,000+ credits for $2,000; they never expire and are non-refundable. Credits pay for more than building: code generation, tests, integrations and scheduled tasks, model calls your app makes through Emergent's Universal LLM Key, and publishing, where each published app carries a fixed monthly fee in credits by tier (Starter, Launch, Grow, Scale, Elite). The guide says a single prompt costs anything from a handful of credits for a small UI tweak to hundreds for a full feature with tests, and that at zero balance work pauses with no overage billing. On cancellation you keep access to the end of the cycle and can get a prorated refund of unused subscription credits, minus published-app usage; a published app stays live only while credits cover its tier fee.",
   "verified_at": "2026-10-17",
-  "source_url": null
+  "source_url": null,
+  "source_quotes": [
+   {
+    "field": "price",
+    "plan": "Top-up example: 250 credits",
+    "quote": "Available pack sizes include: 250 credits ($50) up to 10,000+ credits ($2,000), with custom volumes also available.",
+    "source_url": "https://help.emergent.sh/managing-credit-usage",
+    "read_on": "2026-10-16"
+   },
+   {
+    "field": "price",
+    "plan": "Pro annual monthly equivalent",
+    "quote": "$200 / month $167 / month Save $396",
+    "source_url": "https://emergent.sh/pricing",
+    "read_on": "2026-10-16"
+   },
+   {
+    "field": "price",
+    "plan": "Free",
+    "quote": "$0 / month 10 free monthly credits",
+    "source_url": "https://emergent.sh/pricing",
+    "read_on": "2026-10-16"
+   },
+   {
+    "field": "refund",
+    "plan": null,
+    "quote": "If you cancel your subscription, you are eligible for a prorated dollar refund of unused subscription credits.",
+    "source_url": "https://help.emergent.sh/cancellation-refunds",
+    "read_on": "2026-10-16"
+   }
+  ]
  },
  "free_plan": true,
  "free_plan_evidence": "(re-verified 2026-10-17 on emergent.sh/pricing in the monthly view, with the annual rates from the same page read on 16 October 2026, and on Emergent's help pages on managing credit usage and on cancellation and refunds) Free $0 (10 credits/mo); Standard $20/mo, or $17/mo billed annually, for 100 credits (the page states a $36 annual saving, 15%); Pro $200/mo, or $167/mo billed annually, for 750 credits (a $396 saving, 16.5%).",
@@ -425,8 +455,14 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
+ "verification": {
+  "price": "quoted",
+  "free_trial": "being_verified",
+  "refund": "quoted"
+ },
  "task_evidence": {
   "structured_checks": [
    {

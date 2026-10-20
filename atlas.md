@@ -2222,7 +2222,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/omneky-review/
 
 ## Omniseo (omniseo.com)
-- **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28 against the vendor's own pricing page) Essentials $89/mo (4 AI channels, 50 prompts, 5 seats), Professional $349/mo (10 AI channels, 100 prom…
+- **Verified pricing:** (re-verified 2026-08-17, 2026-09-28 and again on 2026-10-20 against the vendor's own pricing page) Essentials $89/mo (4 AI channels, 50 prompts, 5 seats), Professional $349/mo (10 AI channe…
 - **Honest take:** Two honest cautions. AI search visibility (GEO) is a young, fast-moving category.
 - **Best for:** brands and SEO teams that want to measure and improve how they show up in AI-generated answers (ChatGPT, Google AI and more) as AI search grows
 - **Flags:** Annual commit
@@ -2574,10 +2574,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/quickbooks-uk-review/
 
 ## QuickSigner (quicksigner.com)
-- **Verified pricing:** (re-verified 2026-08-17 and re-read unchanged 2026-09-27 against QuickSigner's own machine-readable pricing page and pricing table) Personal is free: 5 documents a month, 3 signers and 1 do…
-- **Honest take:** A few users report occasional email-deliverability hiccups — otherwise it does exactly what it says (recipients even sign without an account) for a fraction of enterprise pricing.
+- **Verified pricing:** (re-verified 2026-08-17, re-read 2026-09-27 and again 2026-10-20 against QuickSigner's own pricing table and llms.txt) Personal is free: 5 documents a month, 3 signers and 1 document per re…
+- **Honest take:** The price is the argument, and the legal ceiling is the limit.
 - **Best for:** cost-conscious teams that want certified e-signing (ISO 27001, AATL) with unlimited documents from ~$5/mo and a real free tier
-- **Flags:** Per-seat pricing, Usage-metered, Annual commit, Free tier
+- **Flags:** Per-seat pricing, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/quicksigner-review/
 
 ## QuillBot (quillbot.com)
@@ -2849,7 +2849,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sendcloud-review/
 
 ## Sender (sender.net)
-- **Verified pricing:** (read 2026-10-13 in a live browser on sender.net/pricing from a Netherlands connection, which shows euros, in both the annual and the monthly view with the FAQ opened; the US copy of the sa…
+- **Verified pricing:** (re-verified 2026-10-20; first read 2026-10-13 in a live browser on sender.net/pricing from a Netherlands connection, which shows euros, in both the annual and the monthly view with the FAQ…
 - **Honest take:** Free covers 2,500 subscribers, but the paid prices on the cards are for 500; slide to your list size, and the 30% annual discount is for the first year only.
 - **Best for:** small businesses, shops and creators with lists up to a few thousand subscribers who want newsletters, automation, forms and SMS at a low price, starting on a free plan that is generous on volume
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -2999,10 +2999,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/simpletexting-review/
 
 ## SimplyBook.me (simplybook.me)
-- **Verified pricing:** (re-verified 2026-10-16 on simplybook.me/en/pricing, EUR, priceCurrency 'EUR' in the page's own markup) Free plan, EUR 0 a month: 50 bookings a month, 1 custom feature, 1 provider, no card …
+- **Verified pricing:** (re-verified 2026-10-16 and again 2026-10-20 on simplybook.me/en/pricing, EUR, priceCurrency 'EUR' in the page's own markup) Free plan, EUR 0 a month: 50 bookings a month, 1 custom feature,…
 - **Honest take:** The plan ladder is set by bookings per month and by how many custom features you may switch on, and those two ceilings move independently.
 - **Best for:** service businesses that take appointments and want a booking page, reminders and online payment without building one
-- **Flags:** Annual commit, Free tier
+- **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/simplybook-me-review/
 
 ## Skip To Checkout (effectify.io)
@@ -3189,7 +3189,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## SupportBee (supportbee.com)
 - **Verified pricing:** (read 2026-08-27 on supportbee.com/pricing) Two plans, both priced per seat, and no free tier.
-- **Honest take:** It is an email helpdesk and only an email helpdesk.
+- **Honest take:** It is an email helpdesk and only an email helpdesk, and it needs your mailbox before it does anything.
 - **Best for:** small support teams working out of a shared email inbox who want assignment, internal comments and a knowledge base without dragging customers into a portal or learning a helpdesk suite
 - **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/supportbee-review/
@@ -3808,7 +3808,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/your-company-formations-review/
 
 ## Zedonk (zedonk.co.uk)
-- **Verified pricing:** (price re-verified 2026-09-09 and re-read unchanged 2026-09-27 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building block and billed an…
+- **Verified pricing:** (price re-verified 2026-09-09, re-read unchanged 2026-09-27 and again 2026-10-20 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building b…
 - **Honest take:** The 'starting from' wording is doing real work: £166/mo is the floor of the cheapest module, billed annually, so a working setup for a brand that sells wholesale quickly stacks toward £332/mo and beyond.
 - **Best for:** small and mid-size fashion brands that need sales, production, inventory and wholesale in one system built around size curves, seasons and linesheets
 - **Flags:** Add-ons extra

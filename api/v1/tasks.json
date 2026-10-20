@@ -3254,6 +3254,28 @@
   },
   {
    "source": "session",
+   "product_name": "SupportBee",
+   "product_id": "supportbee",
+   "run_date": "2026-10-20",
+   "what": "Tested by our team on 20 October 2026 on the 14-day trial: Daan created the account and our AI assistant ran the test in his browser. The test stopped at the first step, creating a ticket, because the trial needs a connected mailbox first and we did not give an outside service access to a real mailbox. Everything after that step is untested.",
+   "findings": [
+    "The trial opened with one example ticket from SupportBee ('Sample Ticket: How to use SupportBee') and one default label, IMPORTANT.",
+    "No ticket can be created before a mailbox is connected. '+ Ticket' showed 'Please connect an email address to create tickets. New tickets can't be created without a connected email address.'",
+    "Admin > Emails > Add email offers only 'Gmail / Google Workspace' and 'Microsoft Outlook / Office 365', through a connection that copies your support mail into SupportBee. For any other provider the screen says 'Please contact us at support@supportbee.com'.",
+    "The contact form is the other way in: it has its own reply address on supportbeemail.com, an embed code and a preview, and asks for name, email, subject and message, with a reCAPTCHA on by default. Setting 'Show captcha' to No did not stay saved, and we did not send the form."
+   ],
+   "not_tested": [
+    "Internal comments, labels on tickets, and inserting or editing snippets (all need a ticket)",
+    "How SupportBee behaves once Gmail or Outlook is connected",
+    "KBee (the knowledge base), the customer portal and reports"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "PartnerStack",
    "product_id": "partnerstack",
    "run_date": "2026-08-26",
@@ -3375,6 +3397,34 @@
   },
   {
    "source": "session",
+   "product_name": "AltText.ai",
+   "product_id": "alttext-ai",
+   "run_date": "2026-10-20",
+   "what": "Tested by our team on 20 October 2026 on the free account with 25 credits: Daan created the account and our AI assistant ran the test in his browser. We uploaded our own simple 600x400 test images (a blue circle as JPG, PNG and AVIF, an orange square as PNG), asked for one in Dutch, and looked them up again in the library.",
+   "findings": [
+    "Each image cost 1 credit: the blue circle as JPG, the circle as PNG and the orange square as PNG took the balance from 25 to 22.",
+    "The texts were correct and added nothing that was not there: 'A solid blue circle centered on a white background.' and 'An orange square centered on a white background.' The PNG of the circle gave exactly the same text as the JPG.",
+    "With Dutch added next to English (the language field says 'Credits: 1 per language'), only a Dutch text was saved, 'Een effen blauwe cirkel, gecentreerd op een witte achtergrond.', for 1 credit (22 to 21). This test does not settle how multi-language runs are billed.",
+    "The AVIF was refused in the upload form before anything ran: 'Please choose a JPG, PNG, or WebP image.' with 'Upgrade to support advanced formats (AVIF, HEIC, HEIF, JP2, SVG, TIFF)'. No credit was used. The upload label itself lists 'JPG, PNG, GIF, WebP, or BMP (max 16MB)'.",
+    "The library search looks in the alt text, not the Asset ID: 'TEST-A' gave 'Your search returned no results.', while 'blue circle' found the two English records of the circle (not the Dutch one).",
+    "The library listed all four records with Asset ID, source 'Direct Upload', text and time, but the edit page showed 'Image unavailable': the uploaded image itself is not shown again.",
+    "End state: 21 of 25 credits left after four generations and one refused AVIF."
+   ],
+   "not_tested": [
+    "Accessibility quality on real, complex photos (we only used simple shapes)",
+    "Any SEO effect of the alt text",
+    "CMS integrations such as WordPress and Shopify, and writing alt text back automatically",
+    "Bulk import, URL input, the e-commerce and keyword fields, and Final Pass",
+    "Paid formats such as AVIF and what they cost in credits",
+    "When the free credits expire"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "PagePulse",
    "product_id": "pagepulse",
    "run_date": "2026-10-08",
@@ -3410,6 +3460,33 @@
    ],
    "not_tested": "Going live on our own domain or a subfolder, WooCommerce and multi-currency, more than one short page, languages other than German, and WPML itself side by side. Choosing German in the floating language switcher did not navigate in our automated browser session, so we could not confirm that click-through.",
    "report": "/research/clonable-wordpress-test/",
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "FlexiQuiz",
+   "product_id": "flexiquiz",
+   "run_date": "2026-10-20",
+   "what": "Tested by our team on 20 October 2026 on a free account: Daan created the account and our AI assistant built the quiz in his browser and sent the answers as an anonymous visitor without logging in. We built one multiple-choice quiz, pushed it past the question limit, published it and submitted answers until the monthly response limit was reached.",
+   "findings": [
+    "Ten questions saved. The form for an eleventh opened normally, and only on Save did FlexiQuiz say 'There is a maximum of 10 questions on the free plan. Upgrade to add more questions'; the eleventh was not saved.",
+    "A new quiz is published with 'Maximum attempts' set to 1 and a registration page that requires first name, last name and email. We raised the attempts to 30 and switched registration off; the quiz link then worked without a login.",
+    "Grading was correct: a submission with only questions 1-3 right scored '3/10 (30%)', and the 19 fully correct ones scored '10/10 (100%)'.",
+    "Analyze showed 'Total respondents 20' with Pass/Fail per submission, and the Response Summary (questions 1-3 at 100% correct, 4-10 at 95%) matched our own log exactly.",
+    "The 21st respondent of the month could not even start: the quiz link showed only 'This account has reached the maximum monthly response limit' instead of the quiz.",
+    "The preview submission got stuck and did not count as a respondent.",
+    "Timestamps in Analyze read 9:31 AM at about 17:30 our local time: the default time zone was not ours (Europe/Amsterdam)."
+   ],
+   "not_tested": [
+    "Whether a limit of 20 per quiz applies separately from the monthly limit (we had one quiz)",
+    "When the monthly counter resets (that needs a check early next month)",
+    "Respondent portals, email invitations, access codes and certificates",
+    "Live quiz and Build with AI",
+    "Question types other than multiple choice"
+   ],
+   "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
@@ -3671,6 +3748,34 @@
     "Not tested: the website widget, WhatsApp, voice and phone channels, forms inside the chat, handover to a real person, or a larger knowledge base."
    ],
    "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Todoist",
+   "product_id": "todoist",
+   "run_date": "2026-10-20",
+   "what": "Tested by our team on 20 October 2026 on a new free Beginner account: Daan created the account and our AI assistant ran the test in his browser. We built one project with tasks, a sub-task, a section, a priority and a date typed in plain words, then created projects until the free plan's limit appeared.",
+   "findings": [
+    "A new account started at '0 projects' with a 'Free' label; the Inbox does not count as a project.",
+    "Typing 'Review today' was recognised while typing: Todoist highlighted 'today', removed it from the task name and saved a task called 'Review' due Today, and the Today view counted 1.",
+    "A sub-task added through the task details sat indented under its parent, which then showed a '0/1' counter. A section 'Later' came from the project menu with its own Add task.",
+    "A completed task disappeared from the list and came back struck through under Display > Completed tasks; the project counter showed 4 open tasks.",
+    "From the fourth project the sidebar showed 'USED: 4/5', then 'USED: 5/5'.",
+    "The sixth project was not created. The attempt went straight to 'Try Pro for free': yearly billing at €5/month ('SAVE €24'), 'Due today (7 days free) €0' and 'Due 27 Oct 2026 €60/year', for 300 projects and 150 filter views. The projects page then said '5 projects' with 'Need more projects? ... Upgrade'.",
+    "The 'Try Pro for free' window also appeared once, unasked, while creating the very first project."
+   ],
+   "not_tested": [
+    "The one-week activity history (that needs a follow-up a week later)",
+    "Filters (3 on Beginner) and reminders",
+    "Ramble (voice), Todoist Assist and the calendar connection",
+    "Working together in a team workspace",
+    "The monthly price of Pro (we only saw yearly billing: €5 a month, €60 a year)",
+    "Whether the 7-day Pro trial asks for a payment card"
+   ],
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",

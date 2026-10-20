@@ -9,7 +9,7 @@
  "summary": "Email ticketing for collaborative customer service: a shared team inbox where every agent has their own login, plus an integrated knowledge base and, on the upper tier, a customer portal. Per seat, no free plan.",
  "best_for": "small support teams working out of a shared email inbox who want assignment, internal comments and a knowledge base without dragging customers into a portal or learning a helpdesk suite",
  "skip_if": "your customers reach you on chat, phone or WhatsApp, or support and billing need separate queues with their own rules; this is one channel, one team and one knowledge base on both published plans",
- "honest_knock": "It is an email helpdesk and only an email helpdesk. There is no live chat, no phone, no WhatsApp and no social inbox, and the integration list confirms it: Asana, Trello, ClickUp, Linear, Notion, GitHub Issues, Pipedrive, Insightly, Capsule, Customer.io, QuickBooks, PostHog, Slack and webhooks are all places to push a ticket outward, not channels a customer can arrive on. Read the two published plans as printed and neither lifts the cap of one knowledge base and one team, even though the vendor's own FAQ describes teams as the way you mirror departments. Enterprise is listed as everything in Startup plus five named items, and more teams is not one of them. Watch the seat count too. The pricing FAQ defines users as everyone with access across all three permission levels, collaborators included, and the docs add a collaborator through the same add-a-user flow. So the invite-the-whole-company pitch runs through the same per-seat meter, and collaborator activity does not even show up in reports. And the two pages disagree about leaving: the pricing FAQ says you can cancel your subscription anytime, while the billing doc routes cancellation through contact us, which is the one billing action on that page that is not self service.",
+ "honest_knock": "It is an email helpdesk and only an email helpdesk, and it needs your mailbox before it does anything: in our test on 20 October 2026 the trial would not create a ticket until a Gmail or Outlook account was connected, and other mail providers have to go through support. There is no live chat, no phone, no WhatsApp and no social inbox, and the integration list confirms it: Asana, Trello, ClickUp, Linear, Notion, GitHub Issues, Pipedrive, Insightly, Capsule, Customer.io, QuickBooks, PostHog, Slack and webhooks are all places to push a ticket outward, not channels a customer can arrive on. Read the two published plans as printed and neither lifts the cap of one knowledge base and one team, even though the vendor's own FAQ describes teams as the way you mirror departments. Enterprise is listed as everything in Startup plus five named items, and more teams is not one of them. Watch the seat count too. The pricing FAQ defines users as everyone with access across all three permission levels, collaborators included, and the docs add a collaborator through the same add-a-user flow. So the invite-the-whole-company pitch runs through the same per-seat meter, and collaborator activity does not even show up in reports. And the two pages disagree about leaving: the pricing FAQ says you can cancel your subscription anytime, while the billing doc routes cancellation through contact us, which is the one billing action on that page that is not self service.",
  "pricing": {
   "status": "public",
   "entry_price": "$20",
@@ -419,10 +419,35 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "SupportBee",
+    "product_id": "supportbee",
+    "run_date": "2026-10-20",
+    "what": "Tested by our team on 20 October 2026 on the 14-day trial: Daan created the account and our AI assistant ran the test in his browser. The test stopped at the first step, creating a ticket, because the trial needs a connected mailbox first and we did not give an outside service access to a real mailbox. Everything after that step is untested.",
+    "findings": [
+     "The trial opened with one example ticket from SupportBee ('Sample Ticket: How to use SupportBee') and one default label, IMPORTANT.",
+     "No ticket can be created before a mailbox is connected. '+ Ticket' showed 'Please connect an email address to create tickets. New tickets can't be created without a connected email address.'",
+     "Admin > Emails > Add email offers only 'Gmail / Google Workspace' and 'Microsoft Outlook / Office 365', through a connection that copies your support mail into SupportBee. For any other provider the screen says 'Please contact us at support@supportbee.com'.",
+     "The contact form is the other way in: it has its own reply address on supportbeemail.com, an embed code and a preview, and asks for name, email, subject and message, with a reCAPTCHA on by default. Setting 'Show captcha' to No did not stay saved, and we did not send the form."
+    ],
+    "not_tested": [
+     "Internal comments, labels on tickets, and inserting or editing snippets (all need a ticket)",
+     "How SupportBee behaves once Gmail or Outlook is connected",
+     "KBee (the knowledge base), the customer portal and reports"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "supportbee:cancellation_terms",

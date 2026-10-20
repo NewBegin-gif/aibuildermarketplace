@@ -9,7 +9,7 @@
  "summary": "Email-first shared inbox for support teams with live chat, social messaging, a knowledge base, workflows and an AI assistant that answers customer questions.",
  "best_for": "small and mid-sized support teams that want an email-first shared inbox with live chat and a help centre, priced per user without a minimum below Pro",
  "skip_if": "you run a large contact centre with native phone support, or you need SSO but have fewer than ten agents (SSO is on Pro, with a 10-user minimum)",
- "honest_knock": "The Free plan caps you at 100 contacts a month and one Inbox. Standard stops at 25 users and Plus at 50; Pro has a 10-user minimum and is sold through a demo. Extra Inboxes ($10) and Docs sites ($20) are charged monthly, AI Answers adds $0.75 per resolution, and SMS and phone run through integrations rather than natively. We have not used Help Scout ourselves.",
+ "honest_knock": "The Free plan caps you at 100 contacts a month and one Inbox. Standard stops at 25 users and Plus at 50; Pro has a 10-user minimum and is sold through a demo. Extra Inboxes ($10) and Docs sites ($20) are charged monthly, AI Answers adds $0.75 per resolution, and SMS and phone run through integrations rather than natively. In our test on 20 October 2026 the sign-up started on a Plus trial rather than Free, and on Free an eleventh tag was accepted while an eleventh saved reply was refused with a generic error.",
  "pricing": {
   "status": "public",
   "entry_price": "$25",
@@ -17,12 +17,12 @@
   "from_price_usd_month": 25.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 2026-10-10 on helpscout.com/pricing with the monthly and annual toggles, USD) Free covers up to 5 users, 1 Inbox, 1 Docs site and 100 contacts a month, with 10 saved replies and 10 tags. A contact is someone who got a reply from your team or the AI assistant; several conversations with the same person count once. Standard is $25 per user a month billed annually or $30 monthly, for up to 25 users: 2 Inboxes, live chat, WhatsApp, Instagram and Messenger, multiple knowledge bases, one basic SLA policy, basic workflows, unlimited tags and saved replies and the AI Inbox assistant. Plus, marked popular, is $45 annually or $54 monthly, for up to 50 users: 5 Inboxes, advanced workflows, two advanced SLA policies, a secure customer portal, unlimited AI drafts, round-robin routing, Salesforce, Jira and HubSpot integrations and 25 light users. Pro is $75 annually or $90 monthly with unlimited users and a minimum of 10, sold through a demo: 10 Inboxes, unlimited workflows and SLAs, SSO/SAML, HIPAA compliance, 50 light users and a dedicated onboarding specialist. Extra Inboxes cost $10 a month and extra Docs sites $20 a month. AI Answers, the autonomous assistant, is an add-on at $0.75 per resolution billed monthly, with a 3-month free trial. Annual billing is labelled 16% off; SMS and phone calls run through integrations.",
+  "notes": "(read 2026-10-10 on helpscout.com/pricing with the monthly and annual toggles, USD) Free covers up to 5 users, 1 Inbox, 1 Docs site and 100 contacts a month, with 10 saved replies and 10 tags (in our test on 20 October 2026 the saved-reply limit held, but an eleventh tag was accepted). A contact is someone who got a reply from your team or the AI assistant; several conversations with the same person count once. Standard is $25 per user a month billed annually or $30 monthly, for up to 25 users: 2 Inboxes, live chat, WhatsApp, Instagram and Messenger, multiple knowledge bases, one basic SLA policy, basic workflows, unlimited tags and saved replies and the AI Inbox assistant. Plus, marked popular, is $45 annually or $54 monthly, for up to 50 users: 5 Inboxes, advanced workflows, two advanced SLA policies, a secure customer portal, unlimited AI drafts, round-robin routing, Salesforce, Jira and HubSpot integrations and 25 light users. Pro is $75 annually or $90 monthly with unlimited users and a minimum of 10, sold through a demo: 10 Inboxes, unlimited workflows and SLAs, SSO/SAML, HIPAA compliance, 50 light users and a dedicated onboarding specialist. Extra Inboxes cost $10 a month and extra Docs sites $20 a month. AI Answers, the autonomous assistant, is an add-on at $0.75 per resolution billed monthly, with a 3-month free trial. Annual billing is labelled 16% off; SMS and phone calls run through integrations.",
   "verified_at": "2026-10-10",
   "source_url": "https://www.helpscout.com/pricing/"
  },
  "free_plan": true,
- "free_plan_evidence": "(read 2026-10-10 on helpscout.com/pricing with the monthly and annual toggles, USD) Free covers up to 5 users, 1 Inbox, 1 Docs site and 100 contacts a month, with 10 saved replies and 10 tags.",
+ "free_plan_evidence": "(read 2026-10-10 on helpscout.com/pricing with the monthly and annual toggles, USD) Free covers up to 5 users, 1 Inbox, 1 Docs site and 100 contacts a month, with 10 saved replies and 10 tags (in our test on 20 October 2026 the saved-reply limit held, but an eleventh tag was accepted).",
  "cost_traps": [
   {
    "id": "per_seat",
@@ -547,10 +547,37 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Help Scout",
+    "product_id": "help-scout",
+    "run_date": "2026-10-20",
+    "what": "Tested by our team on 20 October 2026: Daan created the account and our AI assistant finished the onboarding and ran the test in his browser. The sign-up put the account on a Plus trial, so we first logged two phone notes on a made-up customer and added tags and saved replies, then switched the account to Free and pushed tags and saved replies past the documented limit of 10.",
+    "findings": [
+     "Signing up did not start on Free. The account landed on a Plus trial ('Trial Period Oct 20 - Nov 03', 1 user, $54/user, 'First monthly payment on Nov 4, 2026') plus a 92-day AI Answers trial, without asking for a payment card.",
+     "Switching to Free needed two clean-ups first. Free allows no private Docs site, so the empty knowledge base Help Scout had created had to be made public, and Free allows 0 workflows, so the two '[Try me]' example workflows had to be deleted. The confirmation screen then listed the Free limits, including 10 tags and 10 saved replies.",
+     "The 10-tag limit was not enforced right after the switch: an eleventh tag was accepted without any message and Settings > Tags showed '11 tags'. Only a lighter style on the conversation set it apart. Two of the ten were 'welcome' and 'practice', which Help Scout had created itself.",
+     "The 10-saved-reply limit was enforced, but with a generic error: 'Could not create saved reply draft' when opening a new one and 'Could not create saved reply' when saving, with no mention of a limit. An example reply Help Scout added counted as one of the ten.",
+     "Editing a saved reply worked: changing only the number of warranty days from 37 to 41 left the rest of the text unchanged after a reload.",
+     "Two phone notes for the same email address joined one customer profile, and the second showed the first in the sidebar. Help Scout filled in the company on its own ('Internet Assigned Numbers Authority' for example.com), and timestamps did not follow our Europe/Amsterdam time zone: 5:53 am was shown at 07:53 local time."
+    ],
+    "not_tested": [
+     "A real email connection (no mailbox was connected)",
+     "AI Answers",
+     "The Docs site"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "help-scout:cancellation_terms",

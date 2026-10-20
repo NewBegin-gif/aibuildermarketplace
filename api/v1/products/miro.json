@@ -9,7 +9,7 @@
  "summary": "Visual collaboration platform: an infinite online whiteboard for brainstorms, diagrams, workshops and planning — with templates, voting and AI that generates diagrams and summaries, built for real-time and async teamwork.",
  "best_for": "teams that think visually — brainstorms, flowcharts, retros, workshops and planning on an infinite shared canvas with strong templates and facilitation tools",
  "skip_if": "your work is mostly documents or task tracking (a doc or PM tool fits better) or most of your company would only ever need to view, not edit",
- "honest_knock": "Per-member pricing charges for every member added to the workspace, so an org-wide rollout multiplies at full headcount — and the free plan's 3-board cap is workspace-wide, not per person, so a team reaches it as soon as it needs a fourth editable board. Model who truly needs to edit before you buy seats.",
+ "honest_knock": "Per-member pricing charges for every member added to the workspace, so an org-wide rollout multiplies at full headcount — and the free plan's cap of 3 editable boards is workspace-wide, not per person. In our test on 20 October 2026 Miro did not block a fourth board: it warned that the oldest board would become view-only, and a new free team already starts with one board made for you. Model who truly needs to edit before you buy seats.",
  "pricing": {
   "status": "public",
   "entry_price": "$8",
@@ -92,10 +92,40 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Miro",
+    "product_id": "miro",
+    "run_date": "2026-10-20",
+    "what": "Tested by our team on 20 October 2026 on a new free account: Daan created the team and our AI assistant ran the test in his browser. We added five sticky notes (one by hand, four with bulk mode), aligned them, exported them to CSV and as an image, and created boards until the free plan's limit appeared.",
+    "findings": [
+     "A new free team opened with a ready-made 'My First Board' and a 'Free plan' label, so one board already counts toward the limit before you start.",
+     "The free plan did not block a fourth board. Creating it showed 'You've reached the limit of three editable boards' and 'My First Board will become view-only', with the choice 'Create team board' or 'Upgrade'; we did not click through. The limit is three editable boards, and a new one turns the oldest read-only.",
+     "The first click on '+ Create' opened a 14-day Business trial offer, which 'Maybe later' closed. Each new board said it was shared with all members of the team.",
+     "Bulk mode is not in the sticky-note menu but under + (Tools) when you search for 'bulk'. Four lines became four stickies in a 2x2 grid, smaller than a single sticky.",
+     "The Align menu has 8 options. Top-aligning the 2x2 grid stacked the stickies on top of each other, and distributing kept the old width, so the overlap stayed; that menu has no automatic spacing.",
+     "Export to CSV gave a 53-byte file (UTF-8 with BOM): one column, no header row, TEST-01 to TEST-05 once each, and no colour, position or structure.",
+     "Image export on Free offered only Small: a 2449 x 1632 px JPG of 81 kB with no visible watermark and sharp text. Medium, Large, vector PDF and SVG sat behind Upgrade, and the default export frame cut off the left edge of the first sticky."
+    ],
+    "not_tested": [
+     "Collaboration with several members and the price per member (this was a single-user test)",
+     "Whether the view-only board becomes editable again after another board is deleted",
+     "Miro AI (the panel was open but not used)",
+     "Cluster objects and automatic arranging",
+     "Integrations and templates"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "miro:cancellation_terms",

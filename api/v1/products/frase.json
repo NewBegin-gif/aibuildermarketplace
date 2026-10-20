@@ -9,7 +9,7 @@
  "summary": "AI-powered SEO content writing and optimization. Research, outline, write, and optimize articles that rank — all in one place.",
  "best_for": "content teams and SEOs who want to speed up research, briefs and SERP-driven optimization in one workflow",
  "skip_if": "you publish only occasionally — the monthly quota and subscription outweigh the time saved for a handful of articles",
- "honest_knock": "The article quotas pinch if you publish at volume (overage docs bill each), and it's a research-and-optimization tool, not a magic ranking button — it speeds up briefs, it doesn't replace the writing or the backlinks.",
+ "honest_knock": "The article quotas pinch if you publish at volume (overage docs bill each), and it's a research-and-optimization tool, not a magic ranking button — it speeds up briefs, it doesn't replace the writing or the backlinks. In our test on 20 October 2026 the writer put back a claim we had rejected, now credited to the National Institutes of Health, and ignored our audience and 'no product tips' instructions, so every generated article needs a human check on its claims.",
  "pricing": {
   "status": "public",
   "entry_price": "$39",
@@ -509,10 +509,40 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Frase",
+    "product_id": "frase",
+    "run_date": "2026-10-20",
+    "what": "Tested by our team on 20 October 2026 on the 7-day trial, with no card asked: Daan created the account and our AI assistant ran the test in his browser. We asked Frase for one article on 'how to organize a reusable packing checklist' for individual travellers, with three sections, no product tips, no prices and no invented statistics; we checked its key facts, rejected one claim, let it write, and looked at the score and the export options.",
+    "findings": [
+     "A site is required. Without one Frase said 'No sites configured. Add a site first to create content bound to it.' Adding our domain asked for no verification, and the website analysis could be skipped.",
+     "The brief overrode our instructions. Frase replaced our audience with 'Shopify Merchants, GTM Leaders, SaaS Operations Managers, Business Travelers', taken from the linked site, planned five sections instead of three, and added a step 'Select an Editable Packing Checklist Tool' with '3 tool recommendations'.",
+     "Its own source check worked: it marked a PubMed claim about working memory load as 'not on the page'. The outline still listed that claim as 'EVIDENCE TO INCLUDE - STAT, Source: National Institutes of Health'. We rejected it, and Frase then said it 'will not be claimed'.",
+     "The rejected claim appeared in the article anyway, now credited to the National Institutes of Health. Frase wrote the 935-word article in about a minute and a half.",
+     "The article also named five products (Todoist, Asana, Notion, Airtable, PackPoint) despite our 'no product recommendations', and used a business setting (trade show, booth, business cards) for an audience of individual travellers. It contained no percentages or prices.",
+     "One article took the trial counter from 5 to 4 articles. The editor scored the draft 64, with 4 of 5 sections, 80% coverage, 0 links and 0 images.",
+     "Export in the trial covers HTML, PDF, Markdown and plain text downloads, Notion and Google Docs, plus 'Repurpose Content' for LinkedIn and Instagram carousels, an X thread and a newsletter. We did not download anything."
+    ],
+    "not_tested": [
+     "Optimize Existing, Import Brief and Start from scratch",
+     "SEO Analytics and the Search Console connection",
+     "The site audit (50 pages in the trial)",
+     "Applying a checklist suggestion and measuring the score change",
+     "Use without a linked site, which is not possible because a site is required"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "frase:cancellation_terms",

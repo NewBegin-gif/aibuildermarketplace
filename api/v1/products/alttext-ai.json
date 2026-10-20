@@ -9,7 +9,7 @@
  "summary": "Bulk AI alt-text generation for image-heavy sites: crawls your pages or plugs into your CMS (WordPress, Shopify, WooCommerce, Magento, Contentful, DatoCMS) and writes the alt attributes back automatically, in 130+ languages.",
  "best_for": "image-heavy sites that need alt text written back into the CMS automatically: e-commerce catalogues, publishers and long-running blogs on WordPress, Shopify, WooCommerce, Magento, BigCommerce, Contentful, DatoCMS or Storyblok. The native integrations, page crawler, CSV import/export and developer API let you clear thousands of missing alt attributes without touching them by hand",
  "skip_if": "you have a few dozen images. Write those yourself for free and you will describe them better than any model, because you know why each image is on the page. Also skip it if your visuals are diagram-, product- or brand-specific enough that every generated line needs rewriting anyway — in which case the credits buy you a draft you were going to redo",
- "honest_knock": "The headline ‘5¢ per image’ only holds for a plain JPG in one language. AVIF, HEIC, SVG and TIFF bill double — precisely the formats a performance-tuned image pipeline outputs — and every extra language adds another credit per image, so by the published rules one AVIF product shot in five languages is six credits, not one. Those advanced formats are also locked out of the 25-credit free trial, so the one thing you cannot measure before paying is your own burn rate. Credits are spent on generation rather than on acceptance: regenerate a line you didn’t like and you pay again, and AltText.ai states plainly that used credits are not normally refundable. The category caveat an honest review owes you: models describe what is visibly in a photo well, but alt text is a judgement call. Whether an image is decorative or informative, and what your brand actually calls the thing in it, is context the model doesn’t have. Bulk generation is a far better starting point than the empty alt attributes on most sites, but treat the output as a draft to spot-check. ‘ADA compliance’ here means the field gets filled, not a legal guarantee that what’s in it is right.",
+ "honest_knock": "The headline ‘5¢ per image’ only holds for a plain JPG in one language. AVIF, HEIC, SVG and TIFF bill double — precisely the formats a performance-tuned image pipeline outputs — and every extra language adds another credit per image, so by the published rules one AVIF product shot in five languages is six credits, not one. Those advanced formats are also locked out of the 25-credit free trial, so the one thing you cannot measure before paying is your own burn rate. In our test on 20 October 2026 the free upload form refused an AVIF with 'Please choose a JPG, PNG, or WebP image.' before charging a credit, and plain JPG and PNG images cost 1 credit each. With English and Dutch both selected we got only a Dutch text for 1 credit, so check what a multi-language run returns before you budget for one. Credits are spent on generation rather than on acceptance: regenerate a line you didn’t like and you pay again, and AltText.ai states plainly that used credits are not normally refundable. The category caveat an honest review owes you: models describe what is visibly in a photo well, but alt text is a judgement call. Whether an image is decorative or informative, and what your brand actually calls the thing in it, is context the model doesn’t have. Bulk generation is a far better starting point than the empty alt attributes on most sites, but treat the output as a draft to spot-check. ‘ADA compliance’ here means the field gets filled, not a legal guarantee that what’s in it is right.",
  "pricing": {
   "status": "public",
   "entry_price": "$5",
@@ -100,10 +100,41 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "AltText.ai",
+    "product_id": "alttext-ai",
+    "run_date": "2026-10-20",
+    "what": "Tested by our team on 20 October 2026 on the free account with 25 credits: Daan created the account and our AI assistant ran the test in his browser. We uploaded our own simple 600x400 test images (a blue circle as JPG, PNG and AVIF, an orange square as PNG), asked for one in Dutch, and looked them up again in the library.",
+    "findings": [
+     "Each image cost 1 credit: the blue circle as JPG, the circle as PNG and the orange square as PNG took the balance from 25 to 22.",
+     "The texts were correct and added nothing that was not there: 'A solid blue circle centered on a white background.' and 'An orange square centered on a white background.' The PNG of the circle gave exactly the same text as the JPG.",
+     "With Dutch added next to English (the language field says 'Credits: 1 per language'), only a Dutch text was saved, 'Een effen blauwe cirkel, gecentreerd op een witte achtergrond.', for 1 credit (22 to 21). This test does not settle how multi-language runs are billed.",
+     "The AVIF was refused in the upload form before anything ran: 'Please choose a JPG, PNG, or WebP image.' with 'Upgrade to support advanced formats (AVIF, HEIC, HEIF, JP2, SVG, TIFF)'. No credit was used. The upload label itself lists 'JPG, PNG, GIF, WebP, or BMP (max 16MB)'.",
+     "The library search looks in the alt text, not the Asset ID: 'TEST-A' gave 'Your search returned no results.', while 'blue circle' found the two English records of the circle (not the Dutch one).",
+     "The library listed all four records with Asset ID, source 'Direct Upload', text and time, but the edit page showed 'Image unavailable': the uploaded image itself is not shown again.",
+     "End state: 21 of 25 credits left after four generations and one refused AVIF."
+    ],
+    "not_tested": [
+     "Accessibility quality on real, complex photos (we only used simple shapes)",
+     "Any SEO effect of the alt text",
+     "CMS integrations such as WordPress and Shopify, and writing alt text back automatically",
+     "Bulk import, URL input, the e-commerce and keyword fields, and Final Pass",
+     "Paid formats such as AVIF and what they cost in credits",
+     "When the free credits expire"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "alttext-ai:cancellation_terms",

@@ -9,7 +9,7 @@
  "summary": "Task manager for individuals and small teams: quick capture, due dates and projects across devices. A to-do app, not a project suite with timelines or dependencies.",
  "best_for": "individuals and small teams who want a fast, elegant task manager that gets out of the way",
  "skip_if": "you need full project management with timelines, workloads and dependencies — this is a to-do app, not a PM suite",
- "honest_knock": "The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly — but Pro is genuinely cheap. It's a personal/team task manager, not a full project platform, so don't expect Gantt-level PM.",
+ "honest_knock": "The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly — but Pro is genuinely cheap. In our test on 20 October 2026 the sixth project was not created: the attempt opened a 7-day Pro trial offer (€60 a year on yearly billing for our account) instead. It's a personal/team task manager, not a full project platform, so don't expect Gantt-level PM.",
  "pricing": {
   "status": "public",
   "entry_price": "$5",
@@ -65,10 +65,41 @@
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Todoist",
+    "product_id": "todoist",
+    "run_date": "2026-10-20",
+    "what": "Tested by our team on 20 October 2026 on a new free Beginner account: Daan created the account and our AI assistant ran the test in his browser. We built one project with tasks, a sub-task, a section, a priority and a date typed in plain words, then created projects until the free plan's limit appeared.",
+    "findings": [
+     "A new account started at '0 projects' with a 'Free' label; the Inbox does not count as a project.",
+     "Typing 'Review today' was recognised while typing: Todoist highlighted 'today', removed it from the task name and saved a task called 'Review' due Today, and the Today view counted 1.",
+     "A sub-task added through the task details sat indented under its parent, which then showed a '0/1' counter. A section 'Later' came from the project menu with its own Add task.",
+     "A completed task disappeared from the list and came back struck through under Display > Completed tasks; the project counter showed 4 open tasks.",
+     "From the fourth project the sidebar showed 'USED: 4/5', then 'USED: 5/5'.",
+     "The sixth project was not created. The attempt went straight to 'Try Pro for free': yearly billing at €5/month ('SAVE €24'), 'Due today (7 days free) €0' and 'Due 27 Oct 2026 €60/year', for 300 projects and 150 filter views. The projects page then said '5 projects' with 'Need more projects? ... Upgrade'.",
+     "The 'Try Pro for free' window also appeared once, unasked, while creating the very first project."
+    ],
+    "not_tested": [
+     "The one-week activity history (that needs a follow-up a week later)",
+     "Filters (3 on Beginner) and reminders",
+     "Ramble (voice), Todoist Assist and the calendar connection",
+     "Working together in a team workspace",
+     "The monthly price of Pro (we only saw yearly billing: €5 a month, €60 a year)",
+     "Whether the 7-day Pro trial asks for a payment card"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "todoist:cancellation_terms",

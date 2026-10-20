@@ -9,56 +9,33 @@
  "summary": "Legally-binding e-signatures with unlimited documents and no per-envelope caps: send a secure link and recipients sign from any device without creating an account. ISO/IEC 27001-certified, AATL signatures, valid across the US, UK and EU — a fair-priced DocuSign alternative.",
  "best_for": "cost-conscious teams that want certified e-signing (ISO 27001, AATL) with unlimited documents from ~$5/mo and a real free tier",
  "skip_if": "you need advanced workflow features and integrations of the big suites — this wins on price, not on ecosystem depth",
- "honest_knock": "A few users report occasional email-deliverability hiccups — otherwise it does exactly what it says (recipients even sign without an account) for a fraction of enterprise pricing.",
+ "honest_knock": "The price is the argument, and the legal ceiling is the limit. QuickSigner's own llms.txt says it issues Advanced, not Qualified, Electronic Signatures, and names its weaker fit plainly: organisations needing QES, contract lifecycle management with redlining and analytics, or on-premise deployment. Below that line it does what it says for a fraction of per-envelope pricing — recipients sign from a link with no account, app or token. A few users report occasional email-deliverability hiccups, which weighs more here than usual because the emailed link is the whole signing route.",
  "pricing": {
   "status": "public",
   "entry_price": "$5",
   "entry_price_terms": "per user a month ($48/yr), unlimited documents",
   "from_price_usd_month": 5.0,
-  "plans": [
-   {
-    "name": "Personal",
-    "price": "free",
-    "includes": "5 documents/month, 3 signers, 1 document per request, 5 MB, PDF only"
-   },
-   {
-    "name": "Business",
-    "price": "$5 per user a month ($48 a year)",
-    "includes": "Unlimited documents, 10 signers, 3 per request, 10 MB, Word files"
-   },
-   {
-    "name": "Professional",
-    "price": "$15 per user a month ($144 a year)",
-    "includes": "50 signers, 10 per request, 15 MB, OTP verification, bulk send, teams"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-08-17 and re-read unchanged 2026-09-27 against QuickSigner's own machine-readable pricing page and pricing table) Personal is free: 5 documents a month, 3 signers and 1 document per request, 5 MB maximum, PDF only, with signature and stamp fields and AATL sealing. Business is $5 per user a month ($48 a year) and is where documents become unlimited — 10 signers and 3 documents per request, 10 MB, Word files, 10 saved templates, reminders and signing order. Professional is $15 per user a month ($144 a year): 50 signers and 10 documents per request, 15 MB, OTP phone verification, bulk send, teams and the eSign API. Annual billing saves 20% and paid plans carry a 14-day trial. The API has a free developer account with unlimited test requests; production costs from $0.30 per signed document and requires Professional, whose card includes 50 free API credits before that rate; completed test documents are watermarked. ISO/IEC 27001:2022-certified and AATL, legally binding in the US, UK and EU.",
-  "verified_at": "2026-09-27",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-08-17, re-read 2026-09-27 and again 2026-10-20 against QuickSigner's own pricing table and llms.txt) Personal is free: 5 documents a month, 3 signers and 1 document per request, 5 MB maximum, PDF only, with signature and stamp fields and AATL sealing. Business is $5 per user a month ($48 a year) and is where documents become unlimited — 10 signers and 3 documents per request, 10 MB, Word files, 10 saved templates, reminders and signing order. Professional is $15 per user a month ($144 a year): 50 signers and 10 documents per request, 15 MB, OTP phone verification, bulk send, teams and the eSign API. Annual billing saves 20% and paid plans carry a 14-day trial. The API has a free developer account with unlimited test requests; production costs from $0.30 per signed document and requires Professional, whose card includes 50 free API sign requests before that rate; completed test documents are watermarked. ISO/IEC 27001:2022-certified and AATL, legally binding in the US, UK and EU.",
+  "verified_at": "2026-10-20",
   "source_url": null
  },
  "free_plan": true,
- "free_plan_evidence": "(re-verified 2026-08-17 and re-read unchanged 2026-09-27 against QuickSigner's own machine-readable pricing page and pricing table) Personal is free: 5 documents a month, 3 signers and 1 document per request, 5 MB maximum, PDF only, with signature and stamp fields and AATL sealing.",
+ "free_plan_evidence": "(re-verified 2026-08-17, re-read 2026-09-27 and again 2026-10-20 against QuickSigner's own pricing table and llms.txt) Personal is free: 5 documents a month, 3 signers and 1 document per request, 5 MB maximum, PDF only, with signature and stamp fields and AATL sealing.",
  "cost_traps": [
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "Business is $5 per user a month ($48 a year) and is where documents become unlimited — 10 signers and 3 documents per request, 10 MB, Word files, 10 saved templates, reminders and signing order.",
-   "verified_at": "2026-09-27",
-   "source_url": null
-  },
-  {
-   "id": "usage_metered",
-   "label": "Usage-metered",
-   "evidence": "The API has a free developer account with unlimited test requests; production costs from $0.30 per signed document and requires Professional, whose card includes 50 free API credits before that rate; completed test documents are watermarked.",
-   "verified_at": "2026-09-27",
+   "verified_at": "2026-10-20",
    "source_url": null
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "Annual billing saves 20% and paid plans carry a 14-day trial.",
-   "verified_at": "2026-09-27",
+   "verified_at": "2026-10-20",
    "source_url": null
   }
  ],
@@ -87,14 +64,395 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "personal",
+     "name": "Personal",
+     "model": "free",
+     "evidence": "Personal is free: 5 documents a month"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "monthly": 5,
+     "annual_year": 48,
+     "evidence": "Business is $5 per user a month ($48 a year)"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "monthly": 15,
+     "annual_year": 144,
+     "evidence": "Professional is $15 per user a month ($144 a year)"
+    }
+   ],
+   "not_computable": [
+    "API production signing from $0.30 per signed document on Professional, after the included free API sign requests."
+   ],
+   "rules_verified_at": "2026-10-20"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "quicksigner",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 4.0,
+       "professional": 12.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 8.0,
+       "professional": 24.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 12.0,
+       "professional": 36.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 20.0,
+       "professional": 60.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 40.0,
+       "professional": 120.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 60.0,
+       "professional": 180.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 80.0,
+       "professional": 240.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 100.0,
+       "professional": 300.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 200.0,
+       "professional": 600.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 400.0,
+       "professional": 1200.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "API production signing from $0.30 per signed document on Professional, after the included free API sign requests."
+    ]
+   },
+   "monthly": {
+    "product_id": "quicksigner",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 5.0,
+       "professional": 15.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 10.0,
+       "professional": 30.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 15.0,
+       "professional": 45.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 25.0,
+       "professional": 75.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 50.0,
+       "professional": 150.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 75.0,
+       "professional": 225.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 100.0,
+       "professional": 300.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 125.0,
+       "professional": 375.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 250.0,
+       "professional": 750.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "personal",
+      "cheapest_plan_name": "Personal",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": 0.0,
+       "business": 500.0,
+       "professional": 1500.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "API production signing from $0.30 per signed document on Professional, after the included free API sign requests."
+    ]
+   }
+  }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "task_evidence": null,
@@ -118,9 +476,9 @@
    "status": "open"
   },
   {
-   "question_id": "quicksigner:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "quicksigner:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: API production signing from $0.30 per signed document on Professional, after the included free API sign requests. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

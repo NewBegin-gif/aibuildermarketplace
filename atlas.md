@@ -1627,7 +1627,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/imagify-review/
 
 ## Imgify (effectify.io)
-- **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/custom-falling-effect) Billed in USD, with recurring charges billed every 30 days.
+- **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/custom-falling-effect; re-verified 2026-10-20 on the same listing, unchanged) Billed in USD, with recurring charges billed every 30 days.
 - **Honest take:** The free plan is development and partner stores only, so a real storefront pays $2.99 from the first day after a 7-day trial, while a free app in the same category has a far deeper public record.
 - **Best for:** shopify stores that want their own logo falling down the page, or a marquee of partner, payment and press logos, rather than generic snow
 - **Full review:** https://aibuildermarketplace.com/b2b/imgify-review/
@@ -2787,7 +2787,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/section-library-review/
 
 ## Securify (securification.ai)
-- **Verified pricing:** (re-verified 2026-09-20 on apps.shopify.com/easy-block-customer-ip-country) Free plan plus three paid tiers, unchanged since the readings of 18 August and 13 September 2026.
+- **Verified pricing:** (re-verified 2026-10-20 on apps.shopify.com/easy-block-customer-ip-country) Free plan plus three paid tiers, unchanged since the readings of 18 August, 13 September and 20 September 2026.
 - **Honest take:** Blocking by country and IP is a blunt instrument and it cuts both ways: every rule that keeps out a fraudster also keeps out a customer travelling, using a corporate VPN, or living behind a carrier NAT.
 - **Best for:** stores seeing real fraud or bot traffic that want country, IP, VPN and email-risk rules plus automatic holds on suspicious orders, and who will review the block log rather than set and forget
 - **Flags:** Free tier
@@ -2815,7 +2815,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/selixer-review/
 
 ## Selleasy (logbase.io)
-- **Verified pricing:** (prices read 2026-09-19 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/products/shopify-upsell-app-selleasy) Billed in USD.
+- **Verified pricing:** (prices read 2026-09-19 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/products/shopify-upsell-app-selleasy; re-verified 2026-10-20 on logbase.io/selleasy/pricing) Billed in …
 - **Honest take:** The meter is your whole store, not the app.
 - **Best for:** shopify stores that want bundles, add-ons, cart funnels and post-purchase offers out of one app and would rather be billed on order volume than hand over a share of the upsell revenue
 - **Flags:** Usage-metered, Free tier

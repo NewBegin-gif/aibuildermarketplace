@@ -3171,6 +3171,30 @@
   },
   {
    "source": "session",
+   "product_name": "Help Scout",
+   "product_id": "help-scout",
+   "run_date": "2026-10-20",
+   "what": "Tested by our team on 20 October 2026: Daan created the account and our AI assistant finished the onboarding and ran the test in his browser. The sign-up put the account on a Plus trial, so we first logged two phone notes on a made-up customer and added tags and saved replies, then switched the account to Free and pushed tags and saved replies past the documented limit of 10.",
+   "findings": [
+    "Signing up did not start on Free. The account landed on a Plus trial ('Trial Period Oct 20 - Nov 03', 1 user, $54/user, 'First monthly payment on Nov 4, 2026') plus a 92-day AI Answers trial, without asking for a payment card.",
+    "Switching to Free needed two clean-ups first. Free allows no private Docs site, so the empty knowledge base Help Scout had created had to be made public, and Free allows 0 workflows, so the two '[Try me]' example workflows had to be deleted. The confirmation screen then listed the Free limits, including 10 tags and 10 saved replies.",
+    "The 10-tag limit was not enforced right after the switch: an eleventh tag was accepted without any message and Settings > Tags showed '11 tags'. Only a lighter style on the conversation set it apart. Two of the ten were 'welcome' and 'practice', which Help Scout had created itself.",
+    "The 10-saved-reply limit was enforced, but with a generic error: 'Could not create saved reply draft' when opening a new one and 'Could not create saved reply' when saving, with no mention of a limit. An example reply Help Scout added counted as one of the ten.",
+    "Editing a saved reply worked: changing only the number of warranty days from 37 to 41 left the rest of the text unchanged after a reload.",
+    "Two phone notes for the same email address joined one customer profile, and the second showed the first in the sidebar. Help Scout filled in the company on its own ('Internet Assigned Numbers Authority' for example.com), and timestamps did not follow our Europe/Amsterdam time zone: 5:53 am was shown at 07:53 local time."
+   ],
+   "not_tested": [
+    "A real email connection (no mailbox was connected)",
+    "AI Answers",
+    "The Docs site"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "UserTrail",
    "product_id": "usertrail",
    "run_date": "2026-10-09",
@@ -3392,6 +3416,33 @@
   },
   {
    "source": "session",
+   "product_name": "Miro",
+   "product_id": "miro",
+   "run_date": "2026-10-20",
+   "what": "Tested by our team on 20 October 2026 on a new free account: Daan created the team and our AI assistant ran the test in his browser. We added five sticky notes (one by hand, four with bulk mode), aligned them, exported them to CSV and as an image, and created boards until the free plan's limit appeared.",
+   "findings": [
+    "A new free team opened with a ready-made 'My First Board' and a 'Free plan' label, so one board already counts toward the limit before you start.",
+    "The free plan did not block a fourth board. Creating it showed 'You've reached the limit of three editable boards' and 'My First Board will become view-only', with the choice 'Create team board' or 'Upgrade'; we did not click through. The limit is three editable boards, and a new one turns the oldest read-only.",
+    "The first click on '+ Create' opened a 14-day Business trial offer, which 'Maybe later' closed. Each new board said it was shared with all members of the team.",
+    "Bulk mode is not in the sticky-note menu but under + (Tools) when you search for 'bulk'. Four lines became four stickies in a 2x2 grid, smaller than a single sticky.",
+    "The Align menu has 8 options. Top-aligning the 2x2 grid stacked the stickies on top of each other, and distributing kept the old width, so the overlap stayed; that menu has no automatic spacing.",
+    "Export to CSV gave a 53-byte file (UTF-8 with BOM): one column, no header row, TEST-01 to TEST-05 once each, and no colour, position or structure.",
+    "Image export on Free offered only Small: a 2449 x 1632 px JPG of 81 kB with no visible watermark and sharp text. Medium, Large, vector PDF and SVG sat behind Upgrade, and the default export frame cut off the left edge of the first sticky."
+   ],
+   "not_tested": [
+    "Collaboration with several members and the price per member (this was a single-user test)",
+    "Whether the view-only board becomes editable again after another board is deleted",
+    "Miro AI (the panel was open but not used)",
+    "Cluster objects and automatic arranging",
+    "Integrations and templates"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Descript",
    "product_id": "descript",
    "run_date": "2026-09-30",
@@ -3475,6 +3526,31 @@
     "Onboarding is compulsory and is itself an involve.me funnel embedded in the app — four questions, carrying the “Made with involve.me” badge. You cannot reach the builder until you finish it. One of the answer options for “How did you discover involve.me?” is “AI - Claude”."
    ],
    "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Murf",
+   "product_id": "murf",
+   "run_date": "2026-10-20",
+   "what": "Tested by our team on 20 October 2026 on the free Studio trial: Daan created the account and our AI assistant ran the test in his browser. We generated a two-sentence script ('Dr. Maya Chen checked seventeen cobalt valves in Rotterdam. The warranty lasts thirty-seven days.'), replayed it, changed only the speed, then changed only one word, reading the voice-generation meter after each step, and opened the export dialog.",
+   "findings": [
+    "The script stayed in one sub-block. The default voice was Ruby (US English) in the 'Angry' style, and the meter started at 00:10:00.",
+    "Three generations of 7.1, 6.4 and 6.3 seconds of audio (19.8 seconds in total) took the meter from 10:00 to 9:46, so 14 seconds of the free 10 minutes were used.",
+    "Replaying the same audio cost nothing: the meter stayed at 00:09:59.",
+    "The on-screen meter lags. After the one-word change it still showed 00:09:52, and only after a page reload did it show 00:09:46, so read it after reloading.",
+    "Because of that lag we cannot split the 14 seconds exactly per step. The most likely split, about 8 seconds for the first generation, nothing for the speed change and about 6 for the word change, fits Murf's help text: delivery settings on unchanged text are free, and a text edit regenerates the whole sub-block.",
+    "Downloads are blocked on the free trial. The export dialog lists MP3, WAV, FLAC, OGG and other formats up to 48 kHz, but has no download button, only 'Unlock unlimited downloads - You are on free plan' with 'Upgrade Plan'."
+   ],
+   "not_tested": [
+    "How the name, the place and the numbers were pronounced: our AI assistant cannot listen to the audio",
+    "Other voices and styles, pitch, pauses and emphasis",
+    "Paid plans and their quotas",
+    "Downloading, which is blocked on the free trial"
+   ],
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
@@ -3677,6 +3753,33 @@
    ],
    "not_tested": "One account, one morning, one run per task (two for the campaign). Real sends and deliverability, content performance with a send history and the limits of Starter and Plus remain untested.",
    "report": "/research/activecampaign-active-intelligence-new-account/",
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Frase",
+   "product_id": "frase",
+   "run_date": "2026-10-20",
+   "what": "Tested by our team on 20 October 2026 on the 7-day trial, with no card asked: Daan created the account and our AI assistant ran the test in his browser. We asked Frase for one article on 'how to organize a reusable packing checklist' for individual travellers, with three sections, no product tips, no prices and no invented statistics; we checked its key facts, rejected one claim, let it write, and looked at the score and the export options.",
+   "findings": [
+    "A site is required. Without one Frase said 'No sites configured. Add a site first to create content bound to it.' Adding our domain asked for no verification, and the website analysis could be skipped.",
+    "The brief overrode our instructions. Frase replaced our audience with 'Shopify Merchants, GTM Leaders, SaaS Operations Managers, Business Travelers', taken from the linked site, planned five sections instead of three, and added a step 'Select an Editable Packing Checklist Tool' with '3 tool recommendations'.",
+    "Its own source check worked: it marked a PubMed claim about working memory load as 'not on the page'. The outline still listed that claim as 'EVIDENCE TO INCLUDE - STAT, Source: National Institutes of Health'. We rejected it, and Frase then said it 'will not be claimed'.",
+    "The rejected claim appeared in the article anyway, now credited to the National Institutes of Health. Frase wrote the 935-word article in about a minute and a half.",
+    "The article also named five products (Todoist, Asana, Notion, Airtable, PackPoint) despite our 'no product recommendations', and used a business setting (trade show, booth, business cards) for an audience of individual travellers. It contained no percentages or prices.",
+    "One article took the trial counter from 5 to 4 articles. The editor scored the draft 64, with 4 of 5 sections, 80% coverage, 0 links and 0 images.",
+    "Export in the trial covers HTML, PDF, Markdown and plain text downloads, Notion and Google Docs, plus 'Repurpose Content' for LinkedIn and Instagram carousels, an X thread and a newsletter. We did not download anything."
+   ],
+   "not_tested": [
+    "Optimize Existing, Import Brief and Start from scratch",
+    "SEO Analytics and the Search Console connection",
+    "The site audit (50 pages in the trial)",
+    "Applying a checklist suggestion and measuring the score change",
+    "Use without a linked site, which is not possible because a site is required"
+   ],
+   "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true

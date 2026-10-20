@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 559 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-19.
+All 564 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-20.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -238,6 +238,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/assembly-review/
 
+## Assortion (assortion.com)
+- **Verified pricing:** (read 2026-10-15 on assortion.com/pricing and the Shopify App Store listing apps.shopify.com/assortion, prices in USD) Assortion has one feature set and charges by the size of your store: t…
+- **Honest take:** Price follows total store orders, not upsell sales.
+- **Best for:** Shopify stores that want upsells, cross-sells, product add-ons and cart customization in one app at a flat price that grows with order volume rather than as a share of upsell revenue
+- **Full review:** https://aibuildermarketplace.com/b2b/assortion-review/
+
 ## Atlas AI Store Builder (helloatlas.io)
 - **Verified pricing:** (re-verified 2026-10-09 on apps.shopify.com/dropshipt and helloatlas.io; first read 2026-08-18) The listing says “Free to install”, but that is the development-store tier.
 - **Honest take:** The meter runs on your success, not your usage.
@@ -265,6 +271,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** stores already running Klaviyo or Omnisend at volume, with enough traffic for identity resolution to work and a recovery figure they can check against their own email platform before a 10% share of it becomes the bill
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/attribuly-review/
+
+## Audionotes (audionotes.app)
+- **Verified pricing:** (read 2026-10-15 on audionotes.app/pricing, the terms at audionotes.app/tos and the refund policy; the page shows $ without naming a currency) Three plans on the pricing page.
+- **Honest take:** Free voice notes stop at 1 minute; paid plans are non-refundable.
+- **Best for:** individual professionals, students and journalers who want voice memos, recordings, files and YouTube videos turned into transcripts, summaries and notes they can chat with, on phone, web and Mac
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/audionotes-review/
 
 ## Audiorista (audiorista.com)
 - **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps.
@@ -393,6 +406,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The honest caveats are crypto-wide, not Bitvavo-specific: fees are only part of the cost (spread matters on small orders), and no exchange removes market risk.
 - **Best for:** EU-based traders and builders who want a MiCA-regulated, euro-native exchange with low tiered fees, deep EUR pairs and a solid API for automation
 - **Full review:** https://aibuildermarketplace.com/b2b/bitvavo-review/
+
+## Bizee (bizee.com)
+- **Verified pricing:** (read 2026-10-15 on bizee.com and its registered agent and cancellation pages; the cards show $ without naming a currency) Three formation packages, each a one-time payment plus your state'…
+- **Honest take:** State fee on top; registered agent free only in year one.
+- **Best for:** first-time US founders and side-hustlers who want an LLC or corporation filed for them for little more than the state fee, with a registered agent included for the first year
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/bizee-review/
 
 ## Blinq (blinq.me)
 - **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) Free forever for individuals (2 cards, unlimited QR sharing).
@@ -1736,6 +1756,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/keap-review/
 
+## Kedra Checkout Rules & Upsells (kedra.io)
+- **Verified pricing:** (read 2026-10-15 on the Shopify App Store listing apps.shopify.com/kedra-checkout-rules-1, prices in USD) Four plans, billed through your Shopify invoice.
+- **Honest take:** Free runs one rule; rules skip draft orders.
+- **Best for:** Shopify merchants who want to hide, rename or reorder payment and shipping methods, validate the checkout and add post-purchase upsells with rules instead of a developer, for a few dollars a month
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/kedra-checkout-rules-upsells-review/
+
 ## Keeper Security (keepersecurity.com)
 - **Verified pricing:** (re-verified 2026-09-17 and again on 2026-10-04 on their own business and add-on pricing pages, reading the US price list; every amount unchanged) Three business tiers, all billed annually:…
 - **Honest take:** Add-ons are priced per user per year — BreachWatch and KeeperChat $24 each, reporting $12 each — so a Business seat at $4.00 a month can quietly double, and billing is annual only.
@@ -2921,6 +2948,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small and mid-size teams and recruitment agencies that get more applicants than they can screen and want an AI to run the first-round interview and score each candidate
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/shortlistiq-review/
+
+## Signable (signable.com)
+- **Verified pricing:** (read 2026-10-20 on signable.com/plans, prices in pounds plus VAT; the EU page signable.com/plans-eu was read on 2026-10-15) Signable prices by the envelope, not by the user: every plan has…
+- **Honest take:** Unused envelopes expire; the overage fee is not published.
+- **Best for:** UK and European small and mid-sized businesses that send contracts, agreements and forms for signature and want to pay by the document rather than by the user, with UK-hosted data
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/signable-review/
 
 ## Signal House (signalhouse.io)
 - **Verified pricing:** (2026-09-11, re-read on their own pricing page and again on 13 October 2026) Usage-based, no platform subscription.

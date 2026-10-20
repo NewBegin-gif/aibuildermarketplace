@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "built_at": "2026-10-19T21:13:57Z",
+ "built_at": "2026-10-20T05:31:54Z",
  "about": "Reader offers and vendor offers on our deal pages, one record each. verification_status says whether the vendor confirmed it; checkout_tested_at stays null because we do not test offers at a checkout. expires_at is UTC; compare it with the current time yourself, time_status_at_build is only the state when this file was built. null means the vendor did not say, never 'no limit'. Opening handoff_url is not an activation or a purchase.",
  "offer_types": {
   "price_discount": "Price discount",
@@ -132,6 +132,69 @@
    ],
    "version": "6b1d0b60c0",
    "time_status_at_build": "no_deadline_known"
+  },
+  {
+   "offer_id": "close-reader-offer",
+   "product_id": "close",
+   "product": "Close",
+   "offer_type": "price_discount",
+   "type_label": "Price discount",
+   "benefit": "An extra 20% off the first year on annual billing",
+   "duration": "First year; renews at the standard rate",
+   "code": "STACK20",
+   "claim_mechanism": "code",
+   "claim_steps": "Choose annual billing and enter the code STACK20 at checkout.",
+   "limits": [
+    "Annual billing only; monthly billing gets nothing",
+    "New customers, first year only",
+    "One code per customer; cannot be combined with other discounts",
+    "Close publishes the code itself, so it is not exclusive to our readers"
+   ],
+   "eligibility": {
+    "customer": "new",
+    "plans": null,
+    "billing": [
+     "annual"
+    ],
+    "regions": null
+   },
+   "structure": {
+    "kind": "first_billing",
+    "percent": 20
+   },
+   "starts_at": null,
+   "expires_at": "2027-01-01T11:59:59Z",
+   "expires_as_stated": "31 Dec 2026 (the vendor gave no time or time zone)",
+   "evidence": {
+    "kind": "vendor_public_page",
+    "by": "Close",
+    "via": "close.com/stack-your-savings (read 20 Oct 2026) and Michael Taylor via PartnerStack, 19 Oct 2026",
+    "summary": "Stated on Close's own offer page and confirmed in writing, 19 Oct 2026"
+   },
+   "confirmed_at": "2026-10-19",
+   "checked_at": "2026-10-20",
+   "verification_status": "vendor_confirmed",
+   "checkout_tested_at": null,
+   "stacking": "no",
+   "exclusive_to_our_readers": false,
+   "published_by_vendor": true,
+   "post_offer_price": null,
+   "terms": "An extra 20% off your first year on annual billing, for new customers, on top of what annual billing already saves. Close's partner team (Michael Taylor, via PartnerStack) sent us the code on 19 October 2026, and Close publishes the same code on its own page, close.com/stack-your-savings, which we read on 20 October 2026; that page says up to 60% off through December 31. Read the shape of it before you count on it: annual billing only, the first year only, so the normal rate applies at renewal, one code per customer, and it cannot be combined with other discounts; monthly billing gets nothing.",
+   "handoff_url": "https://refer.close.com/8sqpd69pa18l",
+   "affiliate": true,
+   "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
+   "test_before_you_pay": "Check that the checkout shows the extra 20% on top of the annual price before you pay for the year.",
+   "trial_kit": null,
+   "site_membership": [
+    "aibm",
+    "mss"
+   ],
+   "shown_on": [
+    "https://aibuildermarketplace.com/deals/#q=close",
+    "https://marketingandsalessoftware.com/deals.html#q=close"
+   ],
+   "version": "7e25c5c65e",
+   "time_status_at_build": "active"
   },
   {
    "offer_id": "cloudways-reader-offer",

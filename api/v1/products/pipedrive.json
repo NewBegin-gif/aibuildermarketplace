@@ -9,7 +9,7 @@
  "summary": "Sales-first CRM built around a visual pipeline: track deals, automate follow-ups and forecast revenue — designed for small and mid-size sales teams. A native MCP server (launched mid-2026) connects it to AI assistants like ChatGPT and Claude for natural-language CRM actions.",
  "best_for": "sales teams that want a simple, visual pipeline they can use on day one, with a separate marketing tool already in place",
  "skip_if": "you want marketing automation in the same tool (HubSpot) or need built-in outbound prospecting",
- "honest_knock": "Pipedrive manages what happens after a lead enters your pipeline — it doesn't do outbound prospecting or marketing, so you'll pair it with a separate tool for that. As you scale and need sales, marketing and support data joined up, its sales-only focus starts to lean on add-ons.",
+ "honest_knock": "Pipedrive manages what happens after a lead enters your pipeline — it doesn't do outbound prospecting or marketing, so you'll pair it with a separate tool for that. As you scale and need sales, marketing and support data joined up, its sales-only focus starts to lean on add-ons. In our test on 21 October 2026 the trial ran on Premium, the €79-a-seat monthly plan, so list the features you used before you settle on a cheaper seat.",
  "pricing": {
   "status": "public",
   "entry_price": "€14",
@@ -559,15 +559,43 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does."
  ],
  "verification": {
   "price": "quoted",
   "free_trial": "quoted",
   "refund": "quoted"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Pipedrive",
+    "product_id": "pipedrive",
+    "run_date": "2026-10-21",
+    "what": "Tested by our team on 21 October 2026 during the 14-day trial, which ran on the Premium plan: Daan created the account with a work email address and our AI assistant ran the test in Daan's browser. We created three deals, moved one to the next stage, won one and lost one, scheduled a task, ticked it off and looked at the export options.",
+    "findings": [
+     "Sign-up accepted our work email address and opened with a ready-made pipeline 'tailored for your industry' (Qualified, Demo Scheduled, Demo Completed, Proposal Made, Negotiations, Contract Signed), amounts in euros and a 'Try with sample data' button. A 'Call me soon' button for a sales call stayed on screen.",
+     "Billing showed 'YOUR PLAN Premium' at €79 per seat billed monthly after the '14-day free trial' (€0 during the trial), with LeadBooster, Smart Docs and Projects included and Campaigns, Automations, Reports and a 'Leads and Deals top-up' sold separately. No card was needed to start.",
+     "The new-deal form showed a counter of 0/15,000 that went up with every deal we added: the deals in the account against a limit of 15,000.",
+     "Marking a deal Won opened a congratulations screen with suggestions for a follow-up; marking one Lost required a 'Lost reason' before it would close.",
+     "A task for the next day appeared under Focus as 'Tomorrow'. Ticking it off showed 'Activity marked as done' and opened 'Schedule your next activity' straight away, already linked to the same deal and organisation.",
+     "Tools and apps > Export data offers leads, deals, organisations, people, products, activities, projects, notes and files, as Excel or CSV. The same menu lists 'Pipedrive AI', and the account menu a 'Pipedrive MCP'."
+    ],
+    "not_tested": [
+     "The export itself (we did not download a file), and filters on won and lost deals",
+     "What stays available on a cheaper plan after the Premium trial",
+     "LeadBooster, Campaigns, email sync, automations and Pipedrive AI",
+     "Several users and their permissions"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "pipedrive:cancellation_terms",

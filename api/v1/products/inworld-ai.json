@@ -1,0 +1,151 @@
+{
+ "schema_version": "1.0",
+ "id": "inworld-ai",
+ "name": "Inworld AI",
+ "research_status": "researched",
+ "vendor_domain": "inworld.ai",
+ "category": "Content & Media",
+ "task": null,
+ "summary": "Voice and model APIs for developers building consumer apps: realtime text-to-speech, speech-to-text, voice cloning and realtime conversation, pay as you go or on monthly plans.",
+ "best_for": "developers and product teams building consumer apps with realtime voice, who want text-to-speech, speech-to-text and voice cloning through one API and can start pay as you go before committing to a plan",
+ "skip_if": "you want a finished voiceover tool with an editor rather than an API; or you need guaranteed zero data retention on a mid-tier plan, which the docs tie to Enterprise",
+ "honest_knock": "The bill is usage on top of the plan, counted on every input character including spaces, punctuation and tags. Credits roll over only while you stay subscribed, cancelling or downgrading forfeits the rest, and payments are non-refundable. The pricing page and the docs disagree on whether zero data retention is a Growth add-on or Enterprise only, and it does not cover requests sent to third-party model providers.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$25",
+  "entry_price_terms": "Creator · billed monthly",
+  "from_price_usd_month": 25.0,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 2026-10-15 on inworld.ai/pricing, the billing and concurrency pages of docs.inworld.ai and the terms at inworld.ai/terms; the page shows $ without naming a currency) Inworld sells voice and model APIs: text-to-speech, speech-to-text and realtime conversation. On-Demand is $0 and pay as you go: the billing docs say it includes up to 70 minutes of text-to-speech and 400 minutes of speech-to-text free, after which Realtime TTS-2 costs $25 per million input characters, TTS-2 Flash $15 and STT 1 $0.15 an hour of audio. The monthly plans lower those rates and raise the limits. Creator is $25 a month, with 500 custom voices and 4 professional clones, TTS-2 at $20 and Flash at $10 per million characters. Builder is $100 a month, with 3,000 voices and 10 clones, TTS-2 at $17.50 and Flash at $9. Developer is $300 a month, with 10,000 voices, 25 clones and priority email, TTS-2 at $15 and Flash at $8. Growth is $1,500 a month, with 30,000 voices and 40 clones, TTS-2 at $12.50 and Flash at $7, and lists zero data retention, HIPAA and a BAA as add-ons. Speech-to-text is $0.10 an hour on every paid plan. Enterprise has custom prices, limits and terms. Paid plans come with credits used across API and Playground products; subscription credits roll over for up to 3 months while an eligible paid plan stays active, and extra credits, bought by hand or by auto-reload, expire a year after purchase. The pricing page also has a yearly view with lower monthly figures, which we did not confirm. Text-to-speech is counted on input characters, including spaces, punctuation and tags that are not spoken.",
+  "verified_at": "2026-10-15",
+  "source_url": "https://inworld.ai/pricing",
+  "source_quotes": [
+   {
+    "field": "price",
+    "plan": "Growth",
+    "quote": "$1,500/mo",
+    "source_url": "https://inworld.ai/pricing",
+    "read_on": "2026-10-15"
+   },
+   {
+    "field": "price",
+    "plan": "On-Demand — STT 1 usage",
+    "quote": "$0.15/hr",
+    "source_url": "https://inworld.ai/pricing",
+    "read_on": "2026-10-15"
+   },
+   {
+    "field": "price",
+    "plan": "Creator — STT 1 usage",
+    "quote": "$0.10/hr",
+    "source_url": "https://inworld.ai/pricing",
+    "read_on": "2026-10-15"
+   },
+   {
+    "field": "refund",
+    "plan": null,
+    "quote": "Payments are non-refundable, except where required by law.",
+    "source_url": "https://inworld.ai/terms",
+    "read_on": "2026-10-15"
+   }
+  ]
+ },
+ "free_plan": true,
+ "free_plan_evidence": "On-Demand is $0 and pay as you go: the billing docs say it includes up to 70 minutes of text-to-speech and 400 minutes of speech-to-text free, after which Realtime TTS-2 costs $25 per million input characters, TTS-2 Flash $15 and STT 1 $0.15 an hour of audio.",
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "Paid plans come with credits used across API and Playground products; subscription credits roll over for up to 3 months while an eligible paid plan stays active, and extra credits, bought by hand or by auto-reload, expire a year after purchase.",
+   "verified_at": "2026-10-15",
+   "source_url": "https://inworld.ai/pricing"
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Growth is $1,500 a month, with 30,000 voices and 40 clones, TTS-2 at $12.50 and Flash at $7, and lists zero data retention, HIPAA and a BAA as add-ons.",
+   "verified_at": "2026-10-15",
+   "source_url": "https://inworld.ai/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "ElevenLabs",
+  "why": "ElevenLabs is in our dossiers too and is the broader voice platform, with voiceovers, dubbing, audiobooks and conversational agents next to its API: its cheapest paid tier, Starter, was $6 a month billed monthly when we read it on 23 September 2026, the first with a commercial licence. Inworld is narrower and built for developers, priced as pay as you go from $0 or plans from $25 a month with per-character rates that fall as you move up. For creating voice content, look at ElevenLabs; for putting realtime voice into your own app at volume, compare Inworld's per-character rates."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/inworld-ai.json",
+  "review": "https://aibuildermarketplace.com/b2b/inworld-ai-review/",
+  "marketplace": null,
+  "vendor_site": "https://inworld.ai"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://get.platform.inworld.ai/by4w26u4f8p1",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
+  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+ ],
+ "verification": {
+  "price": "quoted",
+  "free_trial": "being_verified",
+  "refund": "quoted"
+ },
+ "task_evidence": null,
+ "open_questions": [
+  {
+   "question_id": "inworld-ai:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "inworld-ai:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "inworld-ai:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "inworld-ai:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": [],
+ "agent_channels": {
+  "vendor_mcp": null,
+  "agent_checkout": {
+   "status": "not_checked",
+   "detail": "We could not read the vendor's pages as plain HTML.",
+   "checked_at": "2026-10-07",
+   "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
+  }
+ }
+}

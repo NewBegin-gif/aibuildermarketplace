@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 564 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-20.
+All 568 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-21.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1087,6 +1087,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/easydmarc-review/
 
+## eBillity (ebillity.com)
+- **Verified pricing:** (read 2026-10-15 on ebillity.com/pricing with USD selected, plus the FAQ and the terms of service updated 18 March 2026) eBillity sells four plans per user, and the pricing page says annual…
+- **Honest take:** Base fee on two plans; fees are non-refundable.
+- **Best for:** service businesses, payroll-focused teams and law firms that want employee time tracking, client billing and payroll exports in one tool, priced per user with free payroll and accounting integrations
+- **Flags:** Per-seat pricing, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/ebillity-review/
+
 ## EcomXray (ecomxray.io)
 - **Verified pricing:** (re-verified 17 October 2026 on apps.shopify.com/ecomxray; unchanged since 21 August 2026) Two tiers.
 - **Honest take:** The split between the two tiers is unusually clean, and worth seeing clearly: everything this app is described as doing, the margins, the net units, the restock advice, is free.
@@ -1113,6 +1120,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators, developers and product teams that want the most realistic AI voices available — voiceovers, audiobooks, dubbing, conversational agents and a well-documented API
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/elevenlabs-review/
+
+## EliteCart (elitecart.app)
+- **Verified pricing:** (read 2026-10-15 on the Shopify App Store listing apps.shopify.com/elite-cart-upsell and elitecart.app/pricing, prices in USD) Two published plans and one on request, with no free plan.
+- **Honest take:** No free plan; the volume ladder above 200 orders is unpublished.
+- **Best for:** Shopify stores that want a designed cart drawer with one-click add-ons, a reward bar and in-cart upsells, from a single-language store on Essentials to a multilingual store with targeted upsell flows on Professional
+- **Full review:** https://aibuildermarketplace.com/b2b/elitecart-review/
 
 ## EmailListVerify (emaillistverify.com)
 - **Verified pricing:** (re-verified 2026-08-31 on emaillistverify.com/pricing, read from the page's own JSON-LD offer data) Pay-as-you-go credits that never expire: 1,000 for $5 ($0.005/check), 5,000 for $17 ($0.…
@@ -1693,6 +1706,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** marketers building interactive lead-gen — quizzes, calculators, assessments and payment funnels with built-in email sequences — who want a free tier to validate the concept first
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/involve-me-review/
+
+## Inworld AI (inworld.ai)
+- **Verified pricing:** (read 2026-10-15 on inworld.ai/pricing, the billing and concurrency pages of docs.inworld.ai and the terms at inworld.ai/terms; the page shows $ without naming a currency) Inworld sells voi…
+- **Honest take:** Usage billed per input character; unused credits forfeit on cancel.
+- **Best for:** developers and product teams building consumer apps with realtime voice, who want text-to-speech, speech-to-text and voice cloning through one API and can start pay as you go before committing to a plan
+- **Flags:** Usage-metered, Add-ons extra, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/inworld-ai-review/
 
 ## iubenda (iubenda.com)
 - **Verified pricing:** (read 2026-10-09 on iubenda.com/en/pricing, browser render plus the page source for the monthly and USD figures; prices exclude VAT) All plans are priced per site per month; yearly billing …
@@ -2628,6 +2648,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Google Calendar teams that want AI to auto-schedule tasks, habits and meetings around their priorities
 - **Flags:** Per-seat pricing, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/reclaim-ai-review/
+
+## Redeemly (redeemly.ai)
+- **Verified pricing:** (read 2026-10-15 on Redeemly's pricing article in its help centre, the Shopify App Store listing apps.shopify.com/cashback-redeemly and redeemly.ai; prices in USD) Redeemly has one product …
+- **Honest take:** Priced by total store orders; fees are non-refundable.
+- **Best for:** Shopify stores that want to give cashback as Shopify's own store credit to bring customers back, starting free under 50 orders a month and paying a small flat fee as order volume grows
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/redeemly-review/
 
 ## Reditus (getreditus.com)
 - **Verified pricing:** (re-verified 2026-10-07; figures unchanged since 2026-08-17) 14-day free trial, no credit card.

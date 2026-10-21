@@ -19,7 +19,7 @@
   },
   "notes": "Prices are the entry prices we found at research time; always check live pricing. Every flag carries the evidence sentence from our hand-researched dossier.",
   "tool_count": 568,
-  "flag_count": 930
+  "flag_count": 932
  },
  "tools": [
   {
@@ -3514,12 +3514,12 @@
    "entry_price": "$12",
    "entry_price_terms": "a month, billed annually ($20 billed monthly)",
    "pricing_status": "public",
-   "price_note": "(re-verified 28 September 2026 in a rendered browser, monthly and annual tabs) Free: $0, 10 Pro messages and up to 3 Deep reviews a month. Pro: $20 a month billed monthly, or $12 a month billed annually ($144 a year), with unlimited Pro messages, 15 Deep reviews a month and 500 API and MCP uses included, then $0.05 a use up to 1,000. Deep: $65 monthly, or $45 a month billed annually ($540 a year), with 200 Deep reviews and 2,000 API and MCP uses, then $0.05 a use up to 10,000. Students and faculty with a school email and US healthcare professionals with an NPI number can get up to 40% off. Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and it still gives Free 15 Pro messages where the rendered page says 10. The unit that matters is Deep reviews rather than seats. Correction: our earlier reading, which we could not confirm at the time, put Pro at about $15 a month or roughly $10 annually.",
+   "price_note": "(re-verified 28 September 2026 in a rendered browser, monthly and annual tabs) Free: $0, 10 Pro messages and up to 3 Deep reviews a month. Pro: $20 a month billed monthly, or $12 a month billed annually ($144 a year), with unlimited Pro messages, 15 Deep reviews a month and 500 API and MCP uses included, then $0.05 a use up to 1,000. Deep: $65 monthly, or $45 a month billed annually ($540 a year), with 200 Deep reviews and 2,000 API and MCP uses, then $0.05 a use up to 10,000. Students and faculty with a school email and US healthcare professionals with an NPI number can get up to 40% off. Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and on 28 September it still gave Free 15 Pro messages where the rendered page said 10; re-read on 21 October 2026, that file has been aligned at 10 Pro messages and 3 Deep Searches a month, and it describes the student discount as 40% off for 12 months with a verified .edu or student email. The unit that matters is Deep reviews rather than seats. Correction: our earlier reading, which we could not confirm at the time, put Pro at about $15 a month or roughly $10 annually. The paid amounts are rendered in the browser from Stripe and could not be re-read on 21 October 2026 without one, so the dollar figures above still date from 28 September.",
    "flags": [
     {
      "flag": "per_seat",
-     "evidence": "Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and it still gives Free 15 Pro messages where the rendered page says 10.",
-     "evidence_excerpt": "Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and it still gives …",
+     "evidence": "Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and on 28 September it still gave Free 15 Pro messages where the rendered page said 10; re-read on 21 October 2026, that file has been aligned at 10 Pro messages and 3 Deep Searches a month, and it describes the student discount as 40% off for 12 months with a verified .edu or student email.",
+     "evidence_excerpt": "Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and on 28 September…",
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
      "verified_at": "2026-09-28"
@@ -4710,10 +4710,19 @@
    "entry_price": "$250",
    "entry_price_terms": "a month (page markup also shows an unlabeled alternate $8 figure)",
    "pricing_status": "public",
-   "price_note": "(re-verified 2026-08-21 and again unchanged on 2026-09-28, read on their own pricing page) The prices are published, despite the consultative first impression, and the report figures have not moved since our 12 August reading. An Elevate Insight Report is $500, a bundle of three is $1,350 at a 10% discount, and the Elevate Studio tiers render at $250, $500 and $750 a month. Those three are Elevate Strategy, Elevate Execution and Business Enablement, the last still marked coming soon. A report is scoped to one focus area you choose, delivered within five business days of submission, with up to two rounds of feedback-based adjustments and a review consultation included. Treat the monthly figures as provisional: each price sits in a pair of spans whose second value reads $1,500 per report. For the three monthly tiers those second values are $8, $16 and $149. The page carries no visible label for either state, so which figure a given buyer is shown cannot be settled from the markup.",
-   "flags": [],
+   "price_note": "(re-verified 2026-08-21 and again unchanged on 2026-09-28, read on their own pricing page) The prices are published, despite the consultative first impression, and the report figures have not moved since our 12 August reading. An Elevate Insight Report is $500, a bundle of three is $1,350 at a 10% discount, and the Elevate Studio tiers render at $250, $500 and $750 a month. Those three are Elevate Strategy, Elevate Execution and Business Enablement, the last still marked coming soon. A report is scoped to one focus area you choose, delivered within five business days of submission, with up to two rounds of feedback-based adjustments and a review consultation included. Treat the monthly figures as provisional: each price sits in a pair of spans whose second value reads $1,500 per report. For the three monthly tiers those second values are $8, $16 and $149. The page carries no visible label for either state, so which figure a given buyer is shown cannot be settled from the markup. Re-read on 21 October 2026: the same $500, $1,350 and $250, $500 and $750 figures, with Business Enablement still coming soon. One detail moved in the markup: the Single Insight and Bundled Package cards lower down now pair their $500 and $1,350 with a second value of $149 a month instead of $1,500, while the report card at the top still pairs $500 with $1,500.",
+   "flags": [
+    {
+     "flag": "usage_metered",
+     "evidence": "Its privacy section says report-related data is retained for internal reference and refinement unless you ask for deletion, the terms provide the application 'as-is' with no uptime guarantee, liability is capped at what you paid (for the service over the prior twelve months, or for the specific credits or reports behind a claim), and disputes go to the courts of Travis County, Texas.",
+     "evidence_excerpt": "Its privacy section says report-related data is retained for internal reference and refinement unless you ask for deletion, the terms provide the application 'as-is' with no uptime guarantee, liabili…",
+     "source_url": null,
+     "evidence_field": "dossier pricing notes and honest knock",
+     "verified_at": "2026-10-21"
+    }
+   ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-28",
+   "price_verified_at": "2026-10-21",
    "first_observed_at": "2026-08-21"
   },
   {
@@ -4980,7 +4989,7 @@
    "entry_price": "$6.99",
    "entry_price_terms": "Starter · per month for up to 20,000 bar views, or $67.08 a year",
    "pricing_status": "public",
-   "price_note": "(read 2026-09-29 on apps.shopify.com/essential-announcement-bar, on essential-apps.com/announcement-bar and in the vendor's help articles on bar types and on views) Four plans priced on monthly bar views. Free covers up to 2,000 views a month with unlimited simple bars and unlimited rotating bars, each with a link or button. Starter is $6.99 a month, or $67.08 a year at a stated 20% saving, for up to 20,000 views, and adds running-line (scrolling marquee) bars and icons, including your own uploaded icons. Essential is $9.99 a month or $95.88 a year for up to 50,000 views, and adds cart-page bars, scheduling, geolocation targeting and translations. Professional is $29.99 a month or $287.88 a year for unlimited views and every premium feature. Paid plans carry a 7-day free trial. A view is counted every time a bar is rendered: per page load, not per visitor, and two bars on one page count twice. There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days your bars are unpublished; views reset on the 1st of the month, but the help centre says the bars are not published again automatically. All charges are in USD, billed through Shopify every 30 days. Developer Essential Apps, with an address in Vilnius, Lithuania; the listing gives a launch date of 9 August 2023 and shows 1,302 reviews.",
+   "price_note": "(read 2026-09-29 on apps.shopify.com/essential-announcement-bar, on essential-apps.com/announcement-bar and in the vendor's help articles on bar types and on views; plan prices, annual prices, view limits and the 7-day trial re-verified unchanged on the Shopify App Store listing on 2026-10-21) Four plans priced on monthly bar views. Free covers up to 2,000 views a month with unlimited simple bars and unlimited rotating bars, each with a link or button. Starter is $6.99 a month, or $67.08 a year at a stated 20% saving, for up to 20,000 views, and adds running-line (scrolling marquee) bars and icons, including your own uploaded icons. Essential is $9.99 a month or $95.88 a year for up to 50,000 views, and adds cart-page bars, scheduling, geolocation targeting and translations. Professional is $29.99 a month or $287.88 a year for unlimited views and every premium feature. Paid plans carry a 7-day free trial. A view is counted every time a bar is rendered: per page load, not per visitor, and two bars on one page count twice. There is no overage charge: past the limit you get an email, and if you do not upgrade within 3 days your bars are unpublished; views reset on the 1st of the month, but the help centre says the bars are not published again automatically. All charges are in USD, billed through Shopify every 30 days. Developer Essential Apps, with an address in Vilnius, Lithuania; the listing gives a launch date of 9 August 2023 and shows 1,302 reviews.",
    "flags": [
     {
      "flag": "free_tier",
@@ -4988,11 +4997,11 @@
      "evidence_excerpt": null,
      "source_url": "https://apps.shopify.com/essential-announcement-bar",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-29"
+     "verified_at": "2026-10-21"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-29",
+   "price_verified_at": "2026-10-21",
    "first_observed_at": "2026-09-29"
   },
   {
@@ -5720,7 +5729,7 @@
    "entry_price": "$39",
    "entry_price_terms": "per month billed yearly ($49 monthly), 1 seat, 1 site",
    "pricing_status": "public",
-   "price_note": "(re-verified 2026-10-03 against Frase's own machine-readable pricing file frase.io/pricing.md and the pricing page; every plan price below was unchanged from our 17 August and 14 September readings) The headline figure is the yearly rate; paying month to month costs about 25% more, and both are shown on the page. Starter $39/mo billed yearly against $49/mo monthly: 1 seat, 1 site, 10 articles and 50 audit pages a month, Content Guard watching 10 pages. Professional $103/mo yearly against $129/mo monthly: 3 seats, 5 sites, 40 articles and 250 audit pages, extra seats $29/mo. Scale $239/mo yearly against $299/mo monthly: 5 seats, up to 10 domains, 100 articles and 1,000 audit pages, Content Guard watching 300 pages, extra seats $29/mo. The trial is 7 days with no credit card. FraseCMS hosting is included free up to 100,000 page views a month; Basic at $19/mo on top of a paid plan raises that to 250,000, drops the Frase badge and lets the blog sit on your own domain or a subdirectory, and Pro is $99/mo at a million page views, with $1.00 and $0.50 per extra 1,000 page views and a spend cap set at the base price by default. On Starter, Frase stops at the limit rather than billing you extra; on Professional and Scale you can switch on pay-as-you-go capacity, so there the sticker price is a floor rather than a ceiling: Professional adds $5 per extra article, $0.50 per audit page and $0.25 per AI prompt, Scale $4, $0.40 and $0.20. API, MCP and CLI requests are capped at 5,000, 20,000 and 50,000 a month on the three self-serve plans. Every plan also tracks how AI answers mention your brand (Frase calls it AI Visibility), daily and with alerts: Starter covers ChatGPT and Google AI, Professional adds Perplexity, and Scale adds Claude and Gemini (pricing and feature pages read 21 October 2026). How many prompts each plan tracks for this is not stated.",
+   "price_note": "(re-verified 2026-10-21 against Frase's own machine-readable pricing file frase.io/pricing.md; every plan price below was unchanged from our 17 August, 14 September and 3 October readings) The headline figure is the yearly rate; paying month to month costs about 25% more, and both are shown on the page. Starter $39/mo billed yearly against $49/mo monthly: 1 seat, 1 site, 10 articles and 50 audit pages a month, Content Guard watching 10 pages. Professional $103/mo yearly against $129/mo monthly: 3 seats, 5 sites, 40 articles and 250 audit pages, extra seats $29/mo. Scale $239/mo yearly against $299/mo monthly: 5 seats, up to 10 domains, 100 articles and 1,000 audit pages, Content Guard watching 300 pages, extra seats $29/mo. The trial is 7 days with no credit card. FraseCMS hosting is included free up to 100,000 page views a month; Basic at $19/mo on top of a paid plan raises that to 250,000, drops the Frase badge and lets the blog sit on your own domain or a subdirectory, and Pro is $99/mo at a million page views, with $1.00 and $0.50 per extra 1,000 page views and a spend cap set at the base price by default. On Starter, Frase stops at the limit rather than billing you extra; on Professional and Scale you can switch on pay-as-you-go capacity, so there the sticker price is a floor rather than a ceiling: Professional adds $5 per extra article, $0.50 per audit page and $0.25 per AI prompt, Scale $4, $0.40 and $0.20. API, MCP and CLI requests are capped at 5,000, 20,000 and 50,000 a month on the three self-serve plans. Every plan also tracks how AI answers mention your brand (Frase calls it AI Visibility), daily and with alerts: Starter covers ChatGPT and Google AI, Professional adds Perplexity, and Scale adds Claude and Gemini (pricing and feature pages read 21 October 2026). How many prompts each plan tracks for this is not stated.",
    "flags": [
     {
      "flag": "usage_metered",
@@ -5728,7 +5737,7 @@
      "evidence_excerpt": "The article quotas pinch if you publish at volume (overage docs bill each), and it's a research-and-optimization tool, not a magic ranking button — it speeds up briefs, it doesn't replace the writing…",
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-10-03"
+     "verified_at": "2026-10-21"
     },
     {
      "flag": "addons_extra",
@@ -5736,12 +5745,12 @@
      "evidence_excerpt": "FraseCMS hosting is included free up to 100,000 page views a month; Basic at $19/mo on top of a paid plan raises that to 250,000, drops the Frase badge and lets the blog sit on your own domain or a s…",
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-10-03"
+     "verified_at": "2026-10-21"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-10-03",
-   "first_observed_at": "2026-10-03"
+   "price_verified_at": "2026-10-21",
+   "first_observed_at": "2026-10-21"
   },
   {
    "name": "FreshBooks",
@@ -5872,7 +5881,7 @@
    "entry_price": "$19",
    "entry_price_terms": "Freshdesk Growth · per agent per month billed annually",
    "pricing_status": "public",
-   "price_note": "(2026-08-29, read on their own pricing pages) The main Freshworks pricing page still carries no prices at all — it lists the products and links out to each one, and that list has grown to nine: Freshdesk Omni, Freshdesk, Freshchat, Freshcaller, Freshservice, Freshservice for Business Teams, Freshsales, Freshsales Suite and Freshmarketer. On Freshdesk the annual rates are unchanged since 1 August 2026: Growth $19 per agent per month, Pro $55, Enterprise $89, billed annually. What has changed is that the monthly column is now published: Growth $23, Pro $66, Enterprise $107 per agent per month, billed monthly. The page's SAVE 20% badge overstates the gap — $19 against $23 is 17.4%, $55 against $66 is 16.7%, $89 against $107 is 16.8%. Freddy AI Agent is included with the first 500 sessions; additional sessions are $49 per 100. Freddy AI Copilot is a separate add-on at $29 per agent per month annually, or $35 monthly, on Pro and Enterprise only. Day passes are $2, $7 and $12 per pass on Growth, Pro and Enterprise. Connector app tasks are $80 per 5,000 tasks. The 14-day free trial starts you on Enterprise. Re-verified 11 October 2026 on freshworks.com/freshdesk/pricing/: the annual rates ($19, $55, $89), the $29 Copilot add-on, the $49 per 100 extra AI Agent sessions, the $2/$7/$12 day passes and the $80 per 5,000 connector tasks are unchanged, and a new add-on is listed on every tier: MCP actions at $15 per 1,000. The monthly column is not in the page source we read, so the monthly figures above date from 29 August 2026. The FAQ on the same page adds that the 500 free AI Agent sessions are given once per account, not every month; that an email AI Agent session is a 72-hour window from the customer's first email; that purchased session packs expire with your payment cycle; and that downgrades and cancellations take effect only at the end of your term.",
+   "price_note": "(2026-08-29, read on their own pricing pages) The main Freshworks pricing page still carries no prices at all — it lists the products and links out to each one, and that list has grown to nine: Freshdesk Omni, Freshdesk, Freshchat, Freshcaller, Freshservice, Freshservice for Business Teams, Freshsales, Freshsales Suite and Freshmarketer. On Freshdesk the annual rates are unchanged since 1 August 2026: Growth $19 per agent per month, Pro $55, Enterprise $89, billed annually. What has changed is that the monthly column is now published: Growth $23, Pro $66, Enterprise $107 per agent per month, billed monthly. The page's SAVE 20% badge overstates the gap — $19 against $23 is 17.4%, $55 against $66 is 16.7%, $89 against $107 is 16.8%. Freddy AI Agent is included with the first 500 sessions; additional sessions are $49 per 100. Freddy AI Copilot is a separate add-on at $29 per agent per month annually, or $35 monthly, on Pro and Enterprise only. Day passes are $2, $7 and $12 per pass on Growth, Pro and Enterprise. Connector app tasks are $80 per 5,000 tasks. The 14-day free trial starts you on Enterprise (in our test on 21 October 2026 the sign-up page promised a '14-day all-access free trial' and the app then said 'your 15-day trial starts today'). Re-verified 11 October 2026 on freshworks.com/freshdesk/pricing/: the annual rates ($19, $55, $89), the $29 Copilot add-on, the $49 per 100 extra AI Agent sessions, the $2/$7/$12 day passes and the $80 per 5,000 connector tasks are unchanged, and a new add-on is listed on every tier: MCP actions at $15 per 1,000. The monthly column is not in the page source we read, so the monthly figures above date from 29 August 2026. The FAQ on the same page adds that the 500 free AI Agent sessions are given once per account, not every month; that an email AI Agent session is a 72-hour window from the customer's first email; that purchased session packs expire with your payment cycle; and that downgrades and cancellations take effect only at the end of your term.",
    "flags": [
     {
      "flag": "per_seat",
@@ -9952,7 +9961,7 @@
    "entry_price": "$99",
    "entry_price_terms": "per month for 2,000 or $297/mo for 9,000",
    "pricing_status": "public",
-   "price_note": "(read on 11 September 2026 on parallellabs.app/pricing, which stamps itself 'Last updated: 2026-08-18') The meter is credits, and there are two separate pools. Plan credits come with the subscription: Pay As You Go is $0 with 50 credits and no card, Entrepreneur $99 a month for 2,000 credits and 2 companies, Business $297 for 9,000 credits and 10 companies, and Enterprise is quote-only with SSO, on-premise deployment and dedicated support. Data credits are a different pool, bought once and never expiring, and they are the only part of the product priced per action: 1 data credit per lead or contact returned, 2 per matched enrichment lookup through the API or an agent, and a lookup that finds nothing is free. They run $25 for 500 down to $175 for 5,000, so between 5.0 and 3.5 cents a lead. The two pools expire differently, and the page says so in two places that sit far apart: plan credits 'reset on the 1st of each month', while purchased credit packs and data credits never expire. What the page never says is how many PLATFORM credits an action costs. Content generation, an agent conversation and an outreach step are all simply 'credits' with no published rate, so the 2,000 on Entrepreneur is a quantity without a unit until you have run your own work through it. Per credit the tiers differ by a third: 5.0 cents on Entrepreneur against 3.3 on Business, which is three times the price for four and a half times the credits. Running out has a tier-shaped answer -- the FAQ offers extra credit packages on the Business plan and the Pay-As-You-Go card offers top-ups, but Entrepreneur sits between them with no stated top-up route, so the $99 tier's answer to an empty meter appears to be the $297 one. Seats do not add capacity: every seat in a company shares one monthly pool, and extra seats are $15 a month ($12 annual). The add-ons are where the bill can outgrow the plan -- an extra company is $20 a month ($16 annual), an extra white-label instance $50, and anonymous website pixel identification runs $75, $250 or $500 a month for 500, 2,000 or 5,000 resolutions. On the free tier the limits are real: a 200k context window against 1M on every paid plan, 30 days of chat history instead of unlimited, no App Builder, and model access listed as 'Limited' with response times 'limited on bandwidth and availability'.",
+   "price_note": "(read on 11 September 2026 on parallellabs.app/pricing, which stamps itself 'Last updated: 2026-08-18') The meter is credits, and there are two separate pools. Plan credits come with the subscription: Pay As You Go is $0 with 50 credits a month and no card, Entrepreneur $99 a month for 2,000 credits and 2 companies, Business $297 for 9,000 credits and 10 companies, and Enterprise is quote-only with SSO, on-premise deployment and dedicated support. Data credits are a different pool, bought once and never expiring, and they are the only part of the product priced per action: 1 data credit per lead or contact returned, 2 per matched enrichment lookup through the API or an agent, and a lookup that finds nothing is free. They run $25 for 500 down to $175 for 5,000, so between 5.0 and 3.5 cents a lead. The two pools expire differently, and the page says so in two places that sit far apart: plan credits 'reset on the 1st of each month', while purchased credit packs and data credits never expire. What the page never says is how many PLATFORM credits an action costs. Content generation, an agent conversation and an outreach step are all simply 'credits' with no published rate, so the 2,000 on Entrepreneur is a quantity without a unit until you have run your own work through it. Per credit the tiers differ by a third: 5.0 cents on Entrepreneur against 3.3 on Business, which is three times the price for four and a half times the credits. Running out has a tier-shaped answer -- the FAQ offers extra credit packages on the Business plan and the Pay-As-You-Go card offers top-ups, but Entrepreneur sits between them with no stated top-up route, so the $99 tier's answer to an empty meter appears to be the $297 one. Seats do not add capacity: every seat in a company shares one monthly pool, and extra seats are $15 a month ($12 annual). The add-ons are where the bill can outgrow the plan -- an extra company is $20 a month ($16 annual), an extra white-label instance $50, and anonymous website pixel identification runs $75, $250 or $500 a month for 500, 2,000 or 5,000 resolutions. On the free tier the limits are real: a 200k context window against 1M on every paid plan, 30 days of chat history instead of unlimited, no App Builder, and model access listed as 'Limited' with response times 'limited on bandwidth and availability'. Inside the app on 21 October 2026 the plan screen showed $99 and $297 a month on its annual billing tab ('save 20%'), totalling $1,188 and $3,564 a year (we did not read the monthly tab), and the free plan read 'Monthly credits 4 / 50' after an onboarding that cost 4 credits.",
    "flags": [
     {
      "flag": "usage_metered",
@@ -9971,9 +9980,17 @@
      "verified_at": "2026-09-16"
     },
     {
+     "flag": "annual_lock",
+     "evidence": "Inside the app on 21 October 2026 the plan screen showed $99 and $297 a month on its annual billing tab ('save 20%'), totalling $1,188 and $3,564 a year (we did not read the monthly tab), and the free plan read 'Monthly credits 4 / 50' after an onboarding that cost 4 credits.",
+     "evidence_excerpt": "Inside the app on 21 October 2026 the plan screen showed $99 and $297 a month on its annual billing tab ('save 20%'), totalling $1,188 and $3,564 a year (we did not read the monthly tab), and the fre…",
+     "source_url": "https://parallellabs.app/pricing",
+     "evidence_field": "dossier pricing notes and honest knock",
+     "verified_at": "2026-09-16"
+    },
+    {
      "flag": "free_tier",
-     "evidence": "Plan credits come with the subscription: Pay As You Go is $0 with 50 credits and no card, Entrepreneur $99 a month for 2,000 credits and 2 companies, Business $297 for 9,000 credits and 10 companies, and Enterprise is quote-only with SSO, on-premise deployment and dedicated support.",
-     "evidence_excerpt": "Plan credits come with the subscription: Pay As You Go is $0 with 50 credits and no card, Entrepreneur $99 a month for 2,000 credits and 2 companies, Business $297 for 9,000 credits and 10 companies,…",
+     "evidence": "Plan credits come with the subscription: Pay As You Go is $0 with 50 credits a month and no card, Entrepreneur $99 a month for 2,000 credits and 2 companies, Business $297 for 9,000 credits and 10 companies, and Enterprise is quote-only with SSO, on-premise deployment and dedicated support.",
+     "evidence_excerpt": "Plan credits come with the subscription: Pay As You Go is $0 with 50 credits a month and no card, Entrepreneur $99 a month for 2,000 credits and 2 companies, Business $297 for 9,000 credits and 10 co…",
      "source_url": "https://parallellabs.app/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
      "verified_at": "2026-09-16"
@@ -11689,7 +11706,7 @@
    "entry_price": "$29",
    "entry_price_terms": "per month billed yearly ($39 monthly)",
    "pricing_status": "public",
-   "price_note": "(re-verified 2026-09-14 and re-read unchanged 2026-09-27 on salesflare.com/pricing, per user a month) Three plans, and the page carries both billing terms plus a $/€ switch: Growth $39 a month or $29 billed annually, Pro $64 or $49, and Enterprise $124 or $99 with a minimum of five users. The euro column prints the same numerals — €39/€29, €64/€49, €124/€99 — so a European buyer pays the same figure in a different currency rather than a converted one. Our earlier reading called this “$29–99 per user” with Growth at about $29–39 and Pro at about $49. The range was right and the label was not: the low number in each pair is the annual rate and the high one is what month-to-month costs, and the five-seat floor on Enterprise never appeared. Lead credits are part of the ladder rather than an add-on — 5 on Growth, 100 on Pro, 250 on Enterprise. There is a 30-day free trial with no card. On that same page the vendor commits to no onboarding fees and to no caps on contacts, users, email templates, tracked emails, custom fields, workflows, dashboards or pipelines.",
+   "price_note": "(re-verified 2026-09-14, re-read unchanged 2026-09-27 and again on 2026-10-21 on salesflare.com/pricing, per user a month) Three plans, and the page carries both billing terms plus a $/€ switch: Growth $39 a month or $29 billed annually, Pro $64 or $49, and Enterprise $124 or $99 with a minimum of five users. The euro column prints the same numerals — €39/€29, €64/€49, €124/€99 — so a European buyer pays the same figure in a different currency rather than a converted one. Our earlier reading called this “$29–99 per user” with Growth at about $29–39 and Pro at about $49. The range was right and the label was not: the low number in each pair is the annual rate and the high one is what month-to-month costs, and the five-seat floor on Enterprise never appeared. Lead credits are part of the ladder rather than an add-on — 5 on Growth, 100 on Pro, 250 on Enterprise. There is a 30-day free trial with no card. On that same page the vendor commits to no onboarding fees and to no caps on contacts, users, email templates, tracked emails, custom fields, workflows, dashboards or pipelines.",
    "flags": [
     {
      "flag": "per_seat",
@@ -11697,7 +11714,7 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-27"
+     "verified_at": "2026-10-21"
     },
     {
      "flag": "usage_metered",
@@ -11705,11 +11722,11 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-27"
+     "verified_at": "2026-10-21"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-27",
+   "price_verified_at": "2026-10-21",
    "first_observed_at": "2026-09-14"
   },
   {
@@ -14744,15 +14761,15 @@
    "entry_price": null,
    "entry_price_terms": null,
    "pricing_status": "quote_only",
-   "price_note": "(re-read 2026-09-18 and again on 2026-10-05 on trainual.com/pricing) No prices at all. The page lists four plans — Core, Pro, Premium and Enterprise, grouped under a Training, an Operations and a Performance suite — and every one of them carries a “Get a demo” button where a rate would be. The only figure the page publishes is a one-time implementation fee of $1,000, stated in its own FAQ alongside a 4–6 week engagement with an implementation specialist. The FAQ also answers the sizing question directly: “Trainual is best suited for companies with 25 - 1000 employees”, and says pricing varies with team size and the features you need. Pricing is quote-only. An earlier version of this entry carried monthly figures attributed to unnamed third-party sources; those are not on the vendor's page and could not be traced to a named source, so they have been removed rather than repeated.\n\nThere is also no self-serve way to try it. The FAQ question “Can I try Trainual before committing to a subscription?” is answered with an invitation to book a demo, not with a trial, so a sales conversation is the only route in. Two things are quantified beyond the fee: the implementation team aims to have interviews completed and content in the account within 10 business days, and 500+ templates are included, with 400+ expert-built courses sold separately as a premium courses add-on whose price the page does not give. Read on 5 October 2026, the Premium card lists an MCP server for custom AI agents, and Enterprise adds API access with custom integration support, access to SOC 2 security documentation and extended implementation and migration.",
+   "price_note": "(re-read 2026-09-18 and again on 2026-10-05 on trainual.com/pricing) No prices at all. The page lists four plans — Core, Pro, Premium and Enterprise, grouped under a Training, an Operations and a Performance suite — and every one of them carries a “Get a demo” button where a rate would be. The only figure the page publishes is a one-time implementation fee of $1,000, stated in its own FAQ alongside a 4–6 week engagement with an implementation specialist. The FAQ also answers the sizing question directly: “Trainual is best suited for companies with 25 - 1000 employees”, and says pricing varies with team size and the features you need. Pricing is quote-only. An earlier version of this entry carried monthly figures attributed to unnamed third-party sources; those are not on the vendor's page and could not be traced to a named source, so they have been removed rather than repeated.\n\nThere is also no self-serve way to try it. The FAQ question “Can I try Trainual before committing to a subscription?” is answered with an invitation to book a demo, not with a trial, so a sales conversation is the only route in. Two things are quantified beyond the fee: the implementation team aims to have interviews completed and content in the account within 10 business days, and 500+ templates are included, with 400+ expert-built courses sold separately as a premium courses add-on whose price the page does not give. Read on 5 October 2026, the Premium card lists an MCP server for custom AI agents, and Enterprise adds API access with custom integration support, access to SOC 2 security documentation and extended implementation and migration.\n\nRead a third time on 21 October 2026 (served HTML): still no rate on any plan, the same $1,000 implementation fee and the same 25 - 1000 employee fit. The page is now organised around three suites, Training, Operations and Performance, each with its own Get a demo button, above a plan grid that still names Core, Pro, Premium and Enterprise. The per-plan video-storage and version-history figures we quoted from the 5 October reading did not appear in the served page this time, so they rest on that earlier reading. The FAQ now also answers the cancellation question: a cancelled plan runs to the end of the billing cycle with full access, and an account can instead be put on hold for up to three months.",
    "flags": [
     {
      "flag": "quote_only",
-     "evidence": "No published price: Core/Pro/Premium/Enterprise all route to Get a demo; only a $1,000 one-time implementation fee is disclosed (read 18 Sep and 5 Oct 2026)",
+     "evidence": "No published price: Core/Pro/Premium/Enterprise and the Training, Operations and Performance suites all route to Get a demo; only a $1,000 one-time implementation fee is disclosed (read 18 Sep, 5 Oct and 21 Oct 2026)",
      "evidence_excerpt": null,
      "source_url": "https://trainual.com/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-10-05"
+     "verified_at": "2026-10-21"
     },
     {
      "flag": "addons_extra",
@@ -14760,11 +14777,11 @@
      "evidence_excerpt": "Two things are quantified beyond the fee: the implementation team aims to have interviews completed and content in the account within 10 business days, and 500+ templates are included, with 400+ expe…",
      "source_url": "https://trainual.com/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-10-05"
+     "verified_at": "2026-10-21"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-10-05",
+   "price_verified_at": "2026-10-21",
    "first_observed_at": "2026-09-18"
   },
   {
@@ -15648,7 +15665,7 @@
    "entry_price": "$5",
    "entry_price_terms": "per user a month billed annually, or $6 monthly",
    "pricing_status": "public",
-   "price_note": "(re-read 25 September 2026 on webcatalog.io/en/pricing in a browser, both billing toggles, USD) Basic is free and no card is required: 2 desktop apps, 2 profiles and 1 space, with cloud sync, to-dos, focus mode and curated wallpapers. Pro is $5 per user per month billed annually or $6 billed monthly, plus local taxes, and lifts the caps to unlimited apps, profiles and spaces, with an ad-free experience, pages, theme colours, an ads and tracker blocker, an app lock, location services and priority support. Business is $8 per user per month billed annually or $10 monthly and adds shared spaces, shared pages, team management, centralised billing, an activity log and SAML single sign-on. Both paid plans carry a 7-day trial. The page advertises a 20% saving on yearly billing and prices in USD, EUR or JPY. A legacy lifetime licence is not mentioned on the pricing page (checked 2026-09-25).",
+   "price_note": "(re-read 25 September 2026 on webcatalog.io/en/pricing in a browser, both billing toggles, USD) Basic is free and no card is required: 2 desktop apps, 2 profiles and 1 space, with cloud sync, to-dos, focus mode and curated wallpapers. Pro is $5 per user per month billed annually or $6 billed monthly, plus local taxes, and lifts the caps to unlimited apps, profiles and spaces, with an ad-free experience, pages, theme colours, an ads and tracker blocker, an app lock, location services and priority support. Business is $8 per user per month billed annually or $10 monthly and adds shared spaces, shared pages, team management, centralised billing, an activity log and SAML single sign-on. Both paid plans carry a 7-day trial. The page advertises a 20% saving on yearly billing and prices in USD, EUR or JPY. A legacy lifetime licence is not mentioned on the pricing page (checked 2026-09-25). Re-read on 21 October 2026 by plain fetch: the annual figures, $5 for Pro and $8 per user for Business plus local taxes, and the free Basic caps are unchanged; the monthly toggle does not render without a browser, so the $6 and $10 monthly rates rest on the September reading. The table now marks desktop apps, profiles, spaces and shared spaces as 'Only available on WebCatalog for macOS, Windows, and Linux', so those limits and features belong to the desktop app rather than the browser extension. Payment is by card, PayPal, Apple Pay or Google Pay, with Alipay, KakaoPay, Naver Pay and UPI offered in some regions.",
    "flags": [
     {
      "flag": "per_seat",
@@ -15656,7 +15673,7 @@
      "evidence_excerpt": "Pro is $5 per user per month billed annually or $6 billed monthly, plus local taxes, and lifts the caps to unlimited apps, profiles and spaces, with an ad-free experience, pages, theme colours, an ad…",
      "source_url": "https://webcatalog.io/en/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-25"
+     "verified_at": "2026-10-21"
     },
     {
      "flag": "free_tier",
@@ -15664,11 +15681,11 @@
      "evidence_excerpt": null,
      "source_url": "https://webcatalog.io/en/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-25"
+     "verified_at": "2026-10-21"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-25",
+   "price_verified_at": "2026-10-21",
    "first_observed_at": null
   },
   {

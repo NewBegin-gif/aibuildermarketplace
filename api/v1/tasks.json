@@ -3153,6 +3153,34 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "Imagify",
+   "product_id": "imagify",
+   "run_date": "2026-10-21",
+   "what": "Tested by our team on 21 October 2026 on the free plan in Imagify's web app: Daan created the account and our AI assistant ran the test in Daan's browser. We uploaded three of our own simple test images (a 12 KB PNG, a 50 KB JPG and a 3.4 MB PNG), compared Smart and Lossless and watched the quota counter after each step.",
+   "findings": [
+    "The account started at '0.0KB / 20MB used. You have 100% credit left.' Auto-converting PNG to JPEG is marked 'only for Pro users'; resizing is available on free.",
+    "Smart compression took the PNG from 11.8KB to 3.3KB (72.36%) and the JPG from 48.9KB to 12.3KB (74.91%), each within about 8 seconds.",
+    "The quota counts the original size, not the result: after those two images the counter read 61.44KB of 20MB.",
+    "Lossless took the same PNG from 11.8KB to 5.8KB (51.05%), against 3.3KB with Smart.",
+    "The 3.4MB file was refused straight away with 'File size must be under 2.0 MB. Current file size is 3.4 MB' and used no quota.",
+    "The summary on the optimizer page is mislabelled: 'You saved 15.5KB out of 60.7KB' gave the size after compression (3.3KB + 12.3KB), while the real saving was about 45KB. The History page showed the right saving per file.",
+    "History notes 'Optimized images are available to download for 24 hours' on a free account. End state: 92.16KB of 20MB used after four optimisations and one refused upload."
+   ],
+   "not_tested": [
+    "Downloading the results, and so their visual quality, transparency and actual dimensions",
+    "The resize result (we did not check the output size)",
+    "The WordPress plugin and automatic WebP and AVIF conversion (we only used the web app)",
+    "Page Optimization and the API",
+    "What happens when the 20MB a month runs out",
+    "Real photos (we only used simple test images)"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "SurFox AI",
    "product_id": "surfox-ai",
    "run_date": "2026-10-12",
@@ -3164,6 +3192,31 @@
     "The learning feature that defines the Growth plan could not be judged: the sandbox shows sample data and says real learning needs hundreds of real conversations over several weeks. Delivery, voice, CRM syncing and real costs per conversation were also outside what a sandbox can show."
    ],
    "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "xTiles",
+   "product_id": "xtiles",
+   "run_date": "2026-10-21",
+   "what": "Tested by our team on 21 October 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We made a project with two tiles and three tasks (today, tomorrow and no date), checked them in My Planner, uploaded a 4 MB and a 6 MB file and looked back through the planner history.",
+   "findings": [
+    "Sign-up runs through a required questionnaire for 'Daily Brief by xTiles' and three 'Your stack' steps that each need a choice; going straight to the workspace sent us back. 'I don't need a daily brief' is the way out, and every project still showed a 'Set up your Daily Brief' panel afterwards.",
+    "Tasks made with /task got dates from a picker (Today, Tomorrow, Next week, Next month); 'Custom Recurring' carries a premium icon.",
+    "My Planner showed exactly the right task on 21 and 22 October, and ticking a task off in the planner also ticked it off in the project.",
+    "A 4 MB file uploaded; a 6 MB file was refused with 'Your Free plan is limited to 5 MB file upload. Upgrade to get more.'",
+    "Planner history on Free is the current and the previous week. Two and three weeks back were greyed out with 'Free covers the current and last week. Everything older is saved — go Plus to browse and edit it anytime.' The pricing page calls this '2 weeks'."
+   ],
+   "not_tested": [
+    "The Inbox for tasks without a date (we could not open it)",
+    "Daily Brief with connected apps (we connected nothing)",
+    "Sharing, working together and the limit of three personal spaces",
+    "Generate with AI and the templates",
+    "The mobile app"
+   ],
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
@@ -3292,6 +3345,33 @@
     "Partner replies break email threading. A partner answers inside the PartnerStack dashboard and the platform sends that on as a fresh message from hello@partnerstackmail.com, with a new Message-ID and no reference to the mail it is answering. Any automation of yours that matches replies to threads will not match these."
    ],
    "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Tidio",
+   "product_id": "tidio",
+   "run_date": "2026-10-21",
+   "what": "Tested by our team on 21 October 2026 on the 7-day trial that starts with a new account, without a card: Daan created the account and our AI assistant ran the test in Daan's browser. We gave the Lyro AI agent five questions and answers about a made-up shop, asked it ten questions in the Playground, two it could not know, and changed one answer to see how fast it followed. The chat widget was not installed.",
+   "findings": [
+    "Sign-up requires a website URL ('Can't be empty!'). Within minutes Tidio read 71 pages of the site we entered into Lyro's knowledge on its own. The source list can delete or set an audience in bulk, but excluding a source without deleting it is one source at a time.",
+    "Usage and plan showed 'AI conversations 0/50' marked 'Lifetime quota' for Lyro. After 13 Playground questions it still read 0 / 50: Playground questions do not count.",
+    "A CSV with the columns Question and Answer was accepted as it was (5 Q&As).",
+    "Lyro answered all ten fact and paraphrase questions correctly from our five answers, each marked 'AI response based on your data sources'.",
+    "Asked whether a fault after one month was covered by a 37-day warranty, Lyro gave the 37 days but said 'I'm not able to determine whether one month falls within that period'.",
+    "For the two questions our data did not answer (Sunday opening, return costs) it said it had no information and offered 'Talk to a person'; it made nothing up.",
+    "After we changed the warranty from 37 to 41 days, the next question was answered with 41 days."
+   ],
+   "not_tested": [
+    "Real visitor conversations through an installed chat widget, and so the use of the 50 Lyro conversations",
+    "Handing over to a person, Flows, and the email and social channels",
+    "Lyro Actions, Procedures and Guidance",
+    "What happens when the 7-day trial ends and the account moves to the free plan",
+    "Languages other than English"
+   ],
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
@@ -3620,6 +3700,32 @@
   },
   {
    "source": "session",
+   "product_name": "Beefree",
+   "product_id": "beefree",
+   "run_date": "2026-10-21",
+   "what": "Tested by our team on 21 October 2026 on the free Starter plan of RGE Studio (the Beefree builder under its name since 14 May 2026): Daan created the account and our AI assistant ran the test in Daan's browser. We built one blank email with a title, three lines of text and a button in two columns, checked the mobile view and opened the HTML export.",
+   "findings": [
+    "Every Starter design carries a fixed 'Designed with RGE Studio' footer; it was already in the blank email when the editor opened.",
+    "The export screen said '6 exports left — Limit will reset on the 1st of the month', with 'Upgrade for unlimited'. PDF export and 'Minify the HTML code' are locked on Starter.",
+    "Only showing the HTML code counts as an export: after 'Show and copy HTML' the counter went from 6 to 5. The screen warns first: 'One of your available exports will be used'.",
+    "The HTML was 11 KB ('HTML size: 11KB', 11,122 characters) and contained our title, the three sentences and the button URL exactly as entered, plus a mobile rule at 620 pixels.",
+    "In the mobile view the two columns stacked on their own, text above the button, and width and font size can be set separately for mobile.",
+    "Edits were saved automatically ('Saved!'), and the history icon listed every change with its time, also on Starter. A custom domain asks for an upgrade; a custom subdomain is allowed."
+   ],
+   "not_tested": [
+    "The 'HTML and images' ZIP and the PDF download",
+    "How the email looks in real mail clients such as Outlook and Gmail, and sending through a connected platform",
+    "Roles, team members and the approval process",
+    "The 15-day Professional trial and the limit of 10 designs",
+    "Write with AI and the landing-page editor"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "involve.me",
    "product_id": "involve-me",
    "run_date": "2026-09-07",
@@ -3936,6 +4042,28 @@
     "Not tested: real chats through the website widget, other languages, larger or contradictory knowledge bases, and what the replies cost, because the Test screen is not live AI Agent sessions."
    ],
    "not_tested": null,
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "SmartSuite",
+   "product_id": "smartsuite",
+   "run_date": "2026-10-21",
+   "what": "We tried to start SmartSuite's 14-day trial on 21 October 2026 and did not get in: Daan entered two email addresses on our own company domains in the sign-up form and SmartSuite refused both. We have not used the product itself, and nothing below is a finding about it.",
+   "findings": [
+    "The sign-up page reads 'Welcome to SmartSuite' and 'Let's get your free 14-day trial setup', with one field, 'Enter your business email', and the note 'A valid business email address is required to continue.' Google, Apple and Microsoft sign-in are offered as alternatives.",
+    "An address on our own domain aibuildermarketplace.com was refused with 'Please use your business email.'",
+    "A second address on another domain of ours, theweeklyaiedge.com, was refused with the same message."
+   ],
+   "not_tested": [
+    "The product itself: we never got an account",
+    "Signing up with Google, Apple or Microsoft (we do not connect those accounts in tests)",
+    "What the filter decides on, such as the age of a domain or its mail records; we only know that two of our own domains were refused",
+    "Whether SmartSuite support makes an exception"
+   ],
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",

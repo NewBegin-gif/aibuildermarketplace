@@ -9,7 +9,7 @@
  "summary": "RGE Studio (formerly Beefree — renamed 14 May 2026): drag-and-drop email and landing-page design. Build responsive, on-brand emails fast and export clean HTML to any major ESP, no coding required. Beefree remains the company name and the name of its separate developer SDK; the builder itself now lives under reallygoodemails.com.",
  "best_for": "agencies and in-house teams shipping email at volume across brands or ESPs — a dedicated builder with approvals, brand controls and one-click push to Salesforce Marketing Cloud, Pardot and HubSpot, sitting above whatever you send with",
  "skip_if": "you send alone and your ESP's editor already copes — you would be paying for a second tool to do a job your sending platform already does, and you still need the ESP because RGE Studio sends nothing itself",
- "honest_knock": "Read the seat row before the price row. Professional and Business both cap at two full editing seats, so a \"mid-sized team\" plan at $134/mo annual still buys two people who can actually build. Everyone else lands in view-only slots — four on Professional, ten on Business — or an Enterprise quote. The free Starter is the odd one out: unlimited users, but with no roles or permissions at all. Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests. And the naming is a live tripwire. Since 14 May 2026 the builder is RGE Studio at reallygoodemails.com, while Beefree remains the company name and the name of the separate developer SDK. So check which product a plan or invoice actually refers to. It is purely a creation environment that never sends, so it always sits on top of your ESP. Worth it when the ESP's native editor is the bottleneck — agencies, multi-brand teams, ESP migrations — and duplicated effort when it isn't.",
+ "honest_knock": "Read the seat row before the price row. Professional and Business both cap at two full editing seats, so a \"mid-sized team\" plan at $134/mo annual still buys two people who can actually build. Everyone else lands in view-only slots — four on Professional, ten on Business — or an Enterprise quote. The free Starter is the odd one out: unlimited users, but with no roles or permissions at all. Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests, and in our test on 21 October 2026 merely showing the HTML code used one of them (6 left became 5). And the naming is a live tripwire. Since 14 May 2026 the builder is RGE Studio at reallygoodemails.com, while Beefree remains the company name and the name of the separate developer SDK. So check which product a plan or invoice actually refers to. It is purely a creation environment that never sends, so it always sits on top of your ESP. Worth it when the ESP's native editor is the bottleneck — agencies, multi-brand teams, ESP migrations — and duplicated effort when it isn't.",
  "pricing": {
   "status": "public",
   "entry_price": "$25",
@@ -23,7 +23,7 @@
   "source_quotes": null
  },
  "free_plan": true,
- "free_plan_evidence": "Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests.",
+ "free_plan_evidence": "Exports are metered at six a month, rather than the unlimited free tier its old reputation suggests, and in our test on 21 October 2026 merely showing the HTML code used one of them (6 left became 5).",
  "cost_traps": [],
  "compare_with": {
   "name": "Stripo or your ESP's own editor",
@@ -59,15 +59,44 @@
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Beefree",
+    "product_id": "beefree",
+    "run_date": "2026-10-21",
+    "what": "Tested by our team on 21 October 2026 on the free Starter plan of RGE Studio (the Beefree builder under its name since 14 May 2026): Daan created the account and our AI assistant ran the test in Daan's browser. We built one blank email with a title, three lines of text and a button in two columns, checked the mobile view and opened the HTML export.",
+    "findings": [
+     "Every Starter design carries a fixed 'Designed with RGE Studio' footer; it was already in the blank email when the editor opened.",
+     "The export screen said '6 exports left — Limit will reset on the 1st of the month', with 'Upgrade for unlimited'. PDF export and 'Minify the HTML code' are locked on Starter.",
+     "Only showing the HTML code counts as an export: after 'Show and copy HTML' the counter went from 6 to 5. The screen warns first: 'One of your available exports will be used'.",
+     "The HTML was 11 KB ('HTML size: 11KB', 11,122 characters) and contained our title, the three sentences and the button URL exactly as entered, plus a mobile rule at 620 pixels.",
+     "In the mobile view the two columns stacked on their own, text above the button, and width and font size can be set separately for mobile.",
+     "Edits were saved automatically ('Saved!'), and the history icon listed every change with its time, also on Starter. A custom domain asks for an upgrade; a custom subdomain is allowed."
+    ],
+    "not_tested": [
+     "The 'HTML and images' ZIP and the PDF download",
+     "How the email looks in real mail clients such as Outlook and Gmail, and sending through a connected platform",
+     "Roles, team members and the approval process",
+     "The 15-day Professional trial and the limit of 10 designs",
+     "Write with AI and the landing-page editor"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "beefree:cancellation_terms",

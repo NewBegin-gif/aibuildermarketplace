@@ -9,41 +9,15 @@
  "summary": "AI search across peer-reviewed literature: it reports what published studies found, not whether those studies are sound. Study quality and conflicting results still need your own judgment.",
  "best_for": "researchers, clinicians, students and writers who want evidence-backed answers drawn from peer-reviewed papers instead of the open web",
  "skip_if": "your questions are practical/commercial rather than research-based (a general AI assistant fits), or you need full systematic-review rigor (this accelerates it, not replaces it)",
- "honest_knock": "It searches peer-reviewed literature, which is its strength and its boundary: it can tell you what published studies found, not whether those studies are good. Study quality, sample sizes and conflicting results still need your judgment, and the AI summary layer can smooth over genuine scientific disagreement. Treat it as a dramatically faster literature scan, not an oracle; click through to the papers that matter.",
+ "honest_knock": "It searches peer-reviewed literature, which is its strength and its boundary: it can tell you what published studies found, not whether those studies are good. Study quality, sample sizes and conflicting results still need your judgment, and the AI summary layer can smooth over genuine scientific disagreement. Treat it as a dramatically faster literature scan, not an oracle; click through to the papers that matter. Consensus's own developer notes (read 21 October 2026) add three limits worth knowing before you pay. The corpus is English-first: non-English papers are indexed where metadata exists, but ranking and summaries are tuned for English. It is not a news feed: papers published in the last few weeks may not be indexed yet. And the Consensus Meter is described as a heuristic, not a formal meta-analysis.",
  "pricing": {
   "status": "public",
   "entry_price": "$12",
   "entry_price_terms": "a month, billed annually ($20 billed monthly)",
   "from_price_usd_month": 12.0,
-  "plans": [
-   {
-    "name": "Free",
-    "price": "$0",
-    "includes": "10 Pro messages and up to 3 Deep reviews a month"
-   },
-   {
-    "name": "Pro",
-    "price": "$20 a month billed monthly, or $12 a month billed annually ($144 a year)",
-    "includes": "Unlimited Pro messages, 15 Deep reviews, 500 API/MCP uses, then $0.05/use up to 1,000"
-   },
-   {
-    "name": "Deep",
-    "price": "$65 monthly, or $45 a month billed annually ($540 a year)",
-    "includes": "200 Deep reviews, 2,000 API/MCP uses, then $0.05/use up to 10,000"
-   },
-   {
-    "name": "Team",
-    "price": "no published price",
-    "includes": "Up to 200 seats with 50 Deep searches per seat"
-   },
-   {
-    "name": "Enterprise",
-    "price": "no published price",
-    "includes": "On contract"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 28 September 2026 in a rendered browser, monthly and annual tabs) Free: $0, 10 Pro messages and up to 3 Deep reviews a month. Pro: $20 a month billed monthly, or $12 a month billed annually ($144 a year), with unlimited Pro messages, 15 Deep reviews a month and 500 API and MCP uses included, then $0.05 a use up to 1,000. Deep: $65 monthly, or $45 a month billed annually ($540 a year), with 200 Deep reviews and 2,000 API and MCP uses, then $0.05 a use up to 10,000. Students and faculty with a school email and US healthcare professionals with an NPI number can get up to 40% off. Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and it still gives Free 15 Pro messages where the rendered page says 10. The unit that matters is Deep reviews rather than seats. Correction: our earlier reading, which we could not confirm at the time, put Pro at about $15 a month or roughly $10 annually.",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 28 September 2026 in a rendered browser, monthly and annual tabs) Free: $0, 10 Pro messages and up to 3 Deep reviews a month. Pro: $20 a month billed monthly, or $12 a month billed annually ($144 a year), with unlimited Pro messages, 15 Deep reviews a month and 500 API and MCP uses included, then $0.05 a use up to 1,000. Deep: $65 monthly, or $45 a month billed annually ($540 a year), with 200 Deep reviews and 2,000 API and MCP uses, then $0.05 a use up to 10,000. Students and faculty with a school email and US healthcare professionals with an NPI number can get up to 40% off. Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and on 28 September it still gave Free 15 Pro messages where the rendered page said 10; re-read on 21 October 2026, that file has been aligned at 10 Pro messages and 3 Deep Searches a month, and it describes the student discount as 40% off for 12 months with a verified .edu or student email. The unit that matters is Deep reviews rather than seats. Correction: our earlier reading, which we could not confirm at the time, put Pro at about $15 a month or roughly $10 annually. The paid amounts are rendered in the browser from Stripe and could not be re-read on 21 October 2026 without one, so the dollar figures above still date from 28 September.",
   "verified_at": "2026-09-28",
   "source_url": null,
   "schema_offer": {
@@ -60,7 +34,7 @@
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and it still gives Free 15 Pro messages where the rendered page says 10.",
+   "evidence": "Team and Enterprise carry no amount on the page; the vendor's machine-readable pricing file puts Team at up to 200 seats with 50 Deep searches per seat and Enterprise on contract, and on 28 September it still gave Free 15 Pro messages where the rendered page said 10; re-read on 21 October 2026, that file has been aligned at 10 Pro messages and 3 Deep Searches a month, and it describes the student discount as 40% off for 12 months with a verified .edu or student email.",
    "verified_at": "2026-09-28",
    "source_url": null
   }
@@ -96,6 +70,7 @@
   "growth": null
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",

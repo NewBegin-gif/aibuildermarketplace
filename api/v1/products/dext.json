@@ -9,7 +9,7 @@
  "summary": "Receipt and invoice capture that extracts the data and feeds it into Xero, QuickBooks or Sage. It is the capture layer, not accounting software, so you still need one of those.",
  "best_for": "accountants, bookkeepers and growing businesses drowning in receipts who want fast, accurate capture flowing straight into Xero, QuickBooks or Sage",
  "skip_if": "you're a sole trader with few receipts (pricey for low volume), or you want all-in-one accounting — Dext only does the capture layer",
- "honest_knock": "It's a data-capture layer, not accounting software — it feeds Xero, QuickBooks or Sage, so you still need one of those. Extraction accuracy varies and sometimes needs manual fixes, the UI is tricky for beginners, the mobile app is more limited than desktop, and sole traders find it pricey.",
+ "honest_knock": "It's a data-capture layer, not accounting software — it feeds Xero, QuickBooks or Sage, so you still need one of those. Extraction accuracy varies and sometimes needs manual fixes, the UI is tricky for beginners, the mobile app is more limited than desktop, and sole traders find it pricey. In our own test on 21 October 2026, on two clean made-up receipts, every field we checked was right; a rotated copy of one was flagged as a duplicate but still counted against the 250-document allowance, and a byte-identical copy vanished without a message.",
  "pricing": {
   "status": "public",
   "entry_price": "$25.21",
@@ -75,8 +75,7 @@
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -91,7 +90,36 @@
   "independent": true,
   "checked_at": "2026-10-20"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Dext",
+    "product_id": "dext",
+    "run_date": "2026-10-21",
+    "what": "Tested by our team on 21 October 2026 during the 14-day trial, without a card and without connecting accounting software or a bank: Daan created the account and our AI assistant ran the test in Daan's browser. We uploaded two made-up receipts whose every field we knew, then a byte-identical copy of one and a rotated copy of the other.",
+    "findings": [
+     "Both receipts reached the Costs inbox within about a minute, and all eight fields we checked were right: date, supplier, total and tax on each (EUR 12.10 with EUR 2.10 tax, and EUR 21.80 with EUR 1.80 tax). Dext picked the category itself: 'Office Supplies' for the stationery receipt and 'Travel' for the transport one.",
+     "The rotated copy was marked 'Duplicate' in Submission history and kept out of the inbox, which is right, but it still counted: the usage counter went from 0 to 3 of 250 for two receipts.",
+     "The byte-identical copy appeared nowhere, not even in Submission history: it was dropped without a message.",
+     "The workspace worked straight away without any connection. Onboarding asked three questions (industry, company size and accounting software, with Spreadsheets as an option); the overview showed 'Documents extracted 0 / 250, Resets in 1 days' and trial credits for 10 bank statement, 5 supplier statement and 5 line-item extractions, 5 Vault AI credits and 500 MB of Vault storage.",
+     "Upload offers one document per file (PDF, JPG, PNG, ZIP), one per page (PDF) or auto-splitting (PDF, 'Can take up to 1 hour'), with limits of 6 MB per image or PDF, 100 MB per ZIP and 40 MB for an auto-split PDF. Each account also gets its own email address for sending in documents."
+    ],
+    "not_tested": [
+     "Correcting a recognition error (there was none to correct)",
+     "Net amount and tax rate in the detail view",
+     "Real, creased or handwritten receipts, and other currencies",
+     "Publishing to accounting software, a bank connection and the mobile app",
+     "What happens after the trial, and what the 250 per period means exactly"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "dext:cancellation_terms",

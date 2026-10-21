@@ -2387,7 +2387,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/photogenerator-review/
 
 ## Pickeasy (logbase.io)
-- **Verified pricing:** (read 2026-09-27 on apps.shopify.com/order-delivery-date-time and on the vendor's pricing page at logbase.io/pickeasy-pricing-plan) Five tiers, gated on features and store locations rather …
+- **Verified pricing:** (read 2026-09-27, re-read 2026-10-21 without changes, on apps.shopify.com/order-delivery-date-time and on the vendor's pricing page at logbase.io/pickeasy-pricing-plan) Five tiers, gated on…
 - **Honest take:** Charging your own delivery or shipping rates needs Shopify's Carrier Calculated Shipping API, and Shopify, not the app, decides whether your plan includes it.
 - **Best for:** Florists, bakeries, butchers, grocers and restaurants on Shopify that sell for local pickup or delivery and need customers to choose a date and time slot, with cut-off and preparation times, blackout dates
 - **Full review:** https://aibuildermarketplace.com/b2b/pickeasy-review/
@@ -2622,7 +2622,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/rank-math-review/
 
 ## Rapid Search (rapidsearch.app)
-- **Verified pricing:** (read 2026-09-26 on apps.shopify.com/rapid-search and on the vendor's own pricing page at rapidsearch.app/pricing) Every plan carries every feature; the tiers differ only in monthly session…
+- **Verified pricing:** (read 2026-09-26, re-read 2026-10-21 without changes, on apps.shopify.com/rapid-search and on the vendor's own pricing page at rapidsearch.app/pricing) Every plan carries every feature; the…
 - **Honest take:** The meter is your traffic, not your searches.
 - **Best for:** Shopify stores whose shoppers arrive knowing what they want, with catalogues from a few hundred to 100,000 products, that want typo-tolerant instant search
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -3403,7 +3403,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tidio-review/
 
 ## Timesact Preorder (timesact.com)
-- **Verified pricing:** (read 2026-09-25 on timesact.com/pages/pricing, including its volume selector and yearly toggle, and on the Shopify App Store listing apps.shopify.com/timesact-discount-pre-order, which sho…
+- **Verified pricing:** (read 2026-09-25, re-read 2026-10-21 without changes, on timesact.com/pages/pricing, including its volume selector and yearly toggle, and on the Shopify App Store listing apps.shopify.com/t…
 - **Honest take:** The Fixed price depends on your Shopify plan, not on what you use.
 - **Best for:** Shopify stores that take pre-orders, deposits or back-in-stock sign-ups on a modest or seasonal volume and want to start free
 - **Flags:** Usage-metered, Add-ons extra, Free tier
@@ -3822,7 +3822,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## xTiles (xtiles.app)
 - **Verified pricing:** (read 2026-10-13 in a live browser on xtiles.app/en/pricing, prices in US dollars, with the comparison table and FAQ) Four plans, priced per user.
-- **Honest take:** Free keeps two weeks of planner history; monthly plans are refundable for only 72 hours, and several of Pro's AI permissions are still marked soon.
+- **Honest take:** Free shows only this week's and last week's planner history; monthly plans are refundable for only 72 hours, and several of Pro's AI permissions are still marked soon.
 - **Best for:** individuals, coaches and small teams who want notes, tasks and a daily planner in one visual workspace, and who want to connect ChatGPT or Claude to their projects
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/xtiles-review/

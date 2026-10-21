@@ -9,7 +9,7 @@
  "summary": "Live chat, ticketing and the Lyro AI agent in one platform: AI answers routine questions from your own data, hands the rest to the team with context, and Flows chase leads proactively. Lyro also plugs into Zendesk, Intercom, Salesforce and 20+ platforms without migration, but only on Premium.",
  "best_for": "support teams that want an AI agent and a help desk from the same vendor and can size all three meters — billable conversations, Lyro AI conversations and Flows visitors — against their own volume before they commit, and Shopify, WordPress or Wix stores that want to run live chat at zero and treat the 50 free Lyro conversations as a measurement of whether the AI answers their questions at all",
  "skip_if": "you need the AI agent to keep answering past the first 50 conversations without paying, you cannot get the over-cap rate and the Plus usage rate quoted before signing, you want one per-seat price rather than three independent meters, or you are buying on the strength of the 67 percent resolution figure and need it as a commitment rather than an average",
- "honest_knock": "The AI number on the homepage and the AI number on the pricing page do not agree, and the pricing page is the lower of the two. The homepage, read 24 August 2026, says Lyro “resolves 67% of conversations instantly” and repeats it as a statistic: 67% of conversations resolved instantly. The pricing table, read the same day, lists “Guaranteed 50% Lyro AI resolution rate” as a Premium feature — the most expensive tier on the page. So the figure the marketing quotes is 17 points above the figure the company is willing to guarantee, and the guarantee is only available if you talk to sales about the top plan. Both numbers can be true at once; a typical result and a contractual floor are different things. But it does mean that if you are buying on the strength of 67 percent, you are buying an average someone else achieved, not a commitment to you.\n\nSecond, the plan table opens on annual billing. The headline 24.17 and 49.17 become 29 and 59 the moment you click Monthly, and the two add-ons move 32.50 to 39 and 24.17 to 29. Nothing is hidden — the toggle is right there and the annual column is honestly labelled “2 months free” — but the number you remember from the pricing page is about 20 percent below the number you pay unless you commit for a year. Tidio's own homepage quotes the monthly figure, so the two pages leave a buyer with two different first impressions of the same plan.\n\nThird, “Free plan forever” is true for the help desk and not for the AI. The free tier's 50 Lyro AI conversations are one-off: the comparison table footnote reads that your first 50 conversations are free (lifetime), and the same applies to the 100 Flows visitors. The live chat and ticketing side really does keep working at zero, but the AI agent that the whole homepage is built around stops after 50 conversations ever, which for a shop with any traffic is a matter of days. Read the free plan as a trial of Lyro inside a permanently free help desk, not as a free AI agent.",
+ "honest_knock": "The AI number on the homepage and the AI number on the pricing page do not agree, and the pricing page is the lower of the two. The homepage, read 24 August 2026, says Lyro “resolves 67% of conversations instantly” and repeats it as a statistic: 67% of conversations resolved instantly. The pricing table, read the same day, lists “Guaranteed 50% Lyro AI resolution rate” as a Premium feature — the most expensive tier on the page. So the figure the marketing quotes is 17 points above the figure the company is willing to guarantee, and the guarantee is only available if you talk to sales about the top plan. Both numbers can be true at once; a typical result and a contractual floor are different things. But it does mean that if you are buying on the strength of 67 percent, you are buying an average someone else achieved, not a commitment to you.\n\nSecond, the plan table opens on annual billing. The headline 24.17 and 49.17 become 29 and 59 the moment you click Monthly, and the two add-ons move 32.50 to 39 and 24.17 to 29. Nothing is hidden — the toggle is right there and the annual column is honestly labelled “2 months free” — but the number you remember from the pricing page is about 20 percent below the number you pay unless you commit for a year. Tidio's own homepage quotes the monthly figure, so the two pages leave a buyer with two different first impressions of the same plan.\n\nThird, “Free plan forever” is true for the help desk and not for the AI. The free tier's 50 Lyro AI conversations are one-off: the comparison table footnote reads that your first 50 conversations are free (lifetime), and the same applies to the 100 Flows visitors. The live chat and ticketing side really does keep working at zero, but the AI agent that the whole homepage is built around stops after 50 conversations ever, which for a shop with any traffic is a matter of days. Read the free plan as a trial of Lyro inside a permanently free help desk, not as a free AI agent.\n\nIn our own test on 21 October 2026 Lyro answered ten of ten questions correctly from five answers we gave it, said it had no information on the two it could not know and offered 'Talk to a person', but it would not work out whether one month fell inside a 37-day warranty.",
  "pricing": {
   "status": "public",
   "entry_price": "$29",
@@ -96,15 +96,45 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Tidio",
+    "product_id": "tidio",
+    "run_date": "2026-10-21",
+    "what": "Tested by our team on 21 October 2026 on the 7-day trial that starts with a new account, without a card: Daan created the account and our AI assistant ran the test in Daan's browser. We gave the Lyro AI agent five questions and answers about a made-up shop, asked it ten questions in the Playground, two it could not know, and changed one answer to see how fast it followed. The chat widget was not installed.",
+    "findings": [
+     "Sign-up requires a website URL ('Can't be empty!'). Within minutes Tidio read 71 pages of the site we entered into Lyro's knowledge on its own. The source list can delete or set an audience in bulk, but excluding a source without deleting it is one source at a time.",
+     "Usage and plan showed 'AI conversations 0/50' marked 'Lifetime quota' for Lyro. After 13 Playground questions it still read 0 / 50: Playground questions do not count.",
+     "A CSV with the columns Question and Answer was accepted as it was (5 Q&As).",
+     "Lyro answered all ten fact and paraphrase questions correctly from our five answers, each marked 'AI response based on your data sources'.",
+     "Asked whether a fault after one month was covered by a 37-day warranty, Lyro gave the 37 days but said 'I'm not able to determine whether one month falls within that period'.",
+     "For the two questions our data did not answer (Sunday opening, return costs) it said it had no information and offered 'Talk to a person'; it made nothing up.",
+     "After we changed the warranty from 37 to 41 days, the next question was answered with 41 days."
+    ],
+    "not_tested": [
+     "Real visitor conversations through an installed chat widget, and so the use of the 50 Lyro conversations",
+     "Handing over to a person, Flows, and the email and social channels",
+     "Lyro Actions, Procedures and Guidance",
+     "What happens when the 7-day trial ends and the account moves to the free plan",
+     "Languages other than English"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "tidio:cancellation_terms",

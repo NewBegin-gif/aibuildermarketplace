@@ -1177,7 +1177,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/essential-announcement-bar-review/
 
 ## Essential Countdown Timer Bar (essential-apps.com)
-- **Verified pricing:** (read 2026-09-28 on apps.shopify.com/essential-countdown-timer, on essential-apps.com/countdown-timer and in the vendor's help article on timer views) Four plans priced on monthly timer vie…
+- **Verified pricing:** (read 2026-09-28, re-read 2026-10-21 without changes, on apps.shopify.com/essential-countdown-timer, on essential-apps.com/countdown-timer and in the vendor's help article on timer views) F…
 - **Honest take:** A view is every time a timer loads, so the free plan's thousand views a month is a few hundred browsing sessions, and running out switches the timers off.
 - **Best for:** Shopify merchants who run real, dated promotions, launches or shipping cut-offs and want a top-bar, product-page or cart countdown without code, starting on a free plan
 - **Flags:** Free tier
@@ -1566,7 +1566,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/hibob-review/
 
 ## Hive (hive.com)
-- **Verified pricing:** (re-verified 2026-10-18) Free forever for up to 10 workspace members, with 1,000 AI credits a month and 200MB of storage; Starter $5 per user a month and Teams $12 per user a month on yearl…
+- **Verified pricing:** (re-verified 2026-10-18) Free forever for up to 10 workspace members, with 1,000 AI credits a month by the pricing page and 200MB of storage (a new account we tested on 21 October 2026, wit…
 - **Honest take:** The seat price is honest bait, the add-on grid is the business model: switch on three add-ons and your $12 seat becomes $27 — a la carte flexibility that punishes teams who need the full toolkit.
 - **Best for:** project teams that want flexible PM (Gantt, Kanban, forms, chat) and only pay for the modules they actually use
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
@@ -3089,7 +3089,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Softr (softr.io)
 - **Verified pricing:** (re-verified 2026-09-07 and again 2026-10-01) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credits a month.
 - **Honest take:** Builder seats are billed on top of the plan, and pricing counts builders and app users separately, so a public-facing app with a lot of end users gets expensive fast.
-- **Best for:** teams building internal tools, client portals or member apps on top of Airtable or Google Sheets without code
+- **Best for:** teams building internal tools, client portals or member apps on Softr's own built-in database, Airtable or Google Sheets without code
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/softr-review/
 
@@ -3443,7 +3443,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/top-echelon-review/
 
 ## Track123 (track123.com)
-- **Verified pricing:** (read 2026-09-27 on apps.shopify.com/track123 and in the vendor's pricing article on intercom.help/track123, dated 14 July 2026) Three published plans plus Enterprise, priced on synced orde…
+- **Verified pricing:** (read 2026-09-27, re-read 2026-10-21 without changes, on apps.shopify.com/track123 and in the vendor's pricing article on intercom.help/track123, dated 14 July 2026) Three published plans p…
 - **Honest take:** The overage is the most expensive order on the ladder.
 - **Best for:** Shopify stores shipping from a few dozen to tens of thousands of orders a month, dropshippers included, that want a branded tracking page and order lookup on their own store, PayPal and Stripe tracking sync
 - **Flags:** Usage-metered, Annual commit, Free tier

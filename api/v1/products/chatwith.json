@@ -9,7 +9,7 @@
  "summary": "No-code AI agent builder that trains a support chatbot on your website, docs, files and connected apps, answers customers on your site, WhatsApp, Slack or Telegram, collects leads and escalates to a person; priced by message credits.",
  "best_for": "small and mid-sized businesses, SaaS teams and agencies that want an AI agent trained on their website, docs and connected apps to answer customer questions, collect leads and hand over to a person, at a low entry price",
  "skip_if": "you need a full help desk with ticketing and a team inbox rather than an answer bot, your traffic is unpredictable and you want a refund route, or you need phone support on a small plan",
- "honest_knock": "The real price depends on credits, and the conversation estimates assume five replies at one credit each, which the page itself says varies with the model and conversation length. Fees are non-refundable under the terms, and Starter shows no trial. The gap between Hobby at $19 and Standard at $99 is steep, so small sites may end up buying credit add-ons. Support on the two cheapest plans is community only. The agreement falls under German law. The testimonials and time-saved figures on the site are Chatwith's own. We have not used Chatwith ourselves.",
+ "honest_knock": "The real price depends on credits, and the conversation estimates assume five replies at one credit each, which the page itself says varies with the model and conversation length. Fees are non-refundable under the terms, and Starter shows no trial. The gap between Hobby at $19 and Standard at $99 is steep, so small sites may end up buying credit add-ons. Support on the two cheapest plans is community only. The agreement falls under German law. The testimonials and time-saved figures on the site are Chatwith's own. In our own test on 21 October 2026 it answered nine of ten questions correctly from 177 characters of training text and said 'I do not know' to one it could not know, but contradicted itself once ('No. ... so it is still covered') and left our last question at 'Not sent'.",
  "pricing": {
   "status": "public",
   "entry_price": "$9",
@@ -55,7 +55,7 @@
  ],
  "compare_with": {
   "name": "Tidio",
-  "why": "Tidio is in our dossiers too, re-verified on 10 October 2026: Starter $29 a month paid monthly for 100 billable conversations and 10 seats, with its Lyro AI agent metered separately on top. Chatwith, read on 13 October 2026, starts at $9 a month for 250 message credits, about 50 AI conversations by its own estimate, and $19 for 1,000. Chatwith is the cheaper way to put an AI answer bot on a site; Tidio is the fuller live-chat and help-desk suite where people answer alongside the AI."
+  "why": "Tidio is in our dossiers too, re-verified on 10 October 2026: Starter $29 a month paid monthly for 100 billable conversations and 10 seats, with its Lyro AI agent metered separately on top. Chatwith, read on 13 October 2026, starts at $9 a month for 250 message credits, about 50 AI conversations by its own estimate, and $19 for 1,000. Chatwith is the cheaper way to put an AI answer bot on a site; Tidio is the fuller live-chat and help-desk suite where people answer alongside the AI. With the same five facts in our own tests on 21 October 2026, Tidio's Lyro answered ten of ten questions correctly and Chatwith nine of ten."
  },
  "links": {
   "record": "https://aibuildermarketplace.com/api/v1/products/chatwith.json",
@@ -87,15 +87,45 @@
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Chatwith",
+    "product_id": "chatwith",
+    "run_date": "2026-10-21",
+    "what": "Tested by our team on 21 October 2026 on a new account, without connecting a website or paying: Daan created the account and our AI assistant ran the test in Daan's browser. We trained the agent on 177 characters of text about a made-up shop (the same facts as in our Tidio test), then asked five fact questions, five rephrased ones and two it could not know.",
+    "findings": [
+     "Onboarding has four steps: Train, Brand, Test and Install. Training sources are a website (with linked pages on the same domain, or a sitemap), files, text or YouTube, against a counter of '0 / 500K characters'. Our 177 characters of text were trained in about 10 to 20 seconds.",
+     "The dashboard only opens after the onboarding: going to the app sent us back to the get-started steps. The first sign-in magic link returned 'INVALID_TOKEN'; a second one worked.",
+     "The guardrails slider starts on 'Max (default): Most sophisticated', which refuses off-topic questions and answers in the user's language; Chatwith warns that 'customizing or overriding the guardrails is difficult'.",
+     "All five fact questions were answered correctly, and four of the five rephrased ones, such as 'No. The Lila-17 is purple.' when we asked whether it was red.",
+     "Asked whether a fault after one month was covered by the 37-day warranty, it answered 'No. The Lila-17 warranty is 37 days, so it is still covered after one month.': it starts with no and ends with yes.",
+     "Asked about Sunday opening, which our text did not cover, it said 'I do not know the answer to this question.' and made nothing up. Our last question, on return costs, stayed at 'Not sent. Retry', also after a retry; we did not find out why.",
+     "The test chat made suggestion buttons from the knowledge itself (Product, Color, Pickup, Warranty) and shows 'Powered by Chatwith'."
+    ],
+    "not_tested": [
+     "The plan, message credits and credits used per question (we did not open the dashboard)",
+     "Why the last question was not sent",
+     "Choosing another model, switching knowledge off, and Refinements",
+     "Installing the widget on a site, and Actions",
+     "Website and file sources"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "chatwith:cancellation_terms",

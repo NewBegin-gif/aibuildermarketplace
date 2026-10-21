@@ -15,31 +15,10 @@
   "entry_price": "$9",
   "entry_price_terms": "Growth · per month for 300 synced orders, $0.05 per extra order on monthly billing",
   "from_price_usd_month": 9.0,
-  "plans": [
-   {
-    "name": "Starter",
-    "price": "free",
-    "includes": "for 50 orders a month; orders past that do not sync until next cycle"
-   },
-   {
-    "name": "Growth",
-    "price": "$9 a month or $84 a year",
-    "includes": "for 300 orders"
-   },
-   {
-    "name": "Advanced",
-    "price": "$49 a month or $468 a year",
-    "includes": "for 2,000 orders"
-   },
-   {
-    "name": "Enterprise",
-    "price": "no published price",
-    "includes": "quoted on request for orders above 50,000"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(read 2026-09-27 on apps.shopify.com/track123 and in the vendor's pricing article on intercom.help/track123, dated 14 July 2026) Three published plans plus Enterprise, priced on synced orders a month; customer lookups are unlimited on every plan. Starter is free for 50 orders a month, and orders past that do not sync until the next billing cycle. Growth starts at $9 a month or $84 a year for 300 orders, with 700 orders at $19 ($180 a year) and 1,000 at $29 ($276 a year). Advanced starts at $49 a month or $468 a year for 2,000 orders and climbs through 3,000 ($69), 5,000 ($99), 7,000 ($129), 10,000 ($179), 15,000 ($249) and 20,000 ($299), then in $50 steps to $599 a month, or $5,748 a year, for 50,000 orders. Above 50,000 orders Enterprise is quoted on request. On monthly billing every order past the allowance costs $0.05; on annual billing there is no overage and new orders stop syncing until you upgrade. The Shopify listing shows only the first rung of Growth and of Advanced; the full ladder is in the pricing article. Growth and Advanced carry a 7-day free trial, once per store. All charges are in USD through Shopify's billing, every 30 days.",
-  "verified_at": "2026-09-27",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 2026-09-27, re-read 2026-10-21 without changes, on apps.shopify.com/track123 and in the vendor's pricing article on intercom.help/track123, dated 14 July 2026) Three published plans plus Enterprise, priced on synced orders a month; customer lookups are unlimited on every plan. Starter is free for 50 orders a month, and orders past that do not sync until the next billing cycle. Growth starts at $9 a month or $84 a year for 300 orders, with 700 orders at $19 ($180 a year) and 1,000 at $29 ($276 a year). Advanced starts at $49 a month or $468 a year for 2,000 orders and climbs through 3,000 ($69), 5,000 ($99), 7,000 ($129), 10,000 ($179), 15,000 ($249) and 20,000 ($299), then 25,000 ($349), 30,000 ($399), 35,000 ($449), 40,000 ($499) and 45,000 ($549), up to $599 a month, or $5,748 a year, for 50,000 orders. Above 50,000 orders Enterprise is quoted on request. On monthly billing every order past the allowance costs $0.05; on annual billing there is no overage and new orders stop syncing until you upgrade. The Shopify listing shows only the first rung of Growth and of Advanced; the full ladder is in the pricing article. Growth and Advanced carry a 7-day free trial, once per store. All charges are in USD through Shopify's billing, every 30 days.",
+  "verified_at": "2026-10-21",
   "source_url": "https://intercom.help/track123/en/articles/5920187-track123-pricing-plan",
   "schema_offer": {
    "price": 9.0,
@@ -56,14 +35,14 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "The overage is the most expensive order on the ladder.",
-   "verified_at": "2026-09-27",
+   "verified_at": "2026-10-21",
    "source_url": "https://intercom.help/track123/en/articles/5920187-track123-pricing-plan"
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "On monthly billing every order past the allowance costs $0.05; on annual billing there is no overage and new orders stop syncing until you upgrade.",
-   "verified_at": "2026-09-27",
+   "verified_at": "2026-10-21",
    "source_url": "https://intercom.help/track123/en/articles/5920187-track123-pricing-plan"
   }
  ],
@@ -98,7 +77,6 @@
    "currency": "USD",
    "unit": "order a month",
    "axis": "orders_per_month",
-   "rules_verified_at": "2026-09-27",
    "plans": [
     {
      "id": "starter",
@@ -165,13 +143,32 @@
        "monthly": 299
       },
       {
+       "units": 25000,
+       "monthly": 349
+      },
+      {
+       "units": 30000,
+       "monthly": 399
+      },
+      {
+       "units": 35000,
+       "monthly": 449
+      },
+      {
+       "units": 40000,
+       "monthly": 499
+      },
+      {
+       "units": 45000,
+       "monthly": 549
+      },
+      {
        "units": 50000,
        "monthly": 599,
        "annual_year": 5748
       }
      ],
-     "gap_after": 20000,
-     "evidence": "Advanced starts at $49 a month or $468 a year for 2,000 orders and climbs through 3,000 ($69), 5,000 ($99), 7,000 ($129), 10,000 ($179), 15,000 ($249) and 20,000 ($299), then in $50 steps to $599 a month, or $5,748 a year, for 50,000 orders"
+     "evidence": "Advanced starts at $49 a month or $468 a year for 2,000 orders and climbs through 3,000 ($69), 5,000 ($99), 7,000 ($129), 10,000 ($179), 15,000 ($249) and 20,000 ($299), then 25,000 ($349), 30,000 ($399), 35,000 ($449), 40,000 ($499) and 45,000 ($549), up to $599 a month, or $5,748 a year, for 50,000 orders"
     },
     {
      "id": "enterprise",
@@ -186,8 +183,9 @@
     "evidence": "On monthly billing every order past the allowance costs $0.05; on annual billing there is no overage and new orders stop syncing until you upgrade"
    },
    "notes": [
-    "Between 20,000 and 50,000 orders the page gives $50 steps but not the order count of each step."
-   ]
+    "Annual prices between 3,000 and 45,000 orders are in the vendor's pricing article but not in our price notes, so only the first and last Advanced rung carry an annual figure here."
+   ],
+   "rules_verified_at": "2026-10-21"
   },
   "growth": {
    "annual": {
@@ -598,6 +596,7 @@
   }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

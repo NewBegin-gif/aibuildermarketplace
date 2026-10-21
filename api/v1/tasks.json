@@ -3224,6 +3224,33 @@
   },
   {
    "source": "session",
+   "product_name": "Chatwith",
+   "product_id": "chatwith",
+   "run_date": "2026-10-21",
+   "what": "Tested by our team on 21 October 2026 on a new account, without connecting a website or paying: Daan created the account and our AI assistant ran the test in Daan's browser. We trained the agent on 177 characters of text about a made-up shop (the same facts as in our Tidio test), then asked five fact questions, five rephrased ones and two it could not know.",
+   "findings": [
+    "Onboarding has four steps: Train, Brand, Test and Install. Training sources are a website (with linked pages on the same domain, or a sitemap), files, text or YouTube, against a counter of '0 / 500K characters'. Our 177 characters of text were trained in about 10 to 20 seconds.",
+    "The dashboard only opens after the onboarding: going to the app sent us back to the get-started steps. The first sign-in magic link returned 'INVALID_TOKEN'; a second one worked.",
+    "The guardrails slider starts on 'Max (default): Most sophisticated', which refuses off-topic questions and answers in the user's language; Chatwith warns that 'customizing or overriding the guardrails is difficult'.",
+    "All five fact questions were answered correctly, and four of the five rephrased ones, such as 'No. The Lila-17 is purple.' when we asked whether it was red.",
+    "Asked whether a fault after one month was covered by the 37-day warranty, it answered 'No. The Lila-17 warranty is 37 days, so it is still covered after one month.': it starts with no and ends with yes.",
+    "Asked about Sunday opening, which our text did not cover, it said 'I do not know the answer to this question.' and made nothing up. Our last question, on return costs, stayed at 'Not sent. Retry', also after a retry; we did not find out why.",
+    "The test chat made suggestion buttons from the knowledge itself (Product, Color, Pickup, Warranty) and shows 'Powered by Chatwith'."
+   ],
+   "not_tested": [
+    "The plan, message credits and credits used per question (we did not open the dashboard)",
+    "Why the last question was not sent",
+    "Choosing another model, switching knowledge off, and Refinements",
+    "Installing the widget on a site, and Actions",
+    "Website and file sources"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Help Scout",
    "product_id": "help-scout",
    "run_date": "2026-10-20",
@@ -3700,6 +3727,32 @@
   },
   {
    "source": "session",
+   "product_name": "Hive",
+   "product_id": "hive",
+   "run_date": "2026-10-21",
+   "what": "Tested by our team on 21 October 2026 on a new account without a subscription: Daan created the account and our AI assistant ran the test in Daan's browser. We made a private project with three dated tasks, assigned them, completed one, opened the Gantt view and read the AI usage and billing screens.",
+   "findings": [
+    "Onboarding runs in five steps. At the invite step, 'Allow users with @aibuildermarketplace.com domain to join the workspace automatically' was ticked by default; we switched it off. The workspace then opened with five sample projects and three demo colleagues.",
+    "A blank project can be made 'Private to me'; the default is 'Everyone'. All six layouts (List, Status, Team, Calendar, Gantt, Table) were offered without a lock.",
+    "Typing a name and pressing Enter created three tasks in quick succession; due dates of 22, 23 and 24 October set with the date picker stayed correct.",
+    "Ticking off one task removed it from the List view (the count went from 3 to 2), because a default filter hides completed actions. A buyer who does not know this will think the task is gone.",
+    "The Gantt view worked without a paywall and placed the three tasks on 22, 23 and 24 October.",
+    "AI usage showed 5,000 of 5,000 credits remaining (5,000 included, 0 purchased, resetting on 21 November), while the pricing page gives Free '1,000 AI credits / month'. Billing showed a default daily limit, 'Pause AI after $500 per day', with auto top-up off until a card is added."
+   ],
+   "not_tested": [
+    "Task descriptions and My Actions on the Home page",
+    "The Status and Table layouts",
+    "Storage (200MB) and the 10-member cap",
+    "Buzz and the other AI features, mail, forms and time tracking",
+    "Whether the 5,000 AI credits come back every month or are a one-off starting allowance"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Beefree",
    "product_id": "beefree",
    "run_date": "2026-10-21",
@@ -4089,6 +4142,31 @@
   },
   {
    "source": "session",
+   "product_name": "Softr",
+   "product_id": "softr",
+   "run_date": "2026-10-21",
+   "what": "Tested by our team on 21 October 2026 during the 7-day trial that starts with a new account: Daan created the account and our AI assistant ran the test in Daan's browser. We copied the Knowledge Base template, added two articles of our own, checked them in the preview on desktop and mobile, and changed one figure to see how fast the app followed.",
+   "findings": [
+    "The trial runs on Business for 7 days and drops back to Free on its own: the plan panel in the app marked Free 'Automatic when trial ends'. The same panel listed Basic at $25, Pro at $119 and Business at $395 a month, with 'two months off' for yearly billing, and 5, 10, 50 and 100 AI credits a month from Free to Business.",
+    "'Use template' gave us a working Knowledge Base app within about ten seconds, with Interface, Data, Users, Workflows and Agents tabs. Its data sat in Softr's own built-in database (10 sample users, 40 sample articles), so no Google account was needed despite the Google Sheets name of the template.",
+    "Two new records in the Content table, linked to the 'Customer FAQ' collection, appeared on the Customer FAQs page and in its search, with our text exactly as entered. They did not appear in the home page's 'Latest articles' list, and their 'Created at' field stayed empty where the sample articles had a date.",
+    "The preview opens on its own preview subdomain as a sample user ('Preview as'), with desktop, tablet and mobile views and a QR code to try it on a phone, and it carries a 'Made with softr' badge.",
+    "After we changed the warranty in one record from 37 to 41 days, the preview showed 41 days after a reload; the other record was unchanged."
+   ],
+   "not_tested": [
+    "Publishing, a custom domain and real user sign-up (we only used the preview)",
+    "Permissions per role (we only viewed the app as an Employee)",
+    "The AI building chat, Workflows and Agents",
+    "Why 'Latest articles' left out the new records (we did not look into its filter or sort order)",
+    "What the app does, and which limits apply, once the trial has dropped back to Free"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Prezi",
    "product_id": "prezi",
    "run_date": "2026-09-28",
@@ -4162,6 +4240,31 @@
     "What held up: connecting a data source cost no credits, the unfinished connection still counted against the three-source limit, and the plan prices inside the app matched the public pricing page ($89 / $249 / $399 monthly; $71 / $199 / $319 billed annually)."
    ],
    "not_tested": "We did not add a fourth data source past the limit, did not build our own dashboard after deleting the sample one, and could not check how fresh each source's data is: the app shows sync frequency but no last-synced time.",
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Pipedrive",
+   "product_id": "pipedrive",
+   "run_date": "2026-10-21",
+   "what": "Tested by our team on 21 October 2026 during the 14-day trial, which ran on the Premium plan: Daan created the account with a work email address and our AI assistant ran the test in Daan's browser. We created three deals, moved one to the next stage, won one and lost one, scheduled a task, ticked it off and looked at the export options.",
+   "findings": [
+    "Sign-up accepted our work email address and opened with a ready-made pipeline 'tailored for your industry' (Qualified, Demo Scheduled, Demo Completed, Proposal Made, Negotiations, Contract Signed), amounts in euros and a 'Try with sample data' button. A 'Call me soon' button for a sales call stayed on screen.",
+    "Billing showed 'YOUR PLAN Premium' at €79 per seat billed monthly after the '14-day free trial' (€0 during the trial), with LeadBooster, Smart Docs and Projects included and Campaigns, Automations, Reports and a 'Leads and Deals top-up' sold separately. No card was needed to start.",
+    "The new-deal form showed a counter of 0/15,000 that went up with every deal we added: the deals in the account against a limit of 15,000.",
+    "Marking a deal Won opened a congratulations screen with suggestions for a follow-up; marking one Lost required a 'Lost reason' before it would close.",
+    "A task for the next day appeared under Focus as 'Tomorrow'. Ticking it off showed 'Activity marked as done' and opened 'Schedule your next activity' straight away, already linked to the same deal and organisation.",
+    "Tools and apps > Export data offers leads, deals, organisations, people, products, activities, projects, notes and files, as Excel or CSV. The same menu lists 'Pipedrive AI', and the account menu a 'Pipedrive MCP'."
+   ],
+   "not_tested": [
+    "The export itself (we did not download a file), and filters on won and lost deals",
+    "What stays available on a cheaper plan after the Premium trial",
+    "LeadBooster, Campaigns, email sync, automations and Pipedrive AI",
+    "Several users and their permissions"
+   ],
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",

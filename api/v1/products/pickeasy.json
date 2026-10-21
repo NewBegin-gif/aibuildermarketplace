@@ -17,8 +17,8 @@
   "from_price_usd_month": 9.99,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 2026-09-27 on apps.shopify.com/order-delivery-date-time and on the vendor's pricing page at logbase.io/pickeasy-pricing-plan) Five tiers, gated on features and store locations rather than on how many deliveries you schedule, except at the bottom. Free covers one location and up to 10 orders a month, which the vendor's page defines as total store orders, with date and time slots, order limits, preparation time and cut-off, blocked dates and times and zip-code validation; development stores have no limit. Starter is $9.99 a month and adds Shopify POS, slots for shipping, day-wise cut-off and product limits, product-specific fulfilment methods, preparation times and availability, and delivery rates by price and weight. Smart is $19.99 a month for up to four locations and adds rates by time, product and delivery speed, Google Calendar and Google Maps, a home-page zip-code checker and real-time inventory. Premium is $29.99 a month for 5 to 20 locations and adds multi-condition rates, rates by day of week, specific dates and location, and a checkout-page widget for Shopify Plus stores. The vendor's page adds a Custom tier at $59.99 a month for more than 20 locations and bespoke customisation, where the listing says to contact them. Yearly billing saves 10%: $215.99 for Smart, $323.99 for Premium and $647.99 for Custom, while Starter is $107.99 a year on the listing and $105.99 on the vendor's page. Paid tiers have a 14-day free trial. All charges are in USD through Shopify's billing, every 30 days.",
-  "verified_at": "2026-09-27",
+  "notes": "(read 2026-09-27, re-read 2026-10-21 without changes, on apps.shopify.com/order-delivery-date-time and on the vendor's pricing page at logbase.io/pickeasy-pricing-plan) Five tiers, gated on features and store locations rather than on how many deliveries you schedule, except at the bottom. Free covers one location and up to 10 orders a month, which the vendor's page defines as total store orders, with date and time slots, order limits, preparation time and cut-off, blocked dates and times and zip-code validation; development stores have no limit. Starter is $9.99 a month and adds Shopify POS, slots for shipping, day-wise cut-off and product limits, product-specific fulfilment methods, preparation times and availability, and delivery rates by price and weight. Smart is $19.99 a month for up to four locations and adds rates by time, product and delivery speed, Google Calendar and Google Maps, a home-page zip-code checker and real-time inventory. Premium is $29.99 a month for 5 to 20 locations and adds multi-condition rates, rates by day of week, specific dates and location, and a checkout-page widget for Shopify Plus stores. The vendor's page adds a Custom tier at $59.99 a month for more than 20 locations and bespoke customisation, where the listing says to contact them. Yearly billing saves 10%: $215.99 for Smart, $323.99 for Premium and $647.99 for Custom, while Starter is $107.99 a year on the listing and $105.99 on the vendor's page. Paid tiers have a 14-day free trial. All charges are in USD through Shopify's billing, every 30 days.",
+  "verified_at": "2026-10-21",
   "source_url": null,
   "source_quotes": null
  },
@@ -50,16 +50,404 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "location",
+   "axis": "locations",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free covers one location and up to 10 orders a month, which the vendor's page defines as total store orders"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 9.99,
+     "annual_status": "unknown",
+     "evidence": "Starter is $9.99 a month and adds Shopify POS"
+    },
+    {
+     "id": "smart",
+     "name": "Smart",
+     "model": "flat",
+     "max_units": 4,
+     "monthly": 19.99,
+     "annual_year": 215.99,
+     "evidence": "Smart is $19.99 a month for up to four locations"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "flat",
+     "max_units": 20,
+     "monthly": 29.99,
+     "annual_year": 323.99,
+     "evidence": "Premium is $29.99 a month for 5 to 20 locations"
+    },
+    {
+     "id": "custom",
+     "name": "Custom",
+     "model": "flat",
+     "monthly": 59.99,
+     "annual_year": 647.99,
+     "evidence": "The vendor's page adds a Custom tier at $59.99 a month for more than 20 locations and bespoke customisation"
+    }
+   ],
+   "extra_evidence": "Yearly billing saves 10%: $215.99 for Smart, $323.99 for Premium and $647.99 for Custom, while Starter is $107.99 a year on the listing and $105.99 on the vendor's page.",
+   "notes": [
+    "The Free plan is limited to 10 total store orders a month (development stores have no limit), so it rarely fits a live store.",
+    "Starter's yearly price differs between the Shopify listing ($107.99) and the vendor's page ($105.99); the rule leaves Starter's annual price unknown.",
+    "The Shopify listing says to contact the vendor for the Custom tier; the $59.99 is from the vendor's own page."
+   ],
+   "not_computable": [
+    "bespoke customisation on the Custom tier"
+   ],
+   "rules_verified_at": "2026-10-21"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "pickeasy",
+    "currency": "USD",
+    "axis": "locations",
+    "unit": "location",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "smart": 18.0,
+       "premium": 27.0,
+       "custom": 54.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "smart",
+      "cheapest_plan_name": "Smart",
+      "total_month": 18.0,
+      "billed": {
+       "amount": 215.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": 18.0,
+       "premium": 27.0,
+       "custom": 54.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "smart",
+      "cheapest_plan_name": "Smart",
+      "total_month": 18.0,
+      "billed": {
+       "amount": 215.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": 18.0,
+       "premium": 27.0,
+       "custom": 54.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 27.0,
+      "billed": {
+       "amount": 323.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": "not_eligible",
+       "premium": 27.0,
+       "custom": 54.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 27.0,
+      "billed": {
+       "amount": 323.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": "not_eligible",
+       "premium": 27.0,
+       "custom": 54.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 27.0,
+      "billed": {
+       "amount": 323.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": "not_eligible",
+       "premium": 27.0,
+       "custom": 54.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "custom",
+      "cheapest_plan_name": "Custom",
+      "total_month": 54.0,
+      "billed": {
+       "amount": 647.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": "not_eligible",
+       "premium": "not_eligible",
+       "custom": 54.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "smart",
+      "from_plan_name": "Free",
+      "to_plan_name": "Smart"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "smart",
+      "to_plan": "premium",
+      "from_plan_name": "Smart",
+      "to_plan_name": "Premium"
+     },
+     {
+      "from_units": 20,
+      "to_units": 50,
+      "from_plan": "premium",
+      "to_plan": "custom",
+      "from_plan_name": "Premium",
+      "to_plan_name": "Custom"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "bespoke customisation on the Custom tier"
+    ]
+   },
+   "monthly": {
+    "product_id": "pickeasy",
+    "currency": "USD",
+    "axis": "locations",
+    "unit": "location",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 9.99,
+       "smart": 19.99,
+       "premium": 29.99,
+       "custom": 59.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "smart",
+      "cheapest_plan_name": "Smart",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 19.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": 19.99,
+       "premium": 29.99,
+       "custom": 59.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "smart",
+      "cheapest_plan_name": "Smart",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 19.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": 19.99,
+       "premium": 29.99,
+       "custom": 59.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": "not_eligible",
+       "premium": 29.99,
+       "custom": 59.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": "not_eligible",
+       "premium": 29.99,
+       "custom": 59.99
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": "not_eligible",
+       "premium": 29.99,
+       "custom": 59.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "custom",
+      "cheapest_plan_name": "Custom",
+      "total_month": 59.99,
+      "billed": {
+       "amount": 59.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "smart": "not_eligible",
+       "premium": "not_eligible",
+       "custom": 59.99
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "smart",
+      "from_plan_name": "Free",
+      "to_plan_name": "Smart"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "smart",
+      "to_plan": "premium",
+      "from_plan_name": "Smart",
+      "to_plan_name": "Premium"
+     },
+     {
+      "from_units": 20,
+      "to_units": 50,
+      "from_plan": "premium",
+      "to_plan": "custom",
+      "from_plan_name": "Premium",
+      "to_plan_name": "Custom"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "bespoke customisation on the Custom tier"
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -88,9 +476,9 @@
    "status": "open"
   },
   {
-   "question_id": "pickeasy:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "pickeasy:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: bespoke customisation on the Custom tier. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

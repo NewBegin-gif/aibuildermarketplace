@@ -9,7 +9,7 @@
  "summary": "Visual workspace that combines notes, projects, tasks and a daily planner with templates and an AI assistant, and connects ChatGPT and Claude to your projects through MCP; a free plan and per-user paid plans.",
  "best_for": "individuals, coaches and small teams who want notes, tasks and a daily planner in one visual workspace, and who want to connect ChatGPT or Claude to their projects",
  "skip_if": "you need a database-heavy wiki with deep permissions for a large team, you want a long refund window on a monthly plan, or the AI editing you need is among the features still marked soon",
- "honest_knock": "The free plan keeps only two weeks of planner history and caps uploads at 5MB, so anyone using it as a daily planner will need Plus. Pro's headline is AI control of your workspace, but several of its AI permissions, including editing structure and access rights, are still marked soon. Refund windows are short on monthly plans, 72 hours, and discounted plans are not refundable at all. Only annual Plus can be upgraded to Pro with a credit for what you paid. Prices are per user and VAT may apply. The user count on the site is xTiles' own claim. We have not used xTiles ourselves.",
+ "honest_knock": "The free plan keeps only the current and the previous week of planner history open (the pricing page says two weeks; in our test on 21 October 2026 everything older was greyed out behind Plus) and caps uploads at 5MB, so anyone using it as a daily planner will need Plus. Pro's headline is AI control of your workspace, but several of its AI permissions, including editing structure and access rights, are still marked soon. Refund windows are short on monthly plans, 72 hours, and discounted plans are not refundable at all. Only annual Plus can be upgraded to Pro with a credit for what you paid. Prices are per user and VAT may apply. The user count on the site is xTiles' own claim. Our team tested the free plan on 21 October 2026; the findings are further down this page.",
  "pricing": {
   "status": "public",
   "entry_price": "$19",
@@ -17,13 +17,13 @@
   "from_price_usd_month": 19.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 2026-10-13 in a live browser on xtiles.app/en/pricing, prices in US dollars, with the comparison table and FAQ) Four plans, priced per user. Free costs nothing and gives unlimited pages and projects, free templates, 3 personal spaces, Google and Outlook calendar, an AI assistant with 1,000 credits and limited AI integrations; the table adds file uploads of up to 5MB, two weeks of planner history and one shared space. Plus is $19 a month, or $12.42 a month billed yearly, which the page says saves $79 a year: 100+ premium templates, recurring tasks, unlimited personal spaces, premium widgets, an unlimited AI assistant, basic AI integrations, full planner history, linked pages and unlimited file uploads. Pro is $35 a month, or $24.92 billed yearly (saving $121 a year): two 45-minute personal onboarding sessions, unlimited shared spaces and unlimited AI integrations, which let ChatGPT, Claude and other assistants connected to xTiles edit any project and work in shared workspaces; several AI permissions in the comparison table, among them editing structure and access rights, are marked soon. Enterprise is custom, with SAML SSO, a dedicated account manager and organisation spaces. VAT may apply. Educators, students and non-profits can get 50% off Plus for one year. The FAQ says subscriptions renew automatically, a monthly plan can be refunded in full within 72 hours and an annual one within 30 days, promotional and discounted plans are non-refundable, and only annual Plus can be upgraded to Pro with a calculated difference.",
+  "notes": "(read 2026-10-13 in a live browser on xtiles.app/en/pricing, prices in US dollars, with the comparison table and FAQ) Four plans, priced per user. Free costs nothing and gives unlimited pages and projects, free templates, 3 personal spaces, Google and Outlook calendar, an AI assistant with 1,000 credits and limited AI integrations; the table adds file uploads of up to 5MB, two weeks of planner history (in our test on 21 October 2026: the current and the previous week) and one shared space. Plus is $19 a month, or $12.42 a month billed yearly, which the page says saves $79 a year: 100+ premium templates, recurring tasks, unlimited personal spaces, premium widgets, an unlimited AI assistant, basic AI integrations, full planner history, linked pages and unlimited file uploads. Pro is $35 a month, or $24.92 billed yearly (saving $121 a year): two 45-minute personal onboarding sessions, unlimited shared spaces and unlimited AI integrations, which let ChatGPT, Claude and other assistants connected to xTiles edit any project and work in shared workspaces; several AI permissions in the comparison table, among them editing structure and access rights, are marked soon. Enterprise is custom, with SAML SSO, a dedicated account manager and organisation spaces. VAT may apply. Educators, students and non-profits can get 50% off Plus for one year. The FAQ says subscriptions renew automatically, a monthly plan can be refunded in full within 72 hours and an annual one within 30 days, promotional and discounted plans are non-refundable, and only annual Plus can be upgraded to Pro with a calculated difference.",
   "verified_at": "2026-10-13",
   "source_url": "https://xtiles.app/en/pricing/",
   "source_quotes": null
  },
  "free_plan": true,
- "free_plan_evidence": "The free plan keeps only two weeks of planner history and caps uploads at 5MB, so anyone using it as a daily planner will need Plus.",
+ "free_plan_evidence": "The free plan keeps only the current and the previous week of planner history open (the pricing page says two weeks; in our test on 21 October 2026 everything older was greyed out behind Plus) and caps uploads at 5MB, so anyone using it as a daily planner will need Plus.",
  "cost_traps": [
   {
    "id": "per_seat",
@@ -35,7 +35,7 @@
   {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "Free costs nothing and gives unlimited pages and projects, free templates, 3 personal spaces, Google and Outlook calendar, an AI assistant with 1,000 credits and limited AI integrations; the table adds file uploads of up to 5MB, two weeks of planner history and one shared space.",
+   "evidence": "Free costs nothing and gives unlimited pages and projects, free templates, 3 personal spaces, Google and Outlook calendar, an AI assistant with 1,000 credits and limited AI integrations; the table adds file uploads of up to 5MB, two weeks of planner history (in our test on 21 October 2026: the current and the previous week) and one shared space.",
    "verified_at": "2026-10-13",
    "source_url": "https://xtiles.app/en/pricing/"
   }
@@ -477,15 +477,43 @@
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "xTiles",
+    "product_id": "xtiles",
+    "run_date": "2026-10-21",
+    "what": "Tested by our team on 21 October 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We made a project with two tiles and three tasks (today, tomorrow and no date), checked them in My Planner, uploaded a 4 MB and a 6 MB file and looked back through the planner history.",
+    "findings": [
+     "Sign-up runs through a required questionnaire for 'Daily Brief by xTiles' and three 'Your stack' steps that each need a choice; going straight to the workspace sent us back. 'I don't need a daily brief' is the way out, and every project still showed a 'Set up your Daily Brief' panel afterwards.",
+     "Tasks made with /task got dates from a picker (Today, Tomorrow, Next week, Next month); 'Custom Recurring' carries a premium icon.",
+     "My Planner showed exactly the right task on 21 and 22 October, and ticking a task off in the planner also ticked it off in the project.",
+     "A 4 MB file uploaded; a 6 MB file was refused with 'Your Free plan is limited to 5 MB file upload. Upgrade to get more.'",
+     "Planner history on Free is the current and the previous week. Two and three weeks back were greyed out with 'Free covers the current and last week. Everything older is saved — go Plus to browse and edit it anytime.' The pricing page calls this '2 weeks'."
+    ],
+    "not_tested": [
+     "The Inbox for tasks without a date (we could not open it)",
+     "Daily Brief with connected apps (we connected nothing)",
+     "Sharing, working together and the limit of three personal spaces",
+     "Generate with AI and the templates",
+     "The mobile app"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "xtiles:cancellation_terms",

@@ -320,7 +320,34 @@
          "number",
          "null"
         ],
-        "description": "Only when the entry price is US dollars per month"
+        "description": "Only when the entry price is US dollars per month. The lowest entry price, often on annual billing: read entry_price_terms"
+       },
+       "schema_offer": {
+        "type": [
+         "object",
+         "null"
+        ],
+        "description": "The Offer exactly as it appears in the JSON-LD of the canonical review (what search engines read): one plan's price without commitment where known, with plan and billing basis in description. It can differ from from_price_usd_month, which is the lowest entry price.",
+        "properties": {
+         "price": {
+          "type": "number"
+         },
+         "currency": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "description": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "page": {
+          "type": "string"
+         }
+        }
        },
        "plans": {
         "type": [

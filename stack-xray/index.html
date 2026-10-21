@@ -127,14 +127,14 @@ h1{font-size:1.5rem}
 <h2>1 &middot; Build your stack</h2>
 <p class="sub">Search 592 tools &mdash; our researched tools plus the big incumbents.</p>
 <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-<input id="q" type="search" placeholder="Type a tool name&hellip; (e.g. Mailchimp, Close, Canva)" autocomplete="off"></div>
+<input id="q" type="search" aria-label="Add a tool to your stack" placeholder="Type a tool name&hellip; (e.g. Mailchimp, Close, Canva)" autocomplete="off"></div>
 <div id="sug"></div>
 <div id="rows"></div>
 <div class="quick" id="quick"></div>
 <p class="foot-note">Monthly price = what your invoice says, not the website. Usage: be honest &mdash; that's the whole point. Open &ldquo;Contract details&rdquo; on a line to add seats, the renewal date and notice period; that is what turns the diagnosis into dates.</p>
 <div class="opsl"><label for="hz">Look ahead</label><select id="hz" onchange="diag()" style="background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:5px 8px"><option value="3">3 months</option><option value="6">6 months</option><option value="12" selected>12 months</option></select>
 <button type="button" onclick="exporteer()">Export to a file</button>
-<label class="knop">Import a file<input type="file" accept="application/json,.json" onchange="importeer(this)" style="display:none"></label>
+<label class="knop">Import a file<input type="file" aria-label="Import a saved stack (JSON)" accept="application/json,.json" onchange="importeer(this)" style="display:none"></label>
 <label style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="onthoud" onchange="onthoudWissel()"> Remember on this device</label>
 <button type="button" onclick="vergeet()">Clear saved data</button></div>
 </div>

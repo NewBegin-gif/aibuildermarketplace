@@ -187,7 +187,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-09-17, re-read on their own pricing page and again on 2026-10-04, unchanged) Free $0 with 2 million events a month, permanently, no card required and no time limit.
 - **Honest take:** The cost lands on events instead of seats, and events are the thing you control least: an instrumentation change or a growth spurt moves your bill without anyone choosing to upgrade.
 - **Best for:** product teams who want everyone looking at the same behavioural data — the free 2 million events a month is a real working tier, not a demo
-- **Flags:** Hidden pricing, Usage-metered, Add-ons extra, Free tier
+- **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/amplitude-review/
 
 ## Answering Service Care (answeringservicecare.com)

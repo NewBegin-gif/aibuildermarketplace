@@ -24,7 +24,7 @@ from datetime import datetime, timedelta
 from openai import OpenAI
 
 # ── CONFIG ──────────────────────────────────────────────────────────────────
-TOKEN     = "8643600862:AAGYCXeBrexBX4yt8YIhdRiQEGBOqaOH87Y"
+TOKEN     = os.getenv("TELEGRAM_TOKEN", "")
 ADMIN_ID  = 8311785797
 LOG_FILE  = "/root/felix_hq/victor.log"
 MEM_FILE  = "/root/felix_hq/victor_memory.json"

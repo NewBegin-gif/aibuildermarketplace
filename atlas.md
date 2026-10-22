@@ -784,7 +784,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clutch-review/
 
 ## CO2 Impact (co2impact.co.uk)
-- **Verified pricing:** (read 2026-10-09 in a browser render of the pricing table on co2impact.co.uk's homepage, GBP, all prices exclude VAT) Every licence has a 12-month commitment, with an option to pay monthly.
+- **Verified pricing:** (read 2026-10-09 in a browser render of the pricing table on co2impact.co.uk's homepage; re-verified 2026-10-22 on the redesigned table, GBP, all prices exclude VAT) Every licence runs for …
 - **Honest take:** 12-month commitment on every plan; automated meter data costs extra per meter.
 - **Best for:** UK small and mid-sized businesses that need a first carbon footprint, Scope 1-3 reporting or a carbon reduction plan for customers and tenders, without hiring a consultant
 - **Flags:** Add-ons extra

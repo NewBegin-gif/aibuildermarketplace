@@ -86,15 +86,430 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "account",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "limited",
+     "name": "Limited",
+     "model": "flat",
+     "monthly": 29.99,
+     "annual_month": 25.5,
+     "evidence": "Billed monthly, Limited is $29.99 a month, Basic $59.99, Standard $149.99 and Enterprise $299.99. Quarterly billing takes 5% off (Limited $28.67, Basic $57.00, Standard $142.67 a month) and annual billing 15% (Limited $25.50, Basic $51.00, Standard $127.50 a month)"
+    },
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "flat",
+     "monthly": 59.99,
+     "annual_month": 51.0,
+     "evidence": "Billed monthly, Limited is $29.99 a month, Basic $59.99, Standard $149.99 and Enterprise $299.99. Quarterly billing takes 5% off (Limited $28.67, Basic $57.00, Standard $142.67 a month) and annual billing 15% (Limited $25.50, Basic $51.00, Standard $127.50 a month)"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "flat",
+     "monthly": 149.99,
+     "annual_month": 127.5,
+     "evidence": "Billed monthly, Limited is $29.99 a month, Basic $59.99, Standard $149.99 and Enterprise $299.99. Quarterly billing takes 5% off (Limited $28.67, Basic $57.00, Standard $142.67 a month) and annual billing 15% (Limited $25.50, Basic $51.00, Standard $127.50 a month)"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "flat",
+     "monthly": 299.99,
+     "annual_status": "unknown",
+     "evidence": "Standard $149.99 and Enterprise $299.99",
+     "annual_evidence": "Enterprise is sold monthly or annually only"
+    }
+   ],
+   "notes": "Flat subscription per account; the monthly prices are Basic $59.99 and Standard $149.99 and the annual per-month prices come from the 15% annual toggle. Enterprise is sold monthly or annually only and our notes carry no annual Enterprise price. Quarterly billing (5% off) is not modelled.",
+   "not_computable": [
+    "Product costs, shipping, drop or order handling fees and transaction charges are paid separately at the time of purchase, so the subscription is a floor, not the whole bill.",
+    "Paid add-ons such as the AI Store Builder renew on their own cycle and have no price in our notes."
+   ],
+   "rules_verified_at": "2026-10-22"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "doba",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "account",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 25.5,
+      "billed": {
+       "amount": 306.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 25.5,
+       "basic": 51.0,
+       "standard": 127.5,
+       "enterprise": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Product costs, shipping, drop or order handling fees and transaction charges are paid separately at the time of purchase, so the subscription is a floor, not the whole bill.",
+     "Paid add-ons such as the AI Store Builder renew on their own cycle and have no price in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "doba",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "account",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "limited": 29.99,
+       "basic": 59.99,
+       "standard": 149.99,
+       "enterprise": 299.99
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Product costs, shipping, drop or order handling fees and transaction charges are paid separately at the time of purchase, so the subscription is a floor, not the whole bill.",
+     "Paid add-ons such as the AI Store Builder renew on their own cycle and have no price in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -123,9 +538,15 @@
    "status": "open"
   },
   {
-   "question_id": "doba:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "doba:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Product costs, shipping, drop or order handling fees and transaction charges are paid separately at the time of purchase, so the subscription is a floor, not the whole bill. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "doba:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Paid add-ons such as the AI Store Builder renew on their own cycle and have no price in our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

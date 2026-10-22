@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 568 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-22.
+All 572 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-22.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1005,6 +1005,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/disputifier-review/
 
+## Doba (doba.com)
+- **Verified pricing:** (read 2026-10-22 on doba.com/pricing with the Monthly, Quarterly and Annually toggles; prices in USD) Doba sells four subscription tiers.
+- **Honest take:** Product, shipping and transaction costs on top; refund terms contradict each other.
+- **Best for:** online sellers on Shopify, eBay, Amazon, TikTok Shop and similar channels who want to dropship from one wholesale catalogue and push listings into several stores, starting from the Basic tier
+- **Flags:** Add-ons extra, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/doba-review/
+
 ## DocSend (docsend.com)
 - **Verified pricing:** (read 2026-09-25 on docsend.com/pricing, both billing toggles) Personal is $10 per user a month billed yearly or $15 billed monthly, one user, basic link controls (email to view, passcode, …
 - **Honest take:** Personal at $10 a month has no data rooms at all: sharing several files behind one link starts on Standard at $45 per user a month, and data-room controls on Advanced at $150.
@@ -1079,6 +1086,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants who want build-your-own-box, gift-box, mix-and-match, fixed-price or volume bundles live in days rather than sprints
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/easy-bundles-review/
+
+## EasyBrise (easybrise.com)
+- **Verified pricing:** (read 2026-10-15 on easybrise.com/pricing, its terms of service and refund policy; the terms say all fees are in US dollars) EasyBrise sells US company formation to founders abroad.
+- **Honest take:** State fee on top; agent and address renew after year one.
+- **Best for:** founders outside the United States who want a Wyoming or Delaware LLC or C-Corp with an EIN, registered agent and US address handled in one first-year package, and optionally ongoing tax filing support
+- **Full review:** https://aibuildermarketplace.com/b2b/easybrise-review/
 
 ## EasyDMARC (easydmarc.com)
 - **Verified pricing:** (re-read 2026-10-04 and again 2026-10-21 on easydmarc.com/pricing, which now redirects to /pricing/businesses; the four amounts are unchanged since 26 August 2026, the plan structure around…
@@ -3486,6 +3499,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/tresorit-review/
 
+## TrueReview (truereview.co)
+- **Verified pricing:** (read 2026-10-15 on truereview.co/pricing with the Monthly and Yearly toggles, and on its help-centre price list for request add-ons) TrueReview has three plans.
+- **Honest take:** Payments non-refundable; card required for the trial; requests expire monthly.
+- **Best for:** local businesses that want to send review requests by SMS and email, watch their Google reviews and answer them from one dashboard, with up to five locations on one Premium plan
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/truereview-review/
+
 ## Turbotic (turbotic.com)
 - **Verified pricing:** (re-verified 2026-10-02, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with additional credits bought as needed.
 - **Honest take:** It's a newer, enterprise-leaning automation platform, so it's less proven with a smaller community than the big names — and the credit-per-execution model means heavy volume needs cost-checking.
@@ -3788,6 +3808,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** outbound teams that want usage-priced cold email plus LinkedIn outreach, with unlimited seats and email accounts included instead of per-user fees
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/woodpecker-review/
+
+## WordPerfect Office (wordperfect.com)
+- **Verified pricing:** (read 2026-10-22 on the WordPerfect product pages at wordperfect.com, US English; dollar prices) WordPerfect Office is sold as a one-time purchase, not a subscription.
+- **Honest take:** Windows only; price moves with promotions; guarantee only for direct purchases.
+- **Best for:** Windows users and organisations that already work with WordPerfect documents or Reveal Codes, or that want a desktop office suite on a one-time licence instead of a subscription
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/wordperfect-office-review/
 
 ## World Businesses for Sale (worldbusinessesforsale.com)
 - **Verified pricing:** (2026, re-verified 2026-10-15 on their own store and selling pages) Browsing is free for buyers.

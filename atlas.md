@@ -3204,7 +3204,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sunsama-review/
 
 ## SupaEasy (supaeasy.com)
-- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-16 on both) A free plan plus three paid monthly tiers; Premium and Advanced carry a 7-day tri…
+- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-22 on both) A free plan plus four paid monthly tiers.
 - **Honest take:** The 'free' plan is development-stores only, so any live use is paid, and the AI generator that headlines the app is not in Premium ($49) but in Advanced ($99), plus AI credits bought separately ($25 per 50).
 - **Best for:** Shopify merchants — especially non-Plus stores — who want custom discount, checkout, payment and shipping logic without hiring a developer
 - **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/

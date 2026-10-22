@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 568 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-21.
+All 572 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-22.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -184,7 +184,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/amplemarket-review/
 
 ## Amplitude (amplitude.com)
-- **Verified pricing:** (2026-09-17, re-read on their own pricing page and again on 2026-10-04, unchanged) Free $0 with 2 million events a month, permanently, no card required and no time limit.
+- **Verified pricing:** (2026-09-17, re-read on their own pricing page on 2026-10-04 and again on 2026-10-21, unchanged) Free $0 with 2 million events a month, permanently, no card required and no time limit.
 - **Honest take:** The cost lands on events instead of seats, and events are the thing you control least: an instrumentation change or a growth spurt moves your bill without anyone choosing to upgrade.
 - **Best for:** product teams who want everyone looking at the same behavioural data — the free 2 million events a month is a real working tier, not a demo
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
@@ -495,7 +495,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bot-it-ai-review/
 
 ## Boulevard (joinblvd.com)
-- **Verified pricing:** (2026-09-17, read on their own pricing page; re-read 2026-10-04, annual amounts unchanged) Priced per location per month, and the page opens on its Annually tab, so the headline figures are…
+- **Verified pricing:** (2026-09-17, read on their own pricing page; re-read 2026-10-04 and 2026-10-21, annual amounts unchanged; the monthly figures below are from 4 October) Priced per location per month, and th…
 - **Honest take:** Two things about this price list. It is per location, so the arithmetic for a second salon is not a volume discount, it is double — and the add-ons are per location too, which compounds it.
 - **Best for:** salons, spas and clinics with staff to schedule and a front desk to run — the per-location pricing works out fine for one busy site
 - **Flags:** Add-ons extra
@@ -1005,6 +1005,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/disputifier-review/
 
+## Doba (doba.com)
+- **Verified pricing:** (read 2026-10-22 on doba.com/pricing with the Monthly, Quarterly and Annually toggles; prices in USD) Doba sells four subscription tiers.
+- **Honest take:** Product, shipping and transaction costs on top; refund terms contradict each other.
+- **Best for:** online sellers on Shopify, eBay, Amazon, TikTok Shop and similar channels who want to dropship from one wholesale catalogue and push listings into several stores, starting from the Basic tier
+- **Flags:** Add-ons extra, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/doba-review/
+
 ## DocSend (docsend.com)
 - **Verified pricing:** (read 2026-09-25 on docsend.com/pricing, both billing toggles) Personal is $10 per user a month billed yearly or $15 billed monthly, one user, basic link controls (email to view, passcode, …
 - **Honest take:** Personal at $10 a month has no data rooms at all: sharing several files behind one link starts on Standard at $45 per user a month, and data-room controls on Advanced at $150.
@@ -1080,8 +1087,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/easy-bundles-review/
 
+## EasyBrise (easybrise.com)
+- **Verified pricing:** (read 2026-10-15 on easybrise.com/pricing, its terms of service and refund policy; the terms say all fees are in US dollars) EasyBrise sells US company formation to founders abroad.
+- **Honest take:** State fee on top; agent and address renew after year one.
+- **Best for:** founders outside the United States who want a Wyoming or Delaware LLC or C-Corp with an EIN, registered agent and US address handled in one first-year package, and optionally ongoing tax filing support
+- **Full review:** https://aibuildermarketplace.com/b2b/easybrise-review/
+
 ## EasyDMARC (easydmarc.com)
-- **Verified pricing:** (re-read 2026-10-04 on easydmarc.com/pricing, which now redirects to /pricing/businesses; the four amounts are unchanged since 26 August 2026, the plan structure around them is not) Plus is…
+- **Verified pricing:** (re-read 2026-10-04 and again 2026-10-21 on easydmarc.com/pricing, which now redirects to /pricing/businesses; the four amounts are unchanged since 26 August 2026, the plan structure around…
 - **Honest take:** You are buying domains and history, not features, and no longer seats, since every tier now lists unlimited users.
 - **Best for:** anyone who sends email from their own domain and has not yet got DMARC to enforcement — the reporting is the part that makes that safe rather than guesswork
 - **Flags:** Add-ons extra, Annual commit
@@ -1112,6 +1125,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-21 and again unchanged on 2026-09-28, read on their own pricing page) The prices are published, despite the consultative first impression, and the report figures have n…
 - **Honest take:** It's a strategy-to-execution layer, not a task app or a dashboard — so the value only lands if leadership actually adopts the framework.
 - **Best for:** scaling companies where growth is outpacing alignment — leadership lacks execution visibility and strategic initiatives keep stalling halfway
+- **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/elevateforward-review/
 
 ## ElevenLabs (elevenlabs.io)
@@ -1170,7 +1184,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/essent-preorder-back-in-stock-review/
 
 ## Essential Announcement Bar (essential-apps.com)
-- **Verified pricing:** (read 2026-09-29 on apps.shopify.com/essential-announcement-bar, on essential-apps.com/announcement-bar and in the vendor's help articles on bar types and on views) Four plans priced on mon…
+- **Verified pricing:** (read 2026-09-29 on apps.shopify.com/essential-announcement-bar, on essential-apps.com/announcement-bar and in the vendor's help articles on bar types and on views; plan prices, annual pric…
 - **Honest take:** The bar the listing leads with is not on the free plan.
 - **Best for:** Shopify merchants who want a free, no-code top bar or rotating bar for shipping terms, offers and store notices, and who will pay $9.99 once they need scheduled flash-sale bars, cart-page bars or country targeting
 - **Flags:** Free tier
@@ -1355,7 +1369,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/foxit-review/
 
 ## Frase (frase.io)
-- **Verified pricing:** (re-verified 2026-10-03 against Frase's own machine-readable pricing file frase.io/pricing.md and the pricing page; every plan price below was unchanged from our 17 August and 14 September …
+- **Verified pricing:** (re-verified 2026-10-21 against Frase's own machine-readable pricing file frase.io/pricing.md; every plan price below was unchanged from our 17 August, 14 September and 3 October readings) …
 - **Honest take:** The article quotas pinch if you publish at volume (overage docs bill each), and it's a research-and-optimization tool, not a magic ranking button.
 - **Best for:** content teams and SEOs who want to speed up research, briefs and SERP-driven optimization in one workflow
 - **Flags:** Usage-metered, Add-ons extra
@@ -1444,9 +1458,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/getscreen-review/
 
 ## Gixo (gixo.ai)
-- **Verified pricing:** (re-read 2026-10-04 on gixo.ai/pricing; the per-product floors are unchanged since 19 August 2026, but the page now publishes every tier) Gixo is not one product but seven, each bought on i…
-- **Honest take:** Two things about this pricing are worth reading twice. The first is that seven products means seven subscriptions. Gixo is priced per deliverable, not per company, and one product's plan does not include the others.
+- **Verified pricing:** (re-read 2026-10-21 on gixo.ai/pricing in served HTML; the floors are unchanged, but the billing unit changed after our 4 October reading: five of the seven products are now priced per seat…
+- **Honest take:** Two things about this pricing are worth reading twice. The first is that seven products means seven subscriptions, and most of them are now per seat.
 - **Best for:** teams that want one dedicated, source-grounded tool per deliverable — a deck tool, a content tool, a proposal tool — and would rather buy them separately than bend one generic generator into every shape
+- **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/gixo-review/
 
 ## Glide (glideapps.com)
@@ -2327,9 +2342,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Parallel AI (parallellabs.app)
 - **Verified pricing:** (read on 11 September 2026 on parallellabs.app/pricing, which stamps itself 'Last updated: 2026-08-18') The meter is credits, and there are two separate pools.
-- **Honest take:** The free tier is genuinely free -- 50 credits, no card -- and it is the only way to answer the question the pricing page leaves open.
+- **Honest take:** The free tier is genuinely free -- 50 credits a month, no card -- and it is the only way to answer the question the pricing page leaves open.
 - **Best for:** teams that want the sales, content and support agents in one place and will genuinely use the lead engine -- that half is priced per result, gets cheaper in bulk, and a lookup that finds nothing costs nothing
-- **Flags:** Usage-metered, Add-ons extra, Free tier
+- **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/parallel-ai-review/
 
 ## Parim (parim.co)
@@ -2746,7 +2761,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/runpod-review/
 
 ## Salesflare (salesflare.com)
-- **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27 on salesflare.com/pricing, per user a month) Three plans, and the page carries both billing terms plus a $/€ switch: Growth $39 a mo…
+- **Verified pricing:** (re-verified 2026-09-14, re-read unchanged 2026-09-27 and again on 2026-10-21 on salesflare.com/pricing, per user a month) Three plans, and the page carries both billing terms plus a $/€ sw…
 - **Honest take:** It's deliberately lean: no built-in dialer, no quoting or invoicing, and reporting feels basic unless you export.
 - **Best for:** small B2B teams whose reps hate data entry — Salesflare auto-logs emails, meetings and contact details from your inbox and calendar
 - **Flags:** Per-seat pricing, Usage-metered
@@ -3484,6 +3499,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/tresorit-review/
 
+## TrueReview (truereview.co)
+- **Verified pricing:** (read 2026-10-15 on truereview.co/pricing with the Monthly and Yearly toggles, and on its help-centre price list for request add-ons) TrueReview has three plans.
+- **Honest take:** Payments non-refundable; card required for the trial; requests expire monthly.
+- **Best for:** local businesses that want to send review requests by SMS and email, watch their Google reviews and answer them from one dashboard, with up to five locations on one Premium plan
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/truereview-review/
+
 ## Turbotic (turbotic.com)
 - **Verified pricing:** (re-verified 2026-10-02, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with additional credits bought as needed.
 - **Honest take:** It's a newer, enterprise-leaning automation platform, so it's less proven with a smaller community than the big names — and the credit-per-execution model means heavy volume needs cost-checking.
@@ -3786,6 +3808,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** outbound teams that want usage-priced cold email plus LinkedIn outreach, with unlimited seats and email accounts included instead of per-user fees
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/woodpecker-review/
+
+## WordPerfect Office (wordperfect.com)
+- **Verified pricing:** (read 2026-10-22 on the WordPerfect product pages at wordperfect.com, US English; dollar prices) WordPerfect Office is sold as a one-time purchase, not a subscription.
+- **Honest take:** Windows only; price moves with promotions; guarantee only for direct purchases.
+- **Best for:** Windows users and organisations that already work with WordPerfect documents or Reveal Codes, or that want a desktop office suite on a one-time licence instead of a subscription
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/wordperfect-office-review/
 
 ## World Businesses for Sale (worldbusinessesforsale.com)
 - **Verified pricing:** (2026, re-verified 2026-10-15 on their own store and selling pages) Browsing is free for buyers.

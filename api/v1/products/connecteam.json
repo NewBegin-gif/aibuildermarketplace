@@ -9,37 +9,16 @@
  "summary": "All-in-one app for managing deskless teams. Scheduling, time clock, tasks, training and team chat for hourly and frontline workforces.",
  "best_for": "deskless and frontline teams (shift work, field crews) that need scheduling, a time clock and comms in one app, on the free-for-10 plan",
  "skip_if": "your whole team sits at desks with email and Slack — this is built for the frontline, and a general PM tool fits an office better",
- "honest_knock": "The free-for-10 plan is one of the most generous in the category, but the three-hub structure means costs can stack if you need all of them — price the specific hubs you'll actually use, not the full bundle.",
+ "honest_knock": "The free-for-10 plan is one of the most generous in the category, but the three-hub structure means costs can stack if you need all of them — price the specific hubs you'll actually use, not the full bundle. Read two terms before paying: a monthly plan can be cancelled at any time but prepaid amounts are not refunded, and an annual plan is refundable pro rata only within its first 30 days. Every price is in US dollars, with no other currency offered.",
  "pricing": {
   "status": "public",
   "entry_price": "$29",
   "entry_price_terms": "per month billed yearly ($35 monthly), covers first 30 users",
   "from_price_usd_month": 29.0,
-  "plans": [
-   {
-    "name": "Small Business Plan",
-    "price": "$0 for life",
-    "includes": "Up to 10 users, includes all hubs and features"
-   },
-   {
-    "name": "Basic",
-    "price": "$29/mo yearly billed; $35/mo monthly billed",
-    "includes": "Flat base covers first 30 users per hub; surcharge from user 31 ($0.80 Operations, $0.50 Communications/HR&Skills)"
-   },
-   {
-    "name": "Advanced",
-    "price": "$49/mo yearly billed; $59/mo monthly billed",
-    "includes": "Flat base covers first 30 users per hub; surcharge from user 31 ($2.50 Operations, $1.50 Communications/HR&Skills)"
-   },
-   {
-    "name": "Expert",
-    "price": "$99/mo yearly billed; $119/mo monthly billed",
-    "includes": "Flat base covers first 30 users per hub; surcharge from user 31 ($4.20 Operations, $3.00 Communications/HR&Skills)"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-10-03 on their own pricing page, USD) The free tier is real and not a trial: the Small Business Plan is $0 for life, covers up to 10 users and includes all hubs and features. Above that you buy per hub — Operations, Communications or HR & Skills — and each hub carries a flat base price covering the first 30 users, plus a per-user surcharge only from user 31 onward. Billed yearly that base is $29/mo at Basic, $49 at Advanced and $99 at Expert; billed monthly it is $35, $59 and $119. The surcharge is where the hubs diverge: on the yearly plans Operations adds $0.80, $2.50 and $4.20 per extra user a month, while Communications and HR & Skills add $0.50, $1.50 and $3.00. Quoting only the per-user rate understates a small team's bill, because a shop of 30 or fewer pays the flat base either way. Price it per hub you will actually switch on, not per user. Re-read on 3 October 2026 with every figure unchanged; the yearly toggle is now labelled \"save 18%\", and the 14-day trial still needs no credit card.",
-  "verified_at": "2026-10-03",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-10-03 on their own pricing page, USD) The free tier is real and not a trial: the Small Business Plan is $0 for life, covers up to 10 users and includes all hubs and features. Above that you buy per hub — Operations, Communications or HR & Skills — and each hub carries a flat base price covering the first 30 users, plus a per-user surcharge only from user 31 onward. Billed yearly that base is $29/mo at Basic, $49 at Advanced and $99 at Expert; billed monthly it is $35, $59 and $119. The surcharge is where the hubs diverge: on the yearly plans Operations adds $0.80, $2.50 and $4.20 per extra user a month, while Communications and HR & Skills add $0.50, $1.50 and $3.00. Quoting only the per-user rate understates a small team's bill, because a shop of 30 or fewer pays the flat base either way. Price it per hub you will actually switch on, not per user. Re-read on 3 October 2026 with every figure unchanged; the yearly toggle is now labelled \"save 18%\", and the 14-day trial still needs no credit card. Re-read on 22 October 2026 by plain fetch with every base price and surcharge unchanged. The page's FAQ adds two terms that change the free-tier picture: a team of 11 to 30 users does not have to pay after the trial, because it can move to the Limited plan, free for life on each hub but keeping only the essentials; and the time-clock comparison table marks payroll integration as not included in the Small Business Plan. Prices are in US dollars only.",
+  "verified_at": "2026-10-22",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": null
@@ -51,7 +30,7 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "Above that you buy per hub — Operations, Communications or HR & Skills — and each hub carries a flat base price covering the first 30 users, plus a per-user surcharge only from user 31 onward.",
-   "verified_at": "2026-10-03",
+   "verified_at": "2026-10-22",
    "source_url": null
   }
  ],
@@ -80,15 +59,493 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "small-business",
+     "name": "Small Business Plan",
+     "model": "free",
+     "max_units": 10,
+     "evidence": "the Small Business Plan is $0 for life, covers up to 10 users and includes all hubs and features"
+    },
+    {
+     "id": "limited",
+     "name": "Limited (one hub)",
+     "model": "free",
+     "max_units": 30,
+     "evidence": "it can move to the Limited plan, free for life on each hub but keeping only the essentials"
+    },
+    {
+     "id": "basic",
+     "name": "Basic (Operations Hub)",
+     "model": "flat",
+     "annual_month": 29,
+     "monthly": 35,
+     "included_units": 30,
+     "extra_unit": {
+      "annual_month": 0.8,
+      "monthly_status": "unknown"
+     },
+     "evidence": "Billed yearly that base is $29/mo at Basic, $49 at Advanced and $99 at Expert; billed monthly it is $35, $59 and $119"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced (Operations Hub)",
+     "model": "flat",
+     "annual_month": 49,
+     "monthly": 59,
+     "included_units": 30,
+     "extra_unit": {
+      "annual_month": 2.5,
+      "monthly_status": "unknown"
+     },
+     "evidence": "Billed yearly that base is $29/mo at Basic, $49 at Advanced and $99 at Expert; billed monthly it is $35, $59 and $119"
+    },
+    {
+     "id": "expert",
+     "name": "Expert (Operations Hub)",
+     "model": "flat",
+     "annual_month": 99,
+     "monthly": 119,
+     "included_units": 30,
+     "extra_unit": {
+      "annual_month": 4.2,
+      "monthly_status": "unknown"
+     },
+     "evidence": "Billed yearly that base is $29/mo at Basic, $49 at Advanced and $99 at Expert; billed monthly it is $35, $59 and $119"
+    }
+   ],
+   "extra_evidence": "on the yearly plans Operations adds $0.80, $2.50 and $4.20 per extra user a month",
+   "notes": [
+    "Priced per hub; the rule covers the Operations Hub. Communications and HR & Skills have the same bases with lower surcharges, and each hub you switch on is paid separately.",
+    "The Limited plan keeps only the essentials of each hub; the free Small Business Plan includes all hubs."
+   ],
+   "not_computable": [
+    {
+     "text": "Surcharges for extra users on monthly billing are not in our notes.",
+     "affects_cost": true
+    },
+    {
+     "text": "The plan card says the Small Business Plan covers up to 10 users while the FAQ on the same page says fewer than 10 employees.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-10-22"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "connecteam",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 29.0,
+       "advanced": 49.0,
+       "expert": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 29.0,
+       "advanced": 49.0,
+       "expert": 99.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 29.0,
+       "advanced": 49.0,
+       "expert": 99.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 29.0,
+       "advanced": 49.0,
+       "expert": 99.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 29.0,
+       "advanced": 49.0,
+       "expert": 99.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": 0.0,
+       "basic": 29.0,
+       "advanced": 49.0,
+       "expert": 99.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": 0.0,
+       "basic": 29.0,
+       "advanced": 49.0,
+       "expert": 99.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": 0.0,
+       "basic": 29.0,
+       "advanced": 49.0,
+       "expert": 99.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic (Operations Hub)",
+      "total_month": 45.0,
+      "billed": {
+       "amount": 540.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": "not_eligible",
+       "basic": 45.0,
+       "advanced": 99.0,
+       "expert": 183.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic (Operations Hub)",
+      "total_month": 85.0,
+      "billed": {
+       "amount": 1020.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": "not_eligible",
+       "basic": 85.0,
+       "advanced": 224.0,
+       "expert": 393.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "limited",
+      "to_plan": "basic",
+      "from_plan_name": "Limited (one hub)",
+      "to_plan_name": "Basic (Operations Hub)"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Surcharges for extra users on monthly billing are not in our notes.",
+     "The plan card says the Small Business Plan covers up to 10 users while the FAQ on the same page says fewer than 10 employees."
+    ]
+   },
+   "monthly": {
+    "product_id": "connecteam",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 35.0,
+       "advanced": 59.0,
+       "expert": 119.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 35.0,
+       "advanced": 59.0,
+       "expert": 119.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 35.0,
+       "advanced": 59.0,
+       "expert": 119.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 35.0,
+       "advanced": 59.0,
+       "expert": 119.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": 0.0,
+       "limited": 0.0,
+       "basic": 35.0,
+       "advanced": 59.0,
+       "expert": 119.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": 0.0,
+       "basic": 35.0,
+       "advanced": 59.0,
+       "expert": 119.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": 0.0,
+       "basic": 35.0,
+       "advanced": 59.0,
+       "expert": 119.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "limited",
+      "cheapest_plan_name": "Limited (one hub)",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": 0.0,
+       "basic": 35.0,
+       "advanced": 59.0,
+       "expert": 119.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": "not_eligible",
+       "basic": "price_unknown_on_billing",
+       "advanced": "price_unknown_on_billing",
+       "expert": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "small-business": "not_eligible",
+       "limited": "not_eligible",
+       "basic": "price_unknown_on_billing",
+       "advanced": "price_unknown_on_billing",
+       "expert": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "limited",
+      "to_plan": null,
+      "from_plan_name": "Limited (one hub)",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Surcharges for extra users on monthly billing are not in our notes.",
+     "The plan card says the Small Business Plan covers up to 10 users while the FAQ on the same page says fewer than 10 employees."
+    ]
+   }
+  }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -117,9 +574,15 @@
    "status": "open"
   },
   {
-   "question_id": "connecteam:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "connecteam:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Surcharges for extra users on monthly billing are not in our notes. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "connecteam:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The plan card says the Small Business Plan covers up to 10 users while the FAQ on the same page says fewer than 10 employees. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

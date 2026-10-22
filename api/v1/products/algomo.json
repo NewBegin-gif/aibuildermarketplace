@@ -7,28 +7,44 @@
  "category": "Sales & CRM",
  "task": "Sales outreach, leads & CRM",
  "summary": "AI inbound agent and website personalization for B2B — qualifies visitors by identity, holds contextual conversations and books meetings from your existing traffic.",
- "best_for": "B2B teams with real inbound traffic that want an AI agent qualifying visitors, personalizing the site by visitor identity and booking meetings — and don't mind a sales-led buying process",
- "skip_if": "you want self-serve, transparent pricing, or you are pre-traffic — an AI inbound agent needs inbound to work with",
- "honest_knock": "Algomo is a member of the quote-only club: $200/month is the only number on the site, and the real bill for your traffic volume and feature set only emerges in a sales conversation. Budgeting before the demo is guesswork — and quote-priced tools rarely get cheaper at renewal. Worth knowing before it becomes load-bearing: the personalisation runs from a JavaScript snippet in your header, so the tailored copy and routing rules live for as long as the subscription does. Remove the snippet and every visitor sees the original page again.",
+ "best_for": "teams that want one AI agent on their own website for support and inbound sales, priced by the work it does rather than by seat, and who want to start self-serve on a free plan",
+ "skip_if": "you need SOC 2 evidence, more than five users or a second agent without an enterprise contract, or you cannot accept the agent going quiet when its monthly credits run out",
+ "honest_knock": "The credit model is clear on paper with one opaque step: whether a conversation was 'useful', and so billed at five credits, is decided by a language model after it closes. Algomo shows the verdict and lets you contest it, but the bill rests on a classifier you do not control. The other edges are deliberate. You cannot buy top-ups, so a traffic spike ends with the agent switched off rather than with an overage invoice; nothing is prorated when you change rungs; and cancelling drops the account to Free, where any balance above 140 credits is trimmed. On security, Algomo states that it has not completed a SOC 2 audit, and conversations go to OpenAI by default, with Anthropic, Google and Mistral models reached through OpenRouter only if you select one.",
  "pricing": {
   "status": "public",
-  "entry_price": "$200",
-  "entry_price_terms": "a month (no per-seat pricing)",
-  "from_price_usd_month": 200.0,
+  "entry_price": "$50",
+  "entry_price_terms": "a month for 2,000 credits up to $4,300 for 200,000",
+  "from_price_usd_month": 50.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-10-03 on newmode.ai/pricing and the homepage) Plans start at $200 a month with no per-seat pricing - and that single sentence is still the entire public price list, unchanged since our July and August readings and again on 14 September and 3 October 2026. The pricing page carries exactly two plans, Growth and Enterprise, and both buttons say 'Let's chat' and 'Book call': no amount, no contact slider, no self-serve tier. Growth lists 1:1 personalized LinkedIn ads, AI-generated ad copy, website personalization, CRM integration and email support; Enterprise adds unlimited campaigns, custom integrations, a dedicated success manager, priority support and advanced analytics. What drives the price between the two is not published anywhere on the site, so the only figure a buyer can budget against is the $200 floor.",
-  "verified_at": "2026-10-03",
-  "source_url": null,
+  "notes": "(re-read 2026-10-22 on algomo.com/pricing and its markdown version, algomo.com/pricing.md) Algomo now publishes a complete self-serve price list, and it replaces the single '$200 a month' starting price we had recorded since July. There are three plans. Free is $0 with 100 credits a month, one user, one workspace and one agent, and needs no credit card. Business is a ladder of fixed rungs rather than a slider: 2,000 credits for $50 a month, 4,000 for $100, 8,000 for $200, 16,000 for $400, 25,000 for $600, 40,000 for $950, 60,000 for $1,400, 80,000 for $1,850, 100,000 for $2,250, 150,000 for $3,300 and 200,000 for $4,300, each with up to five users on one workspace and one agent. A budget between two rungs buys the lower one. Paid yearly, every rung costs ten months: $500 a year at the bottom and $43,000 at the top, which the table shows as a 17% to 28% saving against the $50-per-2,000 base rate once the volume discount (4% at 25,000 credits, rising to 14% at 200,000) is added. Enterprise is 'Contact us' and adds unlimited users and agents, several workspaces, SSO, SLAs, a DPA, a security review and, only when a buyer's procurement asks for it, a contract that runs for a year. The unit behind every rung is the same on Free and Business: five credits for a conversation the agent helped with, five more for every further ten replies, nothing for a conversation that went nowhere, and a hundredth of a credit for each workflow step that calls an outside service or each knowledge-base lookup that finds something. Algomo's own estimate is that $50 covers about 400 useful conversations a month.",
+  "verified_at": "2026-10-22",
+  "source_url": "https://www.algomo.com/pricing",
   "schema_offer": null,
-  "source_quotes": null
+  "source_quotes": [
+   {
+    "field": "price",
+    "plan": "Business, starting quota",
+    "quote": "$50/month",
+    "source_url": "https://www.algomo.com/pricing",
+    "read_on": "2026-10-22"
+   }
+  ]
  },
- "free_plan": false,
- "free_plan_evidence": null,
- "cost_traps": [],
+ "free_plan": true,
+ "free_plan_evidence": "Free is $0 with 100 credits a month, one user, one workspace and one agent, and needs no credit card.",
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "Free is $0 with 100 credits a month, one user, one workspace and one agent, and needs no credit card.",
+   "verified_at": "2026-10-22",
+   "source_url": "https://www.algomo.com/pricing"
+  }
+ ],
  "compare_with": {
-  "name": "Intercom",
-  "why": "Intercom's Fin is the incumbent AI-agent route with published pricing; Algomo leads with identity-based personalization and meeting booking, but keeps its price list behind a demo"
+  "name": "Tidio",
+  "why": "Tidio's Starter is $29 a month paid monthly, with its Lyro AI agent sold as an add-on from $39 a month (read 24 August 2026); Algomo includes the agent in every plan and bills per useful conversation rather than per seat or per add-on"
  },
  "links": {
   "record": "https://aibuildermarketplace.com/api/v1/products/algomo.json",
@@ -64,7 +80,7 @@
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
-  "price": "read",
+  "price": "quoted",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },

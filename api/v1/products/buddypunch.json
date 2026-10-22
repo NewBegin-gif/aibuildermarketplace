@@ -9,7 +9,7 @@
  "summary": "Time clock and employee time tracking for hourly teams. Track hours, breaks, PTO and overtime with GPS and photo punch-in, and export payroll-ready reports.",
  "best_for": "small-to-mid teams that need straightforward employee time tracking with GPS and payroll-ready exports",
  "skip_if": "you're a team of two or three — the fixed base fee makes the per-head cost sting until you scale up",
- "honest_knock": "That flat $19 base fee makes it pricey for very small teams — at three or four users the base fee dominates the bill, so it's better value once you're past a handful of employees.",
+ "honest_knock": "That flat $19 base fee makes it pricey for very small teams — at three or four users the base fee dominates the bill, so it's better value once you're past a handful of employees. Two further limits come from Buddy Punch's own documentation. The free administrator seat cannot clock its own time, so a working owner pays for a second login. And outbound webhooks do not yet cover punches or time cards, so a payroll or HR system that needs live punch events has to poll the API instead.",
  "pricing": {
   "status": "public",
   "entry_price": "$5.99",
@@ -17,8 +17,8 @@
   "from_price_usd_month": 5.99,
   "plans": null,
   "plans_source": null,
-  "notes": "Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September): Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month. Scheduling is $1 per user on Starter (included from Pro), real-time GPS $2 per user, onboarding and task checklists $4 per user, extended data retention $2 per user; the payroll add-on is $8 per user plus a $49 base fee a month. 14-day free trial, no card. On annual billing the per-user rates are $4.99, $6.99 and $12.99 and the base fee stays $19 a month. Administrators are free users; employees and managers count, and only active employees are billed. Advanced includes real-time GPS, advanced reporting and the onboarding/tasks add-on (listed as coming soon); data retention is $2 per user on every plan.",
-  "verified_at": "2026-09-24",
+  "notes": "Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September) and again on 22 October 2026: Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month. Scheduling is $1 per user on Starter (included from Pro), real-time GPS $2 per user, onboarding and task checklists $4 per user, data retention for six years $24 per user a year (listed until September as $2 per user a month), advanced reporting $2 per user; the payroll add-on is $8 per user plus a $49 base fee a month. 14-day free trial, no card. On annual billing the per-user rates are $4.99, $6.99 and $12.99 and the base fee stays $19 a month. Administrators are free users; employees and managers count, and only active employees are billed. Advanced includes real-time GPS, advanced reporting and the onboarding/tasks add-on (listed as coming soon); the six-year data retention add-on can be bought on every plan, Advanced included.",
+  "verified_at": "2026-10-22",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": [
@@ -51,22 +51,22 @@
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September): Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month.",
-   "verified_at": "2026-09-24",
+   "evidence": "Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September) and again on 22 October 2026: Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month.",
+   "verified_at": "2026-10-22",
    "source_url": null
   },
   {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
-   "evidence": "Scheduling is $1 per user on Starter (included from Pro), real-time GPS $2 per user, onboarding and task checklists $4 per user, extended data retention $2 per user; the payroll add-on is $8 per user plus a $49 base fee a month.",
-   "verified_at": "2026-09-24",
+   "evidence": "Scheduling is $1 per user on Starter (included from Pro), real-time GPS $2 per user, onboarding and task checklists $4 per user, data retention for six years $24 per user a year (listed until September as $2 per user a month), advanced reporting $2 per user; the payroll add-on is $8 per user plus a $49 base fee a month.",
+   "verified_at": "2026-10-22",
    "source_url": null
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "On annual billing the per-user rates are $4.99, $6.99 and $12.99 and the base fee stays $19 a month.",
-   "verified_at": "2026-09-24",
+   "verified_at": "2026-10-22",
    "source_url": null
   }
  ],
@@ -95,16 +95,445 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "monthly": 19,
+     "annual_month": 19,
+     "included_units": 0,
+     "extra_unit": {
+      "monthly": 5.99,
+      "annual_month": 4.99
+     },
+     "evidence": "Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "monthly": 19,
+     "annual_month": 19,
+     "included_units": 0,
+     "extra_unit": {
+      "monthly": 7.99,
+      "annual_month": 6.99
+     },
+     "evidence": "Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "flat",
+     "monthly": 19,
+     "annual_month": 19,
+     "included_units": 0,
+     "extra_unit": {
+      "monthly": 13.99,
+      "annual_month": 12.99
+     },
+     "evidence": "Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month"
+    }
+   ],
+   "extra_evidence": "On annual billing the per-user rates are $4.99, $6.99 and $12.99 and the base fee stays $19 a month",
+   "addons": [
+    {
+     "id": "scheduling",
+     "label": "Scheduling (Starter)",
+     "per": "unit",
+     "price_month": 1,
+     "billing": "unspecified",
+     "only_on": [
+      "starter"
+     ],
+     "evidence": "Scheduling is $1 per user on Starter (included from Pro)"
+    },
+    {
+     "id": "gps",
+     "label": "Real-time GPS",
+     "per": "unit",
+     "price_month": 2,
+     "billing": "unspecified",
+     "included_on": [
+      "advanced"
+     ],
+     "evidence": "real-time GPS $2 per user"
+    }
+   ],
+   "notes": [
+    "The $19 base fee is charged every month on both billing terms; the rule models it as a flat fee with every user billed on top.",
+    "Administrators are free and are not counted; employees and managers are."
+   ],
+   "not_computable": [
+    {
+     "text": "The payroll add-on ($8 per user plus a $49 base a month) and the six-year data retention add-on ($24 per user a year) are not modelled.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-10-22"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "buddypunch",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 23.99,
+      "billed": {
+       "amount": 287.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 23.99,
+       "pro": 25.99,
+       "advanced": 31.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 28.98,
+      "billed": {
+       "amount": 347.76,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 28.98,
+       "pro": 32.98,
+       "advanced": 44.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 33.97,
+      "billed": {
+       "amount": 407.64,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 33.97,
+       "pro": 39.97,
+       "advanced": 57.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 43.95,
+      "billed": {
+       "amount": 527.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 43.95,
+       "pro": 53.95,
+       "advanced": 83.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 68.9,
+      "billed": {
+       "amount": 826.8,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 68.9,
+       "pro": 88.9,
+       "advanced": 148.9
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 93.85,
+      "billed": {
+       "amount": 1126.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 93.85,
+       "pro": 123.85,
+       "advanced": 213.85
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 118.8,
+      "billed": {
+       "amount": 1425.6,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 118.8,
+       "pro": 158.8,
+       "advanced": 278.8
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 143.75,
+      "billed": {
+       "amount": 1725.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 143.75,
+       "pro": 193.75,
+       "advanced": 343.75
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 268.5,
+      "billed": {
+       "amount": 3222.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 268.5,
+       "pro": 368.5,
+       "advanced": 668.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 518.0,
+      "billed": {
+       "amount": 6216.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 518.0,
+       "pro": 718.0,
+       "advanced": 1318.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The payroll add-on ($8 per user plus a $49 base a month) and the six-year data retention add-on ($24 per user a year) are not modelled."
+    ]
+   },
+   "monthly": {
+    "product_id": "buddypunch",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.99,
+      "billed": {
+       "amount": 24.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.99,
+       "pro": 26.99,
+       "advanced": 32.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.98,
+      "billed": {
+       "amount": 30.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.98,
+       "pro": 34.98,
+       "advanced": 46.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 36.97,
+      "billed": {
+       "amount": 36.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 36.97,
+       "pro": 42.97,
+       "advanced": 60.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 48.95,
+      "billed": {
+       "amount": 48.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 48.95,
+       "pro": 58.95,
+       "advanced": 88.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 78.9,
+      "billed": {
+       "amount": 78.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 78.9,
+       "pro": 98.9,
+       "advanced": 158.9
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 108.85,
+      "billed": {
+       "amount": 108.85,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 108.85,
+       "pro": 138.85,
+       "advanced": 228.85
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 138.8,
+      "billed": {
+       "amount": 138.8,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 138.8,
+       "pro": 178.8,
+       "advanced": 298.8
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 168.75,
+      "billed": {
+       "amount": 168.75,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 168.75,
+       "pro": 218.75,
+       "advanced": 368.75
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 318.5,
+      "billed": {
+       "amount": 318.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 318.5,
+       "pro": 418.5,
+       "advanced": 718.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 618.0,
+      "billed": {
+       "amount": 618.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 618.0,
+       "pro": 818.0,
+       "advanced": 1418.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The payroll add-on ($8 per user plus a $49 base a month) and the six-year data retention add-on ($24 per user a year) are not modelled."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -133,9 +562,9 @@
    "status": "open"
   },
   {
-   "question_id": "buddypunch:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "buddypunch:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The payroll add-on ($8 per user plus a $49 base a month) and the six-year data retention add-on ($24 per user a year) are not modelled. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

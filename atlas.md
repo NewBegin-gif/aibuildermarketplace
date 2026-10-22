@@ -136,9 +136,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aisq-review/
 
 ## Algomo (algomo.com)
-- **Verified pricing:** (re-verified 2026-10-03 on newmode.ai/pricing and the homepage) Plans start at $200 a month with no per-seat pricing - and that single sentence is still the entire public price list, unchan…
-- **Honest take:** Algomo is a member of the quote-only club: $200/month is the only number on the site, and the real bill for your traffic volume and feature set only emerges in a sales conversation.
-- **Best for:** B2B teams with real inbound traffic that want an AI agent qualifying visitors, personalizing the site by visitor identity and booking meetings — and don't mind a sales-led buying process
+- **Verified pricing:** (re-read 2026-10-22 on algomo.com/pricing and its markdown version, algomo.com/pricing.md) Algomo now publishes a complete self-serve price list, and it replaces the single '$200 a month' s…
+- **Honest take:** The credit model is clear on paper with one opaque step: whether a conversation was 'useful', and so billed at five credits, is decided by a language model after it closes.
+- **Best for:** teams that want one AI agent on their own website for support and inbound sales, priced by the work it does rather than by seat, and who want to start self-serve on a free plan
+- **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/algomo-review/
 
 ## Alidrop (alidrop.co)
@@ -571,7 +572,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
 
 ## BuddyPunch (buddypunch.com)
-- **Verified pricing:** Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September): Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, ea…
+- **Verified pricing:** Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September) and again on 22 October 2026: Starter $5.99 per user a month, Pro …
 - **Honest take:** That flat $19 base fee makes it pricey for very small teams — at three or four users the base fee dominates the bill, so it's better value once you're past a handful of employees.
 - **Best for:** small-to-mid teams that need straightforward employee time tracking with GPS and payroll-ready exports
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
@@ -3444,10 +3445,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/todoist-review/
 
 ## Toggl (toggl.com)
-- **Verified pricing:** (re-verified 2026-09-09 and again 2026-10-01 on toggl.com/track/pricing, which now redirects to toggl.com/pricing) Free is $0 for a limited number of users and the page calls it free foreve…
+- **Verified pricing:** (re-verified 2026-09-09 and again 2026-10-01 on toggl.com/track/pricing, which now redirects to toggl.com/pricing) Free is $0 and the page calls it free forever; the pricing FAQ read 22 Oct…
 - **Honest take:** Toggl's honesty problem is the good kind: the free tier is so capable that many teams never need to pay — the paid line is drawn exactly at 'do you bill clients' (budgets, rates, profitability).
 - **Best for:** freelancers, consultants and agencies that bill by the hour and want frictionless tracking with budgets, rates and profitability per project
-- **Flags:** Per-seat pricing, Free tier
+- **Flags:** Per-seat pricing, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/toggl-review/
 
 ## Top Echelon (topechelon.com)

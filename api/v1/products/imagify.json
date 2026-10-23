@@ -114,7 +114,7 @@
     "findings": [
      "The account started at '0.0KB / 20MB used. You have 100% credit left.' Auto-converting PNG to JPEG is marked 'only for Pro users'; resizing is available on free.",
      "Smart compression took the PNG from 11.8KB to 3.3KB (72.36%) and the JPG from 48.9KB to 12.3KB (74.91%), each within about 8 seconds.",
-     "The quota counts the original size, not the result: after those two images the counter read 61.44KB of 20MB.",
+     "After the first two images the quota counter read 61.44KB of 20MB, much closer to their input sizes than to the compressed results. The later counter increments varied, so we did not establish the exact quota accounting rule.",
      "Lossless took the same PNG from 11.8KB to 5.8KB (51.05%), against 3.3KB with Smart.",
      "The 3.4MB file was refused straight away with 'File size must be under 2.0 MB. Current file size is 3.4 MB' and used no quota.",
      "The summary on the optimizer page is mislabelled: 'You saved 15.5KB out of 60.7KB' gave the size after compression (3.3KB + 12.3KB), while the real saving was about 45KB. The History page showed the right saving per file.",
@@ -135,19 +135,34 @@
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
      {
-      "claim": "\"20MB/month\" and \"Max upload size: 2MB/image\" on Starter",
+      "claim": "\"Max upload size: 2MB/image\" on Starter",
       "claim_source": "https://imagify.io/pricing/",
       "claim_read_on": "2026-10-17",
-      "observed": "After two images of 11.8KB and 48.9KB the counter read 61.44KB of 20MB: it counts the original size, not the compressed result. A 3.4MB file was refused with 'File size must be under 2.0 MB' and used no quota.",
+      "observed": "A 3.4MB file was refused with 'File size must be under 2.0 MB. Current file size is 3.4 MB' and used no quota.",
       "observed_on": "2026-10-21",
       "evidence": {
        "label": "Our test observations",
        "url": "https://officesoftwaremarketplace.com/imagify-review.html#claim-vs-measured"
       },
       "plan": "Starter (free) in the web app, account not yet confirmed",
-      "comparability": "Same quantities. The page does not say whether the 20MB is measured before or after compression; the counter shows before.",
+      "comparability": "Same quantity: the per-image upload limit.",
       "status": "confirmed",
-      "buying_consequence": "Work out the free allowance from your original file sizes: at 1MB per photo that is about 20 images a month, not the 200 the page suggests for small files."
+      "buying_consequence": "Files over 2MB need resizing before upload on the free plan."
+     },
+     {
+      "claim": "\"20MB/month\" on Starter",
+      "claim_source": "https://imagify.io/pricing/",
+      "claim_read_on": "2026-10-17",
+      "observed": "The account showed '0.0KB / 20MB used'. After the first two images (11.8KB and 48.9KB) the counter read 61.44KB, much closer to their input sizes than to the compressed results; later increments varied, so we did not establish the exact accounting rule.",
+      "observed_on": "2026-10-21",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/imagify-review.html#claim-vs-measured"
+      },
+      "plan": "Starter (free) in the web app, account not yet confirmed",
+      "comparability": "Same quantity for the displayed allowance. We did not reach the 20MB limit or see a monthly reset.",
+      "status": "confirmed",
+      "buying_consequence": "Budget the free allowance on your original file sizes rather than on the compressed results, as a rough guide; the exact rule and what happens at 20MB were not tested."
      }
     ],
     "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",

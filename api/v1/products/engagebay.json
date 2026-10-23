@@ -113,7 +113,7 @@
     "findings": [
      "CSV import (only .csv, up to 25 MB or 25,000 rows) matched all four of our columns automatically, with 'First Name' mandatory. Options were a tag, 'Validate emails' (which needs paid credits), 'Merge contacts' and 'Send double opt-in email', which we left off. The import ran in the background; after about 20 seconds and a refresh all 3 contacts were there.",
      "All three imported contacts showed the status 'Confirmed' although no opt-in email was sent. Check how your own list is labelled before you mail it.",
-     "Export as CSV (a bulk action) offers about 35 contact fields to tick, such as contact ID, tags, status, sources, address, dates and the last email, SMS and call, but no field for notes, tasks or documents. After Export the file is sent by email ('Your export is getting ready. We'll email you when it's done'); there is no direct download, and we did not open the file.",
+     "Export as CSV (a bulk action) offers about 35 contact fields to tick, such as contact ID, tags, status, sources, address, dates and the last email, SMS and call, but no field for notes, tasks or documents. After Export the app said it would email the file ('Your export is getting ready. We'll email you when it's done'); there is no direct download. We did not verify delivery or inspect the file.",
      "A contact page has tabs for activities, emails, deals, tasks, notes, documents, products, proposals, workflows and automations. Adding a note with a subject and text worked, with an option to create a follow-up task.",
      "The Free dashboard showed a banner asking to verify the email address and a pop-up offering a '3-day All-Access Pass', which we did not start."
     ],
@@ -121,7 +121,8 @@
      "Email broadcasts, sequences and automations",
      "Uploading documents, and tasks",
      "Re-importing and merging",
-     "What changes after the email address is verified"
+     "What changes after the email address is verified",
+     "The contents of the exported CSV file"
     ],
     "report": null,
     "disclosure": null,
@@ -136,7 +137,7 @@
      "reimport_tested": false,
      "awkward": "There is no direct download: after Export the app says 'Your export is getting ready. We'll email you when it's done'.",
      "friction": {
-      "export_route": "A bulk action (select contacts, Bulk Action > Export as CSV); the app said it would email the file. We did not verify delivery or inspect the file.",
+      "export_route": "A bulk action (select contacts, Bulk Action > Export as CSV); the app said the file would arrive by email. Delivery and file contents were not checked.",
       "format": "CSV with contact fields and tags; notes, tasks and documents are not in the field list.",
       "reimport": "Not tested.",
       "cancellation": "Not tested."

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 577 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-23.
+All 578 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-23.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2781,6 +2781,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The published prices are annual rates, and the annual term is doing more work than the page lets on.
 - **Best for:** sales, recruiting and BD teams whose bottleneck is finding verified direct dials and personal emails, and who can commit to an annual term - that is where the search allowance stops being metered
 - **Full review:** https://aibuildermarketplace.com/b2b/rocketreach-review/
+
+## RoverLead (roverlead.com)
+- **Verified pricing:** (read 2026-10-23 in the pricing section of roverlead.com; there is no separate pricing page, roverlead.com/pricing returns a 404; dollar amounts, the page does not name the currency) RoverL…
+- **Honest take:** Per user from $149 a month; credits not explained; fees non-refundable.
+- **Best for:** founders and small sales teams who want leads chosen by a recent signal (a funding round, a new role, engagement with their niche) with the first message already written, and who want every lead
+- **Flags:** Per-seat pricing, Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/roverlead-review/
 
 ## Ruby (ruby.com)
 - **Verified pricing:** Read on their own plans-and-pricing page, 6 September 2026, and unchanged on 6 October 2026.

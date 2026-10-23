@@ -4453,6 +4453,57 @@
   },
   {
    "source": "session",
+   "product_name": "ClickUp",
+   "product_id": "clickup",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 on the Free Forever plan with one seat and no payment method: Daan created the account and our AI assistant ran the test in Daan's browser. We imported a CSV file with three made-up tasks (each with a status, a start date, a due date and a description), compared what arrived with the file, and exported the whole workspace.",
+   "findings": [
+    "The spreadsheet importer (Settings > Imports / Exports) matched all five columns of our CSV to ClickUp fields automatically, then mapped the three status values one to one and previewed 3 valid rows before 'Import into ClickUp'. The three tasks landed in a new list, each under its own status, and the task we opened had the right status, both dates and its description.",
+    "The import history said 'Imported 23 items' for our file of three rows, while the new list held exactly the three tasks. The counter and the result did not agree; we did not find out what the 23 counts.",
+    "The workspace export downloaded within seconds as a CSV of 15 rows (the 12 sample tasks plus our 3) with 34 columns, including task ID, link, content, status, dates, subtasks, attachments, assignees, tags, priority, location, time tracking, checklists and comments. All three of our tasks came back with status, description and both dates.",
+    "Dates in the export appear as epoch values and as text with a time zone, set to 04:00 although our file held only dates.",
+    "Onboarding took seven screens, with an extra confirmation to skip inviting people ('Skip without inviting'). Billing showed 'Free Forever, 1 seat · $0 / seat' and 'No payment methods', and the workspace came with three sample lists holding 12 tasks.",
+    "The upload window inside ClickUp did not respond to our browser tool, so we loaded the file in the same import session through a separate tab; that is a quirk of our test setup, not something we can pin on ClickUp."
+   ],
+   "not_tested": [
+    "Re-importing the export",
+    "Attachments and the storage limit",
+    "Exporting views (List, Table, Form) and the Free Forever limit of five",
+    "Automations, ClickUp Brain and multiple users"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "exit_test": {
+    "run_date": "2026-10-23",
+    "what": "On 23 October 2026, in the Free Forever workspace from this test, we exported the whole workspace with ClickUp's own export and checked whether our three imported test tasks came back with status and dates. We did not re-import the file.",
+    "first_import": null,
+    "came_along": [
+     "All tasks: 15 rows (the 12 sample tasks plus our 3) with 34 columns",
+     "Name, description, status, start and due date, and the list and location of each task",
+     "Columns for attachments, comments and checklists (empty for our tasks)"
+    ],
+    "lost": [
+     "Nothing we entered was missing for our three tasks"
+    ],
+    "awkward": "Dates come out as epoch values and as text with a time zone, set to 04:00 although our CSV held only a date. Attachments, comments and checklists sit as JSON-like text in a single column.",
+    "friction": {
+     "export_route": "Settings > Imports / Exports > Export items, choose a location, Start export; the CSV downloads directly in the page within seconds.",
+     "format": "CSV with 34 columns per task; attachments, comments and checklists as JSON-like text in a column.",
+     "reimport": "Not tested.",
+     "cancellation": "Not tested."
+    },
+    "not_tested": [
+     "Re-importing the export into a separate list",
+     "Exporting views (List or Table) and the limit on that in Free Forever",
+     "Attachments, comments and subtasks in the export"
+    ],
+    "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Todoist",
    "product_id": "todoist",
    "run_date": "2026-10-20",

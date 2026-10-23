@@ -549,6 +549,7 @@
     "product_name": "ClickUp",
     "product_id": "clickup",
     "run_date": "2026-10-23",
+    "session_type": "hands_on",
     "what": "Tested by our team on 23 October 2026 on the Free Forever plan with one seat and no payment method: Daan created the account and our AI assistant ran the test in Daan's browser. We imported a CSV file with three made-up tasks (each with a status, a start date, a due date and a description), compared what arrived with the file, and exported the whole workspace.",
     "findings": [
      "The spreadsheet importer (Settings > Imports / Exports) matched all five columns of our CSV to ClickUp fields automatically, then mapped the three status values one to one and previewed 3 valid rows before 'Import into ClickUp'. The three tasks landed in a new list, each under its own status, and the task we opened had the right status, both dates and its description.",
@@ -565,20 +566,16 @@
      "Automations, ClickUp Brain and multiple users"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "exit_test": {
      "run_date": "2026-10-23",
      "what": "On 23 October 2026, in the Free Forever workspace from this test, we exported the whole workspace with ClickUp's own export and checked whether our three imported test tasks came back with status and dates. We did not re-import the file.",
      "first_import": null,
-     "came_along": [
-      "All tasks: 15 rows (the 12 sample tasks plus our 3) with 34 columns",
-      "Name, description, status, start and due date, and the list and location of each task",
-      "Columns for attachments, comments and checklists (empty for our tasks)"
-     ],
-     "lost": [
-      "Nothing we entered was missing for our three tasks"
-     ],
+     "file_inspected": true,
+     "reimport_tested": false,
      "awkward": "Dates come out as epoch values and as text with a time zone, set to 04:00 although our CSV held only a date. Attachments, comments and checklists sit as JSON-like text in a single column.",
      "friction": {
       "export_route": "Settings > Imports / Exports > Export items, choose a location, Start export; the CSV downloads directly in the page within seconds.",
@@ -591,7 +588,15 @@
       "Exporting views (List or Table) and the limit on that in Free Forever",
       "Attachments, comments and subtasks in the export"
      ],
-     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+     "came_along": [
+      "All tasks: 15 rows (the 12 sample tasks plus our 3) with 34 columns",
+      "Name, description, status, start and due date, and the list and location of each task",
+      "Columns for attachments, comments and checklists (empty for our tasks)"
+     ],
+     "lost": [
+      "Nothing we entered was missing for our three tasks"
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
     },
     "in_catalog": true
    }

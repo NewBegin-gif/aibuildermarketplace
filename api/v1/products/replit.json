@@ -891,6 +891,7 @@
     "product_name": "Replit",
     "product_id": "replit",
     "run_date": "2026-09-26",
+    "session_type": "hands_on",
     "what": "On 26 September 2026 we built the same class-booking web app in Lovable, Replit and Emergent from one identical prompt, each on its free plan, and checked every result against 18 tests we wrote down before the first build. We changed no code: the builder only got our prompt and, where a test failed, a repair prompt in fixed words. Replit ran on a new Starter account, separate from the paid account Daan uses for his own project.",
     "findings": [
      "The Agent built a separate API and web app on PostgreSQL in 8 minutes of work by its own count, ran its own functional test and reported everything as passing. It did not publish by itself: publishing is a manual click, and on Starter the deployment is labelled temporary and will expire.",
@@ -900,6 +901,8 @@
     ],
     "not_tested": "One run on one day, on the free plan's agent mode; Core may behave differently. Not a security audit or a load test. The code export was run from the project zip: it built and ran outside Replit on our own database, and carried the admin password in plain text.",
     "report": "/research/one-booking-app-three-ai-builders/",
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "in_catalog": true

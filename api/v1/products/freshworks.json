@@ -519,6 +519,7 @@
     "product_name": "Freshworks",
     "product_id": "freshworks",
     "run_date": "2026-10-21",
+    "session_type": "hands_on",
     "what": "Tested by our team on 21 October 2026 on Freshdesk, during the trial that starts with a new account (Freshdesk Omni, EU data centre), without connecting a channel, a mailbox or an integration: Daan created the account and our AI assistant ran the test in Daan's browser. We created three tickets with known priorities and statuses, changed one and added a private note.",
     "findings": [
      "The sign-up page promised a '14-day all-access free trial'; inside the app the banner said 'your 15-day trial starts today', next to a 'Buy now' button. Our own company domain was accepted without a business-email check.",
@@ -537,6 +538,8 @@
      "Changing the time zone, and whether SLA deadlines move with it"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -544,9 +547,12 @@
       "claim": "\"14-day all-access free trial\"",
       "claim_source": "https://www.freshworks.com/freshdesk/signup/",
       "claim_read_on": "2026-10-21",
-      "observed": "Right after sign-up the app said 'Hi Daniel Haket, your 15-day trial starts today', with a 'Buy now' button.",
+      "observed": "Right after sign-up the app said 'your 15-day trial starts today', with a 'Buy now' button.",
       "observed_on": "2026-10-21",
-      "evidence": "meetlog step 1; screenshot bewijs/01-proef-15-dagen.jpg (shown on this page)",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/freshworks-review.html#claim-vs-measured"
+      },
       "plan": "Freshdesk Omni trial, EU data centre, new account, no channels connected",
       "comparability": "Not the same count. The sign-up page and the app may count the start day differently, and we did not record the trial's end date, so 14 against 15 is not shown to be a real difference.",
       "status": "not_comparable",

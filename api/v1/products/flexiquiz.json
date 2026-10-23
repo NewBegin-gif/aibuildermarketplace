@@ -75,6 +75,7 @@
     "product_name": "FlexiQuiz",
     "product_id": "flexiquiz",
     "run_date": "2026-10-20",
+    "session_type": "hands_on",
     "what": "Tested by our team on 20 October 2026 on a free account: Daan created the account and our AI assistant built the quiz in his browser and sent the answers as an anonymous visitor without logging in. We built one multiple-choice quiz, pushed it past the question limit, published it and submitted answers until the monthly response limit was reached.",
     "findings": [
      "Ten questions saved. The form for an eleventh opened normally, and only on Save did FlexiQuiz say 'There is a maximum of 10 questions on the free plan. Upgrade to add more questions'; the eleventh was not saved.",
@@ -93,6 +94,8 @@
      "Question types other than multiple choice"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -102,7 +105,10 @@
       "claim_read_on": "2026-10-17",
       "observed": "Saving an eleventh question gave 'There is a maximum of 10 questions on the free plan'. After 20 submissions the quiz link showed only 'This account has reached the maximum monthly response limit'.",
       "observed_on": "2026-10-20",
-      "evidence": "meetlog steps 4, 6 and 7",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/flexiquiz-review.html#claim-vs-measured"
+      },
       "plan": "Free, one quiz, submissions as an anonymous visitor",
       "comparability": "Same quantities. With one quiz we cannot tell the per-quiz and per-account limits apart.",
       "status": "confirmed",

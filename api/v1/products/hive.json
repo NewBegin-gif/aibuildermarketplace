@@ -112,6 +112,7 @@
     "product_name": "Hive",
     "product_id": "hive",
     "run_date": "2026-10-21",
+    "session_type": "hands_on",
     "what": "Tested by our team on 21 October 2026 on a new account without a subscription: Daan created the account and our AI assistant ran the test in Daan's browser. We made a private project with three dated tasks, assigned them, completed one, opened the Gantt view and read the AI usage and billing screens.",
     "findings": [
      "Onboarding runs in five steps. At the invite step, 'Allow users with @aibuildermarketplace.com domain to join the workspace automatically' was ticked by default; we switched it off. The workspace then opened with five sample projects and three demo colleagues.",
@@ -129,6 +130,8 @@
      "Whether the 5,000 AI credits come back every month or are a one-off starting allowance"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -138,7 +141,10 @@
       "claim_read_on": "2026-10-17",
       "observed": "Usage & billing > AI usage in a new account without a subscription: '5.000 of 5.000 remaining', '5.000 included · 0 purchased', 'Resets Nov 21'.",
       "observed_on": "2026-10-21",
-      "evidence": "meetlog step 7",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/hive-review.html#claim-vs-measured"
+      },
       "plan": "Free, new workspace, no card, no subscription",
       "comparability": "Not the same quantity as far as we can tell. The 5,000 may be a one-off starting balance for a new account; we saw one month, not the month after the reset.",
       "status": "not_comparable",
@@ -150,16 +156,8 @@
      "run_date": "2026-10-23",
      "what": "On 23 October 2026, in the same account and still without a subscription, we imported 10 made-up tasks with known IDs from a CSV file: one task depending on another, one subtask, a completed and an in-progress task, a title with a comma and quotation marks, an end date of 29 February 2028, a task across the year end, a Unicode title and a task without dates. We added a text attachment to one task, exported the project and imported Hive's own export into a new project.",
      "first_import": "Import project > Tasks spreadsheet (CSV or Excel; Asana, Monday, MS Project, Smartsheet, Trello and Basecamp are also offered) took four steps. All columns were matched automatically except our Labels column, which became a custom field. No errors: all 10 tasks came in with the right status, the dependent task showed 'Blocked', the subtask sat under its parent, and the leap day and the Unicode title were intact.",
-     "came_along": [
-      "All 10 rows, with titles, Unicode, commas and quotation marks intact",
-      "Start and end dates, now with a four-digit year; 29 February 2028 correct",
-      "Status and completion date",
-      "The subtask's parent, as a name plus a Hive ID (columns Parent and Parent ID)"
-     ],
-     "lost": [
-      "Which task blocks the dependent one: the export only says 'Blocked'",
-      "The attachment itself: the export only says 'Attachments present: true'"
-     ],
+     "file_inspected": true,
+     "reimport_tested": true,
      "awkward": "Two columns with the same name, 'Labels' (Hive's own, empty, and our custom field); Hive IDs instead of a WBS number; and the creator's name in every row.",
      "friction": {
       "export_route": "A button in the app (More > Export): no support request and no waiting. The file (2.9 kB, 35 columns) arrived after about 10 seconds. Export through the API was not tested.",
@@ -174,7 +172,17 @@
       "Comments, time tracking and multiple users",
       "Cancelling a paid subscription"
      ],
-     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+     "came_along": [
+      "All 10 rows, with titles, Unicode, commas and quotation marks intact",
+      "Start and end dates, now with a four-digit year; 29 February 2028 correct",
+      "Status and completion date",
+      "The subtask's parent, as a name plus a Hive ID (columns Parent and Parent ID)"
+     ],
+     "lost": [
+      "Which task blocks the dependent one: the export only says 'Blocked'",
+      "The attachment itself: the export only says 'Attachments present: true'"
+     ],
+     "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
     },
     "in_catalog": true
    }

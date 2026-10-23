@@ -117,6 +117,7 @@
     "product_name": "Process Street",
     "product_id": "process-street",
     "run_date": "2026-10-23",
+    "session_type": "hands_on",
     "what": "Tested by our team on 23 October 2026 during the Pro trial, without a card and without integrations: Daan created the account and our AI assistant ran the test in Daan's browser. We had the AI build a purchase-approval workflow (purchase ID and amount, a budget and a supplier check, manager approval, at most six steps), ran it twice with known amounts, completed one run with approval, left the other open, and exported the Reports views.",
     "findings": [
      "Generate with AI (a name plus instructions) produced the workflow in about 30 seconds: exactly the six steps we asked for, with full task texts and checklists, 35 form fields, 6 dynamic due dates, 1 approval step and 0 stop tasks. Starting a run added a seventh task, 'Role assignments', with four roles the AI invented, such as procurement analyst and finance analyst. That is a lot of fields for a simple approval.",
@@ -133,6 +134,8 @@
      "What remains after the trial"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -142,7 +145,10 @@
       "claim_read_on": "2026-10-23",
       "observed": "On the day of sign-up the app showed '14 days left in your free trial'; no card was asked.",
       "observed_on": "2026-10-23",
-      "evidence": "meetlog step 1",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/process-street-review/#claim-vs-measured"
+      },
       "plan": "Pro trial, no integrations",
       "comparability": "Same quantity: trial length shown on day one.",
       "status": "confirmed",
@@ -154,15 +160,8 @@
      "run_date": "2026-10-23",
      "what": "On 23 October 2026, in the trial account from this test, we exported the Reports views for active and completed workflow runs (two runs of our own, one completed with amount 10 and one left open with amount 20) and checked what the files contain. We did not re-import them.",
      "first_import": null,
-     "came_along": [
-      "Run names, status and the number of completed tasks (2 and 7)",
-      "Timestamps (in UTC) and the workflow version",
-      "13 run-level columns with 'Export all columns': URL, name, assignee email, created, last activity, due date, completed at and by, status, overdue, completed tasks, version and workflow name"
-     ],
-     "lost": [
-      "The form values we entered, such as the purchase ID and the amounts 10 and 20",
-      "Task content, comments and attachments"
-     ],
+     "file_inspected": true,
+     "reimport_tested": false,
      "awkward": "Active and completed runs are separate exports, so one export does not give you all runs.",
      "friction": {
       "export_route": "An Export button in Reports with a choice of visible or all columns gives a CSV straight away.",
@@ -176,7 +175,16 @@
       "Data Sets export",
       "Re-importing the export"
      ],
-     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+     "came_along": [
+      "Run names, status and the number of completed tasks (2 and 7)",
+      "Timestamps (in UTC) and the workflow version",
+      "13 run-level columns with 'Export all columns': URL, name, assignee email, created, last activity, due date, completed at and by, status, overdue, completed tasks, version and workflow name"
+     ],
+     "lost": [
+      "The form values we entered, such as the purchase ID and the amounts 10 and 20",
+      "Task content, comments and attachments"
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
     },
     "in_catalog": true
    }

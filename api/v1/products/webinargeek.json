@@ -124,6 +124,7 @@
     "product_name": "WebinarGeek",
     "product_id": "webinargeek",
     "run_date": "2026-10-21",
+    "session_type": "hands_on",
     "what": "Tested by our team on 21 October 2026 during the 14-day trial, without a card: Daan created the account and our AI assistant ran the test in Daan's browser. We built an unlisted test webinar with three PDF slides and a poll and ran it as a dry run; we did not publish it or invite anyone.",
     "findings": [
      "The poll went live with an empty option. The third answer we had typed was not saved, and nothing warned us: the live poll showed an option with only the placeholder 'Fill in an answer'.",
@@ -141,20 +142,40 @@
      "What stays available after the 14-day trial"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
      {
-      "claim": "\"14 days free.\" and \"No payment details required - Up to 25 live viewers\"",
+      "claim": "\"14 days free.\" and \"No payment details required\"",
       "claim_source": "https://www.webinargeek.com/register",
       "claim_read_on": "2026-10-21",
       "observed": "The account showed 'Free trial for 14 days. Upgrade now'. No card was asked for at sign-up or before the dry run.",
       "observed_on": "2026-10-21",
-      "evidence": "meetlog account record and step 1",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/webinargeek-review/#claim-vs-measured"
+      },
       "plan": "14-day trial, one presenter, unpublished unlisted webinar",
-      "comparability": "Same quantity for trial length and payment details. The 25-viewer cap was not tested: we invited no viewers.",
+      "comparability": "Same quantity for trial length and payment details.",
       "status": "confirmed",
       "buying_consequence": "You can run a full dry run without payment details; to test what viewers see you have to publish a webinar within the trial."
+     },
+     {
+      "claim": "\"Up to 25 live viewers\"",
+      "claim_source": "https://www.webinargeek.com/register",
+      "claim_read_on": "2026-10-21",
+      "observed": "We invited no viewers, so this cap was not tested.",
+      "observed_on": "2026-10-21",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/webinargeek-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial, one presenter, unpublished unlisted webinar",
+      "comparability": "Not tested in this session.",
+      "status": "not_testable",
+      "buying_consequence": "To check the viewer cap you have to publish a webinar and invite viewers within the trial."
      }
     ],
     "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",

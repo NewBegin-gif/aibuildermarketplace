@@ -103,6 +103,7 @@
     "product_name": "folk",
     "product_id": "folk",
     "run_date": "2026-10-23",
+    "session_type": "hands_on",
     "what": "Tested by our team on 23 October 2026 during the 14-day Premium trial, without a card and without connecting any account, LinkedIn, WhatsApp, email, extension or desktop app: Daan created the account and our AI assistant ran the test in Daan's browser. We made a group with two made-up people, linked a deal to each with known values, checked the pipeline sum, added a note to a deal and exported the data.",
     "findings": [
      "Onboarding took six screens and asked for no card; the last one said 'Welcome to your 14-day free trial' with access to all Premium features, and the app then showed 'Premium trial (2 weeks left)'. Skipping the account connection meant clicking 'No, I like endless copy-paste' and then confirming 'Continue with fewer features?'.",
@@ -119,6 +120,8 @@
      "Re-importing the export"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -128,7 +131,10 @@
       "claim_read_on": "2026-10-21",
       "observed": "Sign-up and onboarding asked for no card; the last screen said 'Welcome to your 14-day free trial ... access to all our Premium features' and the app showed 'Premium trial (2 weeks left)'.",
       "observed_on": "2026-10-23",
-      "evidence": "meetlog step 0",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/folk-review.html#claim-vs-measured"
+      },
       "plan": "Premium trial, no integrations",
       "comparability": "Same quantity: trial length and card requirement at sign-up.",
       "status": "confirmed",
@@ -140,16 +146,8 @@
      "run_date": "2026-10-23",
      "what": "On 23 October 2026, in the trial workspace from this test, we exported the Deals view and the People view with folk's own export and compared the files with what we had entered: two people, two deals linked to them with values 100 and 200, a group and one note on a deal. We did not re-import the files.",
      "first_import": null,
-     "came_along": [
-      "Both people and both deals, with the right values (100 and 200) and the linked person",
-      "The group (TESTHAVEN), in the people export",
-      "The note on the deal, in a separate notes.csv with deal ID, deal name and time"
-     ],
-     "lost": [
-      "The person-deal link as an ID: deals.csv names the person ('Ada Test'), not their ID, so with two people of the same name the link cannot be restored unambiguously",
-      "The Deals column in the people export: it was in the view, but not in people.csv",
-      "The currency of Deal value: the app shows '$', the export has the number only"
-     ],
+     "file_inspected": true,
+     "reimport_tested": false,
      "awkward": null,
      "friction": {
       "export_route": "A menu item per view, 'Export view as CSV', gives a ZIP straight away: no support request and no waiting. Export through the API was not tested.",
@@ -163,7 +161,17 @@
       "A full workspace export",
       "Attachments and email history"
      ],
-     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+     "came_along": [
+      "Both people and both deals, with the right values (100 and 200) and the linked person",
+      "The group (TESTHAVEN), in the people export",
+      "The note on the deal, in a separate notes.csv with deal ID, deal name and time"
+     ],
+     "lost": [
+      "The person-deal link as an ID: deals.csv names the person ('Ada Test'), not their ID, so with two people of the same name the link cannot be restored unambiguously",
+      "The Deals column in the people export: it was in the view, but not in people.csv",
+      "The currency of Deal value: the app shows '$', the export has the number only"
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
     },
     "in_catalog": true
    }

@@ -897,9 +897,10 @@
      "The Agent built a separate API and web app on PostgreSQL in 8 minutes of work by its own count, ran its own functional test and reported everything as passing. It did not publish by itself: publishing is a manual click, and on Starter the deployment is labelled temporary and will expire.",
      "Its own test booked one person at a time. When we sent ten bookings for an empty eight-spot class at the same moment, all ten were accepted, after which the class list returned an error and the public page showed 'No classes on the calendar yet.' until two bookings were cancelled.",
      "Given that exact description, the Agent added a database lock per class in two minutes; the same ten simultaneous bookings then gave exactly eight. The same repair stopped it accepting a name made only of spaces.",
-     "On Starter the usage page is closed ('You must have an active subscription to view your own usage'), so you cannot see what a request cost, and the daily allowance was gone after the build and one repair."
+     "On Starter the usage page is closed ('You must have an active subscription to view your own usage'), so you cannot see what a request cost, and the daily allowance was gone after the build and one repair.",
+     "The code export, run from the project zip, built and ran outside Replit on our own database, but the export and its Git history carried the generated admin password in plain text."
     ],
-    "not_tested": "One run on one day, on the free plan's agent mode; Core may behave differently. Not a security audit or a load test. The code export was run from the project zip: it built and ran outside Replit on our own database, and carried the admin password in plain text.",
+    "not_tested": "One run on one day, on the free plan's agent mode; Core may behave differently. Not a security audit or a load test.",
     "report": "/research/one-booking-app-three-ai-builders/",
     "disclosure": null,
     "evidence_status": null,

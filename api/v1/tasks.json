@@ -3922,6 +3922,31 @@
   },
   {
    "source": "session",
+   "product_name": "Claude",
+   "product_id": "claude",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 on Daan's existing claude.ai account on the Max plan, not the Free plan, with the model set to Opus 5.5: our AI assistant ran the test in Daan's browser. Conflict of interest: AIBuilder Marketplace uses Claude itself for research and writing. This was a small faithfulness test on a four-line file, not a comparison with other assistants.",
+   "findings": [
+    "We uploaded a four-line text file (contracts A, B and C with seats and renewal dates, and 'Total seats 12.') and asked three questions with the instruction to quote the exact source text. All three answers were right, each with the literal source sentence: 12 seats in total (with the check 3 + 7 + 2 = 12), only contract A renewing before 2027, and contract C's renewal 'unknown'.",
+    "The trap question, which vendor supplies contract B, got 'unknown' with the remark that the file does not name a vendor for any contract. No name was made up.",
+    "Unprompted, it added that contract C might also renew before 2027, but that the file does not let it confirm that.",
+    "A second run in a new chat with the same file and question gave the same four answers and quotes, in a different layout (a numbered list). On this small test the answers were reproducible.",
+    "We saw no usage-limit message or counter after two short runs, but on the Max plan that says nothing about the limits on Free.",
+    "Conflict of interest: AIBuilder Marketplace uses Claude for research and writing, including the assistant that ran this test. Weigh this hands-on note accordingly."
+   ],
+   "not_tested": [
+    "The Free plan and its usage limit",
+    "Long or messy documents, PDFs, tables and images",
+    "A comparison with other AI assistants",
+    "Connectors, projects, artifacts and code"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "CometChat",
    "product_id": "cometchat",
    "run_date": "2026-10-23",

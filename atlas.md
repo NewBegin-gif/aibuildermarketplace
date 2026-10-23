@@ -115,7 +115,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/airia-review/
 
 ## Airwallex (airwallex.com)
-- **Verified pricing:** (2026-08-28, read off their own pricing page and fee table; re-read 2026-10-11 on airwallex.com/en-us/pricing: plans, FX, transfer, card and billing rates unchanged) FX conversion 0.5% abov…
+- **Verified pricing:** (2026-08-28, read off their own pricing page and fee table; re-read 2026-10-11 on airwallex.com/en-us/pricing: plans, FX, transfer, card and billing rates unchanged; re-read 2026-10-23 on t…
 - **Honest take:** The honest headline here is that the FX markup is published at all — 0.5% and 1% above interbank is a real number, and most competitors will not print one.
 - **Best for:** companies invoicing or paying in several currencies, where a 0.5% spread against your bank's 2–3% is the whole business case
 - **Flags:** Usage-metered
@@ -281,7 +281,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/audionotes-review/
 
 ## Audiorista (audiorista.com)
-- **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps.
+- **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27 and 2026-10-23 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps.
 - **Honest take:** The $29 Demo tier cannot actually publish to the App Store or Google Play — real branded apps start at $240 a month.
 - **Best for:** creators and media brands with a real audio catalog — podcasts, audiobooks, meditations, courses — ready to monetize subscriptions in their own branded apps
 - **Flags:** Usage-metered
@@ -1329,7 +1329,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/finevoice-review/
 
 ## Fireflies.ai (fireflies.ai)
-- **Verified pricing:** (price re-verified 2026-10-16 against the vendor's own pricing page and help guide) Free $0 — free forever, unlimited transcription, limited AI summaries, 400 mins of storage per team, 20 A…
+- **Verified pricing:** (price re-verified 2026-10-23 against the vendor's own pricing page and help guide) Free $0 — free forever, unlimited transcription, limited AI summaries, 400 mins of storage per team, 20 A…
 - **Honest take:** The advertised $10 and $19 are annual-billing rates; month-to-month is $18 and $29.
 - **Best for:** teams that want every meeting transcribed and searchable automatically — the free unlimited-transcription tier is genuinely rare
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
@@ -2028,17 +2028,17 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/manychat-review/
 
 ## MarketerHire (marketerhire.com)
-- **Verified pricing:** (price re-verified 2026-09-23 against marketerhire.com/pricing and the vendor's FAQ at marketerhire.com/faqs/all) No rates are published on the pricing page or in the FAQ.
+- **Verified pricing:** (price re-verified 2026-09-23 against marketerhire.com/pricing and the vendor's FAQ at marketerhire.com/faqs/all; re-read 2026-10-23, same wording and still no rates) No rates are published…
 - **Honest take:** This is vetted senior freelance talent on a monthly retainer with no published rates.
 - **Best for:** companies that need a vetted senior marketer (growth, paid ads, email, more) matched quickly, without the time and risk of a full-time hire
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/marketerhire-review/
 
 ## Marketing 360 (marketing360.com)
-- **Verified pricing:** Quote-based, and deliberately so (verified 6 September 2026 and again 25 September 2026 on their own site).
+- **Verified pricing:** Quote-based, and deliberately so (verified on their own site on 6 September, 25 September and 23 October 2026).
 - **Honest take:** It's an all-in-one "we'll do it for you" model, which is great if you want a single vendor and a human team, but it can mean less flexibility and more lock-in than assembling best-of-breed tools.
 - **Best for:** small businesses that want one vendor handling website, CRM, ads, email and reputation with real humans to help, and prefer done-for-you over DIY
-- **Flags:** Hidden pricing
+- **Flags:** Hidden pricing, Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/marketing-360-review/
 
 ## Meeri (meeritech.com)

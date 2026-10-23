@@ -3991,6 +3991,31 @@
   },
   {
    "source": "session",
+   "product_name": "Blinq",
+   "product_id": "blinq",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 on a free account, without a card and without importing contacts: Daan created the account and our AI assistant ran the test in Daan's browser through the web dashboard, without installing the app. We filled in a made-up card, shared it, opened the link in a separate browser without a Blinq login, changed the role and reloaded the same link.",
+   "findings": [
+    "The web dashboard was enough to make and share a card: 'Finish setup' still asked for the app, but nothing we did needed it. The dashboard opened with a ready-made 'Work' card and two sample contacts from Blinq.",
+    "Share gives a short blinq.me link, a downloadable QR code, and sharing by email, iMessage and LinkedIn. Opened in a separate browser without a login, the link showed the card with name, role, company and 'Save Contact'.",
+    "After we changed the role to 'Research 2' and saved, reloading the same link showed the new role: no new link was needed.",
+    "Name, job title and company saved straight away ('Changes saved'). The website field, which requires a label, did not stay on the card in our attempt.",
+    "Starting a second card with + under Cards met no message or paywall (we did not save it). The free-choice theme colour carries a crown, so it is a Premium feature; lead capture and the contact scanner did not show up in the web dashboard.",
+    "You log in with your email address, but the card shows no email address unless you add one; we did not test this further."
+   ],
+   "not_tested": [
+    "The mobile app, NFC and scanning the QR code with a phone",
+    "Actually saving a second card, and whether a limit appears then",
+    "Lead capture, the contact scanner and team features (paid)",
+    "What 'Save Contact' downloads on the recipient's side"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Freshservice",
    "product_id": "freshservice",
    "run_date": "2026-10-08",
@@ -4144,6 +4169,30 @@
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "ZenZap",
+   "product_id": "zenzap",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 on a new workspace with data in Europe, without a card, without connecting a calendar or other tools and without inviting team members: Daan signed up with a phone number and SMS code, and our AI assistant set up the workspace in Daan's browser through the web app. We made a group, posted a message with a test code, turned it into a to-do with a due date, searched for the code and completed the to-do.",
+   "findings": [
+    "Sign-up works only with a mobile number and a six-digit SMS code ('Sign in with email' is for existing users). Onboarding now presents Zenzap as an agent platform: after the workspace it asks who you are building agents for, your company size, role, industry and tools, and you must create your first agent (a name and an avatar) before you reach the chat. Skipping team invites asks for confirmation ('Start without your team?'). No card or sales call.",
+    "A message becomes a to-do through the message menu (⋮ > Add to-do): it appears in the To-do panel next to the chat and as a card in the chat. A due date is set with a calendar (time optional, with 'Show in my calendar'), and the chat logs each change. The checkbox next to a message only selects it for forwarding or replying; it does not create a to-do.",
+    "Searching the test code found 3 hits, all under 'Messages': the message itself, the 'added to-do' event and the 'Set due date' event. There was no separate group for to-dos in the results, and an 'AI' button sits next to search.",
+    "Ticking off the to-do moved it to 'Completed to-do's' with strikethrough, the chat logged 'marked as Done', and Library > To-do's then showed 0 open.",
+    "The new workspace already held 'My Personal Space', a general channel, a welcome message from a Zenzap staff member and a message from our own agent."
+   ],
+   "not_tested": [
+    "Letting agents do work, and connections with tools or a calendar",
+    "Working hours and notifications",
+    "A second user or an external contact",
+    "The mobile app, calls, workflows and paid plans"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {

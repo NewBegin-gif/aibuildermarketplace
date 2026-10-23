@@ -4145,6 +4145,55 @@
   },
   {
    "source": "session",
+   "product_name": "Kit",
+   "product_id": "kit",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 during the 14-day trial of the Creator plan (not the Free plan), without entering a card and without sending anything: Daan created the account and our AI assistant ran the test in Daan's browser. We imported three made-up subscribers with tags from a CSV file, exported them, and re-imported a changed file with one new name and one empty name cell.",
+   "findings": [
+    "The CSV importer did not map a single column on its own, not even 'email'; we mapped email, first name and tags by hand. Step 3 adds an import tag by default ('Imported October 23rd, 2026 at 10:42 PM'), and the import finished with '3 subscribers processed'.",
+    "All three imported subscribers were 'Confirmed' straight away, although no opt-in email was sent. The 'Total subscribers' statistic stayed at 0 while the list itself showed 'Total: 3'.",
+    "Re-importing on the same email addresses created no duplicates and took over the changed name, but an empty first-name cell erased the existing name of that subscriber. Clean your file before a re-import: a blank cell is not ignored.",
+    "Export (select all > ... > Export) put a download link in the Notifications menu within a few seconds: a CSV with 14 columns, and all three subscribers came back with name and tags, including the automatic import tag.",
+    "Right after the five onboarding questions, a window opened with card fields and 'Subscribe to the Creator Plan', with the yearly plan ($390) preselected over monthly ($39). It closes with the cross, and the trial then runs without a card ('14 / 14 days remaining in trial'). The website field had been prefilled with the domain of our email address."
+   ],
+   "not_tested": [
+    "Sending email, sequences and automations",
+    "The Free plan (we were in the Creator plan trial)",
+    "What happens after 14 days without a card",
+    "Landing pages and forms"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "exit_test": {
+    "run_date": "2026-10-23",
+    "what": "On 23 October 2026, in the Creator trial account from this test, we exported our three imported test subscribers and then re-imported a changed file: one subscriber with a new first name, one with the first-name cell left empty.",
+    "first_import": "Re-importing on the same email addresses created no duplicates: still 3 subscribers. The changed name came through, but the empty first-name cell erased the existing name of that subscriber; the list then showed only the email address. As on the first import, no column was mapped automatically.",
+    "came_along": [
+     "All 3 subscribers with first name, email, status and tags, including Kit's automatic import tag",
+     "14 columns in total, among them created_at in UTC, city, state, country, referrer and UTM fields"
+    ],
+    "lost": [
+     "Broadcasts, sequences and forms are not part of the subscriber export"
+    ],
+    "awkward": "On re-import an empty cell overwrites the existing value instead of leaving it alone.",
+    "friction": {
+     "export_route": "Select subscribers > ... > Export; the download link appears in the Notifications menu within a few seconds.",
+     "format": "CSV with subscriber fields, tags and UTM fields; no broadcasts, sequences or forms.",
+     "reimport": "Re-import matches on email; empty cells overwrite existing values.",
+     "cancellation": "Not tested."
+    },
+    "not_tested": [
+     "Exporting broadcasts, sequences, forms or landing pages",
+     "Custom fields",
+     "Unsubscribed or bounced subscribers in the export"
+    ],
+    "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Blinq",
    "product_id": "blinq",
    "run_date": "2026-10-23",

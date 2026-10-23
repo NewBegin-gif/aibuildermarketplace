@@ -543,15 +543,83 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Typewise",
+    "product_id": "typewise",
+    "run_date": "2026-10-23",
+    "what": "Tested by our team on 23 October 2026 during the trial, without a card, without connecting a channel and without publishing anything: Daan created the account and our AI assistant ran the test in Daan's browser, using only the Simulator. We gave the AI a two-line return policy as a text knowledge source, asked four customer questions with known right answers, changed the return window from 14 to 30 days, asked again, and exported the tickets.",
+    "findings": [
+     "Once the knowledge source was ready, the answers matched it: an unopened vase after 5 days got 'yes, you can return it' citing the 14-day policy for unopened items, and an opened lamp got 'not eligible for return or refund'. Asked about shipping to Norway, which the source did not cover, it said it couldn't find a verified answer and handed the conversation to a human ('Needs agent takeover'). It did not make anything up.",
+     "Changing the rule from 14 to 30 days took effect in the Simulator straight away: an unopened candle holder after 20 days first got 'no ... outside our return window' and, after the change, 'yes ... within 30 days of delivery for a full refund'. The source showed 'Not published yet', so this was the unpublished version.",
+     "Our very first question, asked while the knowledge source still said 'Analyzing' (it turned 'Ready' after about a minute), was handed over to a human in full. Asked again once the source was ready, it was answered.",
+     "Plan & limits showed 'Trial · 92 days remaining' on the day of sign-up, against 14 days in Typewise's documentation, with no payment method, 1,000 resolutions, 50K Nova (AI Operator) credits and one agent seat. Simulator conversations did not count as resolutions (still 0 of 1,000).",
+     "Every Simulator conversation became a ticket with an automatic title, priority and status. 'Export all' downloads an Excel file straight away with 16 columns per ticket, including the AI summary, status, language and CSAT, but not the conversation messages themselves.",
+     "Knowledge sources can be a live URL, web search, a website import, a file (PDF, Word or Excel only), text, or 'Ask a team member'. Parts of the interface showed Dutch text next to English, and once text we typed into the description landed in the name field."
+    ],
+    "not_tested": [
+     "A real channel (chat widget, email, WhatsApp) and publishing",
+     "Specialists, Actions and integrations",
+     "What happens after the trial and what 'Activate plan' costs",
+     "Use of Nova credits"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "\"The trial runs for 14 days\"",
+      "claim_source": "https://docs.typewise.app/documentation/billing/free-trial",
+      "claim_read_on": "2026-10-23",
+      "observed": "On the day of sign-up, Plan & limits showed 'Trial · 92 days remaining' with no payment method.",
+      "observed_on": "2026-10-23",
+      "evidence": "meetlog step 1",
+      "plan": "Trial, simulator only",
+      "comparability": "Same quantity: trial length shown on day one. The app gave more than the documentation says, so the difference is in the buyer's favour.",
+      "status": "contradicted",
+      "buying_consequence": "Our trial was longer than the documentation says; check the counter in your own account rather than the docs."
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-23",
+     "what": "On 23 October 2026, in the trial account from this test, we exported the six tickets created by our Simulator conversations with Typewise's own export and checked what the file contains. We did not re-import it.",
+     "first_import": null,
+     "came_along": [
+      "One row per ticket (6 rows, 16 columns): ticket ID, title, AI summary, customer name and email, channel, priority, status, assignee, team, resolution status, language, CSAT score and comment, created and last activity"
+     ],
+     "lost": [
+      "The full conversation messages: the export has only the summary per ticket",
+      "The knowledge sources and settings"
+     ],
+     "awkward": null,
+     "friction": {
+      "export_route": "All tickets > Export all gives an Excel file straight away.",
+      "format": "XLSX with one row per ticket and a summary; no conversation text.",
+      "reimport": "Not tested.",
+      "cancellation": "Not done; 'Terminate account' sits in the menu next to the plan."
+     },
+     "not_tested": [
+      "Exporting knowledge sources and settings",
+      "A PDF per ticket",
+      "Re-importing the export"
+     ],
+     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "typewise:cancellation_terms",

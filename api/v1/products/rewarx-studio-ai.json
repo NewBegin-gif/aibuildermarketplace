@@ -93,16 +93,256 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free gives 10 AI product photo credits"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 29.9,
+     "annual_year": 299,
+     "evidence": "Starter is $29.90 a month or $299 a year for 100 credits a month"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 54.9,
+     "annual_year": 549,
+     "evidence": "Growth $54.90 a month or $549 a year for 200 credits"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 129.9,
+     "annual_year": 1299,
+     "evidence": "Scale $129.90 a month or $1,299 a year for 500 credits"
+    }
+   ],
+   "notes": "Shopify App Store listing; prices per installed store. Plans differ by monthly credit pool, not by users.",
+   "not_computable": [
+    "Credit usage: one pool for photos and video; no price for extra credits and no statement on rollover.",
+    "External charges the listing says Rewarx Limited may bill separately from the Shopify invoice."
+   ],
+   "rules_verified_at": "2026-10-23"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "rewarx-studio-ai",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 24.92,
+       "growth": 45.75,
+       "scale": 108.25
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credit usage: one pool for photos and video; no price for extra credits and no statement on rollover.",
+     "External charges the listing says Rewarx Limited may bill separately from the Shopify invoice."
+    ]
+   },
+   "monthly": {
+    "product_id": "rewarx-studio-ai",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 29.9,
+       "growth": 54.9,
+       "scale": 129.9
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credit usage: one pool for photos and video; no price for extra credits and no statement on rollover.",
+     "External charges the listing says Rewarx Limited may bill separately from the Shopify invoice."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -131,9 +371,15 @@
    "status": "open"
   },
   {
-   "question_id": "rewarx-studio-ai:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "rewarx-studio-ai:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Credit usage: one pool for photos and video; no price for extra credits and no statement on rollover. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "rewarx-studio-ai:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: External charges the listing says Rewarx Limited may bill separately from the Shopify invoice. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

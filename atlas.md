@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 572 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-22.
+All 577 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-23.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1321,6 +1321,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/finale-inventory-review/
 
+## FineVoice (finevoice.ai)
+- **Verified pricing:** (read 2026-10-23 on finevoice.ai/pricing, USD selected) FineVoice has a free plan and three paid tiers.
+- **Honest take:** Unused quota expires monthly; the Ultra card and the plan table disagree.
+- **Best for:** solo creators, educators and small teams who want text to speech, voice changing, cloning, transcription and sound effects in one subscription, and who use most of the quota every month
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/finevoice-review/
+
 ## Fireflies.ai (fireflies.ai)
 - **Verified pricing:** (price re-verified 2026-10-16 against the vendor's own pricing page and help guide) Free $0 — free forever, unlimited transcription, limited AI summaries, 400 mins of storage per team, 20 A…
 - **Honest take:** The advertised $10 and $19 are annual-billing rates; month-to-month is $18 and $29.
@@ -1958,6 +1965,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Renewal jump, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/lifterlms-review/
 
+## Liltio (liltio.com)
+- **Verified pricing:** (read 2026-10-23 on liltio.com/#pricing; US dollars, before applicable taxes) Liltio sells one product, Liltio Local, as a one-time lifetime licence: $49 standard price, with no recurring s…
+- **Honest take:** Apple silicon and macOS 15.5+ only; one licence covers 2 Macs.
+- **Best for:** Mac users on Apple silicon who dictate emails, notes and first drafts every day and want speech recognition on their own machine, paid for once instead of monthly
+- **Full review:** https://aibuildermarketplace.com/b2b/liltio-review/
+
 ## Lindy.ai (lindy.ai)
 - **Verified pricing:** (re-verified 2026-10-02, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, and the credit allowance is published ag…
 - **Honest take:** Cost tracks headcount rather than output: every colleague who so much as @mentions Lindy in Slack takes a paid seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration.
@@ -2374,6 +2387,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/payoneer-review/
 
+## PDF Agile (pdfagile.com)
+- **Verified pricing:** (read 2026-10-23 on pdfagile.com/pricing; dollar amounts, the page does not name the currency) PDF Agile sells three paid plans and calls each of them a one-time payment rather than a subsc…
+- **Honest take:** Personal, non-commercial licence; unclear what the time-limited plans keep.
+- **Best for:** individuals, students and teachers who edit, convert and sign PDFs regularly and prefer paying once over a monthly subscription
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/pdf-agile-review/
+
 ## Pdfdodo (pdfdodo.com)
 - **Verified pricing:** (read 2026-10-16 in a browser on pdfdodo.com, monthly and yearly view of the pricing block; the cards show a $ sign without naming the currency) Four plans metered by pages analysed per mon…
 - **Honest take:** Free has every feature for 25 pages; FAQ and terms disagree on refunds.
@@ -2727,6 +2747,20 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** high-volume portrait, school and wedding photographers who already live in Photoshop and want repetitive retouching (skin, stray hairs, dust, teeth) automated
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/retouch4me-review/
+
+## Rewarx Studio AI (rewarx.com)
+- **Verified pricing:** (read 2026-10-23 on the Rewarx listing in the Shopify App Store; the listing says all charges are billed in USD) Rewarx's own pricing page shows no amounts, so the Shopify listing is the pu…
+- **Honest take:** Launched May 2026 with no reviews yet; 4K and video use credits fast.
+- **Best for:** Shopify sellers in fashion, beauty, jewellery and home goods who need many consistent product, model and lifestyle images from one product photo and would otherwise pay for a shoot
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/rewarx-studio-ai-review/
+
+## Riibase CRM (riibase.com)
+- **Verified pricing:** (read 2026-10-23 on riibase.com/pricing; dollar amounts, the page does not name the currency) Riibase prices its CRM per team, not per seat.
+- **Honest take:** Record caps of 500 and 5,000 on the cheaper plans; fees non-refundable.
+- **Best for:** small teams in e-commerce, insurance or services that want a simple CRM with pipelines and follow-up automation for one flat team price instead of per-seat billing
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/riibase-crm-review/
 
 ## Rippling (rippling.com)
 - **Verified pricing:** (re-verified 2026-10-16) Rippling is modular and mostly quote-led.

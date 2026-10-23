@@ -1323,9 +1323,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## FineVoice (finevoice.ai)
 - **Verified pricing:** (read 2026-10-23 on finevoice.ai/pricing, USD selected) FineVoice has a free plan and three paid tiers.
-- **Honest take:** Unused quota expires monthly; the Ultra card and the plan table disagree.
+- **Honest take:** Unused quota expires monthly; only annual Ultra is (mostly) unlimited.
 - **Best for:** solo creators, educators and small teams who want text to speech, voice changing, cloning, transcription and sound effects in one subscription, and who use most of the quota every month
-- **Flags:** Free tier
+- **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/finevoice-review/
 
 ## Fireflies.ai (fireflies.ai)

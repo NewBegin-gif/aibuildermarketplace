@@ -4569,6 +4569,101 @@
   },
   {
    "source": "session",
+   "product_name": "folk",
+   "product_id": "folk",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 during the 14-day Premium trial, without a card and without connecting any account, LinkedIn, WhatsApp, email, extension or desktop app: Daan created the account and our AI assistant ran the test in Daan's browser. We made a group with two made-up people, linked a deal to each with known values, checked the pipeline sum, added a note to a deal and exported the data.",
+   "findings": [
+    "Onboarding took six screens and asked for no card; the last one said 'Welcome to your 14-day free trial' with access to all Premium features, and the app then showed 'Premium trial (2 weeks left)'. Skipping the account connection meant clicking 'No, I like endless copy-paste' and then confirming 'Continue with fewer features?'.",
+    "A new group immediately got the views All people and Pipeline. Create person (with 'Create more') added both test people in one go.",
+    "Adding a Deals column created a Deals tab as well. Typing a new deal in each person's cell created both deals, linked to the right person; values of 100 and 200 were kept, shown as $100 and $200 although we never picked a currency.",
+    "The deals pipeline showed both cards under 'No status'; switching the column calculation to Sum of Deal value gave $300, matching 100 + 200.",
+    "Adding a note to a deal failed twice: the first note was not saved (Notes 0), and the second attempt showed 'Whoops! An unexpected error occurred'. After Reload the note saved and the card showed a note icon."
+   ],
+   "not_tested": [
+    "Connections with Google, Microsoft, WhatsApp or LinkedIn, and the Chrome extension",
+    "Enrichment, AI fields, assistants and email sequences",
+    "What remains on Standard after the 14 days (the pricing page lists Deals under Premium)",
+    "Zapier and Make integrations",
+    "Re-importing the export"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"No, we don't ask for your credit card during the trial.\" and \"2 weeks free trial\"",
+     "claim_source": "https://www.folk.app/pricing",
+     "claim_read_on": "2026-10-21",
+     "observed": "Sign-up and onboarding asked for no card; the last screen said 'Welcome to your 14-day free trial ... access to all our Premium features' and the app showed 'Premium trial (2 weeks left)'.",
+     "observed_on": "2026-10-23",
+     "evidence": "meetlog step 0",
+     "plan": "Premium trial, no integrations",
+     "comparability": "Same quantity: trial length and card requirement at sign-up.",
+     "status": "confirmed",
+     "buying_consequence": "You can try folk for two weeks without a card, but the trial runs on Premium features, so Deals and other Premium features you test may not be in a cheaper plan."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-23",
+    "what": "On 23 October 2026, in the trial workspace from this test, we exported the Deals view and the People view with folk's own export and compared the files with what we had entered: two people, two deals linked to them with values 100 and 200, a group and one note on a deal. We did not re-import the files.",
+    "first_import": null,
+    "came_along": [
+     "Both people and both deals, with the right values (100 and 200) and the linked person",
+     "The group (TESTHAVEN), in the people export",
+     "The note on the deal, in a separate notes.csv with deal ID, deal name and time"
+    ],
+    "lost": [
+     "The person-deal link as an ID: deals.csv names the person ('Ada Test'), not their ID, so with two people of the same name the link cannot be restored unambiguously",
+     "The Deals column in the people export: it was in the view, but not in people.csv",
+     "The currency of Deal value: the app shows '$', the export has the number only"
+    ],
+    "awkward": null,
+    "friction": {
+     "export_route": "A menu item per view, 'Export view as CSV', gives a ZIP straight away: no support request and no waiting. Export through the API was not tested.",
+     "format": "Clean CSV files per object type (deals.csv with 10 columns, people.csv with 36) plus a separate notes.csv. Relations only as names, not as IDs; the Deals column is missing from the people export.",
+     "reimport": "Not tested: we did not re-import the export into folk or another CRM.",
+     "cancellation": "Not tested: this was a trial without a subscription."
+    },
+    "not_tested": [
+     "Re-importing the export",
+     "Export through the API",
+     "A full workspace export",
+     "Attachments and email history"
+    ],
+    "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Beehiiv",
+   "product_id": "beehiiv",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 on our existing Free account (the publication we use for our weekly mail, 3 subscribers), as a draft only: our AI assistant ran the test in Daan's browser. We wrote a post with a title and three known lines, checked all four previews and walked through every publishing step without sending or publishing anything.",
+   "findings": [
+    "New > Blank draft post opened the editor (Compose, Audience, Email, Web, Review) in about 10 seconds. Above the editor sat a block 'Earn revenue with this newsletter! Upgrade to the Lite plan to claim them'.",
+    "The title and all three lines came through unchanged in all four previews (email and web, desktop and mobile): 0 field errors in 4 previews. The email preview used the title as subject and left the preview text empty; the web preview said '2 min read' for 12 words.",
+    "The Review step listed 'Fix before you publish: Add email preview text', next to Send test email and Schedule. We sent nothing.",
+    "Audience offers Email and web, Email only or Web only, defaulting to all subscribers. The Email step has subject, preview text, sender name, UTM settings and custom headers; the Web step has the post URL, thumbnail and SEO title and description (defaulting to the publication description). 'Audio newsletter' was available only with Pro.",
+    "We could not find a way to create a second, separate publication on the Free plan: not in the sidebar or the New menu, and /publications/new returned a 404. That is why we tested as a draft in the existing publication.",
+    "After Exit without publishing, Posts listed the draft with its last-edited time; the subscriber count stayed at 3 and no new send appeared."
+   ],
+   "not_tested": [
+    "Actually sending, deliverability and open rates",
+    "A separate second publication on the Free plan",
+    "Importing subscribers, the growth network (Boosts), the Ad Network and paid subscriptions",
+    "The website builder and a custom domain",
+    "The difference between Free and Lite or Pro beyond the visible locks (Ad Network claims, audio newsletter)"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Dext",
    "product_id": "dext",
    "run_date": "2026-10-21",

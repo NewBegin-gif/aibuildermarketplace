@@ -4019,6 +4019,47 @@
   },
   {
    "source": "session",
+   "product_name": "MindStudio",
+   "product_id": "mindstudio",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 on the Free plan, with no card, no top-up and nothing published: Daan created the account and our AI assistant ran the test in Daan's browser. We had MindStudio's built-in Architect build an agent that pulls record IDs and dates out of four made-up records (one without a date) and tried to run it. The run failed for lack of credit, so the extraction itself was not tested.",
+   "findings": [
+    "The Free plan in the app lists 'One Agent' and '1,000 runs / month', but model usage is paid from a separate prepaid balance that starts at $0.00 on a new workspace (shown in red, 'Click to top up'). Topping up opens a card form with $10, $25, $100 and $500; we did not fill it in.",
+    "Our first run of our own agent, in the debugger, stopped while waiting for the model with 'You are out of usage credits' and 'Run Failed: insufficient_credits/balance'. There was no output, so we cannot say how well it extracts dates or whether it marks the record without a date as unknown.",
+    "'Generate Agent' started the built-in MindStudio Architect, which first asked three clarifying questions (date format, output format, several dates per record), then showed a readable plan with the rule to never infer, guess or fabricate dates, and built the agent in about one and a half minutes after 'Build'. The Architect's own debug log listed billing events of about $0.88 over ten steps, while our balance stayed at $0.00: MindStudio paid for that work, not us.",
+    "The debugger logs every step with timings, the resolved variables, the full prompt sent and the model used (Claude 5.5 Sonnet at 0.5°); the error and its reason appear verbatim. The Architect added a second agent next to the empty first one, although Free names 'One Agent'; both were drafts.",
+    "Onboarding offered two ways to connect AI models: the recommended Service Router ('Charged only when agents run', at provider rates without markup) or your own API keys. We chose the Service Router and did not try our own keys.",
+    "We found no export or download option for an agent in the editor. The debugger shows 'Open Script' for the workflow and the Architect run has 'Copy for LLM', which copies the conversation; we did not test these further."
+   ],
+   "not_tested": [
+    "A successful agent run and the quality of the extraction (no credit)",
+    "Evaluations and test suites",
+    "Your own API keys as a way to run without credit",
+    "Publishing, the one-agent limit and how runs are counted",
+    "Exporting an agent, its prompts or logs"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"1,000 runs / month\"",
+     "claim_source": "https://www.mindstudio.ai/pricing",
+     "claim_read_on": "2026-10-23",
+     "observed": "The Free plan page in the app shows '1,000 runs / month', but the workspace credit balance starts at $0.00 and our first run of our own agent failed with 'You are out of usage credits' (insufficient_credits/balance).",
+     "observed_on": "2026-10-23",
+     "evidence": "meetlog steps 1 and 3",
+     "plan": "Free, Service Router, no top-up",
+     "comparability": "The claim counts runs; we measured whether a run can start without paying for model usage. Different quantity.",
+     "status": "not_comparable",
+     "buying_consequence": "On Free you still need to top up credit (or bring your own API keys, not tested) before an agent that calls a model can run."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Capsule",
    "product_id": "capsule",
    "run_date": "2026-09-07",

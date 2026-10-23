@@ -475,15 +475,60 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "noCRM",
+    "product_id": "nocrm",
+    "run_date": "2026-10-23",
+    "what": "Tested by our team on 23 October 2026 during the free trial, without a card and without connecting a mailbox, calendar or WhatsApp: Daan created the account and our AI assistant ran the test in Daan's browser. We added three made-up leads, gave each a next action, moved one to the quotation step and typed a duplicate lead title without saving it.",
+    "findings": [
+     "The workspace worked straight away without any connection. A pop-up offered a 30-day trial instead of 15 days if we entered payment details that day; we declined. The welcome tour ('Let's create our first lead') came back on every page load, even with three leads in place.",
+     "Three leads took about three minutes. The New lead form has a title, a contact block (first name, last name, phone and email as a text template), step, amount, probability, an expected closing date that defaults to tomorrow, and tags.",
+     "All three leads got a next action, at 3 clicks plus text each. 'Set a reminder for the next action' takes a date (default tomorrow), an optional time and what you plan to do; the lead then shows 'You planned: 24/10/2026' and the list shows '1d'. An action due today needed another route: that lead stayed on To do and we added the action as a comment.",
+     "Moving a lead to 'Quotation sent' with the arrow in the step bar left its next action in place: the pipeline step and the next action are separate.",
+     "Typing an existing lead title in New lead showed '1 possible duplicate' with the reason 'Same title' before saving. The time in that warning was 2 hours off the time in the list, probably UTC against local time.",
+     "Keyboard shortcuts fire when you type outside a text field: once an edit screen and once a New lead window opened. Nothing was saved.",
+     "The 'New email' tab on a lead shows an invitation to connect a mailbox instead of an editor, so sending email from a lead needs that connection. The trial showed no limits per plan, so the app does not tell you which features sit above Starter."
+    ],
+    "not_tested": [
+     "Mailbox, calendar or WhatsApp connections, and email from the lead",
+     "Which features remain on Starter after the trial",
+     "Prospecting lists, Excel import, business-card scanning and the mobile app",
+     "Multiple users and lead assignment",
+     "The exact trial length in the app (we did not note an end date)"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "\"15-day free trial (no credit card required)\"",
+      "claim_source": "https://www.nocrm.io/pricing",
+      "claim_read_on": "2026-10-21",
+      "observed": "We used the account for leads, next actions and pipeline steps without giving a card. The app offered to extend the trial to 30 days if we entered payment details that day; we declined.",
+      "observed_on": "2026-10-23",
+      "evidence": "meetlog step 1",
+      "plan": "Trial, no integrations",
+      "comparability": "Same quantity for the card requirement; trial length itself was not read in the app.",
+      "status": "confirmed",
+      "buying_consequence": "You can test without a card; a card buys you 30 instead of 15 days, which only matters if you need longer than two weeks to decide."
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "nocrm:cancellation_terms",

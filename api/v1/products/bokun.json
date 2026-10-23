@@ -93,15 +93,59 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Bokun",
+    "product_id": "bokun",
+    "run_date": "2026-10-23",
+    "what": "Tested by our team on 23 October 2026 during the 14-day Bókun Start trial, without a card, without any OTA, Viator or payment connection and without a website: Daan created the account and our AI assistant ran the test in Daan's browser. We set up a made-up walking tour (Wednesday 28 October, 10:00, 60 minutes, 4 seats, EUR 10 per person), made a back-office booking for 2 adults with a fictional contact and then cancelled it.",
+    "findings": [
+     "After email verification, onboarding first asked about a card (we answered No), then required a plan choice to start the 14-day trial: Start $49 a month plus a 1.5% booking fee, Plus $149 plus 1.25%, Premium $499 plus 1.0% (5, 10 and unlimited users). The next screen asked for a card to start billing when the trial ends on 6 November 2026; 'I'll add card later' skipped it, and the dashboard opened with '14 days left on your Bókun Start free trial'.",
+     "Setting up the tour by hand took 2 minutes 38 seconds in a wizard (title, description, photos, time, booking cutoff, capacity, start times, calendar, pricing) with a counter of the steps still required. No OTA, Viator import or payment step was mandatory; adult and child prices had to be set separately.",
+     "A back-office booking for 2 adults with 'Pay later' was confirmed as not paid, EUR 20.00, and the departure dropped from 4 to 2 seats left. Cancelling asked for a reason and showed the cancellation policy ('Bookings are non-refundable'), with options to apply it and to skip the cancellation email; afterwards the booking showed Cancelled with time and reason, and the departure was back to 4 seats left.",
+     "Activating the tour set it to 'Public' straight away, followed by a message pointing to GetYourGuide, the Bókun Marketplace and other channels. None were connected, so what 'Public' means without a channel we did not check.",
+     "The back-office booking offered three payment routes: send a payment link, enter a payment manually, or pay later. We only used pay later."
+    ],
+    "not_tested": [
+     "OTA distribution (Viator, GetYourGuide), the Bókun Marketplace and resellers",
+     "Real payments, payment links and the 1.5% booking fee",
+     "The booking widget or website as a customer sees it",
+     "What 'Public' means without a sales channel",
+     "What happens after the trial without a card",
+     "Multiple users, resources and price catalogues"
+    ],
+    "report": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "\"14 day free-trial\" and \"No credit card required\"",
+      "claim_source": "https://www.bokun.io/",
+      "claim_read_on": "2026-10-21",
+      "observed": "After sign-up we had to pick a paid plan to start the trial; the next screen asked for a card to bill after the trial ends on 6 November 2026 (14 days after 23 October), but 'I'll add card later' skipped it and the dashboard said '14 days left on your Bókun Start free trial'.",
+      "observed_on": "2026-10-23",
+      "evidence": "meetlog step 1",
+      "plan": "Bókun Start trial, no channels connected",
+      "comparability": "Same quantity: trial length and card requirement at sign-up.",
+      "status": "confirmed",
+      "buying_consequence": "You can test without a card, but expect two card prompts and a plan choice ($49/$149/$499 per month plus a booking fee) before you reach the dashboard; what happens after 14 days without a card we did not see."
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "bokun:cancellation_terms",

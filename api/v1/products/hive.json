@@ -131,6 +131,36 @@
      }
     ],
     "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-23",
+     "what": "On 23 October 2026, in the same account and still without a subscription, we imported 10 made-up tasks with known IDs from a CSV file: one task depending on another, one subtask, a completed and an in-progress task, a title with a comma and quotation marks, an end date of 29 February 2028, a task across the year end, a Unicode title and a task without dates. We added a text attachment to one task, exported the project and imported Hive's own export into a new project.",
+     "first_import": "Import project > Tasks spreadsheet (CSV or Excel; Asana, Monday, MS Project, Smartsheet, Trello and Basecamp are also offered) took four steps. All columns were matched automatically except our Labels column, which became a custom field. No errors: all 10 tasks came in with the right status, the dependent task showed 'Blocked', the subtask sat under its parent, and the leap day and the Unicode title were intact.",
+     "came_along": [
+      "All 10 rows, with titles, Unicode, commas and quotation marks intact",
+      "Start and end dates, now with a four-digit year; 29 February 2028 correct",
+      "Status and completion date",
+      "The subtask's parent, as a name plus a Hive ID (columns Parent and Parent ID)"
+     ],
+     "lost": [
+      "Which task blocks the dependent one: the export only says 'Blocked'",
+      "The attachment itself: the export only says 'Attachments present: true'"
+     ],
+     "awkward": "Two columns with the same name, 'Labels' (Hive's own, empty, and our custom field); Hive IDs instead of a WBS number; and the creator's name in every row.",
+     "friction": {
+      "export_route": "A button in the app (More > Export): no support request and no waiting. The file (2.9 kB, 35 columns) arrived after about 10 seconds. Export through the API was not tested.",
+      "format": "CSV or Excel (.xlsx), with options to hide assignees, leave out custom fields, include sub-actions and limit the date range. The parent comes along as name plus ID; dependencies do not; attachments only as yes or no.",
+      "reimport": "Hive's own export does not fit Hive's own import. The import screen has no Parent or ID field, and every one of the 10 rows was flagged because the assignee column reads 'Unassigned' ('Rows with errors will be ignored when submitting'). After we remapped that column to a custom field, all 10 rows came in with titles, Unicode, dates and status right, but the subtask was now a separate task, the dependency was gone and the attachment was missing. The export columns also produced about 25 unneeded custom fields.",
+      "cancellation": "Not tested: there was no subscription to cancel."
+     },
+     "not_tested": [
+      "Export through the API, and its limits",
+      "Importing into a competitor such as Asana or Monday",
+      "Downloading attachments in bulk",
+      "Comments, time tracking and multiple users",
+      "Cancelling a paid subscription"
+     ],
+     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+    },
     "in_catalog": true
    }
   ]

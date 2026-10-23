@@ -588,6 +588,30 @@
     "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "exit_test": {
+     "run_date": "2026-10-23",
+     "what": "On 23 October 2026, in the same free account as our earlier test, we uploaded a folder with four files whose SHA-256 hashes we had recorded beforehand (three 89-byte text files and a 2,259-byte image), selected all four and downloaded them, then compared the files. We did not upload the downloaded set again.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "The file dates inside the ZIP are the upload time, not the original modification dates.",
+     "friction": {
+      "export_route": "Select the files, then Download; several files automatically come as one ZIP, within seconds for us.",
+      "format": "The original files inside a ZIP.",
+      "reimport": "Not tested: we did not upload the extracted set again.",
+      "cancellation": "Not tested."
+     },
+     "not_tested": [
+      "Uploading the extracted set again",
+      "Version history and share links in the download",
+      "Large files and folders with subfolders"
+     ],
+     "came_along": [
+      "All 4 files, with the same names and identical SHA-256 hashes as before the upload"
+     ],
+     "lost": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
     "in_catalog": true
    }
   ]

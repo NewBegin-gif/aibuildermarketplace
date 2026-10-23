@@ -123,6 +123,21 @@
     "report": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "\"20MB/month\" and \"Max upload size: 2MB/image\" on Starter",
+      "claim_source": "https://imagify.io/pricing/",
+      "claim_read_on": "2026-10-17",
+      "observed": "After two images of 11.8KB and 48.9KB the counter read 61.44KB of 20MB: it counts the original size, not the compressed result. A 3.4MB file was refused with 'File size must be under 2.0 MB' and used no quota.",
+      "observed_on": "2026-10-21",
+      "evidence": "meetlog steps 2 and 6",
+      "plan": "Starter (free) in the web app, account not yet confirmed",
+      "comparability": "Same quantities. The page does not say whether the 20MB is measured before or after compression; the counter shows before.",
+      "status": "confirmed",
+      "buying_consequence": "Work out the free allowance from your original file sizes: at 1MB per photo that is about 20 images a month, not the 200 the page suggests for small files."
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
     "in_catalog": true
    }
   ]

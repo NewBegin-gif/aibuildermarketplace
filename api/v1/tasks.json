@@ -3177,6 +3177,21 @@
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"20MB/month\" and \"Max upload size: 2MB/image\" on Starter",
+     "claim_source": "https://imagify.io/pricing/",
+     "claim_read_on": "2026-10-17",
+     "observed": "After two images of 11.8KB and 48.9KB the counter read 61.44KB of 20MB: it counts the original size, not the compressed result. A 3.4MB file was refused with 'File size must be under 2.0 MB' and used no quota.",
+     "observed_on": "2026-10-21",
+     "evidence": "meetlog steps 2 and 6",
+     "plan": "Starter (free) in the web app, account not yet confirmed",
+     "comparability": "Same quantities. The page does not say whether the 20MB is measured before or after compression; the counter shows before.",
+     "status": "confirmed",
+     "buying_consequence": "Work out the free allowance from your original file sizes: at 1MB per photo that is about 20 images a month, not the 200 the page suggests for small files."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "in_catalog": true
   },
   {
@@ -3315,6 +3330,21 @@
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"50 free credits to start\" and \"No credit card required\"",
+     "claim_source": "https://parallellabs.app/pricing/",
+     "claim_read_on": "2026-10-21",
+     "observed": "The free plan 'Pay As You Go' ($0) showed 'Monthly credits 4 / 50' after onboarding; no card was asked for. The whole onboarding used 4 credits for 14 requests.",
+     "observed_on": "2026-10-21",
+     "evidence": "meetlog step 6; screenshots bewijs/04-plannen.jpg and bewijs/05-verbruik-4-credits.jpg (shown on this page)",
+     "plan": "Pay As You Go ($0), 1 company, 1 seat, no mailbox connected",
+     "comparability": "Same quantity for the 50 credits and the card. The app labels the credits as monthly; we did not see a reset.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan is enough to see what the onboarding builds (it cost 4 of 50 credits); the cost of later actions is not published, so measure your own work before choosing a paid tier."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "in_catalog": true
   },
   {
@@ -3547,6 +3577,21 @@
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"14-day all-access free trial\"",
+     "claim_source": "https://www.freshworks.com/freshdesk/signup/",
+     "claim_read_on": "2026-10-21",
+     "observed": "Right after sign-up the app said 'Hi Daniel Haket, your 15-day trial starts today', with a 'Buy now' button.",
+     "observed_on": "2026-10-21",
+     "evidence": "meetlog step 1; screenshot bewijs/01-proef-15-dagen.jpg (shown on this page)",
+     "plan": "Freshdesk Omni trial, EU data centre, new account, no channels connected",
+     "comparability": "Not the same count. The sign-up page and the app may count the start day differently, and we did not record the trial's end date, so 14 against 15 is not shown to be a real difference.",
+     "status": "not_comparable",
+     "buying_consequence": "Plan your evaluation for 14 days and check the end date in the trial bar on day one; do not count on the extra day."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "in_catalog": true
   },
   {
@@ -3680,6 +3725,21 @@
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"14 days free.\" and \"No payment details required - Up to 25 live viewers\"",
+     "claim_source": "https://www.webinargeek.com/register",
+     "claim_read_on": "2026-10-21",
+     "observed": "The account showed 'Free trial for 14 days. Upgrade now'. No card was asked for at sign-up or before the dry run.",
+     "observed_on": "2026-10-21",
+     "evidence": "meetlog account record and step 1",
+     "plan": "14-day trial, one presenter, unpublished unlisted webinar",
+     "comparability": "Same quantity for trial length and payment details. The 25-viewer cap was not tested: we invited no viewers.",
+     "status": "confirmed",
+     "buying_consequence": "You can run a full dry run without payment details; to test what viewers see you have to publish a webinar within the trial."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "in_catalog": true
   },
   {
@@ -3707,6 +3767,21 @@
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"20 responses a month\" and \"10 questions per quiz\" on the free account",
+     "claim_source": "https://www.flexiquiz.com/Help/faq/what-you-can-do-with-a-free-flexiquiz-account",
+     "claim_read_on": "2026-10-17",
+     "observed": "Saving an eleventh question gave 'There is a maximum of 10 questions on the free plan'. After 20 submissions the quiz link showed only 'This account has reached the maximum monthly response limit'.",
+     "observed_on": "2026-10-20",
+     "evidence": "meetlog steps 4, 6 and 7",
+     "plan": "Free, one quiz, submissions as an anonymous visitor",
+     "comparability": "Same quantities. With one quiz we cannot tell the per-quiz and per-account limits apart.",
+     "status": "confirmed",
+     "buying_consequence": "The limit stops the 21st participant before they can start, so the free plan does not fit a group of more than 20 people a month."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "in_catalog": true
   },
   {
@@ -3734,6 +3809,21 @@
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"Free teams can have up to 3 active boards.\"",
+     "claim_source": "https://help.miro.com/hc/en-us/articles/360017730373-Free-Plan",
+     "claim_read_on": "2026-10-17",
+     "observed": "Creating a fourth board was not blocked: Miro said 'You've reached the limit of three editable boards' and 'My First Board will become view-only', and offered 'Create team board' or 'Upgrade'. We did not click through.",
+     "observed_on": "2026-10-20",
+     "evidence": "meetlog step 6",
+     "plan": "Free, new team, one member",
+     "comparability": "Same quantity: the limit is three editable boards. A fourth does not fail; it turns the oldest one read-only.",
+     "status": "confirmed",
+     "buying_consequence": "On Free you keep three boards you can edit; a fourth costs you editing on an older one, so a team with more live boards needs a paid plan."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "in_catalog": true
   },
   {
@@ -3828,6 +3918,21 @@
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"1,000 AI credits / month\" on the Free plan",
+     "claim_source": "https://hive.com/pricing",
+     "claim_read_on": "2026-10-17",
+     "observed": "Usage & billing > AI usage in a new account without a subscription: '5.000 of 5.000 remaining', '5.000 included · 0 purchased', 'Resets Nov 21'.",
+     "observed_on": "2026-10-21",
+     "evidence": "meetlog step 7",
+     "plan": "Free, new workspace, no card, no subscription",
+     "comparability": "Not the same quantity as far as we can tell. The 5,000 may be a one-off starting balance for a new account; we saw one month, not the month after the reset.",
+     "status": "not_comparable",
+     "buying_consequence": "Budget AI use on the published 1,000 credits a month; treat the higher first balance as unconfirmed until it survives a reset."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "in_catalog": true
   },
   {
@@ -4372,6 +4477,21 @@
    "report": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"free 14 day trial\" and \"No payment details required.\"",
+     "claim_source": "https://dext.com/ (trial); https://app.dext.com/signups/business?country_code=us (payment details)",
+     "claim_read_on": "2026-10-21",
+     "observed": "After sign-up the account showed 'Your free trial ends in 14 days'. We gave no card or bank details, and the workspace worked without connecting accounting software.",
+     "observed_on": "2026-10-21",
+     "evidence": "meetlog step 1",
+     "plan": "Trial, country Netherlands, no accounting or bank connection",
+     "comparability": "Same quantity: trial length and payment details at sign-up.",
+     "status": "confirmed",
+     "buying_consequence": "You can test receipt capture on your own documents without giving payment details; what happens after the 14 days we did not see."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "in_catalog": true
   },
   {

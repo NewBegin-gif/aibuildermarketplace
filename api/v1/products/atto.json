@@ -116,15 +116,428 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "annual_month": 5.65,
+     "monthly": 6.95,
+     "evidence": "Per user per month, billed annually: Starter $5.65, Plus $7.95 (job codes, breaks and notes), Advanced $10.75 (job costing), Expert $16.55 (talk to sales). Billed monthly the same tiers are $6.95, $9.95, $12.95 and $19.95"
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "per_unit",
+     "annual_month": 7.95,
+     "monthly": 9.95,
+     "evidence": "Per user per month, billed annually: Starter $5.65, Plus $7.95 (job codes, breaks and notes), Advanced $10.75 (job costing), Expert $16.55 (talk to sales). Billed monthly the same tiers are $6.95, $9.95, $12.95 and $19.95"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "per_unit",
+     "annual_month": 10.75,
+     "monthly": 12.95,
+     "evidence": "Per user per month, billed annually: Starter $5.65, Plus $7.95 (job codes, breaks and notes), Advanced $10.75 (job costing), Expert $16.55 (talk to sales). Billed monthly the same tiers are $6.95, $9.95, $12.95 and $19.95"
+    },
+    {
+     "id": "expert",
+     "name": "Expert",
+     "model": "per_unit",
+     "annual_month": 16.55,
+     "monthly": 19.95,
+     "evidence": "Per user per month, billed annually: Starter $5.65, Plus $7.95 (job codes, breaks and notes), Advanced $10.75 (job costing), Expert $16.55 (talk to sales). Billed monthly the same tiers are $6.95, $9.95, $12.95 and $19.95"
+    }
+   ],
+   "not_computable": [
+    "Payroll add-on ($5.95 per payroll user a month plus a $39.95 monthly base fee, US businesses only) is not in these totals."
+   ],
+   "notes": [
+    "Expert is listed with a price but marked 'talk to sales'."
+   ],
+   "rules_verified_at": "2026-10-23"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "atto",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 5.65,
+      "billed": {
+       "amount": 67.8,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 5.65,
+       "plus": 7.95,
+       "advanced": 10.75,
+       "expert": 16.55
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 11.3,
+      "billed": {
+       "amount": 135.6,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 11.3,
+       "plus": 15.9,
+       "advanced": 21.5,
+       "expert": 33.1
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 16.95,
+      "billed": {
+       "amount": 203.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 16.95,
+       "plus": 23.85,
+       "advanced": 32.25,
+       "expert": 49.65
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 28.25,
+      "billed": {
+       "amount": 339.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 28.25,
+       "plus": 39.75,
+       "advanced": 53.75,
+       "expert": 82.75
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 56.5,
+      "billed": {
+       "amount": 678.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 56.5,
+       "plus": 79.5,
+       "advanced": 107.5,
+       "expert": 165.5
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 84.75,
+      "billed": {
+       "amount": 1017.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 84.75,
+       "plus": 119.25,
+       "advanced": 161.25,
+       "expert": 248.25
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 113.0,
+      "billed": {
+       "amount": 1356.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 113.0,
+       "plus": 159.0,
+       "advanced": 215.0,
+       "expert": 331.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 141.25,
+      "billed": {
+       "amount": 1695.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 141.25,
+       "plus": 198.75,
+       "advanced": 268.75,
+       "expert": 413.75
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 282.5,
+      "billed": {
+       "amount": 3390.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 282.5,
+       "plus": 397.5,
+       "advanced": 537.5,
+       "expert": 827.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 565.0,
+      "billed": {
+       "amount": 6780.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 565.0,
+       "plus": 795.0,
+       "advanced": 1075.0,
+       "expert": 1655.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Payroll add-on ($5.95 per payroll user a month plus a $39.95 monthly base fee, US businesses only) is not in these totals."
+    ]
+   },
+   "monthly": {
+    "product_id": "atto",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 6.95,
+      "billed": {
+       "amount": 6.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 6.95,
+       "plus": 9.95,
+       "advanced": 12.95,
+       "expert": 19.95
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 13.9,
+      "billed": {
+       "amount": 13.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 13.9,
+       "plus": 19.9,
+       "advanced": 25.9,
+       "expert": 39.9
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.85,
+      "billed": {
+       "amount": 20.85,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.85,
+       "plus": 29.85,
+       "advanced": 38.85,
+       "expert": 59.85
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 34.75,
+      "billed": {
+       "amount": 34.75,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 34.75,
+       "plus": 49.75,
+       "advanced": 64.75,
+       "expert": 99.75
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 69.5,
+      "billed": {
+       "amount": 69.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 69.5,
+       "plus": 99.5,
+       "advanced": 129.5,
+       "expert": 199.5
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 104.25,
+      "billed": {
+       "amount": 104.25,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 104.25,
+       "plus": 149.25,
+       "advanced": 194.25,
+       "expert": 299.25
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 139.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 139.0,
+       "plus": 199.0,
+       "advanced": 259.0,
+       "expert": 399.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 173.75,
+      "billed": {
+       "amount": 173.75,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 173.75,
+       "plus": 248.75,
+       "advanced": 323.75,
+       "expert": 498.75
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 347.5,
+      "billed": {
+       "amount": 347.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 347.5,
+       "plus": 497.5,
+       "advanced": 647.5,
+       "expert": 997.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 695.0,
+      "billed": {
+       "amount": 695.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 695.0,
+       "plus": 995.0,
+       "advanced": 1295.0,
+       "expert": 1995.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Payroll add-on ($5.95 per payroll user a month plus a $39.95 monthly base fee, US businesses only) is not in these totals."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -202,9 +615,9 @@
    "status": "open"
   },
   {
-   "question_id": "atto:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "atto:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Payroll add-on ($5.95 per payroll user a month plus a $39.95 monthly base fee, US businesses only) is not in these totals. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

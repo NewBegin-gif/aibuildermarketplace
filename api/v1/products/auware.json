@@ -64,16 +64,206 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 199,
+     "annual_status": "unknown",
+     "evidence": "One plan: Pro at $199 a month per store"
+    },
+    {
+     "id": "custom",
+     "name": "Contact Us",
+     "model": "quote",
+     "evidence": "Larger setups — unlimited stores and team members, custom campaign and audience limits, Shopify Plus — are a 'Contact Us' conversation with no published price"
+    }
+   ],
+   "not_computable": [
+    "Influencer Pages add-on ($99 a month) is not included in the totals."
+   ],
+   "notes": [
+    "A store is one myshopify.com domain; each store needs its own subscription."
+   ],
+   "rules_verified_at": "2026-10-23"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "auware",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "price_unknown_on_billing",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "price_unknown_on_billing",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "price_unknown_on_billing",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "price_unknown_on_billing",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "price_unknown_on_billing",
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Influencer Pages add-on ($99 a month) is not included in the totals."
+    ]
+   },
+   "monthly": {
+    "product_id": "auware",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 199.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 398.0,
+      "billed": {
+       "amount": 398.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 398.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 597.0,
+      "billed": {
+       "amount": 597.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 597.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 995.0,
+      "billed": {
+       "amount": 995.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 995.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1990.0,
+      "billed": {
+       "amount": 1990.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1990.0,
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Influencer Pages add-on ($99 a month) is not included in the totals."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -102,9 +292,9 @@
    "status": "open"
   },
   {
-   "question_id": "auware:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "auware:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Influencer Pages add-on ($99 a month) is not included in the totals. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -66,16 +66,441 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "extra_evidence": "Billed monthly, read 7 October 2026: Core $159, Plus $599, Business $1,199",
+   "plans": [
+    {
+     "id": "core",
+     "name": "Core",
+     "model": "flat",
+     "max_units": 5,
+     "annual_month": 129,
+     "monthly": 159,
+     "evidence": "Core is $129/mo, a stated $360 saving a year. That covers 5 seats"
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "flat",
+     "max_units": 8,
+     "annual_month": 479,
+     "monthly": 599,
+     "evidence": "Plus $479/mo (a stated $1,440 saving): 8 seats"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "max_units": 15,
+     "annual_month": 959,
+     "monthly": 1199,
+     "evidence": "Business $959/mo (a stated $2,880 saving): 15 seats"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is custom"
+    }
+   ],
+   "not_computable": [
+    "Extra seats at $20 each a month on every tier are not added in; the rule caps each plan at its included seats."
+   ],
+   "notes": [
+    "AI credits, ad accounts and analysed ad spend differ per tier and are not part of the seat calculation."
+   ],
+   "rules_verified_at": "2026-10-23"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "atria",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 1548.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 129.0,
+       "plus": 479.0,
+       "business": 959.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 1548.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 129.0,
+       "plus": 479.0,
+       "business": 959.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 1548.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 129.0,
+       "plus": 479.0,
+       "business": 959.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 129.0,
+      "billed": {
+       "amount": 1548.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 129.0,
+       "plus": 479.0,
+       "business": 959.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 959.0,
+      "billed": {
+       "amount": 11508.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": 959.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 959.0,
+      "billed": {
+       "amount": 11508.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": 959.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "core",
+      "to_plan": "business",
+      "from_plan_name": "Core",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 15,
+      "to_units": 20,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Extra seats at $20 each a month on every tier are not added in; the rule caps each plan at its included seats."
+    ]
+   },
+   "monthly": {
+    "product_id": "atria",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 159.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 159.0,
+       "plus": 599.0,
+       "business": 1199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 159.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 159.0,
+       "plus": 599.0,
+       "business": 1199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 159.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 159.0,
+       "plus": 599.0,
+       "business": 1199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "core",
+      "cheapest_plan_name": "Core",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 159.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": 159.0,
+       "plus": 599.0,
+       "business": 1199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1199.0,
+      "billed": {
+       "amount": 1199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": 1199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1199.0,
+      "billed": {
+       "amount": 1199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": 1199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "core": "not_eligible",
+       "plus": "not_eligible",
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "core",
+      "to_plan": "business",
+      "from_plan_name": "Core",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 15,
+      "to_units": 20,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Extra seats at $20 each a month on every tier are not added in; the rule caps each plan at its included seats."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -104,9 +529,9 @@
    "status": "open"
   },
   {
-   "question_id": "atria:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "atria:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Extra seats at $20 each a month on every tier are not added in; the rule caps each plan at its included seats. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

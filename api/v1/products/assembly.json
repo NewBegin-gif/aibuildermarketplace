@@ -90,15 +90,483 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "internal user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free, a free-forever plan: $0 with 5 active contacts, 1 internal user"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 1,
+     "annual_month": 29,
+     "monthly": 49,
+     "evidence": "Starter: $29 a month billed yearly or $49 monthly, 50 active contacts, 1 internal user"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "included_units": 3,
+     "annual_month": 99,
+     "monthly": 139,
+     "extra_unit": {
+      "annual_month": 29,
+      "monthly": 39
+     },
+     "evidence": "Professional: $99 billed yearly or $139 monthly, 500 active contacts, 3 internal users included and each extra one +$29 a month yearly or +$39 monthly"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "flat",
+     "included_units": 5,
+     "annual_month": 499,
+     "monthly": 599,
+     "extra_unit": {
+      "annual_month": 59,
+      "monthly": 79
+     },
+     "evidence": "Advanced: $499 billed yearly or $599 monthly, unlimited active contacts, 5 internal users included and each extra one +$59 or +$79"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quoted after a demo"
+    }
+   ],
+   "not_computable": [
+    "Plans are also capped by active contacts (5, 50, 500, unlimited); the rule counts internal users only.",
+    "Payment fees on client billing (cards 2.9% + $0.30, ACH 1%) and extra build credits or apps are not included."
+   ],
+   "notes": [],
+   "rules_verified_at": "2026-10-23"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "assembly",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "internal user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 29.0,
+       "professional": 99.0,
+       "advanced": 499.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 1188.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 99.0,
+       "advanced": 499.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 1188.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 99.0,
+       "advanced": 499.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 157.0,
+      "billed": {
+       "amount": 1884.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 157.0,
+       "advanced": 499.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 302.0,
+      "billed": {
+       "amount": 3624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 302.0,
+       "advanced": 794.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 447.0,
+      "billed": {
+       "amount": 5364.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 447.0,
+       "advanced": 1089.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 592.0,
+      "billed": {
+       "amount": 7104.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 592.0,
+       "advanced": 1384.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 737.0,
+      "billed": {
+       "amount": 8844.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 737.0,
+       "advanced": 1679.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 1462.0,
+      "billed": {
+       "amount": 17544.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 1462.0,
+       "advanced": 3154.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 2912.0,
+      "billed": {
+       "amount": 34944.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 2912.0,
+       "advanced": 6104.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "professional",
+      "from_plan_name": "Free",
+      "to_plan_name": "Professional"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Plans are also capped by active contacts (5, 50, 500, unlimited); the rule counts internal users only.",
+     "Payment fees on client billing (cards 2.9% + $0.30, ACH 1%) and extra build credits or apps are not included."
+    ]
+   },
+   "monthly": {
+    "product_id": "assembly",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "internal user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 49.0,
+       "professional": 139.0,
+       "advanced": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 139.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 139.0,
+       "advanced": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 139.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 139.0,
+       "advanced": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 217.0,
+      "billed": {
+       "amount": 217.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 217.0,
+       "advanced": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 412.0,
+      "billed": {
+       "amount": 412.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 412.0,
+       "advanced": 994.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 607.0,
+      "billed": {
+       "amount": 607.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 607.0,
+       "advanced": 1389.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 802.0,
+      "billed": {
+       "amount": 802.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 802.0,
+       "advanced": 1784.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 997.0,
+      "billed": {
+       "amount": 997.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 997.0,
+       "advanced": 2179.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 1972.0,
+      "billed": {
+       "amount": 1972.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 1972.0,
+       "advanced": 4154.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 3922.0,
+      "billed": {
+       "amount": 3922.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "professional": 3922.0,
+       "advanced": 8104.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "professional",
+      "from_plan_name": "Free",
+      "to_plan_name": "Professional"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Plans are also capped by active contacts (5, 50, 500, unlimited); the rule counts internal users only.",
+     "Payment fees on client billing (cards 2.9% + $0.30, ACH 1%) and extra build credits or apps are not included."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -127,9 +595,15 @@
    "status": "open"
   },
   {
-   "question_id": "assembly:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "assembly:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Plans are also capped by active contacts (5, 50, 500, unlimited); the rule counts internal users only. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "assembly:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Payment fees on client billing (cards 2.9% + $0.30, ACH 1%) and extra build credits or apps are not included. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

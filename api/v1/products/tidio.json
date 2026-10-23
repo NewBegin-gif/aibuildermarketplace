@@ -117,12 +117,13 @@
     "product_name": "Tidio",
     "product_id": "tidio",
     "run_date": "2026-10-21",
+    "session_type": "hands_on",
     "what": "Tested by our team on 21 October 2026 on the 7-day trial that starts with a new account, without a card: Daan created the account and our AI assistant ran the test in Daan's browser. We gave the Lyro AI agent five questions and answers about a made-up shop, asked it ten questions in the Playground, two it could not know, and changed one answer to see how fast it followed. The chat widget was not installed.",
     "findings": [
-     "Sign-up requires a website URL ('Can't be empty!'). Within minutes Tidio read 71 pages of the site we entered into Lyro's knowledge on its own. The source list can delete or set an audience in bulk, but excluding a source without deleting it is one source at a time.",
+     "Sign-up requires a website URL ('Can't be empty!'). Within minutes Tidio read 71 pages of the site we entered into Lyro's knowledge on its own. The source list can delete or set an audience in bulk, but excluding a source without deleting it is one source at a time. Before testing our five Q&As we deleted all 71 website sources Tidio had imported automatically, so the answers were checked against our test knowledge alone.",
      "Usage and plan showed 'AI conversations 0/50' marked 'Lifetime quota' for Lyro. After 13 Playground questions it still read 0 / 50: Playground questions do not count.",
      "A CSV with the columns Question and Answer was accepted as it was (5 Q&As).",
-     "Lyro answered all ten fact and paraphrase questions correctly from our five answers, each marked 'AI response based on your data sources'.",
+     "Lyro answered nine of the ten fact and paraphrase questions fully. For the warranty question it repeated the correct 37-day term but did not determine whether one month fell within it. Each answer was marked 'AI response based on your data sources'.",
      "Asked whether a fault after one month was covered by a 37-day warranty, Lyro gave the 37 days but said 'I'm not able to determine whether one month falls within that period'.",
      "For the two questions our data did not answer (Sunday opening, return costs) it said it had no information and offered 'Talk to a person'; it made nothing up.",
      "After we changed the warranty from 37 to 41 days, the next question was answered with 41 days."
@@ -135,6 +136,8 @@
      "Languages other than English"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "in_catalog": true

@@ -110,12 +110,13 @@
     "product_name": "Close",
     "product_id": "close",
     "run_date": "2026-10-23",
+    "session_type": "hands_on",
     "what": "Tested by our team on 23 October 2026 during the trial, without a card, without setting up a phone number or connecting email, and without sending anything: Daan created the account and our AI assistant ran the test in Daan's browser. We imported a CSV with four rows (one made-up company with two contacts and two companies with one), compared the result with the file, and exported the leads as CSV and JSON.",
     "findings": [
      "The trial does not start without consent to sales calls and texts. The last sign-up screen asks for a phone number with a box 'By providing your phone number, you agree to receive calls and texts from Close, including automated messages and calls using AI-powered agents'; without ticking it, sign-up stops at 'You must agree to receive communications'. No card was asked, and the app then showed 'Subscribe · 14d left' on day one.",
      "With the default import options, our four rows became 4 leads instead of 3: the company with two contacts appeared twice, once per contact, even though 'Check if Lead already exists' (on lead name) was on. Merging rows per company needs 'Group related rows', which is off by default and which we left off. Statuses and our TestID field arrived correctly per lead.",
      "Five of six columns were matched automatically. For our TestID column we added a custom field, and in that window 'Enable enrichment' is on by default ('the AI will attempt to fill the field'); we switched it off before saving.",
-     "Export offers leads, contacts or opportunities, CSV or JSON, and current-view, common or all fields, but 'A link to the generated file will be emailed to you.' Both exports arrived by email within about 10 seconds, and the download link requires logging in. The CSV had 4 rows and 274 columns with only the primary contact per lead; the JSON listed every contact.",
+     "Export offers leads, contacts or opportunities, CSV or JSON, and current-view, common or all fields, but 'A link to the generated file will be emailed to you.' Both exports arrived by email within about 10 seconds, and the download link requires logging in. The CSV had 4 rows and 274 columns with primary-contact columns per lead; the JSON had a contacts list per lead. Each lead held one contact in our import, so we could not check whether extra contacts would be lost in the CSV.",
      "The export split the contact name 'AIBM-001 Contact A' into first name 'AIBM-001' and last name 'A', dropping 'Contact'; the full name was still in primary_contact_name.",
      "Import takes CSV only (up to 15 MB), next to copy-paste, import from another CRM or from email. The trial screen also offered a live demo and a $5 calling credit for setting up a phone number."
     ],
@@ -126,6 +127,8 @@
      "What happens after the 14 days"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -135,7 +138,10 @@
       "claim_read_on": "2026-10-23",
       "observed": "On the day of sign-up the app showed 'Subscribe · 14d left'; no card was asked, but the trial only started after ticking consent to sales calls and texts.",
       "observed_on": "2026-10-23",
-      "evidence": "meetlog step 1",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/close-review.html#claim-vs-measured"
+      },
       "plan": "Trial, no phone number or integrations",
       "comparability": "Same quantity: trial length shown on day one.",
       "status": "confirmed",
@@ -147,15 +153,9 @@
      "run_date": "2026-10-23",
      "what": "On 23 October 2026, in the trial account from this test, we exported the four imported leads (one test company with two contacts, two companies with one) with all fields, once as CSV and once as JSON, and checked them against our file. We did not re-import them.",
      "first_import": null,
-     "came_along": [
-      "All 4 leads with our custom TestID field, status, and the contact's name, title and email",
-      "In JSON: every contact per lead, with custom fields as an object",
-      "In CSV: 274 columns per lead, including activity counts and opportunity values"
-     ],
-     "lost": [
-      "In CSV, only the primary contact of each lead; the other contacts are only in the JSON export"
-     ],
-     "awkward": "The export splits a name like 'AIBM-001 Contact A' into first name 'AIBM-001' and last name 'A', dropping 'Contact'; the full name is still in primary_contact_name.",
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "The CSV lead export has primary-contact columns, the JSON export a contacts list. Our import produced one contact per lead, so this run does not show whether extra contacts of a multi-contact lead would be lost in CSV. The export also split the name 'AIBM-001 Contact A' into first name 'AIBM-001' and last name 'A', dropping 'Contact'; the full name is still in primary_contact_name.",
      "friction": {
       "export_route": "List view > ... > Export; the file arrives as an emailed link (within about 10 seconds for us), and downloading it requires logging in.",
       "format": "CSV (one row per lead, primary contact in columns) or JSON (nested contacts, custom fields as an object).",
@@ -165,9 +165,16 @@
      "not_tested": [
       "Re-importing the export with TestID",
       "Contacts and Opportunities exports",
-      "Group related rows (merging contacts per company)"
+      "Group related rows (merging contacts per company)",
+      "Whether extra contacts of a lead survive the CSV export"
      ],
-     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+     "came_along": [
+      "All 4 leads with our custom TestID field, status, and the contact's name, title and email",
+      "In JSON: every contact per lead, with custom fields as an object",
+      "In CSV: 274 columns per lead, including activity counts and opportunity values"
+     ],
+     "lost": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
     },
     "in_catalog": true
    }

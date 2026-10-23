@@ -109,6 +109,7 @@
     "product_name": "Imagify",
     "product_id": "imagify",
     "run_date": "2026-10-21",
+    "session_type": "hands_on",
     "what": "Tested by our team on 21 October 2026 on the free plan in Imagify's web app: Daan created the account and our AI assistant ran the test in Daan's browser. We uploaded three of our own simple test images (a 12 KB PNG, a 50 KB JPG and a 3.4 MB PNG), compared Smart and Lossless and watched the quota counter after each step.",
     "findings": [
      "The account started at '0.0KB / 20MB used. You have 100% credit left.' Auto-converting PNG to JPEG is marked 'only for Pro users'; resizing is available on free.",
@@ -128,6 +129,8 @@
      "Real photos (we only used simple test images)"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -137,7 +140,10 @@
       "claim_read_on": "2026-10-17",
       "observed": "After two images of 11.8KB and 48.9KB the counter read 61.44KB of 20MB: it counts the original size, not the compressed result. A 3.4MB file was refused with 'File size must be under 2.0 MB' and used no quota.",
       "observed_on": "2026-10-21",
-      "evidence": "meetlog steps 2 and 6",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/imagify-review.html#claim-vs-measured"
+      },
       "plan": "Starter (free) in the web app, account not yet confirmed",
       "comparability": "Same quantities. The page does not say whether the 20MB is measured before or after compression; the counter shows before.",
       "status": "confirmed",

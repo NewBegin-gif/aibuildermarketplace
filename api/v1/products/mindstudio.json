@@ -98,6 +98,7 @@
     "product_name": "MindStudio",
     "product_id": "mindstudio",
     "run_date": "2026-10-23",
+    "session_type": "hands_on",
     "what": "Tested by our team on 23 October 2026 on the Free plan, with no card, no top-up and nothing published: Daan created the account and our AI assistant ran the test in Daan's browser. We had MindStudio's built-in Architect build an agent that pulls record IDs and dates out of four made-up records (one without a date) and tried to run it. The run failed for lack of credit, so the extraction itself was not tested.",
     "findings": [
      "The Free plan in the app lists 'One Agent' and '1,000 runs / month', but model usage is paid from a separate prepaid balance that starts at $0.00 on a new workspace (shown in red, 'Click to top up'). Topping up opens a card form with $10, $25, $100 and $500; we did not fill it in.",
@@ -115,6 +116,8 @@
      "Exporting an agent, its prompts or logs"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -124,7 +127,10 @@
       "claim_read_on": "2026-10-23",
       "observed": "The Free plan page in the app shows '1,000 runs / month', but the workspace credit balance starts at $0.00 and our first run of our own agent failed with 'You are out of usage credits' (insufficient_credits/balance).",
       "observed_on": "2026-10-23",
-      "evidence": "meetlog steps 1 and 3",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/mindstudio-review.html#claim-vs-measured"
+      },
       "plan": "Free, Service Router, no top-up",
       "comparability": "The claim counts runs; we measured whether a run can start without paying for model usage. Different quantity.",
       "status": "not_comparable",

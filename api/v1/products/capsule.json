@@ -131,17 +131,20 @@
     "product_name": "Capsule",
     "product_id": "capsule",
     "run_date": "2026-09-07",
+    "session_type": "hands_on",
     "what": "We ran the import ourselves instead of summarising Capsule's help pages. Daan created the account; everything after that was measured in the product. We built a deliberately messy CSV — 24 rows, one row repeated with a different job title and phone number, and one row carrying nothing but an organisation name — imported it with “Import and update duplicates” and the overwrite box ticked, and then tried to undo it. The account was a fresh one on the 14-day premium trial, so nothing below is a free-plan restriction.",
     "findings": [
      "24 rows became 34 contacts. Capsule creates a separate Organisation record for every distinct organisation name in the file — 22 people plus 12 organisations. Nobody warns you, and it matters: the free plan stops at 250 contacts, so a 24-row spreadsheet costs 34 of them.",
      "A row with only the Organisation column filled does build a company record on its own. Our “Solitary Holdings BV” row arrived as an organisation with its phone number attached.",
      "The duplicate row wins. Anna Bakker went in twice, second time as “Head of Marketing” instead of “Marketing Lead”, and the record ended up with the later title. So the last occurrence in the file overwrites the earlier one, inside a single import.",
      "But “overwrite” means exactly the four fields it names — name, job title, organisation and custom fields — and nothing else. The two rows carried different phone numbers and the contact now holds BOTH, sitting side by side. Contact channels are appended, not replaced, so a bad update pass leaves duplicate numbers on the record rather than wrong ones.",
-     "There is no undo, and that is worth knowing before you press Import. The import history logs “34 total imported, 34 contacts created” and offers exactly two things: View and Close. View opens a saved filter holding precisely those 34 contacts — which looks like the undo route until you select all of them and find the only bulk actions are Tag, Create Campaign and Export. No delete. Not on that list, not on the full contact list, not on the contact record, and not on its edit screen. We could not reach a delete anywhere in the interface.",
-     "So the practical rule is the opposite of reassuring: an import is one-way. Test on a handful of rows first, because the clean-up you are counting on does not exist where you would look for it."
+     "We could not find an undo or bulk-delete action in the screens we checked during this trial. The import history logs '34 total imported, 34 contacts created' and offers View and Close; View opens a saved filter with those 34 contacts, whose bulk actions were Tag, Create Campaign and Export. We found no delete on that list, on the full contact list, on the contact record or on its edit screen.",
+     "We did not establish that Capsule has no recovery route. Test a small import first and check the available rollback options before updating real contacts."
     ],
     "not_tested": null,
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "in_catalog": true

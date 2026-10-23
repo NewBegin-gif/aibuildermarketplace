@@ -558,6 +558,7 @@
     "product_name": "Typewise",
     "product_id": "typewise",
     "run_date": "2026-10-23",
+    "session_type": "hands_on",
     "what": "Tested by our team on 23 October 2026 during the trial, without a card, without connecting a channel and without publishing anything: Daan created the account and our AI assistant ran the test in Daan's browser, using only the Simulator. We gave the AI a two-line return policy as a text knowledge source, asked four customer questions with known right answers, changed the return window from 14 to 30 days, asked again, and exported the tickets.",
     "findings": [
      "Once the knowledge source was ready, the answers matched it: an unopened vase after 5 days got 'yes, you can return it' citing the 14-day policy for unopened items, and an opened lamp got 'not eligible for return or refund'. Asked about shipping to Norway, which the source did not cover, it said it couldn't find a verified answer and handed the conversation to a human ('Needs agent takeover'). It did not make anything up.",
@@ -574,6 +575,8 @@
      "Use of Nova credits"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "claim_checks": [
@@ -583,7 +586,10 @@
       "claim_read_on": "2026-10-23",
       "observed": "On the day of sign-up, Plan & limits showed 'Trial · 92 days remaining' with no payment method.",
       "observed_on": "2026-10-23",
-      "evidence": "meetlog step 1",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/typewise-review.html#claim-vs-measured"
+      },
       "plan": "Trial, simulator only",
       "comparability": "Same quantity: trial length shown on day one. The app gave more than the documentation says, so the difference is in the buyer's favour.",
       "status": "contradicted",
@@ -595,13 +601,8 @@
      "run_date": "2026-10-23",
      "what": "On 23 October 2026, in the trial account from this test, we exported the six tickets created by our Simulator conversations with Typewise's own export and checked what the file contains. We did not re-import it.",
      "first_import": null,
-     "came_along": [
-      "One row per ticket (6 rows, 16 columns): ticket ID, title, AI summary, customer name and email, channel, priority, status, assignee, team, resolution status, language, CSAT score and comment, created and last activity"
-     ],
-     "lost": [
-      "The full conversation messages: the export has only the summary per ticket",
-      "The knowledge sources and settings"
-     ],
+     "file_inspected": true,
+     "reimport_tested": false,
      "awkward": null,
      "friction": {
       "export_route": "All tickets > Export all gives an Excel file straight away.",
@@ -614,7 +615,14 @@
       "A PDF per ticket",
       "Re-importing the export"
      ],
-     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+     "came_along": [
+      "One row per ticket (6 rows, 16 columns): ticket ID, title, AI summary, customer name and email, channel, priority, status, assignee, team, resolution status, language, CSAT score and comment, created and last activity"
+     ],
+     "lost": [
+      "The full conversation messages: the export has only the summary per ticket",
+      "The knowledge sources and settings"
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
     },
     "in_catalog": true
    }

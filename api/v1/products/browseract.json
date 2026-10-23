@@ -115,6 +115,7 @@
     "product_name": "BrowserAct",
     "product_id": "browseract",
     "run_date": "2026-09-04",
+    "session_type": "hands_on",
     "what": "Historical test data: these are measurements from 4 September 2026, at that day's free allowance and meters, not today's Free plan or the standard cost of every Bot. We ran the reproducible test BrowserAct's own partner team proposed, on a free account with the 1,500 sign-up credits the card offered at the time. The prompt, verbatim: open books.toscrape.com, collect the first 20 books in listing order, open each detail page and return full title, displayed price, availability and source URL, leave unavailable fields blank, infer nothing. Before touching BrowserAct we fetched the same 20 pages with plain HTTP and saved the four fields as ground truth, so every value below was checked against the source, not against BrowserAct's own claims. Then we built the Bot from the prompt, ran it twice from the published version, and read the credit meter after each step.",
     "findings": [
      "Accuracy: 80 of 80 fields correct, three times over. The build's own verification output, run 1 and run 2 each returned 20 rows with title, price, availability and URL identical to our ground truth, including the parenthetical stock counts ('In stock (22 available)') and the currency symbol, which the Bot kept as displayed rather than converting.",
@@ -127,6 +128,8 @@
     ],
     "not_tested": null,
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "in_catalog": true

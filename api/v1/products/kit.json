@@ -628,6 +628,7 @@
     "product_name": "Kit",
     "product_id": "kit",
     "run_date": "2026-10-23",
+    "session_type": "hands_on",
     "what": "Tested by our team on 23 October 2026 during the 14-day trial of the Creator plan (not the Free plan), without entering a card and without sending anything: Daan created the account and our AI assistant ran the test in Daan's browser. We imported three made-up subscribers with tags from a CSV file, exported them, and re-imported a changed file with one new name and one empty name cell.",
     "findings": [
      "The CSV importer did not map a single column on its own, not even 'email'; we mapped email, first name and tags by hand. Step 3 adds an import tag by default ('Imported October 23rd, 2026 at 10:42 PM'), and the import finished with '3 subscribers processed'.",
@@ -643,19 +644,16 @@
      "Landing pages and forms"
     ],
     "report": null,
+    "disclosure": null,
+    "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
     "exit_test": {
      "run_date": "2026-10-23",
      "what": "On 23 October 2026, in the Creator trial account from this test, we exported our three imported test subscribers and then re-imported a changed file: one subscriber with a new first name, one with the first-name cell left empty.",
      "first_import": "Re-importing on the same email addresses created no duplicates: still 3 subscribers. The changed name came through, but the empty first-name cell erased the existing name of that subscriber; the list then showed only the email address. As on the first import, no column was mapped automatically.",
-     "came_along": [
-      "All 3 subscribers with first name, email, status and tags, including Kit's automatic import tag",
-      "14 columns in total, among them created_at in UTC, city, state, country, referrer and UTM fields"
-     ],
-     "lost": [
-      "Broadcasts, sequences and forms are not part of the subscriber export"
-     ],
+     "file_inspected": true,
+     "reimport_tested": true,
      "awkward": "On re-import an empty cell overwrites the existing value instead of leaving it alone.",
      "friction": {
       "export_route": "Select subscribers > ... > Export; the download link appears in the Notifications menu within a few seconds.",
@@ -668,7 +666,14 @@
       "Custom fields",
       "Unsubscribed or bounced subscribers in the export"
      ],
-     "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+     "came_along": [
+      "All 3 subscribers with first name, email, status and tags, including Kit's automatic import tag",
+      "14 columns in total, among them created_at in UTC, city, state, country, referrer and UTM fields"
+     ],
+     "lost": [
+      "Broadcasts, sequences and forms are not part of the subscriber export"
+     ],
+     "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
     },
     "in_catalog": true
    }

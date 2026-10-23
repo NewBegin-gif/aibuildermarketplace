@@ -87,15 +87,426 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "A free plan (900 credits per seat per year, 2 sequences)"
+    },
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "per_unit",
+     "annual_month": 49,
+     "monthly": 65,
+     "evidence": "paid Basic $49, Professional $79 and Organization $119 per seat/mo billed annually, or $65, $99 and $149 month to month"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "annual_month": 79,
+     "monthly": 99,
+     "evidence": "paid Basic $49, Professional $79 and Organization $119 per seat/mo billed annually, or $65, $99 and $149 month to month"
+    },
+    {
+     "id": "organization",
+     "name": "Organization",
+     "model": "per_unit",
+     "annual_month": 119,
+     "monthly": 149,
+     "min_units": 3,
+     "evidence": "paid Basic $49, Professional $79 and Organization $119 per seat/mo billed annually, or $65, $99 and $149 month to month",
+     "min_evidence": "Organization carries a three-seat minimum, so it starts at $357/mo"
+    }
+   ],
+   "notes": "Per-seat pricing; Organization bills at least three seats. The annual saving the page advertises is 24%.",
+   "not_computable": [
+    "Credit-based limits mean the effective cost often runs higher; extra credits are not priced in our notes."
+   ],
+   "rules_verified_at": "2026-10-23"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "apollo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 49.0,
+       "professional": 79.0,
+       "organization": 357.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 98.0,
+       "professional": 158.0,
+       "organization": 357.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 147.0,
+       "professional": 237.0,
+       "organization": 357.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 245.0,
+       "professional": 395.0,
+       "organization": 595.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 490.0,
+       "professional": 790.0,
+       "organization": 1190.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 735.0,
+       "professional": 1185.0,
+       "organization": 1785.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 980.0,
+       "professional": 1580.0,
+       "organization": 2380.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 1225.0,
+       "professional": 1975.0,
+       "organization": 2975.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 2450.0,
+       "professional": 3950.0,
+       "organization": 5950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 4900.0,
+       "professional": 7900.0,
+       "organization": 11900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Credit-based limits mean the effective cost often runs higher; extra credits are not priced in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "apollo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 65.0,
+       "professional": 99.0,
+       "organization": 447.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 130.0,
+       "professional": 198.0,
+       "organization": 447.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 195.0,
+       "professional": 297.0,
+       "organization": 447.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 325.0,
+       "professional": 495.0,
+       "organization": 745.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 650.0,
+       "professional": 990.0,
+       "organization": 1490.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 975.0,
+       "professional": 1485.0,
+       "organization": 2235.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 1300.0,
+       "professional": 1980.0,
+       "organization": 2980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 1625.0,
+       "professional": 2475.0,
+       "organization": 3725.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 3250.0,
+       "professional": 4950.0,
+       "organization": 7450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 6500.0,
+       "professional": 9900.0,
+       "organization": 14900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Credit-based limits mean the effective cost often runs higher; extra credits are not priced in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -124,9 +535,9 @@
    "status": "open"
   },
   {
-   "question_id": "apollo:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "apollo:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Credit-based limits mean the effective cost often runs higher; extra credits are not priced in our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

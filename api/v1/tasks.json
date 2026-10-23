@@ -3728,6 +3728,54 @@
   },
   {
    "source": "session",
+   "product_name": "EngageBay",
+   "product_id": "engagebay",
+   "run_date": "2026-10-23",
+   "what": "Tested by our team on 23 October 2026 on a new Free account, without starting the trial upgrade and without sending any broadcast or automation: Daan created the account and our AI assistant ran the test in Daan's browser. We imported three made-up contacts from a CSV file with a tag, added a note to one of them and tried to export the contacts.",
+   "findings": [
+    "CSV import (only .csv, up to 25 MB or 25,000 rows) matched all four of our columns automatically, with 'First Name' mandatory. Options were a tag, 'Validate emails' (which needs paid credits), 'Merge contacts' and 'Send double opt-in email', which we left off. The import ran in the background; after about 20 seconds and a refresh all 3 contacts were there.",
+    "All three imported contacts showed the status 'Confirmed' although no opt-in email was sent. Check how your own list is labelled before you mail it.",
+    "Export as CSV (a bulk action) offers about 35 contact fields to tick, such as contact ID, tags, status, sources, address, dates and the last email, SMS and call, but no field for notes, tasks or documents. After Export the file is sent by email ('Your export is getting ready. We'll email you when it's done'); there is no direct download, and we did not open the file.",
+    "A contact page has tabs for activities, emails, deals, tasks, notes, documents, products, proposals, workflows and automations. Adding a note with a subject and text worked, with an option to create a follow-up task.",
+    "The Free dashboard showed a banner asking to verify the email address and a pop-up offering a '3-day All-Access Pass', which we did not start."
+   ],
+   "not_tested": [
+    "Email broadcasts, sequences and automations",
+    "Uploading documents, and tasks",
+    "Re-importing and merging",
+    "What changes after the email address is verified"
+   ],
+   "report": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "exit_test": {
+    "run_date": "2026-10-23",
+    "what": "On 23 October 2026, in the free account from this test, we tried to export three imported test contacts, one of them with a note, through EngageBay's own CSV export. We did not open the exported file and did not re-import it.",
+    "first_import": null,
+    "came_along": [
+     "About 35 selectable contact fields, among them contact ID, tags, status, sources, address, dates and the last email, SMS and call"
+    ],
+    "lost": [
+     "Notes, tasks and documents: none of them is among the fields you can select for the export"
+    ],
+    "awkward": "There is no direct download: after Export the app says 'Your export is getting ready. We'll email you when it's done'.",
+    "friction": {
+     "export_route": "A bulk action (select contacts, Bulk Action > Export as CSV), after which the file arrives by email; no direct download.",
+     "format": "CSV with contact fields and tags; notes, tasks and documents are not in the field list.",
+     "reimport": "Not tested.",
+     "cancellation": "Not tested."
+    },
+    "not_tested": [
+     "The contents of the exported file",
+     "Re-importing and duplicate handling",
+     "Tasks and documents"
+    ],
+    "note": "One export and re-import of synthetic records with known IDs, on the account and date stated. Friction is described, not scored; it is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "PagePulse",
    "product_id": "pagepulse",
    "run_date": "2026-10-08",

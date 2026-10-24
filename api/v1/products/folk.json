@@ -486,13 +486,99 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
   "free_trial": "quoted",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-23",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/folk-review.html",
+  "claims": [
+   {
+    "claim": "\"No, we don't ask for your credit card during the trial.\" and \"2 weeks free trial\"",
+    "claim_source": "https://www.folk.app/pricing",
+    "claim_read_on": "2026-10-21",
+    "observed": "Sign-up and onboarding asked for no card; the last screen said 'Welcome to your 14-day free trial ... access to all our Premium features' and the app showed 'Premium trial (2 weeks left)'.",
+    "observed_on": "2026-10-23",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/folk-review.html#claim-vs-measured"
+    },
+    "plan": "Premium trial, no integrations",
+    "comparability": "Same quantity: trial length and card requirement at sign-up.",
+    "status": "confirmed",
+    "buying_consequence": "You can try folk for two weeks without a card, but the trial runs on Premium features, so Deals and other Premium features you test may not be in a cheaper plan."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the trial workspace from this test, we exported the Deals view and the People view with folk's own export and compared the files with what we had entered: two people, two deals linked to them with values 100 and 200, a group and one note on a deal. We did not re-import the files.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": null,
+   "friction": {
+    "export_route": "A menu item per view, 'Export view as CSV', gives a ZIP straight away: no support request and no waiting. Export through the API was not tested.",
+    "format": "Clean CSV files per object type (deals.csv with 10 columns, people.csv with 36) plus a separate notes.csv. Relations only as names, not as IDs; the Deals column is missing from the people export.",
+    "reimport": "Not tested: we did not re-import the export into folk or another CRM.",
+    "cancellation": "Not tested: this was a trial without a subscription."
+   },
+   "not_tested": [
+    "Re-importing the export",
+    "Export through the API",
+    "A full workspace export",
+    "Attachments and email history"
+   ],
+   "came_along": [
+    "Both people and both deals, with the right values (100 and 200) and the linked person",
+    "The group (TESTHAVEN), in the people export",
+    "The note on the deal, in a separate notes.csv with deal ID, deal name and time"
+   ],
+   "lost": [
+    "The person-deal link as an ID: deals.csv names the person ('Ada Test'), not their ID, so with two people of the same name the link cannot be restored unambiguously",
+    "The Deals column in the people export: it was in the view, but not in people.csv",
+    "The currency of Deal value: the app shows '$', the export has the number only"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/folk-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/folk-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/folk-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/folk-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 23 October 2026, in the trial workspace from this test, we exported the Deals view and the People view with folk's own export and compared the files with what we had entered: two people, two deals linked to them with values 100 and 200, a group and one note on a deal. We did not re-import the files. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/folk-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": true,
+    "basis": "A menu item per view, 'Export view as CSV', gives a ZIP straight away: no support request and no waiting. Export through the API was not tested.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/folk-review.html#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

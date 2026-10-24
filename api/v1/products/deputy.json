@@ -498,13 +498,96 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
+  "Data export tested on 2026-10-24; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-24",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/deputy-review/",
+  "claims": [
+   {
+    "claim": "\"Up to 31 days\"",
+    "claim_source": "https://www.deputy.com/",
+    "claim_read_on": "2026-10-23",
+    "observed": "On sign-up day the app showed '31 days remaining of your Core Plan trial.' No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/deputy-review/#claim-vs-measured"
+    },
+    "plan": "Core Plan trial",
+    "comparability": "Same quantity: trial length on day one; the claim is an upper bound and we got the full 31 days.",
+    "status": "confirmed",
+    "buying_consequence": "A new account got the full 31-day trial of the Core plan without a card."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-24",
+   "what": "On 24 October 2026, in the trial account from this test, we exported our two imported test team members through 'Download your existing team member data', then pasted the exported rows back into the importer with their Deputy IDs and one changed preferred name.",
+   "first_import": "Re-importing with the Deputy ID created no duplicates: still 3 of 3 team members, and the changed name came through ('Beta Updated'). But the gender value 'Prefer not to say', which Deputy itself had put in the export, was flagged as invalid in the importer, and we had to clear it before both rows were accepted.",
+   "file_inspected": true,
+   "reimport_tested": true,
+   "awkward": "Deputy filled in a username, a stress profile (24/7) and gender 'Prefer not to say' on its own, and that gender value is then rejected on re-import. The export is prepared in the background ('This can take up to 5 minutes'); ours was ready after about 20 seconds via the notification bell.",
+   "friction": {
+    "export_route": "People > Add People > Bulk import and update > Update team members > Download; a notification says when it is ready ('can take up to 5 minutes').",
+    "format": "CSV or XLSX in the import format, including the Deputy ID; no schedules, hours or leave.",
+    "reimport": "Re-import on Deputy ID works without duplicates, but the gender value from Deputy's own export is rejected, and the base rates were already lost on the first import.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "The Deputy Data Exporter (a separate tool with a CSV per data source)",
+    "Exporting schedules, hours and leave",
+    "Uploading a file (we only pasted rows into the importer)",
+    "Pay rates set through 'Assign pay by area'"
+   ],
+   "came_along": [
+    "Both team members with name, email, location, role, our Payroll ID, hired date and a Deputy ID",
+    "29 columns, the same as the import template"
+   ],
+   "lost": [
+    "The base rates (20 and 25) we pasted in on the first import: empty in the export and no pay rate in People"
+   ],
+   "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/deputy-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": false,
+    "basis": "On sign-up day the app showed '31 days remaining of your Core Plan trial.' No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/deputy-review/#claim-vs-measured"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "On sign-up day the app showed '31 days remaining of your Core Plan trial.' No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/deputy-review/#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/deputy-review/#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": true,
+    "basis": "On 24 October 2026, in the trial account from this test, we exported our two imported test team members through 'Download your existing team member data', then pasted the exported rows back into the importer with their Deputy IDs and one changed preferred name. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/deputy-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/deputy-review/#hands-on"
+   }
+  }
  },
  "third_party_video": {
   "url": "https://www.youtube.com/watch?v=tPxdVnw4Kx8",

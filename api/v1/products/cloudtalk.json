@@ -629,13 +629,110 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-24; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "quoted",
+  "free_trial": "measured",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-24",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://zerotouchsupport.com/cloudtalk-review.html",
+  "claims": [
+   {
+    "claim": "\"14-Day Free Trial\"",
+    "claim_source": "https://www.cloudtalk.io/signup/",
+    "claim_read_on": "2026-10-23",
+    "observed": "On sign-up day the dashboard showed 'Your demo will EXPIRE in 14 days.' No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/cloudtalk-review.html#claim-vs-measured"
+    },
+    "plan": "Demo package",
+    "comparability": "Same quantity: trial length on day one.",
+    "status": "confirmed",
+    "buying_consequence": "You get 14 days without a card on the Demo package."
+   },
+   {
+    "claim": "\"$5 Credit\"",
+    "claim_source": "https://www.cloudtalk.io/signup/",
+    "claim_read_on": "2026-10-23",
+    "observed": "Settings > Billing showed Credit '€10,00' on the new Demo package, with a 'credit balance is low' warning.",
+    "observed_on": "2026-10-24",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/cloudtalk-review.html#claim-vs-measured"
+    },
+    "plan": "Demo package",
+    "comparability": "Same quantity (starting call credit). The sign-up page showed $5 also when read from the Netherlands, while our account, billed in euros, held €10, more than $5 at any exchange rate.",
+    "status": "contradicted",
+    "buying_consequence": "Our EU demo account started with €10 of call credit rather than $5; check the balance in your own account, since calls stop when it reaches zero."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-24",
+   "what": "On 24 October 2026, in the demo account from this test, we looked for a way to get our two imported test contacts out of CloudTalk again, and tried the report export in CloudTalk Analytics. We made no calls, so the report had nothing in it, and we did not open the emailed file.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Report exports are not a direct download: 'An e-mail with the exported data will be sent to your registered e-mail address in few minutes.'",
+   "friction": {
+    "export_route": "Contacts: no route found in the dashboard. Call and message data: analytics.cloudtalk.io > report > Export > CSV or PDF, by email.",
+    "format": "CSV or PDF per report; we did not see the contents (no calls made).",
+    "reimport": "Not tested.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "Exporting contacts through the API",
+    "The contents of the report CSV (no calls or texts)",
+    "Re-importing",
+    "Exporting call recordings"
+   ],
+   "available_fields": [
+    "Report exports (group, agent, call log and messages) as CSV or PDF, offered in CloudTalk Analytics"
+   ],
+   "not_offered": [
+    "An export of contacts: the Contacts screen had no export or download button (only Bulk Delete, Bulk Import and Add Contact)"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://zerotouchsupport.com/cloudtalk-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": false,
+    "basis": "On sign-up day the dashboard showed 'Your demo will EXPIRE in 14 days.' No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://zerotouchsupport.com/cloudtalk-review.html#claim-vs-measured"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "On sign-up day the dashboard showed 'Your demo will EXPIRE in 14 days.' No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://zerotouchsupport.com/cloudtalk-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "On 24 October 2026, in the demo account from this test, we looked for a way to get our two imported test contacts out of CloudTalk again, and tried the report export in CloudTalk Analytics. We made no calls, so the report had nothing in it, and we did not open the emailed file. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://zerotouchsupport.com/cloudtalk-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 24 October 2026, in the demo account from this test, we looked for a way to get our two imported test contacts out of CloudTalk again, and tried the report export in CloudTalk Analytics. We made no calls, so the report had nothing in it, and we did not open the emailed file. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://zerotouchsupport.com/cloudtalk-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": false,
+    "basis": "Contacts: no route found in the dashboard. Call and message data: analytics.cloudtalk.io > report > Export > CSV or PDF, by email.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://zerotouchsupport.com/cloudtalk-review.html#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

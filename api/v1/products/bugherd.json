@@ -576,13 +576,97 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-24; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "quoted",
+  "free_trial": "measured",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-24",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/bugherd-review.html",
+  "claims": [
+   {
+    "claim": "\"free 7-day trial\"",
+    "claim_source": "https://bugherd.com/",
+    "claim_read_on": "2026-10-23",
+    "observed": "The new account showed '7 days remaining! Upgrade now!' in the header. No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/bugherd-review.html#claim-vs-measured"
+    },
+    "plan": "Trial",
+    "comparability": "Same quantity: trial length shown on day one.",
+    "status": "confirmed",
+    "buying_consequence": "You get 7 days without a card, but you must install the browser extension or a script on a site before you can use the board."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-24",
+   "what": "On 24 October 2026, in the trial account from this test, we exported the project's two feedback tasks (one left on a website, one on an uploaded test design whose title we had changed afterwards) as CSV and as JSON, and compared both files with what we had entered.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "The screenshot links in the export (files.bugherd.com) opened without logging in, so anyone with the file can view them. Archived tasks are left out unless you switch them on.",
+   "friction": {
+    "export_route": "Project > Settings > Export Bugs > CSV, XML or JSON; the file arrives as an email attachment (within about 15 seconds for us); archived tasks are not included by default.",
+    "format": "CSV (22 columns) or JSON/XML with one row per task; screenshots as links, no attachments or design files.",
+    "reimport": "Not testable: we found no import function.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "The XML export",
+    "Comments and attachments in the export (we added none)",
+    "Archived tasks",
+    "Re-importing (no importer found)"
+   ],
+   "came_along": [
+    "Both tasks with id, status, description, created and updated time, reporter email, page path, OS, browser, window and screen size, screenshot link and site",
+    "In JSON three extra fields: project, external ID and a session-recording field"
+   ],
+   "lost": [
+    "The changed title of task 2: the export has no title column; only the updated time moved",
+    "The uploaded design itself: the export only links to a screenshot"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/bugherd-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": false,
+    "basis": "The new account showed '7 days remaining! Upgrade now!' in the header. No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/bugherd-review.html#claim-vs-measured"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "The new account showed '7 days remaining! Upgrade now!' in the header. No card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/bugherd-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/bugherd-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 24 October 2026, in the trial account from this test, we exported the project's two feedback tasks (one left on a website, one on an uploaded test design whose title we had changed afterwards) as CSV and as JSON, and compared both files with what we had entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/bugherd-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": false,
+    "basis": "Project > Settings > Export Bugs > CSV, XML or JSON; the file arrives as an email attachment (within about 15 seconds for us); archived tasks are not included by default.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/bugherd-review.html#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

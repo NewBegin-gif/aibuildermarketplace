@@ -239,6 +239,284 @@
      }
     }
    },
+   "MeasuredFact": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "value",
+     "basis",
+     "observed_on",
+     "evidence_url"
+    ],
+    "properties": {
+     "value": {
+      "enum": [
+       true,
+       false,
+       "not_tested"
+      ]
+     },
+     "basis": {
+      "type": "string"
+     },
+     "observed_on": {
+      "type": "string",
+      "format": "date"
+     },
+     "evidence_url": {
+      "type": "string",
+      "format": "uri"
+     }
+    }
+   },
+   "MeasuredClaim": {
+    "type": "object",
+    "description": "Exactly koopbewijs.api(): vendor claim alongside our observation, not a vendor verification.",
+    "required": [
+     "claim",
+     "claim_source",
+     "claim_read_on",
+     "observed",
+     "observed_on",
+     "evidence",
+     "status"
+    ],
+    "properties": {
+     "claim": {
+      "type": "string"
+     },
+     "claim_source": {
+      "type": "string"
+     },
+     "claim_read_on": {
+      "type": "string",
+      "format": "date"
+     },
+     "observed": {
+      "type": "string"
+     },
+     "observed_on": {
+      "type": "string",
+      "format": "date"
+     },
+     "evidence": {
+      "type": "object",
+      "required": [
+       "label",
+       "url"
+      ],
+      "properties": {
+       "label": {
+        "type": "string"
+       },
+       "url": {
+        "type": "string",
+        "format": "uri"
+       }
+      }
+     },
+     "status": {
+      "enum": [
+       "confirmed",
+       "contradicted",
+       "not_comparable",
+       "not_testable",
+       "out_of_date"
+      ]
+     },
+     "plan": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "comparability": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "buying_consequence": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    }
+   },
+   "MeasuredExitTest": {
+    "type": [
+     "object",
+     "null"
+    ],
+    "description": "Exactly vertrektest.api() plus a public evidence_url. friction.format describes the route's formats, not a list of formats actually tested. available_fields/not_offered describe the dialog when file_inspected is false; they are never promoted to came_along/lost. Read not_tested and note.",
+    "required": [
+     "run_date",
+     "evidence_url",
+     "what",
+     "file_inspected",
+     "reimport_tested",
+     "friction",
+     "not_tested",
+     "note"
+    ],
+    "properties": {
+     "run_date": {
+      "type": "string",
+      "format": "date"
+     },
+     "evidence_url": {
+      "type": "string",
+      "format": "uri"
+     },
+     "what": {
+      "type": "string"
+     },
+     "first_import": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "awkward": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "file_inspected": {
+      "type": "boolean"
+     },
+     "reimport_tested": {
+      "type": "boolean"
+     },
+     "friction": {
+      "type": "object",
+      "properties": {
+       "export_route": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "format": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "reimport": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "cancellation": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     },
+     "came_along": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "lost": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "available_fields": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "not_offered": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "not_tested": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "note": {
+      "type": "string"
+     }
+    }
+   },
+   "Measured": {
+    "type": "object",
+    "additionalProperties": false,
+    "description": "Own hands-on session from handson/<map>/meetlog.json; absent without a matching log. tested_on is the original session date, not the rebuild date; claims and exit tests carry their own observation dates. Unknown facts are not_tested, never inferred from absence. tested_by identifies our team; the actor, account type and blocked/limited attempts are in the review.",
+    "required": [
+     "tested_on",
+     "tested_by",
+     "review_url",
+     "claims",
+     "exit_test",
+     "facts"
+    ],
+    "properties": {
+     "tested_on": {
+      "type": "string",
+      "format": "date"
+     },
+     "tested_by": {
+      "type": "string"
+     },
+     "review_url": {
+      "type": "string",
+      "format": "uri"
+     },
+     "claims": {
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/MeasuredClaim"
+      }
+     },
+     "exit_test": {
+      "$ref": "#/components/schemas/MeasuredExitTest"
+     },
+     "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "trial_requires_card",
+       "trial_duration_confirmed",
+       "export_file_inspected",
+       "export_reimport_tested",
+       "export_direct_download"
+      ],
+      "properties": {
+       "trial_requires_card": {
+        "$ref": "#/components/schemas/MeasuredFact"
+       },
+       "trial_duration_confirmed": {
+        "$ref": "#/components/schemas/MeasuredFact"
+       },
+       "export_file_inspected": {
+        "$ref": "#/components/schemas/MeasuredFact"
+       },
+       "export_reimport_tested": {
+        "$ref": "#/components/schemas/MeasuredFact"
+       },
+       "export_direct_download": {
+        "$ref": "#/components/schemas/MeasuredFact"
+       }
+      }
+     }
+    }
+   },
    "Product": {
     "type": "object",
     "required": [
@@ -421,14 +699,15 @@
      },
      "verification": {
       "type": "object",
-      "description": "Per core field: 'quoted' (a verbatim vendor line is in pricing.source_quotes), 'read' (read on the vendor's page on pricing.verified_at, summarised in pricing.notes) or 'being_verified' (not yet matched; not the same as 'does not exist').",
+      "description": "Per core field: 'quoted' (a verbatim vendor line is in pricing.source_quotes), 'read' (read on the vendor's page on pricing.verified_at, summarised in pricing.notes) or 'being_verified' (not yet matched; not the same as 'does not exist'). 'measured' means a confirmed hands-on trial-duration claim in measured.claims; it does not confirm all trial terms or create a vendor quote.",
       "properties": {
        "price": {
         "type": "string",
         "enum": [
          "quoted",
          "read",
-         "being_verified"
+         "being_verified",
+         "measured"
         ]
        },
        "free_trial": {
@@ -436,7 +715,8 @@
         "enum": [
          "quoted",
          "read",
-         "being_verified"
+         "being_verified",
+         "measured"
         ]
        },
        "refund": {
@@ -444,10 +724,14 @@
         "enum": [
          "quoted",
          "read",
-         "being_verified"
+         "being_verified",
+         "measured"
         ]
        }
       }
+     },
+     "measured": {
+      "$ref": "#/components/schemas/Measured"
      },
      "third_party_video": {
       "type": "object",

@@ -552,13 +552,100 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
   "free_trial": "quoted",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-21",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/hive-review.html",
+  "claims": [
+   {
+    "claim": "\"1,000 AI credits / month\" on the Free plan",
+    "claim_source": "https://hive.com/pricing",
+    "claim_read_on": "2026-10-17",
+    "observed": "Usage & billing > AI usage in a new account without a subscription: '5.000 of 5.000 remaining', '5.000 included · 0 purchased', 'Resets Nov 21'.",
+    "observed_on": "2026-10-21",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/hive-review.html#claim-vs-measured"
+    },
+    "plan": "Free, new workspace, no card, no subscription",
+    "comparability": "Not the same quantity as far as we can tell. The 5,000 may be a one-off starting balance for a new account; we saw one month, not the month after the reset.",
+    "status": "not_comparable",
+    "buying_consequence": "Budget AI use on the published 1,000 credits a month; treat the higher first balance as unconfirmed until it survives a reset."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the same account and still without a subscription, we imported 10 made-up tasks with known IDs from a CSV file: one task depending on another, one subtask, a completed and an in-progress task, a title with a comma and quotation marks, an end date of 29 February 2028, a task across the year end, a Unicode title and a task without dates. We added a text attachment to one task, exported the project and imported Hive's own export into a new project.",
+   "first_import": "Import project > Tasks spreadsheet (CSV or Excel; Asana, Monday, MS Project, Smartsheet, Trello and Basecamp are also offered) took four steps. All columns were matched automatically except our Labels column, which became a custom field. No errors: all 10 tasks came in with the right status, the dependent task showed 'Blocked', the subtask sat under its parent, and the leap day and the Unicode title were intact.",
+   "file_inspected": true,
+   "reimport_tested": true,
+   "awkward": "Two columns with the same name, 'Labels' (Hive's own, empty, and our custom field); Hive IDs instead of a WBS number; and the creator's name in every row.",
+   "friction": {
+    "export_route": "A button in the app (More > Export): no support request and no waiting. The file (2.9 kB, 35 columns) arrived after about 10 seconds. Export through the API was not tested.",
+    "format": "CSV or Excel (.xlsx), with options to hide assignees, leave out custom fields, include sub-actions and limit the date range. The parent comes along as name plus ID; dependencies do not; attachments only as yes or no.",
+    "reimport": "Hive's own export does not fit Hive's own import. The import screen has no Parent or ID field, and every one of the 10 rows was flagged because the assignee column reads 'Unassigned' ('Rows with errors will be ignored when submitting'). After we remapped that column to a custom field, all 10 rows came in with titles, Unicode, dates and status right, but the subtask was now a separate task, the dependency was gone and the attachment was missing. The export columns also produced about 25 unneeded custom fields.",
+    "cancellation": "Not tested: there was no subscription to cancel."
+   },
+   "not_tested": [
+    "Export through the API, and its limits",
+    "Importing into a competitor such as Asana or Monday",
+    "Downloading attachments in bulk",
+    "Comments, time tracking and multiple users",
+    "Cancelling a paid subscription"
+   ],
+   "came_along": [
+    "All 10 rows, with titles, Unicode, commas and quotation marks intact",
+    "Start and end dates, now with a four-digit year; 29 February 2028 correct",
+    "Status and completion date",
+    "The subtask's parent, as a name plus a Hive ID (columns Parent and Parent ID)"
+   ],
+   "lost": [
+    "Which task blocks the dependent one: the export only says 'Blocked'",
+    "The attachment itself: the export only says 'Attachments present: true'"
+   ],
+   "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/hive-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-21",
+    "evidence_url": "https://officesoftwaremarketplace.com/hive-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-21",
+    "evidence_url": "https://officesoftwaremarketplace.com/hive-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-21",
+    "evidence_url": "https://officesoftwaremarketplace.com/hive-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": true,
+    "basis": "On 23 October 2026, in the same account and still without a subscription, we imported 10 made-up tasks with known IDs from a CSV file: one task depending on another, one subtask, a completed and an in-progress task, a title with a comma and quotation marks, an end date of 29 February 2028, a task across the year end, a Unicode title and a task without dates. We added a text attachment to one task, exported the project and imported Hive's own export into a new project. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://officesoftwaremarketplace.com/hive-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-21",
+    "evidence_url": "https://officesoftwaremarketplace.com/hive-review.html#hands-on"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

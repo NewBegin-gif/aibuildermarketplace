@@ -603,13 +603,93 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-24; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-24",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/assembly-review/",
+  "claims": [
+   {
+    "claim": "\"75 build credits / month\"",
+    "claim_source": "https://assembly.com/pricing",
+    "claim_read_on": "2026-10-23",
+    "observed": "Settings > Plans in the new Free workspace showed 'Build credits 50 available' and 'Used this billing period 0 of 50 monthly', with the credits expiring on 24 Nov 2026.",
+    "observed_on": "2026-10-24",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/assembly-review/#claim-vs-measured"
+    },
+    "plan": "Free",
+    "comparability": "Same quantity: monthly build credits on the Free plan.",
+    "status": "contradicted",
+    "buying_consequence": "Expect 50 build credits a month on Free rather than 75; the app showed them expiring on 24 November 2026. Whether unused credits roll over we did not test."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-24",
+   "what": "On 24 October 2026, in the Free workspace from this test, we exported the Companies and Contacts tabs of the CRM after importing two made-up contacts, and compared the files with our import file. We did not re-import them.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "Creation dates come out as a date only, without a time, and a company's contacts are merged into a single cell.",
+   "friction": {
+    "export_route": "CRM > Companies or Contacts tab > Export; direct download.",
+    "format": "One CSV per tab; for companies the contacts are merged into one cell.",
+    "reimport": "Not tested.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "Exporting files (the Files app) and messages",
+    "Re-importing the export",
+    "Custom fields"
+   ],
+   "came_along": [
+    "Both test contacts with first name, last name, email, company, status, creation date and 'Invited by'",
+    "Both companies, with their contacts (name and email) listed in one cell"
+   ],
+   "lost": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/assembly-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/assembly-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/assembly-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/assembly-review/#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 24 October 2026, in the Free workspace from this test, we exported the Companies and Contacts tabs of the CRM after importing two made-up contacts, and compared the files with our import file. We did not re-import them. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/assembly-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": true,
+    "basis": "CRM > Companies or Contacts tab > Export; direct download.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/assembly-review/#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

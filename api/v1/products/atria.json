@@ -537,13 +537,94 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-23",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/atria-review.html",
+  "claims": [
+   {
+    "claim": "\"1,000 free credits included\"",
+    "claim_source": "https://www.tryatria.com/",
+    "claim_read_on": "2026-10-23",
+    "observed": "The new Free account showed 1,250 credits; one generation of four variants cost 144 credits (1,250 to 1,106).",
+    "observed_on": "2026-10-23",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/atria-review.html#claim-vs-measured"
+    },
+    "plan": "Free, no ad accounts",
+    "comparability": "Same quantity: starting credit balance on a new account.",
+    "status": "contradicted",
+    "buying_consequence": "We got 250 more credits than advertised; at 144 credits per generation of four images, that is about eight generations."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the free account from this test, we downloaded one of the generated images and looked for ways to take the brand profile, product profile and prompts out as well.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": null,
+   "friction": {
+    "export_route": "Open an image > Download image; a PNG comes straight away.",
+    "format": "One PNG per image; we found no bulk export or brand export.",
+    "reimport": "Not tested.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "Bulk download of all variants",
+    "Exporting the brand and product profiles",
+    "Save to Assets and boards"
+   ],
+   "came_along": [
+    "The generated image, as a 1168x1168 PNG (1.0 MB), downloaded straight away"
+   ],
+   "lost": [
+    "Brand profile, product profile and prompts: we saw no export button for them"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/atria-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/atria-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/atria-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/atria-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 23 October 2026, in the free account from this test, we downloaded one of the generated images and looked for ways to take the brand profile, product profile and prompts out as well. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/atria-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": true,
+    "basis": "Open an image > Download image; a PNG comes straight away.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/atria-review.html#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

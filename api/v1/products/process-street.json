@@ -92,14 +92,99 @@
  },
  "unknowns": [
   "Pricing status is 'quote_only': no single public entry price.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "quoted",
+  "free_trial": "measured",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-23",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/process-street-review/",
+  "claims": [
+   {
+    "claim": "\"14-day free trial\"",
+    "claim_source": "https://www.process.st/pricing/",
+    "claim_read_on": "2026-10-23",
+    "observed": "On the day of sign-up the app showed '14 days left in your free trial'; no card was asked.",
+    "observed_on": "2026-10-23",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/process-street-review/#claim-vs-measured"
+    },
+    "plan": "Pro trial, no integrations",
+    "comparability": "Same quantity: trial length shown on day one.",
+    "status": "confirmed",
+    "buying_consequence": "You get the full 14 days to test without a card."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the trial account from this test, we exported the Reports views for active and completed workflow runs (two runs of our own, one completed with amount 10 and one left open with amount 20) and checked what the files contain. We did not re-import them.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "Active and completed runs are separate exports, so one export does not give you all runs.",
+   "friction": {
+    "export_route": "An Export button in Reports with a choice of visible or all columns gives a CSV straight away.",
+    "format": "CSV at run level; form values are not in the standard export (adding field columns to the view was not tested).",
+    "reimport": "Not tested; we found no documented way to re-import runs.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "Adding field columns to a Reports view",
+    "PDF export of a workflow or run",
+    "Data Sets export",
+    "Re-importing the export"
+   ],
+   "came_along": [
+    "Run names, status and the number of completed tasks (2 and 7)",
+    "Timestamps (in UTC) and the workflow version",
+    "13 run-level columns with 'Export all columns': URL, name, assignee email, created, last activity, due date, completed at and by, status, overdue, completed tasks, version and workflow name"
+   ],
+   "lost": [
+    "The form values we entered, such as the purchase ID and the amounts 10 and 20",
+    "Task content, comments and attachments"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/process-street-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": false,
+    "basis": "On the day of sign-up the app showed '14 days left in your free trial'; no card was asked.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/process-street-review/#claim-vs-measured"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "On the day of sign-up the app showed '14 days left in your free trial'; no card was asked.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/process-street-review/#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/process-street-review/#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 23 October 2026, in the trial account from this test, we exported the Reports views for active and completed workflow runs (two runs of our own, one completed with amount 10 and one left open with amount 20) and checked what the files contain. We did not re-import them. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/process-street-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": true,
+    "basis": "An Export button in Reports with a choice of visible or all columns gives a CSV straight away.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/process-street-review/#exit-test"
+   }
+  }
  },
  "third_party_video": {
   "url": "https://www.youtube.com/watch?v=Ezupa0mTOro",

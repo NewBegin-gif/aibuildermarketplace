@@ -66,10 +66,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-24; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -77,7 +76,211 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": {
+   "sent_at": "2026-10-24T17:17:30Z",
+   "window_days": 7,
+   "observed_at": "2026-10-24T17:41:11.763371Z",
+   "status": "partial",
+   "channel": "email",
+   "first_reply_hours": null,
+   "first_human_reply_hours": null,
+   "answered": null,
+   "answered_by": null,
+   "plan": "14-day trial",
+   "trial": true,
+   "comparison": {
+    "status": "not_comparable",
+    "reason": "No literal claim with exact plan and trial scope recorded."
+   },
+   "method": "One support message containing three fixed questions, by email or, when the supplier publishes no email address, by in-app chat with manually recorded times; one measurement is one measurement, not an estimate of typical support speed. Seven elapsed days; whole hours, half up. Human means rule-based signals, not proof of authorship. Uncertain replies remain unclear. For email, only messages still present in INBOX/junk at collection time are covered."
+  },
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-24",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/signeasy-review/",
+  "method": [
+   "Uploaded two made-up PDF files at once",
+   "Verified the email address and downloaded both files from the Files row menu",
+   "Opened the Business checkout and stopped before paying",
+   "Emailed support three fixed questions about export, AI training and the DPA"
+  ],
+  "claims": [
+   {
+    "claim": "€14 / month / seat",
+    "claim_source": "https://app.signeasy.com/payment/plans",
+    "claim_read_on": "2026-10-24",
+    "observed": "Yearly is preselected. The Business price is EUR 14 per seat per month, billed as EUR 168 yearly; one seat shows EUR 168 billed now. No VAT line is shown.",
+    "observed_on": "2026-10-24",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/signeasy-review/#claim-vs-measured"
+    },
+    "plan": "Business yearly, 1 seat",
+    "comparability": "Same Business plan, yearly term, EUR and one seat; the dossier records EUR 14 on annual billing. No cost rule exists and tax-inclusive total is unknown.",
+    "status": "not_testable",
+    "buying_consequence": "Annual billing is selected by default; VAT remains unknown.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-24",
+   "what": "Two unsigned PDF documents were uploaded and downloaded individually after email verification.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "Downloaded PDF bytes changed. The bulk download link is delivered by email and that email was not checked.",
+   "friction": {
+    "export_route": "Files, row menu, Download; email verification required.",
+    "format": "PDF.",
+    "reimport": "Reimport was not tested.",
+    "cancellation": "Cancellation was not tested."
+   },
+   "not_tested": [
+    "Bulk download email, native object IDs, separate custom metadata and reimport were not verified.",
+    "Support sending requires a verified Message-ID.",
+    "Text extraction does not prove visual identity."
+   ],
+   "came_along": [
+    "Extracted text and page counts match the originals."
+   ],
+   "lost": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/signeasy-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/signeasy-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/signeasy-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Two unsigned PDF documents were uploaded and downloaded individually after email verification. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/signeasy-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Two unsigned PDF documents were uploaded and downloaded individually after email verification. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/signeasy-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": false,
+    "basis": "Files, row menu, Download; email verification required.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/signeasy-review/#exit-test"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-24",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Signeasy",
+    "product_id": "signeasy",
+    "run_date": "2026-10-24",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 24 October 2026 on the 14-day trial: Daan created the account and our AI assistant ran the test in Daan's browser. We uploaded two made-up PDF files, downloaded them again and opened the Business checkout without paying.",
+    "findings": [
+     "The trial started without a card; sign-up asked for a phone number. The app showed 'Trial ends in 14 days' with a bar asking us to verify our email address.",
+     "Uploading two unsigned test PDFs at once worked; both appeared under Files next to an automatically added sample document.",
+     "Downloads stayed blocked until the email address was verified. Selecting files for a bulk download only promised a link by email; single files download from the row menu. The two downloaded PDFs had different bytes from our originals but the same extracted text and page counts (1 and 2 pages).",
+     "Purchase Now > Business opened a checkout with yearly billing preselected: EUR 14 per seat per month, EUR 168 billed now for one seat, and no VAT line on that screen. We stopped before paying."
+    ],
+    "not_tested": [
+     "Sending a document for signature",
+     "The bulk download email",
+     "Re-importing documents",
+     "Inviting a colleague",
+     "Cancelling the trial"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "€14 / month / seat",
+      "claim_source": "https://app.signeasy.com/payment/plans",
+      "claim_read_on": "2026-10-24",
+      "observed": "Yearly is preselected. The Business price is EUR 14 per seat per month, billed as EUR 168 yearly; one seat shows EUR 168 billed now. No VAT line is shown.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/signeasy-review/#claim-vs-measured"
+      },
+      "plan": "Business yearly, 1 seat",
+      "comparability": "Same Business plan, yearly term, EUR and one seat; the dossier records EUR 14 on annual billing. No cost rule exists and tax-inclusive total is unknown.",
+      "status": "not_testable",
+      "buying_consequence": "Annual billing is selected by default; VAT remains unknown.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-24",
+     "what": "Two unsigned PDF documents were uploaded and downloaded individually after email verification.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "Downloaded PDF bytes changed. The bulk download link is delivered by email and that email was not checked.",
+     "friction": {
+      "export_route": "Files, row menu, Download; email verification required.",
+      "format": "PDF.",
+      "reimport": "Reimport was not tested.",
+      "cancellation": "Cancellation was not tested."
+     },
+     "not_tested": [
+      "Bulk download email, native object IDs, separate custom metadata and reimport were not verified.",
+      "Support sending requires a verified Message-ID.",
+      "Text extraction does not prove visual identity."
+     ],
+     "came_along": [
+      "Extracted text and page counts match the originals."
+     ],
+     "lost": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "signeasy:cancellation_terms",

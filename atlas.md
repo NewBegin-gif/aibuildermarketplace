@@ -571,7 +571,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/browse-ai-review/
 
 ## BrowserAct (browseract.com)
-- **Verified pricing:** (prices re-verified 2026-10-14 on browseract.com/pricing in a live browser, both billing tabs open, and cross-read against browseract.com/llms.txt the same day; the plan amounts and credit …
+- **Verified pricing:** (prices re-verified 2026-10-24 on browseract.com/pricing, every plan amount quoted from the page; last read in a live browser with both billing tabs open and cross-read against browseract.c…
 - **Honest take:** The free tier is the catch: its card reads 200 signup credits where it read 1,500 on 2 September, about 66 workflow steps at 3 credits a step, while the vendor's own llms.txt still advertises 2,000.
 - **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, proxies and CAPTCHA handling managed for them, and can commit to yearly billing
 - **Flags:** Usage-metered, Add-ons extra, Free tier

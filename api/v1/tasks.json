@@ -5719,6 +5719,91 @@
   },
   {
    "source": "session",
+   "product_name": "lemlist",
+   "product_id": "lemlist",
+   "run_date": "2026-10-24",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 24 October 2026 during the free trial, without connecting an email account or LinkedIn and without sending anything: Daan created the account and our AI assistant ran the test in Daan's browser. We set up a draft campaign with one email step using our own variables, imported two made-up leads with a test ID and an amount, and exported them.",
+   "findings": [
+    "The CSV import recognised all six of our columns: email, first and last name, company name, and our test ID and amount as 'Campaign variable', each with a 'Don't overwrite' option. Both leads were imported with status 'To launch'.",
+    "The last import step offers enrichment that costs credits per lead (5 for a verified email, 20 for a phone number, 1 for a LinkedIn profile or an email check) and showed 200 remaining credits; we left it all off. AI columns can be previewed on the first 3 rows for free, and duplicates are skipped within the campaign by default.",
+    "'Export as .CSV' downloaded straight away with 19 columns, and both leads came back complete with our test ID and amount, status and lemlist's internal lead ID. The message text of the sequence is not in the export.",
+    "In the email step, {{firstName}} was mapped to the contact field automatically, while our own variables stayed marked red until leads with those columns existed. Without a connected email account the step said 'Connect an email account to start sending.'",
+    "The home screen showed '15 days of free trial left' on sign-up day, against '14-day free trial' on lemlist's help page. No card was asked. lemlist's chat window once covered the Continue button during the import."
+   ],
+   "not_tested": [
+    "Sending, LinkedIn steps and warm-up",
+    "Enrichment and AI columns (credits)",
+    "What happens after the trial",
+    "lemAgent and the MCP connection"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"200 free credits\"",
+     "claim_source": "https://help.lemlist.com/en/articles/4941590-lemlist-free-trial-what-s-included-and-how-it-works",
+     "claim_read_on": "2026-10-23",
+     "observed": "The import step showed '200 Remaining credits' in the new trial account.",
+     "observed_on": "2026-10-24",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/lemlist-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial",
+     "comparability": "Same quantity: starting credits.",
+     "status": "confirmed",
+     "buying_consequence": "200 credits go fast on enrichment: a verified email costs 5, a phone number 20."
+    },
+    {
+     "claim": "\"14-day free trial\"",
+     "claim_source": "https://help.lemlist.com/en/articles/4941590-lemlist-free-trial-what-s-included-and-how-it-works",
+     "claim_read_on": "2026-10-23",
+     "observed": "On sign-up day the app showed '15 days of free trial left'.",
+     "observed_on": "2026-10-24",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/lemlist-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial",
+     "comparability": "Not the same count as far as we can tell: the app counts remaining days and may include the start day, and we did not record the trial's end date, so 15 against 14 is not shown to be a real difference.",
+     "status": "not_comparable",
+     "buying_consequence": "Plan on the documented 14 days and check the end date in your own account on day one."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-24",
+    "what": "On 24 October 2026, in the trial account from this test, we exported our two imported test leads, which carried two of our own campaign variables (a test ID and an amount), and checked the file against our import file. We did not re-import it.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "The CSV is per campaign and holds the leads only; the message text of the sequence steps is not in it.",
+    "friction": {
+     "export_route": "Leads list > select > Export as .CSV; direct download.",
+     "format": "CSV per campaign with standard and campaign variables; the sequence messages are not included.",
+     "reimport": "Not tested: we did not re-import into a second campaign.",
+     "cancellation": "Not tested."
+    },
+    "not_tested": [
+     "Re-importing into a new campaign, and the duplicate rules",
+     "A preview of the personalised messages",
+     "Exporting sequence steps and messages"
+    ],
+    "came_along": [
+     "Both leads with email, first and last name, company name, our test ID and amount, status and lemlist's internal lead ID",
+     "19 columns in total, including empty standard fields such as phone, LinkedIn URL and job title"
+    ],
+    "lost": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Fireflies.ai",
    "product_id": "fireflies-ai",
    "run_date": "2026-10-09",

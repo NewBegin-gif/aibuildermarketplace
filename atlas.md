@@ -2277,8 +2277,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/nutshell-review/
 
 ## Omneky (omneky.com)
-- **Verified pricing:** (read 2026-10-09 in a browser render of the pricing section on omneky.com, USD, monthly view; omneky.com/pricing itself rendered empty) Lite is $29 a month with 200 credits a month, 1 brand…
-- **Honest take:** Credits per month are listed, but not what an ad costs in credits.
+- **Verified pricing:** (read 2026-10-24 on the pricing section of omneky.com, USD, monthly and yearly prices) Lite is $29 a month billed monthly or $24 a month billed yearly, with 200 credits a month, 1 brand and…
+- **Honest take:** Video formats start on Standard ($99), and the fee for launching on Omneky's own ad accounts is not published.
 - **Best for:** e-commerce brands and performance marketers who want AI-generated image and video ads launched and measured across Meta, Google, TikTok and other channels from one place
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/omneky-review/

@@ -5909,6 +5909,83 @@
   },
   {
    "source": "session",
+   "product_name": "Brevo",
+   "product_id": "brevo",
+   "run_date": "2026-10-24",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 24 October 2026 on the Free plan, in an existing Brevo account: our AI assistant ran the test in Daan's browser. We added two made-up contacts, exported them and opened the Starter checkout without paying.",
+   "findings": [
+    "The account showed the Free plan with 300 emails a day ('300 / 300 Marketing & Transactional emails left') and single-user access.",
+    "A CSV file whose fields contain line breaks was misread in the import preview: the quoted line breaks became extra rows and the columns shifted. The same contacts as an XLSX file previewed correctly.",
+    "Neither the file import nor the re-import could be confirmed without ticking an opt-in agreement that our made-up addresses could not truthfully meet, so we imported no file.",
+    "We created the two contacts by hand instead. FREE_TEXT is a single-line field, so the line break could not be entered. Both contacts started as subscribed to email; we then blocklisted them.",
+    "The CSV export, downloaded through Notifications with export by email switched off, had both contacts with their external IDs, custom codes and Unicode names, plus CONTACT ID 2 and 3, but no subscription or blocklist status column.",
+    "Monthly billing was preselected. Starter (5,000 emails, 500 contacts) showed EUR 7.00 as subtotal and total due, with no VAT line; removing the Brevo logo (EUR 9.00 a month) was switched off. The plan text mentions automatic upgrades when the contact limit is reached, and the checkout box authorizing that was unticked. We stopped before paying."
+   ],
+   "not_tested": [
+    "Signing up (we used an existing account)",
+    "Importing or re-importing a file",
+    "Inviting a colleague (Free has single-user access)",
+    "Cancelling or deleting the account"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "From €7 per month",
+     "claim_source": "https://app.brevo.com/",
+     "claim_read_on": "2026-10-24",
+     "observed": "Starter monthly preselected; displayed subtotal EUR 7.00 and total amount due EUR 7.00, no VAT line; 5000 emails and 500 contacts; logo removal EUR 9.00/month off.",
+     "observed_on": "2026-10-24",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/brevo-review/#claim-vs-measured"
+     },
+     "plan": "Starter monthly",
+     "comparability": "Displayed monthly EUR base-price labels agree with the dossier; no applicable cost rule exists. Tax-inclusive comparison is unavailable because the checkout has no VAT line. Optional logo-removal amounts in dossier and checkout lack a pinned common billing basis.",
+     "status": "not_testable",
+     "buying_consequence": "Monthly billing is preselected; the displayed amount due has no VAT breakdown. Logo removal is optional and off. Contact-limit auto-upgrade copy and the unchecked checkout authorization are recorded separately.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-24",
+    "what": "A CSV export of two manually created contacts was opened and checked.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "FREE_TEXT is a single-line field in the contact form, so the fixture line break could not be entered. CSV preview split quoted multiline values into extra rows and shifted columns; XLSX preview showed the correct rows. Both file import and re-import stopped at a mandatory opt-in declaration that was untrue for synthetic addresses.",
+    "friction": {
+     "export_route": "Select test contacts, choose Export, then download through Notifications; export email delivery was switched off.",
+     "format": "CSV contact attributes; no contact attachment archive or native tags in the observed path.",
+     "reimport": "Not tested: mandatory opt-in declaration was not made. Prepared update used email matching; native-ID updating was not tested.",
+     "cancellation": "Cancellation and deletion were not tested."
+    },
+    "not_tested": [
+     "Signup on the existing account.",
+     "File import, re-import and native-ID update preservation.",
+     "Currency preservation and independent before-export native-ID equality.",
+     "Support response time, inbox monitoring, invitations and cancellation."
+    ],
+    "came_along": [
+     "Two contacts, external IDs, custom codes and Unicode names.",
+     "Calendar dates and numeric amounts remained equivalent; currency was not verified.",
+     "CONTACT ID values are present; comparison with independent pre-export IDs was not tested."
+    ],
+    "lost": [
+     "The UI blocklist status is absent from the contact export."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "ClickUp",
    "product_id": "clickup",
    "run_date": "2026-10-23",

@@ -78,16 +78,430 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "audience": "personal",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free forever for individuals (2 cards, unlimited QR sharing)"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 9.99,
+     "annual_month": 7.33,
+     "evidence": "For individuals, Premium is $9.99 a month billed monthly or $7.33 billed annually"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "monthly": 6.99,
+     "annual_month": 4.99,
+     "min_units": 5,
+     "evidence": "Business is $6.99 per user a month billed monthly or $4.99 per user billed annually, with a minimum charge of five cards"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is custom"
+    }
+   ],
+   "notes": [
+    "Business bills a minimum of five cards, so teams under five pay for five. Event lead capture on Business is billed on top of the seats per lead captured."
+   ],
+   "not_computable": [
+    "Event lead capture on Business: 1 credit at $9.99 for each lead captured and enriched, invoiced monthly in arrears on top of the seats; the bill depends on the number of leads, which is not a team-size axis."
+   ],
+   "rules_verified_at": "2026-10-24"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "blinq",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 24.95,
+      "billed": {
+       "amount": 299.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 24.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 24.95,
+      "billed": {
+       "amount": 299.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 24.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 24.95,
+      "billed": {
+       "amount": 299.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 24.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 24.95,
+      "billed": {
+       "amount": 299.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 24.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 49.9,
+      "billed": {
+       "amount": 598.8,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 49.9,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 74.85,
+      "billed": {
+       "amount": 898.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 74.85,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 99.8,
+      "billed": {
+       "amount": 1197.6,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 99.8,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 124.75,
+      "billed": {
+       "amount": 1497.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 124.75,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 249.5,
+      "billed": {
+       "amount": 2994.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 249.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 5988.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 499.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Event lead capture on Business: 1 credit at $9.99 for each lead captured and enriched, invoiced monthly in arrears on top of the seats; the bill depends on the number of leads, which is not a team-size axis."
+    ]
+   },
+   "monthly": {
+    "product_id": "blinq",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 34.95,
+      "billed": {
+       "amount": 34.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 34.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 34.95,
+      "billed": {
+       "amount": 34.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 34.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 34.95,
+      "billed": {
+       "amount": 34.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 34.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 34.95,
+      "billed": {
+       "amount": 34.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 34.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 69.9,
+      "billed": {
+       "amount": 69.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 69.9,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 104.85,
+      "billed": {
+       "amount": 104.85,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 104.85,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 139.8,
+      "billed": {
+       "amount": 139.8,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 139.8,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 174.75,
+      "billed": {
+       "amount": 174.75,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 174.75,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 349.5,
+      "billed": {
+       "amount": 349.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 349.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 699.0,
+      "billed": {
+       "amount": 699.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "premium": "not_eligible",
+       "business": 699.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Event lead capture on Business: 1 credit at $9.99 for each lead captured and enriched, invoiced monthly in arrears on top of the seats; the bill depends on the number of leads, which is not a team-size axis."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -252,9 +666,9 @@
    "status": "open"
   },
   {
-   "question_id": "blinq:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "blinq:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Event lead capture on Business: 1 credit at $9.99 for each lead captured and enriched, invoiced monthly in arrears on top of the seats; the bill depends on the number of leads, which is not a team-size axis. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

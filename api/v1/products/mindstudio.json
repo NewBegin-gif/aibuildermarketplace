@@ -75,15 +75,406 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "flat",
+     "monthly": 0,
+     "annual_month": 0,
+     "max_units": 1,
+     "evidence": "Free is $0/month plus usage and caps you at one agent and 1,000 runs a month. Individual is $20/month plus usage, or $16/month plus usage billed yearly, a stated 20% saving, and lifts both caps to unlimited agents and unlimited runs. Business is quote-based."
+    },
+    {
+     "id": "individual",
+     "name": "Individual",
+     "model": "flat",
+     "monthly": 20,
+     "annual_month": 16,
+     "max_units": 1,
+     "evidence": "Free is $0/month plus usage and caps you at one agent and 1,000 runs a month. Individual is $20/month plus usage, or $16/month plus usage billed yearly, a stated 20% saving, and lifts both caps to unlimited agents and unlimited runs. Business is quote-based."
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "quote",
+     "evidence": "Free is $0/month plus usage and caps you at one agent and 1,000 runs a month. Individual is $20/month plus usage, or $16/month plus usage billed yearly, a stated 20% saving, and lifts both caps to unlimited agents and unlimited runs. Business is quote-based."
+    }
+   ],
+   "notes": [
+    "Single-user subscription floor only; team collaboration is on Business. Free is deliberately a zero-priced flat subscription, not an all-in free plan.",
+    "Live pricing source: https://www.mindstudio.ai/pricing (read 2026-10-24)."
+   ],
+   "rules_verified_at": "2026-10-24",
+   "not_computable": [
+    {
+     "text": "Every subscription is plus usage; model calls and additional runs have no single price per unit here and are excluded. Free is capped at one agent and 1,000 runs/month.",
+     "affects_cost": true
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "mindstudio",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "individual": 16.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Every subscription is plus usage; model calls and additional runs have no single price per unit here and are excluded. Free is capped at one agent and 1,000 runs/month."
+    ],
+    "measured": [
+     {
+      "claim": "\"1,000 runs / month\"",
+      "claim_source": "https://www.mindstudio.ai/pricing",
+      "claim_read_on": "2026-10-23",
+      "observed": "The Free plan page in the app shows '1,000 runs / month', but the workspace credit balance starts at $0.00 and our first run of our own agent failed with 'You are out of usage credits' (insufficient_credits/balance).",
+      "observed_on": "2026-10-23",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/mindstudio-review.html#claim-vs-measured"
+      },
+      "plan": "Free, Service Router, no top-up",
+      "comparability": "The claim counts runs; we measured whether a run can start without paying for model usage. Different quantity.",
+      "status": "not_comparable",
+      "buying_consequence": "On Free you still need to top up credit (or bring your own API keys, not tested) before an agent that calls a model can run.",
+      "status_label": "Not comparable",
+      "review_url": "https://officesoftwaremarketplace.com/mindstudio-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "mindstudio",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "individual": 20.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "individual": "not_eligible",
+       "business": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Every subscription is plus usage; model calls and additional runs have no single price per unit here and are excluded. Free is capped at one agent and 1,000 runs/month."
+    ],
+    "measured": [
+     {
+      "claim": "\"1,000 runs / month\"",
+      "claim_source": "https://www.mindstudio.ai/pricing",
+      "claim_read_on": "2026-10-23",
+      "observed": "The Free plan page in the app shows '1,000 runs / month', but the workspace credit balance starts at $0.00 and our first run of our own agent failed with 'You are out of usage credits' (insufficient_credits/balance).",
+      "observed_on": "2026-10-23",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/mindstudio-review.html#claim-vs-measured"
+      },
+      "plan": "Free, Service Router, no top-up",
+      "comparability": "The claim counts runs; we measured whether a run can start without paying for model usage. Different quantity.",
+      "status": "not_comparable",
+      "buying_consequence": "On Free you still need to top up credit (or bring your own API keys, not tested) before an agent that calls a model can run.",
+      "status_label": "Not comparable",
+      "review_url": "https://officesoftwaremarketplace.com/mindstudio-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -162,9 +553,9 @@
    "status": "open"
   },
   {
-   "question_id": "mindstudio:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "mindstudio:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Every subscription is plus usage; model calls and additional runs have no single price per unit here and are excluded. Free is capped at one agent and 1,000 runs/month. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

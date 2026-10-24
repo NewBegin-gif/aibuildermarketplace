@@ -74,16 +74,510 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "flat",
+     "included_units": 5,
+     "monthly": 50,
+     "annual_year": 500,
+     "extra_unit": {
+      "monthly": 8,
+      "annual_status": "unknown"
+     },
+     "evidence": "Standard $42/mo billed yearly or $50 month-to-month (5 members, 10 GB), Studio $67 or $80 (10 members, 25 GB), Premium $125 or $150 (25 members, 50 GB), plus a custom tier quoted as \"Let's talk\" — all with unlimited projects and unlimited client users; annual billing reads $500/$800/$1,500 a year (\"two months free\"), extra members $8 per user billed monthly or $6.60 billed annually ($80 a year each)."
+    },
+    {
+     "id": "studio",
+     "name": "Studio",
+     "model": "flat",
+     "included_units": 10,
+     "monthly": 80,
+     "annual_year": 800,
+     "extra_unit": {
+      "monthly": 8,
+      "annual_status": "unknown"
+     },
+     "evidence": "Standard $42/mo billed yearly or $50 month-to-month (5 members, 10 GB), Studio $67 or $80 (10 members, 25 GB), Premium $125 or $150 (25 members, 50 GB), plus a custom tier quoted as \"Let's talk\" — all with unlimited projects and unlimited client users; annual billing reads $500/$800/$1,500 a year (\"two months free\"), extra members $8 per user billed monthly or $6.60 billed annually ($80 a year each)."
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "flat",
+     "included_units": 25,
+     "monthly": 150,
+     "annual_year": 1500,
+     "extra_unit": {
+      "monthly": 8,
+      "annual_status": "unknown"
+     },
+     "evidence": "Standard $42/mo billed yearly or $50 month-to-month (5 members, 10 GB), Studio $67 or $80 (10 members, 25 GB), Premium $125 or $150 (25 members, 50 GB), plus a custom tier quoted as \"Let's talk\" — all with unlimited projects and unlimited client users; annual billing reads $500/$800/$1,500 a year (\"two months free\"), extra members $8 per user billed monthly or $6.60 billed annually ($80 a year each)."
+    },
+    {
+     "id": "custom",
+     "name": "Custom",
+     "model": "quote",
+     "evidence": "Standard $42/mo billed yearly or $50 month-to-month (5 members, 10 GB), Studio $67 or $80 (10 members, 25 GB), Premium $125 or $150 (25 members, 50 GB), plus a custom tier quoted as \"Let's talk\" — all with unlimited projects and unlimited client users; annual billing reads $500/$800/$1,500 a year (\"two months free\"), extra members $8 per user billed monthly or $6.60 billed annually ($80 a year each)."
+    }
+   ],
+   "notes": [
+    "Use the explicit annual invoice totals, not the rounded monthly labels. Annual additional-member invoices are unknown: the displayed annual monthly equivalent is rounded; the historical annual invoice was not confirmed live.",
+    "Live pricing source: https://bugherd.com/pricing (read 2026-10-24)."
+   ],
+   "rules_verified_at": "2026-10-24"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "bugherd",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 41.67,
+      "billed": {
+       "amount": 500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 41.67,
+       "studio": 66.67,
+       "premium": 125.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 41.67,
+      "billed": {
+       "amount": 500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 41.67,
+       "studio": 66.67,
+       "premium": 125.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 41.67,
+      "billed": {
+       "amount": 500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 41.67,
+       "studio": 66.67,
+       "premium": 125.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 41.67,
+      "billed": {
+       "amount": 500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 41.67,
+       "studio": 66.67,
+       "premium": 125.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 66.67,
+      "billed": {
+       "amount": 800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "price_unknown_on_billing",
+       "studio": 66.67,
+       "premium": 125.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 1500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "price_unknown_on_billing",
+       "studio": "price_unknown_on_billing",
+       "premium": 125.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 1500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "price_unknown_on_billing",
+       "studio": "price_unknown_on_billing",
+       "premium": 125.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 1500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "price_unknown_on_billing",
+       "studio": "price_unknown_on_billing",
+       "premium": 125.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "price_unknown_on_billing",
+       "studio": "price_unknown_on_billing",
+       "premium": "price_unknown_on_billing",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "price_unknown_on_billing",
+       "studio": "price_unknown_on_billing",
+       "premium": "price_unknown_on_billing",
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "standard",
+      "to_plan": "studio",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Studio"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "studio",
+      "to_plan": "premium",
+      "from_plan_name": "Studio",
+      "to_plan_name": "Premium"
+     },
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "premium",
+      "to_plan": null,
+      "from_plan_name": "Premium",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "\"free 7-day trial\"",
+      "claim_source": "https://bugherd.com/",
+      "claim_read_on": "2026-10-23",
+      "observed": "The new account showed '7 days remaining! Upgrade now!' in the header. No card was asked.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/bugherd-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Same quantity: trial length shown on day one.",
+      "status": "confirmed",
+      "buying_consequence": "You get 7 days without a card, but you must install the browser extension or a script on a site before you can use the board.",
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/bugherd-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "bugherd",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 50.0,
+       "studio": 80.0,
+       "premium": 150.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 50.0,
+       "studio": 80.0,
+       "premium": 150.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 50.0,
+       "studio": 80.0,
+       "premium": 150.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 50.0,
+       "studio": 80.0,
+       "premium": 150.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 80.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 90.0,
+       "studio": 80.0,
+       "premium": 150.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 120.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 130.0,
+       "studio": 120.0,
+       "premium": 150.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 170.0,
+       "studio": 160.0,
+       "premium": 150.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 210.0,
+       "studio": 200.0,
+       "premium": 150.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 350.0,
+      "billed": {
+       "amount": 350.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 410.0,
+       "studio": 400.0,
+       "premium": 350.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 750.0,
+      "billed": {
+       "amount": 750.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 810.0,
+       "studio": 800.0,
+       "premium": 750.0,
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "standard",
+      "to_plan": "studio",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Studio"
+     },
+     {
+      "from_units": 15,
+      "to_units": 20,
+      "from_plan": "studio",
+      "to_plan": "premium",
+      "from_plan_name": "Studio",
+      "to_plan_name": "Premium"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "\"free 7-day trial\"",
+      "claim_source": "https://bugherd.com/",
+      "claim_read_on": "2026-10-23",
+      "observed": "The new account showed '7 days remaining! Upgrade now!' in the header. No card was asked.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/bugherd-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Same quantity: trial length shown on day one.",
+      "status": "confirmed",
+      "buying_consequence": "You get 7 days without a card, but you must install the browser extension or a script on a site before you can use the board.",
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/bugherd-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -188,12 +682,6 @@
    "question_id": "bugherd:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "bugherd:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

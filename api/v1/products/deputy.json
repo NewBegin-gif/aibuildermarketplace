@@ -94,15 +94,412 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "per_unit",
+     "annual_month": 5,
+     "evidence": "On annual billing Lite is $5, Core $6.50 and Pro $9; switch the toggle to monthly and the same three read $5.50, $7.25 and $10.",
+     "monthly_status": "unknown"
+    },
+    {
+     "id": "core",
+     "name": "Core",
+     "model": "per_unit",
+     "annual_month": 6.5,
+     "evidence": "On annual billing Lite is $5, Core $6.50 and Pro $9; switch the toggle to monthly and the same three read $5.50, $7.25 and $10.",
+     "monthly_status": "unknown"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 9,
+     "evidence": "On annual billing Lite is $5, Core $6.50 and Pro $9; switch the toggle to monthly and the same three read $5.50, $7.25 and $10.",
+     "monthly_status": "unknown"
+    }
+   ],
+   "notes": [
+    "Annual subscription only. Monthly prices have not been confirmed from the live toggle; the monthly invoice minimum cannot be encoded as a per-user minimum.",
+    "Live pricing source: https://www.deputy.com/pricing (read 2026-10-24)."
+   ],
+   "rules_verified_at": "2026-10-24",
+   "not_computable": [
+    {
+     "text": "Monthly billing (including its invoice minimum), paid add-ons, SMS and any future charge for introductory-free Deputy AI are excluded.",
+     "affects_cost": true
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "deputy",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 5.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 5.0,
+       "core": 6.5,
+       "pro": 9.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 120.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 10.0,
+       "core": 13.0,
+       "pro": 18.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 180.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 15.0,
+       "core": 19.5,
+       "pro": 27.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 25.0,
+       "core": 32.5,
+       "pro": 45.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 50.0,
+       "core": 65.0,
+       "pro": 90.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 900.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 75.0,
+       "core": 97.5,
+       "pro": 135.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 100.0,
+       "core": 130.0,
+       "pro": 180.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 1500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 125.0,
+       "core": 162.5,
+       "pro": 225.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 3000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 250.0,
+       "core": 325.0,
+       "pro": 450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 6000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 500.0,
+       "core": 650.0,
+       "pro": 900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Monthly billing (including its invoice minimum), paid add-ons, SMS and any future charge for introductory-free Deputy AI are excluded."
+    ],
+    "measured": [
+     {
+      "claim": "\"Up to 31 days\"",
+      "claim_source": "https://www.deputy.com/",
+      "claim_read_on": "2026-10-23",
+      "observed": "On sign-up day the app showed '31 days remaining of your Core Plan trial.' No card was asked.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/deputy-review/#claim-vs-measured"
+      },
+      "plan": "Core Plan trial",
+      "comparability": "Same quantity: trial length on day one; the claim is an upper bound and we got the full 31 days.",
+      "status": "confirmed",
+      "buying_consequence": "A new account got the full 31-day trial of the Core plan without a card.",
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/deputy-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "deputy",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "lite": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Monthly billing (including its invoice minimum), paid add-ons, SMS and any future charge for introductory-free Deputy AI are excluded."
+    ],
+    "measured": [
+     {
+      "claim": "\"Up to 31 days\"",
+      "claim_source": "https://www.deputy.com/",
+      "claim_read_on": "2026-10-23",
+      "observed": "On sign-up day the app showed '31 days remaining of your Core Plan trial.' No card was asked.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/deputy-review/#claim-vs-measured"
+      },
+      "plan": "Core Plan trial",
+      "comparability": "Same quantity: trial length on day one; the claim is an upper bound and we got the full 31 days.",
+      "status": "confirmed",
+      "buying_consequence": "A new account got the full 31-day trial of the Core plan without a card.",
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/deputy-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -217,9 +614,15 @@
    "status": "open"
   },
   {
-   "question_id": "deputy:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "deputy:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "deputy:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Monthly billing (including its invoice minimum), paid add-ons, SMS and any future charge for introductory-free Deputy AI are excluded. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

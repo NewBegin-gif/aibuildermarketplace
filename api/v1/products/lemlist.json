@@ -81,16 +81,475 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "email",
+     "name": "Email",
+     "model": "flat",
+     "monthly": 69,
+     "annual_month": 55,
+     "evidence": "Email is $69/month, or $55/month on yearly billing, covering unlimited users and 50,000 emails a month. Multichannel is $109/month per user, or $87/month yearly, with unlimited emails and messages and 5 senders per user."
+    },
+    {
+     "id": "multichannel",
+     "name": "Multichannel",
+     "model": "per_unit",
+     "monthly": 109,
+     "annual_month": 87,
+     "evidence": "Email is $69/month, or $55/month on yearly billing, covering unlimited users and 50,000 emails a month. Multichannel is $109/month per user, or $87/month yearly, with unlimited emails and messages and 5 senders per user."
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise (5+ users) is quote-only."
+    }
+   ],
+   "notes": [
+    "USD page rendering; check currency at checkout. Email covers unlimited users and 50,000 emails/month; Multichannel is per user. Quarterly billing not modelled.",
+    "Live pricing source: https://www.lemlist.com/pricing (read 2026-10-24)."
+   ],
+   "rules_verified_at": "2026-10-24",
+   "not_computable": [
+    {
+     "text": "Lead-data enrichment, buying intent signals, telephony and messaging add-ons are excluded.",
+     "affects_cost": true
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "lemlist",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 87.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 174.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 261.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 435.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 870.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 1305.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 1740.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 2175.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 4350.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 55.0,
+       "multichannel": 8700.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Lead-data enrichment, buying intent signals, telephony and messaging add-ons are excluded."
+    ],
+    "measured": [
+     {
+      "claim": "\"200 free credits\"",
+      "claim_source": "https://help.lemlist.com/en/articles/4941590-lemlist-free-trial-what-s-included-and-how-it-works",
+      "claim_read_on": "2026-10-23",
+      "observed": "The import step showed '200 Remaining credits' in the new trial account.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/lemlist-review.html#claim-vs-measured"
+      },
+      "plan": "Free trial",
+      "comparability": "Same quantity: starting credits.",
+      "status": "confirmed",
+      "buying_consequence": "200 credits go fast on enrichment: a verified email costs 5, a phone number 20.",
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/lemlist-review.html"
+     },
+     {
+      "claim": "\"14-day free trial\"",
+      "claim_source": "https://help.lemlist.com/en/articles/4941590-lemlist-free-trial-what-s-included-and-how-it-works",
+      "claim_read_on": "2026-10-23",
+      "observed": "On sign-up day the app showed '15 days of free trial left'.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/lemlist-review.html#claim-vs-measured"
+      },
+      "plan": "Free trial",
+      "comparability": "Not the same count as far as we can tell: the app counts remaining days and may include the start day, and we did not record the trial's end date, so 15 against 14 is not shown to be a real difference.",
+      "status": "not_comparable",
+      "buying_consequence": "Plan on the documented 14 days and check the end date in your own account on day one.",
+      "status_label": "Not comparable",
+      "review_url": "https://marketingandsalessoftware.com/lemlist-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "lemlist",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 109.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 218.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 327.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 545.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 1090.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 1635.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 2180.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 2725.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 5450.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "email",
+      "cheapest_plan_name": "Email",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "email": 69.0,
+       "multichannel": 10900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Lead-data enrichment, buying intent signals, telephony and messaging add-ons are excluded."
+    ],
+    "measured": [
+     {
+      "claim": "\"200 free credits\"",
+      "claim_source": "https://help.lemlist.com/en/articles/4941590-lemlist-free-trial-what-s-included-and-how-it-works",
+      "claim_read_on": "2026-10-23",
+      "observed": "The import step showed '200 Remaining credits' in the new trial account.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/lemlist-review.html#claim-vs-measured"
+      },
+      "plan": "Free trial",
+      "comparability": "Same quantity: starting credits.",
+      "status": "confirmed",
+      "buying_consequence": "200 credits go fast on enrichment: a verified email costs 5, a phone number 20.",
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/lemlist-review.html"
+     },
+     {
+      "claim": "\"14-day free trial\"",
+      "claim_source": "https://help.lemlist.com/en/articles/4941590-lemlist-free-trial-what-s-included-and-how-it-works",
+      "claim_read_on": "2026-10-23",
+      "observed": "On sign-up day the app showed '15 days of free trial left'.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/lemlist-review.html#claim-vs-measured"
+      },
+      "plan": "Free trial",
+      "comparability": "Not the same count as far as we can tell: the app counts remaining days and may include the start day, and we did not record the trial's end date, so 15 against 14 is not shown to be a real difference.",
+      "status": "not_comparable",
+      "buying_consequence": "Plan on the documented 14 days and check the end date in your own account on day one.",
+      "status_label": "Not comparable",
+      "review_url": "https://marketingandsalessoftware.com/lemlist-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -215,9 +674,9 @@
    "status": "open"
   },
   {
-   "question_id": "lemlist:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "lemlist:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Lead-data enrichment, buying intent signals, telephony and messaging add-ons are excluded. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

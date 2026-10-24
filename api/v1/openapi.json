@@ -1163,6 +1163,179 @@
      }
     }
    },
+   "MeasuredSupport": {
+    "type": [
+     "object",
+     "null"
+    ],
+    "additionalProperties": false,
+    "required": [
+     "sent_at",
+     "window_days",
+     "observed_at",
+     "status",
+     "channel",
+     "first_reply_hours",
+     "first_human_reply_hours",
+     "answered",
+     "answered_by",
+     "plan",
+     "trial",
+     "comparison",
+     "method"
+    ],
+    "properties": {
+     "sent_at": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "window_days": {
+      "const": 7
+     },
+     "observed_at": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "status": {
+      "enum": [
+       "partial",
+       "complete"
+      ]
+     },
+     "channel": {
+      "enum": [
+       "email",
+       "chat"
+      ]
+     },
+     "first_reply_hours": {
+      "oneOf": [
+       {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 168
+       },
+       {
+        "enum": [
+         null,
+         "no reply in 7 days"
+        ]
+       }
+      ]
+     },
+     "first_human_reply_hours": {
+      "oneOf": [
+       {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 168
+       },
+       {
+        "enum": [
+         null,
+         "no reply in 7 days",
+         "unclear"
+        ]
+       }
+      ]
+     },
+     "answered": {
+      "enum": [
+       null,
+       "yes",
+       "no",
+       "partly"
+      ]
+     },
+     "answered_by": {
+      "enum": [
+       null,
+       "Claude"
+      ]
+     },
+     "plan": {
+      "type": "string",
+      "minLength": 1
+     },
+     "trial": {
+      "type": "boolean"
+     },
+     "comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "status",
+       "reason"
+      ],
+      "properties": {
+       "status": {
+        "enum": [
+         "comparable",
+         "not_comparable"
+        ]
+       },
+       "reason": {
+        "type": "string"
+       }
+      }
+     },
+     "method": {
+      "const": "One support email containing three fixed questions; one measurement is one measurement, not an estimate of typical support speed. Seven elapsed days; whole hours, half up. Human means rule-based signals, not proof of authorship. Uncertain replies remain unclear. Only messages still present in INBOX/junk at collection time are covered."
+     }
+    }
+   },
+   "MeasuredOnboarding": {
+    "type": [
+     "object",
+     "null"
+    ],
+    "additionalProperties": false,
+    "required": [
+     "screens_to_first_result",
+     "first_result",
+     "card_required",
+     "conversation_required",
+     "connection_required",
+     "observed_on"
+    ],
+    "properties": {
+     "screens_to_first_result": {
+      "type": [
+       "integer",
+       "null"
+      ],
+      "minimum": 1
+     },
+     "first_result": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "card_required": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "conversation_required": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "connection_required": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "observed_on": {
+      "type": "string",
+      "format": "date"
+     }
+    }
+   },
    "Measured": {
     "type": "object",
     "additionalProperties": false,
@@ -1177,7 +1350,9 @@
      "facts",
      "inbox",
      "invites",
-     "entry_exit"
+     "entry_exit",
+     "support",
+     "onboarding"
     ],
     "properties": {
      "tested_on": {
@@ -1213,6 +1388,12 @@
      },
      "entry_exit": {
       "$ref": "#/components/schemas/MeasuredEntryExit"
+     },
+     "support": {
+      "$ref": "#/components/schemas/MeasuredSupport"
+     },
+     "onboarding": {
+      "$ref": "#/components/schemas/MeasuredOnboarding"
      },
      "exit_test": {
       "$ref": "#/components/schemas/MeasuredExitTest"

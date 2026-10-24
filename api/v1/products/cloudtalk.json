@@ -47,7 +47,15 @@
    "description": "Lite, per user per month on annual billing; the EUR 9 AI Conversation Intelligence figure is an add-on, not a plan. Read on the vendor's own pricing page on 2026-08-16.",
    "page": "https://zerotouchsupport.com/cloudtalk-review.html"
   },
-  "source_quotes": null
+  "source_quotes": [
+   {
+    "field": "free_trial",
+    "plan": null,
+    "quote": "14-Day Free Trial",
+    "source_url": "https://www.cloudtalk.io/signup/",
+    "read_on": "2026-10-23"
+   }
+  ]
  },
  "free_plan": false,
  "free_plan_evidence": null,
@@ -550,15 +558,106 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "quoted",
   "refund": "being_verified"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "CloudTalk",
+    "product_id": "cloudtalk",
+    "run_date": "2026-10-24",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 24 October 2026 on the demo package, without a card, without making calls or sending texts, without installing the apps and without buying add-ons: Daan created the account and our AI assistant ran the test in Daan's browser. We checked the trial and the call credit, imported two made-up contacts from a CSV file and looked for a way to export them again.",
+    "findings": [
+     "The Contacts screen has no export or download button, only Bulk Delete, Bulk Import and Add Contact. Exports live in the separate CloudTalk Analytics site (group, agent, call log and messages reports, as CSV or PDF), and the call log CSV is sent by email ('in few minutes') rather than downloaded. We made no calls, so we did not open that file.",
+     "Settings > Billing showed the 'Demo package' at €0 with €10.00 of call credit, already flagged 'Your credit balance is low. If it reaches zero, your team will lose the ability to make calls.' The sign-up page advertises '$5 Credit'. Credit is used for calls outside the plan's included minutes.",
+     "The CSV import kept title, company, city, country and email. Tags separated by ' : ' became separate tags, and CloudTalk asks for one extra tag that it adds to every imported contact. Both rows showed 'Success', but the contact list stayed empty until we reloaded the page about 10 seconds later.",
+     "The import guidelines ask for 'column naming (lowercase first letter)', while the downloadable template itself starts with 'Name' in capitals. Name plus a phone number or email is mandatory, and only CSV files up to 8 MB are accepted.",
+     "After three onboarding screens the account was assigned a phone number straight away, and the dashboard said 'Your demo will EXPIRE in 14 days.' No card was asked. A pop-up offered a separate 30-day trial of the AI call analysis."
+    ],
+    "not_tested": [
+     "Calls and texts (we had no test number of our own)",
+     "The desktop and mobile apps",
+     "AI features and Voice Agents",
+     "CRM integrations",
+     "What happens after 14 days"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "\"14-Day Free Trial\"",
+      "claim_source": "https://www.cloudtalk.io/signup/",
+      "claim_read_on": "2026-10-23",
+      "observed": "On sign-up day the dashboard showed 'Your demo will EXPIRE in 14 days.' No card was asked.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/cloudtalk-review.html#claim-vs-measured"
+      },
+      "plan": "Demo package",
+      "comparability": "Same quantity: trial length on day one.",
+      "status": "confirmed",
+      "buying_consequence": "You get 14 days without a card on the Demo package."
+     },
+     {
+      "claim": "\"$5 Credit\"",
+      "claim_source": "https://www.cloudtalk.io/signup/",
+      "claim_read_on": "2026-10-23",
+      "observed": "Settings > Billing showed Credit '€10,00' on the new Demo package, with a 'credit balance is low' warning.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/cloudtalk-review.html#claim-vs-measured"
+      },
+      "plan": "Demo package",
+      "comparability": "Same quantity (starting call credit). The sign-up page showed $5 also when read from the Netherlands, while our account, billed in euros, held €10, more than $5 at any exchange rate.",
+      "status": "contradicted",
+      "buying_consequence": "Our EU demo account started with €10 of call credit rather than $5; check the balance in your own account, since calls stop when it reaches zero."
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-24",
+     "what": "On 24 October 2026, in the demo account from this test, we looked for a way to get our two imported test contacts out of CloudTalk again, and tried the report export in CloudTalk Analytics. We made no calls, so the report had nothing in it, and we did not open the emailed file.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Report exports are not a direct download: 'An e-mail with the exported data will be sent to your registered e-mail address in few minutes.'",
+     "friction": {
+      "export_route": "Contacts: no route found in the dashboard. Call and message data: analytics.cloudtalk.io > report > Export > CSV or PDF, by email.",
+      "format": "CSV or PDF per report; we did not see the contents (no calls made).",
+      "reimport": "Not tested.",
+      "cancellation": "Not tested."
+     },
+     "not_tested": [
+      "Exporting contacts through the API",
+      "The contents of the report CSV (no calls or texts)",
+      "Re-importing",
+      "Exporting call recordings"
+     ],
+     "available_fields": [
+      "Report exports (group, agent, call log and messages) as CSV or PDF, offered in CloudTalk Analytics"
+     ],
+     "not_offered": [
+      "An export of contacts: the Contacts screen had no export or download button (only Bulk Delete, Bulk Import and Add Contact)"
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "cloudtalk:cancellation_terms",

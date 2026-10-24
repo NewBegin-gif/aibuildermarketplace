@@ -82,15 +82,233 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "per_unit",
+     "monthly": 9.99,
+     "annual_year": 83.92,
+     "evidence": "Basic $9.99 a month or $83.92 a year"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "per_unit",
+     "monthly": 16.99,
+     "annual_year": 142.71,
+     "evidence": "Advanced $16.99 a month or $142.71 a year"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 19.99,
+     "annual_year": 167.92,
+     "evidence": "Pro $19.99 a month or $167.92 a year"
+    }
+   ],
+   "notes": [
+    "A Shopify app is billed per store that installs it; charges are billed in USD and recur every 30 days. The paid tiers exclude Shopify Plus stores. The free Development Stores tier is only for development and partner stores and is left out."
+   ],
+   "rules_verified_at": "2026-10-24"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "blocky",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 6.99,
+      "billed": {
+       "amount": 83.92,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 6.99,
+       "advanced": 11.89,
+       "pro": 13.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 13.99,
+      "billed": {
+       "amount": 167.84,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 13.99,
+       "advanced": 23.79,
+       "pro": 27.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 20.98,
+      "billed": {
+       "amount": 251.76,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 20.98,
+       "advanced": 35.68,
+       "pro": 41.98
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 34.97,
+      "billed": {
+       "amount": 419.6,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 34.97,
+       "advanced": 59.46,
+       "pro": 69.97
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 69.93,
+      "billed": {
+       "amount": 839.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 69.93,
+       "advanced": 118.93,
+       "pro": 139.93
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "blocky",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 9.99,
+      "billed": {
+       "amount": 9.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 9.99,
+       "advanced": 16.99,
+       "pro": 19.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 19.98,
+      "billed": {
+       "amount": 19.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 19.98,
+       "advanced": 33.98,
+       "pro": 39.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 29.97,
+      "billed": {
+       "amount": 29.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 29.97,
+       "advanced": 50.97,
+       "pro": 59.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 49.95,
+      "billed": {
+       "amount": 49.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 49.95,
+       "advanced": 84.95,
+       "pro": 99.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 99.9,
+      "billed": {
+       "amount": 99.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 99.9,
+       "advanced": 169.9,
+       "pro": 199.9
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -117,12 +335,6 @@
    "question_id": "blocky:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "blocky:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

@@ -5208,6 +5208,82 @@
   },
   {
    "source": "session",
+   "product_name": "BugHerd",
+   "product_id": "bugherd",
+   "run_date": "2026-10-24",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 24 October 2026 during the trial, without a card and without inviting anyone: Daan created the account and installed the BugHerd Chrome extension, and our AI assistant ran the test in Daan's browser. We left one feedback task on a website (example.com) and one on our own uploaded test design, changed the title of the second task, and exported both tasks as CSV and JSON.",
+   "findings": [
+    "Before you reach the task board you must install BugHerd on a site: the setup window 'Learn to use BugHerd in 3 simple steps' could not be closed (Escape did nothing) until the extension or a script was in place.",
+    "Leaving feedback on a page opens a form with description, assignee, severity, status, due date and tags, and captures a screenshot automatically. The task then appears on the board with the screenshot, URL, browser and operating system.",
+    "An uploaded image (PDF, image or Figma are offered) becomes a design asset with the same feedback sidebar; our pin on the test design became a task labelled 'IMAGE'.",
+    "The export (CSV, XML or JSON) arrived as an email attachment within about 15 seconds. Both tasks came back with description and metadata, but not the title we had changed on task 2 (there is no title column), and not the uploaded design itself, only a screenshot link. Those screenshot links opened without logging in.",
+    "In Settings, creating tasks by email and commenting on tasks by email were both switched on by default, and archived tasks are left out of the export unless you switch them on.",
+    "The header said '7 days remaining! Upgrade now!' and no card was asked. We found no import function."
+   ],
+   "not_tested": [
+    "Inviting clients and the client view",
+    "Video feedback",
+    "Integrations and BugHerd AI",
+    "Installing via a script on our own site",
+    "What happens after 7 days"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"free 7-day trial\"",
+     "claim_source": "https://bugherd.com/",
+     "claim_read_on": "2026-10-23",
+     "observed": "The new account showed '7 days remaining! Upgrade now!' in the header. No card was asked.",
+     "observed_on": "2026-10-24",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bugherd-review.html#claim-vs-measured"
+     },
+     "plan": "Trial",
+     "comparability": "Same quantity: trial length shown on day one.",
+     "status": "confirmed",
+     "buying_consequence": "You get 7 days without a card, but you must install the browser extension or a script on a site before you can use the board."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-24",
+    "what": "On 24 October 2026, in the trial account from this test, we exported the project's two feedback tasks (one left on a website, one on an uploaded test design whose title we had changed afterwards) as CSV and as JSON, and compared both files with what we had entered.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "The screenshot links in the export (files.bugherd.com) opened without logging in, so anyone with the file can view them. Archived tasks are left out unless you switch them on.",
+    "friction": {
+     "export_route": "Project > Settings > Export Bugs > CSV, XML or JSON; the file arrives as an email attachment (within about 15 seconds for us); archived tasks are not included by default.",
+     "format": "CSV (22 columns) or JSON/XML with one row per task; screenshots as links, no attachments or design files.",
+     "reimport": "Not testable: we found no import function.",
+     "cancellation": "Not tested."
+    },
+    "not_tested": [
+     "The XML export",
+     "Comments and attachments in the export (we added none)",
+     "Archived tasks",
+     "Re-importing (no importer found)"
+    ],
+    "came_along": [
+     "Both tasks with id, status, description, created and updated time, reporter email, page path, OS, browser, window and screen size, screenshot link and site",
+     "In JSON three extra fields: project, external ID and a session-recording field"
+    ],
+    "lost": [
+     "The changed title of task 2: the export has no title column; only the updated time moved",
+     "The uploaded design itself: the export only links to a screenshot"
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Pangram",
    "product_id": "pangram",
    "run_date": "2026-10-01",

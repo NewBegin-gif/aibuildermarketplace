@@ -61,16 +61,418 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "essentials",
+     "name": "Essentials",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 300,
+       "monthly": 19,
+       "annual_year": 205.2
+      }
+     ],
+     "evidence": "Essentials $19 a month or $205.20 a year, a 10% saving, covers stores up to 300 orders a month"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 600,
+       "monthly": 39,
+       "annual_year": 421.2
+      }
+     ],
+     "evidence": "Pro $39 a month or $421.20 a year covers up to 600 orders a month"
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 1500,
+       "monthly": 79,
+       "annual_year": 853.2
+      }
+     ],
+     "evidence": "Plus $79 a month or $853.20 a year covers up to 1,500 orders a month"
+    }
+   ],
+   "notes": "Order bands per plan; the free Agency tier is only for Shopify Partner development stores and is left out. Charges recur every 30 days in USD.",
+   "not_computable": [
+    "Stores above 1,500 orders a month: backupmaster.io/pricing lists further order bands from 2,500 to more than 1,000,000 orders a month without printing their prices."
+   ],
+   "rules_verified_at": "2026-10-24"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "backupmaster",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 17.1,
+      "billed": {
+       "amount": 205.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 17.1,
+       "pro": 35.1,
+       "plus": 71.1
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 17.1,
+      "billed": {
+       "amount": 205.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 17.1,
+       "pro": 35.1,
+       "plus": 71.1
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 17.1,
+      "billed": {
+       "amount": 205.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 17.1,
+       "pro": 35.1,
+       "plus": 71.1
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 71.1,
+      "billed": {
+       "amount": 853.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": 71.1
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 71.1,
+      "billed": {
+       "amount": 853.2,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": 71.1
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 300,
+      "to_units": 700,
+      "from_plan": "essentials",
+      "to_plan": "plus",
+      "from_plan_name": "Essentials",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 1000,
+      "to_units": 2000,
+      "from_plan": "plus",
+      "to_plan": null,
+      "from_plan_name": "Plus",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Stores above 1,500 orders a month: backupmaster.io/pricing lists further order bands from 2,500 to more than 1,000,000 orders a month without printing their prices."
+    ]
+   },
+   "monthly": {
+    "product_id": "backupmaster",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 19.0,
+       "pro": 39.0,
+       "plus": 79.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 19.0,
+       "pro": 39.0,
+       "plus": 79.0
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 19.0,
+       "pro": 39.0,
+       "plus": 79.0
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 79.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": 79.0
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 79.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": 79.0
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials": "not_eligible",
+       "pro": "not_eligible",
+       "plus": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 300,
+      "to_units": 700,
+      "from_plan": "essentials",
+      "to_plan": "plus",
+      "from_plan_name": "Essentials",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 1000,
+      "to_units": 2000,
+      "from_plan": "plus",
+      "to_plan": null,
+      "from_plan_name": "Plus",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Stores above 1,500 orders a month: backupmaster.io/pricing lists further order bands from 2,500 to more than 1,000,000 orders a month without printing their prices."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -99,9 +501,9 @@
    "status": "open"
   },
   {
-   "question_id": "backupmaster:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "backupmaster:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Stores above 1,500 orders a month: backupmaster.io/pricing lists further order bands from 2,500 to more than 1,000,000 orders a month without printing their prices. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

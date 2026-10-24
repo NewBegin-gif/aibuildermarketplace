@@ -548,13 +548,76 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "quoted"
+ },
+ "measured": {
+  "tested_on": "2026-10-23",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/proton-drive-review.html",
+  "claims": [],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the same free account as our earlier test, we uploaded a folder with four files whose SHA-256 hashes we had recorded beforehand (three 89-byte text files and a 2,259-byte image), selected all four and downloaded them, then compared the files. We did not upload the downloaded set again.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "The file dates inside the ZIP are the upload time, not the original modification dates.",
+   "friction": {
+    "export_route": "Select the files, then Download; several files automatically come as one ZIP, within seconds for us.",
+    "format": "The original files inside a ZIP.",
+    "reimport": "Not tested: we did not upload the extracted set again.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "Uploading the extracted set again",
+    "Version history and share links in the download",
+    "Large files and folders with subfolders"
+   ],
+   "came_along": [
+    "All 4 files, with the same names and identical SHA-256 hashes as before the upload"
+   ],
+   "lost": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/proton-drive-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://officesoftwaremarketplace.com/proton-drive-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://officesoftwaremarketplace.com/proton-drive-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://officesoftwaremarketplace.com/proton-drive-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 23 October 2026, in the same free account as our earlier test, we uploaded a folder with four files whose SHA-256 hashes we had recorded beforehand (three 89-byte text files and a 2,259-byte image), selected all four and downloaded them, then compared the files. We did not upload the downloaded set again. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://officesoftwaremarketplace.com/proton-drive-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://officesoftwaremarketplace.com/proton-drive-review.html#hands-on"
+   }
+  }
  },
  "third_party_video": {
   "url": "https://www.youtube.com/watch?v=2mAS2IEYYC4",

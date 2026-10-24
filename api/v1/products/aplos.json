@@ -523,13 +523,93 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-24; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-24",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/aplos-review.html",
+  "claims": [
+   {
+    "claim": "\"Start Your 15-Day Free Trial\"",
+    "claim_source": "https://app.aplos.com/aws/register",
+    "claim_read_on": "2026-10-23",
+    "observed": "After onboarding the account showed 'Subscribe within the first 15 days and receive 25% off for six months!' and ran as a free trial; no card was asked.",
+    "observed_on": "2026-10-24",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/aplos-review.html#claim-vs-measured"
+    },
+    "plan": "Free trial",
+    "comparability": "Not the same quantity: the app showed a 15-day window for a subscription discount, not a trial end date or counter, so the trial length itself was not read.",
+    "status": "not_testable",
+    "buying_consequence": "No card was asked. Subscribing within the first 15 days came with 25% off for six months; check the trial end date in your own account."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-24",
+   "what": "On 24 October 2026, in the trial account from this test, we exported our two imported test contacts, then re-imported them with the Contact IDs from the export and one changed address.",
+   "first_import": "Re-importing with the Contact ID column mapped to 'Contact ID' created no duplicates: still three contacts. The unchanged contact kept one address. For the other contact the old address was not replaced: it now had two addresses, the old and the changed one, both marked 'Other' and NOT VERIFIED, and the list still showed the old one as primary. Every column had to be mapped by hand again.",
+   "file_inspected": true,
+   "reimport_tested": true,
+   "awkward": "The XLSX has a title row ('Contacts for organization …') above the column headers, and the Contact ID shows in Excel as a number in scientific notation (2.6552421E7).",
+   "friction": {
+    "export_route": "People & Groups > Contacts > arrow at the top right > Export Contacts; choose the columns; direct download.",
+    "format": "XLSX with a title row above the column headers; Contact ID as a number in scientific notation.",
+    "reimport": "Re-import on Contact ID creates no duplicates, but a changed address is added instead of replacing the old one; every column has to be mapped by hand again.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "Exporting the chart of accounts",
+    "Transactions, funds and attachments",
+    "Donations and giving history"
+   ],
+   "came_along": [
+    "Both test contacts with Contact ID, name, type, email and address fields",
+    "The contact Aplos creates in a new account, as a third row"
+   ],
+   "lost": [],
+   "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/aplos-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/aplos-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/aplos-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/aplos-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": true,
+    "basis": "On 24 October 2026, in the trial account from this test, we exported our two imported test contacts, then re-imported them with the Contact IDs from the export and one changed address. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/aplos-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": true,
+    "basis": "People & Groups > Contacts > arrow at the top right > Export Contacts; choose the columns; direct download.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/aplos-review.html#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

@@ -612,13 +612,79 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-23",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/kit-review.html",
+  "claims": [],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the Creator trial account from this test, we exported our three imported test subscribers and then re-imported a changed file: one subscriber with a new first name, one with the first-name cell left empty.",
+   "first_import": "Re-importing on the same email addresses created no duplicates: still 3 subscribers. The changed name came through, but the empty first-name cell erased the existing name of that subscriber; the list then showed only the email address. As on the first import, no column was mapped automatically.",
+   "file_inspected": true,
+   "reimport_tested": true,
+   "awkward": "On re-import an empty cell overwrites the existing value instead of leaving it alone.",
+   "friction": {
+    "export_route": "Select subscribers > ... > Export; the download link appears in the Notifications menu within a few seconds.",
+    "format": "CSV with subscriber fields, tags and UTM fields; no broadcasts, sequences or forms.",
+    "reimport": "Re-import matches on email; empty cells overwrite existing values.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "Exporting broadcasts, sequences, forms or landing pages",
+    "Custom fields",
+    "Unsubscribed or bounced subscribers in the export"
+   ],
+   "came_along": [
+    "All 3 subscribers with first name, email, status and tags, including Kit's automatic import tag",
+    "14 columns in total, among them created_at in UTC, city, state, country, referrer and UTM fields"
+   ],
+   "lost": [
+    "Broadcasts, sequences and forms are not part of the subscriber export"
+   ],
+   "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/kit-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/kit-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/kit-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/kit-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": true,
+    "basis": "On 23 October 2026, in the Creator trial account from this test, we exported our three imported test subscribers and then re-imported a changed file: one subscriber with a new first name, one with the first-name cell left empty. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/kit-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://marketingandsalessoftware.com/kit-review.html#hands-on"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

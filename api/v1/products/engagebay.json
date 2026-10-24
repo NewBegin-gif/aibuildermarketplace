@@ -91,7 +91,7 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
@@ -99,6 +99,71 @@
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-23",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/engagebay-review/",
+  "claims": [],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the free account from this test, we tried to export three imported test contacts, one of them with a note, through EngageBay's own CSV export. We did not open the exported file and did not re-import it.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "There is no direct download: after Export the app says 'Your export is getting ready. We'll email you when it's done'.",
+   "friction": {
+    "export_route": "A bulk action (select contacts, Bulk Action > Export as CSV); the app said the file would arrive by email. Delivery and file contents were not checked.",
+    "format": "CSV with contact fields and tags; notes, tasks and documents are not in the field list.",
+    "reimport": "Not tested.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "The contents of the exported file",
+    "Re-importing and duplicate handling",
+    "Tasks and documents"
+   ],
+   "available_fields": [
+    "About 35 selectable contact fields, among them contact ID, tags, status, sources, address, dates and the last email, SMS and call"
+   ],
+   "not_offered": [
+    "Notes, tasks and documents: none of them is among the fields you can select for the export"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/engagebay-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/engagebay-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/engagebay-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "On 23 October 2026, in the free account from this test, we tried to export three imported test contacts, one of them with a note, through EngageBay's own CSV export. We did not open the exported file and did not re-import it. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/engagebay-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 23 October 2026, in the free account from this test, we tried to export three imported test contacts, one of them with a note, through EngageBay's own CSV export. We did not open the exported file and did not re-import it. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/engagebay-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": false,
+    "basis": "A bulk action (select contacts, Bulk Action > Export as CSV); the app said the file would arrive by email. Delivery and file contents were not checked.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/engagebay-review/#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

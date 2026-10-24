@@ -580,13 +580,95 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-23",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://zerotouchsupport.com/typewise-review.html",
+  "claims": [
+   {
+    "claim": "\"The trial runs for 14 days\"",
+    "claim_source": "https://docs.typewise.app/documentation/billing/free-trial",
+    "claim_read_on": "2026-10-23",
+    "observed": "On the day of sign-up, Plan & limits showed 'Trial · 92 days remaining' with no payment method.",
+    "observed_on": "2026-10-23",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/typewise-review.html#claim-vs-measured"
+    },
+    "plan": "Trial, simulator only",
+    "comparability": "Same quantity: trial length shown on day one. The app gave more than the documentation says, so the difference is in the buyer's favour.",
+    "status": "contradicted",
+    "buying_consequence": "Our trial was longer than the documentation says; check the counter in your own account rather than the docs."
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the trial account from this test, we exported the six tickets created by our Simulator conversations with Typewise's own export and checked what the file contains. We did not re-import it.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": null,
+   "friction": {
+    "export_route": "All tickets > Export all gives an Excel file straight away.",
+    "format": "XLSX with one row per ticket and a summary; no conversation text.",
+    "reimport": "Not tested.",
+    "cancellation": "Not done; 'Terminate account' sits in the menu next to the plan."
+   },
+   "not_tested": [
+    "Exporting knowledge sources and settings",
+    "A PDF per ticket",
+    "Re-importing the export"
+   ],
+   "came_along": [
+    "One row per ticket (6 rows, 16 columns): ticket ID, title, AI summary, customer name and email, channel, priority, status, assignee, team, resolution status, language, CSAT score and comment, created and last activity"
+   ],
+   "lost": [
+    "The full conversation messages: the export has only the summary per ticket",
+    "The knowledge sources and settings"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://zerotouchsupport.com/typewise-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://zerotouchsupport.com/typewise-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": false,
+    "basis": "On the day of sign-up, Plan & limits showed 'Trial · 92 days remaining' with no payment method.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://zerotouchsupport.com/typewise-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://zerotouchsupport.com/typewise-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 23 October 2026, in the trial account from this test, we exported the six tickets created by our Simulator conversations with Typewise's own export and checked what the file contains. We did not re-import it. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://zerotouchsupport.com/typewise-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": true,
+    "basis": "All tickets > Export all gives an Excel file straight away.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://zerotouchsupport.com/typewise-review.html#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

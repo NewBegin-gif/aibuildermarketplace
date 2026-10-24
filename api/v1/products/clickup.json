@@ -533,13 +533,80 @@
   }
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
   "free_trial": "being_verified",
   "refund": "being_verified"
+ },
+ "measured": {
+  "tested_on": "2026-10-23",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/clickup-review/",
+  "claims": [],
+  "exit_test": {
+   "run_date": "2026-10-23",
+   "what": "On 23 October 2026, in the Free Forever workspace from this test, we exported the whole workspace with ClickUp's own export and checked whether our three imported test tasks came back with status and dates. We did not re-import the file.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "Dates come out as epoch values and as text with a time zone, set to 04:00 although our CSV held only a date. Attachments, comments and checklists sit as JSON-like text in a single column.",
+   "friction": {
+    "export_route": "Settings > Imports / Exports > Export items, choose a location, Start export; the CSV downloads directly in the page within seconds.",
+    "format": "CSV with 34 columns per task; attachments, comments and checklists as JSON-like text in a column.",
+    "reimport": "Not tested.",
+    "cancellation": "Not tested."
+   },
+   "not_tested": [
+    "Re-importing the export into a separate list",
+    "Exporting views (List or Table) and the limit on that in Free Forever",
+    "Attachments, comments and subtasks in the export"
+   ],
+   "came_along": [
+    "All tasks: 15 rows (the 12 sample tasks plus our 3) with 34 columns",
+    "Name, description, status, start and due date, and the list and location of each task",
+    "Columns for attachments, comments and checklists (empty for our tasks)"
+   ],
+   "lost": [
+    "Nothing we entered was missing for our three tasks"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/clickup-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/clickup-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/clickup-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/clickup-review/#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 23 October 2026, in the Free Forever workspace from this test, we exported the whole workspace with ClickUp's own export and checked whether our three imported test tasks came back with status and dates. We did not re-import the file. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/clickup-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": true,
+    "basis": "Settings > Imports / Exports > Export items, choose a location, Start export; the CSV downloads directly in the page within seconds.",
+    "observed_on": "2026-10-23",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/clickup-review/#exit-test"
+   }
+  }
  },
  "task_evidence": {
   "structured_checks": [],

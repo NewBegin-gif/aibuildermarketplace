@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 578 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-23.
+All 581 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-24.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -515,6 +515,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** marketing and PR teams, agencies and growing businesses that want to track mentions of their brand, competitors and campaigns across social media, news, blogs and Reddit, with AI sentiment analysis
 - **Full review:** https://aibuildermarketplace.com/b2b/brand24-review/
 
+## Brandify (brandify.io)
+- **Verified pricing:** (read 2026-10-24 on brandify.io/aeo/pricing/, brandify.io/brandify-reveal/pricing/, brandify.io/pricing/ and brandify.io/aeo/faq/) Brandify sells a service, not software you log in to and r…
+- **Honest take:** A managed agency service, not software: the fee buys a monthly work allowance, and AI mentions are not guaranteed.
+- **Best for:** US local and service businesses with one website that want an agency to handle Google Business Profile, directory citations, schema and new content for AI search, instead of buying a tracking tool and doing the work themselves
+- **Full review:** https://aibuildermarketplace.com/b2b/brandify-review/
+
 ## Brandye (brandye.com)
 - **Verified pricing:** (read 2026-10-02 on brandye.com/pricing and on apps.shopify.com/brandye-quiz-ai-recommendation) Every plan includes the product quiz, the AI shopping assistant and AI product questions; the…
 - **Honest take:** Read the free plan as a trial, not a tier. Its 100 quiz submissions and 100 chats are lifetime totals, not monthly, so a store with real traffic uses them up in days or weeks and then has to pay.
@@ -894,6 +900,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** entrepreneurs building or running a credit-repair business who need client management, dispute automation and done-for-you letter workflows
 - **Flags:** Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/credit-repair-cloud-review/
+
+## CrossLoop (crossloop.ai)
+- **Verified pricing:** (read 2026-10-24 on crossloop.ai/pricing, crossloop.ai/terms and crossloop.ai/refund-policy, both last updated 10 October 2026) No subscription: you buy one-time credit packs.
+- **Honest take:** One-time packs from $9, but the refund covers only the first purchase and films are deleted after 30 days.
+- **Best for:** founders and small SaaS, AI-tool and ecommerce teams who need a narrated launch or promo video for a product page or a Product Hunt or LinkedIn launch, without hiring an editor or paying for a monthly video subscription
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/crossloop-review/
 
 ## CrowdStrike (crowdstrike.com)
 - **Verified pricing:** (re-verified 2026-09-22 on crowdstrike.com/en-us/pricing/falcon-go/ from a Netherlands exit; all six amounts unchanged since 1 Aug 2026 and the page states 'All prices listed are in US Doll…
@@ -3547,6 +3560,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** local businesses that want to send review requests by SMS and email, watch their Google reviews and answer them from one dashboard, with up to five locations on one Premium plan
 - **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/truereview-review/
+
+## Try You (tryyou.fly.dev)
+- **Verified pricing:** (read 2026-10-24 on the Shopify App Store listing apps.shopify.com/tryyou, the vendor site tryyou.fly.dev, its terms and its privacy policy) Free to install with 10 free try-ons, then pay p…
+- **Honest take:** No monthly fee, but every successful try-on is billed, and shopper photos go to third-party AI models.
+- **Best for:** Shopify stores selling clothing, eyewear, bags, shoes or accessories that want shoppers to see the item on themselves, and prefer paying per use over a fixed monthly app fee
+- **Full review:** https://aibuildermarketplace.com/b2b/try-you-review/
 
 ## Turbotic (turbotic.com)
 - **Verified pricing:** (re-verified 2026-10-02, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with additional credits bought as needed.

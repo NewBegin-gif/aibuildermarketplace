@@ -71,10 +71,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-24; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -82,7 +81,194 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-24",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/goflow-review.html",
+  "method": [
+   "Imported two made-up products through Create Standard Products",
+   "Exported the products and re-imported an update by Item Number",
+   "Looked for a billing or plan page in the app"
+  ],
+  "claims": [
+   {
+    "claim": "free, forever",
+    "claim_source": "https://goflow.com/pricing",
+    "claim_read_on": "2026-10-24",
+    "observed": "No billing or checkout route was found in the app.",
+    "observed_on": "2026-10-24",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/goflow-review.html#claim-vs-measured"
+    },
+    "plan": "Core",
+    "comparability": "No cost rule exists. The dossier describes free Core; the session did not reach a checkout.",
+    "status": "not_testable",
+    "buying_consequence": "No checkout total could be verified.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-24",
+   "what": "Two products were imported and both CSV exports inspected.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": true,
+   "awkward": "Description line breaks became spaces during import. Prices display as dollars while the fixture uses EUR; the export has no currency or internal-ID column.",
+   "friction": {
+    "export_route": "Products list, download icon, Export Products.",
+    "format": "CSV.",
+    "reimport": "The supplementary Item Number update succeeded with two records and no duplicates. Only the second Description changed; its line break again became a space. Fixed native-ID reimport is not offered.",
+    "cancellation": "No billing or subscription page was found; cancellation was not tested."
+   },
+   "not_tested": [
+    "Custom fields were not created; separate tag and image import routes were not tested.",
+    "Checkout was not testable through the observed routes. User creation required an administrator-set password and was not performed.",
+    "The second internal ID and support Message-ID remain unknown."
+   ],
+   "came_along": [
+    "Both Item Numbers and Unicode names are retained; numeric prices are unchanged."
+   ],
+   "lost": [],
+   "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/goflow-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/goflow-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/goflow-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Two products were imported and both CSV exports inspected. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/goflow-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": true,
+    "basis": "Two products were imported and both CSV exports inspected. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/goflow-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-24",
+    "evidence_url": "https://officesoftwaremarketplace.com/goflow-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-24",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Goflow",
+    "product_id": "goflow",
+    "run_date": "2026-10-24",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 24 October 2026 on the free Core plan: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up products, exported them and updated them again by Item Number.",
+    "findings": [
+     "After sign-up Goflow opened on a setup checklist that can be skipped; we saw no card, call or integration requirement.",
+     "Products > Import Products (Create Standard Products) took our CSV with Item Number, Name, Description and Price and imported both products. Prices appeared in dollars although our test file used euros, and a line break in a description became a space.",
+     "Export Products from the products list gave a CSV with both Item Numbers, the Unicode names and unchanged numeric prices, but no currency or internal-ID column.",
+     "Re-importing by Item Number updated the two existing products without creating duplicates: only the second description changed, and its line break again became a space. A re-import by Goflow's own internal ID is not offered.",
+     "We found no billing, subscription or plan page in the app, so there was no checkout to compare with the free Core plan.",
+     "Adding a user under Users > New User asks the administrator to set that user's password; we did not create one."
+    ],
+    "not_tested": [
+     "The registration screens (Daan created the account)",
+     "Custom fields",
+     "Tag and image imports",
+     "Cancelling (no billing page found)"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "free, forever",
+      "claim_source": "https://goflow.com/pricing",
+      "claim_read_on": "2026-10-24",
+      "observed": "No billing or checkout route was found in the app.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/goflow-review.html#claim-vs-measured"
+      },
+      "plan": "Core",
+      "comparability": "No cost rule exists. The dossier describes free Core; the session did not reach a checkout.",
+      "status": "not_testable",
+      "buying_consequence": "No checkout total could be verified.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-24",
+     "what": "Two products were imported and both CSV exports inspected.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": true,
+     "awkward": "Description line breaks became spaces during import. Prices display as dollars while the fixture uses EUR; the export has no currency or internal-ID column.",
+     "friction": {
+      "export_route": "Products list, download icon, Export Products.",
+      "format": "CSV.",
+      "reimport": "The supplementary Item Number update succeeded with two records and no duplicates. Only the second Description changed; its line break again became a space. Fixed native-ID reimport is not offered.",
+      "cancellation": "No billing or subscription page was found; cancellation was not tested."
+     },
+     "not_tested": [
+      "Custom fields were not created; separate tag and image import routes were not tested.",
+      "Checkout was not testable through the observed routes. User creation required an administrator-set password and was not performed.",
+      "The second internal ID and support Message-ID remain unknown."
+     ],
+     "came_along": [
+      "Both Item Numbers and Unicode names are retained; numeric prices are unchanged."
+     ],
+     "lost": [],
+     "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "goflow:cancellation_terms",

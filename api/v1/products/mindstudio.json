@@ -36,7 +36,12 @@
   "notes": "(prices re-verified 2026-09-18 and again 2026-10-05 on mindstudio.ai/pricing) The subscription is a floor, not the bill: every tier reads “+ usage”, so model calls are charged on top. Free is $0/month plus usage and caps you at one agent and 1,000 runs a month. Individual is $20/month plus usage, or $16/month plus usage billed yearly, a stated 20% saving, and lifts both caps to unlimited agents and unlimited runs. Business is quote-based. Because the metered part is uncapped by the plan, the tier you pick says little about what you will actually pay — the run volume does.\n\nThe metered half is more governable than that makes it sound, and the page is specific about it. A run is one execution of an agent, triggered manually or automatically. MindStudio states it does not mark up model cost — its FAQ says you pay exactly the same price as bringing your own API keys from the providers — and that you can set per-agent and total spend limits and track run cost per agent. All tiers reach 200+ models through its Service Router without API keys of your own, with bring-your-own keys as an option, and hitting a run limit triggers a notification with the choice of upgrading or buying additional runs rather than a hard stop mid-month.",
   "verified_at": "2026-10-05",
   "source_url": null,
-  "schema_offer": null,
+  "schema_offer": {
+   "price": 20.0,
+   "currency": "USD",
+   "description": "Individual, per month, billed month-to-month. From our pricing notes: “Free is $0/month plus usage and caps you at one agent and 1,000 runs a month. Individual is $20/month plus usage, or $16/month plus usage billed yearly, a stated 20% saving, and lifts both caps to unlimited agents and…” Read on the vendor's own pricing page on 2026-10-24.",
+   "page": "https://officesoftwaremarketplace.com/mindstudio-review.html"
+  },
   "source_quotes": null
  },
  "free_plan": true,
@@ -487,6 +492,13 @@
   "tested_on": "2026-10-23",
   "tested_by": "Our team; actor, account and scope are documented in the review.",
   "review_url": "https://officesoftwaremarketplace.com/mindstudio-review.html",
+  "method": [
+   "Inspected the Free workspace, Service Router balance and payment screen",
+   "Used Generate Agent to build a record-and-date extraction workflow",
+   "Launched the four reference records in Preview > Run in Debugger",
+   "Inspected resolved variables, model calls and billing events in the debugger",
+   "Looked for agent export and examined the copy controls"
+  ],
   "claims": [
    {
     "claim": "\"1,000 runs / month\"",

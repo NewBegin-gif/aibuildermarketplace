@@ -462,6 +462,7 @@
      "tested_on",
      "tested_by",
      "review_url",
+     "method",
      "claims",
      "exit_test",
      "facts"
@@ -477,6 +478,14 @@
      "review_url": {
       "type": "string",
       "format": "uri"
+     },
+     "method": {
+      "type": "array",
+      "maxItems": 7,
+      "items": {
+       "type": "string"
+      },
+      "description": "Recorded actions from hands_on.methode; empty when no session steps were retained."
      },
      "claims": {
       "type": "array",

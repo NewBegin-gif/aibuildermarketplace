@@ -4012,6 +4012,81 @@
   },
   {
    "source": "session",
+   "product_name": "Deputy",
+   "product_id": "deputy",
+   "run_date": "2026-10-24",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 24 October 2026 during the Core plan trial, without a card, without sending invitations, publishing a schedule or connecting payroll: Daan created the account and our AI assistant ran the test in Daan's browser. We pasted two made-up team members (with a payroll ID and a base rate) into the bulk importer, exported the team data, and pasted the exported rows back with one changed name.",
+   "findings": [
+    "The bulk importer accepted both rows after we cleared a job title that did not exist yet ('Tester'): only existing job titles are allowed. 'Job Complete: 2 records imported successfully, 0 records failed', and both people showed as Employee, 'Not invited'. The importer's column order differs from the CSV template, so rows copied from the template land in the wrong columns; whether an uploaded file is matched by column name we did not test.",
+    "The base rates we pasted in (20 and 25) did not come through: they were empty in the export and no pay rate showed in People.",
+    "The team export is prepared in the background ('This can take up to 5 minutes'); ours was ready after about 20 seconds via the notification bell. The CSV had the same 29 columns as the import template, with both people, our payroll IDs and a Deputy ID each. Deputy had filled in a username, a stress profile (24/7) and gender 'Prefer not to say' on its own.",
+    "Pasting the exported rows back with their Deputy ID created no duplicates and applied the changed name. But 'Prefer not to say', the gender value from Deputy's own export, was flagged as invalid and had to be cleared first.",
+    "After setup, 'Now let's add your team members' had 'Send email invites' ticked by default; we skipped it. The template's sample rows set 'Send Invite' to Y and the role to System Administrator.",
+    "The trial bar said '31 days remaining of your Core Plan trial.' and no card was asked. Consent to sales and marketing calls is a line of text under the phone field; SMS marketing is a separate tick box, which we left off."
+   ],
+   "not_tested": [
+    "Scheduling and publishing a roster",
+    "Clocking in and timesheets",
+    "Payroll connections",
+    "What happens after 31 days",
+    "Deputy AI"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"Up to 31 days\"",
+     "claim_source": "https://www.deputy.com/",
+     "claim_read_on": "2026-10-23",
+     "observed": "On sign-up day the app showed '31 days remaining of your Core Plan trial.' No card was asked.",
+     "observed_on": "2026-10-24",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/deputy-review/#claim-vs-measured"
+     },
+     "plan": "Core Plan trial",
+     "comparability": "Same quantity: trial length on day one; the claim is an upper bound and we got the full 31 days.",
+     "status": "confirmed",
+     "buying_consequence": "A new account got the full 31-day trial of the Core plan without a card."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-24",
+    "what": "On 24 October 2026, in the trial account from this test, we exported our two imported test team members through 'Download your existing team member data', then pasted the exported rows back into the importer with their Deputy IDs and one changed preferred name.",
+    "first_import": "Re-importing with the Deputy ID created no duplicates: still 3 of 3 team members, and the changed name came through ('Beta Updated'). But the gender value 'Prefer not to say', which Deputy itself had put in the export, was flagged as invalid in the importer, and we had to clear it before both rows were accepted.",
+    "file_inspected": true,
+    "reimport_tested": true,
+    "awkward": "Deputy filled in a username, a stress profile (24/7) and gender 'Prefer not to say' on its own, and that gender value is then rejected on re-import. The export is prepared in the background ('This can take up to 5 minutes'); ours was ready after about 20 seconds via the notification bell.",
+    "friction": {
+     "export_route": "People > Add People > Bulk import and update > Update team members > Download; a notification says when it is ready ('can take up to 5 minutes').",
+     "format": "CSV or XLSX in the import format, including the Deputy ID; no schedules, hours or leave.",
+     "reimport": "Re-import on Deputy ID works without duplicates, but the gender value from Deputy's own export is rejected, and the base rates were already lost on the first import.",
+     "cancellation": "Not tested."
+    },
+    "not_tested": [
+     "The Deputy Data Exporter (a separate tool with a CSV per data source)",
+     "Exporting schedules, hours and leave",
+     "Uploading a file (we only pasted rows into the importer)",
+     "Pay rates set through 'Assign pay by area'"
+    ],
+    "came_along": [
+     "Both team members with name, email, location, role, our Payroll ID, hired date and a Deputy ID",
+     "29 columns, the same as the import template"
+    ],
+    "lost": [
+     "The base rates (20 and 25) we pasted in on the first import: empty in the export and no pay rate in People"
+    ],
+    "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Glide",
    "product_id": "glide",
    "run_date": "2026-09-07",

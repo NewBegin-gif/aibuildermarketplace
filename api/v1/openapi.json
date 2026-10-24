@@ -666,6 +666,277 @@
      }
     }
    },
+   "StatusPage": {
+    "type": [
+     "object",
+     "null"
+    ],
+    "additionalProperties": false,
+    "description": "Vendor self-reported history, separate from measured. Never an uptime percentage. Null means no fresh supported confirmed source. Feed-only data cannot establish 90-day incident totals or outage durations.",
+    "required": [
+     "source_url",
+     "source_urls",
+     "platform",
+     "period",
+     "read_at",
+     "claim",
+     "scope",
+     "incident_count",
+     "observed_count",
+     "counts_by_vendor_label",
+     "major_or_critical_count",
+     "observed_major_or_critical_count",
+     "duration_seconds",
+     "known_duration_seconds",
+     "duration_known_count",
+     "ongoing_count",
+     "incidents",
+     "coverage",
+     "note",
+     "availability"
+    ],
+    "properties": {
+     "source_url": {
+      "type": "string",
+      "format": "uri"
+     },
+     "source_urls": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "format": "uri"
+      }
+     },
+     "platform": {
+      "type": "string"
+     },
+     "read_at": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "claim": {
+      "type": [
+       "object",
+       "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+       "quote",
+       "source_url",
+       "read_on",
+       "plan"
+      ],
+      "properties": {
+       "quote": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+       },
+       "source_url": {
+        "type": "string",
+        "format": "uri"
+       },
+       "read_on": {
+        "type": "string",
+        "format": "date"
+       },
+       "plan": {
+        "type": "string",
+        "minLength": 1
+       }
+      }
+     },
+     "scope": {
+      "type": "string"
+     },
+     "period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "from",
+       "to",
+       "days"
+      ],
+      "properties": {
+       "from": {
+        "type": "string",
+        "format": "date-time"
+       },
+       "to": {
+        "type": "string",
+        "format": "date-time"
+       },
+       "days": {
+        "const": 90
+       }
+      }
+     },
+     "incident_count": {
+      "type": [
+       "integer",
+       "null"
+      ],
+      "minimum": 0
+     },
+     "observed_count": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "counts_by_vendor_label": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "integer",
+       "minimum": 0
+      }
+     },
+     "major_or_critical_count": {
+      "type": [
+       "integer",
+       "null"
+      ],
+      "minimum": 0
+     },
+     "observed_major_or_critical_count": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "duration_seconds": {
+      "type": [
+       "number",
+       "null"
+      ],
+      "minimum": 0
+     },
+     "known_duration_seconds": {
+      "type": [
+       "number",
+       "null"
+      ],
+      "minimum": 0
+     },
+     "duration_known_count": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "ongoing_count": {
+      "type": [
+       "integer",
+       "null"
+      ],
+      "minimum": 0
+     },
+     "coverage": {
+      "enum": [
+       "complete_90_days",
+       "feed_entries_only"
+      ]
+     },
+     "availability": {
+      "enum": [
+       "ok",
+       "tijdelijk_onbereikbaar",
+       "pagina_onbereikbaar"
+      ]
+     },
+     "note": {
+      "type": "string"
+     },
+     "incidents": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "source_url",
+        "label",
+        "title",
+        "started_at",
+        "published_at",
+        "resolved_at",
+        "ongoing",
+        "kind"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "source_url": {
+         "type": "string",
+         "format": "uri"
+        },
+        "label": {
+         "type": "string"
+        },
+        "title": {
+         "type": "string"
+        },
+        "started_at": {
+         "type": [
+          "string",
+          "null"
+         ],
+         "format": "date-time"
+        },
+        "published_at": {
+         "type": [
+          "string",
+          "null"
+         ],
+         "format": "date-time"
+        },
+        "resolved_at": {
+         "type": [
+          "string",
+          "null"
+         ],
+         "format": "date-time"
+        },
+        "ongoing": {
+         "type": [
+          "boolean",
+          "null"
+         ]
+        },
+        "kind": {
+         "enum": [
+          "incident",
+          "notice"
+         ]
+        }
+       }
+      }
+     }
+    },
+    "allOf": [
+     {
+      "if": {
+       "properties": {
+        "coverage": {
+         "const": "feed_entries_only"
+        }
+       }
+      },
+      "then": {
+       "properties": {
+        "incident_count": {
+         "type": "null"
+        },
+        "major_or_critical_count": {
+         "type": "null"
+        },
+        "duration_seconds": {
+         "type": "null"
+        },
+        "ongoing_count": {
+         "type": "null"
+        }
+       }
+      }
+     }
+    ]
+   },
    "Product": {
     "type": "object",
     "required": [
@@ -878,6 +1149,9 @@
         ]
        }
       }
+     },
+     "status_page": {
+      "$ref": "#/components/schemas/StatusPage"
      },
      "measured": {
       "$ref": "#/components/schemas/Measured"

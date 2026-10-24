@@ -513,7 +513,10 @@
      "counts",
      "first_sales_email_hours",
      "has_list_unsubscribe",
-     "uncertain"
+     "uncertain",
+     "after_cancel",
+     "after_deletion",
+     "after_unsubscribe"
     ],
     "properties": {
      "window_start": {
@@ -583,6 +586,580 @@
      "uncertain": {
       "type": "integer",
       "minimum": 0
+     },
+     "after_cancel": {
+      "oneOf": [
+       {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "status"
+        ],
+        "properties": {
+         "status": {
+          "const": "not_tested"
+         }
+        }
+       },
+       {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+         "window_start": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "window_end": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "observed_at": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "status": {
+          "enum": [
+           "complete",
+           "partial"
+          ]
+         },
+         "window_days": {
+          "const": 30,
+          "type": "integer"
+         },
+         "time_basis": {
+          "const": "event_date_midnight_Europe_Amsterdam"
+         },
+         "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+           "transactional",
+           "marketing",
+           "sales"
+          ],
+          "properties": {
+           "transactional": {
+            "type": "integer",
+            "minimum": 0
+           },
+           "marketing": {
+            "type": "integer",
+            "minimum": 0
+           },
+           "sales": {
+            "type": "integer",
+            "minimum": 0
+           }
+          }
+         },
+         "last_marketing_day": {
+          "type": [
+           "integer",
+           "null"
+          ],
+          "minimum": 0,
+          "maximum": 29
+         },
+         "uncertain": {
+          "type": "integer",
+          "minimum": 0
+         },
+         "has_list_unsubscribe": {
+          "type": "boolean"
+         }
+        },
+        "required": [
+         "window_start",
+         "window_end",
+         "observed_at",
+         "status",
+         "window_days",
+         "time_basis",
+         "counts",
+         "last_marketing_day",
+         "uncertain",
+         "has_list_unsubscribe"
+        ]
+       }
+      ]
+     },
+     "after_deletion": {
+      "oneOf": [
+       {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "status"
+        ],
+        "properties": {
+         "status": {
+          "const": "not_tested"
+         }
+        }
+       },
+       {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+         "window_start": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "window_end": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "observed_at": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "status": {
+          "enum": [
+           "complete",
+           "partial"
+          ]
+         },
+         "window_days": {
+          "const": 30,
+          "type": "integer"
+         },
+         "time_basis": {
+          "const": "event_date_midnight_Europe_Amsterdam"
+         },
+         "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+           "transactional",
+           "marketing",
+           "sales"
+          ],
+          "properties": {
+           "transactional": {
+            "type": "integer",
+            "minimum": 0
+           },
+           "marketing": {
+            "type": "integer",
+            "minimum": 0
+           },
+           "sales": {
+            "type": "integer",
+            "minimum": 0
+           }
+          }
+         },
+         "last_marketing_day": {
+          "type": [
+           "integer",
+           "null"
+          ],
+          "minimum": 0,
+          "maximum": 29
+         },
+         "uncertain": {
+          "type": "integer",
+          "minimum": 0
+         },
+         "has_list_unsubscribe": {
+          "type": "boolean"
+         }
+        },
+        "required": [
+         "window_start",
+         "window_end",
+         "observed_at",
+         "status",
+         "window_days",
+         "time_basis",
+         "counts",
+         "last_marketing_day",
+         "uncertain",
+         "has_list_unsubscribe"
+        ]
+       }
+      ]
+     },
+     "after_unsubscribe": {
+      "oneOf": [
+       {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "status"
+        ],
+        "properties": {
+         "status": {
+          "enum": [
+           "not_tested",
+           "indeterminate"
+          ]
+         }
+        }
+       },
+       {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+         "status": {
+          "enum": [
+           "waiting",
+           "partial",
+           "complete"
+          ]
+         },
+         "submitted_at": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "window_start": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "window_end": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "observed_at": {
+          "type": "string",
+          "format": "date-time"
+         },
+         "marketing": {
+          "type": "integer",
+          "minimum": 0
+         },
+         "uncertain": {
+          "type": "integer",
+          "minimum": 0
+         }
+        },
+        "required": [
+         "status",
+         "submitted_at",
+         "window_start",
+         "window_end",
+         "observed_at",
+         "marketing",
+         "uncertain"
+        ]
+       }
+      ]
+     }
+    }
+   },
+   "MeasuredInvites": {
+    "oneOf": [
+     {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "status",
+       "default_on",
+       "plus_accepted",
+       "invitee_can_unsubscribe",
+       "address_book_requested",
+       "workspace_requested"
+      ],
+      "properties": {
+       "status": {
+        "const": "not_tested"
+       },
+       "default_on": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "plus_accepted": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "invitee_can_unsubscribe": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "address_book_requested": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "workspace_requested": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       }
+      }
+     },
+     {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+       "window_start": {
+        "type": "string",
+        "format": "date-time"
+       },
+       "window_end": {
+        "type": "string",
+        "format": "date-time"
+       },
+       "observed_at": {
+        "type": "string",
+        "format": "date-time"
+       },
+       "status": {
+        "enum": [
+         "complete",
+         "partial"
+        ]
+       },
+       "default_on": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "plus_accepted": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "invitee_can_unsubscribe": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "address_book_requested": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "workspace_requested": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "window_days": {
+        "const": 14,
+        "type": "integer"
+       },
+       "time_basis": {
+        "const": "invite_date_midnight_Europe_Amsterdam"
+       },
+       "counts": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+         "invitations",
+         "reminders"
+        ],
+        "properties": {
+         "invitations": {
+          "type": "integer",
+          "minimum": 0
+         },
+         "reminders": {
+          "type": "integer",
+          "minimum": 0
+         }
+        }
+       },
+       "uncertain": {
+        "type": "integer",
+        "minimum": 0
+       },
+       "has_list_unsubscribe": {
+        "type": "boolean"
+       },
+       "has_one_click_header": {
+        "type": "boolean"
+       }
+      },
+      "required": [
+       "window_start",
+       "window_end",
+       "observed_at",
+       "status",
+       "default_on",
+       "plus_accepted",
+       "invitee_can_unsubscribe",
+       "address_book_requested",
+       "workspace_requested",
+       "window_days",
+       "time_basis",
+       "counts",
+       "uncertain",
+       "has_list_unsubscribe",
+       "has_one_click_header"
+      ]
+     },
+     {
+      "type": "null"
+     }
+    ]
+   },
+   "MeasuredEntryExit": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "signup",
+     "cancel"
+    ],
+    "properties": {
+     "signup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "screens",
+       "card_required",
+       "call_required",
+       "observed_on",
+       "evidence_url"
+      ],
+      "properties": {
+       "screens": {
+        "oneOf": [
+         {
+          "type": "integer",
+          "minimum": 0
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "card_required": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "call_required": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "observed_on": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "format": "date"
+       },
+       "evidence_url": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "format": "uri"
+       }
+      }
+     },
+     "cancel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "screens",
+       "call_required",
+       "observed_on",
+       "evidence_url"
+      ],
+      "properties": {
+       "screens": {
+        "oneOf": [
+         {
+          "type": "integer",
+          "minimum": 0
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "call_required": {
+        "oneOf": [
+         {
+          "type": "boolean"
+         },
+         {
+          "const": "not_tested"
+         }
+        ]
+       },
+       "observed_on": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "format": "date"
+       },
+       "evidence_url": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "format": "uri"
+       }
+      }
      }
     }
    },
@@ -598,7 +1175,9 @@
      "claims",
      "exit_test",
      "facts",
-     "inbox"
+     "inbox",
+     "invites",
+     "entry_exit"
     ],
     "properties": {
      "tested_on": {
@@ -628,6 +1207,12 @@
      },
      "inbox": {
       "$ref": "#/components/schemas/MeasuredInbox"
+     },
+     "invites": {
+      "$ref": "#/components/schemas/MeasuredInvites"
+     },
+     "entry_exit": {
+      "$ref": "#/components/schemas/MeasuredEntryExit"
      },
      "exit_test": {
       "$ref": "#/components/schemas/MeasuredExitTest"

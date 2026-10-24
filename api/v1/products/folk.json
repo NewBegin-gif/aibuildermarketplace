@@ -79,16 +79,415 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "member",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "monthly": 30,
+     "annual_year": 288,
+     "evidence": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $960 per member per year (re-verified 2026-09-03; every figure held)."
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "per_unit",
+     "monthly": 60,
+     "annual_year": 576,
+     "evidence": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $960 per member per year (re-verified 2026-09-03; every figure held)."
+    }
+   ],
+   "notes": [
+    "USD regular Standard and Premium subscriptions. Enterprise is a starting-from price, not a guaranteed per-seat tariff; omitted rather than returning its minimum as an exact estimate.",
+    "Live pricing source: https://www.folk.app/pricing (read 2026-10-24)."
+   ],
+   "rules_verified_at": "2026-10-24",
+   "not_computable": [
+    {
+     "text": "Enterprise starting prices and custom enrichment/message/AI limits are not calculated.",
+     "affects_cost": true
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "folk",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "member",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 24.0,
+       "premium": 48.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 48.0,
+      "billed": {
+       "amount": 576.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 48.0,
+       "premium": 96.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 72.0,
+      "billed": {
+       "amount": 864.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 72.0,
+       "premium": 144.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 1440.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 120.0,
+       "premium": 240.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 240.0,
+      "billed": {
+       "amount": 2880.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 240.0,
+       "premium": 480.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 360.0,
+      "billed": {
+       "amount": 4320.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 360.0,
+       "premium": 720.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 480.0,
+      "billed": {
+       "amount": 5760.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 480.0,
+       "premium": 960.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 7200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 600.0,
+       "premium": 1200.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 1200.0,
+      "billed": {
+       "amount": 14400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 1200.0,
+       "premium": 2400.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 2400.0,
+      "billed": {
+       "amount": 28800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 2400.0,
+       "premium": 4800.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Enterprise starting prices and custom enrichment/message/AI limits are not calculated."
+    ],
+    "measured": [
+     {
+      "claim": "\"No, we don't ask for your credit card during the trial.\" and \"2 weeks free trial\"",
+      "claim_source": "https://www.folk.app/pricing",
+      "claim_read_on": "2026-10-21",
+      "observed": "Sign-up and onboarding asked for no card; the last screen said 'Welcome to your 14-day free trial ... access to all our Premium features' and the app showed 'Premium trial (2 weeks left)'.",
+      "observed_on": "2026-10-23",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/folk-review.html#claim-vs-measured"
+      },
+      "plan": "Premium trial, no integrations",
+      "comparability": "Same quantity: trial length and card requirement at sign-up.",
+      "status": "confirmed",
+      "buying_consequence": "You can try folk for two weeks without a card, but the trial runs on Premium features, so Deals and other Premium features you test may not be in a cheaper plan.",
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/folk-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "folk",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "member",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 30.0,
+       "premium": 60.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 60.0,
+       "premium": 120.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 90.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 90.0,
+       "premium": 180.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 150.0,
+       "premium": 300.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 300.0,
+       "premium": 600.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 450.0,
+      "billed": {
+       "amount": 450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 450.0,
+       "premium": 900.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 600.0,
+       "premium": 1200.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 750.0,
+      "billed": {
+       "amount": 750.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 750.0,
+       "premium": 1500.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 1500.0,
+      "billed": {
+       "amount": 1500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 1500.0,
+       "premium": 3000.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 3000.0,
+      "billed": {
+       "amount": 3000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 3000.0,
+       "premium": 6000.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Enterprise starting prices and custom enrichment/message/AI limits are not calculated."
+    ],
+    "measured": [
+     {
+      "claim": "\"No, we don't ask for your credit card during the trial.\" and \"2 weeks free trial\"",
+      "claim_source": "https://www.folk.app/pricing",
+      "claim_read_on": "2026-10-21",
+      "observed": "Sign-up and onboarding asked for no card; the last screen said 'Welcome to your 14-day free trial ... access to all our Premium features' and the app showed 'Premium trial (2 weeks left)'.",
+      "observed_on": "2026-10-23",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/folk-review.html#claim-vs-measured"
+      },
+      "plan": "Premium trial, no integrations",
+      "comparability": "Same quantity: trial length and card requirement at sign-up.",
+      "status": "confirmed",
+      "buying_consequence": "You can try folk for two weeks without a card, but the trial runs on Premium features, so Deals and other Premium features you test may not be in a cheaper plan.",
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/folk-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -197,9 +596,9 @@
    "status": "open"
   },
   {
-   "question_id": "folk:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "folk:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Enterprise starting prices and custom enrichment/message/AI limits are not calculated. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

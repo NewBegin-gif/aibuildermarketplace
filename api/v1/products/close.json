@@ -86,16 +86,490 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "solo",
+     "name": "Solo",
+     "model": "per_unit",
+     "monthly": 19,
+     "annual_month": 9,
+     "max_units": 1,
+     "evidence": "Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed annually"
+    },
+    {
+     "id": "essentials",
+     "name": "Essentials",
+     "model": "per_unit",
+     "monthly": 49,
+     "annual_month": 35,
+     "evidence": "Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed annually"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "monthly": 109,
+     "annual_month": 99,
+     "evidence": "Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed annually"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "per_unit",
+     "monthly": 149,
+     "annual_month": 139,
+     "evidence": "Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed annually"
+    }
+   ],
+   "notes": [
+    "Base subscription only; Solo is limited to one user.",
+    "Live pricing source: https://close.com/pricing (read 2026-10-24)."
+   ],
+   "rules_verified_at": "2026-10-24",
+   "not_computable": [
+    {
+     "text": "Telephony, SMS, AI credit overages, Call Assistant and additional organisations are excluded. Temporary partner discounts are excluded.",
+     "affects_cost": true
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "close",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "solo",
+      "cheapest_plan_name": "Solo",
+      "total_month": 9.0,
+      "billed": {
+       "amount": 108.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": 9.0,
+       "essentials": 35.0,
+       "growth": 99.0,
+       "scale": 139.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 70.0,
+      "billed": {
+       "amount": 840.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 70.0,
+       "growth": 198.0,
+       "scale": 278.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 105.0,
+      "billed": {
+       "amount": 1260.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 105.0,
+       "growth": 297.0,
+       "scale": 417.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 175.0,
+      "billed": {
+       "amount": 2100.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 175.0,
+       "growth": 495.0,
+       "scale": 695.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 350.0,
+      "billed": {
+       "amount": 4200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 350.0,
+       "growth": 990.0,
+       "scale": 1390.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 525.0,
+      "billed": {
+       "amount": 6300.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 525.0,
+       "growth": 1485.0,
+       "scale": 2085.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 700.0,
+      "billed": {
+       "amount": 8400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 700.0,
+       "growth": 1980.0,
+       "scale": 2780.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 875.0,
+      "billed": {
+       "amount": 10500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 875.0,
+       "growth": 2475.0,
+       "scale": 3475.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 1750.0,
+      "billed": {
+       "amount": 21000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 1750.0,
+       "growth": 4950.0,
+       "scale": 6950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 3500.0,
+      "billed": {
+       "amount": 42000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 3500.0,
+       "growth": 9900.0,
+       "scale": 13900.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "solo",
+      "to_plan": "essentials",
+      "from_plan_name": "Solo",
+      "to_plan_name": "Essentials"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Telephony, SMS, AI credit overages, Call Assistant and additional organisations are excluded. Temporary partner discounts are excluded."
+    ],
+    "measured": [
+     {
+      "claim": "\"Try Close free for 14 Days\"",
+      "claim_source": "https://www.close.com/pricing",
+      "claim_read_on": "2026-10-23",
+      "observed": "On the day of sign-up the app showed 'Subscribe · 14d left'; no card was asked, but the trial only started after ticking consent to sales calls and texts.",
+      "observed_on": "2026-10-23",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/close-review.html#claim-vs-measured"
+      },
+      "plan": "Trial, no phone number or integrations",
+      "comparability": "Same quantity: trial length shown on day one.",
+      "status": "confirmed",
+      "buying_consequence": "You get 14 days without a card, but you must accept calls and texts from Close to your phone number to start.",
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/close-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "close",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "solo",
+      "cheapest_plan_name": "Solo",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": 19.0,
+       "essentials": 49.0,
+       "growth": 109.0,
+       "scale": 149.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 98.0,
+      "billed": {
+       "amount": 98.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 98.0,
+       "growth": 218.0,
+       "scale": 298.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 147.0,
+      "billed": {
+       "amount": 147.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 147.0,
+       "growth": 327.0,
+       "scale": 447.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 245.0,
+      "billed": {
+       "amount": 245.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 245.0,
+       "growth": 545.0,
+       "scale": 745.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 490.0,
+      "billed": {
+       "amount": 490.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 490.0,
+       "growth": 1090.0,
+       "scale": 1490.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 735.0,
+      "billed": {
+       "amount": 735.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 735.0,
+       "growth": 1635.0,
+       "scale": 2235.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 980.0,
+      "billed": {
+       "amount": 980.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 980.0,
+       "growth": 2180.0,
+       "scale": 2980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 1225.0,
+      "billed": {
+       "amount": 1225.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 1225.0,
+       "growth": 2725.0,
+       "scale": 3725.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 2450.0,
+      "billed": {
+       "amount": 2450.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 2450.0,
+       "growth": 5450.0,
+       "scale": 7450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 4900.0,
+      "billed": {
+       "amount": 4900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "solo": "not_eligible",
+       "essentials": 4900.0,
+       "growth": 10900.0,
+       "scale": 14900.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "solo",
+      "to_plan": "essentials",
+      "from_plan_name": "Solo",
+      "to_plan_name": "Essentials"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Telephony, SMS, AI credit overages, Call Assistant and additional organisations are excluded. Temporary partner discounts are excluded."
+    ],
+    "measured": [
+     {
+      "claim": "\"Try Close free for 14 Days\"",
+      "claim_source": "https://www.close.com/pricing",
+      "claim_read_on": "2026-10-23",
+      "observed": "On the day of sign-up the app showed 'Subscribe · 14d left'; no card was asked, but the trial only started after ticking consent to sales calls and texts.",
+      "observed_on": "2026-10-23",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/close-review.html#claim-vs-measured"
+      },
+      "plan": "Trial, no phone number or integrations",
+      "comparability": "Same quantity: trial length shown on day one.",
+      "status": "confirmed",
+      "buying_consequence": "You get 14 days without a card, but you must accept calls and texts from Close to your phone number to start.",
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/close-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -200,9 +674,9 @@
    "status": "open"
   },
   {
-   "question_id": "close:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "close:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Telephony, SMS, AI credit overages, Call Assistant and additional organisations are excluded. Temporary partner discounts are excluded. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

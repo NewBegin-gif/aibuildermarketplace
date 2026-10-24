@@ -107,15 +107,521 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users), $149 (Plus, up to 10) and $499 (Premium, unlimited)."
+    },
+    {
+     "id": "start",
+     "name": "Start",
+     "model": "flat",
+     "price_month": 49,
+     "billing": "unspecified",
+     "max_units": 5,
+     "evidence": "A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users), $149 (Plus, up to 10) and $499 (Premium, unlimited)."
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "flat",
+     "price_month": 149,
+     "billing": "unspecified",
+     "max_units": 10,
+     "evidence": "A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users), $149 (Plus, up to 10) and $499 (Premium, unlimited)."
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "flat",
+     "price_month": 499,
+     "billing": "unspecified",
+     "evidence": "A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users), $149 (Plus, up to 10) and $499 (Premium, unlimited)."
+    }
+   ],
+   "notes": [
+    "Flat subscription; billing commitment is not explicit in the captured price cards.",
+    "Live pricing source: https://www.bokun.io/pricing (read 2026-10-24)."
+   ],
+   "rules_verified_at": "2026-10-24",
+   "not_computable": [
+    {
+     "text": "Booking percentage fees and Channel Manager fees depend on booking value, channel and who pays the fee; not included in the subscription estimate.",
+     "affects_cost": true
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "bokun",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "start": 49.0,
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": 49.0,
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": 49.0,
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": 49.0,
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 149.0,
+      "billed": {
+       "amount": 149.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "start",
+      "from_plan_name": "Free",
+      "to_plan_name": "Start"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "start",
+      "to_plan": "plus",
+      "from_plan_name": "Start",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "plus",
+      "to_plan": "premium",
+      "from_plan_name": "Plus",
+      "to_plan_name": "Premium"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Booking percentage fees and Channel Manager fees depend on booking value, channel and who pays the fee; not included in the subscription estimate."
+    ],
+    "measured": [
+     {
+      "claim": "\"14 day free-trial\" and \"No credit card required\"",
+      "claim_source": "https://www.bokun.io/",
+      "claim_read_on": "2026-10-21",
+      "observed": "After sign-up we had to pick a paid plan to start the trial; the next screen asked for a card to bill after the trial ends on 6 November 2026 (14 days after 23 October), but 'I'll add card later' skipped it and the dashboard said '14 days left on your Bókun Start free trial'.",
+      "observed_on": "2026-10-23",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/bokun-review/#claim-vs-measured"
+      },
+      "plan": "Bókun Start trial, no channels connected",
+      "comparability": "Same quantity: trial length and card requirement at sign-up.",
+      "status": "confirmed",
+      "buying_consequence": "You can test without a card, but expect two card prompts and a plan choice ($49/$149/$499 per month plus a booking fee) before you reach the dashboard; what happens after 14 days without a card we did not see.",
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/bokun-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "bokun",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "start": 49.0,
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": 49.0,
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": 49.0,
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": 49.0,
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 149.0,
+      "billed": {
+       "amount": 149.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": 149.0,
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "start": "not_eligible",
+       "plus": "not_eligible",
+       "premium": 499.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "start",
+      "from_plan_name": "Free",
+      "to_plan_name": "Start"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "start",
+      "to_plan": "plus",
+      "from_plan_name": "Start",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "plus",
+      "to_plan": "premium",
+      "from_plan_name": "Plus",
+      "to_plan_name": "Premium"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Booking percentage fees and Channel Manager fees depend on booking value, channel and who pays the fee; not included in the subscription estimate."
+    ],
+    "measured": [
+     {
+      "claim": "\"14 day free-trial\" and \"No credit card required\"",
+      "claim_source": "https://www.bokun.io/",
+      "claim_read_on": "2026-10-21",
+      "observed": "After sign-up we had to pick a paid plan to start the trial; the next screen asked for a card to bill after the trial ends on 6 November 2026 (14 days after 23 October), but 'I'll add card later' skipped it and the dashboard said '14 days left on your Bókun Start free trial'.",
+      "observed_on": "2026-10-23",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/bokun-review/#claim-vs-measured"
+      },
+      "plan": "Bókun Start trial, no channels connected",
+      "comparability": "Same quantity: trial length and card requirement at sign-up.",
+      "status": "confirmed",
+      "buying_consequence": "You can test without a card, but expect two card prompts and a plan choice ($49/$149/$499 per month plus a booking fee) before you reach the dashboard; what happens after 14 days without a card we did not see.",
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/bokun-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -194,9 +700,9 @@
    "status": "open"
   },
   {
-   "question_id": "bokun:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "bokun:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Booking percentage fees and Channel Manager fees depend on booking value, channel and who pays the fee; not included in the subscription estimate. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

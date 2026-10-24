@@ -84,15 +84,374 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "annual_month": 250,
+     "max_units": 5,
+     "evidence": "the page says the entry-level plan includes 5 seats and starts at €250 per month, billed annually.",
+     "monthly_status": "unknown"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise starts at ten users and goes through a sales call,"
+    }
+   ],
+   "notes": [
+    "Only the explicitly published starting package of 5 users is priced. No current per-extra-user tariff was found; do not extrapolate the historical EUR50/user rate.",
+    "Live pricing source: https://oneflow.com/pricing/ (read 2026-10-24)."
+   ],
+   "rules_verified_at": "2026-10-24",
+   "not_computable": [
+    {
+     "text": "More than five Business users and paid eID/AI/integration add-ons require a quote.",
+     "affects_cost": true
+    }
+   ]
+  },
+  "growth": {
+   "annual": {
+    "product_id": "oneflow",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 3000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 250.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 3000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 250.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 3000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 250.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 3000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 250.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "More than five Business users and paid eID/AI/integration add-ons require a quote."
+    ],
+    "measured": [
+     {
+      "claim": "\"14 days with no charge\"",
+      "claim_source": "https://oneflow.com/uk/faqs-about-oneflow/",
+      "claim_read_on": "2026-10-23",
+      "observed": "On the day of sign-up the app showed 'Trial ends in 14 days. After this, your access will be limited to the free version of Oneflow.' No card was asked.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/oneflow-review/#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Same quantity: trial length shown on day one.",
+      "status": "confirmed",
+      "buying_consequence": "You get 14 days without a card; afterwards the account drops to the free version rather than closing.",
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/oneflow-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "oneflow",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "More than five Business users and paid eID/AI/integration add-ons require a quote."
+    ],
+    "measured": [
+     {
+      "claim": "\"14 days with no charge\"",
+      "claim_source": "https://oneflow.com/uk/faqs-about-oneflow/",
+      "claim_read_on": "2026-10-23",
+      "observed": "On the day of sign-up the app showed 'Trial ends in 14 days. After this, your access will be limited to the free version of Oneflow.' No card was asked.",
+      "observed_on": "2026-10-24",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/oneflow-review/#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Same quantity: trial length shown on day one.",
+      "status": "confirmed",
+      "buying_consequence": "You get 14 days without a card; afterwards the account drops to the free version rather than closing.",
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/oneflow-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -200,9 +559,15 @@
    "status": "open"
   },
   {
-   "question_id": "oneflow:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "oneflow:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "oneflow:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: More than five Business users and paid eID/AI/integration add-ons require a quote. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

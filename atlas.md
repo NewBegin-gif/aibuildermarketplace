@@ -2298,7 +2298,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/oneflow-review/
 
 ## Optery (optery.com)
-- **Verified pricing:** (read 2026-10-10 on optery.com/pricing, US view, USD, monthly and yearly figures) Optery sells personal data-broker removal in four tiers.
+- **Verified pricing:** (read 2026-10-10 on optery.com/pricing, US view, USD, monthly and yearly figures; re-read 2026-10-24 with a plain fetch: prices, the 17% yearly saving and the FALL2026 banner unchanged, sit…
 - **Honest take:** Core removes one name and one address only; variations and past cities need Extended.
 - **Best for:** people in the US who want their home address and phone number off people-search sites, from a free self-service scan up to a managed service with a human agent
 - **Flags:** Per-seat pricing

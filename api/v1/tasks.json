@@ -4847,6 +4847,78 @@
   },
   {
    "source": "session",
+   "product_name": "Campaign Monitor",
+   "product_id": "campaign-monitor",
+   "run_date": "2026-10-24",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 24 October 2026 during the free trial, without a card and without sending anything: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up subscribers with two custom columns into a new list, exported them, and imported that export into another new list.",
+   "findings": [
+    "The trial bar said 'You have 30 days remaining on your free trial', and the usage panel showed '0 out of 500 emails sent' and 'You can send up to a total of 500 emails, with a maximum of 100 emails per 24 hours. Your trial will expire on 23 Nov 2026.' No card was asked.",
+    "On import, email and name were matched automatically, but our own columns were set to 'Nothing, skip this field' by default ('Skipping will discard this information from your import'); we had to create a field for each before they came in. Both subscribers were then added as Active.",
+    "The export starts with only Name and Email address selected; custom fields, the dates and 'Permission to track' have to be added by hand. With all subscribers and all fields selected, the CSV downloaded straight away with name, email, both dates, our two fields and status. Every line ended with an extra empty column.",
+    "Custom fields belong to one list. Importing the export into a new list set our fields, the dates and the status to 'skip' again, so they have to be recreated per list, and the original join date and status were not carried over. One of our own fields did not come through on that re-import because we mapped it wrongly; that was our mistake, not the product's.",
+    "Upload takes CSV, TXT or XLS files of up to 50,000 subscribers at a time and states 'Explicit consent from subscribers is required'. A list 'My First List' with one subscriber already existed in the new account."
+   ],
+   "not_tested": [
+    "Building and sending email, and automations",
+    "Exporting templates",
+    "What happens after the 30 days",
+    "A sending domain and deliverability"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"500 email limit for the 30-day free trial\"",
+     "claim_source": "https://www.campaignmonitor.com/pricing/",
+     "claim_read_on": "2026-10-23",
+     "observed": "The app showed 'You have 30 days remaining on your free trial' and 'You can send up to a total of 500 emails, with a maximum of 100 emails per 24 hours. Your trial will expire on 23 Nov 2026.'",
+     "observed_on": "2026-10-24",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/campaign-monitor-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial, Single team",
+     "comparability": "Same quantities: trial length and email limit shown in the account.",
+     "status": "confirmed",
+     "buying_consequence": "You can test for 30 days without a card, but only 500 emails in total and at most 100 a day."
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-24",
+    "what": "On 24 October 2026, in the trial account from this test, we exported our two imported test subscribers with all subscribers and all fields selected, then imported that export into a new list.",
+    "first_import": "The re-import into a new list brought both subscribers back as Active. Name and email were matched automatically again, but our own fields, the dates and the status were set to 'skip' once more: custom fields belong to one list and have to be created again for each list, and the dates and status are not read in as such. One of our own fields did not come through because we mapped it wrongly; that was our mistake, not the product's. The subscriber page showed 'Found on 2 lists' and not the original join date.",
+    "file_inspected": true,
+    "reimport_tested": true,
+    "awkward": "The export starts with only Name and Email address selected; custom fields, dates and 'Permission to track' have to be added by hand. Every line ends with an extra empty column.",
+    "friction": {
+     "export_route": "List > menu > Export list; choose status, fields and format; direct download.",
+     "format": "CSV or tab-delimited text; by default only name and email, the rest selected by hand.",
+     "reimport": "Re-import per list; custom fields have to be created again for each list; join date and status are lost.",
+     "cancellation": "Not tested."
+    },
+    "not_tested": [
+     "Exporting templates and campaigns",
+     "The suppression list and unsubscribed subscribers in the export",
+     "Re-mapping our test ID field correctly on re-import (our mapping mistake)"
+    ],
+    "came_along": [
+     "Both subscribers, with name, email, our two custom fields and status, once all fields were selected",
+     "Date Joined and Date Status Changed, as columns in the export"
+    ],
+    "lost": [
+     "On re-import: the original join date and status (both subscribers came back as Active, dated today)"
+    ],
+    "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Pangram",
    "product_id": "pangram",
    "run_date": "2026-10-01",

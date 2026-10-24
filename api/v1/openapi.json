@@ -462,6 +462,130 @@
      }
     }
    },
+   "MeasuredCountFact": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "value",
+     "basis",
+     "observed_on",
+     "evidence_url"
+    ],
+    "properties": {
+     "value": {
+      "oneOf": [
+       {
+        "type": "integer",
+        "minimum": 0
+       },
+       {
+        "const": "not_tested"
+       }
+      ]
+     },
+     "basis": {
+      "type": "string"
+     },
+     "observed_on": {
+      "type": "string",
+      "format": "date"
+     },
+     "evidence_url": {
+      "type": "null",
+      "description": "Aggregate not rendered in the review in this round."
+     }
+    }
+   },
+   "MeasuredInbox": {
+    "type": [
+     "object",
+     "null"
+    ],
+    "additionalProperties": false,
+    "description": "Dated header-only observation of retained INBOX/junk messages. Counts exclude uncertain messages; signup hour is unknown.",
+    "required": [
+     "window_start",
+     "window_end",
+     "window_days",
+     "time_basis",
+     "status",
+     "observed_at",
+     "counts",
+     "first_sales_email_hours",
+     "has_list_unsubscribe",
+     "uncertain"
+    ],
+    "properties": {
+     "window_start": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "window_end": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "window_days": {
+      "const": 14,
+      "type": "integer"
+     },
+     "time_basis": {
+      "const": "signup_date_midnight_Europe_Amsterdam",
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "complete",
+       "partial"
+      ]
+     },
+     "observed_at": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "transactional",
+       "onboarding_tips",
+       "sales_upsell",
+       "personal_looking_sales"
+      ],
+      "properties": {
+       "transactional": {
+        "type": "integer",
+        "minimum": 0
+       },
+       "onboarding_tips": {
+        "type": "integer",
+        "minimum": 0
+       },
+       "sales_upsell": {
+        "type": "integer",
+        "minimum": 0
+       },
+       "personal_looking_sales": {
+        "type": "integer",
+        "minimum": 0
+       }
+      }
+     },
+     "first_sales_email_hours": {
+      "type": [
+       "number",
+       "null"
+      ],
+      "minimum": 0
+     },
+     "has_list_unsubscribe": {
+      "type": "boolean"
+     },
+     "uncertain": {
+      "type": "integer",
+      "minimum": 0
+     }
+    }
+   },
    "Measured": {
     "type": "object",
     "additionalProperties": false,
@@ -473,7 +597,8 @@
      "method",
      "claims",
      "exit_test",
-     "facts"
+     "facts",
+     "inbox"
     ],
     "properties": {
      "tested_on": {
@@ -501,6 +626,9 @@
        "$ref": "#/components/schemas/MeasuredClaim"
       }
      },
+     "inbox": {
+      "$ref": "#/components/schemas/MeasuredInbox"
+     },
      "exit_test": {
       "$ref": "#/components/schemas/MeasuredExitTest"
      },
@@ -512,7 +640,8 @@
        "trial_duration_confirmed",
        "export_file_inspected",
        "export_reimport_tested",
-       "export_direct_download"
+       "export_direct_download",
+       "marketing_emails_14d"
       ],
       "properties": {
        "trial_requires_card": {
@@ -529,6 +658,9 @@
        },
        "export_direct_download": {
         "$ref": "#/components/schemas/MeasuredFact"
+       },
+       "marketing_emails_14d": {
+        "$ref": "#/components/schemas/MeasuredCountFact"
        }
       }
      }

@@ -3607,10 +3607,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/uniqode-review/
 
 ## UniTel Voice (unitelvoice.com)
-- **Verified pricing:** (re-verified 2026-09-09 on unitelvoice.com/pricing) Three plans, no contracts: Solo $9.99/mo, Team $19.99/mo and Office $29.99/mo, each with one phone number and unlimited minutes.
+- **Verified pricing:** (re-verified 2026-10-24 on signup.unitelvoice.com/pick-plan, where unitelvoice.com/pricing now lands) Three plans, no contracts: Solo $9.99/mo, Team $19.99/mo and Office $29.99/mo, each wit…
 - **Honest take:** It's a virtual phone layer, not a full unified-comms suite — you won't find the deep team messaging, video meetings and contact-center features pricier platforms bundle.
 - **Best for:** solopreneurs and small teams that want a professional toll-free or local number, auto-attendant and call routing on their existing phones — no hardware
-- **Flags:** Per-seat pricing, Usage-metered, Annual commit
+- **Flags:** Per-seat pricing, Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/unitel-voice-review/
 
 ## Unleashed Software (unleashedsoftware.com)

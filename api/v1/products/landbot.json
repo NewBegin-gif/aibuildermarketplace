@@ -107,15 +107,456 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "seat",
+   "axis": "users",
+   "extra_evidence": "an extra seat is €25 a month",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free is €0 for 100 chats a month, one seat"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "annual_month": 32,
+     "monthly": 40,
+     "included_units": 2,
+     "extra_unit": {
+      "billing": "unspecified",
+      "price_month": 25
+     },
+     "evidence": "Starter is €32 a month billed annually or €40 paid monthly, with 500 chats, 100 AI chats and 2 seats"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "annual_month": 80,
+     "monthly": 100,
+     "included_units": 3,
+     "extra_unit": {
+      "billing": "unspecified",
+      "price_month": 25
+     },
+     "evidence": "Professional is €80 annually or €100 monthly, with 2,500 chats, 300 AI chats, 3 seats"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "quote",
+     "eligible_from": 5,
+     "evidence": "Business is priced by contract, from 5 seats"
+    }
+   ],
+   "notes": "Prices are before tax; annual billing is a 12-month commitment. Extra seats use the notes' 'an extra seat is €25 a month', without a stated billing term. Plans are also capped by chats a month (100 on Free, 500 on Starter, 2,500 on Professional).",
+   "not_computable": [
+    "Chats over the allowance: €0.05 each, billed in 500-chat packs of €25; extra AI chats €0.10 each. Depends on volume, not team size.",
+    "Professional WA (€160 annually or €200 monthly): the notes give no seat count for this tier."
+   ],
+   "rules_verified_at": "2026-10-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "landbot",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 32.0,
+       "professional": 80.0,
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 32.0,
+      "billed": {
+       "amount": 384.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 32.0,
+       "professional": 80.0,
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 684.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 57.0,
+       "professional": 80.0,
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 107.0,
+      "billed": {
+       "amount": 1284.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 107.0,
+       "professional": 130.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 232.0,
+      "billed": {
+       "amount": 2784.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 232.0,
+       "professional": 255.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 357.0,
+      "billed": {
+       "amount": 4284.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 357.0,
+       "professional": 380.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 482.0,
+      "billed": {
+       "amount": 5784.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 482.0,
+       "professional": 505.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 607.0,
+      "billed": {
+       "amount": 7284.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 607.0,
+       "professional": 630.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1232.0,
+      "billed": {
+       "amount": 14784.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 1232.0,
+       "professional": 1255.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2482.0,
+      "billed": {
+       "amount": 29784.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 2482.0,
+       "professional": 2505.0,
+       "business": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Chats over the allowance: €0.05 each, billed in 500-chat packs of €25; extra AI chats €0.10 each. Depends on volume, not team size.",
+     "Professional WA (€160 annually or €200 monthly): the notes give no seat count for this tier."
+    ]
+   },
+   "monthly": {
+    "product_id": "landbot",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 40.0,
+       "professional": 100.0,
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 40.0,
+       "professional": 100.0,
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 65.0,
+      "billed": {
+       "amount": 65.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 65.0,
+       "professional": 100.0,
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 115.0,
+      "billed": {
+       "amount": 115.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 115.0,
+       "professional": 150.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 240.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 240.0,
+       "professional": 275.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 365.0,
+      "billed": {
+       "amount": 365.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 365.0,
+       "professional": 400.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 490.0,
+      "billed": {
+       "amount": 490.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 490.0,
+       "professional": 525.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 615.0,
+      "billed": {
+       "amount": 615.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 615.0,
+       "professional": 650.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1240.0,
+      "billed": {
+       "amount": 1240.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 1240.0,
+       "professional": 1275.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2490.0,
+      "billed": {
+       "amount": 2490.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 2490.0,
+       "professional": 2525.0,
+       "business": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Chats over the allowance: €0.05 each, billed in 500-chat packs of €25; extra AI chats €0.10 each. Depends on volume, not team size.",
+     "Professional WA (€160 annually or €200 monthly): the notes give no seat count for this tier."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -145,9 +586,15 @@
    "status": "open"
   },
   {
-   "question_id": "landbot:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "landbot:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Chats over the allowance: €0.05 each, billed in 500-chat packs of €25; extra AI chats €0.10 each. Depends on volume, not team size. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "landbot:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Professional WA (€160 annually or €200 monthly): the notes give no seat count for this tier. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

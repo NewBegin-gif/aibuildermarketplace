@@ -114,15 +114,398 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 79,
+     "monthly": 95,
+     "evidence": "Pro is €79 per user a month billed annually or €95 monthly"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 109,
+     "monthly": 135,
+     "evidence": "Business is €109 annually or €135 monthly with 200 credits"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "annual_month": 189,
+     "monthly": 225,
+     "evidence": "Enterprise is €189 annually or €225 monthly with 2,000 credits"
+    }
+   ],
+   "notes": "Per user a month; prices as shown from the Netherlands in euros. Annual billing charges the discounted rate upfront for the whole year. Credits are pooled across users.",
+   "not_computable": [
+    "Extra credits for AI sourcing, enrichment, multiposting, LinkedIn/WhatsApp messaging and analytics can be bought; the notes give no credit price."
+   ],
+   "rules_verified_at": "2026-10-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "recruit-crm",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 79.0,
+       "business": 109.0,
+       "enterprise": 189.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 158.0,
+      "billed": {
+       "amount": 1896.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 158.0,
+       "business": 218.0,
+       "enterprise": 378.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 237.0,
+      "billed": {
+       "amount": 2844.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 237.0,
+       "business": 327.0,
+       "enterprise": 567.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 395.0,
+      "billed": {
+       "amount": 4740.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 395.0,
+       "business": 545.0,
+       "enterprise": 945.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 790.0,
+      "billed": {
+       "amount": 9480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 790.0,
+       "business": 1090.0,
+       "enterprise": 1890.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1185.0,
+      "billed": {
+       "amount": 14220.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1185.0,
+       "business": 1635.0,
+       "enterprise": 2835.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1580.0,
+      "billed": {
+       "amount": 18960.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1580.0,
+       "business": 2180.0,
+       "enterprise": 3780.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1975.0,
+      "billed": {
+       "amount": 23700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1975.0,
+       "business": 2725.0,
+       "enterprise": 4725.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 3950.0,
+      "billed": {
+       "amount": 47400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 3950.0,
+       "business": 5450.0,
+       "enterprise": 9450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 7900.0,
+      "billed": {
+       "amount": 94800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 7900.0,
+       "business": 10900.0,
+       "enterprise": 18900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Extra credits for AI sourcing, enrichment, multiposting, LinkedIn/WhatsApp messaging and analytics can be bought; the notes give no credit price."
+    ]
+   },
+   "monthly": {
+    "product_id": "recruit-crm",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 95.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 95.0,
+       "business": 135.0,
+       "enterprise": 225.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 190.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 190.0,
+       "business": 270.0,
+       "enterprise": 450.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 285.0,
+      "billed": {
+       "amount": 285.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 285.0,
+       "business": 405.0,
+       "enterprise": 675.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 475.0,
+      "billed": {
+       "amount": 475.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 475.0,
+       "business": 675.0,
+       "enterprise": 1125.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 950.0,
+      "billed": {
+       "amount": 950.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 950.0,
+       "business": 1350.0,
+       "enterprise": 2250.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1425.0,
+      "billed": {
+       "amount": 1425.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1425.0,
+       "business": 2025.0,
+       "enterprise": 3375.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1900.0,
+      "billed": {
+       "amount": 1900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1900.0,
+       "business": 2700.0,
+       "enterprise": 4500.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 2375.0,
+      "billed": {
+       "amount": 2375.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 2375.0,
+       "business": 3375.0,
+       "enterprise": 5625.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 4750.0,
+      "billed": {
+       "amount": 4750.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 4750.0,
+       "business": 6750.0,
+       "enterprise": 11250.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 9500.0,
+      "billed": {
+       "amount": 9500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 9500.0,
+       "business": 13500.0,
+       "enterprise": 22500.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Extra credits for AI sourcing, enrichment, multiposting, LinkedIn/WhatsApp messaging and analytics can be bought; the notes give no credit price."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -152,9 +535,9 @@
    "status": "open"
   },
   {
-   "question_id": "recruit-crm:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "recruit-crm:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Extra credits for AI sourcing, enrichment, multiposting, LinkedIn/WhatsApp messaging and analytics can be bought; the notes give no credit price. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

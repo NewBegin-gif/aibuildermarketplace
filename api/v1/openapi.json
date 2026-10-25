@@ -1337,10 +1337,244 @@
      }
     }
    },
+   "MeasuredRoles": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "plan",
+     "route",
+     "quote",
+     "evidence",
+     "status",
+     "role_names",
+     "viewer_roles"
+    ],
+    "properties": {
+     "plan": {
+      "type": "string",
+      "pattern": "\\S"
+     },
+     "route": {
+      "type": "string",
+      "pattern": "\\S"
+     },
+     "quote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "text",
+       "source_url",
+       "observed_at"
+      ],
+      "properties": {
+       "text": {
+        "type": "string",
+        "pattern": "\\S"
+       },
+       "source_url": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https?://[^/\\s?#]+(?:[^\\s]*)$"
+       },
+       "observed_at": {
+        "type": "string",
+        "format": "date-time"
+       }
+      }
+     },
+     "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "pattern": "^bewijs/[a-zA-Z0-9_.-]+\\.(jpg|png|webp)$"
+      }
+     },
+     "status": {
+      "enum": [
+       "free_viewer_documented",
+       "viewer_costs_seat",
+       "viewer_exists_cost_unknown",
+       "no_viewer_role"
+      ]
+     },
+     "role_names": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "pattern": "\\S"
+      }
+     },
+     "viewer_roles": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "pattern": "\\S"
+      }
+     },
+     "default_role": {
+      "type": "string",
+      "pattern": "\\S"
+     }
+    }
+   },
+   "MeasuredApiAccess": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "plan",
+     "route",
+     "quote",
+     "evidence",
+     "status"
+    ],
+    "properties": {
+     "plan": {
+      "type": "string",
+      "pattern": "\\S"
+     },
+     "route": {
+      "type": "string",
+      "pattern": "\\S"
+     },
+     "quote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "text",
+       "source_url",
+       "observed_at"
+      ],
+      "properties": {
+       "text": {
+        "type": "string",
+        "pattern": "\\S"
+       },
+       "source_url": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https?://[^/\\s?#]+(?:[^\\s]*)$"
+       },
+       "observed_at": {
+        "type": "string",
+        "format": "date-time"
+       }
+      }
+     },
+     "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "pattern": "^bewijs/[a-zA-Z0-9_.-]+\\.(jpg|png|webp)$"
+      }
+     },
+     "status": {
+      "enum": [
+       "available_on_tested_plan",
+       "gated",
+       "not_found_in_ui"
+      ]
+     },
+     "gated_plan": {
+      "type": "string",
+      "pattern": "\\S"
+     }
+    },
+    "allOf": [
+     {
+      "if": {
+       "properties": {
+        "status": {
+         "const": "gated"
+        }
+       }
+      },
+      "then": {
+       "required": [
+        "gated_plan"
+       ]
+      },
+      "else": {
+       "not": {
+        "required": [
+         "gated_plan"
+        ]
+       }
+      }
+     }
+    ]
+   },
+   "MeasuredDowngrade": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "plan",
+     "route",
+     "quote",
+     "evidence",
+     "status"
+    ],
+    "properties": {
+     "plan": {
+      "type": "string",
+      "pattern": "\\S"
+     },
+     "route": {
+      "type": "string",
+      "pattern": "\\S"
+     },
+     "quote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "text",
+       "source_url",
+       "observed_at"
+      ],
+      "properties": {
+       "text": {
+        "type": "string",
+        "pattern": "\\S"
+       },
+       "source_url": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https?://[^/\\s?#]+(?:[^\\s]*)$"
+       },
+       "observed_at": {
+        "type": "string",
+        "format": "date-time"
+       }
+      }
+     },
+     "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+       "type": "string",
+       "pattern": "^bewijs/[a-zA-Z0-9_.-]+\\.(jpg|png|webp)$"
+      }
+     },
+     "status": {
+      "enum": [
+       "self_service",
+       "contact_required",
+       "not_offered"
+      ]
+     }
+    }
+   },
    "Measured": {
     "type": "object",
     "additionalProperties": false,
-    "description": "Own hands-on session from handson/<map>/meetlog.json; absent without a matching log. tested_on is the original session date, not the rebuild date; claims and exit tests carry their own observation dates. Unknown facts are not_tested, never inferred from absence. tested_by identifies our team; the actor, account type and blocked/limited attempts are in the review.",
+    "description": "Own hands-on session from handson/<map>/meetlog.json; absent without a matching log. roles/api_access/downgrade are omitted when unknown; API availability is a UI observation, not a key or call test. tested_on is the original session date, not the rebuild date; claims and exit tests carry their own observation dates. Unknown facts are not_tested, never inferred from absence. tested_by identifies our team; the actor, account type and blocked/limited attempts are in the review.",
     "required": [
      "tested_on",
      "tested_by",
@@ -1395,6 +1629,15 @@
      },
      "onboarding": {
       "$ref": "#/components/schemas/MeasuredOnboarding"
+     },
+     "roles": {
+      "$ref": "#/components/schemas/MeasuredRoles"
+     },
+     "api_access": {
+      "$ref": "#/components/schemas/MeasuredApiAccess"
+     },
+     "downgrade": {
+      "$ref": "#/components/schemas/MeasuredDowngrade"
      },
      "exit_test": {
       "$ref": "#/components/schemas/MeasuredExitTest"

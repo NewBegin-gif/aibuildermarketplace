@@ -96,10 +96,9 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-25; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -107,7 +106,218 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": {
+   "sent_at": "2026-10-25T08:45:00Z",
+   "window_days": 7,
+   "observed_at": "2026-10-25T08:47:00Z",
+   "status": "partial",
+   "channel": "chat",
+   "first_reply_hours": 0,
+   "first_human_reply_hours": null,
+   "answered": "partly",
+   "answered_by": "Claude",
+   "plan": "Flexible 3-day trial",
+   "trial": true,
+   "comparison": {
+    "status": "not_comparable",
+    "reason": "No literal claim with exact plan and trial scope recorded."
+   },
+   "method": "One support message containing three fixed questions, by email, by the supplier's support ticket form, or, when the supplier publishes no email address, by in-app chat with manually recorded times; one measurement is one measurement, not an estimate of typical support speed. Seven elapsed days; whole hours, half up. Human means rule-based signals, not proof of authorship. Uncertain replies remain unclear. For email, only messages still present in INBOX/junk at collection time are covered."
+  },
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-25",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/cloudways-review.html",
+  "method": [
+   "Launched a DigitalOcean server with WordPress on the Flexible trial",
+   "Imported two made-up rows into a separate table in Database Manager",
+   "Exported that table as SQL and ran an update on the native key",
+   "Opened the upgrade card form and stopped before entering a card",
+   "Asked the AI support chat our three fixed questions"
+  ],
+  "claims": [
+   {
+    "claim": "$0 ($54.00) Monthly",
+    "claim_source": "https://unified.cloudways.com/product/flexible",
+    "claim_read_on": "2026-10-25",
+    "observed": "A card form appears before the final summary. The product screen shows $54.00/month and $0.0804/hour. Final amount including VAT: not_testable. No card entered or payment made.",
+    "observed_on": "2026-10-25",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/cloudways-review.html#claim-vs-measured"
+    },
+    "plan": "Flexible DigitalOcean Premium 4GB, New York; trial, upgrade card form",
+    "comparability": "The current cost rules contain no Cloudways rule. The dossier matches the same DigitalOcean Premium variant; a final amount including taxes cannot be compared before card entry.",
+    "status": "not_testable",
+    "buying_consequence": "Check the final tax-inclusive total before upgrading. The verification charge is stated to be reversed; no charge or reversal was tested.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-25",
+   "what": "Two isolated test rows were exported as SQL and checked against the kit.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": true,
+   "awkward": "The attachment column contains a path only; this table mapping offers no binary attachment export. No full application backup was tested.",
+   "friction": {
+    "export_route": "Launch Database Manager, select only the test table and export SQL structure and data.",
+    "format": "SQL with separate native and external IDs; empty string is distinct from NULL; boolean stored as tinyint.",
+    "reimport": "Successful converted SQL UPDATE on the native key; not a UI update-import. Only the second record text changed; no duplicate rows. A full restore into an empty context was not documented.",
+    "cancellation": "Cancellation and deletion were not performed; the account owner must handle them."
+   },
+   "not_tested": [
+    "Signup screen count and active setup time.",
+    "Binary media, full application backup and a complete restore into a separate empty context.",
+    "Human support response and the official DPA.",
+    "Invitations, cancellation, deletion and passive email observation."
+   ],
+   "came_along": [
+    "Text, Unicode, dates, exact decimal amounts and EUR currency were preserved.",
+    "The delimiter-encoded tags retain both kit values in a single text column; native tag objects were not tested.",
+    "Native IDs from the first export were preserved after the SQL update."
+   ],
+   "lost": [],
+   "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/cloudways-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-25",
+    "evidence_url": "https://officesoftwaremarketplace.com/cloudways-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-25",
+    "evidence_url": "https://officesoftwaremarketplace.com/cloudways-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Two isolated test rows were exported as SQL and checked against the kit. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-25",
+    "evidence_url": "https://officesoftwaremarketplace.com/cloudways-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": true,
+    "basis": "Two isolated test rows were exported as SQL and checked against the kit. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-25",
+    "evidence_url": "https://officesoftwaremarketplace.com/cloudways-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-25",
+    "evidence_url": "https://officesoftwaremarketplace.com/cloudways-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-25",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Cloudways",
+    "product_id": "cloudways",
+    "run_date": "2026-10-25",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 25 October 2026 on the 3-day Flexible trial: Daan created and verified the account and our AI assistant ran the test in Daan's browser. We launched a DigitalOcean server with WordPress, imported two made-up rows into a separate database table, exported them as SQL and updated one of them.",
+    "findings": [
+     "The Flexible trial needed no card before launch. The setup screen showed DigitalOcean Premium 4GB at $54.00 a month ($0.0804 an hour) and $0 during the trial, with billing starting only when the account is upgraded. The server took about nine minutes to provision.",
+     "In Database Manager we imported our test rows into a table of their own (4 successful queries). Text, Unicode, dates, exact decimal amounts, a true/false field (stored as tinyint) and an empty value kept apart from NULL all came through; the attachment column holds only a file path.",
+     "Exporting just that table as SQL returned both rows with their native IDs 1 and 2 next to our own IDs. We then ran an SQL UPDATE on the native key (2 successful queries): only the second row's text changed and no duplicates appeared. This is a database update, not an import screen in the app.",
+     "Adding a payment method to upgrade opens the card form before any final plan total. The form mentions a $1 verification that is reversed after authorization, and the page said 'Taxes Do not Apply to your current invoice based on your account information.' We entered no card.",
+     "Our three support questions in the chat were answered within seconds by Cloudways' AI agent: it described a full application backup you can download over SFTP, said Copilot may share server and application logs with OpenAI-based models, and passed the DPA question to a human agent. We saw no human reply in that session."
+    ],
+    "not_tested": [
+     "A full application backup or a restore into an empty server",
+     "Uploading media or other binary files",
+     "Inviting a colleague",
+     "Cancelling or deleting the server and account"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "$0 ($54.00) Monthly",
+      "claim_source": "https://unified.cloudways.com/product/flexible",
+      "claim_read_on": "2026-10-25",
+      "observed": "A card form appears before the final summary. The product screen shows $54.00/month and $0.0804/hour. Final amount including VAT: not_testable. No card entered or payment made.",
+      "observed_on": "2026-10-25",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/cloudways-review.html#claim-vs-measured"
+      },
+      "plan": "Flexible DigitalOcean Premium 4GB, New York; trial, upgrade card form",
+      "comparability": "The current cost rules contain no Cloudways rule. The dossier matches the same DigitalOcean Premium variant; a final amount including taxes cannot be compared before card entry.",
+      "status": "not_testable",
+      "buying_consequence": "Check the final tax-inclusive total before upgrading. The verification charge is stated to be reversed; no charge or reversal was tested.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-25",
+     "what": "Two isolated test rows were exported as SQL and checked against the kit.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": true,
+     "awkward": "The attachment column contains a path only; this table mapping offers no binary attachment export. No full application backup was tested.",
+     "friction": {
+      "export_route": "Launch Database Manager, select only the test table and export SQL structure and data.",
+      "format": "SQL with separate native and external IDs; empty string is distinct from NULL; boolean stored as tinyint.",
+      "reimport": "Successful converted SQL UPDATE on the native key; not a UI update-import. Only the second record text changed; no duplicate rows. A full restore into an empty context was not documented.",
+      "cancellation": "Cancellation and deletion were not performed; the account owner must handle them."
+     },
+     "not_tested": [
+      "Signup screen count and active setup time.",
+      "Binary media, full application backup and a complete restore into a separate empty context.",
+      "Human support response and the official DPA.",
+      "Invitations, cancellation, deletion and passive email observation."
+     ],
+     "came_along": [
+      "Text, Unicode, dates, exact decimal amounts and EUR currency were preserved.",
+      "The delimiter-encoded tags retain both kit values in a single text column; native tag objects were not tested.",
+      "Native IDs from the first export were preserved after the SQL update."
+     ],
+     "lost": [],
+     "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "cloudways:cancellation_terms",

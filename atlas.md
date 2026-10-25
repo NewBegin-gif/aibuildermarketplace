@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 581 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-25.
+All 586 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-25.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1424,6 +1424,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/freshworks-review/
 
+## Froonze (froonze.com)
+- **Verified pricing:** (read 2026-10-25 on the Shopify App Store listing apps.shopify.com/customer-accounts and on froonze.com/pricing, where we stepped through every plan in the price simulator) Froonze is one a…
+- **Honest take:** Each plugin is billed separately by order volume, and the 14-day trial is spent once for the whole app.
+- **Best for:** Shopify stores that want loyalty points, VIP tiers, referrals and a wishlist with restock and price-drop alerts from one vendor, paying only for the modules they use
+- **Full review:** https://aibuildermarketplace.com/b2b/froonze-review/
+
 ## FullEnrich (fullenrich.com)
 - **Verified pricing:** (price re-verified 2026-09-23 against the vendor's own pricing page and its machine-readable pricing file fullenrich.com/pricing.md, which declares USD) Credit-based, and credits are spent …
 - **Honest take:** The pay-on-success model is refreshingly honest, but note the 10x: phone numbers eat credits ten times faster than emails, so a calling-heavy motion consumes budget quickly — model your email/phone mix.
@@ -1908,6 +1914,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants on a standard plan who need wholesale prices for named customer groups, with CSV price lists and a registration form that someone approves
 - **Full review:** https://aibuildermarketplace.com/b2b/kumo-review/
 
+## Landbot (landbot.io)
+- **Verified pricing:** (read 2026-10-25 on landbot.io/pricing with both the Annual and the Monthly toggle clicked, and in Landbot's billing FAQ at help.landbot.io) Free is €0 for 100 chats a month, one seat, the …
+- **Honest take:** Free plan has no AI chats, and AI conversations are metered separately at €0.10 each beyond the allowance.
+- **Best for:** marketing, sales and support teams that want a visual, no-code chatbot for lead capture or first-line answers on their website or WhatsApp, and want to start free and pay a fixed monthly base with published overage prices
+- **Flags:** Usage-metered, Annual commit, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/landbot-review/
+
 ## Landingi (landingi.com)
 - **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28; the English page quotes USD while the same page served from a Dutch address quotes euros at the same numerals, so check your own currency) F…
 - **Honest take:** You trade away the high-end optimisation: no AI traffic routing like Unbounce's Smart Traffic, no real-time collaboration, and thinner technical control (script containers).
@@ -2191,6 +2204,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** companies of up to 300 employees that want self-serve travel booking with built-in policy control, free on Navan Business, and optionally unified expense management on top
 - **Flags:** Per-seat pricing, Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/navan-review/
+
+## Netart (netart.com)
+- **Verified pricing:** (read 2026-10-25 on netart.com/us/pricing/pricing-cloudhosting/ and on netart.com/us/hosting/) Netart sells a broad range of cloud services; this review covers CloudHosting, its main web ho…
+- **Honest take:** The cheap first term is a promotion; renewals are at the standard price, and backup costs extra.
+- **Best for:** businesses and developers who want managed cloud hosting with a built-in CDN, PHP and Node.js, MariaDB, PostgreSQL, MongoDB and Redis on one platform, room to grow storage to 10 TB, and 24/7 support
+- **Flags:** Add-ons extra, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/netart-review/
 
 ## NeuroAds (neuroadsinc.com)
 - **Verified pricing:** (read 2026-08-19 and re-verified unchanged 2026-10-09 on apps.shopify.com/neuroads-chatbot) Four tiers, priced by conversations per month.
@@ -2697,6 +2717,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Google Calendar teams that want AI to auto-schedule tasks, habits and meetings around their priorities
 - **Flags:** Per-seat pricing, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/reclaim-ai-review/
+
+## Recruit CRM (recruitcrm.io)
+- **Verified pricing:** (read 2026-10-25 on recruitcrm.io/pricing/ with both the Annually and the Monthly toggle clicked, from the Netherlands, where the page shows euros; and in the Recruit CRM help centre) Pro i…
+- **Honest take:** Seats are only part of the bill: outreach features run on credits, and unused annual time is not refunded.
+- **Best for:** recruitment and staffing agencies that want an applicant tracking system and a client CRM in one place, with a Chrome sourcing extension, a hiring manager portal and, on Business, multichannel outreach and an API
+- **Flags:** Per-seat pricing, Usage-metered, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/recruit-crm-review/
 
 ## Redeemly (redeemly.ai)
 - **Verified pricing:** (read 2026-10-15 on Redeemly's pricing article in its help centre, the Shopify App Store listing apps.shopify.com/cashback-redeemly and redeemly.ai; prices in USD) Redeemly has one product …
@@ -3716,6 +3743,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores that want branded PDF invoices, packing slips and refunds emailed automatically with each order, including B2B and multi-language invoices
 - **Flags:** Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/vify-order-printer-review/
+
+## Visibility Mesh (visibilitymesh.com)
+- **Verified pricing:** (read 2026-10-25 on the Shopify App Store listing apps.shopify.com/visibility-mesh and on the vendor's app page at visibilitymesh.com/pages/shopify-app) Three plans, billed in USD through S…
+- **Honest take:** Only the $179 Growth plan applies fixes for you, and the vendor promises no rankings or traffic.
+- **Best for:** Shopify store owners who want a concrete list of what to change so AI assistants and search engines can read their products, collections and pages, and who will act on it themselves or through a developer
+- **Full review:** https://aibuildermarketplace.com/b2b/visibility-mesh-review/
 
 ## Vista Social (vistasocial.com)
 - **Verified pricing:** (price re-verified 2026-09-25 against the vendor's own pricing page; every list price rose after the 23 Sep 2026 reading) (2026) Professional $99/mo ($950/yr, shown as $80/mo on yearly bill…

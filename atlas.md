@@ -26,7 +26,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/800-com-review/
 
 ## accessiBe (accessibe.com)
-- **Verified pricing:** (2026-09-10, read on their own pricing page) Four tiers for accessWidget, priced per monthly website visits, with both a monthly and a yearly rate on every tier: Micro $59/month or $490/yea…
+- **Verified pricing:** (re-read 2026-10-25 on accessibe.com/pricing/accesswidget; first read 2026-09-10) Four tiers for accessWidget, priced per monthly website visits, with both a monthly and a yearly rate on ev…
 - **Honest take:** In January 2025 the FTC ordered accessiBe to pay $1 million to settle allegations that it misrepresented what accessWidget does, including that its AI plug-in could make any website WCAG-compliant.
 - **Best for:** small and medium sites on ordinary CMS templates whose owners want a visible, cheap first step — contrast, text sizing, keyboard hints and an accessibility statement
 - **Full review:** https://aibuildermarketplace.com/b2b/accessibe-review/

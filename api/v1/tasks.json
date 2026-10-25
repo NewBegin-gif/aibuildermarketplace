@@ -4150,6 +4150,80 @@
   },
   {
    "source": "session",
+   "product_name": "Cloudways",
+   "product_id": "cloudways",
+   "run_date": "2026-10-25",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 25 October 2026 on the 3-day Flexible trial: Daan created and verified the account and our AI assistant ran the test in Daan's browser. We launched a DigitalOcean server with WordPress, imported two made-up rows into a separate database table, exported them as SQL and updated one of them.",
+   "findings": [
+    "The Flexible trial needed no card before launch. The setup screen showed DigitalOcean Premium 4GB at $54.00 a month ($0.0804 an hour) and $0 during the trial, with billing starting only when the account is upgraded. The server took about nine minutes to provision.",
+    "In Database Manager we imported our test rows into a table of their own (4 successful queries). Text, Unicode, dates, exact decimal amounts, a true/false field (stored as tinyint) and an empty value kept apart from NULL all came through; the attachment column holds only a file path.",
+    "Exporting just that table as SQL returned both rows with their native IDs 1 and 2 next to our own IDs. We then ran an SQL UPDATE on the native key (2 successful queries): only the second row's text changed and no duplicates appeared. This is a database update, not an import screen in the app.",
+    "Adding a payment method to upgrade opens the card form before any final plan total. The form mentions a $1 verification that is reversed after authorization, and the page said 'Taxes Do not Apply to your current invoice based on your account information.' We entered no card.",
+    "Our three support questions in the chat were answered within seconds by Cloudways' AI agent: it described a full application backup you can download over SFTP, said Copilot may share server and application logs with OpenAI-based models, and passed the DPA question to a human agent. We saw no human reply in that session."
+   ],
+   "not_tested": [
+    "A full application backup or a restore into an empty server",
+    "Uploading media or other binary files",
+    "Inviting a colleague",
+    "Cancelling or deleting the server and account"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "$0 ($54.00) Monthly",
+     "claim_source": "https://unified.cloudways.com/product/flexible",
+     "claim_read_on": "2026-10-25",
+     "observed": "A card form appears before the final summary. The product screen shows $54.00/month and $0.0804/hour. Final amount including VAT: not_testable. No card entered or payment made.",
+     "observed_on": "2026-10-25",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/cloudways-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible DigitalOcean Premium 4GB, New York; trial, upgrade card form",
+     "comparability": "The current cost rules contain no Cloudways rule. The dossier matches the same DigitalOcean Premium variant; a final amount including taxes cannot be compared before card entry.",
+     "status": "not_testable",
+     "buying_consequence": "Check the final tax-inclusive total before upgrading. The verification charge is stated to be reversed; no charge or reversal was tested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-25",
+    "what": "Two isolated test rows were exported as SQL and checked against the kit.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": true,
+    "awkward": "The attachment column contains a path only; this table mapping offers no binary attachment export. No full application backup was tested.",
+    "friction": {
+     "export_route": "Launch Database Manager, select only the test table and export SQL structure and data.",
+     "format": "SQL with separate native and external IDs; empty string is distinct from NULL; boolean stored as tinyint.",
+     "reimport": "Successful converted SQL UPDATE on the native key; not a UI update-import. Only the second record text changed; no duplicate rows. A full restore into an empty context was not documented.",
+     "cancellation": "Cancellation and deletion were not performed; the account owner must handle them."
+    },
+    "not_tested": [
+     "Signup screen count and active setup time.",
+     "Binary media, full application backup and a complete restore into a separate empty context.",
+     "Human support response and the official DPA.",
+     "Invitations, cancellation, deletion and passive email observation."
+    ],
+    "came_along": [
+     "Text, Unicode, dates, exact decimal amounts and EUR currency were preserved.",
+     "The delimiter-encoded tags retain both kit values in a single text column; native tag objects were not tested.",
+     "Native IDs from the first export were preserved after the SQL update."
+    ],
+    "lost": [],
+    "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "AltText.ai",
    "product_id": "alttext-ai",
    "run_date": "2026-10-20",

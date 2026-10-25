@@ -502,7 +502,7 @@
      "null"
     ],
     "additionalProperties": false,
-    "description": "Dated header-only observation of retained INBOX/junk messages. Counts exclude uncertain messages; signup hour is unknown.",
+    "description": "Dated observation of retained INBOX/junk messages, with optional literal timeline. Counts exclude uncertain classifications; time_basis states whether the signup hour is known.",
     "required": [
      "window_start",
      "window_end",
@@ -532,7 +532,10 @@
       "type": "integer"
      },
      "time_basis": {
-      "const": "signup_date_midnight_Europe_Amsterdam",
+      "enum": [
+       "signup_date_midnight_Europe_Amsterdam",
+       "signup_timestamp"
+      ],
       "type": "string"
      },
      "status": {
@@ -845,6 +848,89 @@
         ]
        }
       ]
+     },
+     "timeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "signup_at",
+       "messages"
+      ],
+      "description": "Literal retained inbox/junk messages. Own correspondence (replies, tickets) excluded; one-time codes, our address and account name replaced in brackets. Missing timeline means not measured, never zero. All display names replaced by vendor team. Exact signup time may be unknown.",
+      "properties": {
+       "signup_at": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "format": "date-time"
+       },
+       "messages": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "properties": {
+          "received_at": {
+           "type": "string",
+           "format": "date-time"
+          },
+          "sender_name": {
+           "type": "string",
+           "pattern": " team$"
+          },
+          "sender_domain": {
+           "type": "string",
+           "pattern": "^[a-z0-9][a-z0-9.-]*$"
+          },
+          "subject": {
+           "type": "string"
+          },
+          "folder": {
+           "enum": [
+            "inbox",
+            "junk"
+           ]
+          },
+          "offer": {
+           "oneOf": [
+            {
+             "type": "null"
+            },
+            {
+             "type": "object",
+             "additionalProperties": false,
+             "required": [
+              "source",
+              "text"
+             ],
+             "properties": {
+              "source": {
+               "enum": [
+                "subject",
+                "body"
+               ]
+              },
+              "text": {
+               "type": "string",
+               "minLength": 1
+              }
+             }
+            }
+           ]
+          }
+         },
+         "required": [
+          "received_at",
+          "sender_name",
+          "sender_domain",
+          "subject",
+          "folder",
+          "offer"
+         ]
+        }
+       }
+      }
      }
     }
    },

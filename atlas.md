@@ -2911,7 +2911,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/section-library-review/
 
 ## Securify (securification.ai)
-- **Verified pricing:** (re-verified 2026-10-20 on apps.shopify.com/easy-block-customer-ip-country) Free plan plus three paid tiers, unchanged since the readings of 18 August, 13 September and 20 September 2026.
+- **Verified pricing:** (re-verified 2026-10-25 on apps.shopify.com/easy-block-customer-ip-country) Free plan plus two paid tiers.
 - **Honest take:** Blocking by country and IP is a blunt instrument and it cuts both ways: every rule that keeps out a fraudster also keeps out a customer travelling, using a corporate VPN, or living behind a carrier NAT.
 - **Best for:** stores seeing real fraud or bot traffic that want country, IP, VPN and email-risk rules plus automatic holds on suspicious orders, and who will review the block log rather than set and forget
 - **Flags:** Free tier

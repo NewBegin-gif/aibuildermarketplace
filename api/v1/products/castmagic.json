@@ -82,15 +82,469 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "extra_evidence": "giving Hobby $29, Starter $69 and Team $199 a month when billed monthly",
+   "plans": [
+    {
+     "id": "hobby",
+     "name": "Hobby",
+     "model": "flat",
+     "max_units": 3,
+     "annual_month": 19,
+     "annual_year": 239,
+     "monthly": 29,
+     "evidence": "Hobby $19 a month billed annually, $239 a year: 30 transcribed hours, up to 3 Spaces, 50GB storage, max team size 3 seats"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 5,
+     "annual_month": 48,
+     "annual_year": 579,
+     "monthly": 69,
+     "evidence": "Starter $48 a month billed annually, $579 a year: 100 hours, 10 Spaces, 250GB, 5 seats"
+    },
+    {
+     "id": "team",
+     "name": "Team",
+     "model": "flat",
+     "included_units": 5,
+     "annual_month": 139,
+     "annual_year": 1669,
+     "monthly": 199,
+     "extra_unit": {
+      "annual_year": 159,
+      "monthly": 19
+     },
+     "evidence": "Team $139 a month billed annually, $1,669 a year: 400 hours, 25 Spaces, 1TB, unlimited team size with 5 seats included and extras at $159 a year or $19 a month each"
+    },
+    {
+     "id": "business-scale",
+     "name": "Business & Scale",
+     "model": "quote",
+     "evidence": "Business & Scale from $699 a month on annual billing and $999 a month on monthly billing, by demo"
+    }
+   ],
+   "not_computable": [
+    "Plans are also capped by transcribed hours (30, 100, 400); extra hours are bought separately without a price in our notes."
+   ],
+   "notes": "Business & Scale is by demo from $699 a month annually or $999 monthly; that is a floor, not a quote.",
+   "rules_verified_at": "2026-10-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "castmagic",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "hobby",
+      "cheapest_plan_name": "Hobby",
+      "total_month": 19.92,
+      "billed": {
+       "amount": 239.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": 19.92,
+       "starter": 48.25,
+       "team": 139.08,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "hobby",
+      "cheapest_plan_name": "Hobby",
+      "total_month": 19.92,
+      "billed": {
+       "amount": 239.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": 19.92,
+       "starter": 48.25,
+       "team": 139.08,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "hobby",
+      "cheapest_plan_name": "Hobby",
+      "total_month": 19.92,
+      "billed": {
+       "amount": 239.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": 19.92,
+       "starter": 48.25,
+       "team": 139.08,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 48.25,
+      "billed": {
+       "amount": 579.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": 48.25,
+       "team": 139.08,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 205.33,
+      "billed": {
+       "amount": 2464.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 205.33,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 271.58,
+      "billed": {
+       "amount": 3259.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 271.58,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 337.83,
+      "billed": {
+       "amount": 4054.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 337.83,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 404.08,
+      "billed": {
+       "amount": 4849.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 404.08,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 735.33,
+      "billed": {
+       "amount": 8824.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 735.33,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 1397.83,
+      "billed": {
+       "amount": 16774.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 1397.83,
+       "business-scale": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "hobby",
+      "to_plan": "starter",
+      "from_plan_name": "Hobby",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "starter",
+      "to_plan": "team",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Team"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Plans are also capped by transcribed hours (30, 100, 400); extra hours are bought separately without a price in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "castmagic",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "hobby",
+      "cheapest_plan_name": "Hobby",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": 29.0,
+       "starter": 69.0,
+       "team": 199.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "hobby",
+      "cheapest_plan_name": "Hobby",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": 29.0,
+       "starter": 69.0,
+       "team": 199.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "hobby",
+      "cheapest_plan_name": "Hobby",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": 29.0,
+       "starter": 69.0,
+       "team": 199.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": 69.0,
+       "team": 199.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 294.0,
+      "billed": {
+       "amount": 294.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 294.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 389.0,
+      "billed": {
+       "amount": 389.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 389.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 484.0,
+      "billed": {
+       "amount": 484.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 484.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 579.0,
+      "billed": {
+       "amount": 579.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 579.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 1054.0,
+      "billed": {
+       "amount": 1054.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 1054.0,
+       "business-scale": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 2004.0,
+      "billed": {
+       "amount": 2004.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "hobby": "not_eligible",
+       "starter": "not_eligible",
+       "team": 2004.0,
+       "business-scale": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "hobby",
+      "to_plan": "starter",
+      "from_plan_name": "Hobby",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "starter",
+      "to_plan": "team",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Team"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Plans are also capped by transcribed hours (30, 100, 400); extra hours are bought separately without a price in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -120,9 +574,9 @@
    "status": "open"
   },
   {
-   "question_id": "castmagic:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "castmagic:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Plans are also capped by transcribed hours (30, 100, 400); extra hours are bought separately without a price in our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

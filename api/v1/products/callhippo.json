@@ -80,16 +80,429 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "annual_month": 19,
+     "monthly": 25,
+     "evidence": "Starter is $19 per user per month on annual billing and $25 month to month, Professional $30 and $40, Ultimate $42 and $55."
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "annual_month": 30,
+     "monthly": 40,
+     "evidence": "Starter is $19 per user per month on annual billing and $25 month to month, Professional $30 and $40, Ultimate $42 and $55."
+    },
+    {
+     "id": "ultimate",
+     "name": "Ultimate",
+     "model": "per_unit",
+     "annual_month": 42,
+     "monthly": 55,
+     "evidence": "Starter is $19 per user per month on annual billing and $25 month to month, Professional $30 and $40, Ultimate $42 and $55."
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "eligible_from": 20,
+     "evidence": "the Core one a minimum of 20 users"
+    }
+   ],
+   "not_computable": [
+    "Add-ons (AI Voice Agent, AI Copilot, dashboard seats, SMS, Spam Watch) and usage past fair use are priced apart.",
+    "Basic is free only for the first 6 months, so it is left out."
+   ],
+   "notes": "Prices are USD with the US/CA number region; the currency selector prices per market instead of converting.",
+   "rules_verified_at": "2026-10-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "callhippo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 228.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.0,
+       "professional": 30.0,
+       "ultimate": 42.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 38.0,
+      "billed": {
+       "amount": 456.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 38.0,
+       "professional": 60.0,
+       "ultimate": 84.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 684.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 57.0,
+       "professional": 90.0,
+       "ultimate": 126.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 1140.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 95.0,
+       "professional": 150.0,
+       "ultimate": 210.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 2280.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 190.0,
+       "professional": 300.0,
+       "ultimate": 420.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 285.0,
+      "billed": {
+       "amount": 3420.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 285.0,
+       "professional": 450.0,
+       "ultimate": 630.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 380.0,
+      "billed": {
+       "amount": 4560.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 380.0,
+       "professional": 600.0,
+       "ultimate": 840.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 475.0,
+      "billed": {
+       "amount": 5700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 475.0,
+       "professional": 750.0,
+       "ultimate": 1050.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 950.0,
+      "billed": {
+       "amount": 11400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 950.0,
+       "professional": 1500.0,
+       "ultimate": 2100.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1900.0,
+      "billed": {
+       "amount": 22800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1900.0,
+       "professional": 3000.0,
+       "ultimate": 4200.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons (AI Voice Agent, AI Copilot, dashboard seats, SMS, Spam Watch) and usage past fair use are priced apart.",
+     "Basic is free only for the first 6 months, so it is left out."
+    ]
+   },
+   "monthly": {
+    "product_id": "callhippo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 25.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 25.0,
+       "professional": 40.0,
+       "ultimate": 55.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 50.0,
+       "professional": 80.0,
+       "ultimate": 110.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 75.0,
+       "professional": 120.0,
+       "ultimate": 165.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 125.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 125.0,
+       "professional": 200.0,
+       "ultimate": 275.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 250.0,
+       "professional": 400.0,
+       "ultimate": 550.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 375.0,
+      "billed": {
+       "amount": 375.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 375.0,
+       "professional": 600.0,
+       "ultimate": 825.0,
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 500.0,
+       "professional": 800.0,
+       "ultimate": 1100.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 625.0,
+      "billed": {
+       "amount": 625.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 625.0,
+       "professional": 1000.0,
+       "ultimate": 1375.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1250.0,
+      "billed": {
+       "amount": 1250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1250.0,
+       "professional": 2000.0,
+       "ultimate": 2750.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2500.0,
+      "billed": {
+       "amount": 2500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 2500.0,
+       "professional": 4000.0,
+       "ultimate": 5500.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons (AI Voice Agent, AI Copilot, dashboard seats, SMS, Spam Watch) and usage past fair use are priced apart.",
+     "Basic is free only for the first 6 months, so it is left out."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -127,9 +540,15 @@
    "status": "open"
   },
   {
-   "question_id": "callhippo:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "callhippo:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Add-ons (AI Voice Agent, AI Copilot, dashboard seats, SMS, Spam Watch) and usage past fair use are priced apart. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "callhippo:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Basic is free only for the first 6 months, so it is left out. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

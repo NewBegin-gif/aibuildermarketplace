@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 581 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-24.
+All 581 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-25.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1772,7 +1772,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/jibble-review/
 
 ## Joiin (joiin.co)
-- **Verified pricing:** (re-verified 2026-10-06 in a browser render of joiin.co/pricing and the price table in its own pricing script, in US dollars) Joiin now sells three plans, Core, Pro and Max, each priced by …
+- **Verified pricing:** (re-verified 2026-10-24 in a browser render of joiin.co/pricing in US dollars at 1, 2, 10 and 100 companies on both billing periods, unchanged; the 5, 20 and 50 company steps and the above-…
 - **Honest take:** The headline now hides a three-way split.
 - **Best for:** finance teams and accountants consolidating multi-entity, multi-currency group reporting from Xero, QuickBooks or Sage without hand-built spreadsheets
 - **Flags:** Annual commit

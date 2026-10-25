@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 586 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-25.
+All 587 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-26.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -962,6 +962,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** podcasters and video creators who want to edit by editing the transcript, cutting
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/descript-review/
+
+## Design.com (design.com)
+- **Verified pricing:** (read 2026-10-26 in a browser on design.com/faqs/purchasing; design.com/pricing returns a 404 and there is no public price table) Design.com sells logo packages as a monthly or annual subsc…
+- **Honest take:** One logo per subscription; real price shown only at checkout.
+- **Best for:** founders and small businesses that want one logo plus matching business cards, social graphics and a simple website from the same template library, and are fine paying monthly
+- **Full review:** https://aibuildermarketplace.com/b2b/design-com-review/
 
 ## Devs.ai (devs.ai)
 - **Verified pricing:** (re-verified 2026-10-11 and 2026-08-26, read in a live browser session on devs.ai/home/pricing with both billing toggles) Devs.ai does publish its pricing — on the marketing site at devs.ai…

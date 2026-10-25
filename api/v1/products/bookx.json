@@ -77,15 +77,488 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "team member",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free costs nothing and covers one service and one team member"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 5,
+       "monthly": 9.99,
+       "annual_year": 107.99
+      }
+     ],
+     "evidence": "Starter is $9.99 a month or $107.99 a year (10% off) and lifts that to five locations and team members"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 10,
+       "monthly": 19.99,
+       "annual_year": 203.99
+      }
+     ],
+     "evidence": "Growth is $19.99 or $203.99 a year (15%) for ten locations and team members"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 20,
+       "monthly": 39.99,
+       "annual_year": 407.99
+      }
+     ],
+     "evidence": "Business is $39.99 or $407.99 a year (15%) for twenty locations and team members"
+    }
+   ],
+   "notes": "The tiers cap 'locations and team members' together; this rule counts team members. Free is one service and one team member. Every tier, Free included, has unlimited bookings. Billed in USD every 30 days; every paid tier has a 14-day free trial.",
+   "not_computable": [
+    "More than twenty locations or team members: the pricing table ends at Business and publishes no price above it."
+   ],
+   "rules_verified_at": "2026-10-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "bookx",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "team member",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 9.0,
+       "growth": 17.0,
+       "business": 34.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 9.0,
+      "billed": {
+       "amount": 107.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 9.0,
+       "growth": 17.0,
+       "business": 34.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 9.0,
+      "billed": {
+       "amount": 107.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 9.0,
+       "growth": 17.0,
+       "business": 34.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 9.0,
+      "billed": {
+       "amount": 107.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 9.0,
+       "growth": 17.0,
+       "business": 34.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 17.0,
+      "billed": {
+       "amount": 203.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": 17.0,
+       "business": 34.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 34.0,
+      "billed": {
+       "amount": 407.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": 34.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 34.0,
+      "billed": {
+       "amount": 407.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": 34.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "growth",
+      "to_plan": "business",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "More than twenty locations or team members: the pricing table ends at Business and publishes no price above it."
+    ]
+   },
+   "monthly": {
+    "product_id": "bookx",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "team member",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 9.99,
+       "growth": 19.99,
+       "business": 39.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 9.99,
+      "billed": {
+       "amount": 9.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 9.99,
+       "growth": 19.99,
+       "business": 39.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 9.99,
+      "billed": {
+       "amount": 9.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 9.99,
+       "growth": 19.99,
+       "business": 39.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 9.99,
+      "billed": {
+       "amount": 9.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 9.99,
+       "growth": 19.99,
+       "business": 39.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 19.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": 19.99,
+       "business": 39.99
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": 39.99
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": 39.99
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "business": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "growth",
+      "to_plan": "business",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "More than twenty locations or team members: the pricing table ends at Business and publishes no price above it."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -115,9 +588,9 @@
    "status": "open"
   },
   {
-   "question_id": "bookx:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "bookx:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: More than twenty locations or team members: the pricing table ends at Business and publishes no price above it. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

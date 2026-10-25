@@ -66,16 +66,428 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "lead-tracking",
+     "name": "Lead Tracking",
+     "model": "flat",
+     "monthly": 55,
+     "annual_month": 50,
+     "evidence": "Lead Tracking $55 a month, Lead Tracking Complete $105, Lead Conversion $165 and Lead Conversion Complete $215; on yearly billing the same four read $50, $95, $150 and $195 a month"
+    },
+    {
+     "id": "lead-tracking-complete",
+     "name": "Lead Tracking Complete",
+     "model": "flat",
+     "monthly": 105,
+     "annual_month": 95,
+     "evidence": "Lead Tracking $55 a month, Lead Tracking Complete $105, Lead Conversion $165 and Lead Conversion Complete $215; on yearly billing the same four read $50, $95, $150 and $195 a month"
+    },
+    {
+     "id": "lead-conversion",
+     "name": "Lead Conversion",
+     "model": "flat",
+     "monthly": 165,
+     "annual_month": 150,
+     "evidence": "Lead Tracking $55 a month, Lead Tracking Complete $105, Lead Conversion $165 and Lead Conversion Complete $215; on yearly billing the same four read $50, $95, $150 and $195 a month"
+    },
+    {
+     "id": "lead-conversion-complete",
+     "name": "Lead Conversion Complete",
+     "model": "flat",
+     "monthly": 215,
+     "annual_month": 195,
+     "evidence": "Lead Tracking $55 a month, Lead Tracking Complete $105, Lead Conversion $165 and Lead Conversion Complete $215; on yearly billing the same four read $50, $95, $150 and $195 a month"
+    }
+   ],
+   "extra_evidence": "Users are unlimited on every plan.",
+   "not_computable": [
+    "Every plan is 'plus additional usage': numbers, minutes, texts and form submissions past the allowance, API calls past 1,500 a month and Voice Assist are billed on top."
+   ],
+   "notes": "Flat per account with unlimited users; the price is a floor because usage is billed on top.",
+   "rules_verified_at": "2026-10-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "callrail",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 50.0,
+       "lead-tracking-complete": 95.0,
+       "lead-conversion": 150.0,
+       "lead-conversion-complete": 195.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Every plan is 'plus additional usage': numbers, minutes, texts and form submissions past the allowance, API calls past 1,500 a month and Voice Assist are billed on top."
+    ]
+   },
+   "monthly": {
+    "product_id": "callrail",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lead-tracking",
+      "cheapest_plan_name": "Lead Tracking",
+      "total_month": 55.0,
+      "billed": {
+       "amount": 55.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lead-tracking": 55.0,
+       "lead-tracking-complete": 105.0,
+       "lead-conversion": 165.0,
+       "lead-conversion-complete": 215.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Every plan is 'plus additional usage': numbers, minutes, texts and form submissions past the allowance, API calls past 1,500 a month and Voice Assist are billed on top."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -113,9 +525,9 @@
    "status": "open"
   },
   {
-   "question_id": "callrail:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "callrail:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Every plan is 'plus additional usage': numbers, minutes, texts and form submissions past the allowance, API calls past 1,500 a month and Voice Assist are billed on top. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

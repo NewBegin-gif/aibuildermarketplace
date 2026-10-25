@@ -3859,7 +3859,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/whatconverts-review/
 
 ## WhisperTranscribe (whispertranscribe.com)
-- **Verified pricing:** (read 2026-10-14 in a live browser on whispertranscribe.com/pricing and the terms of use last updated 28 October 2025) Two products.
+- **Verified pricing:** (read 2026-10-14 in a live browser on whispertranscribe.com/pricing and the terms of use then dated 28 October 2025; the terms and privacy policy were re-read on 25 October 2026 in their ve…
 - **Honest take:** Starter's $2.80-an-hour claim works out to about $3.75; monthly billing doubles the price and fees are non-refundable.
 - **Best for:** podcasters, YouTubers, researchers and small teams who transcribe a predictable number of hours a month, want unlimited users without seat fees, and prefer a service that does not keep their files
 - **Flags:** Usage-metered, Free tier

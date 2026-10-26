@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 587 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-26.
+All 591 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-26.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1141,6 +1141,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
 - **Full review:** https://zerotouchsupport.com/edesk-review.html
 
+## EditEngine (bulkeditor.app)
+- **Verified pricing:** (read 2026-10-26 on the EditEngine listing in the Shopify App Store; the listing says all charges are billed in USD, every 30 days) EditEngine has a free plan and three paid plans, and ever…
+- **Honest take:** Undo does not cover deletes; repeated percentage edits stack.
+- **Best for:** Shopify merchants with hundreds or thousands of products who change prices, tags, SEO fields or metafields in bulk and want a preview and an undo before anything goes live
+- **Flags:** Add-ons extra, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/editengine-review/
+
 ## ElevateForward (elevateforward.ai)
 - **Verified pricing:** (re-verified 2026-08-21 and again unchanged on 2026-09-28, read on their own pricing page) The prices are published, despite the consultative first impression, and the report figures have n…
 - **Honest take:** It's a strategy-to-execution layer, not a task app or a dashboard — so the value only lands if leadership actually adopts the framework.
@@ -1983,6 +1990,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/lemlist-review.html
 
+## Lensmor (lensmor.com)
+- **Verified pricing:** (read 2026-10-26 on lensmor.com/pricing and Lensmor's billing policy in its help centre; dollar amounts, the pages do not name the currency) Lensmor sells credits.
+- **Honest take:** From $499 a month; a full event unlock costs 5,000 credits.
+- **Best for:** B2B sales and marketing teams that exhibit at or prospect around trade shows and want exhibitor and attendee lists per event, with verified contacts revealed only for the accounts that fit
+- **Flags:** Usage-metered, Add-ons extra, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/lensmor-review/
+
 ## LettrLabs (lettrlabs.com)
 - **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page; EVERY rate identical to the 31 Aug 2026 reading, to the cent) (2026) Postage is included in every per-piece rate.
 - **Honest take:** Direct mail only pays off with a tight list and a real offer — it's a leverage channel, not a cheap thing to test blindly.
@@ -2425,6 +2439,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** freelancers and sellers getting paid by international clients and marketplaces (Amazon, Upwork, Fiverr) who need local receiving accounts
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/payoneer-review/
+
+## pCloud (pcloud.com)
+- **Verified pricing:** (read 2026-10-26 on pcloud.com, its family and business pages, from a Netherlands connection that showed euros; the page calls the prices final) pCloud is best known for lifetime plans paid…
+- **Honest take:** Client-side encryption costs extra; refunds can be refused on discounts.
+- **Best for:** individuals and families who want a large amount of cloud storage for years and would rather pay once than keep a subscription running
+- **Flags:** Per-seat pricing, Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/pcloud-review/
 
 ## PDF Agile (pdfagile.com)
 - **Verified pricing:** (read 2026-10-23 on pdfagile.com/pricing; dollar amounts, the page does not name the currency) PDF Agile sells three paid plans and calls each of them a one-time payment rather than a subsc…
@@ -3955,6 +3976,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** individuals, coaches and small teams who want notes, tasks and a daily planner in one visual workspace, and who want to connect ChatGPT or Claude to their projects
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/xtiles-review.html
+
+## Yaps (yaps.ai)
+- **Verified pricing:** (read 2026-10-26 on yaps.ai/pricing with annual billing selected; the monthly price was read on 2026-10-16; dollar amounts, the page does not name the currency) Yaps is free on Android, iPh…
+- **Honest take:** Desktop trial converts automatically; Windows still in beta.
+- **Best for:** writers, students and professionals who dictate or transcribe every day and want the speech processing on their own computer, across Windows, macOS and Linux
+- **Flags:** Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/yaps-review/
 
 ## Your Company Formations (yourcompanyformations.co.uk)
 - **Verified pricing:** (read 2026-10-18 in a browser on yourcompanyformations.co.uk/packages/compare-packages/, prices in pounds) One-off packages for forming a UK limited company, each plus the £100 Companies Ho…

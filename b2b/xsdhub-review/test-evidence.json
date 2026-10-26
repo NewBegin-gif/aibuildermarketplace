@@ -1,0 +1,124 @@
+{
+  "product": "XSDHub",
+  "date": "2026-10-26",
+  "relationship": "AIBM and XSDHub are owned by Daniel Haket. This is an AI-assisted build review, not independent testing.",
+  "method": "Synthetic fixtures executed against the shipped libxml2/WebAssembly engine; manual browser observations and bounded HTTP probes.",
+  "automatedChecks": 39,
+  "automatedChecksPassed": 39,
+  "httpChecks": 14,
+  "httpChecksPassed": 14,
+  "examples": [
+    {
+      "id": "tag-mismatch",
+      "slug": "xml-tag-mismatch",
+      "label": "Opening and ending tag mismatch",
+      "mode": "syntax",
+      "bad": "<order>\n  <item>Notebook</itemz>\n</order>",
+      "good": "<order>\n  <item>Notebook</item>\n</order>",
+      "xsd": "",
+      "observedBad": "failed",
+      "observedGood": "passed"
+    },
+    {
+      "id": "ampersand",
+      "slug": "xml-escape-characters",
+      "label": "Unescaped ampersand",
+      "mode": "syntax",
+      "bad": "<company>Pine & Paper</company>",
+      "good": "<company>Pine &amp; Paper</company>",
+      "xsd": "",
+      "observedBad": "failed",
+      "observedGood": "passed"
+    },
+    {
+      "id": "namespace",
+      "slug": "xml-namespaces-explained",
+      "label": "Namespace mismatch",
+      "mode": "schema",
+      "bad": "<stock><sku>BK-204</sku></stock>",
+      "good": "<stock xmlns=\"urn:example:stock\"><sku>BK-204</sku></stock>",
+      "xsd": "<xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" targetNamespace=\"urn:example:stock\" elementFormDefault=\"qualified\"><xs:element name=\"stock\"><xs:complexType><xs:sequence><xs:element name=\"sku\" type=\"xs:string\"/></xs:sequence></xs:complexType></xs:element></xs:schema>",
+      "observedBad": "failed",
+      "observedGood": "passed"
+    },
+    {
+      "id": "element-order",
+      "slug": "xsd-element-not-expected",
+      "label": "Element is not expected",
+      "mode": "schema",
+      "bad": "<order>\n  <price>12.50</price>\n  <quantity>3</quantity>\n</order>",
+      "good": "<order>\n  <quantity>3</quantity>\n  <price>12.50</price>\n</order>",
+      "xsd": "<xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"><xs:element name=\"order\"><xs:complexType><xs:sequence><xs:element name=\"quantity\" type=\"xs:positiveInteger\"/><xs:element name=\"price\" type=\"xs:decimal\"/></xs:sequence></xs:complexType></xs:element></xs:schema>",
+      "observedBad": "failed",
+      "observedGood": "passed"
+    },
+    {
+      "id": "invalid-date",
+      "slug": "xsd-invalid-date",
+      "label": "Invalid xs:date value",
+      "mode": "schema",
+      "bad": "<deliveryDate>26/10/2026</deliveryDate>",
+      "good": "<deliveryDate>2026-10-26</deliveryDate>",
+      "xsd": "<xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"><xs:element name=\"deliveryDate\" type=\"xs:date\"/></xs:schema>",
+      "observedBad": "failed",
+      "observedGood": "passed"
+    }
+  ],
+  "notTested": [
+    "New real-money purchase to activation",
+    "Real refund or full renewal cycle",
+    "Full device/browser matrix",
+    "Independent penetration test",
+    "Customer production datasets"
+  ],
+  "schemaProjectUpdate": {
+    "date": "2026-10-26",
+    "multiFileChecksPassed": 51,
+    "zipChecksPassed": 6,
+    "browserChecks": [
+      "ZIP loading",
+      "valid project",
+      "invalid XML value",
+      "malformed dependency with filename"
+    ],
+    "limits": {
+      "xsd11": false,
+      "remoteSchemas": false,
+      "savedProjects": false,
+      "files": 100,
+      "bytesPerFile": 1048576,
+      "projectBytes": 10485760
+    }
+  },
+  "advancedWorkspaceUpdate": {
+    "date": "2026-10-26",
+    "localProjectChecks": 53,
+    "zipChecks": 6,
+    "advancedChecks": 13,
+    "selectedW3CXsd10": {
+      "cases": 100,
+      "localPassed": 100,
+      "serverPassed": 100
+    },
+    "selectedW3CXsd11": {
+      "cases": 88,
+      "passed": 88
+    },
+    "notFullConformanceCertification": true,
+    "browserChecked": [
+      "save local project",
+      "compare changed schema",
+      "restore previous revision"
+    ],
+    "serverXmlMegabytesTested": [
+      1,
+      5,
+      9
+    ],
+    "limits": [
+      "cloud project sync not included",
+      "Schematron XPath 1.0 only",
+      "remote URLs and DTDs blocked"
+    ]
+  }
+}

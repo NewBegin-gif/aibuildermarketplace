@@ -264,7 +264,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** GPS tracking of employees needs transparency and often consent (rules differ by country), and adoption dies the day the crew feels surveilled rather than served.
 - **Best for:** hourly and mobile crews (construction, cleaning, field service) that want dead-simple clock-in/out, GPS-verified timesheets and payroll-ready exports
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/atto-review/
+- **Full review:** https://officesoftwaremarketplace.com/atto-review.html
 
 ## Attribuly (attribuly.com)
 - **Verified pricing:** (re-read 2026-10-14 on apps.shopify.com/attribuly and attribuly.com/pricing-retention/; the plan ladder changed after 13 September 2026) A free plan that recovers the first $1,000 of email …
@@ -1146,7 +1146,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Undo does not cover deletes; repeated percentage edits stack.
 - **Best for:** Shopify merchants with hundreds or thousands of products who change prices, tags, SEO fields or metafields in bulk and want a preview and an undo before anything goes live
 - **Flags:** Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/editengine-review/
+- **Full review:** https://marketingandsalessoftware.com/editengine-review.html
 
 ## ElevateForward (elevateforward.ai)
 - **Verified pricing:** (re-verified 2026-08-21 and again unchanged on 2026-09-28, read on their own pricing page) The prices are published, despite the consultative first impression, and the report figures have n…
@@ -1194,7 +1194,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The meter is contacts AND seats at once: prices are per user, and each tier caps contacts — Basic’s 500 contacts fills fast, and the Growth jump is steep ($15 → $65 per user).
 - **Best for:** small teams that want CRM, email marketing, helpdesk and live chat in one affordable suite — the free tier is a genuine trial-for-life, and it undercuts HubSpot hard at small scale
 - **Flags:** Per-seat pricing, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/engagebay-review/
+- **Full review:** https://marketingandsalessoftware.com/engagebay-review.html
 
 ## Envoy (envoy.com)
 - **Verified pricing:** (2026-08-29, read on their own pricing page and their platform page; re-read unchanged on 2026-10-04) Five products, each metered differently and all billed annually.
@@ -1995,7 +1995,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** From $499 a month; a full event unlock costs 5,000 credits.
 - **Best for:** B2B sales and marketing teams that exhibit at or prospect around trade shows and want exhibitor and attendee lists per event, with verified contacts revealed only for the accounts that fit
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/lensmor-review/
+- **Full review:** https://marketingandsalessoftware.com/lensmor-review.html
 
 ## LettrLabs (lettrlabs.com)
 - **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page; EVERY rate identical to the 31 Aug 2026 reading, to the cent) (2026) Postage is included in every per-piece rate.
@@ -2445,7 +2445,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Client-side encryption costs extra; refunds can be refused on discounts.
 - **Best for:** individuals and families who want a large amount of cloud storage for years and would rather pay once than keep a subscription running
 - **Flags:** Per-seat pricing, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/pcloud-review/
+- **Full review:** https://officesoftwaremarketplace.com/pcloud-review.html
 
 ## PDF Agile (pdfagile.com)
 - **Verified pricing:** (read 2026-10-23 on pdfagile.com/pricing; dollar amounts, the page does not name the currency) PDF Agile sells three paid plans and calls each of them a one-time payment rather than a subsc…

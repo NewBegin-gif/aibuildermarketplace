@@ -107,15 +107,444 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "license",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "free",
+     "max_units": 5,
+     "evidence": "capped at 5 Basic licenses"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 32,
+     "monthly": 40,
+     "evidence": "Pro is €24 or $32 per license a month billed yearly, €30 or $40 monthly"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 60,
+     "monthly": 75,
+     "evidence": "Business is €48 or $60 a month yearly, €60 or $75 monthly"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is a custom price"
+    }
+   ],
+   "notes": "Priced per license per month; the page prints euros beside dollars (Pro €24/€30, Business €48/€60) and these rules use the dollar figures. Basic is free with 10 videos per user and 300 minutes of recording in total.",
+   "not_computable": [
+    "AI credits beyond the per-license allowance (500 on Pro, 1,000 on Business): no price for extra credits in our notes.",
+    "Business and Enterprise are sold through a demo; the Claap API is only on Enterprise."
+   ],
+   "rules_verified_at": "2026-10-26"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "claap",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "license",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 32.0,
+       "business": 60.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 64.0,
+       "business": 120.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 96.0,
+       "business": 180.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 160.0,
+       "business": 300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 320.0,
+      "billed": {
+       "amount": 3840.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 320.0,
+       "business": 600.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 480.0,
+      "billed": {
+       "amount": 5760.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 480.0,
+       "business": 900.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 640.0,
+      "billed": {
+       "amount": 7680.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 640.0,
+       "business": 1200.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 800.0,
+      "billed": {
+       "amount": 9600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 800.0,
+       "business": 1500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1600.0,
+      "billed": {
+       "amount": 19200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 1600.0,
+       "business": 3000.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 3200.0,
+      "billed": {
+       "amount": 38400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 3200.0,
+       "business": 6000.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "basic",
+      "to_plan": "pro",
+      "from_plan_name": "Basic",
+      "to_plan_name": "Pro"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "AI credits beyond the per-license allowance (500 on Pro, 1,000 on Business): no price for extra credits in our notes.",
+     "Business and Enterprise are sold through a demo; the Claap API is only on Enterprise."
+    ]
+   },
+   "monthly": {
+    "product_id": "claap",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "license",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 40.0,
+       "business": 75.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 80.0,
+       "business": 150.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 120.0,
+       "business": 225.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 200.0,
+       "business": 375.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 400.0,
+       "business": 750.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 600.0,
+       "business": 1125.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 800.0,
+      "billed": {
+       "amount": 800.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 800.0,
+       "business": 1500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 1000.0,
+       "business": 1875.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 2000.0,
+      "billed": {
+       "amount": 2000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 2000.0,
+       "business": 3750.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 4000.0,
+      "billed": {
+       "amount": 4000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": 4000.0,
+       "business": 7500.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "basic",
+      "to_plan": "pro",
+      "from_plan_name": "Basic",
+      "to_plan_name": "Pro"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "AI credits beyond the per-license allowance (500 on Pro, 1,000 on Business): no price for extra credits in our notes.",
+     "Business and Enterprise are sold through a demo; the Claap API is only on Enterprise."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -145,9 +574,15 @@
    "status": "open"
   },
   {
-   "question_id": "claap:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "claap:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: AI credits beyond the per-license allowance (500 on Pro, 1,000 on Business): no price for extra credits in our notes. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "claap:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Business and Enterprise are sold through a demo; the Claap API is only on Enterprise. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

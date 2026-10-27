@@ -86,16 +86,323 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "website",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "platform-basic",
+     "name": "Security Platform Basic",
+     "model": "per_unit",
+     "annual_year": 229,
+     "monthly_status": "unknown",
+     "evidence": "Basic $229 a year (malware removal SLA 30 hours, scans every 12 hours)"
+    },
+    {
+     "id": "platform-pro",
+     "name": "Security Platform Pro",
+     "model": "per_unit",
+     "annual_year": 339,
+     "monthly_status": "unknown",
+     "evidence": "Pro $339 a year (12 hours, every 6 hours, advanced SSL support)"
+    },
+    {
+     "id": "platform-business",
+     "name": "Security Platform Business",
+     "model": "per_unit",
+     "annual_year": 549,
+     "monthly_status": "unknown",
+     "evidence": "Business $549 a year (6 hours, every 30 minutes)"
+    },
+    {
+     "id": "junior-dev",
+     "name": "Junior Dev",
+     "model": "flat",
+     "included_units": 5,
+     "max_units": 5,
+     "annual_year": 999.98,
+     "monthly_status": "unknown",
+     "evidence": "Junior Dev is $999.98 a year for 5 sites (12 hours, every 6 hours)"
+    },
+    {
+     "id": "multi-site",
+     "name": "Multi-Site & Custom",
+     "model": "quote",
+     "evidence": "Multi-Site & Custom plans for 10 or more sites are priced on request"
+    },
+    {
+     "id": "firewall-basic",
+     "name": "Firewall Basic",
+     "model": "per_unit",
+     "monthly": 9.99,
+     "annual_status": "unknown",
+     "evidence": "the Firewall tab lists Basic at $9.99 a month and Pro at $19.98 a month"
+    },
+    {
+     "id": "firewall-pro",
+     "name": "Firewall Pro",
+     "model": "per_unit",
+     "monthly": 19.98,
+     "annual_status": "unknown",
+     "evidence": "the Firewall tab lists Basic at $9.99 a month and Pro at $19.98 a month"
+    }
+   ],
+   "notes": [
+    "Sucuri sells per website. Security Platform plans include unlimited malware and hack removals; the Firewall plans are the firewall with CDN without the cleanup service. The page does not name the currency; amounts are shown in dollars."
+   ],
+   "rules_verified_at": "2026-10-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "sucuri",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "website",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "platform-basic",
+      "cheapest_plan_name": "Security Platform Basic",
+      "total_month": 19.08,
+      "billed": {
+       "amount": 229.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": 19.08,
+       "platform-pro": 28.25,
+       "platform-business": 45.75,
+       "junior-dev": 83.33,
+       "multi-site": "quote",
+       "firewall-basic": "price_unknown_on_billing",
+       "firewall-pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "platform-basic",
+      "cheapest_plan_name": "Security Platform Basic",
+      "total_month": 38.17,
+      "billed": {
+       "amount": 458.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": 38.17,
+       "platform-pro": 56.5,
+       "platform-business": 91.5,
+       "junior-dev": 83.33,
+       "multi-site": "quote",
+       "firewall-basic": "price_unknown_on_billing",
+       "firewall-pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "platform-basic",
+      "cheapest_plan_name": "Security Platform Basic",
+      "total_month": 57.25,
+      "billed": {
+       "amount": 687.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": 57.25,
+       "platform-pro": 84.75,
+       "platform-business": 137.25,
+       "junior-dev": 83.33,
+       "multi-site": "quote",
+       "firewall-basic": "price_unknown_on_billing",
+       "firewall-pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "junior-dev",
+      "cheapest_plan_name": "Junior Dev",
+      "total_month": 83.33,
+      "billed": {
+       "amount": 999.98,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": 95.42,
+       "platform-pro": 141.25,
+       "platform-business": 228.75,
+       "junior-dev": 83.33,
+       "multi-site": "quote",
+       "firewall-basic": "price_unknown_on_billing",
+       "firewall-pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "platform-basic",
+      "cheapest_plan_name": "Security Platform Basic",
+      "total_month": 190.83,
+      "billed": {
+       "amount": 2290.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": 190.83,
+       "platform-pro": 282.5,
+       "platform-business": 457.5,
+       "junior-dev": "not_eligible",
+       "multi-site": "quote",
+       "firewall-basic": "price_unknown_on_billing",
+       "firewall-pro": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "platform-basic",
+      "to_plan": "junior-dev",
+      "from_plan_name": "Security Platform Basic",
+      "to_plan_name": "Junior Dev"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "junior-dev",
+      "to_plan": "platform-basic",
+      "from_plan_name": "Junior Dev",
+      "to_plan_name": "Security Platform Basic"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "sucuri",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "website",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "firewall-basic",
+      "cheapest_plan_name": "Firewall Basic",
+      "total_month": 9.99,
+      "billed": {
+       "amount": 9.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": "price_unknown_on_billing",
+       "platform-pro": "price_unknown_on_billing",
+       "platform-business": "price_unknown_on_billing",
+       "junior-dev": "price_unknown_on_billing",
+       "multi-site": "quote",
+       "firewall-basic": 9.99,
+       "firewall-pro": 19.98
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "firewall-basic",
+      "cheapest_plan_name": "Firewall Basic",
+      "total_month": 19.98,
+      "billed": {
+       "amount": 19.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": "price_unknown_on_billing",
+       "platform-pro": "price_unknown_on_billing",
+       "platform-business": "price_unknown_on_billing",
+       "junior-dev": "price_unknown_on_billing",
+       "multi-site": "quote",
+       "firewall-basic": 19.98,
+       "firewall-pro": 39.96
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "firewall-basic",
+      "cheapest_plan_name": "Firewall Basic",
+      "total_month": 29.97,
+      "billed": {
+       "amount": 29.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": "price_unknown_on_billing",
+       "platform-pro": "price_unknown_on_billing",
+       "platform-business": "price_unknown_on_billing",
+       "junior-dev": "price_unknown_on_billing",
+       "multi-site": "quote",
+       "firewall-basic": 29.97,
+       "firewall-pro": 59.94
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "firewall-basic",
+      "cheapest_plan_name": "Firewall Basic",
+      "total_month": 49.95,
+      "billed": {
+       "amount": 49.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": "price_unknown_on_billing",
+       "platform-pro": "price_unknown_on_billing",
+       "platform-business": "price_unknown_on_billing",
+       "junior-dev": "price_unknown_on_billing",
+       "multi-site": "quote",
+       "firewall-basic": 49.95,
+       "firewall-pro": 99.9
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "firewall-basic",
+      "cheapest_plan_name": "Firewall Basic",
+      "total_month": 99.9,
+      "billed": {
+       "amount": 99.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "platform-basic": "price_unknown_on_billing",
+       "platform-pro": "price_unknown_on_billing",
+       "platform-business": "price_unknown_on_billing",
+       "junior-dev": "not_eligible",
+       "multi-site": "quote",
+       "firewall-basic": 99.9,
+       "firewall-pro": 199.8
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -125,9 +432,9 @@
    "status": "open"
   },
   {
-   "question_id": "sucuri:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "sucuri:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
    "status": "open"
   }
  ],

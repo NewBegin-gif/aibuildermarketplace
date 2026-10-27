@@ -81,15 +81,342 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "practice",
+   "axis": "companies",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite (sole proprietor)",
+     "model": "per_unit",
+     "annual_month": 139,
+     "annual_year": 1668,
+     "monthly": 159,
+     "evidence": "Lite is $139 a month billed annually ($1,668 a year) or $159 billed monthly"
+    },
+    {
+     "id": "essential",
+     "name": "Essential (sole proprietor)",
+     "model": "per_unit",
+     "annual_month": 189,
+     "annual_year": 2268,
+     "monthly": 219,
+     "evidence": "Essential is $189 a month billed annually ($2,268 a year) or $219 billed monthly"
+    },
+    {
+     "id": "essential-s-corp",
+     "name": "Essential (S corp or group practice)",
+     "model": "per_unit",
+     "annual_month": 299,
+     "monthly": 349,
+     "evidence": "Essential is $299 a month billed annually or $349 monthly"
+    }
+   ],
+   "notes": "Heard prices by practice type: the Lite and first Essential plan are for solo sole proprietors, the second Essential price is for S corps and group practices. Prices for new members from 26 October 2026.",
+   "not_computable": [
+    "Catch-up bookkeeping, required when you join: $99 for each month you have been in business this year (offered free on an annual plan until 31 December 2026 on the 27 October reading); depends on your start date.",
+    "The annual tax return on Lite is a $750 add-on.",
+    "Payroll for S corps and group practices: $49 a month plus $9 per person, counted per person rather than per practice."
+   ],
+   "rules_verified_at": "2026-10-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "heard",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "practice",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 1668.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 139.0,
+       "essential": 189.0,
+       "essential-s-corp": 299.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 278.0,
+      "billed": {
+       "amount": 3336.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 278.0,
+       "essential": 378.0,
+       "essential-s-corp": 598.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 695.0,
+      "billed": {
+       "amount": 8340.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 695.0,
+       "essential": 945.0,
+       "essential-s-corp": 1495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 1390.0,
+      "billed": {
+       "amount": 16680.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 1390.0,
+       "essential": 1890.0,
+       "essential-s-corp": 2990.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 2780.0,
+      "billed": {
+       "amount": 33360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 2780.0,
+       "essential": 3780.0,
+       "essential-s-corp": 5980.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 6950.0,
+      "billed": {
+       "amount": 83400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 6950.0,
+       "essential": 9450.0,
+       "essential-s-corp": 14950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 13900.0,
+      "billed": {
+       "amount": 166800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 13900.0,
+       "essential": 18900.0,
+       "essential-s-corp": 29900.0
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 20850.0,
+      "billed": {
+       "amount": 250200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 20850.0,
+       "essential": 28350.0,
+       "essential-s-corp": 44850.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Catch-up bookkeeping, required when you join: $99 for each month you have been in business this year (offered free on an annual plan until 31 December 2026 on the 27 October reading); depends on your start date.",
+     "The annual tax return on Lite is a $750 add-on.",
+     "Payroll for S corps and group practices: $49 a month plus $9 per person, counted per person rather than per practice."
+    ]
+   },
+   "monthly": {
+    "product_id": "heard",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "practice",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 159.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 159.0,
+       "essential": 219.0,
+       "essential-s-corp": 349.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 318.0,
+      "billed": {
+       "amount": 318.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 318.0,
+       "essential": 438.0,
+       "essential-s-corp": 698.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 795.0,
+      "billed": {
+       "amount": 795.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 795.0,
+       "essential": 1095.0,
+       "essential-s-corp": 1745.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 1590.0,
+      "billed": {
+       "amount": 1590.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 1590.0,
+       "essential": 2190.0,
+       "essential-s-corp": 3490.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 3180.0,
+      "billed": {
+       "amount": 3180.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 3180.0,
+       "essential": 4380.0,
+       "essential-s-corp": 6980.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 7950.0,
+      "billed": {
+       "amount": 7950.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 7950.0,
+       "essential": 10950.0,
+       "essential-s-corp": 17450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 15900.0,
+      "billed": {
+       "amount": 15900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 15900.0,
+       "essential": 21900.0,
+       "essential-s-corp": 34900.0
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite (sole proprietor)",
+      "total_month": 23850.0,
+      "billed": {
+       "amount": 23850.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 23850.0,
+       "essential": 32850.0,
+       "essential-s-corp": 52350.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Catch-up bookkeeping, required when you join: $99 for each month you have been in business this year (offered free on an annual plan until 31 December 2026 on the 27 October reading); depends on your start date.",
+     "The annual tax return on Lite is a $750 add-on.",
+     "Payroll for S corps and group practices: $49 a month plus $9 per person, counted per person rather than per practice."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -127,9 +454,21 @@
    "status": "open"
   },
   {
-   "question_id": "heard:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "heard:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Catch-up bookkeeping, required when you join: $99 for each month you have been in business this year (offered free on an annual plan until 31 December 2026 on the 27 October reading); depends on your start date. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "heard:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The annual tax return on Lite is a $750 add-on. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "heard:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Payroll for S corps and group practices: $49 a month plus $9 per person, counted per person rather than per practice. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

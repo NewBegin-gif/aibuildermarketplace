@@ -108,16 +108,392 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "flat",
+     "max_units": 5,
+     "monthly": 499,
+     "annual_year": 4990,
+     "evidence": "Basic is $499 a month or $4,990 a year, for 35,000 credits a month and a shared workspace of up to 5 seats"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "max_units": 10,
+     "annual_year": 14900,
+     "monthly_status": "unknown",
+     "evidence": "Growth is $14,900 a year for 1,500,000 credits per annual term and up to 10 seats"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is a custom annual agreement with API access and integrations"
+    }
+   ],
+   "not_computable": [
+    "Credits spent on event unlocks, emails and phone numbers, and add-on credit packs ($249 / $549 / $1,199) bought on top of the plan; the bill depends on usage."
+   ],
+   "notes": "Dollar amounts; the pages do not name the currency. Subscription credits do not roll over and fees are non-refundable.",
+   "rules_verified_at": "2026-10-26"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "lensmor",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 415.83,
+      "billed": {
+       "amount": 4990.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 415.83,
+       "growth": 1241.67,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 415.83,
+      "billed": {
+       "amount": 4990.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 415.83,
+       "growth": 1241.67,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 415.83,
+      "billed": {
+       "amount": 4990.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 415.83,
+       "growth": 1241.67,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 415.83,
+      "billed": {
+       "amount": 4990.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 415.83,
+       "growth": 1241.67,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 1241.67,
+      "billed": {
+       "amount": 14900.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": 1241.67,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "basic",
+      "to_plan": "growth",
+      "from_plan_name": "Basic",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "growth",
+      "to_plan": null,
+      "from_plan_name": "Growth",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credits spent on event unlocks, emails and phone numbers, and add-on credit packs ($249 / $549 / $1,199) bought on top of the plan; the bill depends on usage."
+    ]
+   },
+   "monthly": {
+    "product_id": "lensmor",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 499.0,
+       "growth": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 499.0,
+       "growth": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 499.0,
+       "growth": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 499.0,
+       "growth": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "growth": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "basic",
+      "to_plan": null,
+      "from_plan_name": "Basic",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credits spent on event unlocks, emails and phone numbers, and add-on credit packs ($249 / $549 / $1,199) bought on top of the plan; the bill depends on usage."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -147,9 +523,15 @@
    "status": "open"
   },
   {
-   "question_id": "lensmor:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "lensmor:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "lensmor:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Credits spent on event unlocks, emails and phone numbers, and add-on credit packs ($249 / $549 / $1,199) bought on top of the plan; the bill depends on usage. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

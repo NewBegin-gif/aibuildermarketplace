@@ -90,15 +90,241 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "per_unit",
+     "monthly": 19,
+     "annual_year": 190,
+     "evidence": "Basic $19 a month or $190 a year (save 17%): 2,000 credits"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "monthly": 49,
+     "annual_year": 399,
+     "evidence": "Standard $49 or $399 a year (save 32%): 11,000 credits"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 249,
+     "annual_year": 1990,
+     "evidence": "Pro $249 or $1,990 a year (save 33%): 110,000 credits"
+    }
+   ],
+   "notes": "Shopify app, billed in USD per store that installs it. Plans differ by monthly credits (2,000, 11,000, 110,000), not by users; the Free Trial gives 100 credits a month.",
+   "not_computable": [
+    "Credits per output: the listing never says what a title, a meta description or an alt text costs in credits.",
+    "Usage-based charges: the listing says recurring and usage-based charges are billed every 30 days, but publishes no usage rate or threshold."
+   ],
+   "rules_verified_at": "2026-10-26"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "chatgpt-ai-product-description",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 15.83,
+      "billed": {
+       "amount": 190.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 15.83,
+       "standard": 33.25,
+       "pro": 165.83
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 31.67,
+      "billed": {
+       "amount": 380.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 31.67,
+       "standard": 66.5,
+       "pro": 331.67
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 47.5,
+      "billed": {
+       "amount": 570.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 47.5,
+       "standard": 99.75,
+       "pro": 497.5
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 79.17,
+      "billed": {
+       "amount": 950.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 79.17,
+       "standard": 166.25,
+       "pro": 829.17
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 158.33,
+      "billed": {
+       "amount": 1900.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 158.33,
+       "standard": 332.5,
+       "pro": 1658.33
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Credits per output: the listing never says what a title, a meta description or an alt text costs in credits.",
+     "Usage-based charges: the listing says recurring and usage-based charges are billed every 30 days, but publishes no usage rate or threshold."
+    ]
+   },
+   "monthly": {
+    "product_id": "chatgpt-ai-product-description",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 19.0,
+       "standard": 49.0,
+       "pro": 249.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 38.0,
+      "billed": {
+       "amount": 38.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 38.0,
+       "standard": 98.0,
+       "pro": 498.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 57.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 57.0,
+       "standard": 147.0,
+       "pro": 747.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 95.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 95.0,
+       "standard": 245.0,
+       "pro": 1245.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 190.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 190.0,
+       "standard": 490.0,
+       "pro": 2490.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Credits per output: the listing never says what a title, a meta description or an alt text costs in credits.",
+     "Usage-based charges: the listing says recurring and usage-based charges are billed every 30 days, but publishes no usage rate or threshold."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -128,9 +354,15 @@
    "status": "open"
   },
   {
-   "question_id": "chatgpt-ai-product-description:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "chatgpt-ai-product-description:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Credits per output: the listing never says what a title, a meta description or an alt text costs in credits. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "chatgpt-ai-product-description:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Usage-based charges: the listing says recurring and usage-based charges are billed every 30 days, but publishes no usage rate or threshold. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

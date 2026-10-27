@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 591 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-26.
+All 591 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-27.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -345,7 +345,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The smart-template engine is the feature and the fence: decks look polished with zero design skill precisely because the system constrains you.
 - **Best for:** founders, sales and small teams that want consistently good-looking decks fast, where design consistency matters more than pixel-level control
 - **Flags:** Per-seat pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/beautiful-ai-review/
+- **Full review:** https://officesoftwaremarketplace.com/beautiful-ai-review.html
 
 ## Beefree (beefree.io)
 - **Verified pricing:** (price re-verified 2026-10-13) Sold as RGE Studio since the 14 May 2026 rebrand.
@@ -1580,10 +1580,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/healthie-review/
 
 ## Heard (joinheard.com)
-- **Verified pricing:** (re-verified 2026-09-05 and 2026-10-06 on their own pricing page) Three plans, billed upfront per year with the monthly equivalent shown: Lite $129/mo or $1,548 a year, Essential $169/mo or…
-- **Honest take:** Mind the fine print between tiers: the entry plan does not include your annual tax filing (a ~$750 one-off on Lite), it is annual billing only, and messy back-months cost extra as catch-up fees.
+- **Verified pricing:** (re-verified 2026-10-27 in a browser on joinheard.com/pricing and in joinheard.com/llms.txt, which says its prices are for new members starting October 26, 2026; earlier readings on 5 Septe…
+- **Honest take:** Price the tier that actually includes filing.
 - **Best for:** therapists and health-and-wellness practice owners — SLPs, dieticians, chiropractors, audiologists, coaches, massage and physical therapists
-- **Flags:** Add-ons extra, Annual commit
+- **Flags:** Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/heard-review.html
 
 ## Hello Bar (hellobar.com)
@@ -1760,7 +1760,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The tier pages sell live funnels, but the meter that empties first is contacts.
 - **Best for:** marketers building interactive lead-gen — quizzes, calculators, assessments and payment funnels with built-in email sequences — who want a free tier to validate the concept first
 - **Flags:** Usage-metered, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/involve-me-review/
+- **Full review:** https://marketingandsalessoftware.com/involve-me-review.html
 
 ## Inworld AI (inworld.ai)
 - **Verified pricing:** (read 2026-10-15 on inworld.ai/pricing, the billing and concurrency pages of docs.inworld.ai and the terms at inworld.ai/terms; the page shows $ without naming a currency) Inworld sells voi…

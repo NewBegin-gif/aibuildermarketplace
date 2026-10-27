@@ -822,7 +822,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-10-27 on the Compass listing in the Shopify App Store; the terms and privacy policy were read on 2026-10-15) Compass has a single plan with every feature included: $49 a month, o…
 - **Honest take:** Meta ads only; broad store permissions for an analytics app.
 - **Best for:** Shopify merchants who spend on Meta ads and want one simple view of which campaigns turn into real store sales, with plain-English answers instead of Ads Manager reports
-- **Full review:** https://aibuildermarketplace.com/b2b/compass-review/
+- **Full review:** https://marketingandsalessoftware.com/compass-review.html
 
 ## Compliancely (compliancely.com)
 - **Verified pricing:** (2026-07-29, re-verified 2026-08-05, read in a live browser session on their own pricing page, both billing toggles) The published price list covers one product only: TIN-match volume.
@@ -2250,7 +2250,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Little public documentation; no current free trial.
 - **Best for:** small and mid-sized remote or hybrid teams, up to 100 people, who want a visual virtual office with drop-in video and chat instead of scheduling every conversation
 - **Flags:** Per-seat pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/nexgen-virtual-office-review/
+- **Full review:** https://officesoftwaremarketplace.com/nexgen-virtual-office-review.html
 
 ## Nexis CRO (nexiscro.com)
 - **Verified pricing:** (read 14 September 2026 and re-read unchanged on 3 October 2026 on apps.shopify.com/nexis-cro-ai-seo-aeo-audit) Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 o…
@@ -3323,7 +3323,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-10-27 on sucuri.net/website-security-platform/signup/, both tabs; the help-centre and terms pages were read on 2026-10-15; dollar amounts, the page does not name the currency) Su…
 - **Honest take:** Priced per site; cancelling takes a ticket; refund rules conflict.
 - **Best for:** site owners and small businesses who want a firewall in front of their site plus a security team that cleans up a hack for them, on WordPress or any other CMS and host
-- **Full review:** https://aibuildermarketplace.com/b2b/sucuri-review/
+- **Full review:** https://officesoftwaremarketplace.com/sucuri-review.html
 
 ## Sunsama (sunsama.com)
 - **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) The page gives two different numbers and it is worth knowing both.

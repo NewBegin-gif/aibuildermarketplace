@@ -2968,7 +2968,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-10-02 on seeles.ai/upgrade on the monthly, annual and Koin Pack tabs, on the workspace sign-up screen and in the help centre) Everything is paid for in Koins, the platform's cred…
 - **Honest take:** You cannot know in advance what a game will cost.
 - **Best for:** hobbyists, students and teachers who want to turn an idea, a drawing or a photo into a playable browser game without writing code, and indie developers who want to prototype a game idea quickly before building it properly
-- **Flags:** Usage-metered
+- **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/seele-review/
 
 ## Selixer (selixer.com)
@@ -3179,7 +3179,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each …
 - **Honest take:** Smartli bundles nine AI tools — copy, SEO, images, logos — into one suite, and that breadth is also the honest catch: each individual tool is competent rather than best-in-class.
 - **Best for:** e-commerce sellers who want an affordable all-in-one AI suite to draft product listings, ad copy, SEO text and basic brand assets in one place
-- **Flags:** Annual commit
+- **Flags:** Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/smartli-review/
 
 ## SmartSuite (smartsuite.com)
@@ -3279,7 +3279,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/storefaq-review.html
 
 ## StoreLock (storelock.app)
-- **Verified pricing:** (read 2026-10-01 on apps.shopify.com/storelock and in the vendor's FAQ at storelock.app/faqs) Two plans.
+- **Verified pricing:** (re-read 2026-10-27 on apps.shopify.com/storelock, storelock.app/pricing and the StoreLock FAQ) Two plans are on sale today.
 - **Honest take:** The copy protection cannot stop screenshots, developer tools or automated scrapers, which is how stores actually get cloned; the real work is detection and takedown.
 - **Best for:** Shopify merchants with their own product photography and a brand worth copying, especially those whose store has already been cloned, who want lookalike-domain and clone alerts plus DMCA notices pre-filled with the evidence
 - **Full review:** https://aibuildermarketplace.com/b2b/storelock-review/

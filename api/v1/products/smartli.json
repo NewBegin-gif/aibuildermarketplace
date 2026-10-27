@@ -9,7 +9,7 @@
  "summary": "AI writing suite for e-commerce: product listings, ad copy, SEO text and brand assets. Each of the nine tools is competent rather than deep, so leaning hard on one job means outgrowing it.",
  "best_for": "e-commerce sellers who want an affordable all-in-one AI suite to draft product listings, ad copy, SEO text and basic brand assets in one place",
  "skip_if": "you need best-in-class depth in one area (a specialist copy or image tool), or you won't edit and fact-check AI output before it ships",
- "honest_knock": "Smartli bundles nine AI tools — copy, SEO, images, logos — into one suite, and that breadth is also the honest catch: each individual tool is competent rather than best-in-class, so a team that leans hard on one job may outgrow it toward a specialist. And like all AI copy, its product descriptions and ad copy need a human edit and a fact-check — never publish specs or claims it invents about your product. For a store that wants many content jobs handled cheaply in one place, it's efficient.",
+ "honest_knock": "Smartli bundles nine AI tools — copy, SEO, images, logos — into one suite, and that breadth is also the honest catch: each individual tool is competent rather than best-in-class, so a team that leans hard on one job may outgrow it toward a specialist. And like all AI copy, its product descriptions and ad copy need a human edit and a fact-check — never publish specs or claims it invents about your product. For a store that wants many content jobs handled cheaply in one place, it's efficient.\n\nTwo places tell different stories about trying it for free. The Shopify App Store listing, read on 27 October 2026, says 'Free plan available' and shows a Free card that lists only 24/7 chat support, while smartli.ai/pricing shows four paid tiers and no free plan on either tab. A one-star review from an Australian store, edited 24 July 2024, says the advertised free account was not offered after installing and the app would not allow a test without choosing a plan. If a free tier matters to you, check which plan the app selects before you approve the Shopify charge.\n\nThe star average hides a split. Of 66 ratings, 53 are five stars and 4 are one star (4.0 overall), and the one- and two-star reviews are nearly all about billing rather than writing quality: a charge after cancelling inside the trial (May 2023), the free-account complaint above, and the November 2025 review about a $152 charge on the install day. Smartli's terms add that a failed monthly payment may be retried on the same card until you cancel or change the payment method in your account settings, so an expired card does not end the subscription.",
  "pricing": {
   "status": "public",
   "entry_price": "$39",
@@ -17,21 +17,21 @@
   "from_price_usd_month": 39.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 7-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948). Starter was $29/mo when we first checked, so the entry price has gone up.",
-  "verified_at": "2026-09-27",
+  "notes": "(re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 7-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948). Starter was $29/mo when we first checked, so the entry price has gone up. Re-read on 27 October 2026 with a plain fetch: smartli.ai/pricing unchanged (monthly Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 7-day trial; yearly Pro $24 billed $288, Empire $57 billed $684, Unicorn $79 billed $948, Starter absent). The Shopify App Store listing, now titled 'Smartli: AI Tools & SEO Writer', shows a Free plan card with 24/7 chat support above the same paid tiers, and says all charges are billed in USD every 30 days.",
+  "verified_at": "2026-10-27",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": null,
   "recent_change": null
  },
- "free_plan": false,
- "free_plan_evidence": null,
+ "free_plan": true,
+ "free_plan_evidence": "The Shopify App Store listing, now titled 'Smartli: AI Tools & SEO Writer', shows a Free plan card with 24/7 chat support above the same paid tiers, and says all charges are billed in USD every 30 days.",
  "cost_traps": [
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948).",
-   "verified_at": "2026-09-27",
+   "verified_at": "2026-10-27",
    "source_url": null
   }
  ],
@@ -60,16 +60,401 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store account",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 39,
+     "annual_status": "not_offered",
+     "evidence": "Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 7-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948)"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 59,
+     "annual_month": 24,
+     "annual_year": 288,
+     "evidence": "Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 7-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948)"
+    },
+    {
+     "id": "empire",
+     "name": "Empire",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 99,
+     "annual_month": 57,
+     "annual_year": 684,
+     "evidence": "Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 7-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948)"
+    },
+    {
+     "id": "unicorn",
+     "name": "Unicorn",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 299,
+     "annual_month": 79,
+     "annual_year": 948,
+     "evidence": "Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 7-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948)"
+    }
+   ],
+   "notes": [
+    "Plans differ by monthly quota of SEO descriptions, blog posts and ad copy, not by users; the rules count one store account.",
+    "Starter disappears from the table on yearly billing."
+   ],
+   "not_computable": [
+    "The Shopify listing shows a Free plan whose limits are not stated."
+   ],
+   "rules_verified_at": "2026-10-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "smartli",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "store account",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "pro": 24.0,
+       "empire": 57.0,
+       "unicorn": 79.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "pro",
+      "to_plan": null,
+      "from_plan_name": "Pro",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The Shopify listing shows a Free plan whose limits are not stated."
+    ]
+   },
+   "monthly": {
+    "product_id": "smartli",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "store account",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.0,
+       "pro": 59.0,
+       "empire": 99.0,
+       "unicorn": 299.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "empire": "not_eligible",
+       "unicorn": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": null,
+      "from_plan_name": "Starter",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The Shopify listing shows a Free plan whose limits are not stated."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -99,9 +484,9 @@
    "status": "open"
   },
   {
-   "question_id": "smartli:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "smartli:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The Shopify listing shows a Free plan whose limits are not stated. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -93,15 +93,405 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "website",
+   "axis": "companies",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free €0 for 1 clone and up to 20 translated pages",
+     "max_units": 1
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 49,
+     "monthly": 59,
+     "evidence": "Business €49 for 3 clones and 400 pages, Pro €79 for 5 clones and 1,200 pages, Expert €249 for 10 clones and 5,000 pages, Premium €999 for 20 clones and 50,000 pages. Click Per month and the same five read €0, €59, €95, €299 and €1,199"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 79,
+     "monthly": 95,
+     "evidence": "Business €49 for 3 clones and 400 pages, Pro €79 for 5 clones and 1,200 pages, Expert €249 for 10 clones and 5,000 pages, Premium €999 for 20 clones and 50,000 pages. Click Per month and the same five read €0, €59, €95, €299 and €1,199"
+    },
+    {
+     "id": "expert",
+     "name": "Expert",
+     "model": "per_unit",
+     "annual_month": 249,
+     "monthly": 299,
+     "evidence": "Business €49 for 3 clones and 400 pages, Pro €79 for 5 clones and 1,200 pages, Expert €249 for 10 clones and 5,000 pages, Premium €999 for 20 clones and 50,000 pages. Click Per month and the same five read €0, €59, €95, €299 and €1,199"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "per_unit",
+     "annual_month": 999,
+     "monthly": 1199,
+     "evidence": "Business €49 for 3 clones and 400 pages, Pro €79 for 5 clones and 1,200 pages, Expert €249 for 10 clones and 5,000 pages, Premium €999 for 20 clones and 50,000 pages. Click Per month and the same five read €0, €59, €95, €299 and €1,199"
+    }
+   ],
+   "notes": "Website plans, priced per site being translated; plans differ by clones (language copies) and translated pages, not by users. Annual figures are the per-month amounts on the Annually setting.",
+   "not_computable": [
+    "Online Store plans (€99, €299, €499 a month on the annual setting) and their XML product feeds billed per feed.",
+    "Additional clones (€25 or €50 a month) and the 50-page upgrade on Free: depend on how many languages and pages you need.",
+    "Optional setup assistance, a one-off €250 (€1,000 on Premium)."
+   ],
+   "rules_verified_at": "2026-10-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "clonable",
+    "currency": "EUR",
+    "axis": "companies",
+    "unit": "website",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "business": 49.0,
+       "pro": 79.0,
+       "expert": 249.0,
+       "premium": 999.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 98.0,
+      "billed": {
+       "amount": 1176.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 98.0,
+       "pro": 158.0,
+       "expert": 498.0,
+       "premium": 1998.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 245.0,
+      "billed": {
+       "amount": 2940.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 245.0,
+       "pro": 395.0,
+       "expert": 1245.0,
+       "premium": 4995.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 490.0,
+      "billed": {
+       "amount": 5880.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 490.0,
+       "pro": 790.0,
+       "expert": 2490.0,
+       "premium": 9990.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 980.0,
+      "billed": {
+       "amount": 11760.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 980.0,
+       "pro": 1580.0,
+       "expert": 4980.0,
+       "premium": 19980.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 2450.0,
+      "billed": {
+       "amount": 29400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 2450.0,
+       "pro": 3950.0,
+       "expert": 12450.0,
+       "premium": 49950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 4900.0,
+      "billed": {
+       "amount": 58800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 4900.0,
+       "pro": 7900.0,
+       "expert": 24900.0,
+       "premium": 99900.0
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 7350.0,
+      "billed": {
+       "amount": 88200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 7350.0,
+       "pro": 11850.0,
+       "expert": 37350.0,
+       "premium": 149850.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "business",
+      "from_plan_name": "Free",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Online Store plans (€99, €299, €499 a month on the annual setting) and their XML product feeds billed per feed.",
+     "Additional clones (€25 or €50 a month) and the 50-page upgrade on Free: depend on how many languages and pages you need.",
+     "Optional setup assistance, a one-off €250 (€1,000 on Premium)."
+    ]
+   },
+   "monthly": {
+    "product_id": "clonable",
+    "currency": "EUR",
+    "axis": "companies",
+    "unit": "website",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "business": 59.0,
+       "pro": 95.0,
+       "expert": 299.0,
+       "premium": 1199.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 118.0,
+      "billed": {
+       "amount": 118.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 118.0,
+       "pro": 190.0,
+       "expert": 598.0,
+       "premium": 2398.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 295.0,
+      "billed": {
+       "amount": 295.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 295.0,
+       "pro": 475.0,
+       "expert": 1495.0,
+       "premium": 5995.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 590.0,
+      "billed": {
+       "amount": 590.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 590.0,
+       "pro": 950.0,
+       "expert": 2990.0,
+       "premium": 11990.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1180.0,
+      "billed": {
+       "amount": 1180.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 1180.0,
+       "pro": 1900.0,
+       "expert": 5980.0,
+       "premium": 23980.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 2950.0,
+      "billed": {
+       "amount": 2950.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 2950.0,
+       "pro": 4750.0,
+       "expert": 14950.0,
+       "premium": 59950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 5900.0,
+      "billed": {
+       "amount": 5900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 5900.0,
+       "pro": 9500.0,
+       "expert": 29900.0,
+       "premium": 119900.0
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 8850.0,
+      "billed": {
+       "amount": 8850.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "business": 8850.0,
+       "pro": 14250.0,
+       "expert": 44850.0,
+       "premium": 179850.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "business",
+      "from_plan_name": "Free",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Online Store plans (€99, €299, €499 a month on the annual setting) and their XML product feeds billed per feed.",
+     "Additional clones (€25 or €50 a month) and the 50-page upgrade on Free: depend on how many languages and pages you need.",
+     "Optional setup assistance, a one-off €250 (€1,000 on Premium)."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -157,9 +547,21 @@
    "status": "open"
   },
   {
-   "question_id": "clonable:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "clonable:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Online Store plans (€99, €299, €499 a month on the annual setting) and their XML product feeds billed per feed. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "clonable:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Additional clones (€25 or €50 a month) and the 50-page upgrade on Free: depend on how many languages and pages you need. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "clonable:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Optional setup assistance, a one-off €250 (€1,000 on Premium). Can you publish the price or the rule?",
    "status": "open"
   }
  ],

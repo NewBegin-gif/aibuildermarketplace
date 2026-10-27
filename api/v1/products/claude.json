@@ -96,16 +96,440 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "audience": "personal",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "The free tier is $0"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 1,
+     "annual_month": 17,
+     "annual_year": 200,
+     "monthly": 20,
+     "evidence": "Pro is $17/month with the annual discount ($200 billed up front) or $20 billed monthly"
+    },
+    {
+     "id": "team-standard",
+     "name": "Team (standard seat)",
+     "model": "per_unit",
+     "min_units": 2,
+     "max_units": 150,
+     "annual_month": 20,
+     "monthly": 25,
+     "evidence": "Team is for teams of 2 to 150: a standard seat is $20/seat/month billed annually ($25 monthly)"
+    },
+    {
+     "id": "team-premium",
+     "name": "Team (premium seat)",
+     "model": "per_unit",
+     "min_units": 2,
+     "max_units": 150,
+     "annual_month": 100,
+     "monthly": 125,
+     "evidence": "a premium seat is $100/seat/month billed annually ($125 monthly)"
+    }
+   ],
+   "notes": "Team allows 2 to 150 people; the minimum of 2 applies to the team, which can mix standard and premium seats. These rules price an all-standard or all-premium team.",
+   "not_computable": [
+    "Max is a personal plan from $100 a month for 5x or 20x Pro usage; the 20x price is not in our notes.",
+    "Enterprise self-serve is $20 per seat plus usage billed at API rates, so the total depends on the models and tasks the team runs; larger contracts are custom.",
+    "The API is billed per token and per platform feature, separate from any seat."
+   ],
+   "rules_verified_at": "2026-10-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "claude",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 40.0,
+       "team-premium": 200.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 40.0,
+       "team-premium": 200.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 720.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 60.0,
+       "team-premium": 300.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 100.0,
+       "team-premium": 500.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 2400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 200.0,
+       "team-premium": 1000.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 3600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 300.0,
+       "team-premium": 1500.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 4800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 400.0,
+       "team-premium": 2000.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 6000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 500.0,
+       "team-premium": 2500.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 12000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 1000.0,
+       "team-premium": 5000.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 2000.0,
+      "billed": {
+       "amount": 24000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 2000.0,
+       "team-premium": 10000.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Max is a personal plan from $100 a month for 5x or 20x Pro usage; the 20x price is not in our notes.",
+     "Enterprise self-serve is $20 per seat plus usage billed at API rates, so the total depends on the models and tasks the team runs; larger contracts are custom.",
+     "The API is billed per token and per platform feature, separate from any seat."
+    ]
+   },
+   "monthly": {
+    "product_id": "claude",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 50.0,
+       "team-premium": 250.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 50.0,
+       "team-premium": 250.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 75.0,
+       "team-premium": 375.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 125.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 125.0,
+       "team-premium": 625.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 250.0,
+       "team-premium": 1250.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 375.0,
+      "billed": {
+       "amount": 375.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 375.0,
+       "team-premium": 1875.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 500.0,
+       "team-premium": 2500.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 625.0,
+      "billed": {
+       "amount": 625.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 625.0,
+       "team-premium": 3125.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 1250.0,
+      "billed": {
+       "amount": 1250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 1250.0,
+       "team-premium": 6250.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team-standard",
+      "cheapest_plan_name": "Team (standard seat)",
+      "total_month": 2500.0,
+      "billed": {
+       "amount": 2500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "pro": "not_eligible",
+       "team-standard": 2500.0,
+       "team-premium": 12500.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Max is a personal plan from $100 a month for 5x or 20x Pro usage; the 20x price is not in our notes.",
+     "Enterprise self-serve is $20 per seat plus usage billed at API rates, so the total depends on the models and tasks the team runs; larger contracts are custom.",
+     "The API is billed per token and per platform feature, separate from any seat."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -587,9 +1011,21 @@
    "status": "open"
   },
   {
-   "question_id": "claude:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "claude:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Max is a personal plan from $100 a month for 5x or 20x Pro usage; the 20x price is not in our notes. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "claude:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Enterprise self-serve is $20 per seat plus usage billed at API rates, so the total depends on the models and tasks the team runs; larger contracts are custom. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "claude:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: The API is billed per token and per platform feature, separate from any seat. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

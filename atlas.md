@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 591 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-27.
+All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-27.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -817,6 +817,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** product teams that want proven in-app text/voice/video chat with SDKs for every major framework, without building messaging infrastructure themselves
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://zerotouchsupport.com/cometchat-review.html
+
+## Compass (thecompassapp.io)
+- **Verified pricing:** (read 2026-10-27 on the Compass listing in the Shopify App Store; the terms and privacy policy were read on 2026-10-15) Compass has a single plan with every feature included: $49 a month, o…
+- **Honest take:** Meta ads only; broad store permissions for an analytics app.
+- **Best for:** Shopify merchants who spend on Meta ads and want one simple view of which campaigns turn into real store sales, with plain-English answers instead of Ads Manager reports
+- **Full review:** https://aibuildermarketplace.com/b2b/compass-review/
 
 ## Compliancely (compliancely.com)
 - **Verified pricing:** (2026-07-29, re-verified 2026-08-05, read in a live browser session on their own pricing page, both billing toggles) The published price list covers one product only: TIN-match volume.
@@ -2239,6 +2245,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://zerotouchsupport.com/neuroads-review.html
 
+## NexGen Virtual Office (nexgenvirtualworkplace.net)
+- **Verified pricing:** (read 2026-10-27 on nexgenvirtualworkplace.net, SMB Market page; the Enterprise and Webex pages were read on 2026-10-20; dollar amounts, the page does not name the currency) NexGen prices i…
+- **Honest take:** Little public documentation; no current free trial.
+- **Best for:** small and mid-sized remote or hybrid teams, up to 100 people, who want a visual virtual office with drop-in video and chat instead of scheduling every conversation
+- **Flags:** Per-seat pricing
+- **Full review:** https://aibuildermarketplace.com/b2b/nexgen-virtual-office-review/
+
 ## Nexis CRO (nexiscro.com)
 - **Verified pricing:** (read 14 September 2026 and re-read unchanged on 3 October 2026 on apps.shopify.com/nexis-cro-ai-seo-aeo-audit) Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 o…
 - **Honest take:** It has no track record at all.
@@ -3305,6 +3318,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** leadership teams that already run on goals and want one place to set objectives, track KPIs and scorecards, and keep strategy execution on cadence
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/success-co-review/
+
+## Sucuri (sucuri.net)
+- **Verified pricing:** (read 2026-10-27 on sucuri.net/website-security-platform/signup/, both tabs; the help-centre and terms pages were read on 2026-10-15; dollar amounts, the page does not name the currency) Su…
+- **Honest take:** Priced per site; cancelling takes a ticket; refund rules conflict.
+- **Best for:** site owners and small businesses who want a firewall in front of their site plus a security team that cleans up a hack for them, on WordPress or any other CMS and host
+- **Full review:** https://aibuildermarketplace.com/b2b/sucuri-review/
 
 ## Sunsama (sunsama.com)
 - **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) The page gives two different numbers and it is worth knowing both.

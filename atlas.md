@@ -3115,10 +3115,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/signal-house-review.html
 
 ## Signeasy (signeasy.com)
-- **Verified pricing:** (re-read 2026-10-04 on signeasy.com/pricing, including the page's own pricing script) No free plan, a 14-day free trial and a 100-day money-back guarantee.
+- **Verified pricing:** (re-read 2026-10-04 on signeasy.com/pricing, including the page's own pricing script) No free plan on the pricing page, a 14-day free trial and a 100-day money-back guarantee.
 - **Honest take:** The $10 Personal plan is annual-billed and single-seat.
 - **Best for:** small teams that want straightforward unlimited sending and signing per seat, with contract management one tier up
-- **Flags:** Per-seat pricing
+- **Flags:** Per-seat pricing, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/signeasy-review/
 
 ## Signitic (signitic.com)

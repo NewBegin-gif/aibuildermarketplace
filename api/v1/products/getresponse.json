@@ -346,7 +346,47 @@
     ],
     "switch_points": [],
     "conflicts": [],
-    "unknowns": []
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.getresponse.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The banner states 14 days, but the welcome message in the same app promises access to all plans for the first 30 days.",
+      "observed_on": "2026-10-28",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+      },
+      "plan": "Starter, 1,000 contacts, annual",
+      "comparability": "Same session and tested trial; only the visible statements were compared.",
+      "status": "contradicted",
+      "buying_consequence": "The internal trial messages conflict. Do not rely on access lasting 30 days; actual expiry was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/getresponse-review/"
+     },
+     {
+      "claim": "Prices listed are net amounts",
+      "claim_source": "https://www.getresponse.com/upgrade-free/",
+      "claim_read_on": "2026-10-28",
+      "observed": "Starter for 1,000 contacts, annual: subtotal €192, prepaid discount 18% (-€34.56), tax €33.06 at 21%, order total €190.50. Renewal text gives 2027-10-28. Checkout was recorded as text only; no screenshot was saved.",
+      "observed_on": "2026-10-28",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+      },
+      "plan": "Starter, 1,000 contacts, annual",
+      "comparability": "Same Starter plan, 1,000 contacts and annual term. Net pricing is consistent with checkout tax; the older cost rule is not an independent current checkout/tax confirmation.",
+      "status": "confirmed",
+      "buying_consequence": "The page presents net prices; the checkout adds tax. Budget for the observed tax-inclusive annual total. The screenshot was omitted because it displayed a home address.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/getresponse-review/"
+     }
+    ]
    },
    "monthly": {
     "product_id": "getresponse",
@@ -518,15 +558,54 @@
     ],
     "switch_points": [],
     "conflicts": [],
-    "unknowns": []
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.getresponse.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The banner states 14 days, but the welcome message in the same app promises access to all plans for the first 30 days.",
+      "observed_on": "2026-10-28",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+      },
+      "plan": "Starter, 1,000 contacts, annual",
+      "comparability": "Same session and tested trial; only the visible statements were compared.",
+      "status": "contradicted",
+      "buying_consequence": "The internal trial messages conflict. Do not rely on access lasting 30 days; actual expiry was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/getresponse-review/"
+     },
+     {
+      "claim": "Prices listed are net amounts",
+      "claim_source": "https://www.getresponse.com/upgrade-free/",
+      "claim_read_on": "2026-10-28",
+      "observed": "Starter for 1,000 contacts, annual: subtotal €192, prepaid discount 18% (-€34.56), tax €33.06 at 21%, order total €190.50. Renewal text gives 2027-10-28. Checkout was recorded as text only; no screenshot was saved.",
+      "observed_on": "2026-10-28",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+      },
+      "plan": "Starter, 1,000 contacts, annual",
+      "comparability": "Same Starter plan, 1,000 contacts and annual term. Net pricing is consistent with checkout tax; the older cost rule is not an independent current checkout/tax confirmation.",
+      "status": "confirmed",
+      "buying_consequence": "The page presents net prices; the checkout adds tax. Budget for the observed tax-inclusive annual total. The screenshot was omitted because it displayed a home address.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/getresponse-review/"
+     }
+    ]
    }
   }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-10-28; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -534,7 +613,252 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "api_access": {
+   "status": "available_on_tested_plan",
+   "plan": "Free trial",
+   "route": "Tools > Integrations and API > API",
+   "quote": {
+    "text": "Allow applications access to your account",
+    "source_url": "https://app.getresponse.com/",
+    "observed_at": "2026-10-28T11:05:00+01:00"
+   },
+   "evidence": [
+    "bewijs/14-api-sleutel-aangeboden-in-proef.jpg"
+   ]
+  },
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-28",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/getresponse-review/",
+  "method": [
+   "Imported two made-up contacts with a tag and a custom field",
+   "Generated one email with the AI generator",
+   "Exported the contacts and imported them again with one change",
+   "Opened the Starter checkout and stopped before paying"
+  ],
+  "claims": [
+   {
+    "claim": "Try free for 14 days",
+    "claim_source": "https://www.getresponse.com/pricing",
+    "claim_read_on": "2026-10-25",
+    "observed": "The banner states 14 days, but the welcome message in the same app promises access to all plans for the first 30 days.",
+    "observed_on": "2026-10-28",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+    },
+    "plan": "Starter, 1,000 contacts, annual",
+    "comparability": "Same session and tested trial; only the visible statements were compared.",
+    "status": "contradicted",
+    "buying_consequence": "The internal trial messages conflict. Do not rely on access lasting 30 days; actual expiry was not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Prices listed are net amounts",
+    "claim_source": "https://www.getresponse.com/upgrade-free/",
+    "claim_read_on": "2026-10-28",
+    "observed": "Starter for 1,000 contacts, annual: subtotal €192, prepaid discount 18% (-€34.56), tax €33.06 at 21%, order total €190.50. Renewal text gives 2027-10-28. Checkout was recorded as text only; no screenshot was saved.",
+    "observed_on": "2026-10-28",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+    },
+    "plan": "Starter, 1,000 contacts, annual",
+    "comparability": "Same Starter plan, 1,000 contacts and annual term. Net pricing is consistent with checkout tax; the older cost rule is not an independent current checkout/tax confirmation.",
+    "status": "confirmed",
+    "buying_consequence": "The page presents net prices; the checkout adds tax. Budget for the observed tax-inclusive annual total. The screenshot was omitted because it displayed a home address.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-28",
+   "what": "Exported the two contacts from the custom fixture with Tags, Custom fields and Consent fields enabled.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "Tags and custom fields are off by default in export. Session notes identify exported times as UTC; the CSV has no explicit timezone marker.",
+   "friction": {
+    "export_route": "List > Show contacts > menu > Export > Export new file > Download.",
+    "format": "CSV opened and compared with the custom fixture.",
+    "reimport": "Add and update existing matched by email address. The later notes record AIBM-002 HERIMPORT, AIBM-001 unchanged and three contacts total, with no duplicate. Import statistics still show Updated 0. No contact-list screenshot or post-reimport export was saved.",
+    "cancellation": "Checkout text gives Profile > Billing > Cancel subscription. That route and cancellation were not tested."
+   },
+   "not_tested": [
+    "Update by native ID and post-reimport export.",
+    "Field preservation after reimport beyond the observed name and unchanged first record.",
+    "Data access after trial expiry.",
+    "All official category-kit checks; a custom contact fixture was used."
+   ],
+   "came_along": [
+    "Both contacts, native IDs, list, names, email fields, subscription details, the shared tag and custom:aibm_id are present."
+   ],
+   "lost": [
+    "Original per-row tags were skipped during import and replaced by one shared tag.",
+    "No consent columns appear in the export despite selecting Consent fields."
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/getresponse-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-28",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/getresponse-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-28",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/getresponse-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Exported the two contacts from the custom fixture with Tags, Custom fields and Consent fields enabled. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-28",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/getresponse-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Exported the two contacts from the custom fixture with Tags, Custom fields and Consent fields enabled. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-28",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/getresponse-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-28",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/getresponse-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-28",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "GetResponse",
+    "product_id": "getresponse",
+    "run_date": "2026-10-28",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 28 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up contacts, generated one email with AI, exported the contacts, imported them again with one change and opened the Starter checkout without paying.",
+    "findings": [
+     "The trial banner said 'Your trial expires in 14 days', while the welcome message in the same account said 'For the first 30 days, you'll have access to features from all our plans'. No card was asked.",
+     "The contact counter started at 1 of 500: the sign-up address itself is added as a contact. Importing a CSV requires ticking 'I have permission to add these people to my list'; without it the import stops.",
+     "A tags column in the CSV could not be mapped per row; you can only assign the same tags to the whole import, and tag names allow only letters, numbers and underscores. A custom field could be created during the import. Import statistics said 'Added to list 0' while both contacts were in the list.",
+     "The AI email generator allows three runs in the trial ('Runs left: 3', then 2). With a topic but no facts, it invented pros and cons for the tools, such as 'Affordable pricing with a solid free tier'.",
+     "Export leaves tags and custom fields off unless you tick them. With both on, the CSV kept both contacts, their GetResponse IDs, the shared tag and our custom field, but showed no consent columns although we selected them.",
+     "Importing the file again with one changed name updated that contact by email address; the other stayed the same and no duplicate appeared. The import statistics still said 'Updated 0'.",
+     "In-app prices are net. Starter for 1,000 contacts billed yearly came to €192, minus €34.56 prepaid discount, plus €33.06 tax (21%): €190.50 in total. Team roles require an upgrade; generating an API key is offered in the trial."
+    ],
+    "not_tested": [
+     "Sending an email or running an automation",
+     "What happens to the account and data when the trial ends",
+     "Cancelling (the account settings showed no billing section during the trial)",
+     "Contacting support",
+     "Team roles (only available after an upgrade)"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.getresponse.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The banner states 14 days, but the welcome message in the same app promises access to all plans for the first 30 days.",
+      "observed_on": "2026-10-28",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+      },
+      "plan": "Starter, 1,000 contacts, annual",
+      "comparability": "Same session and tested trial; only the visible statements were compared.",
+      "status": "contradicted",
+      "buying_consequence": "The internal trial messages conflict. Do not rely on access lasting 30 days; actual expiry was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Prices listed are net amounts",
+      "claim_source": "https://www.getresponse.com/upgrade-free/",
+      "claim_read_on": "2026-10-28",
+      "observed": "Starter for 1,000 contacts, annual: subtotal €192, prepaid discount 18% (-€34.56), tax €33.06 at 21%, order total €190.50. Renewal text gives 2027-10-28. Checkout was recorded as text only; no screenshot was saved.",
+      "observed_on": "2026-10-28",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+      },
+      "plan": "Starter, 1,000 contacts, annual",
+      "comparability": "Same Starter plan, 1,000 contacts and annual term. Net pricing is consistent with checkout tax; the older cost rule is not an independent current checkout/tax confirmation.",
+      "status": "confirmed",
+      "buying_consequence": "The page presents net prices; the checkout adds tax. Budget for the observed tax-inclusive annual total. The screenshot was omitted because it displayed a home address.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-28",
+     "what": "Exported the two contacts from the custom fixture with Tags, Custom fields and Consent fields enabled.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "Tags and custom fields are off by default in export. Session notes identify exported times as UTC; the CSV has no explicit timezone marker.",
+     "friction": {
+      "export_route": "List > Show contacts > menu > Export > Export new file > Download.",
+      "format": "CSV opened and compared with the custom fixture.",
+      "reimport": "Add and update existing matched by email address. The later notes record AIBM-002 HERIMPORT, AIBM-001 unchanged and three contacts total, with no duplicate. Import statistics still show Updated 0. No contact-list screenshot or post-reimport export was saved.",
+      "cancellation": "Checkout text gives Profile > Billing > Cancel subscription. That route and cancellation were not tested."
+     },
+     "not_tested": [
+      "Update by native ID and post-reimport export.",
+      "Field preservation after reimport beyond the observed name and unchanged first record.",
+      "Data access after trial expiry.",
+      "All official category-kit checks; a custom contact fixture was used."
+     ],
+     "came_along": [
+      "Both contacts, native IDs, list, names, email fields, subscription details, the shared tag and custom:aibm_id are present."
+     ],
+     "lost": [
+      "Original per-row tags were skipped during import and replaced by one shared tag.",
+      "No consent columns appear in the export despite selecting Consent fields."
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "getresponse:cancellation_terms",

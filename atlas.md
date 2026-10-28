@@ -396,7 +396,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bitdefender-review/
 
 ## Bitscale (bitscale.ai)
-- **Verified pricing:** (re-verified 13 September 2026 on bitscale.ai/pricing, extended on 11 September 2026 from inside a free account; every headline figure unchanged since 1 September 2026) The meter is credits.
+- **Verified pricing:** (re-verified 28 October 2026 on bitscale.ai/pricing, extended on 11 September 2026 from inside a free account; every headline figure unchanged since 1 September 2026) The meter is credits.
 - **Honest take:** Every email or phone the waterfall finds costs one to twelve credits depending on how many providers you let it try, so the same 15,000 credits are 15,000 enriched contacts or 1,250.
 - **Best for:** sales and RevOps teams that already run enrichment across several vendors and want the waterfall, the signals and the CRM sync in one place, with enough monthly volume to put 15,000 credits to work
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -3673,7 +3673,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/unbounce-review/
 
 ## Uniqode (uniqode.com)
-- **Verified pricing:** (re-verified 2026-09-13 on their own pricing page, read both as plain HTML and as a live browser render) The plan cards are rendered in the browser and carry no price in either reading, so …
+- **Verified pricing:** (re-verified 2026-10-28 on their own pricing page, read both as plain HTML and as a live browser render) The plan cards are rendered in the browser and carry no price in either reading, so …
 - **Honest take:** The tier jumps are steep and a lot is gated: analytics are capped at 60 days on the entry plan, scan limits apply across all tiers, and custom domains sit behind higher pricing.
 - **Best for:** marketing teams that need dynamic QR codes with real analytics and enterprise compliance (SOC 2, GDPR, ISO 27001, optional HIPAA)
 - **Flags:** Per-seat pricing, Add-ons extra

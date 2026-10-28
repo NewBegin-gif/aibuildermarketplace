@@ -2904,10 +2904,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/salesmessage-review.html
 
 ## SalesTarget.ai (salestarget.ai)
-- **Verified pricing:** (read 2026-10-01 on salestarget.ai/pricing, tab by tab, and in the help centre at help.salestarget.ai) Sold either as one bundle or module by module, priced per organisation rather than per…
-- **Honest take:** The credit numbers on the plan cards shrink once you read the help centre's price list.
+- **Verified pricing:** (re-read 2026-10-28 on salestarget.ai/pricing, tab by tab, monthly billing; the vendor told us on 28 October that its plans had changed) Sold either as one bundle or module by module.
+- **Honest take:** The credit numbers on the plan cards shrink once you read the price list.
 - **Best for:** small sales teams and agencies that want a B2B lead database, cold email with unlimited inboxes and warm-up, LinkedIn automation and a basic CRM under one login, priced per organisation with 3 seats included rather than per seat
-- **Flags:** Usage-metered
+- **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/salestarget-ai-review.html
 
 ## Samsara (samsara.com)

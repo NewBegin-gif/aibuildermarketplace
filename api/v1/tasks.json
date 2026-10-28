@@ -4028,6 +4028,102 @@
   },
   {
    "source": "session",
+   "product_name": "monday.com",
+   "product_id": "monday-com",
+   "run_date": "2026-10-28",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 28 October 2026 on the free Pro trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported three made-up tasks, set up one automation, asked the AI assistant one question, exported the board, imported it again with one change and opened the Pro checkout without entering a card.",
+   "findings": [
+    "The account opened on a 14-day Pro trial without a card, after six onboarding screens. The first screen had 'allow automatic sign-ups with an @aibuildermarketplace.com email address' switched on by default.",
+    "The plans page started at 5 seats; the smallest choice was 3. For 3 seats Pro cost €19 per seat a month billed yearly or €24 monthly, and choosing monthly first opened a prompt to reconsider yearly billing.",
+    "The Pro checkout for 3 seats monthly added an AI add-on of €30 (3,000 credits) by itself, offset by a €30 discount 'only in the first year', plus €15.12 tax (21%): €87.12 a month. After the first year that add-on would cost extra if you keep it.",
+    "Our CSV import matched only the Status column automatically; task name and due date had to be mapped by hand. Start Date arrived as a text column. The status cells first showed colours without labels, but the labels appeared after reloading the board.",
+    "A 'when status changes to Done, move item to group' automation ran within seconds and used 1 of the 25,000 monthly actions on Pro. The Sidekick assistant correctly named the two tasks due on 29 October.",
+    "Re-importing with one changed description and 'Update' matched on task name: the description changed and no duplicates appeared, although the notice said '3 items imported'.",
+    "Invitations offer Admin, Member and a Viewer role described as 'view only, no edits (free)'. The 'downgrade to Free' link only said you can choose a plan when the trial ends. API tokens and an MCP server are offered in the developer centre."
+   ],
+   "not_tested": [
+    "What the Free plan allows after the trial",
+    "How many AI credits one Sidekick answer uses (we saw a balance of 7.6 afterwards, not before)",
+    "Re-importing by item ID",
+    "Contacting support",
+    "Guests and seat costs with real colleagues"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "14-day free trial",
+     "claim_source": "https://monday.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "The plans window states 14 days remaining in the free Pro trial.",
+     "observed_on": "2026-10-28",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/monday-com-review/#claim-vs-measured"
+     },
+     "plan": "Pro, 3 seats, monthly, automatic AI add-on",
+     "comparability": "Same session and tested trial; only the visible statements were compared.",
+     "status": "confirmed",
+     "buying_consequence": "The initial trial length is confirmed; behavior after expiry was not tested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€24 per seat a month (Pro, monthly billing)",
+     "claim_source": "https://monday.com/",
+     "claim_read_on": "2026-10-28",
+     "observed": "Pro, 3 seats, monthly: €72 plus an automatic AI add-on of €30, offset by a €30 discount only in the first year; tax €15.12 at 21.0%; total €87.12. The smallest paid team size offered is 3.",
+     "observed_on": "2026-10-28",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/monday-com-review/#claim-vs-measured"
+     },
+     "plan": "Pro, 3 seats, monthly, automatic AI add-on",
+     "comparability": "Same Pro plan, 3 seats and monthly EUR term. Base plan matches the displayed price; contradiction concerns the automatic add-on after the first-year discount. No matching current cost rule; no computed renewal total.",
+     "status": "contradicted",
+     "buying_consequence": "The automatic AI add-on is discounted only in the first year, creating an additional charge afterward if retained. The final amount after that year was not observed. The paid plan requires at least 3 seats.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-28",
+    "what": "Exported the board to Excel and compared the three imported tasks with the custom CSV fixture.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Export is under More actions. Updates is off by default and Subitems is disabled in the dialog.",
+    "friction": {
+     "export_route": "Board menu > More actions > export board to Excel.",
+     "format": "XLSX opened and compared with the custom fixture; due dates are Excel dates and Start Date is text.",
+     "reimport": "Update matched by task name, with the modified description recorded on AIBM-002 and no duplicates. The new import group was empty. Due Date was not mapped. No post-reimport export or update by Item ID was tested.",
+     "cancellation": "Following the Free downgrade link only shows a message to choose a plan at the end of the Pro trial. No downgrade was offered at that point and no change was confirmed."
+    },
+    "not_tested": [
+     "Reimport/update by Item ID and post-reimport export.",
+     "Preservation of all fields and IDs after reimport.",
+     "Free-plan behavior after the trial.",
+     "Update content preservation; there were no updates.",
+     "All official category-kit checks; a copied ClickUp task fixture was used."
+    ],
+    "came_along": [
+     "Imported task names, descriptions, native Item IDs and due dates are present.",
+     "Status values to do, in progress and complete are present in the export. After reloading, the board also showed status labels; the initial missing text was a display delay."
+    ],
+    "lost": [
+     "Start Date is stored as text rather than a date column."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Deputy",
    "product_id": "deputy",
    "run_date": "2026-10-24",
@@ -5021,6 +5117,99 @@
     ],
     "lost": [],
     "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Toggl",
+   "product_id": "toggl",
+   "run_date": "2026-10-28",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 28 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We logged three time entries with known durations, set a billable rate, exported the reports, tried to import one export again and opened the upgrade without paying.",
+   "findings": [
+    "Signing up at track.toggl.com put us in the new Toggl Focus app. After three onboarding screens a dialog said 'The whole product is unlocked for 31 days' and 'No credit card needed'; the pricing page we read on 25 October says a 30-day trial. The upgrade screen gave the trial end as November 28.",
+    "Our three entries (a 2m 18s timer, 15:00 and 1:30 by hand) added up to exactly 18m 48s in the report breakdown. The summary tiles rounded that to 19m, while the day header in the timer list showed 18m.",
+    "A project with a $60 hourly rate turned the 15-minute entry into $15.00 and 79.79% billable, both correct. Billable rates are one of eight features the project view labels as unlocked by the Premium trial.",
+    "The Time logs CSV kept all three entries to the second, with project, client and amount on the right row. The Summary CSV put all 0:18:48 under the one project, although only 15 minutes belonged to it. Every export format (PDF, CSV, XLSX) carries a paid-feature star.",
+    "Importing our own Time logs export again did not work as is: the importer asked for a duration column, could not use the combined start-and-stop column, and read the export's '-' placeholders as names, so all three entries would have been skipped. We stopped before importing; there is no ID column to update by.",
+    "Monthly prices in the app were $12 for Starter and $24 for Premium per license ($9 and $16 a month billed yearly). Choosing Premium warned that 'your current trial will finish immediately', so we stopped there. After the trial the app says you can 'keep going free — no charge', and the Free plan allows up to 5 members.",
+    "The invite dialog offers Workspace admin, Manager, Member, Time tracker and Guest, with no role preselected. Billing lists 'Change plan' and 'Cancel trial' in the plan menu."
+   ],
+   "not_tested": [
+    "The final checkout with tax (choosing a plan ends the trial straight away)",
+    "Export and members on the Free plan after the trial ends",
+    "Completing a re-import (we stopped at the preview)",
+    "Contacting support",
+    "The calendar connection, Toggl AI and the mobile and desktop apps"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "30-day trial",
+     "claim_source": "https://toggl.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "The app states 31 days and Ends November 28 after signup on 28 October. The 30-day claim is from Toggl pricing; the account redirects to Toggl Focus.",
+     "observed_on": "2026-10-28",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/toggl-review/#claim-vs-measured"
+     },
+     "plan": "Premium trial in Toggl Focus",
+     "comparability": "Same session and tested trial; only the visible statements were compared.",
+     "status": "not_comparable",
+     "buying_consequence": "Do not promise an extra free day. Counting the start day alone does not settle the difference between 30 and 31; exact start/end times are missing, and the tested app differs from the pricing context.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$24 per license a month (Premium, monthly billing)",
+     "claim_source": "https://focus.toggl.com/",
+     "claim_read_on": "2026-10-28",
+     "observed": "Monthly in-app prices are Starter $12 and Premium $24. Upgrade warns that the current trial will finish immediately. The payment screen was not reached.",
+     "observed_on": "2026-10-28",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/toggl-review/#claim-vs-measured"
+     },
+     "plan": "Premium trial in Toggl Focus",
+     "comparability": "No checkout reached; cost-rule comparison unavailable. In-app prices differ in product context from the older Track rule.",
+     "status": "not_testable",
+     "buying_consequence": "Tax-inclusive price and final payment conditions remain unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-28",
+    "what": "Exported the custom time entries from the Toggl Focus trial as Summary CSV and Time logs CSV.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Export options carry a paid-feature star. Availability on Free after the trial was not tested.",
+    "friction": {
+     "export_route": "Reports > Export; Summary and Time logs were exported separately.",
+     "format": "CSV files opened and checked. PDF and XLSX options were visible but not inspected.",
+     "reimport": "Reimport dry run of a modified Time logs CSV was blocked: combined start/stop fields need manual editing, and dash placeholders are treated as names. All three time entries would be skipped in match-only mode. Nothing was submitted; no native ID column was available.",
+     "cancellation": "Billing offers Change plan and Cancel trial on Trial - Focus Premium. No plan change or cancellation was confirmed."
+    },
+    "not_tested": [
+     "Completed reimport and subsequent export.",
+     "Export on Free after trial expiry.",
+     "All official category-kit checks; a custom time-entry fixture was used."
+    ],
+    "came_along": [
+     "Time logs retains all three entries, exact durations, start/stop times, project, client, billable flag and amount."
+    ],
+    "lost": [
+     "The Summary CSV assigns all 0:18:48 to one project even though only 0:15:00 belongs to it."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -6053,6 +6242,101 @@
     ],
     "lost": [
      "The UI blocklist status is absent from the contact export."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "GetResponse",
+   "product_id": "getresponse",
+   "run_date": "2026-10-28",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 28 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up contacts, generated one email with AI, exported the contacts, imported them again with one change and opened the Starter checkout without paying.",
+   "findings": [
+    "The trial banner said 'Your trial expires in 14 days', while the welcome message in the same account said 'For the first 30 days, you'll have access to features from all our plans'. No card was asked.",
+    "The contact counter started at 1 of 500: the sign-up address itself is added as a contact. Importing a CSV requires ticking 'I have permission to add these people to my list'; without it the import stops.",
+    "A tags column in the CSV could not be mapped per row; you can only assign the same tags to the whole import, and tag names allow only letters, numbers and underscores. A custom field could be created during the import. Import statistics said 'Added to list 0' while both contacts were in the list.",
+    "The AI email generator allows three runs in the trial ('Runs left: 3', then 2). With a topic but no facts, it invented pros and cons for the tools, such as 'Affordable pricing with a solid free tier'.",
+    "Export leaves tags and custom fields off unless you tick them. With both on, the CSV kept both contacts, their GetResponse IDs, the shared tag and our custom field, but showed no consent columns although we selected them.",
+    "Importing the file again with one changed name updated that contact by email address; the other stayed the same and no duplicate appeared. The import statistics still said 'Updated 0'.",
+    "In-app prices are net. Starter for 1,000 contacts billed yearly came to €192, minus €34.56 prepaid discount, plus €33.06 tax (21%): €190.50 in total. Team roles require an upgrade; generating an API key is offered in the trial."
+   ],
+   "not_tested": [
+    "Sending an email or running an automation",
+    "What happens to the account and data when the trial ends",
+    "Cancelling (the account settings showed no billing section during the trial)",
+    "Contacting support",
+    "Team roles (only available after an upgrade)"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Try free for 14 days",
+     "claim_source": "https://www.getresponse.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "The banner states 14 days, but the welcome message in the same app promises access to all plans for the first 30 days.",
+     "observed_on": "2026-10-28",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+     },
+     "plan": "Starter, 1,000 contacts, annual",
+     "comparability": "Same session and tested trial; only the visible statements were compared.",
+     "status": "contradicted",
+     "buying_consequence": "The internal trial messages conflict. Do not rely on access lasting 30 days; actual expiry was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Prices listed are net amounts",
+     "claim_source": "https://www.getresponse.com/upgrade-free/",
+     "claim_read_on": "2026-10-28",
+     "observed": "Starter for 1,000 contacts, annual: subtotal €192, prepaid discount 18% (-€34.56), tax €33.06 at 21%, order total €190.50. Renewal text gives 2027-10-28. Checkout was recorded as text only; no screenshot was saved.",
+     "observed_on": "2026-10-28",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/getresponse-review/#claim-vs-measured"
+     },
+     "plan": "Starter, 1,000 contacts, annual",
+     "comparability": "Same Starter plan, 1,000 contacts and annual term. Net pricing is consistent with checkout tax; the older cost rule is not an independent current checkout/tax confirmation.",
+     "status": "confirmed",
+     "buying_consequence": "The page presents net prices; the checkout adds tax. Budget for the observed tax-inclusive annual total. The screenshot was omitted because it displayed a home address.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-28",
+    "what": "Exported the two contacts from the custom fixture with Tags, Custom fields and Consent fields enabled.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Tags and custom fields are off by default in export. Session notes identify exported times as UTC; the CSV has no explicit timezone marker.",
+    "friction": {
+     "export_route": "List > Show contacts > menu > Export > Export new file > Download.",
+     "format": "CSV opened and compared with the custom fixture.",
+     "reimport": "Add and update existing matched by email address. The later notes record AIBM-002 HERIMPORT, AIBM-001 unchanged and three contacts total, with no duplicate. Import statistics still show Updated 0. No contact-list screenshot or post-reimport export was saved.",
+     "cancellation": "Checkout text gives Profile > Billing > Cancel subscription. That route and cancellation were not tested."
+    },
+    "not_tested": [
+     "Update by native ID and post-reimport export.",
+     "Field preservation after reimport beyond the observed name and unchanged first record.",
+     "Data access after trial expiry.",
+     "All official category-kit checks; a custom contact fixture was used."
+    ],
+    "came_along": [
+     "Both contacts, native IDs, list, names, email fields, subscription details, the shared tag and custom:aibm_id are present."
+    ],
+    "lost": [
+     "Original per-row tags were skipped during import and replaced by one shared tag.",
+     "No consent columns appear in the export despite selecting Consent fields."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },

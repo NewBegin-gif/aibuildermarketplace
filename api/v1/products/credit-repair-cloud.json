@@ -67,16 +67,514 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "personal",
+     "name": "Personal",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 49,
+     "annual_status": "unknown",
+     "evidence": "Personal is $49 for 1 user and up to 3 friends and family"
+    },
+    {
+     "id": "start",
+     "name": "Start",
+     "model": "flat",
+     "max_units": 3,
+     "monthly": 179,
+     "annual_month": 143.2,
+     "evidence": "Start $179 for up to 3 users and 300 active clients. Grow is $299 for 6 users and 600 clients, and Scale $399 for 12 users and 1,200 clients. Enterprise is $599 for 24 users and 2,400 clients. Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20"
+    },
+    {
+     "id": "grow",
+     "name": "Grow",
+     "model": "flat",
+     "max_units": 6,
+     "monthly": 299,
+     "annual_month": 239.2,
+     "evidence": "Start $179 for up to 3 users and 300 active clients. Grow is $299 for 6 users and 600 clients, and Scale $399 for 12 users and 1,200 clients. Enterprise is $599 for 24 users and 2,400 clients. Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "flat",
+     "max_units": 12,
+     "monthly": 399,
+     "annual_month": 319.2,
+     "evidence": "Start $179 for up to 3 users and 300 active clients. Grow is $299 for 6 users and 600 clients, and Scale $399 for 12 users and 1,200 clients. Enterprise is $599 for 24 users and 2,400 clients. Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "flat",
+     "max_units": 24,
+     "monthly": 599,
+     "annual_month": 479.2,
+     "evidence": "Start $179 for up to 3 users and 300 active clients. Grow is $299 for 6 users and 600 clients, and Scale $399 for 12 users and 1,200 clients. Enterprise is $599 for 24 users and 2,400 clients. Annual billing takes 20% off and is shown as a monthly equivalent on the four business tiers: $143.20, $239.20, $319.20 and $479.20"
+    }
+   ],
+   "notes": [
+    "Annual billing requires a one-year term; monthly plans have no long-term contract."
+   ],
+   "not_computable": [
+    "Active-client caps (300 / 600 / 1,200 / 2,400) can force a higher tier before the user count does.",
+    "Extra team members or 100 extra client slots are add-ons at $50 (Start), $40 (Grow), $30 (Scale) or $20 (Enterprise) a month each; the rules move you up a tier instead of adding them."
+   ],
+   "rules_verified_at": "2026-10-28"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "credit-repair-cloud",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 143.2,
+      "billed": {
+       "amount": 1718.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": 143.2,
+       "grow": 239.2,
+       "scale": 319.2,
+       "enterprise": 479.2
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 143.2,
+      "billed": {
+       "amount": 1718.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": 143.2,
+       "grow": 239.2,
+       "scale": 319.2,
+       "enterprise": 479.2
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 143.2,
+      "billed": {
+       "amount": 1718.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": 143.2,
+       "grow": 239.2,
+       "scale": 319.2,
+       "enterprise": 479.2
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "grow",
+      "cheapest_plan_name": "Grow",
+      "total_month": 239.2,
+      "billed": {
+       "amount": 2870.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": 239.2,
+       "scale": 319.2,
+       "enterprise": 479.2
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "scale",
+      "cheapest_plan_name": "Scale",
+      "total_month": 319.2,
+      "billed": {
+       "amount": 3830.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": 319.2,
+       "enterprise": 479.2
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 479.2,
+      "billed": {
+       "amount": 5750.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": 479.2
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 479.2,
+      "billed": {
+       "amount": 5750.4,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": 479.2
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "start",
+      "to_plan": "grow",
+      "from_plan_name": "Start",
+      "to_plan_name": "Grow"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "grow",
+      "to_plan": "scale",
+      "from_plan_name": "Grow",
+      "to_plan_name": "Scale"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "scale",
+      "to_plan": "enterprise",
+      "from_plan_name": "Scale",
+      "to_plan_name": "Enterprise"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "enterprise",
+      "to_plan": null,
+      "from_plan_name": "Enterprise",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Active-client caps (300 / 600 / 1,200 / 2,400) can force a higher tier before the user count does.",
+     "Extra team members or 100 extra client slots are add-ons at $50 (Start), $40 (Grow), $30 (Scale) or $20 (Enterprise) a month each; the rules move you up a tier instead of adding them."
+    ]
+   },
+   "monthly": {
+    "product_id": "credit-repair-cloud",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": 179.0,
+       "grow": 299.0,
+       "scale": 399.0,
+       "enterprise": 599.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": 179.0,
+       "grow": 299.0,
+       "scale": 399.0,
+       "enterprise": 599.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "start",
+      "cheapest_plan_name": "Start",
+      "total_month": 179.0,
+      "billed": {
+       "amount": 179.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": 179.0,
+       "grow": 299.0,
+       "scale": 399.0,
+       "enterprise": 599.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "grow",
+      "cheapest_plan_name": "Grow",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 299.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": 299.0,
+       "scale": 399.0,
+       "enterprise": 599.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "scale",
+      "cheapest_plan_name": "Scale",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": 399.0,
+       "enterprise": 599.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 599.0,
+      "billed": {
+       "amount": 599.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": 599.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 599.0,
+      "billed": {
+       "amount": 599.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": 599.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "personal": "not_eligible",
+       "start": "not_eligible",
+       "grow": "not_eligible",
+       "scale": "not_eligible",
+       "enterprise": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "start",
+      "to_plan": "grow",
+      "from_plan_name": "Start",
+      "to_plan_name": "Grow"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "grow",
+      "to_plan": "scale",
+      "from_plan_name": "Grow",
+      "to_plan_name": "Scale"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "scale",
+      "to_plan": "enterprise",
+      "from_plan_name": "Scale",
+      "to_plan_name": "Enterprise"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "enterprise",
+      "to_plan": null,
+      "from_plan_name": "Enterprise",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Active-client caps (300 / 600 / 1,200 / 2,400) can force a higher tier before the user count does.",
+     "Extra team members or 100 extra client slots are add-ons at $50 (Start), $40 (Grow), $30 (Scale) or $20 (Enterprise) a month each; the rules move you up a tier instead of adding them."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -147,9 +645,15 @@
    "status": "open"
   },
   {
-   "question_id": "credit-repair-cloud:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "credit-repair-cloud:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Active-client caps (300 / 600 / 1,200 / 2,400) can force a higher tier before the user count does. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "credit-repair-cloud:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Extra team members or 100 extra client slots are add-ons at $50 (Start), $40 (Grow), $30 (Scale) or $20 (Enterprise) a month each; the rules move you up a tier instead of adding them. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-27.
+All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-28.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -434,7 +434,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Bokun is a Tripadvisor/Viator company, and that's both the draw and the lock-in.
 - **Best for:** tour, activity and experience operators who want booking management plus wide OTA distribution (Viator, GetYourGuide and more) from one dashboard
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/bokun-review/
+- **Full review:** https://officesoftwaremarketplace.com/bokun-review.html
 
 ## Bold Custom Pricing (boldcommerce.com)
 - **Verified pricing:** (read 2026-10-06 on the Shopify App Store listing at apps.shopify.com/customer-pricing, where the app is titled Custom Pricing: Wholesale B2B; prices in USD) Three plans, each with a 14-day…
@@ -2348,7 +2348,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The entry is €250 a month on annual billing — €3,000 a year committed before you've sent your first contract — and the rest of the ladder lives in a sales conversation.
 - **Best for:** sales and legal teams with real contract volume who want the full lifecycle — creating, negotiating, e-signing and archiving interactive contracts — in one platform with CRM integrations
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/oneflow-review/
+- **Full review:** https://marketingandsalessoftware.com/oneflow-review.html
 
 ## Optery (optery.com)
 - **Verified pricing:** (read 2026-10-10 on optery.com/pricing, US view, USD, monthly and yearly figures; re-read 2026-10-24 with a plain fetch: prices, the 17% yearly saving and the FALL2026 banner unchanged, sit…

@@ -65,16 +65,522 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "flat",
+     "max_units": 1,
+     "annual_month": 49,
+     "annual_year": 588,
+     "monthly_status": "not_offered",
+     "evidence": "Annual: Basic $49/month ($588 a year, 1 user), Standard $105 ($1,264, 3 users), Plus $166 ($1,997, 8 users), Pro $221 ($2,654, 15 users), Unlimited $332 ($3,984, unlimited users). Monthly billing costs more for the same plans: Standard $139, Plus $199, Pro $279, Unlimited $399 a month; Basic is 'Available for Annual' only."
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "flat",
+     "max_units": 3,
+     "annual_month": 105,
+     "annual_year": 1264,
+     "monthly": 139,
+     "evidence": "Annual: Basic $49/month ($588 a year, 1 user), Standard $105 ($1,264, 3 users), Plus $166 ($1,997, 8 users), Pro $221 ($2,654, 15 users), Unlimited $332 ($3,984, unlimited users). Monthly billing costs more for the same plans: Standard $139, Plus $199, Pro $279, Unlimited $399 a month; Basic is 'Available for Annual' only."
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "flat",
+     "max_units": 8,
+     "annual_month": 166,
+     "annual_year": 1997,
+     "monthly": 199,
+     "evidence": "Annual: Basic $49/month ($588 a year, 1 user), Standard $105 ($1,264, 3 users), Plus $166 ($1,997, 8 users), Pro $221 ($2,654, 15 users), Unlimited $332 ($3,984, unlimited users). Monthly billing costs more for the same plans: Standard $139, Plus $199, Pro $279, Unlimited $399 a month; Basic is 'Available for Annual' only."
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 15,
+     "annual_month": 221,
+     "annual_year": 2654,
+     "monthly": 279,
+     "evidence": "Annual: Basic $49/month ($588 a year, 1 user), Standard $105 ($1,264, 3 users), Plus $166 ($1,997, 8 users), Pro $221 ($2,654, 15 users), Unlimited $332 ($3,984, unlimited users). Monthly billing costs more for the same plans: Standard $139, Plus $199, Pro $279, Unlimited $399 a month; Basic is 'Available for Annual' only."
+    },
+    {
+     "id": "unlimited",
+     "name": "Unlimited",
+     "model": "flat",
+     "annual_month": 332,
+     "annual_year": 3984,
+     "monthly": 399,
+     "evidence": "Annual: Basic $49/month ($588 a year, 1 user), Standard $105 ($1,264, 3 users), Plus $166 ($1,997, 8 users), Pro $221 ($2,654, 15 users), Unlimited $332 ($3,984, unlimited users). Monthly billing costs more for the same plans: Standard $139, Plus $199, Pro $279, Unlimited $399 a month; Basic is 'Available for Annual' only."
+    }
+   ],
+   "notes": "Priced for the company as a whole with a user cap per plan (1, 3, 8, 15, unlimited), not per seat; unlimited projects on every tier. Annual plans open with 30 days free before the first bill.",
+   "not_computable": [
+    "Card payments through the built-in Stripe integration: 2.9% + $0.30 a transaction (3.9% + $0.30 Amex, ACH 1% + $0.30 capped at $10.00), depends on payment volume."
+   ],
+   "rules_verified_at": "2026-10-28"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "contractor-foreman",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 49.0,
+       "standard": 105.33,
+       "plus": 166.42,
+       "pro": 221.17,
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 105.33,
+      "billed": {
+       "amount": 1264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": 105.33,
+       "plus": 166.42,
+       "pro": 221.17,
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 105.33,
+      "billed": {
+       "amount": 1264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": 105.33,
+       "plus": 166.42,
+       "pro": 221.17,
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 166.42,
+      "billed": {
+       "amount": 1997.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": 166.42,
+       "pro": 221.17,
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 221.17,
+      "billed": {
+       "amount": 2654.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 221.17,
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 221.17,
+      "billed": {
+       "amount": 2654.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 221.17,
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 332.0,
+      "billed": {
+       "amount": 3984.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "not_eligible",
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 332.0,
+      "billed": {
+       "amount": 3984.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "not_eligible",
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 332.0,
+      "billed": {
+       "amount": 3984.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "not_eligible",
+       "unlimited": 332.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 332.0,
+      "billed": {
+       "amount": 3984.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "not_eligible",
+       "unlimited": 332.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "basic",
+      "to_plan": "standard",
+      "from_plan_name": "Basic",
+      "to_plan_name": "Standard"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "standard",
+      "to_plan": "plus",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "plus",
+      "to_plan": "pro",
+      "from_plan_name": "Plus",
+      "to_plan_name": "Pro"
+     },
+     {
+      "from_units": 15,
+      "to_units": 20,
+      "from_plan": "pro",
+      "to_plan": "unlimited",
+      "from_plan_name": "Pro",
+      "to_plan_name": "Unlimited"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Card payments through the built-in Stripe integration: 2.9% + $0.30 a transaction (3.9% + $0.30 Amex, ACH 1% + $0.30 capped at $10.00), depends on payment volume."
+    ]
+   },
+   "monthly": {
+    "product_id": "contractor-foreman",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 139.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_offered_on_billing",
+       "standard": 139.0,
+       "plus": 199.0,
+       "pro": 279.0,
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 139.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": 139.0,
+       "plus": 199.0,
+       "pro": 279.0,
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 139.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": 139.0,
+       "plus": 199.0,
+       "pro": 279.0,
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": 199.0,
+       "pro": 279.0,
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 279.0,
+      "billed": {
+       "amount": 279.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 279.0,
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 279.0,
+      "billed": {
+       "amount": 279.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 279.0,
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "not_eligible",
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "not_eligible",
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "not_eligible",
+       "unlimited": 399.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "not_eligible",
+       "unlimited": 399.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "standard",
+      "to_plan": "plus",
+      "from_plan_name": "Standard",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "plus",
+      "to_plan": "pro",
+      "from_plan_name": "Plus",
+      "to_plan_name": "Pro"
+     },
+     {
+      "from_units": 15,
+      "to_units": 20,
+      "from_plan": "pro",
+      "to_plan": "unlimited",
+      "from_plan_name": "Pro",
+      "to_plan_name": "Unlimited"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Card payments through the built-in Stripe integration: 2.9% + $0.30 a transaction (3.9% + $0.30 Amex, ACH 1% + $0.30 capped at $10.00), depends on payment volume."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -104,9 +610,9 @@
    "status": "open"
   },
   {
-   "question_id": "contractor-foreman:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "contractor-foreman:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Card payments through the built-in Stripe integration: 2.9% + $0.30 a transaction (3.9% + $0.30 Amex, ACH 1% + $0.30 capped at $10.00), depends on payment volume. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

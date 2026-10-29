@@ -1976,7 +1976,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/leadpages-review.html
 
 ## LearnWorlds (learnworlds.com)
-- **Verified pricing:** (re-verified 2026-09-05 and again 2026-09-30 on their own pricing page) Starter $29/mo (or $24 annually) but with a $5 fee per paid enrollment — still the single most important number in th…
+- **Verified pricing:** (re-verified 2026-10-29 on their own pricing page, both billing toggles) Starter $49/mo (or $44 annually) with a $5 fee per paid enrollment — still the single most important number in this …
 - **Honest take:** The detail most people miss is Starter's $5-per-paid-enrollment fee — at any real sales volume it quietly makes Starter more expensive than the flat Pro Trainer plan, so the "cheap" tier often isn't.
 - **Best for:** course creators and training businesses that want a branded school with interactive video, assessments, certificates and a built-in checkout
 - **Flags:** Usage-metered, Add-ons extra, Annual commit

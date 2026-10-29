@@ -93,15 +93,389 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "per_unit",
+     "max_units": 9,
+     "annual_month": 39,
+     "monthly": 59,
+     "evidence": "Four tiers, priced per user: Basic $39, Pro $59 and Advanced $79 per user per month billed annually, plus an Enterprise tier that is quote-only. Month to month the same tiers read $59, $79 and $99 per user"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "max_units": 9,
+     "annual_month": 59,
+     "monthly": 79,
+     "evidence": "Four tiers, priced per user: Basic $39, Pro $59 and Advanced $79 per user per month billed annually, plus an Enterprise tier that is quote-only. Month to month the same tiers read $59, $79 and $99 per user"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "per_unit",
+     "max_units": 9,
+     "annual_month": 79,
+     "monthly": 99,
+     "evidence": "Four tiers, priced per user: Basic $39, Pro $59 and Advanced $79 per user per month billed annually, plus an Enterprise tier that is quote-only. Month to month the same tiers read $59, $79 and $99 per user"
+    }
+   ],
+   "notes": [
+    "One seat connects one LinkedIn account, so five reps means five seats.",
+    "Basic is capped at one drip campaign and lower daily quotas; unlimited campaigns and full quotas start at Pro."
+   ],
+   "not_computable": [
+    "Enterprise is quote-only, and ten or more seats goes through sales, so the price for 10+ users is not published.",
+    "Email-finder top-up credits are bought on top of the 100 included each month."
+   ],
+   "rules_verified_at": "2026-10-29"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "dripify",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 468.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 39.0,
+       "pro": 59.0,
+       "advanced": 79.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 78.0,
+      "billed": {
+       "amount": 936.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 78.0,
+       "pro": 118.0,
+       "advanced": 158.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 117.0,
+      "billed": {
+       "amount": 1404.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 117.0,
+       "pro": 177.0,
+       "advanced": 237.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 195.0,
+      "billed": {
+       "amount": 2340.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 195.0,
+       "pro": 295.0,
+       "advanced": 395.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "basic",
+      "to_plan": null,
+      "from_plan_name": "Basic",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Enterprise is quote-only, and ten or more seats goes through sales, so the price for 10+ users is not published.",
+     "Email-finder top-up credits are bought on top of the 100 included each month."
+    ]
+   },
+   "monthly": {
+    "product_id": "dripify",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 59.0,
+       "pro": 79.0,
+       "advanced": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 118.0,
+      "billed": {
+       "amount": 118.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 118.0,
+       "pro": 158.0,
+       "advanced": 198.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 177.0,
+      "billed": {
+       "amount": 177.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 177.0,
+       "pro": 237.0,
+       "advanced": 297.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 295.0,
+      "billed": {
+       "amount": 295.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 295.0,
+       "pro": 395.0,
+       "advanced": 495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "advanced": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "basic",
+      "to_plan": null,
+      "from_plan_name": "Basic",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Enterprise is quote-only, and ten or more seats goes through sales, so the price for 10+ users is not published.",
+     "Email-finder top-up credits are bought on top of the 100 included each month."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -139,9 +513,15 @@
    "status": "open"
   },
   {
-   "question_id": "dripify:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "dripify:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Enterprise is quote-only, and ten or more seats goes through sales, so the price for 10+ users is not published. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "dripify:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Email-finder top-up credits are bought on top of the 100 included each month. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

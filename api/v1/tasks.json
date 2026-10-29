@@ -4508,6 +4508,115 @@
   },
   {
    "source": "session",
+   "product_name": "Moosend",
+   "product_id": "moosend",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up members from a CSV into a test list, exported the list, imported a changed version and opened the Pro checkout without paying.",
+   "findings": [
+    "The account opened on a free trial: 'Your free trial expires in 30 days', '0 out of 1,000 members', no payment method. That matches the pricing page's 30 days for up to 1,000 contacts, without a card.",
+    "A new list starts on single opt-in, so importing our two test members sent no confirmation email. The import has an optional 'add them as verified' consent box, which we left unticked.",
+    "Custom fields can be text, date, number, dropdown or checkbox. The CSV import mapped nine of our eleven columns; there is no field for a subscription status or a file.",
+    "Export comes by email: the link arrived about 10 seconds after we asked, and it downloaded the file without logging in. Anyone who gets that email link gets the list.",
+    "The export (a ZIP with a semicolon-separated CSV) kept names with accents, dates and custom fields, but our free text lost its line break and the space after a comma, and 12.10 became 12.1. It has no member ID.",
+    "Importing the changed file again ('Add or update') matched on email: still two members, no duplicates, only the one changed field different. An export taken a minute after the import still showed the old value.",
+    "A new team member defaults to Admin, and the owner sets their password; Viewer is among six roles. The API key was there in the trial, with full account access."
+   ],
+   "not_tested": [
+    "Sending a campaign or automation",
+    "What happens to the list when the trial ends",
+    "Support's answer (we emailed our three questions on 29 October)"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Create your free account today!",
+     "claim_source": "https://identity.moosend.com/register/?utm_campaign=pricing_mn",
+     "claim_read_on": "2026-10-29",
+     "observed": "The app shows 30 trial days, 1,000 maximum members and no payment method.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/moosend-review/#claim-vs-measured"
+     },
+     "plan": "Free trial (30 days, 1K)",
+     "comparability": "Compared on the account we tested: the free trial on the 1,000-member allowance, not a paid plan.",
+     "status": "confirmed",
+     "buying_consequence": "The free route is available; the paid Pro selection starts at 500 subscribers.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "30-day free trial",
+     "claim_source": "https://moosend.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Home shows 30 days and 1,000-member allowance; Billing shows no payment method.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/moosend-review/#claim-vs-measured"
+     },
+     "plan": "Free trial (30 days, 1K)",
+     "comparability": "Same trial account; the 30 days are the counter shown in the app on the signup day.",
+     "status": "confirmed",
+     "buying_consequence": "The observed trial matches the duration quoted in the source notes.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$9 Per month",
+     "claim_source": "https://moosend.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Monthly Pro 500 shows $9 on the price page and $9 / monthly on checkout. Tax and final payable total are not visible.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/moosend-review/#claim-vs-measured"
+     },
+     "plan": "Free trial (30 days, 1K)",
+     "comparability": "Same basis on both sides: Pro, 500 contacts, billed monthly, in USD; tax was not shown at checkout.",
+     "status": "confirmed",
+     "buying_consequence": "Monthly base matches; final tax-inclusive total unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Imported and exported two newsletter members, then tested an update matched by email.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": true,
+    "awkward": "The email download link works without login. The ZIP contains a semicolon CSV with UTF-8 BOM. The first export after reimport was stale; the later export contains the update. Tags were imported as text, not native tags.",
+    "friction": {
+     "export_route": "Members > Export to CSV; download ZIP through email link.",
+     "format": "ZIP containing CSV; imported records become Active although subscription_state was not mapped.",
+     "reimport": "Native-ID reimport is not offered because the export omits that ID. A separate email-key update retained both records with no duplicates and changed only the second free-text value, with the same text normalization.",
+     "cancellation": "The free trial has no payment method. Actual cancellation, expiry and deletion were not tested."
+    },
+    "not_tested": [
+     "Actual cancellation, expiry and deletion.",
+     "Native-ID update execution.",
+     "Unentered fields and complete signup screen count."
+    ],
+    "came_along": [
+     "Both member names, emails, custom codes, dates and currencies survive. Decimal values remain numerically equal."
+    ],
+    "lost": [
+     "Free text loses the space after the comma and replaces the newline with a space.",
+     "The export contains no native member ID."
+    ],
+    "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Clonable",
    "product_id": "clonable",
    "run_date": "2026-10-01",
@@ -6065,6 +6174,95 @@
   },
   {
    "source": "session",
+   "product_name": "Tradify",
+   "product_id": "tradify",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up customers from a CSV, exported them, imported a changed copy and opened the Lite checkout without paying.",
+   "findings": [
+    "The trial showed '14 Trial Days Left' with no card, matching 'Free for 14 days'. It includes all features; the checkout says there is no limit on staff during the trial.",
+    "Customers import from a template with four free custom fields. The import says existing customers 'will be updated' and that the changes 'cannot be undone'; it matched our columns by name and added both customers.",
+    "The customer export was the best of this round: our free text came back exactly, with its line break, quotes and accents, and every record carried a 'Tradify Id'.",
+    "Re-importing a copy with one field changed updated that customer in place: still two customers, the same IDs, nothing else changed. The import cannot map the Tradify Id, so it matches on something else, most likely the customer name.",
+    "Lite is $47 per user a month; the checkout adds staff without a login at $10 each a month. Pro is $51 and Plus $61. We stopped before 'Upgrade'."
+   ],
+   "not_tested": [
+    "Jobs, quotes and invoices",
+    "Scheduling and timesheets",
+    "Accounting software sync",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free for 14 days",
+     "claim_source": "https://go.tradifyhq.com/signup",
+     "claim_read_on": "2026-10-29",
+     "observed": "Dashboard shows 14 Trial Days Left; checkout staff charges were inspected without confirming upgrade.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tradify-review/#claim-vs-measured"
+     },
+     "plan": "14-day trial",
+     "comparability": "Compared on the trial account on the signup day, with all features switched on.",
+     "status": "confirmed",
+     "buying_consequence": "Initial trial length matches; the final payment amount remains unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$47 USD per User/Month",
+     "claim_source": "https://www.tradifyhq.com/pricing",
+     "claim_read_on": "2026-10-29",
+     "observed": "Lite plan page shows $47 USD per User/Month; modal shows one login staff member at $47 and no-access staff at $10, quantity zero. Upgrade was not confirmed.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tradify-review/#claim-vs-measured"
+     },
+     "plan": "14-day trial",
+     "comparability": "Lite, one staff member with login, monthly in USD; we stopped before Upgrade, so tax and the final total were not shown.",
+     "status": "not_testable",
+     "buying_consequence": "Base staff charge matches; final tax-inclusive checkout total is unmeasured.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Imported and exported two customers using the task-category fixture as a documented customer-field subset.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": true,
+    "awkward": "Jobs were not created. Dates, amounts, currency, task status, project and attachments were not entered through the customer mapping. Tags were stored in Custom 4 as text.",
+    "friction": {
+     "export_route": "Contacts > Customers > Options > Export Customers to File.",
+     "format": "UTF-8 CSV without BOM; customer template fields plus Tradify Id and Created On.",
+     "reimport": "The import mapping does not offer Tradify Id. The business-key update succeeded: same IDs, no duplicates, first customer unchanged and only the second free-text field updated. Customer-name matching is inferred from the unmapped ID, not independently isolated.",
+     "cancellation": "The account shows trial access. Actual cancellation, expiry and deletion were not tested."
+    },
+    "not_tested": [
+     "Actual cancellation, expiry and deletion.",
+     "Native-ID update execution.",
+     "Unentered fields and complete signup screen count."
+    ],
+    "came_along": [
+     "Customer names and Custom fields retain test IDs, custom codes, free text with its newline and Unicode exactly.",
+     "The customer export contains Tradify Id."
+    ],
+    "lost": [],
+    "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Katana MRP",
    "product_id": "katana-mrp",
    "run_date": "2026-10-24",
@@ -6429,6 +6627,94 @@
      "No consent columns appear in the export despite selecting Consent fields."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "AWeber",
+   "product_id": "aweber",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026 on AWeber Free: Daan created the account and our AI assistant ran the test in Daan's browser. We tried to import two made-up subscribers from a CSV and opened the Lite trial checkout without paying. AWeber refused both test addresses, so we stopped there.",
+   "findings": [
+    "AWeber rejected both of our made-up addresses (on the reserved test domain example.com) as 'Blocked or invalid email format', so 0 of 2 were added. Following our test plan, we did not swap in real addresses; export and re-import were therefore not tested.",
+    "Before the import, AWeber asks how the subscribers joined your list (website, in person, bought a product, purchased the list or other) and whether they come from another provider. The 'Other' answer needs a written explanation.",
+    "Confirmation emails for imports are off by default, and the import itself defaults to 'No, they do not need to confirm'. Confirmation for subscribers added through the API is locked on; only AWeber Plus can ask to switch it off.",
+    "Custom fields are plain text only, up to 25. The import also offers 'Add new and update existing' and 'Only update existing', with 'Only add new subscribers' preselected.",
+    "Our own address was put on our list as a subscriber automatically at signup, and every list needs a postal address, which is printed under your emails.",
+    "On Free, 'Invite a user' is disabled ('Upgrade your account to invite more users'). The Lite '14-day trial' goes to a Stripe checkout that asks for a card first: € 13,98 a month from 12 November, nothing due today.",
+    "Prices in the app: Lite $15 and Plus $30 a month billed monthly, or $13 and $20 a month billed yearly, which is the preselected option."
+   ],
+   "not_tested": [
+    "Importing or exporting subscribers",
+    "Re-importing an export",
+    "Sending a broadcast or automation",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "get started for free",
+     "claim_source": "https://www.aweber.com/free.htm",
+     "claim_read_on": "2026-10-29",
+     "observed": "Free is available without a card; extra-user invitation is locked. The Lite paid trial separately requires a card.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/aweber-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Compared on AWeber Free as we used it; the paid Lite trial is a separate route with its own card step.",
+     "status": "confirmed",
+     "buying_consequence": "Free access does not include additional users or the same terms as the paid trial.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$15/month",
+     "claim_source": "https://www.aweber.com/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Lite monthly price $15 converts at the displayed 0.9317 EUR per USD to €13.98. Stripe shows 14 free days, €0 today and €13.98 monthly from 12 November 2026; card required and tax zero before address.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/aweber-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Lite, billed monthly, 0-500 subscribers; the checkout converted USD to EUR and showed tax before an address was entered.",
+     "status": "confirmed",
+     "buying_consequence": "Displayed conversion matches; paid trial requires a card and final tax depends on billing details.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Attempted to import the two fictional newsletter records; both reserved email addresses were rejected.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Import history reports two submitted and none imported: Blocked or invalid email format. The test stopped as planned. Import confirmation is off by default; API confirmation can only be disabled by request on Plus. The import requires a subscriber-origin explanation.",
+    "friction": {
+     "export_route": "Export CSV is visible but was not used because neither test record was imported.",
+     "format": "No test-record export was downloaded.",
+     "reimport": "Reimport was not tested because the core import was blocked.",
+     "cancellation": "Free has no card or trial expiry. The paid Lite trial requires a card; it was not started."
+    },
+    "not_tested": [
+     "Actual cancellation, expiry and deletion.",
+     "Native-ID update execution.",
+     "Unentered fields and complete signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -7043,6 +7329,190 @@
     "lost": [
      "The summary/free-text field is absent from the export and from the available column list.",
      "reqId is empty; no native candidate ID is exported."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Connecteam",
+   "product_id": "connecteam",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026: Daan created the account and our AI assistant ran the test in Daan's browser. We switched on Quick Tasks, saved two made-up tasks with an attachment as drafts, exported the task list and looked at the plans.",
+   "findings": [
+    "The pricing page offers a '14-day free trial', but our account landed on the Small Business plan instead: 'FREE for small businesses with up to 10 employees … Free for life'. No card was asked.",
+    "Setup asks for company size and industry, then a mobile number; you cannot reach the dashboard without one. Your industry decides which tools appear: Quick Tasks was not in our menu until we added it.",
+    "Connecteam adds two sample users ('Liz (sample)', 'Sam (sample)') and, when you switch on Quick Tasks, two example tasks. A task must be assigned to someone, even as a draft.",
+    "The task export (XLSX) included all four drafts. Our description lost its line break, and accents were kept. There is no task ID.",
+    "The attachments came back as links to public.cdn.connecteam.com that open without logging in; the downloaded files were byte-for-byte the same as our uploads.",
+    "'Add multiple tasks' is a grid for new tasks, not a file import, so there is no way to update tasks by importing a file.",
+    "Paid plans are priced per hub (Operations, Communications, HR & Skills): Basic $29, Advanced $49 and Expert $99 a month billed yearly, each up to 10 users."
+   ],
+   "not_tested": [
+    "Time clock, scheduling and chat",
+    "Assigning tasks to employees",
+    "A paid checkout",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "14-day free trial",
+     "claim_source": "https://connecteam.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "The app instead shows Small Business FREE for up to 10 employees, Free for life, with no trial countdown.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/connecteam-review/#claim-vs-measured"
+     },
+     "plan": "Small Business (Free for life)",
+     "comparability": "Compared on the account we got: the free Small Business plan, with no trial countdown anywhere in the app.",
+     "status": "contradicted",
+     "buying_consequence": "This account received ongoing free access rather than the advertised timed trial; paid hub terms were not tested.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$29",
+     "claim_source": "https://connecteam.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Basic shows $29 per month billed yearly per hub; no paid checkout opened.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/connecteam-review/#claim-vs-measured"
+     },
+     "plan": "Small Business (Free for life)",
+     "comparability": "Basic per hub, billed yearly, as listed in the app; no paid checkout was opened.",
+     "status": "not_testable",
+     "buying_consequence": "Final bundle, tax and payable total remain unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Created two draft tasks and exported them alongside two supplier-created example tasks.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "The account uses the Small Business plan, free for life, instead of a timed trial. Onboarding requires a mobile number. Attachment links work without login. In the actual worksheet, image hyperlinks occupy the Location column while Attachments 1 is empty.",
+    "friction": {
+     "export_route": "Quick Tasks > export icon; drafts are included.",
+     "format": "XLSX with the two test drafts plus two example drafts.",
+     "reimport": "Add multiple tasks is a new-task input grid; no file import or ID update is offered.",
+     "cancellation": "Free plan, no card or trial end. Actual cancellation and deletion were not tested."
+    },
+    "not_tested": [
+     "Actual cancellation, expiry and deletion.",
+     "Native-ID update execution.",
+     "Unentered fields and complete signup screen count."
+    ],
+    "came_along": [
+     "Both Unicode task titles survive. Downloaded attachment bytes match the original kit PNGs."
+    ],
+    "lost": [
+     "Descriptions lose their newline without a replacement space. No native task ID is exported."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "BuddyPunch",
+   "product_id": "buddypunch",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up employees by hand, logged two test shifts, exported the hours and looked at the plans without paying.",
+   "findings": [
+    "The trial runs on Pro, billed annually ('Free trial · 14 days left', next billing date 12 November). That is not the cheapest plan: Starter is $4.99 per employee a month plus a $19 base fee, billed yearly.",
+    "'Send a welcome email to the employee' is ticked by default, in the setup wizard and on the new-employee form. We untick it; the list then shows the invite as 'Not sent'.",
+    "Employees took our made-up names with accents, an employee ID, a hire date and a multi-line note. There are no custom fields for codes or amounts.",
+    "Each punch shows the IP address of whoever entered it, here the manager.",
+    "The standard export ('Export to Excel' on the payroll export) is actually a CSV, with employee ID, names and hours: 1.500 and 2.000, which match our test shifts. It has no notes, emails or start and end times. The employee profile export is part of a paid add-on ($2 per user a month).",
+    "The employee import takes eight fixed columns (username, names, email and password required). It has no notes field and no update option, so you cannot change records by importing again.",
+    "API access is only in the Advanced plan ($12.99 per employee a month plus $19), not in the Pro plan the trial runs on."
+   ],
+   "not_tested": [
+    "Punching in from an employee login or the mobile app",
+    "Scheduling and time off",
+    "Payroll",
+    "Support's answer (we emailed our three questions on 29 October)"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "14 days for Free",
+     "claim_source": "https://app.buddypunch.com/account/register/ProAnnually",
+     "claim_read_on": "2026-10-29",
+     "observed": "Pro trial via ProAnnually shows 14 days left and next billing date 11/12/2026, with no payment method.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/buddypunch-review/#claim-vs-measured"
+     },
+     "plan": "Pro (14-day trial)",
+     "comparability": "Compared on the Pro trial that the signup link starts, which is not the cheapest plan.",
+     "status": "confirmed",
+     "buying_consequence": "Trial features are Pro; API access is listed under Advanced.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$4.99 / employee / month + $19.00 base fee per month",
+     "claim_source": "https://buddypunch.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Starter $4.99 per employee per month plus $19 base is shown on annual billing. Add a Credit Card was not opened.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/buddypunch-review/#claim-vs-measured"
+     },
+     "plan": "Pro (14-day trial)",
+     "comparability": "Starter on annual billing as shown in the plan switcher; we did not open the card step, so the charged amount is not checked.",
+     "status": "not_testable",
+     "buying_consequence": "No checkout total or tax verified.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Created two test employees and synthetic punches, then exported payroll hours on the Pro trial.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Export to Excel produces CSV. Employee Profile Details requires the Advanced Reporting paid add-on. Welcome email is enabled by default in both setup and the employee form; it was switched off before saving.",
+    "friction": {
+     "export_route": "Time Cards > Export > Payroll Export > Export to Excel.",
+     "format": "UTF-8 CSV without BOM, with a pay-period line before the column headers.",
+     "reimport": "The employee import has no free-text field or documented update mode; fixed free-text reimport is not offered.",
+     "cancellation": "Change Plan offers Starter and a Cancel Account route is visible. Neither was confirmed."
+    },
+    "not_tested": [
+     "Actual cancellation, expiry and deletion.",
+     "Native-ID update execution.",
+     "Unentered fields and complete signup screen count."
+    ],
+    "came_along": [
+     "Both Employee Id values and Unicode names survive; hours match the synthetic shifts."
+    ],
+    "lost": [
+     "The standard hours CSV omits employee free text, hire date, email and shift start/end timestamps."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },

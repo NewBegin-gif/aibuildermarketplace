@@ -21,7 +21,15 @@
   "verified_at": "2026-10-02",
   "source_url": null,
   "schema_offer": null,
-  "source_quotes": null,
+  "source_quotes": [
+   {
+    "field": "free_trial",
+    "plan": null,
+    "quote": "Free for 14 days",
+    "source_url": "https://go.tradifyhq.com/signup",
+    "read_on": "2026-10-29"
+   }
+  ],
   "recent_change": null
  },
  "free_plan": false,
@@ -74,18 +82,240 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-10-29; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-29",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/tradify-review/",
+  "method": [
+   "Imported two made-up customers from a CSV",
+   "Exported the customer list",
+   "Imported a copy with one field changed and exported again",
+   "Opened the Lite checkout and stopped before upgrading"
+  ],
+  "claims": [
+   {
+    "claim": "Free for 14 days",
+    "claim_source": "https://go.tradifyhq.com/signup",
+    "claim_read_on": "2026-10-29",
+    "observed": "Dashboard shows 14 Trial Days Left; checkout staff charges were inspected without confirming upgrade.",
+    "observed_on": "2026-10-29",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/tradify-review/#claim-vs-measured"
+    },
+    "plan": "14-day trial",
+    "comparability": "Compared on the trial account on the signup day, with all features switched on.",
+    "status": "confirmed",
+    "buying_consequence": "Initial trial length matches; the final payment amount remains unknown.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$47 USD per User/Month",
+    "claim_source": "https://www.tradifyhq.com/pricing",
+    "claim_read_on": "2026-10-29",
+    "observed": "Lite plan page shows $47 USD per User/Month; modal shows one login staff member at $47 and no-access staff at $10, quantity zero. Upgrade was not confirmed.",
+    "observed_on": "2026-10-29",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/tradify-review/#claim-vs-measured"
+    },
+    "plan": "14-day trial",
+    "comparability": "Lite, one staff member with login, monthly in USD; we stopped before Upgrade, so tax and the final total were not shown.",
+    "status": "not_testable",
+    "buying_consequence": "Base staff charge matches; final tax-inclusive checkout total is unmeasured.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-29",
+   "what": "Imported and exported two customers using the task-category fixture as a documented customer-field subset.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": true,
+   "awkward": "Jobs were not created. Dates, amounts, currency, task status, project and attachments were not entered through the customer mapping. Tags were stored in Custom 4 as text.",
+   "friction": {
+    "export_route": "Contacts > Customers > Options > Export Customers to File.",
+    "format": "UTF-8 CSV without BOM; customer template fields plus Tradify Id and Created On.",
+    "reimport": "The import mapping does not offer Tradify Id. The business-key update succeeded: same IDs, no duplicates, first customer unchanged and only the second free-text field updated. Customer-name matching is inferred from the unmapped ID, not independently isolated.",
+    "cancellation": "The account shows trial access. Actual cancellation, expiry and deletion were not tested."
+   },
+   "not_tested": [
+    "Actual cancellation, expiry and deletion.",
+    "Native-ID update execution.",
+    "Unentered fields and complete signup screen count."
+   ],
+   "came_along": [
+    "Customer names and Custom fields retain test IDs, custom codes, free text with its newline and Unicode exactly.",
+    "The customer export contains Tradify Id."
+   ],
+   "lost": [],
+   "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/tradify-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tradify-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "Dashboard shows 14 Trial Days Left; checkout staff charges were inspected without confirming upgrade.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tradify-review/#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Imported and exported two customers using the task-category fixture as a documented customer-field subset. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tradify-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": true,
+    "basis": "Imported and exported two customers using the task-category fixture as a documented customer-field subset. One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tradify-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tradify-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-29",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Tradify",
+    "product_id": "tradify",
+    "run_date": "2026-10-29",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up customers from a CSV, exported them, imported a changed copy and opened the Lite checkout without paying.",
+    "findings": [
+     "The trial showed '14 Trial Days Left' with no card, matching 'Free for 14 days'. It includes all features; the checkout says there is no limit on staff during the trial.",
+     "Customers import from a template with four free custom fields. The import says existing customers 'will be updated' and that the changes 'cannot be undone'; it matched our columns by name and added both customers.",
+     "The customer export was the best of this round: our free text came back exactly, with its line break, quotes and accents, and every record carried a 'Tradify Id'.",
+     "Re-importing a copy with one field changed updated that customer in place: still two customers, the same IDs, nothing else changed. The import cannot map the Tradify Id, so it matches on something else, most likely the customer name.",
+     "Lite is $47 per user a month; the checkout adds staff without a login at $10 each a month. Pro is $51 and Plus $61. We stopped before 'Upgrade'."
+    ],
+    "not_tested": [
+     "Jobs, quotes and invoices",
+     "Scheduling and timesheets",
+     "Accounting software sync",
+     "Contacting support"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Free for 14 days",
+      "claim_source": "https://go.tradifyhq.com/signup",
+      "claim_read_on": "2026-10-29",
+      "observed": "Dashboard shows 14 Trial Days Left; checkout staff charges were inspected without confirming upgrade.",
+      "observed_on": "2026-10-29",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/tradify-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial",
+      "comparability": "Compared on the trial account on the signup day, with all features switched on.",
+      "status": "confirmed",
+      "buying_consequence": "Initial trial length matches; the final payment amount remains unknown.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$47 USD per User/Month",
+      "claim_source": "https://www.tradifyhq.com/pricing",
+      "claim_read_on": "2026-10-29",
+      "observed": "Lite plan page shows $47 USD per User/Month; modal shows one login staff member at $47 and no-access staff at $10, quantity zero. Upgrade was not confirmed.",
+      "observed_on": "2026-10-29",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/tradify-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial",
+      "comparability": "Lite, one staff member with login, monthly in USD; we stopped before Upgrade, so tax and the final total were not shown.",
+      "status": "not_testable",
+      "buying_consequence": "Base staff charge matches; final tax-inclusive checkout total is unmeasured.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-29",
+     "what": "Imported and exported two customers using the task-category fixture as a documented customer-field subset.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": true,
+     "awkward": "Jobs were not created. Dates, amounts, currency, task status, project and attachments were not entered through the customer mapping. Tags were stored in Custom 4 as text.",
+     "friction": {
+      "export_route": "Contacts > Customers > Options > Export Customers to File.",
+      "format": "UTF-8 CSV without BOM; customer template fields plus Tradify Id and Created On.",
+      "reimport": "The import mapping does not offer Tradify Id. The business-key update succeeded: same IDs, no duplicates, first customer unchanged and only the second free-text field updated. Customer-name matching is inferred from the unmapped ID, not independently isolated.",
+      "cancellation": "The account shows trial access. Actual cancellation, expiry and deletion were not tested."
+     },
+     "not_tested": [
+      "Actual cancellation, expiry and deletion.",
+      "Native-ID update execution.",
+      "Unentered fields and complete signup screen count."
+     ],
+     "came_along": [
+      "Customer names and Custom fields retain test IDs, custom codes, free text with its newline and Unicode exactly.",
+      "The customer export contains Tradify Id."
+     ],
+     "lost": [],
+     "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "tradify:cancellation_terms",

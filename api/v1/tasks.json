@@ -4790,6 +4790,96 @@
   },
   {
    "source": "session",
+   "product_name": "Survicate",
+   "product_id": "survicate",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We built a two-question link survey, answered it twice ourselves, exported the responses and opened the Starter checkout without paying.",
+   "findings": [
+    "The account opened on a 'Free 10-Day Trial' with '25 responses remaining', so the trial is limited by responses as well as days. No card was asked.",
+    "A new link survey is live from the start: 'Enable survey' is switched on and the anonymous link works before you press anything like Launch.",
+    "Answering a second time from the same browser showed 'You've already responded to this survey'. Retaking is off by default; we switched it on to add our second response.",
+    "Export comes as an email link (CSV, XLSX, PNG or PDF), and the link only works when you are logged in. The CSV arrived within about half a minute and kept both responses with their own IDs and our free text exactly, including quotes, a line break and accented letters.",
+    "The CSV also had an 'Insight' column that Survicate filled in by itself with an AI label for each open answer ('Testversies'); we had not switched on any AI feature.",
+    "The Starter checkout, monthly, showed 'Total €159' before choosing a country, so tax was not yet shown. Yearly billing was preselected on the plans page, where Growth is €149 a month billed annually.",
+    "Invitations offer None, Guest, User and Admin, with User preselected and billing rights off. An API key and a workspace key were already present in the trial settings."
+   ],
+   "not_tested": [
+    "How many of the 25 responses were left after our two",
+    "What happens to the surveys and data when the trial ends",
+    "Website, in-product or email distribution",
+    "Support's answer (we emailed our three questions on 29 October)"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "10-day trial",
+     "claim_source": "https://survicate.com/pricing/",
+     "claim_read_on": "2026-10-25",
+     "observed": "Home shows Free 10-Day Trial, 10 days remaining in trial and 25 responses remaining. The post-test response balance was not read.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/survicate-review/#claim-vs-measured"
+     },
+     "plan": "Free 10-Day Trial",
+     "comparability": "Trial length and response quota read in the app on the day of sign-up; this row compares terms, not prices.",
+     "status": "confirmed",
+     "buying_consequence": "Initial trial duration matches; the initial quota is 25 responses, not unlimited responses.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€ 159 /mo",
+     "claim_source": "https://survicate.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Starter 250, Monthly: Total €159 before country selection; tax not shown. No payment details entered.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/survicate-review/#claim-vs-measured"
+     },
+     "plan": "Free 10-Day Trial",
+     "comparability": "Observed in-app plan/term/currency compared; no matching product cost rule. Trial context and paid checkout are separate; final tax-inclusive price unknown.",
+     "status": "confirmed",
+     "buying_consequence": "Displayed monthly base price matches; total including tax remains unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Exported the two manually submitted test responses as CSV.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "CSV is requested through an email link and requires login. The export adds an AI Insight column containing Testversies without us enabling it. Retaking was initially blocked and was enabled for the second test response.",
+    "friction": {
+     "export_route": "Analyze > Export > CSV > Request file; email link > logged-in Exports panel.",
+     "format": "CSV contains two header rows, UTC timestamps and two response rows. IP address was not included.",
+     "reimport": "No response import route was seen; reimport was not tested.",
+     "cancellation": "Subscription opens Choose your plan; no explicit downgrade refusal or cancellation was measured."
+    },
+    "not_tested": [
+     "Reimport and export after trial expiry.",
+     "Actual cancellation and deletion.",
+     "Fields not entered in the documented subset."
+    ],
+    "came_along": [
+     "Both responses retain response UUIDs, answer choices, Unicode, quotes and multiline free text exactly."
+    ],
+    "lost": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Miro",
    "product_id": "miro",
    "run_date": "2026-10-20",
@@ -6777,6 +6867,189 @@
   },
   {
    "source": "session",
+   "product_name": "Wrike",
+   "product_id": "wrike",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We created a project with two made-up tasks, a custom field and two attachments, exported it to Excel and opened the Team checkout without entering a card.",
+   "findings": [
+    "The trial is a 'free 14-day Pinnacle trial', Wrike's top plan, which has no listed price. It says you can 'continue on our Free plan' afterwards. The workspace came with a sample project already filled in.",
+    "Two tasks with a description and an attachment each took a few minutes. A custom text field was easy to add, but the value for the first row only stuck after clicking another cell and reloading.",
+    "The Excel export kept task names with accents, statuses, descriptions with quotes and line breaks, and the custom field. It did not include the attachments or Wrike's own task IDs; the Key column is just a row number.",
+    "The Team checkout started at 2 users with annual billing preselected: '$240 per year, before tax', which is the $10 per user a month annual price. The monthly price is $14 per user.",
+    "The invite dialog offers Admin, Regular User (preselected), External User, Contributor and Viewer. The plans page has a 'Get the Free plan' link, and the API app console is open in the trial."
+   ],
+   "not_tested": [
+    "Tax on the Team checkout",
+    "What the Free plan keeps after the Pinnacle trial ends",
+    "Importing the Excel file back",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "free two-week trial",
+     "claim_source": "https://www.wrike.com/free-trial/",
+     "claim_read_on": "2026-10-25",
+     "observed": "Welcome offers a free 14-day Pinnacle trial, up to 25 team members during the trial and a Free-plan option afterward. Pinnacle has custom pricing; no Pinnacle price was measured.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wrike-review/#claim-vs-measured"
+     },
+     "plan": "14-day Pinnacle trial",
+     "comparability": "Trial length and trial plan read in the app on the day of sign-up; this row compares terms, not prices.",
+     "status": "confirmed",
+     "buying_consequence": "Initial trial length matches, but trial features are the highest plan, not the Team checkout plan.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$10 user / month billed yearly",
+     "claim_source": "https://www.wrike.com/free-trial/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Team checkout: 2 users minimum, Annual billing preselected; $240 per year, before tax. The page also lists $14 billed monthly rather than the $10 annual-billed monthly equivalent.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wrike-review/#claim-vs-measured"
+     },
+     "plan": "14-day Pinnacle trial",
+     "comparability": "Observed in-app plan/term/currency compared; no matching product cost rule. Trial context and paid checkout are separate; final tax-inclusive price unknown.",
+     "status": "confirmed",
+     "buying_consequence": "The annual-billed price matches. Budget the annual commitment; tax and the final tax-inclusive amount remain unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Exported the two manually entered test tasks to Excel.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "The first custom-field value required clicking another cell and reloading before it appeared. Folder exports as a slash rather than the project name.",
+    "friction": {
+     "export_route": "Table menu > Export project to Excel > all tasks.",
+     "format": "XLSX, Tasks worksheet, with both test tasks.",
+     "reimport": "Reimport/update by native ID was not tested.",
+     "cancellation": "Choose your plan offers a Free-plan link. No plan change or cancellation was confirmed."
+    },
+    "not_tested": [
+     "Reimport and export after trial expiry.",
+     "Actual cancellation and deletion.",
+     "Fields not entered in the documented subset."
+    ],
+    "came_along": [
+     "Both task titles, status mappings and the custom text field are retained. Unicode and the original description text survive."
+    ],
+    "lost": [
+     "No attachment bytes, filenames or native task IDs are present in the export. Key is a row number.",
+     "Descriptions have an additional trailing newline, so they are not byte-for-byte identical."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Breezy HR",
+   "product_id": "breezy-hr",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We created a private candidate pool, added two made-up candidates by hand, exported them and put the Startup plan in the cart without paying.",
+   "findings": [
+    "Billing said 'You have 13 days left on your trial' on the day we signed up, with the trial ending on 12 November: 14 calendar days. All features are open during the trial. The app switched itself to Dutch.",
+    "A candidate has to belong to a position or pool. We used a pool so nothing was posted; its default stages had no automatic actions, and AI scoring was off.",
+    "Breezy showed a warning that the account is not yet verified and that, without verification, positions are not posted to job sites; it asks you to contact support through the chat.",
+    "The candidate export kept names with accents, email addresses, the pool and the stage. It has no column for the summary we typed, so that text did not come back, and the requisition ID column was empty.",
+    "Startup monthly went into a cart showing '$189' and 'Pay now $189', with no tax shown before paying. Annual billing (15% off) is preselected on the plans page, where Startup is $157 a month.",
+    "Members can only be Administrator or Member, with no viewer role. A free Bootstrap plan is offered; it keeps full access to candidates from the last 30 days only. The REST API and Zapier are listed in the trial."
+   ],
+   "not_tested": [
+    "Publishing a position (needs account verification)",
+    "Attachments, CVs and custom fields",
+    "What Bootstrap keeps after the trial",
+    "Support's answer (we emailed our three questions on 29 October)"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Full Feature 14-Day Trial",
+     "claim_source": "https://breezy.hr/",
+     "claim_read_on": "2026-10-25",
+     "observed": "Billing shows 13 days left and expiry on 12 November 2026 after creation on 29 October. All features are offered during the trial.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/breezy-hr-review/#claim-vs-measured"
+     },
+     "plan": "14-day trial (all features)",
+     "comparability": "Trial length read from the billing page on the day of sign-up; this row compares terms, not prices.",
+     "status": "confirmed",
+     "buying_consequence": "The calendar dates align with 14 days; the remaining-days display does not prove a shortened trial. Exact expiry time was not measured.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$189 /maand",
+     "claim_source": "https://breezy.hr/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Monthly Startup cart shows $189 and Nu $ 189 betalen. Tax and country are not shown; stopped before payment. Annual prices were selected by default on the plan page.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/breezy-hr-review/#claim-vs-measured"
+     },
+     "plan": "14-day trial (all features)",
+     "comparability": "Observed in-app plan/term/currency compared. Current Startup monthly cost rule matches the base USD 189, but final tax-inclusive price is unknown; older preparation is superseded for cost-rule availability.",
+     "status": "confirmed",
+     "buying_consequence": "Monthly base price matches. The amount including tax is unknown; yearly defaults are a separate choice.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Exported the two manually entered test candidates in two CSV variants.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Enabling additional columns adds headline, resume, tags and reqId but does not recover summaries. The pool was a draft; job-board publication requires account verification through support.",
+    "friction": {
+     "export_route": "Candidates > select both > menu > Export Candidates; repeated after enabling extra columns.",
+     "format": "UTF-8 CSV; both files inspected.",
+     "reimport": "Reimport was not performed; update by native ID was not established.",
+     "cancellation": "Bootstrap Free offers Aan de slag; no downgrade or cancellation was confirmed."
+    },
+    "not_tested": [
+     "Reimport and export after trial expiry.",
+     "Actual cancellation and deletion.",
+     "Fields not entered in the documented subset."
+    ],
+    "came_along": [
+     "Both names, email fields, pool and stage are retained; Unicode is preserved."
+    ],
+    "lost": [
+     "The summary/free-text field is absent from the export and from the available column list.",
+     "reqId is empty; no native candidate ID is exported."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Replit",
    "product_id": "replit",
    "run_date": "2026-09-26",
@@ -6981,6 +7254,97 @@
    "evidence_status": "partially_retained",
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "MRPeasy",
+   "product_id": "mrpeasy",
+   "run_date": "2026-10-29",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up items from a CSV without stock, exported the item list and a backup, and opened the payment page without entering a card.",
+   "findings": [
+    "The trial ran for 15 days ('ends on 13.11.2026'), on the Starter plan. The second 15 days are three rewards of 5 days each, for watching a video, following on LinkedIn and adding a second user who performs 5 actions. They are not automatic.",
+    "Before an import MRPeasy recommends downloading a backup, and does it in one click (an .mrp file).",
+    "The item import recognised part number, description and selling price by itself. It has no field for notes, tags, dates or custom fields; custom fields are a Professional-plan feature, which the Starter trial does not include.",
+    "Two items were imported with zero stock. The CSV export (semicolons) kept part numbers, names with accents and selling prices; the part number is the only key, with no internal ID.",
+    "The payment page asks for a card or PayPal but shows no amount, plan or tax. The account page lists 'Next invoice € 39.00' for Starter, monthly, one user.",
+    "Users get a permission grid per module (read, create, update, delete), all off by default, rather than named roles. We found no API setting among the integrations in the time we had."
+   ],
+   "not_tested": [
+    "Restoring the backup file",
+    "Updating items by importing again",
+    "Production planning, BOMs and stock movements",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "15 + 15 days",
+     "claim_source": "https://www.mrpeasy.com/pricing/",
+     "claim_read_on": "2026-10-25",
+     "observed": "Trial ends on 13.11.2026 after signup on 29 October: 15 days initially. Free Use offers three separate 5-day rewards for watching a video, LinkedIn follow and a second user completing 5 actions; none performed.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/mrpeasy-review/#claim-vs-measured"
+     },
+     "plan": "Starter trial",
+     "comparability": "Trial end date and the Free Use rewards read in the app on the day of sign-up; this row compares terms, not prices.",
+     "status": "confirmed",
+     "buying_consequence": "Only 15 initial days were granted. The additional 15 days are conditional, not automatic.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Next invoice € 39.00",
+     "claim_source": "https://www.mrpeasy.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Account shows Next invoice € 39.00; Profile shows Starter and Monthly. The payment page offers card or PayPal but shows no amount, plan or tax.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/mrpeasy-review/#claim-vs-measured"
+     },
+     "plan": "Starter trial",
+     "comparability": "Observed in-app plan/term/currency compared; no matching product cost rule. Trial context and paid checkout are separate; final tax-inclusive price unknown.",
+     "status": "not_testable",
+     "buying_consequence": "Next invoice is not a final checkout total; payable amount and tax remain unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "Imported and exported the two test items on Starter, with a separate pre-import database backup.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Items CSV uses a semicolon separator and UTF-8 BOM and includes four demo items alongside the two test items. The binary .mrp backup was not opened or restored.",
+    "friction": {
+     "export_route": "Stock > Items > CSV; a database backup was downloaded before import.",
+     "format": "Items CSV opened and checked against the working copy and category fixture; .mrp backup separately hashed.",
+     "reimport": "No reimport was performed. Part No. is the business key; an update on that key was not tested.",
+     "cancellation": "Profile allows plan selection but the tested Starter plan is already the lowest listed tier. No route to a lower or free plan was established."
+    },
+    "not_tested": [
+     "Reimport and export after trial expiry.",
+     "Actual cancellation and deletion.",
+     "Fields not entered in the documented subset."
+    ],
+    "came_along": [
+     "Part No., item name, Unicode and selling price are retained for both test items. Decimal formatting changes while the numerical value stays equal."
+    ],
+    "lost": [
+     "Notes/free text, custom fields, tags and record date have no destination in the inspected item-import mapping and were not imported."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

@@ -21,7 +21,15 @@
   "verified_at": "2026-09-25",
   "source_url": null,
   "schema_offer": null,
-  "source_quotes": null,
+  "source_quotes": [
+   {
+    "field": "free_trial",
+    "plan": null,
+    "quote": "free two-week trial",
+    "source_url": "https://www.wrike.com/free-trial/",
+    "read_on": "2026-10-25"
+   }
+  ],
   "recent_change": null
  },
  "free_plan": true,
@@ -67,18 +75,294 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-10-29; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "quoted",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "roles": {
+   "status": "viewer_exists_cost_unknown",
+   "plan": "14-day Pinnacle trial",
+   "route": "Invite > User type; no invitation sent.",
+   "quote": {
+    "text": "Viewer — Can only comment",
+    "source_url": "https://www.wrike.com/free-trial/",
+    "observed_at": "2026-10-29T10:00:00+01:00"
+   },
+   "evidence": [
+    "bewijs/04-rollenlijst.jpg"
+   ],
+   "role_names": [
+    "Admin",
+    "Regular User",
+    "External User",
+    "Contributor",
+    "Viewer"
+   ],
+   "viewer_roles": [
+    "Viewer"
+   ],
+   "default_role": "Regular User"
+  },
+  "api_access": {
+   "status": "available_on_tested_plan",
+   "plan": "14-day Pinnacle trial",
+   "route": "App console > My apps; no app/token created or call.",
+   "quote": {
+    "text": "Create new app",
+    "source_url": "https://app-eu.wrike.com/appconsole.htm#api",
+    "observed_at": "2026-10-29T10:00:00+01:00"
+   },
+   "evidence": [
+    "bewijs/11-api-appconsole.jpg"
+   ]
+  },
+  "downgrade": {
+   "status": "self_service",
+   "plan": "14-day Pinnacle trial",
+   "route": "Choose your plan > Free-plan link; not followed or confirmed.",
+   "quote": {
+    "text": "Not ready for a paid plan? Get the Free plan with basic features.",
+    "source_url": "https://www.wrike.com/free-trial/",
+    "observed_at": "2026-10-29T10:00:00+01:00"
+   },
+   "evidence": [
+    "bewijs/08-plannen-free-plan-link.jpg"
+   ]
+  },
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-29",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/wrike-review/",
+  "method": [
+   "Created a project with two made-up tasks, descriptions and attachments",
+   "Added a custom text field and filled it in",
+   "Exported the project to Excel",
+   "Opened the Team checkout and stopped at the card form"
+  ],
+  "claims": [
+   {
+    "claim": "free two-week trial",
+    "claim_source": "https://www.wrike.com/free-trial/",
+    "claim_read_on": "2026-10-25",
+    "observed": "Welcome offers a free 14-day Pinnacle trial, up to 25 team members during the trial and a Free-plan option afterward. Pinnacle has custom pricing; no Pinnacle price was measured.",
+    "observed_on": "2026-10-29",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/wrike-review/#claim-vs-measured"
+    },
+    "plan": "14-day Pinnacle trial",
+    "comparability": "Trial length and trial plan read in the app on the day of sign-up; this row compares terms, not prices.",
+    "status": "confirmed",
+    "buying_consequence": "Initial trial length matches, but trial features are the highest plan, not the Team checkout plan.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$10 user / month billed yearly",
+    "claim_source": "https://www.wrike.com/free-trial/",
+    "claim_read_on": "2026-10-29",
+    "observed": "Team checkout: 2 users minimum, Annual billing preselected; $240 per year, before tax. The page also lists $14 billed monthly rather than the $10 annual-billed monthly equivalent.",
+    "observed_on": "2026-10-29",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/wrike-review/#claim-vs-measured"
+    },
+    "plan": "14-day Pinnacle trial",
+    "comparability": "Observed in-app plan/term/currency compared; no matching product cost rule. Trial context and paid checkout are separate; final tax-inclusive price unknown.",
+    "status": "confirmed",
+    "buying_consequence": "The annual-billed price matches. Budget the annual commitment; tax and the final tax-inclusive amount remain unknown.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-29",
+   "what": "Exported the two manually entered test tasks to Excel.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "The first custom-field value required clicking another cell and reloading before it appeared. Folder exports as a slash rather than the project name.",
+   "friction": {
+    "export_route": "Table menu > Export project to Excel > all tasks.",
+    "format": "XLSX, Tasks worksheet, with both test tasks.",
+    "reimport": "Reimport/update by native ID was not tested.",
+    "cancellation": "Choose your plan offers a Free-plan link. No plan change or cancellation was confirmed."
+   },
+   "not_tested": [
+    "Reimport and export after trial expiry.",
+    "Actual cancellation and deletion.",
+    "Fields not entered in the documented subset."
+   ],
+   "came_along": [
+    "Both task titles, status mappings and the custom text field are retained. Unicode and the original description text survive."
+   ],
+   "lost": [
+    "No attachment bytes, filenames or native task IDs are present in the export. Key is a row number.",
+    "Descriptions have an additional trailing newline, so they are not byte-for-byte identical."
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/wrike-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wrike-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wrike-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Exported the two manually entered test tasks to Excel. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wrike-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Exported the two manually entered test tasks to Excel. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wrike-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-29",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wrike-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-29",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Wrike",
+    "product_id": "wrike",
+    "run_date": "2026-10-29",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We created a project with two made-up tasks, a custom field and two attachments, exported it to Excel and opened the Team checkout without entering a card.",
+    "findings": [
+     "The trial is a 'free 14-day Pinnacle trial', Wrike's top plan, which has no listed price. It says you can 'continue on our Free plan' afterwards. The workspace came with a sample project already filled in.",
+     "Two tasks with a description and an attachment each took a few minutes. A custom text field was easy to add, but the value for the first row only stuck after clicking another cell and reloading.",
+     "The Excel export kept task names with accents, statuses, descriptions with quotes and line breaks, and the custom field. It did not include the attachments or Wrike's own task IDs; the Key column is just a row number.",
+     "The Team checkout started at 2 users with annual billing preselected: '$240 per year, before tax', which is the $10 per user a month annual price. The monthly price is $14 per user.",
+     "The invite dialog offers Admin, Regular User (preselected), External User, Contributor and Viewer. The plans page has a 'Get the Free plan' link, and the API app console is open in the trial."
+    ],
+    "not_tested": [
+     "Tax on the Team checkout",
+     "What the Free plan keeps after the Pinnacle trial ends",
+     "Importing the Excel file back",
+     "Contacting support"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "free two-week trial",
+      "claim_source": "https://www.wrike.com/free-trial/",
+      "claim_read_on": "2026-10-25",
+      "observed": "Welcome offers a free 14-day Pinnacle trial, up to 25 team members during the trial and a Free-plan option afterward. Pinnacle has custom pricing; no Pinnacle price was measured.",
+      "observed_on": "2026-10-29",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/wrike-review/#claim-vs-measured"
+      },
+      "plan": "14-day Pinnacle trial",
+      "comparability": "Trial length and trial plan read in the app on the day of sign-up; this row compares terms, not prices.",
+      "status": "confirmed",
+      "buying_consequence": "Initial trial length matches, but trial features are the highest plan, not the Team checkout plan.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$10 user / month billed yearly",
+      "claim_source": "https://www.wrike.com/free-trial/",
+      "claim_read_on": "2026-10-29",
+      "observed": "Team checkout: 2 users minimum, Annual billing preselected; $240 per year, before tax. The page also lists $14 billed monthly rather than the $10 annual-billed monthly equivalent.",
+      "observed_on": "2026-10-29",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/wrike-review/#claim-vs-measured"
+      },
+      "plan": "14-day Pinnacle trial",
+      "comparability": "Observed in-app plan/term/currency compared; no matching product cost rule. Trial context and paid checkout are separate; final tax-inclusive price unknown.",
+      "status": "confirmed",
+      "buying_consequence": "The annual-billed price matches. Budget the annual commitment; tax and the final tax-inclusive amount remain unknown.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-29",
+     "what": "Exported the two manually entered test tasks to Excel.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "The first custom-field value required clicking another cell and reloading before it appeared. Folder exports as a slash rather than the project name.",
+     "friction": {
+      "export_route": "Table menu > Export project to Excel > all tasks.",
+      "format": "XLSX, Tasks worksheet, with both test tasks.",
+      "reimport": "Reimport/update by native ID was not tested.",
+      "cancellation": "Choose your plan offers a Free-plan link. No plan change or cancellation was confirmed."
+     },
+     "not_tested": [
+      "Reimport and export after trial expiry.",
+      "Actual cancellation and deletion.",
+      "Fields not entered in the documented subset."
+     ],
+     "came_along": [
+      "Both task titles, status mappings and the custom text field are retained. Unicode and the original description text survive."
+     ],
+     "lost": [
+      "No attachment bytes, filenames or native task IDs are present in the export. Key is a row number.",
+      "Descriptions have an additional trailing newline, so they are not byte-for-byte identical."
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "wrike:cancellation_terms",

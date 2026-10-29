@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-28.
+All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-29.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -734,7 +734,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The everything-app breadth is also the downside — it's feature-dense with a real learning curve, and teams can drown in options.
 - **Best for:** teams that want one highly customizable app for tasks, docs, goals and reporting and will invest in setting it up
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/clickup-review/
+- **Full review:** https://officesoftwaremarketplace.com/clickup-review.html
 
 ## Clonable (clonable.net)
 - **Verified pricing:** (prices re-verified 2026-09-21 on clonable.net/pricing; the page blocks plain fetches and was read in a browser) Two ladders behind a Website / Online Store tab, each with a Per month / Ann…
@@ -3881,7 +3881,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The friendly €59 headline is the annual rate for 75 viewers, and the real cost lives in add-ons.
 - **Best for:** marketing and sales teams running live and automated webinars in Europe who want a polished, GDPR-friendly platform with viewer-tier pricing
 - **Flags:** Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/webinargeek-review/
+- **Full review:** https://marketingandsalessoftware.com/webinargeek-review.html
 
 ## Weblium (weblium.com)
 - **Verified pricing:** (read 2026-10-08 on weblium.com/pricing in a browser render, USD; the FAQ says all prices are in USD) Three plans, each for one website.

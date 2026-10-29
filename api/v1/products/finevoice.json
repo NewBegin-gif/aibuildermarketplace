@@ -101,16 +101,399 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "account",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "FineVoice has a free plan and three paid tiers"
+    },
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 8.99,
+     "annual_year": 71.99,
+     "evidence": "Billed monthly: Basic $8.99, Pro $17.99 (the table offers 28% off the first month, $12.99) and Ultra $24.99. Billed annually: Basic $71.99, Pro $99.99 and Ultra $129.99 a year"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 17.99,
+     "annual_year": 99.99,
+     "evidence": "Billed monthly: Basic $8.99, Pro $17.99 (the table offers 28% off the first month, $12.99) and Ultra $24.99. Billed annually: Basic $71.99, Pro $99.99 and Ultra $129.99 a year"
+    },
+    {
+     "id": "ultra",
+     "name": "Ultra",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 24.99,
+     "annual_year": 129.99,
+     "evidence": "Billed monthly: Basic $8.99, Pro $17.99 (the table offers 28% off the first month, $12.99) and Ultra $24.99. Billed annually: Basic $71.99, Pro $99.99 and Ultra $129.99 a year"
+    }
+   ],
+   "notes": [
+    "Plans are quotas per account across audio tools (text to speech characters, voice changer and speech to text minutes, voice clones); unused quota does not carry over.",
+    "Pro's first month is offered at a discount on monthly billing; the regular monthly price is used here."
+   ],
+   "not_computable": [
+    "Sales tax may be added depending on where you live.",
+    "The notes give no seat or team pricing, so a team of several people is not computed beyond one account."
+   ],
+   "rules_verified_at": "2026-10-29"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "finevoice",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "account",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 6.0,
+       "pro": 8.33,
+       "ultra": 10.83
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Sales tax may be added depending on where you live.",
+     "The notes give no seat or team pricing, so a team of several people is not computed beyond one account."
+    ]
+   },
+   "monthly": {
+    "product_id": "finevoice",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "account",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 8.99,
+       "pro": 17.99,
+       "ultra": 24.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "pro": "not_eligible",
+       "ultra": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Sales tax may be added depending on where you live.",
+     "The notes give no seat or team pricing, so a team of several people is not computed beyond one account."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -140,9 +523,15 @@
    "status": "open"
   },
   {
-   "question_id": "finevoice:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "finevoice:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Sales tax may be added depending on where you live. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "finevoice:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The notes give no seat or team pricing, so a team of several people is not computed beyond one account. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

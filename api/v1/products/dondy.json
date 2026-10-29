@@ -83,15 +83,256 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free: a WhatsApp chat button with unlimited conversations"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 6.99,
+     "annual_year": 67.1,
+     "evidence": "Pro $6.99 a month or $67.10 a year"
+    },
+    {
+     "id": "power-automation",
+     "name": "Power Automation",
+     "model": "per_unit",
+     "monthly": 79.99,
+     "annual_year": 719.88,
+     "evidence": "Power Automation $79.99 a month or $719.88 a year"
+    },
+    {
+     "id": "elite",
+     "name": "Elite",
+     "model": "per_unit",
+     "monthly": 159.99,
+     "annual_year": 1439.88,
+     "evidence": "Elite $159.99 a month or $1,439.88 a year"
+    }
+   ],
+   "notes": [
+    "Power Automation and Elite include 1,000 one-click messages every 30 days."
+   ],
+   "not_computable": [
+    "WhatsApp message rates beyond the included messages and Meta's per-conversation charges are billed on top."
+   ],
+   "rules_verified_at": "2026-10-29"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "dondy",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 5.59,
+       "power-automation": 59.99,
+       "elite": 119.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 11.18,
+       "power-automation": 119.98,
+       "elite": 239.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 16.78,
+       "power-automation": 179.97,
+       "elite": 359.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 27.96,
+       "power-automation": 299.95,
+       "elite": 599.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 55.92,
+       "power-automation": 599.9,
+       "elite": 1199.9
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "WhatsApp message rates beyond the included messages and Meta's per-conversation charges are billed on top."
+    ]
+   },
+   "monthly": {
+    "product_id": "dondy",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 6.99,
+       "power-automation": 79.99,
+       "elite": 159.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 13.98,
+       "power-automation": 159.98,
+       "elite": 319.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 20.97,
+       "power-automation": 239.97,
+       "elite": 479.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 34.95,
+       "power-automation": 399.95,
+       "elite": 799.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 69.9,
+       "power-automation": 799.9,
+       "elite": 1599.9
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "WhatsApp message rates beyond the included messages and Meta's per-conversation charges are billed on top."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -121,9 +362,9 @@
    "status": "open"
   },
   {
-   "question_id": "dondy:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "dondy:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: WhatsApp message rates beyond the included messages and Meta's per-conversation charges are billed on top. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

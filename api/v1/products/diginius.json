@@ -81,15 +81,382 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "account",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "essential",
+     "name": "Essential",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 75,
+     "annual_status": "unknown",
+     "evidence": "Essential $75 USD a month, Pro $250, Core $500 and marked Most Popular, Business by contact with sales"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 250,
+     "annual_status": "unknown",
+     "evidence": "Essential $75 USD a month, Pro $250, Core $500 and marked Most Popular, Business by contact with sales"
+    },
+    {
+     "id": "core",
+     "name": "Core",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 500,
+     "annual_status": "unknown",
+     "evidence": "Essential $75 USD a month, Pro $250, Core $500 and marked Most Popular, Business by contact with sales"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "quote",
+     "evidence": "Business by contact with sales"
+    }
+   ],
+   "notes": [
+    "The FAQ confirms a 20% discount for annual payment; the annual amount itself is not in our notes.",
+    "Seat counts are no longer published, so the price is per account, not per user."
+   ],
+   "not_computable": [
+    "Whether more than one user can share an account at these prices is not published."
+   ],
+   "rules_verified_at": "2026-10-29"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "diginius",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "account",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing",
+       "core": "price_unknown_on_billing",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Whether more than one user can share an account at these prices is not published."
+    ]
+   },
+   "monthly": {
+    "product_id": "diginius",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "account",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essential": 75.0,
+       "pro": 250.0,
+       "core": 500.0,
+       "business": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essential": "not_eligible",
+       "pro": "not_eligible",
+       "core": "not_eligible",
+       "business": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "essential",
+      "to_plan": null,
+      "from_plan_name": "Essential",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Whether more than one user can share an account at these prices is not published."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -119,9 +486,9 @@
    "status": "open"
   },
   {
-   "question_id": "diginius:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "diginius:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Whether more than one user can share an account at these prices is not published. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -65,16 +65,265 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "monthly": 39,
+     "annual_status": "not_offered",
+     "evidence": "Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 14-day free trial. Switch to annual billing and Starter disappears from the table"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 59,
+     "annual_month": 24,
+     "annual_year": 288,
+     "evidence": "Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 14-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948)"
+    },
+    {
+     "id": "empire",
+     "name": "Empire",
+     "model": "per_unit",
+     "monthly": 99,
+     "annual_month": 57,
+     "annual_year": 684,
+     "evidence": "Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 14-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948)"
+    },
+    {
+     "id": "unicorn",
+     "name": "Unicorn",
+     "model": "per_unit",
+     "monthly": 299,
+     "annual_month": 79,
+     "annual_year": 948,
+     "evidence": "Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each with a 14-day free trial. Switch to annual billing and Starter disappears from the table; the rest become Pro $24/mo (billed annually at $288), Empire $57/mo ($684) and Unicorn $79/mo ($948)"
+    }
+   ],
+   "notes": [
+    "The meter is catalogue size per plan (unique and premium products), not users."
+   ],
+   "not_computable": [
+    "The pricing page does not mention the Shopify subscription the generated store runs on; that cost comes on top.",
+    "The homepage FAQ still quotes an older range plus a one-time store-creation fee, so marketing copy and the pricing table disagree."
+   ],
+   "rules_verified_at": "2026-10-29"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "dropgenius",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "pro": 24.0,
+       "empire": 57.0,
+       "unicorn": 79.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 48.0,
+      "billed": {
+       "amount": 576.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "pro": 48.0,
+       "empire": 114.0,
+       "unicorn": 158.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 72.0,
+      "billed": {
+       "amount": 864.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "pro": 72.0,
+       "empire": 171.0,
+       "unicorn": 237.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 1440.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "pro": 120.0,
+       "empire": 285.0,
+       "unicorn": 395.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 240.0,
+      "billed": {
+       "amount": 2880.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "pro": 240.0,
+       "empire": 570.0,
+       "unicorn": 790.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The pricing page does not mention the Shopify subscription the generated store runs on; that cost comes on top.",
+     "The homepage FAQ still quotes an older range plus a one-time store-creation fee, so marketing copy and the pricing table disagree."
+    ]
+   },
+   "monthly": {
+    "product_id": "dropgenius",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.0,
+       "pro": 59.0,
+       "empire": 99.0,
+       "unicorn": 299.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 78.0,
+      "billed": {
+       "amount": 78.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 78.0,
+       "pro": 118.0,
+       "empire": 198.0,
+       "unicorn": 598.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 117.0,
+      "billed": {
+       "amount": 117.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 117.0,
+       "pro": 177.0,
+       "empire": 297.0,
+       "unicorn": 897.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 195.0,
+      "billed": {
+       "amount": 195.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 195.0,
+       "pro": 295.0,
+       "empire": 495.0,
+       "unicorn": 1495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 390.0,
+      "billed": {
+       "amount": 390.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 390.0,
+       "pro": 590.0,
+       "empire": 990.0,
+       "unicorn": 2990.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The pricing page does not mention the Shopify subscription the generated store runs on; that cost comes on top.",
+     "The homepage FAQ still quotes an older range plus a one-time store-creation fee, so marketing copy and the pricing table disagree."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -104,9 +353,15 @@
    "status": "open"
   },
   {
-   "question_id": "dropgenius:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "dropgenius:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The pricing page does not mention the Shopify subscription the generated store runs on; that cost comes on top. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "dropgenius:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The homepage FAQ still quotes an older range plus a one-time store-creation fee, so marketing copy and the pricing table disagree. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

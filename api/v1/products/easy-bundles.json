@@ -100,15 +100,257 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "The free plan is free to install and covers up to $500 of bundle sales a month"
+    },
+    {
+     "id": "essential",
+     "name": "Essential",
+     "model": "per_unit",
+     "monthly": 29,
+     "annual_year": 299,
+     "evidence": "Essential is $29 a month or $299 a year and lifts that to $3,000"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "monthly": 49,
+     "annual_year": 499,
+     "evidence": "Growth is $49 or $499 a year up to $5,000"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "per_unit",
+     "monthly": 99,
+     "annual_year": 999,
+     "evidence": "Scale is $99 or $999 a year up to $10,000"
+    }
+   ],
+   "notes": [
+    "Plans are capped by monthly bundle sales (Free up to $500, Essential $3,000, Growth $5,000, Scale $10,000), not by users or orders; pick the tier that covers your bundle revenue.",
+    "Billed in USD every 30 days; each paid tier has a 15-day free trial."
+   ],
+   "not_computable": [
+    "The listing does not publish what happens above $10,000 of bundle sales a month or any overage rate."
+   ],
+   "rules_verified_at": "2026-10-29"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "easy-bundles",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 24.92,
+       "growth": 41.58,
+       "scale": 83.25
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 49.83,
+       "growth": 83.17,
+       "scale": 166.5
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 74.75,
+       "growth": 124.75,
+       "scale": 249.75
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 124.58,
+       "growth": 207.92,
+       "scale": 416.25
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 249.17,
+       "growth": 415.83,
+       "scale": 832.5
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The listing does not publish what happens above $10,000 of bundle sales a month or any overage rate."
+    ]
+   },
+   "monthly": {
+    "product_id": "easy-bundles",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 29.0,
+       "growth": 49.0,
+       "scale": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 58.0,
+       "growth": 98.0,
+       "scale": 198.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 87.0,
+       "growth": 147.0,
+       "scale": 297.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 145.0,
+       "growth": 245.0,
+       "scale": 495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 290.0,
+       "growth": 490.0,
+       "scale": 990.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The listing does not publish what happens above $10,000 of bundle sales a month or any overage rate."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -138,9 +380,9 @@
    "status": "open"
   },
   {
-   "question_id": "easy-bundles:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "easy-bundles:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The listing does not publish what happens above $10,000 of bundle sales a month or any overage rate. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

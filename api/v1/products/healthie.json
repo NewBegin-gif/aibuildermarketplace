@@ -97,10 +97,9 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-30; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -108,7 +107,265 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-30",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/healthie-review/",
+  "method": [
+   "Added two made-up clients by hand, without invite emails",
+   "Exported the client list report",
+   "Looked at both import routes without submitting",
+   "Looked at the plans"
+  ],
+  "claims": [
+   {
+    "claim": "Plus plan for 14 days",
+    "claim_source": "https://www.gethealthie.com/pricing",
+    "claim_read_on": "2026-10-29",
+    "observed": "The banner confirms fourteen trial days, but the exact Plus tier in the claim was not independently established in the account.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not independently established",
+    "comparability": "Compared on the provider trial for one clinician; which plan tier the trial runs on was not shown.",
+    "status": "not_testable",
+    "buying_consequence": "Trial duration is visible; Plus feature scope remains unverified.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Plus plan for 14 days",
+    "claim_source": "https://www.gethealthie.com/pricing",
+    "claim_read_on": "2026-10-29",
+    "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not independently established",
+    "comparability": "Same trial for one clinician; the monthly plan prices came from the in-app plan page.",
+    "status": "not_testable",
+    "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Your trial ends in 14 days.",
+    "claim_source": "https://secure.gethealthie.com/",
+    "claim_read_on": "2026-10-30",
+    "observed": "The account banner states fourteen trial days; the tested tier is not independently verified.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not independently established",
+    "comparability": "The 14-day countdown banner on the home screen on signup day.",
+    "status": "confirmed",
+    "buying_consequence": "Duration matches the public claim; the Plus-plan scope remains unknown.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-30",
+   "what": "Created two fictional clients without email addresses or health information, then exported Client List.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "Send Client Invite email defaults to on for each new client; it was disabled before each save. The report generates email addresses on the vendor domain for clients created without an email. Other kit fields were not entered. The import flow submits a request to Healthie and advertises onboarding import on paid plans.",
+   "friction": {
+    "export_route": "Visualize > CLIENTS > Client List > Download Report; retrieve the generated CSV from Documents > Generated Reports.",
+    "format": "CSV with thirty-nine columns and three rows: one supplier demo plus the two test clients.",
+    "reimport": "Self-service reimport is not offered in the inspected flow: Upload File leads to Submit Request. No request was submitted.",
+    "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+   },
+   "not_tested": [
+    "Full signup screen count and first-result setup speed.",
+    "Actual cancellation, expiry and deletion.",
+    "All kit fields that were not entered.",
+    "Application reimport or restoration."
+   ],
+   "came_along": [
+    "Both Unicode client names and unique IDs appear in the report alongside one demo client."
+   ],
+   "lost": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/healthie-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/healthie-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/healthie-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Created two fictional clients without email addresses or health information, then exported Client List. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/healthie-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Created two fictional clients without email addresses or health information, then exported Client List. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/healthie-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/healthie-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-30",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Healthie",
+    "product_id": "healthie",
+    "run_date": "2026-10-30",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up clients without email or health data, exported the client list and looked at the import options and plans.",
+    "findings": [
+     "The trial runs 14 days with no card. Plans start at $19.99 a month (Core, 10 active clients); roles and permissions only come with the Group plan at $149.99.",
+     "Adding a client sends them an invite email by default. You have to pick 'Do not send the Client Invite email' each time; the form switches back to sending for the next client.",
+     "New accounts come with a sample client and appointment already in place.",
+     "The client list export is a report that Healthie builds in the background and files under Documents ('can take up to 30 minutes'); ours was ready in about a minute. It had 39 columns, and accented names came through intact.",
+     "Clients we saved without an email got a made-up @gethealthie.com address in the export.",
+     "You cannot import clients yourself. Both import routes send your file to Healthie as a request, and its data import is 'included on paid plans'."
+    ],
+    "not_tested": [
+     "Charting, scheduling and billing",
+     "Re-importing clients",
+     "A paid checkout",
+     "Contacting support"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Plus plan for 14 days",
+      "claim_source": "https://www.gethealthie.com/pricing",
+      "claim_read_on": "2026-10-29",
+      "observed": "The banner confirms fourteen trial days, but the exact Plus tier in the claim was not independently established in the account.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "Compared on the provider trial for one clinician; which plan tier the trial runs on was not shown.",
+      "status": "not_testable",
+      "buying_consequence": "Trial duration is visible; Plus feature scope remains unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Plus plan for 14 days",
+      "claim_source": "https://www.gethealthie.com/pricing",
+      "claim_read_on": "2026-10-29",
+      "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "Same trial for one clinician; the monthly plan prices came from the in-app plan page.",
+      "status": "not_testable",
+      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Your trial ends in 14 days.",
+      "claim_source": "https://secure.gethealthie.com/",
+      "claim_read_on": "2026-10-30",
+      "observed": "The account banner states fourteen trial days; the tested tier is not independently verified.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "The 14-day countdown banner on the home screen on signup day.",
+      "status": "confirmed",
+      "buying_consequence": "Duration matches the public claim; the Plus-plan scope remains unknown.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-30",
+     "what": "Created two fictional clients without email addresses or health information, then exported Client List.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "Send Client Invite email defaults to on for each new client; it was disabled before each save. The report generates email addresses on the vendor domain for clients created without an email. Other kit fields were not entered. The import flow submits a request to Healthie and advertises onboarding import on paid plans.",
+     "friction": {
+      "export_route": "Visualize > CLIENTS > Client List > Download Report; retrieve the generated CSV from Documents > Generated Reports.",
+      "format": "CSV with thirty-nine columns and three rows: one supplier demo plus the two test clients.",
+      "reimport": "Self-service reimport is not offered in the inspected flow: Upload File leads to Submit Request. No request was submitted.",
+      "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+     },
+     "not_tested": [
+      "Full signup screen count and first-result setup speed.",
+      "Actual cancellation, expiry and deletion.",
+      "All kit fields that were not entered.",
+      "Application reimport or restoration."
+     ],
+     "came_along": [
+      "Both Unicode client names and unique IDs appear in the report alongside one demo client."
+     ],
+     "lost": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "healthie:cancellation_terms",

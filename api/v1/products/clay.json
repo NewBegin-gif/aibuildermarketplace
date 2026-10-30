@@ -79,10 +79,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-30; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -90,7 +89,264 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-30",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/clay-review.html",
+  "method": [
+   "Imported our two-row test CSV into a new table",
+   "Downloaded the table as CSV and compared every field",
+   "Looked at the import options and the plan checkout"
+  ],
+  "claims": [
+   {
+    "claim": "Start 14-day trial",
+    "claim_source": "https://www.clay.com/pricing",
+    "claim_read_on": "2026-10-25",
+    "observed": "Billing says Plan Trial, Pricing Free, one thousand credits and five thousand actions per two weeks; Growth says Trialing. No explicit trial end date was shown.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+    },
+    "plan": "Trial; Pricing Free; Growth labelled Trialing",
+    "comparability": "Clay trial wording is compared with mixed Trial, Free and Trialing labels; the two-week credit interval is not an independently observed trial duration.",
+    "status": "not_testable",
+    "buying_consequence": "A fourteen-day expiry cannot be established from a biweekly zero-payment date.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "No credit card required.",
+    "claim_source": "https://www.clay.com/pricing",
+    "claim_read_on": "2026-10-25",
+    "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+    },
+    "plan": "Trial; Pricing Free; Growth labelled Trialing",
+    "comparability": "Clay onboarding and CSV work proceeded without a card; opening Flex checkout did not activate a subscription.",
+    "status": "confirmed",
+    "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$50/mo",
+    "claim_source": "https://app.clay.com/",
+    "claim_read_on": "2026-10-30",
+    "observed": "Flex promotional USD 50 versus EUR 46.64 including displayed EUR 0 tax; currency conversion USD/EUR 0.9328 explains the session total. No matching rule.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+    },
+    "plan": "Trial; Pricing Free; Growth labelled Trialing",
+    "comparability": "The introductory Flex monthly selection, rather than default Launch, converts to the displayed EUR total with zero tax in this checkout; no matching cost rule is available.",
+    "status": "confirmed",
+    "buying_consequence": "The selected introductory Flex checkout totals EUR 46.64; do not confuse it with preselected Launch.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-30",
+   "what": "Imported the two-record kit CSV into a new table and exported the default view without running enrichment or connecting a CRM.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "Import shows no field mapping or type-selection screen; every column uses a text icon. Date and amount value retention therefore does not prove typed columns. The attachment column contains filenames only; no image bytes were uploaded. Onboarding requires survey answers including at least one tool choice, and Escape does not close the first-use modal. Billing says Trial and Pricing Free with credits and actions replenished every two weeks, while Growth is labelled Trialing; no trial end date was shown. Launch was preselected before Flex was chosen.",
+   "friction": {
+    "export_route": "Tools > Export > Download CSV.",
+    "format": "UTF-8 CSV without BOM, LF endings, two rows and eleven columns in original order. Amounts normalize from 12.10 to 12.1 and from 24.20 to 24.2.",
+    "reimport": "Export has no Clay row ID, only the supplied test_id. Import from CSV opens an upload box; update matching was not tested and no reimport was performed.",
+    "cancellation": "Actual cancellation, trial expiry and account deletion were not tested."
+   },
+   "not_tested": [
+    "Complete signup screen count and human first-result setup time.",
+    "Actual cancellation, expiry, deletion and follow-up mail.",
+    "Kit fields that were not entered.",
+    "Application reimport or restoration."
+   ],
+   "came_along": [
+    "Both rows and all eleven source columns return. Accents, multiline text, custom code, dates, currency, tag strings, nullable text, active and attachment filenames match exactly. Amount strings lose a trailing zero but retain their decimal values."
+   ],
+   "lost": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/clay-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/clay-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/clay-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Imported the two-record kit CSV into a new table and exported the default view without running enrichment or connecting a CRM. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/clay-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Imported the two-record kit CSV into a new table and exported the default view without running enrichment or connecting a CRM. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/clay-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/clay-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-30",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Clay",
+    "product_id": "clay",
+    "run_date": "2026-10-30",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported a two-row test CSV into a new table without running any enrichment, exported it and compared every field.",
+    "findings": [
+     "The account came with 1,000 data credits and 5,000 actions every two weeks, with no card. Setup asks four survey questions and a tool must be picked before you can continue.",
+     "The CSV import has no field mapping step: every column became a text column.",
+     "The CSV export brought back all eleven columns of both rows, including accents, quotes and line breaks. Amounts lost a trailing zero (12.10 became 12.1).",
+     "The export has no Clay row ID of its own, and the import into an existing table offers no update-on-key option.",
+     "Importing and exporting used none of the credits.",
+     "Launch at $185 a month is preselected on the plan page. The cheapest plan, Flex, came to €46.64 a month at checkout with €0.00 tax shown."
+    ],
+    "not_tested": [
+     "Enrichments and AI research",
+     "Re-importing to update rows",
+     "Connecting a CRM",
+     "Contacting support"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Start 14-day trial",
+      "claim_source": "https://www.clay.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "Billing says Plan Trial, Pricing Free, one thousand credits and five thousand actions per two weeks; Growth says Trialing. No explicit trial end date was shown.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; Pricing Free; Growth labelled Trialing",
+      "comparability": "Clay trial wording is compared with mixed Trial, Free and Trialing labels; the two-week credit interval is not an independently observed trial duration.",
+      "status": "not_testable",
+      "buying_consequence": "A fourteen-day expiry cannot be established from a biweekly zero-payment date.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "No credit card required.",
+      "claim_source": "https://www.clay.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; Pricing Free; Growth labelled Trialing",
+      "comparability": "Clay onboarding and CSV work proceeded without a card; opening Flex checkout did not activate a subscription.",
+      "status": "confirmed",
+      "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$50/mo",
+      "claim_source": "https://app.clay.com/",
+      "claim_read_on": "2026-10-30",
+      "observed": "Flex promotional USD 50 versus EUR 46.64 including displayed EUR 0 tax; currency conversion USD/EUR 0.9328 explains the session total. No matching rule.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; Pricing Free; Growth labelled Trialing",
+      "comparability": "The introductory Flex monthly selection, rather than default Launch, converts to the displayed EUR total with zero tax in this checkout; no matching cost rule is available.",
+      "status": "confirmed",
+      "buying_consequence": "The selected introductory Flex checkout totals EUR 46.64; do not confuse it with preselected Launch.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-30",
+     "what": "Imported the two-record kit CSV into a new table and exported the default view without running enrichment or connecting a CRM.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "Import shows no field mapping or type-selection screen; every column uses a text icon. Date and amount value retention therefore does not prove typed columns. The attachment column contains filenames only; no image bytes were uploaded. Onboarding requires survey answers including at least one tool choice, and Escape does not close the first-use modal. Billing says Trial and Pricing Free with credits and actions replenished every two weeks, while Growth is labelled Trialing; no trial end date was shown. Launch was preselected before Flex was chosen.",
+     "friction": {
+      "export_route": "Tools > Export > Download CSV.",
+      "format": "UTF-8 CSV without BOM, LF endings, two rows and eleven columns in original order. Amounts normalize from 12.10 to 12.1 and from 24.20 to 24.2.",
+      "reimport": "Export has no Clay row ID, only the supplied test_id. Import from CSV opens an upload box; update matching was not tested and no reimport was performed.",
+      "cancellation": "Actual cancellation, trial expiry and account deletion were not tested."
+     },
+     "not_tested": [
+      "Complete signup screen count and human first-result setup time.",
+      "Actual cancellation, expiry, deletion and follow-up mail.",
+      "Kit fields that were not entered.",
+      "Application reimport or restoration."
+     ],
+     "came_along": [
+      "Both rows and all eleven source columns return. Accents, multiline text, custom code, dates, currency, tag strings, nullable text, active and attachment filenames match exactly. Amount strings lose a trailing zero but retain their decimal values."
+     ],
+     "lost": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "clay:cancellation_terms",

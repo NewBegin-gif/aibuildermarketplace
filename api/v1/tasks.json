@@ -3329,7 +3329,7 @@
      "status": "confirmed",
      "buying_consequence": "This observation confirms the Free route; it cannot prove future pricing permanence.",
      "buyer_direction": null,
-     "claim_changed_on": null
+     "claim_changed_on": "2026-10-30"
     },
     {
      "claim": "$0 forever",
@@ -3346,7 +3346,7 @@
      "status": "not_testable",
      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
      "buyer_direction": null,
-     "claim_changed_on": null
+     "claim_changed_on": "2026-10-30"
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
@@ -4370,6 +4370,112 @@
   },
   {
    "source": "session",
+   "product_name": "ServiceM8",
+   "product_id": "servicem8",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We went through the setup wizard, created two made-up quote jobs for two new clients and looked for an export.",
+   "findings": [
+    "The trial runs 14 days with no card. The four-step setup asks for your industry, accounting software and branding, and the last two steps can be skipped.",
+    "New accounts include a sample job, and in our account its address was a real street near the location of the signup.",
+    "Client names lost their accents: 'TEST Zoë Alpha' became 'TEST Zoe Alpha' as soon as we created the client. The job description kept accents and line breaks.",
+    "A new job saves the moment you open it, with Quote as the default status.",
+    "We found no export for jobs or clients in the web app. Clients can be bulk-imported, and the reports are dashboards with totals."
+   ],
+   "not_tested": [
+    "Scheduling, invoicing and payments",
+    "The mobile app",
+    "Accounting software sync",
+    "Support's answer (we emailed our three questions on 30 October)"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "14-day free trial",
+     "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+     "claim_read_on": "2026-10-30",
+     "observed": "The account banner shows fourteen days remaining of the ServiceM8 trial. No card was entered.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+     },
+     "plan": "14-day trial; tier not inspected",
+     "comparability": "The fourteen-day claim is compared with the ServiceM8 remaining-trial banner, not a verified paid plan or mobile-app feature set.",
+     "status": "confirmed",
+     "buying_consequence": "Trial duration matches; paid plan and web export scope remain unverified.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14-day free trial",
+     "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+     "claim_read_on": "2026-10-30",
+     "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+     },
+     "plan": "14-day trial; tier not inspected",
+     "comparability": "ServiceM8 Choose Plan was left unopened; jobs created during trial establish no amount due, seat minimum or tax treatment.",
+     "status": "not_testable",
+     "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "you do not need a credit card",
+     "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+     "claim_read_on": "2026-10-30",
+     "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+     },
+     "plan": "14-day trial; tier not inspected",
+     "comparability": "The ServiceM8 setup wizard and Quote-job route required no card during the recorded session; later subscription activation is untested.",
+     "status": "confirmed",
+     "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Created two Quote jobs with fictional customers, kit IDs in PO Number, multiline descriptions and separate notes.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Job descriptions kept accents, quotation marks and line breaks in the UI. New Job creates the job immediately with Quote as the default status. Separate notes held the custom codes, tags and amount strings; structured equivalents were not tested.",
+    "friction": {
+     "export_route": "History/Jobs, Clients and Reports offered no job or customer export in the inspected web UI. Clients offers Bulk Import. Settings was not searched, so broader export availability remains untested.",
+     "format": "No job or customer export file obtained.",
+     "reimport": "Customer Bulk Import was not tested. No job restoration or update round trip performed.",
+     "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+    },
+    "not_tested": [
+     "Full signup screen count and first-result setup speed.",
+     "Actual cancellation, expiry and deletion.",
+     "All kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "available_fields": [],
+    "not_offered": [
+     "Customer creation changed Zoë to Zoe and Bèta to Beta before export. This is an input-stage change, not measured export loss."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Freshworks",
    "product_id": "freshworks",
    "run_date": "2026-10-21",
@@ -4582,6 +4688,110 @@
      "Start Date is stored as text rather than a date column."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Amplitude",
+   "product_id": "amplitude",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up events from a CSV without writing code and tried the project's raw data export.",
+   "findings": [
+    "Setup leads with an AI prompt to paste into a coding tool, but there is also a no-code route: 'CSV of Events' under Integrations. No card was asked.",
+    "The CSV import needs an event type, a time and a user or device ID; any other column can become an event property. Both of our test events showed up as received within about a minute.",
+    "Event times arrived correctly: our UTC times were shown in Dutch time, including the change from summer to winter time.",
+    "The project's 'Export Data' asks for a range of UTC dates. For our fresh events it returned nothing: a 404 for the event dates, and no file for the upload date, about 20 minutes after the import.",
+    "The setup screen shows your project's API key in plain sight, so take care with screenshots."
+   ],
+   "not_tested": [
+    "The raw data export once processing has caught up",
+    "Charts and analyses",
+    "Paid plans",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free",
+     "claim_source": "https://www.amplitude.com/pricing",
+     "claim_read_on": "2026-10-30",
+     "observed": "CSV ingestion worked without a card, but Plans & Billing was not opened and the Free subscription label was not independently observed.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/amplitude-review/#claim-vs-measured"
+     },
+     "plan": "Account in EU region; Free tier not independently confirmed",
+     "comparability": "Amplitude ingestion was observed in the EU account, but a matching Free label and its plan allowances were not read in billing.",
+     "status": "not_testable",
+     "buying_consequence": "The available ingestion route does not establish the full Free-plan allowance or API entitlement.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free",
+     "claim_source": "https://www.amplitude.com/pricing",
+     "claim_read_on": "2026-10-30",
+     "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/amplitude-review/#claim-vs-measured"
+     },
+     "plan": "Account in EU region; Free tier not independently confirmed",
+     "comparability": "Amplitude Plans & Billing and payment screens were unopened, leaving the payable term, currency and tax basis unavailable.",
+     "status": "not_testable",
+     "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No Credit Card required.",
+     "claim_source": "https://www.amplitude.com/pricing",
+     "claim_read_on": "2026-10-30",
+     "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/amplitude-review/#claim-vs-measured"
+     },
+     "plan": "Account in EU region; Free tier not independently confirmed",
+     "comparability": "The observed CSV setup needed no card entry; this does not test payment requirements for another Amplitude tier.",
+     "status": "confirmed",
+     "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Imported two kit-derived events through CSV of Events, labelled No Code, in an EU-region account.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Both event user IDs appeared within approximately one minute and the project counted two events. Individual event properties were not inspected, so text, tags and numeric preservation remain unknown. Local display times reflected the daylight-saving change between the two event dates. The Free tier was not confirmed in Plans & Billing.",
+    "friction": {
+     "export_route": "Settings > Projects > default > Export Data; the first UTC-date range returned HTTP 404 on two attempts. A later range produced no file during the session.",
+     "format": "No raw export bytes were obtained. The retained CSV is input, not an export.",
+     "reimport": "No reimport performed. The notes describe events as append-only, but a supported update route or rejection was not directly tested; update-on-ID remains untested.",
+     "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+    },
+    "not_tested": [
+     "Full signup screen count and first-result setup speed.",
+     "Actual cancellation, expiry and deletion.",
+     "All kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -5991,6 +6201,111 @@
    "evidence_status": "original_session_record_not_retained",
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Trainerize",
+   "product_id": "trainerize",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We set up the account without claiming to be a coach, added two made-up exercises to the library and looked for an export.",
+   "findings": [
+    "The trial runs 30 days, as advertised, with no card. Setup asks what kind of coach you are, and 'Other' is an option. A phone number becomes required once you have answered.",
+    "A new exercise is built around a video (an mp4 or .mov file, or a YouTube link). You cannot add an image, and saving silently did nothing until we switched to 'No Video'.",
+    "Tags come from a fixed list (muscle, equipment, movement, level); you cannot make your own.",
+    "The instructions kept our line break, accents and quotes.",
+    "The library already holds hundreds of stock exercises with videos.",
+    "We found no export for exercises in the library or business menus."
+   ],
+   "not_tested": [
+    "Adding clients and programs",
+    "The mobile app",
+    "Paid plans",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Enjoy 30 days free",
+     "claim_source": "https://www.trainerize.com/free-trial/",
+     "claim_read_on": "2026-10-30",
+     "observed": "The account announces a thirty-day Free Trial, with thirty days remaining.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/trainerize-review/#claim-vs-measured"
+     },
+     "plan": "30-day trial; tier not inspected",
+     "comparability": "The public thirty-day offer matches both the trial-start dialog and remaining-days banner; the subscription tier is unknown.",
+     "status": "confirmed",
+     "buying_consequence": "A phone number is required in setup; the tested subscription tier was not established.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Enjoy 30 days free",
+     "claim_source": "https://www.trainerize.com/free-trial/",
+     "claim_read_on": "2026-10-30",
+     "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/trainerize-review/#claim-vs-measured"
+     },
+     "plan": "30-day trial; tier not inspected",
+     "comparability": "Trainerize Upgrade Now was not followed to an order summary, so no final amount can be compared with a price rule.",
+     "status": "not_testable",
+     "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required.",
+     "claim_source": "https://www.trainerize.com/free-trial/",
+     "claim_read_on": "2026-10-30",
+     "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/trainerize-review/#claim-vs-measured"
+     },
+     "plan": "30-day trial; tier not inspected",
+     "comparability": "Trainerize’s post-signup setup and exercise creation proceeded without a payment card; the mandatory phone field is a separate setup requirement.",
+     "status": "confirmed",
+     "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Created two custom exercises in Master Libraries > Exercises during the thirty-day trial.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Setup required a phone number. Exercise media accepts video rather than the kit PNGs, and tags come from a fixed list; Beginner was selected. Saving gave no visible result with Custom Video selected. Selecting No Video allowed both exercises to save, with names and multiline instructions intact in the UI. These are input observations, not export preservation results.",
+    "friction": {
+     "export_route": "No exercise export or import control found in the library and inspected Business menu. This limited search does not prove that export is unavailable throughout the product.",
+     "format": "No exercise export file obtained.",
+     "reimport": "Exercise restoration was not tested; no export was available for a round trip.",
+     "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+    },
+    "not_tested": [
+     "Full signup screen count and first-result setup speed.",
+     "Actual cancellation, expiry and deletion.",
+     "All kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -8348,6 +8663,115 @@
   },
   {
    "source": "session",
+   "product_name": "Nutshell",
+   "product_id": "nutshell",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up people by hand, exported them and looked at the import options.",
+   "findings": [
+    "The trial runs 14 days with no card. The first suggestion is to connect your Google or Microsoft 365 email and calendar; we skipped it.",
+    "The account comes with five sample contacts.",
+    "The spreadsheet import walks you through mapping and promises 'Everything you upload belongs to you. We will not use it for anything.' Nutshell also offers to run the import for you.",
+    "The people export only includes the columns shown in the list. Our descriptions were missing until we turned on that column and exported again.",
+    "The export is a CSV with a byte-order mark and its own record ID; names with accents came back exactly.",
+    "The trial includes an API key option and SQL access in the data settings."
+   ],
+   "not_tested": [
+    "Importing a spreadsheet",
+    "Re-importing an export to update records",
+    "Paid plans and add-ons",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Try free for 14 days",
+     "claim_source": "https://www.nutshell.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "The account banner shows fourteen trial days remaining. No card was entered.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+     },
+     "plan": "14-day trial; tier not inspected",
+     "comparability": "Nutshell’s advertised fourteen days match its welcome banner; this says nothing about a particular paid CRM tier.",
+     "status": "confirmed",
+     "buying_consequence": "Trial access confirms the duration; checkout and later billing remain untested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Try free for 14 days",
+     "claim_source": "https://www.nutshell.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+     },
+     "plan": "14-day trial; tier not inspected",
+     "comparability": "Nutshell Upgrade now was not opened and no matching cost rule exists in the snapshot, preventing a like-for-like checkout comparison.",
+     "status": "not_testable",
+     "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "no credit card required",
+     "claim_source": "https://www.nutshell.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+     },
+     "plan": "14-day trial; tier not inspected",
+     "comparability": "Manual people entry and selected-row CSV export were completed without entering card details; this finding is limited to that Nutshell trial route.",
+     "status": "confirmed",
+     "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Created two people manually after the CSV upload could not be completed through the test setup, then exported the selected pair twice.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "CSV import was not executed because the system file picker could not be operated in this test setup; this is not a product import failure. Descriptions were entered as a shortened single-line mapping with ID, custom code and amount text, so original multiline kit preservation is untested. The list contained five demo contacts in addition to the two test people. Tags, companies and custom fields were not created.",
+    "friction": {
+     "export_route": "People > select the two test people > Export > Download ready. Enable Description through Change columns before repeating the export.",
+     "format": "UTF-8 CSV with BOM and LF endings: twenty columns initially, twenty-one after enabling Description. Both exports contain only the selected two people.",
+     "reimport": "Update-on-ID reimport and the separate full ZIP export were not tested.",
+     "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+    },
+    "not_tested": [
+     "Full signup screen count and first-result setup speed.",
+     "Actual cancellation, expiry and deletion.",
+     "All kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "came_along": [
+     "Both names and emails appear exactly in the two CSVs, with stable export IDs 6-contacts and 7-contacts. After enabling Description, the exact manually entered description strings also appear."
+    ],
+    "lost": [
+     "The first export omits Description because that list column was hidden; enabling it includes the field in the second export."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "SimplyBook.me",
    "product_id": "simplybook-me",
    "run_date": "2026-10-30",
@@ -8706,6 +9130,129 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Unbounce",
+   "product_id": "unbounce",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We asked the AI builder for a one-page site with two sections of our test text, saved it unpublished and looked for a way to export the page.",
+   "findings": [
+    "The account opened on a 'Premium Free Trial': 14 days on the top plan, with no card asked. A profile form (company, industry, size, experience) comes first.",
+    "The AI builder took our exact headings and text, accents and quotes included, and said so in its summary. It took about 30 seconds. We gave Pagecloud the same prompt the same day, and its AI builder left our text out.",
+    "The page stays unpublished until you click Publish, but its code already carries a 'robots: index, follow' tag.",
+    "We found no page export. 'Edit Code' shows the full HTML and CSS of the page, which you can copy out, but there is no download.",
+    "The trial counter in the app said '13 days left' on the signup day, with a traffic meter of 0/500 visitors."
+   ],
+   "not_tested": [
+    "Publishing and a custom domain",
+    "Forms and leads",
+    "Paid plans and checkout",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Start building for free",
+     "claim_source": "https://unbounce.com/pricing/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Building succeeded without a card. Setup explicitly calls the offer Premium Free Trial on the top plan for fourteen days; the page list later shows thirteen days left.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unbounce-review/#claim-vs-measured"
+     },
+     "plan": "Premium Free Trial; top plan, 14 days",
+     "comparability": "The free-building claim is compared with the observed Premium Free Trial on the top plan, rather than an ongoing free subscription.",
+     "status": "confirmed",
+     "buying_consequence": "Free building is a time-limited top-plan trial rather than evidence of an ongoing free plan.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Start building for free",
+     "claim_source": "https://unbounce.com/pricing/",
+     "claim_read_on": "2026-10-30",
+     "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unbounce-review/#claim-vs-measured"
+     },
+     "plan": "Premium Free Trial; top plan, 14 days",
+     "comparability": "Unbounce Buy Now was not followed; the top-plan trial banner supplies no tax-inclusive checkout amount.",
+     "status": "not_testable",
+     "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "no credit card needed!",
+     "claim_source": "https://app.unbounce.com/signup/trial_2027",
+     "claim_read_on": "2026-10-30",
+     "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unbounce-review/#claim-vs-measured"
+     },
+     "plan": "Premium Free Trial; top plan, 14 days",
+     "comparability": "The no-card statement covers the recorded profile and building route; Daan’s uncounted signup screens remain outside the measurement.",
+     "status": "confirmed",
+     "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The accented characters (ë, è, é) and the quotes are exactly as you wrote them.",
+     "claim_source": "https://app.unbounce.com/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Both prompted headings and accompanying text appear literally in the editor and its HTML, including accents and quotes.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unbounce-review/#claim-vs-measured"
+     },
+     "plan": "Premium Free Trial; top plan, 14 days",
+     "comparability": "This checks only the two supplied headings and their prompt text against the generated page and Edit Code; omitted kit fields are outside scope.",
+     "status": "confirmed",
+     "buying_consequence": "The supplied prompt text required no observed correction; this is not a ranking or a full-kit preservation test.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Built an unpublished AI landing page using the same two-section test prompt as the Pagecloud session.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The prompt used a subset of the kit text, without its second lines or images. The Premium Free Trial grants access to the top plan. The page remains Unpublished; its code contains meta robots index,follow. This code value does not establish public accessibility or actual indexing. In the recorded Pagecloud session, the same prompt produced a page without the supplied headings and text; this compares those two outputs and is not a product ranking.",
+    "friction": {
+     "export_route": "Page menu and Overview offered no page file download in the inspected UI. Editor > Edit Code exposes the complete HTML and CSS for copying. Download Leads concerns form responses and was not tested.",
+     "format": "No downloaded page file. HTML was inspected in the editor; it was not captured as a local export.",
+     "reimport": "Pasting code back into the editor was not tested.",
+     "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+    },
+    "not_tested": [
+     "Full signup screen count and first-result setup speed.",
+     "Actual cancellation, expiry and deletion.",
+     "All kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "available_fields": [
+     "Both supplied section headings and prompt text appear literally on the page, including accents and quotation marks. The code editor also shows that text."
+    ],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

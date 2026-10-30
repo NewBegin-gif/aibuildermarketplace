@@ -3949,6 +3949,111 @@
   },
   {
    "source": "session",
+   "product_name": "Poptin",
+   "product_id": "poptin",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We built a contact form with our own custom fields on a test domain, kept it switched off and looked at leads, export and the paid plans.",
+   "findings": [
+    "The free plan needs no card and gives you 1,000 visitors a month on one domain, with Poptin branding.",
+    "A new form asks for a domain and is switched on by default; we used a test domain and switched it off.",
+    "Custom fields can be text, number, date or yes/no. Their type and key cannot be changed afterwards.",
+    "We found no preview that saves a test submission. Submissions only come in from a live site with the Poptin code installed, so we could not test storing or exporting them.",
+    "The contacts list sits behind an upgrade on the free plan.",
+    "Basic was $25 a month on the monthly term. The checkout showed no tax or total before the card details."
+   ],
+   "not_tested": [
+    "Publishing the form on a live site",
+    "Exporting submissions",
+    "Email campaigns and automations",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Get Started For Free",
+     "claim_source": "https://app.popt.in/register",
+     "claim_read_on": "2026-10-25",
+     "observed": "Billing says Current plan Free with one thousand visitors and one domain. The form draft saves successfully.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/poptin-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "The Poptin free-start offer is checked against billing and draft creation, with live-site response collection outside this setup.",
+     "status": "confirmed",
+     "buying_consequence": "Starting free does not establish a response workflow without installing code on a live website.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required",
+     "claim_source": "https://app.popt.in/register",
+     "claim_read_on": "2026-10-25",
+     "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/poptin-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Poptin Free draft creation uses no card, while the separate Basic upgrade presents empty card fields.",
+     "status": "confirmed",
+     "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$25/monthly",
+     "claim_source": "https://app.popt.in/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Basic monthly USD 25 shown before card; no tax or final total. No matching cost-engine product rule.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/poptin-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "The selected Basic monthly screen shows USD 25; the initially displayed annual equivalent and unknown tax and absent cost rule cannot supply its final payable amount.",
+     "status": "not_testable",
+     "buying_consequence": "Budget for possible tax; the final amount is not established before card entry.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Built an unpublished form draft on example.com with custom Text and Date properties; status was set to OFF.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Two responses and their export remain untested: submitting requires a live site with Poptin code, which this test setup did not publish or install. This is a boundary of the test setup, not a Poptin response failure. Contacts is behind an upgrade. The form starts with status ON before the tester changes it. Property Type and Key cannot be edited after creation. Disclosure: We may earn a commission if you buy through our links.",
+    "friction": {
+     "export_route": "Leads > Conversions shows an export icon, but no responses were created; Leads > Contacts requires an upgrade.",
+     "format": "No response export file obtained.",
+     "reimport": "No response or contact reimport tested.",
+     "cancellation": "Actual cancellation, trial expiry and account deletion were not tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup time.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Parallel AI",
    "product_id": "parallel-ai",
    "run_date": "2026-10-21",
@@ -4686,6 +4791,132 @@
     ],
     "lost": [
      "Start Date is stored as text rather than a date column."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Wistia",
+   "product_id": "wistia",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We uploaded two short test videos we made ourselves, added a description and tags, and downloaded a video back.",
+   "findings": [
+    "After the first upload Wistia offered a 14-day Business trial with no card; we stayed on Free.",
+    "Uploading a 10-second video took seconds. Description and tags save on Free.",
+    "A new folder is set to 'Anyone with the link — Can view' by default.",
+    "The download offered only converted versions (540p, 360p or 288p), not the file we uploaded. The 540p file was a different size, picked up an audio track and kept the full 10 seconds.",
+    "The description and tags do not come with the download, and the plan table lists CSV export as a paid feature.",
+    "Business came to €92.35 a month at checkout, converted from $99; tax only appears once you enter an address."
+   ],
+   "not_tested": [
+    "Embedding on a website and the analytics",
+    "The Business trial features",
+    "Inviting other users",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "$0/mo",
+     "claim_source": "https://wistia.com/pricing",
+     "claim_read_on": "2026-10-30",
+     "observed": "Plans identifies Free as the current plan. The fourteen-day Business offer was declined.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wistia-review/#claim-vs-measured"
+     },
+     "plan": "Free; Business trial skipped",
+     "comparability": "Wistia zero-price access is checked against the explicit current Free label after choosing Maybe later on the Business offer.",
+     "status": "confirmed",
+     "buying_consequence": "Video upload was tested on Free, not a Business trial.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required",
+     "claim_source": "https://wistia.com/pricing",
+     "claim_read_on": "2026-10-30",
+     "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wistia-review/#claim-vs-measured"
+     },
+     "plan": "Free; Business trial skipped",
+     "comparability": "Wistia upload and the skipped Business offer required no card in the recorded route.",
+     "status": "confirmed",
+     "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$99/month",
+     "claim_source": "https://wistia.com/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Page USD 99 versus EUR 92.35 at displayed USD/EUR 0.9328; tax and total require address. Rounded display exchange rate is not an exact price guarantee.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wistia-review/#claim-vs-measured"
+     },
+     "plan": "Free; Business trial skipped",
+     "comparability": "Business monthly crosses USD pricing and EUR Stripe conversion; missing address-based tax and an unverified cost rule prevent an equal final-total comparison.",
+     "status": "not_testable",
+     "buying_consequence": "EUR subtotal may increase after billing address; original video export remains unproven on Free.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Anyone with the link — Can view",
+     "claim_source": "https://wistia.com/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Folder details shows link viewers can view, while people in the account have No access.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wistia-review/#claim-vs-measured"
+     },
+     "plan": "Free; Business trial skipped",
+     "comparability": "This checks the recorded Wistia folder access default itself, without inferring that a live anonymous request succeeded.",
+     "status": "confirmed",
+     "buying_consequence": "Check folder access before sharing a link; anonymous reachability was not separately tested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Uploaded two ten-second test videos derived from the kit PNGs on Free, then downloaded the first video.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "The kit contains PNGs rather than videos; source videos were created for this test. The missing accented glyph in the first image originates in the kit font. The Business trial offer was skipped. Folder access defaults to Anyone with the link — Can view; actual anonymous access was not tested. CSV metadata export is excluded from Free in the plan comparison. The second video received no description or tags and was not downloaded.",
+    "friction": {
+     "export_route": "Media menu > Download > Video > mp4; resolutions shown are 540p, 360p and 288p.",
+     "format": "First download: H.264 video at 960 by 690 with AAC audio, versus a 1000 by 720 source with no audio. Both are ten seconds long.",
+     "reimport": "Replace is offered for a media file; metadata restoration or fixed-ID record reimport was not tested.",
+     "cancellation": "Actual cancellation, trial expiry and account deletion were not tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup time.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "came_along": [
+     "The first downloaded video retains the static test image and ten-second duration. Description and tags could be saved on the first media item in the UI; export preservation of those fields was not established."
+    ],
+    "lost": [
+     "Bytes and dimensions change. An AAC audio track is added. No original-file download."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },
@@ -6182,6 +6413,132 @@
   },
   {
    "source": "session",
+   "product_name": "Fastmail",
+   "product_id": "fastmail",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up contacts with a photo each, exported the address book, changed one note in the export and imported it again.",
+   "findings": [
+    "The trial showed 30 days, with no card. Upgrading ends the trial straight away: the checkout says the subscription starts today and that there are no refunds for unused time.",
+    "Individual was €6 a month on the monthly term, €1.04 of it VAT, or €5 a month on a 12-month term.",
+    "Adding a second user, and by the same message sending your first email, first asks you to verify a mobile phone number by text.",
+    "The contact form has names, company, nickname, birthday, email, phone, address and notes, but no custom fields.",
+    "The vCard export brought back names with accents, multi-line notes and the photos byte for byte. The groups we used as tags were missing from it.",
+    "Importing the edited vCard did not update anything: it added two new contacts with new IDs, so we ended up with four."
+   ],
+   "not_tested": [
+    "Sending and receiving email",
+    "Connecting another mailbox or a custom domain",
+    "Paying for a plan",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "lasts up to 30 days",
+     "claim_source": "https://www.fastmail.help/hc/en-us/articles/1500000277442-Trial-accounts",
+     "claim_read_on": "2026-10-30",
+     "observed": "The welcome and billing screens show thirty days remaining. Upgrading explicitly ends the trial.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+     },
+     "plan": "30-day trial; tier not established",
+     "comparability": "The up-to-thirty-day claim is compared with the Fastmail remaining-days banner; an upgrade is separately subject to immediate trial termination.",
+     "status": "confirmed",
+     "buying_consequence": "The observed maximum-duration offer is consistent; purchasing early forfeits remaining trial time.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card is required",
+     "claim_source": "https://www.fastmail.help/hc/en-us/articles/1500000277442-Trial-accounts",
+     "claim_read_on": "2026-10-30",
+     "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+     },
+     "plan": "30-day trial; tier not established",
+     "comparability": "Fastmail signup notes explicitly report no card request; SMS verification before adding a user is a distinct requirement.",
+     "status": "confirmed",
+     "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€6",
+     "claim_source": "https://app.fastmail.com/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Current app monthly Individual price and order summary both EUR 6 including EUR 1.04 VAT. No Fastmail product rule exists in the pinned cost rules; the historical preparation also marks the exact rule comparison untested.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+     },
+     "plan": "30-day trial; tier not established",
+     "comparability": "The observed Individual monthly EUR 6 plan and EUR 6 tax-inclusive summary use the same term and account; the cost-engine rule is not asserted to match.",
+     "status": "confirmed",
+     "buying_consequence": "Upgrading starts today, renews automatically and offers no unused-time refund.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Upgrading to a paid plan will end your trial period and unlock all features.",
+     "claim_source": "https://app.fastmail.com/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Billing warns the trial ends on upgrade; checkout says the new subscription starts today and offers no refunds for unused time.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+     },
+     "plan": "30-day trial; tier not established",
+     "comparability": "Fastmail upgrade timing is compared directly between its trial banner and monthly checkout terms; no payment or cancellation was performed.",
+     "status": "confirmed",
+     "buying_consequence": "Buying during the trial gives up its remaining free days.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Two fictional address-book contacts, with multiline notes, PNG photos and groups, exported and reimported during the trial.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": true,
+    "awkward": "The contact form offers no custom fields, general record date or amount field. Birthday is a different field. A second user triggers mobile verification; the same message also requires verification before a first outgoing message. An upgrade ends the remaining trial and starts the subscription immediately, with no refund for unused time.",
+    "friction": {
+     "export_route": "Settings > Migration > Export > Download all contacts.",
+     "format": "vCard 3.0 with embedded base64 PNG photos; two cards before and four after reimport.",
+     "reimport": "Import > Upload contacts and calendars > Contacts reported success, but retained UIDs did not update existing contacts: four contacts remained.",
+     "cancellation": "Actual cancellation, trial expiry and account deletion were not tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup time.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields that were not entered."
+    ],
+    "came_along": [
+     "Both names, emails, nicknames and notes survive vCard export, including accents, quotes and line breaks. Embedded photo bytes match the two kit PNGs."
+    ],
+    "lost": [
+     "Download all contacts omits group membership: neither of the two assigned groups per contact is exported.",
+     "Reimporting the modified vCard creates two duplicates with new UIDs. The original second contact retains its old note; an additional copy carries the updated note."
+    ],
+    "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Capsule",
    "product_id": "capsule",
    "run_date": "2026-09-07",
@@ -7254,6 +7611,112 @@
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "LearnWorlds",
+   "product_id": "learnworlds",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up learners by hand, exported the user list and looked at bulk import and the paid plans.",
+   "findings": [
+    "The trial showed 30 days, with no card. Setup asks you to pick a site template and answer five questions.",
+    "Adding a user always sends that person an invitation email; the form has no option to skip it. Our test address bounced within a minute.",
+    "The user export is a CSV with 47 columns. It brought back each learner's ID, name with accents, email and tag.",
+    "Bulk user import is locked on the trial. The locked form shows an option to update existing users, matched by email.",
+    "Starter was €49 a month plus €5 per paid enrollment on the monthly term. The checkout showed €49.00 due, with no tax line before the card details."
+   ],
+   "not_tested": [
+    "Building or publishing a course",
+    "Enrolling learners and payments",
+    "Custom user fields",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "30-day free trial.",
+     "claim_source": "https://www.learnworlds.com/getstarted/",
+     "claim_read_on": "2026-10-25",
+     "observed": "The school sidebar shows thirty days left and Trial.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+     },
+     "plan": "Trial; 30 days left",
+     "comparability": "LearnWorlds thirty-day offer is checked against the school trial counter, while paid-plan functionality is assessed separately.",
+     "status": "confirmed",
+     "buying_consequence": "The observed duration matches; bulk import is unavailable on the tested Trial.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required.",
+     "claim_source": "https://www.learnworlds.com/getstarted/",
+     "claim_read_on": "2026-10-25",
+     "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+     },
+     "plan": "Trial; 30 days left",
+     "comparability": "LearnWorlds Trial onboarding and learner creation required no card; Starter checkout was stopped before entry.",
+     "status": "confirmed",
+     "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€49/month",
+     "claim_source": "https://www.learnworlds.com/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Starter monthly EUR 49 amount due shown; VAT unspecified, and EUR 5 per paid enrollment is a separate usage charge. No matching rule.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+     },
+     "plan": "Trial; 30 days left",
+     "comparability": "Starter monthly page and amount due both show EUR 49, but the hidden VAT basis and enrollment usage fee and absent cost rule prevent a verified all-in comparison.",
+     "status": "not_testable",
+     "buying_consequence": "EUR 49 monthly excludes a verified VAT determination; each paid enrollment is listed at EUR 5.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Created two fictional learners manually during Trial and exported the complete users report, including the owner.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Add user always sends an invitation in the inspected form: no off switch was present, and the first example.com address became Hard bounced. The export has no hard-bounce column. A second tag was not successfully created, so preservation of the complete two-tag kit is untested. Custom fields were not entered and User fields was not opened. Starter lists a charge per paid enrollment in addition to its monthly fee.",
+    "friction": {
+     "export_route": "Users > All users > Export users report > Export as csv.",
+     "format": "UTF-8 CSV with BOM, forty-seven columns and three rows: the owner plus the two test learners.",
+     "reimport": "Import users is a higher-plan feature on Trial. The disabled update-existing option describes email matching; no reimport was performed.",
+     "cancellation": "Actual cancellation, trial expiry and account deletion were not tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup time.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "came_along": [
+     "Both learner IDs, names with accents, emails and the single entered aibm-test tag appear in the CSV."
+    ],
+    "lost": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -9099,6 +9562,113 @@
      "The Deals column in the people export: it was in the view, but not in people.csv",
      "The currency of Deal value: the app shows '$', the export has the number only"
     ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Clay",
+   "product_id": "clay",
+   "run_date": "2026-10-30",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported a two-row test CSV into a new table without running any enrichment, exported it and compared every field.",
+   "findings": [
+    "The account came with 1,000 data credits and 5,000 actions every two weeks, with no card. Setup asks four survey questions and a tool must be picked before you can continue.",
+    "The CSV import has no field mapping step: every column became a text column.",
+    "The CSV export brought back all eleven columns of both rows, including accents, quotes and line breaks. Amounts lost a trailing zero (12.10 became 12.1).",
+    "The export has no Clay row ID of its own, and the import into an existing table offers no update-on-key option.",
+    "Importing and exporting used none of the credits.",
+    "Launch at $185 a month is preselected on the plan page. The cheapest plan, Flex, came to €46.64 a month at checkout with €0.00 tax shown."
+   ],
+   "not_tested": [
+    "Enrichments and AI research",
+    "Re-importing to update rows",
+    "Connecting a CRM",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Start 14-day trial",
+     "claim_source": "https://www.clay.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "Billing says Plan Trial, Pricing Free, one thousand credits and five thousand actions per two weeks; Growth says Trialing. No explicit trial end date was shown.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+     },
+     "plan": "Trial; Pricing Free; Growth labelled Trialing",
+     "comparability": "Clay trial wording is compared with mixed Trial, Free and Trialing labels; the two-week credit interval is not an independently observed trial duration.",
+     "status": "not_testable",
+     "buying_consequence": "A fourteen-day expiry cannot be established from a biweekly zero-payment date.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required.",
+     "claim_source": "https://www.clay.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+     },
+     "plan": "Trial; Pricing Free; Growth labelled Trialing",
+     "comparability": "Clay onboarding and CSV work proceeded without a card; opening Flex checkout did not activate a subscription.",
+     "status": "confirmed",
+     "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$50/mo",
+     "claim_source": "https://app.clay.com/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Flex promotional USD 50 versus EUR 46.64 including displayed EUR 0 tax; currency conversion USD/EUR 0.9328 explains the session total. No matching rule.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/clay-review.html#claim-vs-measured"
+     },
+     "plan": "Trial; Pricing Free; Growth labelled Trialing",
+     "comparability": "The introductory Flex monthly selection, rather than default Launch, converts to the displayed EUR total with zero tax in this checkout; no matching cost rule is available.",
+     "status": "confirmed",
+     "buying_consequence": "The selected introductory Flex checkout totals EUR 46.64; do not confuse it with preselected Launch.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "Imported the two-record kit CSV into a new table and exported the default view without running enrichment or connecting a CRM.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Import shows no field mapping or type-selection screen; every column uses a text icon. Date and amount value retention therefore does not prove typed columns. The attachment column contains filenames only; no image bytes were uploaded. Onboarding requires survey answers including at least one tool choice, and Escape does not close the first-use modal. Billing says Trial and Pricing Free with credits and actions replenished every two weeks, while Growth is labelled Trialing; no trial end date was shown. Launch was preselected before Flex was chosen.",
+    "friction": {
+     "export_route": "Tools > Export > Download CSV.",
+     "format": "UTF-8 CSV without BOM, LF endings, two rows and eleven columns in original order. Amounts normalize from 12.10 to 12.1 and from 24.20 to 24.2.",
+     "reimport": "Export has no Clay row ID, only the supplied test_id. Import from CSV opens an upload box; update matching was not tested and no reimport was performed.",
+     "cancellation": "Actual cancellation, trial expiry and account deletion were not tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup time.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields that were not entered.",
+     "Application reimport or restoration."
+    ],
+    "came_along": [
+     "Both rows and all eleven source columns return. Accents, multiline text, custom code, dates, currency, tag strings, nullable text, active and attachment filenames match exactly. Amount strings lose a trailing zero but retain their decimal values."
+    ],
+    "lost": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true

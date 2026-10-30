@@ -62,16 +62,439 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "loyalty-influenced order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 250,
+     "evidence": "Free covers up to 250 of those and is unusually complete"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 500,
+       "monthly": 10
+      }
+     ],
+     "annual_status": "unknown",
+     "evidence": "Starter is $10 a month for up to 500"
+    },
+    {
+     "id": "essential",
+     "name": "Essential",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 1500,
+       "monthly": 24
+      }
+     ],
+     "annual_status": "unknown",
+     "evidence": "Essential is $24 for up to 1,500"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "monthly": 79,
+     "annual_status": "unknown",
+     "evidence": "Growth is $79 for unlimited loyalty orders"
+    }
+   ],
+   "notes": "Counts loyalty-influenced orders (repeat sales and referrals), not every store order. Charges are in USD and recur every 30 days; paid plans carry a 14-day free trial. Per the vendor FAQ, passing a cap upgrades you in place to the next tier, with no per-order overage fee.",
+   "rules_verified_at": "2026-10-30"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "essential-loyalty",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "loyalty-influenced order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "essential": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": "price_unknown_on_billing",
+       "essential": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "price_unknown_on_billing",
+       "essential": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "price_unknown_on_billing",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "essential-loyalty",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "loyalty-influenced order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 10.0,
+       "essential": 24.0,
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 10.0,
+       "essential": 24.0,
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 10.0,
+       "essential": 24.0,
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": 24.0,
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": 24.0,
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 79.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 79.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 79.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 79.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": 79.0
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 79.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "growth": 79.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 300,
+      "to_units": 700,
+      "from_plan": "starter",
+      "to_plan": "essential",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Essential"
+     },
+     {
+      "from_units": 1000,
+      "to_units": 2000,
+      "from_plan": "essential",
+      "to_plan": "growth",
+      "from_plan_name": "Essential",
+      "to_plan_name": "Growth"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -98,12 +521,6 @@
    "question_id": "essential-loyalty:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "essential-loyalty:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

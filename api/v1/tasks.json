@@ -3622,11 +3622,11 @@
    "product_id": "pixlr",
    "run_date": "2026-10-30",
    "session_type": "hands_on",
-   "what": "Tested by our team on 30 October 2026 without an account: our AI assistant used the free Pixlr Editor in Daan's browser. We opened our test image, added a text layer, and saved it as a Pixlr project file and as a PNG.",
+   "what": "Tested by our team on 30 October 2026 without an account: our AI assistant used the free Pixlr Editor in Daan's browser. We opened our two test images, added a text layer to each, and saved them as Pixlr project files and one as a PNG.",
    "findings": [
-    "You can edit without an account, but saving is capped: after each save a pop-up showed '0/3 daily free save!' and then '1/3 daily free save!', with an invitation to sign up.",
+    "You can edit without an account, but saving shows a free-save counter: after our saves the pop-up read '0/3 daily free save!', then '1/3', then '1/3' again, each time with an invitation to sign up. We were not blocked after three saves, so how the limit counts is unclear.",
     "Save offers JPG, PNG, WebP, PDF and PXZ, Pixlr's own project format.",
-    "The PXZ file is a ZIP that keeps the layers: our text layer came back editable with its accents intact. The background image was stored as WebP, not as the original PNG.",
+    "The PXZ files are ZIPs that keep the layers: both text layers came back editable with their accents intact. The background images were stored as WebP, not as the original PNGs.",
     "By default, saving uses the browser's file-save dialog. A plain download only works after switching on 'Use legacy save method (Download)' in the settings."
    ],
    "not_tested": [
@@ -3644,16 +3644,16 @@
      "claim": "free advanced photo editor",
      "claim_source": "https://pixlr.com/editor/",
      "claim_read_on": "2026-10-29",
-     "observed": "The public Editor allowed editing without an account. Save popups showed three daily free saves.",
+     "observed": "The public Editor allowed guest editing of both images and three completed saves. Popups read 0/3 daily free save!, 1/3 daily free save!, 1/3 daily free save! (0/3 → 1/3 → 1/3); a daily maximum is not proven.",
      "observed_on": "2026-10-30",
      "evidence": {
       "label": "Our test observations",
       "url": "https://aibuildermarketplace.com/b2b/pixlr-review/#claim-vs-measured"
      },
      "plan": "Public Editor, no account",
-     "comparability": "Compared on the public editor without logging in; paid plans were not opened.",
+     "comparability": "Pixlr public guest editing and three completed saves across two page loads are observed. The literal counters 0/3 → 1/3 → 1/3 do not establish a daily maximum or remaining allowance.",
      "status": "confirmed",
-     "buying_consequence": "Free editing has a daily save limit; paid options were not tested.",
+     "buying_consequence": "Guest editing and three saves succeeded; the daily quota and reset behavior remain unknown.",
      "buyer_direction": null,
      "claim_changed_on": null
     },
@@ -3668,7 +3668,7 @@
       "url": "https://aibuildermarketplace.com/b2b/pixlr-review/#claim-vs-measured"
      },
      "plan": "Public Editor, no account",
-     "comparability": "Same guest session, one image saved twice.",
+     "comparability": "The Pixlr guest workflow did not enter subscription checkout. Its save-success popups contain no comparable paid plan, billing term, seat count or tax-inclusive subscription total.",
      "status": "not_testable",
      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
      "buyer_direction": null,
@@ -3678,11 +3678,11 @@
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
     "run_date": "2026-10-30",
-    "what": "Edited the first kit image in the public Editor without an account and saved a PXZ project and PNG.",
+    "what": "Edited both kit images in the public Editor without an account and saved two PXZ projects; the first image was also saved as PNG.",
     "first_import": null,
     "file_inspected": true,
     "reimport_tested": false,
-    "awkward": "The background is stored as WebP inside the PXZ rather than the original PNG. The missing glyph in the source image predates editing. The save popups show a daily free-save allowance of three; the observed counters were 0/3 and 1/3. Only the first kit image was edited. Legacy Download had to be enabled to obtain files.",
+    "awkward": "Both PNG backgrounds are stored as WebP inside PXZ. The missing glyph in the first source image predates editing. Save popups read 0/3 daily free save!, then 1/3 daily free save!, then 1/3 daily free save! after a new page load: 0/3 → 1/3 → 1/3. The third save succeeded, so a three-saves-per-day limit is not established. A fourth save dialog did not open; no quota block was demonstrated. Legacy Download was enabled to obtain files.",
     "friction": {
      "export_route": "File > Save > PXZ or PNG, using the legacy Download method.",
      "format": "PXZ is a ZIP containing a manifest, background WebP, thumbnail and font; PNG is a flattened image.",
@@ -3696,7 +3696,7 @@
      "Application reimport or restoration."
     ],
     "came_along": [
-     "The PXZ manifest retains separate background and editable text layers. The added text preserves Zoë and één exactly."
+     "Both PXZ manifests retain separate background and text layers. The entered strings AIBM-001 TEST Zoë Alpha één and AIBM-002 TEST Bèta Twee één are preserved exactly."
     ],
     "lost": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
@@ -7275,18 +7275,18 @@
    "product_id": "printify",
    "run_date": "2026-10-30",
    "session_type": "hands_on",
-   "what": "Tested by our team on 30 October 2026 on a free account: Daan created the account and our AI assistant ran the test in Daan's browser. We made one unpublished mug design with our own test image, edited its listing and looked for ways to export the product or its mockups.",
+   "what": "Tested by our team on 30 October 2026 on a free account: Daan created the account and our AI assistant ran the test in Daan's browser. We made two unpublished mug designs with our own test images, edited their listings and looked for ways to export the products or their mockups.",
    "findings": [
     "The account opened in an AI wizard that had already made five designs, all selected 'to publish'. Leaving it warns that you lose this 'reserved collection'.",
     "Catalog prices show two numbers, for example 'From USD 6.40' and 'From USD 4.71 with Printify Premium'. No card was asked.",
-    "Our 1000 × 720 test image got a 'Medium resolution (187 DPI)' warning on the mug.",
+    "Both of our 1000 × 720 test images got a 'Medium resolution (187 DPI)' warning on the mug.",
     "Opening the product brought a pop-up for AI-optimised listings, which we declined. The listing was filled in for us anyway: 40 mockups, 16 tags and a suggested price of $11.99-$16.99.",
-    "The product stayed unpublished; publishing needs a connected store. The product menu has no export, and the mockup download buttons gave us no file."
+    "Both products stayed unpublished; publishing needs a connected store. The product menu has no export, and the mockup download buttons gave us no file."
    ],
    "not_tested": [
     "Connecting a store and publishing",
     "Ordering a sample",
-    "A second product",
+    "Downloading the uploaded design files",
     "Contacting support"
    ],
    "report": null,
@@ -7299,14 +7299,14 @@
      "claim": "free to join",
      "claim_source": "https://printify.com/blog/hoodie-design-ideas/",
      "claim_read_on": "2026-10-29",
-     "observed": "A product draft was created on Free without payment or connecting a store.",
+     "observed": "Two kit-based mug drafts were saved on Free without payment or a connected store; TEST Zoë Alpha and TEST Bèta Twee are both Unpublished.",
      "observed_on": "2026-10-30",
      "evidence": {
       "label": "Our test observations",
       "url": "https://aibuildermarketplace.com/b2b/printify-review/#claim-vs-measured"
      },
      "plan": "Free",
-     "comparability": "Compared on a free account without a connected store; Premium was not opened.",
+     "comparability": "Printify Free allowed two kit-based mug drafts to be saved as Unpublished without payment or a connected store; this tests access to design and draft saving only.",
      "status": "confirmed",
      "buying_consequence": "Free design access does not establish production or shipping costs.",
      "buyer_direction": null,
@@ -7323,7 +7323,7 @@
       "url": "https://aibuildermarketplace.com/b2b/printify-review/#claim-vs-measured"
      },
      "plan": "Free",
-     "comparability": "Same free account, one unpublished mug design.",
+     "comparability": "The Printify session never opened Premium billing, a sample-order checkout or a production order; catalog production prices cannot establish shipping, tax or an order total.",
      "status": "not_testable",
      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
      "buyer_direction": null,
@@ -7333,11 +7333,11 @@
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
     "run_date": "2026-10-30",
-    "what": "Created one unpublished mug design using the first kit PNG and saved its title and description as a draft.",
+    "what": "Created two unpublished mug designs using both kit PNGs and saved their titles and two-line descriptions as drafts.",
     "first_import": null,
     "file_inspected": false,
     "reimport_tested": false,
-    "awkward": "The AI onboarding wizard initially selected five products to publish; the tester left it. The uploaded image triggered a Medium resolution warning at 187 DPI. AI listing optimization was opted out of. The second product was not created. No store was connected.",
+    "awkward": "The AI onboarding wizard initially selected five products to publish; the tester left it. Both uploads triggered Medium resolution (187 DPI). AI listing optimization was opted out of for the first product; the popup did not recur for the second. Both drafts are Unpublished; no store was connected.",
     "friction": {
      "export_route": "The product menu offered Replace, Copy to, Set personalization and Delete. Mockup download clicks produced no downloaded bytes during the session.",
      "format": "No product metadata export or downloaded mockup was obtained. The retained kit PNGs are input files.",

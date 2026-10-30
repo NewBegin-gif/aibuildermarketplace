@@ -5881,19 +5881,20 @@
    "product_id": "outgrow",
    "run_date": "2026-10-30",
    "session_type": "hands_on",
-   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We turned a template into a private quiz calculator with our test question and fields, filled it in once in Preview, and tried the export without going live.",
+   "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We turned a template into a quiz calculator with our test question and fields, published it on Outgrow's own test link, submitted two made-up responses and exported them.",
    "findings": [
     "The trial runs on the Business plan (USD 720 a month) for seven days, ending 6 November, with a cap of 100 leads. No card was asked. The plan list shows no free plan; the cheapest is Freelancer Limited at $22 a month, or $14 billed yearly.",
-    "Answers given in Preview are not stored. After our test submission, Analyze still said 'WAITING FOR RESPONSES!'. You have to publish ('Go Live') before any response reaches your account; our test plan did not allow that.",
-    "The export is not a direct download: 'Full Export' promises an email and a copy under 'Previous Reports'. With no stored responses, neither arrived during our session.",
-    "Template result screens keep their sample numbers ('Your cost: $4000') until you rewrite the formulas, so a quick test shows made-up results.",
-    "Team roles are Admin, Manager (preselected), Designer and Analyst; there is no view-only guest role. Team size follows the plan: 1, 1, 3 or 10 users.",
-    "An API key and a global webhook are offered in the trial's settings menu; we did not open the key."
+    "Answers given in Preview are not stored; only a published ('Go Live') calculator collects responses. Email alerts for new leads are switched on by default, and both of ours arrived.",
+    "On the published page, the lead form came back pre-filled with the previous person's name, email and answers when we opened it again in the same browser.",
+    "The full export arrives as an XLSX link by email and under 'Previous Reports'. That link opened without logging in.",
+    "The export kept everything we entered exactly: names with accents, our free text with its line break and quotes, custom fields, and 12.10 and 24.20 with the trailing zero. It also records each respondent's city and region.",
+    "Template result screens keep their sample numbers ('Your cost: $4000') until you rewrite the formulas.",
+    "We found no way to unpublish a calculator short of deleting it. Team roles are Admin, Manager (preselected), Designer and Analyst, with no view-only role."
    ],
    "not_tested": [
-    "Publishing a calculator and collecting real responses",
-    "The content of a response export",
     "Changing the result formulas",
+    "Re-importing responses (no import route for them)",
+    "Embedding on a website",
     "Contacting support"
    ],
    "report": null,
@@ -5913,7 +5914,7 @@
       "url": "https://aibuildermarketplace.com/b2b/outgrow-review/#claim-vs-measured"
      },
      "plan": "Business trial (Monthly), 100 leads",
-     "comparability": "Compared on the Business trial as it opened on signup day, ending 6 November.",
+     "comparability": "Compares the seven-day trial claim with account start on 30 October and displayed expiry on 6 November, on the Business trial capped at 100 leads; no ongoing free-plan entitlement established.",
      "status": "confirmed",
      "buying_consequence": "The trial allowance must not be described as an ongoing free plan.",
      "buyer_direction": null,
@@ -5930,7 +5931,7 @@
       "url": "https://aibuildermarketplace.com/b2b/outgrow-review/#claim-vs-measured"
      },
      "plan": "Business trial (Monthly), 100 leads",
-     "comparability": "Same Business trial; plan prices were read in the app, but no checkout was opened, so tax and totals are unknown.",
+     "comparability": "Checkout was not opened; final tax, currency and billing term cannot be compared with the price page or a matching cost rule. Live response export provides no payment evidence.",
      "status": "not_testable",
      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
      "buyer_direction": null,
@@ -5940,26 +5941,32 @@
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
     "run_date": "2026-10-30",
-    "what": "Configured a private calculator and submitted the first kit response in Preview.",
+    "what": "After Daan explicitly approved live publication, contrary to the test plan, submitted two live calculator responses and inspected the Full Export.",
     "first_import": null,
-    "file_inspected": false,
+    "file_inspected": true,
     "reimport_tested": false,
-    "awkward": "Preview did not store the response: Analyze still reported WAITING FOR RESPONSES! The second response was not entered. Template result formulas were left unchanged, so the expected score was not tested. Going live was excluded by the test plan.",
+    "awkward": "The second lead form retained the previous respondent details after reloading in the same browser. Lead email notifications were enabled by default. The source reports that the S3 export link opened without login. The export records respondent IP geolocation. The inspected menus offered no unpublish action without deleting the calculator. Template formulas were unchanged and the calculated result was not tested.",
     "friction": {
-     "export_route": "Analyze > Export Data > Full Export; delivery is promised by email and Previous Reports. Previous Reports showed No Data, and no report email had arrived by the end of the session.",
-     "format": "No export file was received during the session; this does not establish what a live response export preserves.",
-     "reimport": "Response reimport was not tested; the onboarding Import data option concerned questions.",
-     "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+     "export_route": "Analyze > Export Data > Full Export, then Previous Reports and email delivery. The report appeared after about 30 seconds following live submissions.",
+     "format": "XLSX: one worksheet, 30 columns and two response records. No standalone native ID column; a uid appears only in Unique Results URL. Tag values remain one text field.",
+     "reimport": "Response reimport was not offered; Import data concerns questions. Native-ID preservation was not tested because no independent ID was captured before export.",
+     "cancellation": "No unpublish action was found in the inspected Publish and dashboard menus; Delete was offered. The calculator was left live pending trial expiry on 6 November. Deletion remains a Daan action; cancellation and actual expiry were not tested."
     },
     "not_tested": [
      "Full signup screen count and first-result setup speed.",
      "Actual cancellation, expiry and deletion.",
-     "All kit fields that were not entered.",
-     "Application reimport or restoration."
+     "Attachment preservation: no attachments uploaded.",
+     "Calculated score: unchanged template formulas and empty Result Obtained.",
+     "Native-ID preservation and restoration; response reimport not offered."
     ],
-    "available_fields": [],
-    "not_offered": [],
-    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    "came_along": [
+     "Both test records, Unicode names, full multiline text and separate custom codes.",
+     "Amounts 12.10 and 24.20 retain their trailing zero; EUR appears in the question header.",
+     "Pipe-delimited tag strings return unchanged in one text field; separate native tags were not entered.",
+     "System response dates and answers B and A."
+    ],
+    "lost": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },

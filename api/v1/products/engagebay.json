@@ -86,15 +86,444 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 15,
+     "evidence": "$0 for 250 contacts with email marketing, CRM, helpdesk and live chat, and the plan card adds that it is free for teams of up to 15 members"
+    },
+    {
+     "id": "basic",
+     "name": "All-in-One Basic",
+     "model": "per_unit",
+     "monthly": 14.99,
+     "annual_month": 13.79,
+     "evidence": "All-in-One suite per user/month on monthly billing: Basic $14.99 (500 contacts), Growth $64.99 (5,000 contacts, marketing automation), Pro $119.99 (10,000 contacts)."
+    },
+    {
+     "id": "growth",
+     "name": "All-in-One Growth",
+     "model": "per_unit",
+     "monthly": 64.99,
+     "annual_month": 59.79,
+     "evidence": "All-in-One suite per user/month on monthly billing: Basic $14.99 (500 contacts), Growth $64.99 (5,000 contacts, marketing automation), Pro $119.99 (10,000 contacts)."
+    },
+    {
+     "id": "pro",
+     "name": "All-in-One Pro",
+     "model": "per_unit",
+     "monthly": 119.99,
+     "annual_month": 110.39,
+     "evidence": "All-in-One suite per user/month on monthly billing: Basic $14.99 (500 contacts), Growth $64.99 (5,000 contacts, marketing automation), Pro $119.99 (10,000 contacts)."
+    }
+   ],
+   "extra_evidence": "with a yearly ‘8% off’ step in between ($13.79, $59.79, $110.39)",
+   "notes": "Per user per month. Contact caps per plan: Free 250, Basic 500, Growth 5,000, Pro 10,000 (Pro was 50,000 in August). A biennial display at 15% off ($12.74, $55.24, $101.99) assumes two years prepaid and is not modelled here.",
+   "not_computable": [
+    "More than 10,000 contacts on Pro: the vendor asks you to schedule a call about expanding the limit and publishes no price."
+   ],
+   "rules_verified_at": "2026-10-30"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "engagebay",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 13.79,
+       "growth": 59.79,
+       "pro": 110.39
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 27.58,
+       "growth": 119.58,
+       "pro": 220.78
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 41.37,
+       "growth": 179.37,
+       "pro": 331.17
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 68.95,
+       "growth": 298.95,
+       "pro": 551.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 137.9,
+       "growth": 597.9,
+       "pro": 1103.9
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 206.85,
+       "growth": 896.85,
+       "pro": 1655.85
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "All-in-One Basic",
+      "total_month": 275.8,
+      "billed": {
+       "amount": 3309.6,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": 275.8,
+       "growth": 1195.8,
+       "pro": 2207.8
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "All-in-One Basic",
+      "total_month": 344.75,
+      "billed": {
+       "amount": 4137.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": 344.75,
+       "growth": 1494.75,
+       "pro": 2759.75
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "All-in-One Basic",
+      "total_month": 689.5,
+      "billed": {
+       "amount": 8274.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": 689.5,
+       "growth": 2989.5,
+       "pro": 5519.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "All-in-One Basic",
+      "total_month": 1379.0,
+      "billed": {
+       "amount": 16548.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": 1379.0,
+       "growth": 5979.0,
+       "pro": 11039.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 15,
+      "to_units": 20,
+      "from_plan": "free",
+      "to_plan": "basic",
+      "from_plan_name": "Free",
+      "to_plan_name": "All-in-One Basic"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "More than 10,000 contacts on Pro: the vendor asks you to schedule a call about expanding the limit and publishes no price."
+    ]
+   },
+   "monthly": {
+    "product_id": "engagebay",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 14.99,
+       "growth": 64.99,
+       "pro": 119.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 29.98,
+       "growth": 129.98,
+       "pro": 239.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 44.97,
+       "growth": 194.97,
+       "pro": 359.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 74.95,
+       "growth": 324.95,
+       "pro": 599.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 149.9,
+       "growth": 649.9,
+       "pro": 1199.9
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 224.85,
+       "growth": 974.85,
+       "pro": 1799.85
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "All-in-One Basic",
+      "total_month": 299.8,
+      "billed": {
+       "amount": 299.8,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": 299.8,
+       "growth": 1299.8,
+       "pro": 2399.8
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "All-in-One Basic",
+      "total_month": 374.75,
+      "billed": {
+       "amount": 374.75,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": 374.75,
+       "growth": 1624.75,
+       "pro": 2999.75
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "All-in-One Basic",
+      "total_month": 749.5,
+      "billed": {
+       "amount": 749.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": 749.5,
+       "growth": 3249.5,
+       "pro": 5999.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "All-in-One Basic",
+      "total_month": 1499.0,
+      "billed": {
+       "amount": 1499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": 1499.0,
+       "growth": 6499.0,
+       "pro": 11999.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 15,
+      "to_units": 20,
+      "from_plan": "free",
+      "to_plan": "basic",
+      "from_plan_name": "Free",
+      "to_plan_name": "All-in-One Basic"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "More than 10,000 contacts on Pro: the vendor asks you to schedule a call about expanding the limit and publishes no price."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Data export tested on 2026-10-23; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -313,9 +742,9 @@
    "status": "open"
   },
   {
-   "question_id": "engagebay:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "engagebay:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: More than 10,000 contacts on Pro: the vendor asks you to schedule a call about expanding the limit and publishes no price. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

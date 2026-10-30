@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-29.
+All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-30.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -932,7 +932,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Each plan includes a fixed number of data sources and going over means moving up a whole tier, so one extra integration can mean the $199 Team Core to $319 Team Scale step.
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/databox-review/
+- **Full review:** https://officesoftwaremarketplace.com/databox-review.html
 
 ## Datarails (datarails.com)
 - **Verified pricing:** (read 2026-08-25 on www.datarails.com/pricing) There is no public price.
@@ -2077,7 +2077,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Flows are button-and-script based, not natural language — type something unexpected and the bot falls back.
 - **Best for:** creators and brands running comment-to-DM and multi-channel (Instagram, Messenger, WhatsApp) marketing funnels — its killer feature works reliably
 - **Flags:** Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/manychat-review/
+- **Full review:** https://marketingandsalessoftware.com/manychat-review.html
 
 ## MarketerHire (marketerhire.com)
 - **Verified pricing:** (price re-verified 2026-09-23 against marketerhire.com/pricing and the vendor's FAQ at marketerhire.com/faqs/all; re-read 2026-10-23, same wording and still no rates) No rates are published…
@@ -2979,10 +2979,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/selixer-review/
 
 ## Selleasy (logbase.io)
-- **Verified pricing:** (prices read 2026-09-19 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/products/shopify-upsell-app-selleasy; re-verified 2026-10-20 on logbase.io/selleasy/pricing) Billed in …
-- **Honest take:** The meter is your whole store, not the app.
-- **Best for:** shopify stores that want bundles, add-ons, cart funnels and post-purchase offers out of one app and would rather be billed on order volume than hand over a share of the upsell revenue
-- **Flags:** Usage-metered, Free tier
+- **Verified pricing:** (prices read 2026-10-30 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/selleasy/pricing; the order-based ladder read on 19 September and 20 October 2026 has been replaced) Bi…
+- **Honest take:** The pricing changed under this review in October 2026, and the vendor's own page has not caught up.
+- **Best for:** shopify stores that want bundles, add-ons, cart funnels and post-purchase offers out of one app on a flat fee that never takes a share of upsell revenue
+- **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/selleasy-review.html
 
 ## Seller Investigators (sellerinvestigators.com)

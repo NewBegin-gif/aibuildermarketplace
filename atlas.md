@@ -2052,7 +2052,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/loyalino-review.html
 
 ## Lucrovox (lucrovox.com)
-- **Verified pricing:** (re-verified 2026-09-15 on lucrovox.com/#pricing and lucrovox.com/lucrochat, both read in a real browser with the pages fully loaded) The phone agent has three published tiers and the plan …
+- **Verified pricing:** (re-verified 2026-10-30 on lucrovox.com/#pricing in a real browser, phone-agent tiers unchanged; lucrovox.com/lucrochat last read 2026-09-15) The phone agent has three published tiers and t…
 - **Honest take:** The meter is AI-handled calls: Starter’s 100 calls a month is roughly three a day, so a genuinely busy shop outgrows it quickly — and the steps are steep ($199 → $499 → $999).
 - **Best for:** local service businesses — HVAC, plumbing, roofing, med spas — losing revenue to missed calls who want a 24/7 AI receptionist that books jobs straight into Google Calendar, Housecall Pro, ServiceTitan or Jobber
 - **Flags:** Usage-metered

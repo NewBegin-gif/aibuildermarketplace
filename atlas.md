@@ -1162,7 +1162,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/elevateforward-review/
 
 ## ElevenLabs (elevenlabs.io)
-- **Verified pricing:** (re-verified 23 Sep 2026 on elevenlabs.io/pricing) Every rate held again, unchanged since August.
+- **Verified pricing:** (re-verified 30 Oct 2026 on elevenlabs.io/pricing) Every plan rate held again, unchanged since August.
 - **Honest take:** Credits are the meter and retakes are the tax — you are charged per generation request, and a regeneration is only free while the content and settings are unchanged.
 - **Best for:** creators, developers and product teams that want the most realistic AI voices available — voiceovers, audiobooks, dubbing, conversational agents and a well-documented API
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -1374,7 +1374,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/flatpay-review.html
 
 ## FlexiQuiz (flexiquiz.com)
-- **Verified pricing:** (re-verified 2026-09-22 on flexiquiz.com/Home/Plans, every amount unchanged; the monthly-billed rates were read from the page's own billing-toggle script, the yearly rates from the rendered…
+- **Verified pricing:** (re-verified 2026-10-30 on flexiquiz.com/Home/Plans, every amount unchanged since 22 September; the monthly-billed rates were read from the page's own billing-toggle script, the yearly rate…
 - **Honest take:** The monthly response caps are the business model: 20 on free, 500 on Essentials, 2,000 on Premium and 25,000 on Enterprise -- one viral quiz or one big exam cohort and you're shopping a tier up.
 - **Best for:** educators, trainers and small teams that want professional graded quizzes, exams and simple courses — with certificates, timed tests, question banks and analytics — without building out a full LMS
 - **Flags:** Free tier
@@ -1824,10 +1824,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/kartra-review.html
 
 ## Katana MRP (katanamrp.com)
-- **Verified pricing:** (re-verified 2026-09-23) A Free plan covering 30 SKUs with unlimited users, integrations and locations plus all Katana features, add-ons and API access, then Core starting at $299/month wit…
-- **Honest take:** The $299 headline is the floor.
+- **Verified pricing:** (re-verified 2026-10-30 on katanamrp.com/pricing) The public pricing page now shows two packages.
+- **Honest take:** There is no public price above Free any more.
 - **Best for:** product makers and small manufacturers who need live inventory, production scheduling and multi-channel order sync in one cloud platform
-- **Flags:** Usage-metered, Add-ons extra, Free tier
+- **Flags:** Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/katana-mrp-review/
 
 ## Keap (keap.com)

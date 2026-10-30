@@ -88,15 +88,298 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "location",
+   "axis": "locations",
+   "plans": [
+    {
+     "id": "visitors-basic",
+     "name": "Visitors Basic",
+     "model": "free",
+     "evidence": "Visitors: Basic free, Premium $362 per location per month, Enterprise quote-only."
+    },
+    {
+     "id": "visitors-premium",
+     "name": "Visitors Premium",
+     "model": "per_unit",
+     "annual_month": 362,
+     "monthly_status": "not_offered",
+     "evidence": "Visitors: Basic free, Premium $362 per location per month, Enterprise quote-only."
+    },
+    {
+     "id": "visitors-enterprise",
+     "name": "Visitors Enterprise",
+     "model": "quote",
+     "evidence": "Visitors: Basic free, Premium $362 per location per month, Enterprise quote-only."
+    }
+   ],
+   "notes": "Visitors module only; all Envoy products are billed annually. Other modules meter differently: Emergency Notifications $2 per user, Reservations $5 per bookable resource, Screens $12 per device, Deliveries $250 per delivery location, each per month.",
+   "not_computable": [
+    "The Envoy platform fee: the platform page says the platform is required and priced as a flat annual fee with its own Premium and Enterprise tiers, but publishes no amount, so any total excludes it."
+   ],
+   "rules_verified_at": "2026-10-30"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "envoy",
+    "currency": "USD",
+    "axis": "locations",
+    "unit": "location",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": 362.0,
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": 724.0,
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": 1086.0,
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": 1810.0,
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": 3620.0,
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": 7240.0,
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": 18100.0,
+       "visitors-enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The Envoy platform fee: the platform page says the platform is required and priced as a flat annual fee with its own Premium and Enterprise tiers, but publishes no amount, so any total excludes it."
+    ]
+   },
+   "monthly": {
+    "product_id": "envoy",
+    "currency": "USD",
+    "axis": "locations",
+    "unit": "location",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": "not_offered_on_billing",
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": "not_offered_on_billing",
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": "not_offered_on_billing",
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": "not_offered_on_billing",
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": "not_offered_on_billing",
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": "not_offered_on_billing",
+       "visitors-enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "visitors-basic",
+      "cheapest_plan_name": "Visitors Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "visitors-basic": 0.0,
+       "visitors-premium": "not_offered_on_billing",
+       "visitors-enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The Envoy platform fee: the platform page says the platform is required and priced as a flat annual fee with its own Premium and Enterprise tiers, but publishes no amount, so any total excludes it."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -224,9 +507,9 @@
    "status": "open"
   },
   {
-   "question_id": "envoy:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "envoy:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The Envoy platform fee: the platform page says the platform is required and priced as a flat annual fee with its own Premium and Enterprise tiers, but publishes no amount, so any total excludes it. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

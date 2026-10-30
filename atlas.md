@@ -78,7 +78,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Cost rises with every client you add, and the most-cited complaint is data connectors that disconnect without a clear warning.
 - **Best for:** marketing agencies that need white-label client reports from 85+ integrations — automated, on-brand and hands-off
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://marketingandsalessoftware.com/agencyanalytics-review.html
+- **Full review:** https://aibuildermarketplace.com/b2b/agencyanalytics-review/
 
 ## AgentNest (ecommercestorez.us)
 - **Verified pricing:** (re-verified 2026-10-09 on apps.shopify.com/agentnest; first read 2026-08-19, no amount or allowance changed in between, though the listing now calls the app 'AgentNest - ChatGPT Ad Catalog…
@@ -369,7 +369,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/bidx-review.html
 
 ## Bill.com (bill.com)
-- **Verified pricing:** (re-verified 2026-09-15 on their own pricing page) Accounts-payable and receivable plans priced per user: Essentials $49, Team $65 and Corporate $89 per user per month, plus a quote-only En…
+- **Verified pricing:** (re-verified 2026-10-30 on bill.com/product/pricing, the Accounts Payable & Receivable tab and the fee tables; the Spend and Expense tab and the accountant prices were last read 2026-09-15)…
 - **Honest take:** Per-user pricing plus per-transaction fees means the real cost depends on team size and payment volume.
 - **Best for:** growing companies with real accounts-payable volume and approval chains that want to automate bill pay and sync to accounting
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra

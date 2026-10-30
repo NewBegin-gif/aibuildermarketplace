@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "built_at": "2026-10-30T12:53:33Z",
+ "built_at": "2026-10-30T13:23:22Z",
  "about": "Reader offers and vendor offers on our deal pages, one record each. verification_status says whether the vendor confirmed it; checkout_tested_at stays null because we do not test offers at a checkout. expires_at is UTC; compare it with the current time yourself, time_status_at_build is only the state when this file was built. null means the vendor did not say, never 'no limit'. Opening handoff_url is not an activation or a purchase.",
  "offer_types": {
   "price_discount": "Price discount",
@@ -936,6 +936,62 @@
    "time_status_at_build": "no_deadline_known"
   },
   {
+   "offer_id": "pagecloud-reader-offer",
+   "product_id": "pagecloud",
+   "product": "Pagecloud",
+   "offer_type": "price_discount",
+   "type_label": "Price discount",
+   "benefit": "20% off your first payment",
+   "duration": "First payment only; the offer itself has no end date",
+   "code": null,
+   "claim_mechanism": "link",
+   "claim_steps": "Sign up through our link; the discount is applied automatically to your first payment, there is no code.",
+   "limits": [
+    "First payment only: one month on monthly billing, the first year on annual billing"
+   ],
+   "eligibility": {
+    "customer": "new",
+    "plans": null,
+    "billing": null,
+    "regions": null
+   },
+   "structure": {
+    "kind": "first_billing",
+    "percent": 20
+   },
+   "starts_at": null,
+   "expires_at": null,
+   "expires_as_stated": null,
+   "evidence": {
+    "kind": "vendor_in_writing",
+    "by": "Pagecloud (Mike Grouchy)",
+    "via": "Pagecloud support email, 30 Oct 2026",
+    "summary": "Confirmed in writing by Pagecloud (Mike Grouchy) via Pagecloud support email, 30 Oct 2026, 30 Oct 2026"
+   },
+   "confirmed_at": "2026-10-30",
+   "checked_at": "2026-10-30",
+   "verification_status": "vendor_confirmed",
+   "checkout_tested_at": null,
+   "stacking": "unknown",
+   "exclusive_to_our_readers": false,
+   "published_by_vendor": false,
+   "post_offer_price": null,
+   "terms": "20% off your first payment, applied automatically when you sign up through our link; there is no code to type. Pagecloud's Mike Grouchy confirmed it in writing on 30 October 2026: it covers the first payment only and does not expire, so it works whenever that first payment comes after signing up. Read the shape of it before you count on it: it is one payment, not an ongoing rate, so on monthly billing it is 20% off one month and on annual billing 20% off the first year. We have not run it through Pagecloud's checkout ourselves, so check that the discount shows before you pay.",
+   "handoff_url": "https://cloudl.ink/vt47lrrhos6v",
+   "affiliate": true,
+   "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
+   "test_before_you_pay": "Check that the 20% shows on the first payment at checkout before you pay.",
+   "trial_kit": null,
+   "site_membership": [
+    "aibm"
+   ],
+   "shown_on": [
+    "https://aibuildermarketplace.com/deals/#q=pagecloud"
+   ],
+   "version": "b8fd7b42e8",
+   "time_status_at_build": "no_deadline_known"
+  },
+  {
    "offer_id": "quo-reader-offer",
    "product_id": "quo",
    "product": "Quo",
@@ -1167,6 +1223,73 @@
    ],
    "version": "0afaf97bb0",
    "time_status_at_build": "no_deadline_known"
+  },
+  {
+   "offer_id": "sender-reader-offer",
+   "product_id": "sender",
+   "product": "Sender",
+   "offer_type": "price_discount",
+   "type_label": "Price discount",
+   "benefit": "Black Friday: 60% off 24 months of Professional, 40% off 24 months of Standard, or 30% off 12 months",
+   "duration": "Until 28 November 2026, on the prepaid term you choose",
+   "code": null,
+   "claim_mechanism": "vendor_promotion",
+   "claim_steps": "Pick the 24-month (or annual) option on sender.net/pricing; the discount is in the price shown, there is no code. Our link only decides who is credited for the sign-up.",
+   "limits": [
+    "First-time Sender customers only",
+    "Prepaid term: 24 or 12 months paid up front",
+    "Normal rate applies at renewal"
+   ],
+   "eligibility": {
+    "customer": "new",
+    "plans": [
+     "Standard",
+     "Professional"
+    ],
+    "billing": [
+     "annual",
+     "biennial"
+    ],
+    "regions": null
+   },
+   "structure": {
+    "kind": "first_billing",
+    "percent": 60,
+    "note": "60% is Professional on 24 months; Standard on 24 months is 40%, either on 12 months 30%"
+   },
+   "starts_at": null,
+   "expires_at": "2026-11-29T11:59:59Z",
+   "expires_as_stated": "28 Nov 2026 (the vendor gave no time or time zone)",
+   "evidence": {
+    "kind": "vendor_public_page",
+    "by": "Sender",
+    "via": "sender.net/pricing read 30 Oct 2026; end date from Sender's partner email the same day",
+    "summary": "Stated on Sender's own offer page and confirmed in writing, 30 Oct 2026"
+   },
+   "confirmed_at": "2026-10-30",
+   "checked_at": "2026-10-30",
+   "verification_status": "vendor_confirmed",
+   "checkout_tested_at": null,
+   "stacking": "unknown",
+   "exclusive_to_our_readers": false,
+   "published_by_vendor": true,
+   "post_offer_price": null,
+   "terms": "Black Friday pricing for new customers, applied on Sender's own pricing page with no code to type: 60% off 24 months of Professional, 40% off 24 months of Standard, or 30% off 12 months of either. We read it on sender.net/pricing on 30 October 2026, which shows it as a 24-month toggle for first-time users, and Sender told its partners the same day that it ends on 28 November. Read the shape of it before you count on it: the deep discount is a two-year prepayment, so you pay the whole term up front, and the normal rate applies when it renews. Existing Sender customers are not eligible.",
+   "handoff_url": "https://join.sender.net/jurkddle1xw9",
+   "affiliate": true,
+   "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
+   "test_before_you_pay": "Check on the pricing page that the 24-month total matches the discount for your audience size before you pay.",
+   "trial_kit": null,
+   "site_membership": [
+    "aibm",
+    "mss"
+   ],
+   "shown_on": [
+    "https://aibuildermarketplace.com/deals/#q=sender",
+    "https://marketingandsalessoftware.com/deals.html#q=sender"
+   ],
+   "version": "cb2b2f106c",
+   "time_status_at_build": "active"
   },
   {
    "offer_id": "sentaro-reader-offer",

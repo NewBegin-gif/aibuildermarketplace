@@ -81,10 +81,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-10-30; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -92,7 +91,281 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "api_access": {
+   "status": "available_on_tested_plan",
+   "plan": "14-day trial; tier not inspected",
+   "route": "Settings > API key (menu only; page not opened); no key value copied and no API call made; menu visibility only, functional entitlement untested.",
+   "quote": {
+    "text": "API key",
+    "source_url": "https://app.nutshell.com/",
+    "observed_at": "2026-10-30T14:20:00+01:00"
+   },
+   "evidence": [
+    "bewijs/02-csv-import-scherm.jpg"
+   ]
+  },
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-30",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/nutshell-review.html",
+  "method": [
+   "Added two made-up people by hand",
+   "Exported the selected people, then exported again with the description column shown",
+   "Looked at the import and data settings"
+  ],
+  "claims": [
+   {
+    "claim": "Try free for 14 days",
+    "claim_source": "https://www.nutshell.com/pricing",
+    "claim_read_on": "2026-10-25",
+    "observed": "The account banner shows fourteen trial days remaining. No card was entered.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not inspected",
+    "comparability": "Nutshell’s advertised fourteen days match its welcome banner; this says nothing about a particular paid CRM tier.",
+    "status": "confirmed",
+    "buying_consequence": "Trial access confirms the duration; checkout and later billing remain untested.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Try free for 14 days",
+    "claim_source": "https://www.nutshell.com/pricing",
+    "claim_read_on": "2026-10-25",
+    "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not inspected",
+    "comparability": "Nutshell Upgrade now was not opened and no matching cost rule exists in the snapshot, preventing a like-for-like checkout comparison.",
+    "status": "not_testable",
+    "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "no credit card required",
+    "claim_source": "https://www.nutshell.com/pricing",
+    "claim_read_on": "2026-10-25",
+    "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not inspected",
+    "comparability": "Manual people entry and selected-row CSV export were completed without entering card details; this finding is limited to that Nutshell trial route.",
+    "status": "confirmed",
+    "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-30",
+   "what": "Created two people manually after the CSV upload could not be completed through the test setup, then exported the selected pair twice.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "CSV import was not executed because the system file picker could not be operated in this test setup; this is not a product import failure. Descriptions were entered as a shortened single-line mapping with ID, custom code and amount text, so original multiline kit preservation is untested. The list contained five demo contacts in addition to the two test people. Tags, companies and custom fields were not created.",
+   "friction": {
+    "export_route": "People > select the two test people > Export > Download ready. Enable Description through Change columns before repeating the export.",
+    "format": "UTF-8 CSV with BOM and LF endings: twenty columns initially, twenty-one after enabling Description. Both exports contain only the selected two people.",
+    "reimport": "Update-on-ID reimport and the separate full ZIP export were not tested.",
+    "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+   },
+   "not_tested": [
+    "Full signup screen count and first-result setup speed.",
+    "Actual cancellation, expiry and deletion.",
+    "All kit fields that were not entered.",
+    "Application reimport or restoration."
+   ],
+   "came_along": [
+    "Both names and emails appear exactly in the two CSVs, with stable export IDs 6-contacts and 7-contacts. After enabling Description, the exact manually entered description strings also appear."
+   ],
+   "lost": [
+    "The first export omits Description because that list column was hidden; enabling it includes the field in the second export."
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/nutshell-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/nutshell-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/nutshell-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Created two people manually after the CSV upload could not be completed through the test setup, then exported the selected pair twice. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/nutshell-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Created two people manually after the CSV upload could not be completed through the test setup, then exported the selected pair twice. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/nutshell-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://marketingandsalessoftware.com/nutshell-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-30",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Nutshell",
+    "product_id": "nutshell",
+    "run_date": "2026-10-30",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up people by hand, exported them and looked at the import options.",
+    "findings": [
+     "The trial runs 14 days with no card. The first suggestion is to connect your Google or Microsoft 365 email and calendar; we skipped it.",
+     "The account comes with five sample contacts.",
+     "The spreadsheet import walks you through mapping and promises 'Everything you upload belongs to you. We will not use it for anything.' Nutshell also offers to run the import for you.",
+     "The people export only includes the columns shown in the list. Our descriptions were missing until we turned on that column and exported again.",
+     "The export is a CSV with a byte-order mark and its own record ID; names with accents came back exactly.",
+     "The trial includes an API key option and SQL access in the data settings."
+    ],
+    "not_tested": [
+     "Importing a spreadsheet",
+     "Re-importing an export to update records",
+     "Paid plans and add-ons",
+     "Contacting support"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The account banner shows fourteen trial days remaining. No card was entered.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Nutshell’s advertised fourteen days match its welcome banner; this says nothing about a particular paid CRM tier.",
+      "status": "confirmed",
+      "buying_consequence": "Trial access confirms the duration; checkout and later billing remain untested.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Nutshell Upgrade now was not opened and no matching cost rule exists in the snapshot, preventing a like-for-like checkout comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "no credit card required",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Manual people entry and selected-row CSV export were completed without entering card details; this finding is limited to that Nutshell trial route.",
+      "status": "confirmed",
+      "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-30",
+     "what": "Created two people manually after the CSV upload could not be completed through the test setup, then exported the selected pair twice.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "CSV import was not executed because the system file picker could not be operated in this test setup; this is not a product import failure. Descriptions were entered as a shortened single-line mapping with ID, custom code and amount text, so original multiline kit preservation is untested. The list contained five demo contacts in addition to the two test people. Tags, companies and custom fields were not created.",
+     "friction": {
+      "export_route": "People > select the two test people > Export > Download ready. Enable Description through Change columns before repeating the export.",
+      "format": "UTF-8 CSV with BOM and LF endings: twenty columns initially, twenty-one after enabling Description. Both exports contain only the selected two people.",
+      "reimport": "Update-on-ID reimport and the separate full ZIP export were not tested.",
+      "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+     },
+     "not_tested": [
+      "Full signup screen count and first-result setup speed.",
+      "Actual cancellation, expiry and deletion.",
+      "All kit fields that were not entered.",
+      "Application reimport or restoration."
+     ],
+     "came_along": [
+      "Both names and emails appear exactly in the two CSVs, with stable export IDs 6-contacts and 7-contacts. After enabling Description, the exact manually entered description strings also appear."
+     ],
+     "lost": [
+      "The first export omits Description because that list column was hidden; enabling it includes the field in the second export."
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "nutshell:cancellation_terms",

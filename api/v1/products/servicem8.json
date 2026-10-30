@@ -47,7 +47,15 @@
   "verified_at": "2026-09-19",
   "source_url": null,
   "schema_offer": null,
-  "source_quotes": null,
+  "source_quotes": [
+   {
+    "field": "free_trial",
+    "plan": null,
+    "quote": "14-day free trial",
+    "source_url": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+    "read_on": "2026-10-30"
+   }
+  ],
   "recent_change": null
  },
  "free_plan": true,
@@ -93,18 +101,273 @@
  },
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-10-30; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "quoted",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-30",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/servicem8-review/",
+  "method": [
+   "Went through the setup wizard",
+   "Created two made-up clients with a quote job each",
+   "Looked through the jobs, clients, reports and account menus for an export"
+  ],
+  "claims": [
+   {
+    "claim": "14-day free trial",
+    "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+    "claim_read_on": "2026-10-30",
+    "observed": "The account banner shows fourteen days remaining of the ServiceM8 trial. No card was entered.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not inspected",
+    "comparability": "The fourteen-day claim is compared with the ServiceM8 remaining-trial banner, not a verified paid plan or mobile-app feature set.",
+    "status": "confirmed",
+    "buying_consequence": "Trial duration matches; paid plan and web export scope remain unverified.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "14-day free trial",
+    "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+    "claim_read_on": "2026-10-30",
+    "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not inspected",
+    "comparability": "ServiceM8 Choose Plan was left unopened; jobs created during trial establish no amount due, seat minimum or tax treatment.",
+    "status": "not_testable",
+    "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "you do not need a credit card",
+    "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+    "claim_read_on": "2026-10-30",
+    "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+    "observed_on": "2026-10-30",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+    },
+    "plan": "14-day trial; tier not inspected",
+    "comparability": "The ServiceM8 setup wizard and Quote-job route required no card during the recorded session; later subscription activation is untested.",
+    "status": "confirmed",
+    "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-30",
+   "what": "Created two Quote jobs with fictional customers, kit IDs in PO Number, multiline descriptions and separate notes.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Job descriptions kept accents, quotation marks and line breaks in the UI. New Job creates the job immediately with Quote as the default status. Separate notes held the custom codes, tags and amount strings; structured equivalents were not tested.",
+   "friction": {
+    "export_route": "History/Jobs, Clients and Reports offered no job or customer export in the inspected web UI. Clients offers Bulk Import. Settings was not searched, so broader export availability remains untested.",
+    "format": "No job or customer export file obtained.",
+    "reimport": "Customer Bulk Import was not tested. No job restoration or update round trip performed.",
+    "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+   },
+   "not_tested": [
+    "Full signup screen count and first-result setup speed.",
+    "Actual cancellation, expiry and deletion.",
+    "All kit fields that were not entered.",
+    "Application reimport or restoration."
+   ],
+   "available_fields": [],
+   "not_offered": [
+    "Customer creation changed Zoë to Zoe and Bèta to Beta before export. This is an input-stage change, not measured export loss."
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/servicem8-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/servicem8-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/servicem8-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Created two Quote jobs with fictional customers, kit IDs in PO Number, multiline descriptions and separate notes. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/servicem8-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Created two Quote jobs with fictional customers, kit IDs in PO Number, multiline descriptions and separate notes. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/servicem8-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-30",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/servicem8-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-30",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "ServiceM8",
+    "product_id": "servicem8",
+    "run_date": "2026-10-30",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We went through the setup wizard, created two made-up quote jobs for two new clients and looked for an export.",
+    "findings": [
+     "The trial runs 14 days with no card. The four-step setup asks for your industry, accounting software and branding, and the last two steps can be skipped.",
+     "New accounts include a sample job, and in our account its address was a real street near the location of the signup.",
+     "Client names lost their accents: 'TEST Zoë Alpha' became 'TEST Zoe Alpha' as soon as we created the client. The job description kept accents and line breaks.",
+     "A new job saves the moment you open it, with Quote as the default status.",
+     "We found no export for jobs or clients in the web app. Clients can be bulk-imported, and the reports are dashboards with totals."
+    ],
+    "not_tested": [
+     "Scheduling, invoicing and payments",
+     "The mobile app",
+     "Accounting software sync",
+     "Support's answer (we emailed our three questions on 30 October)"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "14-day free trial",
+      "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+      "claim_read_on": "2026-10-30",
+      "observed": "The account banner shows fourteen days remaining of the ServiceM8 trial. No card was entered.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "The fourteen-day claim is compared with the ServiceM8 remaining-trial banner, not a verified paid plan or mobile-app feature set.",
+      "status": "confirmed",
+      "buying_consequence": "Trial duration matches; paid plan and web export scope remain unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "14-day free trial",
+      "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+      "claim_read_on": "2026-10-30",
+      "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "ServiceM8 Choose Plan was left unopened; jobs created during trial establish no amount due, seat minimum or tax treatment.",
+      "status": "not_testable",
+      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "you do not need a credit card",
+      "claim_source": "https://support.servicem8.com/questions/general/does-servicem8-offer-a-free-trial-and-do-i-need-a-credit-card",
+      "claim_read_on": "2026-10-30",
+      "observed": "No card was entered during the observed post-signup route. Daan handled signup; its individual screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/servicem8-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "The ServiceM8 setup wizard and Quote-job route required no card during the recorded session; later subscription activation is untested.",
+      "status": "confirmed",
+      "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-30",
+     "what": "Created two Quote jobs with fictional customers, kit IDs in PO Number, multiline descriptions and separate notes.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Job descriptions kept accents, quotation marks and line breaks in the UI. New Job creates the job immediately with Quote as the default status. Separate notes held the custom codes, tags and amount strings; structured equivalents were not tested.",
+     "friction": {
+      "export_route": "History/Jobs, Clients and Reports offered no job or customer export in the inspected web UI. Clients offers Bulk Import. Settings was not searched, so broader export availability remains untested.",
+      "format": "No job or customer export file obtained.",
+      "reimport": "Customer Bulk Import was not tested. No job restoration or update round trip performed.",
+      "cancellation": "Cancellation, expiry and account deletion were not tested. The control date, where recorded, is planning only."
+     },
+     "not_tested": [
+      "Full signup screen count and first-result setup speed.",
+      "Actual cancellation, expiry and deletion.",
+      "All kit fields that were not entered.",
+      "Application reimport or restoration."
+     ],
+     "available_fields": [],
+     "not_offered": [
+      "Customer creation changed Zoë to Zoe and Bèta to Beta before export. This is an input-stage change, not measured export loss."
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "servicem8:cancellation_terms",

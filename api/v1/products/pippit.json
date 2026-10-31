@@ -26,7 +26,15 @@
    "description": "Starter, per year on the yearly tab (list price EUR 145); EUR 8 a month on monthly billing against a EUR 13 list price. Read on the vendor's own pricing page on 2026-09-22.",
    "page": "https://aibuildermarketplace.com/b2b/pippit-review/"
   },
-  "source_quotes": null,
+  "source_quotes": [
+   {
+    "field": "free_trial",
+    "plan": null,
+    "quote": "Get free daily credits",
+    "source_url": "https://www.pippit.ai/pricing",
+    "read_on": "2026-10-31"
+   }
+  ],
   "recent_change": null
  },
  "free_plan": true,
@@ -72,18 +80,271 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-10-31; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "quoted",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-31",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/pippit-review/",
+  "method": [
+   "Checked the credit history of the existing account",
+   "Asked the agent for one square test image",
+   "Downloaded the image and checked size, format and text"
+  ],
+  "claims": [
+   {
+    "claim": "Get free daily credits",
+    "claim_source": "https://www.pippit.ai/pricing",
+    "claim_read_on": "2026-10-31",
+    "observed": "Forty daily credits appeared after login; one image reduced the balance to thirty-eight, while old trial credits were expired.",
+    "observed_on": "2026-10-31",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pippit-review/#claim-vs-measured"
+    },
+    "plan": "Free, existing account",
+    "comparability": "Pippit daily-credit wording is compared only with the delayed forty-credit grant on the existing August account.",
+    "status": "confirmed",
+    "buying_consequence": "Daily credits worked in this existing account; they are separate from the expired trial allowance.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "No credit card required.",
+    "claim_source": "https://www.pippit.ai/pricing",
+    "claim_read_on": "2026-10-31",
+    "observed": "An existing Free account produced a test image without payment; new-account signup requirements were not tested.",
+    "observed_on": "2026-10-31",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pippit-review/#claim-vs-measured"
+    },
+    "plan": "Free, existing account",
+    "comparability": "Pippit no-card signup wording is outside this existing-account session, whose original registration took place in August.",
+    "status": "not_comparable",
+    "buying_consequence": "This existing-account observation cannot confirm a new-account signup claim.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "€13/Monthly",
+    "claim_source": "https://www.pippit.ai/",
+    "claim_read_on": "2026-10-31",
+    "observed": "Starter monthly is displayed at €13, while the modal initially defaults to yearly pricing; Subscribe was not opened, so final tax and total remain unknown.",
+    "observed_on": "2026-10-31",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pippit-review/#claim-vs-measured"
+    },
+    "plan": "Free, existing account",
+    "comparability": "Pippit price comparison uses Starter in EUR with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+    "status": "not_testable",
+    "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-31",
+   "what": "One generated test image on an existing Free account created on August 14.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "This was an existing account from August 14, not a new signup. Trial credits had expired; the balance initially showed zero, then forty daily credits appeared. One image used two credits. The canvas filename ended in .png, but the download is JPEG with a Pippit AI watermark. The second image and project restoration were not tested.",
+   "friction": {
+    "export_route": "Download the image from the agent chat.",
+    "format": "JPEG image; project export not investigated.",
+    "reimport": "Project reimport not investigated.",
+    "cancellation": "No cancellation, expiry or deletion action tested."
+   },
+   "not_tested": [
+    "Complete signup screen count and human first-result setup speed.",
+    "Actual cancellation, expiry, deletion and follow-up mail.",
+    "Kit fields not entered and application record reimport."
+   ],
+   "came_along": [
+    "First test image downloaded."
+   ],
+   "lost": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/pippit-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pippit-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pippit-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "One generated test image on an existing Free account created on August 14. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pippit-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "One generated test image on an existing Free account created on August 14. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pippit-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pippit-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-31",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Pippit",
+    "product_id": "pippit",
+    "run_date": "2026-10-31",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 31 October 2026 on the free plan, with an existing account Daan had made on 14 August 2026; our AI assistant ran the test in Daan's browser. We asked the agent for one simple image and downloaded it.",
+    "findings": [
+     "The credit history showed 400 trial credits from August that expired after 30 days, and 40 free credits that were valid for one day only.",
+     "With 0 credits the first request opened the subscription screen. The day's 40 free credits appeared a few minutes after logging in.",
+     "The agent made the image in about 25 seconds for 2 credits. It spelled our test text exactly.",
+     "The download was a 2048 × 2048 JPEG, though the canvas called it a .png. It carried a 'Pippit AI' watermark in the corner.",
+     "Starter was €13 a month for 1,575 credits, or €145 a year; the plan screen opened on yearly billing."
+    ],
+    "not_tested": [
+     "A brand-new account and its trial",
+     "Video generation and publishing",
+     "Paying for a plan",
+     "Contacting support"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Get free daily credits",
+      "claim_source": "https://www.pippit.ai/pricing",
+      "claim_read_on": "2026-10-31",
+      "observed": "Forty daily credits appeared after login; one image reduced the balance to thirty-eight, while old trial credits were expired.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pippit-review/#claim-vs-measured"
+      },
+      "plan": "Free, existing account",
+      "comparability": "Pippit daily-credit wording is compared only with the delayed forty-credit grant on the existing August account.",
+      "status": "confirmed",
+      "buying_consequence": "Daily credits worked in this existing account; they are separate from the expired trial allowance.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "No credit card required.",
+      "claim_source": "https://www.pippit.ai/pricing",
+      "claim_read_on": "2026-10-31",
+      "observed": "An existing Free account produced a test image without payment; new-account signup requirements were not tested.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pippit-review/#claim-vs-measured"
+      },
+      "plan": "Free, existing account",
+      "comparability": "Pippit no-card signup wording is outside this existing-account session, whose original registration took place in August.",
+      "status": "not_comparable",
+      "buying_consequence": "This existing-account observation cannot confirm a new-account signup claim.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "€13/Monthly",
+      "claim_source": "https://www.pippit.ai/",
+      "claim_read_on": "2026-10-31",
+      "observed": "Starter monthly is displayed at €13, while the modal initially defaults to yearly pricing; Subscribe was not opened, so final tax and total remain unknown.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pippit-review/#claim-vs-measured"
+      },
+      "plan": "Free, existing account",
+      "comparability": "Pippit price comparison uses Starter in EUR with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-31",
+     "what": "One generated test image on an existing Free account created on August 14.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "This was an existing account from August 14, not a new signup. Trial credits had expired; the balance initially showed zero, then forty daily credits appeared. One image used two credits. The canvas filename ended in .png, but the download is JPEG with a Pippit AI watermark. The second image and project restoration were not tested.",
+     "friction": {
+      "export_route": "Download the image from the agent chat.",
+      "format": "JPEG image; project export not investigated.",
+      "reimport": "Project reimport not investigated.",
+      "cancellation": "No cancellation, expiry or deletion action tested."
+     },
+     "not_tested": [
+      "Complete signup screen count and human first-result setup speed.",
+      "Actual cancellation, expiry, deletion and follow-up mail.",
+      "Kit fields not entered and application record reimport."
+     ],
+     "came_along": [
+      "First test image downloaded."
+     ],
+     "lost": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "pippit:cancellation_terms",

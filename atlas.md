@@ -3179,7 +3179,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-10-31 on slasify.com/pricing in a browser render, USD) Three services, each with a starting price and a custom quote.
 - **Honest take:** Only starting prices are public: EOR from $250 a month and contractors from $50 a month, with no statement that these are per worker, and Global Payroll is quote-only.
 - **Best for:** companies hiring a few people in countries where they have no entity, especially in Southeast Asia, that want a low published EOR starting price and a dedicated account manager
-- **Full review:** https://aibuildermarketplace.com/b2b/slasify-review/
+- **Full review:** https://officesoftwaremarketplace.com/slasify-review.html
 
 ## Smartli (smartli.ai)
 - **Verified pricing:** (re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each …

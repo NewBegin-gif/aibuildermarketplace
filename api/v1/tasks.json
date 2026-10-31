@@ -5734,6 +5734,115 @@
   },
   {
    "source": "session",
+   "product_name": "Top Echelon",
+   "product_id": "top-echelon",
+   "run_date": "2026-10-31",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 31 October 2026 on the 30-day trial of TE Recruit: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up people by hand, attached a file to one, and exported both to a spreadsheet.",
+   "findings": [
+    "The trial showed 30 days, with no card. The account came pre-filled with 100 sample people and 50 sample companies.",
+    "The contact importer only continues if you confirm that every imported email address has agreed to receive your emails; we did not tick that, so we added the people by hand.",
+    "The export runs in the background, raises a notification and waits on the Files & Exports page; the download needs no email.",
+    "The CSV has a header row and kept the names with accents, the multi-line memo and Top Echelon's own ID for each person.",
+    "Every exported person had Country set to 'United States of America', although we entered no country; times were in US time.",
+    "The attachment downloaded byte-for-byte identical, but attachments are not part of the spreadsheet export."
+   ],
+   "not_tested": [
+    "Re-importing the export",
+    "Jobs, pipelines and emailing candidates",
+    "Prices and paying for a plan",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "30-day free trial",
+     "claim_source": "https://topechelon.com/trial/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Dashboard displayed 30 days left on the test date.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/top-echelon-review.html#claim-vs-measured"
+     },
+     "plan": "TE Recruit Trial",
+     "comparability": "Top Echelon thirty-day wording is compared directly with its dashboard remaining-days counter.",
+     "status": "confirmed",
+     "buying_consequence": "Thirty days were available in this account; paid-plan scope and billing were not checked.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No Credit Card Required",
+     "claim_source": "https://topechelon.com/trial/",
+     "claim_read_on": "2026-10-30",
+     "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/top-echelon-review.html#claim-vs-measured"
+     },
+     "plan": "TE Recruit Trial",
+     "comparability": "Top Echelon card-free wording is compared with the recorded trial session without payment details; full registration screens were not counted.",
+     "status": "confirmed",
+     "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "30-day free trial",
+     "claim_source": "https://topechelon.com/trial/",
+     "claim_read_on": "2026-10-30",
+     "observed": "top-echelon: pricing and checkout were not opened; currency, tax, term, minimum seats, renewal and final total remain unknown.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/top-echelon-review.html#claim-vs-measured"
+     },
+     "plan": "TE Recruit Trial",
+     "comparability": "top-echelon price-page versus checkout comparison cannot be made because neither pricing nor billing was opened during this session.",
+     "status": "not_testable",
+     "buying_consequence": "No observed checkout or exact cost-rule match is available; do not infer a paid price.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-31",
+    "what": "Two manually created people and one separately downloaded attachment.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Importer required declaring consent for every imported email address; we stopped and manually created records without email. Account already contained 100 sample people. CSV has a header and p-201/p-202 IDs; the supplied test IDs survive inside memos, not dedicated ID fields. Unentered Country defaults to United States of America; displayed timestamps use US notation. Attachment viewer renders PNG text with a broken ë, while separate download bytes are unchanged.",
+    "friction": {
+     "export_route": "Select two people > Export to Spreadsheet > columns > Files & Exports > download.",
+     "format": "UTF-8 without BOM; comma delimiter; LF; header and two rows.",
+     "reimport": "Update-existing choice seen but not executed; consent declaration remains a gate.",
+     "cancellation": "No cancellation, expiry or deletion action tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup speed.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields not entered and application record reimport."
+    ],
+    "came_along": [
+     "Names and multiline memos preserved.",
+     "PNG download matches original bytes."
+    ],
+    "lost": [
+     "Attachment absent from people CSV."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Retouch4me",
    "product_id": "retouch4me",
    "run_date": "2026-09-08",
@@ -8008,6 +8117,115 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Tellent",
+   "product_id": "tellent",
+   "run_date": "2026-10-31",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 31 October 2026 on the 18-day Recruitee trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up candidates by hand, with tags, and exported the candidate list.",
+   "findings": [
+    "Setup asks which apps to trial; we picked only the Recruitee ATS. The trial showed 18 days, with no card.",
+    "Setup offers sample data or an empty account; we chose empty.",
+    "Candidates can be added by CV upload, by hand, by CSV import or with a Chrome extension. The phone field defaulted to +31.",
+    "The CSV export downloads straight away. It uses semicolons, has a header row and kept the accented names, emails and both tags.",
+    "Each candidate has Tellent's own numeric ID in the export; creation times are in UTC.",
+    "Both candidates were exported with status 'qualified', which we never set. The CV is not in the export."
+   ],
+   "not_tested": [
+    "Re-importing the export",
+    "Jobs, careers site and emailing candidates",
+    "Prices and paying for a plan",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Try for free for 18 days",
+     "claim_source": "https://www.tellent.com/",
+     "claim_read_on": "2026-10-31",
+     "observed": "Setup offered an eighteen-day trial; app showed eighteen trial days remaining with only Recruitee selected.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tellent-review/#claim-vs-measured"
+     },
+     "plan": "Recruitee Trial",
+     "comparability": "Tellent eighteen-day wording is compared with setup and the Recruitee trial banner, without extending the finding to HR.",
+     "status": "confirmed",
+     "buying_consequence": "This test covers Recruitee candidates only; HR was not activated.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required",
+     "claim_source": "https://tellent.com/blog/tag/absence-management",
+     "claim_read_on": "2026-10-31",
+     "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tellent-review/#claim-vs-measured"
+     },
+     "plan": "Recruitee Trial",
+     "comparability": "Tellent card-free wording is compared with the recorded trial session without payment details; full registration screens were not counted.",
+     "status": "confirmed",
+     "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Try for free for 18 days",
+     "claim_source": "https://www.tellent.com/",
+     "claim_read_on": "2026-10-31",
+     "observed": "tellent: pricing and checkout were not opened; currency, tax, term, minimum seats, renewal and final total remain unknown.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tellent-review/#claim-vs-measured"
+     },
+     "plan": "Recruitee Trial",
+     "comparability": "tellent price-page versus checkout comparison cannot be made because neither pricing nor billing was opened during this session.",
+     "status": "not_testable",
+     "buying_consequence": "No observed checkout or exact cost-rule match is available; do not infer a paid price.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-31",
+    "what": "Two manual Recruitee candidates; only Recruitee selected during the Tellent trial.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Empty account selected. No free_text entered, so note retention is not_tested. Candidate CSV uses numeric IDs, UTC created_at and qualified by default; that system timestamp is not the kit date. Two tags are serialized together using semicolons inside a quoted field. CV bytes were not downloaded or exported. The original download filename contains a user identifier and is withheld.",
+    "friction": {
+     "export_route": "Candidates > menu > Export to CSV; direct download.",
+     "format": "UTF-8 without BOM; semicolon delimiter; CRLF; header and two rows.",
+     "reimport": "CSV import entry exists; no update reimport executed.",
+     "cancellation": "No cancellation, expiry or deletion action tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup speed.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields not entered and application record reimport."
+    ],
+    "came_along": [
+     "Unicode names and emails preserved.",
+     "Two tags survive in one CSV field."
+    ],
+    "lost": [
+     "Uploaded CV absent from CSV."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

@@ -5501,6 +5501,140 @@
   },
   {
    "source": "session",
+   "product_name": "Keeper Security",
+   "product_id": "keeper-security",
+   "run_date": "2026-10-31",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 31 October 2026 on the 14-day business trial: Daan created the account and our AI assistant ran the test in Daan's browser. We stored two made-up, non-secret notes in the web vault, each with custom fields and a file attachment, then exported the vault.",
+   "findings": [
+    "The business trial showed 14 days, with no card.",
+    "The admin console and the web vault each needed their own login, and a new browser tab asked to log in again.",
+    "Custom fields take your own label, but there is no number, currency or tag field; we stored amounts and tags as text.",
+    "The vault export offers CSV, JSON, PDF and KDBX. Keeper states it contains the full record content but no file attachments.",
+    "Both exports kept our titles with accents, the multi-line note and every custom field. Neither included Keeper's own record ID.",
+    "The CSV has no header row and uses the interface language for field names; the JSON stores dates as a timestamp of local midnight.",
+    "The export file is not encrypted.",
+    "Each attachment downloads separately from its record; ours came back byte-for-byte identical."
+   ],
+   "not_tested": [
+    "Importing the export back in",
+    "Roles, sharing and inviting users",
+    "Prices and paying for a plan",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "14-day trial",
+     "claim_source": "https://www.keepersecurity.com/trial/keeper-free-trial/",
+     "claim_read_on": "2026-10-31",
+     "observed": "The admin console said Nog 14 dagen in het proefabonnement; the account was a business trial.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/keeper-security-review/#claim-vs-measured"
+     },
+     "plan": "Business trial (14 days)",
+     "comparability": "Keeper business trial duration is compared with the recorded 14-day admin-console countdown, without counting the separate personal trial.",
+     "status": "confirmed",
+     "buying_consequence": "The observed record test took place within the business trial; exact expiry time was not measured.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required.",
+     "claim_source": "https://www.keepersecurity.com/trial/keeper-free-trial/",
+     "claim_read_on": "2026-10-31",
+     "observed": "No card was requested in the recorded business-trial account creation and test; Daan created the account.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/keeper-security-review/#claim-vs-measured"
+     },
+     "plan": "Business trial (14 days)",
+     "comparability": "Keeper no-card wording is compared with the recorded account-creation outcome and card-free vault work, not a full measured registration route.",
+     "status": "confirmed",
+     "buying_consequence": "The recorded trial required no payment entry; complete registration screen counting was not observed.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Bevat de volledige recordinhoud van uw kluis zonder bestandsbijlagen.",
+     "claim_source": "https://www.keepersecurity.com/",
+     "claim_read_on": "2026-10-31",
+     "observed": "Both CSV and JSON contain two records and no attachments. Separately downloaded AIBM-002 file has the same SHA-256 as its kit source.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/keeper-security-review/#claim-vs-measured"
+     },
+     "plan": "Business trial (14 days)",
+     "comparability": "Keeper export exclusion is compared directly with the two inspected vault files; a separate per-record file download is a different retrieval route.",
+     "status": "confirmed",
+     "buying_consequence": "Keep a separate copy of each attachment; these vault exports alone do not include files.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14-day trial",
+     "claim_source": "https://www.keepersecurity.com/trial/keeper-free-trial/",
+     "claim_read_on": "2026-10-31",
+     "observed": "Buy now and pricing/checkout were not opened; no comparable plan price or final total was observed.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/keeper-security-review/#claim-vs-measured"
+     },
+     "plan": "Business trial (14 days)",
+     "comparability": "Keeper price-page versus checkout comparison is untested because the purchase route was not opened; the trial quote identifies scope only and is not a price.",
+     "status": "not_testable",
+     "buying_consequence": "No tax-inclusive purchase total or matching cost-rule comparison can be made.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-31",
+    "what": "Two synthetic Secure note records entered manually, with dates, separate custom text fields and attachments.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "The console and Web Vault used separate sessions per tab; a new tab required login again. Secure notes are masked by default. Amount and tags were custom text fields, so numeric and tag semantics changed despite exact strings. CSV has no header and uses Dutch UI labels. JSON dates encode local midnight as epoch-ms: 24 October is 23 October at 22:00 UTC; 25 October is 24 October at 22:00 UTC. No Keeper UID appears in these exports. File attachments are excluded from vault export; the separate AIBM-002 file download matches the kit bytes exactly.",
+    "friction": {
+     "export_route": "Web Vault > Settings > Export; direct file download, without mail.",
+     "format": "CSV, JSON, PDF and KDBX offered. CSV and JSON inspected: unencrypted; CSV UTF-8 without BOM, LF, no header, Dutch label/value pairs. PDF and KDBX not downloaded.",
+     "reimport": "Import settings seen but no reimport performed; these exports supply no Keeper record UID.",
+     "cancellation": "Cancellation, expiry, deletion and downgrade not tested."
+    },
+    "not_tested": [
+     "Full signup screen count and human setup speed.",
+     "Checkout, roles policy, API access and downgrade.",
+     "Support, invitations, reimport and separate first-file download.",
+     "PDF/KDBX output contents, cancellation and deletion.",
+     "nullable_text and active were not entered."
+    ],
+    "came_along": [
+     "Both external test IDs returned.",
+     "Notes and custom code kept.",
+     "Unicode and calendar dates kept.",
+     "One file downloaded byte-for-byte."
+    ],
+    "lost": [
+     "Files absent from vault exports.",
+     "Amount is text, not a number.",
+     "Tags remain one text value."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Deputy",
    "product_id": "deputy",
    "run_date": "2026-10-24",

@@ -65,16 +65,468 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "individual",
+     "name": "Individual",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 1,
+     "annual_month": 5,
+     "annual_year": 60,
+     "monthly_status": "unknown",
+     "evidence": "Individual is $5 a month, or $60 for twelve months, with 60 GB of storage for one person"
+    },
+    {
+     "id": "duo",
+     "name": "Duo",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 2,
+     "annual_month": 8,
+     "annual_year": 96,
+     "monthly_status": "unknown",
+     "evidence": "Duo is $8 a month ($96 a year) for two inboxes and 120 GB"
+    },
+    {
+     "id": "family",
+     "name": "Family",
+     "audience": "personal",
+     "model": "flat",
+     "max_units": 6,
+     "annual_month": 11,
+     "annual_year": 132,
+     "monthly_status": "unknown",
+     "evidence": "Family is $11 a month ($132 a year) for up to six people"
+    }
+   ],
+   "notes": [
+    "The monthly figures are the twelve-month term; the page also sells 24- and 36-month terms, and the month-to-month price is not in our notes. US prices are shown tax-exclusive."
+   ],
+   "not_computable": [
+    "Fastmail's business plans are not in our pricing notes, so no team rule is available."
+   ],
+   "rules_verified_at": "2026-10-31"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "fastmail",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Fastmail's business plans are not in our pricing notes, so no team rule is available."
+    ],
+    "measured": [
+     {
+      "claim": "lasts up to 30 days",
+      "claim_source": "https://www.fastmail.help/hc/en-us/articles/1500000277442-Trial-accounts",
+      "claim_read_on": "2026-10-30",
+      "observed": "The welcome and billing screens show thirty days remaining. Upgrading explicitly ends the trial.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+      },
+      "plan": "30-day trial; tier not established",
+      "comparability": "The up-to-thirty-day claim is compared with the Fastmail remaining-days banner; an upgrade is separately subject to immediate trial termination.",
+      "status": "confirmed",
+      "buying_consequence": "The observed maximum-duration offer is consistent; purchasing early forfeits remaining trial time.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/fastmail-review/"
+     },
+     {
+      "claim": "No credit card is required",
+      "claim_source": "https://www.fastmail.help/hc/en-us/articles/1500000277442-Trial-accounts",
+      "claim_read_on": "2026-10-30",
+      "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+      },
+      "plan": "30-day trial; tier not established",
+      "comparability": "Fastmail signup notes explicitly report no card request; SMS verification before adding a user is a distinct requirement.",
+      "status": "confirmed",
+      "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/fastmail-review/"
+     },
+     {
+      "claim": "€6",
+      "claim_source": "https://app.fastmail.com/",
+      "claim_read_on": "2026-10-30",
+      "observed": "Current app monthly Individual price and order summary both EUR 6 including EUR 1.04 VAT. No Fastmail product rule exists in the pinned cost rules; the historical preparation also marks the exact rule comparison untested.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+      },
+      "plan": "30-day trial; tier not established",
+      "comparability": "The observed Individual monthly EUR 6 plan and EUR 6 tax-inclusive summary use the same term and account; the cost-engine rule is not asserted to match.",
+      "status": "confirmed",
+      "buying_consequence": "Upgrading starts today, renews automatically and offers no unused-time refund.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/fastmail-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "fastmail",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "duo": "not_eligible",
+       "family": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Fastmail's business plans are not in our pricing notes, so no team rule is available."
+    ],
+    "measured": [
+     {
+      "claim": "lasts up to 30 days",
+      "claim_source": "https://www.fastmail.help/hc/en-us/articles/1500000277442-Trial-accounts",
+      "claim_read_on": "2026-10-30",
+      "observed": "The welcome and billing screens show thirty days remaining. Upgrading explicitly ends the trial.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+      },
+      "plan": "30-day trial; tier not established",
+      "comparability": "The up-to-thirty-day claim is compared with the Fastmail remaining-days banner; an upgrade is separately subject to immediate trial termination.",
+      "status": "confirmed",
+      "buying_consequence": "The observed maximum-duration offer is consistent; purchasing early forfeits remaining trial time.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/fastmail-review/"
+     },
+     {
+      "claim": "No credit card is required",
+      "claim_source": "https://www.fastmail.help/hc/en-us/articles/1500000277442-Trial-accounts",
+      "claim_read_on": "2026-10-30",
+      "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+      },
+      "plan": "30-day trial; tier not established",
+      "comparability": "Fastmail signup notes explicitly report no card request; SMS verification before adding a user is a distinct requirement.",
+      "status": "confirmed",
+      "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/fastmail-review/"
+     },
+     {
+      "claim": "€6",
+      "claim_source": "https://app.fastmail.com/",
+      "claim_read_on": "2026-10-30",
+      "observed": "Current app monthly Individual price and order summary both EUR 6 including EUR 1.04 VAT. No Fastmail product rule exists in the pinned cost rules; the historical preparation also marks the exact rule comparison untested.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/fastmail-review/#claim-vs-measured"
+      },
+      "plan": "30-day trial; tier not established",
+      "comparability": "The observed Individual monthly EUR 6 plan and EUR 6 tax-inclusive summary use the same term and account; the cost-engine rule is not asserted to match.",
+      "status": "confirmed",
+      "buying_consequence": "Upgrading starts today, renews automatically and offers no unused-time refund.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/fastmail-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-10-30; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -419,9 +871,15 @@
    "status": "open"
   },
   {
-   "question_id": "fastmail:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "fastmail:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "fastmail:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Fastmail's business plans are not in our pricing notes, so no team rule is available. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

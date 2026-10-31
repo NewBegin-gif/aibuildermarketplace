@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-30.
+All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-31.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -78,7 +78,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Cost rises with every client you add, and the most-cited complaint is data connectors that disconnect without a clear warning.
 - **Best for:** marketing agencies that need white-label client reports from 85+ integrations — automated, on-brand and hands-off
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/agencyanalytics-review/
+- **Full review:** https://marketingandsalessoftware.com/agencyanalytics-review.html
 
 ## AgentNest (ecommercestorez.us)
 - **Verified pricing:** (re-verified 2026-10-09 on apps.shopify.com/agentnest; first read 2026-08-19, no amount or allowance changed in between, though the listing now calls the app 'AgentNest - ChatGPT Ad Catalog…

@@ -96,16 +96,446 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "agent",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 10,
+     "evidence": "Free is $0 for up to 10 agents."
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "annual_month": 19,
+     "monthly": 23,
+     "evidence": "Per agent per month: Growth $19 billed annually or $23 monthly, Pro $49 or $59, Enterprise $79 or $95."
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 49,
+     "monthly": 59,
+     "evidence": "Per agent per month: Growth $19 billed annually or $23 monthly, Pro $49 or $59, Enterprise $79 or $95."
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "annual_month": 79,
+     "monthly": 95,
+     "evidence": "Per agent per month: Growth $19 billed annually or $23 monthly, Pro $49 or $59, Enterprise $79 or $95."
+    }
+   ],
+   "not_computable": [
+    "Freddy AI is a separate bill: the Copilot add-on is $29 per agent a month billed annually ($35 monthly), and Freddy AI Agent sessions cost $49 per 100 sessions beyond the 500 complimentary sessions each paid account receives once.",
+    "Freshcaller, campaign contacts, connector app tasks and day passes are separate add-ons."
+   ],
+   "rules_verified_at": "2026-10-31"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "freshchat",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 19.0,
+       "pro": 49.0,
+       "enterprise": 79.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 38.0,
+       "pro": 98.0,
+       "enterprise": 158.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 57.0,
+       "pro": 147.0,
+       "enterprise": 237.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 95.0,
+       "pro": 245.0,
+       "enterprise": 395.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 190.0,
+       "pro": 490.0,
+       "enterprise": 790.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 285.0,
+      "billed": {
+       "amount": 3420.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 285.0,
+       "pro": 735.0,
+       "enterprise": 1185.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 380.0,
+      "billed": {
+       "amount": 4560.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 380.0,
+       "pro": 980.0,
+       "enterprise": 1580.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 475.0,
+      "billed": {
+       "amount": 5700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 475.0,
+       "pro": 1225.0,
+       "enterprise": 1975.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 950.0,
+      "billed": {
+       "amount": 11400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 950.0,
+       "pro": 2450.0,
+       "enterprise": 3950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 1900.0,
+      "billed": {
+       "amount": 22800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 1900.0,
+       "pro": 4900.0,
+       "enterprise": 7900.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "free",
+      "to_plan": "growth",
+      "from_plan_name": "Free",
+      "to_plan_name": "Growth"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Freddy AI is a separate bill: the Copilot add-on is $29 per agent a month billed annually ($35 monthly), and Freddy AI Agent sessions cost $49 per 100 sessions beyond the 500 complimentary sessions each paid account receives once.",
+     "Freshcaller, campaign contacts, connector app tasks and day passes are separate add-ons."
+    ]
+   },
+   "monthly": {
+    "product_id": "freshchat",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "agent",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 23.0,
+       "pro": 59.0,
+       "enterprise": 95.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 46.0,
+       "pro": 118.0,
+       "enterprise": 190.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 69.0,
+       "pro": 177.0,
+       "enterprise": 285.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 115.0,
+       "pro": 295.0,
+       "enterprise": 475.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "growth": 230.0,
+       "pro": 590.0,
+       "enterprise": 950.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 345.0,
+      "billed": {
+       "amount": 345.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 345.0,
+       "pro": 885.0,
+       "enterprise": 1425.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 460.0,
+      "billed": {
+       "amount": 460.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 460.0,
+       "pro": 1180.0,
+       "enterprise": 1900.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 575.0,
+      "billed": {
+       "amount": 575.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 575.0,
+       "pro": 1475.0,
+       "enterprise": 2375.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 1150.0,
+      "billed": {
+       "amount": 1150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 1150.0,
+       "pro": 2950.0,
+       "enterprise": 4750.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 2300.0,
+      "billed": {
+       "amount": 2300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "growth": 2300.0,
+       "pro": 5900.0,
+       "enterprise": 9500.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "free",
+      "to_plan": "growth",
+      "from_plan_name": "Free",
+      "to_plan_name": "Growth"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Freddy AI is a separate bill: the Copilot add-on is $29 per agent a month billed annually ($35 monthly), and Freddy AI Agent sessions cost $49 per 100 sessions beyond the 500 complimentary sessions each paid account receives once.",
+     "Freshcaller, campaign contacts, connector app tasks and day passes are separate add-ons."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -170,9 +600,15 @@
    "status": "open"
   },
   {
-   "question_id": "freshchat:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "freshchat:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Freddy AI is a separate bill: the Copilot add-on is $29 per agent a month billed annually ($35 monthly), and Freddy AI Agent sessions cost $49 per 100 sessions beyond the 500 complimentary sessions each paid account receives once. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "freshchat:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Freshcaller, campaign contacts, connector app tasks and day passes are separate add-ons. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

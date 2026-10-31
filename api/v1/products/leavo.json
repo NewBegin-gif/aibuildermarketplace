@@ -21,7 +21,15 @@
   "verified_at": "2026-10-19",
   "source_url": null,
   "schema_offer": null,
-  "source_quotes": null,
+  "source_quotes": [
+   {
+    "field": "free_trial",
+    "plan": null,
+    "quote": "30-day free trial",
+    "source_url": "https://www.leavo.com/en/pricing",
+    "read_on": "2026-10-25"
+   }
+  ],
   "recent_change": null
  },
  "free_plan": false,
@@ -67,18 +75,336 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-10-31; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "roles": {
+   "status": "no_viewer_role",
+   "plan": "Trial",
+   "route": "Members > Add a member > full role selector; no role selected.",
+   "quote": {
+    "text": "Select role",
+    "source_url": "https://app.leavo.com/",
+    "observed_at": "2026-10-31T13:25:00+01:00"
+   },
+   "evidence": [
+    "bewijs/07-rollenlijst-geen-standaard.jpg"
+   ],
+   "role_names": [
+    "Admin",
+    "HR",
+    "Approver",
+    "Employee"
+   ],
+   "viewer_roles": []
+  },
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-10-31",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/leavo-review.html",
+  "method": [
+   "Added one made-up employee by hand without an invitation",
+   "Imported a second one from CSV",
+   "Exported the member list and compared it"
+  ],
+  "claims": [
+   {
+    "claim": "30-day free trial",
+    "claim_source": "https://www.leavo.com/en/pricing",
+    "claim_read_on": "2026-10-25",
+    "observed": "The wizard described thirty days and billing showed thirty days remaining.",
+    "observed_on": "2026-10-31",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+    },
+    "plan": "Trial",
+    "comparability": "Leavo trial length is compared with the wizard promise and the current billing countdown.",
+    "status": "confirmed",
+    "buying_consequence": "Member creation and import were tested within that trial, without purchase.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "No credit card required",
+    "claim_source": "https://www.leavo.com/en/pricing",
+    "claim_read_on": "2026-10-25",
+    "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+    "observed_on": "2026-10-31",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+    },
+    "plan": "Trial",
+    "comparability": "Leavo card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
+    "status": "confirmed",
+    "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$9.00/month",
+    "claim_source": "https://www.leavo.com/",
+    "claim_read_on": "2026-10-31",
+    "observed": "Professional lists three members at $3 per user per month, giving $9.00 monthly; tax and payment checkout were not inspected.",
+    "observed_on": "2026-10-31",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+    },
+    "plan": "Trial",
+    "comparability": "Leavo price comparison uses Professional, three members in USD with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+    "status": "not_testable",
+    "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   },
+   {
+    "claim": "1 invitation will go out in your name.",
+    "claim_source": "https://app.leavo.com/",
+    "claim_read_on": "2026-10-31",
+    "observed": "The invitation switch was off while this message remained; the row was removed and export later showed not_invited for both test members.",
+    "observed_on": "2026-10-31",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+    },
+    "plan": "Trial",
+    "comparability": "Leavo invitation-preview text is compared with the switch state and later not_invited rows, without claiming that the removed wizard row triggered mail.",
+    "status": "not_testable",
+    "buying_consequence": "The contradictory wizard message is a UX finding; no unwanted invitation is proven.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-10-31",
+   "what": "Two members, one created manually and one imported without invitations.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "Turning off wizard invitations still left the text “1 invitation will go out”; we removed the row and added the team later. This is a UX finding, not evidence of an actual unwanted send. Separate Create and Import Members actions were used; the export says not_invited. Import required lowercase permanent and called Employee default. Employee Code was not mappable. Export omits email, employee code and hire date, so matching is by name only. No invitation role was preselected.",
+   "friction": {
+    "export_route": "Members > download icon > Export CSV; no active filter.",
+    "format": "UTF-8 CSV with BOM; owner row separate from two test members.",
+    "reimport": "No ID available in this export; update-only reimport not tested.",
+    "cancellation": "No cancellation, expiry or deletion action tested."
+   },
+   "not_tested": [
+    "Complete signup screen count and human first-result setup speed.",
+    "Actual cancellation, expiry, deletion and follow-up mail.",
+    "Kit fields not entered and application record reimport."
+   ],
+   "came_along": [
+    "Both member names returned.",
+    "Unicode names kept in UTF-8 BOM."
+   ],
+   "lost": [
+    "External test_id absent.",
+    "Email absent from member export.",
+    "Entered hire dates absent."
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/leavo-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://officesoftwaremarketplace.com/leavo-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "The wizard described thirty days and billing showed thirty days remaining.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "Two members, one created manually and one imported without invitations. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://officesoftwaremarketplace.com/leavo-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Two members, one created manually and one imported without invitations. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://officesoftwaremarketplace.com/leavo-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-10-31",
+    "evidence_url": "https://officesoftwaremarketplace.com/leavo-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-10-31",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Leavo",
+    "product_id": "leavo",
+    "run_date": "2026-10-31",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 31 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We set up a workspace, added one made-up employee by hand and one by CSV import, without invitations, and exported the member list.",
+    "findings": [
+     "The trial showed 30 days, with no card. The 7-step setup imports Dutch public holidays and sets 25 days of leave by default.",
+     "In the setup, 'send the invitations' was on by default. With the switch off, the note under it still said one invitation would go out, so we added nobody there.",
+     "In the member list you can choose 'Create' or 'Create & Invite'; the second is the main button. No role is preselected.",
+     "The CSV import rejected 'Permanent' and 'Employee', the words the form uses. It wanted 'permanent' in lower case and calls the role 'default'. Both were easy to fix in the preview.",
+     "The employee code column could not be mapped in the import.",
+     "The CSV export kept the names with accents and shows 'not_invited', but has no email or employee code. Professional is $3 per user a month."
+    ],
+    "not_tested": [
+     "Leave requests and approvals",
+     "Shift planning",
+     "Re-importing to update members",
+     "Contacting support"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "30-day free trial",
+      "claim_source": "https://www.leavo.com/en/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The wizard described thirty days and billing showed thirty days remaining.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo trial length is compared with the wizard promise and the current billing countdown.",
+      "status": "confirmed",
+      "buying_consequence": "Member creation and import were tested within that trial, without purchase.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "No credit card required",
+      "claim_source": "https://www.leavo.com/en/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
+      "status": "confirmed",
+      "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$9.00/month",
+      "claim_source": "https://www.leavo.com/",
+      "claim_read_on": "2026-10-31",
+      "observed": "Professional lists three members at $3 per user per month, giving $9.00 monthly; tax and payment checkout were not inspected.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo price comparison uses Professional, three members in USD with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     },
+     {
+      "claim": "1 invitation will go out in your name.",
+      "claim_source": "https://app.leavo.com/",
+      "claim_read_on": "2026-10-31",
+      "observed": "The invitation switch was off while this message remained; the row was removed and export later showed not_invited for both test members.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo invitation-preview text is compared with the switch state and later not_invited rows, without claiming that the removed wizard row triggered mail.",
+      "status": "not_testable",
+      "buying_consequence": "The contradictory wizard message is a UX finding; no unwanted invitation is proven.",
+      "buyer_direction": null,
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-10-31",
+     "what": "Two members, one created manually and one imported without invitations.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "Turning off wizard invitations still left the text “1 invitation will go out”; we removed the row and added the team later. This is a UX finding, not evidence of an actual unwanted send. Separate Create and Import Members actions were used; the export says not_invited. Import required lowercase permanent and called Employee default. Employee Code was not mappable. Export omits email, employee code and hire date, so matching is by name only. No invitation role was preselected.",
+     "friction": {
+      "export_route": "Members > download icon > Export CSV; no active filter.",
+      "format": "UTF-8 CSV with BOM; owner row separate from two test members.",
+      "reimport": "No ID available in this export; update-only reimport not tested.",
+      "cancellation": "No cancellation, expiry or deletion action tested."
+     },
+     "not_tested": [
+      "Complete signup screen count and human first-result setup speed.",
+      "Actual cancellation, expiry, deletion and follow-up mail.",
+      "Kit fields not entered and application record reimport."
+     ],
+     "came_along": [
+      "Both member names returned.",
+      "Unicode names kept in UTF-8 BOM."
+     ],
+     "lost": [
+      "External test_id absent.",
+      "Email absent from member export.",
+      "Entered hire dates absent."
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "leavo:cancellation_terms",

@@ -4509,6 +4509,148 @@
   },
   {
    "source": "session",
+   "product_name": "Planday",
+   "product_id": "planday",
+   "run_date": "2026-10-31",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 31 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up employees without inviting them and exported the employee details.",
+   "findings": [
+    "The trial showed 30 days, with no card. The sign-up form requires a phone number.",
+    "Creating an employee does not send an invitation; you invite people separately later. Our two showed as 'Not invited'.",
+    "The quick form asks only for first name, surname and an employee group, which is required.",
+    "The export defaults to Excel. As CSV it defaults to ISO-8859; UTF-8 is an option. The file has no header row and uses semicolons.",
+    "The export kept each employee's Planday ID and the names with accents, when read in the chosen encoding.",
+    "Every employee in the export, the account owner included, was listed as 'Female' though we never set a gender."
+   ],
+   "not_tested": [
+    "Scheduling and publishing shifts",
+    "Payroll and wages",
+    "Prices and paying for a plan",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "30-day free trial",
+     "claim_source": "https://help.planday.com/en/articles/381180-planday-trial-plan-faqs-and-troubleshooting",
+     "claim_read_on": "2026-10-25",
+     "observed": "The roster banner showed 30 trial days left; the account was usable without a card.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/planday-review.html#claim-vs-measured"
+     },
+     "plan": "30-day trial",
+     "comparability": "Planday trial duration is compared with the thirty-day roster banner in this new account.",
+     "status": "confirmed",
+     "buying_consequence": "Thirty-day trial access supported employee creation and direct export.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "no credit card required",
+     "claim_source": "https://help.planday.com/en/articles/381180-planday-trial-plan-faqs-and-troubleshooting",
+     "claim_read_on": "2026-10-25",
+     "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/planday-review.html#claim-vs-measured"
+     },
+     "plan": "30-day trial",
+     "comparability": "Planday card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
+     "status": "confirmed",
+     "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "30-day free trial",
+     "claim_source": "https://help.planday.com/en/articles/381180-planday-trial-plan-faqs-and-troubleshooting",
+     "claim_read_on": "2026-10-25",
+     "observed": "Pricing and checkout not tested; preparation is not a session price observation.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/planday-review.html#claim-vs-measured"
+     },
+     "plan": "30-day trial",
+     "comparability": "Planday paid-price comparison is unavailable because neither prices nor checkout were opened and no matching cost-rule basis was observed; the quoted access offer is context only.",
+     "status": "not_testable",
+     "buying_consequence": "Payable total, tax, fees, term and seat minimums remain unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Not invited 2",
+     "claim_source": "https://www.planday.com/",
+     "claim_read_on": "2026-10-31",
+     "observed": "Both manually created test employees were listed as not invited; Send invitations is a separate unused action.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/planday-review.html#claim-vs-measured"
+     },
+     "plan": "30-day trial",
+     "comparability": "Planday invitation status is compared with the two created employees and the separate unused invitation action.",
+     "status": "confirmed",
+     "buying_consequence": "Employee creation can precede a separate invitation action in this observed route.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Female",
+     "claim_source": "https://www.planday.com/",
+     "claim_read_on": "2026-10-31",
+     "observed": "Both supplied test rows contain Female although gender was not entered; the notes report the same value for the administrator, whose row was removed.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/planday-review.html#claim-vs-measured"
+     },
+     "plan": "30-day trial",
+     "comparability": "Planday gender export is checked against the untouched gender field in the quick creation route and the two supplied test rows; the owner observation remains note-based.",
+     "status": "confirmed",
+     "buying_consequence": "Review automatically populated gender before using this export for HR records.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-31",
+    "what": "Two manually created employees; no shifts scheduled.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Creating employees sends no invitation: the form directs users to invite later, and the list showed Not invited 2. The quick form required an employee group; Manager was the only existing choice, not a measured access role. The second creation spinner hung for over fifteen seconds; both employees existed after reload. Export defaults to Excel; CSV defaults to ISO-8859, with UTF8 and Unicode choices. Both saved exports have no header and use semicolons. All employees were assigned Female without us entering gender, including the administrator according to the notes. The administrator row was removed before the supplied files were saved. The supplied UTF-8 file has no BOM, contrary to the raw note; the original download cannot be checked. No shifts, pricing or reimport tested.",
+    "friction": {
+     "export_route": "People > Employees > Tools > Export data > Employee details > Create report; immediate download.",
+     "format": "Saved ISO-8859-compatible Latin-1 and UTF-8 CSV files; no header, semicolons and CRLF; saved UTF-8 has no BOM.",
+     "reimport": "Employee import via template was visible but not used; update-only restoration not tested.",
+     "cancellation": "No cancellation, expiry or deletion action tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup speed.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields not entered and application record reimport."
+    ],
+    "came_along": [
+     "Both employee names returned.",
+     "Native IDs 91748 and 91749 kept.",
+     "Unicode kept with correct encoding."
+    ],
+    "lost": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Aplos",
    "product_id": "aplos",
    "run_date": "2026-10-24",
@@ -11117,6 +11259,109 @@
     "available_fields": [
      "Both supplied section headings and prompt text appear literally on the page, including accents and quotation marks. The code editor also shows that text."
     ],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Seamless.ai",
+   "product_id": "seamless-ai",
+   "run_date": "2026-10-31",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 31 October 2026 with the free credits: Daan created the account and our AI assistant ran the test in Daan's browser. We searched the company database for two of our own sites and one well-known company, without spending credits or revealing any contact details.",
+   "findings": [
+    "The account came with 50 free credits and no card. After logging in it asked for phone verification.",
+    "The setup filters preselect the United States and Canada as locations; we skipped them.",
+    "A company search for AI Builder Marketplace and for Marketing and Sales Software found neither.",
+    "A control search for hubspot.com found it, but the phone numbers and description stay blurred until you click 'Find', which costs credits.",
+    "Searching did not use any credits."
+   ],
+   "not_tested": [
+    "Revealing contacts and their accuracy",
+    "Connecting an email account",
+    "Prices and paying for a plan",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "50 free credits",
+     "claim_source": "https://seamless.ai/lp/faq",
+     "claim_read_on": "2026-10-31",
+     "observed": "Fifty credits were displayed after onboarding and remained untouched after the three company searches.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/seamless-ai-review/#claim-vs-measured"
+     },
+     "plan": "Free credits; plan name not recorded",
+     "comparability": "Seamless starting-credit wording is compared with the fifty-credit balance before and after unrevealed company searches.",
+     "status": "confirmed",
+     "buying_consequence": "The observed searches did not consume the starting credits; hidden fields were not revealed.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "no credit card required",
+     "claim_source": "https://login.seamless.ai/login/signup",
+     "claim_read_on": "2026-10-31",
+     "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/seamless-ai-review/#claim-vs-measured"
+     },
+     "plan": "Free credits; plan name not recorded",
+     "comparability": "Seamless.ai card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
+     "status": "confirmed",
+     "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "50 free credits",
+     "claim_source": "https://seamless.ai/lp/faq",
+     "claim_read_on": "2026-10-31",
+     "observed": "Pricing and checkout not tested; preparation is not a session price observation.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/seamless-ai-review/#claim-vs-measured"
+     },
+     "plan": "Free credits; plan name not recorded",
+     "comparability": "Seamless.ai paid-price comparison is unavailable because neither prices nor checkout were opened and no matching cost-rule basis was observed; the quoted access offer is context only.",
+     "status": "not_testable",
+     "buying_consequence": "Payable total, tax, fees, term and seat minimums remain unknown.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-31",
+    "what": "Company-domain search; CRM kit used only as an evaluation matrix.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Login was followed by phone verification handled by the account owner. Onboarding preselected United States and Canada in the location filters; we skipped this step, and do not infer the effective search geography. Both our own domains returned zero matches with the observed Default company matching. The hubspot.com control returned one result, with Company Phones and About blurred behind Find. We did not reveal fields or spend credits: the balance stayed at fifty. In our two dated tests Apollo found aibuildermarketplace.com and did not find marketingandsalessoftware.com; Seamless found neither. This limited comparison does not establish broader database coverage. No kit contacts were entered, no export obtained, no mailbox connected and no prices inspected.",
+    "friction": {
+     "export_route": "No own records; export not tested.",
+     "format": "No export file obtained.",
+     "reimport": "No application record reimport tested.",
+     "cancellation": "No cancellation, expiry or deletion action tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup speed.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields not entered and application record reimport."
+    ],
+    "available_fields": [],
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },

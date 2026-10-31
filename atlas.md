@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 594 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-31.
+All 595 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-31.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -798,7 +798,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/co2-impact-review.html
 
 ## Code Bulk Discounts (discountkit.app)
-- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/code-bulk and re-verified there on 2026-09-16, unchanged) Two plans, billed in USD every 30 days.
+- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/code-bulk and re-verified there on 2026-10-31, unchanged) Two plans, billed in USD every 30 days.
 - **Honest take:** Read the free plan's number twice, because the word doing the work is 'lifetime': it is 500 codes in total, not 500 a month.
 - **Best for:** shopify stores that already run email or SMS campaigns and need thousands of unique, single-use codes generated out of one existing discount and handed over as a CSV
 - **Flags:** Free tier
@@ -960,7 +960,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The minimum monthly spend is the number to check before anything else: at $5.50 per user on monthly billing, a team of fewer than about six people still pays the $30 floor.
 - **Best for:** shift-based businesses — hospitality, retail, healthcare, any hourly workforce — that need rostering, clocking and labour-law compliance in one system and have enough staff to clear the minimum spend
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/deputy-review/
+- **Full review:** https://officesoftwaremarketplace.com/deputy-review.html
 
 ## Descript (descript.com)
 - **Verified pricing:** (re-verified 2026-08-17 and again 2026-10-01) Free plan with 60 minutes a month and watermarked 720p exports.
@@ -2084,7 +2084,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** This is vetted senior freelance talent on a monthly retainer with no published rates.
 - **Best for:** companies that need a vetted senior marketer (growth, paid ads, email, more) matched quickly, without the time and risk of a full-time hire
 - **Flags:** Hidden pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/marketerhire-review/
+- **Full review:** https://marketingandsalessoftware.com/marketerhire-review.html
 
 ## Marketing 360 (marketing360.com)
 - **Verified pricing:** Quote-based, and deliberately so (verified on their own site on 6 September, 25 September and 23 October 2026).
@@ -3174,6 +3174,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The cart skip blinds the measurement you would use to judge it.
 - **Best for:** Shopify merchants who want a free sticky buy button, or who need to hide add-to-cart and express-payment buttons on products they list online but sell in person
 - **Full review:** https://marketingandsalessoftware.com/skip-to-checkout-review.html
+
+## Slasify (slasify.com)
+- **Verified pricing:** (read 2026-10-31 on slasify.com/pricing in a browser render, USD) Three services, each with a starting price and a custom quote.
+- **Honest take:** Only starting prices are public: EOR from $250 a month and contractors from $50 a month, with no statement that these are per worker, and Global Payroll is quote-only.
+- **Best for:** companies hiring a few people in countries where they have no entity, especially in Southeast Asia, that want a low published EOR starting price and a dedicated account manager
+- **Full review:** https://aibuildermarketplace.com/b2b/slasify-review/
 
 ## Smartli (smartli.ai)
 - **Verified pricing:** (re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each …

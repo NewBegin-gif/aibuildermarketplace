@@ -1613,8 +1613,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/help-scout-review.html
 
 ## HelpCenter (helpcenterapp.com)
-- **Verified pricing:** (re-read 2026-08-29 on apps.shopify.com/helpcenter, re-verified unchanged 2026-10-14) Free to install, and the meter is tickets rather than agents — Basic already gives unlimited support ag…
-- **Honest take:** The meter is tickets, not agents: Basic charges $0.16 for every ticket past fifty, so 300 tickets a month cost $45.99 against $19.99 on Standard.
+- **Verified pricing:** (re-verified 2026-11-01 on apps.shopify.com/helpcenter) Free to install, and the meter is tickets rather than agents.
+- **Honest take:** No small paid tier any more: after Free (10 tickets, then $0.25 each) the next step is Standard at $40 a month for 500 tickets.
 - **Best for:** small Shopify stores that want ticketing, live chat and a searchable FAQ page from one app rather than bolting three together
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://zerotouchsupport.com/helpcenter-review.html

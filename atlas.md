@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 595 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-10-31.
+All 595 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-01.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -967,7 +967,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's per-editor pricing with two meters running underneath: media hours AND monthly AI credits.
 - **Best for:** podcasters and video creators who want to edit by editing the transcript, cutting
 - **Flags:** Usage-metered, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/descript-review/
+- **Full review:** https://officesoftwaremarketplace.com/descript-review.html
 
 ## Design.com (design.com)
 - **Verified pricing:** (read 2026-10-26 in a browser on design.com/faqs/purchasing; design.com/pricing returns a 404 and there is no public price table) Design.com sells logo packages as a monthly or annual subsc…
@@ -1059,7 +1059,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/doola-review.html
 
 ## Drip (drip.com)
-- **Verified pricing:** (ladder re-read on drip.com/pricing on 17 September 2026; every rung below was confirmed on the live slider and matches the page's own pricing object) One ladder, no tiers: you drag a slide…
+- **Verified pricing:** (ladder re-read on drip.com/pricing on 17 September 2026 and again on 1 November 2026; every rung below was confirmed on the live slider) One ladder, no tiers: you drag a slider to your lis…
 - **Honest take:** Unlimited sends hold only to 30,000 people; from 30,001 the allowance becomes twelve sends per contact per month, and Drip never flags the switch.
 - **Best for:** an online store on Shopify, WooCommerce or BigCommerce that already has order data worth segmenting and wants ecommerce playbooks — abandoned cart, welcome series, post-purchase
 - **Flags:** Usage-metered
@@ -1866,7 +1866,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/kit-review.html
 
 ## Kite (kite.skailama.app)
-- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/kite-free-gift) Four plans, billed in USD every 30 days.
+- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/kite-free-gift, re-verified unchanged 2026-11-01) Four plans, billed in USD every 30 days.
 - **Honest take:** The free plan covers only the first 50 discount orders a month, then $29 a month is billed, and Free and Starter are not for Shopify Advanced and Plus, whose entry tier is $49.
 - **Best for:** shopify stores that want the discount mechanics themselves — gift with purchase, buy X get Y, tiered and volume pricing, with progress bars pushing the cart toward the next reward
 - **Flags:** Free tier
@@ -2091,7 +2091,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's an all-in-one "we'll do it for you" model, which is great if you want a single vendor and a human team, but it can mean less flexibility and more lock-in than assembling best-of-breed tools.
 - **Best for:** small businesses that want one vendor handling website, CRM, ads, email and reputation with real humans to help, and prefer done-for-you over DIY
 - **Flags:** Hidden pricing, Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/marketing-360-review/
+- **Full review:** https://marketingandsalessoftware.com/marketing-360-review.html
 
 ## Meeri (meeritech.com)
 - **Verified pricing:** (read 2026-08-23 on apps.shopify.com/meeripush-push-notifications, listed as “Meeri Abandoned Cart Recovery”, and on meeritech.com; both re-read 2026-09-19 with no amount changed) Two plans…
@@ -3258,7 +3258,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/spocket-review/
 
 ## Stackable (stkbl.app)
-- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/stackable-discounts) Two paid tiers, billed in USD every 30 days, and no free plan.
+- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/stackable-discounts, re-verified unchanged 2026-11-01) Two paid tiers, billed in USD every 30 days, and no free plan.
 - **Honest take:** The two halves of the pitch are priced five times apart.
 - **Best for:** shopify stores running several promotions at once — an order discount, free shipping and a collection deal
 - **Full review:** https://marketingandsalessoftware.com/stackable-review.html

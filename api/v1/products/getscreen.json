@@ -68,15 +68,429 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "technician",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free plan (2 devices)"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "annual_month": 4.17,
+     "monthly": 5.0,
+     "evidence": "Standard is $4.17 per technician a month plus $0.08 per device, Advanced $6.67 plus $0.13, and Enterprise $8.33 plus $0.17. Advanced and Enterprise add unlimited client invitations. Free plan (2 devices); paid tiers add one-time quick connections (Advanced) and white-label, roles and mass-device management (Enterprise) — plus a one-time Personal Lifetime Deal at $149 in the page as served, which a browser on a European connection re-renders as EUR 139 (a different number, not just a different symbol, unlike the business rates), and which sidesteps the recurring fees of rivals like TeamViewer (~$50/mo). Without annual payment the business rates are 5.00 / 8.00 / 10.00 per technician"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "per_unit",
+     "annual_month": 6.67,
+     "monthly": 8.0,
+     "evidence": "Standard is $4.17 per technician a month plus $0.08 per device, Advanced $6.67 plus $0.13, and Enterprise $8.33 plus $0.17. Advanced and Enterprise add unlimited client invitations. Free plan (2 devices); paid tiers add one-time quick connections (Advanced) and white-label, roles and mass-device management (Enterprise) — plus a one-time Personal Lifetime Deal at $149 in the page as served, which a browser on a European connection re-renders as EUR 139 (a different number, not just a different symbol, unlike the business rates), and which sidesteps the recurring fees of rivals like TeamViewer (~$50/mo). Without annual payment the business rates are 5.00 / 8.00 / 10.00 per technician"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "annual_month": 8.33,
+     "monthly": 10.0,
+     "evidence": "Standard is $4.17 per technician a month plus $0.08 per device, Advanced $6.67 plus $0.13, and Enterprise $8.33 plus $0.17. Advanced and Enterprise add unlimited client invitations. Free plan (2 devices); paid tiers add one-time quick connections (Advanced) and white-label, roles and mass-device management (Enterprise) — plus a one-time Personal Lifetime Deal at $149 in the page as served, which a browser on a European connection re-renders as EUR 139 (a different number, not just a different symbol, unlike the business rates), and which sidesteps the recurring fees of rivals like TeamViewer (~$50/mo). Without annual payment the business rates are 5.00 / 8.00 / 10.00 per technician"
+    }
+   ],
+   "notes": [
+    "Monthly rates from: 'Without annual payment the business rates are 5.00 / 8.00 / 10.00 per technician'. Read as dollars from a US connection; a Dutch connection prints the same numerals as euros."
+   ],
+   "not_computable": [
+    {
+     "text": "Every business plan also bills per managed device ($0.08 / $0.13 / $0.17 a month on annual payment, $0.10 / $0.15 / $0.20 monthly); the engine only counts technicians, so real totals are higher.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-11-01"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "getscreen",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "technician",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 4.17,
+       "advanced": 6.67,
+       "enterprise": 8.33
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 8.34,
+       "advanced": 13.34,
+       "enterprise": 16.66
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 12.51,
+       "advanced": 20.01,
+       "enterprise": 24.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 20.85,
+       "advanced": 33.35,
+       "enterprise": 41.65
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 41.7,
+       "advanced": 66.7,
+       "enterprise": 83.3
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 62.55,
+       "advanced": 100.05,
+       "enterprise": 124.95
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 83.4,
+       "advanced": 133.4,
+       "enterprise": 166.6
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 104.25,
+       "advanced": 166.75,
+       "enterprise": 208.25
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 208.5,
+       "advanced": 333.5,
+       "enterprise": 416.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 417.0,
+       "advanced": 667.0,
+       "enterprise": 833.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Every business plan also bills per managed device ($0.08 / $0.13 / $0.17 a month on annual payment, $0.10 / $0.15 / $0.20 monthly); the engine only counts technicians, so real totals are higher."
+    ]
+   },
+   "monthly": {
+    "product_id": "getscreen",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "technician",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 5.0,
+       "advanced": 8.0,
+       "enterprise": 10.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 10.0,
+       "advanced": 16.0,
+       "enterprise": 20.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 15.0,
+       "advanced": 24.0,
+       "enterprise": 30.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 25.0,
+       "advanced": 40.0,
+       "enterprise": 50.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 50.0,
+       "advanced": 80.0,
+       "enterprise": 100.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 75.0,
+       "advanced": 120.0,
+       "enterprise": 150.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 100.0,
+       "advanced": 160.0,
+       "enterprise": 200.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 125.0,
+       "advanced": 200.0,
+       "enterprise": 250.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 250.0,
+       "advanced": 400.0,
+       "enterprise": 500.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 500.0,
+       "advanced": 800.0,
+       "enterprise": 1000.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Every business plan also bills per managed device ($0.08 / $0.13 / $0.17 a month on annual payment, $0.10 / $0.15 / $0.20 monthly); the engine only counts technicians, so real totals are higher."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -106,9 +520,9 @@
    "status": "open"
   },
   {
-   "question_id": "getscreen:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "getscreen:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Every business plan also bills per managed device ($0.08 / $0.13 / $0.17 a month on annual payment, $0.10 / $0.15 / $0.20 monthly); the engine only counts technicians, so real totals are higher. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

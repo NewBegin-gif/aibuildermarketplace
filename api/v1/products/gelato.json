@@ -68,15 +68,258 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 2,
+     "evidence": "Free is $0 forever with two connected stores and two account users"
+    },
+    {
+     "id": "gelato-plus",
+     "name": "Gelato+",
+     "model": "flat",
+     "monthly": 29.99,
+     "annual_month": 19.99,
+     "evidence": "Gelato+ is $29.99 a month, or $19.99 a month billed annually, and lifts both of those to unlimited"
+    },
+    {
+     "id": "platinum",
+     "name": "Platinum",
+     "model": "quote",
+     "evidence": "Platinum is quoted"
+    }
+   ],
+   "notes": [
+    "The subscription is separate from product and shipping costs; Gelato+ adds up to 33% off products year-round, which may vary per market."
+   ],
+   "not_computable": [
+    {
+     "text": "Product and shipping costs per order are not part of the subscription and are not modelled.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-11-01"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "gelato",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "gelato-plus": 19.99,
+       "platinum": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "gelato-plus": 19.99,
+       "platinum": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "gelato-plus",
+      "cheapest_plan_name": "Gelato+",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "gelato-plus": 19.99,
+       "platinum": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "gelato-plus",
+      "cheapest_plan_name": "Gelato+",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "gelato-plus": 19.99,
+       "platinum": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "gelato-plus",
+      "cheapest_plan_name": "Gelato+",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "gelato-plus": 19.99,
+       "platinum": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 2,
+      "to_units": 3,
+      "from_plan": "free",
+      "to_plan": "gelato-plus",
+      "from_plan_name": "Free",
+      "to_plan_name": "Gelato+"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Product and shipping costs per order are not part of the subscription and are not modelled."
+    ]
+   },
+   "monthly": {
+    "product_id": "gelato",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "gelato-plus": 29.99,
+       "platinum": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "gelato-plus": 29.99,
+       "platinum": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "gelato-plus",
+      "cheapest_plan_name": "Gelato+",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "gelato-plus": 29.99,
+       "platinum": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "gelato-plus",
+      "cheapest_plan_name": "Gelato+",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "gelato-plus": 29.99,
+       "platinum": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "gelato-plus",
+      "cheapest_plan_name": "Gelato+",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "gelato-plus": 29.99,
+       "platinum": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 2,
+      "to_units": 3,
+      "from_plan": "free",
+      "to_plan": "gelato-plus",
+      "from_plan_name": "Free",
+      "to_plan_name": "Gelato+"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Product and shipping costs per order are not part of the subscription and are not modelled."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -106,9 +349,9 @@
    "status": "open"
   },
   {
-   "question_id": "gelato:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "gelato:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Product and shipping costs per order are not part of the subscription and are not modelled. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

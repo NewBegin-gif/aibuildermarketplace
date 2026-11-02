@@ -423,7 +423,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/blinq-review.html
 
 ## Blocky (effectify.io)
-- **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial, and every amount unchanged since 22 August …
+- **Verified pricing:** (re-verified 2026-11-02 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial.
 - **Honest take:** Read the plan text before you read the badge. The App Store header says a free plan is available; that free plan is Development Stores, for development and partner stores only, and it starts charging the moment the store goes live.
 - **Best for:** Shopify stores below Plus that are losing time to bot traffic, repeat fraudsters or orders from regions they do not ship to, and want blocking rules they control rather than a full security suite
 - **Flags:** Add-ons extra
@@ -475,7 +475,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/bonline-review.html
 
 ## BookX (logbase.io)
-- **Verified pricing:** (read 2026-09-08 on apps.shopify.com/appointment-booking-bookeasy and checked against the vendor's own pricing section on logbase.io, which lists the same tiers) Four tiers billed in USD ev…
+- **Verified pricing:** (re-verified 2026-11-02 on apps.shopify.com/appointment-booking-bookeasy; first read 2026-09-08) Every paid tier was halved since our earlier readings, which had Starter at $9.99, Growth at…
 - **Honest take:** The free plan is a demonstration rather than a plan.
 - **Best for:** Shopify merchants running appointment-based services — salons, studios, clinics, rentals, classes and events
 - **Flags:** Free tier
@@ -3344,10 +3344,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/
 
 ## Super (effectify.io)
-- **Verified pricing:** (price re-read 2026-10-13, unchanged) Four paid tiers, billed in USD every 30 days through Shopify, and the Shopify listing prints only three of them.
+- **Verified pricing:** (re-verified 2026-11-02 on apps.shopify.com/super-gift-wraps) Every tier on the listing was repriced since our October reading, and the vendor's help-centre price article has not been updat…
 - **Honest take:** If you are on Shopify Plus, the price block on the listing is not the one you pay from.
 - **Best for:** Shopify stores with a real gifting season — jewellery, cosmetics, speciality food, anything bought for someone else
-- **Flags:** Annual commit
 - **Full review:** https://marketingandsalessoftware.com/super-review.html
 
 ## Superfiliate (superfiliate.com)
@@ -3490,7 +3489,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tenable-review/
 
 ## TestDriver.ai (testdriver.ai)
-- **Verified pricing:** (read 18 September 2026 in a live browser on testdriver.ai/pricing) Two tiers.
+- **Verified pricing:** (re-verified 2026-11-02 on testdriver.ai/pricing) Two tiers, and Pro has been repriced since our September reading.
 - **Honest take:** You do not control your own seat count.
 - **Best for:** teams already living inside GitHub pull requests who want end-to-end tests to exist at all — mention @testdriverai in a PR, get a written, run and committed test back with a recording
 - **Flags:** Per-seat pricing, Usage-metered
@@ -3559,8 +3558,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/timesact-preorder-review.html
 
 ## TiXel (effectify.io)
-- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/tixel) One paid plan and no ladder to climb, and the amounts are unchanged since 22 August 2026.
-- **Honest take:** The reviews are binary — 84 five-star and 6 one-star of 93 on 18 September 2026 — and the one-stars describe the same failure: the pixel is set up and no events ever arrive.
+- **Verified pricing:** (re-verified 2026-11-02 on apps.shopify.com/tixel) One paid plan and no ladder to climb, and the amounts are unchanged since 22 August 2026.
+- **Honest take:** The free trial is now one day, and the one-star reviews describe a pixel that installs cleanly and then records nothing, so test events the day you install.
 - **Best for:** Shopify merchants running Meta and TikTok ads who need more than the free channel apps give them
 - **Full review:** https://aibuildermarketplace.com/b2b/tixel-review/
 

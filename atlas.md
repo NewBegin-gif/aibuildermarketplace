@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 599 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
+All 600 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2506,7 +2506,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Data stays per device unless you pay +$3/mo for Cloud sync.
 - **Best for:** small businesses that run an imprest petty cash float (shops, restaurants, site offices, clinics, schools) and want receipts, approvals and the VAT split in one simple app
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/petty-cash-manager-review/
+- **Full review:** https://officesoftwaremarketplace.com/petty-cash-manager-review.html
 
 ## PhotoGenerator (photogenerator.ai)
 - **Verified pricing:** (read 3 October 2026 in a live browser on photogenerator.ai/pricing, with every billing mode and every credit option clicked) Credit-based, in US dollars, with no free tier among the publis…
@@ -2637,6 +2637,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators and stores testing print-on-demand with no upfront cost, upgrading to Premium once volume justifies it
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/printify-review/
+
+## PrintSage (printsage.com)
+- **Verified pricing:** (read 2026-11-02 on printsage.com and on ShipSage's print-on-demand page, shipsage.com/print-on-demand; prices in US dollars) PrintSage has no subscription and no plan price.
+- **Honest take:** US-only fulfillment; real cost per item shows only at checkout.
+- **Best for:** Shopify, Etsy, TikTok Shop and Amazon sellers who sell custom apparel mainly to US customers and want in-house US printing with 2-day delivery and no subscription
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/printsage-review/
 
 ## Process Street (process.st)
 - **Verified pricing:** Process Street publishes no prices.

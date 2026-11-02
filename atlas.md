@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 595 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
+All 596 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -3459,6 +3459,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Canadian accountants and bookkeepers who prepare and e-file client returns and want fast, checked, CRA-integrated professional tax software
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/taxcycle-review/
+
+## Teachable (teachable.com)
+- **Verified pricing:** (read 2026-11-02 on teachable.com/pricing, teachable.com/legal/usage-fees and Teachable's help article on transaction fees and bundles; the pricing page says all prices are in US dollars) T…
+- **Honest take:** 7.5% fee on Starter; processing extra; free students capped at 100.
+- **Best for:** course creators and coaches who sell to their own audience and want checkout, tax handling and student apps handled for them
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/teachable-review/
 
 ## Team Pulse (goteampulse.io)
 - **Verified pricing:** (re-verified 2026-09-22 and 2026-10-13 in the site's own plan-config array; goteampulse.io/pricing itself returns 404, the plans sit on the home page) Genuinely free tier: $0/mo for 1 membe…

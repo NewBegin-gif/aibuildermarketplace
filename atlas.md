@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 597 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
+All 599 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -43,7 +43,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** No cloud on Essentials; 250 GB pre-selected on Advanced; renewal price not shown.
 - **Best for:** home users and small home offices who want full-system image backup and disk cloning, with an optional cloud copy, on one to five computers
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/acronis-review/
+- **Full review:** https://officesoftwaremarketplace.com/acronis-review.html
 
 ## ActiveCampaign (activecampaign.com)
 - **Verified pricing:** (re-verified 2026-08-17 and again 2026-09-29 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan, trial only.
@@ -1578,6 +1578,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing
 - **Full review:** https://officesoftwaremarketplace.com/gusto-review.html
 
+## Hablaki (hablaki.com)
+- **Verified pricing:** (read 2026-11-02 on hablaki.com/en, its FAQ and the refund policy at hablaki.com/en/refunds; the Spanish homepage, read 2026-10-21, gives the same 9,99 USD) Hablaki sells one thing: a lifet…
+- **Honest take:** Six languages; internet needed for setup and licence checks.
+- **Best for:** people who write a lot on a Mac or Windows PC in one of its six languages and want dictation into any app, processed on their own computer, without a subscription
+- **Full review:** https://aibuildermarketplace.com/b2b/hablaki-review/
+
 ## Harbor Compliance (harborcompliance.com)
 - **Verified pricing:** (read 2026-10-04 on harborcompliance.com, service page by service page; there is no single pricing page, /pricing returns a 404) Priced per service, each with its own page.
 - **Honest take:** The $99 registered agent price is a first-year rate that renews at $159, and annual report filing adds $199 per state each year.
@@ -2105,7 +2111,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Read on 19 September 2026, the vendor's homepage claims a 5.0 rating and 100% five-star reviews, while the App Store listing showed 4.7 from 11 reviews, one of them a single star.
 - **Best for:** small Shopify stores that want a cart-recovery channel which costs almost nothing and takes no commission on what it recovers
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/meeri-review/
+- **Full review:** https://marketingandsalessoftware.com/meeri-review.html
 
 ## MeetGeek (meetgeek.ai)
 - **Verified pricing:** (re-verified 2026-09-19 on meetgeek.ai/pricing; amounts unchanged since 2026-09-04) The page loads on annual billing, so the figures it shows first are the annual ones; both terms are given…
@@ -2494,6 +2500,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** data and marketing teams that want churn, LTV or demand predictions running against their own warehouse without hiring data scientists, and can work with an annual commitment quoted on a call
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/pecan-ai-review/
+
+## Petty Cash Manager (pettycash.getdailytools.com)
+- **Verified pricing:** (read 2026-11-02 on pettycash.getdailytools.com, pricing section and FAQ; the page says prices are in US dollars, with VAT or GST added at checkout where your country requires it) Petty Cas…
+- **Honest take:** Data stays per device unless you pay +$3/mo for Cloud sync.
+- **Best for:** small businesses that run an imprest petty cash float (shops, restaurants, site offices, clinics, schools) and want receipts, approvals and the VAT split in one simple app
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/petty-cash-manager-review/
 
 ## PhotoGenerator (photogenerator.ai)
 - **Verified pricing:** (read 3 October 2026 in a live browser on photogenerator.ai/pricing, with every billing mode and every credit option clicked) Credit-based, in US dollars, with no free tier among the publis…

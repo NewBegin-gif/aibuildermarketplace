@@ -9,35 +9,32 @@
  "summary": "AI QA engineer that lives in GitHub: mention @testdriverai in a pull request or issue and it starts a real desktop sandbox, runs your application, writes and runs an end-to-end UI test, posts a recording, and commits the test file to your repository — then reruns it on every pull request that touches the same ground. Tests are written against behaviour rather than selectors (find “signup button”, assert “dashboard is visible”). Covers web apps, Chrome and VSCode extensions, Windows desktop and Linux; Mac, iOS and Android are Enterprise-only and marked coming soon. By Haxor Inc.",
  "best_for": "teams already living inside GitHub pull requests who want end-to-end tests to exist at all — mention @testdriverai in a PR, get a written, run and committed test back with a recording — and who would otherwise keep postponing a Playwright suite nobody has time to maintain",
  "skip_if": "your contributor list is much longer than your test needs, because seats are billed per GitHub user who touches a PR rather than per tester; you ship a Mac, iOS or Android app, which Pro does not cover at all; or your suite is long enough that sandbox minutes, not seats, become the real bill",
- "honest_knock": "You do not control your own seat count. The pricing page says a seat is billed automatically for every GitHub user who gets a pull-request review or runs a test — so the bill is set by who touches your repository, not by a number you chose. On a team of ten that is $200 a month before a single test has run, and it scales with contributors rather than with usage.\n\nThe included allowance is thinner than it looks. 120 testing minutes at the published $0.14 overage rate is $16.80 of metered value against a $20 seat, so the bundle is close to a rounding error on the seat itself. Worse, the meter runs on sandbox uptime rather than test duration: the clock covers booting the machine and loading your app, not only the part where it clicks things. A suite that takes eight minutes of wall time per pull request exhausts 120 minutes in fifteen pull requests.\n\nAnd the page never says whether those 120 minutes are per seat or per account. At $0.14 a minute that ambiguity is worth $151.20 a month on a ten-person team — the difference between 120 minutes and 1,200. It is the first thing to put in writing before you turn this on, and it is not answerable from anything they publish.\n\nOne coverage trap: if you ship a Mac desktop app, or anything on iOS or Android, Pro does not cover you. Those platforms are marked coming soon and sit under Enterprise, which is quote-only.\n\nWhat is genuinely good here is the part that usually breaks. Tests are written against what a user does rather than against selectors — the generated file reads `td.find(\"signup button\").click()` and `td.assert(\"dashboard is visible\")` — and the documentation tells you to describe behaviour instead of implementation, which is the opposite of the brittle CSS-selector suites this category is famous for. That is also the risk: an element resolved by an AI from a description can drift for reasons a diff will not show you.",
+ "honest_knock": "You do not control your own seat count. The pricing page says a seat is billed automatically for every GitHub user who gets a pull-request review or runs a test — so the bill is set by who touches your repository, not by a number you chose. On a team of ten that is $240 a month before a single test has run, and it scales with contributors rather than with usage.\n\nThe allowance improved in the repricing we read on 2 November 2026: 360 testing minutes at the published $0.08 overage rate is $28.80 of metered value against a $24 seat. But the meter still runs on sandbox uptime rather than test duration: the clock covers booting the machine and loading your app, not only the part where it clicks things. A suite that takes eight minutes of wall time per pull request exhausts 360 minutes in 45 pull requests.\n\nThe FAQ now says your plan includes 360 testing minutes each billing period, which reads as one allowance for the plan rather than 360 per seat. Budget it that way: on a ten-person team the gap between 360 and 3,600 minutes is $259.20 a month at $0.08. And note that charges, including the one when the trial converts, are non-refundable.\n\nOne coverage trap: if you ship a Mac desktop app, or anything on iOS or Android, Pro does not cover you. Those platforms are marked coming soon and sit under Enterprise, which is quote-only.\n\nWhat is genuinely good here is the part that usually breaks. Tests are written against what a user does rather than against selectors — the generated file reads `td.find(\"signup button\").click()` and `td.assert(\"dashboard is visible\")` — and the documentation tells you to describe behaviour instead of implementation, which is the opposite of the brittle CSS-selector suites this category is famous for. That is also the risk: an element resolved by an AI from a description can drift for reasons a diff will not show you.",
  "pricing": {
   "status": "public",
-  "entry_price": "$20",
-  "entry_price_terms": "Pro · per seat a month, plus $0.14 per testing minute beyond the 120 included",
-  "from_price_usd_month": 20.0,
-  "plans": [
-   {
-    "name": "Pro",
-    "price": "$20 per seat a month plus $0.14 per testing minute, 120 testing minutes included, 14-day free trial",
-    "includes": "Cloud-hosted; web apps, Chrome/VSCode extensions, Windows desktop, Linux/Windows; unlimited team users, AI generation and test runs"
-   },
-   {
-    "name": "Enterprise",
-    "price": "no published price",
-    "includes": "Self-hosted; unlimited testing minutes, root access, custom VM images, BYO keys, VPN, private Slack support, tests built by Haxor"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(read 18 September 2026 in a live browser on testdriver.ai/pricing) Two tiers. Pro is $20 per seat a month plus $0.14 for every testing minute, with 120 testing minutes included and a 14-day free trial. Read the seat rule carefully, because you do not choose it: the page states that seats are automatically billed for every GitHub user who gets a pull-request review or runs a test. Testing minutes are billed for as long as the sandbox is running — which starts automatically on pull-request generation and on test runs — so the meter covers the machine's uptime rather than the duration of your assertions. Pro is cloud-hosted and covers web apps, Chrome extensions, VSCode extensions, Windows desktop apps, Linux and Windows, with unlimited team users and unlimited AI generation and test runs. Enterprise is quote-only and self-hosted, with unlimited testing minutes, root access, custom VM images, bring-your-own-keys, VPN deployment and private Slack Connect support — and it is the tier where Haxor's team builds and maintains the tests for you. Mac desktop, Android and iOS are listed as coming soon, and only under Enterprise. The company is Haxor Inc.",
-  "verified_at": "2026-09-18",
+  "entry_price": "$24",
+  "entry_price_terms": "Pro · per seat a month, plus $0.08 per testing minute beyond the 360 included each billing period",
+  "from_price_usd_month": 24.0,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-11-02 on testdriver.ai/pricing) Two tiers, and Pro has been repriced since our September reading. Pro is now $24 per seat a month plus $0.08 for every testing minute, with 360 testing minutes included and a 14-day free trial. In September it was $20 a seat, $0.14 a minute and 120 minutes, so the seat went up and the meter got cheaper and roomier. The trial ends after 14 days or 360 testing minutes, whichever comes first; you add a card at checkout and the plan converts automatically at $24 a seat. After the trial the FAQ says your plan includes 360 testing minutes each billing period, with usage beyond that metered by the second at $0.08 a minute. Read the seat rule carefully, because you do not choose it: a seat is any GitHub user who gets a TestDriver review on a pull request or runs a test in the billing period. Inviting people to the team in the web console is free and does not create seats. Testing minutes are billed for as long as the sandbox is running, which starts automatically on pull-request generation and on test runs, so the meter covers the machine's uptime rather than the duration of your assertions. Charges, including the one when the trial converts, are non-refundable; seat changes are prorated. On the comparison table read 18 September 2026, Pro is cloud-hosted and covers web apps, Chrome extensions, VSCode extensions, Windows desktop apps, Linux and Windows, with unlimited AI generation and test runs. Enterprise is quote-only and self-hosted, with unlimited testing and no per-minute fees, and the pricing page now says it carries a 30-day money-back guarantee. Mac desktop, Android and iOS were listed as coming soon, and only under Enterprise. The company is Haxor Inc.",
+  "verified_at": "2026-11-02",
   "source_url": "https://testdriver.ai/pricing",
   "schema_offer": {
-   "price": 20.0,
+   "price": 24.0,
    "currency": "USD",
-   "description": "Pro, per seat a month, plus $0.14 per testing minute beyond the 120 included; 14-day free trial. Read on the vendor's own pricing page on 2026-09-18.",
+   "description": "Pro, per seat a month, plus $0.08 per testing minute beyond the 360 included each billing period; 14-day free trial (or 360 minutes, whichever comes first). Read on the vendor's own pricing page on 2026-11-02.",
    "page": "https://aibuildermarketplace.com/b2b/testdriver-ai-review/"
   },
-  "source_quotes": null,
+  "source_quotes": [
+   {
+    "field": "price",
+    "plan": "Pro",
+    "quote": "$24/ month / seat",
+    "source_url": "https://testdriver.ai/pricing/",
+    "read_on": "2026-11-02"
+   }
+  ],
   "recent_change": null
  },
  "free_plan": false,
@@ -46,21 +43,21 @@
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "Pro is $20 per seat a month plus $0.14 for every testing minute, with 120 testing minutes included and a 14-day free trial.",
-   "verified_at": "2026-09-18",
+   "evidence": "Pro is now $24 per seat a month plus $0.08 for every testing minute, with 360 testing minutes included and a 14-day free trial.",
+   "verified_at": "2026-11-02",
    "source_url": "https://testdriver.ai/pricing"
   },
   {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "120 testing minutes at the published $0.14 overage rate is $16.80 of metered value against a $20 seat, so the bundle is close to a rounding error on the seat itself.",
-   "verified_at": "2026-09-18",
+   "evidence": "After the trial the FAQ says your plan includes 360 testing minutes each billing period, with usage beyond that metered by the second at $0.08 a minute.",
+   "verified_at": "2026-11-02",
    "source_url": "https://testdriver.ai/pricing"
   }
  ],
  "compare_with": {
   "name": "BugHerd",
-  "why": "These solve the same problem from opposite ends, and we carry no direct automated-QA competitor to put beside this one — worth saying plainly rather than inventing a peer. BugHerd, from our own dossiers (re-verified 5 September 2026), is where humans report what they found: about $42 a month for 5 members, $67 for 10 and $125 for 25, with unlimited projects and unlimited client users, and extra members at $6.60 each billed annually. It is a fixed, predictable bill and it catches what a person noticed.\n\nTestDriver is the machine doing the looking, and its bill moves with your team and your runtime rather than staying still. At ten seats it is $200 a month before minutes, against BugHerd's $67 for the same headcount — but BugHerd never opens your app, and nothing in it stops a regression merging. The honest comparison is not really between these two: it is between TestDriver and the Playwright suite you would write yourself, where the software is free and the cost is the engineer-weeks to build it and the maintenance nobody budgets for. Price that against $20 a seat before deciding."
+  "why": "These solve the same problem from opposite ends, and we carry no direct automated-QA competitor to put beside this one — worth saying plainly rather than inventing a peer. BugHerd, from our own dossiers (re-verified 5 September 2026), is where humans report what they found: about $42 a month for 5 members, $67 for 10 and $125 for 25, with unlimited projects and unlimited client users, and extra members at $6.60 each billed annually. It is a fixed, predictable bill and it catches what a person noticed.\n\nTestDriver is the machine doing the looking, and its bill moves with your team and your runtime rather than staying still. At ten seats it is $240 a month before minutes, against BugHerd's $67 for the same headcount — but BugHerd never opens your app, and nothing in it stops a regression merging. The honest comparison is not really between these two: it is between TestDriver and the Playwright suite you would write yourself, where the software is free and the cost is the engineer-weeks to build it and the maintenance nobody budgets for. Price that against $24 a seat before deciding."
  },
  "links": {
   "record": "https://aibuildermarketplace.com/api/v1/products/testdriver-ai.json",
@@ -83,347 +80,20 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "available",
+  "status": "failed_evidence_check",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": {
-   "currency": "USD",
-   "unit": "seat",
-   "axis": "users",
-   "plans": [
-    {
-     "id": "pro",
-     "name": "Pro",
-     "model": "per_unit",
-     "monthly": 20,
-     "annual_status": "unknown",
-     "evidence": "Pro is $20 per seat a month plus $0.14 for every testing minute, with 120 testing minutes included"
-    },
-    {
-     "id": "enterprise",
-     "name": "Enterprise",
-     "model": "quote",
-     "evidence": "Enterprise is quote-only and self-hosted"
-    }
-   ],
-   "not_computable": [
-    {
-     "text": "Testing minutes beyond the 120 included cost $0.14 each and run for as long as the sandbox is up; the motor does not meter minutes.",
-     "affects_cost": true
-    }
-   ],
-   "notes": [
-    "Seats are billed automatically for every GitHub user who gets a pull-request review or runs a test, so the user count is not one you choose."
-   ],
-   "rules_verified_at": "2026-10-15"
-  },
-  "growth": {
-   "annual": {
-    "product_id": "testdriver-ai",
-    "currency": "USD",
-    "axis": "users",
-    "unit": "seat",
-    "billing": "annual",
-    "rows": [
-     {
-      "units": 1,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 2,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 3,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 5,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 10,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 15,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 20,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 25,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 50,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 100,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "pro": "price_unknown_on_billing",
-       "enterprise": "quote"
-      }
-     }
-    ],
-    "switch_points": [],
-    "conflicts": [],
-    "unknowns": [
-     "Testing minutes beyond the 120 included cost $0.14 each and run for as long as the sandbox is up; the motor does not meter minutes."
-    ]
-   },
-   "monthly": {
-    "product_id": "testdriver-ai",
-    "currency": "USD",
-    "axis": "users",
-    "unit": "seat",
-    "billing": "monthly",
-    "rows": [
-     {
-      "units": 1,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 20.0,
-      "billed": {
-       "amount": 20.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 20.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 2,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 40.0,
-      "billed": {
-       "amount": 40.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 40.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 3,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 60.0,
-      "billed": {
-       "amount": 60.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 60.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 5,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 100.0,
-      "billed": {
-       "amount": 100.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 100.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 10,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 200.0,
-      "billed": {
-       "amount": 200.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 200.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 15,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 300.0,
-      "billed": {
-       "amount": 300.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 300.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 20,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 400.0,
-      "billed": {
-       "amount": 400.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 400.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 25,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 500.0,
-      "billed": {
-       "amount": 500.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 500.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 50,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 1000.0,
-      "billed": {
-       "amount": 1000.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 1000.0,
-       "enterprise": "quote"
-      }
-     },
-     {
-      "units": 100,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 2000.0,
-      "billed": {
-       "amount": 2000.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 2000.0,
-       "enterprise": "quote"
-      }
-     }
-    ],
-    "switch_points": [],
-    "conflicts": [],
-    "unknowns": [
-     "Testing minutes beyond the 120 included cost $0.14 each and run for as long as the sandbox is up; the motor does not meter minutes."
-    ]
-   }
-  }
+  "rules": null,
+  "growth": null
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
-  "price": "read",
+  "price": "quoted",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
@@ -449,9 +119,9 @@
    "status": "open"
   },
   {
-   "question_id": "testdriver-ai:pricing_gap_1",
-   "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: Testing minutes beyond the 120 included cost $0.14 each and run for as long as the sandbox is up; the motor does not meter minutes. Can you publish the price or the rule?",
+   "question_id": "testdriver-ai:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

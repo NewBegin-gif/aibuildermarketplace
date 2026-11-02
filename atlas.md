@@ -2643,7 +2643,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** US-only fulfillment; real cost per item shows only at checkout.
 - **Best for:** Shopify, Etsy, TikTok Shop and Amazon sellers who sell custom apparel mainly to US customers and want in-house US printing with 2-day delivery and no subscription
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/printsage-review/
+- **Full review:** https://marketingandsalessoftware.com/printsage-review.html
 
 ## Process Street (process.st)
 - **Verified pricing:** Process Street publishes no prices.

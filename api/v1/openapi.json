@@ -2176,6 +2176,13 @@
          "null"
         ]
        },
+       "price_history": {
+        "type": [
+         "object",
+         "null"
+        ],
+        "description": "Our own record of the vendor's public pricing page. status 'stable': every amount on the page was identical across >= 3 of our reads over >= 30 days (see stable.since/until/reads). status 'changed': price changes we confirmed on the page, each with plan, from/to, unit, the window between the last read with the old price and the first with the new one, a verbatim quote and its source. Null when we have too few reads to say either. Raw reading differences are never published on their own."
+       },
        "recent_change": {
         "type": [
          "object",

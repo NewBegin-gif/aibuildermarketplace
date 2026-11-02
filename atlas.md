@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 596 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
+All 597 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -37,6 +37,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** developers and small businesses that want a cheap Linux or Windows VPS, or a dedicated server in a specific region, and will compare hosts on the renewal price
 - **Flags:** Renewal jump
 - **Full review:** https://officesoftwaremarketplace.com/accuweb-hosting-review.html
+
+## Acronis (acronis.com)
+- **Verified pricing:** (read 2026-11-02 on the True Image purchasing page, shown in euros to a visitor in Europe; we did not see a US-dollar price list) This review covers Acronis True Image, the home and home-of…
+- **Honest take:** No cloud on Essentials; 250 GB pre-selected on Advanced; renewal price not shown.
+- **Best for:** home users and small home offices who want full-system image backup and disk cloning, with an optional cloud copy, on one to five computers
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/acronis-review/
 
 ## ActiveCampaign (activecampaign.com)
 - **Verified pricing:** (re-verified 2026-08-17 and again 2026-09-29 in the browser; the figures below are the 'starts at' prices on annual billing, before you pick a contact count) No free plan, trial only.
@@ -3465,7 +3472,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** 7.5% fee on Starter; processing extra; free students capped at 100.
 - **Best for:** course creators and coaches who sell to their own audience and want checkout, tax handling and student apps handled for them
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/teachable-review/
+- **Full review:** https://marketingandsalessoftware.com/teachable-review.html
 
 ## Team Pulse (goteampulse.io)
 - **Verified pricing:** (re-verified 2026-09-22 and 2026-10-13 in the site's own plan-config array; goteampulse.io/pricing itself returns 404, the plans sit on the home page) Genuinely free tier: $0/mo for 1 membe…

@@ -94,15 +94,428 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "admin",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "monthly": 39,
+     "annual_month": 29,
+     "max_units": 1,
+     "evidence": "Starter is $39 a month billed monthly, or $29 a month billed annually: 5 published products, 1 admin and a 7.5% transaction fee on your sales"
+    },
+    {
+     "id": "builder",
+     "name": "Builder",
+     "model": "flat",
+     "monthly": 89,
+     "annual_month": 69,
+     "max_units": 1,
+     "evidence": "Builder is $89 a month, or $69 billed annually: 10 products, 1 admin"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "monthly": 189,
+     "annual_month": 139,
+     "max_units": 5,
+     "evidence": "Growth is $189 a month, or $139 billed annually: 50 products, 5 admins"
+    },
+    {
+     "id": "custom",
+     "name": "Custom",
+     "model": "quote",
+     "evidence": "Custom is priced through sales"
+    }
+   ],
+   "notes": [
+    "Plans are capped by admins (1 on Starter and Builder, 5 on Growth), not sold per seat; there is no published price for an extra admin.",
+    "There is no free plan: the pricing page offers a 7-day free trial and a 30-day guarantee."
+   ],
+   "not_computable": [
+    "Starter's 7.5% transaction fee on sales, payment processing (2.9% + $0.30 per domestic card for a US school, 4.4% + $0.30 international), the Standard or Global bundle surcharges, video storage beyond 1TB at $15 a month per TB, and $0.50 a month per student added outside checkout beyond 100 depend on sales volume and are not modelled."
+   ],
+   "rules_verified_at": "2026-11-02"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "teachable",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "admin",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 348.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "builder": 69.0,
+       "growth": 139.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 1668.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": 139.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 1668.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": 139.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 139.0,
+      "billed": {
+       "amount": 1668.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": 139.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "growth",
+      "to_plan": null,
+      "from_plan_name": "Growth",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Starter's 7.5% transaction fee on sales, payment processing (2.9% + $0.30 per domestic card for a US school, 4.4% + $0.30 international), the Standard or Global bundle surcharges, video storage beyond 1TB at $15 a month per TB, and $0.50 a month per student added outside checkout beyond 100 depend on sales volume and are not modelled."
+    ]
+   },
+   "monthly": {
+    "product_id": "teachable",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "admin",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.0,
+       "builder": 89.0,
+       "growth": 189.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 189.0,
+      "billed": {
+       "amount": 189.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": 189.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 189.0,
+      "billed": {
+       "amount": 189.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": 189.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 189.0,
+      "billed": {
+       "amount": 189.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": 189.0,
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "builder": "not_eligible",
+       "growth": "not_eligible",
+       "custom": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "growth",
+      "to_plan": null,
+      "from_plan_name": "Growth",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Starter's 7.5% transaction fee on sales, payment processing (2.9% + $0.30 per domestic card for a US school, 4.4% + $0.30 international), the Standard or Global bundle surcharges, video storage beyond 1TB at $15 a month per TB, and $0.50 a month per student added outside checkout beyond 100 depend on sales volume and are not modelled."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -132,9 +545,9 @@
    "status": "open"
   },
   {
-   "question_id": "teachable:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "teachable:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Starter's 7.5% transaction fee on sales, payment processing (2.9% + $0.30 per domestic card for a US school, 4.4% + $0.30 international), the Standard or Global bundle surcharges, video storage beyond 1TB at $15 a month per TB, and $0.50 a month per student added outside checkout beyond 100 depend on sales volume and are not modelled. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -695,7 +695,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/checkr-review.html
 
 ## ChemiCloud (chemicloud.com)
-- **Verified pricing:** (re-verified 2026-10-17) Shared hosting starts at $1.95/mo on ChemiCloud's Back to Build sale, which was still running when we read the hosting page on 17 October 2026: Starter, Pro and Tur…
+- **Verified pricing:** (re-verified 2026-11-02) Shared hosting starts at $1.49/mo on ChemiCloud's Black Friday sale, which went live on 2 November 2026 and replaced the Back to Build sale: Starter, Pro and Turbo …
 - **Honest take:** The honest catch is the one every budget host shares: the headline price is an introductory rate, and renewals land roughly three times higher, so judge it on the renewal cost, not the sign-up teaser.
 - **Best for:** small businesses, freelancers and growing sites that want fast, well-supported managed shared or WordPress hosting at a low starting price
 - **Flags:** Renewal jump
@@ -1361,7 +1361,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/finale-inventory-review.html
 
 ## FineVoice (finevoice.ai)
-- **Verified pricing:** (read 2026-10-23 and re-read 2026-10-29 on finevoice.ai/pricing, USD selected) FineVoice has a free plan and three paid tiers.
+- **Verified pricing:** (read 2026-10-23, re-read 2026-10-29 and 2026-11-02 on finevoice.ai/pricing, USD selected) FineVoice has a free plan and three paid tiers.
 - **Honest take:** Unused quota expires monthly; only annual Ultra is (mostly) unlimited.
 - **Best for:** solo creators, educators and small teams who want text to speech, voice changing, cloning, transcription and sound effects in one subscription, and who use most of the quota every month
 - **Flags:** Usage-metered, Annual commit, Free tier

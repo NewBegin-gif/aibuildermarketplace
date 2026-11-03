@@ -95,15 +95,464 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Starter is $0 forever with 5,000 views in total rather than per month"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "max_units": 3,
+     "monthly": 39,
+     "annual_month": 29,
+     "evidence": "Growth is $39 a month billed monthly or $29 billed annually, up to 50,000 views a month"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "flat",
+     "monthly": 69,
+     "annual_month": 49,
+     "evidence": "Premium $69 or $49, up to 150,000"
+    },
+    {
+     "id": "elite",
+     "name": "Elite",
+     "model": "flat",
+     "monthly": 129,
+     "annual_month": 99,
+     "evidence": "Elite $129 or $99, up to 500,000, with unlimited seats"
+    }
+   ],
+   "notes": [
+    "Seats: 1 on Starter, 3 on Growth, unlimited on Premium and Elite.",
+    "The real meter is monthly popup views per website (Growth 50,000, Premium 150,000, Elite 500,000; Starter 5,000 in total). Pick the tier by views first; seats only decide between Starter, Growth and the rest.",
+    "When a site reaches its limit its campaigns pause until the next billing cycle; the page describes no overage charge."
+   ],
+   "not_computable": [
+    "View-based limits per website and custom agency or enterprise plans are not computed."
+   ],
+   "rules_verified_at": "2026-11-03"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "hello-bar",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 0.0,
+       "growth": 29.0,
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 348.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 29.0,
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 348.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 29.0,
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 49.0,
+       "elite": 99.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "growth",
+      "to_plan": "premium",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Premium"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "View-based limits per website and custom agency or enterprise plans are not computed."
+    ]
+   },
+   "monthly": {
+    "product_id": "hello-bar",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 0.0,
+       "growth": 39.0,
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 39.0,
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 39.0,
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "premium",
+      "cheapest_plan_name": "Premium",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "premium": 69.0,
+       "elite": 129.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "growth",
+      "to_plan": "premium",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Premium"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "View-based limits per website and custom agency or enterprise plans are not computed."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -133,9 +582,9 @@
    "status": "open"
   },
   {
-   "question_id": "hello-bar:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "hello-bar:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: View-based limits per website and custom agency or enterprise plans are not computed. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

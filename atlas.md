@@ -2159,7 +2159,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-03 on mksparkinteractive.com, in pounds sterling) MK Website Assistant is a done-for-you service from MK Spark Interactive, a small UK studio, not a self-serve app.
 - **Honest take:** Done-for-you service; "from" prices, set-up fee on top.
 - **Best for:** small UK service businesses such as dental and physio practices, vets, opticians and letting agents that want an AI assistant set up for them on their website to answer enquiries and capture leads after hours
-- **Full review:** https://aibuildermarketplace.com/b2b/mk-website-assistant-review/
+- **Full review:** https://zerotouchsupport.com/mk-website-assistant-review.html
 
 ## Mktg.ai (mktg.ai)
 - **Verified pricing:** No public pricing (re-verified 25 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'.
@@ -2446,10 +2446,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/papaya-global-review/
 
 ## Parallel AI (parallellabs.app)
-- **Verified pricing:** (read on 11 September 2026 on parallellabs.app/pricing, which stamps itself 'Last updated: 2026-08-18') The meter is credits, and there are two separate pools.
-- **Honest take:** The free tier is genuinely free -- 50 credits a month, no card -- and it is the only way to answer the question the pricing page leaves open.
-- **Best for:** teams that want the sales, content and support agents in one place and will genuinely use the lead engine -- that half is priced per result, gets cheaper in bulk, and a lookup that finds nothing costs nothing
-- **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
+- **Verified pricing:** (re-verified 2026-11-03 on parallellabs.app/pricing; the page we read on 11 September 2026 sold credits, and that model is gone) Parallel AI now sells flat plans with usage limits instead o…
+- **Honest take:** The usage limits are not published as numbers.
+- **Best for:** small teams and solo operators that want sales, content and support agents plus lead search and outreach in one place, at a flat monthly price
+- **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://marketingandsalessoftware.com/parallel-ai-review.html
 
 ## Parim (parim.co)
@@ -3839,7 +3839,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** YouTube only; video files deleted 30 days after you stop paying.
 - **Best for:** YouTube creators and small production teams that juggle editors, scripts and review over spreadsheets and chat, and want one board from idea to scheduled upload
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/videoupload-review/
+- **Full review:** https://marketingandsalessoftware.com/videoupload-review.html
 
 ## VidPal (vidpal.ai)
 - **Verified pricing:** (price re-verified 2026-10-07 against the vendor's own pricing page and confirmed by VidPal in writing) (2026) Free: 4 lifetime credits, standard-quality exports, "Made with Vidpal.ai" wate…

@@ -491,8 +491,16 @@
       "format": "date"
      },
      "evidence_url": {
-      "type": "null",
-      "description": "Aggregate not rendered in the review in this round."
+      "oneOf": [
+       {
+        "type": "null"
+       },
+       {
+        "type": "string",
+        "format": "uri"
+       }
+      ],
+      "description": "Anchor of the inbox timeline on the review when the count is known; null when not tested."
      }
     }
    },

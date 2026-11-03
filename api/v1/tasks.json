@@ -3263,6 +3263,95 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "pCloud",
+   "product_id": "pcloud",
+   "run_date": "2026-11-02",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 2 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We uploaded three files (a CSV and two images) to a private folder, downloaded them back as one ZIP and compared the files byte for byte. We did not open the upgrade or checkout.",
+   "findings": [
+    "The free account started at 2 GB of storage and became 3 GB after our first upload: one extra gigabyte unlocked by that action. The homepage says you can unlock up to 10 GB; we only saw the first step.",
+    "Upload and download worked even though the email address was not yet confirmed; a banner kept asking for the confirmation.",
+    "Selecting three files and choosing Download gave one ZIP with a generic file name. All three files inside were byte-identical to the originals.",
+    "Basic account settings report an EU data region. The account-data download explicitly leaves your files out, so it is not a backup of your storage.",
+    "No card was asked for in the steps we saw; a lifetime pCloud Pass promotion appeared straight after login."
+   ],
+   "not_tested": [
+    "Checkout, tax and the price of the paid plans",
+    "The rest of the 10 GB unlock steps",
+    "Sharing links, invitations and the desktop drive",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "unlock up to 10GB of free space",
+     "claim_source": "https://my.pcloud.com/",
+     "claim_read_on": "2026-11-02",
+     "observed": "Observed start quota was 2 GB; first upload unlocked one additional GB and quota became 3 GB.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pcloud-review.html#claim-vs-measured"
+     },
+     "plan": "pCloud Basic (Free)",
+     "comparability": "The ceiling claim is compared only with the observed 2-to-3 GB progression; the full 10 GB unlock sequence remains untested.",
+     "status": "not_testable",
+     "buying_consequence": "The 10 GB wording is an unlock ceiling, not the starting allowance; remaining tasks were not performed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Sign up free",
+     "claim_source": "https://www.pcloud.com/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Checkout not opened; no checkout price, tax, final total or cost-rule comparison observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pcloud-review.html#claim-vs-measured"
+     },
+     "plan": "pCloud Basic (Free)",
+     "comparability": "pCloud: checkout and a matching cost-rule basis are absent; prepared trial wording provides no price comparison.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "Three kit files were uploaded to a private folder and downloaded together as a ZIP. All three extracted files matched the originals byte for byte. Free storage increased from 2 GB to 3 GB after the first upload.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Multiple selected files downloaded inside a generically named ZIP. The email-confirmation banner remained visible; file upload and download still worked. Storage began at 2 GB, then increased to 3 GB after the first upload.",
+    "friction": {
+     "export_route": "Select all three files > Downloaden > Archief downloaden > Downloaden.",
+     "format": "ZIP, 59744 bytes; extracted CSV 434 bytes and PNGs 29314 and 29584 bytes match kit SHA-256 values.",
+     "reimport": "No reupload or internal-record-ID update tested. Downloaded file bytes prove content preservation, not restoration of sharing, history or native metadata.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitations, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID update roundtrip and long-term access."
+    ],
+    "came_along": [
+     "Both PNG files byte-identical",
+     "CSV file byte-identical"
+    ],
+    "lost": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Landbot",
    "product_id": "landbot",
    "run_date": "2026-10-31",
@@ -3367,6 +3456,114 @@
   },
   {
    "source": "session",
+   "product_name": "Recruit CRM",
+   "product_id": "recruit-crm",
+   "run_date": "2026-11-02",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 2 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up contacts from a CSV file, then exported them again to CSV. We did not open the checkout.",
+   "findings": [
+    "The dashboard showed '30 days left', matching the 30-day trial in the help centre, and the workspace already held sample contacts and candidates.",
+    "The importer started every column on 'Don't Import This Column' and had the header row switched off by default, so each field has to be mapped by hand. We found no custom fields in the mapping list.",
+    "The import warned that 'all the special characters in FirstName and LastName will be removed', yet both exported first names kept their accents.",
+    "The export kept the two contacts with their IDs, but left out the note text we entered: 'Last Note Added' is only a timestamp. The Contact Name column added a trailing space to each name.",
+    "Getting the export took four clicks: select the contacts, More, Export, then pick the fields and Export to CSV."
+   ],
+   "not_tested": [
+    "Checkout, tax and the paid plans",
+    "Re-importing the export and how duplicates are matched",
+    "Roles, API access and downgrading",
+    "Inviting teammates and contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "30-day trial",
+     "claim_source": "https://help.recruitcrm.io/en/articles/10265727-faq-handbook-2",
+     "claim_read_on": "2026-10-25",
+     "observed": "Dashboard showed 30 days left; import and CSV export worked during this short trial session.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/recruit-crm-review.html#claim-vs-measured"
+     },
+     "plan": "30-day trial",
+     "comparability": "The duration claim uses the reported dashboard countdown and completed two-contact route, not full registration timing.",
+     "status": "confirmed",
+     "buying_consequence": "Trial contact import/export was usable for this scope; other roles and add-ons remain untested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Please note that all the special characters in 'FirstName' and 'LastName' will be removed.",
+     "claim_source": "https://app.recruitcrm.io/",
+     "claim_read_on": "2026-11-02",
+     "observed": "The exported Contact First Name values retained ë and è in both synthetic contacts despite this import warning.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/recruit-crm-review.html#claim-vs-measured"
+     },
+     "plan": "30-day trial",
+     "comparability": "The exact import warning is compared with the original downloaded first-name cells; no general guarantee for other characters or routes.",
+     "status": "contradicted",
+     "buying_consequence": "Unicode survived the tested import route; the broad removal warning did not describe this observed result.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "30-day trial",
+     "claim_source": "https://help.recruitcrm.io/en/articles/10265727-faq-handbook-2",
+     "claim_read_on": "2026-10-25",
+     "observed": "Checkout not opened; no checkout price, tax, final total or cost-rule comparison observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/recruit-crm-review.html#claim-vs-measured"
+     },
+     "plan": "30-day trial",
+     "comparability": "Recruit CRM: checkout and a matching cost-rule basis are absent; prepared trial wording provides no price comparison.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "Two synthetic contacts were imported and exported on the trial. The observed importer offered standard fields only. The export preserved Unicode names but omitted the entered note text.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "Every mapping began unset. The import warning predicted special-character removal, but exported first names retained Unicode. Contact Name added a trailing space to each name. The Last Note Added timestamp did not carry the note text.",
+    "friction": {
+     "export_route": "Contacts > select two > More > Export > Fields to Export > Export to CSV.",
+     "format": "UTF-8 CSV, two test rows, 1893 original bytes; owner/actor and address cells withheld in a separate inspection derivative.",
+     "reimport": "No herimport in the short session. A duplicate-merge choice existed, but its matching key and update behavior were not inspected.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitations, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID update roundtrip and long-term access."
+    ],
+    "came_along": [
+     "Two exported contacts, IDs 2 and 3",
+     "Unicode in both first names"
+    ],
+    "lost": [
+     "Contact Note text absent"
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "RoverLead",
    "product_id": "roverlead",
    "run_date": "2026-10-23",
@@ -3390,6 +3587,94 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Riibase CRM",
+   "product_id": "riibase-crm",
+   "run_date": "2026-11-02",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 2 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two made-up contacts with custom fields, tried to export them, and re-imported an edited file to update one contact. We did not open the checkout.",
+   "findings": [
+    "The banner read '10 days left in your free trial (ends Nov 12, 2026)', matching the pricing page, and the toolbar showed 500 AI credits.",
+    "The trial allows 50 records, and two demo contacts already counted towards that. The dashboard said Total Contacts 0 while the contact list showed the two demos.",
+    "Import let us match on email and create our extra columns as new text fields on the spot. Tags arrived as a single text field.",
+    "The export task said Completed, but its Download link returned '404 Page Not Found' twice, so we never got the file.",
+    "Re-importing an edited file with On Duplicate set to Update changed the second contact after about 45 seconds and created no duplicates."
+   ],
+   "not_tested": [
+    "Checkout, tax and the paid plans",
+    "A working export file",
+    "Roles, API access and downgrading",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "10-day free trial.",
+     "claim_source": "https://www.riibase.com/pricing",
+     "claim_read_on": "2026-10-29",
+     "observed": "Banner showed 10 days left in your free trial (ends Nov 12, 2026).",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/riibase-crm-review.html#claim-vs-measured"
+     },
+     "plan": "10-day trial",
+     "comparability": "Prepared duration agrees with the observed trial banner; full registration and post-expiry behavior remain outside scope.",
+     "status": "confirmed",
+     "buying_consequence": "A ten-day trial banner was present during the observed import/update session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "10-day free trial.",
+     "claim_source": "https://www.riibase.com/pricing",
+     "claim_read_on": "2026-10-29",
+     "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/riibase-crm-review.html#claim-vs-measured"
+     },
+     "plan": "10-day trial",
+     "comparability": "Riibase CRM: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "Two contacts and custom text fields were imported. Export showed Completed but its download returned 404 twice, leaving no file. A separate email-key reimport updated the second contact without duplicates.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Completed did not mean a downloadable export: two download attempts returned 404. Import and email-match update worked, but do not prove a native-ID export/update roundtrip. Tags became one text field; amounts lost a trailing zero in the UI without changing numeric value.",
+    "friction": {
+     "export_route": "My Exports > Create Export > Contacts > CSV > Completed > Download > 404, twice.",
+     "format": "No product export received. The two supplied CSV files are import working copies, not exports.",
+     "reimport": "Email-key Update succeeded using a working copy. Native-ID reimport from a genuine export remains not_tested because no export file was received.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitation, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID export/update roundtrip."
+    ],
+    "available_fields": [],
+    "not_offered": [
+     "No export file received"
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -3682,6 +3967,111 @@
   },
   {
    "source": "session",
+   "product_name": "VideoScribe",
+   "product_id": "videoscribe",
+   "run_date": "2026-11-02",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 2 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We built a two-scene storyboard with our own test text and downloaded it as one MP4. We did not open Purchase now.",
+   "findings": [
+    "The trial banner read 'Free Trial - 6 days 23h 58m 54s remaining', which matches the 7-day trial on the pricing page, and said to purchase to remove VideoScribe watermarks.",
+    "Before downloading, the dialog said 'You have 3 of your 3 downloads remaining': the trial counts downloads. One MP4 in HD 1080p downloaded without problems.",
+    "Hand-drawing defaults to 2 seconds per element; our two scenes ran 2.5 seconds each. A long line of text ran past the edge of the frame instead of wrapping.",
+    "The editor shows its limits plainly: 25 scenes, 150 image elements, 50 audio tracks and 300 MB of audio per project.",
+    "The share dialog warns that anyone with the preview link can watch without signing in, and GIF exports stop after the first 15 seconds."
+   ],
+   "not_tested": [
+    "Checkout, tax and the paid plans",
+    "Whether the watermark appears in the downloaded file (we did not inspect the frames)",
+    "Importing media in bulk",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "7 day free trial",
+     "claim_source": "https://www.videoscribe.co/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Trial banner showed 6 days 23h 58m 54s remaining.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/videoscribe-review.html#claim-vs-measured"
+     },
+     "plan": "Free Trial",
+     "comparability": "Trial duration is compared with the current countdown; account creation timing is approximate.",
+     "status": "confirmed",
+     "buying_consequence": "Export before the observed trial expires; long-term project access was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have 3 of your 3 downloads remaining.",
+     "claim_source": "https://app.videoscribe.co/",
+     "claim_read_on": "2026-11-02",
+     "observed": "The MP4/GIF dialog displayed this counter before one MP4 download; the counter after download was not recorded.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/videoscribe-review.html#claim-vs-measured"
+     },
+     "plan": "Free Trial",
+     "comparability": "The allowance finding uses the pre-download dialog only and does not infer remaining quota after export.",
+     "status": "confirmed",
+     "buying_consequence": "The observed trial has a displayed download allowance; no post-download decrement was verified.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "7 day free trial",
+     "claim_source": "https://www.videoscribe.co/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Checkout not opened; no checkout price, tax, final total or cost-rule comparison observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/videoscribe-review.html#claim-vs-measured"
+     },
+     "plan": "Free Trial",
+     "comparability": "VideoScribe: checkout and a matching cost-rule basis are absent; prepared trial wording provides no price comparison.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "A two-scene storyboard was exported as one MP4 derivative during the free trial. This was a manual storyboard test using content-media as a checklist, not the kit fixture import.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Long text stayed on one line beyond the frame. Trial output carries a watermark according to the banner; the downloaded frames were not inspected to verify it.",
+    "friction": {
+     "export_route": "Download > Share your video > Download as video or GIF > MP4.",
+     "format": "MP4, 381189 bytes; download hash verified. Preparing dialog says HD 1080p. No ffprobe or frame-by-frame content verification.",
+     "reimport": "MP4 is a derivative, not an editable project backup. No editable source format observed; reimport remains not_tested because the inspected route does not prove all product capabilities.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitations, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID update roundtrip and long-term access."
+    ],
+    "available_fields": [
+     "One MP4 derivative downloaded"
+    ],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Imagify",
    "product_id": "imagify",
    "run_date": "2026-10-21",
@@ -3746,6 +4136,109 @@
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Superlines",
+   "product_id": "superlines",
+   "run_date": "2026-11-02",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 2 November 2026 on the free account: Daan created the account and our AI assistant ran the test in Daan's browser. We went through onboarding up to the plan choice and read the plan cards. We did not start a plan or open the checkout, so no monitoring results were collected.",
+   "findings": [
+    "Onboarding read our website and filled in the brand, market (United States, English), description, audience and four competitors by itself.",
+    "Three of ten AI engines were selectable on the included allowance, and the prompt slider defaulted to its maximum of 50.",
+    "After 'Organization Created Successfully!' the app asked us to subscribe to a plan to start the 7-day free trial. We stopped there, so we could not check the 'no credit card required' claim.",
+    "The plan cards in the app showed Starter at EUR 79 a month (EUR 828 a year, 50 prompts) and Pro at EUR 199 a month (EUR 2,101 a year, 150 prompts).",
+    "CSV and JSON export were listed with the Pro plan."
+   ],
+   "not_tested": [
+    "Starting the trial and whether a card is needed",
+    "Monitoring results from the AI engines",
+    "Exporting data",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "7-day free trial.",
+     "claim_source": "https://www.superlines.io/alternatives/ahrefs-brand-radar",
+     "claim_read_on": "2026-10-29",
+     "observed": "Plan-selection modal offered a seven-day trial after subscribing to a plan; no trial started.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/superlines-review.html#claim-vs-measured"
+     },
+     "plan": "No subscription started",
+     "comparability": "The prepared seven-day duration is compared only with modal wording, without a running countdown or started subscription.",
+     "status": "not_testable",
+     "buying_consequence": "Choose a plan before attempting trial access; the trial itself was not exercised.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required.",
+     "claim_source": "https://www.superlines.io/alternatives/ahrefs-brand-radar",
+     "claim_read_on": "2026-10-29",
+     "observed": "The modal requested a plan subscription, but checkout was not opened and no card field was seen.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/superlines-review.html#claim-vs-measured"
+     },
+     "plan": "No subscription started",
+     "comparability": "A subscription prompt does not establish a payment-card requirement; the checkout route remains uninspected.",
+     "status": "not_testable",
+     "buying_consequence": "The no-card promise cannot be confirmed or contradicted from plan selection alone.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "7-day free trial.",
+     "claim_source": "https://www.superlines.io/alternatives/ahrefs-brand-radar",
+     "claim_read_on": "2026-10-29",
+     "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/superlines-review.html#claim-vs-measured"
+     },
+     "plan": "No subscription started",
+     "comparability": "Superlines: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "Brand and competitor auto-detection and three generated prompts were observed during onboarding. No plan was started and no monitoring result or kit export was tested.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The dashboard requested a plan subscription to begin the seven-day trial. The supplier's no-card claim remains untested because checkout was not opened. The initial analysis was not awaited.",
+    "friction": {
+     "export_route": "No export performed; Pro card lists Data export (CSV & JSON).",
+     "format": "No downloaded export file.",
+     "reimport": "No export, kit import or reimport performed; no capability absence inferred.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitation, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID export/update roundtrip."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -6020,6 +6513,99 @@
      "Notes, tasks and documents: none of them is among the fields you can select for the export"
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "BillingNow",
+   "product_id": "billingnow",
+   "run_date": "2026-11-02",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 2 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We created one made-up client and a draft invoice, exported invoices to CSV and downloaded the PDF. Nothing was sent and no payment was connected.",
+   "findings": [
+    "We saw no trial banner or countdown anywhere, although the homepage promises a 3-day free trial; General settings simply showed 'Premium Plan'.",
+    "A Dutch organisation in euros came with no tax rates set up. After we added 21% by hand, the draft for EUR 10.00 showed the tax as EUR 2.1.",
+    "The invoice CSV is a one-row summary: client, dates, total and balance (written as 12.1 rather than 12.10). It has no line items, description, tax or net amount.",
+    "A line-item description accepted a second line, but only the first line was visible in the invoice row.",
+    "The Developers page offers API keys 'for the CLI and your integrations' straight away; adding a user asks only for a name and email, with no choice of role."
+   ],
+   "not_tested": [
+    "What happens when the 3-day trial ends",
+    "Sending an invoice and taking a payment",
+    "Importing invoices",
+    "Contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "3-day free trial",
+     "claim_source": "https://billingnow.com/",
+     "claim_read_on": "2026-10-29",
+     "observed": "No trial banner or countdown was seen; General settings displayed Premium Plan.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+     },
+     "plan": "Premium Plan (UI label; trial status unverified)",
+     "comparability": "The prepared three-day trial wording has no observed trial timer or verified start/end state for this account.",
+     "status": "not_testable",
+     "buying_consequence": "Confirm account billing status separately; Premium Plan alone does not prove a paid subscription or trial duration.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "3-day free trial",
+     "claim_source": "https://billingnow.com/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+     },
+     "plan": "Premium Plan (UI label; trial status unverified)",
+     "comparability": "BillingNow: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "One of two kit records was entered as a draft invoice and exported to CSV and PDF. CSV is an invoice summary; PDF content remains unverified.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "The NL/EUR organization had no predefined tax rates. The manually added 21% rate displayed EUR 2.1; CSV writes 12.1 rather than 12.10. The summary omits line items, description, tax and net. No trial banner was seen despite the Premium Plan label.",
+    "friction": {
+     "export_route": "Invoices > Export > Export as CSV; row menu > Download PDF.",
+     "format": "UTF-8 CSV, 166 bytes; PDF, 16598 bytes. PDF content not checked; original hashes verified. CSV 12.1 is numerically equal to 12.10, with formatting loss only.",
+     "reimport": "Import button observed but not used. No reimport or complete two-record kit test.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitation, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID export/update roundtrip.",
+     "PDF contents and second kit record."
+    ],
+    "came_along": [
+     "One draft invoice summary",
+     "Unicode in exported client text"
+    ],
+    "lost": [
+     "Line items absent from CSV",
+     "Tax and net absent from CSV"
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -11223,6 +11809,114 @@
     "available_fields": [],
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Uniqode",
+   "product_id": "uniqode",
+   "run_date": "2026-11-02",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 2 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We created two dynamic website QR codes, exported the list to CSV, downloaded a QR image and read the analytics page. We did not open the checkout.",
+   "findings": [
+    "The sidebar counted the 14-day trial down ('Your QR Codes will expire in 13d : 23hr : 58m') and warned that the codes expire when the trial ends: something to plan for before you print anything.",
+    "The analytics page showed 1,800 total scans and 1,296 unique scanners on a brand-new account, under the banner 'You're exploring a preview of your future insights'. These are sample figures; our CSV export showed 0 real scans for both codes.",
+    "The note field took one line; the second line of our note was lost while typing, and the saved note did not appear in the CSV export.",
+    "'Add to Watchlist' was switched on by default for each new code, with a promise of a daily scan notification.",
+    "The CSV export kept both QR IDs, destinations and names, including the Unicode characters in our second title. Bulk Upload carried a paid-plan crown, so we did not test bringing the file back in."
+   ],
+   "not_tested": [
+    "Checkout, tax and the price after the trial",
+    "Real scans of the codes",
+    "Bulk Upload and re-importing the CSV",
+    "Inviting collaborators and contacting support"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "14-day free trial",
+     "claim_source": "https://www.uniqode.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "The sidebar displayed Your QR Codes will expire in 13d : 23hr : 58m.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/uniqode-review.html#claim-vs-measured"
+     },
+     "plan": "14-day trial",
+     "comparability": "The prepared duration claim is compared with the sidebar countdown; future scan availability is not a measured outcome.",
+     "status": "confirmed",
+     "buying_consequence": "The UI warns that dynamic codes expire after the trial; post-expiry behavior was not exercised.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You're exploring a preview of your future insights",
+     "claim_source": "https://dashboard.uniqode.com/",
+     "claim_read_on": "2026-11-02",
+     "observed": "The actual analytics page displayed sample Total Scans 1,800 and Unique Scanners 1,296; exported real Scans were 0 for both rows.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/uniqode-review.html#claim-vs-measured"
+     },
+     "plan": "14-day trial",
+     "comparability": "Sample analytics are compared with the explicit banner and downloaded zero-scan rows; no real scan test is inferred.",
+     "status": "confirmed",
+     "buying_consequence": "Read the preview banner before treating dashboard figures as real traffic.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14-day free trial",
+     "claim_source": "https://www.uniqode.com/pricing",
+     "claim_read_on": "2026-10-25",
+     "observed": "Checkout not opened; no checkout price, tax, final total or cost-rule comparison observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/uniqode-review.html#claim-vs-measured"
+     },
+     "plan": "14-day trial",
+     "comparability": "Uniqode: checkout and a matching cost-rule basis are absent; prepared trial wording provides no price comparison.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "Two dynamic QR codes were created and exported as list metadata; a PNG was downloaded separately. The live analytics page displayed clearly bannered sample figures while both exported scan counts were zero.",
+    "first_import": null,
+    "file_inspected": true,
+    "reimport_tested": false,
+    "awkward": "The analytics page showed 1,800 sample scans with the banner You're exploring a preview of your future insights. The note field accepted one line; the second line was lost during input. Add to Watchlist was on by default. The sidebar explicitly warned that codes expire after the trial.",
+    "friction": {
+     "export_route": "QR Codes > select two > menu > Export; PNG downloaded in creation flow.",
+     "format": "UTF-8 CSV metadata and separate PNG. Owner addresses withheld only in the inspection derivative; original hash pinned.",
+     "reimport": "Bulk Upload showed a paid crown. No import, update preview or native-ID roundtrip tested; do not infer that every import route is unavailable.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitations, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID update roundtrip and long-term access."
+    ],
+    "came_along": [
+     "Two QR rows and destination IDs",
+     "Unicode in the second QR title"
+    ],
+    "lost": [
+     "Note text absent from CSV"
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },

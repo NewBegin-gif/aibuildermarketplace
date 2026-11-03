@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 600 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-02.
+All 602 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-03.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2195,7 +2195,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The friendly $7-9 headline is the entry rate at the smallest list size (500 contacts), and the ladder above it does not fall smoothly: paid annually, 8,000 contacts costs $51 a month while 10,000 costs $70.
 - **Best for:** small businesses and marketers who want affordable email marketing and automation with a low entry price, a real free trial and a clean drag-and-drop builder
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/moosend-review/
+- **Full review:** https://marketingandsalessoftware.com/moosend-review.html
 
 ## Motive (gomotive.com)
 - **Verified pricing:** (2026-08-30 and 2026-10-04, read on their own pricing page) No prices are shown.
@@ -2216,7 +2216,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The meter is generation hours per YEAR, not per month — 24 hours sounds generous until you count retakes, because every text edit regenerates the whole sub-block and bills again.
 - **Best for:** creators, trainers and product teams that need studio-quality voiceovers in many languages without booking voice actors — explainers, courses, product videos
 - **Flags:** Usage-metered, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/murf-review/
+- **Full review:** https://officesoftwaremarketplace.com/murf-review.html
 
 ## MX AI (effectify.io)
 - **Verified pricing:** (read 2026-09-16 and re-read unchanged on 2026-10-03 on apps.shopify.com/custom-background-music) Two plans, and the free one is not for you.
@@ -2376,6 +2376,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** shopify stores that already own product video and want it working as an upsell at the product page, cart and post-purchase moments, or that want to test a handful of AI-generated clips cheaply before committing
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/optizen-review/
+
+## Orateur (orateur.ai)
+- **Verified pricing:** (read 2026-11-03 on orateur.ai/pricing, shown in Swiss francs on the French-language site; we did not see a price list in another currency) Orateur prices by plan, each with an allowance of…
+- **Honest take:** French-only site, Swiss franc pricing; annual totals not shown.
+- **Best for:** small businesses in Switzerland and French-speaking Europe, such as clinics, salons, fiduciaries and law offices, that miss calls and want an AI receptionist to answer, book appointments and take messages around the clock
+- **Full review:** https://aibuildermarketplace.com/b2b/orateur-review/
 
 ## Outgrow (outgrow.co)
 - **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30 on the vendor's own pricing page) Freelancer Limited $22/month or $14 annually for 5 content pieces, 5 content types and 250 leads a month; Free…
@@ -2581,6 +2587,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Two honest notes. Plesk has been raising prices steadily (the 2026 round averaged ~26%), so budget for the renewal trajectory, not today's invoice — it's a recurring theme in the ecosystem since the acquisition era.
 - **Best for:** agencies and hosters managing multiple sites on their own servers who want a mature control panel with per-domain management, security and one-click stacks
 - **Full review:** https://officesoftwaremarketplace.com/plesk-review.html
+
+## Ploy (ploy.ai)
+- **Verified pricing:** (read 2026-11-03 on ploy.ai/pricing) Ploy charges by plan and by credits.
+- **Honest take:** Credit use per build is not published; Pro jumps to $300/mo.
+- **Best for:** marketing teams and startups that want an AI-built marketing site plus SEO, visitor identification and outreach agents in one platform, and are willing to move their site onto it
+- **Flags:** Usage-metered, Annual commit, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/ploy-review/
 
 ## Poptin (poptin.com)
 - **Verified pricing:** (re-verified 10 October 2026 in a live browser on poptin.com/pricing, in both product modes; first read 18 September 2026, with the in-app billing page at app.popt.in checked alongside it) …

@@ -95,16 +95,470 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "failed_evidence_check",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "account",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "monthly": 29,
+     "annual_month": 24,
+     "evidence": "Starter costs $29 a month, or $24 a month billed yearly, with a 7-day free trial"
+    },
+    {
+     "id": "entrepreneur",
+     "name": "Entrepreneur",
+     "model": "flat",
+     "monthly": 119,
+     "annual_month": 99,
+     "evidence": "Entrepreneur costs $119 a month, or $99 a month billed yearly"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "monthly": 356,
+     "annual_month": 297,
+     "evidence": "Business costs $356 a month, or $297 a month billed yearly"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is custom, with SAML SSO, on-premise deployment and dedicated support"
+    }
+   ],
+   "notes": [
+    "Plans differ by usage (Entrepreneur 6 times and Business 30 times the usage of Starter), LinkedIn accounts and branded domains; our notes do not say how many users a plan includes, so the price is per account, not per seat.",
+    "Usage is unlimited under fair use with a rolling 5-hour window; sustained automated use far beyond normal business activity may be limited for the rest of the month."
+   ],
+   "not_computable": [
+    "Add-ons depend on use: an extra white-label instance $50 a month, an extra branded domain $5, a cold-email mailbox $5 each, an extra LinkedIn account $25 and an extra static IP $25."
+   ],
+   "rules_verified_at": "2026-11-03"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "parallel-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "account",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 24.0,
+       "entrepreneur": 99.0,
+       "business": 297.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons depend on use: an extra white-label instance $50 a month, an extra branded domain $5, a cold-email mailbox $5 each, an extra LinkedIn account $25 and an extra static IP $25."
+    ],
+    "measured": [
+     {
+      "claim": "\"50 free credits to start\" and \"No credit card required\"",
+      "claim_source": "https://parallellabs.app/pricing/",
+      "claim_read_on": "2026-10-21",
+      "observed": "The free plan 'Pay As You Go' ($0) showed 'Monthly credits 4 / 50' after onboarding; no card was asked for. The whole onboarding used 4 credits for 14 requests.",
+      "observed_on": "2026-10-21",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/parallel-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Pay As You Go ($0), 1 company, 1 seat, no mailbox connected",
+      "comparability": "Same quantity for the 50 credits and the card. The app labels the credits as monthly; we did not see a reset.",
+      "status": "confirmed",
+      "buying_consequence": "The free plan is enough to see what the onboarding builds (it cost 4 of 50 credits); the cost of later actions is not published, so measure your own work before choosing a paid tier.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-11-01",
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/parallel-ai-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "parallel-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "account",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 29.0,
+       "entrepreneur": 119.0,
+       "business": 356.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons depend on use: an extra white-label instance $50 a month, an extra branded domain $5, a cold-email mailbox $5 each, an extra LinkedIn account $25 and an extra static IP $25."
+    ],
+    "measured": [
+     {
+      "claim": "\"50 free credits to start\" and \"No credit card required\"",
+      "claim_source": "https://parallellabs.app/pricing/",
+      "claim_read_on": "2026-10-21",
+      "observed": "The free plan 'Pay As You Go' ($0) showed 'Monthly credits 4 / 50' after onboarding; no card was asked for. The whole onboarding used 4 credits for 14 requests.",
+      "observed_on": "2026-10-21",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/parallel-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Pay As You Go ($0), 1 company, 1 seat, no mailbox connected",
+      "comparability": "Same quantity for the 50 credits and the card. The app labels the credits as monthly; we did not see a reset.",
+      "status": "confirmed",
+      "buying_consequence": "The free plan is enough to see what the onboarding builds (it cost 4 of 50 credits); the cost of later actions is not published, so measure your own work before choosing a paid tier.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-11-01",
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/parallel-ai-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -329,9 +783,9 @@
    "status": "open"
   },
   {
-   "question_id": "parallel-ai:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "parallel-ai:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Add-ons depend on use: an extra white-label instance $50 a month, an extra branded domain $5, a cold-email mailbox $5 each, an extra LinkedIn account $25 and an extra static IP $25. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

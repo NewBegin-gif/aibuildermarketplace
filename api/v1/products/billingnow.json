@@ -246,7 +246,47 @@
     ],
     "switch_points": [],
     "conflicts": [],
-    "unknowns": []
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "3-day free trial",
+      "claim_source": "https://billingnow.com/",
+      "claim_read_on": "2026-10-29",
+      "observed": "No trial banner or countdown was seen; General settings displayed Premium Plan.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+      },
+      "plan": "Premium Plan (UI label; trial status unverified)",
+      "comparability": "The prepared three-day trial wording has no observed trial timer or verified start/end state for this account.",
+      "status": "not_testable",
+      "buying_consequence": "Confirm account billing status separately; Premium Plan alone does not prove a paid subscription or trial duration.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/billingnow-review.html"
+     },
+     {
+      "claim": "3-day free trial",
+      "claim_source": "https://billingnow.com/",
+      "claim_read_on": "2026-10-29",
+      "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+      },
+      "plan": "Premium Plan (UI label; trial status unverified)",
+      "comparability": "BillingNow: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+      "status": "not_testable",
+      "buying_consequence": "A purchase price cannot be confirmed from this session.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/billingnow-review.html"
+     }
+    ]
    },
    "monthly": {
     "product_id": "billingnow",
@@ -398,15 +438,54 @@
     ],
     "switch_points": [],
     "conflicts": [],
-    "unknowns": []
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "3-day free trial",
+      "claim_source": "https://billingnow.com/",
+      "claim_read_on": "2026-10-29",
+      "observed": "No trial banner or countdown was seen; General settings displayed Premium Plan.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+      },
+      "plan": "Premium Plan (UI label; trial status unverified)",
+      "comparability": "The prepared three-day trial wording has no observed trial timer or verified start/end state for this account.",
+      "status": "not_testable",
+      "buying_consequence": "Confirm account billing status separately; Premium Plan alone does not prove a paid subscription or trial duration.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/billingnow-review.html"
+     },
+     {
+      "claim": "3-day free trial",
+      "claim_source": "https://billingnow.com/",
+      "claim_read_on": "2026-10-29",
+      "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+      },
+      "plan": "Premium Plan (UI label; trial status unverified)",
+      "comparability": "BillingNow: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+      "status": "not_testable",
+      "buying_consequence": "A purchase price cannot be confirmed from this session.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/billingnow-review.html"
+     }
+    ]
    }
   }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-02; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -414,7 +493,250 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "api_access": {
+   "status": "available_on_tested_plan",
+   "plan": "Premium Plan (UI label; trial status unverified)",
+   "route": "Settings > Developers > API keys; Create a key visible, zero keys; no key created. Scope is UI availability, not a live API call.",
+   "quote": {
+    "text": "Programmatic access for the CLI and your integrations.",
+    "source_url": "https://app.billingnow.com/organization/settings",
+    "observed_at": "2026-11-02T10:54:00+01:00"
+   },
+   "evidence": [
+    "bewijs/05-1793613277288-nr3vky.jpg"
+   ]
+  },
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-02",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/billingnow-review.html",
+  "method": [
+   "Created a client and a draft invoice with one line",
+   "Added a 21% tax rate",
+   "Exported invoices to CSV and downloaded the invoice PDF"
+  ],
+  "claims": [
+   {
+    "claim": "3-day free trial",
+    "claim_source": "https://billingnow.com/",
+    "claim_read_on": "2026-10-29",
+    "observed": "No trial banner or countdown was seen; General settings displayed Premium Plan.",
+    "observed_on": "2026-11-02",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+    },
+    "plan": "Premium Plan (UI label; trial status unverified)",
+    "comparability": "The prepared three-day trial wording has no observed trial timer or verified start/end state for this account.",
+    "status": "not_testable",
+    "buying_consequence": "Confirm account billing status separately; Premium Plan alone does not prove a paid subscription or trial duration.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "3-day free trial",
+    "claim_source": "https://billingnow.com/",
+    "claim_read_on": "2026-10-29",
+    "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+    "observed_on": "2026-11-02",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+    },
+    "plan": "Premium Plan (UI label; trial status unverified)",
+    "comparability": "BillingNow: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+    "status": "not_testable",
+    "buying_consequence": "A purchase price cannot be confirmed from this session.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-02",
+   "what": "One of two kit records was entered as a draft invoice and exported to CSV and PDF. CSV is an invoice summary; PDF content remains unverified.",
+   "first_import": null,
+   "file_inspected": true,
+   "reimport_tested": false,
+   "awkward": "The NL/EUR organization had no predefined tax rates. The manually added 21% rate displayed EUR 2.1; CSV writes 12.1 rather than 12.10. The summary omits line items, description, tax and net. No trial banner was seen despite the Premium Plan label.",
+   "friction": {
+    "export_route": "Invoices > Export > Export as CSV; row menu > Download PDF.",
+    "format": "UTF-8 CSV, 166 bytes; PDF, 16598 bytes. PDF content not checked; original hashes verified. CSV 12.1 is numerically equal to 12.10, with formatting loss only.",
+    "reimport": "Import button observed but not used. No reimport or complete two-record kit test.",
+    "cancellation": "Cancellation and downgrade were not performed."
+   },
+   "not_tested": [
+    "Support, invitation, checkout, tax and final total.",
+    "Complete original signup, cancellation and deletion.",
+    "Native-ID export/update roundtrip.",
+    "PDF contents and second kit record."
+   ],
+   "came_along": [
+    "One draft invoice summary",
+    "Unicode in exported client text"
+   ],
+   "lost": [
+    "Line items absent from CSV",
+    "Tax and net absent from CSV"
+   ],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/billingnow-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://officesoftwaremarketplace.com/billingnow-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://officesoftwaremarketplace.com/billingnow-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": true,
+    "basis": "One of two kit records was entered as a draft invoice and exported to CSV and PDF. CSV is an invoice summary; PDF content remains unverified. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://officesoftwaremarketplace.com/billingnow-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "One of two kit records was entered as a draft invoice and exported to CSV and PDF. CSV is an invoice summary; PDF content remains unverified. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://officesoftwaremarketplace.com/billingnow-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://officesoftwaremarketplace.com/billingnow-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-02",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "BillingNow",
+    "product_id": "billingnow",
+    "run_date": "2026-11-02",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 2 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We created one made-up client and a draft invoice, exported invoices to CSV and downloaded the PDF. Nothing was sent and no payment was connected.",
+    "findings": [
+     "We saw no trial banner or countdown anywhere, although the homepage promises a 3-day free trial; General settings simply showed 'Premium Plan'.",
+     "A Dutch organisation in euros came with no tax rates set up. After we added 21% by hand, the draft for EUR 10.00 showed the tax as EUR 2.1.",
+     "The invoice CSV is a one-row summary: client, dates, total and balance (written as 12.1 rather than 12.10). It has no line items, description, tax or net amount.",
+     "A line-item description accepted a second line, but only the first line was visible in the invoice row.",
+     "The Developers page offers API keys 'for the CLI and your integrations' straight away; adding a user asks only for a name and email, with no choice of role."
+    ],
+    "not_tested": [
+     "What happens when the 3-day trial ends",
+     "Sending an invoice and taking a payment",
+     "Importing invoices",
+     "Contacting support"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "3-day free trial",
+      "claim_source": "https://billingnow.com/",
+      "claim_read_on": "2026-10-29",
+      "observed": "No trial banner or countdown was seen; General settings displayed Premium Plan.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+      },
+      "plan": "Premium Plan (UI label; trial status unverified)",
+      "comparability": "The prepared three-day trial wording has no observed trial timer or verified start/end state for this account.",
+      "status": "not_testable",
+      "buying_consequence": "Confirm account billing status separately; Premium Plan alone does not prove a paid subscription or trial duration.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "3-day free trial",
+      "claim_source": "https://billingnow.com/",
+      "claim_read_on": "2026-10-29",
+      "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/billingnow-review.html#claim-vs-measured"
+      },
+      "plan": "Premium Plan (UI label; trial status unverified)",
+      "comparability": "BillingNow: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+      "status": "not_testable",
+      "buying_consequence": "A purchase price cannot be confirmed from this session.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-02",
+     "what": "One of two kit records was entered as a draft invoice and exported to CSV and PDF. CSV is an invoice summary; PDF content remains unverified.",
+     "first_import": null,
+     "file_inspected": true,
+     "reimport_tested": false,
+     "awkward": "The NL/EUR organization had no predefined tax rates. The manually added 21% rate displayed EUR 2.1; CSV writes 12.1 rather than 12.10. The summary omits line items, description, tax and net. No trial banner was seen despite the Premium Plan label.",
+     "friction": {
+      "export_route": "Invoices > Export > Export as CSV; row menu > Download PDF.",
+      "format": "UTF-8 CSV, 166 bytes; PDF, 16598 bytes. PDF content not checked; original hashes verified. CSV 12.1 is numerically equal to 12.10, with formatting loss only.",
+      "reimport": "Import button observed but not used. No reimport or complete two-record kit test.",
+      "cancellation": "Cancellation and downgrade were not performed."
+     },
+     "not_tested": [
+      "Support, invitation, checkout, tax and final total.",
+      "Complete original signup, cancellation and deletion.",
+      "Native-ID export/update roundtrip.",
+      "PDF contents and second kit record."
+     ],
+     "came_along": [
+      "One draft invoice summary",
+      "Unicode in exported client text"
+     ],
+     "lost": [
+      "Line items absent from CSV",
+      "Tax and net absent from CSV"
+     ],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "billingnow:cancellation_terms",

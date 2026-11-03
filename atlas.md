@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 602 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-03.
+All 604 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-03.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2155,6 +2155,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/miro-review.html
 
+## MK Website Assistant (mksparkinteractive.com)
+- **Verified pricing:** (read 2026-11-03 on mksparkinteractive.com, in pounds sterling) MK Website Assistant is a done-for-you service from MK Spark Interactive, a small UK studio, not a self-serve app.
+- **Honest take:** Done-for-you service; "from" prices, set-up fee on top.
+- **Best for:** small UK service businesses such as dental and physio practices, vets, opticians and letting agents that want an AI assistant set up for them on their website to answer enquiries and capture leads after hours
+- **Full review:** https://aibuildermarketplace.com/b2b/mk-website-assistant-review/
+
 ## Mktg.ai (mktg.ai)
 - **Verified pricing:** No public pricing (re-verified 25 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'.
 - **Honest take:** No published price: the pricing page returns a 404, and the FAQ names the tiers but no figure.
@@ -2381,7 +2387,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-03 on orateur.ai/pricing, shown in Swiss francs on the French-language site; we did not see a price list in another currency) Orateur prices by plan, each with an allowance of…
 - **Honest take:** French-only site, Swiss franc pricing; annual totals not shown.
 - **Best for:** small businesses in Switzerland and French-speaking Europe, such as clinics, salons, fiduciaries and law offices, that miss calls and want an AI receptionist to answer, book appointments and take messages around the clock
-- **Full review:** https://aibuildermarketplace.com/b2b/orateur-review/
+- **Full review:** https://zerotouchsupport.com/orateur-review.html
 
 ## Outgrow (outgrow.co)
 - **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30 on the vendor's own pricing page) Freelancer Limited $22/month or $14 annually for 5 content pieces, 5 content types and 250 leads a month; Free…
@@ -2593,7 +2599,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Credit use per build is not published; Pro jumps to $300/mo.
 - **Best for:** marketing teams and startups that want an AI-built marketing site plus SEO, visitor identification and outreach agents in one platform, and are willing to move their site onto it
 - **Flags:** Usage-metered, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/ploy-review/
+- **Full review:** https://marketingandsalessoftware.com/ploy-review.html
 
 ## Poptin (poptin.com)
 - **Verified pricing:** (re-verified 10 October 2026 in a live browser on poptin.com/pricing, in both product modes; first read 18 September 2026, with the in-app billing page at app.popt.in checked alongside it) …
@@ -3827,6 +3833,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** trainers and L&D, HR and marketing teams that want hand-drawn whiteboard explainer videos without hiring an animator
 - **Flags:** Usage-metered
 - **Full review:** https://officesoftwaremarketplace.com/videoscribe-review.html
+
+## VideoUpload (videoupload.team)
+- **Verified pricing:** (read 2026-11-03 on videoupload.team/pricing) VideoUpload charges one flat price per workspace, with no per-seat fees: only the workspace owner pays, and editors, scriptwriters and designer…
+- **Honest take:** YouTube only; video files deleted 30 days after you stop paying.
+- **Best for:** YouTube creators and small production teams that juggle editors, scripts and review over spreadsheets and chat, and want one board from idea to scheduled upload
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/videoupload-review/
 
 ## VidPal (vidpal.ai)
 - **Verified pricing:** (price re-verified 2026-10-07 against the vendor's own pricing page and confirmed by VidPal in writing) (2026) Free: 4 lifetime credits, standard-quality exports, "Made with Vidpal.ai" wate…

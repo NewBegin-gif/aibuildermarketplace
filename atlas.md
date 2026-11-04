@@ -2917,7 +2917,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/riverside-review/
 
 ## RocketReach (rocketreach.co)
-- **Verified pricing:** (read 2026-09-01 on rocketreach.co/pricing, re-verified 2026-09-19 in a real browser with every amount unchanged) A free account exists: signing up takes no credit card and gives 5 lookups.
+- **Verified pricing:** (read 2026-09-01 on rocketreach.co/pricing, re-read 2026-11-04 in a real browser with every amount unchanged) A free account exists: signing up takes no credit card and gives 5 lookups.
 - **Honest take:** The published prices are annual rates, and the annual term is doing more work than the page lets on.
 - **Best for:** sales, recruiting and BD teams whose bottleneck is finding verified direct dials and personal emails, and who can commit to an annual term - that is where the search allowance stops being metered
 - **Full review:** https://aibuildermarketplace.com/b2b/rocketreach-review/

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 606 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-04.
+All 608 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-04.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1132,6 +1132,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** anyone who sends email from their own domain and has not yet got DMARC to enforcement — the reporting is the part that makes that safe rather than guesswork
 - **Flags:** Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/easydmarc-review/
+
+## EazyChat (eazychat.io)
+- **Verified pricing:** (read 2026-11-04 on eazychat.io/pricing.html, US dollars) EazyChat charges per user per month, and every plan includes AI, unlimited human chats and a 15-day free trial, with no long-term c…
+- **Honest take:** Priced per user; Launch has only 100 AI conversations a month.
+- **Best for:** small businesses that want an AI chat on their website and social channels that answers routine questions around the clock and hands over to a person with the full conversation
+- **Flags:** Per-seat pricing, Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/eazychat-review/
 
 ## eBillity (ebillity.com)
 - **Verified pricing:** (read 2026-10-15 on ebillity.com/pricing with USD selected, plus the FAQ and the terms of service updated 18 March 2026) eBillity sells four plans per user, and the pricing page says annual…
@@ -2566,7 +2573,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Prices changed between reads; usage limits given as multiples, not numbers.
 - **Best for:** small brands and solo marketers who want to create posts, images and short videos with AI and publish them to many networks from one plan, without paying per channel
 - **Flags:** Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/pixasocial-review/
+- **Full review:** https://marketingandsalessoftware.com/pixasocial-review.html
 
 ## Pixel Union (pixelunion.net)
 - **Verified pricing:** Read on 7 September 2026, re-read on 12 September 2026 and again, unchanged, on 27 September 2026.
@@ -3763,7 +3770,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Sale prices change per campaign; AI is a separate yearly subscription.
 - **Best for:** individuals and small teams who want a full PDF editor on Windows, Mac and mobile under one licence, and who like the option to pay once
 - **Flags:** Usage-metered, Renewal jump, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/updf-review/
+- **Full review:** https://officesoftwaremarketplace.com/updf-review.html
 
 ## Upsell & Cross Sell - AW (csell.io)
 - **Verified pricing:** (read 2026-10-11 on the Shopify App Store listing apps.shopify.com/cross-sell and on the developer's own pricing page csell.io/pricing, USD; the listing says all charges are billed in USD a…
@@ -3901,6 +3908,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams that want an all-in-one experience-optimisation platform (A/B testing + heatmaps + personalisation) with friendlier Bayesian stats and transparent pricing
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/vwo-review/
+
+## Vynaris (vynaris.com)
+- **Verified pricing:** (read 2026-11-04 on vynaris.com/pricing, US dollars) Vynaris is an API gateway, so what you pay is mostly the price of the models it calls for you.
+- **Honest take:** Early beta; routing fee comes on top of the model price.
+- **Best for:** developers running agents or apps on OpenAI- or Anthropic-compatible APIs who want requests routed to cheaper models where that is safe, with a receipt per request to check the savings
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/vynaris-review/
 
 ## VyReel (vy-reel.com)
 - **Verified pricing:** (read 2026-09-24 on apps.shopify.com/vyreel and on the vendor's own pricing section at vy-reel.com) The Shopify listing shows four tiers, the vendor site six.

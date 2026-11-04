@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 604 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-03.
+All 604 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-04.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1580,8 +1580,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Hablaki (hablaki.com)
 - **Verified pricing:** (read 2026-11-02 on hablaki.com/en, its FAQ and the refund policy at hablaki.com/en/refunds; the Spanish homepage, read 2026-10-21, gives the same 9,99 USD) Hablaki sells one thing: a lifet…
-- **Honest take:** Six languages; internet needed for setup and licence checks.
-- **Best for:** people who write a lot on a Mac or Windows PC in one of its six languages and want dictation into any app, processed on their own computer, without a subscription
+- **Honest take:** Six listed languages; internet needed for setup and licence checks.
+- **Best for:** people who write a lot on a Mac or Windows PC in one of its six listed languages and want dictation or file transcription in any app, processed on their own computer, without a subscription
 - **Full review:** https://aibuildermarketplace.com/b2b/hablaki-review/
 
 ## Harbor Compliance (harborcompliance.com)

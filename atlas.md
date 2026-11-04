@@ -1893,7 +1893,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/kite-review.html
 
 ## Kiwi Sizing (kiwisizing.com)
-- **Verified pricing:** (read 5 September 2026 and re-read 19 September 2026 on apps.shopify.com/kiwi-sizing, no amount changed) Four tiers, and the interesting line is not the price but the sentence under it.
+- **Verified pricing:** (read 5 September 2026 and re-read 19 September and 4 November 2026 on apps.shopify.com/kiwi-sizing, no amount changed) Four tiers, and the interesting line is not the price but the sentenc…
 - **Honest take:** The real limit of the free plan is the Kiwi watermark on your storefront; removing it is what the $7.99 buys, and Plus and Ultimate add order-volume charges the listing never quantifies.
 - **Best for:** apparel and accessory stores where sizing drives returns, and that want charts plus an AI fit recommender without building either
 - **Flags:** Usage-metered, Add-ons extra, Free tier
@@ -2114,7 +2114,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/marketing-360-review.html
 
 ## Meeri (meeritech.com)
-- **Verified pricing:** (read 2026-08-23 on apps.shopify.com/meeripush-push-notifications, listed as “Meeri Abandoned Cart Recovery”, and on meeritech.com; both re-read 2026-09-19 with no amount changed) Two plans…
+- **Verified pricing:** (read 2026-08-23 on apps.shopify.com/meeripush-push-notifications, listed as “Meeri Abandoned Cart Recovery”, and on meeritech.com; both re-read 2026-09-19 with no amount changed; the listi…
 - **Honest take:** Read on 19 September 2026, the vendor's homepage claims a 5.0 rating and 100% five-star reviews, while the App Store listing showed 4.7 from 11 reviews, one of them a single star.
 - **Best for:** small Shopify stores that want a cart-recovery channel which costs almost nothing and takes no commission on what it recovers
 - **Flags:** Usage-metered, Free tier
@@ -3436,7 +3436,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/supportbee-review.html
 
 ## Surfer (SurferSEO) (surferseo.com)
-- **Verified pricing:** (re-read 2026-09-19 on surferseo.com/pricing from the Netherlands; earlier reads 2026-08-25 from the Netherlands and 2026-08-26 over a US connection) Billed yearly: Discovery $49/mo, Standa…
+- **Verified pricing:** (re-read 2026-11-04 from the Netherlands: surferseo.com/pricing now redirects to surfer.ai/pricing; earlier reads 2026-08-25 and 2026-09-19 from the Netherlands and 2026-08-26 over a US con…
 - **Honest take:** Every tier quotes its monthly rate on annual billing, so the number you see is a year's commitment rather than a monthly one.
 - **Best for:** content marketers, SEO specialists and agencies that need on-page optimization against live SERP data and want to start tracking how often they are cited in AI answers
 - **Flags:** Annual commit
@@ -3949,7 +3949,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/wati-review.html
 
 ## Way (effectify.io)
-- **Verified pricing:** (re-verified 2026-09-19) Four tiers, and above the first one the ladder is a location counter rather than a feature list.
+- **Verified pricing:** (re-verified 2026-11-04) Four tiers, and above the first one the ladder is a location counter rather than a feature list.
 - **Honest take:** The pricing page reads like a feature ladder and behaves like a counter.
 - **Best for:** retailers and brands with physical stockists who want a Google Maps locator on their Shopify storefront without setting up a Maps API key or paying Google directly
 - **Flags:** Usage-metered, Annual commit

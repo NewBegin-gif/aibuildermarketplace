@@ -68,16 +68,433 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "annual_month": 20,
+     "monthly": 20,
+     "max_units": 5,
+     "evidence": "Starter is $20 a seat a month on either billing (400 credits a seat a month, up to 5 seats)"
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "per_unit",
+     "annual_month": 50,
+     "monthly": 60,
+     "max_units": 10,
+     "evidence": "Plus $50 a seat annually or $60 monthly (2,000 credits, up to 10 seats)"
+    },
+    {
+     "id": "max",
+     "name": "Max",
+     "model": "per_unit",
+     "annual_month": 100,
+     "monthly": 150,
+     "max_units": 20,
+     "evidence": "Max $100 a seat annually or $150 monthly (5,000 credits, up to 20 seats"
+    }
+   ],
+   "not_computable": [
+    "Credits are the meter: extra credit packs and the larger 10,000- and 15,000-credit Max sizes are not priced in our notes, so heavy generation can cost more than the seat total."
+   ],
+   "rules_verified_at": "2026-11-04"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "invideo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "plus": 50.0,
+       "max": 100.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 40.0,
+       "plus": 100.0,
+       "max": 200.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 720.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 60.0,
+       "plus": 150.0,
+       "max": 300.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 100.0,
+       "plus": 250.0,
+       "max": 500.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 6000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": 500.0,
+       "max": 1000.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "max",
+      "cheapest_plan_name": "Max",
+      "total_month": 1500.0,
+      "billed": {
+       "amount": 18000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": 1500.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "max",
+      "cheapest_plan_name": "Max",
+      "total_month": 2000.0,
+      "billed": {
+       "amount": 24000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": 2000.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "starter",
+      "to_plan": "plus",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "plus",
+      "to_plan": "max",
+      "from_plan_name": "Plus",
+      "to_plan_name": "Max"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "max",
+      "to_plan": null,
+      "from_plan_name": "Max",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credits are the meter: extra credit packs and the larger 10,000- and 15,000-credit Max sizes are not priced in our notes, so heavy generation can cost more than the seat total."
+    ]
+   },
+   "monthly": {
+    "product_id": "invideo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 20.0,
+       "plus": 60.0,
+       "max": 150.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 40.0,
+       "plus": 120.0,
+       "max": 300.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 60.0,
+       "plus": 180.0,
+       "max": 450.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 100.0,
+       "plus": 300.0,
+       "max": 750.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": 600.0,
+       "max": 1500.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "max",
+      "cheapest_plan_name": "Max",
+      "total_month": 2250.0,
+      "billed": {
+       "amount": 2250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": 2250.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "max",
+      "cheapest_plan_name": "Max",
+      "total_month": 3000.0,
+      "billed": {
+       "amount": 3000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": 3000.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "plus": "not_eligible",
+       "max": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "starter",
+      "to_plan": "plus",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "plus",
+      "to_plan": "max",
+      "from_plan_name": "Plus",
+      "to_plan_name": "Max"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "max",
+      "to_plan": null,
+      "from_plan_name": "Max",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credits are the meter: extra credit packs and the larger 10,000- and 15,000-credit Max sizes are not priced in our notes, so heavy generation can cost more than the seat total."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -107,9 +524,9 @@
    "status": "open"
   },
   {
-   "question_id": "invideo:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "invideo:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Credits are the meter: extra credit packs and the larger 10,000- and 15,000-credit Max sizes are not priced in our notes, so heavy generation can cost more than the seat total. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

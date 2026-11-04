@@ -102,15 +102,393 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "workforce-analytics",
+     "name": "Workforce Analytics",
+     "model": "per_unit",
+     "annual_month": 8,
+     "monthly_status": "unknown",
+     "evidence": "Workforce Analytics $8/seat/mo"
+    },
+    {
+     "id": "workflow-optimization",
+     "name": "Workflow Optimization",
+     "model": "per_unit",
+     "annual_month": 12,
+     "monthly_status": "unknown",
+     "evidence": "Workflow Optimization $12/seat/mo"
+    },
+    {
+     "id": "bundle",
+     "name": "Workforce Analytics + Workflow Optimization",
+     "model": "per_unit",
+     "annual_month": 16,
+     "monthly_status": "unknown",
+     "evidence": "or both bundled at $16/seat/mo"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise custom"
+    }
+   ],
+   "not_computable": [
+    "Add-ons per seat (Workspace Security, screen recording, screenshots) and the data-warehouse bundle are extra; month-to-month billing exists on select plans without a published rate; admin, manager and client users are not billed unless tracked."
+   ],
+   "rules_verified_at": "2026-11-04"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "insightful",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 8.0,
+       "workflow-optimization": 12.0,
+       "bundle": 16.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 192.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 16.0,
+       "workflow-optimization": 24.0,
+       "bundle": 32.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 24.0,
+       "workflow-optimization": 36.0,
+       "bundle": 48.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 40.0,
+       "workflow-optimization": 60.0,
+       "bundle": 80.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 960.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 80.0,
+       "workflow-optimization": 120.0,
+       "bundle": 160.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 1440.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 120.0,
+       "workflow-optimization": 180.0,
+       "bundle": 240.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 160.0,
+      "billed": {
+       "amount": 1920.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 160.0,
+       "workflow-optimization": 240.0,
+       "bundle": 320.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 2400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 200.0,
+       "workflow-optimization": 300.0,
+       "bundle": 400.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 4800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 400.0,
+       "workflow-optimization": 600.0,
+       "bundle": 800.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "workforce-analytics",
+      "cheapest_plan_name": "Workforce Analytics",
+      "total_month": 800.0,
+      "billed": {
+       "amount": 9600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": 800.0,
+       "workflow-optimization": 1200.0,
+       "bundle": 1600.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons per seat (Workspace Security, screen recording, screenshots) and the data-warehouse bundle are extra; month-to-month billing exists on select plans without a published rate; admin, manager and client users are not billed unless tracked."
+    ]
+   },
+   "monthly": {
+    "product_id": "insightful",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "workforce-analytics": "price_unknown_on_billing",
+       "workflow-optimization": "price_unknown_on_billing",
+       "bundle": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons per seat (Workspace Security, screen recording, screenshots) and the data-warehouse bundle are extra; month-to-month billing exists on select plans without a published rate; admin, manager and client users are not billed unless tracked."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -140,9 +518,15 @@
    "status": "open"
   },
   {
-   "question_id": "insightful:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "insightful:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "insightful:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Add-ons per seat (Workspace Security, screen recording, screenshots) and the data-warehouse bundle are extra; month-to-month billing exists on select plans without a published rate; admin, manager and client users are not billed unless tracked. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

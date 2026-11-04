@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 608 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-04.
+All 609 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-04.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1138,7 +1138,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Priced per user; Launch has only 100 AI conversations a month.
 - **Best for:** small businesses that want an AI chat on their website and social channels that answers routine questions around the clock and hands over to a person with the full conversation
 - **Flags:** Per-seat pricing, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/eazychat-review/
+- **Full review:** https://zerotouchsupport.com/eazychat-review.html
 
 ## eBillity (ebillity.com)
 - **Verified pricing:** (read 2026-10-15 on ebillity.com/pricing with USD selected, plus the FAQ and the terms of service updated 18 March 2026) eBillity sells four plans per user, and the pricing page says annual…
@@ -3016,6 +3016,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** stores seeing real fraud or bot traffic that want country, IP, VPN and email-risk rules plus automatic holds on suspicious orders, and who will review the block log rather than set and forget
 - **Flags:** Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/securify-review/
+
+## SeedProd (seedprod.com)
+- **Verified pricing:** (read 2026-11-04 on seedprod.com/pricing, US dollars) SeedProd is a WordPress plugin sold as a yearly licence, and the prices on the pricing page are introductory: the page says all renewal…
+- **Honest take:** Introductory prices; renewals at full price, about double.
+- **Best for:** WordPress site owners and small businesses who want to build landing pages, coming-soon pages or a full theme with drag and drop instead of code
+- **Full review:** https://aibuildermarketplace.com/b2b/seedprod-review/
 
 ## Seel (seel.com)
 - **Verified pricing:** Three plans on seel.com/pricing, re-read 7 September and again 19 September 2026 (on that second reading the plan cards no longer print a monthly figure at all — all three say “Contact us” …

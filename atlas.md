@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 604 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-04.
+All 606 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-04.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2332,7 +2332,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It does one job — turning out-of-stock moments into recovered sales via back-in-stock and pre-order alerts — and its value is entirely tied to how often you actually sell out.
 - **Best for:** Shopify stores that regularly sell out of popular products and want to recover that lost demand with back-in-stock notifications, pre-orders and wishlists
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/notify-me-review/
+- **Full review:** https://marketingandsalessoftware.com/notify-me-review.html
 
 ## Nouswise (nouswise.com)
 - **Verified pricing:** (2026-08-12, read on their own pricing page; re-verified 2026-08-26 and again 2026-09-05) Four tiers, billed monthly: Starter at 0$/month, Essential at 19.99$/month and Pro at 49.99$/month,…
@@ -2561,6 +2561,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/pippit-review/
 
+## Pixasocial (pixasocial.com)
+- **Verified pricing:** (read 2026-11-04 on app.pixasocial.com/pricing; prices shown in euros for Germany, tax added at checkout) Pixasocial sells one suite in four sizes.
+- **Honest take:** Prices changed between reads; usage limits given as multiples, not numbers.
+- **Best for:** small brands and solo marketers who want to create posts, images and short videos with AI and publish them to many networks from one plan, without paying per channel
+- **Flags:** Add-ons extra, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/pixasocial-review/
+
 ## Pixel Union (pixelunion.net)
 - **Verified pricing:** Read on 7 September 2026, re-read on 12 September 2026 and again, unchanged, on 27 September 2026.
 - **Honest take:** A $360 theme on a store with weak product pages or slow images still converts weakly, and heavily customized premium themes take more work to keep updated.
@@ -2669,7 +2676,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Pricing is opaque and jumps steeply from Startup to Pro, with seat minimums that push the real cost above the headline per-member rate — you'll need a sales call to price it.
 - **Best for:** operations-driven teams that run recurring, checklist-based processes and want them tracked and auditable
 - **Flags:** Hidden pricing, Per-seat pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/process-street-review/
+- **Full review:** https://officesoftwaremarketplace.com/process-street-review.html
 
 ## ProtectMyOrder (protectmyorder.com)
 - **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05) The App Store route has closed.
@@ -3110,7 +3117,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 24 September 2026, unchanged since 5 September) £2.75 per active employee per month for the first 30, then £1.50 for each employee above 30 — the reduced rate is marginal…
 - **Honest take:** It's focused, affordable rota software — which means it does scheduling, clock-ins, leave and swaps well, but it isn't a full HR or payroll platform.
 - **Best for:** shift-based businesses (hospitality, retail, leisure) that want quick rota building, clock-ins and leave management without spreadsheet pain
-- **Full review:** https://aibuildermarketplace.com/b2b/shiftie-review/
+- **Full review:** https://officesoftwaremarketplace.com/shiftie-review.html
 
 ## Shipdock (happyapps.cz)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/packeta) Three tiers, no free plan, every amount unchanged since 22 August 2026, and the entry tier still names its own limitation.
@@ -3124,7 +3131,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The free tier stops at 30 labels a month at 5¢ a label on your own carrier accounts, and Pro bills $0.08 for every label past 10,000 shipments.
 - **Best for:** e-commerce sellers shipping across multiple carriers who want rate comparison, label printing and tracking in one place with genuine rate discounts
 - **Flags:** Usage-metered, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/shippo-review/
+- **Full review:** https://officesoftwaremarketplace.com/shippo-review.html
 
 ## Shoeboxed (shoeboxed.com)
 - **Verified pricing:** (price re-verified 2026-10-11 against the vendor's own pricing page; prices unchanged since 31 Aug 2026, allowances and overage rates changed) Four plans, each quoted both yearly and monthl…
@@ -3206,7 +3213,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The credit model plus US carrier (10DLC) fees and per-number/per-seat add-ons mean the sticker isn't the whole bill — and SMS marketing only works with genuine opt-in and a real offer, not blasting a cold list.
 - **Best for:** US businesses that want straightforward, compliant SMS marketing and two-way texting with rollover credits
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/simpletexting-review/
+- **Full review:** https://zerotouchsupport.com/simpletexting-review.html
 
 ## SimplyBook.me (simplybook.me)
 - **Verified pricing:** (re-verified 2026-10-16 and again 2026-10-20 on simplybook.me/en/pricing, EUR, priceCurrency 'EUR' in the page's own markup) Free plan, EUR 0 a month: 50 bookings a month, 1 custom feature,…
@@ -3441,7 +3448,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The conversational-survey UX is the draw, but response limits on lower tiers and the 'contact sales' wall on advanced features (API, higher volume) make budgeting fiddly — and there's no true monthly billing.
 - **Best for:** teams that want engaging, conversational surveys and NPS with a polished respondent experience
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/surveysparrow-review/
+- **Full review:** https://marketingandsalessoftware.com/surveysparrow-review.html
 
 ## Survicate (survicate.com)
 - **Verified pricing:** (read 2026-09-08 and re-read unchanged 2026-09-26 in the plan data embedded in survicate.com/pricing; from an EU exit the cards show EUR 99 for Growth at 250 responses, EUR 299 for Pro and …
@@ -3750,6 +3757,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** manufacturers and wholesalers who have outgrown spreadsheets and need real-time stock across multiple warehouses, with batch and serial tracking, landed costs and purchase-to-sale visibility in one system
 - **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/unleashed-software-review/
+
+## UPDF (updf.com)
+- **Verified pricing:** (read 2026-11-04 on updf.com/pricing-individuals, US dollars) On 4 November the pricing page ran a Black Friday sale, so these are sale prices with the list price struck through.
+- **Honest take:** Sale prices change per campaign; AI is a separate yearly subscription.
+- **Best for:** individuals and small teams who want a full PDF editor on Windows, Mac and mobile under one licence, and who like the option to pay once
+- **Flags:** Usage-metered, Renewal jump, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/updf-review/
 
 ## Upsell & Cross Sell - AW (csell.io)
 - **Verified pricing:** (read 2026-10-11 on the Shopify App Store listing apps.shopify.com/cross-sell and on the developer's own pricing page csell.io/pricing, USD; the listing says all charges are billed in USD a…

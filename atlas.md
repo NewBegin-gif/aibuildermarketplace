@@ -3720,10 +3720,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/trainual-review/
 
 ## Tresorit (tresorit.com)
-- **Verified pricing:** (business plans re-verified 2026-10-16 on tresorit.com/pricing/business in a browser, both billing toggles, all amounts unchanged since 14 August 2026; personal plans last read 2026-08-14) …
+- **Verified pricing:** (re-verified 2026-11-05 on tresorit.com/pricing/business, /personal, /tresorit-engage and /file-sharing in a browser, both billing toggles; Tresorit announced a price increase to partners o…
 - **Honest take:** You pay the Swiss-E2EE premium — noticeably above mainstream clouds and above Proton Drive per GB — and the encryption trade-offs are inherent.
 - **Best for:** businesses and professionals with confidentiality obligations (legal, health, finance) that need end-to-end-encrypted storage, granular sharing controls and compliance features
-- **Flags:** Per-seat pricing
+- **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/tresorit-review.html
 
 ## TrueReview (truereview.co)

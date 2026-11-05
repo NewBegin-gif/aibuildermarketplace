@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 611 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-05.
+All 613 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-05.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -948,6 +948,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/databox-review.html
 
+## DataHawk (datahawk.co)
+- **Verified pricing:** (read 2026-11-05 on datahawk.co/pricing) DataHawk does not publish a price.
+- **Honest take:** No public price; annual terms with two months' notice.
+- **Best for:** Amazon and Walmart brands and agencies that want sales, advertising, search and inventory data in one analytics platform with daily alerts
+- **Flags:** Hidden pricing, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/datahawk-review/
+
 ## Datarails (datarails.com)
 - **Verified pricing:** (read 2026-08-25 on www.datarails.com/pricing) There is no public price.
 - **Honest take:** You cannot find out what it costs without talking to sales, and the entry plan is smaller than it looks: Professional covers 2 users and 1 integration.
@@ -1188,6 +1195,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators, developers and product teams that want the most realistic AI voices available — voiceovers, audiobooks, dubbing, conversational agents and a well-documented API
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/elevenlabs-review/
+
+## Elite Site Optimizer (elitesiteoptimizer.com)
+- **Verified pricing:** (monthly prices read 2026-11-05 on elitesiteoptimizer.com/pricing; annual totals read 15 October 2026) Elite Site Optimizer sells monthly or annual plans with limits on domains, users, camp…
+- **Honest take:** Refund page contradicts the 30-day guarantee.
+- **Best for:** small businesses, freelancers and agencies that want rank tracking, site crawling and competitor reports in one SEO tool with a no-card trial
+- **Flags:** Usage-metered, Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/elite-site-optimizer-review/
 
 ## EliteCart (elitecart.app)
 - **Verified pricing:** (read 2026-10-15 on the Shopify App Store listing apps.shopify.com/elite-cart-upsell and elitecart.app/pricing, prices in USD) Two published plans and one on request, with no free plan.
@@ -4079,7 +4093,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Intro prices renew at double; free version adds 3% payment fee.
 - **Best for:** WordPress site owners and small agencies that want a drag-and-drop form builder with templates, integrations and, on higher plans, payment forms
 - **Flags:** Renewal jump, Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/wpforms-review/
+- **Full review:** https://officesoftwaremarketplace.com/wpforms-review.html
 
 ## WPLP (wplegalpages.com)
 - **Verified pricing:** (read 2026-10-12 in a live browser on wplegalpages.com/pricing, every option in the site selector chosen, and on the two plugin pages at wordpress.org/plugins/wplegalpages and wordpress.org…

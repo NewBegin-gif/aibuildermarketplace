@@ -66,16 +66,441 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "discount order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 50,
+     "evidence": "The Free plan is free to install and covers the first 50 discount orders each month"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "monthly": 29,
+     "annual_year": 299,
+     "evidence": "Starter is $29 a month, or $299 a year at a stated 14% saving, and adds unlimited discount orders"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "monthly": 49,
+     "annual_year": 499,
+     "evidence": "Growth is $49 a month, or $499 a year at 15%"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "monthly": 99,
+     "annual_year": 999,
+     "evidence": "Pro is $99 a month, or $999 a year at 16%"
+    }
+   ],
+   "notes": [
+    "The axis counts orders that use a Kite discount, not all store orders; the Free plan covers the first 50 of those a month and the listing says $29 a month is billed only if you go over 50.",
+    "Free and Starter both say 'Not for Shopify Advanced and Plus', so a store on those Shopify plans should budget from Growth.",
+    "Billed in USD every 30 days; the three paid tiers carry a 7-day free trial."
+   ],
+   "rules_verified_at": "2026-11-05"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "kite",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "discount order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.92,
+      "billed": {
+       "amount": 299.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.92,
+      "billed": {
+       "amount": 299.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.92,
+      "billed": {
+       "amount": 299.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.92,
+      "billed": {
+       "amount": 299.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.92,
+      "billed": {
+       "amount": 299.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.92,
+      "billed": {
+       "amount": 299.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.92,
+      "billed": {
+       "amount": 299.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 24.92,
+      "billed": {
+       "amount": 299.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 24.92,
+       "growth": 41.58,
+       "pro": 83.25
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "kite",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "discount order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 29.0,
+      "billed": {
+       "amount": 29.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": 29.0,
+       "growth": 49.0,
+       "pro": 99.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "free",
+      "to_plan": "starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Starter"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -102,12 +527,6 @@
    "question_id": "kite:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "kite:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

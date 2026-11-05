@@ -90,16 +90,261 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free publishes up to three size charts with 22 templates and unlimited CSV import, and puts a Kiwi watermark on your storefront"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "per_unit",
+     "monthly": 7.99,
+     "annual_status": "unknown",
+     "evidence": "Premium is $7.99 a month for up to ten charts, removes the watermark"
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "per_unit",
+     "monthly": 14.99,
+     "annual_status": "unknown",
+     "evidence": "is $14.99 for up to twenty charts, ten size recommenders and six languages"
+    },
+    {
+     "id": "ultimate",
+     "name": "Ultimate",
+     "model": "per_unit",
+     "monthly": 26.99,
+     "annual_status": "unknown",
+     "evidence": "Ultimate is $26.99 for unlimited charts and recommenders and 22 languages"
+    }
+   ],
+   "notes": [
+    "Tiers are capped by the number of size charts (Free 3, Premium 10, Plus 20, Ultimate unlimited), not by users.",
+    "Premium states no additional monthly charges; recurring and usage-based charges are billed in USD every 30 days."
+   ],
+   "not_computable": [
+    "Plus and Ultimate carry additional charges based on order volume, and the listing does not say what those charges are, so their price is a floor.",
+    "Import credits are an optional add-on on every paid tier, without a price in our notes."
+   ],
+   "rules_verified_at": "2026-11-05"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "kiwi-sizing",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Plus and Ultimate carry additional charges based on order volume, and the listing does not say what those charges are, so their price is a floor.",
+     "Import credits are an optional add-on on every paid tier, without a price in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "kiwi-sizing",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": 7.99,
+       "plus": 14.99,
+       "ultimate": 26.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": 15.98,
+       "plus": 29.98,
+       "ultimate": 53.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": 23.97,
+       "plus": 44.97,
+       "ultimate": 80.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": 39.95,
+       "plus": 74.95,
+       "ultimate": 134.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "premium": 79.9,
+       "plus": 149.9,
+       "ultimate": 269.9
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Plus and Ultimate carry additional charges based on order volume, and the listing does not say what those charges are, so their price is a floor.",
+     "Import credits are an optional add-on on every paid tier, without a price in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -129,9 +374,15 @@
    "status": "open"
   },
   {
-   "question_id": "kiwi-sizing:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "kiwi-sizing:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Plus and Ultimate carry additional charges based on order volume, and the listing does not say what those charges are, so their price is a floor. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "kiwi-sizing:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Import credits are an optional add-on on every paid tier, without a price in our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

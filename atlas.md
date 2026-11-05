@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 609 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-04.
+All 610 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-05.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -100,6 +100,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** educators, trainers and event hosts running interactive sessions — polls, quizzes, word clouds and live Q&A — with audiences up to 50 free
 - **Flags:** Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/ahaslides-review/
+
+## AI for Database (aifordatabase.com)
+- **Verified pricing:** (read 2026-11-05 on aifordatabase.com/pricing) AI for Database sells per user, and every payment turns into that user's own AI credits.
+- **Honest take:** AI usage runs on credits; no confirmed free AI allowance.
+- **Best for:** small teams without a data analyst who want to ask their own database questions in plain English and turn the answers into dashboards and scheduled alerts
+- **Flags:** Per-seat pricing, Usage-metered, Annual commit, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/ai-for-database-review/
 
 ## Aira (aira.app)
 - **Verified pricing:** (re-verified 2026-10-15 on aira.app/pricing; first read in this form 2026-10-10) Aira now sells one product on its pricing page: Aira Connect at €499 a month, billed annually (€5,988 a year…
@@ -2388,7 +2395,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** AI video is the reason to install this, and it is the one thing the subscription does not cover.
 - **Best for:** shopify stores that already own product video and want it working as an upsell at the product page, cart and post-purchase moments, or that want to test a handful of AI-generated clips cheaply before committing
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/optizen-review/
+- **Full review:** https://marketingandsalessoftware.com/optizen-review.html
 
 ## Orateur (orateur.ai)
 - **Verified pricing:** (read 2026-11-03 on orateur.ai/pricing, shown in Swiss francs on the French-language site; we did not see a price list in another currency) Orateur prices by plan, each with an allowance of…
@@ -2518,7 +2525,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The pricing page argues instead of quoting.
 - **Best for:** data and marketing teams that want churn, LTV or demand predictions running against their own warehouse without hiring data scientists, and can work with an annual commitment quoted on a call
 - **Flags:** Hidden pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/pecan-ai-review/
+- **Full review:** https://marketingandsalessoftware.com/pecan-ai-review.html
 
 ## Petty Cash Manager (pettycash.getdailytools.com)
 - **Verified pricing:** (read 2026-11-02 on pettycash.getdailytools.com, pricing section and FAQ; the page says prices are in US dollars, with VAT or GST added at checkout where your country requires it) Petty Cas…
@@ -3170,7 +3177,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-09-26, read on shore.com/en/pricing and its 'All features compared' page, in euros, excluding VAT, for businesses only) Five packages on two product lines, each with a yearly-billing …
 - **Honest take:** It's built for local appointment businesses in the German-speaking market, and the package split shows it: booking and the till are sold as separate lines, and only All-in-One carries both.
 - **Best for:** salons, barbers, spas, wellness studios, physical therapists, craftspeople and local retailers that want bookings via Google and Instagram, no-show-reducing reminders, marketing and (optionally) POS in one fixed-price system
-- **Full review:** https://aibuildermarketplace.com/b2b/shore-review/
+- **Full review:** https://officesoftwaremarketplace.com/shore-review.html
 
 ## ShortlistIQ (shortlistiq.com)
 - **Verified pricing:** (read 2026-10-16 in a browser on shortlistiq.com/pricing; the cards show a $ sign without naming the currency, and clicking Pay annually did not change the amounts) Three paid plans, each l…
@@ -3259,7 +3266,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's a broad, do-everything work-management platform, so the power comes with a learning curve and a per-seat cost that adds up for bigger teams.
 - **Best for:** teams consolidating projects, CRM and operations into one flexible, database-driven work-management platform
 - **Flags:** Per-seat pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/smartsuite-review/
+- **Full review:** https://officesoftwaremarketplace.com/smartsuite-review.html
 
 ## Smarty Discounts (neezon.com)
 - **Verified pricing:** (read 2026-09-04 on apps.shopify.com/smarty-discount) Three tiers, all billed in USD and recurring every 30 days.
@@ -4065,7 +4072,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-02 on their own pricing page, which had not moved since our September readings: the same three licences at the same rates, the same 50/100/500 site-count selector on Mu…
 - **Honest take:** It's a subscription, not a lifetime license — you keep your settings if you stop paying but lose updates and support, and a technically-minded user can get most of the way there with a free caching plugin.
 - **Best for:** WordPress owners who want near-instant page-speed gains out of the box without touching cache config
-- **Full review:** https://aibuildermarketplace.com/b2b/wp-rocket-review/
+- **Full review:** https://officesoftwaremarketplace.com/wp-rocket-review.html
 
 ## WPLP (wplegalpages.com)
 - **Verified pricing:** (read 2026-10-12 in a live browser on wplegalpages.com/pricing, every option in the site selector chosen, and on the two plugin pages at wordpress.org/plugins/wplegalpages and wordpress.org…

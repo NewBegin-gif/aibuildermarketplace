@@ -87,15 +87,438 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "contact",
+   "axis": "contacts",
+   "plans": [
+    {
+     "id": "essentials",
+     "name": "Essentials",
+     "model": "flat",
+     "max_units": 500,
+     "monthly": 59,
+     "annual_month": 52,
+     "evidence": "Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Professional $549 / $429"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 2500,
+     "monthly": 119,
+     "annual_month": 99,
+     "evidence": "Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Professional $549 / $429"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "max_units": 12500,
+     "monthly": 229,
+     "annual_month": 189,
+     "evidence": "Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Professional $549 / $429"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "max_units": 25000,
+     "monthly": 549,
+     "annual_month": 429,
+     "evidence": "Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Professional $549 / $429"
+    }
+   ],
+   "not_computable": [
+    "Essentials charges a 5% transaction fee on your sales; the tiers above it charge 0%. That fee depends on your sales volume.",
+    "Kartra upgrades you automatically when you pass a contact cap and charges a mid-cycle reconciliation fee whose amount is not stated.",
+    "Above 25,000 contacts no price is in our notes."
+   ],
+   "notes": [
+    "Contact caps per tier: 500, 2,500, 12,500 and 25,000. Essentials sends 10,000 emails and texts a month; the tiers above it are unlimited."
+   ],
+   "rules_verified_at": "2026-11-05"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "kartra",
+    "currency": "USD",
+    "axis": "contacts",
+    "unit": "contact",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 52.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 52.0,
+       "starter": 99.0,
+       "growth": 189.0,
+       "professional": 429.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Essentials charges a 5% transaction fee on your sales; the tiers above it charge 0%. That fee depends on your sales volume.",
+     "Kartra upgrades you automatically when you pass a contact cap and charges a mid-cycle reconciliation fee whose amount is not stated.",
+     "Above 25,000 contacts no price is in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "kartra",
+    "currency": "USD",
+    "axis": "contacts",
+    "unit": "contact",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 59.0,
+       "starter": 119.0,
+       "growth": 229.0,
+       "professional": 549.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Essentials charges a 5% transaction fee on your sales; the tiers above it charge 0%. That fee depends on your sales volume.",
+     "Kartra upgrades you automatically when you pass a contact cap and charges a mid-cycle reconciliation fee whose amount is not stated.",
+     "Above 25,000 contacts no price is in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -125,9 +548,21 @@
    "status": "open"
   },
   {
-   "question_id": "kartra:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "kartra:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Essentials charges a 5% transaction fee on your sales; the tiers above it charge 0%. That fee depends on your sales volume. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "kartra:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Kartra upgrades you automatically when you pass a contact cap and charges a mid-cycle reconciliation fee whose amount is not stated. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "kartra:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Above 25,000 contacts no price is in our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

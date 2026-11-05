@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 610 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-05.
+All 611 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-05.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -4073,6 +4073,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's a subscription, not a lifetime license — you keep your settings if you stop paying but lose updates and support, and a technically-minded user can get most of the way there with a free caching plugin.
 - **Best for:** WordPress owners who want near-instant page-speed gains out of the box without touching cache config
 - **Full review:** https://officesoftwaremarketplace.com/wp-rocket-review.html
+
+## WPForms (wpforms.com)
+- **Verified pricing:** (read 2026-11-05 on wpforms.com/pricing) WPForms sells yearly licences for WordPress, by the number of sites.
+- **Honest take:** Intro prices renew at double; free version adds 3% payment fee.
+- **Best for:** WordPress site owners and small agencies that want a drag-and-drop form builder with templates, integrations and, on higher plans, payment forms
+- **Flags:** Renewal jump, Add-ons extra, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/wpforms-review/
 
 ## WPLP (wplegalpages.com)
 - **Verified pricing:** (read 2026-10-12 in a live browser on wplegalpages.com/pricing, every option in the site selector chosen, and on the two plugin pages at wordpress.org/plugins/wplegalpages and wordpress.org…

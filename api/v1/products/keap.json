@@ -86,16 +86,327 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "keap",
+     "name": "Keap (whole platform)",
+     "model": "flat",
+     "included_units": 2,
+     "monthly": 299,
+     "annual_status": "unknown",
+     "extra_unit": {
+      "monthly": 39,
+      "annual_status": "unknown"
+     },
+     "evidence": "That $299 is what the calculator quotes for its own minimum: 2 users and 1,500 contacts. Raising only the contact count on the same calculator gives $335 at 2,500, $449 at 5,000, $539 at 10,000 and $719 at 25,000, and users beyond the first two are $39 a month each."
+    }
+   ],
+   "notes": [
+    "The base assumes 1,500 contacts; on the same calculator the price rises with contacts to $335 at 2,500, $449 at 5,000, $539 at 10,000 and $719 at 25,000 (with 2 users).",
+    "Cancelling an annual contract before its term ends carries a $299 early termination fee, and cancellation must be started by phone at least ten days before the next invoice date."
+   ],
+   "not_computable": [
+    "Paid implementation services (strategy consulting, data import and migration) are quoted separately before go-live.",
+    "Text marketing above the bundled Tier 1 and message/voice overages depend on usage.",
+    "Combined user and contact pricing above 1,500 contacts is not published, so contacts and users are not added together here."
+   ],
+   "rules_verified_at": "2026-11-05"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "keap",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "keap": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Paid implementation services (strategy consulting, data import and migration) are quoted separately before go-live.",
+     "Text marketing above the bundled Tier 1 and message/voice overages depend on usage.",
+     "Combined user and contact pricing above 1,500 contacts is not published, so contacts and users are not added together here."
+    ]
+   },
+   "monthly": {
+    "product_id": "keap",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 299.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 299.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 299.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 299.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 338.0,
+      "billed": {
+       "amount": 338.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 338.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 416.0,
+      "billed": {
+       "amount": 416.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 416.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 611.0,
+      "billed": {
+       "amount": 611.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 611.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 806.0,
+      "billed": {
+       "amount": 806.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 806.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 1001.0,
+      "billed": {
+       "amount": 1001.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 1001.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 1196.0,
+      "billed": {
+       "amount": 1196.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 1196.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 2171.0,
+      "billed": {
+       "amount": 2171.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 2171.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "keap",
+      "cheapest_plan_name": "Keap (whole platform)",
+      "total_month": 4121.0,
+      "billed": {
+       "amount": 4121.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "keap": 4121.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Paid implementation services (strategy consulting, data import and migration) are quoted separately before go-live.",
+     "Text marketing above the bundled Tier 1 and message/voice overages depend on usage.",
+     "Combined user and contact pricing above 1,500 contacts is not published, so contacts and users are not added together here."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -125,9 +436,21 @@
    "status": "open"
   },
   {
-   "question_id": "keap:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "keap:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Paid implementation services (strategy consulting, data import and migration) are quoted separately before go-live. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "keap:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Text marketing above the bundled Tier 1 and message/voice overages depend on usage. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "keap:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Combined user and contact pricing above 1,500 contacts is not published, so contacts and users are not added together here. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

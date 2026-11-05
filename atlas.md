@@ -953,7 +953,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** No public price; annual terms with two months' notice.
 - **Best for:** Amazon and Walmart brands and agencies that want sales, advertising, search and inventory data in one analytics platform with daily alerts
 - **Flags:** Hidden pricing, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/datahawk-review/
+- **Full review:** https://marketingandsalessoftware.com/datahawk-review.html
 
 ## Datarails (datarails.com)
 - **Verified pricing:** (read 2026-08-25 on www.datarails.com/pricing) There is no public price.
@@ -1201,7 +1201,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Refund page contradicts the 30-day guarantee.
 - **Best for:** small businesses, freelancers and agencies that want rank tracking, site crawling and competitor reports in one SEO tool with a no-card trial
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/elite-site-optimizer-review/
+- **Full review:** https://marketingandsalessoftware.com/elite-site-optimizer-review.html
 
 ## EliteCart (elitecart.app)
 - **Verified pricing:** (read 2026-10-15 on the Shopify App Store listing apps.shopify.com/elite-cart-upsell and elitecart.app/pricing, prices in USD) Two published plans and one on request, with no free plan.

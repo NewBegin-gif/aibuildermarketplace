@@ -5,7 +5,7 @@
  "research_status": "researched",
  "vendor_domain": "aifordatabase.com",
  "category": "Developer Tools",
- "task": null,
+ "task": "AI development, agents & data",
  "summary": "Natural-language access to your own databases: ask questions in plain English, get answers with charts, saved SQL, dashboards, scheduled workflows and alerts, with PostgreSQL, MySQL, MongoDB, SQL Server and Google Sheets connections.",
  "best_for": "small teams without a data analyst who want to ask their own database questions in plain English and turn the answers into dashboards and scheduled alerts",
  "skip_if": "you need a fixed monthly price with no usage credits, require SSO on a standard plan, or want a free AI allowance you can rely on",
@@ -88,16 +88,402 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 10,
+     "annual_year": 96,
+     "evidence": "Pro costs $10 per user per month and adds $10 of credits per payment; Team costs $30 per user per month and adds $30 of credits per payment, plus per-user usage tracking, assigned connections, audit logs and shared dashboards and workflows. Annual billing is 20% less than twelve monthly payments: $96 per user for Pro and $288 per user for Team"
+    },
+    {
+     "id": "team",
+     "name": "Team",
+     "model": "per_unit",
+     "monthly": 30,
+     "annual_year": 288,
+     "evidence": "Pro costs $10 per user per month and adds $10 of credits per payment; Team costs $30 per user per month and adds $30 of credits per payment, plus per-user usage tracking, assigned connections, audit logs and shared dashboards and workflows. Annual billing is 20% less than twelve monthly payments: $96 per user for Pro and $288 per user for Team"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is custom priced"
+    }
+   ],
+   "not_computable": [
+    "Each payment becomes that user's AI credits; usage pauses when the balance runs out and top-ups of $10, $25, $50 or $100 are extra. The pricing page does not say how many questions a dollar of credit buys.",
+    "Self-hosting is sold separately and its price is not published."
+   ],
+   "notes": [
+    "Prices and credits exclude applicable taxes, per the pricing page. SSO/SAML is not included in Pro or Team."
+   ],
+   "rules_verified_at": "2026-11-05"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "ai-for-database",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 8.0,
+       "team": 24.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 16.0,
+      "billed": {
+       "amount": 192.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 16.0,
+       "team": 48.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 288.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 24.0,
+       "team": 72.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 40.0,
+       "team": 120.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 960.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 80.0,
+       "team": 240.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 1440.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 120.0,
+       "team": 360.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 160.0,
+      "billed": {
+       "amount": 1920.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 160.0,
+       "team": 480.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 2400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 200.0,
+       "team": 600.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 4800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 400.0,
+       "team": 1200.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 800.0,
+      "billed": {
+       "amount": 9600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 800.0,
+       "team": 2400.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Each payment becomes that user's AI credits; usage pauses when the balance runs out and top-ups of $10, $25, $50 or $100 are extra. The pricing page does not say how many questions a dollar of credit buys.",
+     "Self-hosting is sold separately and its price is not published."
+    ]
+   },
+   "monthly": {
+    "product_id": "ai-for-database",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 10.0,
+       "team": 30.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 20.0,
+       "team": 60.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 30.0,
+       "team": 90.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 50.0,
+       "team": 150.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 100.0,
+       "team": 300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 150.0,
+       "team": 450.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 200.0,
+       "team": 600.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 250.0,
+       "team": 750.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 500.0,
+       "team": 1500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1000.0,
+       "team": 3000.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Each payment becomes that user's AI credits; usage pauses when the balance runs out and top-ups of $10, $25, $50 or $100 are extra. The pricing page does not say how many questions a dollar of credit buys.",
+     "Self-hosting is sold separately and its price is not published."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -127,9 +513,15 @@
    "status": "open"
   },
   {
-   "question_id": "ai-for-database:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "ai-for-database:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Each payment becomes that user's AI credits; usage pauses when the balance runs out and top-ups of $10, $25, $50 or $100 are extra. The pricing page does not say how many questions a dollar of credit buys. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "ai-for-database:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Self-hosting is sold separately and its price is not published. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

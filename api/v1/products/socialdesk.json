@@ -80,16 +80,357 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "included_units": 1,
+     "max_units": 1,
+     "monthly": 19,
+     "annual_status": "unknown",
+     "evidence": "Starter costs $19 a month for 5 social accounts, 1 workspace, 1 user"
+    },
+    {
+     "id": "team",
+     "name": "Team",
+     "model": "flat",
+     "monthly": 39,
+     "annual_status": "unknown",
+     "evidence": "Team costs $39 a month and adds 20 social accounts, unlimited team members and workspaces"
+    }
+   ],
+   "notes": [
+    "Every plan starts with a 7-day free trial that, per the page, needs no credit card; prices are shown with a dollar sign without naming a currency, and tax is not mentioned."
+   ],
+   "not_computable": [
+    "Pro ($59 a month, 50 accounts) and Max ($99 a month, 100 accounts) are sized by social accounts; the notes do not state their team-member limits, so they are left out of the per-user calculation.",
+    "A Yearly toggle says '2 months free', but the yearly amounts were not read."
+   ],
+   "rules_verified_at": "2026-11-06"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "socialdesk",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Pro ($59 a month, 50 accounts) and Max ($99 a month, 100 accounts) are sized by social accounts; the notes do not state their team-member limits, so they are left out of the per-user calculation.",
+     "A Yearly toggle says '2 months free', but the yearly amounts were not read."
+    ]
+   },
+   "monthly": {
+    "product_id": "socialdesk",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.0,
+       "team": 39.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "team": 39.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "team",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Team"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Pro ($59 a month, 50 accounts) and Max ($99 a month, 100 accounts) are sized by social accounts; the notes do not state their team-member limits, so they are left out of the per-user calculation.",
+     "A Yearly toggle says '2 months free', but the yearly amounts were not read."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -119,9 +460,15 @@
    "status": "open"
   },
   {
-   "question_id": "socialdesk:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "socialdesk:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Pro ($59 a month, 50 accounts) and Max ($99 a month, 100 accounts) are sized by social accounts; the notes do not state their team-member limits, so they are left out of the per-user calculation. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "socialdesk:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: A Yearly toggle says '2 months free', but the yearly amounts were not read. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

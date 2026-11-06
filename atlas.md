@@ -2816,7 +2816,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Priced in CHF; only a 3-day trial.
 - **Best for:** site owners and small agencies that want AI-written SEO articles, rank tracking and AI-search visibility reports in one subscription with auto-publishing
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/rankbolt-review/
+- **Full review:** https://marketingandsalessoftware.com/rankbolt-review.html
 
 ## Rapid Search (rapidsearch.app)
 - **Verified pricing:** (read 2026-09-26, re-read 2026-10-21 without changes, on apps.shopify.com/rapid-search and on the vendor's own pricing page at rapidsearch.app/pricing) Every plan carries every feature; the…
@@ -3327,7 +3327,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-06 on socialdesk.ai) SocialDesk sells four monthly plans and every one starts with a 7-day free trial that, per the page, needs no credit card.
 - **Honest take:** Yearly prices not published; no currency named.
 - **Best for:** solo creators, small brands and agencies that want scheduling, a shared DMs and comments inbox and AI auto-replies across six platforms for under $100 a month
-- **Full review:** https://aibuildermarketplace.com/b2b/socialdesk-review/
+- **Full review:** https://marketingandsalessoftware.com/socialdesk-review.html
 
 ## Softr (softr.io)
 - **Verified pricing:** (re-verified 2026-09-07 and again 2026-10-01) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credits a month.

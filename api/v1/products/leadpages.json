@@ -75,16 +75,412 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "optimize",
+     "name": "Optimize",
+     "model": "flat",
+     "included_units": 3,
+     "monthly": 199,
+     "annual_month": 159,
+     "extra_unit": {
+      "price_month": 20,
+      "billing": "unspecified"
+     },
+     "evidence": "Optimize $199/mo or $159 annually ($1,908), 6 sites, 3 seats, up to four variants, Smart Traffic, heatmaps and auto-personalisation; Scale $399/mo or $319 annually ($3,828), 10 sites, 10 seats, auto-optimisation, cross-page learning, role-based access and audit logs. Enterprise is priced by sales. Annual billing is 20% off. No plan has a traffic cap. Add-ons: $20 a month per extra seat"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "flat",
+     "included_units": 10,
+     "monthly": 399,
+     "annual_month": 319,
+     "extra_unit": {
+      "price_month": 20,
+      "billing": "unspecified"
+     },
+     "evidence": "Optimize $199/mo or $159 annually ($1,908), 6 sites, 3 seats, up to four variants, Smart Traffic, heatmaps and auto-personalisation; Scale $399/mo or $319 annually ($3,828), 10 sites, 10 seats, auto-optimisation, cross-page learning, role-based access and audit logs. Enterprise is priced by sales. Annual billing is 20% off. No plan has a traffic cap. Add-ons: $20 a month per extra seat"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is priced by sales"
+    }
+   ],
+   "notes": [
+    "Add-ons: $20 a month per extra seat or extra custom domain. A 7-day free trial requires a credit card and converts unless you cancel."
+   ],
+   "not_computable": [
+    "Pro ($29/mo or $23 annually), Business ($49/mo or $39 annually) and Grow ($99/mo or $79 annually) have no seat count in the notes, so they are left out of the per-user calculation.",
+    "From a European connection the page showed euro prices that differ for Grow and Optimize; this rule uses the USD figures."
+   ],
+   "rules_verified_at": "2026-11-06"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "leadpages",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 159.0,
+       "scale": 319.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 159.0,
+       "scale": 319.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 159.0,
+      "billed": {
+       "amount": 1908.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 159.0,
+       "scale": 319.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 2388.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 199.0,
+       "scale": 319.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 3588.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 299.0,
+       "scale": 319.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 4788.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 399.0,
+       "scale": 419.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 5988.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 499.0,
+       "scale": 519.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 599.0,
+      "billed": {
+       "amount": 7188.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 599.0,
+       "scale": 619.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 1099.0,
+      "billed": {
+       "amount": 13188.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 1099.0,
+       "scale": 1119.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 2099.0,
+      "billed": {
+       "amount": 25188.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 2099.0,
+       "scale": 2119.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Pro ($29/mo or $23 annually), Business ($49/mo or $39 annually) and Grow ($99/mo or $79 annually) have no seat count in the notes, so they are left out of the per-user calculation.",
+     "From a European connection the page showed euro prices that differ for Grow and Optimize; this rule uses the USD figures."
+    ]
+   },
+   "monthly": {
+    "product_id": "leadpages",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 199.0,
+       "scale": 399.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 199.0,
+       "scale": 399.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 199.0,
+       "scale": 399.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 239.0,
+      "billed": {
+       "amount": 239.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 239.0,
+       "scale": 399.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 339.0,
+      "billed": {
+       "amount": 339.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 339.0,
+       "scale": 399.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 439.0,
+      "billed": {
+       "amount": 439.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 439.0,
+       "scale": 499.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 539.0,
+      "billed": {
+       "amount": 539.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 539.0,
+       "scale": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 639.0,
+      "billed": {
+       "amount": 639.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 639.0,
+       "scale": 699.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 1139.0,
+      "billed": {
+       "amount": 1139.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 1139.0,
+       "scale": 1199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "optimize",
+      "cheapest_plan_name": "Optimize",
+      "total_month": 2139.0,
+      "billed": {
+       "amount": 2139.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "optimize": 2139.0,
+       "scale": 2199.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Pro ($29/mo or $23 annually), Business ($49/mo or $39 annually) and Grow ($99/mo or $79 annually) have no seat count in the notes, so they are left out of the per-user calculation.",
+     "From a European connection the page showed euro prices that differ for Grow and Optimize; this rule uses the USD figures."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -114,9 +510,15 @@
    "status": "open"
   },
   {
-   "question_id": "leadpages:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "leadpages:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Pro ($29/mo or $23 annually), Business ($49/mo or $39 annually) and Grow ($99/mo or $79 annually) have no seat count in the notes, so they are left out of the per-user calculation. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "leadpages:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: From a European connection the page showed euro prices that differ for Grow and Optimize; this rule uses the USD figures. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

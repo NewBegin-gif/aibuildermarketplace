@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 613 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-05.
+All 615 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-06.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2388,7 +2388,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Two honest cautions. AI search visibility (GEO) is a young, fast-moving category.
 - **Best for:** brands and SEO teams that want to measure and improve how they show up in AI-generated answers (ChatGPT, Google AI and more) as AI search grows
 - **Flags:** Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/omniseo-review/
+- **Full review:** https://marketingandsalessoftware.com/omniseo-review.html
 
 ## Oneflow (oneflow.com)
 - **Verified pricing:** (price re-verified 2026-09-18 and again on 2026-10-05 against oneflow.com/pricing/; read from a Dutch connection, and the page sells in EUR, GBP, NOK, SEK and USD — these are the EUR figure…
@@ -2600,7 +2600,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** Read on 7 September 2026, re-read on 12 September 2026 and again, unchanged, on 27 September 2026.
 - **Honest take:** A $360 theme on a store with weak product pages or slow images still converts weakly, and heavily customized premium themes take more work to keep updated.
 - **Best for:** online retailers and larger-catalog stores that want a professionally designed, conversion-focused Shopify storefront without paying for custom development
-- **Full review:** https://aibuildermarketplace.com/b2b/pixel-union-review/
+- **Full review:** https://marketingandsalessoftware.com/pixel-union-review.html
 
 ## Pixlr (pixlr.com)
 - **Verified pricing:** (read 2026-10-12 in a live browser on pixlr.com/pricing, monthly and yearly views, from a Netherlands connection, which shows euros; the English home page says plans start at $1.99 a month)…
@@ -2810,6 +2810,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** WordPress site owners who want a powerful, feature-rich SEO plugin — the free version alone beats most paid rivals
 - **Flags:** Usage-metered, Renewal jump, Free tier
 - **Full review:** https://marketingandsalessoftware.com/rank-math-review.html
+
+## RankBolt (rankbolt.ai)
+- **Verified pricing:** (read 2026-11-06 on rankbolt.ai) RankBolt prices in Swiss francs and sells three monthly plans, each with a 3-day free trial that, per the page, needs no credit card.
+- **Honest take:** Priced in CHF; only a 3-day trial.
+- **Best for:** site owners and small agencies that want AI-written SEO articles, rank tracking and AI-search visibility reports in one subscription with auto-publishing
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/rankbolt-review/
 
 ## Rapid Search (rapidsearch.app)
 - **Verified pricing:** (read 2026-09-26, re-read 2026-10-21 without changes, on apps.shopify.com/rapid-search and on the vendor's own pricing page at rapidsearch.app/pricing) Every plan carries every feature; the…
@@ -3233,7 +3240,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's built for straightforward everyday signing — if you need deep contract-lifecycle (CLM) features, a heavier platform fits better.
 - **Best for:** teams where many people sign occasionally and want unlimited users on one plan - size it against the 100 invites a year, not the headcount
 - **Flags:** Per-seat pricing, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/signnow-review/
+- **Full review:** https://officesoftwaremarketplace.com/signnow-review.html
 
 ## Similarweb (similarweb.com)
 - **Verified pricing:** (re-verified 2026-10-16 on their own pricing page; first read 2026-08-25) The entrepreneur plans are published: $125 per month on annual billing for Competitive Intelligence, $333 for Compe…
@@ -3294,7 +3301,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Pricing is volume-tiered, so a shared IP on the cheapest plan is fine for low volume while serious senders need the dedicated-IP tiers (and the IP warm-up discipline that comes with them).
 - **Best for:** businesses and developers needing dependable high-deliverability transactional or bulk email via SMTP relay and API, with dedicated IPs at scale
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/smtp-com-review/
+- **Full review:** https://officesoftwaremarketplace.com/smtp-com-review.html
 
 ## SMTP2GO (smtp2go.com)
 - **Verified pricing:** (read 2026-09-26 on smtp2go.com/pricing with the volume slider walked through all nine stops; the plan cards carry the amounts in their data-rate-monthly and data-rate-annual attributes) Fr…
@@ -3316,12 +3323,18 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/socialbee-review/
 
+## SocialDesk (socialdesk.ai)
+- **Verified pricing:** (read 2026-11-06 on socialdesk.ai) SocialDesk sells four monthly plans and every one starts with a 7-day free trial that, per the page, needs no credit card.
+- **Honest take:** Yearly prices not published; no currency named.
+- **Best for:** solo creators, small brands and agencies that want scheduling, a shared DMs and comments inbox and AI auto-replies across six platforms for under $100 a month
+- **Full review:** https://aibuildermarketplace.com/b2b/socialdesk-review/
+
 ## Softr (softr.io)
 - **Verified pricing:** (re-verified 2026-09-07 and again 2026-10-01) A free plan with unlimited apps, up to 3 builders, 5 app users, 5,000 database records, 500 workflow actions and 5 AI credits a month.
 - **Honest take:** Builder seats are billed on top of the plan, and pricing counts builders and app users separately, so a public-facing app with a lot of end users gets expensive fast.
 - **Best for:** teams building internal tools, client portals or member apps on Softr's own built-in database, Airtable or Google Sheets without code
 - **Flags:** Usage-metered, Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/softr-review/
+- **Full review:** https://officesoftwaremarketplace.com/softr-review.html
 
 ## SoftSync (softsync.ai)
 - **Verified pricing:** (read 2026-09-26 on softsync.ai/pricing in a headless browser, including the plan table and every pricing FAQ answer) Two standard paid plans, priced per seat per month, plus a custom Enter…
@@ -3531,7 +3544,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Printify is cheaper, higher-margin and has a far bigger catalogue — if you're optimising for profit per sale or product breadth, that's the real trade-off.
 - **Best for:** creators building a real apparel or streetwear brand who care about fabric, fit and how the product feels in hand
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/tapstitch-review/
+- **Full review:** https://marketingandsalessoftware.com/tapstitch-review.html
 
 ## Tax1099 (tax1099.com)
 - **Verified pricing:** (read 2026-09-08, re-read 2026-10-01 and 2026-10-12 on tax1099.com/tax-1099-efile-pricing) Filing is graduated volume pricing, not a flat rate that falls: each band is billed at its own rat…

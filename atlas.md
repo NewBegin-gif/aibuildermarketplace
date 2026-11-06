@@ -3487,7 +3487,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** No public prices; quote-based, 3-month minimum.
 - **Best for:** startups and scale-ups in SaaS, fintech and eCommerce that want an outsourced, human-led support team, with or without AI, and can commit to a contract of at least 3 months
 - **Flags:** Per-seat pricing, Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/supportyourapp-review/
+- **Full review:** https://zerotouchsupport.com/supportyourapp-review.html
 
 ## Surfer (SurferSEO) (surferseo.com)
 - **Verified pricing:** (re-read 2026-11-04 from the Netherlands: surferseo.com/pricing now redirects to surfer.ai/pricing; earlier reads 2026-08-25 and 2026-09-19 from the Netherlands and 2026-08-26 over a US con…

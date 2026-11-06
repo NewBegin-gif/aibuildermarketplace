@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 616 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-06.
+All 618 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-06.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1490,6 +1490,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** outbound teams that need maximum find-rates on emails and especially mobile numbers, and prefer paying only for verified hits
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/fullenrich-review.html
+
+## Future Skills Academy (futureskillsacademy.com)
+- **Verified pricing:** (read 2026-11-06 on futureskillsacademy.com/pricing) Future Skills Academy sells three plans.
+- **Honest take:** Prices billed yearly; 7-day refund window.
+- **Best for:** individuals who want a self-paced AI certification, and small teams who want to train two or more people with an admin dashboard
+- **Full review:** https://aibuildermarketplace.com/b2b/future-skills-academy-review/
 
 ## Gamma (gamma.app)
 - **Verified pricing:** (re-verified 2026-09-29 in a rendered browser that got past the bot challenge: the individual plans are unchanged from our 16 and 26 August readings, the business side is not.
@@ -3475,6 +3481,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small support teams working out of a shared email inbox who want assignment, internal comments and a knowledge base without dragging customers into a portal or learning a helpdesk suite
 - **Flags:** Per-seat pricing
 - **Full review:** https://zerotouchsupport.com/supportbee-review.html
+
+## SupportYourApp (supportyourapp.com)
+- **Verified pricing:** (vendor answer, 23 October 2026; pricing page re-read 6 November 2026 shows no amounts) SupportYourApp does not publish prices: its pricing page says to get custom pricing.
+- **Honest take:** No public prices; quote-based, 3-month minimum.
+- **Best for:** startups and scale-ups in SaaS, fintech and eCommerce that want an outsourced, human-led support team, with or without AI, and can commit to a contract of at least 3 months
+- **Flags:** Per-seat pricing, Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/supportyourapp-review/
 
 ## Surfer (SurferSEO) (surferseo.com)
 - **Verified pricing:** (re-read 2026-11-04 from the Netherlands: surferseo.com/pricing now redirects to surfer.ai/pricing; earlier reads 2026-08-25 and 2026-09-19 from the Netherlands and 2026-08-26 over a US con…

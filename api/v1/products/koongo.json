@@ -76,16 +76,425 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 10,
+     "evidence": "Free covers one store language, 100 items or SKUs, 5 product feeds, one marketplace wizard and up to 10 orders a month, updating once a day"
+    },
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "flat",
+     "monthly": 39,
+     "annual_status": "unknown",
+     "included_units": 100,
+     "extra_unit": {
+      "monthly_status": "unknown",
+      "annual_status": "unknown"
+     },
+     "evidence": "Lite is $39 a month and updates every 6 hours"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "monthly": 79,
+     "annual_status": "unknown",
+     "included_units": 100,
+     "extra_unit": {
+      "monthly_status": "unknown",
+      "annual_status": "unknown"
+     },
+     "evidence": "Starter is $79 and updates every 30 minutes"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "monthly": 119,
+     "annual_status": "unknown",
+     "included_units": 100,
+     "extra_unit": {
+      "monthly_status": "unknown",
+      "annual_status": "unknown"
+     },
+     "evidence": "Pro is $119 and updates every 15 minutes"
+    }
+   ],
+   "notes": [
+    "The three paid tiers include the same 1,000 items, 5 feeds and 100 orders a month and differ by update frequency (every 6 hours, 30 minutes or 15 minutes); pick on how fresh your feeds must be, not on order volume.",
+    "Prices are the Shopify App Store listing in USD, recurring every 30 days; koongo.com sells the same plans in euros excluding VAT."
+   ],
+   "not_computable": [
+    "Orders beyond 100 a month: the surcharge table on koongo.com is in euros (an extra 100 orders from EUR 10.00 down to EUR 2.00) and the USD rate on the listing is not in our notes.",
+    "Surcharges for extra items, feeds, marketplaces, stores and team seats.",
+    "Feed-manager-only variants (from $14.50, $29 and $41)."
+   ],
+   "rules_verified_at": "2026-11-06"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "koongo",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 0,
+      "to_units": 50,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Orders beyond 100 a month: the surcharge table on koongo.com is in euros (an extra 100 orders from EUR 10.00 down to EUR 2.00) and the USD rate on the listing is not in our notes.",
+     "Surcharges for extra items, feeds, marketplaces, stores and team seats.",
+     "Feed-manager-only variants (from $14.50, $29 and $41)."
+    ]
+   },
+   "monthly": {
+    "product_id": "koongo",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 39.0,
+       "starter": 79.0,
+       "pro": 119.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": 39.0,
+       "starter": 79.0,
+       "pro": 119.0
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "lite": "price_unknown_on_billing",
+       "starter": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 0,
+      "to_units": 50,
+      "from_plan": "free",
+      "to_plan": "lite",
+      "from_plan_name": "Free",
+      "to_plan_name": "Lite"
+     },
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "lite",
+      "to_plan": null,
+      "from_plan_name": "Lite",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Orders beyond 100 a month: the surcharge table on koongo.com is in euros (an extra 100 orders from EUR 10.00 down to EUR 2.00) and the USD rate on the listing is not in our notes.",
+     "Surcharges for extra items, feeds, marketplaces, stores and team seats.",
+     "Feed-manager-only variants (from $14.50, $29 and $41)."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -115,9 +524,21 @@
    "status": "open"
   },
   {
-   "question_id": "koongo:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "koongo:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Orders beyond 100 a month: the surcharge table on koongo.com is in euros (an extra 100 orders from EUR 10.00 down to EUR 2.00) and the USD rate on the listing is not in our notes. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "koongo:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Surcharges for extra items, feeds, marketplaces, stores and team seats. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "koongo:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Feed-manager-only variants (from $14.50, $29 and $41). Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 615 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-06.
+All 616 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-06.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -3112,6 +3112,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small businesses, shops and creators with lists up to a few thousand subscribers who want newsletters, automation, forms and SMS at a low price, starting on a free plan that is generous on volume
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/sender-review.html
+
+## SendHQ (sendhq.cc)
+- **Verified pricing:** (read 2026-11-06 on sendhq.cc/pricing) SendHQ sells an email API in two plans, each for transactional or for marketing email.
+- **Honest take:** No free plan; hard monthly send cap.
+- **Best for:** developers and small product teams that want a simple email API with fixed monthly plans and no overage billing, and that keep bounce and complaint rates low
+- **Flags:** Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/sendhq-review/
 
 ## Sentaro (sentaro.com)
 - **Verified pricing:** (read 24 September 2026 on sentaro.com/en/pricing) Priced per protected account, in USD.

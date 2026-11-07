@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 622 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
+All 623 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -190,6 +190,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** FTL trucking carriers and asset-based (hybrid) brokers with roughly 5–300 trucks — especially compliance-heavy freight like hazmat, reefer and cross-border
 - **Flags:** Hidden pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/alvys-review/
+
+## AML Watcher (amlwatcher.com)
+- **Verified pricing:** (read 2026-11-07 on amlwatcher.com/pricing) AML Watcher sells anti-money-laundering screening in three plans: Basic for quick checks, Premium for in-depth risk analysis and enhanced due dil…
+- **Honest take:** Set-up cost plus volume-based price; no list price.
+- **Best for:** fintechs, payment firms and compliance teams that need sanctions, PEP and adverse-media screening through a dashboard or an API, from a small volume upward
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/aml-watcher-review/
 
 ## Amplemarket (amplemarket.com)
 - **Verified pricing:** (re-verified 2026-09-14) The only published price is Startup at $600/mo on an annual term, covering 2 users, with additional users available to purchase; Growth and Elite are listed as Cust…
@@ -3886,7 +3893,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Fees on every payment, no flat plan price.
 - **Best for:** small businesses and teams that need to find and pay freelancers on a project basis and want one place for contracts and payments
 - **Flags:** Per-seat pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/upwork-review/
+- **Full review:** https://officesoftwaremarketplace.com/upwork-review.html
 
 ## UserHelp.co (userhelp.co)
 - **Verified pricing:** (read 2026-10-17 in a browser on userhelp.co/pricing; the card shows a $ sign without naming the currency) Two plans.

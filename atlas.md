@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 618 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-06.
+All 619 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -335,6 +335,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/aweber-review/
 
+## B12 (b12.io)
+- **Verified pricing:** (read 2026-11-07 on b12.io/pricing) B12 sells an AI website, store and web-app builder in three do-it-yourself plans, plus a separate "experts do it for you" tab that we did not price.
+- **Honest take:** AI credits are capped; domain free for year one only.
+- **Best for:** freelancers, consultants and small businesses that want an AI-generated site they can edit by chat, with optional intake forms, email marketing and contracts on the higher plan
+- **Flags:** Usage-metered, Add-ons extra, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/b12-review/
+
 ## BabyLoveGrowth (babylovegrowth.ai)
 - **Verified pricing:** (prices re-verified 2026-10-07 on babylovegrowth.ai/en/pricing from a European connection, where it prices in euros) Two plans and a Monthly/Yearly toggle that swaps the amounts.
 - **Honest take:** The honest concern here isn't the price — it's the model, and the guarantee that is supposed to cover you if the model fails.
@@ -352,7 +359,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (prices re-verified 2026-09-19 on barcodestalk.com/buy-barcodes) One-off purchase, no subscription and no renewal.
 - **Honest take:** Some large retailers and brand registries, notably certain Amazon Brand Registry and big-box requirements, ask for a GS1-issued prefix, and a third-party barcode may not satisfy that.
 - **Best for:** sellers and small brands listing on marketplaces or in independent retail who want authentic, one-time-cost UPC/EAN barcodes without an annual GS1 membership
-- **Full review:** https://aibuildermarketplace.com/b2b/barcodes-talk-review/
+- **Full review:** https://officesoftwaremarketplace.com/barcodes-talk-review.html
 
 ## Beautiful.ai (beautiful.ai)
 - **Verified pricing:** (re-verified 2026-09-02 on the vendor's own pricing page, amounts unchanged on 2026-09-29) Pro is $14.50/mo billed annually, up from $12 in our July and August 2026 captures ($45 for a one-…
@@ -606,8 +613,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/bugherd-review.html
 
 ## Buzz.ai (buzz.ai)
-- **Verified pricing:** (price re-verified 2026-09-05; Teams amounts, credits and setup fees unchanged on 2026-09-30) Teams: Core is $79 per seat a month with 500 credits a month, AI Employee $695 per seat a month…
-- **Honest take:** Two meters run at once: seats AND credits — the seat price includes a credit allowance (500 a month on Core, 5,000 on AI Employee, read 5 September 2026), and real outbound volume means credit packages on top.
+- **Verified pricing:** (price re-verified 2026-11-07 on buzz.ai/pricing and buzz.ai/whitelabels/; USD) Teams: Core is $79 per seat a month with 500 credits a month, billed monthly, with a $0 setup fee footnoted '…
+- **Honest take:** Two meters run at once: seats AND credits — the seat price includes a credit allowance (500 a month on Core, 5,000 on AI Employee, read 7 November 2026), and real outbound volume means credit packages on top.
 - **Best for:** GTM teams that want AI to run outbound end-to-end — prompt-driven prospecting of intent-ready buyers, multichannel sequences and meeting booking without adding SDR headcount
 - **Flags:** Per-seat pricing, Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/buzz-ai-review/
@@ -2661,7 +2668,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The 2.5% comes off revenue, not margin.
 - **Best for:** shopify stores that want post-purchase upsells with no fixed monthly cost, where the bill only exists once the app has already added revenue, and that are comfortable being early on an app a few months old
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/post-purchase-upsell-hero-review/
+- **Full review:** https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html
 
 ## PostOnce (postonce.app)
 - **Verified pricing:** (read 2026-10-12 in a live browser on postonce.app and postonce.app/pricing, monthly and yearly views, and in the terms at postonce.app/terms) Two plans, priced in euros including VAT, with…
@@ -2675,7 +2682,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The $0 a month is not free — it carries a $49 monthly minimum spend, which means $49 is your floor whether you send anything or not.
 - **Best for:** Shopify stores with a list large enough that SMS beats email on response — the per-message economics only work once volume justifies the platform fee
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/postscript-review/
+- **Full review:** https://marketingandsalessoftware.com/postscript-review.html
 
 ## Prezi (prezi.com)
 - **Verified pricing:** Prezi has a free plan, Basic, and three paid individual plans: Standard €5 a month, Plus €15 and Premium €25, all billed annually.
@@ -3321,7 +3328,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's the pragmatic middle of email infrastructure: simpler and better-supported than the hyperscale APIs, cheaper than most, with genuinely useful reporting — but sending reputation is still yours to earn.
 - **Best for:** businesses that want dependable transactional/bulk sending via SMTP or API with human support and clear per-volume pricing
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/smtp2go-review/
+- **Full review:** https://officesoftwaremarketplace.com/smtp2go-review.html
 
 ## Social Bar (effectify.io)
 - **Verified pricing:** (re-verified 2026-10-19 on apps.shopify.com/sticky-social-media-icons-bar; first read 2026-09-18) Two plans, and the free one is not the one you will be on.
@@ -3536,7 +3543,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The minute caps are tight: Starter's 1,250 credits a month is roughly 10 to 12 minutes of finished video, and the meter counts seconds.
 - **Best for:** teams making talking-head training, explainer and onboarding videos without cameras, actors or editing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/synthesia-review/
+- **Full review:** https://officesoftwaremarketplace.com/synthesia-review.html
 
 ## Tapform (tapform.com)
 - **Verified pricing:** (read 2026-10-18 in a browser on tapform.com/pricing in the monthly and yearly view; the page shows $ without naming a currency) Two plans.

@@ -69,16 +69,485 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "annual_month": 2.5,
+     "monthly": 3,
+     "evidence": "Professional $2.50/user/mo billed yearly ($450 a year for 15 members) or $3/user/mo billed monthly"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "per_unit",
+     "annual_month": 4.17,
+     "monthly": 5,
+     "evidence": "Premium $4.17/user/mo billed yearly ($750 a year for 15 members) or $5/user/mo billed monthly"
+    }
+   ],
+   "notes": [
+    "30-day free trial; there is no permanent free plan.",
+    "Volume pricing for large teams goes through sales."
+   ],
+   "rules_verified_at": "2026-11-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "leavo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 2.5,
+      "billed": {
+       "amount": 30.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 2.5,
+       "premium": 4.17
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 5.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 5.0,
+       "premium": 8.34
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 7.5,
+      "billed": {
+       "amount": 90.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 7.5,
+       "premium": 12.51
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 12.5,
+      "billed": {
+       "amount": 150.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 12.5,
+       "premium": 20.85
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 25.0,
+       "premium": 41.7
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 37.5,
+      "billed": {
+       "amount": 450.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 37.5,
+       "premium": 62.55
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 50.0,
+       "premium": 83.4
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 62.5,
+      "billed": {
+       "amount": 750.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 62.5,
+       "premium": 104.25
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 1500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 125.0,
+       "premium": 208.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 3000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 250.0,
+       "premium": 417.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "30-day free trial",
+      "claim_source": "https://www.leavo.com/en/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The wizard described thirty days and billing showed thirty days remaining.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo trial length is compared with the wizard promise and the current billing countdown.",
+      "status": "confirmed",
+      "buying_consequence": "Member creation and import were tested within that trial, without purchase.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/leavo-review.html"
+     },
+     {
+      "claim": "No credit card required",
+      "claim_source": "https://www.leavo.com/en/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
+      "status": "confirmed",
+      "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/leavo-review.html"
+     },
+     {
+      "claim": "$9.00/month",
+      "claim_source": "https://www.leavo.com/",
+      "claim_read_on": "2026-10-31",
+      "observed": "Professional lists three members at $3 per user per month, giving $9.00 monthly; tax and payment checkout were not inspected.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo price comparison uses Professional, three members in USD with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-10-31",
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/leavo-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "leavo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 3.0,
+      "billed": {
+       "amount": 3.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 3.0,
+       "premium": 5.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 6.0,
+      "billed": {
+       "amount": 6.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 6.0,
+       "premium": 10.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 9.0,
+      "billed": {
+       "amount": 9.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 9.0,
+       "premium": 15.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 15.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 15.0,
+       "premium": 25.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 30.0,
+       "premium": 50.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 45.0,
+      "billed": {
+       "amount": 45.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 45.0,
+       "premium": 75.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 60.0,
+       "premium": 100.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 75.0,
+       "premium": 125.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 150.0,
+       "premium": 250.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 300.0,
+       "premium": 500.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "30-day free trial",
+      "claim_source": "https://www.leavo.com/en/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The wizard described thirty days and billing showed thirty days remaining.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo trial length is compared with the wizard promise and the current billing countdown.",
+      "status": "confirmed",
+      "buying_consequence": "Member creation and import were tested within that trial, without purchase.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/leavo-review.html"
+     },
+     {
+      "claim": "No credit card required",
+      "claim_source": "https://www.leavo.com/en/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
+      "status": "confirmed",
+      "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/leavo-review.html"
+     },
+     {
+      "claim": "$9.00/month",
+      "claim_source": "https://www.leavo.com/",
+      "claim_read_on": "2026-10-31",
+      "observed": "Professional lists three members at $3 per user per month, giving $9.00 monthly; tax and payment checkout were not inspected.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/leavo-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Leavo price comparison uses Professional, three members in USD with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-10-31",
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/leavo-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-10-31; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -468,12 +937,6 @@
    "question_id": "leavo:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "leavo:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

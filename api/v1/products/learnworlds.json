@@ -118,15 +118,602 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "admin",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 49,
+     "annual_month": 44,
+     "evidence": "Starter $49/mo (or $44 annually) with a $5 fee per paid enrollment"
+    },
+    {
+     "id": "pro-trainer",
+     "name": "Pro Trainer",
+     "model": "flat",
+     "max_units": 5,
+     "monthly": 99,
+     "annual_month": 79,
+     "evidence": "Pro Trainer $99/mo, or $79 billed annually, with no enrollment fee"
+    },
+    {
+     "id": "learning-center",
+     "name": "Learning Center",
+     "model": "flat",
+     "max_units": 25,
+     "monthly": 299,
+     "annual_month": 249,
+     "evidence": "Learning Center $299/mo, or $249 annually; Corporate quoted"
+    },
+    {
+     "id": "corporate",
+     "name": "Corporate",
+     "model": "quote",
+     "evidence": "Corporate quoted"
+    }
+   ],
+   "limits_evidence": "1 / 5 / 25 admins",
+   "usage": [
+    {
+     "id": "paid-enrollments",
+     "label": "Paid enrollments (Starter only)",
+     "unit": "paid enrollment",
+     "price": 5,
+     "only_on": [
+      "starter"
+     ],
+     "evidence": "with a $5 fee per paid enrollment"
+    }
+   ],
+   "notes": [
+    "The axis counts admins, not learners; monthly active learners are capped separately (1,000 / 2,000 / 2,000).",
+    "The plan cards print no currency symbol; the notes record the amounts in dollars."
+   ],
+   "not_computable": [
+    "Payment-gateway fees (Stripe at about 2.9% + $0.30) and EU VAT come on top.",
+    "The branded mobile app add-on prints no amount."
+   ],
+   "rules_verified_at": "2026-11-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "learnworlds",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "admin",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 44.0,
+      "billed": {
+       "amount": 528.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 44.0,
+       "pro-trainer": 79.0,
+       "learning-center": 249.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro-trainer",
+      "cheapest_plan_name": "Pro Trainer",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": 79.0,
+       "learning-center": 249.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro-trainer",
+      "cheapest_plan_name": "Pro Trainer",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": 79.0,
+       "learning-center": 249.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro-trainer",
+      "cheapest_plan_name": "Pro Trainer",
+      "total_month": 79.0,
+      "billed": {
+       "amount": 948.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": 79.0,
+       "learning-center": 249.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "learning-center",
+      "cheapest_plan_name": "Learning Center",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 2988.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": 249.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "learning-center",
+      "cheapest_plan_name": "Learning Center",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 2988.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": 249.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "learning-center",
+      "cheapest_plan_name": "Learning Center",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 2988.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": 249.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "learning-center",
+      "cheapest_plan_name": "Learning Center",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 2988.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": 249.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": "not_eligible",
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": "not_eligible",
+       "corporate": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "pro-trainer",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Pro Trainer"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "pro-trainer",
+      "to_plan": "learning-center",
+      "from_plan_name": "Pro Trainer",
+      "to_plan_name": "Learning Center"
+     },
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "learning-center",
+      "to_plan": null,
+      "from_plan_name": "Learning Center",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Payment-gateway fees (Stripe at about 2.9% + $0.30) and EU VAT come on top.",
+     "The branded mobile app add-on prints no amount."
+    ],
+    "measured": [
+     {
+      "claim": "30-day free trial.",
+      "claim_source": "https://www.learnworlds.com/getstarted/",
+      "claim_read_on": "2026-10-25",
+      "observed": "The school sidebar shows thirty days left and Trial.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; 30 days left",
+      "comparability": "LearnWorlds thirty-day offer is checked against the school trial counter, while paid-plan functionality is assessed separately.",
+      "status": "confirmed",
+      "buying_consequence": "The observed duration matches; bulk import is unavailable on the tested Trial.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/learnworlds-review.html"
+     },
+     {
+      "claim": "No credit card required.",
+      "claim_source": "https://www.learnworlds.com/getstarted/",
+      "claim_read_on": "2026-10-25",
+      "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; 30 days left",
+      "comparability": "LearnWorlds Trial onboarding and learner creation required no card; Starter checkout was stopped before entry.",
+      "status": "confirmed",
+      "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/learnworlds-review.html"
+     },
+     {
+      "claim": "€49/month",
+      "claim_source": "https://www.learnworlds.com/",
+      "claim_read_on": "2026-10-30",
+      "observed": "Starter monthly EUR 49 amount due shown; VAT unspecified, and EUR 5 per paid enrollment is a separate usage charge. No matching rule.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; 30 days left",
+      "comparability": "Starter monthly page and amount due both show EUR 49, but the hidden VAT basis and enrollment usage fee and absent cost rule prevent a verified all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "EUR 49 monthly excludes a verified VAT determination; each paid enrollment is listed at EUR 5.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-10-30",
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/learnworlds-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "learnworlds",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "admin",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 49.0,
+       "pro-trainer": 99.0,
+       "learning-center": 299.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro-trainer",
+      "cheapest_plan_name": "Pro Trainer",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": 99.0,
+       "learning-center": 299.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro-trainer",
+      "cheapest_plan_name": "Pro Trainer",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": 99.0,
+       "learning-center": 299.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro-trainer",
+      "cheapest_plan_name": "Pro Trainer",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": 99.0,
+       "learning-center": 299.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "learning-center",
+      "cheapest_plan_name": "Learning Center",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 299.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": 299.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "learning-center",
+      "cheapest_plan_name": "Learning Center",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 299.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": 299.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "learning-center",
+      "cheapest_plan_name": "Learning Center",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 299.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": 299.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "learning-center",
+      "cheapest_plan_name": "Learning Center",
+      "total_month": 299.0,
+      "billed": {
+       "amount": 299.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": 299.0,
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": "not_eligible",
+       "corporate": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "pro-trainer": "not_eligible",
+       "learning-center": "not_eligible",
+       "corporate": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "pro-trainer",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Pro Trainer"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "pro-trainer",
+      "to_plan": "learning-center",
+      "from_plan_name": "Pro Trainer",
+      "to_plan_name": "Learning Center"
+     },
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "learning-center",
+      "to_plan": null,
+      "from_plan_name": "Learning Center",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Payment-gateway fees (Stripe at about 2.9% + $0.30) and EU VAT come on top.",
+     "The branded mobile app add-on prints no amount."
+    ],
+    "measured": [
+     {
+      "claim": "30-day free trial.",
+      "claim_source": "https://www.learnworlds.com/getstarted/",
+      "claim_read_on": "2026-10-25",
+      "observed": "The school sidebar shows thirty days left and Trial.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; 30 days left",
+      "comparability": "LearnWorlds thirty-day offer is checked against the school trial counter, while paid-plan functionality is assessed separately.",
+      "status": "confirmed",
+      "buying_consequence": "The observed duration matches; bulk import is unavailable on the tested Trial.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/learnworlds-review.html"
+     },
+     {
+      "claim": "No credit card required.",
+      "claim_source": "https://www.learnworlds.com/getstarted/",
+      "claim_read_on": "2026-10-25",
+      "observed": "No card was requested according to source notes, and no payment details were entered in the observed route. Complete signup screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; 30 days left",
+      "comparability": "LearnWorlds Trial onboarding and learner creation required no card; Starter checkout was stopped before entry.",
+      "status": "confirmed",
+      "buying_consequence": "The recorded session proceeded without card entry; this does not promise payment-free access to every feature.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/learnworlds-review.html"
+     },
+     {
+      "claim": "€49/month",
+      "claim_source": "https://www.learnworlds.com/",
+      "claim_read_on": "2026-10-30",
+      "observed": "Starter monthly EUR 49 amount due shown; VAT unspecified, and EUR 5 per paid enrollment is a separate usage charge. No matching rule.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/learnworlds-review.html#claim-vs-measured"
+      },
+      "plan": "Trial; 30 days left",
+      "comparability": "Starter monthly page and amount due both show EUR 49, but the hidden VAT basis and enrollment usage fee and absent cost rule prevent a verified all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "EUR 49 monthly excludes a verified VAT determination; each paid enrollment is listed at EUR 5.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-10-30",
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/learnworlds-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Data export tested on 2026-10-30; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -504,9 +1091,15 @@
    "status": "open"
   },
   {
-   "question_id": "learnworlds:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "learnworlds:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Payment-gateway fees (Stripe at about 2.9% + $0.30) and EU VAT come on top. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "learnworlds:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The branded mobile app add-on prints no amount. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

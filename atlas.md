@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 621 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
+All 622 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1685,7 +1685,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Usage and add-on fees come on top of the plan.
 - **Best for:** marketing agencies and consultants who manage several clients and want CRM, funnels, texting, email and automation in one white-label platform
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/highlevel-review/
+- **Full review:** https://marketingandsalessoftware.com/highlevel-review.html
 
 ## Hive (hive.com)
 - **Verified pricing:** (re-verified 2026-10-18) Free forever for up to 10 workspace members, with 1,000 AI credits a month by the pricing page and 200MB of storage (a new account we tested on 21 October 2026, wit…
@@ -3880,6 +3880,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** solo builders and small teams monitoring sites, ports and APIs at 60-second resolution with status pages — and honestly, the free 50-monitor tier covers most hobby stacks
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/uptimerobot-review/
+
+## Upwork (upwork.com)
+- **Verified pricing:** (read 2026-10-23 on support.upwork.com help articles; the client pricing pages returned an access error, so there is no complete plan table) Upwork is a marketplace where clients hire freel…
+- **Honest take:** Fees on every payment, no flat plan price.
+- **Best for:** small businesses and teams that need to find and pay freelancers on a project basis and want one place for contracts and payments
+- **Flags:** Per-seat pricing
+- **Full review:** https://aibuildermarketplace.com/b2b/upwork-review/
 
 ## UserHelp.co (userhelp.co)
 - **Verified pricing:** (read 2026-10-17 in a browser on userhelp.co/pricing; the card shows a $ sign without naming the currency) Two plans.

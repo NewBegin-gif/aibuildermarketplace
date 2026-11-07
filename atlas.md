@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 620 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
+All 621 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1680,6 +1680,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Hidden pricing, Per-seat pricing, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/hibob-review/
 
+## HighLevel (gohighlevel.com)
+- **Verified pricing:** (read 2026-11-07 on gohighlevel.com/pricing) HighLevel sells its agency CRM and marketing-automation platform in three published plans plus a custom Enterprise plan.
+- **Honest take:** Usage and add-on fees come on top of the plan.
+- **Best for:** marketing agencies and consultants who manage several clients and want CRM, funnels, texting, email and automation in one white-label platform
+- **Flags:** Usage-metered, Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/highlevel-review/
+
 ## Hive (hive.com)
 - **Verified pricing:** (re-verified 2026-10-18) Free forever for up to 10 workspace members, with 1,000 AI credits a month by the pricing page and 200MB of storage (a new account we tested on 21 October 2026, wit…
 - **Honest take:** The seat price is honest bait, the add-on grid is the business model: switch on three add-ons and your $12 seat becomes $27 — a la carte flexibility that punishes teams who need the full toolkit.
@@ -2283,7 +2290,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Priced by prospect slots; list size decides your plan.
 - **Best for:** founders, agencies and small sales teams that run cold outreach from many mailboxes and want warmup, rotation and AI help under one fixed price
 - **Flags:** Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/mystrika-review/
+- **Full review:** https://marketingandsalessoftware.com/mystrika-review.html
 
 ## NameRobot (namerobot.com)
 - **Verified pricing:** (read 2026-10-07 on namerobot.com in a browser render, USD) NameRobot sells several naming tools.

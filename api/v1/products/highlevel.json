@@ -102,16 +102,364 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "client sub-account",
+   "axis": "companies",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "monthly": 97,
+     "annual_year": 970,
+     "max_units": 3,
+     "evidence": "Starter costs $97 a month ($970 a year) and is meant for one business or a few clients; the FAQ says it includes 3 sub-accounts"
+    },
+    {
+     "id": "unlimited",
+     "name": "Unlimited",
+     "model": "flat",
+     "monthly": 297,
+     "annual_status": "unknown",
+     "evidence": "Unlimited costs $297 a month, for agencies managing unlimited clients"
+    },
+    {
+     "id": "founder",
+     "name": "Founder",
+     "model": "flat",
+     "monthly": 497,
+     "annual_status": "unknown",
+     "evidence": "Founder costs $497 a month and adds SaaS mode with unlimited reselling"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "three published plans plus a custom Enterprise plan"
+    }
+   ],
+   "notes": [
+    "Every plan starts with a 14-day free trial and billing begins automatically at the end of the trial unless you cancel; the FAQ says billing is month to month with no long-term contract.",
+    "The annual amounts on the Unlimited and Founder cards did not match their monthly plans in the page text we read, so they are not used."
+   ],
+   "not_computable": [
+    "Usage-based charges for conversation AI, voice AI, reviews AI, email and SMS marketing and calling are billed on top; the notes give no rates.",
+    "Optional add-ons per sub-account (AI Employee $50 or $97 a month, branded client portal app $49 a month) and HIPAA compliance at $297 a month are not added by the calculator."
+   ],
+   "rules_verified_at": "2026-11-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "highlevel",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "client sub-account",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 80.83,
+      "billed": {
+       "amount": 970.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 80.83,
+       "unlimited": "price_unknown_on_billing",
+       "founder": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 80.83,
+      "billed": {
+       "amount": 970.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 80.83,
+       "unlimited": "price_unknown_on_billing",
+       "founder": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": "price_unknown_on_billing",
+       "founder": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": "price_unknown_on_billing",
+       "founder": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": "price_unknown_on_billing",
+       "founder": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": "price_unknown_on_billing",
+       "founder": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": "price_unknown_on_billing",
+       "founder": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": "price_unknown_on_billing",
+       "founder": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 2,
+      "to_units": 5,
+      "from_plan": "starter",
+      "to_plan": null,
+      "from_plan_name": "Starter",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Usage-based charges for conversation AI, voice AI, reviews AI, email and SMS marketing and calling are billed on top; the notes give no rates.",
+     "Optional add-ons per sub-account (AI Employee $50 or $97 a month, branded client portal app $49 a month) and HIPAA compliance at $297 a month are not added by the calculator."
+    ]
+   },
+   "monthly": {
+    "product_id": "highlevel",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "client sub-account",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 97.0,
+      "billed": {
+       "amount": 97.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 97.0,
+       "unlimited": 297.0,
+       "founder": 497.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 97.0,
+      "billed": {
+       "amount": 97.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 97.0,
+       "unlimited": 297.0,
+       "founder": 497.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 297.0,
+      "billed": {
+       "amount": 297.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": 297.0,
+       "founder": 497.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 297.0,
+      "billed": {
+       "amount": 297.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": 297.0,
+       "founder": 497.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 297.0,
+      "billed": {
+       "amount": 297.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": 297.0,
+       "founder": 497.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 297.0,
+      "billed": {
+       "amount": 297.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": 297.0,
+       "founder": 497.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 297.0,
+      "billed": {
+       "amount": 297.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": 297.0,
+       "founder": 497.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 297.0,
+      "billed": {
+       "amount": 297.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "unlimited": 297.0,
+       "founder": 497.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 2,
+      "to_units": 5,
+      "from_plan": "starter",
+      "to_plan": "unlimited",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Unlimited"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Usage-based charges for conversation AI, voice AI, reviews AI, email and SMS marketing and calling are billed on top; the notes give no rates.",
+     "Optional add-ons per sub-account (AI Employee $50 or $97 a month, branded client portal app $49 a month) and HIPAA compliance at $297 a month are not added by the calculator."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -141,9 +489,15 @@
    "status": "open"
   },
   {
-   "question_id": "highlevel:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "highlevel:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Usage-based charges for conversation AI, voice AI, reviews AI, email and SMS marketing and calling are billed on top; the notes give no rates. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "highlevel:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Optional add-ons per sub-account (AI Employee $50 or $97 a month, branded client portal app $49 a month) and HIPAA compliance at $297 a month are not added by the calculator. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

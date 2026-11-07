@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 619 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
+All 620 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2277,6 +2277,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** companies chasing an attestation they cannot staff for — CMMC or FedRAMP to keep bidding on defence and public-sector work, SOC 2 or ISO 27001 to get through enterprise procurement
 - **Flags:** Hidden pricing
 - **Full review:** https://officesoftwaremarketplace.com/mycroft-review.html
+
+## Mystrika (mystrika.com)
+- **Verified pricing:** (read 2026-11-07 on mystrika.com) Mystrika is a cold-email platform that sells by prospect slots rather than by sender count.
+- **Honest take:** Priced by prospect slots; list size decides your plan.
+- **Best for:** founders, agencies and small sales teams that run cold outreach from many mailboxes and want warmup, rotation and AI help under one fixed price
+- **Flags:** Annual commit, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/mystrika-review/
 
 ## NameRobot (namerobot.com)
 - **Verified pricing:** (read 2026-10-07 on namerobot.com in a browser render, USD) NameRobot sells several naming tools.

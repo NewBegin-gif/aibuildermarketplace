@@ -89,15 +89,544 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "per_unit",
+     "price_month": 29.99,
+     "billing": "unspecified",
+     "evidence": "Plus is $29.99/mo per user (3k credits per user per month)"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "price_month": 99.99,
+     "billing": "unspecified",
+     "evidence": "Pro $99.99/mo per user (15k credits, 5x Plus)"
+    },
+    {
+     "id": "max",
+     "name": "Max",
+     "model": "per_unit",
+     "price_month": 199.99,
+     "billing": "unspecified",
+     "evidence": "Max $199.99/mo per user (35k credits, ~12x Plus)"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quote-only"
+    }
+   ],
+   "notes": [
+    "Anyone who uses Lindy takes a paid seat, including colleagues who only @mention it in Slack."
+   ],
+   "not_computable": [
+    "Credits pool per workspace and do not roll over; usage beyond the included credits is not priced in our notes."
+   ],
+   "rules_verified_at": "2026-11-07"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "lindy-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 29.99,
+       "pro": 99.99,
+       "max": 199.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 59.98,
+      "billed": {
+       "amount": 59.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 59.98,
+       "pro": 199.98,
+       "max": 399.98,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 89.97,
+      "billed": {
+       "amount": 89.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 89.97,
+       "pro": 299.97,
+       "max": 599.97,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 149.95,
+      "billed": {
+       "amount": 149.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 149.95,
+       "pro": 499.95,
+       "max": 999.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 299.9,
+      "billed": {
+       "amount": 299.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 299.9,
+       "pro": 999.9,
+       "max": 1999.9,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 449.85,
+      "billed": {
+       "amount": 449.85,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 449.85,
+       "pro": 1499.85,
+       "max": 2999.85,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 599.8,
+      "billed": {
+       "amount": 599.8,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 599.8,
+       "pro": 1999.8,
+       "max": 3999.8,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 749.75,
+      "billed": {
+       "amount": 749.75,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 749.75,
+       "pro": 2499.75,
+       "max": 4999.75,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 1499.5,
+      "billed": {
+       "amount": 1499.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 1499.5,
+       "pro": 4999.5,
+       "max": 9999.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 2999.0,
+      "billed": {
+       "amount": 2999.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 2999.0,
+       "pro": 9999.0,
+       "max": 19999.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Credits pool per workspace and do not roll over; usage beyond the included credits is not priced in our notes."
+    ],
+    "measured": [
+     {
+      "claim": "No credit card required.",
+      "claim_source": "https://www.lindy.ai/pricing",
+      "claim_read_on": "2026-10-31",
+      "observed": "The observed trial-start route required a payment method; we stopped without activating the trial.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      },
+      "plan": "Trial not started: payment gate",
+      "comparability": "Lindy no-card wording is compared with its mandatory payment block after skipping Google and Outlook connection on the email signup route.",
+      "status": "contradicted",
+      "buying_consequence": "A payment method is required before trial use on this observed signup route; no product performance test was possible.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/"
+     },
+     {
+      "claim": "$50 in credits for free",
+      "claim_source": "https://www.lindy.ai/pricing",
+      "claim_read_on": "2026-10-31",
+      "observed": "The prepared offer is fifty dollars in credits, while the blocked trial screen gives seven free days then monthly payment; no credit balance was reached.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      },
+      "plan": "Trial not started: payment gate",
+      "comparability": "Lindy starting-credit wording cannot be checked without reaching the assistant after its payment gate.",
+      "status": "not_testable",
+      "buying_consequence": "Do not rely on a verified starting credit allowance for this blocked route.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/"
+     },
+     {
+      "claim": "First 7 days free, then $49.99/month.",
+      "claim_source": "https://www.lindy.ai/",
+      "claim_read_on": "2026-10-31",
+      "observed": "The trial-start screen lists $49.99 per month after seven days; payment is required, but tax, fees and a final payable total were not established.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      },
+      "plan": "Trial not started: payment gate",
+      "comparability": "Lindy.ai price comparison uses 7-day trial then monthly in USD with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-10-31",
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "lindy-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 29.99,
+       "pro": 99.99,
+       "max": 199.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 59.98,
+      "billed": {
+       "amount": 59.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 59.98,
+       "pro": 199.98,
+       "max": 399.98,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 89.97,
+      "billed": {
+       "amount": 89.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 89.97,
+       "pro": 299.97,
+       "max": 599.97,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 149.95,
+      "billed": {
+       "amount": 149.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 149.95,
+       "pro": 499.95,
+       "max": 999.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 299.9,
+      "billed": {
+       "amount": 299.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 299.9,
+       "pro": 999.9,
+       "max": 1999.9,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 449.85,
+      "billed": {
+       "amount": 449.85,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 449.85,
+       "pro": 1499.85,
+       "max": 2999.85,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 599.8,
+      "billed": {
+       "amount": 599.8,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 599.8,
+       "pro": 1999.8,
+       "max": 3999.8,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 749.75,
+      "billed": {
+       "amount": 749.75,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 749.75,
+       "pro": 2499.75,
+       "max": 4999.75,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 1499.5,
+      "billed": {
+       "amount": 1499.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 1499.5,
+       "pro": 4999.5,
+       "max": 9999.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 2999.0,
+      "billed": {
+       "amount": 2999.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "plus": 2999.0,
+       "pro": 9999.0,
+       "max": 19999.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Credits pool per workspace and do not roll over; usage beyond the included credits is not priced in our notes."
+    ],
+    "measured": [
+     {
+      "claim": "No credit card required.",
+      "claim_source": "https://www.lindy.ai/pricing",
+      "claim_read_on": "2026-10-31",
+      "observed": "The observed trial-start route required a payment method; we stopped without activating the trial.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      },
+      "plan": "Trial not started: payment gate",
+      "comparability": "Lindy no-card wording is compared with its mandatory payment block after skipping Google and Outlook connection on the email signup route.",
+      "status": "contradicted",
+      "buying_consequence": "A payment method is required before trial use on this observed signup route; no product performance test was possible.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/"
+     },
+     {
+      "claim": "$50 in credits for free",
+      "claim_source": "https://www.lindy.ai/pricing",
+      "claim_read_on": "2026-10-31",
+      "observed": "The prepared offer is fifty dollars in credits, while the blocked trial screen gives seven free days then monthly payment; no credit balance was reached.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      },
+      "plan": "Trial not started: payment gate",
+      "comparability": "Lindy starting-credit wording cannot be checked without reaching the assistant after its payment gate.",
+      "status": "not_testable",
+      "buying_consequence": "Do not rely on a verified starting credit allowance for this blocked route.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/"
+     },
+     {
+      "claim": "First 7 days free, then $49.99/month.",
+      "claim_source": "https://www.lindy.ai/",
+      "claim_read_on": "2026-10-31",
+      "observed": "The trial-start screen lists $49.99 per month after seven days; payment is required, but tax, fees and a final payable total were not established.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      },
+      "plan": "Trial not started: payment gate",
+      "comparability": "Lindy.ai price comparison uses 7-day trial then monthly in USD with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-10-31",
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Data export tested on 2026-10-31; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -444,9 +973,9 @@
    "status": "open"
   },
   {
-   "question_id": "lindy-ai:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "lindy-ai:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Credits pool per workspace and do not roll over; usage beyond the included credits is not priced in our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

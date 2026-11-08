@@ -102,15 +102,283 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "connected store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 29.99,
+     "annual_month": 19.99,
+     "annual_year": 239.88,
+     "evidence": "Lite is $29.99 a month, or $19.99 a month billed as $239.88 a year"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 3,
+     "monthly": 49.99,
+     "annual_month": 32.5,
+     "annual_year": 390,
+     "evidence": "Starter is $49.99 a month, or $32.50 a month billed as $390 a year"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "monthly": 79.99,
+     "annual_month": 54.99,
+     "annual_year": 659.88,
+     "evidence": "Pro is $79.99 a month, or $54.99 a month billed as $659.88 a year"
+    }
+   ],
+   "notes": [
+    "Store caps: Lite has 1 connected store, Starter 3, Pro unlimited. Lite and Starter also cap product imports (25 and 250) and orders shipped by Tradelle (100 and 500) a month.",
+    "Every plan starts with a 7-day trial for $1, which the terms say is non-refundable."
+   ],
+   "not_computable": [
+    "Fulfilled orders are charged separately for product cost and shipping, and product prices exclude VAT.",
+    "Lifetime Max at $1,299 once is a one-time purchase, not a subscription."
+   ],
+   "rules_verified_at": "2026-11-08"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "tradelle",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "connected store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 19.99,
+       "starter": 32.5,
+       "pro": 54.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 32.5,
+      "billed": {
+       "amount": 390.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 32.5,
+       "pro": 54.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 32.5,
+      "billed": {
+       "amount": 390.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 32.5,
+       "pro": 54.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 54.99,
+      "billed": {
+       "amount": 659.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "pro": 54.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 54.99,
+      "billed": {
+       "amount": 659.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "pro": 54.99
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "lite",
+      "to_plan": "starter",
+      "from_plan_name": "Lite",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "starter",
+      "to_plan": "pro",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Pro"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Fulfilled orders are charged separately for product cost and shipping, and product prices exclude VAT.",
+     "Lifetime Max at $1,299 once is a one-time purchase, not a subscription."
+    ]
+   },
+   "monthly": {
+    "product_id": "tradelle",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "connected store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 29.99,
+       "starter": 49.99,
+       "pro": 79.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 49.99,
+      "billed": {
+       "amount": 49.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 49.99,
+       "pro": 79.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 49.99,
+      "billed": {
+       "amount": 49.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": 49.99,
+       "pro": 79.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "pro": 79.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 79.99,
+      "billed": {
+       "amount": 79.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": "not_eligible",
+       "starter": "not_eligible",
+       "pro": 79.99
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "lite",
+      "to_plan": "starter",
+      "from_plan_name": "Lite",
+      "to_plan_name": "Starter"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "starter",
+      "to_plan": "pro",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Pro"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Fulfilled orders are charged separately for product cost and shipping, and product prices exclude VAT.",
+     "Lifetime Max at $1,299 once is a one-time purchase, not a subscription."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -140,9 +408,15 @@
    "status": "open"
   },
   {
-   "question_id": "tradelle:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "tradelle:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Fulfilled orders are charged separately for product cost and shipping, and product prices exclude VAT. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "tradelle:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Lifetime Max at $1,299 once is a one-time purchase, not a subscription. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

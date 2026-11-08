@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 623 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-07.
+All 624 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-08.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -196,7 +196,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Set-up cost plus volume-based price; no list price.
 - **Best for:** fintechs, payment firms and compliance teams that need sanctions, PEP and adverse-media screening through a dashboard or an API, from a small volume upward
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/aml-watcher-review/
+- **Full review:** https://officesoftwaremarketplace.com/aml-watcher-review.html
 
 ## Amplemarket (amplemarket.com)
 - **Verified pricing:** (re-verified 2026-09-14) The only published price is Startup at $600/mo on an annual term, covering 2 users, with additional users available to purchase; Growth and Elite are listed as Cust…
@@ -2456,7 +2456,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Two meters at once: content types and pieces gate the lower tiers, and monthly LEAD limits gate the upside.
 - **Best for:** marketers who want quizzes, calculators and assessments that earn the lead by giving genuine value — with logic, integrations and templates handled
 - **Flags:** Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/outgrow-review/
+- **Full review:** https://marketingandsalessoftware.com/outgrow-review.html
 
 ## OutSends (outsends.com)
 - **Verified pricing:** (read 2026-10-17 in a browser on outsends.com/pricing, monthly view; the cards show a $ sign without naming the currency, and the page says prices exclude VAT) Four fixed plans, each with u…
@@ -3241,6 +3241,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** salons, barbers, spas, wellness studios, physical therapists, craftspeople and local retailers that want bookings via Google and Instagram, no-show-reducing reminders, marketing and (optionally) POS in one fixed-price system
 - **Full review:** https://officesoftwaremarketplace.com/shore-review.html
 
+## Shortcut Chat (shortcutchat.com)
+- **Verified pricing:** (read 2026-11-08 on shortcutchat.com, dollar amounts as shown on the page) Shortcut Chat sells one subscription in three sizes.
+- **Honest take:** Usage allowance is shown only as a percentage.
+- **Best for:** people who already compare the answers of several AI models by hand and want one subscription with side-by-side answers, web search, image generation and reusable prompt snippets
+- **Flags:** Usage-metered, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/shortcut-chat-review/
+
 ## ShortlistIQ (shortlistiq.com)
 - **Verified pricing:** (read 2026-10-16 in a browser on shortlistiq.com/pricing; the cards show a $ sign without naming the currency, and clicking Pay annually did not change the amounts) Three paid plans, each l…
 - **Honest take:** Free for 10 applicants; Basic covers 20 a month; no refunds on early cancellation.
@@ -3476,7 +3483,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) The page gives two different numbers and it is worth knowing both.
 - **Honest take:** The pricing page contradicts itself: the plan card says $17 yearly and $22 monthly, the FAQ on the same page says $20 yearly and $25 monthly.
 - **Best for:** people whose problem is deciding what to do today rather than tracking what exists — it pulls from your existing tools and forces a daily plan, which is the whole product
-- **Full review:** https://aibuildermarketplace.com/b2b/sunsama-review/
+- **Full review:** https://officesoftwaremarketplace.com/sunsama-review.html
 
 ## SupaEasy (supaeasy.com)
 - **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-22 on both) A free plan plus four paid monthly tiers.
@@ -3729,7 +3736,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly — but Pro is genuinely cheap.
 - **Best for:** individuals and small teams who want a fast, elegant task manager that gets out of the way
 - **Flags:** Per-seat pricing, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/todoist-review/
+- **Full review:** https://officesoftwaremarketplace.com/todoist-review.html
 
 ## Toggl (toggl.com)
 - **Verified pricing:** (re-verified 2026-09-09 and again 2026-10-01 on toggl.com/track/pricing, which now redirects to toggl.com/pricing) Free is $0 and the page calls it free forever; the pricing FAQ read 22 Oct…

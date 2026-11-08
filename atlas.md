@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 624 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-08.
+All 625 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-08.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -3246,7 +3246,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Usage allowance is shown only as a percentage.
 - **Best for:** people who already compare the answers of several AI models by hand and want one subscription with side-by-side answers, web search, image generation and reusable prompt snippets
 - **Flags:** Usage-metered, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/shortcut-chat-review/
+- **Full review:** https://officesoftwaremarketplace.com/shortcut-chat-review.html
 
 ## ShortlistIQ (shortlistiq.com)
 - **Verified pricing:** (read 2026-10-16 in a browser on shortlistiq.com/pricing; the cards show a $ sign without naming the currency, and clicking Pay annually did not change the amounts) Three paid plans, each l…
@@ -3765,6 +3765,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores shipping a few hundred to a few thousand parcels a month that want where-is-my-order traffic off the support desk
 - **Flags:** Usage-metered, Annual commit
 - **Full review:** https://zerotouchsupport.com/trackr-review.html
+
+## Tradelle (tradelle.io)
+- **Verified pricing:** (read 2026-11-08 on tradelle.io/pricing, US dollars) Tradelle sells dropshipping product research and order fulfillment in three subscription tiers plus a one-time Lifetime Max.
+- **Honest take:** Fulfilled orders and VAT are billed on top of the plan.
+- **Best for:** new and growing Shopify dropshippers who want product research, competitor store data and fulfillment in one tool, and who will use the tier quotas
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/tradelle-review/
 
 ## Tradify (tradifyhq.com)
 - **Verified pricing:** Per user, per month, quoted in USD on tradifyhq.com/pricing and re-verified 2026-10-02: Lite $47, Pro $51 and Plus $61 per user, plus a Custom tier for large teams that is priced on request.

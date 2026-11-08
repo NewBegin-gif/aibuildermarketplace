@@ -73,15 +73,397 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "Mac",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "annual_year": 99.99,
+     "monthly_status": "not_offered",
+     "evidence": "Standard is €99.99 a year (8 GB virtual RAM and 4 virtual CPUs per machine)"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_year": 119.99,
+     "monthly_status": "not_offered",
+     "evidence": "Pro is €119.99 a year (128 GB and 32 CPUs, command line tools and developer features)"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_year": 149.99,
+     "monthly_status": "not_offered",
+     "evidence": "Business is €149.99 a year (Pro plus central administration, volume licensing and deployment through Mac management tools)"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise pricing is by contact."
+    }
+   ],
+   "notes": [
+    "Each licence covers one Mac, so the unit is a Mac rather than a person; a Windows licence is not included.",
+    "The rules use the list prices. On 8 November 2026 a Black Friday promotion cut them to €49.99, €59.99 and €97.49 a year; check the amount at checkout."
+   ],
+   "not_computable": [
+    "The one-time purchase option for Standard and the 2-year subscriptions for Pro and Business: no amounts in our notes."
+   ],
+   "rules_verified_at": "2026-11-08"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "parallels",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "Mac",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 8.33,
+      "billed": {
+       "amount": 99.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 8.33,
+       "pro": 10.0,
+       "business": 12.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 16.67,
+      "billed": {
+       "amount": 199.98,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 16.67,
+       "pro": 20.0,
+       "business": 25.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 299.97,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 25.0,
+       "pro": 30.0,
+       "business": 37.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 41.66,
+      "billed": {
+       "amount": 499.95,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 41.66,
+       "pro": 50.0,
+       "business": 62.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 83.33,
+      "billed": {
+       "amount": 999.9,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 83.33,
+       "pro": 99.99,
+       "business": 124.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 124.99,
+      "billed": {
+       "amount": 1499.85,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 124.99,
+       "pro": 149.99,
+       "business": 187.49,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 166.65,
+      "billed": {
+       "amount": 1999.8,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 166.65,
+       "pro": 199.98,
+       "business": 249.98,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 208.31,
+      "billed": {
+       "amount": 2499.75,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 208.31,
+       "pro": 249.98,
+       "business": 312.48,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 416.63,
+      "billed": {
+       "amount": 4999.5,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 416.63,
+       "pro": 499.96,
+       "business": 624.96,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard",
+      "total_month": 833.25,
+      "billed": {
+       "amount": 9999.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 833.25,
+       "pro": 999.92,
+       "business": 1249.92,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The one-time purchase option for Standard and the 2-year subscriptions for Pro and Business: no amounts in our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "parallels",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "Mac",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "pro": "not_offered_on_billing",
+       "business": "not_offered_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The one-time purchase option for Standard and the 2-year subscriptions for Pro and Business: no amounts in our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -111,9 +493,9 @@
    "status": "open"
   },
   {
-   "question_id": "parallels:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "parallels:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The one-time purchase option for Standard and the 2-year subscriptions for Pro and Business: no amounts in our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

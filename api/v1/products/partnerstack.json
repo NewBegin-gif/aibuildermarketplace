@@ -9,7 +9,7 @@
  "summary": "The partner platform we run our own 58 programmes on: affiliate tracking, lead and deal registration, partner payments and a marketplace where B2B partners find you. Quote-only at every tier.",
  "best_for": "B2B SaaS teams that want partner payments, lead and deal registration and a marketplace of active B2B partners in one place, and are prepared to go through a demo to find out what it costs",
  "skip_if": "you want to know the price before you talk to anyone, you need click-level attribution back to the page that earned it, or you only need a simple affiliate link tracker",
- "honest_knock": "The reporting counts clicks and calls them customers. A record in the Partner API's customers endpoint is a tracked click, not a signup: on 29 July 2026 a single bare curl against one tracking link at 07:09:01 UTC produced a customer record at 07:09:02, with no browser, no account and has_paid false. Read that endpoint's length as signups and you will report volume that never existed. The second half of the problem is that there is no referring-URL field anywhere in the partnership data, so you can see that a link was clicked and never learn which of your pages earned it — which is exactly the thing you need to decide what to write next.",
+ "honest_knock": "The reporting counts clicks and calls them customers. A record in the Partner API's customers endpoint is a tracked click, not a signup: on 29 July 2026 a single bare curl against one tracking link at 07:09:01 UTC produced a customer record at 07:09:02, with no browser, no account and has_paid false. Read that endpoint's length as signups and you will report volume that never existed. The second half of the problem is that there is no referring-URL field anywhere in the partnership data, so you can see that a link was clicked and never learn which of your pages earned it, which is exactly the thing you need to decide what to write next.",
  "pricing": {
   "status": "see_details",
   "entry_price": null,
@@ -18,17 +18,17 @@
   "plans": [
    {
     "name": "Launch",
-    "price": "quoted — book a demo",
+    "price": "quoted: book a demo",
     "includes": "pick affiliate link tracking OR lead and deal registration, not both; marketplace access, partner payments, CRM integrations, AI + MCP connector"
    },
    {
     "name": "Growth",
-    "price": "quoted — book a demo",
+    "price": "quoted: book a demo",
     "includes": "adds advanced integrations, a learning-management solution, partner challenges and incentives, MDF management and segmentation"
    },
    {
     "name": "Enterprise",
-    "price": "quoted — book a demo",
+    "price": "quoted: book a demo",
     "includes": "the only tier with tracking and both registration motions together, plus custom workflows, a designated CSM and priority support"
    }
   ],
@@ -54,7 +54,7 @@
  "cost_traps": [],
  "compare_with": {
   "name": "Reditus",
-  "why": "the alternative people weigh this against — Reditus publishes its entry price ($99/mo billed annually) where PartnerStack quotes every tier, and the split is whether you want a number you can budget against or a marketplace with the volume of B2B partners PartnerStack has"
+  "why": "the alternative people weigh this against: Reditus publishes its entry price ($99/mo billed annually) where PartnerStack quotes every tier, and the split is whether you want a number you can budget against or a marketplace with the volume of B2B partners PartnerStack has"
  },
  "links": {
   "record": "https://aibuildermarketplace.com/api/v1/products/partnerstack.json",
@@ -103,11 +103,11 @@
     "product_id": "partnerstack",
     "run_date": "2026-08-26",
     "session_type": "hands_on",
-    "what": "We did not read the docs and summarise them: PartnerStack is the platform our own affiliate operation runs on. We manage 58 partner programmes through it, pull the Partner API v2 on a schedule, and stamp sub-IDs across 704 pages of our own site. PartnerStack is also an affiliate partner of ours — we earn 15% of every sale for a year on anyone who signs up through our link — which is why the findings below are things we measured against our own records rather than claims from their marketing.",
+    "what": "We did not read the docs and summarise them: PartnerStack is the platform our own affiliate operation runs on. We manage 58 partner programmes through it, pull the Partner API v2 on a schedule, and stamp sub-IDs across 704 pages of our own site. PartnerStack is also an affiliate partner of ours, we earn 15% of every sale for a year on anyone who signs up through our link, which is why the findings below are things we measured against our own records rather than claims from their marketing.",
     "findings": [
      "A record in the customers endpoint is a tracked click, not a signup. One plain curl on a tracking link produced a customer record one second later, has_paid false, with no browser and no account. Records surface in the API about five minutes after the click, so allow ten before concluding a test did nothing.",
      "Clicks arrive without a source. There is no referring-URL field in the partnership data, so the platform can tell you a link was clicked and never which page produced it. We had to build sub-ID stamping across our own pages to answer that question ourselves.",
-     "Commission terms do not come from the API. offers.base_rate is returned null on every partnership we hold. The readable source is PartnerStack's own public directory at market.partnerstack.com — and it sometimes contradicts the vendor's own affiliate page, which is worth knowing before you quote a rate to anyone.",
+     "Commission terms do not come from the API. offers.base_rate is returned null on every partnership we hold. The readable source is PartnerStack's own public directory at market.partnerstack.com, and it sometimes contradicts the vendor's own affiliate page, which is worth knowing before you quote a rate to anyone.",
      "Programme status lags the reality by days. One partner sent us a welcome email with a working tracking link on 7 August; the API still read application-denied and only turned active somewhere between 13 and 18 August. Treat the vendor's email as the leading indicator and the API status as the one that catches up.",
      "The earned-commission endpoints are the weakest part. rewards and transactions did not return usable data for us, so what you have actually been paid is a dashboard question rather than an API one.",
      "Partner replies break email threading. A partner answers inside the PartnerStack dashboard and the platform sends that on as a fresh message from hello@partnerstackmail.com, with a new Message-ID and no reference to the mail it is answering. Any automation of yours that matches replies to threads will not match these."

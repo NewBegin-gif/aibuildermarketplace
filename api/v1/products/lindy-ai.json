@@ -9,40 +9,43 @@
  "summary": "An AI teammate that lives in Slack: @mention it and it works across your other tools, sits in meetings for shared context and runs jobs on a schedule.",
  "best_for": "teams that live in Slack and want one shared teammate that sits in their meetings, runs scheduled routines and drafts replies inside the tools they already use",
  "skip_if": "you want flat, predictable automation costs across a large team: Lindy charges for every seat that touches it and the credits expire each cycle, so you pay for people whether or not they used their allowance",
- "honest_knock": "Cost tracks headcount rather than output: every colleague who so much as @mentions Lindy in Slack takes a paid seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration. Credits are published now, but as ranges: an everyday ask is 2-250, a big build 1,000-2,500. So a month is still an estimate. And when the shared pool runs dry there is no top-up: Lindy pauses credit-using actions until the reset, unless an admin moves the workspace to a bigger plan.",
+ "honest_knock": "Cost tracks headcount as well as output: every colleague who so much as @mentions Lindy in Slack takes a seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration. Credits are sized in ranges (an everyday ask is 2-250, a big build 1,000-2,500), so a month is still an estimate. And the entry price itself was served in two versions on 8 November 2026: $29.99 for 3,000 credits or $49.99 for 5,000.",
  "pricing": {
   "status": "public",
   "entry_price": "$29.99",
-  "entry_price_terms": "per month per user for 3,000 credits",
+  "entry_price_terms": "per month per user for 3,000 credits (the page also serves $49.99/mo for 5,000 credits)",
   "from_price_usd_month": 29.99,
   "plans": [
    {
-    "name": "Plus",
-    "price": "$29.99 per user/mo",
-    "includes": "3,000 credits per user a month"
+    "name": "Free",
+    "price": "$0",
+    "includes": "$50 in credits, valid 7 days, no card required on the pricing page"
    },
    {
-    "name": "Pro",
-    "price": "$99.99 per user/mo",
-    "includes": "15,000 credits: five times Plus"
-   },
-   {
-    "name": "Max",
-    "price": "$199.99 per user/mo",
-    "includes": "35,000 credits, about twelve times Plus"
+    "name": "Team",
+    "price": "from $29.99 or $49.99 per user/mo (the page served both on 8 Nov 2026)",
+    "includes": "3,000 or 5,000 credits at entry; levels up to 35,000 credits for $199.99 and team levels up to 1,750,000 for $9,999.50; top-ups $10 per 1,000 credits"
    },
    {
     "name": "Enterprise",
     "price": "quoted",
-    "includes": "credits pool per workspace, refresh each cycle and do not roll over; anyone who uses Lindy takes a paid seat"
+    "includes": "SSO and SCIM, audit logs, HIPAA with a signed BAA, shared usage and bonus credits"
    }
   ],
   "plans_source": "hand-curated from the vendor's pricing page",
-  "notes": "(re-verified 2026-10-02, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, and the credit allowance is published again. Plus is $29.99/mo per user (3k credits per user per month), Pro $99.99/mo per user (15k credits, 5x Plus) and Max $199.99/mo per user (35k credits, ~12x Plus). Enterprise is quote-only. Every seat's credits pool into one workspace balance, refresh each billing cycle and do not roll over; the page sizes work as 2-250 credits for an everyday ask, 250-1,000 for deep work and 1,000-2,500 for a big build. Anyone who uses Lindy takes a paid seat, including colleagues who only @mention it in Slack — those who join that way get a 7-day free trial first, direct signups are billed straight away. All four tiers connect up to 5 inboxes, and computer use, model selection and MCP support are no longer tier-gated.",
-  "verified_at": "2026-10-02",
+  "notes": "(re-verified 2026-11-08, read on their own pricing page by plain fetch, ten times) Team starts at $29.99/mo per user for 3,000 credits on some fetches of lindy.ai/pricing and at $49.99/mo per user for 5,000 credits on others: the page serves two versions of the entry level, and 7 of 10 pricing-page fetches on 8 November showed $49.99. The plan line-up changed since 2 October: Plus, Pro and Max are gone. There is now a Free start with $50 in credits for 7 days and no credit card required, one Team plan where you pick a monthly credit level, and quote-only Enterprise. Higher Team levels read the same in both versions: 6,000 credits $59.99, 8,000 $79.99, 15,000 $99.99, 20,000 $149.99, 35,000 $199.99, 45,000 $299.99, and team levels of 70,000 ($399.98), 105,000 ($599.97), 175,000 ($999.95), 350,000 ($1,999.90), 700,000 ($3,999.80) and 1,750,000 credits ($9,999.50). The page says every active user in the workspace is billed, from the entry amount for the entry credits each. Credits pool across the team; monthly credits refresh each billing cycle and do not roll over. Top-ups are now sold at $10 per 1,000 credits, and top-up credits stay until used. Anyone who uses Lindy takes a seat, including colleagues who only @mention it in Slack; those who join through Slack get a 7-day free trial first, direct signups are billed straight away.",
+  "verified_at": "2026-11-08",
   "source_url": null,
   "schema_offer": null,
-  "source_quotes": null,
+  "source_quotes": [
+   {
+    "field": "price",
+    "plan": "Instap volgens actuele homepage-FAQ",
+    "quote": "$49.99",
+    "source_url": "https://www.lindy.ai/",
+    "read_on": "2026-11-04"
+   }
+  ],
   "recent_change": null,
   "price_history": null
  },
@@ -52,15 +55,15 @@
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "Plus is $29.99/mo per user (3k credits per user per month), Pro $99.99/mo per user (15k credits, 5x Plus) and Max $199.99/mo per user (35k credits, ~12x Plus).",
-   "verified_at": "2026-10-02",
+   "evidence": "(re-verified 2026-11-08, read on their own pricing page by plain fetch, ten times) Team starts at $29.99/mo per user for 3,000 credits on some fetches of lindy.ai/pricing and at $49.99/mo per user for 5,000 credits on others: the page serves two versions of the entry level, and 7 of 10 pricing-page fetches on 8 November showed $49.99.",
+   "verified_at": "2026-11-08",
    "source_url": null
   },
   {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "(re-verified 2026-10-02, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, and the credit allowance is published again.",
-   "verified_at": "2026-10-02",
+   "evidence": "(re-verified 2026-11-08, read on their own pricing page by plain fetch, ten times) Team starts at $29.99/mo per user for 3,000 credits on some fetches of lindy.ai/pricing and at $49.99/mo per user for 5,000 credits on others: the page serves two versions of the entry level, and 7 of 10 pricing-page fetches on 8 November showed $49.99.",
+   "verified_at": "2026-11-08",
    "source_url": null
   }
  ],
@@ -97,43 +100,36 @@
    "axis": "users",
    "plans": [
     {
-     "id": "plus",
-     "name": "Plus",
+     "id": "team",
+     "name": "Team (5,000 credits per user)",
      "model": "per_unit",
-     "price_month": 29.99,
+     "price_month": 49.99,
      "billing": "unspecified",
-     "evidence": "Plus is $29.99/mo per user (3k credits per user per month)"
-    },
-    {
-     "id": "pro",
-     "name": "Pro",
-     "model": "per_unit",
-     "price_month": 99.99,
-     "billing": "unspecified",
-     "evidence": "Pro $99.99/mo per user (15k credits, 5x Plus)"
-    },
-    {
-     "id": "max",
-     "name": "Max",
-     "model": "per_unit",
-     "price_month": 199.99,
-     "billing": "unspecified",
-     "evidence": "Max $199.99/mo per user (35k credits, ~12x Plus)"
+     "evidence": "at $49.99/mo per user for 5,000 credits on others"
     },
     {
      "id": "enterprise",
      "name": "Enterprise",
      "model": "quote",
-     "evidence": "Enterprise is quote-only"
+     "evidence": "quote-only Enterprise"
+    }
+   ],
+   "conflicts": [
+    {
+     "about": "entry price of the Team plan",
+     "evidence": "Team starts at $29.99/mo per user for 3,000 credits on some fetches of lindy.ai/pricing and at $49.99/mo per user for 5,000 credits on others: the page serves two versions of the entry level, and 7 of 10 pricing-page fetches on 8 November showed $49.99"
     }
    ],
    "notes": [
-    "Anyone who uses Lindy takes a paid seat, including colleagues who only @mention it in Slack."
+    "The Team price is an entry level (a floor): higher monthly credit levels cost more, from 6,000 credits at $59.99 to 1,750,000 credits at $9,999.50.",
+    "The Free start ($50 in credits for 7 days) is a trial, not a lasting free plan, so it is not modelled.",
+    "Anyone who uses Lindy takes a seat, including colleagues who only @mention it in Slack."
    ],
    "not_computable": [
-    "Credits pool per workspace and do not roll over; usage beyond the included credits is not priced in our notes."
+    "How a team credit level (70,000 credits and up) combines with per-user billing is not spelled out on the page.",
+    "Top-ups at $10 per 1,000 credits depend on usage."
    ],
-   "rules_verified_at": "2026-11-07"
+   "rules_verified_at": "2026-11-08"
   },
   "growth": {
    "annual": {
@@ -145,179 +141,165 @@
     "rows": [
      {
       "units": 1,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 29.99,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 49.99,
       "billed": {
-       "amount": 29.99,
+       "amount": 49.99,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 29.99,
-       "pro": 99.99,
-       "max": 199.99,
+       "team": 49.99,
        "enterprise": "quote"
       }
      },
      {
       "units": 2,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 59.98,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 99.98,
       "billed": {
-       "amount": 59.98,
+       "amount": 99.98,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 59.98,
-       "pro": 199.98,
-       "max": 399.98,
+       "team": 99.98,
        "enterprise": "quote"
       }
      },
      {
       "units": 3,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 89.97,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 149.97,
       "billed": {
-       "amount": 89.97,
+       "amount": 149.97,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 89.97,
-       "pro": 299.97,
-       "max": 599.97,
+       "team": 149.97,
        "enterprise": "quote"
       }
      },
      {
       "units": 5,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 149.95,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 249.95,
       "billed": {
-       "amount": 149.95,
+       "amount": 249.95,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 149.95,
-       "pro": 499.95,
-       "max": 999.95,
+       "team": 249.95,
        "enterprise": "quote"
       }
      },
      {
       "units": 10,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 299.9,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 499.9,
       "billed": {
-       "amount": 299.9,
+       "amount": 499.9,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 299.9,
-       "pro": 999.9,
-       "max": 1999.9,
+       "team": 499.9,
        "enterprise": "quote"
       }
      },
      {
       "units": 15,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 449.85,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 749.85,
       "billed": {
-       "amount": 449.85,
+       "amount": 749.85,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 449.85,
-       "pro": 1499.85,
-       "max": 2999.85,
+       "team": 749.85,
        "enterprise": "quote"
       }
      },
      {
       "units": 20,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 599.8,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 999.8,
       "billed": {
-       "amount": 599.8,
+       "amount": 999.8,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 599.8,
-       "pro": 1999.8,
-       "max": 3999.8,
+       "team": 999.8,
        "enterprise": "quote"
       }
      },
      {
       "units": 25,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 749.75,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 1249.75,
       "billed": {
-       "amount": 749.75,
+       "amount": 1249.75,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 749.75,
-       "pro": 2499.75,
-       "max": 4999.75,
+       "team": 1249.75,
        "enterprise": "quote"
       }
      },
      {
       "units": 50,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 1499.5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 2499.5,
       "billed": {
-       "amount": 1499.5,
+       "amount": 2499.5,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 1499.5,
-       "pro": 4999.5,
-       "max": 9999.5,
+       "team": 2499.5,
        "enterprise": "quote"
       }
      },
      {
       "units": 100,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 2999.0,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 4999.0,
       "billed": {
-       "amount": 2999.0,
+       "amount": 4999.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 2999.0,
-       "pro": 9999.0,
-       "max": 19999.0,
+       "team": 4999.0,
        "enterprise": "quote"
       }
      }
     ],
     "switch_points": [],
-    "conflicts": [],
+    "conflicts": [
+     {
+      "about": "entry price of the Team plan",
+      "evidence": "Team starts at $29.99/mo per user for 3,000 credits on some fetches of lindy.ai/pricing and at $49.99/mo per user for 5,000 credits on others: the page serves two versions of the entry level, and 7 of 10 pricing-page fetches on 8 November showed $49.99"
+     }
+    ],
     "unknowns": [
-     "Credits pool per workspace and do not roll over; usage beyond the included credits is not priced in our notes."
+     "How a team credit level (70,000 credits and up) combines with per-user billing is not spelled out on the page.",
+     "Top-ups at $10 per 1,000 credits depend on usage."
     ],
     "measured": [
      {
@@ -388,179 +370,165 @@
     "rows": [
      {
       "units": 1,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 29.99,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 49.99,
       "billed": {
-       "amount": 29.99,
+       "amount": 49.99,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 29.99,
-       "pro": 99.99,
-       "max": 199.99,
+       "team": 49.99,
        "enterprise": "quote"
       }
      },
      {
       "units": 2,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 59.98,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 99.98,
       "billed": {
-       "amount": 59.98,
+       "amount": 99.98,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 59.98,
-       "pro": 199.98,
-       "max": 399.98,
+       "team": 99.98,
        "enterprise": "quote"
       }
      },
      {
       "units": 3,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 89.97,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 149.97,
       "billed": {
-       "amount": 89.97,
+       "amount": 149.97,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 89.97,
-       "pro": 299.97,
-       "max": 599.97,
+       "team": 149.97,
        "enterprise": "quote"
       }
      },
      {
       "units": 5,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 149.95,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 249.95,
       "billed": {
-       "amount": 149.95,
+       "amount": 249.95,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 149.95,
-       "pro": 499.95,
-       "max": 999.95,
+       "team": 249.95,
        "enterprise": "quote"
       }
      },
      {
       "units": 10,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 299.9,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 499.9,
       "billed": {
-       "amount": 299.9,
+       "amount": 499.9,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 299.9,
-       "pro": 999.9,
-       "max": 1999.9,
+       "team": 499.9,
        "enterprise": "quote"
       }
      },
      {
       "units": 15,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 449.85,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 749.85,
       "billed": {
-       "amount": 449.85,
+       "amount": 749.85,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 449.85,
-       "pro": 1499.85,
-       "max": 2999.85,
+       "team": 749.85,
        "enterprise": "quote"
       }
      },
      {
       "units": 20,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 599.8,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 999.8,
       "billed": {
-       "amount": 599.8,
+       "amount": 999.8,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 599.8,
-       "pro": 1999.8,
-       "max": 3999.8,
+       "team": 999.8,
        "enterprise": "quote"
       }
      },
      {
       "units": 25,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 749.75,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 1249.75,
       "billed": {
-       "amount": 749.75,
+       "amount": 1249.75,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 749.75,
-       "pro": 2499.75,
-       "max": 4999.75,
+       "team": 1249.75,
        "enterprise": "quote"
       }
      },
      {
       "units": 50,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 1499.5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 2499.5,
       "billed": {
-       "amount": 1499.5,
+       "amount": 2499.5,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 1499.5,
-       "pro": 4999.5,
-       "max": 9999.5,
+       "team": 2499.5,
        "enterprise": "quote"
       }
      },
      {
       "units": 100,
-      "cheapest_plan": "plus",
-      "cheapest_plan_name": "Plus",
-      "total_month": 2999.0,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team (5,000 credits per user)",
+      "total_month": 4999.0,
       "billed": {
-       "amount": 2999.0,
+       "amount": 4999.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "plus": 2999.0,
-       "pro": 9999.0,
-       "max": 19999.0,
+       "team": 4999.0,
        "enterprise": "quote"
       }
      }
     ],
     "switch_points": [],
-    "conflicts": [],
+    "conflicts": [
+     {
+      "about": "entry price of the Team plan",
+      "evidence": "Team starts at $29.99/mo per user for 3,000 credits on some fetches of lindy.ai/pricing and at $49.99/mo per user for 5,000 credits on others: the page serves two versions of the entry level, and 7 of 10 pricing-page fetches on 8 November showed $49.99"
+     }
+    ],
     "unknowns": [
-     "Credits pool per workspace and do not roll over; usage beyond the included credits is not priced in our notes."
+     "How a team credit level (70,000 credits and up) combines with per-user billing is not spelled out on the page.",
+     "Top-ups at $10 per 1,000 credits depend on usage."
     ],
     "measured": [
      {
@@ -629,7 +597,7 @@
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
-  "price": "read",
+  "price": "quoted",
   "free_trial": "being_verified",
   "refund": "being_verified"
  },
@@ -975,7 +943,13 @@
   {
    "question_id": "lindy-ai:pricing_gap_1",
    "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: Credits pool per workspace and do not roll over; usage beyond the included credits is not priced in our notes. Can you publish the price or the rule?",
+   "question": "Our price check could not put a number on this part of the cost: How a team credit level (70,000 credits and up) combines with per-user billing is not spelled out on the page. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "lindy-ai:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Top-ups at $10 per 1,000 credits depend on usage. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

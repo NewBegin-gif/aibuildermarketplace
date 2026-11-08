@@ -41,7 +41,12 @@
   "notes": "(re-verified 2026-09-19 on meetgeek.ai/pricing; amounts unchanged since 2026-09-04) The page loads on annual billing, so the figures it shows first are the annual ones; both terms are given here. Basic is free with 3 hours of transcription a month. Pro $9.99 per user per month billed annually, $15.99 billed monthly, with 20 hours of transcription. Business $17 per user per month billed annually, $27 billed monthly, with unlimited transcription and team multi-meeting analytics. Enterprise is quote-only: SSO, SCIM, org-wide settings, on-premise storage, custom retention, custom voice agents and a dedicated account manager. Extra transcription hours are $0.50 each. Downloads and exports and admin user management start on Pro, not Business; API and MCP access are listed on the free Basic plan. A 14-day free trial runs on Pro. Two limits sit beside the hours and neither is in the plan blurb. A separate cap ends the individual meeting: two hours on Basic and Pro, three on Business, four on Enterprise. And your recordings expire on a schedule — transcripts are kept three months on Basic, a year on Pro and indefinitely above that, audio one month, six months and twelve, with video stored only from Business. On the same page, the annual badge claims up to 40% off, the actual step from monthly to annual is about 37% on both paid tiers, and a line under the heading offers 30% off for startups, non-profits and education on request. Data can be stored in the EU or the US on every plan, the page claims SOC 2, GDPR and HIPAA compliance and states that customer data is not used to train external models, but recording-consent notifications with approval tracking start on Business.",
   "verified_at": "2026-09-19",
   "source_url": null,
-  "schema_offer": null,
+  "schema_offer": {
+   "price": 15.99,
+   "currency": "USD",
+   "description": "Pro per user, per month, billed month-to-month. From our pricing notes: “Pro $9.99 per user per month billed annually, $15.99 billed monthly, with 20 hours of transcription” Read on the vendor's own pricing page on 2026-11-08.",
+   "page": "https://aibuildermarketplace.com/b2b/meetgeek-review/"
+  },
   "source_quotes": [
    {
     "field": "price",
@@ -118,15 +123,427 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "free",
+     "evidence": "Basic is free with 3 hours of transcription a month"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 9.99,
+     "monthly": 15.99,
+     "evidence": "Pro $9.99 per user per month billed annually, $15.99 billed monthly, with 20 hours of transcription"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 17,
+     "monthly": 27,
+     "evidence": "Business $17 per user per month billed annually, $27 billed monthly, with unlimited transcription and team multi-meeting analytics"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quote-only"
+    }
+   ],
+   "notes": [
+    "Basic includes 3 hours of transcription a month and Pro 20 hours; Business is unlimited."
+   ],
+   "not_computable": [
+    "Extra transcription hours are $0.50 each and depend on usage.",
+    "The 30% discount for startups, non-profits and education is on request."
+   ],
+   "rules_verified_at": "2026-11-08"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "meetgeek",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 9.99,
+       "business": 17.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 19.98,
+       "business": 34.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 29.97,
+       "business": 51.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 49.95,
+       "business": 85.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 99.9,
+       "business": 170.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 149.85,
+       "business": 255.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 199.8,
+       "business": 340.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 249.75,
+       "business": 425.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 499.5,
+       "business": 850.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 999.0,
+       "business": 1700.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Extra transcription hours are $0.50 each and depend on usage.",
+     "The 30% discount for startups, non-profits and education is on request."
+    ]
+   },
+   "monthly": {
+    "product_id": "meetgeek",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 15.99,
+       "business": 27.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 31.98,
+       "business": 54.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 47.97,
+       "business": 81.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 79.95,
+       "business": 135.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 159.9,
+       "business": 270.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 239.85,
+       "business": 405.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 319.8,
+       "business": 540.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 399.75,
+       "business": 675.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 799.5,
+       "business": 1350.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 0.0,
+       "pro": 1599.0,
+       "business": 2700.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Extra transcription hours are $0.50 each and depend on usage.",
+     "The 30% discount for startups, non-profits and education is on request."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -156,9 +573,15 @@
    "status": "open"
   },
   {
-   "question_id": "meetgeek:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "meetgeek:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Extra transcription hours are $0.50 each and depend on usage. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "meetgeek:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The 30% discount for startups, non-profits and education is on request. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

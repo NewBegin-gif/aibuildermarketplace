@@ -114,15 +114,423 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "per_unit",
+     "annual_month": 4,
+     "monthly": 5,
+     "evidence": "Basic is $5 per seat per month billed monthly or $4 billed annually"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 5.5,
+     "monthly": 7,
+     "evidence": "Pro is $7 monthly or $5.50 annually"
+    },
+    {
+     "id": "premium",
+     "name": "Premium",
+     "model": "per_unit",
+     "annual_month": 7,
+     "monthly": 9,
+     "evidence": "Premium, marked popular, is $9 monthly or $7 annually"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is custom, on annual billing with volume pricing"
+    }
+   ],
+   "not_computable": [
+    "Add-ons per seat (More Screenshots $2 a month, Extended Data Retention $2 a month or $1.67 annually) are optional and not included."
+   ],
+   "rules_verified_at": "2026-11-08"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "modge",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 4.0,
+      "billed": {
+       "amount": 48.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 4.0,
+       "pro": 5.5,
+       "premium": 7.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 96.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 8.0,
+       "pro": 11.0,
+       "premium": 14.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 12.0,
+      "billed": {
+       "amount": 144.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 12.0,
+       "pro": 16.5,
+       "premium": 21.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 20.0,
+       "pro": 27.5,
+       "premium": 35.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 40.0,
+       "pro": 55.0,
+       "premium": 70.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 720.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 60.0,
+       "pro": 82.5,
+       "premium": 105.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 960.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 80.0,
+       "pro": 110.0,
+       "premium": 140.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 100.0,
+       "pro": 137.5,
+       "premium": 175.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 2400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 200.0,
+       "pro": 275.0,
+       "premium": 350.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 4800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 400.0,
+       "pro": 550.0,
+       "premium": 700.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons per seat (More Screenshots $2 a month, Extended Data Retention $2 a month or $1.67 annually) are optional and not included."
+    ]
+   },
+   "monthly": {
+    "product_id": "modge",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 5.0,
+      "billed": {
+       "amount": 5.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 5.0,
+       "pro": 7.0,
+       "premium": 9.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 10.0,
+       "pro": 14.0,
+       "premium": 18.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 15.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 15.0,
+       "pro": 21.0,
+       "premium": 27.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 25.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 25.0,
+       "pro": 35.0,
+       "premium": 45.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 50.0,
+       "pro": 70.0,
+       "premium": 90.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 75.0,
+       "pro": 105.0,
+       "premium": 135.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 100.0,
+       "pro": 140.0,
+       "premium": 180.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 125.0,
+      "billed": {
+       "amount": 125.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 125.0,
+       "pro": 175.0,
+       "premium": 225.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 250.0,
+       "pro": 350.0,
+       "premium": 450.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 500.0,
+       "pro": 700.0,
+       "premium": 900.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons per seat (More Screenshots $2 a month, Extended Data Retention $2 a month or $1.67 annually) are optional and not included."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -133,6 +541,18 @@
  "status_page": null,
  "task_evidence": null,
  "open_questions": [
+  {
+   "question_id": "modge:modge-q1",
+   "key": "modge-q1",
+   "question": "Are screenshots deleted after 3, 12 or 24 months depending on the plan, or kept for as long as the subscription runs?",
+   "status": "open"
+  },
+  {
+   "question_id": "modge:modge-q2",
+   "key": "modge-q2",
+   "question": "Does Modge hold a SOC 2 Type II report today?",
+   "status": "open"
+  },
   {
    "question_id": "modge:cancellation_terms",
    "key": "cancellation_terms",
@@ -152,9 +572,9 @@
    "status": "open"
   },
   {
-   "question_id": "modge:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "modge:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Add-ons per seat (More Screenshots $2 a month, Extended Data Retention $2 a month or $1.67 annually) are optional and not included. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

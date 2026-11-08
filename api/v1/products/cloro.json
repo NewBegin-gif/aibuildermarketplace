@@ -7,7 +7,7 @@
  "category": "Marketing",
  "task": "SEO, content & landing pages",
  "summary": "API that reads AI search engines — ChatGPT, Perplexity, Copilot, Gemini, Grok, AI Overview and Google Search — and returns the sources and citations behind every query as structured JSON.",
- "best_for": "SEO and marketing teams who need AI-search visibility as structured data — who gets cited for which query on ChatGPT, Perplexity, Copilot, Gemini and Google's AI Overview — rather than as a dashboard someone else designed",
+ "best_for": "SEO and marketing teams who need AI-search visibility as structured data: who gets cited for which query on ChatGPT, Perplexity, Copilot, Gemini and Google's AI Overview: rather than as a dashboard someone else designed",
  "skip_if": "you want a finished rank-tracking dashboard rather than an API; this returns JSON with markdown, sources and citations, and you build the reporting yourself",
  "honest_knock": "The free tier is a sampler, not a trial of the real thing: 500 credits is about 100 async ChatGPT answers at the 5-credit rate we were actually charged, and their table lists 7 for a full response. Fewer, if you call it synchronously -- and one concurrent job means you queue. Anyone running a daily visibility check across a hundred keywords burns through it in about two days. Read the credit table before the price table -- the same $100 buys 250,000 credits, which is 35,700 full ChatGPT calls or 62,500 Perplexity ones, so your engine mix decides your bill more than your plan does. And nothing carries: their FAQ, read 17 September 2026, states that unused credits expire at the end of every cycle, so a quiet month is money gone rather than headroom for a busy one.",
  "pricing": {
@@ -104,11 +104,11 @@
     "session_type": "hands_on",
     "what": "We did not just read the docs: we ran 40 pricing queries across 20 tools and two engines through the async batch endpoint for a research report of our own, then spent a further handful of credits measuring what individual requests actually cost. Cloro is an affiliate partner of ours, which is why we checked their credit table against the meter instead of quoting it.",
     "findings": [
-     "A plain async ChatGPT task billed 5 credits, not the 7 the pricing table lists for a full ChatGPT response — that is the web-search rate. It held over 20 requests in a batch and again on a single measured call. Budget from 5 and the free tier is 100 ChatGPT answers, not 71.",
+     "A plain async ChatGPT task billed 5 credits, not the 7 the pricing table lists for a full ChatGPT response: that is the web-search rate. It held over 20 requests in a batch and again on a single measured call. Budget from 5 and the free tier is 100 ChatGPT answers, not 71.",
      "The credit meter lags. Straight after a completed ChatGPT task the balance was unchanged; the charge landed about 90 seconds later. If you gate your own spending on a balance read immediately after a call, you will overshoot.",
-     "The harvest does not echo your request back: task.payload comes back null. Submit a batch of 40 and nothing in the response tells you which answer belongs to which query — you have to keep your own map of task id to question. This cost us a wrong result on the first pass.",
+     "The harvest does not echo your request back: task.payload comes back null. Submit a batch of 40 and nothing in the response tells you which answer belongs to which query: you have to keep your own map of task id to question. This cost us a wrong result on the first pass.",
      "The response shape differs per engine, so there is no single schema to code against. ChatGPT returned text, sources, citationPills and model; Perplexity returned no model but added related_queries, search_model_queries and shopping_cards.",
-     "Async tasks came back in roughly 30 to 40 seconds each, and on the free tier's single concurrent job a 40-task batch is a queue, not a burst — budget wall-clock time as well as credits.",
+     "Async tasks came back in roughly 30 to 40 seconds each, and on the free tier's single concurrent job a 40-task batch is a queue, not a burst: budget wall-clock time as well as credits.",
      "Source counts swing wildly and that is the engine, not the API: one Perplexity call returned 10 sources, while in our 20-tool batch 14 of 20 Perplexity answers returned no sources at all."
     ],
     "not_tested": null,

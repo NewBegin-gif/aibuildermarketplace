@@ -2987,7 +2987,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## RoverLead (roverlead.com)
 - **Verified pricing:** (read 2026-10-23 in the pricing section of roverlead.com; there is no separate pricing page, roverlead.com/pricing returns a 404; dollar amounts, the page does not name the currency) RoverL…
 - **Honest take:** Per user from $149 a month; credits not explained; fees non-refundable.
-- **Best for:** founders and small sales teams who want leads chosen by a recent signal (a funding round, a new role, engagement with their niche) with the first message already written, and who want every lead
+- **Best for:** B2B sales teams first, and founders who do their own selling second, who want leads chosen by a recent signal (a funding round, a new role, engagement with their niche) with the first message already written
 - **Flags:** Per-seat pricing, Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/roverlead-review.html
 
@@ -3771,7 +3771,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Fulfilled orders and VAT are billed on top of the plan.
 - **Best for:** new and growing Shopify dropshippers who want product research, competitor store data and fulfillment in one tool, and who will use the tier quotas
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/tradelle-review/
+- **Full review:** https://marketingandsalessoftware.com/tradelle-review.html
 
 ## Tradify (tradifyhq.com)
 - **Verified pricing:** Per user, per month, quoted in USD on tradifyhq.com/pricing and re-verified 2026-10-02: Lite $47, Pro $51 and Plus $61 per user, plus a Custom tier for large teams that is priced on request.

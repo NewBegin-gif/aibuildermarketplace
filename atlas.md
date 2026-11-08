@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 625 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-08.
+All 628 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-08.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1919,6 +1919,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/keeper-security-review/
 
+## KillerPlayer (killerplayer.com)
+- **Verified pricing:** (read 2026-11-08 on killerplayer.com/pricing, US dollars) KillerPlayer is a custom player for YouTube-hosted videos, and its plans differ by two numbers only: how many videos you embed and …
+- **Honest take:** Introductory prices apply to the first period only; renewals bill at the standard rate.
+- **Best for:** bloggers, course creators and small publishers whose videos already live on YouTube and who want a branded embed without the YouTube title, logo and suggested videos, without re-uploading anything
+- **Flags:** Renewal jump, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/killerplayer-review/
+
 ## Kinsta (kinsta.com)
 - **Verified pricing:** (re-verified 2026-10-03 on their own plans page, USD, tax excluded) Managed WordPress hosting from $35/mo for a single site, or $30/mo billed annually at $350 a year, with the first month f…
 - **Honest take:** You pay a premium for managed speed and support: worth it if performance matters, wasteful on a low-traffic hobby site a $5 shared host would carry fine.
@@ -2513,6 +2520,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small teams and solo operators that want sales, content and support agents plus lead search and outreach in one place, at a flat monthly price
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://marketingandsalessoftware.com/parallel-ai-review.html
+
+## Parallels (parallels.com)
+- **Verified pricing:** (read 2026-11-08 in a live browser on parallels.com/products/desktop/buy, euros from a Netherlands connection) Parallels Desktop runs Windows, Linux or macOS in a virtual machine on a Mac.
+- **Honest take:** Windows licence not included; one licence covers one Mac.
+- **Best for:** Mac users who need to run Windows apps next to macOS apps, from home users on Standard to developers on Pro and small teams on Business
+- **Full review:** https://aibuildermarketplace.com/b2b/parallels-review/
 
 ## Parim (parim.co)
 - **Verified pricing:** (re-read 2026-09-17 and again on 2026-10-05 on parim.co/pricing; unchanged since 20 August 2026) One number is published and the rest is not.
@@ -3751,6 +3764,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** recruiting agencies and SMB staffing firms that want an applicant tracking system and CRM in one place, especially ones that would actually work split placements with other recruiters
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/top-echelon-review.html
+
+## Tossable Digits (tossabledigits.com)
+- **Verified pricing:** (read 2026-11-08 on tossabledigits.com/pricing, US dollars) Tossable Digits, run by Telusion, Inc., sells virtual phone numbers that forward calls and send text messages, billed monthly or …
+- **Honest take:** Business SMS is not allowed; included minutes cover US and Canada calls only.
+- **Best for:** expats, travelers and individuals who want to keep or park a US or Canadian number and forward calls and personal texts to their own phone cheaply
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/tossable-digits-review/
 
 ## Track123 (track123.com)
 - **Verified pricing:** (read 2026-09-27, re-read 2026-10-21 without changes, on apps.shopify.com/track123 and in the vendor's pricing article on intercom.help/track123, dated 14 July 2026) Three published plans p…

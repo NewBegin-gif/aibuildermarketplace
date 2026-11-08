@@ -4286,6 +4286,91 @@
   },
   {
    "source": "session",
+   "product_name": "ShortlistIQ",
+   "product_id": "shortlistiq",
+   "run_date": "2026-11-02",
+   "session_type": "signup_attempt",
+   "what": "We tried ShortlistIQ's free trial on 2 November 2026: Daan created the account and our AI assistant worked in Daan's browser. The test stopped at the first step, because creating an AI assistant produced nothing, so we never reached an interview, a candidate or an export. Nothing below is a finding about the interviews themselves.",
+   "findings": [
+    "The header showed 'Free Trial' and '0 of 10 candidates invited', which matches the pricing page's free plan for up to 10 applicants. No card was asked for in the screens we saw.",
+    "The dashboard checklist had six steps, including creating an AI assistant and an interview. Creating an interview first requires an assistant.",
+    "The assistant form asks for a name, an avatar, a communication style, a humour slider, an emoji setting, a language and pronouns. Avatars can be uploaded or picked from generated faces, filtered by sex, age, ethnicity and hair colour.",
+    "We pressed the generate button twice, with waits of 6 and 15 seconds. The page stayed on the form, showed no error message, and the AI Assistants list still read 'Create your first AI Assistant'. We do not know the cause."
+   ],
+   "not_tested": [
+    "Everything after the assistant: interviews, candidate invitations, scoring reports, and any import or export of candidate data",
+    "Why the generate step failed; we did not read the browser console, and the failure may be on our side",
+    "Checkout, tax and the final price",
+    "Support, roles, API access, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "up to 10 applicants",
+     "claim_source": "https://www.shortlistiq.com/pricing",
+     "claim_read_on": "2026-10-29",
+     "observed": "Header displayed Free Trial and 0 of 10 candidates invited.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/shortlistiq-review.html#claim-vs-measured"
+     },
+     "plan": "Free Trial",
+     "comparability": "The prepared applicant ceiling is compared with the explicit invitation counter, without testing a candidate interview.",
+     "status": "confirmed",
+     "buying_consequence": "The displayed allowance is ten candidate invitations; none was used.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "up to 10 applicants",
+     "claim_source": "https://www.shortlistiq.com/pricing",
+     "claim_read_on": "2026-10-29",
+     "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/shortlistiq-review.html#claim-vs-measured"
+     },
+     "plan": "Free Trial",
+     "comparability": "ShortlistIQ: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "The trial showed an allowance of ten invited candidates. Assistant generation produced no result or error after two attempts, blocking the prerequisite for an interview and candidate testing.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Generation remained on the form after waits of 6 and 15 seconds; the assistant list stayed empty without an error message. The cause is unknown. No candidate import/export behavior was tested.",
+    "friction": {
+     "export_route": "No export reached; assistant prerequisite blocked the test session.",
+     "format": "No file downloaded.",
+     "reimport": "All candidate/kit export and reimport checks remain not_tested; failure of this prerequisite does not establish missing export capability.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitation, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID export/update roundtrip."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Superlines",
    "product_id": "superlines",
    "run_date": "2026-11-02",

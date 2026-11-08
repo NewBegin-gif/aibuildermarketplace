@@ -1414,7 +1414,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Free account, but the 0.07% FX rate is introductory and needs USD 10,000 a month in conversions.
 - **Best for:** startups, scale-ups and mid-market companies that collect and pay in several currencies and convert at least USD 10,000 a month on major pairs, and want one account with no monthly fee
 - **Flags:** Renewal jump, Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/finmo-review/
+- **Full review:** https://officesoftwaremarketplace.com/finmo-review.html
 
 ## Fireflies.ai (fireflies.ai)
 - **Verified pricing:** (price re-verified 2026-10-23 against the vendor's own pricing page and help guide) Free $0 — free forever, unlimited transcription, limited AI summaries, 400 mins of storage per team, 20 A…
@@ -2106,8 +2106,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/liltio-review.html
 
 ## Lindy.ai (lindy.ai)
-- **Verified pricing:** (re-verified 2026-10-02, read on their own pricing page; every amount, credit allowance and FAQ rule unchanged since 4 September) Now sold per user, and the credit allowance is published ag…
-- **Honest take:** Cost tracks headcount rather than output: every colleague who so much as @mentions Lindy in Slack takes a paid seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration.
+- **Verified pricing:** (re-verified 2026-11-08, read on their own pricing page by plain fetch, ten times) Team starts at $29.99/mo per user for 3,000 credits on some fetches of lindy.ai/pricing and at $49.99/mo p…
+- **Honest take:** Cost tracks headcount as well as output: every colleague who so much as @mentions Lindy in Slack takes a seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration.
 - **Best for:** teams that live in Slack and want one shared teammate that sits in their meetings, runs scheduled routines and drafts replies inside the tools they already use
 - **Flags:** Per-seat pricing, Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/lindy-ai-review/

@@ -3263,6 +3263,152 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "SendHQ",
+   "product_id": "sendhq",
+   "run_date": "2026-11-02",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 2 November 2026 on the unpaid integration trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two fictional contacts from a CSV file, then ran a second import to update one of them. We sent nothing, created no API key and did not open checkout.",
+   "findings": [
+    "The trial shows 'Integration trial', 'No active subscription' and 100 recipient deliveries (0 of 100 used). No card was asked for. The plan page lists Transactional Starter at $9 a month, Marketing Starter at $19 and Scale at $39 a month, with a 10% annual discount and the note 'Hard monthly caps, no overage bills.'",
+    "Contacts accepts a CSV of up to 5,000 rows and 5 MB, and nothing is imported until you confirm. Name and email columns matched on their own. Every other column became a custom contact field.",
+    "The import asks why you may email these people and requires an answer. Our records were synthetic, so we said so; the answer is stored on each contact as evidence of consent.",
+    "Our test file marked one contact 'blocked'. SendHQ did not recognise that word and showed both rows as subscribed in the preview. After we changed the value to 'unsubscribed', the preview showed zero subscribed and both contacts arrived as unsubscribed.",
+    "The accented name, the e-mail address and the two-line note came through unchanged. The pipe-separated tag 'aibm-test|alpha' stayed one text value instead of two tags. A file name in the attachment column is stored as plain text; contacts have no file upload.",
+    "A second import with 'Update names and fields of contacts who already exist' ticked reported New 0 and Existing 2. The changed note on the second contact updated and the first stayed as it was. Contacts are matched on the e-mail address, not on an ID."
+   ],
+   "not_tested": [
+    "Export: we found no export or download button on Contacts or Lists, so we could not check what a file would contain. That is not a finding that SendHQ has no export",
+    "A round trip with native record IDs, and any check of attachments",
+    "Checkout, tax and the final price: the browser session did not allow opening it",
+    "Support, team roles, invitations, downgrade and cancellation",
+    "Sending: we sent no message and created no API key or sending domain"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Your lifetime trial includes 100 controlled recipient deliveries. Activate Starter when you are ready for production traffic.",
+     "claim_source": "https://sendhq.cc/app",
+     "claim_read_on": "2026-11-02",
+     "observed": "The account showed Integration trial, No active subscription and 0 of 100 recipient deliveries. Contacts and CSV import worked on this unpaid workspace; no delivery was attempted.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+     },
+     "plan": "Integration trial (unpaid; no active subscription)",
+     "comparability": "The trial wording is compared with the observed plan panel and the completed contact imports; available sending quota is not treated as a successful send.",
+     "status": "confirmed",
+     "buying_consequence": "The unpaid trial allowed this Contacts test. Production sending, allowed recipients and complete marketing access were not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Rows marked unsubscribed in your file come in as unsubscribed and never get broadcasts.",
+     "claim_source": "https://sendhq.cc/app",
+     "claim_read_on": "2026-11-02",
+     "observed": "The original blocked value previewed as subscribed. Replacing only that status with unsubscribed gave 0 subscribed and both imported contacts showed Unsubscribed. Broadcast exclusion was not exercised.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+     },
+     "plan": "Integration trial (unpaid; no active subscription)",
+     "comparability": "Imported status and the zero-subscribed preview support only status mapping; no broadcast was sent to test the separate exclusion promise.",
+     "status": "not_testable",
+     "buying_consequence": "Use the recognized unsubscribed input value for this route; this test did not verify actual broadcast suppression.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Extra columns become contact fields you can use as merge tags.",
+     "claim_source": "https://sendhq.cc/app",
+     "claim_read_on": "2026-11-02",
+     "observed": "Extra CSV columns were automatically mapped to contact fields. The tags column remained one text value and attachment remained a filename; merge-tag rendering was not tested.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+     },
+     "plan": "Integration trial (unpaid; no active subscription)",
+     "comparability": "Column mapping is directly observed, while template merge-tag rendering is outside this short Contacts-only test.",
+     "status": "not_testable",
+     "buying_consequence": "Automatic custom fields do not establish two native tags or binary attachments.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Recorded on every contact as evidence of consent.",
+     "claim_source": "https://sendhq.cc/app",
+     "claim_read_on": "2026-11-02",
+     "observed": "Import required a consent-basis selection and allowed Something else with a free-text explanation that no consent existed. Contact detail stored that explanation and showed Confirmed: Not required.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+     },
+     "plan": "Integration trial (unpaid; no active subscription)",
+     "comparability": "The recording claim is compared with the required import form and stored detail view; legal validity of consent and delivery behavior were not evaluated.",
+     "status": "confirmed",
+     "buying_consequence": "A mandatory basis entry records the supplied explanation; it does not establish opt-in or permission to send.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "A practical base plan for permission-based product marketing",
+     "claim_source": "https://sendhq.cc/app",
+     "claim_read_on": "2026-11-02",
+     "observed": "The in-app monthly Marketing plan page showed Starter $19/month for 50,000 recipient deliveries and 25 verified domains; Scale $39/month for 200,000 and 100 domains. Checkout was not opened because the permission layer refused the browser transaction action. Tax and final total are unknown.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+     },
+     "plan": "Integration trial (unpaid; no active subscription)",
+     "comparability": "Marketing monthly plan-page amounts are recorded without checkout access, tax or a corresponding internal cost rule; no all-in price confirmation is possible.",
+     "status": "not_testable",
+     "buying_consequence": "These are in-app plan-page prices in USD; no checkout total or like-for-like cost-rule comparison is verified.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "Two synthetic subscribers imported as unsubscribed into Contacts on an unpaid Integration trial. An email-matched CSV update was tested; no product export or native-ID roundtrip was available for inspection.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": true,
+    "awkward": "The original blocked status previewed as subscribed; changing only that input status to unsubscribed produced zero subscribed. Consent basis was mandatory even for these synthetic unsubscribed records. The stored basis explained that no consent existed; the detail view then showed Confirmed: Not required. Tags remained a single text field and attachment remained filename text.",
+    "friction": {
+     "export_route": "No export action found in the inspected Contacts, Lists or docs index; not_tested, not proof of absence.",
+     "format": "UTF-8 CSV inputs inspected; no product export format or exported file inspected.",
+     "reimport": "Email-matched update reported New 0 and Existing 2. AIBM-002 free_text changed to the kit value; AIBM-001 stayed unchanged according to notes and two contacts remained. This is a supplementary update test; the fixed native-ID roundtrip is not_tested.",
+     "cancellation": "No active subscription; cancellation, downgrade and deletion not tested."
+    },
+    "not_tested": [
+     "Product export, exported field preservation and native-ID roundtrip.",
+     "Attachment binary upload/download and file hashes after storage.",
+     "New-account signup, human setup timing, support and invitations.",
+     "Checkout, tax, final total, actual downgrade, cancellation and deletion.",
+     "Sending, API execution and API-key creation."
+    ],
+    "available_fields": [
+     "Two contacts after email update",
+     "Updated text reported in the UI"
+    ],
+    "not_offered": [
+     "Two tags became one text field"
+    ],
+    "note": "One export and re-import of synthetic records, on the account and date stated. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "pCloud",
    "product_id": "pcloud",
    "run_date": "2026-11-02",
@@ -4136,6 +4282,91 @@
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "ShortlistIQ",
+   "product_id": "shortlistiq",
+   "run_date": "2026-11-02",
+   "session_type": "signup_attempt",
+   "what": "We tried ShortlistIQ's free trial on 2 November 2026: Daan created the account and our AI assistant worked in Daan's browser. The test stopped at the first step, because creating an AI assistant produced nothing, so we never reached an interview, a candidate or an export. Nothing below is a finding about the interviews themselves.",
+   "findings": [
+    "The header showed 'Free Trial' and '0 of 10 candidates invited', which matches the pricing page's free plan for up to 10 applicants. No card was asked for in the screens we saw.",
+    "The dashboard checklist had six steps, including creating an AI assistant and an interview. Creating an interview first requires an assistant.",
+    "The assistant form asks for a name, an avatar, a communication style, a humour slider, an emoji setting, a language and pronouns. Avatars can be uploaded or picked from generated faces, filtered by sex, age, ethnicity and hair colour.",
+    "We pressed the generate button twice, with waits of 6 and 15 seconds. The page stayed on the form, showed no error message, and the AI Assistants list still read 'Create your first AI Assistant'. We do not know the cause."
+   ],
+   "not_tested": [
+    "Everything after the assistant: interviews, candidate invitations, scoring reports, and any import or export of candidate data",
+    "Why the generate step failed; we did not read the browser console, and the failure may be on our side",
+    "Checkout, tax and the final price",
+    "Support, roles, API access, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "up to 10 applicants",
+     "claim_source": "https://www.shortlistiq.com/pricing",
+     "claim_read_on": "2026-10-29",
+     "observed": "Header displayed Free Trial and 0 of 10 candidates invited.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/shortlistiq-review.html#claim-vs-measured"
+     },
+     "plan": "Free Trial",
+     "comparability": "The prepared applicant ceiling is compared with the explicit invitation counter, without testing a candidate interview.",
+     "status": "confirmed",
+     "buying_consequence": "The displayed allowance is ten candidate invitations; none was used.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "up to 10 applicants",
+     "claim_source": "https://www.shortlistiq.com/pricing",
+     "claim_read_on": "2026-10-29",
+     "observed": "Checkout not opened; no checkout price, tax or final total observed.",
+     "observed_on": "2026-11-02",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/shortlistiq-review.html#claim-vs-measured"
+     },
+     "plan": "Free Trial",
+     "comparability": "ShortlistIQ: no checkout or cost-rule comparison; observed plan wording is not a final payable amount.",
+     "status": "not_testable",
+     "buying_consequence": "A purchase price cannot be confirmed from this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-02",
+    "what": "The trial showed an allowance of ten invited candidates. Assistant generation produced no result or error after two attempts, blocking the prerequisite for an interview and candidate testing.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Generation remained on the form after waits of 6 and 15 seconds; the assistant list stayed empty without an error message. The cause is unknown. No candidate import/export behavior was tested.",
+    "friction": {
+     "export_route": "No export reached; assistant prerequisite blocked the test session.",
+     "format": "No file downloaded.",
+     "reimport": "All candidate/kit export and reimport checks remain not_tested; failure of this prerequisite does not establish missing export capability.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support, invitation, checkout, tax and final total.",
+     "Complete original signup, cancellation and deletion.",
+     "Native-ID export/update roundtrip."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

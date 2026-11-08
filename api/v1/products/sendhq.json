@@ -73,10 +73,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-02; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -84,7 +83,354 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "api_access": {
+   "status": "available_on_tested_plan",
+   "plan": "Integration trial (unpaid; no active subscription)",
+   "route": "Sidebar > API keys; creation screen reported in supplied raw notes. No key created or copied. Separate API-screen image not delivered; image evidence below shows navigation only.",
+   "quote": {
+    "text": "Create an API key — The full key is shown once",
+    "source_url": "https://sendhq.cc/app",
+    "observed_at": "2026-11-02T10:05:00+01:00"
+   },
+   "evidence": [
+    "bewijs/08-aibm-001-detail.png"
+   ]
+  },
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-02",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/sendhq-review/",
+  "method": [
+   "Read the plan and usage screens of the trial workspace",
+   "Imported a two-row CSV of fictional contacts and checked each field on the contact detail page",
+   "Ran a second import with the update option on and compared the changed field"
+  ],
+  "claims": [
+   {
+    "claim": "Your lifetime trial includes 100 controlled recipient deliveries. Activate Starter when you are ready for production traffic.",
+    "claim_source": "https://sendhq.cc/app",
+    "claim_read_on": "2026-11-02",
+    "observed": "The account showed Integration trial, No active subscription and 0 of 100 recipient deliveries. Contacts and CSV import worked on this unpaid workspace; no delivery was attempted.",
+    "observed_on": "2026-11-02",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+    },
+    "plan": "Integration trial (unpaid; no active subscription)",
+    "comparability": "The trial wording is compared with the observed plan panel and the completed contact imports; available sending quota is not treated as a successful send.",
+    "status": "confirmed",
+    "buying_consequence": "The unpaid trial allowed this Contacts test. Production sending, allowed recipients and complete marketing access were not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Rows marked unsubscribed in your file come in as unsubscribed and never get broadcasts.",
+    "claim_source": "https://sendhq.cc/app",
+    "claim_read_on": "2026-11-02",
+    "observed": "The original blocked value previewed as subscribed. Replacing only that status with unsubscribed gave 0 subscribed and both imported contacts showed Unsubscribed. Broadcast exclusion was not exercised.",
+    "observed_on": "2026-11-02",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+    },
+    "plan": "Integration trial (unpaid; no active subscription)",
+    "comparability": "Imported status and the zero-subscribed preview support only status mapping; no broadcast was sent to test the separate exclusion promise.",
+    "status": "not_testable",
+    "buying_consequence": "Use the recognized unsubscribed input value for this route; this test did not verify actual broadcast suppression.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Extra columns become contact fields you can use as merge tags.",
+    "claim_source": "https://sendhq.cc/app",
+    "claim_read_on": "2026-11-02",
+    "observed": "Extra CSV columns were automatically mapped to contact fields. The tags column remained one text value and attachment remained a filename; merge-tag rendering was not tested.",
+    "observed_on": "2026-11-02",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+    },
+    "plan": "Integration trial (unpaid; no active subscription)",
+    "comparability": "Column mapping is directly observed, while template merge-tag rendering is outside this short Contacts-only test.",
+    "status": "not_testable",
+    "buying_consequence": "Automatic custom fields do not establish two native tags or binary attachments.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Recorded on every contact as evidence of consent.",
+    "claim_source": "https://sendhq.cc/app",
+    "claim_read_on": "2026-11-02",
+    "observed": "Import required a consent-basis selection and allowed Something else with a free-text explanation that no consent existed. Contact detail stored that explanation and showed Confirmed: Not required.",
+    "observed_on": "2026-11-02",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+    },
+    "plan": "Integration trial (unpaid; no active subscription)",
+    "comparability": "The recording claim is compared with the required import form and stored detail view; legal validity of consent and delivery behavior were not evaluated.",
+    "status": "confirmed",
+    "buying_consequence": "A mandatory basis entry records the supplied explanation; it does not establish opt-in or permission to send.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "A practical base plan for permission-based product marketing",
+    "claim_source": "https://sendhq.cc/app",
+    "claim_read_on": "2026-11-02",
+    "observed": "The in-app monthly Marketing plan page showed Starter $19/month for 50,000 recipient deliveries and 25 verified domains; Scale $39/month for 200,000 and 100 domains. Checkout was not opened because the permission layer refused the browser transaction action. Tax and final total are unknown.",
+    "observed_on": "2026-11-02",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+    },
+    "plan": "Integration trial (unpaid; no active subscription)",
+    "comparability": "Marketing monthly plan-page amounts are recorded without checkout access, tax or a corresponding internal cost rule; no all-in price confirmation is possible.",
+    "status": "not_testable",
+    "buying_consequence": "These are in-app plan-page prices in USD; no checkout total or like-for-like cost-rule comparison is verified.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-02",
+   "what": "Two synthetic subscribers imported as unsubscribed into Contacts on an unpaid Integration trial. An email-matched CSV update was tested; no product export or native-ID roundtrip was available for inspection.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": true,
+   "awkward": "The original blocked status previewed as subscribed; changing only that input status to unsubscribed produced zero subscribed. Consent basis was mandatory even for these synthetic unsubscribed records. The stored basis explained that no consent existed; the detail view then showed Confirmed: Not required. Tags remained a single text field and attachment remained filename text.",
+   "friction": {
+    "export_route": "No export action found in the inspected Contacts, Lists or docs index; not_tested, not proof of absence.",
+    "format": "UTF-8 CSV inputs inspected; no product export format or exported file inspected.",
+    "reimport": "Email-matched update reported New 0 and Existing 2. AIBM-002 free_text changed to the kit value; AIBM-001 stayed unchanged according to notes and two contacts remained. This is a supplementary update test; the fixed native-ID roundtrip is not_tested.",
+    "cancellation": "No active subscription; cancellation, downgrade and deletion not tested."
+   },
+   "not_tested": [
+    "Product export, exported field preservation and native-ID roundtrip.",
+    "Attachment binary upload/download and file hashes after storage.",
+    "New-account signup, human setup timing, support and invitations.",
+    "Checkout, tax, final total, actual downgrade, cancellation and deletion.",
+    "Sending, API execution and API-key creation."
+   ],
+   "available_fields": [
+    "Two contacts after email update",
+    "Updated text reported in the UI"
+   ],
+   "not_offered": [
+    "Two tags became one text field"
+   ],
+   "note": "One export and re-import of synthetic records, on the account and date stated. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/sendhq-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/sendhq-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/sendhq-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Two synthetic subscribers imported as unsubscribed into Contacts on an unpaid Integration trial. An email-matched CSV update was tested; no product export or native-ID roundtrip was available for inspection. One export and re-import of synthetic records, on the account and date stated. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/sendhq-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": true,
+    "basis": "Two synthetic subscribers imported as unsubscribed into Contacts on an unpaid Integration trial. An email-matched CSV update was tested; no product export or native-ID roundtrip was available for inspection. One export and re-import of synthetic records, on the account and date stated. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/sendhq-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-02",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/sendhq-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-02",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "SendHQ",
+    "product_id": "sendhq",
+    "run_date": "2026-11-02",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 2 November 2026 on the unpaid integration trial: Daan created the account and our AI assistant ran the test in Daan's browser. We imported two fictional contacts from a CSV file, then ran a second import to update one of them. We sent nothing, created no API key and did not open checkout.",
+    "findings": [
+     "The trial shows 'Integration trial', 'No active subscription' and 100 recipient deliveries (0 of 100 used). No card was asked for. The plan page lists Transactional Starter at $9 a month, Marketing Starter at $19 and Scale at $39 a month, with a 10% annual discount and the note 'Hard monthly caps, no overage bills.'",
+     "Contacts accepts a CSV of up to 5,000 rows and 5 MB, and nothing is imported until you confirm. Name and email columns matched on their own. Every other column became a custom contact field.",
+     "The import asks why you may email these people and requires an answer. Our records were synthetic, so we said so; the answer is stored on each contact as evidence of consent.",
+     "Our test file marked one contact 'blocked'. SendHQ did not recognise that word and showed both rows as subscribed in the preview. After we changed the value to 'unsubscribed', the preview showed zero subscribed and both contacts arrived as unsubscribed.",
+     "The accented name, the e-mail address and the two-line note came through unchanged. The pipe-separated tag 'aibm-test|alpha' stayed one text value instead of two tags. A file name in the attachment column is stored as plain text; contacts have no file upload.",
+     "A second import with 'Update names and fields of contacts who already exist' ticked reported New 0 and Existing 2. The changed note on the second contact updated and the first stayed as it was. Contacts are matched on the e-mail address, not on an ID."
+    ],
+    "not_tested": [
+     "Export: we found no export or download button on Contacts or Lists, so we could not check what a file would contain. That is not a finding that SendHQ has no export",
+     "A round trip with native record IDs, and any check of attachments",
+     "Checkout, tax and the final price: the browser session did not allow opening it",
+     "Support, team roles, invitations, downgrade and cancellation",
+     "Sending: we sent no message and created no API key or sending domain"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Your lifetime trial includes 100 controlled recipient deliveries. Activate Starter when you are ready for production traffic.",
+      "claim_source": "https://sendhq.cc/app",
+      "claim_read_on": "2026-11-02",
+      "observed": "The account showed Integration trial, No active subscription and 0 of 100 recipient deliveries. Contacts and CSV import worked on this unpaid workspace; no delivery was attempted.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+      },
+      "plan": "Integration trial (unpaid; no active subscription)",
+      "comparability": "The trial wording is compared with the observed plan panel and the completed contact imports; available sending quota is not treated as a successful send.",
+      "status": "confirmed",
+      "buying_consequence": "The unpaid trial allowed this Contacts test. Production sending, allowed recipients and complete marketing access were not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Rows marked unsubscribed in your file come in as unsubscribed and never get broadcasts.",
+      "claim_source": "https://sendhq.cc/app",
+      "claim_read_on": "2026-11-02",
+      "observed": "The original blocked value previewed as subscribed. Replacing only that status with unsubscribed gave 0 subscribed and both imported contacts showed Unsubscribed. Broadcast exclusion was not exercised.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+      },
+      "plan": "Integration trial (unpaid; no active subscription)",
+      "comparability": "Imported status and the zero-subscribed preview support only status mapping; no broadcast was sent to test the separate exclusion promise.",
+      "status": "not_testable",
+      "buying_consequence": "Use the recognized unsubscribed input value for this route; this test did not verify actual broadcast suppression.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Extra columns become contact fields you can use as merge tags.",
+      "claim_source": "https://sendhq.cc/app",
+      "claim_read_on": "2026-11-02",
+      "observed": "Extra CSV columns were automatically mapped to contact fields. The tags column remained one text value and attachment remained a filename; merge-tag rendering was not tested.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+      },
+      "plan": "Integration trial (unpaid; no active subscription)",
+      "comparability": "Column mapping is directly observed, while template merge-tag rendering is outside this short Contacts-only test.",
+      "status": "not_testable",
+      "buying_consequence": "Automatic custom fields do not establish two native tags or binary attachments.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Recorded on every contact as evidence of consent.",
+      "claim_source": "https://sendhq.cc/app",
+      "claim_read_on": "2026-11-02",
+      "observed": "Import required a consent-basis selection and allowed Something else with a free-text explanation that no consent existed. Contact detail stored that explanation and showed Confirmed: Not required.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+      },
+      "plan": "Integration trial (unpaid; no active subscription)",
+      "comparability": "The recording claim is compared with the required import form and stored detail view; legal validity of consent and delivery behavior were not evaluated.",
+      "status": "confirmed",
+      "buying_consequence": "A mandatory basis entry records the supplied explanation; it does not establish opt-in or permission to send.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "A practical base plan for permission-based product marketing",
+      "claim_source": "https://sendhq.cc/app",
+      "claim_read_on": "2026-11-02",
+      "observed": "The in-app monthly Marketing plan page showed Starter $19/month for 50,000 recipient deliveries and 25 verified domains; Scale $39/month for 200,000 and 100 domains. Checkout was not opened because the permission layer refused the browser transaction action. Tax and final total are unknown.",
+      "observed_on": "2026-11-02",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/sendhq-review/#claim-vs-measured"
+      },
+      "plan": "Integration trial (unpaid; no active subscription)",
+      "comparability": "Marketing monthly plan-page amounts are recorded without checkout access, tax or a corresponding internal cost rule; no all-in price confirmation is possible.",
+      "status": "not_testable",
+      "buying_consequence": "These are in-app plan-page prices in USD; no checkout total or like-for-like cost-rule comparison is verified.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-02",
+     "what": "Two synthetic subscribers imported as unsubscribed into Contacts on an unpaid Integration trial. An email-matched CSV update was tested; no product export or native-ID roundtrip was available for inspection.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": true,
+     "awkward": "The original blocked status previewed as subscribed; changing only that input status to unsubscribed produced zero subscribed. Consent basis was mandatory even for these synthetic unsubscribed records. The stored basis explained that no consent existed; the detail view then showed Confirmed: Not required. Tags remained a single text field and attachment remained filename text.",
+     "friction": {
+      "export_route": "No export action found in the inspected Contacts, Lists or docs index; not_tested, not proof of absence.",
+      "format": "UTF-8 CSV inputs inspected; no product export format or exported file inspected.",
+      "reimport": "Email-matched update reported New 0 and Existing 2. AIBM-002 free_text changed to the kit value; AIBM-001 stayed unchanged according to notes and two contacts remained. This is a supplementary update test; the fixed native-ID roundtrip is not_tested.",
+      "cancellation": "No active subscription; cancellation, downgrade and deletion not tested."
+     },
+     "not_tested": [
+      "Product export, exported field preservation and native-ID roundtrip.",
+      "Attachment binary upload/download and file hashes after storage.",
+      "New-account signup, human setup timing, support and invitations.",
+      "Checkout, tax, final total, actual downgrade, cancellation and deletion.",
+      "Sending, API execution and API-key creation."
+     ],
+     "available_fields": [
+      "Two contacts after email update",
+      "Updated text reported in the UI"
+     ],
+     "not_offered": [
+      "Two tags became one text field"
+     ],
+     "note": "One export and re-import of synthetic records, on the account and date stated. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "sendhq:cancellation_terms",

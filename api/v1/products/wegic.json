@@ -73,10 +73,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-05; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -84,7 +83,326 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-05",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/wegic-review/",
+  "method": [
+   "Opened the Wegic start screen and sent the kit prompt",
+   "Answered the assistant's questions and confirmed its summary and structure",
+   "Waited about 3.5 minutes for the preview step and noted the credit counter at each step"
+  ],
+  "claims": [
+   {
+    "claim": "Sign in to unlock more features.",
+    "claim_source": "https://wegic.ai/workspace/projects",
+    "claim_read_on": "2026-11-05",
+    "observed": "The tab displayed visitor credits rather than an established signed-in account. No registered trial behavior inferred.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+    },
+    "plan": "Visitor mode; account state unproven",
+    "comparability": "Wegic: Visitor session only; Daan account existence and cross-tab login unknown.",
+    "status": "confirmed",
+    "buying_consequence": "These findings apply to visitor mode.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Internal Note / Action: Status badge ( Draft / Do Not Publish ) & feedback button",
+    "claim_source": "https://wegic.ai/workspace/projects",
+    "claim_read_on": "2026-11-05",
+    "observed": "The proposed structure added a status badge and feedback button without those elements in the exact-copy prompt. No completed preview was obtained.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+    },
+    "plan": "Visitor mode; account state unproven",
+    "comparability": "Wegic: Proposal in chat, not a verified change on a completed page.",
+    "status": "confirmed",
+    "buying_consequence": "Review the proposed structure before generating.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "this will take about 1-2 minutes, please hold on…",
+    "claim_source": "https://wegic.ai/workspace/projects",
+    "claim_read_on": "2026-11-05",
+    "observed": "No preview was ready at the approximately 3.5-minute cutoff. Session ended within its time budget; eventual generation outcome unknown.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+    },
+    "plan": "Visitor mode; account state unproven",
+    "comparability": "Wegic: Approximate single wait, not a measured setup-time benchmark or service-wide timing result.",
+    "status": "not_comparable",
+    "buying_consequence": "Allow for pending generation when evaluating the observed route.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free signup.",
+    "claim_source": "https://wegic.ai/ai-website-builder/start-a-free",
+    "claim_read_on": "2026-10-29",
+    "observed": "Visitor credits left 100 and Sign in to unlock more features showed that this tab was in visitor mode. Daan supplied a start URL, but account existence/login were not established. No registered-account or trial-tier result claimed. Visitor credits fell 100 to 98 to 96 to 95 during chat steps. Assistant said previews take about 1-2 minutes; none ready after approximately 3.5 minutes when the session stopped.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+    },
+    "plan": "Visitor mode; account state unproven",
+    "comparability": "Wegic: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+    "status": "not_testable",
+    "buying_consequence": "Observed session scope limits the public claim comparison.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free signup.",
+    "claim_source": "https://wegic.ai/ai-website-builder/start-a-free",
+    "claim_read_on": "2026-10-29",
+    "observed": "Visitor-mode chat only. No pricing, registered trial, payment screen or checkout total observed.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+    },
+    "plan": "Visitor mode; account state unproven",
+    "comparability": "Wegic: Wegic visitor scope does not establish signup/trial or a payable price. No checkout or same-scope cost comparison.",
+    "status": "not_testable",
+    "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-05",
+   "what": "Submitted AIBM-001 exact-copy prompt. Chat display changed straight quotation marks into curly marks; ë/é retained. Selected Internal concept testing and confirmed summary. Proposed structure added an unrequested status badge and feedback button, then generation remained pending. Completed core/page outcome not_tested; chat observations do not establish final page content.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Visitor chat reformatted prompt quotes and proposed unrequested interface elements; previews still pending at the observation cutoff.",
+   "friction": {
+    "export_route": "No previews completed by session stop; no export, download or reimport inspected.",
+    "format": "No downloaded export file examined.",
+    "reimport": "No native-ID export, update or reimport executed.",
+    "cancellation": "Cancellation and downgrade not tested."
+   },
+   "not_tested": [
+    "Support and invitation sending.",
+    "Full signup count and exact session duration.",
+    "All ten export and reimport checks; no downloaded output bytes.",
+    "Cancellation, deletion and passive follow-up."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/wegic-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wegic-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wegic-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Submitted AIBM-001 exact-copy prompt. Chat display changed straight quotation marks into curly marks; ë/é retained. Selected Internal concept testing and confirmed summary. Proposed structure added an unrequested status badge and feedback button, then generation remained pending. Completed core/page outcome not_tested; chat observations do not establish final page content. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wegic-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Submitted AIBM-001 exact-copy prompt. Chat display changed straight quotation marks into curly marks; ë/é retained. Selected Internal concept testing and confirmed summary. Proposed structure added an unrequested status badge and feedback button, then generation remained pending. Completed core/page outcome not_tested; chat observations do not establish final page content. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wegic-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/wegic-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-05",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Wegic",
+    "product_id": "wegic",
+    "run_date": "2026-11-05",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 5 November 2026: Daan opened the site and our AI assistant ran the test in Daan's browser. The session ran in visitor mode, not signed in, so this is a test of the free visitor experience. We sent a one-page test prompt to the AI site builder and followed the chat until we stopped after about 3.5 minutes. We published nothing.",
+    "findings": [
+     "The start screen is a chat with an assistant called Kimmy. The footer showed 'Visitor credits left: 100'.",
+     "After our first prompt the project name appeared top left with 'Sign in to unlock more features', which confirms visitor mode.",
+     "Kimmy asked for the purpose of the page, then wrote a summary and a proposed structure. The structure added a 'Draft / Do Not Publish' status badge and a feedback button that we had not asked for.",
+     "The chat repeated our prompt with straight quotes turned into curly quotes. The accented characters were kept.",
+     "Credits dropped step by step: 100, 98, 96, 95. After 'Looks good, generate previews' the assistant promised styles in 1 to 2 minutes. After about 3.5 minutes there was still no preview."
+    ],
+    "not_tested": [
+     "A finished site preview or published page: we stopped at the tutorial wait",
+     "Whether a signed-in account behaves differently",
+     "Pricing, export, roles, support, downgrade and cancellation"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Sign in to unlock more features.",
+      "claim_source": "https://wegic.ai/workspace/projects",
+      "claim_read_on": "2026-11-05",
+      "observed": "The tab displayed visitor credits rather than an established signed-in account. No registered trial behavior inferred.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+      },
+      "plan": "Visitor mode; account state unproven",
+      "comparability": "Wegic: Visitor session only; Daan account existence and cross-tab login unknown.",
+      "status": "confirmed",
+      "buying_consequence": "These findings apply to visitor mode.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Internal Note / Action: Status badge ( Draft / Do Not Publish ) & feedback button",
+      "claim_source": "https://wegic.ai/workspace/projects",
+      "claim_read_on": "2026-11-05",
+      "observed": "The proposed structure added a status badge and feedback button without those elements in the exact-copy prompt. No completed preview was obtained.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+      },
+      "plan": "Visitor mode; account state unproven",
+      "comparability": "Wegic: Proposal in chat, not a verified change on a completed page.",
+      "status": "confirmed",
+      "buying_consequence": "Review the proposed structure before generating.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "this will take about 1-2 minutes, please hold on…",
+      "claim_source": "https://wegic.ai/workspace/projects",
+      "claim_read_on": "2026-11-05",
+      "observed": "No preview was ready at the approximately 3.5-minute cutoff. Session ended within its time budget; eventual generation outcome unknown.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+      },
+      "plan": "Visitor mode; account state unproven",
+      "comparability": "Wegic: Approximate single wait, not a measured setup-time benchmark or service-wide timing result.",
+      "status": "not_comparable",
+      "buying_consequence": "Allow for pending generation when evaluating the observed route.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free signup.",
+      "claim_source": "https://wegic.ai/ai-website-builder/start-a-free",
+      "claim_read_on": "2026-10-29",
+      "observed": "Visitor credits left 100 and Sign in to unlock more features showed that this tab was in visitor mode. Daan supplied a start URL, but account existence/login were not established. No registered-account or trial-tier result claimed. Visitor credits fell 100 to 98 to 96 to 95 during chat steps. Assistant said previews take about 1-2 minutes; none ready after approximately 3.5 minutes when the session stopped.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+      },
+      "plan": "Visitor mode; account state unproven",
+      "comparability": "Wegic: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+      "status": "not_testable",
+      "buying_consequence": "Observed session scope limits the public claim comparison.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free signup.",
+      "claim_source": "https://wegic.ai/ai-website-builder/start-a-free",
+      "claim_read_on": "2026-10-29",
+      "observed": "Visitor-mode chat only. No pricing, registered trial, payment screen or checkout total observed.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+      },
+      "plan": "Visitor mode; account state unproven",
+      "comparability": "Wegic: Wegic visitor scope does not establish signup/trial or a payable price. No checkout or same-scope cost comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-05",
+     "what": "Submitted AIBM-001 exact-copy prompt. Chat display changed straight quotation marks into curly marks; ë/é retained. Selected Internal concept testing and confirmed summary. Proposed structure added an unrequested status badge and feedback button, then generation remained pending. Completed core/page outcome not_tested; chat observations do not establish final page content.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Visitor chat reformatted prompt quotes and proposed unrequested interface elements; previews still pending at the observation cutoff.",
+     "friction": {
+      "export_route": "No previews completed by session stop; no export, download or reimport inspected.",
+      "format": "No downloaded export file examined.",
+      "reimport": "No native-ID export, update or reimport executed.",
+      "cancellation": "Cancellation and downgrade not tested."
+     },
+     "not_tested": [
+      "Support and invitation sending.",
+      "Full signup count and exact session duration.",
+      "All ten export and reimport checks; no downloaded output bytes.",
+      "Cancellation, deletion and passive follow-up."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "wegic:cancellation_terms",

@@ -88,7 +88,7 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-06; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
@@ -98,6 +98,183 @@
   "refund": "being_verified"
  },
  "status_page": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-06",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/prezi-review.html",
+  "method": [
+   "Entered one prompt with exact kit text and compared the slides with it",
+   "Opened the share and download tabs and read the default settings",
+   "Opened the upgrade and trial screens and stopped before confirming"
+  ],
+  "claims": [
+   {
+    "claim": "VALIDATION STATUS // AIBM-001",
+    "claim_source": "https://prezi.com/craft/",
+    "claim_read_on": "2026-11-06",
+    "observed": "One two-slide generation added this label, altered requested title/case and invented a hardware-validation overview. Credits changed 500 to 350.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+    },
+    "plan": "Free / Prezi AI 4.0",
+    "comparability": "Prezi: Correct third prompt only; earlier typing mistakes excluded; no export preservation inferred.",
+    "status": "confirmed",
+    "buying_consequence": "Inspect generated text against the prompt before sharing.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Openbaar",
+    "claim_source": "https://prezi.com/craft/",
+    "claim_read_on": "2026-11-06",
+    "observed": "New presentation publicly shared by default; AI-analyse, Hergebruik toestaan and Downloads toestaan on.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+    },
+    "plan": "Free / Prezi AI 4.0",
+    "comparability": "Prezi: Observed sharing defaults on this new presentation; no anonymous-viewer access test.",
+    "status": "confirmed",
+    "buying_consequence": "Review public visibility and reuse settings before sharing material.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Bewerkbare PPTX",
+    "claim_source": "https://prezi.com/craft/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Owner download options PDF, editable PPTX and SCORM labelled Plus while viewer downloads toggle was enabled.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+    },
+    "plan": "Free / Prezi AI 4.0",
+    "comparability": "Prezi: Owner entitlement versus sharing setting, without claiming successful viewer export.",
+    "status": "confirmed",
+    "buying_consequence": "Owner export was gated; viewer behavior remains untested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "€ 15/mnd, Jaarlijks gefactureerd",
+    "claim_source": "https://prezi.com/craft/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Plus trial required payment method; annual base € 180,00 with 21% btw € 37,80 after trial; current charge € 0,00.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+    },
+    "plan": "Free / Prezi AI 4.0",
+    "comparability": "Prezi: Annual base, tax and current-charge lines only; no independently quoted annual tax-inclusive total.",
+    "status": "confirmed",
+    "buying_consequence": "Monthly equivalent is billed annually after trial.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "€ 15/mnd, Jaarlijks gefactureerd",
+    "claim_source": "https://prezi.com/craft/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Plus annual base € 180,00 and 21% btw € 37,80 after trial; current charge € 0,00. Payment method required, trial not started. No independent verbatim tax-inclusive annual total in a preserved UI quote.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+    },
+    "plan": "Free / Prezi AI 4.0",
+    "comparability": "Prezi: Plus annual base € 180,00 and 21% btw € 37,80 after trial; current charge € 0,00. Payment method required, trial not started. No independent verbatim tax-inclusive annual total in a preserved UI quote. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+    "status": "confirmed",
+    "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-06",
+   "what": "Correct third prompt requested two slides with exact kit text. Slide title dropped TEST and parentheses; slide two uppercased text and added VALIDATION STATUS // AIBM-001. Overview invented PROTOCOL ALPHA — Internal hardware validation. Credit balance went 500 to 350. First two typing attempts excluded as own input artefacts.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Share default Openbaar with AI analysis, reuse and viewer downloads on. Owner PDF/PPTX/SCORM showed Plus gate. Viewer download permission was not exercised; no export bytes or reimport.",
+   "friction": {
+    "export_route": "Share default Openbaar with AI analysis, reuse and viewer downloads on. Owner PDF/PPTX/SCORM showed Plus gate. Viewer download permission was not exercised; no export bytes or reimport.",
+    "format": "No downloaded product file.",
+    "reimport": "No native-ID reimport.",
+    "cancellation": "Cancellation/downgrade not tested."
+   },
+   "not_tested": [
+    "Support, invitations, cancellation and passive follow-up.",
+    "Downloaded product exports and native-ID roundtrip.",
+    "Full original signup screen count."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/prezi-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/prezi-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/prezi-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Correct third prompt requested two slides with exact kit text. Slide title dropped TEST and parentheses; slide two uppercased text and added VALIDATION STATUS // AIBM-001. Overview invented PROTOCOL ALPHA — Internal hardware validation. Credit balance went 500 to 350. First two typing attempts excluded as own input artefacts. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/prezi-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Correct third prompt requested two slides with exact kit text. Slide title dropped TEST and parentheses; slide two uppercased text and added VALIDATION STATUS // AIBM-001. Overview invented PROTOCOL ALPHA — Internal hardware validation. Credit balance went 500 to 350. First two typing attempts excluded as own input artefacts. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/prezi-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/prezi-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-06",
+    "evidence_url": null
+   }
+  }
+ },
  "task_evidence": {
   "structured_checks": [
    {
@@ -494,21 +671,140 @@
     "source": "session",
     "product_name": "Prezi",
     "product_id": "prezi",
-    "run_date": "2026-09-28",
+    "run_date": "2026-11-06",
     "session_type": "hands_on",
-    "what": "On 28 September 2026 we gave Gamma, Beautiful.ai, Prezi and Canva the same brief for a ten-slide investor deck: eleven facts about a made-up bakery chain and the rule to add no other numbers. We checked every deck against 15 tests written down before the first one was generated. Prezi ran on a new Basic (free) account.",
+    "what": "Tested by our team on 6 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We asked the AI editor for a two-slide presentation with exact text, then read the sharing, download and upgrade screens. We published nothing and did not start the Plus trial.",
     "findings": [
-     "Prezi's AI editor opened in a pop-up window and built ten slides plus its zooming overview in under four minutes, using 150 of the 500 starting credits.",
-     "It added no numbers of its own and drew both charts to scale, but it made up a company website (kettlecrumb.nl), gave the CEO a gender the brief did not, and described 2025's actual revenue as a projection.",
-     "Asked once to 'Change the ask to €450,000 for 12%', it updated the ask slide but left 'Our €400,000 investment' on the use-of-funds slide, so the deck contradicted itself.",
-     "On Basic, PDF, PowerPoint (labelled editable) and SCORM downloads in the AI editor were all locked to Plus, and the only sharing option is Public, which the Dutch interface describes as anyone being able to find and view the deck ('iedereen kan dit vinden en bekijken'), with the account holder's name on the page. To take our deck offline we had to move it to the bin."
+     "No card was asked for at sign-up. The dashboard showed 500 credits. One generation of two slides took about a minute and brought the balance to 350, so 150 credits.",
+     "Our third prompt asked for a title slide and a second slide holding one line of text and nothing else. The first two attempts lost characters while we typed, which was our own input slip, so we do not count them. The title came out without 'TEST' and without the brackets. Slide two showed our line in capitals and added a label 'VALIDATION STATUS // AIBM-001' and a large '001' that we had not asked for.",
+     "The zooming overview carried an invented headline, 'PROTOCOL ALPHA, Internal hardware validation', over a mountain landscape with hardware renders. None of that was in the prompt. A 'Made with Prezi' badge sits on the slides.",
+     "A new presentation is public by default, with a public link and a QR code. AI analysis of viewing behaviour, reuse by viewers (who can make their own editable copy) and viewer downloads as PDF, PowerPoint or SCORM were all switched on.",
+     "In the owner's Download tab, PDF, editable PPTX and SCORM are all marked Plus. That sits next to a sharing setting that lets viewers download in the same formats. We did not test the viewer side, so we do not know which of the two wins.",
+     "The upgrade dialog offers Plus at €15 a month, billed annually. The trial screen shows €0.00 due now and the first charge on 20 November. It still asks for a payment method: a base of €180.00 a year plus 21% VAT of €37.80, so €217.80 after the trial. Registering the account itself needed no card. We stopped there.",
+     "Our earlier test of 28 September 2026 on a Basic account, with a ten-slide investor deck, found the same download lock and a public-only sharing option. That test is described in the four-tool comparison linked below."
     ],
-    "not_tested": "One run on one day on the Basic plan; Plus may behave differently. We did not judge design quality. We downloaded and opened no exported file, so we have not checked whether the PowerPoint labelled editable keeps its text editable. Also untested: the PDF and PowerPoint download buttons on the public room page, shown to us on Basic and to logged-out viewers behind a sign-in, and the dashboard's Download PPTX.",
+    "not_tested": [
+     "Export and re-import: PDF and PowerPoint downloads are Plus-only for the owner, and we downloaded no file",
+     "What an anonymous viewer can do with the public link, including the download permission",
+     "The final price: we did not finish the trial sign-up, so no tax-inclusive total was shown on a payment screen",
+     "Support, team roles, API access, invitations, downgrade and cancellation",
+     "How long sign-up took from the first click; Daan created the account before we started counting"
+    ],
     "report": "/research/one-pitch-deck-four-ai-presentation-tools/",
     "disclosure": null,
     "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "VALIDATION STATUS // AIBM-001",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "One two-slide generation added this label, altered requested title/case and invented a hardware-validation overview. Credits changed 500 to 350.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Correct third prompt only; earlier typing mistakes excluded; no export preservation inferred.",
+      "status": "confirmed",
+      "buying_consequence": "Inspect generated text against the prompt before sharing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Openbaar",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "New presentation publicly shared by default; AI-analyse, Hergebruik toestaan and Downloads toestaan on.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Observed sharing defaults on this new presentation; no anonymous-viewer access test.",
+      "status": "confirmed",
+      "buying_consequence": "Review public visibility and reuse settings before sharing material.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Bewerkbare PPTX",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Owner download options PDF, editable PPTX and SCORM labelled Plus while viewer downloads toggle was enabled.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Owner entitlement versus sharing setting, without claiming successful viewer export.",
+      "status": "confirmed",
+      "buying_consequence": "Owner export was gated; viewer behavior remains untested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "€ 15/mnd, Jaarlijks gefactureerd",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Plus trial required payment method; annual base € 180,00 with 21% btw € 37,80 after trial; current charge € 0,00.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Annual base, tax and current-charge lines only; no independently quoted annual tax-inclusive total.",
+      "status": "confirmed",
+      "buying_consequence": "Monthly equivalent is billed annually after trial.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "€ 15/mnd, Jaarlijks gefactureerd",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Plus annual base € 180,00 and 21% btw € 37,80 after trial; current charge € 0,00. Payment method required, trial not started. No independent verbatim tax-inclusive annual total in a preserved UI quote.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Plus annual base € 180,00 and 21% btw € 37,80 after trial; current charge € 0,00. Payment method required, trial not started. No independent verbatim tax-inclusive annual total in a preserved UI quote. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+      "status": "confirmed",
+      "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-06",
+     "what": "Correct third prompt requested two slides with exact kit text. Slide title dropped TEST and parentheses; slide two uppercased text and added VALIDATION STATUS // AIBM-001. Overview invented PROTOCOL ALPHA — Internal hardware validation. Credit balance went 500 to 350. First two typing attempts excluded as own input artefacts.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Share default Openbaar with AI analysis, reuse and viewer downloads on. Owner PDF/PPTX/SCORM showed Plus gate. Viewer download permission was not exercised; no export bytes or reimport.",
+     "friction": {
+      "export_route": "Share default Openbaar with AI analysis, reuse and viewer downloads on. Owner PDF/PPTX/SCORM showed Plus gate. Viewer download permission was not exercised; no export bytes or reimport.",
+      "format": "No downloaded product file.",
+      "reimport": "No native-ID reimport.",
+      "cancellation": "Cancellation/downgrade not tested."
+     },
+     "not_tested": [
+      "Support, invitations, cancellation and passive follow-up.",
+      "Downloaded product exports and native-ID roundtrip.",
+      "Full original signup screen count."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
     "in_catalog": true
    }
   ]

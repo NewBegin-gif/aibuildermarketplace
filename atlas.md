@@ -772,9 +772,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clonable-review/
 
 ## Cloro (cloro.dev)
-- **Verified pricing:** (prices re-read 2026-10-19 on cloro.dev/pricing, unchanged since 2026-09-17 except that Grok has left the credit table) Credit-metered, and the credit table matters more than the plan price.
+- **Verified pricing:** (prices re-read 2026-11-09 on cloro.dev/pricing; plan prices unchanged since 2026-09-17, the credit table changed: Copilot and Perplexity are gone and Bing AI Mode is new) Credit-metered, a…
 - **Honest take:** The free tier is a sampler, not a trial of the real thing: 500 credits is about 100 async ChatGPT answers at the 5-credit rate we were actually charged, and their table lists 7 for a full response.
-- **Best for:** SEO and marketing teams who need AI-search visibility as structured data: who gets cited for which query on ChatGPT, Perplexity, Copilot, Gemini and Google's AI Overview: rather than as a dashboard someone else designed
+- **Best for:** SEO and marketing teams who need AI-search visibility as structured data: who gets cited for which query on ChatGPT, Gemini, Bing AI Mode and Google's AI Mode and AI Overview: rather than as a dashboard someone else designed
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/cloro-review.html
 
@@ -1811,7 +1811,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-09 on indiemade.com/plans-pricing) IndieMade lists two plans, Essential and Plus, and every plan starts with a 30-day free trial that needs no credit card.
 - **Honest take:** Own store with Etsy sync, price shown at signup.
 - **Best for:** makers and small sellers who want their own store, with two-way Etsy sync, and no platform transaction fees
-- **Full review:** https://aibuildermarketplace.com/b2b/indiemade-review/
+- **Full review:** https://marketingandsalessoftware.com/indiemade-review.html
 
 ## Influencer Hero (influencer-hero.com)
 - **Verified pricing:** (pricing matrix read 18 September 2026 in documentation the vendor sent us; the public ladder at influencer-hero.com/pricing was read the same week and shows the quarterly column) Four plan…
@@ -2146,8 +2146,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/loyalino-review.html
 
 ## Lucrovox (lucrovox.com)
-- **Verified pricing:** (re-verified 2026-10-30 on lucrovox.com/#pricing in a real browser, phone-agent tiers unchanged; lucrovox.com/lucrochat last read 2026-09-15) The phone agent has three published tiers and t…
-- **Honest take:** The meter is AI-handled calls: Starter’s 100 calls a month is roughly three a day, so a busy shop outgrows it quickly, and the steps are steep ($199 → $499 → $999).
+- **Verified pricing:** (re-verified 2026-11-09 on lucrovox.com/#pricing in a real browser; the phone-agent prices dropped since our 30 October reading; lucrovox.com/lucrochat last read 2026-09-15, and the LucroCh…
+- **Honest take:** The meter is AI-handled calls: Starter’s 250 calls a month is about eight a day, and the jump from there is steep ($139 → $349 → $999).
 - **Best for:** local service businesses (HVAC, plumbing, roofing, med spas) losing revenue to missed calls who want a 24/7 AI receptionist that books jobs straight into Google Calendar, Housecall Pro, ServiceTitan or Jobber
 - **Flags:** Usage-metered
 - **Full review:** https://zerotouchsupport.com/lucrovox-review.html

@@ -4023,6 +4023,181 @@
   },
   {
    "source": "session",
+   "product_name": "Tapform",
+   "product_id": "tapform",
+   "run_date": "2026-11-06",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 6 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We built one lead form, published it and sent one fictional test lead through it. We did not export the lead and did not open checkout.",
+   "findings": [
+    "The plan page opens in the monthly view: Free at $0.00 with 5 leads a month and Unlimited at $4.99 a month. That matches our read of 18 October. The Free button did not respond, so we used Skip. No card was asked for.",
+    "The welcome screen says 'Your free trial of Tapform starts today' and shows decorative cards reading 'Payment successful'. Nothing was paid. Inside the app, a pop-up then says 'You are on free plan' and a banner repeats it, which does not fit a trial that had just started.",
+    "A pop-up offering a free call with a sales person appeared twice during the session.",
+    "The default form comes with a consent text under it. It says Tapform and its providers may contact you by text or call, some of it automated, once the form is submitted. Check that wording before you put the form on your own site.",
+    "Our title and description with the accent in 'Zoë', the quotation marks and the dash were saved and shown correctly. The published form carries a 'Powered by tapform' badge, and its public address is built from the account holder's full name.",
+    "The address block took only five-digit US-style ZIP codes. The field is numeric, so the Dutch postcode '3011 AB' was cut to '3011' and then refused with 'Zip must be 5 digit number!', although the country was set to the Netherlands. We typed '30110' to get past it. The lead arrived with that value.",
+    "After the submit, the thank-you screen carries an advert, 'Create your Tapform'. The lead list showed our lead and a demo lead that was already there. The counter read 'Leads collected 1/5', so the demo lead does not count.",
+    "The lead detail kept the accent and the quotation marks. We could not confirm from the text view that the line break in the notes field survived."
+   ],
+   "not_tested": [
+    "Export and re-import: there is an 'Export all' button on the lead list, but we did not click it, so no file was opened",
+    "The second fictional record: we sent one lead only",
+    "Checkout, tax and the final price",
+    "Support, team roles, API access, invitations, downgrade and cancellation",
+    "How many screens sign-up took in full; Daan created the account before we started counting"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Payment successful",
+     "claim_source": "https://dashboard.tapform.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Decorative welcome card appeared without card entry or payment; trial welcome conflicted with You are on free plan.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tapform-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Tapform: Onboarding messaging only; no charge or subscription inferred.",
+     "status": "confirmed",
+     "buying_consequence": "Do not treat the decorative success text as a transaction.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You are on free plan",
+     "claim_source": "https://dashboard.tapform.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Plan Free; counter Leads collected 1/5 after one own submission; preloaded demo lead excluded.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tapform-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Tapform: One own lead on Free, not a full allowance exhaustion test.",
+     "status": "confirmed",
+     "buying_consequence": "The actual observed lead count is separate from the demo entry.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Zip must be 5 digit number!",
+     "claim_source": "https://dashboard.tapform.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "With Netherlands selected, 3011 AB became 3011 and was rejected; 30110 used to submit.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tapform-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Tapform: One field configuration and one Dutch postcode; no claim about every editable form.",
+     "status": "confirmed",
+     "buying_consequence": "The inspected default address block did not accept that Dutch postcode.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Tapform and our providers you select may need to contact you by text/call.",
+     "claim_source": "https://dashboard.tapform.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Default consent named Tapform/providers; public slug used account name. Form and lead preserved accents/quotes; linebreak unknown.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tapform-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Tapform: Default form text and one observed lead; no legal assessment or third-party contact test.",
+     "status": "confirmed",
+     "buying_consequence": "Inspect consent and the public slug before using the form.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Create your Tapform",
+     "claim_source": "https://dashboard.tapform.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Thank-you page contained a promotion; Export all not clicked.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tapform-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Tapform: One submitted lead; no returned export or complete two-record coverage.",
+     "status": "confirmed",
+     "buying_consequence": "Submission confirmation and data export remain separate outcomes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$4.99",
+     "claim_source": "https://dashboard.tapform.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Unlimited monthly plan offer; no checkout or payment.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tapform-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Tapform: Monthly plan selection only, distinct from a paid checkout.",
+     "status": "confirmed",
+     "buying_consequence": "Payable total and taxes unverified.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$4.99",
+     "claim_source": "https://dashboard.tapform.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Free 5 leads/month, one form. Unlimited $4.99/month on Monthly default; no payment checkout observed. Payment successful on welcome was decorative, no payment occurred.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tapform-review.html#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Tapform: Free 5 leads/month, one form. Unlimited $4.99/month on Monthly default; no payment checkout observed. Payment successful on welcome was decorative, no payment occurred. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+     "status": "not_testable",
+     "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-06",
+    "what": "Kit form title and description saved. Public slug contained full account name; no link reproduced. Default consent named Tapform/providers. Netherlands postcode 3011 AB truncated to 3011 and failed Zip must be 5 digit number!; submitted workaround 30110. One lead retained name accents and quotes; newline preservation unverified. Second record not sent; demo lead separate.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Export all present but not clicked; Data exporting shown on plan table. No export bytes or reimport. Confirmation page advertised Create your Tapform.",
+    "friction": {
+     "export_route": "Export all present but not clicked; Data exporting shown on plan table. No export bytes or reimport. Confirmation page advertised Create your Tapform.",
+     "format": "No downloaded product file.",
+     "reimport": "No native-ID reimport.",
+     "cancellation": "Cancellation/downgrade not tested."
+    },
+    "not_tested": [
+     "Support, invitations, cancellation and passive follow-up.",
+     "Downloaded product exports and native-ID roundtrip.",
+     "Full original signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Brand24",
    "product_id": "brand24",
    "run_date": "2026-10-30",
@@ -4474,6 +4649,247 @@
   },
   {
    "source": "session",
+   "product_name": "Pdfdodo",
+   "product_id": "pdfdodo",
+   "run_date": "2026-11-06",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 6 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We converted our fictional invoice from the test kit into a PDF, uploaded it, ran the analysis and read the result and the pricing page. We downloaded nothing and did not open checkout.",
+   "findings": [
+    "Sign-up asked for no card. The dashboard showed 25 credits and a 15 MB limit per file. The page says you can download results as CSV or Excel.",
+    "Upload, 'Start Analysis' and 'Analysis complete' took about 15 seconds. The credit counter then read 24.",
+    "The document detail page showed only the file name, the date and a 'Merge tables' menu. It held no table and no value, and we saw no download button. No error or warning appeared, yet the analysis had used a credit.",
+    "Our invoice lists its lines as plain text (date, amount, custom code, tags, net, tax) and has no table. The app extracts tables, so for this layout we got nothing: none of the seven fields was read out. This is a result for one document of this type, not a measure of accuracy on invoices with tables.",
+    "A missing 'ë' in the sample name was already empty in the test image, so we do not count it as a reading error.",
+    "The pricing page opens with 'Yearly' highlighted while the cards show monthly prices: Solo $25, Startup $59 and Business $99 a month. After clicking 'Monthly' the cards show the yearly prices: Solo $20.83 a month ($250 billed yearly), Startup $49.16 ($590) and Business $82.50 ($990). On 16 October the Solo card read $20 beside $200, so that card changed."
+   ],
+   "not_tested": [
+    "Export and re-import: the analysis produced no table, so there was nothing to export, and we downloaded no file",
+    "The second fictional record: we uploaded one document",
+    "Checkout, tax and the final price: we did not click Select",
+    "Support, team roles, API access, invitations, downgrade and cancellation",
+    "Whether the monthly credit top-up exists; we saw 25 credits and no refill rule"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Credits: 25",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Credits changed from 25 to 24 after one page was analysed; no card requested per tester.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Initial working account compared with its post-analysis counter, not a subscription-renewal measurement.",
+     "status": "confirmed",
+     "buying_consequence": "Initial credits and one observed consumption only; no monthly refresh inferred.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Analysis complete",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "One non-tabular kit invoice produced no table or value in document detail; no warning reported.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: One line-formatted invoice only; no general conclusion about supported tabular PDFs.",
+     "status": "confirmed",
+     "buying_consequence": "Check extracted content even when completion is reported.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Merge tables",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Document detail showed merge options but no table, extracted values or visible download action.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: In-app extraction scope; downloadable CSV/Excel and export retention remain untested.",
+     "status": "confirmed",
+     "buying_consequence": "No returned data was available to inspect in this session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Get 2 months free on yearly plans",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Yearly highlighted with monthly cards; clicking Monthly showed annually billed cards according to supplied notes.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Observed toggle/card mismatch only; checkout was never opened.",
+     "status": "confirmed",
+     "buying_consequence": "Verify term against the actual card and checkout before purchasing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$25/mo",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Solo pricing card: $25/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Solo month pricing-card amount only, distinct from other tiers and billing periods.",
+     "status": "confirmed",
+     "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$59/mo",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Startup pricing card: $59/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Startup month pricing-card amount only, distinct from other tiers and billing periods.",
+     "status": "confirmed",
+     "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$99/mo",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Business pricing card: $99/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Business month pricing-card amount only, distinct from other tiers and billing periods.",
+     "status": "confirmed",
+     "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$250",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Solo pricing card: $250 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Solo year pricing-card amount only, distinct from other tiers and billing periods.",
+     "status": "confirmed",
+     "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$590",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Startup pricing card: $590 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Startup year pricing-card amount only, distinct from other tiers and billing periods.",
+     "status": "confirmed",
+     "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$990",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Business pricing card: $990 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Business year pricing-card amount only, distinct from other tiers and billing periods.",
+     "status": "confirmed",
+     "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Get 2 months free on yearly plans",
+     "claim_source": "https://app.pdfdodo.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Not tested: Select not clicked; checkout, tax and final payable total unknown. Pricing-card amounts are quoted separately in purchase evidence; no independent live-page read. Highlight Yearly accompanied monthly cards; clicking Monthly showed annual cards. No billing cycle selected or purchased.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+     },
+     "plan": "Free; 25 initial credits observed (renewal not established)",
+     "comparability": "PDFdodo: Not tested: Select not clicked; checkout, tax and final payable total unknown. Pricing-card amounts are quoted separately in purchase evidence; no independent live-page read. Highlight Yearly accompanied monthly cards; clicking Monthly showed annual cards. No billing cycle selected or purchased. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+     "status": "not_testable",
+     "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-06",
+    "what": "One derived kit invoice PDF, a list of lines rather than a table, uploaded and analysed. Analysis complete after approximately 15 seconds per tester; credits 25 to 24. Document detail displayed no extracted table or value and no visible download button. No warning reported. This single non-tabular invoice does not establish general table-extraction accuracy. Second kit record not uploaded.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "CSV/Excel not tested: no table or value extracted and no file downloaded. No native-ID reimport. Missing extraction is an in-app result, not proof of export loss. The missing diaeresis was already present in the source kit PNG and is not a PDFdodo OCR error.",
+    "friction": {
+     "export_route": "CSV/Excel not tested: no table or value extracted and no file downloaded. No native-ID reimport. Missing extraction is an in-app result, not proof of export loss. The missing diaeresis was already present in the source kit PNG and is not a PDFdodo OCR error.",
+     "format": "No downloaded product file.",
+     "reimport": "No native-ID reimport.",
+     "cancellation": "Cancellation/downgrade not tested."
+    },
+    "not_tested": [
+     "Support, invitations, cancellation and passive follow-up.",
+     "Downloaded product exports and native-ID roundtrip.",
+     "Full original signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "SurFox AI",
    "product_id": "surfox-ai",
    "run_date": "2026-10-12",
@@ -4740,6 +5156,91 @@
     "not_offered": [
      "The generated page omits both supplied section headings and their accompanying kit text, despite the assistant promising to use them as written."
     ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Lusha",
+   "product_id": "lusha",
+   "run_date": "2026-11-06",
+   "session_type": "signup_attempt",
+   "what": "We tried to sign up for Lusha's free account on 6 November 2026. Daan filled in the e-mail sign-up form and Lusha refused it, so we never had a working account. Nothing below is a finding about the product itself.",
+   "findings": [
+    "After 'Get started' the form showed a red message: 'This signup looks suspicious. Please contact support if you think there is a mistake.' No account was created.",
+    "The only other route on the page was to sign in with Google or Office 365. We did not take it.",
+    "Chrome was under automation at that moment, and that may have triggered the filter. We do not know the cause. We did not retry, did not try a workaround and did not write to support."
+   ],
+   "not_tested": [
+    "Everything after sign-up: the lookup flow, credits, export and re-import",
+    "Whether the refusal came from the automation, the e-mail address or something else",
+    "Checkout, tax and the final price",
+    "Support, team roles, API access, invitations, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "This signup looks suspicious. Please contact support if you think there is a mistake.",
+     "claim_source": "https://auth.lusha.com/signup",
+     "claim_read_on": "2026-11-06",
+     "observed": "Email signup blocked during automated Chrome context. Screenshot was in chat only and not saved as a source file.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/lusha-review.html#claim-vs-measured"
+     },
+     "plan": "No account",
+     "comparability": "No literal claim covering this exact plan and trial; trial support can differ.",
+     "status": "not_comparable",
+     "buying_consequence": "No working account or product test established.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Create a free account",
+     "claim_source": "https://auth.lusha.com/signup",
+     "claim_read_on": "2026-11-06",
+     "observed": "Not tested: signup blocked.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/lusha-review.html#claim-vs-measured"
+     },
+     "plan": "No account",
+     "comparability": "Lusha: Not tested: signup blocked. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+     "status": "not_testable",
+     "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-06",
+    "what": "Not tested: no account. This is a signup-blockage note, not a hands-on product review.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Not tested: no account or product objects.",
+    "friction": {
+     "export_route": "Not tested: no account or product objects.",
+     "format": "No downloaded product file.",
+     "reimport": "No native-ID reimport.",
+     "cancellation": "Cancellation/downgrade not tested."
+    },
+    "not_tested": [
+     "Support, invitations, cancellation and passive follow-up.",
+     "Downloaded product exports and native-ID roundtrip.",
+     "Full original signup screen count.",
+     "All product use: no account, automated-browser signup rejected."
+    ],
+    "available_fields": [],
+    "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
@@ -10437,6 +10938,164 @@
   },
   {
    "source": "session",
+   "product_name": "Hello Bar",
+   "product_id": "hello-bar",
+   "run_date": "2026-11-06",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 6 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We built one email pop-up with our test text, saved it paused and opened the Growth checkout without paying. The pop-up was never installed on a site, so we collected no lead and exported nothing.",
+   "findings": [
+    "Onboarding took three steps. The first asks for your website address, marked required, and says it will help you install Hello Bar. The second can be skipped. The third asks where new leads should go, with 'None' as an answer. No card and no sales call.",
+    "The dashboard says 'Free Forever Plan' and '0 total views'. The sidebar says 'Next reset: On Free Trial'. The two labels contradict each other and we could not tell which one applies.",
+    "The default template headline reads 'Huge Savings at our selected stores! Sign up Now to receive the offer.' We replaced it with our test line. The accent, the quotation marks and the dash showed correctly. The long headline runs under the close button.",
+    "Save & Pause is refused with 'Please choose a contact list' until you create one. The dialog says 'We will store your email addresses in Hello Bar' and that you can download them from the Contacts dashboard.",
+    "The option to e-mail account admins about each new lead and the conversion script field both carry a padlock, so they sit behind a paid plan.",
+    "The saved pop-up appeared under Paused, with goal e-mail, 0 views and 0 conversions. A banner says the pop-ups stay invisible until Hello Bar is installed.",
+    "The Growth checkout shows $39.00 per month, per site, 'billed monthly', 'Total due today $39.00' and no tax line. The 'Pay Monthly' switch above it was off while the price says billed monthly. That matches the $39 monthly price we read on 24 September."
+   ],
+   "not_tested": [
+    "Collecting a lead and exporting it: the pop-up was not installed on our site, and the Contacts page loaded empty each time we opened it",
+    "The download promise for saved e-mail addresses, and any round trip with native IDs",
+    "The free plan's view limit: the app showed only '0 total views. Need more?'",
+    "Tax and the final price: no tax line was shown on the checkout screen, so we cannot say what a buyer pays in total",
+    "Support, team roles, API access, invitations, downgrade and cancellation",
+    "How many screens sign-up took in full; Daan created the account before we started counting"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "FREE FOREVER PLAN",
+     "claim_source": "https://app.hellobar.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Sidebar also said Next reset: On Free Trial.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/hello-bar-review.html#claim-vs-measured"
+     },
+     "plan": "Free Forever",
+     "comparability": "Hello Bar: Same account Free plan versus trial label; no expiry inferred.",
+     "status": "contradicted",
+     "buying_consequence": "The session does not resolve the contradictory trial/reset label.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Huge Savings at our selected stores!",
+     "claim_source": "https://app.hellobar.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Default template made an offer claim before kit replacement. Kit heading retained characters but extended under close icon.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/hello-bar-review.html#claim-vs-measured"
+     },
+     "plan": "Free Forever",
+     "comparability": "Hello Bar: Template/editor content only; no published conversion test.",
+     "status": "confirmed",
+     "buying_consequence": "Replace template claims and inspect long-heading layout.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Please choose a contact list",
+     "claim_source": "https://app.hellobar.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Save & Pause required a contact list; dialog said We will store your email addresses in Hello Bar.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/hello-bar-review.html#claim-vs-measured"
+     },
+     "plan": "Free Forever",
+     "comparability": "Hello Bar: Editor save gate, distinct from connecting an external integration.",
+     "status": "confirmed",
+     "buying_consequence": "Saving a lead popup required choosing storage/list setup.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your popups won't be visible until HelloBar is installed. Install Now",
+     "claim_source": "https://app.hellobar.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Popup paused; no site installation or submissions. Contacts page blank; exports not tested.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/hello-bar-review.html#claim-vs-measured"
+     },
+     "plan": "Free Forever",
+     "comparability": "Hello Bar: Paused uninstalled popup only; download promise was not verified.",
+     "status": "confirmed",
+     "buying_consequence": "A saved draft does not establish live collection or returnability.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$39.00 per month, per site, billed monthly",
+     "claim_source": "https://app.hellobar.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Total due today $39.00; Pay Monthly switch off; no VAT line.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/hello-bar-review.html#claim-vs-measured"
+     },
+     "plan": "Free Forever",
+     "comparability": "Hello Bar: Single-site Growth screen; no annual term inferred from switch alone.",
+     "status": "confirmed",
+     "buying_consequence": "Billing-period label and switch state need clarification.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$39.00 per month, per site, billed monthly",
+     "claim_source": "https://app.hellobar.com/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Growth $39.00 per month, per site, billed monthly; Total due today $39.00. Pay Monthly toggle off despite billed monthly text. No visible VAT line.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/hello-bar-review.html#claim-vs-measured"
+     },
+     "plan": "Free Forever",
+     "comparability": "Hello Bar: Growth $39.00 per month, per site, billed monthly; Total due today $39.00. Pay Monthly toggle off despite billed monthly text. No visible VAT line. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+     "status": "confirmed",
+     "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-06",
+    "what": "Pop-up modal template contained Huge Savings claim. Kit headline preserved Unicode/punctuation; long heading ran under close button. Save & Pause required a contact list. Stored paused, not installed on MSS; no submissions. Admin lead-email and conversion-script controls locked.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Storage dialog promised contact emails downloadable from Contacts. Contacts page blank in supplied attempts. No submissions, downloaded files or roundtrip; not tested.",
+    "friction": {
+     "export_route": "Storage dialog promised contact emails downloadable from Contacts. Contacts page blank in supplied attempts. No submissions, downloaded files or roundtrip; not tested.",
+     "format": "No downloaded product file.",
+     "reimport": "No native-ID reimport.",
+     "cancellation": "Cancellation/downgrade not tested."
+    },
+    "not_tested": [
+     "Support, invitations, cancellation and passive follow-up.",
+     "Downloaded product exports and native-ID roundtrip.",
+     "Full original signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BugHerd",
    "product_id": "bugherd",
    "run_date": "2026-10-24",
@@ -12847,21 +13506,140 @@
    "source": "session",
    "product_name": "Prezi",
    "product_id": "prezi",
-   "run_date": "2026-09-28",
+   "run_date": "2026-11-06",
    "session_type": "hands_on",
-   "what": "On 28 September 2026 we gave Gamma, Beautiful.ai, Prezi and Canva the same brief for a ten-slide investor deck: eleven facts about a made-up bakery chain and the rule to add no other numbers. We checked every deck against 15 tests written down before the first one was generated. Prezi ran on a new Basic (free) account.",
+   "what": "Tested by our team on 6 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We asked the AI editor for a two-slide presentation with exact text, then read the sharing, download and upgrade screens. We published nothing and did not start the Plus trial.",
    "findings": [
-    "Prezi's AI editor opened in a pop-up window and built ten slides plus its zooming overview in under four minutes, using 150 of the 500 starting credits.",
-    "It added no numbers of its own and drew both charts to scale, but it made up a company website (kettlecrumb.nl), gave the CEO a gender the brief did not, and described 2025's actual revenue as a projection.",
-    "Asked once to 'Change the ask to €450,000 for 12%', it updated the ask slide but left 'Our €400,000 investment' on the use-of-funds slide, so the deck contradicted itself.",
-    "On Basic, PDF, PowerPoint (labelled editable) and SCORM downloads in the AI editor were all locked to Plus, and the only sharing option is Public, which the Dutch interface describes as anyone being able to find and view the deck ('iedereen kan dit vinden en bekijken'), with the account holder's name on the page. To take our deck offline we had to move it to the bin."
+    "No card was asked for at sign-up. The dashboard showed 500 credits. One generation of two slides took about a minute and brought the balance to 350, so 150 credits.",
+    "Our third prompt asked for a title slide and a second slide holding one line of text and nothing else. The first two attempts lost characters while we typed, which was our own input slip, so we do not count them. The title came out without 'TEST' and without the brackets. Slide two showed our line in capitals and added a label 'VALIDATION STATUS // AIBM-001' and a large '001' that we had not asked for.",
+    "The zooming overview carried an invented headline, 'PROTOCOL ALPHA, Internal hardware validation', over a mountain landscape with hardware renders. None of that was in the prompt. A 'Made with Prezi' badge sits on the slides.",
+    "A new presentation is public by default, with a public link and a QR code. AI analysis of viewing behaviour, reuse by viewers (who can make their own editable copy) and viewer downloads as PDF, PowerPoint or SCORM were all switched on.",
+    "In the owner's Download tab, PDF, editable PPTX and SCORM are all marked Plus. That sits next to a sharing setting that lets viewers download in the same formats. We did not test the viewer side, so we do not know which of the two wins.",
+    "The upgrade dialog offers Plus at €15 a month, billed annually. The trial screen shows €0.00 due now and the first charge on 20 November. It still asks for a payment method: a base of €180.00 a year plus 21% VAT of €37.80, so €217.80 after the trial. Registering the account itself needed no card. We stopped there.",
+    "Our earlier test of 28 September 2026 on a Basic account, with a ten-slide investor deck, found the same download lock and a public-only sharing option. That test is described in the four-tool comparison linked below."
    ],
-   "not_tested": "One run on one day on the Basic plan; Plus may behave differently. We did not judge design quality. We downloaded and opened no exported file, so we have not checked whether the PowerPoint labelled editable keeps its text editable. Also untested: the PDF and PowerPoint download buttons on the public room page, shown to us on Basic and to logged-out viewers behind a sign-in, and the dashboard's Download PPTX.",
+   "not_tested": [
+    "Export and re-import: PDF and PowerPoint downloads are Plus-only for the owner, and we downloaded no file",
+    "What an anonymous viewer can do with the public link, including the download permission",
+    "The final price: we did not finish the trial sign-up, so no tax-inclusive total was shown on a payment screen",
+    "Support, team roles, API access, invitations, downgrade and cancellation",
+    "How long sign-up took from the first click; Daan created the account before we started counting"
+   ],
    "report": "/research/one-pitch-deck-four-ai-presentation-tools/",
    "disclosure": null,
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "VALIDATION STATUS // AIBM-001",
+     "claim_source": "https://prezi.com/craft/",
+     "claim_read_on": "2026-11-06",
+     "observed": "One two-slide generation added this label, altered requested title/case and invented a hardware-validation overview. Credits changed 500 to 350.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+     },
+     "plan": "Free / Prezi AI 4.0",
+     "comparability": "Prezi: Correct third prompt only; earlier typing mistakes excluded; no export preservation inferred.",
+     "status": "confirmed",
+     "buying_consequence": "Inspect generated text against the prompt before sharing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Openbaar",
+     "claim_source": "https://prezi.com/craft/",
+     "claim_read_on": "2026-11-06",
+     "observed": "New presentation publicly shared by default; AI-analyse, Hergebruik toestaan and Downloads toestaan on.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+     },
+     "plan": "Free / Prezi AI 4.0",
+     "comparability": "Prezi: Observed sharing defaults on this new presentation; no anonymous-viewer access test.",
+     "status": "confirmed",
+     "buying_consequence": "Review public visibility and reuse settings before sharing material.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Bewerkbare PPTX",
+     "claim_source": "https://prezi.com/craft/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Owner download options PDF, editable PPTX and SCORM labelled Plus while viewer downloads toggle was enabled.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+     },
+     "plan": "Free / Prezi AI 4.0",
+     "comparability": "Prezi: Owner entitlement versus sharing setting, without claiming successful viewer export.",
+     "status": "confirmed",
+     "buying_consequence": "Owner export was gated; viewer behavior remains untested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€ 15/mnd, Jaarlijks gefactureerd",
+     "claim_source": "https://prezi.com/craft/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Plus trial required payment method; annual base € 180,00 with 21% btw € 37,80 after trial; current charge € 0,00.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+     },
+     "plan": "Free / Prezi AI 4.0",
+     "comparability": "Prezi: Annual base, tax and current-charge lines only; no independently quoted annual tax-inclusive total.",
+     "status": "confirmed",
+     "buying_consequence": "Monthly equivalent is billed annually after trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€ 15/mnd, Jaarlijks gefactureerd",
+     "claim_source": "https://prezi.com/craft/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Plus annual base € 180,00 and 21% btw € 37,80 after trial; current charge € 0,00. Payment method required, trial not started. No independent verbatim tax-inclusive annual total in a preserved UI quote.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+     },
+     "plan": "Free / Prezi AI 4.0",
+     "comparability": "Prezi: Plus annual base € 180,00 and 21% btw € 37,80 after trial; current charge € 0,00. Payment method required, trial not started. No independent verbatim tax-inclusive annual total in a preserved UI quote. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+     "status": "confirmed",
+     "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-06",
+    "what": "Correct third prompt requested two slides with exact kit text. Slide title dropped TEST and parentheses; slide two uppercased text and added VALIDATION STATUS // AIBM-001. Overview invented PROTOCOL ALPHA — Internal hardware validation. Credit balance went 500 to 350. First two typing attempts excluded as own input artefacts.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Share default Openbaar with AI analysis, reuse and viewer downloads on. Owner PDF/PPTX/SCORM showed Plus gate. Viewer download permission was not exercised; no export bytes or reimport.",
+    "friction": {
+     "export_route": "Share default Openbaar with AI analysis, reuse and viewer downloads on. Owner PDF/PPTX/SCORM showed Plus gate. Viewer download permission was not exercised; no export bytes or reimport.",
+     "format": "No downloaded product file.",
+     "reimport": "No native-ID reimport.",
+     "cancellation": "Cancellation/downgrade not tested."
+    },
+    "not_tested": [
+     "Support, invitations, cancellation and passive follow-up.",
+     "Downloaded product exports and native-ID roundtrip.",
+     "Full original signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

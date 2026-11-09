@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 631 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-09.
+All 632 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-09.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2290,6 +2290,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** fleets large enough that ELD compliance and dash-cam evidence are already costing you money, and who will negotiate a quote rather than accept the first one
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/motive-review/
+
+## Movavi (movavi.com)
+- **Verified pricing:** (read 2026-11-09 on movavi.com/video-editor-plus/buynow.html) The purchase page lists three paid options, with prices in euros including VAT.
+- **Honest take:** Desktop video editor with AI subtitles, yearly plan.
+- **Best for:** solo creators and small teams who want a desktop video editor with one-click AI subtitles, background removal and noise reduction, without a heavy learning curve
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/movavi-review/
 
 ## MRPeasy (mrpeasy.com)
 - **Verified pricing:** (re-verified 2026-08-24 and again on 2026-09-28 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise $99 and Unlimited $149.

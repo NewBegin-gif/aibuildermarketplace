@@ -102,18 +102,371 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-05; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-05",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/vista-social-review/",
+  "method": [
+   "Read the dashboard and setup checklist",
+   "Tried to schedule a post, then saved one idea and read it back on the Ideas page",
+   "Pressed 'Start my subscription' and read the checkout without entering anything"
+  ],
+  "claims": [
+   {
+    "claim": "Idea has been saved.",
+    "claim_source": "https://vistasocial.com/dashboard",
+    "claim_read_on": "2026-11-05",
+    "observed": "One AIBM-001 idea was saved without a social profile; Unicode, quotes and two lines were visible on its card. No export inspected.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+    },
+    "plan": "Trial; tier not established; Advanced offered at checkout",
+    "comparability": "Vista Social: One saved idea only; this does not establish post scheduling or export preservation.",
+    "status": "confirmed",
+    "buying_consequence": "An independent idea draft is possible in this observed trial route.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Schedule your first post — Connect a profile first, then this unlocks.",
+    "claim_source": "https://vistasocial.com/dashboard",
+    "claim_read_on": "2026-11-05",
+    "observed": "Schedule a post requested a social profile or integration; no account was connected.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+    },
+    "plan": "Trial; tier not established; Advanced offered at checkout",
+    "comparability": "Vista Social: Scheduling gate is separate from the successful New idea route.",
+    "status": "confirmed",
+    "buying_consequence": "Scheduling requires a connection in the route inspected.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Abonneren op Advanced € 1.770,54 per jaar",
+    "claim_source": "https://checkout.stripe.com/",
+    "claim_read_on": "2026-11-05",
+    "observed": "Start my subscription directly selected Advanced, quantity 30, annual billing. The checkout showed no alternative plan or monthly term in this route.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+    },
+    "plan": "Trial; tier not established; Advanced offered at checkout",
+    "comparability": "Vista Social: Shortcut default only; no claim that other purchasing routes lack alternatives.",
+    "status": "confirmed",
+    "buying_consequence": "Check the selected annual plan and profile quantity before purchasing.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "1 USD = 0,9270 EUR. Kosten zullen variëren op basis van wisselkoersen.",
+    "claim_source": "https://checkout.stripe.com/",
+    "claim_read_on": "2026-11-05",
+    "observed": "EUR selected with a displayed conversion rate and notice that charges can vary with exchange rates. No VAT row visible before card entry.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+    },
+    "plan": "Trial; tier not established; Advanced offered at checkout",
+    "comparability": "Vista Social: Displayed conversion notice, not an independent currency-rate calculation or tax determination.",
+    "status": "confirmed",
+    "buying_consequence": "Future EUR charges and tax basis require checking.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "free for 14 days",
+    "claim_source": "https://vistasocial.com/pricing/",
+    "claim_read_on": "2026-10-29",
+    "observed": "Daan created the account. Email confirmation remained pending. Slack promotion was closed without connecting. Trial counter 14 days. No card in observed setup; optional walkthrough not taken. Publishing, inbox and reports required a first social profile. Schedule a post requested a connection. A standalone New idea route was available without connecting. No trial-tier inference from later checkout.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+    },
+    "plan": "Trial; tier not established; Advanced offered at checkout",
+    "comparability": "Vista Social: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+    "status": "confirmed",
+    "buying_consequence": "Observed session scope limits the public claim comparison.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Abonneren op Advanced € 1.770,54 per jaar",
+    "claim_source": "https://checkout.stripe.com/",
+    "claim_read_on": "2026-11-05",
+    "observed": "Advanced annual quantity 30: displayed subtotal and total today € 1.770,54 in EUR. VAT unknown; no payment/card input. No pricing-page capture for identical scope.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+    },
+    "plan": "Trial; tier not established; Advanced offered at checkout",
+    "comparability": "Vista Social: Vista Social: Stripe total observed, but same-scope public pricing and a matching cost rule are absent. A three-source price comparison is not testable; tax remains unknown.",
+    "status": "not_testable",
+    "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-05",
+   "what": "New idea saved AIBM-001 with Zoë, é, literal quotation marks and two lines. Toast Idea has been saved; card shows first line as heading and second as body. No profile connected or post published. AIBM-002 not entered because of time.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Standalone idea storage works without a social profile; scheduled posts require one. Subscription shortcut selected Advanced with 30 profiles annually.",
+   "friction": {
+    "export_route": "Ideas menu offered Shared links, New collection and Bulk create ideas; no export found in the inspected menu. Not tested, not proven unavailable. No download or reimport.",
+    "format": "No downloaded export file examined.",
+    "reimport": "No native-ID export, update or reimport executed.",
+    "cancellation": "Cancellation and downgrade not tested."
+   },
+   "not_tested": [
+    "Support and invitation sending.",
+    "Full signup count and exact session duration.",
+    "All ten export and reimport checks; no downloaded output bytes.",
+    "Cancellation, deletion and passive follow-up."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/vista-social-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/vista-social-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "Daan created the account. Email confirmation remained pending. Slack promotion was closed without connecting. Trial counter 14 days. No card in observed setup; optional walkthrough not taken. Publishing, inbox and reports required a first social profile. Schedule a post requested a connection. A standalone New idea route was available without connecting. No trial-tier inference from later checkout.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "New idea saved AIBM-001 with Zoë, é, literal quotation marks and two lines. Toast Idea has been saved; card shows first line as heading and second as body. No profile connected or post published. AIBM-002 not entered because of time. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/vista-social-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "New idea saved AIBM-001 with Zoë, é, literal quotation marks and two lines. Toast Idea has been saved; card shows first line as heading and second as body. No profile connected or post published. AIBM-002 not entered because of time. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/vista-social-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/vista-social-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-05",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Vista Social",
+    "product_id": "vista-social",
+    "run_date": "2026-11-05",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 5 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We connected no social profile. We saved one fictional idea, opened the subscription checkout and stopped before entering any payment detail.",
+    "findings": [
+     "The dashboard showed 'Your trial ends in 14 days' and a banner asking us to confirm the e-mail address. Setup is a checklist: connect a profile, invite your team, schedule a first post. No card was asked for.",
+     "'Schedule a post' asks for a social profile or integration first, so scheduling needs a connection. The Create menu lists New post, New note, New idea, Ideas, DM Automations, Evergreen, Bulk publishing and more.",
+     "'New idea' works without a connected profile. We saved our first test record with an accent (Zoë), quotation marks and a second line. The Ideas page kept the accent and the quotation marks, and showed the first line as a bold title and the second line as body text.",
+     "The Ideas menu offers Shared links, New collection and Bulk create ideas. We found no export there.",
+     "'Start my subscription' opened a live Stripe checkout for the Advanced plan, 30 profiles, billed yearly, at €1,770.54 for the year. We found no plan choice or monthly option on that route. No VAT line was visible before card entry, so the VAT-inclusive total is unknown. The checkout offered EUR or USD at 1 USD = 0.9270 EUR and said costs vary with exchange rates."
+    ],
+    "not_tested": [
+     "Publishing and scheduling: they need a connected social profile",
+     "Export and re-import: no export was found in the Ideas menu; the second test record was not entered",
+     "The VAT-inclusive final price: it is not visible before card details",
+     "Roles, API access, support, invitations, downgrade and cancellation"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Idea has been saved.",
+      "claim_source": "https://vistasocial.com/dashboard",
+      "claim_read_on": "2026-11-05",
+      "observed": "One AIBM-001 idea was saved without a social profile; Unicode, quotes and two lines were visible on its card. No export inspected.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+      },
+      "plan": "Trial; tier not established; Advanced offered at checkout",
+      "comparability": "Vista Social: One saved idea only; this does not establish post scheduling or export preservation.",
+      "status": "confirmed",
+      "buying_consequence": "An independent idea draft is possible in this observed trial route.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Schedule your first post — Connect a profile first, then this unlocks.",
+      "claim_source": "https://vistasocial.com/dashboard",
+      "claim_read_on": "2026-11-05",
+      "observed": "Schedule a post requested a social profile or integration; no account was connected.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+      },
+      "plan": "Trial; tier not established; Advanced offered at checkout",
+      "comparability": "Vista Social: Scheduling gate is separate from the successful New idea route.",
+      "status": "confirmed",
+      "buying_consequence": "Scheduling requires a connection in the route inspected.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Abonneren op Advanced € 1.770,54 per jaar",
+      "claim_source": "https://checkout.stripe.com/",
+      "claim_read_on": "2026-11-05",
+      "observed": "Start my subscription directly selected Advanced, quantity 30, annual billing. The checkout showed no alternative plan or monthly term in this route.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+      },
+      "plan": "Trial; tier not established; Advanced offered at checkout",
+      "comparability": "Vista Social: Shortcut default only; no claim that other purchasing routes lack alternatives.",
+      "status": "confirmed",
+      "buying_consequence": "Check the selected annual plan and profile quantity before purchasing.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "1 USD = 0,9270 EUR. Kosten zullen variëren op basis van wisselkoersen.",
+      "claim_source": "https://checkout.stripe.com/",
+      "claim_read_on": "2026-11-05",
+      "observed": "EUR selected with a displayed conversion rate and notice that charges can vary with exchange rates. No VAT row visible before card entry.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+      },
+      "plan": "Trial; tier not established; Advanced offered at checkout",
+      "comparability": "Vista Social: Displayed conversion notice, not an independent currency-rate calculation or tax determination.",
+      "status": "confirmed",
+      "buying_consequence": "Future EUR charges and tax basis require checking.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "free for 14 days",
+      "claim_source": "https://vistasocial.com/pricing/",
+      "claim_read_on": "2026-10-29",
+      "observed": "Daan created the account. Email confirmation remained pending. Slack promotion was closed without connecting. Trial counter 14 days. No card in observed setup; optional walkthrough not taken. Publishing, inbox and reports required a first social profile. Schedule a post requested a connection. A standalone New idea route was available without connecting. No trial-tier inference from later checkout.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+      },
+      "plan": "Trial; tier not established; Advanced offered at checkout",
+      "comparability": "Vista Social: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+      "status": "confirmed",
+      "buying_consequence": "Observed session scope limits the public claim comparison.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Abonneren op Advanced € 1.770,54 per jaar",
+      "claim_source": "https://checkout.stripe.com/",
+      "claim_read_on": "2026-11-05",
+      "observed": "Advanced annual quantity 30: displayed subtotal and total today € 1.770,54 in EUR. VAT unknown; no payment/card input. No pricing-page capture for identical scope.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+      },
+      "plan": "Trial; tier not established; Advanced offered at checkout",
+      "comparability": "Vista Social: Vista Social: Stripe total observed, but same-scope public pricing and a matching cost rule are absent. A three-source price comparison is not testable; tax remains unknown.",
+      "status": "not_testable",
+      "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-05",
+     "what": "New idea saved AIBM-001 with Zoë, é, literal quotation marks and two lines. Toast Idea has been saved; card shows first line as heading and second as body. No profile connected or post published. AIBM-002 not entered because of time.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Standalone idea storage works without a social profile; scheduled posts require one. Subscription shortcut selected Advanced with 30 profiles annually.",
+     "friction": {
+      "export_route": "Ideas menu offered Shared links, New collection and Bulk create ideas; no export found in the inspected menu. Not tested, not proven unavailable. No download or reimport.",
+      "format": "No downloaded export file examined.",
+      "reimport": "No native-ID export, update or reimport executed.",
+      "cancellation": "Cancellation and downgrade not tested."
+     },
+     "not_tested": [
+      "Support and invitation sending.",
+      "Full signup count and exact session duration.",
+      "All ten export and reimport checks; no downloaded output bytes.",
+      "Cancellation, deletion and passive follow-up."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "vista-social:cancellation_terms",

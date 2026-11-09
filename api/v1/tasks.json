@@ -9678,6 +9678,161 @@
   },
   {
    "source": "session",
+   "product_name": "Vista Social",
+   "product_id": "vista-social",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We connected no social profile. We saved one fictional idea, opened the subscription checkout and stopped before entering any payment detail.",
+   "findings": [
+    "The dashboard showed 'Your trial ends in 14 days' and a banner asking us to confirm the e-mail address. Setup is a checklist: connect a profile, invite your team, schedule a first post. No card was asked for.",
+    "'Schedule a post' asks for a social profile or integration first, so scheduling needs a connection. The Create menu lists New post, New note, New idea, Ideas, DM Automations, Evergreen, Bulk publishing and more.",
+    "'New idea' works without a connected profile. We saved our first test record with an accent (Zoë), quotation marks and a second line. The Ideas page kept the accent and the quotation marks, and showed the first line as a bold title and the second line as body text.",
+    "The Ideas menu offers Shared links, New collection and Bulk create ideas. We found no export there.",
+    "'Start my subscription' opened a live Stripe checkout for the Advanced plan, 30 profiles, billed yearly, at €1,770.54 for the year. We found no plan choice or monthly option on that route. No VAT line was visible before card entry, so the VAT-inclusive total is unknown. The checkout offered EUR or USD at 1 USD = 0.9270 EUR and said costs vary with exchange rates."
+   ],
+   "not_tested": [
+    "Publishing and scheduling: they need a connected social profile",
+    "Export and re-import: no export was found in the Ideas menu; the second test record was not entered",
+    "The VAT-inclusive final price: it is not visible before card details",
+    "Roles, API access, support, invitations, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Idea has been saved.",
+     "claim_source": "https://vistasocial.com/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "One AIBM-001 idea was saved without a social profile; Unicode, quotes and two lines were visible on its card. No export inspected.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+     },
+     "plan": "Trial; tier not established; Advanced offered at checkout",
+     "comparability": "Vista Social: One saved idea only; this does not establish post scheduling or export preservation.",
+     "status": "confirmed",
+     "buying_consequence": "An independent idea draft is possible in this observed trial route.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Schedule your first post — Connect a profile first, then this unlocks.",
+     "claim_source": "https://vistasocial.com/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "Schedule a post requested a social profile or integration; no account was connected.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+     },
+     "plan": "Trial; tier not established; Advanced offered at checkout",
+     "comparability": "Vista Social: Scheduling gate is separate from the successful New idea route.",
+     "status": "confirmed",
+     "buying_consequence": "Scheduling requires a connection in the route inspected.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Abonneren op Advanced € 1.770,54 per jaar",
+     "claim_source": "https://checkout.stripe.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Start my subscription directly selected Advanced, quantity 30, annual billing. The checkout showed no alternative plan or monthly term in this route.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+     },
+     "plan": "Trial; tier not established; Advanced offered at checkout",
+     "comparability": "Vista Social: Shortcut default only; no claim that other purchasing routes lack alternatives.",
+     "status": "confirmed",
+     "buying_consequence": "Check the selected annual plan and profile quantity before purchasing.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 USD = 0,9270 EUR. Kosten zullen variëren op basis van wisselkoersen.",
+     "claim_source": "https://checkout.stripe.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "EUR selected with a displayed conversion rate and notice that charges can vary with exchange rates. No VAT row visible before card entry.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+     },
+     "plan": "Trial; tier not established; Advanced offered at checkout",
+     "comparability": "Vista Social: Displayed conversion notice, not an independent currency-rate calculation or tax determination.",
+     "status": "confirmed",
+     "buying_consequence": "Future EUR charges and tax basis require checking.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "free for 14 days",
+     "claim_source": "https://vistasocial.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Daan created the account. Email confirmation remained pending. Slack promotion was closed without connecting. Trial counter 14 days. No card in observed setup; optional walkthrough not taken. Publishing, inbox and reports required a first social profile. Schedule a post requested a connection. A standalone New idea route was available without connecting. No trial-tier inference from later checkout.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+     },
+     "plan": "Trial; tier not established; Advanced offered at checkout",
+     "comparability": "Vista Social: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+     "status": "confirmed",
+     "buying_consequence": "Observed session scope limits the public claim comparison.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Abonneren op Advanced € 1.770,54 per jaar",
+     "claim_source": "https://checkout.stripe.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Advanced annual quantity 30: displayed subtotal and total today € 1.770,54 in EUR. VAT unknown; no payment/card input. No pricing-page capture for identical scope.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/vista-social-review/#claim-vs-measured"
+     },
+     "plan": "Trial; tier not established; Advanced offered at checkout",
+     "comparability": "Vista Social: Vista Social: Stripe total observed, but same-scope public pricing and a matching cost rule are absent. A three-source price comparison is not testable; tax remains unknown.",
+     "status": "not_testable",
+     "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "New idea saved AIBM-001 with Zoë, é, literal quotation marks and two lines. Toast Idea has been saved; card shows first line as heading and second as body. No profile connected or post published. AIBM-002 not entered because of time.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Standalone idea storage works without a social profile; scheduled posts require one. Subscription shortcut selected Advanced with 30 profiles annually.",
+    "friction": {
+     "export_route": "Ideas menu offered Shared links, New collection and Bulk create ideas; no export found in the inspected menu. Not tested, not proven unavailable. No download or reimport.",
+     "format": "No downloaded export file examined.",
+     "reimport": "No native-ID export, update or reimport executed.",
+     "cancellation": "Cancellation and downgrade not tested."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full signup count and exact session duration.",
+     "All ten export and reimport checks; no downloaded output bytes.",
+     "Cancellation, deletion and passive follow-up."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BugHerd",
    "product_id": "bugherd",
    "run_date": "2026-10-24",
@@ -10772,6 +10927,127 @@
   },
   {
    "source": "session",
+   "product_name": "SocialBee",
+   "product_id": "socialbee",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026 on the Pro trial: Daan created the account and our AI assistant ran the test in Daan's browser. We stopped at the social-account connection step, because the test plan forbids linking a real social account. We published nothing and entered none of our test records.",
+   "findings": [
+    "After sign-up the onboarding screen 'Connect social accounts' offers Facebook, Instagram, Threads, LinkedIn, TikTok, YouTube, Google, Pinterest, X and Bluesky. 'Continue' stays disabled until an account is connected.",
+    "The dashboard and 'Create post' show a pop-up: 'In order to unlock SocialBee's features, please connect a social account first.' The content page sends you back to onboarding. In the routes we opened, there was no way to draft a post without a connected account.",
+    "The banner read 'Your trial will expire in 13 days' on the day we signed up, against the public promise of 'Full Pro Access for 14 Days'. We did not record exact start and end times, so this does not show a shortened trial. No card was asked for in the screens we saw.",
+    "Settings > Pricing showed 'Current plan: Pro' during the trial, with yearly prices of $290 (Bootstrap), $490 (Accelerate) and $990 (Pro) a year. We did not look at monthly prices or the Agency tab, and we did not open checkout."
+   ],
+   "not_tested": [
+    "The core posting flow: it needs a connected social account",
+    "Export and re-import: no records were entered",
+    "Roles: we saw only a tooltip for Users & Roles and did not open the screen",
+    "Checkout, tax and the final price",
+    "Support, invitations, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "In order to unlock SocialBee's features, please connect a social account first.",
+     "claim_source": "https://app.socialbee.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "The inspected Create post/content routes did not allow an independent draft without connecting a social account. No connection was made.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/socialbee-review/#claim-vs-measured"
+     },
+     "plan": "Pro trial; Standard tab",
+     "comparability": "SocialBee: Post/content gate on the Pro trial, not a universal assessment of every menu.",
+     "status": "confirmed",
+     "buying_consequence": "A social connection is needed for the inspected core route.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your trial will expire in 13 days Upgrade Now!",
+     "claim_source": "https://app.socialbee.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Pro trial counter showed 13 days on the signup day; the historical public claim is 14 days. Exact start/end times were not captured.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/socialbee-review/#claim-vs-measured"
+     },
+     "plan": "Pro trial; Standard tab",
+     "comparability": "SocialBee: Remaining-day display and advertised duration differ in basis; no exact elapsed-time measurement.",
+     "status": "not_testable",
+     "buying_consequence": "The remaining-day counter alone cannot establish a shortened trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Full Pro Access for 14 Days",
+     "claim_source": "https://socialbee.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Account created by Daan. Connect social accounts onboarding had disabled Continue without a connection. No card requested in the observed continuation; full signup was not measured. Current plan Pro, the highest Standard plan. Public claim Full Pro Access for 14 Days; same-day app counter says 13 days. Yearly toggle selected: Bootstrap $290/year (struck-through $348), Accelerate $490/year (struck-through $588), Pro $990/year (struck-through $1188). Monthly prices and Agency tab not inspected.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/socialbee-review/#claim-vs-measured"
+     },
+     "plan": "Pro trial; Standard tab",
+     "comparability": "SocialBee: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+     "status": "not_testable",
+     "buying_consequence": "Observed session scope limits the public claim comparison.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$348 $290 /per year",
+     "claim_source": "https://app.socialbee.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Yearly selected: Bootstrap $290, Accelerate $490, Pro $990 per year. Only plan cards inspected; no tax or checkout total.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/socialbee-review/#claim-vs-measured"
+     },
+     "plan": "Pro trial; Standard tab",
+     "comparability": "SocialBee: SocialBee annual plan cards only; no checkout or matching product cost rule. Monthly terms, discounts and payable total remain unverified.",
+     "status": "not_testable",
+     "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "Create post displayed the connection gate. Content returned to onboarding. No social account connected, as required by the plan; no independent saved draft or kit records.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The inspected trial core route requires a social-account connection; the session stopped without connecting.",
+    "friction": {
+     "export_route": "Not tested: the core route required a prohibited social-account connection. No records, export or reimport.",
+     "format": "No downloaded export file examined.",
+     "reimport": "No native-ID export, update or reimport executed.",
+     "cancellation": "Cancellation and downgrade not tested."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full signup count and exact session duration.",
+     "All ten export and reimport checks; no downloaded output bytes.",
+     "Cancellation, deletion and passive follow-up."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "ClickUp",
    "product_id": "clickup",
    "run_date": "2026-10-23",
@@ -11005,6 +11281,92 @@
      "Task content, comments and attachments"
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Housecall Pro",
+   "product_id": "housecall-pro",
+   "run_date": "2026-11-05",
+   "session_type": "signup_attempt",
+   "what": "We tried to start Housecall Pro's free trial on 5 November 2026 from the Netherlands. Daan reported that sign-up only worked with a US phone number, so we stopped at the first step and took no workaround. We never had a working account, so nothing below is a finding about the product itself.",
+   "findings": [
+    "Housecall Pro's pricing page promises 'Free for 2 weeks.' and, in our notes from the earlier read, no credit card. We could not start that trial from the Netherlands.",
+    "The account holder reported that the sign-up form asked for a US telephone number. We could not confirm the restriction ourselves: when we reopened the public sign-up page on 5 November, our page reader returned no text.",
+    "A buyer outside the US should therefore check with Housecall Pro whether a non-US number works before planning around the trial."
+   ],
+   "not_tested": [
+    "Everything after sign-up: the core job-booking and invoicing flow, export and re-import",
+    "Whether the US-number requirement applies to every non-US sign-up, or only to the route Daan used",
+    "Checkout, tax and the final price",
+    "Support, roles, API access, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free for 2 weeks.",
+     "claim_source": "https://www.housecallpro.com/pricing/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Daan reported signup blocked because a US telephone number was required. Account-holder report only; no direct UI quote or image. Public signup page reopened on 2026-11-05 returned no readable text. No workaround.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/housecall-pro-review.html#claim-vs-measured"
+     },
+     "plan": "No working account; trial not started",
+     "comparability": "Housecall Pro: Historical public claim, original read date retained; later observed plan or report is scoped separately.",
+     "status": "not_testable",
+     "buying_consequence": "Observed scope is narrower than a complete end-to-end signup, trial or signing test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free for 2 weeks.",
+     "claim_source": "https://www.housecallpro.com/pricing/",
+     "claim_read_on": "2026-10-30",
+     "observed": "Daan reported US-phone signup blockage. No account, trial or checkout tested. No independently readable country/number restriction on the reopened signup page.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/housecall-pro-review.html#claim-vs-measured"
+     },
+     "plan": "No working account; trial not started",
+     "comparability": "Housecall Pro: Housecall Pro historical trial wording cannot confirm signup eligibility or a payable total. No working account and no comparable cost rule; report-only restriction remains unverified.",
+     "status": "not_testable",
+     "buying_consequence": "A final payable amount cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "Signup blockage reported by account holder; no direct app session.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The reported US-number requirement was not independently verified; the public signup reader exposed no text.",
+    "friction": {
+     "export_route": "Not tested: no working account.",
+     "format": "No file received.",
+     "reimport": "No input, export or reimport.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full original signup and measured duration.",
+     "Downloaded export bytes, native IDs and fixed-ID reimport.",
+     "Cancellation, deletion and passive follow-up.",
+     "All direct app behavior; account-holder report only."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -11303,6 +11665,161 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Unleashed Software",
+   "product_id": "unleashed-software",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We went through the trial set-up, saved one fictional product and read the plan page. We downloaded no export and did not go past the plan page of the subscribe flow.",
+   "findings": [
+    "Sign-up lands in Access Evo, the Access Group's cloud shell, with Unleashed as an app inside it. The bar read 'TRIAL MODE' and '14 days remaining before your trial expires'. No card and no sales call were required.",
+    "Set-up has three steps: your goals, your business (type, size, prior inventory software) and how you heard about us. The last field is required free text.",
+    "'Use demo data' is ticked by default. We left it on, so the product list holds furniture demo rows next to our own. The welcome page says 'Delete all data' clears the demo data.",
+    "Add Product saved our test record: product code AIBM-001, description 'TEST Zoë Alpha' and a two-line note with quotation marks and an accent. The list kept the accent. We did not fill in price, tags or the second record.",
+    "The product list offers Import and an Export menu with PDF, CSV and XLSX. We did not download a file.",
+    "'Subscribe Now' opens a plan page with monthly billing preselected: CORE $399 a month (3 user licences, 100 sales orders a month, 250,000 API calls a month) and PRO $729 a month (5 user licences, 500,000 API calls). The page says prices are in USD and exclude applicable taxes, and offers annual billing with savings of up to 8%."
+   ],
+   "not_tested": [
+    "Export and re-import: the export formats are offered, but we downloaded no file; the second test record was not entered",
+    "Add-ons, payment and the final price: we stopped at the plan page",
+    "Roles, support, invitations, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Use demo data",
+     "claim_source": "https://go.unleashed.erp.accessacloud.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "The setup option was preselected and retained; furniture demo products appeared alongside the single manually added test product.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unleashed-software-review/#claim-vs-measured"
+     },
+     "plan": "Trial mode; commercial tier not established",
+     "comparability": "Unleashed Software: Observed default and populated list; no export or demo deletion performed.",
+     "status": "confirmed",
+     "buying_consequence": "Separate demo products from kit records when evaluating exports.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Product created successfully.",
+     "claim_source": "https://go.unleashed.erp.accessacloud.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "AIBM-001 was saved manually with Unicode description and two-line Notes. The other test record and optional fields were not entered.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unleashed-software-review/#claim-vs-measured"
+     },
+     "plan": "Trial mode; commercial tier not established",
+     "comparability": "Unleashed Software: Input/UI preservation only; native ID, downloaded export and fixed-ID update unknown.",
+     "status": "confirmed",
+     "buying_consequence": "Single-product entry succeeded within the inspected scope.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Export to CSV",
+     "claim_source": "https://go.unleashed.erp.accessacloud.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "PDF, CSV and XLSX were offered by the trial product menu, but no file was downloaded.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unleashed-software-review/#claim-vs-measured"
+     },
+     "plan": "Trial mode; commercial tier not established",
+     "comparability": "Unleashed Software: UI option is not a passed export or content-preservation test.",
+     "status": "confirmed",
+     "buying_consequence": "The export menu is visible; output completeness has not been measured.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Usage-based billing for additional sales orders",
+     "claim_source": "https://billing.unleashed.erp.accessacloud.com/subscribe",
+     "claim_read_on": "2026-11-05",
+     "observed": "CORE plan stage displayed 100 sales orders per month and usage-based additional orders; Pay Monthly was selected and prices exclude taxes.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unleashed-software-review/#claim-vs-measured"
+     },
+     "plan": "Trial mode; commercial tier not established",
+     "comparability": "Unleashed Software: Commercial plan-stage allowance only; no usage charge or final invoice measured.",
+     "status": "confirmed",
+     "buying_consequence": "The plan amount is not a universal final cost for higher order volumes.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14-day free trial",
+     "claim_source": "https://www.unleashedsoftware.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Daan created account through Access Evo. Three setup stages followed; referral free-text mandatory. Use demo data was preselected and left on. Trial counter 14 days; no card or mandatory sales conversation in observed continuation. Optional Book in with Sales not taken. TRIAL MODE; 14 days remaining. Demo furniture data separate from test record. Product menu offered Import and Export PDF/CSV/XLSX. Quoted API call quotas on commercial plans do not prove trial API entitlement.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unleashed-software-review/#claim-vs-measured"
+     },
+     "plan": "Trial mode; commercial tier not established",
+     "comparability": "Unleashed Software: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+     "status": "confirmed",
+     "buying_consequence": "Observed session scope limits the public claim comparison.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$399 paid monthly (save $33 per month)",
+     "claim_source": "https://billing.unleashed.erp.accessacloud.com/subscribe",
+     "claim_read_on": "2026-11-05",
+     "observed": "Plan stage only: CORE $399/month and PRO $729/month, USD excluding applicable taxes. Monthly selected; no Add Ons or Payment stage. Displayed base rates match the internal historical anchor, not a final total.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/unleashed-software-review/#claim-vs-measured"
+     },
+     "plan": "Trial mode; commercial tier not established",
+     "comparability": "Unleashed Software: Unleashed monthly base rates agree with the historical cost rule for CORE/PRO, but final checkout, taxes, optional modules and usage charges were not reached; no final payable comparison.",
+     "status": "not_testable",
+     "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "Manually created product AIBM-001, description TEST Zoë Alpha and Notes with two lines, quotes and é. Product created successfully; list retained ë, On Hand 0. Price, date, tags and custom field not entered; AIBM-002 not entered because of time. No stock movement.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Use demo data was on by default. Core includes a sales-order allowance plus usage-based excess; plan-stage amount excludes taxes.",
+    "friction": {
+     "export_route": "Export menu offered PDF, CSV and XLSX on trial; none downloaded. All ten export and reimport checks remain not_tested; visible buttons are not output bytes.",
+     "format": "No downloaded export file examined.",
+     "reimport": "No native-ID export, update or reimport executed.",
+     "cancellation": "Cancellation and downgrade not tested."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full signup count and exact session duration.",
+     "All ten export and reimport checks; no downloaded output bytes.",
+     "Cancellation, deletion and passive follow-up."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

@@ -70,7 +70,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-09 on waverunner.adwave.com/pricing, the wallet and billing help page) Adwave has no subscription for businesses: you fund a prepaid wallet and live campaigns charge their dai…
 - **Honest take:** Prepaid-wallet ads across phone, TV and search.
 - **Best for:** small businesses that want ads on phones, TV, search and social planned from their website, paid from a prepaid wallet that cannot go into debt
-- **Full review:** https://aibuildermarketplace.com/b2b/adwave-review/
+- **Full review:** https://marketingandsalessoftware.com/adwave-review.html
 
 ## Adwisely (adwisely.com)
 - **Verified pricing:** (price re-verified 2026-09-10, re-read unchanged 2026-09-27) Read on adwisely.com/pricing; every figure below stood unchanged from our previous reading on 2 August 2026.
@@ -3940,9 +3940,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html
 
 ## Upsell.com (upsell.com)
-- **Verified pricing:** (prices re-verified 2026-09-19 on upsell.com/pricing and on the Shopify listing apps.shopify.com/reconvert-upsell-cross-sell; both now show the same ladder, which replaces the $4.99/$9.99/$…
-- **Honest take:** The ladder is public now, and that removes the complaint we had in September, but it leaves a cliff where the old one had a gap.
-- **Best for:** shopify merchants who want one funnel covering product page, cart, post-purchase and thank-you offers with AI recommendations and A/B testing, and who are either under 2,000 orders a month
+- **Verified pricing:** (prices re-verified 2026-11-09 on upsell.com/pricing in the Shopify view and on the Shopify App Store listing apps.shopify.com/reconvert-upsell-cross-sell the same day; this replaces the $1…
+- **Honest take:** Growth is banded and cheap up to 500 orders, but the step after Growth is steep.
+- **Best for:** Shopify merchants who want one funnel covering product page, cart, post-purchase and thank-you offers with AI recommendations and A/B testing, and who sit under 500 orders a month
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/upsell-com-review/
 

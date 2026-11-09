@@ -5152,6 +5152,147 @@
   },
   {
    "source": "session",
+   "product_name": "RocketReach",
+   "product_id": "rocketreach",
+   "run_date": "2026-11-06",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 6 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We read the usage page, uploaded a two-row CSV of fictional contacts and opened the plan and checkout pages. We stopped before any payment details. We did not look up a real person.",
+   "findings": [
+    "Sign-up asked for no card. Usage and Billing shows plan 'Gratis' at $0.00 a month with 5 lookups and 5 company exports remaining, renewing on 6 December 2026. The interface and checkout were in Dutch.",
+    "The free plan shows an API key straight away, with lookup endpoints and a webhook setting. We made no API call, so we do not know whether the free key works.",
+    "Team Management on the free plan shows only an upsell and no invite button.",
+    "CSV upload: the page says the 2 rows would use about 2 lookups and that you are only charged for accurate matches. The mapping offers Ignore, Company, Job Title, name fields, LinkedIn URL, Email, phone fields and Company Domain. There is no field type for free text, a custom code, dates, amounts or tags.",
+    "After mapping we got a file error, then a result of 2 submitted, 0 matched, 0 verified. My Contacts showed 'No Results Found', so our two records were not kept. The lookup counter stayed at 5, consistent with the charge-only-on-match wording. This is a lookup tool, not a CRM, so the result says more about what the tool is for than about a fault.",
+    "Monthly checkout for Essentials read $39 USD today, renewing on 6 December 2026 at $39. Plans on the pricing page: Essentials $39, Pro $79, Ultimate $169 a month, or $19, $52 and $115 a month billed yearly. No VAT line showed before card entry, so the final price with tax is unknown."
+   ],
+   "not_tested": [
+    "Export and re-import: the contact list was empty and we downloaded no file",
+    "Support, roles and invitations beyond the free-plan upsell",
+    "Downgrade and cancellation",
+    "Whether the free API key accepts calls",
+    "The final price including VAT"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Lookups 5 Remaining",
+     "claim_source": "https://rocketreach.co/person",
+     "claim_read_on": "2026-11-06",
+     "observed": "Free showed five remaining lookups and five company exports; after the failed matching upload the lookup balance remained five.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/rocketreach-review/#claim-vs-measured"
+     },
+     "plan": "Gratis (Free)",
+     "comparability": "RocketReach: Account balances before and after the same synthetic upload; no successful lookup or enrichment tested.",
+     "status": "confirmed",
+     "buying_consequence": "Quota was unchanged for the zero-match upload.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You will only be charged for accurate matches.",
+     "claim_source": "https://rocketreach.co/person",
+     "claim_read_on": "2026-11-06",
+     "observed": "Submitted Contacts 2; Matched Contacts 0; Verified Matched Contacts 0; My Contacts showed Filtered Contacts (0).",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/rocketreach-review/#claim-vs-measured"
+     },
+     "plan": "Gratis (Free)",
+     "comparability": "RocketReach: Matching outcome in an enrichment tool, separate from a CRM storage or export test.",
+     "status": "confirmed",
+     "buying_consequence": "Unmatched synthetic source rows were not retained in My Contacts.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No Results Found",
+     "claim_source": "https://rocketreach.co/person",
+     "claim_read_on": "2026-11-06",
+     "observed": "Both submitted rows absent from tagged My Contacts. No mapping types for free text, custom code, date, amount, tags or attachment.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/rocketreach-review/#claim-vs-measured"
+     },
+     "plan": "Gratis (Free)",
+     "comparability": "RocketReach: Input/mapping and in-app retention only; no downloaded file examined.",
+     "status": "confirmed",
+     "buying_consequence": "The inspected mapping cannot preserve those independent kit fields.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Vandaag totaal $39 USD",
+     "claim_source": "https://rocketreach.co/person",
+     "claim_read_on": "2026-11-06",
+     "observed": "Monthly Essentials checkout displayed the same monthly amount; no VAT line before payment data.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/rocketreach-review/#claim-vs-measured"
+     },
+     "plan": "Gratis (Free)",
+     "comparability": "RocketReach: Monthly Essentials route only; do not substitute annual price or team scope.",
+     "status": "confirmed",
+     "buying_consequence": "Tax-inclusive final basis remains unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Vandaag totaal $39 USD",
+     "claim_source": "https://rocketreach.co/person",
+     "claim_read_on": "2026-11-06",
+     "observed": "Monthly Essentials checkout: Totaal $39 x 1 maand $39 USD; Vandaag totaal $39 USD; renewal Dec 6, 2026 at $39 USD. Netherlands prefilled; no VAT line before card entry; tax unknown.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/rocketreach-review/#claim-vs-measured"
+     },
+     "plan": "Gratis (Free)",
+     "comparability": "RocketReach: Monthly Essentials checkout: Totaal $39 x 1 maand $39 USD; Vandaag totaal $39 USD; renewal Dec 6, 2026 at $39 USD. Netherlands prefilled; no VAT line before card entry; tax unknown. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+     "status": "confirmed",
+     "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-06",
+    "what": "Uploaded two synthetic CRM-kit rows. Mapped email/company/display_name to Email/Company/Full Name; test_id ignored. No accurate matches; empty tagged My Contacts list. No real person searched. This is an enrichment/lookup tool, not a CRM.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The tool matches contacts against its own database, and our two fictional rows found no match, so nothing was kept.",
+    "friction": {
+     "export_route": "Download List and Download Usage Report CSV were offered but not used; no export bytes or reimport. The empty in-app list proves non-retention of unmatched rows, not a downloaded-export result.",
+     "format": "No downloaded product file.",
+     "reimport": "No native-ID reimport.",
+     "cancellation": "Cancellation/downgrade not tested."
+    },
+    "not_tested": [
+     "Support, invitations, cancellation and passive follow-up.",
+     "Downloaded product exports and native-ID roundtrip.",
+     "Full original signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [
+     "Two unmatched synthetic rows absent from in-app My Contacts; no export file inspected."
+    ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "SupportBee",
    "product_id": "supportbee",
    "run_date": "2026-10-20",
@@ -7379,6 +7520,143 @@
   },
   {
    "source": "session",
+   "product_name": "Wegic",
+   "product_id": "wegic",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026: Daan opened the site and our AI assistant ran the test in Daan's browser. The session ran in visitor mode, not signed in, so this is a test of the free visitor experience. We sent a one-page test prompt to the AI site builder and followed the chat until we stopped after about 3.5 minutes. We published nothing.",
+   "findings": [
+    "The start screen is a chat with an assistant called Kimmy. The footer showed 'Visitor credits left: 100'.",
+    "After our first prompt the project name appeared top left with 'Sign in to unlock more features', which confirms visitor mode.",
+    "Kimmy asked for the purpose of the page, then wrote a summary and a proposed structure. The structure added a 'Draft / Do Not Publish' status badge and a feedback button that we had not asked for.",
+    "The chat repeated our prompt with straight quotes turned into curly quotes. The accented characters were kept.",
+    "Credits dropped step by step: 100, 98, 96, 95. After 'Looks good, generate previews' the assistant promised styles in 1 to 2 minutes. After about 3.5 minutes there was still no preview."
+   ],
+   "not_tested": [
+    "A finished site preview or published page: we stopped at the tutorial wait",
+    "Whether a signed-in account behaves differently",
+    "Pricing, export, roles, support, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Sign in to unlock more features.",
+     "claim_source": "https://wegic.ai/workspace/projects",
+     "claim_read_on": "2026-11-05",
+     "observed": "The tab displayed visitor credits rather than an established signed-in account. No registered trial behavior inferred.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+     },
+     "plan": "Visitor mode; account state unproven",
+     "comparability": "Wegic: Visitor session only; Daan account existence and cross-tab login unknown.",
+     "status": "confirmed",
+     "buying_consequence": "These findings apply to visitor mode.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Internal Note / Action: Status badge ( Draft / Do Not Publish ) & feedback button",
+     "claim_source": "https://wegic.ai/workspace/projects",
+     "claim_read_on": "2026-11-05",
+     "observed": "The proposed structure added a status badge and feedback button without those elements in the exact-copy prompt. No completed preview was obtained.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+     },
+     "plan": "Visitor mode; account state unproven",
+     "comparability": "Wegic: Proposal in chat, not a verified change on a completed page.",
+     "status": "confirmed",
+     "buying_consequence": "Review the proposed structure before generating.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "this will take about 1-2 minutes, please hold on…",
+     "claim_source": "https://wegic.ai/workspace/projects",
+     "claim_read_on": "2026-11-05",
+     "observed": "No preview was ready at the approximately 3.5-minute cutoff. Session ended within its time budget; eventual generation outcome unknown.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+     },
+     "plan": "Visitor mode; account state unproven",
+     "comparability": "Wegic: Approximate single wait, not a measured setup-time benchmark or service-wide timing result.",
+     "status": "not_comparable",
+     "buying_consequence": "Allow for pending generation when evaluating the observed route.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free signup.",
+     "claim_source": "https://wegic.ai/ai-website-builder/start-a-free",
+     "claim_read_on": "2026-10-29",
+     "observed": "Visitor credits left 100 and Sign in to unlock more features showed that this tab was in visitor mode. Daan supplied a start URL, but account existence/login were not established. No registered-account or trial-tier result claimed. Visitor credits fell 100 to 98 to 96 to 95 during chat steps. Assistant said previews take about 1-2 minutes; none ready after approximately 3.5 minutes when the session stopped.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+     },
+     "plan": "Visitor mode; account state unproven",
+     "comparability": "Wegic: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+     "status": "not_testable",
+     "buying_consequence": "Observed session scope limits the public claim comparison.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free signup.",
+     "claim_source": "https://wegic.ai/ai-website-builder/start-a-free",
+     "claim_read_on": "2026-10-29",
+     "observed": "Visitor-mode chat only. No pricing, registered trial, payment screen or checkout total observed.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/wegic-review/#claim-vs-measured"
+     },
+     "plan": "Visitor mode; account state unproven",
+     "comparability": "Wegic: Wegic visitor scope does not establish signup/trial or a payable price. No checkout or same-scope cost comparison.",
+     "status": "not_testable",
+     "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "Submitted AIBM-001 exact-copy prompt. Chat display changed straight quotation marks into curly marks; ë/é retained. Selected Internal concept testing and confirmed summary. Proposed structure added an unrequested status badge and feedback button, then generation remained pending. Completed core/page outcome not_tested; chat observations do not establish final page content.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Visitor chat reformatted prompt quotes and proposed unrequested interface elements; previews still pending at the observation cutoff.",
+    "friction": {
+     "export_route": "No previews completed by session stop; no export, download or reimport inspected.",
+     "format": "No downloaded export file examined.",
+     "reimport": "No native-ID export, update or reimport executed.",
+     "cancellation": "Cancellation and downgrade not tested."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full signup count and exact session duration.",
+     "All ten export and reimport checks; no downloaded output bytes.",
+     "Cancellation, deletion and passive follow-up."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "WebinarGeek",
    "product_id": "webinargeek",
    "run_date": "2026-10-21",
@@ -7741,6 +8019,160 @@
      "Contact IDs absent from CSV."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Restream",
+   "product_id": "restream",
+   "run_date": "2026-11-06",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 6 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We went through onboarding, read the plan screen, uploaded a 6-second test video and opened the schedule-stream form. We stopped before connecting any channel and before payment.",
+   "findings": [
+    "Onboarding asks who will stream (an organization or just you). No card was requested. Two draft events, an RTMP stream and a Studio stream, already existed on the home page.",
+    "Straight after onboarding a plan screen appears. Free is $0 with 50 streaming hours, counted per destination, so one hour on 3 platforms uses 3 hours. Creator Plus is $19.99 a month.",
+    "On Creator Plus all three add-ons were ticked by default: Clips +$19, Advanced Cloud recording +$19 and Upload & Stream +$39. Checkout then showed 'Due today $96.98', nearly five times the $19.99 base price. A 7-day money-back guarantee is shown at checkout. No VAT line appeared.",
+    "Storage accepted our 6-second MP4 (32 KB). The counter went to 1 of 3 uploads and available storage to 66%, so the limit counts files and not bytes.",
+    "The file menu offers Schedule stream, Download, Trim video, Transcript (upgrade), Details, Rename and Delete. Create event offers a title, date with time zone, and a preticked option to create an event post in advance. Loop video needs an upgrade."
+   ],
+   "not_tested": [
+    "Going live: no channel was connected and the event was not saved",
+    "Downloading the upload again",
+    "Support, roles and invitations (free plan is individual use only), downgrade and cancellation",
+    "The final price including VAT"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "$19.99/mo",
+     "claim_source": "https://app.restream.io/",
+     "claim_read_on": "2026-11-06",
+     "observed": "All three add-ons were checked by default; checkout Due today $96.98 with those defaults.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/restream-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Restream: Base plan compared with default bundled checkout; the displayed total is recorded without reverse-calculating its arithmetic.",
+     "status": "confirmed",
+     "buying_consequence": "Review each selected add-on before subscribing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Due today $96.98",
+     "claim_source": "https://app.restream.io/",
+     "claim_read_on": "2026-11-06",
+     "observed": "No payment submitted; no VAT line visible before payment data.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/restream-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Restream: Immediate displayed checkout only, not an invoice or proof of an actual charge.",
+     "status": "confirmed",
+     "buying_consequence": "Tax treatment is unknown at the inspected point.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "UPLOADS 1/3",
+     "claim_source": "https://app.restream.io/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Own small video occupied one of three upload slots; AVAILABLE STORAGE: 66%; expiry shown as 29 days.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/restream-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Restream: One successful media upload; no general byte-cap calculation or durability test.",
+     "status": "confirmed",
+     "buying_consequence": "The inspected allowance counted the file slot despite its small size.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Create an event post in advance to invite your audience",
+     "claim_source": "https://app.restream.io/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Checkbox was on by default; Loop video required Upgrade. Stopped before selecting channels.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/restream-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Restream: Scheduling form defaults only; no published post or broadcast.",
+     "status": "confirmed",
+     "buying_consequence": "Review event-publicity setting before continuing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Transcript",
+     "claim_source": "https://app.restream.io/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Item menu labelled Transcript Upgrade; Download offered without a download attempt.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/restream-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Restream: Menu availability only; no transcript output or returned media bytes.",
+     "status": "confirmed",
+     "buying_consequence": "Transcript entitlement differs from the visible download action.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Due today $96.98",
+     "claim_source": "https://app.restream.io/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Creator Plus base $19.99/mo. Clips +$19/mo, Advanced Cloud recording +$19/mo and Upload & Stream +$39/mo were all preselected. Checkout Due today $96.98; monthly default; Netherlands; no visible VAT line. Saved Link payment details appeared but were not touched.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/restream-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Restream: Creator Plus base $19.99/mo. Clips +$19/mo, Advanced Cloud recording +$19/mo and Upload & Stream +$39/mo were all preselected. Checkout Due today $96.98; monthly default; Netherlands; no visible VAT line. Saved Link payment details appeared but were not touched. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+     "status": "confirmed",
+     "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-06",
+    "what": "Own six-second MP4 uploaded successfully per notes. UPLOADS changed from 0/3 to 1/3, storage from 100% to 66%; item showed Expires: 29 days. Schedule Video inspected; stopped before channel selection, no event saved or live stream.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Add-ons were preticked in the plan screen and checkout, so the default basket cost $96.98 against a $19.99 base price.",
+    "friction": {
+     "export_route": "Download offered in item menu; not used. Transcript and Loop video labelled Upgrade. No return file, reimport or live-stream test.",
+     "format": "No downloaded product file.",
+     "reimport": "No native-ID reimport.",
+     "cancellation": "Cancellation/downgrade not tested."
+    },
+    "not_tested": [
+     "Support, invitations, cancellation and passive follow-up.",
+     "Downloaded product exports and native-ID roundtrip.",
+     "Full original signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -8195,6 +8627,178 @@
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Consensus",
+   "product_id": "consensus",
+   "run_date": "2026-11-06",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 6 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We asked one research question, read the answer and its sources, opened the export options and the bibliography view, and read the plan and checkout screens. We stopped before payment. This is a literature search engine, so the import kit does not apply.",
+   "findings": [
+    "The sidebar showed '10 / 10 Pro messages left'. One question used one Pro message and the counter read 9 / 10.",
+    "Question: 'Does regular physical activity reduce the risk of depression in adults?' The answer said yes, with a 17% to 25% lower risk. The Consensus Meter, based on 19 papers, showed Yes 100%. A note says it 'may not be a perfect reflection of the current science'.",
+    "We checked the top source (Pearce et al., JAMA Psychiatry, 2022) and it matches the published paper. Other cited papers also exist. One sentence repeated a citation twice.",
+    "Export offers the 18 cited papers by default, the top 20, or all 49 papers on Pro. Formats are CSV, RIS and a bibliography in APA, MLA, Chicago, Harvard, BibTeX and AMA. The APA view had formatting slips: doubled full stops after titles, a space before a final full stop and a journal name not in title case.",
+    "The upgrade screen preselects Annual. Pro is $12 a month billed yearly ($144) or $20 monthly. The Free column says 'without any AI analysis' and lists 10 Pro messages a month in the same column.",
+    "Monthly Pro checkout read EUR 18.61 for the Netherlands, with annual billing offered at EUR 133.98 a year. No VAT line showed before card entry."
+   ],
+   "not_tested": [
+    "Downloading the CSV or RIS file and re-importing it",
+    "Roles, invitations, support, downgrade and cancellation",
+    "Accuracy beyond the one question and the sources we checked",
+    "The final price including VAT"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "10 / 10 Pro messages left",
+     "claim_source": "https://consensus.app/",
+     "claim_read_on": "2026-11-06",
+     "observed": "After one automatically Pro question, counter was 9 / 10.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/consensus-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Consensus: Single-question quota observation, not a test of all monthly or Deep review limits.",
+     "status": "confirmed",
+     "buying_consequence": "One observed question consumed one Pro message.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "without any AI analysis",
+     "claim_source": "https://consensus.app/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Free headline conflicted with the same plan column offering Dynamic AI-powered search and analysis and the observed Pro answer.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/consensus-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Consensus: Internal Free-plan wording conflict supported by an actual AI answer.",
+     "status": "contradicted",
+     "buying_consequence": "Free AI scope requires reading the detailed quota, not only the headline.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "It may not be a perfect reflection of the current science.",
+     "claim_source": "https://consensus.app/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Meter N=19 showed 100% Yes. Tester reported Pearce 2022 title, authors, year and journal matched; repeated Schuch 2018 Schuch 2018 citation in prose.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/consensus-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Consensus: Report of the supplied literature session; no independent medical conclusion or completeness claim.",
+     "status": "confirmed",
+     "buying_consequence": "Meter output retains its own coverage disclaimer.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Bibliography",
+     "claim_source": "https://consensus.app/",
+     "claim_read_on": "2026-11-06",
+     "observed": "In-app APA list viewed: duplicated periods and space before period; CSV/RIS not downloaded.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/consensus-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Consensus: Visible bibliography text only; no claim that downloaded CSV/RIS has these errors.",
+     "status": "confirmed",
+     "buying_consequence": "Bibliography formatting needs checking before reuse.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "All 49 papers",
+     "claim_source": "https://consensus.app/",
+     "claim_read_on": "2026-11-06",
+     "observed": "All cited (18) default; full All 49 papers selection labelled PRO.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/consensus-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Consensus: Selection UI on Free; no downloaded bibliography file or complete export tested.",
+     "status": "confirmed",
+     "buying_consequence": "Export selection scope differs by plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Totaal vandaag te betalen € 18,61",
+     "claim_source": "https://consensus.app/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Monthly Pro displayed EUR checkout while plan page showed USD; no visible VAT line.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/consensus-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Consensus: Monthly EUR checkout versus monthly USD page; not a measured overcharge.",
+     "status": "confirmed",
+     "buying_consequence": "Tax is unknown; currency conversion prevents direct same-currency price comparison.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Totaal vandaag te betalen € 18,61",
+     "claim_source": "https://consensus.app/",
+     "claim_read_on": "2026-11-06",
+     "observed": "Pro $20/mo monthly or $12/mo with $144 annually; Annual default. Stripe monthly checkout € 18,61; Totaal vandaag te betalen € 18,61; EUR/USD selector; Netherlands; no visible VAT line.",
+     "observed_on": "2026-11-06",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/consensus-review/#claim-vs-measured"
+     },
+     "plan": "Free",
+     "comparability": "Consensus: Pro $20/mo monthly or $12/mo with $144 annually; Annual default. Stripe monthly checkout € 18,61; Totaal vandaag te betalen € 18,61; EUR/USD selector; Netherlands; no visible VAT line. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+     "status": "confirmed",
+     "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-06",
+    "what": "One question about physical activity and depression used one Pro message (10 to 9). Meter showed N=19 and 100% Yes with a science-coverage disclaimer. Tester checked Pearce 2022 JAMA Psychiatry and reported it correct; Codex did not independently validate clinical claims. Repeated Schuch 2018 citation noted. Kit is evaluation matrix only, no synthetic records imported.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "In-app APA bibliography of 18 papers viewed; duplicated punctuation, space before a period and journal capitalization issues reported. CSV/RIS offered; All 49 papers PRO. No downloaded files or roundtrip.",
+    "friction": {
+     "export_route": "In-app APA bibliography of 18 papers viewed; duplicated punctuation, space before a period and journal capitalization issues reported. CSV/RIS offered; All 49 papers PRO. No downloaded files or roundtrip.",
+     "format": "No downloaded product file.",
+     "reimport": "No native-ID reimport.",
+     "cancellation": "Cancellation/downgrade not tested."
+    },
+    "not_tested": [
+     "Support, invitations, cancellation and passive follow-up.",
+     "Downloaded product exports and native-ID roundtrip.",
+     "Full original signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -14039,6 +14643,161 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Brizy",
+   "product_id": "brizy",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We went through sign-up, opened the Cloud editor and sent our test prompt to the built-in AI assistant. The request was blocked, so no page was built. We did not publish, export or open checkout.",
+   "findings": [
+    "Sign-up asks four required survey questions (business type, company size, role, how you found Brizy), then shows a member dashboard with 'Start free trial Cloud'. No card was requested.",
+    "The trial banner read 'Your trial ends in 14 days! Upgrade to publish your website.' The new project card was labelled PRO PROJECT.",
+    "'Create New Website' offers four starting methods: From Scratch, Start with a template, Generate with AI 1.9 and Generate with AI 2.0 (Beta).",
+    "Our first prompt in the AI panel ended in 'Out of AI credits - AI credits limit reached', with top-ups of $10, $25 and $50 on offer, plus 'Couldn't finish your request'. The plan cards say 'AI Builder Included', so the trial's AI allowance is unclear.",
+    "The plan page had Yearly -20% preselected: Personal $19/mo (1 website), Agency $69/mo (10 websites), White Label $159/mo and a custom Enterprise plan with API access and SSO. We did not look at monthly prices."
+   ],
+   "not_tested": [
+    "A completed AI or manual page, and Save Draft: the AI request was blocked and we did not build by hand",
+    "Export, re-import, roles, API settings, downgrade and cancellation",
+    "Support and invitation sending",
+    "Checkout and the final price"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Your trial ends in 14 days! Upgrade to publish your website. | View Plans",
+     "claim_source": "https://admin.brizy.io/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "The observed Cloud trial activation reached the dashboard without a card request. Historical plan did not yet establish a cardless activation.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/brizy-review/#claim-vs-measured"
+     },
+     "plan": "14-day Cloud trial; project card PRO PROJECT",
+     "comparability": "Brizy: Observed activation only, not a new public no-card vendor quote or proof of every signup path.",
+     "status": "confirmed",
+     "buying_consequence": "This session establishes cardless trial activation on the observed route.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "AI Builder Included",
+     "claim_source": "https://admin.brizy.io/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "The first AI editor prompt in a fresh trial was blocked by Out of AI credits and a request failure; paid credit top-ups were offered. No AI page completed.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/brizy-review/#claim-vs-measured"
+     },
+     "plan": "14-day Cloud trial; project card PRO PROJECT",
+     "comparability": "Brizy: Paid-plan label versus trial editor outcome; scopes differ, so no blanket contradiction of paid-plan entitlement.",
+     "status": "not_comparable",
+     "buying_consequence": "Check trial AI credit entitlement before relying on the included-builder label.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Out of AI credits — AI credits limit reached. Upgrade plan or Buy Credits",
+     "claim_source": "https://admin.brizy.io/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "The first supplied kit prompt stopped at the credit gate; no manual page fallback or publication.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/brizy-review/#claim-vs-measured"
+     },
+     "plan": "14-day Cloud trial; project card PRO PROJECT",
+     "comparability": "Brizy: One first-request observation in this fresh trial, not all Brizy building methods.",
+     "status": "confirmed",
+     "buying_consequence": "The tested trial AI route could not complete the core action.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$10 / $25 / $50",
+     "claim_source": "https://admin.brizy.io/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "Credit top-ups were offered alongside the blocked prompt; none bought.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/brizy-review/#claim-vs-measured"
+     },
+     "plan": "14-day Cloud trial; project card PRO PROJECT",
+     "comparability": "Brizy: Top-up offers only; no payment or credit-delivery verification.",
+     "status": "confirmed",
+     "buying_consequence": "The displayed paid top-ups are separate from a completed trial generation.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Start 14-day Free Trial",
+     "claim_source": "https://www.brizy.io/account/signup",
+     "claim_read_on": "2026-10-29",
+     "observed": "Daan created account. Four mandatory survey questions preceded the member dashboard. START FREE TRIAL CLOUD activated a 14-day Cloud trial without requesting a card. This observed activation resolves the historical open card question for this route; full signup screen count remains unmeasured. Project card PRO PROJECT. Trial banner says 14 days and upgrade to publish. Fresh first editor AI prompt returned Out of AI credits and AI credits limit reached; Retry error also shown. Plans label AI Builder Included. No AI output completed.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/brizy-review/#claim-vs-measured"
+     },
+     "plan": "14-day Cloud trial; project card PRO PROJECT",
+     "comparability": "Brizy: Historical public claim and original read date retained; session counter/activation is not an exact elapsed-duration measurement. Visitor mode cannot confirm signup.",
+     "status": "confirmed",
+     "buying_consequence": "Observed session scope limits the public claim comparison.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$19/mo",
+     "claim_source": "https://admin.brizy.io/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "Yearly -20% selected: Personal $19/mo, Agency $69/mo, White Label $159/mo. No annual total, monthly toggle comparison or checkout.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/brizy-review/#claim-vs-measured"
+     },
+     "plan": "14-day Cloud trial; project card PRO PROJECT",
+     "comparability": "Brizy: Brizy selected annual cards display the same figures the historical cost rule calls monthly. Term basis is therefore unresolved; do not multiply or substitute historical annual totals. No checkout to adjudicate.",
+     "status": "not_testable",
+     "buying_consequence": "Final like-for-like tax-inclusive purchase price cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "Opened From Scratch editor and submitted the AIBM-001 kit prompt. First prompt blocked by credits; request could not finish. No manual block or Save Draft performed because of time. Nothing published and no completed page checked.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "A fresh first AI editor request was blocked for unavailable credits while plan cards advertise AI Builder Included. Paid top-ups were offered; trial coverage of that feature remains unresolved.",
+    "friction": {
+     "export_route": "Export, roles, API settings and downgrade not tested after blocked AI creation. No output file or reimport.",
+     "format": "No downloaded export file examined.",
+     "reimport": "No native-ID export, update or reimport executed.",
+     "cancellation": "Cancellation and downgrade not tested."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full signup count and exact session duration.",
+     "All ten export and reimport checks; no downloaded output bytes.",
+     "Cancellation, deletion and passive follow-up."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   }
  ]

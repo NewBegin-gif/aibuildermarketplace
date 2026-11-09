@@ -82,16 +82,353 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "nordlayer-lite",
+     "name": "NordLayer Lite",
+     "model": "per_unit",
+     "min_units": 5,
+     "annual_month": 8,
+     "monthly": 10,
+     "evidence": "Per user per month: Lite $8 on annual billing or $10 month-to-month, Core $11 or $14, Premium $14 or $18, which the toggle labels as savings of 20%, 21% and 22%. There is a five-user minimum"
+    }
+   ],
+   "notes": [
+    "These rules cover the business product NordLayer, quoted in USD; the consumer NordVPN plans are priced in euros over 27-month terms and are left out.",
+    "There is a five-user minimum and a 14-day money-back guarantee."
+   ],
+   "not_computable": [
+    "NordLayer Core ($11 annual, $14 month-to-month per user) and Premium ($14 or $18) require a dedicated-IP server on top at +$40 a month on annual billing or +$50 month-to-month; the engine cannot attach a mandatory server fee to a plan, so they are not computed here.",
+    "The enterprise offer starts at $6 per user per month on annual billing, or $10 month-to-month, from 200 seats; a starting price, not a rate card.",
+    "Consumer plans (Basic, Complete, Ultimate Max) are charged per 27-month term and renew at a higher yearly rate."
+   ],
+   "rules_verified_at": "2026-11-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "nordvpn",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 40.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 40.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 40.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 40.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 80.0,
+      "billed": {
+       "amount": 960.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 80.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 1440.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 120.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 160.0,
+      "billed": {
+       "amount": 1920.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 160.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 2400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 200.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 4800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 400.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 800.0,
+      "billed": {
+       "amount": 9600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 800.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "NordLayer Core ($11 annual, $14 month-to-month per user) and Premium ($14 or $18) require a dedicated-IP server on top at +$40 a month on annual billing or +$50 month-to-month; the engine cannot attach a mandatory server fee to a plan, so they are not computed here.",
+     "The enterprise offer starts at $6 per user per month on annual billing, or $10 month-to-month, from 200 seats; a starting price, not a rate card.",
+     "Consumer plans (Basic, Complete, Ultimate Max) are charged per 27-month term and renew at a higher yearly rate."
+    ]
+   },
+   "monthly": {
+    "product_id": "nordvpn",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 50.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 50.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 50.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 50.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 100.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 150.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 200.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 250.0,
+      "billed": {
+       "amount": 250.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 250.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 500.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "nordlayer-lite",
+      "cheapest_plan_name": "NordLayer Lite",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "nordlayer-lite": 1000.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "NordLayer Core ($11 annual, $14 month-to-month per user) and Premium ($14 or $18) require a dedicated-IP server on top at +$40 a month on annual billing or +$50 month-to-month; the engine cannot attach a mandatory server fee to a plan, so they are not computed here.",
+     "The enterprise offer starts at $6 per user per month on annual billing, or $10 month-to-month, from 200 seats; a starting price, not a rate card.",
+     "Consumer plans (Basic, Complete, Ultimate Max) are charged per 27-month term and renew at a higher yearly rate."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -121,9 +458,21 @@
    "status": "open"
   },
   {
-   "question_id": "nordvpn:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "nordvpn:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: NordLayer Core ($11 annual, $14 month-to-month per user) and Premium ($14 or $18) require a dedicated-IP server on top at +$40 a month on annual billing or +$50 month-to-month; the engine cannot attach a mandatory server fee to a plan, so they are not computed here. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "nordvpn:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The enterprise offer starts at $6 per user per month on annual billing, or $10 month-to-month, from 200 seats; a starting price, not a rate card. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "nordvpn:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Consumer plans (Basic, Complete, Ultimate Max) are charged per 27-month term and renew at a higher yearly rate. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

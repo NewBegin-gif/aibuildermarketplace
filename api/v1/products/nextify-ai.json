@@ -112,15 +112,420 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free is $0 for 50 credits a month, watermarked, on the basic models only"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 29,
+     "annual_month": 21,
+     "annual_year": 244,
+     "evidence": "Billed monthly the paid tiers are Starter $29, Pro $79 and Business $189. Billed annually the same tiers are $21, $52 and $114 a month, charged $244, $617 and $1,361 a year"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 79,
+     "annual_month": 52,
+     "annual_year": 617,
+     "evidence": "Billed monthly the paid tiers are Starter $29, Pro $79 and Business $189. Billed annually the same tiers are $21, $52 and $114 a month, charged $244, $617 and $1,361 a year"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "max_units": 2,
+     "monthly": 189,
+     "annual_month": 114,
+     "annual_year": 1361,
+     "evidence": "Billed monthly the paid tiers are Starter $29, Pro $79 and Business $189. Billed annually the same tiers are $21, $52 and $114 a month, charged $244, $617 and $1,361 a year"
+    }
+   ],
+   "notes": [
+    "Business is the only tier with a second seat, so Starter and Pro are single-seat.",
+    "Credit allowances are 1,000, 3,000 and 8,000 a month and do not roll over between cycles; the free plan is only visible when logged out."
+   ],
+   "not_computable": [
+    "Credit top-ups: a one-off pack of 1,250 credits is $50; the engine does not estimate credit consumption."
+   ],
+   "rules_verified_at": "2026-11-09"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "nextify-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 20.33,
+       "pro": 51.42,
+       "business": 113.42
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 113.42,
+      "billed": {
+       "amount": 1361.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": 113.42
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "business",
+      "from_plan_name": "Free",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 2,
+      "to_units": 3,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credit top-ups: a one-off pack of 1,250 credits is $50; the engine does not estimate credit consumption."
+    ]
+   },
+   "monthly": {
+    "product_id": "nextify-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 29.0,
+       "pro": 79.0,
+       "business": 189.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 189.0,
+      "billed": {
+       "amount": 189.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": 189.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "pro": "not_eligible",
+       "business": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "business",
+      "from_plan_name": "Free",
+      "to_plan_name": "Business"
+     },
+     {
+      "from_units": 2,
+      "to_units": 3,
+      "from_plan": "business",
+      "to_plan": null,
+      "from_plan_name": "Business",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Credit top-ups: a one-off pack of 1,250 credits is $50; the engine does not estimate credit consumption."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -178,9 +583,9 @@
    "status": "open"
   },
   {
-   "question_id": "nextify-ai:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "nextify-ai:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Credit top-ups: a one-off pack of 1,250 credits is $50; the engine does not estimate credit consumption. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -5899,6 +5899,180 @@
   },
   {
    "source": "session",
+   "product_name": "Webflow",
+   "product_id": "webflow",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026 on the free Starter plan: Daan created the account and our AI assistant ran the test in Daan's browser. We went through onboarding, tried to import two fictional records into a CMS collection, and read the plan and export screens. We published nothing and did not open checkout.",
+   "findings": [
+    "Onboarding took six screens with a progress bar. On the last one, 'Stay up to date by subscribing to our emails' was ticked in advance; we unticked it. No card and no sales call.",
+    "Starter shows $0 with 2 static pages, 1 GB bandwidth, 50 form submits and a CMS limit of 50 items. Basic is $15 a month and Premium $25, both with 'Billed yearly' switched on by default. The page says prices are in USD with applicable taxes added at checkout.",
+    "A CSV import into a new CMS collection recognised the header and let us map each column. The preview showed our amount as 12.1 and joined the two lines of the description into one.",
+    "Both records then failed with 'Import Failed: All items failed to import' and 'Validation Failure' on each row. The screen does not give the reason; it sits in a summary file we did not download. A multi-line text field may be the cause, but we did not establish that, and it may be a mapping mistake on our side.",
+    "Export code in the Designer says 'Available on paid Workspace plans'. That is separate from the CMS, which has its own CSV export button.",
+    "On Starter with a CMS collection, 'Upgrade to Basic' opens 'Delete CMS items to upgrade to Basic'. To keep the collection you have to take Premium. We did not go further."
+   ],
+   "not_tested": [
+    "Everything the kit checks after an import: both records failed, so export, special characters and round trip are untested, not failed",
+    "Checkout, tax and the final price: we never reached a payment screen",
+    "Support, team roles, API access and invitations",
+    "An actual downgrade or cancellation; we only read the dialog",
+    "The email verification link that the dashboard asks for was not used"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Stay up to date by subscribing to our emails.",
+     "claim_source": "https://webflow.com/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "The marketing checkbox was selected by default; the tester unchecked it during onboarding.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/webflow-review/#claim-vs-measured"
+     },
+     "plan": "Starter Site; free Workspace",
+     "comparability": "Webflow: Default state visible in the supplied cropped onboarding screenshot; receipt of marketing not measured.",
+     "status": "confirmed",
+     "buying_consequence": "Review the marketing choice during signup.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Available on paid Workspace plans",
+     "claim_source": "https://webflow.com/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "Export code was gated in the tested free Workspace. The CMS CSV Export button was a separate route and was not used.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/webflow-review/#claim-vs-measured"
+     },
+     "plan": "Starter Site; free Workspace",
+     "comparability": "Webflow: Workspace code-export gate, not a conclusion about CMS CSV export availability.",
+     "status": "confirmed",
+     "buying_consequence": "A paid Site plan alone is not the stated code-export entitlement.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "All items failed to import",
+     "claim_source": "https://webflow.com/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "Both kit records showed Validation Failure; detailed summary was not downloaded. Cause remains unknown and may involve own mapping.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/webflow-review/#claim-vs-measured"
+     },
+     "plan": "Starter Site; free Workspace",
+     "comparability": "Webflow: Failed input, not proof of lost stored fields or broken product behavior.",
+     "status": "confirmed",
+     "buying_consequence": "The attempted CMS mapping needs diagnosis before a preservation test can run.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "To upgrade to a Basic Site plan, you need to delete all existing CMS items and collections.",
+     "claim_source": "https://webflow.com/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "Starter includes CMS; the upgrade dialog requires removing CMS to move to Basic or choosing Premium to keep it.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/webflow-review/#claim-vs-measured"
+     },
+     "plan": "Starter Site; free Workspace",
+     "comparability": "Webflow: Observed Starter-to-Basic transition requirement; no deletion, paid upgrade or downgrade executed.",
+     "status": "confirmed",
+     "buying_consequence": "The cheaper paid Site option does not retain the free plan CMS configuration.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "All prices are in USD with applicable taxes added at checkout.",
+     "claim_source": "https://webflow.com/dashboard",
+     "claim_read_on": "2026-11-05",
+     "observed": "Site plans used USD with yearly billing preselected. No checkout or final tax-inclusive amount was observed.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/webflow-review/#claim-vs-measured"
+     },
+     "plan": "Starter Site; free Workspace",
+     "comparability": "Webflow: Pricing defaults only; no actual payment total or current cost-rule confirmation.",
+     "status": "confirmed",
+     "buying_consequence": "A displayed monthly equivalent is not a monthly contract or a tax-inclusive total.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "free Starter Site plan",
+     "claim_source": "https://webflow.com/pricing",
+     "claim_read_on": "2026-10-29",
+     "observed": "Starter current $0/mo; 50 CMS items and 20 collections. Basic $15/mo and Premium $25/mo billed yearly; yearly toggle on. USD with taxes at checkout. Roles/API not inspected.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/webflow-review/#claim-vs-measured"
+     },
+     "plan": "Starter Site; free Workspace",
+     "comparability": "Webflow: Historical public claim, original read date retained; later observed plan or report is scoped separately.",
+     "status": "confirmed",
+     "buying_consequence": "Observed scope is narrower than a complete end-to-end signup, trial or signing test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "All prices are in USD with applicable taxes added at checkout.",
+     "claim_source": "https://webflow.com/pricing",
+     "claim_read_on": "2026-11-05",
+     "observed": "Basic $15/mo and Premium $25/mo Billed yearly; annual toggle on. Basic transition stopped at delete-CMS requirement; no payment screen.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/webflow-review/#claim-vs-measured"
+     },
+     "plan": "Starter Site; free Workspace",
+     "comparability": "Webflow: Webflow Site prices, annual default and CMS-removal dialog do not establish checkout tax/total. Workspace and Site costs differ; no current comparable cost-rule total verified.",
+     "status": "not_testable",
+     "buying_consequence": "A final payable amount cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "CMS import attempt on Starter; all items failed validation and no export was downloaded.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Preselected marketing opt-in. Moving from free Starter CMS to paid Basic requires deleting CMS content; Premium is offered instead.",
+    "friction": {
+     "export_route": "Code export requires a paid Workspace. CMS CSV Export was not exercised after failed import.",
+     "format": "No exported file; import preview is not a content-preservation test.",
+     "reimport": "Import failure unresolved; no stored records, native-ID export or reimport tested.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full original signup and measured duration.",
+     "Downloaded export bytes, native IDs and fixed-ID reimport.",
+     "Cancellation, deletion and passive follow-up."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "monday.com",
    "product_id": "monday-com",
    "run_date": "2026-10-28",
@@ -8753,6 +8927,164 @@
   },
   {
    "source": "session",
+   "product_name": "TicketTailor",
+   "product_id": "tickettailor",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We created a box office, drafted one event with a ticket type, and read the fee, team and API screens. We published nothing, sold no ticket and connected no payment provider.",
+   "findings": [
+    "Creating the box office asks for an organisation name, country, billing currency, whether tickets are free or paid, and expected yearly volume, plus a tick for the acceptable use policy. No card was asked for.",
+    "Billing shows 'Prepay', a credit balance of 5 and Auto-Renew off. Without credits, usage is charged at the pay-as-you-go rate of €0.70, excluding VAT. This is a credit model, so we found no subscription checkout to test.",
+    "The ticket dialog showed the fee in advance. For a €12.10 ticket the buyer pays €12.10, estimated fees are €0.43 and you receive €11.67. The €0.70 Ticket Tailor fee is struck through to €0.00 as one trial credit, and the €0.43 is a Stripe example of 1.5% plus €0.25 on a domestic card.",
+    "Our draft event kept the accent in 'Zoë' and the two-line description with quotation marks. The kit start date of 28 October is in the past, so we kept the suggested default of 19 November. That is a mapping change on our side, not a data loss.",
+    "The event stayed in Draft. 'Get ready to publish' lists a payment method as the open step, and publishing needs a connected payment provider.",
+    "Settings > API offers API keys ('Generate a new key') and webhooks on this trial. We created no key.",
+    "Team access lists one teammate, the owner. 'Invite teammate' asks for a verification code sent by e-mail first, so we did not see the role options."
+   ],
+   "not_tested": [
+    "Roles: the verification step blocked the invite screen, and the code is a step only the account holder can take",
+    "Export and re-import: exports need orders, and we found no export for event settings; the second kit record was not entered",
+    "Checkout, tax and the final price: we did not open the credit purchase",
+    "Support: we found a chat promise on the welcome screen and an API address, but no support mailbox, so we sent no question",
+    "Invitations, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Prepay",
+     "claim_source": "https://app.tickettailor.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Billing displayed 5 trial credits and auto-renew Off; PAYG rate €0.70 per usage excluding VAT.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+     },
+     "plan": "Prepay; 5 trial credits; auto-renew Off",
+     "comparability": "Ticket Tailor: Account billing balance and rate; no credit purchase or real usage charge.",
+     "status": "confirmed",
+     "buying_consequence": "Credits and PAYG usage, rather than a subscription term, apply in this account.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Buyer will pay €12.10",
+     "claim_source": "https://app.tickettailor.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "The illustrative ticket showed €11.67 received after estimated €0.43 Stripe fees; trial Ticket Tailor fee zero.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+     },
+     "plan": "Prepay; 5 trial credits; auto-renew Off",
+     "comparability": "Ticket Tailor: Calculator only: domestic one-ticket Stripe example, not settlement or a universal processing rate.",
+     "status": "confirmed",
+     "buying_consequence": "The displayed buyer amount and estimated seller receipt differ.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Generate a new key",
+     "claim_source": "https://app.tickettailor.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Settings > API offered key generation with zero existing keys; no key made and no request sent.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+     },
+     "plan": "Prepay; 5 trial credits; auto-renew Off",
+     "comparability": "Ticket Tailor: UI entitlement only, without testing API functionality.",
+     "status": "confirmed",
+     "buying_consequence": "API configuration is offered on the tested trial/prepay account.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Verification required",
+     "claim_source": "https://app.tickettailor.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Invite teammate stopped at owner email verification; role names, default role and viewer seat costs were not inspected.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+     },
+     "plan": "Prepay; 5 trial credits; auto-renew Off",
+     "comparability": "Ticket Tailor: A verification email is not an invitation or a completed roles test.",
+     "status": "confirmed",
+     "buying_consequence": "Owner verification is needed to continue the inspected team route.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "It's free to create an account",
+     "claim_source": "https://app.tickettailor.com/sign-up",
+     "claim_read_on": "2026-10-29",
+     "observed": "Billing: Prepay, 5 credits, auto-renew Off; PAYG €0.70 per usage excluding VAT. API keys (0), Generate a new key offered; no key created. Team Owner visible but roles selector not reached.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+     },
+     "plan": "Prepay; 5 trial credits; auto-renew Off",
+     "comparability": "Ticket Tailor: Historical public claim, original read date retained; later observed plan or report is scoped separately.",
+     "status": "confirmed",
+     "buying_consequence": "Observed scope is narrower than a complete end-to-end signup, trial or signing test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€0.70 per usage, excluding VAT",
+     "claim_source": "https://app.tickettailor.com/sign-up",
+     "claim_read_on": "2026-11-05",
+     "observed": "Credit-purchase checkout not opened. Prepay has 5 trial credits and auto-renew Off; ticket fee illustration is not a checkout invoice.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+     },
+     "plan": "Prepay; 5 trial credits; auto-renew Off",
+     "comparability": "Ticket Tailor: Ticket Tailor usage-rate and ticket-fee evidence cannot confirm a credit-purchase total or tax. No matching current EUR cost rule; historical USD rate is not comparable.",
+     "status": "not_testable",
+     "buying_consequence": "A final payable amount cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "One unpublished event and ticket type; no orders, attendee export or roundtrip.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Invite teammate required owner email verification. Publishing required a payment provider; no provider linked.",
+    "friction": {
+     "export_route": "Orders/attendees were not created; no draft-settings export found in the session.",
+     "format": "No downloaded file; fee calculator is an illustrative estimate.",
+     "reimport": "No actual export or native-ID update route tested.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full original signup and measured duration.",
+     "Downloaded export bytes, native IDs and fixed-ID reimport.",
+     "Cancellation, deletion and passive follow-up."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Hive",
    "product_id": "hive",
    "run_date": "2026-10-21",
@@ -11413,6 +11745,161 @@
   },
   {
    "source": "session",
+   "product_name": "QuickSigner",
+   "product_id": "quicksigner",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026 on the free Personal plan: Daan created the account and our AI assistant ran the test in Daan's browser. We read the plan page, uploaded one fictional PDF into a new sign request and stopped there. We added no signer, sent nothing and signed nothing.",
+   "findings": [
+    "After sign-up the app opens on an empty 'Sent documents' list with 'Personal Plan (free)' in the sidebar. No card, no sales call and no linked account.",
+    "My Account lists Business at 5.00 USD a month or 48.00 USD a year, and Pro at 15.00 USD a month or 144.00 USD a year, all marked with a 14-day trial period. The Business and Pro amounts match our own price rule from 20 October. Checkout, tax and seats are untested.",
+    "Templates are 'Available only with a Business plan'.",
+    "In a new sign request we uploaded our PDF 'attachment-AIBM-001.pdf'. The app shows it as 'attachment_AIBM_001.pdf', with underscores for hyphens. This is how the upload is displayed, not an export or a content comparison.",
+    "Without a signer the form says 'You must fill in at least one signer' and the Send button stays grey."
+   ],
+   "not_tested": [
+    "Sending, signing, downloading a signed file and the audit trail: no signer was added",
+    "The second kit PDF; we uploaded one",
+    "Checkout, tax, seats and the final price",
+    "Support, roles, API access, invitations and downgrade; the plan is free, and the account page also offers account deletion, which we left to the account holder"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Personal (free)",
+     "claim_source": "https://app.quicksigner.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "The account showed Personal free; no paid trial was started in the session.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
+     },
+     "plan": "Personal (free)",
+     "comparability": "QuickSigner: Observed account plan only; original full signup and payment gates not measured.",
+     "status": "confirmed",
+     "buying_consequence": "Account access should not be confused with starting a paid-plan trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "5.00 USD/month*",
+     "claim_source": "https://app.quicksigner.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Business offered 5.00 USD/month or 48.00 USD/year; Pro offered 15.00 USD/month or 144.00 USD/year, with 14-day trial labels.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
+     },
+     "plan": "Personal (free)",
+     "comparability": "QuickSigner: In-account offer cards only; no tax-inclusive checkout, paid entitlement or trial activation tested.",
+     "status": "confirmed",
+     "buying_consequence": "Compare actual annual and monthly terms before choosing Upgrade.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Available only with a Business plan.",
+     "claim_source": "https://app.quicksigner.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Templates page blocked reuse on Personal free and named Business.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
+     },
+     "plan": "Personal (free)",
+     "comparability": "QuickSigner: Template entitlement only, distinct from the tested PDF upload.",
+     "status": "confirmed",
+     "buying_consequence": "Template reuse needs the named paid plan in the route inspected.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "attachment_AIBM_001.pdf",
+     "claim_source": "https://app.quicksigner.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "The uploaded attachment-AIBM-001.pdf was displayed as attachment_AIBM_001.pdf. No download to compare file bytes.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
+     },
+     "plan": "Personal (free)",
+     "comparability": "QuickSigner: Changed filename during upload; no claim of PDF content loss or export renaming.",
+     "status": "confirmed",
+     "buying_consequence": "The upload display name changes hyphens to underscores.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Sign your first PDF free today",
+     "claim_source": "https://www.quicksigner.com/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Personal (free). Account offers Business 5.00 USD/month or 48.00 USD/year; Pro 15.00 USD/month or 144.00 USD/year, each with 14 days trial period. Templates only Business. Roles/API not inspected.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
+     },
+     "plan": "Personal (free)",
+     "comparability": "QuickSigner: Historical public claim, original read date retained; later observed plan or report is scoped separately.",
+     "status": "not_testable",
+     "buying_consequence": "Observed scope is narrower than a complete end-to-end signup, trial or signing test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "5.00 USD/month*",
+     "claim_source": "https://www.quicksigner.com/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Business 5.00 USD/month or 48.00 USD/year; Pro 15.00 USD/month or 144.00 USD/year and 14-day trial labels. Checkout not opened.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
+     },
+     "plan": "Personal (free)",
+     "comparability": "QuickSigner: QuickSigner in-account offers are not a checkout total. The pinned cost rule dated 2026-10-20 has the same Business/Pro amounts; tax, seat basis and checkout total remain unverified.",
+     "status": "not_testable",
+     "buying_consequence": "A final payable amount cannot be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "One unsigned kit PDF uploaded to an unsent request on Personal free.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Upload display name changed hyphens to underscores. Templates require Business. A signer is required to proceed, and none was added.",
+    "friction": {
+     "export_route": "No download exercised; request stopped before any signer or send.",
+     "format": "Input was PDF; no output file or output content inspected.",
+     "reimport": "No exported bytes or native-ID update performed.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full original signup and measured duration.",
+     "Downloaded export bytes, native IDs and fixed-ID reimport.",
+     "Cancellation, deletion and passive follow-up."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Cloro",
    "product_id": "cloro",
    "run_date": "2026-08-19",
@@ -12637,6 +13124,197 @@
      "Complete signup screen count and human first-result setup speed.",
      "Actual cancellation, expiry, deletion and follow-up mail.",
      "Kit fields not entered and application record reimport."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "SurveyMonkey",
+   "product_id": "surveymonkey",
+   "run_date": "2026-11-05",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 5 November 2026 on the free Basic plan: Daan created the account and our AI assistant ran the test in Daan's browser. We drafted a small quiz survey, looked for an export, and opened the checkout for Standard Monthly without paying. We collected no responses and sent nothing.",
+   "findings": [
+    "Sign-up asked four profile questions and then dropped us on the home screen. No card, no sales call and no linked account was required.",
+    "The account page shows 'Basic (Free) Account', '10 responses per survey' and 'Survey data storage: United States'. 'Access to Benchmarks' was already switched on, so your survey results feed SurveyMonkey's benchmarks unless you turn it off.",
+    "Quiz scoring worked on Basic: we marked one answer as worth one point. A 'Multiple textboxes' question raised the toast '1 paid feature added! Upgrade your plan or remove paid features to send this survey.' Basic lets you preview paid question types, but not send a survey that uses one.",
+    "In Analyze results, 'New export' and 'Previous exports' are locked, with the panel 'Good data deserves a way out' and an Upgrade button. On Basic we found no way to export results.",
+    "The pricing page opens on Team plans: Team Advantage at €30 per user per month, from 3 users, billed annually. Individual plans sit behind a second tab: Standard Monthly €39 a month, Advantage Annual €36 a month (€432 billed annually), Premier Annual €99 a month (€1,188 billed annually).",
+    "Checkout for Standard Monthly, with the Netherlands pre-filled, showed 'Total (VAT included) €39'. The sentence under it says the plan renews at €39 monthly 'plus applicable taxes'. The two statements do not agree, so confirm the tax basis before you buy. We stopped before any payment."
+   ],
+   "not_tested": [
+    "Collecting responses and exporting them: Basic gave us no way to submit test responses, so both fictional kit records stayed untested",
+    "Round trip with native record IDs; export bytes were never downloaded",
+    "Support, team roles, API access and invitations: the Team page asked for a paid plan and we did not open the developer pages",
+    "Downgrade and cancellation: we were already on the free plan",
+    "How long a full sign-up takes from the first click; Daan created the account before we started counting"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Basic (Free) Account",
+     "claim_source": "https://www.surveymonkey.com/user/account/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Account summary shows the Basic response cap; no responses were submitted.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/surveymonkey-review.html#claim-vs-measured"
+     },
+     "plan": "Basic (Free)",
+     "comparability": "SurveyMonkey: Basic account counter, not a measurement of collection or export.",
+     "status": "confirmed",
+     "buying_consequence": "The cap applies to the tested free account.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Survey data storage: United States",
+     "claim_source": "https://www.surveymonkey.com/user/account/",
+     "claim_read_on": "2026-11-05",
+     "observed": "The account summary identifies United States storage; Benchmarks was on by default in the session notes.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/surveymonkey-review.html#claim-vs-measured"
+     },
+     "plan": "Basic (Free)",
+     "comparability": "SurveyMonkey: Storage/account settings only; no legal or backend assessment.",
+     "status": "confirmed",
+     "buying_consequence": "Check storage and benchmark preferences before collecting data.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your Basic plan only lets you preview paid features and question types.",
+     "claim_source": "https://www.surveymonkey.com/user/account/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Quiz scoring worked, but Multiple Textboxes was identified as a paid feature and blocked sending on Basic.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/surveymonkey-review.html#claim-vs-measured"
+     },
+     "plan": "Basic (Free)",
+     "comparability": "SurveyMonkey: Question-type preview access differs from permission to send that type.",
+     "status": "confirmed",
+     "buying_consequence": "Remove the paid question type or change plan to send that design.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Good data deserves a way out",
+     "claim_source": "https://www.surveymonkey.com/user/account/",
+     "claim_read_on": "2026-11-05",
+     "observed": "New export and Previous exports were locked; the panel offered Upgrade. No export on Basic.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/surveymonkey-review.html#claim-vs-measured"
+     },
+     "plan": "Basic (Free)",
+     "comparability": "SurveyMonkey: Direct Basic export gate; no inference about individual response loss.",
+     "status": "confirmed",
+     "buying_consequence": "Results export requires a different plan in the route inspected.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€30 / user / month, Starting at 3 users, billed annually",
+     "claim_source": "https://www.surveymonkey.com/user/account/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Pricing initially opened Team plans; Individual plans had to be selected for the single-user monthly route.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/surveymonkey-review.html#claim-vs-measured"
+     },
+     "plan": "Basic (Free)",
+     "comparability": "SurveyMonkey: Team default is not comparable to the later Standard Monthly single-user checkout.",
+     "status": "confirmed",
+     "buying_consequence": "The initial price has an annual term and a multi-user minimum.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total (VAT included) €39",
+     "claim_source": "https://www.surveymonkey.com/user/account/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Checkout total says VAT included, but the renewal sentence says plus applicable taxes. Future tax basis is unresolved.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/surveymonkey-review.html#claim-vs-measured"
+     },
+     "plan": "Basic (Free)",
+     "comparability": "SurveyMonkey: Internal wording conflict on the same checkout; no calculated tax or overcharge inferred.",
+     "status": "contradicted",
+     "buying_consequence": "Confirm the tax basis for renewal before purchasing.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Sign up free",
+     "claim_source": "https://www.surveymonkey.com/pricing/",
+     "claim_read_on": "2026-10-29",
+     "observed": "Basic (Free) Account; 10 responses per survey; storage United States. Benchmarks enabled by default according to session notes. Team route says Permission required; no roles list inspected. Developers link alone does not establish API access.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/surveymonkey-review.html#claim-vs-measured"
+     },
+     "plan": "Basic (Free)",
+     "comparability": "SurveyMonkey: Historical public claim, original read date retained; later observed plan or report is scoped separately.",
+     "status": "confirmed",
+     "buying_consequence": "Observed scope is narrower than a complete end-to-end signup, trial or signing test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€39 / month Billed monthly",
+     "claim_source": "https://www.surveymonkey.com/pricing/",
+     "claim_read_on": "2026-11-05",
+     "observed": "Standard Monthly single user: Total (VAT included) €39; Monthly billing; Netherlands selected; Save 7% with annual billing off. Renewal says plus applicable taxes.",
+     "observed_on": "2026-11-05",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/surveymonkey-review.html#claim-vs-measured"
+     },
+     "plan": "Basic (Free)",
+     "comparability": "SurveyMonkey: SurveyMonkey Standard Monthly page and Netherlands checkout agree on the displayed €39 monthly amount; renewal tax wording conflicts. No matching current cost rule: historical team USD/annual/minimum-user anchor is not comparable.",
+     "status": "confirmed",
+     "buying_consequence": "Displayed immediate amount matches monthly page on SurveyMonkey; renewal tax basis requires clarification.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-05",
+    "what": "Draft survey design on Basic; no live responses or record export.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Paid Multiple Textboxes can be previewed but prevents free sending; Benchmarks was on by default.",
+    "friction": {
+     "export_route": "Analyze results > Export; New export and Previous exports locked; upgrade required on Basic.",
+     "format": "No downloaded file. CSV, PDF, PPT and XLS labels on pricing are not a tested export.",
+     "reimport": "No response records, export bytes or native-ID update tested.",
+     "cancellation": "Cancellation and downgrade were not performed."
+    },
+    "not_tested": [
+     "Support and invitation sending.",
+     "Full original signup and measured duration.",
+     "Downloaded export bytes, native IDs and fixed-ID reimport.",
+     "Cancellation, deletion and passive follow-up."
     ],
     "available_fields": [],
     "not_offered": [],

@@ -84,10 +84,9 @@
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-05; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
@@ -95,7 +94,377 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "api_access": {
+   "status": "available_on_tested_plan",
+   "plan": "Prepay; 5 trial credits; auto-renew Off",
+   "route": "Settings > API; zero keys, Generate a new key offered; no key or API call.",
+   "quote": {
+    "text": "The Ticket Tailor API uses API keys to authenticate requests. You can generate multiple API keys per box office.",
+    "source_url": "https://app.tickettailor.com/",
+    "observed_at": "2026-11-05T00:00:00+01:00"
+   },
+   "evidence": [
+    "bewijs/07-api.jpg"
+   ]
+  },
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-05",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/tickettailor-review/",
+  "method": [
+   "Filled in the box office form and read the billing page",
+   "Entered one fictional event with one ticket type and read the fee calculation",
+   "Opened the team and API settings"
+  ],
+  "claims": [
+   {
+    "claim": "Prepay",
+    "claim_source": "https://app.tickettailor.com/",
+    "claim_read_on": "2026-11-05",
+    "observed": "Billing displayed 5 trial credits and auto-renew Off; PAYG rate €0.70 per usage excluding VAT.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+    },
+    "plan": "Prepay; 5 trial credits; auto-renew Off",
+    "comparability": "Ticket Tailor: Account billing balance and rate; no credit purchase or real usage charge.",
+    "status": "confirmed",
+    "buying_consequence": "Credits and PAYG usage, rather than a subscription term, apply in this account.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Buyer will pay €12.10",
+    "claim_source": "https://app.tickettailor.com/",
+    "claim_read_on": "2026-11-05",
+    "observed": "The illustrative ticket showed €11.67 received after estimated €0.43 Stripe fees; trial Ticket Tailor fee zero.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+    },
+    "plan": "Prepay; 5 trial credits; auto-renew Off",
+    "comparability": "Ticket Tailor: Calculator only: domestic one-ticket Stripe example, not settlement or a universal processing rate.",
+    "status": "confirmed",
+    "buying_consequence": "The displayed buyer amount and estimated seller receipt differ.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Generate a new key",
+    "claim_source": "https://app.tickettailor.com/",
+    "claim_read_on": "2026-11-05",
+    "observed": "Settings > API offered key generation with zero existing keys; no key made and no request sent.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+    },
+    "plan": "Prepay; 5 trial credits; auto-renew Off",
+    "comparability": "Ticket Tailor: UI entitlement only, without testing API functionality.",
+    "status": "confirmed",
+    "buying_consequence": "API configuration is offered on the tested trial/prepay account.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Verification required",
+    "claim_source": "https://app.tickettailor.com/",
+    "claim_read_on": "2026-11-05",
+    "observed": "Invite teammate stopped at owner email verification; role names, default role and viewer seat costs were not inspected.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+    },
+    "plan": "Prepay; 5 trial credits; auto-renew Off",
+    "comparability": "Ticket Tailor: A verification email is not an invitation or a completed roles test.",
+    "status": "confirmed",
+    "buying_consequence": "Owner verification is needed to continue the inspected team route.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "It's free to create an account",
+    "claim_source": "https://app.tickettailor.com/sign-up",
+    "claim_read_on": "2026-10-29",
+    "observed": "Billing: Prepay, 5 credits, auto-renew Off; PAYG €0.70 per usage excluding VAT. API keys (0), Generate a new key offered; no key created. Team Owner visible but roles selector not reached.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+    },
+    "plan": "Prepay; 5 trial credits; auto-renew Off",
+    "comparability": "Ticket Tailor: Historical public claim, original read date retained; later observed plan or report is scoped separately.",
+    "status": "confirmed",
+    "buying_consequence": "Observed scope is narrower than a complete end-to-end signup, trial or signing test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "€0.70 per usage, excluding VAT",
+    "claim_source": "https://app.tickettailor.com/sign-up",
+    "claim_read_on": "2026-11-05",
+    "observed": "Credit-purchase checkout not opened. Prepay has 5 trial credits and auto-renew Off; ticket fee illustration is not a checkout invoice.",
+    "observed_on": "2026-11-05",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+    },
+    "plan": "Prepay; 5 trial credits; auto-renew Off",
+    "comparability": "Ticket Tailor: Ticket Tailor usage-rate and ticket-fee evidence cannot confirm a credit-purchase total or tax. No matching current EUR cost rule; historical USD rate is not comparable.",
+    "status": "not_testable",
+    "buying_consequence": "A final payable amount cannot be confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-05",
+   "what": "One unpublished event and ticket type; no orders, attendee export or roundtrip.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Invite teammate required owner email verification. Publishing required a payment provider; no provider linked.",
+   "friction": {
+    "export_route": "Orders/attendees were not created; no draft-settings export found in the session.",
+    "format": "No downloaded file; fee calculator is an illustrative estimate.",
+    "reimport": "No actual export or native-ID update route tested.",
+    "cancellation": "Cancellation and downgrade were not performed."
+   },
+   "not_tested": [
+    "Support and invitation sending.",
+    "Full original signup and measured duration.",
+    "Downloaded export bytes, native IDs and fixed-ID reimport.",
+    "Cancellation, deletion and passive follow-up."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "One unpublished event and ticket type; no orders, attendee export or roundtrip. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "One unpublished event and ticket type; no orders, attendee export or roundtrip. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-05",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-05",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "TicketTailor",
+    "product_id": "tickettailor",
+    "run_date": "2026-11-05",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 5 November 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We created a box office, drafted one event with a ticket type, and read the fee, team and API screens. We published nothing, sold no ticket and connected no payment provider.",
+    "findings": [
+     "Creating the box office asks for an organisation name, country, billing currency, whether tickets are free or paid, and expected yearly volume, plus a tick for the acceptable use policy. No card was asked for.",
+     "Billing shows 'Prepay', a credit balance of 5 and Auto-Renew off. Without credits, usage is charged at the pay-as-you-go rate of €0.70, excluding VAT. This is a credit model, so we found no subscription checkout to test.",
+     "The ticket dialog showed the fee in advance. For a €12.10 ticket the buyer pays €12.10, estimated fees are €0.43 and you receive €11.67. The €0.70 Ticket Tailor fee is struck through to €0.00 as one trial credit, and the €0.43 is a Stripe example of 1.5% plus €0.25 on a domestic card.",
+     "Our draft event kept the accent in 'Zoë' and the two-line description with quotation marks. The kit start date of 28 October is in the past, so we kept the suggested default of 19 November. That is a mapping change on our side, not a data loss.",
+     "The event stayed in Draft. 'Get ready to publish' lists a payment method as the open step, and publishing needs a connected payment provider.",
+     "Settings > API offers API keys ('Generate a new key') and webhooks on this trial. We created no key.",
+     "Team access lists one teammate, the owner. 'Invite teammate' asks for a verification code sent by e-mail first, so we did not see the role options."
+    ],
+    "not_tested": [
+     "Roles: the verification step blocked the invite screen, and the code is a step only the account holder can take",
+     "Export and re-import: exports need orders, and we found no export for event settings; the second kit record was not entered",
+     "Checkout, tax and the final price: we did not open the credit purchase",
+     "Support: we found a chat promise on the welcome screen and an API address, but no support mailbox, so we sent no question",
+     "Invitations, downgrade and cancellation"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Prepay",
+      "claim_source": "https://app.tickettailor.com/",
+      "claim_read_on": "2026-11-05",
+      "observed": "Billing displayed 5 trial credits and auto-renew Off; PAYG rate €0.70 per usage excluding VAT.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+      },
+      "plan": "Prepay; 5 trial credits; auto-renew Off",
+      "comparability": "Ticket Tailor: Account billing balance and rate; no credit purchase or real usage charge.",
+      "status": "confirmed",
+      "buying_consequence": "Credits and PAYG usage, rather than a subscription term, apply in this account.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Buyer will pay €12.10",
+      "claim_source": "https://app.tickettailor.com/",
+      "claim_read_on": "2026-11-05",
+      "observed": "The illustrative ticket showed €11.67 received after estimated €0.43 Stripe fees; trial Ticket Tailor fee zero.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+      },
+      "plan": "Prepay; 5 trial credits; auto-renew Off",
+      "comparability": "Ticket Tailor: Calculator only: domestic one-ticket Stripe example, not settlement or a universal processing rate.",
+      "status": "confirmed",
+      "buying_consequence": "The displayed buyer amount and estimated seller receipt differ.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Generate a new key",
+      "claim_source": "https://app.tickettailor.com/",
+      "claim_read_on": "2026-11-05",
+      "observed": "Settings > API offered key generation with zero existing keys; no key made and no request sent.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+      },
+      "plan": "Prepay; 5 trial credits; auto-renew Off",
+      "comparability": "Ticket Tailor: UI entitlement only, without testing API functionality.",
+      "status": "confirmed",
+      "buying_consequence": "API configuration is offered on the tested trial/prepay account.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Verification required",
+      "claim_source": "https://app.tickettailor.com/",
+      "claim_read_on": "2026-11-05",
+      "observed": "Invite teammate stopped at owner email verification; role names, default role and viewer seat costs were not inspected.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+      },
+      "plan": "Prepay; 5 trial credits; auto-renew Off",
+      "comparability": "Ticket Tailor: A verification email is not an invitation or a completed roles test.",
+      "status": "confirmed",
+      "buying_consequence": "Owner verification is needed to continue the inspected team route.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "It's free to create an account",
+      "claim_source": "https://app.tickettailor.com/sign-up",
+      "claim_read_on": "2026-10-29",
+      "observed": "Billing: Prepay, 5 credits, auto-renew Off; PAYG €0.70 per usage excluding VAT. API keys (0), Generate a new key offered; no key created. Team Owner visible but roles selector not reached.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+      },
+      "plan": "Prepay; 5 trial credits; auto-renew Off",
+      "comparability": "Ticket Tailor: Historical public claim, original read date retained; later observed plan or report is scoped separately.",
+      "status": "confirmed",
+      "buying_consequence": "Observed scope is narrower than a complete end-to-end signup, trial or signing test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "€0.70 per usage, excluding VAT",
+      "claim_source": "https://app.tickettailor.com/sign-up",
+      "claim_read_on": "2026-11-05",
+      "observed": "Credit-purchase checkout not opened. Prepay has 5 trial credits and auto-renew Off; ticket fee illustration is not a checkout invoice.",
+      "observed_on": "2026-11-05",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/tickettailor-review/#claim-vs-measured"
+      },
+      "plan": "Prepay; 5 trial credits; auto-renew Off",
+      "comparability": "Ticket Tailor: Ticket Tailor usage-rate and ticket-fee evidence cannot confirm a credit-purchase total or tax. No matching current EUR cost rule; historical USD rate is not comparable.",
+      "status": "not_testable",
+      "buying_consequence": "A final payable amount cannot be confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-05",
+     "what": "One unpublished event and ticket type; no orders, attendee export or roundtrip.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Invite teammate required owner email verification. Publishing required a payment provider; no provider linked.",
+     "friction": {
+      "export_route": "Orders/attendees were not created; no draft-settings export found in the session.",
+      "format": "No downloaded file; fee calculator is an illustrative estimate.",
+      "reimport": "No actual export or native-ID update route tested.",
+      "cancellation": "Cancellation and downgrade were not performed."
+     },
+     "not_tested": [
+      "Support and invitation sending.",
+      "Full original signup and measured duration.",
+      "Downloaded export bytes, native IDs and fixed-ID reimport.",
+      "Cancellation, deletion and passive follow-up."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "tickettailor:tickettailor-q1",

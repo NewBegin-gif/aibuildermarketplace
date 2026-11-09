@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 633 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-09.
+All 634 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-09.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -65,6 +65,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small and mid-sized employers who want payroll, tax filing and compliance handled by the largest and oldest provider in the category: over 75 years
 - **Flags:** Hidden pricing, Per-seat pricing
 - **Full review:** https://officesoftwaremarketplace.com/adp-review.html
+
+## Adwave (waverunner.adwave.com)
+- **Verified pricing:** (read 2026-11-09 on waverunner.adwave.com/pricing, the wallet and billing help page) Adwave has no subscription for businesses: you fund a prepaid wallet and live campaigns charge their dai…
+- **Honest take:** Prepaid-wallet ads across phone, TV and search.
+- **Best for:** small businesses that want ads on phones, TV, search and social planned from their website, paid from a prepaid wallet that cannot go into debt
+- **Full review:** https://aibuildermarketplace.com/b2b/adwave-review/
 
 ## Adwisely (adwisely.com)
 - **Verified pricing:** (price re-verified 2026-09-10, re-read unchanged 2026-09-27) Read on adwisely.com/pricing; every figure below stood unchanged from our previous reading on 2 August 2026.
@@ -2944,7 +2950,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-09 on remotecoworker.com) The homepage says plans start at $7.99 an hour.
 - **Honest take:** Dedicated virtual assistants, quote on request.
 - **Best for:** small businesses that want a dedicated remote assistant for admin, support or bookkeeping and are happy to get a quote from a specialist first
-- **Full review:** https://aibuildermarketplace.com/b2b/remote-coworker-review/
+- **Full review:** https://zerotouchsupport.com/remote-coworker-review.html
 
 ## Remote People (remotepeople.com)
 - **Verified pricing:** (2026-08-07, read on their own pricing page; re-verified unchanged on 2026-10-06 and again on 2026-10-09) Priced per service rather than per plan, and every figure is a floor.

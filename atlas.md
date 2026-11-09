@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 629 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-08.
+All 631 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-09.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1348,6 +1348,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/expertsender-review.html
 
+## FaceReady (faceready.ai)
+- **Verified pricing:** (read 2026-11-09 on faceready.ai/pricing) FaceReady costs $19.99 a month, or $119.88 a year, which the page says works out at $9.99 a month.
+- **Honest take:** Local de-aging camera, no refunds.
+- **Best for:** people who join video calls from a Mac or Windows 11 PC and want an AI de-aging filter that runs on the computer itself
+- **Full review:** https://aibuildermarketplace.com/b2b/faceready-review/
+
 ## Fast Bundle (fastbundle.co)
 - **Verified pricing:** (read 2026-08-24 on apps.shopify.com/fast-bundle-product-bundles, listed as “FBP | Fast Bundle & Upsell App”, and on fastbundle.co/pricing) The meter here is not your catalogue, your traffi…
 - **Honest take:** On 17 July 2026, after what its own status page calls a security attack, Shopify removed the app from the App Store and deactivated it on existing stores; it was fully searchable again on 3 August.
@@ -1800,6 +1806,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** retail brands and omnichannel sellers at real scale needing warehouse management plus algorithm-driven merchandising and inventory optimization
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/increff-review/
+
+## IndieMade (indiemade.com)
+- **Verified pricing:** (read 2026-11-09 on indiemade.com/plans-pricing) IndieMade lists two plans, Essential and Plus, and every plan starts with a 30-day free trial that needs no credit card.
+- **Honest take:** Own store with Etsy sync, price shown at signup.
+- **Best for:** makers and small sellers who want their own store, with two-way Etsy sync, and no platform transaction fees
+- **Full review:** https://aibuildermarketplace.com/b2b/indiemade-review/
 
 ## Influencer Hero (influencer-hero.com)
 - **Verified pricing:** (pricing matrix read 18 September 2026 in documentation the vendor sent us; the public ladder at influencer-hero.com/pricing was read the same week and shows the quarterly column) Four plan…
@@ -2765,7 +2777,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Start with what is no longer there. Read on 18 September and again on 5 October 2026, the Shopify App Store listing for this app is gone: the page says it is not currently available and sends support questions to the vendor.
 - **Best for:** Shopify stores with a known parcel-loss rate that are willing to come in through the vendor rather than the App Store: keeping 80% of the upsell on Standard if they can settle claims in-house
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/protectmyorder-review/
+- **Full review:** https://marketingandsalessoftware.com/protectmyorder-review.html
 
 ## Proton (proton.me)
 - **Verified pricing:** (read 2026-08-26 on proton.me/pricing over a US connection, on the Mail tab with yearly billing) Free is $0.00 a month for 1 GB and one address.
@@ -2793,7 +2805,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Every tier ships the same four features, so what you are buying is a ceiling on the revenue the app is allowed to earn you.
 - **Best for:** shopify stores that want bundles, quantity breaks, BOGO and free-gift offers without touching code, and that value a free tier which is the complete app rather than a feature-stripped demo
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/pumper-bundles-review/
+- **Full review:** https://marketingandsalessoftware.com/pumper-bundles-review.html
 
 ## PushOwl (pushowl.com)
 - **Verified pricing:** (prices read 2026-08-17 in a browser and re-read unchanged on 2026-10-04 on pushowl.com/pricing, with both billing toggles) This is priced per channel and then added up, which is the part w…
@@ -3213,7 +3225,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Unlimited users on every paid tier is unusual in this category and worth saying first: put your whole crew in without the bill moving.
 - **Best for:** trades and service businesses with a crew, where per-user pricing elsewhere punishes you for having enough people: this is one of the few tools in the category that does not
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/servicem8-review/
+- **Full review:** https://officesoftwaremarketplace.com/servicem8-review.html
 
 ## Shiftie (shiftie.co)
 - **Verified pricing:** (price re-verified 24 September 2026, unchanged since 5 September) £2.75 per active employee per month for the first 30, then £1.50 for each employee above 30 — the reduced rate is marginal…
@@ -3563,7 +3575,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Response caps on the self-serve plans trigger $0.15-per-response overages (US rate), and much of the good analytics and logic sits behind higher tiers.
 - **Best for:** teams that need research-grade survey logic (skip logic, randomisation, quotas) with compliance (HIPAA, GDPR, SOC 2) and 200+ integrations
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/surveymonkey-review/
+- **Full review:** https://officesoftwaremarketplace.com/surveymonkey-review.html
 
 ## SurveySparrow (surveysparrow.com)
 - **Verified pricing:** (re-verified 20 September 2026 from a US exit in New York; the euro ladder was read 14 September 2026 from Europe) SurveySparrow bills quarterly or yearly — there is no monthly option — and…
@@ -3584,7 +3596,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The app runs on Mac and iOS only (Android phones can join as cameras, but there is no Windows version) so the machine doing the switching has to be an Apple one.
 - **Best for:** creators, churches, events and small businesses that want multi-camera live production and streaming using iPhones and iPads they already own: no broadcast hardware
 - **Flags:** Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/switcher-studio-review/
+- **Full review:** https://officesoftwaremarketplace.com/switcher-studio-review.html
 
 ## Synthesia (synthesia.io)
 - **Verified pricing:** (re-read 1 October 2026) The public pricing page, read without signing in from a Netherlands connection, now shows dollars and a new credit model: 'Credits are now the shared currency acros…

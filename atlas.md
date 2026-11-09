@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 632 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-09.
+All 633 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-09.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2939,6 +2939,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** B2B SaaS teams with a product-led motion that want to launch an affiliate program and tap an affiliate-discovery network, and are comfortable committing annually
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/reditus-review.html
+
+## Remote CoWorker (remotecoworker.com)
+- **Verified pricing:** (read 2026-11-09 on remotecoworker.com) The homepage says plans start at $7.99 an hour.
+- **Honest take:** Dedicated virtual assistants, quote on request.
+- **Best for:** small businesses that want a dedicated remote assistant for admin, support or bookkeeping and are happy to get a quote from a specialist first
+- **Full review:** https://aibuildermarketplace.com/b2b/remote-coworker-review/
 
 ## Remote People (remotepeople.com)
 - **Verified pricing:** (2026-08-07, read on their own pricing page; re-verified unchanged on 2026-10-06 and again on 2026-10-09) Priced per service rather than per plan, and every figure is a floor.

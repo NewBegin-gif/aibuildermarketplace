@@ -102,10 +102,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-06; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
@@ -113,7 +112,531 @@
   "refund": "quoted"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-06",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/pdfdodo-review.html",
+  "method": [
+   "Converted the kit invoice image to a PDF (39,331 bytes) and uploaded it",
+   "Ran the analysis and opened the document detail page",
+   "Read both pricing views and stopped before checkout"
+  ],
+  "claims": [
+   {
+    "claim": "Credits: 25",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Credits changed from 25 to 24 after one page was analysed; no card requested per tester.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Initial working account compared with its post-analysis counter, not a subscription-renewal measurement.",
+    "status": "confirmed",
+    "buying_consequence": "Initial credits and one observed consumption only; no monthly refresh inferred.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Analysis complete",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "One non-tabular kit invoice produced no table or value in document detail; no warning reported.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: One line-formatted invoice only; no general conclusion about supported tabular PDFs.",
+    "status": "confirmed",
+    "buying_consequence": "Check extracted content even when completion is reported.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Merge tables",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Document detail showed merge options but no table, extracted values or visible download action.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: In-app extraction scope; downloadable CSV/Excel and export retention remain untested.",
+    "status": "confirmed",
+    "buying_consequence": "No returned data was available to inspect in this session.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Get 2 months free on yearly plans",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Yearly highlighted with monthly cards; clicking Monthly showed annually billed cards according to supplied notes.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Observed toggle/card mismatch only; checkout was never opened.",
+    "status": "confirmed",
+    "buying_consequence": "Verify term against the actual card and checkout before purchasing.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$25/mo",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Solo pricing card: $25/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Solo month pricing-card amount only, distinct from other tiers and billing periods.",
+    "status": "confirmed",
+    "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$59/mo",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Startup pricing card: $59/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Startup month pricing-card amount only, distinct from other tiers and billing periods.",
+    "status": "confirmed",
+    "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$99/mo",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Business pricing card: $99/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Business month pricing-card amount only, distinct from other tiers and billing periods.",
+    "status": "confirmed",
+    "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$250",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Solo pricing card: $250 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Solo year pricing-card amount only, distinct from other tiers and billing periods.",
+    "status": "confirmed",
+    "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$590",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Startup pricing card: $590 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Startup year pricing-card amount only, distinct from other tiers and billing periods.",
+    "status": "confirmed",
+    "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$990",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Business pricing card: $990 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Business year pricing-card amount only, distinct from other tiers and billing periods.",
+    "status": "confirmed",
+    "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Get 2 months free on yearly plans",
+    "claim_source": "https://app.pdfdodo.com/",
+    "claim_read_on": "2026-11-06",
+    "observed": "Not tested: Select not clicked; checkout, tax and final payable total unknown. Pricing-card amounts are quoted separately in purchase evidence; no independent live-page read. Highlight Yearly accompanied monthly cards; clicking Monthly showed annual cards. No billing cycle selected or purchased.",
+    "observed_on": "2026-11-06",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+    },
+    "plan": "Free; 25 initial credits observed (renewal not established)",
+    "comparability": "PDFdodo: Not tested: Select not clicked; checkout, tax and final payable total unknown. Pricing-card amounts are quoted separately in purchase evidence; no independent live-page read. Highlight Yearly accompanied monthly cards; clicking Monthly showed annual cards. No billing cycle selected or purchased. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+    "status": "not_testable",
+    "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-06",
+   "what": "One derived kit invoice PDF, a list of lines rather than a table, uploaded and analysed. Analysis complete after approximately 15 seconds per tester; credits 25 to 24. Document detail displayed no extracted table or value and no visible download button. No warning reported. This single non-tabular invoice does not establish general table-extraction accuracy. Second kit record not uploaded.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "CSV/Excel not tested: no table or value extracted and no file downloaded. No native-ID reimport. Missing extraction is an in-app result, not proof of export loss. The missing diaeresis was already present in the source kit PNG and is not a PDFdodo OCR error.",
+   "friction": {
+    "export_route": "CSV/Excel not tested: no table or value extracted and no file downloaded. No native-ID reimport. Missing extraction is an in-app result, not proof of export loss. The missing diaeresis was already present in the source kit PNG and is not a PDFdodo OCR error.",
+    "format": "No downloaded product file.",
+    "reimport": "No native-ID reimport.",
+    "cancellation": "Cancellation/downgrade not tested."
+   },
+   "not_tested": [
+    "Support, invitations, cancellation and passive follow-up.",
+    "Downloaded product exports and native-ID roundtrip.",
+    "Full original signup screen count."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "One derived kit invoice PDF, a list of lines rather than a table, uploaded and analysed. Analysis complete after approximately 15 seconds per tester; credits 25 to 24. Document detail displayed no extracted table or value and no visible download button. No warning reported. This single non-tabular invoice does not establish general table-extraction accuracy. Second kit record not uploaded. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "One derived kit invoice PDF, a list of lines rather than a table, uploaded and analysed. Analysis complete after approximately 15 seconds per tester; credits 25 to 24. Document detail displayed no extracted table or value and no visible download button. No warning reported. This single non-tabular invoice does not establish general table-extraction accuracy. Second kit record not uploaded. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-06",
+    "evidence_url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-06",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Pdfdodo",
+    "product_id": "pdfdodo",
+    "run_date": "2026-11-06",
+    "session_type": "hands_on",
+    "what": "Tested by our team on 6 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We converted our fictional invoice from the test kit into a PDF, uploaded it, ran the analysis and read the result and the pricing page. We downloaded nothing and did not open checkout.",
+    "findings": [
+     "Sign-up asked for no card. The dashboard showed 25 credits and a 15 MB limit per file. The page says you can download results as CSV or Excel.",
+     "Upload, 'Start Analysis' and 'Analysis complete' took about 15 seconds. The credit counter then read 24.",
+     "The document detail page showed only the file name, the date and a 'Merge tables' menu. It held no table and no value, and we saw no download button. No error or warning appeared, yet the analysis had used a credit.",
+     "Our invoice lists its lines as plain text (date, amount, custom code, tags, net, tax) and has no table. The app extracts tables, so for this layout we got nothing: none of the seven fields was read out. This is a result for one document of this type, not a measure of accuracy on invoices with tables.",
+     "A missing 'ë' in the sample name was already empty in the test image, so we do not count it as a reading error.",
+     "The pricing page opens with 'Yearly' highlighted while the cards show monthly prices: Solo $25, Startup $59 and Business $99 a month. After clicking 'Monthly' the cards show the yearly prices: Solo $20.83 a month ($250 billed yearly), Startup $49.16 ($590) and Business $82.50 ($990). On 16 October the Solo card read $20 beside $200, so that card changed."
+    ],
+    "not_tested": [
+     "Export and re-import: the analysis produced no table, so there was nothing to export, and we downloaded no file",
+     "The second fictional record: we uploaded one document",
+     "Checkout, tax and the final price: we did not click Select",
+     "Support, team roles, API access, invitations, downgrade and cancellation",
+     "Whether the monthly credit top-up exists; we saw 25 credits and no refill rule"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Credits: 25",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Credits changed from 25 to 24 after one page was analysed; no card requested per tester.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Initial working account compared with its post-analysis counter, not a subscription-renewal measurement.",
+      "status": "confirmed",
+      "buying_consequence": "Initial credits and one observed consumption only; no monthly refresh inferred.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Analysis complete",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "One non-tabular kit invoice produced no table or value in document detail; no warning reported.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: One line-formatted invoice only; no general conclusion about supported tabular PDFs.",
+      "status": "confirmed",
+      "buying_consequence": "Check extracted content even when completion is reported.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Merge tables",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Document detail showed merge options but no table, extracted values or visible download action.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: In-app extraction scope; downloadable CSV/Excel and export retention remain untested.",
+      "status": "confirmed",
+      "buying_consequence": "No returned data was available to inspect in this session.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Get 2 months free on yearly plans",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Yearly highlighted with monthly cards; clicking Monthly showed annually billed cards according to supplied notes.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Observed toggle/card mismatch only; checkout was never opened.",
+      "status": "confirmed",
+      "buying_consequence": "Verify term against the actual card and checkout before purchasing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$25/mo",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Solo pricing card: $25/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Solo month pricing-card amount only, distinct from other tiers and billing periods.",
+      "status": "confirmed",
+      "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$59/mo",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Startup pricing card: $59/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Startup month pricing-card amount only, distinct from other tiers and billing periods.",
+      "status": "confirmed",
+      "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$99/mo",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Business pricing card: $99/mo per month. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Business month pricing-card amount only, distinct from other tiers and billing periods.",
+      "status": "confirmed",
+      "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$250",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Solo pricing card: $250 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Solo year pricing-card amount only, distinct from other tiers and billing periods.",
+      "status": "confirmed",
+      "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$590",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Startup pricing card: $590 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Startup year pricing-card amount only, distinct from other tiers and billing periods.",
+      "status": "confirmed",
+      "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$990",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Business pricing card: $990 per year. Amount transcribed in sole session source and visible in preserved pricing screenshot.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Business year pricing-card amount only, distinct from other tiers and billing periods.",
+      "status": "confirmed",
+      "buying_consequence": "Verify final term and tax at checkout; checkout not opened.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Get 2 months free on yearly plans",
+      "claim_source": "https://app.pdfdodo.com/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Not tested: Select not clicked; checkout, tax and final payable total unknown. Pricing-card amounts are quoted separately in purchase evidence; no independent live-page read. Highlight Yearly accompanied monthly cards; clicking Monthly showed annual cards. No billing cycle selected or purchased.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/pdfdodo-review.html#claim-vs-measured"
+      },
+      "plan": "Free; 25 initial credits observed (renewal not established)",
+      "comparability": "PDFdodo: Not tested: Select not clicked; checkout, tax and final payable total unknown. Pricing-card amounts are quoted separately in purchase evidence; no independent live-page read. Highlight Yearly accompanied monthly cards; clicking Monthly showed annual cards. No billing cycle selected or purchased. Cost-rule limitation: no verified same-plan/term/currency/seat/tax rule; historical anchor not comparable.",
+      "status": "not_testable",
+      "buying_consequence": "Only the recorded offer/checkout scope is established; no completed purchase.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-06",
+     "what": "One derived kit invoice PDF, a list of lines rather than a table, uploaded and analysed. Analysis complete after approximately 15 seconds per tester; credits 25 to 24. Document detail displayed no extracted table or value and no visible download button. No warning reported. This single non-tabular invoice does not establish general table-extraction accuracy. Second kit record not uploaded.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "CSV/Excel not tested: no table or value extracted and no file downloaded. No native-ID reimport. Missing extraction is an in-app result, not proof of export loss. The missing diaeresis was already present in the source kit PNG and is not a PDFdodo OCR error.",
+     "friction": {
+      "export_route": "CSV/Excel not tested: no table or value extracted and no file downloaded. No native-ID reimport. Missing extraction is an in-app result, not proof of export loss. The missing diaeresis was already present in the source kit PNG and is not a PDFdodo OCR error.",
+      "format": "No downloaded product file.",
+      "reimport": "No native-ID reimport.",
+      "cancellation": "Cancellation/downgrade not tested."
+     },
+     "not_tested": [
+      "Support, invitations, cancellation and passive follow-up.",
+      "Downloaded product exports and native-ID roundtrip.",
+      "Full original signup screen count."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "pdfdodo:cancellation_terms",

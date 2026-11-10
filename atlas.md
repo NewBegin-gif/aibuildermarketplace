@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 635 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-10.
+All 636 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -727,6 +727,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small businesses, freelancers and growing sites that want fast, well-supported managed shared or WordPress hosting at a low starting price
 - **Flags:** Renewal jump
 - **Full review:** https://officesoftwaremarketplace.com/chemicloud-review.html
+
+## Cherry Servers (cherryservers.com)
+- **Verified pricing:** (read 2026-11-10 on cherryservers.com/pricing and /pricing/virtual-servers) Cherry Servers bills by the hour, the month or a longer fixed term, and the plan table shows prices excluding VAT.
+- **Honest take:** Hourly bare metal and VPS; spot servers have no SLA.
+- **Best for:** developers and small teams who want a single-tenant bare-metal or KVM server billed by the hour, with root access, in European data centres
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/cherry-servers-review/
 
 ## Circle (circle.so)
 - **Verified pricing:** (2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Scale $419/mo annual, plus a custom Circle Plus tier for fully branded apps.
@@ -2652,7 +2659,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Free Pinterest stats in your browser; the pricing page disagrees with itself.
 - **Best for:** Pinterest bloggers, Etsy and Shopify sellers and social media managers who want to see which pins perform before they create their own
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/pinbee-review/
+- **Full review:** https://marketingandsalessoftware.com/pinbee-review.html
 
 ## Pingtree (pingtree.com)
 - **Verified pricing:** (2026-10-07, read on their own pricing page; unchanged on 2026-10-15) Self Service is “From $499” per month with a free trial included, and Managed Services carries a starting cost of $2,50…

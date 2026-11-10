@@ -1,0 +1,142 @@
+{
+ "schema_version": "1.0",
+ "id": "cherry-servers",
+ "name": "Cherry Servers",
+ "research_status": "researched",
+ "vendor_domain": "cherryservers.com",
+ "category": "Developer Tools",
+ "task": null,
+ "summary": "Bare-metal and virtual server hosting in European data centres, billed by the hour or on fixed terms, with root access.",
+ "best_for": "developers and small teams who want a single-tenant bare-metal or KVM server billed by the hour, with root access, in European data centres",
+ "skip_if": "you want a managed host with support for your website software, you cannot do the identity check for card payments, or you need a fixed price list before you sign up",
+ "honest_knock": "The exact price of each virtual-server configuration loads dynamically, so we could not read a full price list. Spot servers have no SLA and can be stopped on two minutes of notice, and card payments need an identity check.",
+ "pricing": {
+  "status": "see_details",
+  "entry_price": null,
+  "entry_price_terms": null,
+  "from_price_usd_month": null,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 2026-11-10 on cherryservers.com/pricing and /pricing/virtual-servers) Cherry Servers bills by the hour, the month or a longer fixed term, and the plan table shows prices excluding VAT. The overview page lists virtual servers from €0.015 an hour and dedicated servers from €0.084 an hour. The virtual-server FAQ says plans start at $3.5 a month for a 1 vCore Cloud VPS, and that every virtual plan includes 1 to 35 TB of traffic depending on the plan. Add-ons are priced separately: Elastic Block Storage from €0.066 per GB a month, Backup Storage from €2.99 for 50 GB a month (free for dedicated servers), a Floating IP from €2.00 a month, a 5-address public subnet from €16.00 a month and a load balancer from €10.14 a month. The site offers a 15-day money-back guarantee. Exact monthly prices for each virtual-server configuration load dynamically and were not visible in the page text, and the page quotes euros in one place and dollars in another, so check the plan table and the VAT line at checkout.",
+  "verified_at": "2026-11-10",
+  "source_url": "https://www.cherryservers.com/pricing",
+  "schema_offer": null,
+  "source_quotes": [
+   {
+    "field": "price",
+    "plan": "Cloud VPS entry",
+    "quote": "Plans start at $3.5/month for a 1 vCore Cloud VPS.",
+    "source_url": "https://www.cherryservers.com/pricing/virtual-servers",
+    "read_on": "2026-10-21"
+   },
+   {
+    "field": "price",
+    "plan": "Public IP Subnet starting rate",
+    "quote": "€16.00 / 5 IPs / mo",
+    "source_url": "https://www.cherryservers.com/pricing",
+    "read_on": "2026-10-21"
+   },
+   {
+    "field": "price",
+    "plan": "Backup Storage starting rate",
+    "quote": "€2.99 / 50GB / mo",
+    "source_url": "https://www.cherryservers.com/pricing",
+    "read_on": "2026-10-21"
+   }
+  ],
+  "recent_change": null,
+  "price_history": null
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "Add-ons are priced separately: Elastic Block Storage from €0.066 per GB a month, Backup Storage from €2.99 for 50 GB a month (free for dedicated servers), a Floating IP from €2.00 a month, a 5-address public subnet from €16.00 a month and a load balancer from €10.14 a month.",
+   "verified_at": "2026-11-10",
+   "source_url": "https://www.cherryservers.com/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "Contabo",
+  "why": "Contabo is in our directory as a reviewed VPS provider. We have not compared the two on price, so check the same vCore and RAM size on both, and the billing terms, before you commit"
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/cherry-servers.json",
+  "review": "https://aibuildermarketplace.com/b2b/cherry-servers-review/",
+  "marketplace": null,
+  "vendor_site": "https://cherryservers.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://www.awin1.com/cread.php?awinmid=88911&awinaffid=2880219",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "not_yet",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": null,
+  "growth": null
+ },
+ "unknowns": [
+  "Pricing status is 'see_details': no single public entry price.",
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
+  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+ ],
+ "verification": {
+  "price": "quoted",
+  "free_trial": "being_verified",
+  "refund": "being_verified"
+ },
+ "status_page": null,
+ "task_evidence": null,
+ "open_questions": [
+  {
+   "question_id": "cherry-servers:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "cherry-servers:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "cherry-servers:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "cherry-servers:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": [],
+ "agent_channels": {
+  "vendor_mcp": null,
+  "agent_checkout": {
+   "status": "not_checked",
+   "detail": "We could not read the vendor's pages as plain HTML.",
+   "checked_at": "2026-10-07",
+   "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
+  }
+ }
+}

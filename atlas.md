@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 636 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-10.
+All 637 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2143,6 +2143,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams running a predictable programme of webinars to a known audience size, where buying a year of attendance up front is cheaper than a per-seat platform
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/livestorm-review/
+
+## LocalTry (localtry.com)
+- **Verified pricing:** (read 2026-11-10 on localtry.com/pricing) LocalTry has three plans that all include the same 133 capabilities and differ by team size and workspace count: Core is $59 a month for 2 users an…
+- **Honest take:** All-in-one CRM with AI; card needed for the trial.
+- **Best for:** small service businesses and agencies that want customers, jobs, invoices, reviews and marketing in one CRM and would like to connect their own AI tool
+- **Full review:** https://aibuildermarketplace.com/b2b/localtry-review/
 
 ## Lovable (lovable.dev)
 - **Verified pricing:** (read 2026-09-26 on lovable.dev/pricing from a European exit, so shown in euros including VAT, and in Lovable's plans-and-credits documentation) Free: 5 build credits a day, capped at 30 a …

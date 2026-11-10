@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 637 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-10.
+All 639 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2303,6 +2303,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/moosend-review.html
 
+## MotionUI (motionui.net)
+- **Verified pricing:** (read 2026-11-10 on motionui.net, US dollars) MotionUI has a Free plan and a Pro plan.
+- **Honest take:** After Effects plugin for UI animation; free plan, Pro $19 a month.
+- **Best for:** motion designers and product designers who animate interface screens in After Effects and want to bring Figma frames in and let Claude help build the scenes
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/motionui-review/
+
 ## Motive (gomotive.com)
 - **Verified pricing:** (2026-08-30 and 2026-10-04, read on their own pricing page) No prices are shown.
 - **Honest take:** A pricing page with a form where the prices should be.
@@ -3629,6 +3636,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** product and CX teams running always-on feedback (NPS, CSAT and in-app surveys) piped into the CRM and analytics stack they already use
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/survicate-review/
+
+## SurvIQ (surviqapp.com)
+- **Verified pricing:** (read 2026-11-10 on surviqapp.com/en, US dollars) SurvIQ has a Free plan with 50 responses a month, 1 user and up to 3 active surveys.
+- **Honest take:** Surveys with analysis and AI; free plan, then $9 to $79 a month.
+- **Best for:** freelancers, consultants, small teams and students who want a survey builder with built-in cross-tab analysis and AI summaries without paying for every feature separately
+- **Flags:** Usage-metered, Annual commit, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/surviq-review/
 
 ## Switcher Studio (switcherstudio.com)
 - **Verified pricing:** (read 2026-09-26 on switcherstudio.com/pricing) Studio is $65 a month month-to-month and $45 on annual billing ('Up to 30% Off').

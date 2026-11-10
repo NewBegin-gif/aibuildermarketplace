@@ -2505,8 +2505,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/optizen-review.html
 
 ## Orateur (orateur.ai)
-- **Verified pricing:** (read 2026-11-03 on orateur.ai/pricing, shown in Swiss francs on the French-language site; we did not see a price list in another currency) Orateur prices by plan, each with an allowance of…
-- **Honest take:** French-only site, Swiss franc pricing; annual totals not shown.
+- **Verified pricing:** (read 2026-11-03 on orateur.ai/pricing, shown in Swiss francs on the French-language site; on 10 November 2026 the English-language version of the same page showed the same plan figures in …
+- **Honest take:** Prices in Swiss francs or pounds; the AI speaks English and French only.
 - **Best for:** small businesses in Switzerland and French-speaking Europe, such as clinics, salons, fiduciaries and law offices, that miss calls and want an AI receptionist to answer, book appointments and take messages around the clock
 - **Full review:** https://zerotouchsupport.com/orateur-review.html
 
@@ -3178,7 +3178,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seele-review/
 
 ## Selixer (selixer.com)
-- **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/selixer; unchanged since 10 September 2026) Three tiers, no free plan, each with a 14-day free trial.
+- **Verified pricing:** (re-verified 2026-11-10 on apps.shopify.com/selixer; amounts unchanged since 10 September 2026) Three tiers, no free plan, each with a 14-day free trial.
 - **Honest take:** Read the feature lists rather than the prices and the entry tier stops looking like the product.
 - **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
 - **Flags:** Usage-metered

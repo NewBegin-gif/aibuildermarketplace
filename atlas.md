@@ -2148,7 +2148,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-10 on localtry.com/pricing) LocalTry has three plans that all include the same 133 capabilities and differ by team size and workspace count: Core is $59 a month for 2 users an…
 - **Honest take:** All-in-one CRM with AI; card needed for the trial.
 - **Best for:** small service businesses and agencies that want customers, jobs, invoices, reviews and marketing in one CRM and would like to connect their own AI tool
-- **Full review:** https://aibuildermarketplace.com/b2b/localtry-review/
+- **Full review:** https://marketingandsalessoftware.com/localtry-review.html
 
 ## Lovable (lovable.dev)
 - **Verified pricing:** (read 2026-09-26 on lovable.dev/pricing from a European exit, so shown in euros including VAT, and in Lovable's plans-and-credits documentation) Free: 5 build credits a day, capped at 30 a …
@@ -3642,7 +3642,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Surveys with analysis and AI; free plan, then $9 to $79 a month.
 - **Best for:** freelancers, consultants, small teams and students who want a survey builder with built-in cross-tab analysis and AI summaries without paying for every feature separately
 - **Flags:** Usage-metered, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/surviq-review/
+- **Full review:** https://officesoftwaremarketplace.com/surviq-review.html
 
 ## Switcher Studio (switcherstudio.com)
 - **Verified pricing:** (read 2026-09-26 on switcherstudio.com/pricing) Studio is $65 a month month-to-month and $45 on annual billing ('Up to 30% Off').

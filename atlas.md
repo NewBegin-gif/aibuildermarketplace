@@ -1196,7 +1196,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/ecomxray-review.html
 
 ## eDesk (edesk.com)
-- **Verified pricing:** (re-verified 2026-09-29) No free plan: 'Start for free' opens a 14-day full-feature trial with no credit card.
+- **Verified pricing:** (re-verified 2026-11-10) No free plan: 'Start for free' opens a 14-day full-feature trial with no credit card.
 - **Honest take:** The per-agent price is the entry ticket, but the AI Agent charges $0.99 for every automated resolution on top, a variable line that scales with your ticket volume.
 - **Best for:** e-commerce and marketplace sellers who want one unified inbox across Amazon, eBay, Shopify and email: with order data and AI-assisted replies where support and revenue overlap
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra

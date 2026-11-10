@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 634 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-09.
+All 635 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-10.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2647,6 +2647,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/piktochart-review/
 
+## PinBee (pinbee.net)
+- **Verified pricing:** (read 2026-11-10 on pinbee.net) PinBee has a free plan with no time limit and no account, and PinBee Pro on three plans: $9 a month, $49 a year (the page says that is $4.08 a month) or $99 …
+- **Honest take:** Free Pinterest stats in your browser; the pricing page disagrees with itself.
+- **Best for:** Pinterest bloggers, Etsy and Shopify sellers and social media managers who want to see which pins perform before they create their own
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/pinbee-review/
+
 ## Pingtree (pingtree.com)
 - **Verified pricing:** (2026-10-07, read on their own pricing page; unchanged on 2026-10-15) Self Service is “From $499” per month with a free trial included, and Managed Services carries a starting cost of $2,50…
 - **Honest take:** Two things about this price list will cost you money if you skim it. First, the $499 is a floor rather than a bill.
@@ -2992,7 +2999,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The channel caps are the business model -- each tier buys a few more destinations.
 - **Best for:** creators, podcasters and marketing teams who broadcast one show to many platforms at once, without extra encoding hardware
 - **Flags:** Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/restream-review/
+- **Full review:** https://marketingandsalessoftware.com/restream-review.html
 
 ## Retouch4me (retouch4.me)
 - **Verified pricing:** (read 2026-09-07 on retouch4.me/pricing, and re-read 8 September 2026 while signed in: the signed-in tariff page shows the same three yearly cards, no member-only rate and retouch4.me/produ…
@@ -3033,7 +3040,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-09-01 on rocketreach.co/pricing, re-read 2026-11-04 in a real browser with every amount unchanged) A free account exists: signing up takes no credit card and gives 5 lookups.
 - **Honest take:** The published prices are annual rates, and the annual term is doing more work than the page lets on.
 - **Best for:** sales, recruiting and BD teams whose bottleneck is finding verified direct dials and personal emails, and who can commit to an annual term - that is where the search allowance stops being metered
-- **Full review:** https://aibuildermarketplace.com/b2b/rocketreach-review/
+- **Full review:** https://marketingandsalessoftware.com/rocketreach-review.html
 
 ## RoverLead (roverlead.com)
 - **Verified pricing:** (read 2026-10-23 in the pricing section of roverlead.com; there is no separate pricing page, roverlead.com/pricing returns a 404; dollar amounts, the page does not name the currency) RoverL…
@@ -3657,7 +3664,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Per-form pricing is cheap for a handful of 1099s, but it's metered: TIN matching, W-9 requests, state filing and corrections can each carry their own charge.
 - **Best for:** businesses and accountants who need to e-file 1099s, W-2s and related forms accurately and cheaply, especially seasonal or higher-volume filers
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/tax1099-review/
+- **Full review:** https://officesoftwaremarketplace.com/tax1099-review.html
 
 ## TaxCycle (taxcycle.com)
 - **Verified pricing:** Prices are published on www.taxcycle.com/pricing (Canadian dollars before tax, per year, single user).
@@ -4181,7 +4188,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28 against Wing's homepage plan cards and its machine-readable llms.txt; wingassistant.com/pricing/ itself now redirects to a call-booking page)…
 - **Honest take:** You're renting a person, not automating a task: a good VA is real leverage, but only if you already have documented, delegatable work.
 - **Best for:** founders drowning in delegatable admin who have processes to hand off and want a managed VA without recruiting one themselves
-- **Full review:** https://aibuildermarketplace.com/b2b/wing-assistant-review/
+- **Full review:** https://officesoftwaremarketplace.com/wing-assistant-review.html
 
 ## Wistia (wistia.com)
 - **Verified pricing:** (re-verified 2026-10-19 on wistia.com/pricing, Video Platform tab; the monthly-toggle rates below are from the 19 September 2026 reading and were not re-read, because the page renders them …

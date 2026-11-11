@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 639 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-10.
+All 641 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-11.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1937,6 +1937,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/keap-review/
 
+## Kedra AI Index (kedra.io)
+- **Verified pricing:** (read 2026-11-11 on the Shopify App Store listing, US dollars) Kedra has a Free plan and three paid plans.
+- **Honest take:** AI visibility checks for Shopify; free plan, then $10 to $79 a month.
+- **Best for:** Shopify store owners who want to see whether AI assistants recommend their products and want llms.txt and agents.md files kept up to date from the catalog
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/kedra-ai-index-review/
+
 ## Kedra Checkout Rules & Upsells (kedra.io)
 - **Verified pricing:** (read 2026-10-15 on the Shopify App Store listing apps.shopify.com/kedra-checkout-rules-1, prices in USD) Four plans, billed through your Shopify invoice.
 - **Honest take:** Free runs one rule; rules skip draft orders.
@@ -2538,6 +2545,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/oyster-review.html
 
+## P2COS (p2cos.com)
+- **Verified pricing:** (read 2026-11-11 on p2cos.com/pricing, US dollars) P2COS sells three plans.
+- **Honest take:** Local-first prospecting desktop app; early access, from $19.99 a month.
+- **Best for:** owner-operators and small teams who want a local-first desktop tool for finding prospects, tracking outreach and moving them through a pipeline, and who accept an early product
+- **Full review:** https://aibuildermarketplace.com/b2b/p2cos-review/
+
 ## Pagecloud (pagecloud.com)
 - **Verified pricing:** (read 2026-10-11 on pagecloud.com/pricing, USD, with the monthly and annual toggle and the FAQ opened) Three plans, each with Pagecloud AI, hosting, SSL, your own domain, inquiry forms with…
 - **Honest take:** Pagecloud AI has no native blog or store on Launch, Grow or Optimize; AI usage is given only as multipliers.
@@ -2693,7 +2706,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The meter is credits per attempt, not per usable result, and buyer reviews centre on exactly that.
 - **Best for:** solo founders and small teams that want a steady stream of product-marketing videos and posters generated from a product link, without filming anything
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/pippit-review/
+- **Full review:** https://marketingandsalessoftware.com/pippit-review.html
 
 ## Pixasocial (pixasocial.com)
 - **Verified pricing:** (read 2026-11-04 on app.pixasocial.com/pricing; prices shown in euros for Germany, tax added at checkout) Pixasocial sells one suite in four sizes.
@@ -3094,7 +3107,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The per-seat rate falls with team size but the monthly bill does not follow it: 19 seats on Starter is $1,330 while 20 seats on Pro is $799.
 - **Best for:** outbound sales teams and agencies running LinkedIn sequences across several seats, where the per-seat price drops and the admin panel earns its keep
 - **Flags:** Per-seat pricing, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/salesflow-review/
+- **Full review:** https://marketingandsalessoftware.com/salesflow-review.html
 
 ## Salesmessage (salesmessage.com)
 - **Verified pricing:** (2026-08-08, re-verified 10 September 2026 and again 13 October 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plans plus Enterpr…
@@ -3134,7 +3147,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The two features carry very different risk, the app presents them as one install, and since August the money has been split across them in a way the name does not warn you about.
 - **Best for:** Shopify merchants who want a free, one-click back-to-top button on long collection and product pages without touching theme code
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/scrolly-review/
+- **Full review:** https://marketingandsalessoftware.com/scrolly-review.html
 
 ## Seamless.ai (seamless.ai)
 - **Verified pricing:** (read 2026-09-30 on seamless.ai/pricing, seamless.ai/pricing-inquiry, Seamless's help centre and seamless.ai/llms.txt) The pricing page no longer shows plans: seamless.ai/pricing now forwar…
@@ -3698,7 +3711,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** This is professional preparer software priced for firms, not a consumer filing app: the cost only makes sense if you're preparing returns for clients at volume.
 - **Best for:** Canadian accountants and bookkeepers who prepare and e-file client returns and want fast, checked, CRA-integrated professional tax software
 - **Flags:** Per-seat pricing, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/taxcycle-review/
+- **Full review:** https://officesoftwaremarketplace.com/taxcycle-review.html
 
 ## Teachable (teachable.com)
 - **Verified pricing:** (read 2026-11-02 on teachable.com/pricing, teachable.com/legal/usage-fees and Teachable's help article on transaction fees and bundles; the pricing page says all prices are in US dollars) T…
@@ -3768,7 +3781,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The price is the knock, because there isn't one.
 - **Best for:** enterprises running AI across several departments, models and applications that cannot answer what the bill bought: organisations with a real AI invoice to explain, a CFO asking for return per team
 - **Flags:** Hidden pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/thetop-review/
+- **Full review:** https://officesoftwaremarketplace.com/thetop-review.html
 
 ## Thordata (thordata.com)
 - **Verified pricing:** (price re-verified 2026-09-23 against the vendor's own pricing page) (2026) Usage-metered, with free trials on the APIs.

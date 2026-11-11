@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}/*cmv2*/gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});gtag('consent','default',{analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});gtag('js',new Date());var s=document.createElement('script');s.src='/ga4-gate.js';s.defer=true;document.head.appendChild(s);</script>
+<title>Claude Code + Miro Mermaid, Tested: Board Edits Rewrite the Code</title>
+<meta name="description" content="We had Claude Code write three Mermaid diagrams of a real pipeline and put them in Miro's free plan: native shapes, edits synced both ways on flowcharts, code-only for sequence and ER.">
+<link rel="canonical" href="https://aibuildermarketplace.com/research/claude-code-miro-mermaid-test/">
+<meta property="og:title" content="Claude Code + Miro Mermaid, Tested: Board Edits Rewrite the Code"><meta property="og:description" content="We had Claude Code write three Mermaid diagrams of a real pipeline and put them in Miro's free plan: native shapes, edits synced both ways on flowcharts, code-only for sequence and ER.">
+<meta property="og:image" content="https://aibuildermarketplace.com/research/claude-code-miro-mermaid-test/img/board-edit-updates-code.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Claude Code + Miro Mermaid, Tested: Board Edits Rewrite the Code", "datePublished": "2026-11-11", "dateModified": "2026-11-11", "author": {"@type": "Person", "name": "Daan Haket", "@id": "https://aibuildermarketplace.com/about/#daan", "alternateName": "Daniel Haket"}, "publisher": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "about": [{"@type": "SoftwareApplication", "name": "Miro"}, {"@type": "SoftwareApplication", "name": "Claude Code"}, {"@type": "SoftwareApplication", "name": "Mermaid"}]}</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--bg:#0a0a0a;--card:#141414;--border:#262626;--text:#fafafa;--text2:#a3a3a3;--accent:#3b82f6;--amber:#f59e0b;--ok:#22c55e;--no:#fb7185}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.75}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.nav{border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);z-index:50}
+.nav-in{max-width:1180px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav a{color:var(--text2);font-size:.85rem;font-weight:600;margin-left:16px}
+.logo-t{font-weight:800;color:var(--text)}.logo-t em{font-style:normal;background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.wrap{max-width:900px;margin:0 auto;padding:14px 24px 70px}
+h1{font-size:2.1rem;line-height:1.2;margin:18px 0 10px;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:1.25rem;margin:40px 0 12px;text-wrap:balance}
+h3{font-size:1.04rem;margin:26px 0 4px}
+.lede{font-size:1.08rem;color:var(--text2)}
+.pill{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(59,130,246,.3);border-radius:999px;padding:4px 11px}
+.cite{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:16px 20px;margin:20px 0;font-size:1.02rem}
+.cite small{display:block;color:var(--text2);font-size:.8rem;margin-top:8px}
+.big{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0}
+.big div{flex:1 1 160px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.big b{display:block;font-size:1.9rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.big span{color:var(--text2);font-size:.86rem}
+.tw{overflow-x:auto;margin:10px 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{padding:9px 10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+th{color:var(--text2);font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+td.t{color:var(--text2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.r{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.03em;border:1px solid;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.ok{color:var(--ok);border-color:rgba(34,197,94,.4)}
+.pa{color:var(--amber);border-color:rgba(245,158,11,.45)}
+.no{color:var(--no);border-color:rgba(251,113,133,.45)}
+.nt{color:var(--text2);border-color:var(--border)}
+.fx{display:block;font-size:.74rem;color:var(--text2);margin-top:3px}
+.note{border-left:3px solid var(--amber);padding:2px 0 2px 14px;margin:18px 0;color:var(--text2)}
+.disc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:20px 0;font-size:.93rem;color:var(--text2)}
+.disc b{color:var(--text)}
+pre{background:#101010;border:1px solid var(--border);border-radius:12px;padding:16px 18px;overflow-x:auto;font-size:.82rem;line-height:1.6;white-space:pre-wrap}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+.card h3{margin-top:0}
+.card p{margin:.4em 0;color:var(--text2);font-size:.92rem}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto;background:#fff}
+.shots figcaption{padding:10px 14px;font-size:.84rem;color:var(--text2);line-height:1.55}
+.shots figcaption b{color:var(--text)}
+ul.tight{padding-left:20px}ul.tight li{margin:6px 0}
+footer{border-top:1px solid var(--border);margin-top:48px;padding:22px 24px;color:var(--text2);font-size:.85rem;text-align:center}
+.shots img{background:#0a0a14}
+</style></head>
+<body><nav class="snav" id="nav" aria-label="Main"><style>
+:root{--snav-h:56px}
+nav.snav{display:block;position:sticky;top:0;left:auto;right:auto;z-index:1000;margin:0;padding:0;height:auto;border:0;width:auto;
+ max-width:none;transform:none;box-shadow:none;
+ background:rgba(2,6,23,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+ border-bottom:1px solid rgba(148,163,184,.16);font:500 .9rem/1.2 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+ text-align:left;color:#e2e8f0}
+nav.snav *{box-sizing:border-box}
+nav.snav .snav-in{max-width:1180px;margin:0 auto;padding:0 20px;height:var(--snav-h);display:flex;align-items:center;gap:12px}
+nav.snav a{text-decoration:none}
+nav.snav button,nav.snav a{margin:0;line-height:1.2;height:auto;min-height:0;box-shadow:none;text-transform:none;
+ letter-spacing:normal;vertical-align:middle;width:auto}
+nav.snav li{margin:0;padding:0;list-style:none}
+nav.snav .snav-merk{display:flex;align-items:center;gap:9px;color:#f8fafc;font-weight:800;font-size:1.05rem;
+ letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+nav.snav .snav-merk i{width:10px;height:10px;border-radius:3px;flex:0 0 10px;background:linear-gradient(135deg,#818cf8,#34d399)}
+nav.snav .snav-merk em{font-style:normal;color:#a5b4fc}
+nav.snav .snav-links{display:flex;align-items:center;gap:2px;margin-left:auto;list-style:none;padding:0;margin-top:0;margin-bottom:0}
+nav.snav .snav-links a,nav.snav .snav-meer>button{color:#cbd5e1;padding:8px 11px;border-radius:8px;white-space:nowrap;
+ background:none;border:0;font:inherit;cursor:pointer;display:block}
+nav.snav .snav-links a:hover,nav.snav .snav-meer>button:hover{color:#fff;background:rgba(255,255,255,.07)}
+nav.snav .nu>a,nav.snav a.nu,nav.snav .snav-meer.nu>button{color:#fff;background:rgba(129,140,248,.16)}
+nav.snav .snav-meer{position:relative}
+nav.snav .snav-meer>button::after{content:"";display:inline-block;margin-left:6px;border:4px solid transparent;
+ border-top-color:currentColor;vertical-align:-2px}
+nav.snav .snav-meer-lijst{position:absolute;right:0;top:calc(100% + 6px);min-width:220px;list-style:none;margin:0;padding:6px;
+ background:#0f172a;border:1px solid rgba(148,163,184,.2);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+nav.snav .snav-meer-lijst[hidden]{display:none}
+nav.snav .snav-meer-lijst a{padding:9px 12px}
+nav.snav .snav-cta{flex:0 0 auto;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-weight:700;
+ padding:8px 14px;border-radius:9px;white-space:nowrap}
+nav.snav .snav-cta:hover{filter:brightness(1.08)}
+nav.snav .snav-menu{display:none;flex:0 0 auto;background:none;border:1px solid rgba(148,163,184,.3);color:#e2e8f0;
+ border-radius:9px;padding:7px 11px;font:inherit;font-weight:600;cursor:pointer}
+nav.snav a:focus-visible,nav.snav button:focus-visible{outline:2px solid #a5b4fc;outline-offset:2px}
+@media(max-width:900px){
+ nav.snav .snav-in{padding:0 12px;gap:8px}
+ nav.snav .snav-merk{font-size:.98rem}
+ nav.snav .snav-menu{display:block}
+ nav.snav .snav-cta{margin-left:auto;padding:7px 11px;font-size:.84rem}
+ nav.snav .snav-links{display:none;position:absolute;left:0;right:0;top:var(--snav-h);flex-direction:column;align-items:stretch;
+  gap:0;margin:0;padding:8px 12px 14px;background:#0b1224;border-bottom:1px solid rgba(148,163,184,.2);
+  max-height:calc(100vh - var(--snav-h));overflow-y:auto;box-shadow:0 16px 32px rgba(0,0,0,.5)}
+ nav.snav.open .snav-links{display:flex}
+ nav.snav .snav-links a,nav.snav .snav-meer>button{padding:12px 10px;font-size:1rem;width:100%;text-align:left}
+ nav.snav .snav-meer>button{display:none}
+ nav.snav .snav-meer-lijst,nav.snav .snav-meer-lijst[hidden]{display:block;position:static;box-shadow:none;border:0;
+  border-top:1px solid rgba(148,163,184,.16);border-radius:0;padding:6px 0 0;margin-top:6px;background:none;min-width:0}
+}
+@media(max-width:480px){nav.snav .snav-merk em{display:none}}
+/* audit P1-2: de marketplace-subnav (vorige/volgende) plakt direct onder deze balk, op elke breedte */
+.subnav{top:calc(var(--snav-h) + 1px)!important}
+</style><div class="snav-in"><a class="snav-merk" href="/"><i aria-hidden="true"></i><span>AIBuilder <em>Marketplace</em></span></a><ul class="snav-links" id="nav-links"><li><a href="/b2b/">Reviews</a></li><li><a href="/atlas/">Atlas</a></li><li><a href="/best/">Best tools</a></li><li><a href="/tools/">Free tools</a></li><li><a href="/deals/">Deals</a></li><li class="snav-meer nu"><button type="button" aria-expanded="false" aria-controls="nav-meer">More</button><ul class="snav-meer-lijst" id="nav-meer" hidden><li><a href="/about/">About</a></li><li class=nu><a href="/research/">Research</a></li><li><a href="/pricewatch/">Price Watch</a></li><li><a href="/guides/hidden-cost-report-2026/">Hidden Cost Report</a></li><li><a href="/stats/">Stats</a></li><li><a href="/stack-xray/">Stack X-Ray</a></li><li><a href="/roadmap/">AI Roadmap</a></li><li><a href="/ai/">AI explained</a></li><li><a href="/videos/">Videos</a></li><li><a href="/marketplace/">Marketplace</a></li><li><a href="/list-your-saas/">List your SaaS</a></li></ul></li></ul><a class="snav-cta" href="/finder/">Find software</a><button type="button" class="snav-menu" aria-expanded="false" aria-controls="nav-links">Menu</button></div><script>(function(){var n=document.currentScript&&document.currentScript.closest('nav.snav');if(!n)return;
+var m=n.querySelector('.snav-menu'),w=n.querySelector('.snav-meer>button'),l=n.querySelector('.snav-meer-lijst');
+function zetMenu(o){n.classList.toggle('open',o);m.setAttribute('aria-expanded',o?'true':'false');}
+function zetMeer(o){if(!w)return;w.setAttribute('aria-expanded',o?'true':'false');l.hidden=!o;}
+m.addEventListener('click',function(){zetMenu(!n.classList.contains('open'));});
+if(w)w.addEventListener('click',function(e){e.stopPropagation();zetMeer(l.hidden);});
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;
+ if(w&&!l.hidden){zetMeer(false);w.focus();}else if(n.classList.contains('open')){zetMenu(false);m.focus();}});
+document.addEventListener('click',function(e){if(!n.contains(e.target)){zetMeer(false);zetMenu(false);}});
+})();</script></nav>
+<div class="wrap">
+<p style="font-size:.8rem;color:#737373;margin:14px 0"><a href="/">Home</a> &rsaquo; <a href="/research/">Research</a> &rsaquo; Hands-on test</p>
+<span class="pill">Hands-on test &middot; run on 2026-11-11</span>
+<h1>Claude Code writes the Mermaid, Miro draws it: an edit on the board changed the code, and a line of code changed the board</h1>
+<p class="lede">On the evening of 11 November 2026 we had Claude Code, Anthropic&rsquo;s coding agent, write three Mermaid diagrams of a real system: the pipeline that turns an approved partner into a published review on this site. We put them into Miro&rsquo;s new Mermaid diagrams on the free plan, then edited them on the board and in the code, broke the code on purpose and read it back out. One board, one evening, three diagram types: a case study, not a verdict on every setup.</p>
+
+<blockquote class="cite">Miro rendered all three Mermaid diagrams that Claude Code wrote as native Miro shapes. Renaming a box on the board rewrote the matching line of Mermaid, and a line we added to the code appeared as a new box. Only the flowchart could be edited visually; the sequence and ER diagrams rendered but stayed code-only, as Miro&rsquo;s own help page says.<small>AIBuilder Marketplace, hands-on test, 2026-11-11. Free to quote with attribution.</small></blockquote>
+
+<div class="big">
+  <div><b>3 / 3</b><span>diagram types rendered: flowchart, sequence, ER</span></div>
+  <div><b>16 &rarr; 17</b><span>flowchart boxes after one line of code was added</span></div>
+  <div><b>1 edit</b><span>on the board, and the Mermaid line changed with it</span></div>
+  <div><b>$0</b><span>we used Miro&rsquo;s free plan</span></div>
+</div>
+
+<div class="disc"><b>Who pays us.</b> We are in Miro&rsquo;s affiliate programme on Reditus: if you sign up for a paid Miro plan through the link on this page, we may be paid. This page is also our entry in Miro&rsquo;s Mermaid content campaign on Reditus, which pays a one-off bonus if Miro approves it. Neither changes what we report: Miro did not see this page before it went live, and the snag we hit is in here too. <b>Who did the work:</b> Daan owns the Miro account; our AI assistant ran the test in his browser, wrote the diagrams with Claude Code and took the screenshots, and Daan decided what we publish.</div>
+
+<h2 id="how-we-tested">How we tested</h2>
+<ul class="tight">
+<li><b>A real system, not a toy.</b> Claude Code wrote the Mermaid from what it had just read in our own pipeline: the onboarding queue, the research step, the honesty check that rejects any price not quoted in a source, and the publish gates. The flowchart has 16 boxes and 16 arrows, including two loops back and three dead ends.</li>
+<li><b>Three diagram types.</b> A flowchart (the onboarding pipeline), a sequence diagram (how a hands-on test travels from the browser to a live page, five participants and eight messages) and an ER diagram (partner, queue item, research file, dossier, test and review page: six entities, five relationships).</li>
+<li><b>Miro&rsquo;s free plan.</b> An existing free Miro account in Chrome. For each diagram we placed a Diagram on the board, chose <i>Build with code</i> and put the Mermaid into the code panel, as Miro&rsquo;s <a href="https://help.miro.com/hc/en-us/articles/7004628130962-Create-Mermaid-diagrams" rel="noopener">help page</a> describes. We pasted the code with a scripted paste into the code panel rather than with the keyboard.</li>
+<li><b>Checked in the code, not just on screen.</b> After each change we read the Mermaid back out of Miro&rsquo;s code panel and compared it with what Claude Code had written.</li>
+</ul>
+
+<h2 id="evidence">What happened, step by step</h2>
+<div class="tw"><table><thead><tr><th>Step</th><th>What we saw</th><th>Result</th></tr></thead><tbody>
+<tr><td><b>Flowchart in</b></td><td>The 16 boxes appeared as Miro shapes: rectangles for steps, diamonds for decisions, labelled arrows for <i>yes</i>, <i>no</i> and <i>403 / geo-block</i>. Clicking a box selected it and opened a toolbar for shape type, font size, bold, text colour, border and fill.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Board &rarr; code</b></td><td>We double-clicked the box &ldquo;status: wachtend&rdquo; and renamed it &ldquo;status: wachtend (queued)&rdquo;. Line 5 of the Mermaid changed to <code>D["status: wachtend (queued)"]</code>: Miro added the quotes itself, because Mermaid needs them around brackets in a label.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Code &rarr; board</b></td><td>We typed a new line at the end of the code, <code>M --&gt; N[Partner gets a live-link mail]</code>. A 17th box appeared at the bottom of the flowchart, connected to &ldquo;Live review page&rdquo;, and was still there after a reload.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Sequence diagram</b></td><td>All five participants, their lifelines and the eight messages rendered, including the two self-calls and the dashed replies. Double-clicking a participant did nothing: no text editing.</td><td><span class="r ok">rendered, code-only</span></td></tr>
+<tr><td><b>ER diagram</b></td><td>Six tables with their fields and types, five relationships with the right one-to-many and zero-or-one markers and their labels.</td><td><span class="r ok">rendered, code-only</span></td></tr>
+<tr><td><b>Broken code</b></td><td>We added a line with an unclosed decision, <code>N --&gt; O{Broken decision</code>. The line got a warning icon and a red underline in the code panel, and the diagram kept its last valid version instead of breaking. Closing the brace rendered the new diamond.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Code back out</b></td><td>The Mermaid we read back from Miro matched what Claude Code wrote line for line, with the same indentation and the <code>&lt;br/&gt;</code> line breaks intact. The only differences were our own two edits.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>The snag</b></td><td>Each time we put code into a new diagram, the diagram rendered but the code panel next to it stayed empty until we reloaded the page; after the reload the code was there. It happened with all three diagrams. It may come from our scripted paste, so a paste from the keyboard may behave differently.</td><td><span class="r pa">reload needed</span></td></tr>
+</tbody></table></div>
+
+<h2>What the Claude Code half adds</h2>
+<p>The point of Mermaid in Miro is that the diagram stays text. Claude Code could describe our pipeline in a minute because it had just read the code, and because the result is Mermaid rather than a picture, the same text can go back into the repository next to the code it describes. What we did by hand on the board, rename a step and add one, is the kind of change an agent can make in the code instead. Miro&rsquo;s help page says agents connected through Miro&rsquo;s MCP server can also create, read and update these diagrams directly on a board; we did not test that route (see below).</p>
+
+<h2>Flowcharts only, for now</h2>
+<p>Miro is upfront that visual editing works for flowcharts only, with state, sequence, class and ER diagrams marked &ldquo;Coming soon&rdquo; on its <a href="https://help.miro.com/hc/en-us/articles/7004628130962-Create-Mermaid-diagrams" rel="noopener">help page</a>. That matched what we saw: the sequence and ER diagrams looked right, but every change to them has to go through the code. The same page notes that Miro lays the diagram out itself, so you cannot drag a shape to a spot of your choosing unless you switch the diagram to free-form, which cuts it loose from the Mermaid code.</p>
+
+<h2>What it costs</h2>
+<p>Nothing extra. Miro&rsquo;s help page lists Mermaid diagrams for all users on the Free, Starter, Business, Enterprise and Education plans, and we ran the whole test on a free account. If you want to try it, start from Miro&rsquo;s Mermaid page: <a href="https://miro.com/mermaid/?red=aibuil" rel="sponsored noopener nofollow">miro.com/mermaid</a> (our affiliate link). The free plan&rsquo;s limit of three editable boards applies, as covered in our <a href="https://officesoftwaremarketplace.com/miro-review.html">Miro review</a>.</p>
+
+<h2>Screens from the test</h2>
+<div class="shots">
+<figure><a href="img/board-edit-updates-code.jpg"><img src="img/board-edit-updates-code.jpg" alt="Renaming a box updates the Mermaid code" loading="lazy" width="1470" height="757"></a><figcaption><b>Board &rarr; code.</b> We renamed the selected box on the board; line 5 of the Mermaid on the left now reads <code>D["status: wachtend (queued)"]</code>.</figcaption></figure>
+<figure><a href="img/code-adds-box.jpg"><img src="img/code-adds-box.jpg" alt="A line of code adds a box" loading="lazy" width="1470" height="757"></a><figcaption><b>Code &rarr; board.</b> The box &ldquo;Partner gets a live-link mail&rdquo; at the end of the flowchart came from one line typed in the code panel.</figcaption></figure>
+<figure><a href="img/sequence-diagram.jpg"><img src="img/sequence-diagram.jpg" alt="The sequence diagram in Miro" loading="lazy" width="1470" height="757"></a><figcaption><b>Sequence diagram.</b> Five participants and eight messages rendered as Miro shapes; not editable on the board yet. The code panel is empty here until a reload: the snag described above.</figcaption></figure>
+<figure><a href="img/er-diagram.jpg"><img src="img/er-diagram.jpg" alt="The ER diagram in Miro" loading="lazy" width="1470" height="757"></a><figcaption><b>ER diagram.</b> Six tables, five relationships with their cardinality markers.</figcaption></figure>
+<figure><a href="img/syntax-error.jpg"><img src="img/syntax-error.jpg" alt="A syntax error flagged in the code panel" loading="lazy" width="1470" height="757"></a><figcaption><b>Broken on purpose.</b> Line 19 lacks its closing brace: warning icon, red underline, and the diagram on the right keeps its last valid state.</figcaption></figure>
+</div>
+
+<h2>What this test does not show</h2>
+<ul class="tight">
+<li><b>Miro&rsquo;s MCP server.</b> We did not connect Claude Code to Miro MCP, so we have not seen an agent create or edit a diagram on the board itself, or the change legend Miro says an agent can add. Claude Code wrote the Mermaid and we carried it into Miro.</li>
+<li><b>Teams.</b> One account, one browser: no real-time co-editing, comments or sharing with a second person.</li>
+<li><b>Other diagram types and Miro AI.</b> No class or state diagrams, no Sidekicks or Flows, no switch to free-form and no export.</li>
+<li><b>Large diagrams.</b> Our biggest diagram had 17 boxes; we did not test how auto layout copes with hundreds.</li>
+</ul>
+<p>Our full review: <a href="https://officesoftwaremarketplace.com/miro-review.html">Miro</a>. Our other hands-on tests: <a href="/research/clonable-wordpress-test/">Clonable on WordPress</a> &middot; <a href="/research/one-booking-app-three-ai-builders/">one booking app, three AI builders</a> &middot; <a href="/research/one-pitch-deck-four-ai-presentation-tools/">one pitch deck, four AI presentation tools</a>. How we separate researched reviews from hands-on ones: <a href="/how-we-review/">how we review</a>.</p>
+<p>AIBuilder Marketplace, &ldquo;Claude Code writes the Mermaid, Miro draws it&rdquo;, hands-on test run on 2026-11-11. Free to quote and reproduce with attribution (CC BY 4.0).</p>
+</div>
+
+<footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. This page contains one affiliate link, to Miro, marked as sponsored.<!--sister-net-start-->
+<nav aria-label="Sister sites" style="display:block;max-width:1100px;margin:28px auto 0;padding:12px 20px 4px;border-top:1px solid rgba(128,128,128,.22);font-size:.72rem;line-height:1.8;text-align:center">Six sites, one owner, built and run by <a href="/about/" style="color:inherit">Daan Haket</a>.<span style="display:block;margin-top:2px">Follow us: <a href="https://www.youtube.com/@aibuildermarketplace" target="_blank" rel="me noopener" style="color:inherit">YouTube</a> <span style="opacity:.4">&middot;</span> <a href="https://www.instagram.com/aibuildermarketplace/" target="_blank" rel="me noopener" style="color:inherit">Instagram</a> <span style="opacity:.4">&middot;</span> <a href="https://bsky.app/profile/aibuildermarketplace.com" target="_blank" rel="me noopener" style="color:inherit">Bluesky</a></span></nav>
+<!--sister-net-end-->
+</footer>
+</body></html>

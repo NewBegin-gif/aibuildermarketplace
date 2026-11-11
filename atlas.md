@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 641 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-11.
+All 644 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-11.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -624,6 +624,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** web agencies and site teams that want clients to point-and-click feedback directly on the page, and, new in 2026, want AI agents (Claude Code, Cursor and others) to read, triage and action that feedback via BugHerd's MCP server
 - **Flags:** Per-seat pricing, Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/bugherd-review.html
+
+## BulkCertPDF (bulkcertpdf.com)
+- **Verified pricing:** (read 2026-11-11 on bulkcertpdf.com/pricing, US dollars) BulkCertPDF has a Free plan, a one-off Batch Pass and a Pro subscription.
+- **Honest take:** Certificates from Excel; free for 25 a month, Batch Pass $19.
+- **Best for:** training providers, course organisers and HR teams who need named PDF certificates from a spreadsheet without designing each one
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/bulkcertpdf-review/
 
 ## Buzz.ai (buzz.ai)
 - **Verified pricing:** (price re-verified 2026-11-07 on buzz.ai/pricing and buzz.ai/whitelabels/; USD) Teams: Core is $79 per seat a month with 500 credits a month, billed monthly, with a $0 setup fee footnoted '…
@@ -2558,6 +2565,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/pagecloud-review/
 
+## Pagely (pagely.com)
+- **Verified pricing:** (read 2026-11-11 on pagely.com/pricing-signup, US dollars) Pagely sells managed WordPress hosting in six plans, all billed per month.
+- **Honest take:** Managed WordPress hosting; plans from $99 a month.
+- **Best for:** agencies and businesses running several WordPress sites that want managed hosting with expert support and a clear path to high availability
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/pagely-review/
+
 ## PagePulse (getpagepulse.io)
 - **Verified pricing:** (re-read 16 October 2026 on getpagepulse.io/#pricing in both billing states; the page opens on Annual billing, marked Save 20%.
 - **Honest take:** The ladder is metered on tracked pages, not people: Starter buys two pages, and every card below Scale lists unlimited collaborators, although the FAQ says workspace members are what you pay for.
@@ -2936,6 +2950,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** site owners and small agencies that want AI-written SEO articles, rank tracking and AI-search visibility reports in one subscription with auto-publishing
 - **Flags:** Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/rankbolt-review.html
+
+## RankSlide (rankslide.com)
+- **Verified pricing:** (read 2026-11-11 on rankslide.com/pricing, US dollars) RankSlide sells four plans and says every plan includes every feature; the plans differ by the number of sites.
+- **Honest take:** Search Console drop alerts; 14-day trial, from $48 a year.
+- **Best for:** bloggers, in-house SEOs and agencies who want a daily alert when a page or keyword loses Google traffic, with a likely cause attached
+- **Full review:** https://aibuildermarketplace.com/b2b/rankslide-review/
 
 ## Rapid Search (rapidsearch.app)
 - **Verified pricing:** (read 2026-09-26, re-read 2026-10-21 without changes, on apps.shopify.com/rapid-search and on the vendor's own pricing page at rapidsearch.app/pricing) Every plan carries every feature; the…

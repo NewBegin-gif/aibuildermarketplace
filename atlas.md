@@ -1942,7 +1942,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** AI visibility checks for Shopify; free plan, then $10 to $79 a month.
 - **Best for:** Shopify store owners who want to see whether AI assistants recommend their products and want llms.txt and agents.md files kept up to date from the catalog
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/kedra-ai-index-review/
+- **Full review:** https://marketingandsalessoftware.com/kedra-ai-index-review.html
 
 ## Kedra Checkout Rules & Upsells (kedra.io)
 - **Verified pricing:** (read 2026-10-15 on the Shopify App Store listing apps.shopify.com/kedra-checkout-rules-1, prices in USD) Four plans, billed through your Shopify invoice.
@@ -2549,7 +2549,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-11 on p2cos.com/pricing, US dollars) P2COS sells three plans.
 - **Honest take:** Local-first prospecting desktop app; early access, from $19.99 a month.
 - **Best for:** owner-operators and small teams who want a local-first desktop tool for finding prospects, tracking outreach and moving them through a pipeline, and who accept an early product
-- **Full review:** https://aibuildermarketplace.com/b2b/p2cos-review/
+- **Full review:** https://marketingandsalessoftware.com/p2cos-review.html
 
 ## Pagecloud (pagecloud.com)
 - **Verified pricing:** (read 2026-10-11 on pagecloud.com/pricing, USD, with the monthly and annual toggle and the FAQ opened) Three plans, each with Pagecloud AI, hosting, SSL, your own domain, inquiry forms with…

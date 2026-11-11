@@ -630,7 +630,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Certificates from Excel; free for 25 a month, Batch Pass $19.
 - **Best for:** training providers, course organisers and HR teams who need named PDF certificates from a spreadsheet without designing each one
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/bulkcertpdf-review/
+- **Full review:** https://officesoftwaremarketplace.com/bulkcertpdf-review.html
 
 ## Buzz.ai (buzz.ai)
 - **Verified pricing:** (price re-verified 2026-11-07 on buzz.ai/pricing and buzz.ai/whitelabels/; USD) Teams: Core is $79 per seat a month with 500 credits a month, billed monthly, with a $0 setup fee footnoted '…
@@ -2570,7 +2570,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Managed WordPress hosting; plans from $99 a month.
 - **Best for:** agencies and businesses running several WordPress sites that want managed hosting with expert support and a clear path to high availability
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/pagely-review/
+- **Full review:** https://officesoftwaremarketplace.com/pagely-review.html
 
 ## PagePulse (getpagepulse.io)
 - **Verified pricing:** (re-read 16 October 2026 on getpagepulse.io/#pricing in both billing states; the page opens on Annual billing, marked Save 20%.
@@ -2955,7 +2955,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-11 on rankslide.com/pricing, US dollars) RankSlide sells four plans and says every plan includes every feature; the plans differ by the number of sites.
 - **Honest take:** Search Console drop alerts; 14-day trial, from $48 a year.
 - **Best for:** bloggers, in-house SEOs and agencies who want a daily alert when a page or keyword loses Google traffic, with a likely cause attached
-- **Full review:** https://aibuildermarketplace.com/b2b/rankslide-review/
+- **Full review:** https://marketingandsalessoftware.com/rankslide-review.html
 
 ## Rapid Search (rapidsearch.app)
 - **Verified pricing:** (read 2026-09-26, re-read 2026-10-21 without changes, on apps.shopify.com/rapid-search and on the vendor's own pricing page at rapidsearch.app/pricing) Every plan carries every feature; the…

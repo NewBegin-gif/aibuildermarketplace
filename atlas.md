@@ -523,7 +523,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/bookyourdata-review.html
 
 ## Bot It AI (botitai.com)
-- **Verified pricing:** (read 2026-09-24 on apps.shopify.com/bot-it and on the vendor's own botitai.com/pricing, which list the same two tiers) Free is free forever, with no trial involved: the full catalogue audi…
+- **Verified pricing:** (read 2026-09-24 on apps.shopify.com/bot-it and on the vendor's own botitai.com/pricing, which list the same two tiers; re-read unchanged on 2026-11-11) Free is free forever, with no trial …
 - **Honest take:** The budget behind the AI fixes is not published.
 - **Best for:** Shopify merchants who want to know how complete their catalogue data is for AI shopping agents and are willing to test an early tool, starting with the free audit before paying for automated fixes
 - **Flags:** Free tier
@@ -2186,7 +2186,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/lucrovox-review.html
 
 ## LumenCart (lumencart.fleeta.co.uk)
-- **Verified pricing:** (read 22 September 2026 and re-read unchanged 27 September 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generations for a new store;…
+- **Verified pricing:** (read 22 September 2026 and re-read unchanged on 27 September and 11 November 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generatio…
 - **Honest take:** You buy credits, not images: highest quality costs 2 credits against 1 for standard, so the better setting halves every allowance on the page: Starter's 75 credits is 37 images a month, not 75.
 - **Best for:** small Shopify merchants who want studio and lifestyle product shots out of the photos they already have, without hiring a photographer or a studio
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -2201,7 +2201,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## ManyChat (manychat.com)
 - **Verified pricing:** Read on their own pricing page, 6 September 2026, and again, unchanged, 25 September 2026.
-- **Honest take:** Flows are button-and-script based, not natural language: type something unexpected and the bot falls back.
+- **Honest take:** Without the paid AI add-on, flows are button-and-script based: type something unexpected and the bot falls back.
 - **Best for:** creators and brands running comment-to-DM and multi-channel (Instagram, Messenger, WhatsApp) marketing funnels: its killer feature works reliably
 - **Flags:** Add-ons extra, Free tier
 - **Full review:** https://marketingandsalessoftware.com/manychat-review.html
@@ -3496,7 +3496,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/softr-review.html
 
 ## SoftSync (softsync.ai)
-- **Verified pricing:** (read 2026-09-26 on softsync.ai/pricing in a headless browser, including the plan table and every pricing FAQ answer) Two standard paid plans, priced per seat per month, plus a custom Enter…
+- **Verified pricing:** (read 2026-09-26 on softsync.ai/pricing in a headless browser, including the plan table and every pricing FAQ answer; re-read 2026-11-11 on softsync.ai/pricing and softsync.ai/pricing.md, a…
 - **Honest take:** Pro stops at five team members per workspace.
 - **Best for:** small B2B sales teams of up to five people who want CRM records, email campaigns, meeting summaries and follow-up automation in one workspace, and who want Claude
 - **Flags:** Per-seat pricing, Usage-metered
@@ -3769,7 +3769,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tenable-review/
 
 ## TestDriver.ai (testdriver.ai)
-- **Verified pricing:** (re-verified 2026-11-02 on testdriver.ai/pricing) Two tiers, and Pro has been repriced since our September reading.
+- **Verified pricing:** (re-verified 2026-11-11 on testdriver.ai/pricing; amounts unchanged since 2026-11-02) Two tiers, and Pro has been repriced since our September reading.
 - **Honest take:** You do not control your own seat count.
 - **Best for:** teams already living inside GitHub pull requests who want end-to-end tests to exist at all (mention @testdriverai in a PR, get a written
 - **Flags:** Per-seat pricing, Usage-metered
@@ -4151,7 +4151,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vynaris-review/
 
 ## VyReel (vy-reel.com)
-- **Verified pricing:** (read 2026-09-24 on apps.shopify.com/vyreel and on the vendor's own pricing section at vy-reel.com) The Shopify listing shows four tiers, the vendor site six.
+- **Verified pricing:** (read 2026-09-24 on apps.shopify.com/vyreel and on the vendor's own pricing section at vy-reel.com; re-read unchanged on 2026-11-11) The Shopify listing shows four tiers, the vendor site si…
 - **Honest take:** The meter is clicks, and nobody says what happens when you run out.
 - **Best for:** Shopify stores that already publish short-form video on Instagram or TikTok and want it on the storefront as shoppable reels, stories and grids, with AI product tagging included from the free tier up
 - **Flags:** Usage-metered, Annual commit, Free tier

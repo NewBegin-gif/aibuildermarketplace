@@ -8,8 +8,8 @@
  "task": "AI development, agents & data",
  "summary": "AI QA engineer that lives in GitHub: mention @testdriverai in a pull request or issue and it starts a real desktop sandbox, runs your application, writes and runs an end-to-end UI test, posts a recording, and commits the test file to your repository — then reruns it on every pull request that touches the same ground. Tests are written against behaviour rather than selectors (find “signup button”, assert “dashboard is visible”). Covers web apps, Chrome and VSCode extensions, Windows desktop and Linux; Mac, iOS and Android are Enterprise-only and marked coming soon. By Haxor Inc.",
  "best_for": "teams already living inside GitHub pull requests who want end-to-end tests to exist at all (mention @testdriverai in a PR, get a written, run and committed test back with a recording) and who would otherwise keep postponing a Playwright suite nobody has time to maintain",
- "skip_if": "your contributor list is much longer than your test needs, because seats are billed per GitHub user who touches a PR rather than per tester; you ship a Mac, iOS or Android app, which Pro does not cover at all; or your suite is long enough that sandbox minutes, not seats, become the real bill",
- "honest_knock": "You do not control your own seat count. The pricing page says a seat is billed automatically for every GitHub user who gets a pull-request review or runs a test, so the bill is set by who touches your repository, not by a number you chose. On a team of ten that is $240 a month before a single test has run, and it scales with contributors rather than with usage.\n\nThe allowance improved in the repricing we read on 2 November 2026: 360 testing minutes at the published $0.08 overage rate is $28.80 of metered value against a $24 seat. But the meter still runs on sandbox uptime rather than test duration: the clock covers booting the machine and loading your app, not only the part where it clicks things. A suite that takes eight minutes of wall time per pull request exhausts 360 minutes in 45 pull requests.\n\nThe FAQ now says your plan includes 360 testing minutes each billing period, which reads as one allowance for the plan rather than 360 per seat. Budget it that way: on a ten-person team the gap between 360 and 3,600 minutes is $259.20 a month at $0.08. And note that charges, including the one when the trial converts, are non-refundable.\n\nOne coverage trap: if you ship a Mac desktop app, or anything on iOS or Android, Pro does not cover you. Those platforms are marked coming soon and sit under Enterprise, which is quote-only.\n\nWhat is good here is the part that usually breaks. Tests are written against what a user does rather than against selectors: the generated file reads `td.find(\"signup button\").click()` and `td.assert(\"dashboard is visible\")`, and the documentation tells you to describe behaviour instead of implementation, which is the opposite of the brittle CSS-selector suites this category is famous for. That is also the risk: an element resolved by an AI from a description can drift for reasons a diff will not show you.",
+ "skip_if": "your contributor list is much longer than your test needs, because seats are billed per GitHub user who touches a PR rather than per tester; you ship a Windows or Mac desktop app, which Pro does not cover, or a mobile app, which the pricing table does not list at all; or your suite is long enough that sandbox minutes, not seats, become the real bill",
+ "honest_knock": "You do not control your own seat count. The pricing page says a seat is billed automatically for every GitHub user who gets a pull-request review or runs a test, so the bill is set by who touches your repository, not by a number you chose. On a team of ten that is $240 a month before a single test has run, and it scales with contributors rather than with usage.\n\nThe allowance improved in the repricing we read on 2 November 2026: 360 testing minutes at the published $0.08 overage rate is $28.80 of metered value against a $24 seat. But the meter still runs on sandbox uptime rather than test duration: the clock covers booting the machine and loading your app, not only the part where it clicks things. A suite that takes eight minutes of wall time per pull request exhausts 360 minutes in 45 pull requests.\n\nThe FAQ now says your plan includes 360 testing minutes each billing period, which reads as one allowance for the plan rather than 360 per seat. Budget it that way: on a ten-person team the gap between 360 and 3,600 minutes is $259.20 a month at $0.08. And note that charges, including the one when the trial converts, are non-refundable.\n\nOne coverage trap: Pro is browser-shaped. The comparison table re-read on 11 November 2026 covers web apps, Chrome extensions and VSCode extensions on Linux, and marks Windows and Mac desktop apps as not included in Pro. Those sit under Enterprise, which is quote-only. Android and iOS are not on the table at all.\n\nWhat is good here is the part that usually breaks. Tests are written against what a user does rather than against selectors: the generated file reads `td.find(\"signup button\").click()` and `td.assert(\"dashboard is visible\")`, and the documentation tells you to describe behaviour instead of implementation, which is the opposite of the brittle CSS-selector suites this category is famous for. That is also the risk: an element resolved by an AI from a description can drift for reasons a diff will not show you.",
  "pricing": {
   "status": "public",
   "entry_price": "$24",
@@ -17,13 +17,13 @@
   "from_price_usd_month": 24.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-11-02 on testdriver.ai/pricing) Two tiers, and Pro has been repriced since our September reading. Pro is now $24 per seat a month plus $0.08 for every testing minute, with 360 testing minutes included and a 14-day free trial. In September it was $20 a seat, $0.14 a minute and 120 minutes, so the seat went up and the meter got cheaper and roomier. The trial ends after 14 days or 360 testing minutes, whichever comes first; you add a card at checkout and the plan converts automatically at $24 a seat. After the trial the FAQ says your plan includes 360 testing minutes each billing period, with usage beyond that metered by the second at $0.08 a minute. Read the seat rule carefully, because you do not choose it: a seat is any GitHub user who gets a TestDriver review on a pull request or runs a test in the billing period. Inviting people to the team in the web console is free and does not create seats. Testing minutes are billed for as long as the sandbox is running, which starts automatically on pull-request generation and on test runs, so the meter covers the machine's uptime rather than the duration of your assertions. Charges, including the one when the trial converts, are non-refundable; seat changes are prorated. On the comparison table read 18 September 2026, Pro is cloud-hosted and covers web apps, Chrome extensions, VSCode extensions, Windows desktop apps, Linux and Windows, with unlimited AI generation and test runs. Enterprise is quote-only and self-hosted, with unlimited testing and no per-minute fees, and the pricing page now says it carries a 30-day money-back guarantee. Mac desktop, Android and iOS were listed as coming soon, and only under Enterprise. The company is Haxor Inc.",
-  "verified_at": "2026-11-02",
+  "notes": "(re-verified 2026-11-11 on testdriver.ai/pricing; amounts unchanged since 2026-11-02) Two tiers, and Pro has been repriced since our September reading. Pro is now $24 per seat a month plus $0.08 for every testing minute, with 360 testing minutes included and a 14-day free trial. In September it was $20 a seat, $0.14 a minute and 120 minutes, so the seat went up and the meter got cheaper and roomier. The trial ends after 14 days or 360 testing minutes, whichever comes first; you add a card at checkout and the plan converts automatically at $24 a seat. After the trial the FAQ says your plan includes 360 testing minutes each billing period, with usage beyond that metered by the second at $0.08 a minute. Read the seat rule carefully, because you do not choose it: a seat is any GitHub user who gets a TestDriver review on a pull request or runs a test in the billing period. Inviting people to the team in the web console is free and does not create seats. Testing minutes are billed for as long as the sandbox is running, which starts automatically on pull-request generation and on test runs, so the meter covers the machine's uptime rather than the duration of your assertions. Charges, including the one when the trial converts, are non-refundable; seat changes are prorated. On the comparison table re-read 11 November 2026, Pro is cloud-hosted with 2 parallel tests and unlimited team users, and covers web apps, Chrome extensions and VSCode extensions on Linux. Windows desktop apps, Mac desktop apps and the Windows and Mac platforms are marked not included in Pro and sit under Enterprise, which is quote-only and self-hosted, with unlimited testing, no per-minute fees, 2+ parallel tests and a 30-day money-back guarantee. On the September table Pro still covered Windows, and Mac desktop, Android and iOS were listed as coming soon; Android and iOS no longer appear on the table at all. The company is Haxor Inc.",
+  "verified_at": "2026-11-11",
   "source_url": "https://testdriver.ai/pricing",
   "schema_offer": {
    "price": 24.0,
    "currency": "USD",
-   "description": "Pro, per seat a month, plus $0.08 per testing minute beyond the 360 included each billing period; 14-day free trial (or 360 minutes, whichever comes first). Read on the vendor's own pricing page on 2026-11-02.",
+   "description": "Pro, per seat a month, plus $0.08 per testing minute beyond the 360 included each billing period; 14-day free trial (or 360 minutes, whichever comes first). Read on the vendor's own pricing page on 2026-11-11.",
    "page": "https://aibuildermarketplace.com/b2b/testdriver-ai-review/"
   },
   "source_quotes": [
@@ -82,14 +82,14 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "Pro is now $24 per seat a month plus $0.08 for every testing minute, with 360 testing minutes included and a 14-day free trial.",
-   "verified_at": "2026-11-02",
+   "verified_at": "2026-11-11",
    "source_url": "https://testdriver.ai/pricing"
   },
   {
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "After the trial the FAQ says your plan includes 360 testing minutes each billing period, with usage beyond that metered by the second at $0.08 a minute.",
-   "verified_at": "2026-11-02",
+   "verified_at": "2026-11-11",
    "source_url": "https://testdriver.ai/pricing"
   }
  ],
@@ -137,7 +137,7 @@
      "id": "enterprise",
      "name": "Enterprise",
      "model": "quote",
-     "evidence": "Enterprise is quote-only and self-hosted"
+     "evidence": "Enterprise, which is quote-only and self-hosted"
     }
    ],
    "not_computable": [
@@ -147,9 +147,10 @@
     }
    ],
    "notes": [
-    "Seats are billed automatically for every GitHub user who gets a pull-request review or runs a test, so the user count is not one you choose."
+    "Seats are billed automatically for every GitHub user who gets a pull-request review or runs a test, so the user count is not one you choose.",
+    "Pro allows 2 parallel tests and covers web apps and browser and VSCode extensions on Linux; Windows and Mac desktop apps are Enterprise only (table re-read 11 November 2026)."
    ],
-   "rules_verified_at": "2026-11-02"
+   "rules_verified_at": "2026-11-11"
   },
   "growth": {
    "annual": {

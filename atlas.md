@@ -806,7 +806,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/close-review.html
 
 ## CloudTalk (cloudtalk.io)
-- **Verified pricing:** Lite €19, Starter €25, Essential €29 and Expert €49 per user/mo on annual billing, or €27, €34, €39 and €69 billed monthly, and Expert needs at least 3 licences (re-verified 2026-08-16 and …
+- **Verified pricing:** Starter €25, Essential €29 and Expert €49 per user/mo on annual billing, or €34, €39 and €69 billed monthly, and Expert needs at least 3 licences (re-verified 2026-10-06 and 2026-11-11).
 - **Honest take:** The per-seat price is only part of it: number rental, outbound minutes and the AI add-ons stack on top, so a call-heavy team's real bill runs above the plan rate.
 - **Best for:** support and sales teams that want a cloud call center with strong CRM integrations and call analytics
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit
@@ -2757,7 +2757,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/plansom-review.html
 
 ## Plesk (plesk.com)
-- **Verified pricing:** (read 2026-08-30 on plesk.com/pricing from a US exit; re-verified 2026-09-20 from the Netherlands against the page's own PleskPricing rate card, which carries every currency) Per-server lic…
+- **Verified pricing:** (read 2026-08-30 on plesk.com/pricing from a US exit; re-verified 2026-09-20 and, for the euro figures, 2026-11-11 from the Netherlands against the page's own PleskPricing rate card, which …
 - **Honest take:** Two honest notes. Plesk has been raising prices steadily (the 2026 round averaged ~26%), so budget for the renewal trajectory, not today's invoice: it's a recurring theme in the ecosystem since the acquisition era.
 - **Best for:** agencies and hosters managing multiple sites on their own servers who want a mature control panel with per-domain management, security and one-click stacks
 - **Full review:** https://officesoftwaremarketplace.com/plesk-review.html
@@ -3664,7 +3664,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/surveysparrow-review.html
 
 ## Survicate (survicate.com)
-- **Verified pricing:** (read 2026-09-08 and re-read unchanged 2026-09-26 in the plan data embedded in survicate.com/pricing; from an EU exit the cards show EUR 99 for Growth at 250 responses, EUR 299 for Pro and …
+- **Verified pricing:** (read 2026-09-08 and re-read unchanged 2026-09-26 and 2026-11-11 (Growth from $56, Pro $349, Enterprise $569) in the plan data embedded in survicate.com/pricing; from an EU exit the cards s…
 - **Honest take:** The plan is metered by response volume, not by surveys: a viral NPS month can push you a tier up, and the free plan's 30-day retention quietly deletes your history.
 - **Best for:** product and CX teams running always-on feedback (NPS, CSAT and in-app surveys) piped into the CRM and analytics stack they already use
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -4124,7 +4124,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vista-social-review/
 
 ## Volza (volza.com)
-- **Verified pricing:** (price re-verified 2026-09-23 on volza.com/pricing; first read 2026-09-01) Three paid annual plans and a free trial.
+- **Verified pricing:** (price re-verified 2026-11-09 on volza.com/pricing in a browser, because the page returns HTTP 403 to plain fetches; earlier reads 2026-09-01 and 2026-09-23) Three paid plans, billed annual…
 - **Honest take:** Three honest catches. The entry plan is narrower than the marketing implies: $1,500 a year covers 182 countries and two users, while the 200-country coverage and ten seats start at $4,500.
 - **Best for:** import-export businesses and sourcing teams that want global customs-level trade data plus verified buyer/supplier contacts at a fraction of enterprise pricing
 - **Flags:** Usage-metered

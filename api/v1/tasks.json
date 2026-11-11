@@ -3825,6 +3825,91 @@
   },
   {
    "source": "session",
+   "product_name": "FineVoice",
+   "product_id": "finevoice",
+   "run_date": "2026-10-30",
+   "session_type": "signup_attempt",
+   "what": "We tried to sign up for FineVoice by email on 30 October 2026. Daan entered an address on our own company domain, the Cloudflare check passed and FineVoice refused the sign-up, so we never had an account. Nothing below is a finding about the product itself.",
+   "findings": [
+    "After 'Sign up' the form showed: 'Email verification failed, please enter a valid email.' No account was created.",
+    "The sign-up screen listed 2000 Characters for Text to Speech, without saying whether that is per day or per month. The opt-in to AI news, tools and updates was switched on by default.",
+    "We did not retry with another address and did not use Google or Microsoft sign-in. We do not know why the address was refused.",
+    "We have no saved screenshot of the refusal; the message is quoted from our session notes."
+   ],
+   "not_tested": [
+    "Everything after sign-up: voice cloning, text to speech, export and re-import",
+    "Why the address was refused, and whether another address or Google or Microsoft sign-in would have worked",
+    "Checkout, tax and the final price",
+    "Support, roles, API access, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Email verification failed, please enter a valid email.",
+     "claim_source": "SEO/handson/finevoice/ruw-notities.md",
+     "claim_read_on": "2026-11-11",
+     "observed": "Email signup was attempted in the tester’s Chrome with the designated test email and password. Cloudflare showed Success! After Sign up, the quoted verification error appeared. No account was created. No retry with another address and no Google/Microsoft SSO were attempted.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/finevoice-review/#claim-vs-measured"
+     },
+     "plan": "No usable product session",
+     "comparability": "FineVoice: one historical email signup route only; no general eligibility or product-quality conclusion.",
+     "status": "not_comparable",
+     "buying_consequence": "Core product use remains untested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Email verification failed, please enter a valid email.",
+     "claim_source": "SEO/handson/finevoice/ruw-notities.md",
+     "claim_read_on": "2026-11-11",
+     "observed": "Not tested: no checkout inspected.",
+     "observed_on": "2026-10-30",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/finevoice-review/#claim-vs-measured"
+     },
+     "plan": "No usable product session",
+     "comparability": "FineVoice: pricing page, checkout and cost rule not compared; the quoted text describes only the signup boundary.",
+     "status": "not_testable",
+     "buying_consequence": "Price and purchase terms remain unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-30",
+    "what": "On 30 October 2026 we attempted email signup in Chrome. After the Cloudflare check showed Success!, signup returned: “Email verification failed, please enter a valid email.” No account was created. We did not retry with another address or use Google/Microsoft sign-in. Core use and exports were not tested.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Not tested: stopped at signup/onboarding under the connection and identity limits of the test plan. No core product action or export.",
+    "friction": {
+     "export_route": "Not tested: stopped at signup/onboarding under the connection and identity limits of the test plan. No core product action or export.",
+     "format": "No exported file inspected.",
+     "reimport": "No reimport tested.",
+     "cancellation": "No cancellation tested."
+    },
+    "not_tested": [
+     "Core action, export and reimport.",
+     "Support, roles, API and downgrade.",
+     "The AI news, tools, and updates opt-in was enabled by default. The signup screen said 2000 Characters for Text to Speech without a daily or monthly period. The screenshot was shared in the original conversation but not saved as a file; only the supplied raw note is available. The cause of the rejection is unknown."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "eBillity",
    "product_id": "ebillity",
    "run_date": "2026-10-31",
@@ -4907,6 +4992,91 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Content Raptor",
+   "product_id": "content-raptor",
+   "run_date": "2026-10-31",
+   "session_type": "signup_attempt",
+   "what": "We tried Content Raptor on 31 October 2026. Daan created an account by email and registration worked, but onboarding then required a Google Search Console connection and we stopped there. We never used rank tracking or any other feature, so nothing below is a finding about the product itself.",
+   "findings": [
+    "After sign-in the only screen was 'Step 1 of 2: Connect Google Search Console', with the buttons 'Connect now' and 'Connect another account'. We saw no option to skip it.",
+    "Opening the home page and the rank-tracking page directly sent us back to onboarding. Only Account and Logout were reachable.",
+    "The account page showed Subscription plan N/A and 10 daily tracking credits left. No card was requested in the screens we saw. Two e-mail settings, Account activity emails and Weekly opportunities digest, were switched on by default.",
+    "We did not connect Google. These screens do not show whether a trial applies or whether rank tracking works for an account."
+   ],
+   "not_tested": [
+    "Everything after onboarding: rank tracking, content optimisation, export and re-import",
+    "Whether a Google connection can be skipped by another route",
+    "Trial terms, checkout, tax and the final price",
+    "Support, roles, API access, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Connect Google Search Console",
+     "claim_source": "SEO/handson/content-raptor/ruw-notities.md",
+     "claim_read_on": "2026-11-11",
+     "observed": "Email registration succeeded. Onboarding required Google Search Console. Direct home and rank-tracking routes returned to onboarding; only Account and Logout were reachable. No skip option was observed. The tester stopped under the rule against connecting Google.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/content-raptor-review.html#claim-vs-measured"
+     },
+     "plan": "No usable product session",
+     "comparability": "Content Raptor: one historical email signup route only; no general eligibility or product-quality conclusion.",
+     "status": "not_comparable",
+     "buying_consequence": "Core product use remains untested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Connect Google Search Console",
+     "claim_source": "SEO/handson/content-raptor/ruw-notities.md",
+     "claim_read_on": "2026-11-11",
+     "observed": "Not tested: no checkout inspected.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/content-raptor-review.html#claim-vs-measured"
+     },
+     "plan": "No usable product session",
+     "comparability": "Content Raptor: pricing page, checkout and cost rule not compared; the quoted text describes only the signup boundary.",
+     "status": "not_testable",
+     "buying_consequence": "Price and purchase terms remain unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-31",
+    "what": "On 31 October 2026 we created an account by email, then stopped at the Google Search Console connection screen. No skip option was visible, and the home and rank-tracking routes returned to onboarding. We did not connect Google. Core use and exports were not tested.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Not tested: stopped at signup/onboarding under the connection and identity limits of the test plan. No core product action or export.",
+    "friction": {
+     "export_route": "Not tested: stopped at signup/onboarding under the connection and identity limits of the test plan. No core product action or export.",
+     "format": "No exported file inspected.",
+     "reimport": "No reimport tested.",
+     "cancellation": "No cancellation tested."
+    },
+    "not_tested": [
+     "Core action, export and reimport.",
+     "Support, roles, API and downgrade.",
+     "The account page showed Subscription plan N/A. No card was requested in the observed route. Account activity emails and Weekly opportunities digest were enabled by default. These observations do not establish trial entitlement or functional rank tracking."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -14587,6 +14757,90 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Salesflare",
+   "product_id": "salesflare",
+   "run_date": "2026-10-29",
+   "session_type": "signup_attempt",
+   "what": "We tried to sign up for Salesflare by email on 29 October 2026. The route led to a mailbox connection screen, and we stopped there because connecting a real mailbox was outside our test rules. We never got into the CRM, so nothing below is a finding about the product itself.",
+   "findings": [
+    "After the sign-up form, Salesflare showed 'Please fill out your email settings' with fields for email, password and an IMAP server marked as required, plus an optional SMTP server and a Connect button. We saw no skip, later or back option.",
+    "Opening the app afterwards showed the login screen, with no signed-in session.",
+    "That answers our test question for this route only: the email sign-up we followed asked for a mailbox connection before CRM access. We cannot say whether other routes, such as Google or Microsoft sign-in, work differently; we did not try them."
+   ],
+   "not_tested": [
+    "Whether the CRM can be used without a mailbox connection by any other route",
+    "Everything after sign-up: contacts, import, export and re-import",
+    "Checkout, tax and the final price",
+    "Support, roles, API access, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Please fill out your email settings.",
+     "claim_source": "SEO/handson/salesflare/ruw-notities.md",
+     "claim_read_on": "2026-11-11",
+     "observed": "Email signup led to an IMAP connection screen asking for email, password and a mandatory IMAP server. No skip, later or back option was observed. The app subsequently showed its login screen. The tester stopped without connecting the real mailbox; Google/Microsoft sign-in was not attempted.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/salesflare-review/#claim-vs-measured"
+     },
+     "plan": "No usable product session",
+     "comparability": "Salesflare: one historical email signup route only; no general eligibility or product-quality conclusion.",
+     "status": "not_comparable",
+     "buying_consequence": "Core product use remains untested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Please fill out your email settings.",
+     "claim_source": "SEO/handson/salesflare/ruw-notities.md",
+     "claim_read_on": "2026-11-11",
+     "observed": "Not tested: no checkout inspected.",
+     "observed_on": "2026-10-29",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/salesflare-review/#claim-vs-measured"
+     },
+     "plan": "No usable product session",
+     "comparability": "Salesflare: pricing page, checkout and cost rule not compared; the quoted text describes only the signup boundary.",
+     "status": "not_testable",
+     "buying_consequence": "Price and purchase terms remain unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-29",
+    "what": "On 29 October 2026 the email signup route led to a mailbox connection screen requiring IMAP settings and a password. No skip or later option was visible. We stopped without connecting the mailbox; opening the app then showed the login screen. Whether the CRM can be used without a mailbox connection remains not tested beyond this observed signup route.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Not tested: stopped at signup/onboarding under the connection and identity limits of the test plan. No core product action or export.",
+    "friction": {
+     "export_route": "Not tested: stopped at signup/onboarding under the connection and identity limits of the test plan. No core product action or export.",
+     "format": "No exported file inspected.",
+     "reimport": "No reimport tested.",
+     "cancellation": "No cancellation tested."
+    },
+    "not_tested": [
+     "Core action, export and reimport.",
+     "Support, roles, API and downgrade.",
+     "Core question: can the CRM be used without a mailbox connection? not_tested: the observed email route stopped at mandatory mailbox setup before CRM access. This is a route-specific observation, not a claim that every possible account route requires a connection."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

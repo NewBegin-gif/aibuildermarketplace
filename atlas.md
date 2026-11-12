@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 644 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-11.
+All 646 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-12.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -11,7 +11,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's the polished, category-leading pick, and it's priced like it: free and cheaper managers exist, so you're paying for the UX, ecosystem and business controls, not raw functionality.
 - **Best for:** teams that want the most polished, secure password manager with solid admin controls and integrations
 - **Flags:** Per-seat pricing, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/1password-review/
+- **Full review:** https://officesoftwaremarketplace.com/1password-review.html
 
 ## 24-7PressRelease (24-7pressrelease.com)
 - **Verified pricing:** (read 2026-10-08 on 24-7pressrelease.com/pricing, USD, prices per release) Six plans, each paid per press release rather than by subscription.
@@ -588,7 +588,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The per-GB meter looks small until you multiply by real scraping volume, and the committed tiers only pay off if your usage is steady.
 - **Best for:** data teams and enterprises with real, ongoing web-data needs (pricing intelligence, market research) that justify committed volume and pass use-case vetting
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/bright-data-review/
+- **Full review:** https://officesoftwaremarketplace.com/bright-data-review.html
 
 ## Brizy (brizy.io)
 - **Verified pricing:** (read 2026-10-09 in a browser render of brizy.io/pricing-cloud, USD, both billing toggles; taxes not included) Brizy Cloud is the hosted version.
@@ -2151,6 +2151,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/lindy-ai-review/
 
+## LinkShortener.io (linkshortener.io)
+- **Verified pricing:** (read 2026-11-12 on linkshortener.io/pricing, US dollars) LinkShortener.io has a Free plan and three paid plans, each with a shared monthly allowance of short links and QR codes.
+- **Honest take:** Branded short links and QR codes; free for 20 a month.
+- **Best for:** marketers and small teams who want branded short links and dynamic QR codes with click reports, and who are fine staying within a monthly link allowance
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/linkshortener-io-review/
+
 ## Livestorm (livestorm.com)
 - **Verified pricing:** (re-verified 2026-09-05 and again 2026-09-30 on their own pricing page) There is still no plan price.
 - **Honest take:** This is a bet on attendance that you place a year in advance.
@@ -3201,7 +3208,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Seel's algorithm prices it, so if it lands too high for your niche and shoppers stop opting in, your only lever is switching the feature off entirely.
 - **Best for:** stores selling final-sale, high-consideration or hard-to-size products, where return anxiety is the thing killing the order: merchants report conversion lifting around 5% and shoppers taking the option roughly 24% of the time
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/seel-review/
+- **Full review:** https://marketingandsalessoftware.com/seel-review.html
 
 ## Seele (seeles.ai)
 - **Verified pricing:** (read 2026-10-02 on seeles.ai/upgrade on the monthly, annual and Koin Pack tabs, on the workspace sign-up screen and in the help centre) Everything is paid for in Koins, the platform's cred…
@@ -3215,7 +3222,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Read the feature lists rather than the prices and the entry tier stops looking like the product.
 - **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/selixer-review/
+- **Full review:** https://marketingandsalessoftware.com/selixer-review.html
 
 ## Selleasy (logbase.io)
 - **Verified pricing:** (prices read 2026-10-30 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/selleasy/pricing; the order-based ladder read on 19 September and 20 October 2026 has been replaced) Bi…
@@ -3311,6 +3318,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's focused, affordable rota software, which means it does scheduling, clock-ins, leave and swaps well, but it isn't a full HR or payroll platform.
 - **Best for:** shift-based businesses (hospitality, retail, leisure) that want quick rota building, clock-ins and leave management without spreadsheet pain
 - **Full review:** https://officesoftwaremarketplace.com/shiftie-review.html
+
+## Ship.com (ship.com)
+- **Verified pricing:** (read 2026-11-12 on ship.com/pricing, US dollars) Ship.com sells four plans, and you pay postage on top of every one.
+- **Honest take:** Shipping labels with UPS and USPS rates; plans from $4.99 a month.
+- **Best for:** small online sellers who ship US parcels with UPS or USPS and want one tool for labels, tracking emails and basic marketing emails, and who ship enough to make a cap on shipments matter
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/ship-com-review/
 
 ## Shipdock (happyapps.cz)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/packeta) Three tiers, no free plan, every amount unchanged since 22 August 2026, and the entry tier still names its own limitation.

@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CW1KZ258ZV"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}/*cmv2*/gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});gtag('consent','default',{analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});gtag('js',new Date());var s=document.createElement('script');s.src='/ga4-gate.js';s.defer=true;document.head.appendChild(s);</script>
+<title>monday.com MCP Server Tested: Free Plan Works, Expired Trial Gets 403</title>
+<meta name="description" content="We connected Claude Code to monday.com's MCP server: on the Free plan columns, items, a comment, status and insights worked in 13 calls; on an expired Pro trial it refused items with a bare 403.">
+<link rel="canonical" href="https://aibuildermarketplace.com/research/monday-mcp-server-test/">
+<meta property="og:title" content="monday.com MCP Server Tested: Free Plan Works, Expired Trial Gets 403"><meta property="og:description" content="We connected Claude Code to monday.com's MCP server: on the Free plan columns, items, a comment, status and insights worked in 13 calls; on an expired Pro trial it refused items with a bare 403.">
+<meta property="og:image" content="https://aibuildermarketplace.com/research/monday-mcp-server-test/img/board-built-through-mcp.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "monday.com MCP Server Tested: Free Plan Works, Expired Trial Gets 403", "datePublished": "2026-11-12", "dateModified": "2026-11-12", "author": {"@type": "Person", "name": "Daan Haket", "@id": "https://aibuildermarketplace.com/about/#daan", "alternateName": "Daniel Haket"}, "publisher": {"@type": "Organization", "name": "AIBuilder Marketplace"}, "about": [{"@type": "SoftwareApplication", "name": "monday.com"}, {"@type": "SoftwareApplication", "name": "Claude Code"}, {"@type": "Thing", "name": "Model Context Protocol"}]}</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--bg:#0a0a0a;--card:#141414;--border:#262626;--text:#fafafa;--text2:#a3a3a3;--accent:#3b82f6;--amber:#f59e0b;--ok:#22c55e;--no:#fb7185}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.75}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.nav{border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);z-index:50}
+.nav-in{max-width:1180px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav a{color:var(--text2);font-size:.85rem;font-weight:600;margin-left:16px}
+.logo-t{font-weight:800;color:var(--text)}.logo-t em{font-style:normal;background:linear-gradient(135deg,#3b82f6,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.wrap{max-width:900px;margin:0 auto;padding:14px 24px 70px}
+h1{font-size:2.1rem;line-height:1.2;margin:18px 0 10px;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:1.25rem;margin:40px 0 12px;text-wrap:balance}
+h3{font-size:1.04rem;margin:26px 0 4px}
+.lede{font-size:1.08rem;color:var(--text2)}
+.pill{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(59,130,246,.3);border-radius:999px;padding:4px 11px}
+.cite{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:16px 20px;margin:20px 0;font-size:1.02rem}
+.cite small{display:block;color:var(--text2);font-size:.8rem;margin-top:8px}
+.big{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0}
+.big div{flex:1 1 160px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.big b{display:block;font-size:1.9rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.big span{color:var(--text2);font-size:.86rem}
+.tw{overflow-x:auto;margin:10px 0 18px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{padding:9px 10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+th{color:var(--text2);font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+td.t{color:var(--text2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.r{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.03em;border:1px solid;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.ok{color:var(--ok);border-color:rgba(34,197,94,.4)}
+.pa{color:var(--amber);border-color:rgba(245,158,11,.45)}
+.no{color:var(--no);border-color:rgba(251,113,133,.45)}
+.nt{color:var(--text2);border-color:var(--border)}
+.fx{display:block;font-size:.74rem;color:var(--text2);margin-top:3px}
+.note{border-left:3px solid var(--amber);padding:2px 0 2px 14px;margin:18px 0;color:var(--text2)}
+.disc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:20px 0;font-size:.93rem;color:var(--text2)}
+.disc b{color:var(--text)}
+pre{background:#101010;border:1px solid var(--border);border-radius:12px;padding:16px 18px;overflow-x:auto;font-size:.82rem;line-height:1.6;white-space:pre-wrap}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+.card h3{margin-top:0}
+.card p{margin:.4em 0;color:var(--text2);font-size:.92rem}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.shots img{display:block;width:100%;height:auto;background:#fff}
+.shots figcaption{padding:10px 14px;font-size:.84rem;color:var(--text2);line-height:1.55}
+.shots figcaption b{color:var(--text)}
+ul.tight{padding-left:20px}ul.tight li{margin:6px 0}
+footer{border-top:1px solid var(--border);margin-top:48px;padding:22px 24px;color:var(--text2);font-size:.85rem;text-align:center}
+.shots img{background:#0a0a14}
+</style></head>
+<body><nav class="snav" id="nav" aria-label="Main"><style>
+:root{--snav-h:56px}
+nav.snav{display:block;position:sticky;top:0;left:auto;right:auto;z-index:1000;margin:0;padding:0;height:auto;border:0;width:auto;
+ max-width:none;transform:none;box-shadow:none;
+ background:rgba(2,6,23,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+ border-bottom:1px solid rgba(148,163,184,.16);font:500 .9rem/1.2 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+ text-align:left;color:#e2e8f0}
+nav.snav *{box-sizing:border-box}
+nav.snav .snav-in{max-width:1180px;margin:0 auto;padding:0 20px;height:var(--snav-h);display:flex;align-items:center;gap:12px}
+nav.snav a{text-decoration:none}
+nav.snav button,nav.snav a{margin:0;line-height:1.2;height:auto;min-height:0;box-shadow:none;text-transform:none;
+ letter-spacing:normal;vertical-align:middle;width:auto}
+nav.snav li{margin:0;padding:0;list-style:none}
+nav.snav .snav-merk{display:flex;align-items:center;gap:9px;color:#f8fafc;font-weight:800;font-size:1.05rem;
+ letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+nav.snav .snav-merk i{width:10px;height:10px;border-radius:3px;flex:0 0 10px;background:linear-gradient(135deg,#818cf8,#34d399)}
+nav.snav .snav-merk em{font-style:normal;color:#a5b4fc}
+nav.snav .snav-links{display:flex;align-items:center;gap:2px;margin-left:auto;list-style:none;padding:0;margin-top:0;margin-bottom:0}
+nav.snav .snav-links a,nav.snav .snav-meer>button{color:#cbd5e1;padding:8px 11px;border-radius:8px;white-space:nowrap;
+ background:none;border:0;font:inherit;cursor:pointer;display:block}
+nav.snav .snav-links a:hover,nav.snav .snav-meer>button:hover{color:#fff;background:rgba(255,255,255,.07)}
+nav.snav .nu>a,nav.snav a.nu,nav.snav .snav-meer.nu>button{color:#fff;background:rgba(129,140,248,.16)}
+nav.snav .snav-meer{position:relative}
+nav.snav .snav-meer>button::after{content:"";display:inline-block;margin-left:6px;border:4px solid transparent;
+ border-top-color:currentColor;vertical-align:-2px}
+nav.snav .snav-meer-lijst{position:absolute;right:0;top:calc(100% + 6px);min-width:220px;list-style:none;margin:0;padding:6px;
+ background:#0f172a;border:1px solid rgba(148,163,184,.2);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+nav.snav .snav-meer-lijst[hidden]{display:none}
+nav.snav .snav-meer-lijst a{padding:9px 12px}
+nav.snav .snav-cta{flex:0 0 auto;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-weight:700;
+ padding:8px 14px;border-radius:9px;white-space:nowrap}
+nav.snav .snav-cta:hover{filter:brightness(1.08)}
+nav.snav .snav-menu{display:none;flex:0 0 auto;background:none;border:1px solid rgba(148,163,184,.3);color:#e2e8f0;
+ border-radius:9px;padding:7px 11px;font:inherit;font-weight:600;cursor:pointer}
+nav.snav a:focus-visible,nav.snav button:focus-visible{outline:2px solid #a5b4fc;outline-offset:2px}
+@media(max-width:900px){
+ nav.snav .snav-in{padding:0 12px;gap:8px}
+ nav.snav .snav-merk{font-size:.98rem}
+ nav.snav .snav-menu{display:block}
+ nav.snav .snav-cta{margin-left:auto;padding:7px 11px;font-size:.84rem}
+ nav.snav .snav-links{display:none;position:absolute;left:0;right:0;top:var(--snav-h);flex-direction:column;align-items:stretch;
+  gap:0;margin:0;padding:8px 12px 14px;background:#0b1224;border-bottom:1px solid rgba(148,163,184,.2);
+  max-height:calc(100vh - var(--snav-h));overflow-y:auto;box-shadow:0 16px 32px rgba(0,0,0,.5)}
+ nav.snav.open .snav-links{display:flex}
+ nav.snav .snav-links a,nav.snav .snav-meer>button{padding:12px 10px;font-size:1rem;width:100%;text-align:left}
+ nav.snav .snav-meer>button{display:none}
+ nav.snav .snav-meer-lijst,nav.snav .snav-meer-lijst[hidden]{display:block;position:static;box-shadow:none;border:0;
+  border-top:1px solid rgba(148,163,184,.16);border-radius:0;padding:6px 0 0;margin-top:6px;background:none;min-width:0}
+}
+@media(max-width:480px){nav.snav .snav-merk em{display:none}}
+/* audit P1-2: de marketplace-subnav (vorige/volgende) plakt direct onder deze balk, op elke breedte */
+.subnav{top:calc(var(--snav-h) + 1px)!important}
+</style><div class="snav-in"><a class="snav-merk" href="/"><i aria-hidden="true"></i><span>AIBuilder <em>Marketplace</em></span></a><ul class="snav-links" id="nav-links"><li><a href="/b2b/">Reviews</a></li><li><a href="/atlas/">Atlas</a></li><li><a href="/best/">Best tools</a></li><li><a href="/tools/">Free tools</a></li><li><a href="/deals/">Deals</a></li><li class="snav-meer nu"><button type="button" aria-expanded="false" aria-controls="nav-meer">More</button><ul class="snav-meer-lijst" id="nav-meer" hidden><li><a href="/about/">About</a></li><li class=nu><a href="/research/">Research</a></li><li><a href="/pricewatch/">Price Watch</a></li><li><a href="/guides/hidden-cost-report-2026/">Hidden Cost Report</a></li><li><a href="/stats/">Stats</a></li><li><a href="/stack-xray/">Stack X-Ray</a></li><li><a href="/roadmap/">AI Roadmap</a></li><li><a href="/ai/">AI explained</a></li><li><a href="/videos/">Videos</a></li><li><a href="/marketplace/">Marketplace</a></li><li><a href="/list-your-saas/">List your SaaS</a></li></ul></li></ul><a class="snav-cta" href="/finder/">Find software</a><button type="button" class="snav-menu" aria-expanded="false" aria-controls="nav-links">Menu</button></div><script>(function(){var n=document.currentScript&&document.currentScript.closest('nav.snav');if(!n)return;
+var m=n.querySelector('.snav-menu'),w=n.querySelector('.snav-meer>button'),l=n.querySelector('.snav-meer-lijst');
+function zetMenu(o){n.classList.toggle('open',o);m.setAttribute('aria-expanded',o?'true':'false');}
+function zetMeer(o){if(!w)return;w.setAttribute('aria-expanded',o?'true':'false');l.hidden=!o;}
+m.addEventListener('click',function(){zetMenu(!n.classList.contains('open'));});
+if(w)w.addEventListener('click',function(e){e.stopPropagation();zetMeer(l.hidden);});
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;
+ if(w&&!l.hidden){zetMeer(false);w.focus();}else if(n.classList.contains('open')){zetMenu(false);m.focus();}});
+document.addEventListener('click',function(e){if(!n.contains(e.target)){zetMeer(false);zetMenu(false);}});
+})();</script></nav>
+<div class="wrap">
+<p style="font-size:.8rem;color:#737373;margin:14px 0"><a href="/">Home</a> &rsaquo; <a href="/research/">Research</a> &rsaquo; Hands-on test</p>
+<span class="pill">Hands-on test &middot; run on 2026-11-12</span>
+<h1>monday.com&rsquo;s MCP server, tested with Claude Code: everything worked on the Free plan, nothing worked after an expired trial</h1>
+<p class="lede">On 12 November 2026 we connected Claude Code, Anthropic&rsquo;s coding agent, to monday.com&rsquo;s hosted MCP server and asked it to build a small board: columns, items, a comment, a status change and a count per status. The first run happened to hit an account whose Pro trial had ended, and the server refused almost everything with a bare &ldquo;403&rdquo;. After we moved the account to monday&rsquo;s Free plan, the same steps all worked.</p>
+
+<blockquote class="cite">On monday&rsquo;s Free plan, Claude Code built a board through the MCP server in 13 calls: two columns, two items, a dated status, a comment and a count per status. On the same account with an expired Pro trial, the server still created and deleted boards but refused columns and items with a 403 that did not say why.<small>AIBuilder Marketplace, hands-on test, 12 November 2026</small></blockquote>
+
+<div class="big">
+  <div><b>104</b><span>monday tools offered to Claude Code</span></div>
+  <div><b>13</b><span>MCP calls to build the board on Free</span></div>
+  <div><b>403</b><span>the only answer on an expired trial, with no reason given</span></div>
+  <div><b>$0</b><span>monday&rsquo;s Free plan, no card</span></div>
+</div>
+
+<div class="disc"><b>Who pays us.</b> We are in monday.com&rsquo;s affiliate programme: if you buy a paid monday plan through a link on our monday.com review, we may be paid. This page has no affiliate links, monday did not pay for this test and did not see this page before it went live.</div>
+
+<h2 id="how-we-tested">How we tested</h2>
+<ul class="tight">
+<li><b>Connection.</b> We added <code>https://mcp.monday.com/mcp</code> to Claude Code as a remote (HTTP) server, the endpoint monday publishes in its machine-readable card at <code>monday.com/.well-known/mcp.json</code>, and signed in once through monday&rsquo;s OAuth page.</li>
+<li><b>Our own test account,</b> from our earlier monday test, with one member. Its Pro trial had ended; we only found that out from the first run (below).</li>
+<li><b>Plain-language instructions.</b> Claude Code (on Anthropic&rsquo;s Sonnet model) got numbered steps and picked the tools itself. We logged each call, its input and the answer, and checked the board in monday afterwards.</li>
+</ul>
+
+<h2 id="evidence">What happened, step by step</h2>
+<h3>Run 1: the Pro trial had expired</h3>
+<div class="tw"><table><thead><tr><th>Step</th><th>What we saw</th><th>Result</th></tr></thead><tbody>
+<tr><td><b>Who am I</b></td><td><code>get_user_context</code> returned the user and account, with an empty plan tier (<code>"tier": null</code>).</td><td><span class="r pa">no plan shown</span></td></tr>
+<tr><td><b>Board</b></td><td>A private board was refused (&ldquo;User unauthorized to perform action&rdquo;, 403); a public board was created.</td><td><span class="r pa">partly</span></td></tr>
+<tr><td><b>Columns and items</b></td><td>A status column, a date column and both items were all refused: <code>FORBIDDEN_EXCEPTION</code> and &ldquo;User unauthorized to perform action&rdquo;, 403 each time. Nothing in the answer mentioned the trial or the plan.</td><td><span class="r pa">refused</span></td></tr>
+<tr><td><b>Delete</b></td><td>The server has no tool to delete a board or an item, but it does offer <code>all_monday_api</code>, which runs any GraphQL request. A <code>delete_board</code> mutation through it worked.</td><td><span class="r ok">worked</span></td></tr>
+</tbody></table></div>
+<p>Opening monday in the browser explained it: a full-screen notice that the Pro trial had ended, asking us to pick a plan before using the account. The app said so plainly; the MCP server only said 403.</p>
+
+<h3>Run 2: the same account on the Free plan</h3>
+<div class="tw"><table><thead><tr><th>Step</th><th>What we saw</th><th>Result</th></tr></thead><tbody>
+<tr><td><b>Who am I</b></td><td><code>get_user_context</code> now showed <code>"tier":"free"</code>.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Board</b></td><td><code>create_board</code> made a public board &ldquo;AIBM MCP test&rdquo;; <code>get_board_info</code> read back one Name column and one group.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Columns</b></td><td>A status column and a date column were created. The status labels came out in Dutch (&ldquo;Ermee bezig&rdquo;, &ldquo;Klaar&rdquo;, &ldquo;Vastgelopen&rdquo;) because the account is set to Dutch: the server follows the account&rsquo;s language.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Items</b></td><td>&ldquo;Check pricing page&rdquo; with status &ldquo;working on it&rdquo; and due date 20 November, and &ldquo;Check signup flow&rdquo; without values.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Comment</b></td><td><code>create_update</code> posted an update on the first item; it shows as a speech bubble with a 1 on the board.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Status change</b></td><td><code>change_item_column_values</code> set the second item to &ldquo;done&rdquo;; reading the items back confirmed both values.</td><td><span class="r ok">worked</span></td></tr>
+<tr><td><b>Count per status</b></td><td><code>board_insights</code> grouped by the status column: one item &ldquo;working on it&rdquo;, one &ldquo;done&rdquo;. Labels nobody uses are left out rather than shown as zero.</td><td><span class="r ok">worked</span></td></tr>
+</tbody></table></div>
+
+<h2>What it means if you use monday.com</h2>
+<p>monday says in its own <a href="https://monday.com/w/mcp" rel="noopener nofollow">MCP FAQ</a> that MCP is available on all plans at no extra cost, and on the Free plan that held up: everything we asked for worked, in 13 calls. The board in monday also showed &ldquo;AI credits used up&rdquo; while the MCP calls went through, so in our test the MCP work did not draw on monday&rsquo;s own AI credits.</p>
+<p>The weak spot is the error message. When an account is in a state the app blocks, such as an ended trial, the server answers with a generic 403, and an agent cannot tell a missing permission from a missing plan. Two more things to know before you connect an agent: there is no delete tool, but <code>all_monday_api</code> can run any GraphQL request your account is allowed to make, deletes included; and labels follow your account language, so an agent working in English may get Dutch, German or French status names back.</p>
+
+<h2>Screens from the test</h2>
+<div class="shots">
+<figure><a href="img/board-built-through-mcp.jpg"><img src="img/board-built-through-mcp.jpg" alt="A monday.com board built by Claude Code through the MCP server" loading="lazy" width="1470" height="757"></a><figcaption><b>Built through MCP, on Free.</b> The board, both columns, both items, the status colours, the date and the comment bubble were all made by Claude Code through monday&rsquo;s MCP server.</figcaption></figure>
+<figure><a href="img/expired-trial-wall.jpg"><img src="img/expired-trial-wall.jpg" alt="monday.com's notice that the Pro trial has ended" loading="lazy" width="1470" height="757"></a><figcaption><b>What the app showed during run 1.</b> &ldquo;Your Pro trial has ended&rdquo; (in Dutch: the account language), with a plan picker. The MCP server meanwhile answered with plain 403s.</figcaption></figure>
+</div>
+<p>One more thing we noticed on the way to the Free plan: monday&rsquo;s downgrade path first offers another 30 days of Pro for &euro;0, with card details required and billing from day 31 unless you cancel. The Free plan is a small link at the bottom of that screen.</p>
+
+<h2>What this test does not show</h2>
+<ul class="tight">
+<li><b>Paid-plan features.</b> Automations, dashboards, private boards and guests through MCP on Standard or Pro: not tested.</li>
+<li><b>Monday&rsquo;s agent and Vibe tools.</b> The server also offers tools for monday&rsquo;s own agents and Vibe apps; we did not use them.</li>
+<li><b>Large boards.</b> Two items; we did not test paging through thousands.</li>
+<li><b>Other clients.</b> Only Claude Code.</li>
+</ul>
+<p>Our monday.com review: <a href="/b2b/monday-com-review/">monday.com</a>. All partner MCP servers, with plan and price from their own docs and the ones we tested marked: <a href="/ai/model-context-protocol/">MCP explained, and who ships one</a>. Our other MCP tests: <a href="/research/clickup-mcp-server-test/">ClickUp</a> &middot; <a href="/research/claude-code-miro-mermaid-test/#mcp">Miro</a>. How we separate researched reviews from hands-on ones: <a href="/how-we-review/">how we review</a>.</p>
+<p>AIBuilder Marketplace, &ldquo;monday.com&rsquo;s MCP server, tested with Claude Code&rdquo;, hands-on test run on 2026-11-12. Free to quote and reproduce with attribution (CC BY 4.0).</p>
+</div>
+
+<footer>&copy; 2025-2026 <a href="/">AIBuilder Marketplace</a> &middot; <a href="/about/">About Daniel</a>. This page contains no affiliate links.<!--sister-net-start-->
+<nav aria-label="Sister sites" style="display:block;max-width:1100px;margin:28px auto 0;padding:12px 20px 4px;border-top:1px solid rgba(128,128,128,.22);font-size:.72rem;line-height:1.8;text-align:center">Six sites, one owner, built and run by <a href="/about/" style="color:inherit">Daan Haket</a>.<span style="display:block;margin-top:2px">Follow us: <a href="https://www.youtube.com/@aibuildermarketplace" target="_blank" rel="me noopener" style="color:inherit">YouTube</a> <span style="opacity:.4">&middot;</span> <a href="https://www.instagram.com/aibuildermarketplace/" target="_blank" rel="me noopener" style="color:inherit">Instagram</a> <span style="opacity:.4">&middot;</span> <a href="https://bsky.app/profile/aibuildermarketplace.com" target="_blank" rel="me noopener" style="color:inherit">Bluesky</a></span></nav>
+<!--sister-net-end-->
+</footer>
+</body></html>

@@ -87,7 +87,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/aftersell-review/
 
 ## AgencyAnalytics (agencyanalytics.com)
-- **Verified pricing:** One published rate: $20 USD per client / month billed annually, with no clients included in the base, so cost scales directly with your roster (a 25-client agency pays $500/mo; past that it…
+- **Verified pricing:** One published rate: $20 USD per client / month billed annually, with no clients included in the base, so cost scales directly with your roster (24 clients cost $480 a month; from 25 clients…
 - **Honest take:** Cost rises with every client you add, and the most-cited complaint is data connectors that disconnect without a clear warning.
 - **Best for:** marketing agencies that need white-label client reports from 85+ integrations: automated, on-brand and hands-off
 - **Flags:** Usage-metered, Add-ons extra
@@ -556,7 +556,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/brandify-review.html
 
 ## Brandye (brandye.com)
-- **Verified pricing:** (read 2026-10-02 on brandye.com/pricing and on apps.shopify.com/brandye-quiz-ai-recommendation) Every plan includes the product quiz, the AI shopping assistant and AI product questions; the…
+- **Verified pricing:** (read 2026-10-02 and re-verified unchanged 2026-11-12 on brandye.com/pricing and on apps.shopify.com/brandye-quiz-ai-recommendation) Every plan includes the product quiz, the AI shopping as…
 - **Honest take:** Read the free plan as a trial, not a tier. Its 100 quiz submissions and 100 chats are lifetime totals, not monthly, so a store with real traffic uses them up in days or weeks and then has to pay.
 - **Best for:** Shopify stores with a catalogue where shoppers need help choosing, such as skincare, supplements or gifts, that want a product-finder quiz, answers on product pages and a chat assistant in one app
 - **Flags:** Free tier
@@ -982,8 +982,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/database-mart-review.html
 
 ## Databox (databox.com)
-- **Verified pricing:** (re-verified 2026-10-02, 2026-10-06 and 2026-10-20, read on their own pricing page) Databox renamed and repriced its whole ladder since our August reading, so the Analyst/Pro/Growth tiers w…
-- **Honest take:** Each plan includes a fixed number of data sources and going over means moving up a whole tier, so one extra integration can mean the $199 Team Core to $319 Team Scale step.
+- **Verified pricing:** (read 2026-11-12 on their own pricing page) NEW: the page now sells one self-serve plan, Business, at $399 a month billed annually ($4,788 a year) or $499 billed monthly, with up to 10 user…
+- **Honest take:** There is no free plan any more and one self-serve plan, Business at $399 a month billed annually, so a one-person setup pays the same entry price as a ten-person team.
 - **Best for:** SMBs and agencies that want clean KPI dashboards from 130+ one-click integrations without building them by hand
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/databox-review.html
@@ -1005,7 +1005,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Deel (deel.com)
 - **Verified pricing:** (re-verified 2026-10-09; the figures are unchanged since 2026-08-17) Pricing is per worker and demo-led, and each product is priced separately.
 - **Honest take:** Every price is a ‘starting at’ and every button says ‘book a demo’ — the real bill depends on countries, benefits and add-ons, and only firms up in a sales conversation.
-- **Best for:** companies hiring internationally without local entities: contractors paid compliantly in 150+ countries, or full EOR employment where you need someone on the ground fast
+- **Best for:** companies hiring internationally without local entities: contractors paid compliantly in 150+ countries, or full EOR employment in 130+ countries where you need someone on the ground fast
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/deel-review.html
 
@@ -1401,7 +1401,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/fastmail-review/
 
 ## FBtrack (optiapps.xyz)
-- **Verified pricing:** (read 2026-09-28 on apps.shopify.com/facebook-pixel-conversion-api-fbtrack) Three paid plans and no free plan, each with a 14-day free trial.
+- **Verified pricing:** (read 2026-09-28 and re-verified unchanged 2026-11-12 on apps.shopify.com/facebook-pixel-conversion-api-fbtrack) Three paid plans and no free plan, each with a 14-day free trial.
 - **Honest take:** The critical reviews are about tracking that stopped without warning or events that never arrived, and with 22 reviews in eight years there is little else to weigh them against.
 - **Best for:** Shopify stores that advertise on Meta plus TikTok, Snapchat or Pinterest and want several pixels, for example one per collection or a backup pixel, with server-side events for all of them managed from one screen
 - **Full review:** https://marketingandsalessoftware.com/fbtrack-review.html
@@ -1565,7 +1565,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/gamma-review/
 
 ## GCheck (gcheck.com)
-- **Verified pricing:** (re-verified 2026-10-16 on gcheck.com/pricing-packages after GCheck's partner mail announced a lower Basic price; first read 2026-09-29, including its FAQ) Three packages, each priced per b…
+- **Verified pricing:** (re-verified 2026-10-16 on gcheck.com/pricing-packages after GCheck's partner mail announced a lower Basic price, and again on 2026-11-12 with its comparison page; first read 2026-09-29, in…
 - **Honest take:** The pricing page reads like self-serve and is not.
 - **Best for:** US employers running a steady number of hires, especially in healthcare, nonprofits, education and staffing
 - **Full review:** https://officesoftwaremarketplace.com/gcheck-review.html
@@ -2125,8 +2125,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## lemlist (lemlist.com)
 - **Verified pricing:** (re-verified 2026-10-05 on www.lemlist.com/en/pricing; euros from a Dutch exit, the same numerals the earlier dollar reading carried — check your own checkout) No free plan, 14-day trial.
-- **Honest take:** The per-seat plus per-email-account model makes total cost unpredictable as you scale, and reviews flag support response times and the LinkedIn Chrome-extension's reliability.
-- **Best for:** outbound teams that live in cold email and want multichannel sequences, warm-up and a big template community in one per-seat tool
+- **Honest take:** The Multichannel plan is priced per user and contact data is a paid credit add-on.
+- **Best for:** outbound teams that live in cold email and want multichannel sequences, warm-up and a big template community in one tool (unlimited users on the Email plan, priced per user on Multichannel)
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/lemlist-review.html
 
@@ -3033,9 +3033,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/remote-coworker-review.html
 
 ## Remote People (remotepeople.com)
-- **Verified pricing:** (2026-08-07, read on their own pricing page; re-verified unchanged on 2026-10-06 and again on 2026-10-09) Priced per service rather than per plan, and every figure is a floor.
+- **Verified pricing:** (read 2026-11-12 on their own pricing page.
 - **Honest take:** Every rate is a 'from' price with no country-level figure, and recruitment fees charged as a share of salary can dwarf the subscription.
-- **Best for:** small and mid-size teams hiring a handful of people abroad who want to pay monthly, keep the option to stop, and not carry a five-employee minimum. EOR Flex is unusual on those terms: no setup fee, no deposit
+- **Best for:** small and mid-size teams hiring a handful of people abroad, above all in the countries and salary ranges that EOR Select covers. Read on 12 November 2026, EOR Select starts at $199 per employee a month
 - **Flags:** Per-seat pricing, Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/remote-people-review.html
 
@@ -3157,9 +3157,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/salesmessage-review.html
 
 ## SalesTarget.ai (salestarget.ai)
-- **Verified pricing:** (re-read 2026-10-28 on salestarget.ai/pricing, tab by tab, monthly billing; the vendor told us on 28 October that its plans had changed) Sold either as one bundle or module by module.
+- **Verified pricing:** (re-read 2026-10-28 on salestarget.ai/pricing, tab by tab, monthly billing; the vendor told us on 28 October that its plans had changed.
 - **Honest take:** The credit numbers on the plan cards shrink once you read the price list.
-- **Best for:** small sales teams and agencies that want a B2B lead database, cold email with unlimited inboxes and warm-up, LinkedIn automation and a basic CRM under one login, priced per organisation with 3 seats included rather than per seat
+- **Best for:** small sales teams and agencies that want a B2B lead database, cold email with unlimited inboxes and warm-up, LinkedIn automation and a basic CRM under one login, priced per organisation with a few seats included (1 on Growth
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/salestarget-ai-review.html
 
@@ -3571,7 +3571,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/storefaq-review.html
 
 ## StoreLock (storelock.app)
-- **Verified pricing:** (re-read 2026-10-27 on apps.shopify.com/storelock, storelock.app/pricing and the StoreLock FAQ) Two plans are on sale today.
+- **Verified pricing:** (re-read 2026-10-27 and re-verified unchanged 2026-11-12 on apps.shopify.com/storelock, storelock.app/pricing and the StoreLock FAQ) Two plans are on sale today.
 - **Honest take:** The copy protection cannot stop screenshots, developer tools or automated scrapers, which is how stores actually get cloned; the real work is detection and takedown.
 - **Best for:** Shopify merchants with their own product photography and a brand worth copying, especially those whose store has already been cloned, who want lookalike-domain and clone alerts plus DMCA notices pre-filled with the evidence
 - **Full review:** https://aibuildermarketplace.com/b2b/storelock-review/
@@ -3719,7 +3719,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/switchstation-review/
 
 ## Synthesia (synthesia.io)
-- **Verified pricing:** (re-read 1 October 2026) The public pricing page, read without signing in from a Netherlands connection, now shows dollars and a new credit model: 'Credits are now the shared currency acros…
+- **Verified pricing:** (re-read 12 November 2026) The public pricing page is geo-priced, and the dollar view has changed since 1 October.
 - **Honest take:** The minute caps are tight: Starter's 1,250 credits a month is roughly 10 to 12 minutes of finished video, and the meter counts seconds.
 - **Best for:** teams making talking-head training, explainer and onboarding videos without cameras, actors or editing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
@@ -4352,7 +4352,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Xero (xero.com)
 - **Verified pricing:** (re-verified 2026-10-09 in a browser render of their own US pricing page) The 1 October price increase the page announced in September has happened.
-- **Honest take:** Read the second number, not the first. Every plan on the US page is 80% off for three months, and the price after that is five times what the button says: $27, $59 and $97 a month.
+- **Honest take:** The price on the button is a three-month promo at 80% off; from month four Early, Growing and Established cost $27, $59 and $97 a month.
 - **Best for:** small businesses whose bookkeeper or accountant already works in Xero: the ecosystem and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
@@ -4429,7 +4429,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## ZoomInfo (zoominfo.com)
 - **Verified pricing:** Sales-gated, re-verified on 2026-10-08: the pricing page now loads and names the packages (Sales: Professional, Copilot Advanced and Copilot Enterprise; Marketing: Demand with 75K included …
-- **Honest take:** The contract is the most-cited frustration: annual lock-in with a strict 60–90 day cancellation window and 10–20% renewal increases.
+- **Honest take:** The contract is the most-cited frustration: annual lock-in; buyers report a 60 to 90 day cancellation window and 10 to 20% renewal increases, which we could not confirm from ZoomInfo's own terms.
 - **Best for:** enterprise go-to-market teams that need the deepest US database, buyer-intent signals and conversation intelligence, and can absorb the contract
 - **Flags:** Hidden pricing, Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/zoominfo-review.html

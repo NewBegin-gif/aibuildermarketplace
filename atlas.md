@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 646 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-12.
+All 647 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-12.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1278,6 +1278,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/envoy-review/
 
+## eReleases (ereleases.com)
+- **Verified pricing:** (read 2026-11-12 on ereleases.com/pricing, US dollars) eReleases sells press release distribution by the release, not by subscription.
+- **Honest take:** Press release distribution through PR Newswire; from $399 a release.
+- **Best for:** small businesses that want a single press release sent over a national newswire with a targeted journalist list and are happy to pay per release
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/ereleases-review/
+
 ## Essent Preorder Back in Stock (essential-apps.com)
 - **Verified pricing:** (read 2026-10-04 on apps.shopify.com/essential-pre-order, pricing table and data-access section; the vendor's own pricing page at essential-apps.com/pricing lists the apps but no prices) Fo…
 - **Honest take:** Each paid plan charges per pre-order past its allowance, so a launch that sells 300 on the $4.95 plan adds $50 in overage.
@@ -2156,7 +2163,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Branded short links and QR codes; free for 20 a month.
 - **Best for:** marketers and small teams who want branded short links and dynamic QR codes with click reports, and who are fine staying within a monthly link allowance
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/linkshortener-io-review/
+- **Full review:** https://marketingandsalessoftware.com/linkshortener-io-review.html
 
 ## Livestorm (livestorm.com)
 - **Verified pricing:** (re-verified 2026-09-05 and again 2026-09-30 on their own pricing page) There is still no plan price.
@@ -3324,7 +3331,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Shipping labels with UPS and USPS rates; plans from $4.99 a month.
 - **Best for:** small online sellers who ship US parcels with UPS or USPS and want one tool for labels, tracking emails and basic marketing emails, and who ship enough to make a cap on shipments matter
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/ship-com-review/
+- **Full review:** https://marketingandsalessoftware.com/ship-com-review.html
 
 ## Shipdock (happyapps.cz)
 - **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/packeta) Three tiers, no free plan, every amount unchanged since 22 August 2026, and the entry tier still names its own limitation.

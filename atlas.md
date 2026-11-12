@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 648 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-12.
+All 649 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-12.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -741,6 +741,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** developers and small teams who want a single-tenant bare-metal or KVM server billed by the hour, with root access, in European data centres
 - **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/cherry-servers-review/
+
+## ChristianSteven (christiansteven.com)
+- **Verified pricing:** (read 2026-11-12 on go.christiansteven.com/pbrs-pricing-purchase, US dollars) ChristianSteven sells four report-automation products: PBRS for Power BI and SSRS, ATRS for Tableau, CRD for Cr…
+- **Honest take:** Report scheduling for Power BI, Tableau and Crystal Reports; 30-day trial.
+- **Best for:** IT and reporting teams that already run Power BI, SSRS, Tableau or Crystal Reports and need scheduled, personalised report delivery by email, folders or other destinations
+- **Full review:** https://aibuildermarketplace.com/b2b/christiansteven-review/
 
 ## Circle (circle.so)
 - **Verified pricing:** (2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Scale $419/mo annual, plus a custom Circle Plus tier for fully branded apps.

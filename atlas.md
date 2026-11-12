@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 647 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-12.
+All 648 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-12.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -3704,6 +3704,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** creators, churches, events and small businesses that want multi-camera live production and streaming using iPhones and iPads they already own: no broadcast hardware
 - **Flags:** Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/switcher-studio-review.html
+
+## SwitchStation (switchstation.sssflow.com)
+- **Verified pricing:** (read 2026-11-12 on switchstation.sssflow.com, US dollars) SwitchStation has three licence levels and no subscription.
+- **Honest take:** Mac rail for Claude Code and Codex sessions; free plan, one-time licences.
+- **Best for:** Mac users who run several Claude Code or Codex sessions at once and want to see which one is waiting for them, then jump to the right window in one click
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/switchstation-review/
 
 ## Synthesia (synthesia.io)
 - **Verified pricing:** (re-read 1 October 2026) The public pricing page, read without signing in from a Netherlands connection, now shows dollars and a new credit model: 'Credits are now the shared currency acros…

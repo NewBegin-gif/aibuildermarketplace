@@ -746,7 +746,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-12 on go.christiansteven.com/pbrs-pricing-purchase, US dollars) ChristianSteven sells four report-automation products: PBRS for Power BI and SSRS, ATRS for Tableau, CRD for Cr…
 - **Honest take:** Report scheduling for Power BI, Tableau and Crystal Reports; 30-day trial.
 - **Best for:** IT and reporting teams that already run Power BI, SSRS, Tableau or Crystal Reports and need scheduled, personalised report delivery by email, folders or other destinations
-- **Full review:** https://aibuildermarketplace.com/b2b/christiansteven-review/
+- **Full review:** https://officesoftwaremarketplace.com/christiansteven-review.html
 
 ## Circle (circle.so)
 - **Verified pricing:** (2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Scale $419/mo annual, plus a custom Circle Plus tier for fully branded apps.
@@ -1606,7 +1606,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Gixo (gixo.ai)
 - **Verified pricing:** (re-read 2026-10-21 on gixo.ai/pricing in served HTML; the floors are unchanged, but the billing unit changed after our 4 October reading: five of the seven products are now priced per seat…
-- **Honest take:** Two things about this pricing are worth reading twice. The first is that seven products means seven subscriptions, and most of them are now per seat.
+- **Honest take:** One product's plan does not include the others: decks, articles and proposals together mean Lumen plus Quill plus Arc, $69 a month for one person at the entry tiers.
 - **Best for:** teams that want one dedicated, source-grounded tool per deliverable (a deck tool, a content tool, a proposal tool) and would rather buy them separately than bend one generic generator into every shape
 - **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/gixo-review/
@@ -1720,7 +1720,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/help-scout-review.html
 
 ## HelpCenter (helpcenterapp.com)
-- **Verified pricing:** (re-verified 2026-11-01 on apps.shopify.com/helpcenter) Free to install, and the meter is tickets rather than agents.
+- **Verified pricing:** (re-verified 2026-11-01 and again, unchanged, on 2026-11-12 on apps.shopify.com/helpcenter) Free to install, and the meter is tickets rather than agents.
 - **Honest take:** No small paid tier any more: after Free (10 tickets, then $0.25 each) the next step is Standard at $40 a month for 500 tickets.
 - **Best for:** small Shopify stores that want ticketing, live chat and a searchable FAQ page from one app rather than bolting three together
 - **Flags:** Usage-metered, Free tier
@@ -2303,7 +2303,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/mktg-ai-review/
 
 ## Modelize (modelize.studio)
-- **Verified pricing:** (re-read 2026-09-17 and again on 2026-10-04 on apps.shopify.com/modelize, listed as “Modelize: AI Product Photos”) Free plan available, then Starter $19, Pro $49 and Enterprise $99 a month …
+- **Verified pricing:** (re-read 2026-09-17, 2026-10-04 and 2026-11-12 on apps.shopify.com/modelize; listed in October as “Modelize: AI Product Photos” and on 12 November as “Modelize: AI Image Generator”) Free pl…
 - **Honest take:** The economics are flat: at roughly $0.19 to $0.20 an image on every tier, moving up the ladder buys resolution, custom presets and support, never a cheaper image.
 - **Best for:** Shopify fashion, jewellery and homeware sellers who need consistent on-model, lifestyle or flat-lay imagery across a large catalogue and cannot justify a photographer per drop
 - **Flags:** Usage-metered, Free tier
@@ -3197,7 +3197,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seamless-ai-review/
 
 ## Section Library (sectionlibrary.com)
-- **Verified pricing:** (re-read 2026-09-17 and again on 2026-10-05 on apps.shopify.com/section-library, now listed as “Section Library: AI Sections”; every amount is unchanged since 19 August 2026) Free plan: 8 c…
+- **Verified pricing:** (re-read 2026-09-17, 2026-10-05 and 2026-11-12 on apps.shopify.com/section-library; listed in October as “Section Library: AI Sections” and on 12 November 2026 as “Mason: AI Page Builder”; …
 - **Honest take:** Almost three years on the App Store and one review.
 - **Best for:** Shopify merchants who want ready-made theme sections and the occasional AI-generated layout inside the native theme editor, and who can live with an app that has almost no public track record
 - **Flags:** Usage-metered, Free tier
@@ -3306,7 +3306,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/seokart-review.html
 
 ## SEOmatic (seomatic.io)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/minifier and on seomatic.io, re-verified unchanged on both 2026-09-28) Four tiers, and the only thing that changes between the three paid ones is how ma…
+- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/minifier and on seomatic.io, re-verified unchanged on both 2026-09-28 and again on 2026-11-12) Four tiers, and the only thing that changes between the t…
 - **Honest take:** This app is eleven years old and has 151 reviews (28 September 2026; it was 114 in August).
 - **Best for:** Shopify stores under 5,000 products that want image compression, alt text, auto-generated meta tags, schema and sitemaps from one app on a flat monthly fee, and would rather not pay per AI credit
 - **Flags:** Usage-metered, Free tier
@@ -3577,7 +3577,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/storelock-review/
 
 ## StoreSEO (storeseo.com)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/storeseo, re-verified unchanged 2026-09-28) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25 image optimisations, up to 5 tracked ke…
+- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/storeseo, re-verified 2026-09-28 and 2026-11-12; Lite was repriced in between) Free Forever covers 25 products with SEO scoring, 200 AI credits, 25 imag…
 - **Honest take:** It fixes the mechanical layer, meta tags, alt text, images and sitemaps, but none of that creates demand, and on 25 products the free tier already does most of it.
 - **Best for:** Shopify stores with a few hundred products and no in-house SEO help, who want metadata, schema, alt text and indexing handled in bulk and reported against Search Console
 - **Flags:** Usage-metered, Free tier

@@ -1283,7 +1283,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Press release distribution through PR Newswire; from $399 a release.
 - **Best for:** small businesses that want a single press release sent over a national newswire with a targeted journalist list and are happy to pay per release
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/ereleases-review/
+- **Full review:** https://marketingandsalessoftware.com/ereleases-review.html
 
 ## Essent Preorder Back in Stock (essential-apps.com)
 - **Verified pricing:** (read 2026-10-04 on apps.shopify.com/essential-pre-order, pricing table and data-access section; the vendor's own pricing page at essential-apps.com/pricing lists the apps but no prices) Fo…

@@ -3532,6 +3532,114 @@
   },
   {
    "source": "session",
+   "product_name": "RankBolt",
+   "product_id": "rankbolt",
+   "run_date": "2026-11-12",
+   "session_type": "hands_on",
+   "what": "We ran RankBolt's onboarding on 12 November 2026 for our own site, read its free AI search report and looked at the first article it wrote. Google Search Console and a CMS connection were optional and we skipped both. We did not test checkout, rank tracking, support or export.",
+   "findings": [
+    "Onboarding had eight steps. The Search Console and website-connection steps were optional, with 'Skip for now' and 'Skip & get started'. No card was requested; the site says every new account gets a 3-day free trial without a card, and we did not see a trial counter.",
+    "RankBolt analysed our site and proposed a description, 30 keywords and 5 competitors. The description was accurate. Everything was editable.",
+    "The free report put 10 prompts to ChatGPT, Perplexity, Gemini and Claude and was done in about 1.5 minutes. Our site appeared in 4 of 40 answers (10%), with a 50% share of voice and 2 of 10 cited answers (20%). The product computes these figures itself; this is no independent audit.",
+    "The dashboard then said '10 tracked, 2 mention you'. That counts prompts, while the report counted answers, so the two figures have different denominators.",
+    "After the last step RankBolt wrote a first article on its own. It was marked 'First article written' within about 3 minutes and sat in Draft, with 0 published. The text was long and structured and linked to pages on our own site.",
+    "Our session notes record that dollar amounts in the article's worked example were rendered as maths, for example '45 tier is $360' came out as spaced-out letters. Our saved screenshot shows only the start of the article, so it does not show the fault. Read a draft through before publishing.",
+    "Keyword rankings were gated on the dashboard behind 'Upgrade to unlock rankings'."
+   ],
+   "not_tested": [
+    "Checkout, currency, tax and the final price",
+    "Rank tracking, which sits behind the upgrade",
+    "A second article and multi-site use",
+    "Export: the Copy as Markdown, Copy as HTML and Email buttons were visible but unused",
+    "Team invitations, roles, API entitlement and support",
+    "Downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "AI Search Report for AIBuilder Marketplace — Created by analysing 40 answers across 4 AI platforms and 10 prompts",
+     "claim_source": "SEO/handson/rankbolt/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "The report displayed 4 of 40 answers mentioning the site, 50% share of voice and 2 of 10 cited answers. These are the vendor report’s own metrics, not independently verified.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/rankbolt-review.html#claim-vs-measured"
+     },
+     "plan": "New account trial; tier not established",
+     "comparability": "RankBolt: One report for one owned site; no repeated runs or multi-client reporting tested.",
+     "status": "confirmed",
+     "buying_consequence": "One free report was available without linking GSC or a CMS.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Upgrade to unlock rankings",
+     "claim_source": "SEO/handson/rankbolt/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "Keyword rankings were gated on the new-account dashboard. Currency and checkout were not inspected.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/rankbolt-review.html#claim-vs-measured"
+     },
+     "plan": "New account trial; tier not established",
+     "comparability": "RankBolt: Dashboard gate only; do not substitute AI visibility output for keyword-rank measurements.",
+     "status": "confirmed",
+     "buying_consequence": "Rank-tracking-only fit and final purchase terms remain untested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Upgrade to unlock rankings",
+     "claim_source": "SEO/handson/rankbolt/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "No pricing/checkout or currency check; final purchase amount, term and tax unknown.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/rankbolt-review.html#claim-vs-measured"
+     },
+     "plan": "New account trial; tier not established",
+     "comparability": "RankBolt: Pricing/checkout comparison: No pricing/checkout or currency check; final purchase amount, term and tax unknown. No verified matching cost rule.",
+     "status": "not_testable",
+     "buying_consequence": "Check the billing basis and any taxes before purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-12",
+    "what": "Free AI report completed in about 1.5 minutes: 40 answers across ChatGPT, Perplexity, Gemini and Claude, using 10 prompts. It displayed 10% visibility (4/40 answers), 50% share of voice, 20% citation share (2/10 cited answers). These are product-reported metrics, not an independent visibility audit. Dashboard prompt counts were 2/10 mentioning the site, a different denominator from 4/40 answers. First article automatically became Draft within about 3 minutes, with 0 published. Site-related references appeared in the draft. Raw note reports dollar examples rendered as malformed maths, including 45 𝑡 𝑖 𝑒 𝑟 ...; the supplied editor screenshot shows the article opening, not the affected examples. No second draft or multiple-client-site workflow tested. No CMS connected and nothing published. Copy as Markdown/HTML and Email it to me were visible but unused.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Raw note reports malformed maths in dollar examples; screenshot does not capture the affected passage.",
+    "friction": {
+     "export_route": "No downloaded file examined and no export or reimport performed; all export preservation checks remain not_tested.",
+     "format": "No downloaded file bytes examined.",
+     "reimport": "No reimport executed.",
+     "cancellation": "No cancellation/downgrade performed."
+    },
+    "not_tested": [
+     "Support and invitations.",
+     "Export, reimport, cancellation and passive follow-up.",
+     "Roles, API entitlement and downgrade.",
+     "Session date 12 November 2026; raw source read on 12 November 2026. Midnight timestamps are date anchors required by the schema, not measured event times. Explicit event times in descriptions are UTC; elapsed results include only the scope stated."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "pCloud",
    "product_id": "pcloud",
    "run_date": "2026-11-02",
@@ -5115,6 +5223,113 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "PulseMonitor",
+   "product_id": "pulsemonitor",
+   "run_date": "2026-11-12",
+   "session_type": "hands_on",
+   "what": "We created one uptime monitor on PulseMonitor's Free plan on 12 November 2026, looked at alert integrations and tried the status-page route. We pressed Upgrade Now once and saw no checkout. We did not test support, invitations, export or an alert channel.",
+   "findings": [
+    "The account opened on Free with no card request and an empty dashboard ('0 Total monitors').",
+    "We created an HTTP monitor for our own homepage at 15:01:07 UTC. At 15:01:47 UTC the dashboard showed '1 Up, 100% healthy'. That is 40 seconds from the empty dashboard to the first green check.",
+    "On Free the shortest check interval is 5 minutes, which is also the default. The other choices are 15 and 30 minutes and 1, 6, 12 and 24 hours. One-minute checks are a Pro feature.",
+    "Alerts and integrations: Discord and Telegram webhooks are open on Free. Slack, Zapier, Microsoft Teams, PagerDuty and a custom webhook carry a Pro label. We connected no channel.",
+    "The monitor form has its own PagerDuty button, labelled Pro. We did not connect it.",
+    "The Status pages menu opened an upgrade page, so there is no status page on Free. Pro is $9 a month (preselected) or $90 a year, which the page says saves $18, with 500 monitors, 1-minute checks, teams, status pages, heartbeats, API and maintenance windows.",
+    "After Upgrade Now we saw no checkout screen within 5 seconds in the same tab, so we do not know the checkout terms."
+   ],
+   "not_tested": [
+    "Checkout, tax and the final price",
+    "Connecting an alert channel and whether alerts arrive",
+    "Team roles, API access and how fast support replies",
+    "Export, downgrade and cancellation",
+    "Heartbeats and the SEO Analyzer"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "PagerDuty Pro",
+     "claim_source": "SEO/handson/pulsemonitor/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "The form displayed a dedicated PagerDuty Pro button. The source reports dossier wording that no native link existed. No integration was connected.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pulsemonitor-review/#claim-vs-measured"
+     },
+     "plan": "Free; Pro upgrade page inspected",
+     "comparability": "PulseMonitor: Presence and paid label only, not proof of a working native integration.",
+     "status": "contradicted",
+     "buying_consequence": "PagerDuty is offered as a Pro route in this screen; its working behaviour remains untested.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Status page — Pro",
+     "claim_source": "SEO/handson/pulsemonitor/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "Opening Status pages on Free went to the Pro offer, with $9/month selected or $90/year.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pulsemonitor-review/#claim-vs-measured"
+     },
+     "plan": "Free; Pro upgrade page inspected",
+     "comparability": "PulseMonitor: Free account status-page route only; checkout did not open.",
+     "status": "confirmed",
+     "buying_consequence": "A status page requires upgrading in this observed Free route.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Monthly · $9/month",
+     "claim_source": "SEO/handson/pulsemonitor/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "Pro offer only; Upgrade Now produced no checkout in the inspected tab within 5 seconds. No checkout price or tax-inclusive cost-rule comparison.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pulsemonitor-review/#claim-vs-measured"
+     },
+     "plan": "Free; Pro upgrade page inspected",
+     "comparability": "PulseMonitor: Pricing/checkout comparison: Pro offer only; Upgrade Now produced no checkout in the inspected tab within 5 seconds. No checkout price or tax-inclusive cost-rule comparison. No verified matching cost rule.",
+     "status": "not_testable",
+     "buying_consequence": "Check the billing basis and any taxes before purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-12",
+    "what": "Created one HTTP monitor of the tester’s own homepage. From empty dashboard at 15:01:07 UTC to Up at 15:01:47: 40 seconds. Free default and shortest offered interval was 5 minutes; longer intervals up to 24 hours. Discord and Telegram were available; Slack, Zapier, Microsoft Teams, PagerDuty and Custom webhook were labelled Pro. No alert channel connected. Status pages opened the Pro upgrade page. A PagerDuty button was present despite historical dossier wording that no native link existed; actual integration not tested. The monitor remained active on the tester’s homepage at a 5-minute interval.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Status pages and 1-minute checks require Pro; checkout did not open in the inspected tab.",
+    "friction": {
+     "export_route": "No downloaded file examined and no export or reimport performed; all export preservation checks remain not_tested.",
+     "format": "No downloaded file bytes examined.",
+     "reimport": "No reimport executed.",
+     "cancellation": "No cancellation/downgrade performed."
+    },
+    "not_tested": [
+     "Support and invitations.",
+     "Export, reimport, cancellation and passive follow-up.",
+     "Roles, API entitlement and downgrade.",
+     "Session date 12 November 2026; raw source read on 12 November 2026. Midnight timestamps are date anchors required by the schema, not measured event times. Explicit event times in descriptions are UTC; elapsed results include only the scope stated."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -8660,6 +8875,131 @@
   },
   {
    "source": "session",
+   "product_name": "EmailListVerify",
+   "product_id": "emaillistverify",
+   "run_date": "2026-11-12",
+   "session_type": "hands_on",
+   "what": "We verified a two-row synthetic list on EmailListVerify's free credits on 12 November 2026, read the Email Finder credit rules and opened the pay-as-you-go pricing page. We stopped before paying. We did not download results or test support, invitations or the API.",
+   "findings": [
+    "The account opened with 100 of 100 credits and no card request, matching the '100 free verification credits' claim.",
+    "We uploaded a two-row CSV of example.com addresses at 15:00 UTC. The tool found the e-mail column itself ('2 Email addresses to be verified').",
+    "The verification window showed Standard at 1 credit per address and Deep Scan Recovery at 3 credits per address, 'Total cost 2 - 6 CR'. Deep Scan was switched on by default and adds up to 30 minutes after Standard. The page says credits are refunded for addresses it cannot resolve.",
+    "The list finished in about a minute and cost 2 credits (98 of 100 left). Deep Scan charged nothing because Standard resolved both addresses. Both came back Invalid MX, which is correct because example.com has no mail server.",
+    "Email Finder charges 5 credits when a first or last name is given and 10 credits when only a domain is given, from the same balance. We did not run it.",
+    "The pricing page preselects pay as you go: 10,000 credits for EUR 27 (EUR 0.0027 per address) and 50,000 for EUR 98 (EUR 0.0020). A monthly plan for 50,000 is EUR 89 a month. The switch 'Automatically buy the same package when your credits run low' was on by default.",
+    "The page states prices exclude VAT, with tax calculated at checkout. We did not go past it."
+   ],
+   "not_tested": [
+    "Catch-all handling: our synthetic list had no catch-all domain and we used no real addresses",
+    "Running Email Finder",
+    "Downloading results, export and re-import",
+    "Checkout, tax and the final price",
+    "Whether support answers, and what the API and roles allow",
+    "Downgrading or cancelling a plan"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "€98 one off, €0.0020 per address",
+     "claim_source": "SEO/handson/emaillistverify/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "The request reports dossier wording $98; the inspected 50,000-credit PAYG page showed €98 one off excluding VAT. No exchange-rate equivalence or tax-inclusive checkout established.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/emaillistverify-review/#claim-vs-measured"
+     },
+     "plan": "100 free credits; PAYG pricing inspected",
+     "comparability": "EmailListVerify: Same stated credit volume, different currency and explicit VAT exclusion; no direct numerical price-rise conclusion.",
+     "status": "contradicted",
+     "buying_consequence": "The dossier’s dollar figure does not state the observed EUR and VAT basis; final payable price remains unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Automatically buy the same package when your credits run low",
+     "claim_source": "SEO/handson/emaillistverify/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "Automatic purchase of the same package when credits run low was on by default on the PAYG pricing page.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/emaillistverify-review/#claim-vs-measured"
+     },
+     "plan": "100 free credits; PAYG pricing inspected",
+     "comparability": "EmailListVerify: Observed PAYG page default; no purchase or automatic charge actually made.",
+     "status": "confirmed",
+     "buying_consequence": "Review this default before buying a one-off package.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total cost 2 – 6 CR",
+     "claim_source": "SEO/handson/emaillistverify/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "Deep Scan was on by default and could add credits; the two example.com records used 2 Standard credits only.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/emaillistverify-review/#claim-vs-measured"
+     },
+     "plan": "100 free credits; PAYG pricing inspected",
+     "comparability": "EmailListVerify: Two synthetic addresses only; do not infer a 3-credit charge for every address.",
+     "status": "confirmed",
+     "buying_consequence": "The selected recovery option can change credit cost; this run did not incur the maximum.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€98 one off, €0.0020 per address",
+     "claim_source": "SEO/handson/emaillistverify/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "Pricing page only, €98 for 50,000 excluding VAT; no final checkout. Historical dossier $98 is not a like-for-like tax-inclusive EUR price.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/emaillistverify-review/#claim-vs-measured"
+     },
+     "plan": "100 free credits; PAYG pricing inspected",
+     "comparability": "EmailListVerify: Pricing/checkout comparison: Pricing page only, €98 for 50,000 excluding VAT; no final checkout. Historical dossier $98 is not a like-for-like tax-inclusive EUR price. No verified matching cost rule.",
+     "status": "not_testable",
+     "buying_consequence": "Check the billing basis and any taxes before purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-12",
+    "what": "Uploaded the two-record synthetic example.com kit CSV with several columns. The email column was detected automatically. Deep Scan Recovery was recommended and ON by default: 3 credits/email, up to 6 CR, with total estimated 2–6 CR including Standard. Verification completed within about 1 minute: 2 Invalid MX, 0 safe-to-send; 2 credits deducted, balance 98. No Deep Scan surcharge was observed for this completed run. This synthetic fixture does not measure real-list accuracy or catch-all recovery. Finder used the same balance and advertised 5 credits with a name or 10 for domain only; no lookup performed.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Deep Scan and automatic top-up were both on by default.",
+    "friction": {
+     "export_route": "Download offered; not performed. No downloaded file examined and no export or reimport performed; all export preservation checks remain not_tested.",
+     "format": "No downloaded file bytes examined.",
+     "reimport": "No reimport executed.",
+     "cancellation": "No cancellation/downgrade performed."
+    },
+    "not_tested": [
+     "Support and invitations.",
+     "Export, reimport, cancellation and passive follow-up.",
+     "Roles, API entitlement and downgrade.",
+     "Session date 12 November 2026; raw source read on 12 November 2026. Midnight timestamps are date anchors required by the schema, not measured event times. Explicit event times in descriptions are UTC; elapsed results include only the scope stated."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "FlexiQuiz",
    "product_id": "flexiquiz",
    "run_date": "2026-10-20",
@@ -10857,6 +11197,129 @@
      "Uploaded CV absent from CSV."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Shorby",
+   "product_id": "shorby",
+   "run_date": "2026-11-12",
+   "session_type": "hands_on",
+   "what": "We built a link page on Shorby's trial on 12 November 2026, added a WhatsApp button, tried to add a second ad platform and a second project, and opened the Rocket checkout. We stopped before paying and did not publish. We did not test export, support or downgrade.",
+   "findings": [
+    "The trial started without a card. The dashboard banner read 'Your trial will expire in 5 days'. The editor opened empty, and the page address returned 404 before publishing, so a draft stays private.",
+    "A WhatsApp button took about 20 seconds: a placeholder number with country code and a predefined message, then a black WhatsApp button on the page. Telegram, Messenger, Skype, Viber and e-mail are in the same list.",
+    "The pixel list offers 9 platforms. Adding a second ad platform to one pixel set (Facebook plus Google Ads, with placeholder IDs) returned 'Please upgrade your subscription plan to add more Ad platforms'. The trial allows one.",
+    "Creating a second project returned 'Please upgrade your subscription plan to add more projects'. The trial allows one project.",
+    "The pricing page preselects annual billing: Rocket $12 a month, Pro $24, Agency $82, with 'all prices in USD all sales are final'.",
+    "The Rocket checkout showed an annual saving of $36 and 'Total: $144 per year', with Stripe card fields. We saw no tax line. Stripe offered a saved payment method from the browser, which we did not click."
+   ],
+   "not_tested": [
+    "Publishing the page and how the messenger button behaves on a phone",
+    "Export and re-import",
+    "Downgrade and cancellation",
+    "Support replies, team invitations and API access",
+    "Tax and the final price"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Please upgrade your subscription plan to add more Ad platforms",
+     "claim_source": "SEO/handson/shorby/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "A second fictitious ad platform triggered an upgrade message; the trial pixel list was not saved.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/shorby-review/#claim-vs-measured"
+     },
+     "plan": "Trial; Rocket annual checkout inspected",
+     "comparability": "Shorby: Second platform attempt in the tested trial; not a paid-tier limit.",
+     "status": "confirmed",
+     "buying_consequence": "Multiple ad platforms require upgrading on this trial route.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Please upgrade your subscription plan to add more projects",
+     "claim_source": "SEO/handson/shorby/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "A second project triggered an upgrade message.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/shorby-review/#claim-vs-measured"
+     },
+     "plan": "Trial; Rocket annual checkout inspected",
+     "comparability": "Shorby: Second project attempt in the tested trial only.",
+     "status": "confirmed",
+     "buying_consequence": "Multiple projects require upgrading on this trial route.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Note: all prices in USD all sales are final",
+     "claim_source": "SEO/handson/shorby/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "The pricing page stated all sales are final. No refund requested or legal enforceability assessed.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/shorby-review/#claim-vs-measured"
+     },
+     "plan": "Trial; Rocket annual checkout inspected",
+     "comparability": "Shorby: Displayed commercial condition only; no refund outcome tested.",
+     "status": "confirmed",
+     "buying_consequence": "Read the final-sale condition before subscribing.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total: $144 per year",
+     "claim_source": "SEO/handson/shorby/sessie-2026-11-12-ruw.md",
+     "claim_read_on": "2026-11-12",
+     "observed": "Rocket pricing $12/month billed annually equals $144/year shown in checkout. This matches the base annual price; VAT and final tax-inclusive total unknown, same-scope cost rule unverified.",
+     "observed_on": "2026-11-12",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/shorby-review/#claim-vs-measured"
+     },
+     "plan": "Trial; Rocket annual checkout inspected",
+     "comparability": "Shorby: Pricing/checkout comparison: Rocket pricing $12/month billed annually equals $144/year shown in checkout. This matches the base annual price; VAT and final tax-inclusive total unknown, same-scope cost rule unverified. No verified matching cost rule.",
+     "status": "confirmed",
+     "buying_consequence": "Check the billing basis and any taxes before purchase.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-12",
+    "what": "Added a WhatsApp button with fictitious number and prefilled text in about 20 seconds. The draft remained unpublished. Pixel chooser listed 9 platforms: Facebook, Google Adwords, Twitter, Pinterest, Quora, LinkedIn, Instagram, Snapchat and Google Analytics. Adding a second platform produced an upgrade gate; pixel list not saved. Adding a second project also produced an upgrade gate. Findings apply to this trial, not all paid tiers.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Second pixel platform and second project gated on the trial.",
+    "friction": {
+     "export_route": "No downloaded file examined and no export or reimport performed; all export preservation checks remain not_tested.",
+     "format": "No downloaded file bytes examined.",
+     "reimport": "No reimport executed.",
+     "cancellation": "No cancellation/downgrade performed."
+    },
+    "not_tested": [
+     "Support and invitations.",
+     "Export, reimport, cancellation and passive follow-up.",
+     "Roles, API entitlement and downgrade.",
+     "Session date 12 November 2026; raw source read on 12 November 2026. Midnight timestamps are date anchors required by the schema, not measured event times. Explicit event times in descriptions are UTC; elapsed results include only the scope stated."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },

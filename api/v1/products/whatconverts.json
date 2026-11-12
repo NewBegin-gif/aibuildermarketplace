@@ -68,10 +68,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-12; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -79,7 +78,221 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-12",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/whatconverts-review/",
+  "method": [
+   "Followed the e-mail trial sign-up and read the screen it led to",
+   "Stopped at the card fields, as the test protocol requires"
+  ],
+  "claims": [
+   {
+    "claim": "Card Number *",
+    "claim_source": "SEO/handson/whatconverts/sessie-2026-11-12-ruw.md",
+    "claim_read_on": "2026-11-12",
+    "observed": "The inspected signup form required payment-card details before trial access. No card entered.",
+    "observed_on": "2026-11-12",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#claim-vs-measured"
+    },
+    "plan": "Plus selected; trial not activated",
+    "comparability": "WhatConverts: Required card field at this signup boundary; no general eligibility claim.",
+    "status": "confirmed",
+    "buying_consequence": "Trial access through this route required a card.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Due Nov 26, 2026 — $60 /month",
+    "claim_source": "SEO/handson/whatconverts/sessie-2026-11-12-ruw.md",
+    "claim_read_on": "2026-11-12",
+    "observed": "Displayed Plus signup terms: $0.00 today, $60/month from 26 November; no separate pricing-page or cost-rule comparison.",
+    "observed_on": "2026-11-12",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#claim-vs-measured"
+    },
+    "plan": "Plus selected; trial not activated",
+    "comparability": "WhatConverts: Pricing/checkout comparison: Displayed Plus signup terms: $0.00 today, $60/month from 26 November; no separate pricing-page or cost-rule comparison. No verified matching cost rule.",
+    "status": "not_testable",
+    "buying_consequence": "Check the billing basis and any taxes before purchase.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-12",
+   "what": "On 12 November 2026 we stopped at the WhatConverts trial signup screen because it required card details. Plus was selected, with $0.00 due today and $60/month from 26 November. No card was entered. We did not reach the app or test call tracking.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Required card before trial access; session stopped.",
+   "friction": {
+    "export_route": "No downloaded file examined and no export or reimport performed; all export preservation checks remain not_tested.",
+    "format": "No downloaded file bytes examined.",
+    "reimport": "No reimport executed.",
+    "cancellation": "No cancellation/downgrade performed."
+   },
+   "not_tested": [
+    "Support and invitations.",
+    "Export, reimport, cancellation and passive follow-up.",
+    "Roles, API entitlement and downgrade."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-12",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-12",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "On 12 November 2026 we stopped at the WhatConverts trial signup screen because it required card details. Plus was selected, with $0.00 due today and $60/month from 26 November. No card was entered. We did not reach the app or test call tracking. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-12",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "On 12 November 2026 we stopped at the WhatConverts trial signup screen because it required card details. Plus was selected, with $0.00 due today and $60/month from 26 November. No card was entered. We did not reach the app or test call tracking. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-12",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-12",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-12",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "WhatConverts",
+    "product_id": "whatconverts",
+    "run_date": "2026-11-12",
+    "session_type": "signup_attempt",
+    "what": "We tried to start a WhatConverts free trial on 12 November 2026. After the account form, the trial screen asked for card details before any access, so we stopped there. We never reached the app or call tracking, so nothing below is a finding about the product itself.",
+    "findings": [
+     "The trial screen said 'Your free trial is ready!' and 'You won't be charged today and we'll email you before your trial ends.' It still marked Card Number, Expiration Date, Security Code and Zip / Postal Code as required.",
+     "The Plus plan was preselected, with 'Due Today $0.00' and 'Due Nov 26, 2026 $60 /month'. The screen listed a trial-end reminder on 23 November and said 'Your subscription starts. Cancel anytime.' on 26 November.",
+     "'Fund my account balance automatically' was switched off by default.",
+     "We entered no card details. These screens do not show whether a trial without a card exists on another route."
+    ],
+    "not_tested": [
+     "Everything after sign-up: call tracking, lead data, export and re-import",
+     "Whether a trial without a card exists on another route",
+     "Support, invitations, roles, API access, downgrade and cancellation",
+     "Checkout beyond the trial screen, tax and the final price"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Card Number *",
+      "claim_source": "SEO/handson/whatconverts/sessie-2026-11-12-ruw.md",
+      "claim_read_on": "2026-11-12",
+      "observed": "The inspected signup form required payment-card details before trial access. No card entered.",
+      "observed_on": "2026-11-12",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#claim-vs-measured"
+      },
+      "plan": "Plus selected; trial not activated",
+      "comparability": "WhatConverts: Required card field at this signup boundary; no general eligibility claim.",
+      "status": "confirmed",
+      "buying_consequence": "Trial access through this route required a card.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Due Nov 26, 2026 — $60 /month",
+      "claim_source": "SEO/handson/whatconverts/sessie-2026-11-12-ruw.md",
+      "claim_read_on": "2026-11-12",
+      "observed": "Displayed Plus signup terms: $0.00 today, $60/month from 26 November; no separate pricing-page or cost-rule comparison.",
+      "observed_on": "2026-11-12",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/whatconverts-review/#claim-vs-measured"
+      },
+      "plan": "Plus selected; trial not activated",
+      "comparability": "WhatConverts: Pricing/checkout comparison: Displayed Plus signup terms: $0.00 today, $60/month from 26 November; no separate pricing-page or cost-rule comparison. No verified matching cost rule.",
+      "status": "not_testable",
+      "buying_consequence": "Check the billing basis and any taxes before purchase.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-12",
+     "what": "On 12 November 2026 we stopped at the WhatConverts trial signup screen because it required card details. Plus was selected, with $0.00 due today and $60/month from 26 November. No card was entered. We did not reach the app or test call tracking.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Required card before trial access; session stopped.",
+     "friction": {
+      "export_route": "No downloaded file examined and no export or reimport performed; all export preservation checks remain not_tested.",
+      "format": "No downloaded file bytes examined.",
+      "reimport": "No reimport executed.",
+      "cancellation": "No cancellation/downgrade performed."
+     },
+     "not_tested": [
+      "Support and invitations.",
+      "Export, reimport, cancellation and passive follow-up.",
+      "Roles, API entitlement and downgrade."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "whatconverts:cancellation_terms",

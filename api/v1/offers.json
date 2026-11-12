@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "built_at": "2026-11-12T12:29:49Z",
+ "built_at": "2026-11-12T12:55:00Z",
  "about": "Reader offers and vendor offers on our deal pages, one record each. verification_status says whether the vendor confirmed it; checkout_tested_at stays null because we do not test offers at a checkout. expires_at is UTC; compare it with the current time yourself, time_status_at_build is only the state when this file was built. null means the vendor did not say, never 'no limit'. Opening handoff_url is not an activation or a purchase.",
  "offer_types": {
   "price_discount": "Price discount",
@@ -752,6 +752,66 @@
    "time_status_at_build": "no_deadline_known"
   },
   {
+   "offer_id": "healthie-reader-offer",
+   "product_id": "healthie",
+   "product": "Healthie",
+   "offer_type": "price_discount",
+   "type_label": "Price discount",
+   "benefit": "10% off the first six months when you upgrade during the free trial",
+   "duration": "First six months",
+   "code": null,
+   "claim_mechanism": "vendor_promotion",
+   "claim_steps": "Upgrade before your free trial ends; Healthie offers the discount in its trial emails.",
+   "limits": [
+    "Only before the trial ends",
+    "Offered to our own trial account; we cannot confirm every trial gets it"
+   ],
+   "eligibility": {
+    "customer": "new",
+    "plans": null,
+    "billing": null,
+    "regions": null
+   },
+   "structure": {
+    "kind": "percent",
+    "percent": 10,
+    "months": 6,
+    "ongoing": false
+   },
+   "starts_at": null,
+   "expires_at": null,
+   "expires_as_stated": null,
+   "evidence": {
+    "kind": "vendor_email",
+    "by": "Healthie",
+    "summary": "Received from Healthie by email, 11 Nov 2026"
+   },
+   "confirmed_at": "2026-11-11",
+   "checked_at": "2026-11-12",
+   "verification_status": "vendor_confirmed",
+   "checkout_tested_at": null,
+   "stacking": "unknown",
+   "exclusive_to_our_readers": false,
+   "published_by_vendor": false,
+   "post_offer_price": "Standard price after six months",
+   "terms": "10% off your first six months if you upgrade before your free trial ends. Healthie offered this to our own trial account by email on 10 and 11 November 2026. It is a trial offer, not a Black Friday sale, and we cannot confirm that every trial gets it, so look for it in your trial emails before you upgrade.",
+   "handoff_url": "https://refer.gethealthie.com/fwvt80nnt1fq",
+   "affiliate": true,
+   "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
+   "test_before_you_pay": "Check that the trial email offering 10% reached you before you upgrade.",
+   "trial_kit": null,
+   "site_membership": [
+    "aibm",
+    "osm"
+   ],
+   "shown_on": [
+    "https://aibuildermarketplace.com/deals/#q=healthie",
+    "https://officesoftwaremarketplace.com/deals.html#q=healthie"
+   ],
+   "version": "cc351834fe",
+   "time_status_at_build": "no_deadline_known"
+  },
+  {
    "offer_id": "lifterlms-reader-offer",
    "product_id": "lifterlms",
    "product": "LifterLMS",
@@ -1177,6 +1237,71 @@
    ],
    "version": "b8fd7b42e8",
    "time_status_at_build": "no_deadline_known"
+  },
+  {
+   "offer_id": "parallels-reader-offer",
+   "product_id": "parallels",
+   "product": "Parallels",
+   "offer_type": "price_discount",
+   "type_label": "Price discount",
+   "benefit": "50% off Standard and Pro Edition (code PD50), 35% off Business Edition (code PD35)",
+   "duration": "One purchase",
+   "code": "PD50",
+   "claim_mechanism": "code",
+   "claim_steps": "Enter PD50 (Standard or Pro) or PD35 (Business) at checkout.",
+   "limits": [
+    "Valid until 23 November 2026",
+    "Open to everyone who has the code, not exclusive to our readers"
+   ],
+   "eligibility": {
+    "customer": null,
+    "plans": [
+     "Standard",
+     "Pro",
+     "Business"
+    ],
+    "billing": null,
+    "regions": null
+   },
+   "structure": {
+    "kind": "percent",
+    "percent": 50,
+    "months": null,
+    "ongoing": false
+   },
+   "starts_at": null,
+   "expires_at": "2026-11-24T11:59:59Z",
+   "expires_as_stated": "23 Nov 2026 (the vendor gave no time or time zone)",
+   "evidence": {
+    "kind": "vendor_via_network",
+    "by": "Parallels",
+    "via": "CJ",
+    "summary": "Supplied by Parallels via CJ, 11 Nov 2026"
+   },
+   "confirmed_at": "2026-11-11",
+   "checked_at": "2026-11-12",
+   "verification_status": "vendor_confirmed",
+   "checkout_tested_at": null,
+   "stacking": "unknown",
+   "exclusive_to_our_readers": false,
+   "published_by_vendor": true,
+   "post_offer_price": "Standard price at renewal",
+   "terms": "50% off Parallels Desktop Standard and Pro Edition with the code PD50, or 35% off Business Edition with the code PD35. Parallels sent both codes to its affiliates through CJ on 9 and 11 November 2026, valid until 23 November 2026. Pro Edition includes the developer tools. We have not run the code through the checkout ourselves.",
+   "handoff_url": "https://www.jdoqocy.com/click-101832528-14508993-1751579892000",
+   "affiliate": true,
+   "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
+   "test_before_you_pay": "Check that the checkout total shows the discount before you pay.",
+   "trial_kit": null,
+   "site_membership": [
+    "aibm",
+    "osm"
+   ],
+   "shown_on": [
+    "https://aibuildermarketplace.com/deals/#q=parallels",
+    "https://officesoftwaremarketplace.com/deals.html#q=parallels"
+   ],
+   "version": "c29e16f2ac",
+   "time_status_at_build": "active"
   },
   {
    "offer_id": "petty-cash-manager-reader-offer",

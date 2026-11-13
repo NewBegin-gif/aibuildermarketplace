@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 653 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
+All 655 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -112,6 +112,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** educators, trainers and event hosts running interactive sessions (polls, quizzes, word clouds and live Q&A) with audiences up to 50 free
 - **Flags:** Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/ahaslides-review/
+
+## AI Autocomplete (ai-autocomplete.com)
+- **Verified pricing:** (read 2026-11-13 on apps.shopify.com/ai-autocomplete, charges in USD billed every 30 days) AI Autocomplete has two plans, both with a 30-day free trial.
+- **Honest take:** Filter suggestions as shoppers type; from $10 a month plus usage, 30-day trial.
+- **Best for:** Shopify store owners with large catalogues who want filter suggestions to appear as shoppers type in the search box
+- **Full review:** https://aibuildermarketplace.com/b2b/ai-autocomplete-review/
 
 ## AI for Database (aifordatabase.com)
 - **Verified pricing:** (read 2026-11-05 on aifordatabase.com/pricing) AI for Database sells per user, and every payment turns into that user's own AI credits.
@@ -849,7 +855,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Email-first CRM with contacts, tracking and mail merge; Pro from $17 a month billed yearly.
 - **Best for:** freelancers, consultants and small sales teams who live in their inbox and want contacts, notes and follow-ups kept in one place
 - **Flags:** Per-seat pricing, Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/cloze-crm-review/
+- **Full review:** https://marketingandsalessoftware.com/cloze-crm-review.html
 
 ## Clutch (clutch.co)
 - **Verified pricing:** (re-verified 2026-10-02 and again on 2026-10-06, read in their own help centre) Free for buyers.
@@ -3331,6 +3337,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores under 5,000 products that want image compression, alt text, auto-generated meta tags, schema and sitemaps from one app on a flat monthly fee, and would rather not pay per AI credit
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/seomatic-review.html
+
+## Seonix (seonix.ai)
+- **Verified pricing:** (read 2026-11-13 on seonix.ai/pricing) Seonix has a free plan, a Starter plan and a custom Enterprise plan.
+- **Honest take:** Free SEO audit with 98 keyword ideas; AI articles from $49 a month.
+- **Best for:** site owners who want a free audit and keyword ideas first, and small teams ready to pay for 30 AI articles a month on a single site
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/seonix-review/
 
 ## Serpstat (serpstat.com)
 - **Verified pricing:** (2026-07-24, read on their own pricing page) Four plans, and the page opens on the annual view — so the first number you see is not the month-to-month price.

@@ -2,59 +2,123 @@
  "schema_version": "1.0",
  "id": "pepys",
  "name": "Pepys",
- "research_status": "not_researched",
+ "research_status": "researched",
  "vendor_domain": "pepys.co",
- "category": "AI & Data",
+ "category": "Video & Audio",
  "task": null,
- "summary": null,
- "best_for": null,
- "skip_if": null,
- "honest_knock": null,
+ "summary": "Audio and video transcription with timestamps in 99 languages, summaries and exports; pay per hour of audio with no subscription.",
+ "best_for": "researchers, journalists, podcasters and students who transcribe audio or video in bursts and want to pay per hour, with no monthly subscription",
+ "skip_if": "you need live meeting capture with a bot in the call, you transcribe every day and prefer a flat monthly plan, or you want a tool we have tested on real recordings",
+ "honest_knock": "Speaker labels use three times the credits. The team plan has no visible price. The page shows euros but bills in USD, and all sales are final. Pepys Dictate, the Mac dictation app, is a separate product.",
  "pricing": {
-  "status": "not_researched",
-  "entry_price": null,
-  "entry_price_terms": null,
+  "status": "public",
+  "entry_price": "€11",
+  "entry_price_terms": "10-hour pack · per one-time, 10 hours cost €11",
   "from_price_usd_month": null,
   "plans": null,
   "plans_source": null,
-  "notes": null,
-  "verified_at": null,
-  "source_url": null
+  "notes": "(read 2026-11-13 on pepys.co/pricing, amounts shown in euros and billed in USD) Pepys has a free account and pay-as-you-go credits. The free account gives 60 minutes once, with no card, files up to 1 GB, transcription in 99 languages with timestamps, AI summary, chapters and chat, translation, exports to TXT, DOCX, PDF, SRT, VTT and JSON, and API access metered on your free minutes. Paid credits cost €1.1 an hour on purchases under €17.6, €0.88 an hour from €17.6 and €0.75 an hour from €74.8. The smallest pack shown is 10 hours for €11 and the next 20 hours for €17.6. Any purchase unlocks files up to 5 GB and 10 hours, unlimited Google Drive, OneDrive and Zoom imports, batch upload of up to 100 files, speaker labels at 3 credits per minute, word-level timestamp exports and removal of the Pepys mark. The page says credits never expire, personal use has no subscription and all sales are final. Teams can add a flat monthly plan, but the page shows no price for it. We did not buy credits, so we do not know the tax added or how the team plan is priced.",
+  "verified_at": "2026-11-13",
+  "source_url": "https://pepys.co/pricing",
+  "schema_offer": {
+   "price": 11.0,
+   "currency": "EUR",
+   "description": "10-hour pack, 10 hours cost €11; 20 hours cost €17.6; the hourly rate is €1.1 under €17.6, €0.88 from €17.6 and €0.75 from €74.8; the page says billed in USD; speaker labels use 3 credits per minute. Read on the vendor's own pricing page on 2026-11-13.",
+   "page": "https://aibuildermarketplace.com/b2b/pepys-review/"
+  },
+  "source_quotes": null,
+  "recent_change": null,
+  "price_history": null
  },
  "free_plan": false,
  "free_plan_evidence": null,
- "cost_traps": [],
- "compare_with": null,
- "listed_on_marketplace": "2026-09-04",
+ "cost_traps": [
+  {
+   "id": "usage_metered",
+   "label": "Usage-metered",
+   "evidence": "(read 2026-11-13 on pepys.co/pricing, amounts shown in euros and billed in USD) Pepys has a free account and pay-as-you-go credits.",
+   "verified_at": "2026-11-13",
+   "source_url": "https://pepys.co/pricing"
+  }
+ ],
+ "compare_with": {
+  "name": "Otter",
+  "why": "Otter joins meetings live and bills monthly. Compare whether you want pay-per-hour uploads after the fact or a subscription with live capture."
+ },
  "links": {
   "record": "https://aibuildermarketplace.com/api/v1/products/pepys.json",
-  "review": null,
+  "review": "https://aibuildermarketplace.com/b2b/pepys-review/",
   "marketplace": "https://aibuildermarketplace.com/marketplace/pepys/",
   "vendor_site": "https://pepys.co"
  },
  "purchase": {
   "seller": "the vendor",
   "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
-  "handoff_url": "https://pepys.co/",
-  "affiliate": false,
+  "handoff_url": "https://pepys.co/r/QH8689VN",
+  "affiliate": true,
   "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
  },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
  "cost": {
-  "status": "not_researched",
+  "status": "not_yet",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
   "rules": null,
   "growth": null
  },
- "provenance": {
-  "research": "none: listed on our marketplace by the vendor, not researched by us",
-  "method": "https://aibuildermarketplace.com/how-we-review/",
-  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/."
- },
  "unknowns": [
-  "Not researched by AIBuilder Marketplace: no price reading, no cost-trap check and no review. The vendor listed this product on our marketplace; nothing in this record is verified beyond its name, category and website.",
-  "free_plan false here means 'not checked', not 'no free plan'."
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
+  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
+ "verification": {
+  "price": "read",
+  "free_trial": "being_verified",
+  "refund": "being_verified"
+ },
+ "status_page": null,
  "task_evidence": null,
- "open_questions": [],
- "vendor_answers": []
+ "open_questions": [
+  {
+   "question_id": "pepys:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "pepys:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "pepys:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "pepys:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": [],
+ "agent_channels": {
+  "vendor_mcp": null,
+  "agent_checkout": {
+   "status": "not_checked",
+   "detail": "We could not read the vendor's pages as plain HTML.",
+   "checked_at": "2026-10-07",
+   "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
+  }
+ }
 }

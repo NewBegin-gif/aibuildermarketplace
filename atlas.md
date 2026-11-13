@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 650 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
+All 652 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -463,10 +463,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/blinq-review.html
 
 ## Blocky (effectify.io)
-- **Verified pricing:** (re-verified 2026-11-02 on apps.shopify.com/blocky-simple-country-blocker) Four tiers, each paid one with a 7-day free trial.
-- **Honest take:** Read the plan text before you read the badge. The App Store header says a free plan is available; that free plan is Development Stores, for development and partner stores only, and it starts charging the moment the store goes live.
+- **Verified pricing:** (re-verified 2026-11-13 on apps.shopify.com/blocky-simple-country-blocker, where the app is now listed as Bloky Fraud Filter Bot Blocker) Four plans.
+- **Honest take:** Read the plan text before you pick a tier. The listing now has a real Free plan, but it stops at 4 country and IP rules, so treat it as a trial of the idea rather than a working fraud filter.
 - **Best for:** Shopify stores below Plus that are losing time to bot traffic, repeat fraudsters or orders from regions they do not ship to, and want blocking rules they control rather than a full security suite
-- **Flags:** Add-ons extra
+- **Flags:** Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/blocky-review/
 
 ## Bokun (bokun.io)
@@ -2225,6 +2225,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/lusha-review.html
 
+## MailVeri (mailveri.com)
+- **Verified pricing:** (read 2026-11-13 on mailveri.com/pricing, US dollars) MailVeri sells pay-as-you-go credit packs with no subscription, and the page says credits never expire.
+- **Honest take:** Bulk email verification with credits that never expire; from $9 for 10,000.
+- **Best for:** marketers and developers who verify email lists in bursts and want to buy credits once instead of paying a monthly subscription
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/mailveri-review/
+
 ## ManyChat (manychat.com)
 - **Verified pricing:** Read on their own pricing page, 6 September 2026, and again, unchanged, 25 September 2026.
 - **Honest take:** Without the paid AI add-on, flows are button-and-script based: type something unexpected and the bot falls back.
@@ -2379,8 +2386,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/murf-review.html
 
 ## MX AI (effectify.io)
-- **Verified pricing:** (read 2026-09-16 and re-read unchanged on 2026-10-03 on apps.shopify.com/custom-background-music) Two plans, and the free one is not for you.
-- **Honest take:** A free app from RoarTheme does the core job with the same 4.8 rating, so the $2.99 buys player controls, extra sources and AI-generated seasonal tracks, not the background music itself.
+- **Verified pricing:** (read 2026-09-16 and 2026-10-03, re-read 2026-11-13 on apps.shopify.com/custom-background-music; the price rose between the October and November readings) Two plans, and the free one is not…
+- **Honest take:** A free app from RoarTheme does the core job with the same 4.8 rating, so the $4.99 buys player controls, extra sources and AI-generated seasonal tracks, not the background music itself.
 - **Best for:** Shopify merchants who want seasonal or ambient audio on the storefront, want a say in how the player looks and behaves, and would rather use the app's royalty-free tracks than sort out the licensing for a song of their own
 - **Full review:** https://aibuildermarketplace.com/b2b/mx-ai-review/
 
@@ -2692,6 +2699,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** data and marketing teams that want churn, LTV or demand predictions running against their own warehouse without hiring data scientists, and can work with an annual commitment quoted on a call
 - **Flags:** Hidden pricing
 - **Full review:** https://marketingandsalessoftware.com/pecan-ai-review.html
+
+## Pepys (pepys.co)
+- **Verified pricing:** (read 2026-11-13 on pepys.co/pricing, amounts shown in euros and billed in USD) Pepys has a free account and pay-as-you-go credits.
+- **Honest take:** Timestamped transcripts in 99 languages; 60 free minutes, then from €11 for 10 hours.
+- **Best for:** researchers, journalists, podcasters and students who transcribe audio or video in bursts and want to pay per hour, with no monthly subscription
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/pepys-review/
 
 ## Petty Cash Manager (pettycash.getdailytools.com)
 - **Verified pricing:** (read 2026-11-02 on pettycash.getdailytools.com, pricing section and FAQ; the page says prices are in US dollars, with VAT or GST added at checkout where your country requires it) Petty Cas…
@@ -3417,7 +3431,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-read 2026-10-04 on signeasy.com/pricing, including the page's own pricing script) No free plan on the pricing page, a 14-day free trial and a 100-day money-back guarantee.
 - **Honest take:** The $10 Personal plan is annual-billed and single-seat, and note that sign-unlimited is not send-unlimited.
 - **Best for:** small teams that want straightforward unlimited sending and signing per seat, with contract management one tier up
-- **Flags:** Per-seat pricing, Free tier
+- **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/signeasy-review/
 
 ## Signitic (signitic.com)
@@ -3563,10 +3577,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/stamped-review.html
 
 ## Stampezee (stampezee.com)
-- **Verified pricing:** (re-verified 2026-10-19 on stampezee.com/en/pricing, the plan cards plus the plan data behind them) The free tier is gone from the page.
+- **Verified pricing:** (re-verified 2026-11-13 on stampezee.com/en/pricing, the plan cards plus the plan data behind them; same plans and prices as on 2026-10-19) The free tier is no longer on the page.
 - **Honest take:** The category is honest and proven (digital stamp cards beat lost paper cards), and the platform is young with limited public review coverage.
 - **Best for:** local businesses (cafés, salons, retail) that want a simple digital stamp-card loyalty program and can judge it inside a 14-day trial
-- **Flags:** Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/stampezee-review/
 
 ## StoreFAQ (storefaq.io)
@@ -3636,7 +3649,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/
 
 ## Super (effectify.io)
-- **Verified pricing:** (re-verified 2026-11-02 on apps.shopify.com/super-gift-wraps) Every tier on the listing was repriced since our October reading, and the vendor's help-centre price article has not been updat…
+- **Verified pricing:** (re-verified 2026-11-13 on apps.shopify.com/super-gift-wraps; Basic, Advanced and Pro unchanged since 2026-11-02) Every tier on the listing was repriced since our October reading, and the v…
 - **Honest take:** If you are on Shopify Plus, the price block on the listing is not the one you pay from.
 - **Best for:** Shopify stores with a real gifting season (jewellery, cosmetics, speciality food, anything bought for someone else) that want paid or free gift wrap
 - **Full review:** https://marketingandsalessoftware.com/super-review.html
@@ -3725,7 +3738,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/switchstation-review/
 
 ## Synthesia (synthesia.io)
-- **Verified pricing:** (re-read 12 November 2026) The public pricing page is geo-priced, and the dollar view has changed since 1 October.
+- **Verified pricing:** (re-read 12 and 13 November 2026, unchanged) The public pricing page is geo-priced, and the dollar view has changed since 1 October.
 - **Honest take:** The minute caps are tight: Starter's 1,250 credits a month is roughly 10 to 12 minutes of finished video, and the meter counts seconds.
 - **Best for:** teams making talking-head training, explainer and onboarding videos without cameras, actors or editing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
@@ -4102,7 +4115,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/vea-review/
 
 ## Velora (joinvelora.com)
-- **Verified pricing:** Quote-only.
+- **Verified pricing:** (read 25 September 2026 on joinvelora.com, which has no pricing page, and on the pricing pages of the products it is built on) Quote-only.
 - **Honest take:** Velora is three acquired products (Keela, Aplos, Raisely) being unified into one platform, and that's the honest watch-out: integration between them is newer than the marketing suggests.
 - **Best for:** nonprofits that want donor CRM, fund accounting and online fundraising from one vendor, purpose-built for charities rather than adapted business tools
 - **Flags:** Hidden pricing

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 650 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
+All 651 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -63,7 +63,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-13 on addresshero.com/pricing, US dollars) AddressHero sells three plans for Shopify stores, each with a 14-day free trial.
 - **Honest take:** Address checks for Shopify checkout; from $9.99 a month.
 - **Best for:** Shopify store owners who lose money on mistyped or incomplete delivery addresses and want checks at checkout, with automatic correction as a paid step up
-- **Full review:** https://aibuildermarketplace.com/b2b/addresshero-review/
+- **Full review:** https://marketingandsalessoftware.com/addresshero-review.html
 
 ## ADP (adp.com)
 - **Verified pricing:** (2026-08-15, read on their own site) ADP shows no public pricing for RUN anywhere on its site, and we checked four places before saying so.
@@ -3372,6 +3372,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** independent auto repair, tire and fleet service shops with roughly 3 to 6 staff who want estimates, inspections, customer texting, parts ordering and payments in one system
 - **Flags:** Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/shopmonkey-review.html
+
+## ShopTrueProfit (shoptrueprofit.com)
+- **Verified pricing:** (read 2026-11-13 on shoptrueprofit.com, dollar amounts as shown) ShopTrueProfit has three options.
+- **Honest take:** Profit per order and product from your Etsy, eBay or Amazon reports; from $7 a month.
+- **Best for:** Etsy sellers, and smaller eBay or Amazon sellers, who want to see profit per order and product after fees and ads, and prefer to keep their report files in the browser instead of connecting a store login
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/shoptrueprofit-review/
 
 ## Shorby (shorby.com)
 - **Verified pricing:** (re-verified 2026-09-25 at dash.shorby.com/pricing) Three paid plans, no free plan on the table.

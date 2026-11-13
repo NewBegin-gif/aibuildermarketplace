@@ -3646,7 +3646,7 @@
    "session_type": "hands_on",
    "what": "Tested by our team on 2 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser. We uploaded three files (a CSV and two images) to a private folder, downloaded them back as one ZIP and compared the files byte for byte. We did not open the upgrade or checkout.",
    "findings": [
-    "The free account started at 2 GB of storage and became 3 GB after our first upload: one extra gigabyte unlocked by that action. The homepage says you can unlock up to 10 GB; we only saw the first step.",
+    "The free account started at 2 GB of storage and became 3 GB after our first upload: one extra gigabyte added by that action. The homepage says you can reach up to 10 GB; we only saw the first step.",
     "Upload and download worked even though the email address was not yet confirmed; a banner kept asking for the confirmation.",
     "Selecting three files and choosing Download gave one ZIP with a generic file name. All three files inside were byte-identical to the originals.",
     "Basic account settings report an EU data region. The account-data download explicitly leaves your files out, so it is not a backup of your storage.",
@@ -3654,7 +3654,7 @@
    ],
    "not_tested": [
     "Checkout, tax and the price of the paid plans",
-    "The rest of the 10 GB unlock steps",
+    "The rest of the steps up to 10 GB",
     "Sharing links, invitations and the desktop drive",
     "Contacting support"
    ],
@@ -6016,7 +6016,7 @@
     "Brand Voice and Brand Images",
     "Whether the email sequence really sends nothing after you connect a mailbox without turning on sending",
     "How the chat widgets do on a real site",
-    "What the data credits (0 / 0 on the free plan) unlock"
+    "What the data credits (0 / 0 on the free plan) give access to"
    ],
    "report": null,
    "disclosure": null,
@@ -6146,7 +6146,7 @@
    "what": "Daan created the free account and logged in; everything after that was read inside the workspace on 11 September 2026 -- the credit screen, the plans and billing screen and the upgrade panel -- alongside Bitscale's own credit documentation. Two limits worth stating plainly. We did not run an enrichment: the grid renders in a canvas our browser panel could not drive, so the per-record credit costs below come from Bitscale's published credit table and not from a meter we moved ourselves. And Bitscale is an affiliate partner of ours; their partner manager offered 2,000 bonus credits that same morning, which had not been added when we looked -- the account was on the ordinary free allowance of 200, which is what a new reader gets.",
    "findings": [
     "The free tier runs two meters, not one, and the account screen shows both: 200 platform credits and 2,000 search credits, each resetting monthly, with the next search reset dated on the page. Enriching a record spends platform credits; finding one through Find People or Find Companies spends a search credit, one per record. A reader budgeting on \"200 credits\" is reading half the meter, and it is the half that runs out first.",
-    "On Free, nothing carries over. The billing screen states it twice -- \"Rolled-Over Credits: Not included in the plan\" and \"Rollover Limit: Not included in the plan\" -- so an unused month is gone rather than banked. Rollover is listed among the things the first paid plan unlocks, next to credit rollover, the 100+ providers, action columns beyond 20 per grid, and the inbound integrations (RB2B, Factors, Vector).",
+    "On Free, nothing carries over. The billing screen states it twice -- \"Rolled-Over Credits: Not included in the plan\" and \"Rollover Limit: Not included in the plan\" -- so an unused month is gone rather than banked. Rollover is listed among the things the first paid plan adds, next to credit rollover, the 100+ providers, action columns beyond 20 per grid, and the inbound integrations (RB2B, Factors, Vector).",
     "What one enriched record costs is published, and the range is the whole story: one to twelve platform credits per successful email or phone lookup, depending on how many providers the waterfall is allowed to try. An AI enrichment is one to two credits a run, a BitAgent website scrape one per query, and anything arriving through the API is free. On Growth that turns 15,000 credits into anywhere between 1,250 and 15,000 enriched contacts -- 2.3 cents each at one credit, 28 cents at twelve.",
     "The in-app upgrade panel carries a Growth benefit the public plan cards do not mention: three hours a quarter with a GTM engineer, alongside the 15,000 credits. Worth knowing before you compare the $349 against a pure data vendor, because it is consulting time rather than volume.",
     "The two meters are set to become convertible. Bitscale's documentation announces 1 platform credit = 10 search credits as an upcoming feature, handled manually for enterprise accounts today. Until that ships, a month where you burn the enrichment pool cannot be topped up from the search pool, however much of it is left."
@@ -10275,7 +10275,7 @@
     "A project with a $60 hourly rate turned the 15-minute entry into $15.00 and 79.79% billable, both correct. Billable rates are one of eight features the project view labels as unlocked by the Premium trial.",
     "The Time logs CSV kept all three entries to the second, with project, client and amount on the right row. The Summary CSV put all 0:18:48 under the one project, although only 15 minutes belonged to it. Every export format (PDF, CSV, XLSX) carries a paid-feature star.",
     "Importing our own Time logs export again did not work as is: the importer asked for a duration column, could not use the combined start-and-stop column, and read the export's '-' placeholders as names, so all three entries would have been skipped. We stopped before importing; there is no ID column to update by.",
-    "Monthly prices in the app were $12 for Starter and $24 for Premium per license ($9 and $16 a month billed yearly). Choosing Premium warned that 'your current trial will finish immediately', so we stopped there. After the trial the app says you can 'keep going free — no charge', and the Free plan allows up to 5 members.",
+    "Monthly prices in the app were $12 for Starter and $24 for Premium per license ($9 and $16 a month billed yearly). Choosing Premium warned that 'your current trial will finish immediately', so we stopped there. After the trial the app says you can 'keep going free — no charge', and the Free plan allowed up to 5 members in the app; the pricing FAQ (read 22 October) says 3 users, so count on 3.",
     "The invite dialog offers Workspace admin, Manager, Member, Time tracker and Guest, with no role preselected. Billing lists 'Change plan' and 'Cancel trial' in the plan menu."
    ],
    "not_tested": [
@@ -11889,7 +11889,7 @@
     "'Schedule a post' asks for a social profile or integration first, so scheduling needs a connection. The Create menu lists New post, New note, New idea, Ideas, DM Automations, Evergreen, Bulk publishing and more.",
     "'New idea' works without a connected profile. We saved our first test record with an accent (Zoë), quotation marks and a second line. The Ideas page kept the accent and the quotation marks, and showed the first line as a bold title and the second line as body text.",
     "The Ideas menu offers Shared links, New collection and Bulk create ideas. We found no export there.",
-    "'Start my subscription' opened a live Stripe checkout for the Advanced plan, 30 profiles, billed yearly, at €1,770.54 for the year. We found no plan choice or monthly option on that route. No VAT line was visible before card entry, so the VAT-inclusive total is unknown. The checkout offered EUR or USD at 1 USD = 0.9270 EUR and said costs vary with exchange rates."
+    "'Start my subscription' opened a live Stripe checkout for the Advanced plan, 30 profiles, billed yearly, at €1,770.54 for the year. We found no plan choice or monthly option on that route. Vista Social support told us in writing on 13 November 2026 that plan and billing frequency are chosen in Settings, Plan and Billing before checkout; our test went straight from 'Start my subscription' to Stripe without us seeing that step. No VAT line was visible before card entry, so the VAT-inclusive total is unknown. The checkout offered EUR or USD at 1 USD = 0.9270 EUR and said costs vary with exchange rates."
    ],
    "not_tested": [
     "Publishing and scheduling: they need a connected social profile",
@@ -15291,11 +15291,12 @@
    "session_type": "hands_on",
    "what": "Tested by our team on 30 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We went through the setup wizard, created two made-up services with prices and descriptions, and looked for a way to export them. We made no bookings.",
    "findings": [
-    "The trial runs 14 days (until 13 November) with 50 bookings, 5 providers and 5 users. No card was asked.",
+    "Our trial, started 30 October, ran 14 days (until 13 November) with 50 bookings, 5 providers and 5 users. No card was asked. SimplyBook.me's marketing team told us in writing on 13 November 2026 that the trial is now 7 days, and its pricing page said the same when we read it that day.",
     "Our company was put on SimplyBook's public Booking.page marketplace without asking, with the phone number from signup as the company phone. We removed it under Settings > Directory listing.",
     "The two services were bookable in the booking widget straight after the wizard. Names with accents and prices (12,10 € and 24,20 €) came through correctly.",
     "We found no way to export services or settings. The reports cover bookings, clients, sales and payments only.",
-    "After the trial you can only drop to the Free plan from seven days before it ends. Basic (€ 11.90 a month, billed yearly) was blocked for us because the trial already used four custom features and Basic allows three."
+    "After the trial you can only drop to the Free plan from seven days before it ends. Basic (€ 11.90 a month, billed yearly) was blocked for us because the trial already used four custom features and Basic allows three.",
+    "Cancellation (not tested by us): SimplyBook.me's marketing team stated in writing on 13 November 2026 that customers can cancel at any time, and that an annual plan cancelled before the end of its term stays active until the paid period expires."
    ],
    "not_tested": [
     "Taking a booking and exporting bookings or clients",
@@ -15487,7 +15488,7 @@
     "Business at 25 seats showed '$96 x 1 year' (annual) and '$20 x 1 month' (monthly). That is a price per account, not per user. Our earlier page said '$8 per user a month billed annually', which this checkout contradicts.",
     "The Business and Business Premium checkout showed no invitation limit and no price for extra invitations, so what invitation 101 costs is not shown there.",
     "Site License with 1000 documents a year showed '$1.75 per invite' and '$1.75 x 1000 invites, $1750'. Our earlier page said $1.50 per invite.",
-    "Single Sign-on is listed under Admin Settings. Clicking 'Add SSO Configuration' during the trial opened the upgrade window with Business Premium selected; it did not say which plan unlocks SSO.",
+    "Single Sign-on is listed under Admin Settings. Clicking 'Add SSO Configuration' during the trial opened the upgrade window with Business Premium selected; it did not say which plan includes SSO.",
     "No tax line was visible. Payment options were PayPal, Apple Pay, Google Pay and card."
    ],
    "not_tested": [

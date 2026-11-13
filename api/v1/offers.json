@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "built_at": "2026-11-13T10:03:02Z",
+ "built_at": "2026-11-13T12:47:52Z",
  "about": "Reader offers and vendor offers on our deal pages, one record each. verification_status says whether the vendor confirmed it; checkout_tested_at stays null because we do not test offers at a checkout. expires_at is UTC; compare it with the current time yourself, time_status_at_build is only the state when this file was built. null means the vendor did not say, never 'no limit'. Opening handoff_url is not an activation or a purchase.",
  "offer_types": {
   "price_discount": "Price discount",
@@ -1423,6 +1423,64 @@
    ],
    "version": "e9696e5796",
    "time_status_at_build": "no_deadline_known"
+  },
+  {
+   "offer_id": "quicksigner-reader-offer",
+   "product_id": "quicksigner",
+   "product": "QuickSigner",
+   "offer_type": "price_discount",
+   "type_label": "Price discount",
+   "benefit": "5% off the first payment",
+   "duration": "First payment only",
+   "code": "AIBUILDER5",
+   "claim_mechanism": "code",
+   "claim_steps": "Enter AIBUILDER5 in the promo code field at checkout.",
+   "limits": [
+    "New customers only, one use per customer",
+    "Any QuickSigner plan, first order only"
+   ],
+   "eligibility": {
+    "customer": "new",
+    "plans": null,
+    "billing": null,
+    "regions": null
+   },
+   "structure": {
+    "kind": "first_billing",
+    "percent": 5
+   },
+   "starts_at": null,
+   "expires_at": "2027-07-01T04:59:00Z",
+   "expires_as_stated": "30 Jun 2027, 23:59 -05 (04:59 UTC, 06:59 Amsterdam)",
+   "evidence": {
+    "kind": "vendor_in_writing",
+    "by": "Adrian Ionescu, QuickSigner",
+    "summary": "Confirmed in writing by Adrian Ionescu, QuickSigner, 13 Nov 2026"
+   },
+   "confirmed_at": "2026-11-13",
+   "checked_at": "2026-11-13",
+   "verification_status": "vendor_confirmed",
+   "checkout_tested_at": null,
+   "stacking": "unknown",
+   "exclusive_to_our_readers": true,
+   "published_by_vendor": false,
+   "post_offer_price": "Standard rate afterwards",
+   "terms": "5% off the first payment on any QuickSigner plan with the code AIBUILDER5, for new customers on their first order (one use per customer), entered in the promo code field at checkout. Valid until 30 June 2027, 23:59 UTC-5. QuickSigner sent us this code in writing on 13 November 2026.",
+   "handoff_url": "https://get.quicksigner.com/rovxkyohvtcb",
+   "affiliate": true,
+   "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
+   "test_before_you_pay": "Check at checkout that the total drops by 5% on the first payment, and that your plan and team size fit before the standard rate applies.",
+   "trial_kit": null,
+   "site_membership": [
+    "aibm",
+    "osm"
+   ],
+   "shown_on": [
+    "https://aibuildermarketplace.com/deals/#q=quicksigner",
+    "https://officesoftwaremarketplace.com/deals.html#q=quicksigner"
+   ],
+   "version": "3e0ffa0a9b",
+   "time_status_at_build": "active"
   },
   {
    "offer_id": "quo-reader-offer",

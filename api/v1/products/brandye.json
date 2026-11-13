@@ -58,16 +58,481 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "Shopify store",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free covers up to 100 quiz submissions and 100 chats in total, lifetime rather than per month"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 19,
+     "annual_year": 190,
+     "evidence": "Starter is $19 a month for 200 submissions and 500 chats a month"
+    },
+    {
+     "id": "booster",
+     "name": "Booster",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 49,
+     "annual_year": 470.4,
+     "evidence": "Booster is $49 a month for 500 submissions and 1,500 chats"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 129,
+     "annual_year": 1238.4,
+     "evidence": "Growth is $129 a month for 1,000 submissions and 3,000 chats"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 249,
+     "annual_status": "unknown",
+     "evidence": "Scale at $249 a month for 2,500 submissions and 6,000 chats"
+    },
+    {
+     "id": "brand",
+     "name": "Brand",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 599,
+     "annual_status": "unknown",
+     "evidence": "Brand at $599 a month for 6,000 submissions and 15,000 chats"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "plus Enterprise on request"
+    }
+   ],
+   "notes": [
+    "One subscription per Shopify store, so the rules count one store; plans differ in quiz submissions, chats and data retention, not users.",
+    "Yearly prices are from the Shopify listing: $190 for Starter, $470.40 for Booster and $1,238.40 for Growth. Scale and Brand appear only on brandye.com."
+   ],
+   "extra_evidence": "yearly prices of $190 for Starter, $470.40 for Booster and $1,238.40 for Growth",
+   "not_computable": [
+    "The vendor page advertises 20% off yearly billing for Scale and Brand without printing the yearly amounts."
+   ],
+   "rules_verified_at": "2026-11-13"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "brandye",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "Shopify store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 15.83,
+       "booster": 39.2,
+       "growth": 103.2,
+       "scale": "price_unknown_on_billing",
+       "brand": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The vendor page advertises 20% off yearly billing for Scale and Brand without printing the yearly amounts."
+    ]
+   },
+   "monthly": {
+    "product_id": "brandye",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "Shopify store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 19.0,
+       "booster": 49.0,
+       "growth": 129.0,
+       "scale": 249.0,
+       "brand": 599.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "starter": "not_eligible",
+       "booster": "not_eligible",
+       "growth": "not_eligible",
+       "scale": "not_eligible",
+       "brand": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The vendor page advertises 20% off yearly billing for Scale and Brand without printing the yearly amounts."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -97,9 +562,9 @@
    "status": "open"
   },
   {
-   "question_id": "brandye:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "brandye:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The vendor page advertises 20% off yearly billing for Scale and Brand without printing the yearly amounts. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

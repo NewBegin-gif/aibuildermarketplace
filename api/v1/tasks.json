@@ -3690,6 +3690,149 @@
   },
   {
    "source": "session",
+   "product_name": "Elite Site Optimizer",
+   "product_id": "elite-site-optimizer",
+   "run_date": "2026-11-13",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 we tested Elite Site Optimizer on the free trial: domain verification, a site audit request, rank tracking, competitor and AI Readiness pages, and the plan page. We did not test checkout, support, export or any finished report.",
+   "findings": [
+    "Verification took three steps: a business email code, then a temporary verification that said a DNS TXT record was needed, then the TXT record itself, which our AI assistant added at Daan's request. The token is valid for 7 days.",
+    "After full verification, keyword tracking still said 'This feature is available for our premium members only!' and Add Keywords and Add Bulk Keyword stayed grey. The pricing page of 7 November says the trial gives the complete platform free for 14 days, so rank tracking did not match that.",
+    "Competitor Settings and the AI Readiness Run Report Now button were grey, and the AI Add-ons tab was empty.",
+    "The site audit offered one option, HARD RUN. The first attempt seemed to do nothing. The second, at 09:20, promised a report in about 7 hours. At 17:49, about 8.5 hours later, there was no report and no notification, so no report content was tested.",
+    "Monthly plan prices we saw: Free $0, Basic $49, Pro $69, Premium $119. We did not open the yearly prices or checkout."
+   ],
+   "not_tested": [
+    "Account registration and the screen count",
+    "Any finished audit report",
+    "Rank tracking and competitor analysis, which stayed unavailable",
+    "Checkout and yearly prices",
+    "Support, invitations, roles, API access and export",
+    "Market traffic data and the Google Analytics link"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Experience the Complete ESO platform Free for 14 Days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "In the trial, rank tracking said it is for premium members only even after full DNS verification, Competitor Settings and AI Readiness were grey, the AI Add-ons tab was empty and the audit report did not arrive. The plan page does not list which features the trial excludes.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/elite-site-optimizer-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; subscription page viewed, no plan chosen",
+     "comparability": "Pricing page wording read on 7 November versus the trial account on 13 November; one account.",
+     "status": "contradicted",
+     "buying_consequence": "The free trial does not include rank tracking; do not buy expecting a full platform test.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your Report will be ready in about 7 hours",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The notice appeared at 09:20. At 17:49, about 8.5 hours later, the page still said No report available yet and no notification had arrived. The first click on Run Report Now appeared to do nothing.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/elite-site-optimizer-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; subscription page viewed, no plan chosen",
+     "comparability": "One audit request on one domain; why no report was produced is unknown.",
+     "status": "contradicted",
+     "buying_consequence": "A trial audit may not arrive in the promised time; check again before relying on it.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This feature is available for our premium members only!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The Keywords page showed this after full DNS verification, and Add Keywords and Add Bulk Keyword stayed grey on the trial.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/elite-site-optimizer-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; subscription page viewed, no plan chosen",
+     "comparability": "One account on the free trial.",
+     "status": "confirmed",
+     "buying_consequence": "Rank tracking needs a paid plan; which plan includes it was not tested, as Basic, Pro and Premium were not opened.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Please click here to verify your domain by adding a TXT record",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "Verification took three steps: a business email OTP (done by Daan), temporary verification with a message that a TXT record is needed, and then the TXT record in DNS (added by our AI assistant at Daan request). Before the TXT record the access was temporary and partial.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/elite-site-optimizer-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; subscription page viewed, no plan chosen",
+     "comparability": "One domain verified through all three steps.",
+     "status": "confirmed",
+     "buying_consequence": "Plan for access to the DNS of the domain before testing; email verification alone gives only temporary access.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Basic $49/Month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The monthly tab shows Free 0, Basic 49, Pro 69 and Premium 119 dollars a month. The yearly tab was not opened, the AI Add-ons tab was empty and no checkout was opened, so tax, renewal terms and the final payable total are unknown.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/elite-site-optimizer-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; subscription page viewed, no plan chosen",
+     "comparability": "Plan page versus an unopened checkout; the stored cost rule has no matching checkout basis.",
+     "status": "not_testable",
+     "buying_consequence": "Check the billing basis, tax and renewal terms and which plan includes rank tracking before buying.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-13",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Elite Site Optimizer on the free trial: domain verification in three steps, a site audit request, rank tracking, competitor and AI readiness pages, and the plan page. Verification took three steps. First the business email OTP, done by Daan at about 09:17. That gave temporary verification: the Keywords page said the domain is verified temporarily using business email and that a TXT record must be added to access all features, and Add Keywords and Add Bulk Keyword were grey. Then, at Daan request, our AI assistant added a TXT verification record at the root of the domain at the DNS host between 10:15 and 10:20, with a TTL of 3600. The token expires in 7 days and its value is not recorded here. The host panel reported that the record was not valid or conflicted with another record, but a DNS query to the name server showed the record, and it had been there since the first try. Submit in the tool then said the domain was already verified. After full verification the Keywords page still said This feature is available for our premium members only, and Add Keywords and Add Bulk Keyword stayed grey, so rank tracking is not part of the free trial. Competitor Ranking showed No Metric Data Available with a grey Competitor Settings button. AI Readiness has only a Run Report Now button, which was grey, and clicking it did nothing. The AI Add-ons tab was empty, and the Competitor Analysis tab next to Site Audit stays empty without a report. Site Audit, Run Report Now, offered only HARD RUN (it checks for new web pages and runs a complete report), with a Home Page section, and starts by itself after 60 seconds. The first attempt appeared to do nothing and the page stayed on No report available yet. The second attempt, with the section chosen, gave the notice that the report would be ready in about 7 hours, at 09:20. At 17:49, about 8.5 hours after the start, there was still no report and no notification apart from two Domain Added Successfully messages, so the promise was not met. The browser session had been logged out, and Daan logged in again before this check. Analysts needing market traffic data were not tested, as no traffic data part was viewed. The TXT record stays in the DNS of the tested domain until cleaned up. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Verification needs an email OTP and then a DNS TXT record, with only temporary access in between. Rank tracking is premium only, Competitor Settings and AI Readiness are grey, and the audit promised in about 7 hours had not arrived after about 8.5 hours.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and signup screen count.",
+     "Any finished audit report, since none arrived, and the Competitor Analysis tab content.",
+     "Rank tracking, because Add Keywords stayed grey; which paid plan includes it was not opened.",
+     "Support, invitations, checkout, export and reimport.",
+     "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+     "Market traffic data, the Google Analytics link, the yearly prices and the AI Add-ons.",
+     "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 09:09 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "RankBolt",
    "product_id": "rankbolt",
    "run_date": "2026-11-12",
@@ -7202,6 +7345,130 @@
     ],
     "lost": [],
     "note": "One export and re-import of synthetic records, on the account and date stated. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Nouswise",
+   "product_id": "nouswise",
+   "run_date": "2026-11-13",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 we tested Nouswise on the free Starter plan: onboarding, one project with our own homepage as its only source, and two questions, one inside and one outside that source. We did not test checkout, support, export or the Enterprise and on-premises options.",
+   "findings": [
+    "Onboarding showed an 8-step welcome tour that we could not close, and step 2 required an age group with no option to decline. No card was asked for.",
+    "Our homepage was added as a source at about 17:59. After about 1.5 minutes and a reload it showed as a source.",
+    "Question inside the source (how this site decides which tools to skip, and whether it tests tools): the answer came after about 30 seconds with Bronnen 1 and 10 steps, with source references. We found it consistent with the site. This is one question, not an accuracy benchmark.",
+    "Question outside the source (the current VAT rate for software subscriptions in Germany): Nouswise did not refuse. It answered 19% with Bronnen 0 after 5 steps and added that it could not verify this against an authoritative tax source and that it was general guidance. That does not match the page's promise of answers based only on your verified data source. The zero source counter and the warning do make the gap visible. We did not check whether 19% is right.",
+    "Check the Bronnen counter on every answer: an answer with 0 sources is not drawn from your documents."
+   ],
+   "not_tested": [
+    "Account registration and the screen count",
+    "Pricing page and checkout",
+    "Support, invitations, roles and API access",
+    "Export and reimport",
+    "Enterprise or on-premises use for confidential files",
+    "Answer accuracy beyond the two questions"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Stel een vraag en ontvang antwoorden die uitsluitend zijn gebaseerd op uw gecontroleerde gegevensbron.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "A question outside the one added source, about the current VAT rate for software subscriptions in Germany, was answered with Bronnen 0 after 5 steps: the standard rate is 19%, followed by a statement that it could not be verified against an authoritative tax source and should be treated as general guidance, not tax advice. The tool did not refuse. The 19% was not checked here.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/nouswise-review.html#claim-vs-measured"
+     },
+     "plan": "Free Starter plan; no pricing page viewed",
+     "comparability": "One out of library question; the in library question was answered with sources.",
+     "status": "contradicted",
+     "buying_consequence": "Do not assume answers come only from your sources: an out of library question still got an answer, without sources and with a disclaimer; check the Bronnen counter on every answer.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Bronnen 1, Onderzocht in 10 stappen",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "A question inside the added source, about how the site decides which tools to skip and whether it tests tools, got an answer with source references. The tester found it consistent with the site; no independent accuracy benchmark was run.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/nouswise-review.html#claim-vs-measured"
+     },
+     "plan": "Free Starter plan; no pricing page viewed",
+     "comparability": "One in library question, checked by the tester against the source site only.",
+     "status": "confirmed",
+     "buying_consequence": "In library answers came with source references and a source counter.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Age group required",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "Onboarding step 2 requires education, research areas, how the tester heard of the tool and an age group (18-24 up to 54+, no option to decline); Volgende stays grey and the messages Channel required and Age group required appear until they are chosen. The 8 step welcome tour could not be closed with X or Escape.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/nouswise-review.html#claim-vs-measured"
+     },
+     "plan": "Free Starter plan; no pricing page viewed",
+     "comparability": "Observed in one onboarding on one account.",
+     "status": "confirmed",
+     "buying_consequence": "Use needs personal profile answers, including an age group, before the first project.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "gratis Starter",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The account was on the free Starter plan and no card was requested. No pricing page or checkout was opened, so paid plans, tax and the final payable total are unknown.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/nouswise-review.html#claim-vs-measured"
+     },
+     "plan": "Free Starter plan; no pricing page viewed",
+     "comparability": "Free plan observed versus no pricing page or checkout; the stored cost rule has no matching checkout basis.",
+     "status": "not_testable",
+     "buying_consequence": "Check paid plan prices, tax and renewal terms before buying; none were seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-13",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Nouswise on the free Starter plan: onboarding, one project with the tested site as its only source, and two questions, one inside and one outside that source. A project was created and the link https://aibuildermarketplace.com/ was added and uploaded at about 17:59. The status Bezig met verwerken followed, and after about 1.5 minutes (and a reload) the source Best AI and business tools was visible. Question 1, inside the source: How does this site decide which tools to tell readers to skip, and does it test tools itself? After about 30 seconds the answer showed Bronnen 1, Onderzocht in 10 stappen, with source references: skip advice is about fit, with Zendesk (small email teams) and PulseMonitor as examples, 167 hands-on reviews and another 492 researched reviews, a presentation tools case with 15 predetermined tests, and the affiliate disclosure described as stated policy rather than independent proof. The tester found this consistent with the site. Question 2, outside the source: What is the current VAT rate for software subscriptions in Germany? gave Bronnen 0, Onderzocht in 5 stappen: The standard German VAT rate is 19%, and software subscriptions are generally taxed at that rate, followed by a statement that it could not verify this against an authoritative tax source in the material available and that this is general guidance, not tax advice. So it did not refuse: it answered without a source and with a warning. This contradicts the promise of answers based exclusively on the verified data source, although the zero source counter and the disclaimer make the difference visible. The correctness of the 19% was not checked here. Use by public sector units with confidential files (Enterprise or on premises) was not tested. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The welcome tour could not be closed and onboarding requires an age group. A question outside the added source was still answered, with 0 sources.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and signup screen count.",
+     "Support, invitations, checkout, export and reimport; the Activiteiten outputs were not used.",
+     "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+     "Enterprise or on premises use for confidential files, other source types, and the accuracy of answers beyond the two questions.",
+     "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:35 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -15818,6 +16085,97 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Dify",
+   "product_id": "dify",
+   "run_date": "2026-11-13",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 we tested Dify Cloud on the Sandbox plan: one chatbot built from a sample template and tried once in the preview. We used no API key of our own and published nothing. We did not test self-hosting, checkout, support or export.",
+   "findings": [
+    "Sandbox is free and asked for no card. It starts with 200 message credits.",
+    "We created the sample app 'Chatflow: AI Chatbot' (model gpt-5.4-mini) from a template. The editor showed three nodes, START, LLM and ANSWER, and a visible system prompt.",
+    "The preview answered our question in about 8 seconds, on the credits Dify includes. One answer cost 5 credits (200 to 195). From the home screen to a working chatbot took about 2 minutes.",
+    "No code and no server were needed. Changing the bot does mean understanding the nodes and the system prompt.",
+    "Monthly prices we saw with the yearly toggle off: Professional $59 and Team $159 per workspace."
+   ],
+   "not_tested": [
+    "Account registration and the screen count",
+    "Self-hosting",
+    "Publishing the app, an own API key and knowledge bases",
+    "Cost of more than one answer or of other models",
+    "Checkout and the yearly price",
+    "Support, invitations, roles and export"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "200 message credits",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The Sandbox plan lists 200 message credits and the sidebar showed 200 credits at the start. After one chatbot answer 195 remained, so one short answer used 5 credits.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/dify-review.html#claim-vs-measured"
+     },
+     "plan": "Sandbox plan; plans page viewed, no plan chosen",
+     "comparability": "One answer on one model with the credits included with Dify; no repeat runs.",
+     "status": "confirmed",
+     "buying_consequence": "One short answer cost 5 credits, so the free credits go quickly for a team testing a chatbot; the cost per answer depends on the model.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Bill Annually Save 17%",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The plan page shows an annual billing toggle with Save 17%, switched off in the screenshot, so the prices read are monthly: Professional 59 dollars and Team 159 dollars per workspace a month. No checkout was opened, so tax, renewal terms and the final payable total are unknown.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/dify-review.html#claim-vs-measured"
+     },
+     "plan": "Sandbox plan; plans page viewed, no plan chosen",
+     "comparability": "Plan page versus an unopened checkout; the stored cost rule has no matching checkout basis.",
+     "status": "not_testable",
+     "buying_consequence": "Check the billing basis, tax and renewal terms at checkout before buying.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-13",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Dify Cloud on the Sandbox plan: one chatbot built from a sample template and tried once in the preview. No own API key was used and nothing was published. The template Chatflow: AI Chatbot, which needed the model gpt-5.4-mini, was used through Create from this sample app. The editor opened with the nodes START, LLM and ANSWER and a visible system prompt, with the status Auto-Saved 17:50:49 and Unpublished. The preview question In two sentences: what should a small team check before buying an AI tool? was answered within about 8 seconds: whether the tool solves a real problem, ease of use, integrations, cost, privacy and support. No own API key was needed: the model ran on the credits included with Dify. Credits went from 200 to 195 after one answer, so 5 credits for that answer. From the home screen to a working chatbot took about 2 minutes. It needed no code and no server, but building it does require understanding the nodes (START, LLM, ANSWER) and the system prompt. Self hosting for technical teams was not tested, as no self hosted installation was made. The app stays unpublished in the Sandbox. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "One short answer used 5 credits of the 200 free credits, and building even a sample chatbot needs some understanding of nodes and the system prompt.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and signup screen count.",
+     "Publishing the app, an own API key, knowledge bases and the Self-Hosted version.",
+     "Support, invitations, checkout, export and reimport.",
+     "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+     "The cost of more than one answer or of other models.",
+     "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:49 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

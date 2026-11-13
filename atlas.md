@@ -508,7 +508,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/bolt-business-review.html
 
 ## bOnline (bonline.com)
-- **Verified pricing:** (read 2026-10-06 on bonline.com/pricing, prices in GBP excluding VAT) Three plans, priced per user a month.
+- **Verified pricing:** (read 2026-10-06 and re-read 2026-11-13 on bonline.com/pricing, prices in GBP excluding VAT) Four plans, priced per user a month; the fourth, AI Hero, appeared between the two readings.
 - **Honest take:** The pricing page does not state a contract length, Starter includes only 100 outbound minutes a month, and every price is excluding VAT.
 - **Best for:** UK sole traders and small businesses of one to a few people who want a business number on their mobile, a desk phone if needed, and unlimited UK calls for under £14 a user a month
 - **Flags:** Per-seat pricing, Add-ons extra
@@ -1133,7 +1133,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/drip-review.html
 
 ## Dripify (dripify.com)
-- **Verified pricing:** (re-verified 2026-08-26 on their own pricing page — note that dripify.io now redirects to dripify.com) Four tiers, priced per user: Basic $39, Pro $59 and Advanced $79 per user per month bi…
+- **Verified pricing:** (re-verified 2026-08-26 on their own pricing page — note that dripify.io now redirects to dripify.com) Three tiers, priced per user: Pro $59 and Advanced $79 per user per month billed annua…
 - **Honest take:** Understand what you are buying before the price matters: LinkedIn prohibits this entire product category.
 - **Best for:** sales teams that already run LinkedIn outreach, understand that automation breaches LinkedIn's terms
 - **Flags:** Per-seat pricing, Usage-metered
@@ -3378,7 +3378,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Profit per order and product from your Etsy, eBay or Amazon reports; from $7 a month.
 - **Best for:** Etsy sellers, and smaller eBay or Amazon sellers, who want to see profit per order and product after fees and ads, and prefer to keep their report files in the browser instead of connecting a store login
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/shoptrueprofit-review/
+- **Full review:** https://marketingandsalessoftware.com/shoptrueprofit-review.html
 
 ## Shorby (shorby.com)
 - **Verified pricing:** (re-verified 2026-09-25 at dash.shorby.com/pricing) Three paid plans, no free plan on the table.

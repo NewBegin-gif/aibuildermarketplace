@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 651 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
+All 650 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2554,7 +2554,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30 on the vendor's own pricing page) Freelancer Limited $22/month or $14 annually for 5 content pieces, 5 content types and 250 leads a month; Free…
 - **Honest take:** Two meters at once: content types and pieces gate the lower tiers, and monthly LEAD limits gate the upside.
 - **Best for:** marketers who want quizzes, calculators and assessments that earn the lead by giving genuine value: with logic, integrations and templates handled
-- **Flags:** Annual commit, Free tier
+- **Flags:** Annual commit
 - **Full review:** https://marketingandsalessoftware.com/outgrow-review.html
 
 ## OutSends (outsends.com)
@@ -2803,10 +2803,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/poptin-review.html
 
 ## Positive User (user.com)
-- **Verified pricing:** (read 2026-10-07 on user.com/pricing in a browser render, prices in EUR as the page prints them, billed annually) Positive User, the platform formerly called User.com and now part of the Fr…
-- **Honest take:** Every plan caps email at 60,000 a year, only annual prices are printed, and auto-renewal needs 30 days notice to stop.
+- **Verified pricing:** (read 2026-10-07 on user.com/pricing in a browser render, prices in EUR as the page prints them, billed annually; re-verified 2026-11-13 with a plain fetch) Positive User, the platform form…
+- **Honest take:** Every Marketing Suite plan caps email at 60,000 a year, only annual prices are printed, and auto-renewal needs 30 days notice to stop.
 - **Best for:** European small and mid-sized businesses that want email, SMS, WhatsApp and website behaviour tracking in one EU-hosted platform, with a modest sending volume and a small marketing team
-- **Flags:** Add-ons extra
+- **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/positive-user-review.html
 
 ## Post Purchase Upsell Hero (postpurchaseupsellhero.com)
@@ -3243,13 +3243,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/selixer-review.html
 
-## Selleasy (logbase.io)
-- **Verified pricing:** (prices read 2026-10-30 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/selleasy/pricing; the order-based ladder read on 19 September and 20 October 2026 has been replaced) Bi…
-- **Honest take:** The pricing changed under this review in October 2026, and the vendor's own page has not caught up.
-- **Best for:** shopify stores that want bundles, add-ons, cart funnels and post-purchase offers out of one app on a flat fee that never takes a share of upsell revenue: small stores can test on the free plan
-- **Flags:** Free tier
-- **Full review:** https://marketingandsalessoftware.com/selleasy-review.html
-
 ## Seller Investigators (sellerinvestigators.com)
 - **Verified pricing:** (2026-08-15, read on their own site) One number, and it is the whole model: a 25% commission, charged only after Amazon has deposited recovered funds in your account.
 - **Honest take:** Contingency pricing is the honest kind, you pay only out of money that arrived, but 25% of a recovery is not the same as 25% of a profit, and there is one question that decides whether this is worth it for you.
@@ -3656,7 +3649,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/superfiliate-review/
 
 ## Superlines (superlines.io)
-- **Verified pricing:** (read 2026-10-16 in a browser on superlines.io/pricing, For brands tab, monthly and yearly view, prices shown in euros; the terms say VAT is added where required) Three self-service plans a…
+- **Verified pricing:** (read 2026-10-16 in a browser on superlines.io/pricing, For brands tab, monthly and yearly view, prices shown in euros; the terms say VAT is added where required.
 - **Honest take:** Starter has no exports and 1 month of history; 30 days' notice to stop renewal.
 - **Best for:** marketing teams and agencies in Europe that want to track how ChatGPT, Gemini, Perplexity and other AI engines mention and cite their brands, with unlimited seats
 - **Full review:** https://marketingandsalessoftware.com/superlines-review.html

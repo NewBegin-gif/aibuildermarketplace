@@ -7319,6 +7319,133 @@
   },
   {
    "source": "session",
+   "product_name": "Zendesk",
+   "product_id": "zendesk",
+   "run_date": "2026-11-13",
+   "session_type": "hands_on",
+   "what": "On 13 November 2026 we tested Zendesk Suite Professional on its trial, using our own site as the knowledge source. We built a Billing group and a routing trigger with the admin copilot, saved one synthetic invoice ticket, and asked the AI agent a Dutch and an English question. We did not open checkout, and we did not test support, invitations, roles, API access, export or cancellation.",
+   "findings": [
+    "Daan created the account the day before and we did not see that step. In the accelerated setup the website address came prefilled, and about 35 seconds later the AI agent had read our site. The setup asked for no card, no phone number and no mailbox connection. An optional banner offered an expert call.",
+    "The trial runs on Suite Professional with 12 of 14 days left when we looked. The trial therefore includes features that the entry plan Support Team does not.",
+    "The admin copilot created the Billing group on the first approval. The routing trigger took three approvals: the copilot first used the field subject, which Zendesk rejected, then title, then subject_includes_word. The whole job took about 1.5 minutes.",
+    "We then saved a synthetic ticket titled 'Vraag over mijn factuur van oktober' as an internal note, with no public reply. The assignee field showed Billing (Ticket #3). Only this Dutch 'factuur' branch was tested. We did not test the 'invoice' branch or reporting per department.",
+    "The plan page lists the admin copilot under Suite Professional. We did not test the same trigger on Suite Team, where it would be set up by hand.",
+    "The AI agent runs in Dutch because the account language is Dutch. Our English question was refused with 'Ik spreek uw taal niet'. A Dutch question about whether we test software ourselves got an answer in about 10 seconds that matches our site: some reviews are tested hands-on and dated, others are supplier-research reviews. This is one answer, not an accuracy benchmark.",
+    "The plan page in the trial shows, per agent per month in euros: Support Team 19 billed annually or 25 monthly, Suite Team 55 or 69, and Suite Professional 115 or 149. The annual option is labelled 24% off. Copilot is a separate add-on at 50 euros per agent per month. A recommendation popup suggested Suite Team and also listed Suite Growth, which the full comparison did not.",
+    "We opened no checkout, so tax, totals, minimums and renewal terms are unknown. These euro prices are not directly comparable with the dollar price read on the US page on 7 October 2026."
+   ],
+   "not_tested": [
+    "Checkout, tax, minimums and renewal terms",
+    "Support, invitations, roles and API access",
+    "The 'invoice' keyword branch and reporting per department",
+    "The same routing on Suite Team without the copilot",
+    "AI usage limits and surcharges",
+    "Export, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Team-functies, plus: Admin copilot",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The full trial plan page lists admin copilot under Suite Professional. In this Professional trial the group succeeded first time and the trigger on the third approval; the synthetic factuur ticket routed to Billing. Suite Team manual configuration was not tested.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/zendesk-review.html#claim-vs-measured"
+     },
+     "plan": "Suite Professional trial; displayed plan comparisons labelled separately",
+     "comparability": "Professional admin-copilot listing versus the observed group, trigger and one Dutch-subject ticket; no entry-plan equivalence.",
+     "status": "confirmed",
+     "buying_consequence": "The tested admin copilot is listed on Professional; do not assume Support Team includes it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Ik spreek uw taal niet.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The English AI question was refused while the Dutch question received an answer consistent with the site according to the tester. Account language was Dutch; changing language configuration was not tested.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/zendesk-review.html#claim-vs-measured"
+     },
+     "plan": "Suite Professional trial; displayed plan comparisons labelled separately",
+     "comparability": "English versus Dutch questions within the same Dutch-language trial account only; not a general language-support test.",
+     "status": "confirmed",
+     "buying_consequence": "Check required languages during setup; this single refusal does not establish lack of multilingual support.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€ 50 per agent/maand",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The plan page displays Copilot separately at EUR 50 per agent/month. Admin copilot appears in the Professional feature list. The session does not establish the add-on as necessary for the tested admin copilot or what AI usage is included.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/zendesk-review.html#claim-vs-measured"
+     },
+     "plan": "Suite Professional trial; displayed plan comparisons labelled separately",
+     "comparability": "Copilot add-on price listing only; no paid activation or usage-charge experiment.",
+     "status": "not_testable",
+     "buying_consequence": "Separate the tested admin feature from the Copilot add-on and confirm required AI entitlements before buying.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€ 19",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "Only the in-trial plan comparison was inspected, not checkout. Support Team: EUR 19 per agent/month billed yearly, EUR 25 monthly. Suite Team: EUR 55 yearly-billed monthly equivalent, EUR 69 monthly. Suite Professional: EUR 115 yearly-billed monthly equivalent, EUR 149 monthly. Copilot was shown separately at EUR 50 per agent/month. Annual and monthly screenshots exist; which billing term was initially selected is unknown. Tax, fees, final total, seat minimum and renewal terms remain unknown. Admin copilot is listed under Suite Professional; the separate Copilot add-on must not be treated as a demonstrated requirement for the tested admin copilot. AI agents are listed under Suite Team, but included AI usage or overage was not measured. Historical local USD cost-rule figures are not directly comparable with this EUR plan page.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/zendesk-review.html#claim-vs-measured"
+     },
+     "plan": "Suite Professional trial; displayed plan comparisons labelled separately",
+     "comparability": "EUR plan page versus unopened checkout; the historical USD cost rule has a different storefront and currency.",
+     "status": "not_testable",
+     "buying_consequence": "Displayed plan prices are not a verified checkout total; tax and renewal remain unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-13",
+    "what": "On 13 November 2026 the supplied session tested Zendesk Suite Professional trial setup, AI questions and billing-ticket routing. Admin copilot created Billing on the first attempt. Trigger creation succeeded only after the third approval: subject was rejected, then title, then subject_includes_word was used according to the session note. The final assistant summary described routing newly created tickets when the subject contains factuur or invoice to Billing. A synthetic ticket titled Vraag over mijn factuur van oktober was saved as Ticket #3 using an internal note, without a public reply; its assignee field displayed Billing. Only the Dutch factuur branch was tested; the invoice branch, later tickets and departmental reporting were not tested. With Dutch account language, the English question received Ik spreek uw taal niet. The Dutch question received an answer distinguishing dated hands-on reviews from supplier-research reviews. The tester found that consistent with the site; no independent source-completeness or general accuracy benchmark was performed. Setup ingested the site; no categorised kit import was performed.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Trigger creation required three approvals; the English AI question was refused in the Dutch-language account. Cross-language behaviour after configuration changes is unknown.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no output file was downloaded or examined. Two categorised kit records were not entered. The separate synthetic billing ticket is not proof of kit coverage.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and signup screen count.",
+     "Support, invitations, departmental reporting, checkout, export and reimport.",
+     "Roles, API entitlement, downgrade, cancellation and passive follow-up.",
+     "English invoice routing branch, broader AI accuracy, language reconfiguration and AI allowances.",
+     "Session and source-reading date: 13 November 2026. Interface/account language: Dutch. Session began around 09:02 CET; setup took about 35 seconds, routing configuration about 1.5 minutes, Dutch AI answer about 10 seconds. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Wistia",
    "product_id": "wistia",
    "run_date": "2026-10-30",
@@ -8885,7 +9012,7 @@
     "We uploaded a two-row CSV of example.com addresses at 15:00 UTC. The tool found the e-mail column itself ('2 Email addresses to be verified').",
     "The verification window showed Standard at 1 credit per address and Deep Scan Recovery at 3 credits per address, 'Total cost 2 - 6 CR'. Deep Scan was switched on by default and adds up to 30 minutes after Standard. The page says credits are refunded for addresses it cannot resolve.",
     "The list finished in about a minute and cost 2 credits (98 of 100 left). Deep Scan charged nothing because Standard resolved both addresses. Both came back Invalid MX, which is correct because example.com has no mail server.",
-    "Email Finder charges 5 credits when a first or last name is given and 10 credits when only a domain is given, from the same balance. We did not run it.",
+    "Email Finder charges 5 credits when a first or last name is given and 10 credits when only a domain is given, from the same balance. We did not run a lookup with that feature.",
     "The pricing page preselects pay as you go: 10,000 credits for EUR 27 (EUR 0.0027 per address) and 50,000 for EUR 98 (EUR 0.0020). A monthly plan for 50,000 is EUR 89 a month. The switch 'Automatically buy the same package when your credits run low' was on by default.",
     "The page states prices exclude VAT, with tax calculated at checkout. We did not go past it."
    ],

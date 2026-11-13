@@ -157,13 +157,19 @@
   },
   {
    "name": "ClickUp",
-   "what": "Hosted server at mcp.clickup.com/mcp covering tasks, docs, time tracking, workspace search and chat. Delete operations are deliberately not supported.",
-   "plan": "All plans. Free: 50 calls a day; Unlimited and above: 300 a day on a rolling 24-hour window; with the Everything AI add-on you get the standard public API limits.",
+   "what": "Hosted server at mcp.clickup.com/mcp covering tasks, subtasks, comments, docs, time tracking, workspace search and chat. Deleting tasks is possible too: we did it in our test.",
+   "plan": "All plans, with a daily cap per rolling 24 hours: 100 MCP calls on Free Forever, 300 on Unlimited, 1,000 on Business, 2,500 on Business Plus, 5,000 on Enterprise; with the Everything AI add-on you get the normal public API limits.",
    "plan_known": true,
    "status": "Public beta",
    "since": "",
    "src": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
-   "gate": "free"
+   "gate": "free",
+   "tested": {
+    "url": "/research/clickup-mcp-server-test/",
+    "date": "12 Nov 2026",
+    "note": "On a workspace without a paid plan, Claude Code created a list, a task with due date and priority, a comment and a subtask, changed the status and deleted the task, in 19 calls."
+   },
+   "plan_editie": "All plans. Free: 50 calls a day; Unlimited and above: 300 a day on a rolling 24-hour window; with the Everything AI add-on you get the standard public API limits."
   },
   {
    "name": "Close",
@@ -441,13 +447,21 @@
   },
   {
    "name": "Miro",
-   "what": "Server at mcp.miro.com: read and build boards — frames, sticky notes, shapes, cards, tables, architecture and sequence diagrams, plus reading and resolving comments.",
-   "plan": "Enterprise. An admin has to enable the MCP server for the organisation before anyone can connect.",
+   "what": "Server at mcp.miro.com: read and build boards, including frames, sticky notes, shapes, tables and Mermaid diagrams, plus reading and resolving comments.",
+   "plan": "All Miro plans. Their docs now call it \"Enterprise Level Security, for all Miro users\"; on Enterprise an admin gets extra controls. We connected it on the Free plan on 11 November 2026.",
    "plan_known": true,
    "status": "Live",
    "since": "",
    "src": "https://developers.miro.com/docs/miro-mcp",
-   "gate": "higher"
+   "gate": "free",
+   "tested": {
+    "url": "/research/claude-code-miro-mermaid-test/#mcp",
+    "date": "11 Nov 2026",
+    "note": "Claude Code read a Mermaid diagram back as source, created a new one and added a step to an existing flowchart; Miro showed the change in its own code panel."
+   },
+   "gate_editie": "higher",
+   "plan_editie": "Enterprise. An admin has to enable the MCP server for the organisation before anyone can connect.",
+   "gewijzigd_na_editie": "2026-11-11: own docs now open the MCP server to all Miro plans; we connected it on the Free plan"
   },
   {
    "name": "monday.com",
@@ -457,7 +471,12 @@
    "status": "Live",
    "since": "",
    "src": "https://monday.com/w/mcp",
-   "gate": "free"
+   "gate": "free",
+   "tested": {
+    "url": "/research/monday-mcp-server-test/",
+    "date": "12 Nov 2026",
+    "note": "On the Free plan Claude Code built a board with columns, items, a comment and a status count in 13 calls. On an expired Pro trial the server refused columns and items with a bare 403."
+   }
   },
   {
    "name": "Navan",
@@ -834,6 +853,66 @@
    "src2_label": "Their plan comparison",
    "buiten_cohort": "2026-10-01",
    "buiten_cohort_reden": "found by searching our own dossiers, not in a full sweep of all partners"
+  },
+  {
+   "name": "LearnWorlds",
+   "what": "Connects ChatGPT, Claude or another compatible assistant to a school so it can build dashboards from analytics, users and the grading queue, and (after the admin confirms) create tags, segments and automations to re-engage learners.",
+   "plan": "Learning Center and High Volume & Corporate plans; not on Starter or Pro Trainer.",
+   "plan_known": true,
+   "status": "GA",
+   "since": "2026-11",
+   "src": "https://www.learnworlds.com/whats-new/",
+   "gate": "higher",
+   "buiten_cohort": "2026-11-12",
+   "buiten_cohort_reden": "found after the edition by reading vendor pages and our own dossiers, not in a full sweep of all partners"
+  },
+  {
+   "name": "Fax.Plus",
+   "what": "Hosted MCP server with 38 tools: send and receive faxes, manage contacts and groups, upload files, resend or delete faxes and check delivery.",
+   "plan": "Not on Free; Basic, Premium and Business via OAuth; Enterprise via OAuth or personal access token. Blocked on accounts with Advanced Security Controls (HIPAA/PHIPA).",
+   "plan_known": true,
+   "status": "Beta",
+   "since": "",
+   "src": "https://apidoc.fax.plus/get-started/fax-plus-mcp",
+   "gate": "any_paid",
+   "buiten_cohort": "2026-11-12",
+   "buiten_cohort_reden": "found after the edition by reading vendor pages and our own dossiers, not in a full sweep of all partners"
+  },
+  {
+   "name": "Seller Snap",
+   "what": "Read-only connector for ChatGPT and Claude: ask plain-English questions about repricing, profit, competitors and listings on Amazon and Walmart. It cannot change prices, rules or settings.",
+   "plan": "Any plan, including the free ones (their MCP page).",
+   "plan_known": true,
+   "status": "GA",
+   "since": "",
+   "src": "https://sellersnap.io/mcp/",
+   "gate": "free",
+   "buiten_cohort": "2026-11-12",
+   "buiten_cohort_reden": "found after the edition by reading vendor pages and our own dossiers, not in a full sweep of all partners"
+  },
+  {
+   "name": "Dripify",
+   "what": "Lets an MCP client (Claude Desktop, Cursor, Codex CLI) view campaigns, search leads and upload up to 1,000 leads per request into a new lead list. Sales Navigator URLs are not supported; ChatGPT and Claude web cannot connect yet.",
+   "plan": "An active Pro or Advanced plan, plus your API key.",
+   "plan_known": true,
+   "status": "Beta",
+   "since": "",
+   "src": "https://help.dripify.com/en/articles/17171745-how-to-connect-dripify-to-ai-assistants-with-the-mcp-server",
+   "gate": "higher",
+   "buiten_cohort": "2026-11-12",
+   "buiten_cohort_reden": "found after the edition by reading vendor pages and our own dossiers, not in a full sweep of all partners"
+  },
+  {
+   "name": "EngageBay",
+   "what": "Hosted remote MCP server giving Claude, ChatGPT or Perplexity read and write access to contacts, companies, deals, tasks and appointments. Records can be created and updated, not deleted, and access follows the user's own permissions.",
+   "plan": "Not stated in their own documentation.",
+   "plan_known": false,
+   "status": "GA",
+   "since": "",
+   "src": "https://www.engagebay.com/ai-tools/mcp",
+   "gate": "unstated",
+   "buiten_cohort": "2026-11-12",
+   "buiten_cohort_reden": "found after the edition by reading vendor pages and our own dossiers, not in a full sweep of all partners"
   }
  ]
 }

@@ -117,7 +117,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-13 on apps.shopify.com/ai-autocomplete, charges in USD billed every 30 days) AI Autocomplete has two plans, both with a 30-day free trial.
 - **Honest take:** Filter suggestions as shoppers type; from $10 a month plus usage, 30-day trial.
 - **Best for:** Shopify store owners with large catalogues who want filter suggestions to appear as shoppers type in the search box
-- **Full review:** https://aibuildermarketplace.com/b2b/ai-autocomplete-review/
+- **Full review:** https://marketingandsalessoftware.com/ai-autocomplete-review.html
 
 ## AI for Database (aifordatabase.com)
 - **Verified pricing:** (read 2026-11-05 on aifordatabase.com/pricing) AI for Database sells per user, and every payment turns into that user's own AI credits.
@@ -565,6 +565,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-10-24 on brandify.io/aeo/pricing/, brandify.io/brandify-reveal/pricing/, brandify.io/pricing/ and brandify.io/aeo/faq/) Brandify sells a service, not software you log in to and r…
 - **Honest take:** A managed agency service, not software: the fee buys a monthly work allowance, and AI mentions are not guaranteed.
 - **Best for:** US local and service businesses with one website that want an agency to handle Google Business Profile, directory citations, schema and new content for AI search, instead of buying a tracking tool and doing the work themselves
+- **Flags:** Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/brandify-review.html
 
 ## Brandye (brandye.com)
@@ -2970,10 +2971,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/quickbooks-uk-review.html
 
 ## QuickSigner (quicksigner.com)
-- **Verified pricing:** (re-verified 2026-08-17, re-read 2026-09-27 and again 2026-10-20 against QuickSigner's own pricing table and llms.txt) Personal is free: 5 documents a month, 3 signers and 1 document per re…
+- **Verified pricing:** (re-verified 2026-08-17, re-read 2026-09-27 and 2026-10-20, and read again on 2026-11-13 on QuickSigner's redesigned pricing page) Free, shown as 'Personal Plan (free)' inside the app: 5 do…
 - **Honest take:** The price is the argument, and the legal ceiling is the limit.
 - **Best for:** cost-conscious teams that want certified e-signing (ISO 27001, AATL) with unlimited documents from ~$5/mo and a real free tier
-- **Flags:** Per-seat pricing, Annual commit, Free tier
+- **Flags:** Per-seat pricing, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/quicksigner-review/
 
 ## QuillBot (quillbot.com)
@@ -3183,7 +3184,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/salesflow-review.html
 
 ## Salesmessage (salesmessage.com)
-- **Verified pricing:** (2026-08-08, re-verified 10 September 2026 and again 13 October 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plans plus Enterpr…
+- **Verified pricing:** (2026-08-08, re-verified 10 September, 13 October and 13 November 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plans plus Enter…
 - **Honest take:** Two things changed here and both cost money. First, calling now runs on the same meter as texting (1 credit a minute, 2 a minute when forwarding) so voice minutes eat the allowance you budgeted for messages.
 - **Best for:** sales and service teams that want two-way texting and calling in one CRM-linked inbox, and can estimate their monthly credit burn, messages plus call minutes, before they sign
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
@@ -4435,7 +4436,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-22 on zenbusiness.com/pricing-products/, where /pricing/ now redirects; every one of the sixteen published amounts unchanged since 25 Jul 2026) Formation itself is $0 p…
 - **Honest take:** The $0 is real for the filing service and it is also the whole commercial idea: what you sign up for at zero has an annual carry that is not shown next to it.
 - **Best for:** first-time founders who want the paperwork handled and are willing to pay a yearly fee to keep it handled: the a-la-carte pricing means you can start at the state fee plus a registered agent and add only what you actually need
-- **Flags:** Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/zenbusiness-review/
 
 ## Zendesk (zendesk.com)

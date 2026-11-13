@@ -109,10 +109,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-13; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
@@ -120,7 +119,298 @@
   "refund": "quoted"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-13",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/",
+  "method": [
+   "Used a free On-Demand account without adding a card",
+   "Generated one 123-character clip in the Text-to-Speech playground",
+   "Read the first-audio message and the credit balance before and after",
+   "Read the billing and data retention screens, and stopped before checkout"
+  ],
+  "claims": [
+   {
+    "claim": "Zero Data Retention is available on the Developer plan and above.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The Data Retention setting under Billing says so, and the Developer plan card lists Zero Data Retention. The setting was not changed on a paid plan.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#claim-vs-measured"
+    },
+    "plan": "On-Demand with free credits; plan cards viewed, no plan chosen",
+    "comparability": "In app setting text versus the plan card on one account; no paid plan was opened.",
+    "status": "confirmed",
+    "buying_consequence": "A team with strict data retention rules needs the Developer plan at 300 dollars a month or higher; the free plan cannot change the setting.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "First audio in 0.8 s. Use it in your app.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The playground reported this after one generation. The tester saw audio play within about 3 seconds, by eye and not timed, so the two figures measure different things.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#claim-vs-measured"
+    },
+    "plan": "On-Demand with free credits; plan cards viewed, no plan chosen",
+    "comparability": "One clip, one input and no timing tool; the 3 seconds is an impression.",
+    "status": "not_testable",
+    "buying_consequence": "Treat the 0.8 s as the playground message for one 123 character input, not a latency guarantee for an app.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Up to 70 min TTS included",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "After one generation of 123 characters the free credits went from 1.00 to 0.99 dollars. Whether the included minutes or the credit paid for it was not determined.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#claim-vs-measured"
+    },
+    "plan": "On-Demand with free credits; plan cards viewed, no plan chosen",
+    "comparability": "One short generation; the allowance and the credit balance use different units.",
+    "status": "not_testable",
+    "buying_consequence": "The free allowance was not measured beyond one short clip.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "2 months free",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The plan cards show monthly prices and a Yearly option labelled 2 months free. Yearly prices were not read and no checkout was opened, so tax, renewal terms and the final payable total are unknown.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#claim-vs-measured"
+    },
+    "plan": "On-Demand with free credits; plan cards viewed, no plan chosen",
+    "comparability": "Plan cards versus an unopened checkout; the stored cost rule has no matching checkout basis.",
+    "status": "not_testable",
+    "buying_consequence": "Check the billing basis, tax and renewal terms at checkout before buying.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-13",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Inworld AI on the On-Demand plan: one text to speech clip in the playground and the billing and data retention screens. In the Text-to-Speech playground the voice Sarah, language Auto and model Inworld TTS 2 were used, with sliders for Delivery and Talking speed and MP3 as download format; input is limited to 5,000 characters. A support agent line of 123 characters was entered (it contains a typing error from our side) and Generate was pressed. Audio played within about 3 seconds and the playground reported First audio in 0.8 s, with a clip of 0:05. The 3 seconds is the tester impression, not a timed measurement; the 0.8 s is the playground message. A realtime conversation through the API was not tested because no API key was created. The playground has Add speaker for several speakers and example roles (Support Agent, AI Companion, Fitness Coach, Virtual Assistant, Language Teacher). No timeline or video editor was seen. The MP3 download was not used. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Zero Data Retention cannot be changed on the free On-Demand plan; the setting says an upgrade to Developer or above is needed.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original account registration and signup screen count.",
+    "Realtime voice through the API, because no API key was created.",
+    "Support, invitations, checkout, export and reimport; the MP3 download was not used.",
+    "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+    "Speech to speech, speech to text, voice cloning, several speakers and any paid plan.",
+    "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Inworld AI on the On-Demand plan: one text to speech clip in the playground and the billing and data retention screens. In the Text-to-Speech playground the voice Sarah, language Auto and model Inworld TTS 2 were used, with sliders for Delivery and Talking speed and MP3 as download format; input is limited to 5,000 characters. A support agent line of 123 characters was entered (it contains a typing error from our side) and Generate was pressed. Audio played within about 3 seconds and the playground reported First audio in 0.8 s, with a clip of 0:05. The 3 seconds is the tester impression, not a timed measurement; the 0.8 s is the playground message. A realtime conversation through the API was not tested because no API key was created. The playground has Add speaker for several speakers and example roles (Support Agent, AI Companion, Fitness Coach, Virtual Assistant, Language Teacher). No timeline or video editor was seen. The MP3 download was not used. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Inworld AI on the On-Demand plan: one text to speech clip in the playground and the billing and data retention screens. In the Text-to-Speech playground the voice Sarah, language Auto and model Inworld TTS 2 were used, with sliders for Delivery and Talking speed and MP3 as download format; input is limited to 5,000 characters. A support agent line of 123 characters was entered (it contains a typing error from our side) and Generate was pressed. Audio played within about 3 seconds and the playground reported First audio in 0.8 s, with a clip of 0:05. The 3 seconds is the tester impression, not a timed measurement; the 0.8 s is the playground message. A realtime conversation through the API was not tested because no API key was created. The playground has Add speaker for several speakers and example roles (Support Agent, AI Companion, Fitness Coach, Virtual Assistant, Language Teacher). No timeline or video editor was seen. The MP3 download was not used. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-13",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Inworld AI",
+    "product_id": "inworld-ai",
+    "run_date": "2026-11-13",
+    "session_type": "hands_on",
+    "what": "We generated one text-to-speech clip in Inworld AI's playground on the free On-Demand plan on 13 November 2026 and read the billing and data retention screens. The account is Daan's, and our AI assistant did the clicking. We created no API key, so a realtime conversation through the API was not tested. We did not use the MP3 download or test checkout, support or cancellation.",
+    "findings": [
+     "The playground used the voice Sarah, language Auto and the model Inworld TTS 2, with sliders for delivery and talking speed and MP3 as the download format. Input is limited to 5,000 characters. It offers an Add speaker option and example roles such as Support Agent, AI Companion and Language Teacher. We saw no timeline or video editor.",
+     "We entered a support line of 123 characters and pressed Generate. Audio played within about 3 seconds by our eye, not timed, and the playground reported 'First audio in 0.8 s' for a clip of 0:05. The two figures measure different things. The 0.8 s is the playground's own message for one short input, not a latency guarantee for an app.",
+     "The free credit balance went from $1.00 to $0.99 after that one clip. The plan card says 'Up to 70 min TTS included'. We could not tell whether the included minutes or the credit paid for the clip, and we did not measure the allowance beyond one short generation.",
+     "Under Billing, the Data Retention setting says Zero Data Retention is available on the Developer plan and above, and the Developer card lists it. The setting could not be changed on the free plan. The Developer plan costs $300 a month on its card.",
+     "The plan cards show monthly prices and a yearly option labelled '2 months free'. We did not read yearly prices or open checkout, so tax, renewal terms and the payable total are unknown."
+    ],
+    "not_tested": [
+     "Sign-up on a fresh account (we joined an existing one)",
+     "Realtime voice through the API",
+     "Speech to speech, speech to text, voice cloning, a conversation with several speakers, and any paid plan",
+     "The MP3 download, checkout, support, export, roles, downgrade and cancelling"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Zero Data Retention is available on the Developer plan and above.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The Data Retention setting under Billing says so, and the Developer plan card lists Zero Data Retention. The setting was not changed on a paid plan.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#claim-vs-measured"
+      },
+      "plan": "On-Demand with free credits; plan cards viewed, no plan chosen",
+      "comparability": "In app setting text versus the plan card on one account; no paid plan was opened.",
+      "status": "confirmed",
+      "buying_consequence": "A team with strict data retention rules needs the Developer plan at 300 dollars a month or higher; the free plan cannot change the setting.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "First audio in 0.8 s. Use it in your app.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The playground reported this after one generation. The tester saw audio play within about 3 seconds, by eye and not timed, so the two figures measure different things.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#claim-vs-measured"
+      },
+      "plan": "On-Demand with free credits; plan cards viewed, no plan chosen",
+      "comparability": "One clip, one input and no timing tool; the 3 seconds is an impression.",
+      "status": "not_testable",
+      "buying_consequence": "Treat the 0.8 s as the playground message for one 123 character input, not a latency guarantee for an app.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Up to 70 min TTS included",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "After one generation of 123 characters the free credits went from 1.00 to 0.99 dollars. Whether the included minutes or the credit paid for it was not determined.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#claim-vs-measured"
+      },
+      "plan": "On-Demand with free credits; plan cards viewed, no plan chosen",
+      "comparability": "One short generation; the allowance and the credit balance use different units.",
+      "status": "not_testable",
+      "buying_consequence": "The free allowance was not measured beyond one short clip.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "2 months free",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The plan cards show monthly prices and a Yearly option labelled 2 months free. Yearly prices were not read and no checkout was opened, so tax, renewal terms and the final payable total are unknown.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/inworld-ai-review/#claim-vs-measured"
+      },
+      "plan": "On-Demand with free credits; plan cards viewed, no plan chosen",
+      "comparability": "Plan cards versus an unopened checkout; the stored cost rule has no matching checkout basis.",
+      "status": "not_testable",
+      "buying_consequence": "Check the billing basis, tax and renewal terms at checkout before buying.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-13",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Inworld AI on the On-Demand plan: one text to speech clip in the playground and the billing and data retention screens. In the Text-to-Speech playground the voice Sarah, language Auto and model Inworld TTS 2 were used, with sliders for Delivery and Talking speed and MP3 as download format; input is limited to 5,000 characters. A support agent line of 123 characters was entered (it contains a typing error from our side) and Generate was pressed. Audio played within about 3 seconds and the playground reported First audio in 0.8 s, with a clip of 0:05. The 3 seconds is the tester impression, not a timed measurement; the 0.8 s is the playground message. A realtime conversation through the API was not tested because no API key was created. The playground has Add speaker for several speakers and example roles (Support Agent, AI Companion, Fitness Coach, Virtual Assistant, Language Teacher). No timeline or video editor was seen. The MP3 download was not used. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Zero Data Retention cannot be changed on the free On-Demand plan; the setting says an upgrade to Developer or above is needed.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original account registration and signup screen count.",
+      "Realtime voice through the API, because no API key was created.",
+      "Support, invitations, checkout, export and reimport; the MP3 download was not used.",
+      "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+      "Speech to speech, speech to text, voice cloning, several speakers and any paid plan.",
+      "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "inworld-ai:cancellation_terms",

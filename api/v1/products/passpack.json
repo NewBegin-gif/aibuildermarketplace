@@ -83,10 +83,9 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-13; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -94,7 +93,264 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-13",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/passpack-review/",
+  "method": [
+   "Used a Business trial without adding a card",
+   "Created one made-up record without a password and one multi-administrator team",
+   "Shared the record with the team and read two reports",
+   "Stopped before the billing portal"
+  ],
+  "claims": [
+   {
+    "claim": "Try FREE for 28 Days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The account shows a Business plan with status Trial and no card was requested. The trial end date was not visible (the renewal date field was empty), so the 28 days were not confirmed.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/passpack-review/#claim-vs-measured"
+    },
+    "plan": "Business trial; subscription page viewed, billing portal not opened",
+    "comparability": "Pricing page claim versus the status shown in the app; no end date or day counter was seen.",
+    "status": "not_testable",
+    "buying_consequence": "Confirm the trial end date and what happens at its end before relying on 28 days.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Passpack for iPhone is on the App Store",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The app shows a banner for the iPhone app. No Android app was offered inside the app; whether one exists elsewhere was not checked.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/passpack-review/#claim-vs-measured"
+    },
+    "plan": "Business trial; subscription page viewed, billing portal not opened",
+    "comparability": "In app banner only; no store pages were checked.",
+    "status": "confirmed",
+    "buying_consequence": "Teams on Android phones should check app availability separately.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Verleng mijn contract automatisch met het aantal gebruikte licenties.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The Abonnement page says the contract renews automatically with the number of used licences, currently 1. The Stripe billing portal was not opened and no price, tax, renewal date or total was seen.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/passpack-review/#claim-vs-measured"
+    },
+    "plan": "Business trial; subscription page viewed, billing portal not opened",
+    "comparability": "Subscription page wording versus an unopened billing portal; the stored cost rule has no matching checkout basis.",
+    "status": "not_testable",
+    "buying_consequence": "Check price, tax and renewal terms in the billing portal before the trial ends.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-13",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Passpack on a Business trial: a made up record without any password, a multi-administrator team, sharing the record with the team, and two reports. No password was entered in this test. The test record has an empty password field, a made up username and an example web address, so no real login or credential was typed, generated or stored. The record form has the fields Recordnaam, Gebruikersnaam, E-mail, Wachtwoord (with a generator and strength meter), TOTP, Website-URL and Etiketten. The record Test: shared social media login was saved with the password left empty (Nieuw record aangemaakt) and defaults to Privé. The team Marketing (test) was created with the default member rights Kan bekijken or Kan bewerken and the team mode Privé or Multi-beheerder; Multi-beheerder was chosen (Nieuw team aangemaakt). Sharing: on the record the sharing mode must be changed first (Houd privé, Eigendom overdragen or Deel met teams met meerdere beheerders); only then the team list appears. From the Opnames tab of the team the private record could not be added. Switching on Marketing (test) in the team list opened the confirmation Instellingen voor delen updaten?, which says the record can then be managed by all administrators of the organisation, and the change was saved. This took about 6 clicks and the route was not easy to find. The Teamlidmaatschap report searches by email and shows team name, team owner and user permission; a search on the own account gave Geen resultaten gevonden, so the owner does not count as a member. The Toegang tot logboeken report lists sign in activity per login and offers a CSV download; no screenshot of it is used and its contents are not reproduced here. A departing colleague was not simulated because no second user was invited. The only app banner promotes the iPhone app; no Android app was offered inside the app. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Sharing a private record with a team needed about 6 clicks and a change of sharing mode first; adding the record from the team side did not work.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original account registration and signup screen count.",
+    "Support, invitations to a second user, checkout, export and reimport.",
+    "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+    "Passwords, the password generator output, TOTP, a departing colleague, teams above twenty people and Android apps.",
+    "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:12 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/passpack-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/passpack-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/passpack-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Passpack on a Business trial: a made up record without any password, a multi-administrator team, sharing the record with the team, and two reports. No password was entered in this test. The test record has an empty password field, a made up username and an example web address, so no real login or credential was typed, generated or stored. The record form has the fields Recordnaam, Gebruikersnaam, E-mail, Wachtwoord (with a generator and strength meter), TOTP, Website-URL and Etiketten. The record Test: shared social media login was saved with the password left empty (Nieuw record aangemaakt) and defaults to Privé. The team Marketing (test) was created with the default member rights Kan bekijken or Kan bewerken and the team mode Privé or Multi-beheerder; Multi-beheerder was chosen (Nieuw team aangemaakt). Sharing: on the record the sharing mode must be changed first (Houd privé, Eigendom overdragen or Deel met teams met meerdere beheerders); only then the team list appears. From the Opnames tab of the team the private record could not be added. Switching on Marketing (test) in the team list opened the confirmation Instellingen voor delen updaten?, which says the record can then be managed by all administrators of the organisation, and the change was saved. This took about 6 clicks and the route was not easy to find. The Teamlidmaatschap report searches by email and shows team name, team owner and user permission; a search on the own account gave Geen resultaten gevonden, so the owner does not count as a member. The Toegang tot logboeken report lists sign in activity per login and offers a CSV download; no screenshot of it is used and its contents are not reproduced here. A departing colleague was not simulated because no second user was invited. The only app banner promotes the iPhone app; no Android app was offered inside the app. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/passpack-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Passpack on a Business trial: a made up record without any password, a multi-administrator team, sharing the record with the team, and two reports. No password was entered in this test. The test record has an empty password field, a made up username and an example web address, so no real login or credential was typed, generated or stored. The record form has the fields Recordnaam, Gebruikersnaam, E-mail, Wachtwoord (with a generator and strength meter), TOTP, Website-URL and Etiketten. The record Test: shared social media login was saved with the password left empty (Nieuw record aangemaakt) and defaults to Privé. The team Marketing (test) was created with the default member rights Kan bekijken or Kan bewerken and the team mode Privé or Multi-beheerder; Multi-beheerder was chosen (Nieuw team aangemaakt). Sharing: on the record the sharing mode must be changed first (Houd privé, Eigendom overdragen or Deel met teams met meerdere beheerders); only then the team list appears. From the Opnames tab of the team the private record could not be added. Switching on Marketing (test) in the team list opened the confirmation Instellingen voor delen updaten?, which says the record can then be managed by all administrators of the organisation, and the change was saved. This took about 6 clicks and the route was not easy to find. The Teamlidmaatschap report searches by email and shows team name, team owner and user permission; a search on the own account gave Geen resultaten gevonden, so the owner does not count as a member. The Toegang tot logboeken report lists sign in activity per login and offers a CSV download; no screenshot of it is used and its contents are not reproduced here. A departing colleague was not simulated because no second user was invited. The only app banner promotes the iPhone app; no Android app was offered inside the app. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/passpack-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/passpack-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-13",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Passpack",
+    "product_id": "passpack",
+    "run_date": "2026-11-13",
+    "session_type": "hands_on",
+    "what": "We tested team sharing in Passpack on a Business trial on 13 November 2026 with a made-up record that holds no password. The account is Daan's, and our AI assistant did the clicking. We typed, generated and stored no password and no real login: the record has an empty password field, an invented username and an example web address. We invited no second user, so a departing colleague was not simulated.",
+    "findings": [
+     "The record form has fields for name, username, email, password (with a generator and a strength meter), TOTP, website address and tags. We saved the record with the password left empty. It defaults to private.",
+     "We created a team called 'Marketing (test)' with default member rights of view or edit, and chose the Multi-administrator mode over Private.",
+     "Sharing took about 6 clicks and the route was hard to find. On the record, the sharing mode must change first (keep private, transfer ownership, or share with multi-administrator teams). Only then does the team list appear. Adding the private record from the team's own records tab did not work.",
+     "Switching the team on opened a confirmation saying the record can then be managed by all administrators of the organisation. We confirmed and it saved.",
+     "The Team Membership report searches by email and shows team name, team owner and user permission. A search on our own account returned no results, so the owner does not count as a member there. The Log Access report lists sign-in activity per login and offers a CSV download. We did not open the file.",
+     "The account showed a Business plan with status Trial and no card was requested. The trial end date was not visible because the renewal date field was empty, so we could not confirm the '28 days' on the pricing page.",
+     "The Subscription page says the contract renews automatically with the number of licences used, currently 1. We did not open the Stripe billing portal and saw no price, tax or total. The only mobile banner promoted the iPhone app. We saw no Android app offered inside the app, and did not check whether one exists elsewhere."
+    ],
+    "not_tested": [
+     "Sign-up on a fresh account (we joined an existing one)",
+     "Passwords, the generator output, TOTP and what a departing colleague loses",
+     "Teams above twenty people and Android apps",
+     "Inviting a second user, checkout, export, API use, downgrade and cancelling"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Try FREE for 28 Days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The account shows a Business plan with status Trial and no card was requested. The trial end date was not visible (the renewal date field was empty), so the 28 days were not confirmed.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/passpack-review/#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "Pricing page claim versus the status shown in the app; no end date or day counter was seen.",
+      "status": "not_testable",
+      "buying_consequence": "Confirm the trial end date and what happens at its end before relying on 28 days.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Passpack for iPhone is on the App Store",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The app shows a banner for the iPhone app. No Android app was offered inside the app; whether one exists elsewhere was not checked.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/passpack-review/#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "In app banner only; no store pages were checked.",
+      "status": "confirmed",
+      "buying_consequence": "Teams on Android phones should check app availability separately.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Verleng mijn contract automatisch met het aantal gebruikte licenties.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The Abonnement page says the contract renews automatically with the number of used licences, currently 1. The Stripe billing portal was not opened and no price, tax, renewal date or total was seen.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/passpack-review/#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "Subscription page wording versus an unopened billing portal; the stored cost rule has no matching checkout basis.",
+      "status": "not_testable",
+      "buying_consequence": "Check price, tax and renewal terms in the billing portal before the trial ends.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-13",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Passpack on a Business trial: a made up record without any password, a multi-administrator team, sharing the record with the team, and two reports. No password was entered in this test. The test record has an empty password field, a made up username and an example web address, so no real login or credential was typed, generated or stored. The record form has the fields Recordnaam, Gebruikersnaam, E-mail, Wachtwoord (with a generator and strength meter), TOTP, Website-URL and Etiketten. The record Test: shared social media login was saved with the password left empty (Nieuw record aangemaakt) and defaults to Privé. The team Marketing (test) was created with the default member rights Kan bekijken or Kan bewerken and the team mode Privé or Multi-beheerder; Multi-beheerder was chosen (Nieuw team aangemaakt). Sharing: on the record the sharing mode must be changed first (Houd privé, Eigendom overdragen or Deel met teams met meerdere beheerders); only then the team list appears. From the Opnames tab of the team the private record could not be added. Switching on Marketing (test) in the team list opened the confirmation Instellingen voor delen updaten?, which says the record can then be managed by all administrators of the organisation, and the change was saved. This took about 6 clicks and the route was not easy to find. The Teamlidmaatschap report searches by email and shows team name, team owner and user permission; a search on the own account gave Geen resultaten gevonden, so the owner does not count as a member. The Toegang tot logboeken report lists sign in activity per login and offers a CSV download; no screenshot of it is used and its contents are not reproduced here. A departing colleague was not simulated because no second user was invited. The only app banner promotes the iPhone app; no Android app was offered inside the app. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Sharing a private record with a team needed about 6 clicks and a change of sharing mode first; adding the record from the team side did not work.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original account registration and signup screen count.",
+      "Support, invitations to a second user, checkout, export and reimport.",
+      "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+      "Passwords, the password generator output, TOTP, a departing colleague, teams above twenty people and Android apps.",
+      "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:12 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "passpack:cancellation_terms",

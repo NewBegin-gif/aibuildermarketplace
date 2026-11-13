@@ -68,10 +68,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-13; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -79,7 +78,265 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-13",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/team-pulse-review/",
+  "method": [
+   "Used a Free account without adding a card",
+   "Generated one project board and its starter tasks with the built-in AI",
+   "Opened the Growth trial window from the invite button and read it",
+   "Stopped at the Stripe payment step"
+  ],
+  "claims": [
+   {
+    "claim": "1 pipeline",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The Growth trial window lists 1 pipeline for Growth and also lists Pipelines under Available in Pro. The Pipeline tab was locked on Free and the Growth trial was not continued, so whether Growth includes a working pipeline was not tested.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; Growth trial window viewed, not continued",
+    "comparability": "One trial window, two statements; blocked by a Stripe step, so no pipeline was opened.",
+    "status": "not_testable",
+    "buying_consequence": "Confirm whether Growth includes a working pipeline before buying it for client tracking; the window contradicts itself.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Founder Launch Offer",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The trial window shows a Founder Launch Offer to lock in the current pricing for life, as long as the subscription remains active. Nothing was bought, so the lock in was not tested.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; Growth trial window viewed, not continued",
+    "comparability": "Vendor offer text only; no purchase and no later price observation.",
+    "status": "not_testable",
+    "buying_consequence": "The offer applies to a paid subscription; it was not checked against a later price change.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$79 /mo Billed annually ($948/year)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-13",
+    "observed": "The trial window shows Growth at 79 dollars a month billed annually (948 dollars a year). Monthly billing, tax and the Pro price were not seen and the Stripe checkout was not opened, so the payable total is unknown.",
+    "observed_on": "2026-11-13",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; Growth trial window viewed, not continued",
+    "comparability": "Trial window price versus an unopened Stripe checkout; the stored cost rule has no matching checkout basis.",
+    "status": "not_testable",
+    "buying_consequence": "Check the billing basis, tax and renewal terms at checkout before buying; the window shows a yearly total, not a payable total.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-13",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Team Pulse on the Free plan: an AI generated project board. Blocked part: the Growth trial goes through a Stripe step that asks for payment details, so it was not continued and no card details were entered. The Pipeline tab, the pipeline feature and anything else behind the Growth trial are therefore not tested. Project Client onboarding Q4 was created with the description Onboard three new freelance clients: kickoff call, contract, first invoice, weekly check-in. Generate with AI returned five columns after about 10 seconds: Contracting & Legal, Kickoff & Strategy, Initial Billing, Weekly Check-ins and Fully Onboarded. Generate starter tasks returned five tasks after about 10 seconds, for example Draft and send master service agreements (MSAs) to all three clients. Create Project then showed Workflow created and a board with five columns and five tasks, with tabs Overview, Chat, Tasks, Files and Activity. The whole run took about 1 minute, was free and needed no card. Each AI generation costs 1 AI credit; the credit balance was not read. Tracking clients and tasks together in a pipeline was not tested because of the Stripe block. Inviting teammates on Free opens the Growth trial window, and Growth lists 3 team members; teams of more than three people were not tested. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Inviting a teammate on Free opens the Growth trial window instead of an invite form, and that window lists 1 pipeline for Growth while naming Pipelines as Available in Pro.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the object tested was one AI generated project board, not the kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original account registration and signup screen count.",
+    "Pipeline and the Growth trial, blocked by a Stripe step that asks for payment details.",
+    "Support, invitations, checkout, export and reimport.",
+    "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+    "Teams of more than three people, Pro prices and the AI credit balance.",
+    "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:02 CET and the project run took about 1 minute. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Team Pulse on the Free plan: an AI generated project board. Blocked part: the Growth trial goes through a Stripe step that asks for payment details, so it was not continued and no card details were entered. The Pipeline tab, the pipeline feature and anything else behind the Growth trial are therefore not tested. Project Client onboarding Q4 was created with the description Onboard three new freelance clients: kickoff call, contract, first invoice, weekly check-in. Generate with AI returned five columns after about 10 seconds: Contracting & Legal, Kickoff & Strategy, Initial Billing, Weekly Check-ins and Fully Onboarded. Generate starter tasks returned five tasks after about 10 seconds, for example Draft and send master service agreements (MSAs) to all three clients. Create Project then showed Workflow created and a board with five columns and five tasks, with tabs Overview, Chat, Tasks, Files and Activity. The whole run took about 1 minute, was free and needed no card. Each AI generation costs 1 AI credit; the credit balance was not read. Tracking clients and tasks together in a pipeline was not tested because of the Stripe block. Inviting teammates on Free opens the Growth trial window, and Growth lists 3 team members; teams of more than three people were not tested. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Team Pulse on the Free plan: an AI generated project board. Blocked part: the Growth trial goes through a Stripe step that asks for payment details, so it was not continued and no card details were entered. The Pipeline tab, the pipeline feature and anything else behind the Growth trial are therefore not tested. Project Client onboarding Q4 was created with the description Onboard three new freelance clients: kickoff call, contract, first invoice, weekly check-in. Generate with AI returned five columns after about 10 seconds: Contracting & Legal, Kickoff & Strategy, Initial Billing, Weekly Check-ins and Fully Onboarded. Generate starter tasks returned five tasks after about 10 seconds, for example Draft and send master service agreements (MSAs) to all three clients. Create Project then showed Workflow created and a board with five columns and five tasks, with tabs Overview, Chat, Tasks, Files and Activity. The whole run took about 1 minute, was free and needed no card. Each AI generation costs 1 AI credit; the credit balance was not read. Tracking clients and tasks together in a pipeline was not tested because of the Stripe block. Inviting teammates on Free opens the Growth trial window, and Growth lists 3 team members; teams of more than three people were not tested. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-13",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-13",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Team Pulse",
+    "product_id": "team-pulse",
+    "run_date": "2026-11-13",
+    "session_type": "hands_on",
+    "what": "We ran Team Pulse's AI project builder on the Free plan on 13 November 2026, then followed the Growth trial window up to its payment step. The account is Daan's, and our AI assistant did the clicking. We stopped at the Stripe step that asks for payment details and entered no card. The Pipeline feature sits behind that trial, so we did not test it.",
+    "findings": [
+     "We created a project called 'Client onboarding Q4' with the description 'Onboard three new freelance clients: kickoff call, contract, first invoice, weekly check-in'. The AI step took about 10 seconds and proposed five columns that run from contracting and legal through kickoff and billing to a fully onboarded client.",
+     "The starter-task step returned five tasks in about 10 seconds, the first one a draft of service agreements for all three clients. Creating the project then gave a board with five columns and five tasks, and the tabs Overview, Chat, Tasks, Files and Activity. The whole run took about a minute (our approximate timing), was free and needed no card.",
+     "Each AI generation costs 1 AI credit. We did not read the credit balance, so we cannot say how many generations Free allows.",
+     "The Pipeline tab was locked on Free. Inviting a teammate on Free did not open an invite form. It opened the Growth trial window, which lists 3 team members for Growth.",
+     "The same window lists 1 pipeline for Growth and also names Pipelines as 'Available in Pro'. We did not continue the trial, so we do not know whether Growth includes a working pipeline.",
+     "The window shows Growth at $79 a month billed annually ($948 a year) and a 'Founder Launch Offer' to lock in the current price for life while the subscription stays active. We did not see monthly billing, tax or the Pro price, and bought nothing, so the lock-in and the payable total are unknown."
+    ],
+    "not_tested": [
+     "Sign-up on a fresh account (we joined an existing one)",
+     "The Pipeline feature and the Growth trial, which needs payment details at a Stripe step",
+     "Teams above three people, what Pro costs, and how many AI credits are left",
+     "Checkout, support, export, roles, API use, downgrade and cancelling"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "1 pipeline",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The Growth trial window lists 1 pipeline for Growth and also lists Pipelines under Available in Pro. The Pipeline tab was locked on Free and the Growth trial was not continued, so whether Growth includes a working pipeline was not tested.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; Growth trial window viewed, not continued",
+      "comparability": "One trial window, two statements; blocked by a Stripe step, so no pipeline was opened.",
+      "status": "not_testable",
+      "buying_consequence": "Confirm whether Growth includes a working pipeline before buying it for client tracking; the window contradicts itself.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Founder Launch Offer",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The trial window shows a Founder Launch Offer to lock in the current pricing for life, as long as the subscription remains active. Nothing was bought, so the lock in was not tested.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; Growth trial window viewed, not continued",
+      "comparability": "Vendor offer text only; no purchase and no later price observation.",
+      "status": "not_testable",
+      "buying_consequence": "The offer applies to a paid subscription; it was not checked against a later price change.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$79 /mo Billed annually ($948/year)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The trial window shows Growth at 79 dollars a month billed annually (948 dollars a year). Monthly billing, tax and the Pro price were not seen and the Stripe checkout was not opened, so the payable total is unknown.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/team-pulse-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; Growth trial window viewed, not continued",
+      "comparability": "Trial window price versus an unopened Stripe checkout; the stored cost rule has no matching checkout basis.",
+      "status": "not_testable",
+      "buying_consequence": "Check the billing basis, tax and renewal terms at checkout before buying; the window shows a yearly total, not a payable total.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-13",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Team Pulse on the Free plan: an AI generated project board. Blocked part: the Growth trial goes through a Stripe step that asks for payment details, so it was not continued and no card details were entered. The Pipeline tab, the pipeline feature and anything else behind the Growth trial are therefore not tested. Project Client onboarding Q4 was created with the description Onboard three new freelance clients: kickoff call, contract, first invoice, weekly check-in. Generate with AI returned five columns after about 10 seconds: Contracting & Legal, Kickoff & Strategy, Initial Billing, Weekly Check-ins and Fully Onboarded. Generate starter tasks returned five tasks after about 10 seconds, for example Draft and send master service agreements (MSAs) to all three clients. Create Project then showed Workflow created and a board with five columns and five tasks, with tabs Overview, Chat, Tasks, Files and Activity. The whole run took about 1 minute, was free and needed no card. Each AI generation costs 1 AI credit; the credit balance was not read. Tracking clients and tasks together in a pipeline was not tested because of the Stripe block. Inviting teammates on Free opens the Growth trial window, and Growth lists 3 team members; teams of more than three people were not tested. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Inviting a teammate on Free opens the Growth trial window instead of an invite form, and that window lists 1 pipeline for Growth while naming Pipelines as Available in Pro.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the object tested was one AI generated project board, not the kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original account registration and signup screen count.",
+      "Pipeline and the Growth trial, blocked by a Stripe step that asks for payment details.",
+      "Support, invitations, checkout, export and reimport.",
+      "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+      "Teams of more than three people, Pro prices and the AI credit balance.",
+      "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:02 CET and the project run took about 1 minute. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "team-pulse:cancellation_terms",

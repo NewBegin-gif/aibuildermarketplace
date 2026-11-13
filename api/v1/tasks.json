@@ -8859,6 +8859,134 @@
   },
   {
    "source": "session",
+   "product_name": "Geotargetly",
+   "product_id": "geotargetly",
+   "run_date": "2026-11-13",
+   "session_type": "hands_on",
+   "what": "We set up a Netherlands-only Geo Redirect and a Geo Link on Geo Targetly's 14-day trial on 13 November 2026, opened the Geo Link from the Netherlands and read the plan screens. Daan created the account and our AI assistant ran the test in Daan's browser. We placed no script on a real site, so the redirect rule itself never ran. We did not test checkout, support, export or cancellation.",
+   "findings": [
+    "The trial needs no card. The subscription screen read '$0/mo on your free trial' with Payment Method None, and the account showed 13 days left. We joined an existing trial account, so we did not see the sign-up screens. A welcome window offered Start Setup and Skip for now, and a Book Free Setup Call is optional.",
+    "Geo Redirect saved without any code: from the fictional https://www.example.com to https://www.example.com/nl/ when the country equals Netherlands, redirecting visitors automatically. Step two wants a single script pasted just below the opening head tag. It offers install tabs for 14 platforms, among them Google Tag Manager, WordPress, Shopify, Wix, Squarespace and Webflow.",
+    "The URL fields add https:// themselves. Pasting a full address gave https://https://www.example.com, and we needed two corrections. Redirect plus link took about 7 minutes with those corrections (our own approximate timing, not a benchmark).",
+    "A Geo Link needs no script. Netherlands went to https://example.org/ and All Other Locations to https://example.com/, with a short link on a shared gtly.link domain and a QR code. The page recommends your own domain because shared domains can go down when others abuse them.",
+    "Opening the short link from the Netherlands first showed an interstitial, 'You will be redirected in 3', with Geo Targetly branding, and then https://example.org/ loaded. A notice says the branding is in effect during the free trial. Geo Targetly's text says a subscription removes it; we did not buy one, so we did not see that.",
+    "Pageview counting comes from the vendor help page 'What are pageviews quota?', which we read and did not measure: every page view counts, including visitors who match no rule; bots do not count; a Geo Link counts only a click; and multiple products on one page count as multiple pageviews, because each instance of the tracking script consumes one.",
+    "The in-app plan screen is in euros. Monthly: Dev 14, Startup 29, Growth 59, with 1,000, 20,000 and 100,000 pageviews a month. Yearly, shown per month: 11, 23 and 47 with 12,000, 240,000 and 1,200,000 pageviews a year, or 132, 276 and 564 in total. Yearly billing was preselected, under the banner 'SAVE 20% ON YEARLY BILLING'.",
+    "The Startup and Growth cards list 'Access to all features' and the Dev card does not. We did not check which features Dev lacks, so we cannot confirm that higher plans only add pageviews.",
+    "The dashboard holds a hidden notice for an exceeded quota ('Upgrade or re-subscribe'). We did not trigger it, so we do not know what happens to live redirects at the limit."
+   ],
+   "not_tested": [
+    "How sign-up works from scratch",
+    "Running the redirect on a real site and the delay before the right page appears",
+    "A popup alongside the redirect, and what happens at the pageview limit",
+    "What the Dev plan lacks compared with higher plans",
+    "Checkout, tax and the final price",
+    "Support, invitations, roles, API access, export, downgrade and cancellation"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Multiple products in a page will count as multiple pageviews. Each instance of our tracking script will consume a pageview.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The vendor help page statement was read. No script was placed on a real site, so pageview consumption was not measured.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geotargetly-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; plan selection screens viewed, no plan chosen",
+     "comparability": "Help page statement only; no counting experiment, so it is not compared with any plan allowance.",
+     "status": "not_testable",
+     "buying_consequence": "A site that runs a redirect and another product on the same page should expect more than one pageview per visit when sizing a plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Purchasing a subscription removes the branding.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "During the trial a branded countdown of 3 seconds appeared before a Geo Link target. No subscription was bought, so removal of the branding was not observed.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geotargetly-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; plan selection screens viewed, no plan chosen",
+     "comparability": "Trial behaviour versus the vendor statement; no paid plan was observed.",
+     "status": "not_testable",
+     "buying_consequence": "The trial does not show the final visitor experience.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Access to all features",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The Startup and Growth cards list it and the Dev card does not. Which features Dev lacks was not checked.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geotargetly-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; plan selection screens viewed, no plan chosen",
+     "comparability": "Plan card wording only; no feature by feature check across plans.",
+     "status": "not_testable",
+     "buying_consequence": "Confirm what Dev includes before choosing it; the plan cards alone do not show the feature difference.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "SAVE 20% ON YEARLY BILLING",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-13",
+     "observed": "The plan page in the app shows yearly prices per month of EUR 11, 23 and 47 against monthly EUR 14, 29 and 59, with yearly totals of EUR 132, 276 and 564. Yearly billing was preselected. No checkout was opened, so tax, renewal terms and the final payable total are unknown.",
+     "observed_on": "2026-11-13",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geotargetly-review.html#claim-vs-measured"
+     },
+     "plan": "Free trial; plan selection screens viewed, no plan chosen",
+     "comparability": "EUR plan page versus an unopened checkout; the stored cost rule has no matching checkout basis.",
+     "status": "not_testable",
+     "buying_consequence": "Check the billing basis, tax and renewal terms at checkout before buying; the plan page shows prices, not a payable total.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-13",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Geo Targetly on a 14 day trial without a card: one Geo Redirect rule, one Geo Link and the pageview rules. Geo Redirect, Quick Setup, Automatic Geo Redirect: from the fictional address https://www.example.com to https://www.example.com/nl/, with the location rule Country Equal to Netherlands, set to redirect visitors automatically upon visit. It saved without any code (Save Successful). The URL fields add https:// themselves, so pasting a full URL gave https://https://www.example.com; this needed two corrections. A second step asked for one script directly after the opening head tag, with tabs for JavaScript, SPA, AJAX, Google Tag Manager, WordPress, Shopify, Wix, Squarespace, Webflow, HubSpot, ClickFunnels, BigCommerce, Magento and Cloudflare. The script was not placed on any site, so the redirect rule itself was not run. Geo Link needs no script: Netherlands goes to https://example.org/ and All Other Locations to https://example.com/, with a short link on a shared gtly.link domain and a QR code. The page recommends a custom domain and warns that shared domains can go down when others abuse them. Opening the short link from the Netherlands first showed an interstitial, You will be redirected in 3, naming the owner of the target page and Geo Targetly branding, and then https://example.org/ (Example Domain) loaded. The redirect plus link setup took about 7 minutes including the https corrections. Pageview counting, from the vendor help page What are pageviews quota: every page view counts, including visitors who match no rule; bots do not count; a Geo Link counts only a click; and multiple products on one page count as multiple pageviews because each instance of the tracking script consumes one. The dashboard contains a hidden notice for an exceeded quota. It was not triggered, so what happens to live redirects at the limit was not tested. No popup was run alongside the redirect, and no kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Pasting a full URL doubled the https:// prefix and needed two corrections. During the trial a branded countdown page appears before a Geo Link target loads.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were a redirect rule and a link rule, not records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and signup screen count.",
+     "Support, invitations, checkout, export and reimport.",
+     "Roles, API entitlement, downgrade, cancellation and passive follow up.",
+     "Running the redirect on a real site, a popup alongside the redirect, behaviour at the pageview limit, and what the Dev plan lacks compared with higher plans.",
+     "Session and source-reading date: 13 November 2026. Times are CET. The dashboard was opened at about 09:12 CET and the redirect plus link setup took about 7 minutes including corrections. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Signeasy",
    "product_id": "signeasy",
    "run_date": "2026-10-24",
@@ -11133,7 +11261,7 @@
     "The 'HTML and images' ZIP and the PDF download",
     "How the email looks in real mail clients such as Outlook and Gmail, and sending through a connected platform",
     "Roles, team members and the approval process",
-    "The 15-day Professional trial and the limit of 10 designs",
+    "The 15-day paid-plan trial (the pricing page's FAQ calls it a Business trial, and both paid cards say Start a free trial) and the limit of 10 designs",
     "Write with AI and the landing-page editor"
    ],
    "report": null,

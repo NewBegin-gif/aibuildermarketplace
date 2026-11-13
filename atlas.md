@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 649 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-12.
+All 650 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -58,6 +58,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** performance marketers and stores that test many ad variations across sizes and platforms and want on-brand creative volume without a designer bottleneck
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/adcreative-ai-review.html
+
+## AddressHero (addresshero.com)
+- **Verified pricing:** (read 2026-11-13 on addresshero.com/pricing, US dollars) AddressHero sells three plans for Shopify stores, each with a 14-day free trial.
+- **Honest take:** Address checks for Shopify checkout; from $9.99 a month.
+- **Best for:** Shopify store owners who lose money on mistyped or incomplete delivery addresses and want checks at checkout, with automatic correction as a paid step up
+- **Full review:** https://aibuildermarketplace.com/b2b/addresshero-review/
 
 ## ADP (adp.com)
 - **Verified pricing:** (2026-08-15, read on their own site) ADP shows no public pricing for RUN anywhere on its site, and we checked four places before saying so.
@@ -257,7 +263,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's a fintech account (strongest in Southeast Asia), not a full bank.
 - **Best for:** startups and SMBs that want an all-in-one business account with $0 monthly fees and built-in spend management
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/aspire-review/
+- **Full review:** https://officesoftwaremarketplace.com/aspire-review.html
 
 ## Assembly (assembly.com)
 - **Verified pricing:** (re-verified 28 September 2026 in a rendered browser, both billing tabs and the full comparison table) Assembly, the client-portal platform at assembly.com, publishes five tiers.
@@ -842,7 +848,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-02 and again on 2026-10-06, read in their own help centre) Free for buyers.
 - **Honest take:** It's free to submit a brief, but be clear on what it is: a lead-generation marketplace, not a neutral directory.
 - **Best for:** businesses that want to skip manual agency research and get matched quickly with vetted, best-fit service providers for a specific project
-- **Full review:** https://aibuildermarketplace.com/b2b/clutch-review/
+- **Full review:** https://officesoftwaremarketplace.com/clutch-review.html
 
 ## CO2 Impact (co2impact.co.uk)
 - **Verified pricing:** (read 2026-10-09 in a browser render of the pricing table on co2impact.co.uk's homepage; re-verified 2026-10-22 on the redesigned table, GBP, all prices exclude VAT) Every licence runs for …
@@ -3262,7 +3268,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The honest mechanic is the revenue ladder: plans cap by your ANNUAL SALES, so success moves you up.
 - **Best for:** creators selling digital products, subscriptions and print-on-demand who want a simple store with zero platform commission
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/sellfy-review/
+- **Full review:** https://marketingandsalessoftware.com/sellfy-review.html
 
 ## Sendcloud (sendcloud.com)
 - **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 31 Aug 2026 reading) Free plan €0/mo: up …
@@ -3310,7 +3316,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** This app is eleven years old and has 151 reviews (28 September 2026; it was 114 in August).
 - **Best for:** Shopify stores under 5,000 products that want image compression, alt text, auto-generated meta tags, schema and sitemaps from one app on a flat monthly fee, and would rather not pay per AI credit
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/seomatic-review/
+- **Full review:** https://marketingandsalessoftware.com/seomatic-review.html
 
 ## Serpstat (serpstat.com)
 - **Verified pricing:** (2026-07-24, read on their own pricing page) Four plans, and the page opens on the annual view — so the first number you see is not the month-to-month price.

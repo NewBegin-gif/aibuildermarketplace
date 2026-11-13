@@ -17,8 +17,8 @@
   "from_price_usd_month": 5.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-08-17, re-read 2026-09-27 and again 2026-10-20 against QuickSigner's own pricing table and llms.txt) Personal is free: 5 documents a month, 3 signers and 1 document per request, 5 MB maximum, PDF only, with signature and stamp fields and AATL sealing. Business is $5 per user a month ($48 a year) and is where documents become unlimited — 10 signers and 3 documents per request, 10 MB, Word files, 10 saved templates, reminders and signing order. Professional is $15 per user a month ($144 a year): 50 signers and 10 documents per request, 15 MB, OTP phone verification, bulk send, teams and the eSign API. Annual billing saves 20% and paid plans carry a 14-day trial. The API has a free developer account with unlimited test requests; production costs from $0.30 per signed document and requires Professional, whose card includes 50 free API sign requests before that rate; completed test documents are watermarked. ISO/IEC 27001:2022-certified and AATL, legally binding in the US, UK and EU.",
-  "verified_at": "2026-10-20",
+  "notes": "(re-verified 2026-08-17, re-read 2026-09-27 and 2026-10-20, and read again on 2026-11-13 on QuickSigner's redesigned pricing page) Free, shown as 'Personal Plan (free)' inside the app: 5 documents a month, 3 signers and 1 document per request, PDF up to 5 MB, signature and stamp fields, certificate and diploma sealing, and uploads from Google Drive. Business is $5 per user a month ($48 a year, so $4 a month billed yearly) and is where documents become unlimited: 10 signers and 3 documents per request, PDF or Word up to 10 MB, 10 reusable templates, signing order, reminders, a saved signature, and search, filters, tags and reports. Professional is $15 per user a month ($144 a year): 50 signers and 10 documents per request, 15 MB, unlimited templates, OTP verification by SMS or WhatsApp, editing a request after sending, bulk send, teams, priority support and the eSignature API. Enterprise is priced on a custom quote for high API volume, custom approval flows and large teams. Annual billing saves 20%, and Business and Professional carry a 14-day free trial. The API has a free developer account with unlimited test requests; going live requires Professional, which includes the first 50 production sign requests free, then $0.30 per request, with a lower rate above 500 requests a month. llms.txt adds that completed test documents are watermarked. ISO/IEC 27001:2022-certified and AATL, legally binding under the ESIGN Act, UETA and eIDAS.",
+  "verified_at": "2026-11-13",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": [
@@ -47,21 +47,21 @@
   "recent_change": null,
   "price_history": null
  },
- "free_plan": true,
- "free_plan_evidence": "(re-verified 2026-08-17, re-read 2026-09-27 and again 2026-10-20 against QuickSigner's own pricing table and llms.txt) Personal is free: 5 documents a month, 3 signers and 1 document per request, 5 MB maximum, PDF only, with signature and stamp fields and AATL sealing.",
+ "free_plan": false,
+ "free_plan_evidence": null,
  "cost_traps": [
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "Business is $5 per user a month ($48 a year) and is where documents become unlimited — 10 signers and 3 documents per request, 10 MB, Word files, 10 saved templates, reminders and signing order.",
-   "verified_at": "2026-10-20",
+   "evidence": "Business is $5 per user a month ($48 a year, so $4 a month billed yearly) and is where documents become unlimited: 10 signers and 3 documents per request, PDF or Word up to 10 MB, 10 reusable templates, signing order, reminders, a saved signature, and search, filters, tags and reports.",
+   "verified_at": "2026-11-13",
    "source_url": null
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
-   "evidence": "Annual billing saves 20% and paid plans carry a 14-day trial.",
-   "verified_at": "2026-10-20",
+   "evidence": "Annual billing saves 20%, and Business and Professional carry a 14-day free trial.",
+   "verified_at": "2026-11-13",
    "source_url": null
   }
  ],
@@ -101,7 +101,7 @@
      "id": "personal",
      "name": "Personal",
      "model": "free",
-     "evidence": "Personal is free: 5 documents a month"
+     "evidence": "Free, shown as 'Personal Plan (free)' inside the app: 5 documents a month"
     },
     {
      "id": "business",
@@ -109,7 +109,7 @@
      "model": "per_unit",
      "monthly": 5,
      "annual_year": 48,
-     "evidence": "Business is $5 per user a month ($48 a year)"
+     "evidence": "Business is $5 per user a month ($48 a year"
     },
     {
      "id": "professional",
@@ -118,12 +118,21 @@
      "monthly": 15,
      "annual_year": 144,
      "evidence": "Professional is $15 per user a month ($144 a year)"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is priced on a custom quote"
     }
    ],
-   "not_computable": [
-    "API production signing from $0.30 per signed document on Professional, after the included free API sign requests."
+   "notes": [
+    "Business and Professional carry a 14-day free trial. Re-read against the 13 November 2026 notes."
    ],
-   "rules_verified_at": "2026-10-20"
+   "not_computable": [
+    "API production signing on Professional: the first 50 production sign requests are free, then $0.30 per request, with a lower rate above 500 requests a month that the notes do not give."
+   ],
+   "rules_verified_at": "2026-11-13"
   },
   "growth": {
    "annual": {
@@ -146,7 +155,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 4.0,
-       "professional": 12.0
+       "professional": 12.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -162,7 +172,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 8.0,
-       "professional": 24.0
+       "professional": 24.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -178,7 +189,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 12.0,
-       "professional": 36.0
+       "professional": 36.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -194,7 +206,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 20.0,
-       "professional": 60.0
+       "professional": 60.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -210,7 +223,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 40.0,
-       "professional": 120.0
+       "professional": 120.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -226,7 +240,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 60.0,
-       "professional": 180.0
+       "professional": 180.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -242,7 +257,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 80.0,
-       "professional": 240.0
+       "professional": 240.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -258,7 +274,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 100.0,
-       "professional": 300.0
+       "professional": 300.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -274,7 +291,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 200.0,
-       "professional": 600.0
+       "professional": 600.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -290,14 +308,15 @@
       "per_plan": {
        "personal": 0.0,
        "business": 400.0,
-       "professional": 1200.0
+       "professional": 1200.0,
+       "enterprise": "quote"
       }
      }
     ],
     "switch_points": [],
     "conflicts": [],
     "unknowns": [
-     "API production signing from $0.30 per signed document on Professional, after the included free API sign requests."
+     "API production signing on Professional: the first 50 production sign requests are free, then $0.30 per request, with a lower rate above 500 requests a month that the notes do not give."
     ],
     "measured": [
      {
@@ -379,7 +398,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 5.0,
-       "professional": 15.0
+       "professional": 15.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -395,7 +415,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 10.0,
-       "professional": 30.0
+       "professional": 30.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -411,7 +432,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 15.0,
-       "professional": 45.0
+       "professional": 45.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -427,7 +449,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 25.0,
-       "professional": 75.0
+       "professional": 75.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -443,7 +466,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 50.0,
-       "professional": 150.0
+       "professional": 150.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -459,7 +483,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 75.0,
-       "professional": 225.0
+       "professional": 225.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -475,7 +500,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 100.0,
-       "professional": 300.0
+       "professional": 300.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -491,7 +517,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 125.0,
-       "professional": 375.0
+       "professional": 375.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -507,7 +534,8 @@
       "per_plan": {
        "personal": 0.0,
        "business": 250.0,
-       "professional": 750.0
+       "professional": 750.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -523,14 +551,15 @@
       "per_plan": {
        "personal": 0.0,
        "business": 500.0,
-       "professional": 1500.0
+       "professional": 1500.0,
+       "enterprise": "quote"
       }
      }
     ],
     "switch_points": [],
     "conflicts": [],
     "unknowns": [
-     "API production signing from $0.30 per signed document on Professional, after the included free API sign requests."
+     "API production signing on Professional: the first 50 production sign requests are free, then $0.30 per request, with a lower rate above 500 requests a month that the notes do not give."
     ],
     "measured": [
      {
@@ -1026,7 +1055,7 @@
   {
    "question_id": "quicksigner:pricing_gap_1",
    "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: API production signing from $0.30 per signed document on Professional, after the included free API sign requests. Can you publish the price or the rule?",
+   "question": "Our price check could not put a number on this part of the cost: API production signing on Professional: the first 50 production sign requests are free, then $0.30 per request, with a lower rate above 500 requests a month that the notes do not give. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

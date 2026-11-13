@@ -3263,6 +3263,164 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "Cloze CRM",
+   "product_id": "cloze-crm",
+   "run_date": "2026-10-31",
+   "session_type": "hands_on",
+   "what": "Tested by our team on 31 October 2026 on the 14-day trial that starts with a new account, without a card: Daan created the account and our AI assistant ran the test in Daan's browser. We answered the onboarding questions, imported a two-row CSV of made-up contacts, and tried to export them again. We connected no mailbox, calendar or phone, sent nothing, invited nobody and paid nothing. The session took about ten minutes.",
+   "findings": [
+    "After sign-up Cloze asked four onboarding questions (industry setup, what to call people, what to call deals, and whether to track an active stage). We chose sales and services and left the defaults. The next screen said it was analysing our history and would email us when done, 'a few minutes to a few hours', although no mailbox was connected. The mailbox dialog offered Google, Microsoft 365, Exchange, iCloud, Yahoo and other email, and we connected none.",
+    "Settings showed the trial ending on 16 November 2026, which is 16 days after our account date of 31 October. Cloze's help page promises 14 days without a card. We were not asked for a card in the steps we recorded, but we did not count every sign-up screen, and we cannot say every account gets 16 days.",
+    "The CSV importer read the two rows and the sample values correctly, including accents and a line break inside a note, but detected no columns on its own, not even the email column. The 'Add person' field list runs to dozens of fields, and custom fields could only be mapped onto fields that already exist in the account. We mapped four columns by hand (display name, note, email, tags) and left the rest unmapped.",
+    "The import offered a dry run and a plain import; we ran the import and got 'Imported 2 of 2 records successfully', with the option to download our mapping. The two contacts did not show in the list until we searched for 'TEST', although the counter had already moved.",
+    "The email address and the multi-line note arrived intact. Our tag 'aibm-test|alpha' became one tag, '#aibm-test-alpha': the pipe turned into a hyphen and the tag was not split in two. That matters if you keep several tags in one spreadsheet column.",
+    "Settings > Import / Export offers CSV or Excel for people, companies and deals. The Dutch interface translated 'Excel' as 'uitmunten' (the verb 'to excel'). We pressed 'Export now' twice, at 21:21 and 21:24. Both times a loading spinner ran for about 30 seconds with no download, no message and no file, and the network log showed no export request. We do not know whether the file would have come by email later, so we do not call this a failed export. The export window points to support@cloze.com for help."
+   ],
+   "not_tested": [
+    "Pricing and checkout, so currency, tax, minimum seats and renewal terms are unknown from our own session",
+    "Whether the export file arrived by email later, and any export that produced a file",
+    "Re-importing to update existing records",
+    "Real mailbox connection and the email-history analysis the onboarding announced",
+    "Sending email, calendar, text messages and the team setup, roles and invitations",
+    "API access (a Settings entry exists, we did not open it) and contacting support",
+    "Cancelling, deleting the account or what follows when the trial ends"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "14 days",
+     "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+     "claim_read_on": "2026-10-31",
+     "observed": "Settings showed trial ending 16 November 2026, sixteen days after the account date of 31 October.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+     },
+     "plan": "Trial",
+     "comparability": "Cloze help promises fourteen days, whereas this account shows a 16 November end date from a 31 October start.",
+     "status": "contradicted",
+     "buying_consequence": "The observed account trial is two days longer than the published fourteen-day wording; do not assume all accounts receive sixteen days.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "without entering your credit card details",
+     "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+     "claim_read_on": "2026-10-31",
+     "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+     },
+     "plan": "Trial",
+     "comparability": "Cloze card-free wording is compared with the recorded trial session without payment details; full registration screens were not counted.",
+     "status": "confirmed",
+     "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14 days",
+     "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+     "claim_read_on": "2026-10-31",
+     "observed": "cloze: pricing and checkout were not opened; currency, tax, term, minimum seats, renewal and final total remain unknown.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+     },
+     "plan": "Trial",
+     "comparability": "cloze price-page versus checkout comparison cannot be made because neither pricing nor billing was opened during this session.",
+     "status": "not_testable",
+     "buying_consequence": "No observed checkout or exact cost-rule match is available; do not infer a paid price.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14 days",
+     "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+     "claim_read_on": "2026-10-31",
+     "observed": "Settings showed trial ending 16 November 2026, sixteen days after the account date of 31 October.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+     },
+     "plan": "Trial",
+     "comparability": "Cloze help promises fourteen days, whereas this account shows a 16 November end date from a 31 October start.",
+     "status": "contradicted",
+     "buying_consequence": "The observed account trial is two days longer than the published fourteen-day wording; do not assume all accounts receive sixteen days.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "without entering your credit card details",
+     "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+     "claim_read_on": "2026-10-31",
+     "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+     },
+     "plan": "Trial",
+     "comparability": "Cloze card-free wording is compared with the recorded trial session without payment details; full registration screens were not counted.",
+     "status": "confirmed",
+     "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14 days",
+     "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+     "claim_read_on": "2026-10-31",
+     "observed": "cloze: pricing and checkout were not opened; currency, tax, term, minimum seats, renewal and final total remain unknown.",
+     "observed_on": "2026-10-31",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+     },
+     "plan": "Trial",
+     "comparability": "cloze price-page versus checkout comparison cannot be made because neither pricing nor billing was opened during this session.",
+     "status": "not_testable",
+     "buying_consequence": "No observed checkout or exact cost-rule match is available; do not infer a paid price.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-10-31",
+    "what": "Two CSV-imported contacts; export attempts produced no file.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "No columns auto-detected; four mapped manually. Import retained email and multiline notes, but merged each pipe-separated tag pair into one hyphenated tag. Those are UI/import observations; all export kit checks remain not_tested. Two export attempts spun without a download; later email delivery remains unchecked. Onboarding claimed to analyse email history without a connected mailbox; Excel was translated as uitmunten.",
+    "friction": {
+     "export_route": "Settings > Import / Export > Export > My People; Export now attempted twice.",
+     "format": "CSV and Excel choices offered; no actual file obtained.",
+     "reimport": "Dry run and mapping download offered; record update reimport not executed.",
+     "cancellation": "No cancellation, expiry or deletion action tested."
+    },
+    "not_tested": [
+     "Complete signup screen count and human first-result setup speed.",
+     "Actual cancellation, expiry, deletion and follow-up mail.",
+     "Kit fields not entered and application record reimport."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "SendHQ",
    "product_id": "sendhq",
    "run_date": "2026-11-02",

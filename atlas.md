@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 652 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
+All 653 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -8,7 +8,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## 1Password (1password.com)
 - **Verified pricing:** Teams Starter Pack about $24.95/mo flat for 10 members (billed annually, $29.95 month-to-month), with up to 10 further seats at $4.99 each per month on annual billing; Business about $8.99/…
-- **Honest take:** It's the polished, category-leading pick, and it's priced like it: free and cheaper managers exist, so you're paying for the UX, ecosystem and business controls, not raw functionality.
+- **Honest take:** It's the polished, category-leading pick, and it's priced like it: free and cheaper managers exist, so you're paying for the UX, integrations and business controls, not raw functionality.
 - **Best for:** teams that want the most polished, secure password manager with solid admin controls and integrations
 - **Flags:** Per-seat pricing, Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/1password-review.html
@@ -241,7 +241,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Apollo (apollo.io)
 - **Verified pricing:** A free plan (900 credits per seat per year, 2 sequences); paid Basic $49, Professional $79 and Organization $119 per seat/mo billed annually, or $65, $99 and $149 month to month - the annua…
 - **Honest take:** The credit and export caps are the catch: real usage on enrichment and dialing often runs well above the sticker, and data accuracy is hit-or-miss, so verify before you outreach at scale.
-- **Best for:** sales teams that want prospecting data, enrichment and sequencing in one affordable all-in-one platform
+- **Best for:** sales teams that want prospecting data, enrichment and sequencing in one affordable platform
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/apollo-review/
 
@@ -261,7 +261,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Aspire (aspireapp.com)
 - **Verified pricing:** (price re-verified 2026-10-09 against the vendor's own pricing page, in a browser and by plain fetch) SGD $0 monthly fee on Basic, no minimum balance and no deposit to open.
 - **Honest take:** It's a fintech account (strongest in Southeast Asia), not a full bank.
-- **Best for:** startups and SMBs that want an all-in-one business account with $0 monthly fees and built-in spend management
+- **Best for:** startups and SMBs that want a business account with $0 monthly fees and built-in spend management
 - **Flags:** Free tier
 - **Full review:** https://officesoftwaremarketplace.com/aspire-review.html
 
@@ -778,14 +778,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Claude (claude.ai)
 - **Verified pricing:** (price re-verified 2026-10-11 on their own pricing page; unchanged since 2026-08-27) The free tier is $0.
 - **Honest take:** The honest catch is usage limits: even on Pro you can hit a ceiling mid-session on a heavy day, and the step up to Max is a real $100 to $200 a month: you're buying headroom, not extra features.
-- **Best for:** developers, writers, analysts and researchers who want best-in-class reasoning, coding and long-document work, and a model that's careful and direct rather than eager to please
+- **Best for:** developers, writers, analysts and researchers who want strong reasoning, coding and long-document work, and a model that's careful and direct rather than eager to please
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/claude-review.html
 
 ## Clay (clay.com)
 - **Verified pricing:** (re-verified 2026-10-19 on clay.com/pricing; both billing terms read from the page markup, no figure has moved since our August reading, and our reading of the headline prices was corrected…
 - **Honest take:** Two honest catches: a steep learning curve (expect 2–4 weeks, many teams need a dedicated Clay expert), and credits that are hard to forecast at scale.
-- **Best for:** modern GTM and ops teams who want best-in-class waterfall enrichment and custom research workflows, and have someone to own it
+- **Best for:** modern GTM and ops teams who want waterfall enrichment and custom research workflows, and have someone to own it
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/clay-review.html
 
@@ -843,6 +843,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores with a catalogue big enough that shoppers ask which item to buy, who want a chat assistant that reads live inventory and hands off to a person, and who will watch the transcripts
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://zerotouchsupport.com/cloze-review.html
+
+## Cloze CRM (cloze.com)
+- **Verified pricing:** (read 2026-11-13 on cloze.com/app/pricing, "$" shown without a currency name) Cloze has four paid plans and a 14 day free trial with no credit card.
+- **Honest take:** Email-first CRM with contacts, tracking and mail merge; Pro from $17 a month billed yearly.
+- **Best for:** freelancers, consultants and small sales teams who live in their inbox and want contacts, notes and follow-ups kept in one place
+- **Flags:** Per-seat pricing, Add-ons extra, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/cloze-crm-review/
 
 ## Clutch (clutch.co)
 - **Verified pricing:** (re-verified 2026-10-02 and again on 2026-10-06, read in their own help centre) Free for buyers.
@@ -1939,13 +1946,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Jubilee (jubileepro.com)
 - **Verified pricing:** Pay As You Go is $95 per case.
 - **Honest take:** It's a focused vertical tool (bankruptcy petition preparation and case management) so its whole value is bounded by that practice area; a general legal practice won't get much from it.
-- **Best for:** bankruptcy attorneys and legal professionals who want streamlined petition preparation, document automation and case management for filings
+- **Best for:** bankruptcy attorneys and legal professionals who want petition preparation, document automation and case management for filings
 - **Flags:** Usage-metered, Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/jubilee-review.html
 
 ## Kartra (kartra.com)
 - **Verified pricing:** (re-verified 2026-09-05 and again 2026-09-30 on their own pricing page) Four tiers, monthly against yearly: Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Professional $54…
-- **Honest take:** If your core need is polished course delivery, Kajabi's creator features are stronger; Kartra wins on all-in-one breadth, not course depth.
+- **Honest take:** If your core need is polished course delivery, Kajabi's creator features are stronger; Kartra wins on breadth, not course depth.
 - **Best for:** creators and coaches who want funnels, email, checkout, memberships and scheduling under one roof instead of five subscriptions
 - **Full review:** https://marketingandsalessoftware.com/kartra-review.html
 
@@ -2186,7 +2193,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## LocalTry (localtry.com)
 - **Verified pricing:** (read 2026-11-10 on localtry.com/pricing) LocalTry has three plans that all include the same 133 capabilities and differ by team size and workspace count: Core is $59 a month for 2 users an…
-- **Honest take:** All-in-one CRM with AI; card needed for the trial.
+- **Honest take:** CRM with AI; card needed for the trial.
 - **Best for:** small service businesses and agencies that want customers, jobs, invoices, reviews and marketing in one CRM and would like to connect their own AI tool
 - **Full review:** https://marketingandsalessoftware.com/localtry-review.html
 
@@ -2230,7 +2237,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Bulk email verification with credits that never expire; from $9 for 10,000.
 - **Best for:** marketers and developers who verify email lists in bursts and want to buy credits once instead of paying a monthly subscription
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/mailveri-review/
+- **Full review:** https://marketingandsalessoftware.com/mailveri-review.html
 
 ## ManyChat (manychat.com)
 - **Verified pricing:** Read on their own pricing page, 6 September 2026, and again, unchanged, 25 September 2026.
@@ -2422,7 +2429,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-10-25 on netart.com/us/pricing/pricing-cloudhosting/ and on netart.com/us/hosting/) Netart sells a broad range of cloud services; this review covers CloudHosting, its main web ho…
 - **Honest take:** The cheap first term is a promotion; renewals are at the standard price, and backup costs extra.
 - **Best for:** businesses and developers who want managed cloud hosting with a built-in CDN, PHP and Node.js, MariaDB, PostgreSQL, MongoDB and Redis on one platform, room to grow storage to 10 TB, and 24/7 support
-- **Flags:** Add-ons extra, Free tier
+- **Flags:** Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/netart-review.html
 
 ## NeuroAds (neuroadsinc.com)
@@ -2463,7 +2470,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## NiceJob (nicejob.com)
 - **Verified pricing:** (re-verified 2026-10-13 on their own pricing page) Two software plans, both USD per month with a 14-day free trial, no contract and cancel anytime: Starter at $75 (SMS and email review requ…
 - **Honest take:** Reporting and customization are fairly basic, and the Sites website add-on carries a $199 setup fee on top of its $99 a month.
-- **Best for:** local and service businesses that want reputation marketing on offense (automatically asking happy customers for reviews and showcasing them) rather than only managing damage when a bad review lands
+- **Best for:** local and service businesses that want reputation marketing on offense (automatically asking happy customers for reviews and displaying them) rather than only managing damage when a bad review lands
 - **Flags:** Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/nicejob-review.html
 
@@ -2798,7 +2805,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Plesk (plesk.com)
 - **Verified pricing:** (read 2026-08-30 on plesk.com/pricing from a US exit; re-verified 2026-09-20 and, for the euro figures, 2026-11-11 from the Netherlands against the page's own PleskPricing rate card, which …
-- **Honest take:** Two honest notes. Plesk has been raising prices steadily (the 2026 round averaged ~26%), so budget for the renewal trajectory, not today's invoice: it's a recurring theme in the ecosystem since the acquisition era.
+- **Honest take:** Two honest notes. Plesk has been raising prices steadily (the 2026 round averaged ~26%), so budget for the renewal trajectory, not today's invoice: it's a recurring theme since the acquisition era.
 - **Best for:** agencies and hosters managing multiple sites on their own servers who want a mature control panel with per-domain management, security and one-click stacks
 - **Full review:** https://officesoftwaremarketplace.com/plesk-review.html
 
@@ -3483,9 +3490,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Smartli (smartli.ai)
 - **Verified pricing:** (re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each …
-- **Honest take:** Smartli bundles nine AI tools (copy, SEO, images, logos) into one suite, and that breadth is also the honest catch: each individual tool is competent rather than best-in-class.
-- **Best for:** e-commerce sellers who want an affordable all-in-one AI suite to draft product listings, ad copy, SEO text and basic brand assets in one place
-- **Flags:** Annual commit, Free tier
+- **Honest take:** Smartli bundles nine AI tools (copy, SEO, images, logos) into one suite, and that breadth is also the honest catch: each individual tool is competent rather than the best at its job.
+- **Best for:** e-commerce sellers who want an affordable AI suite to draft product listings, ad copy, SEO text and basic brand assets in one place
+- **Flags:** Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/smartli-review/
 
 ## SmartSuite (smartsuite.com)
@@ -4069,7 +4076,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## UpsellPlus (upsellplus.com)
 - **Verified pricing:** (listing and vendor pricing page re-verified 2026-09-19 on apps.shopify.com/upsellpluscheckout, USD; the Scale ladder confirmed in writing by UpsellPlus support on 2026-09-21) Fixed monthly…
 - **Honest take:** The plans are capped by the revenue they are allowed to earn you, and the first paid step does not raise that cap: Free and the $49 Launch plan both stop at $500 of upsell revenue a month.
-- **Best for:** shopify merchants who want one app covering product page, cart, checkout, post-purchase, customer accounts and POS offers rather than three, especially Shopify Plus stores, where the checkout half of the product actually unlocks
+- **Best for:** shopify merchants who want one app covering product page, cart, checkout, post-purchase, customer accounts and POS offers rather than three, especially Shopify Plus stores, where the checkout half of the product actually works
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/upsellplus-review/
 
@@ -4192,7 +4199,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## VWO (vwo.com)
 - **Verified pricing:** No price is published any more, and the site has moved.
 - **Honest take:** The jump from Growth to Pro is steep (small businesses get priced out of MVT and complex targeting) and the UI is dense with options.
-- **Best for:** teams that want an all-in-one experience-optimisation platform (A/B testing + heatmaps + personalisation) with friendlier Bayesian stats and transparent pricing
+- **Best for:** teams that want an experience-optimisation platform (A/B testing + heatmaps + personalisation) with friendlier Bayesian stats and transparent pricing
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/vwo-review/
 
@@ -4372,7 +4379,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Xero (xero.com)
 - **Verified pricing:** (re-verified 2026-10-09 in a browser render of their own US pricing page) The 1 October price increase the page announced in September has happened.
 - **Honest take:** The price on the button is a three-month promo at 80% off; from month four Early, Growing and Established cost $27, $59 and $97 a month.
-- **Best for:** small businesses whose bookkeeper or accountant already works in Xero: the ecosystem and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs
+- **Best for:** small businesses whose bookkeeper or accountant already works in Xero: the connected apps and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
 
@@ -4441,7 +4448,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## ZenZap (zenzap.co)
 - **Verified pricing:** (re-read 2026-10-07 on the vendor's own pricing page; unchanged on 2026-10-15) The per-seat prices are gone.
-- **Honest take:** The pricing undercuts Slack: the honest question is ecosystem: team chat lives or dies on integrations and habit, and ZenZap's app catalog is a fraction of Slack's.
+- **Honest take:** The pricing undercuts Slack: the honest question is integrations: team chat lives or dies on integrations and habit, and ZenZap's app catalog is a fraction of Slack's.
 - **Best for:** small teams that run work over messy WhatsApp/personal chat today and want organized, professional chat with tasks: starting free
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://zerotouchsupport.com/zenzap-review.html

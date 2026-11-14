@@ -3263,6 +3263,164 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "SignThis",
+   "product_id": "signthis",
+   "run_date": "2026-11-14",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 14 November 2026 the session tested SignThis on the free plan: one PDF to three signers, the document counter, VerySecure, a correction after sending, cancelling, and the page a signer sees without an account. The paid Professional plan was not activated. One PDF with three made up signers was uploaded at 12:56. Place signature blocks put a signature, name and date for all three signers on page 1 with one click. Review and send said Uses 1 of your 3 remaining free documents and that free workspaces can send each document to up to 10 recipients and to 25 in any 24 hours (0 of 25 used; this document goes to 3). It was sent at 12:58, and the counter then read 2 of 3 free documents left this month: three signers cost one document. VerySecure palm scan can be ticked per signer on the free plan, but Review and send then says VerySecure requires a paid subscription and that ordinary documents remain available within the free allowance. No palm scan or biometrics followed and the box was unticked again. The invitations to the made up signer addresses did not arrive: the activity log said Accepted by mail service, with a note that accepted does not mean the email is in the inbox. Our own mailbox does not deliver plus addresses, which is a limit on our side and not a fault of SignThis. Correct and resend as new version made a new draft with the same blocks; after changing signer 1 to a reachable address, Review and send said Uses 1 of your 2 remaining free documents, so a correction costs a new document. Afterwards both versions stood on Waiting: the first was not withdrawn by itself. Both requests were cancelled with Cancel request, and the counter stayed at 1 of 3 free documents left: cancelling does not give the document back. What a signer without an account sees: the invitation of 13:00 arrived in the Junk folder of our mailbox and says No account is needed and that the signer can decline or ask the sender for a paper alternative; the link is valid until 14 December. The link opens a page without any login, with the document name, the sender, the items You will be asked to give (a signature and a full name) and all participants. Review and continue offers Read it first, a reading mode (Reading only, Ready to sign?), Open original PDF, the electronic records and signatures disclosure and Agree and continue, with the note that continuing does not sign the document. The PDF could be read before agreeing. Agree and continue was not clicked and nothing was signed. The sender saw for signer 1 at once Opened, opened just now.",
+   "findings": [
+    "Three signers cost one document: the counter went from 3 of 3 to 2 of 3 free documents left this month, and Review and send said Uses 1 of your 3 remaining free documents. One click on Place signature blocks put a signature, name and date for all three signers on page 1. Free workspaces can send each document to up to 10 recipients and to 25 in any 24 hours.",
+    "A correction costs a new document. Correct and resend as new version made a new draft with the same blocks and said Uses 1 of your 2 remaining free documents. Both versions then stood on Waiting. Cancelling both left the counter at 1 of 3, so cancelling does not give the document back.",
+    "VerySecure palm scan can be ticked per signer on the free plan, but Review and send then says VerySecure requires a paid subscription. The box was unticked and no palm scan followed.",
+    "A signer needs no account. The invitation says No account is needed, the link is valid until 14 December and opens without a login. The signer can read the PDF before agreeing, and continuing does not sign it. The sender saw Opened, opened just now at once.",
+    "The invitation landed in the Junk folder of our mailbox. The first invitations to made up plus addresses did not arrive (Accepted by mail service); our mailbox does not deliver plus addresses, which is a limit on our side."
+   ],
+   "not_tested": [
+    "The paid Professional plan: the next step needs agreement to recurring billing and a Stripe checkout",
+    "The VerySecure palm scan itself, signing, the sealed PDF and audit certificate",
+    "API or MCP, templates and bulk send",
+    "Support, export and reimport, roles, downgrade and cancelling a paid plan",
+    "Original account registration and the screen count"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Uses 1 of your 3 remaining free documents",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "One PDF sent to three signers used one free document: the counter went from 3 of 3 to 2 of 3 left.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Professional not activated",
+     "comparability": "One document with three signers on one account.",
+     "status": "confirmed",
+     "buying_consequence": "Several signers on one document cost one document on the free plan.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free workspaces can send each document to up to 10 recipients, and to 25 in any 24 hours.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "The limit is stated at Review and send, with 0 of 25 used for the 24 hours. It was not exceeded or tested.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Professional not activated",
+     "comparability": "Stated limit seen once; no attempt to exceed it.",
+     "status": "not_testable",
+     "buying_consequence": "Teams sending to more than 10 recipients per document need a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Uses 1 of your 2 remaining free documents",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "Correcting a sent document made a new draft that costs another free document, and both versions stayed Waiting until cancelled. After cancelling both, the counter stayed at 1 of 3 left.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Professional not activated",
+     "comparability": "One correction and two cancellations on one account.",
+     "status": "confirmed",
+     "buying_consequence": "A correction after sending costs a document and cancelling gives nothing back, so check a document before sending it.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "VerySecure requires a paid subscription.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "The palm scan box can be ticked per signer on the free plan; the refusal only appears at Review and send. The box was unticked again and no palm scan happened.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Professional not activated",
+     "comparability": "Observed once at Review and send.",
+     "status": "confirmed",
+     "buying_consequence": "VerySecure needs a paid plan; the free plan lets you set it up before telling you.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No account is needed.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "The signer link opened without any login, the PDF could be read before agreeing, and continuing does not sign. The invitation landed in the Junk folder of our own mailbox. Signing itself was not tested.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Professional not activated",
+     "comparability": "One invitation to one mailbox; delivery to other providers was not tested.",
+     "status": "confirmed",
+     "buying_consequence": "Signers need no account, but tell them to check their spam folder.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Agree and continue to payment $25 / month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "Professional is shown at 25 dollars a month with an agreement to recurring billing, and Stripe checkout comes next. The step was not taken, no discount code could be entered in the app, and no checkout was opened, so tax, the effect of any code and the final payable total are unknown.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Professional not activated",
+     "comparability": "App page versus an unopened Stripe checkout; the stored cost rule has no matching checkout basis.",
+     "status": "not_testable",
+     "buying_consequence": "Check the price after any code, the tax and the renewal terms on the Stripe page before agreeing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-14",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 14 November 2026 the session tested SignThis on the free plan: one PDF to three signers, the document counter, VerySecure, a correction after sending, cancelling, and the page a signer sees without an account. The paid Professional plan was not activated. One PDF with three made up signers was uploaded at 12:56. Place signature blocks put a signature, name and date for all three signers on page 1 with one click. Review and send said Uses 1 of your 3 remaining free documents and that free workspaces can send each document to up to 10 recipients and to 25 in any 24 hours (0 of 25 used; this document goes to 3). It was sent at 12:58, and the counter then read 2 of 3 free documents left this month: three signers cost one document. VerySecure palm scan can be ticked per signer on the free plan, but Review and send then says VerySecure requires a paid subscription and that ordinary documents remain available within the free allowance. No palm scan or biometrics followed and the box was unticked again. The invitations to the made up signer addresses did not arrive: the activity log said Accepted by mail service, with a note that accepted does not mean the email is in the inbox. Our own mailbox does not deliver plus addresses, which is a limit on our side and not a fault of SignThis. Correct and resend as new version made a new draft with the same blocks; after changing signer 1 to a reachable address, Review and send said Uses 1 of your 2 remaining free documents, so a correction costs a new document. Afterwards both versions stood on Waiting: the first was not withdrawn by itself. Both requests were cancelled with Cancel request, and the counter stayed at 1 of 3 free documents left: cancelling does not give the document back. What a signer without an account sees: the invitation of 13:00 arrived in the Junk folder of our mailbox and says No account is needed and that the signer can decline or ask the sender for a paper alternative; the link is valid until 14 December. The link opens a page without any login, with the document name, the sender, the items You will be asked to give (a signature and a full name) and all participants. Review and continue offers Read it first, a reading mode (Reading only, Ready to sign?), Open original PDF, the electronic records and signatures disclosure and Agree and continue, with the note that continuing does not sign the document. The PDF could be read before agreeing. Agree and continue was not clicked and nothing was signed. The sender saw for signer 1 at once Opened, opened just now. Not tested: the Professional plan, the VerySecure palm scan itself, the signing, the sealed PDF and audit certificate, API or MCP, templates and bulk send. No kit records were entered beyond the one synthetic PDF.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "A correction after sending costs a new document and the original stays open until cancelled; cancelling gives nothing back. VerySecure can be ticked on the free plan and only refused at Review and send. The invitation landed in the Junk folder.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and signup screen count.",
+     "The paid Professional plan with a reader discount code, because the next step needs agreement to recurring billing and a Stripe checkout.",
+     "Signing, the sealed PDF and audit certificate, the VerySecure palm scan itself, API or MCP, templates and bulk send.",
+     "Support, checkout, export and reimport.",
+     "Roles, API entitlement, downgrade, cancellation of a paid plan and passive follow up.",
+     "Session and source-reading date: 14 November 2026. Times are CET. The session started at about 12:55 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Cloze CRM",
    "product_id": "cloze-crm",
    "run_date": "2026-10-31",

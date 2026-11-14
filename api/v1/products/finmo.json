@@ -17,8 +17,8 @@
   "from_price_usd_month": null,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 6 November 2026 on finmo.net/pricing and the launch promotion terms) Finmo sells three things. The Business Account is free to hold: $0 to open, $0 a month, no minimum balance and unlimited user seats at no charge. You pay per transaction instead. SWIFT payouts carry a US$5 Finmo fee per transfer on supported corridors, and conversions on supported major currency pairs include a 0.07% FX margin (7 basis points) in the rate. That 0.07% is an introductory price, and the conditions matter. It runs for 12 months from the day you complete KYB. From the fourth full calendar month after you register, you must convert at least USD 10,000 equivalent each month to keep it. It only applies to conversions made Monday to Friday, 08:00 to 17:00 Singapore time, and not to Treasury, Embedded or any API access. Finmo does not publish the margins that apply after the promotion or outside those hours; it told us on 6 November 2026 that standard margins are set by currency pair and volume, are shared at onboarding and typically fall between 7 and 20 basis points (0.07% to 0.20%). That range comes from Finmo, not from a public page, and we have not verified it. Local transfer allowances depend on the payment method and your account, and payments sent through the API are priced separately. Finmo Treasury (Finmo's line: \"Every bank account, one view of your cash\") and Finmo Embedded (\"Licensed global payments infrastructure to build on\") have no public price: Finmo says pricing combines subscription and usage fees based on your banks, volumes and integration scope.",
-  "verified_at": "2026-11-06",
+  "notes": "(read 6 November 2026 on finmo.net/pricing and the launch promotion terms) Finmo sells three things. The Business Account is free to hold: $0 to open, $0 a month, no minimum balance and unlimited user seats at no charge. You pay per transaction instead. SWIFT payouts carry a US$5 Finmo fee per transfer on supported corridors, and conversions on supported major currency pairs include a 0.07% FX margin (7 basis points) in the rate. That 0.07% is an introductory price, and the conditions matter. It runs for 12 months from the day you complete KYB. From the fourth full calendar month after you register, you must convert at least USD 10,000 equivalent each month to keep it. It only applies to conversions made Monday to Friday, 08:00 to 17:00 Singapore time, and not to Treasury, Embedded or any API access. Finmo does not publish the margins that apply after the promotion or outside those hours; it told us on 6 November 2026 that standard margins are set by currency pair and volume, are shared at onboarding and typically fall between 7 and 20 basis points (0.07% to 0.20%). That range comes from Finmo, not from a public page, and we have not verified it. Local transfer allowances depend on the payment method and your account, and payments sent through the API are priced separately. Finmo Treasury (Finmo's line: \"Every bank account, one view of your cash\") and Finmo Embedded (\"Licensed global payments infrastructure to build on\") have no public price: Finmo says pricing combines subscription and usage fees based on your banks, volumes and integration scope. Re-read on 14 November 2026 with a plain fetch of finmo.net/pricing: $0 to open, $0 a month, free user seats, US$5 SWIFT payouts and the 0.07% launch margin on major pairs, unchanged. Finmo's Hong Kong pricing page (finmo.net/hk/pricing) was still live that day with a different, modular schedule: Essential free, Plus $49 per user a month, SWIFT payouts $25 and an FX margin of 0.50% on major currencies and 1.00% on others. The main page says fees depend on where your business is registered and on your agreed pricing schedule, so ask which list applies to your entity.",
+  "verified_at": "2026-11-14",
   "source_url": "https://www.finmo.net/pricing",
   "schema_offer": null,
   "source_quotes": [
@@ -37,17 +37,24 @@
  "free_plan_evidence": "The Business Account is free to hold: $0 to open, $0 a month, no minimum balance and unlimited user seats at no charge.",
  "cost_traps": [
   {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "Finmo's Hong Kong pricing page (finmo.net/hk/pricing) was still live that day with a different, modular schedule: Essential free, Plus $49 per user a month, SWIFT payouts $25 and an FX margin of 0.50% on major currencies and 1.00% on others.",
+   "verified_at": "2026-11-14",
+   "source_url": "https://www.finmo.net/pricing"
+  },
+  {
    "id": "renewal_jump",
    "label": "Renewal price jump",
    "evidence": "That 0.07% is an introductory price, and the conditions matter.",
-   "verified_at": "2026-11-06",
+   "verified_at": "2026-11-14",
    "source_url": "https://www.finmo.net/pricing"
   },
   {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "Local transfer allowances depend on the payment method and your account, and payments sent through the API are priced separately.",
-   "verified_at": "2026-11-06",
+   "verified_at": "2026-11-14",
    "source_url": "https://www.finmo.net/pricing"
   }
  ],
@@ -97,6 +104,12 @@
  "status_page": null,
  "task_evidence": null,
  "open_questions": [
+  {
+   "question_id": "finmo:finmo-q1",
+   "key": "finmo-q1",
+   "question": "Which fee schedule applies to a business registered in Hong Kong: the main pricing page or finmo.net/hk/pricing?",
+   "status": "open"
+  },
   {
    "question_id": "finmo:cancellation_terms",
    "key": "cancellation_terms",

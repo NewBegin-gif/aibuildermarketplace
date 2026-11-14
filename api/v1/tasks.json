@@ -3421,6 +3421,149 @@
   },
   {
    "source": "session",
+   "product_name": "Seonix",
+   "product_id": "seonix",
+   "run_date": "2026-11-14",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 we tested the Seonix free plan (onboarding, site scan, issues, keywords). On 14 November 2026 we tested Starter, which the vendor set to free for us until 12 January 2027, so no card was needed: integrations, the planner, one AI article and the billing page. Nothing was connected or published.",
+   "findings": [
+    "Free plan: the site scan took under 10 seconds and gave a health score of 95 with 8 active issues. It checked 100 of our 285 sitemap pages. Generate Content said AI is not available on the Free plan.",
+    "Starter: the first two clicks on Generate Content did nothing on screen (the network call returned 409, with no message). The third attempt started at about 08:09:50 and the draft was ready at 08:16:52, about 7 minutes, against the 30 to 60 seconds shown on screen.",
+    "The draft, Apollo Pricing Explained for Small Sales Teams, has 2,076 words, 13 subheadings, key takeaways and an FAQ, and scored SEO 90, Readability 87 and AI answers 86 (Excellent). It contains no price at all (0 amounts, checked with a script), although our own dossier lists the plan prices. The scores do not check whether a pricing article answers the pricing question.",
+    "For a site without a CMS the only publishing route is the REST API option, which needs your own endpoint: a POST for create and update keyed on external_id, and a GET that lists the articles on the site. The calendar said auto-plan, drag and drop and slot scheduling work only once a channel is connected; auto-publish was off.",
+    "The Title Too Long issue lists 7 of our review pages and says Seonix will fix this itself. With no channel connected, nothing was fixed. Whether a connected channel fixes them was not tested.",
+    "Billing showed Starter at $49 a month, Active, renewing on 12 January 2027, with a Cancel subscription button and Save 20% for yearly billing. We saw no charge because the vendor set the plan to free. Tax and the final total are unknown because no checkout was opened.",
+    "Without our asking, Seonix had already planned 12 articles for 15 to 26 November and written a draft that reused facts from our own site."
+   ],
+   "not_tested": [
+    "Account registration and the screen count",
+    "Connecting a real publishing channel and publishing",
+    "Search Console and Analytics, Studio covers",
+    "Checkout, support, invitations, roles, export and cancelling",
+    "The daily limits of Starter beyond one article"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "This usually takes 30-60 seconds.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "The screen says this while the article is written. The draft was ready at 08:16:52 after a start at about 08:09:50, about 7 minutes. The first two clicks on Generate Content failed silently with a 409 before that.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+     },
+     "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+     "comparability": "One article on one account in a session with pauses; not a benchmark of vendor speed.",
+     "status": "contradicted",
+     "buying_consequence": "Plan on about 7 minutes per article, not 30 to 60 seconds, and expect to retry a silent failure.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Excellent",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "The Apollo pricing draft scored SEO 90, Readability 87 and AI answers 86 with the label Excellent, while it contained no price at all and our own dossier lists the plan prices. The scores do not check that a pricing article answers the pricing question.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+     },
+     "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+     "comparability": "One article on one topic; the dossier prices were checked by hand.",
+     "status": "contradicted",
+     "buying_consequence": "Check every generated article for the facts a reader came for, such as prices, whatever the score says.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Seonix will fix this itself",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "The Title Too Long issue lists 7 review pages above 60 characters and says Seonix will fix this itself. No publishing channel was connected and nothing was fixed in this test; whether a connected channel fixes them was not tested.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+     },
+     "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+     "comparability": "Issue wording versus a site without a connected channel; no fix was attempted through a channel.",
+     "status": "not_testable",
+     "buying_consequence": "A static site needs its own REST endpoint before Seonix can publish fixes or articles; budget developer time for it.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Connect a channel to use the planner",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "The calendar says auto-plan, drag and drop and slot scheduling need a connected publishing channel, and auto-publish was off. For a site without a CMS the only route was the REST API with an own endpoint.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+     },
+     "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+     "comparability": "Observed on Starter on one project without a channel.",
+     "status": "confirmed",
+     "buying_consequence": "The planner and auto-publish do not work until a channel is connected, which for a static site means building an endpoint first.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Starter $49/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-14",
+     "observed": "Billing shows Starter at 49 dollars a month, Active, monthly, renewing on 12 January 2027, with Save 20% for yearly billing. The plan was set to free by the vendor until 12 January 2027 at our request, so no charge was seen. No checkout was opened, so tax and the final payable total are unknown.",
+     "observed_on": "2026-11-14",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+     },
+     "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+     "comparability": "Billing page on a vendor granted plan versus an unopened checkout; the stored cost rule has no matching checkout basis.",
+     "status": "not_testable",
+     "buying_consequence": "Check the billing basis, tax and renewal terms before buying; Starter allows 1 article per day and 50 edits and chat per day.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-14",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 13 November 2026 the session tested Seonix in two parts: the free plan on 13 November (onboarding, site scan, issues, keywords) and Starter on 14 November (integrations, planner, one AI article, billing). Nothing was connected or published. At 08:05 on 14 November the Overview showed STARTER and a banner to connect a channel to start publishing. The Content Plan showed 12 scheduled articles, one WILL WRITE article a day from 15 to 26 November, 3 of them as PILLAR. Seonix had by itself written a draft, Best Business Software for Small Business Without Overbuying (14 November, 1,664 words), which reused facts from our own site. Integrations says Pick one publishing destination: WordPress (plugin), REST API, Ghost (Admin API), Webflow (CMS collections), Wix and Shopify, with Notion coming soon. For a static site without a CMS the only route is the REST API: Connect Custom API says to publish articles to any site by exposing a REST endpoint that accepts the Seonix payload. One route lets an AI agent build it from a prompt plus a connect code; the manual route needs an endpoint that receives a POST for create and update, keyed on external_id, and a GET that lists the articles already on the site. It was not connected, because that would publish to the live site. The Calendar says Connect a channel to use the planner: auto-plan, drag and drop and slot scheduling work once a publishing channel is connected. Auto-publish was off with Every day recommended, and 19 of 216 topic clusters were ready. A vendor contact had advised connecting the site under Integrations first; the app says the same. Article: New article, Expert Article, topic Apollo.io pricing explained: what each plan really costs a small sales team, keyphrase Apollo pricing (commercial, 67), length 2,000. The first two clicks on Generate Content visibly did nothing: the network call to generate the article returned 409 without any message on screen. The third attempt, on a new form, started at about 08:09:50. The steps were Analyzing topic, Generating SEO title, Writing article content, Fact-checking and quality review and Preparing cover, with the screen saying This usually takes 30-60 seconds. The draft was ready at 08:16:52, about 7 minutes. The result, Apollo Pricing Explained for Small Sales Teams, has 2,076 words, 13 subheadings, Key takeaways and an FAQ, with SEO 90, Readability 87, AI answers 86 and the label Excellent; then Seonix is optimizing and Fixing the issues ran by itself. It names the plans Free, Basic, Professional and Organization, seats, credits that do not roll over, and Organization with minimum seats and annual payment, but it contains no price at all: 0 amounts, checked with a script. Our own dossier, re-verified on 1 October 2026, lists Basic 49, Professional 79 and Organization 119 dollars per seat a month billed annually, and 65, 99 and 149 monthly, with Organization needing at least 3 seats, which is 357 dollars a month. A pricing article without prices is safe, as nothing is invented, but it does not answer the search question. Not tested: connecting a real channel, publishing, Search Console and Analytics, Studio covers and cancelling. The draft stays unpublished in Seonix. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The first two Generate Content clicks failed silently with a 409, the article took about 7 minutes against 30 to 60 seconds on screen, and a static site can only connect through its own REST endpoint.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and signup screen count.",
+     "Connecting a real publishing channel, publishing, Search Console and Analytics, Studio covers and cancelling.",
+     "Support, invitations, checkout, export and reimport.",
+     "Roles, API entitlement beyond the connect dialog, downgrade and passive follow up.",
+     "The daily limits of Starter beyond one article.",
+     "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 08:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "SendHQ",
    "product_id": "sendhq",
    "run_date": "2026-11-02",

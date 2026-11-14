@@ -73,16 +73,572 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "pro",
+     "name": "Cloze Pro",
+     "model": "flat",
+     "max_units": 1,
+     "annual_month": 17,
+     "monthly": 19.99,
+     "evidence": "Cloze Pro for individuals costs $17 a month billed yearly or $19.99 month to month"
+    },
+    {
+     "id": "business-silver",
+     "name": "Business Silver",
+     "model": "per_unit",
+     "annual_month": 21,
+     "monthly": 24.99,
+     "evidence": "Business Silver costs $21 per user a month billed yearly or $24.99 month to month"
+    },
+    {
+     "id": "business-gold",
+     "name": "Business Gold",
+     "model": "per_unit",
+     "annual_month": 29,
+     "monthly": 34.99,
+     "evidence": "Business Gold $29 or $34.99"
+    },
+    {
+     "id": "business-platinum",
+     "name": "Business Platinum",
+     "model": "per_unit",
+     "annual_month": 42,
+     "monthly": 49.99,
+     "evidence": "Business Platinum $42 or $49.99"
+    }
+   ],
+   "notes": [
+    "Cloze Pro is for individuals; the Business plans are per user. 14-day free trial with no credit card. Prices shown with \"$\" and no currency name."
+   ],
+   "not_computable": [
+    "The Concierge Service add-on costs $20 per user a month with a $500 monthly minimum.",
+    "After the trial there is a free plan with contact management and an email inbox, but the page shows no limits for it.",
+    "Tax added at checkout is not known."
+   ],
+   "rules_verified_at": "2026-11-14"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "cloze-crm",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Cloze Pro",
+      "total_month": 17.0,
+      "billed": {
+       "amount": 204.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 17.0,
+       "business-silver": 21.0,
+       "business-gold": 29.0,
+       "business-platinum": 42.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 42.0,
+      "billed": {
+       "amount": 504.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 42.0,
+       "business-gold": 58.0,
+       "business-platinum": 84.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 63.0,
+      "billed": {
+       "amount": 756.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 63.0,
+       "business-gold": 87.0,
+       "business-platinum": 126.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 105.0,
+      "billed": {
+       "amount": 1260.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 105.0,
+       "business-gold": 145.0,
+       "business-platinum": 210.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 210.0,
+      "billed": {
+       "amount": 2520.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 210.0,
+       "business-gold": 290.0,
+       "business-platinum": 420.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 315.0,
+      "billed": {
+       "amount": 3780.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 315.0,
+       "business-gold": 435.0,
+       "business-platinum": 630.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 420.0,
+      "billed": {
+       "amount": 5040.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 420.0,
+       "business-gold": 580.0,
+       "business-platinum": 840.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 525.0,
+      "billed": {
+       "amount": 6300.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 525.0,
+       "business-gold": 725.0,
+       "business-platinum": 1050.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 1050.0,
+      "billed": {
+       "amount": 12600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 1050.0,
+       "business-gold": 1450.0,
+       "business-platinum": 2100.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 2100.0,
+      "billed": {
+       "amount": 25200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 2100.0,
+       "business-gold": 2900.0,
+       "business-platinum": 4200.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "pro",
+      "to_plan": "business-silver",
+      "from_plan_name": "Cloze Pro",
+      "to_plan_name": "Business Silver"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The Concierge Service add-on costs $20 per user a month with a $500 monthly minimum.",
+     "After the trial there is a free plan with contact management and an email inbox, but the page shows no limits for it.",
+     "Tax added at checkout is not known."
+    ],
+    "measured": [
+     {
+      "claim": "14 days",
+      "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+      "claim_read_on": "2026-10-31",
+      "observed": "Settings showed trial ending 16 November 2026, sixteen days after the account date of 31 October.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Cloze help promises fourteen days, whereas this account shows a 16 November end date from a 31 October start.",
+      "status": "contradicted",
+      "buying_consequence": "The observed account trial is two days longer than the published fourteen-day wording; do not assume all accounts receive sixteen days.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/cloze-crm-review.html"
+     },
+     {
+      "claim": "14 days",
+      "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+      "claim_read_on": "2026-10-31",
+      "observed": "Settings showed trial ending 16 November 2026, sixteen days after the account date of 31 October.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Cloze help promises fourteen days, whereas this account shows a 16 November end date from a 31 October start.",
+      "status": "contradicted",
+      "buying_consequence": "The observed account trial is two days longer than the published fourteen-day wording; do not assume all accounts receive sixteen days.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/cloze-crm-review.html"
+     },
+     {
+      "claim": "without entering your credit card details",
+      "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+      "claim_read_on": "2026-10-31",
+      "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Cloze card-free wording is compared with the recorded trial session without payment details; full registration screens were not counted.",
+      "status": "confirmed",
+      "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/cloze-crm-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "cloze-crm",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Cloze Pro",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 19.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 19.99,
+       "business-silver": 24.99,
+       "business-gold": 34.99,
+       "business-platinum": 49.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 49.98,
+      "billed": {
+       "amount": 49.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 49.98,
+       "business-gold": 69.98,
+       "business-platinum": 99.98
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 74.97,
+      "billed": {
+       "amount": 74.97,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 74.97,
+       "business-gold": 104.97,
+       "business-platinum": 149.97
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 124.95,
+      "billed": {
+       "amount": 124.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 124.95,
+       "business-gold": 174.95,
+       "business-platinum": 249.95
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 249.9,
+      "billed": {
+       "amount": 249.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 249.9,
+       "business-gold": 349.9,
+       "business-platinum": 499.9
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 374.85,
+      "billed": {
+       "amount": 374.85,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 374.85,
+       "business-gold": 524.85,
+       "business-platinum": 749.85
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 499.8,
+      "billed": {
+       "amount": 499.8,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 499.8,
+       "business-gold": 699.8,
+       "business-platinum": 999.8
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 624.75,
+      "billed": {
+       "amount": 624.75,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 624.75,
+       "business-gold": 874.75,
+       "business-platinum": 1249.75
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 1249.5,
+      "billed": {
+       "amount": 1249.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 1249.5,
+       "business-gold": 1749.5,
+       "business-platinum": 2499.5
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business-silver",
+      "cheapest_plan_name": "Business Silver",
+      "total_month": 2499.0,
+      "billed": {
+       "amount": 2499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "business-silver": 2499.0,
+       "business-gold": 3499.0,
+       "business-platinum": 4999.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "pro",
+      "to_plan": "business-silver",
+      "from_plan_name": "Cloze Pro",
+      "to_plan_name": "Business Silver"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The Concierge Service add-on costs $20 per user a month with a $500 monthly minimum.",
+     "After the trial there is a free plan with contact management and an email inbox, but the page shows no limits for it.",
+     "Tax added at checkout is not known."
+    ],
+    "measured": [
+     {
+      "claim": "14 days",
+      "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+      "claim_read_on": "2026-10-31",
+      "observed": "Settings showed trial ending 16 November 2026, sixteen days after the account date of 31 October.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Cloze help promises fourteen days, whereas this account shows a 16 November end date from a 31 October start.",
+      "status": "contradicted",
+      "buying_consequence": "The observed account trial is two days longer than the published fourteen-day wording; do not assume all accounts receive sixteen days.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/cloze-crm-review.html"
+     },
+     {
+      "claim": "14 days",
+      "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+      "claim_read_on": "2026-10-31",
+      "observed": "Settings showed trial ending 16 November 2026, sixteen days after the account date of 31 October.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Cloze help promises fourteen days, whereas this account shows a 16 November end date from a 31 October start.",
+      "status": "contradicted",
+      "buying_consequence": "The observed account trial is two days longer than the published fourteen-day wording; do not assume all accounts receive sixteen days.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/cloze-crm-review.html"
+     },
+     {
+      "claim": "without entering your credit card details",
+      "claim_source": "https://help.cloze.com/article/1692-is-there-a-free-version-of-cloze",
+      "claim_read_on": "2026-10-31",
+      "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/cloze-crm-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Cloze card-free wording is compared with the recorded trial session without payment details; full registration screens were not counted.",
+      "status": "confirmed",
+      "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/cloze-crm-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-10-31; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -471,9 +1027,21 @@
    "status": "open"
   },
   {
-   "question_id": "cloze-crm:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "cloze-crm:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The Concierge Service add-on costs $20 per user a month with a $500 monthly minimum. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "cloze-crm:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: After the trial there is a free plan with contact management and an email inbox, but the page shows no limits for it. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "cloze-crm:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Tax added at checkout is not known. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

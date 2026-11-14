@@ -17,13 +17,13 @@
   "from_price_usd_month": null,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 2026-11-02 on the True Image purchasing page, shown in euros to a visitor in Europe; we did not see a US-dollar price list) This review covers Acronis True Image, the home and home-office backup product. Acronis' business and MSP products (Cyber Protect) are priced separately and are not covered here. True Image is sold as a one-year subscription per number of computers. Essentials is €49.99 a year for 1 computer (€79.99 for 3, €99.99 for 5) and has no cloud storage: it does local backup and disk cloning. Advanced adds cloud backup, Microsoft 365 backup and antivirus; for 1 computer it is €57.99 a year with 50 GB of cloud storage, €72.99 with 250 GB (the option the page pre-selects) or €89.99 with 500 GB. Premium adds blockchain certification and e-signatures; for 1 computer it is €124.99 a year with 1 TB of cloud storage and goes up to €559.99 a year with 10 TB. The page does not state what the subscription costs at renewal, and it does not say whether VAT is included. The comparison table lists a 30-day free trial.",
-  "verified_at": "2026-11-02",
+  "notes": "(read 2026-11-02 on the True Image purchasing page, shown in euros to a visitor in Europe; we did not see a US-dollar price list) This review covers Acronis True Image, the home and home-office backup product. Acronis' business and MSP products (Cyber Protect) are priced separately and are not covered here. True Image is sold as a one-year subscription per number of computers. Essentials is €49.99 a year for 1 computer (€79.99 for 3, €99.99 for 5) and has no cloud storage: it does local backup and disk cloning. Advanced adds cloud backup, Microsoft 365 backup and antivirus; for 1 computer it is €57.99 a year with 50 GB of cloud storage, €72.99 with 250 GB (the option the page pre-selects) or €89.99 with 500 GB. Premium adds blockchain certification and e-signatures; for 1 computer it is €124.99 a year with 1 TB of cloud storage and goes up to €559.99 a year with 10 TB. The page does not state what the subscription costs at renewal, and it does not say whether VAT is included. The comparison table lists a 30-day free trial. Re-read on 14 November 2026 with a plain fetch of the purchasing page, again in euros: the 1-computer prices shown without the plan selector are unchanged at €49.99 (Essentials), €57.99 (Advanced) and €124.99 (Premium) a year. The 3- and 5-computer prices and the other storage sizes are filled in by the page script and were not visible in that fetch; they stay as read on 2 November 2026.",
+  "verified_at": "2026-11-14",
   "source_url": "https://www.acronis.com/en/products/true-image/purchasing/",
   "schema_offer": {
    "price": 49.99,
    "currency": "EUR",
-   "description": "Essentials, one-year subscription for 1 computer, local backup only; Advanced €57.99 (50 GB cloud) or €72.99 (250 GB, pre-selected), Premium €124.99 (1 TB); 3 and 5 computers cost more. Read on the vendor's own pricing page on 2026-11-02.",
+   "description": "Essentials, one-year subscription for 1 computer, local backup only; Advanced €57.99 (50 GB cloud) or €72.99 (250 GB, pre-selected), Premium €124.99 (1 TB); 3 and 5 computers cost more. Read on the vendor's own pricing page on 2026-11-14.",
    "page": "https://officesoftwaremarketplace.com/acronis-review.html"
   },
   "source_quotes": [
@@ -66,7 +66,7 @@
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "Acronis' business and MSP products (Cyber Protect) are priced separately and are not covered here.",
-   "verified_at": "2026-11-02",
+   "verified_at": "2026-11-14",
    "source_url": "https://www.acronis.com/en/products/true-image/purchasing/"
   }
  ],
@@ -95,16 +95,445 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "computer",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "essentials-1",
+     "name": "Essentials (1 computer)",
+     "model": "flat",
+     "max_units": 1,
+     "annual_year": 49.99,
+     "monthly_status": "not_offered",
+     "evidence": "Essentials is €49.99 a year for 1 computer (€79.99 for 3, €99.99 for 5)"
+    },
+    {
+     "id": "essentials-3",
+     "name": "Essentials (3 computers)",
+     "model": "flat",
+     "max_units": 3,
+     "annual_year": 79.99,
+     "monthly_status": "not_offered",
+     "evidence": "Essentials is €49.99 a year for 1 computer (€79.99 for 3, €99.99 for 5)"
+    },
+    {
+     "id": "essentials-5",
+     "name": "Essentials (5 computers)",
+     "model": "flat",
+     "max_units": 5,
+     "annual_year": 99.99,
+     "monthly_status": "not_offered",
+     "evidence": "Essentials is €49.99 a year for 1 computer (€79.99 for 3, €99.99 for 5)"
+    },
+    {
+     "id": "advanced-1-50gb",
+     "name": "Advanced, 50 GB (1 computer)",
+     "model": "flat",
+     "max_units": 1,
+     "annual_year": 57.99,
+     "monthly_status": "not_offered",
+     "evidence": "for 1 computer it is €57.99 a year with 50 GB of cloud storage"
+    },
+    {
+     "id": "premium-1-1tb",
+     "name": "Premium, 1 TB (1 computer)",
+     "model": "flat",
+     "max_units": 1,
+     "annual_year": 124.99,
+     "monthly_status": "not_offered",
+     "evidence": "for 1 computer it is €124.99 a year with 1 TB of cloud storage"
+    }
+   ],
+   "notes": [
+    "True Image is a one-year subscription per number of computers; Essentials has no cloud storage. Euro prices shown to a European visitor; the page does not say whether VAT is included."
+   ],
+   "not_computable": [
+    "Advanced and Premium for 3 or 5 computers: the notes give only 1-computer prices.",
+    "Renewal prices are not stated on the purchasing page.",
+    "Larger cloud storage options (Advanced 250 GB or 500 GB, Premium up to 10 TB) are not modelled as separate plans."
+   ],
+   "rules_verified_at": "2026-11-14"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "acronis",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "computer",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials-1",
+      "cheapest_plan_name": "Essentials (1 computer)",
+      "total_month": 4.17,
+      "billed": {
+       "amount": 49.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": 4.17,
+       "essentials-3": 6.67,
+       "essentials-5": 8.33,
+       "advanced-1-50gb": 4.83,
+       "premium-1-1tb": 10.42
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials-3",
+      "cheapest_plan_name": "Essentials (3 computers)",
+      "total_month": 6.67,
+      "billed": {
+       "amount": 79.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": 6.67,
+       "essentials-5": 8.33,
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "essentials-3",
+      "cheapest_plan_name": "Essentials (3 computers)",
+      "total_month": 6.67,
+      "billed": {
+       "amount": 79.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": 6.67,
+       "essentials-5": 8.33,
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials-5",
+      "cheapest_plan_name": "Essentials (5 computers)",
+      "total_month": 8.33,
+      "billed": {
+       "amount": 99.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": 8.33,
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "essentials-1",
+      "to_plan": "essentials-3",
+      "from_plan_name": "Essentials (1 computer)",
+      "to_plan_name": "Essentials (3 computers)"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "essentials-3",
+      "to_plan": "essentials-5",
+      "from_plan_name": "Essentials (3 computers)",
+      "to_plan_name": "Essentials (5 computers)"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "essentials-5",
+      "to_plan": null,
+      "from_plan_name": "Essentials (5 computers)",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Advanced and Premium for 3 or 5 computers: the notes give only 1-computer prices.",
+     "Renewal prices are not stated on the purchasing page.",
+     "Larger cloud storage options (Advanced 250 GB or 500 GB, Premium up to 10 TB) are not modelled as separate plans."
+    ]
+   },
+   "monthly": {
+    "product_id": "acronis",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "computer",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_offered_on_billing",
+       "essentials-3": "not_offered_on_billing",
+       "essentials-5": "not_offered_on_billing",
+       "advanced-1-50gb": "not_offered_on_billing",
+       "premium-1-1tb": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_offered_on_billing",
+       "essentials-5": "not_offered_on_billing",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_offered_on_billing",
+       "essentials-5": "not_offered_on_billing",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_offered_on_billing",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "essentials-1": "not_eligible",
+       "essentials-3": "not_eligible",
+       "essentials-5": "not_eligible",
+       "advanced-1-50gb": "not_eligible",
+       "premium-1-1tb": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Advanced and Premium for 3 or 5 computers: the notes give only 1-computer prices.",
+     "Renewal prices are not stated on the purchasing page.",
+     "Larger cloud storage options (Advanced 250 GB or 500 GB, Premium up to 10 TB) are not modelled as separate plans."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -115,6 +544,12 @@
  "status_page": null,
  "task_evidence": null,
  "open_questions": [
+  {
+   "question_id": "acronis:acronis-q1",
+   "key": "acronis-q1",
+   "question": "What happens to local and Acronis Cloud backups when a True Image subscription is not renewed?",
+   "status": "open"
+  },
   {
    "question_id": "acronis:cancellation_terms",
    "key": "cancellation_terms",
@@ -134,9 +569,21 @@
    "status": "open"
   },
   {
-   "question_id": "acronis:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "acronis:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Advanced and Premium for 3 or 5 computers: the notes give only 1-computer prices. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "acronis:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Renewal prices are not stated on the purchasing page. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "acronis:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: Larger cloud storage options (Advanced 250 GB or 500 GB, Premium up to 10 TB) are not modelled as separate plans. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -1528,7 +1528,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** B2B payments for AP and AR; $0 plan, ACH from $0.50.
 - **Best for:** small US businesses and bookkeepers who pay vendors and collect invoices by ACH and want a free account with an AP and AR inbox
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/forwardly-review/
+- **Full review:** https://officesoftwaremarketplace.com/forwardly-review.html
 
 ## Foxit (foxit.com)
 - **Verified pricing:** (re-verified 2026-09-22 on the Foxit PDF Editor pricing page; every figure identical to the 1 Sep 2026 reading) PDF Editor is $129.99 per user per year, or $10.99 per user per month, with a…
@@ -3495,7 +3495,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** E-signatures with palm verification; free plan, paid from $8 a month.
 - **Best for:** senders who sign a few documents a month for free, or who want to require a palm scan from signers before a signature counts
 - **Flags:** Per-seat pricing, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/signthis-review/
+- **Full review:** https://officesoftwaremarketplace.com/signthis-review.html
 
 ## Similarweb (similarweb.com)
 - **Verified pricing:** (re-verified 2026-10-16 on their own pricing page; first read 2026-08-25) The entrepreneur plans are published: $125 per month on annual billing for Competitive Intelligence, $333 for Compe…

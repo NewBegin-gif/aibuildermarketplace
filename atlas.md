@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 657 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-14.
+All 659 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-14.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -186,7 +186,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** WordPress SEO plugin; Basic 99 a year regular, half price in year one.
 - **Best for:** WordPress site owners and agencies who want titles, schema, sitemaps and redirects in one plugin and accept yearly licences
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/all-in-one-seo-review/
+- **Full review:** https://marketingandsalessoftware.com/all-in-one-seo-review.html
 
 ## Alli AI (alliai.com)
 - **Verified pricing:** (prices re-verified 2026-09-19 on alliai.com/pricing) Billed in USD, no free tier, a 10-day free trial on every plan and cancellation from the dashboard at any time.
@@ -1523,6 +1523,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing
 - **Full review:** https://marketingandsalessoftware.com/folk-review.html
 
+## Forwardly (forwardly.com)
+- **Verified pricing:** (read 2026-11-14 on forwardly.com/pricing, US dollars) Forwardly has no monthly platform fee.
+- **Honest take:** B2B payments for AP and AR; $0 plan, ACH from $0.50.
+- **Best for:** small US businesses and bookkeepers who pay vendors and collect invoices by ACH and want a free account with an AP and AR inbox
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/forwardly-review/
+
 ## Foxit (foxit.com)
 - **Verified pricing:** (re-verified 2026-09-22 on the Foxit PDF Editor pricing page; every figure identical to the 1 Sep 2026 reading) PDF Editor is $129.99 per user per year, or $10.99 per user per month, with a…
 - **Honest take:** Buy the $129.99 Editor and then need signatures, and Editor plus standalone eSign Essentials is $249.99 a year against $159.99 for the Editor+ that bundles it.
@@ -2570,7 +2577,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Popups and signup forms; Basic $108 first year, $210 on renewal.
 - **Best for:** small sites and shops that want popups, slide-ins and signup forms with ready templates, and who accept yearly billing
 - **Flags:** Usage-metered, Renewal jump
-- **Full review:** https://aibuildermarketplace.com/b2b/optinmonster-review/
+- **Full review:** https://marketingandsalessoftware.com/optinmonster-review.html
 
 ## Optizen (optizenapp.com)
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell; re-read 2026-09-17 and 2026-10-05, every amount unchanged) Three tiers, billed in USD.
@@ -3482,6 +3489,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams where many people sign occasionally and want unlimited users on one plan - size it against the 100 invites a year, not the headcount
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/signnow-review.html
+
+## SignThis (signthis.pro)
+- **Verified pricing:** (read 2026-11-14 on signthis.pro and signthis.pro/reviewers, US dollars a month before tax) SignThis has a free plan that sends 3 documents a month with no card and no end date; the allowan…
+- **Honest take:** E-signatures with palm verification; free plan, paid from $8 a month.
+- **Best for:** senders who sign a few documents a month for free, or who want to require a palm scan from signers before a signature counts
+- **Flags:** Per-seat pricing, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/signthis-review/
 
 ## Similarweb (similarweb.com)
 - **Verified pricing:** (re-verified 2026-10-16 on their own pricing page; first read 2026-08-25) The entrepreneur plans are published: $125 per month on annual billing for Competitive Intelligence, $333 for Compe…

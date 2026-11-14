@@ -2995,7 +2995,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-17, re-read 2026-09-27 and 2026-10-20, and read again on 2026-11-13 on QuickSigner's redesigned pricing page) Free, shown as 'Personal Plan (free)' inside the app: 5 do…
 - **Honest take:** The price is the argument, and the legal ceiling is the limit.
 - **Best for:** cost-conscious teams that want certified e-signing (ISO 27001, AATL) with unlimited documents from ~$5/mo and a real free tier
-- **Flags:** Per-seat pricing, Annual commit
+- **Flags:** Per-seat pricing, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/quicksigner-review/
 
 ## QuillBot (quillbot.com)

@@ -68,16 +68,227 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "per_unit",
+     "monthly": 10,
+     "annual_status": "unknown",
+     "evidence": "Basic is $10 a month for one active pixel"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "monthly": 15,
+     "annual_status": "unknown",
+     "evidence": "Standard is $15 a month for five active pixels"
+    },
+    {
+     "id": "unlimited",
+     "name": "Unlimited",
+     "model": "per_unit",
+     "monthly": 30,
+     "annual_status": "unknown",
+     "evidence": "Unlimited is $30 a month for unlimited Meta, TikTok, Snapchat and Pinterest pixels"
+    }
+   ],
+   "notes": [
+    "Shopify app billed in USD every 30 days through Shopify, 14-day free trial, no free plan and no yearly price.",
+    "The plans differ only in active pixels: 1 on Basic, 5 on Standard, unlimited on Unlimited. Pick the plan by pixel count; the cheapest plan per store assumes one pixel."
+   ],
+   "not_computable": [
+    "The motor counts stores, not pixels; a store with more than one active pixel needs Standard or Unlimited."
+   ],
+   "rules_verified_at": "2026-11-14"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "fbtrack",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "unlimited": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "unlimited": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "unlimited": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "unlimited": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "basic": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "unlimited": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The motor counts stores, not pixels; a store with more than one active pixel needs Standard or Unlimited."
+    ]
+   },
+   "monthly": {
+    "product_id": "fbtrack",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 10.0,
+       "standard": 15.0,
+       "unlimited": 30.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 20.0,
+       "standard": 30.0,
+       "unlimited": 60.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 30.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 30.0,
+       "standard": 45.0,
+       "unlimited": 90.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 50.0,
+      "billed": {
+       "amount": 50.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 50.0,
+       "standard": 75.0,
+       "unlimited": 150.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 100.0,
+       "standard": 150.0,
+       "unlimited": 300.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The motor counts stores, not pixels; a store with more than one active pixel needs Standard or Unlimited."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -107,9 +318,9 @@
    "status": "open"
   },
   {
-   "question_id": "fbtrack:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "fbtrack:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The motor counts stores, not pixels; a store with more than one active pixel needs Standard or Unlimited. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

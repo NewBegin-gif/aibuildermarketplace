@@ -1479,7 +1479,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 6 November 2026 on finmo.net/pricing and the launch promotion terms) Finmo sells three things.
 - **Honest take:** Free account, but the 0.07% FX rate is introductory and needs USD 10,000 a month in conversions.
 - **Best for:** startups, scale-ups and mid-market companies that collect and pay in several currencies and convert at least USD 10,000 a month on major pairs, and want one account with no monthly fee
-- **Flags:** Renewal jump, Add-ons extra, Free tier
+- **Flags:** Per-seat pricing, Renewal jump, Add-ons extra, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/finmo-review.html
 
 ## Fireflies.ai (fireflies.ai)

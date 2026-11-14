@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 655 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-13.
+All 657 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-14.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -180,6 +180,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** dropshippers who want automated product sourcing, fulfillment and inventory sync with access to faster-shipping suppliers and one-click store integration
 - **Flags:** Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/alidrop-review/
+
+## All in One SEO (aioseo.com)
+- **Verified pricing:** (read 2026-11-14 on aioseo.com/pricing) All in One SEO sells four yearly plans.
+- **Honest take:** WordPress SEO plugin; Basic 99 a year regular, half price in year one.
+- **Best for:** WordPress site owners and agencies who want titles, schema, sitemaps and redirects in one plugin and accept yearly licences
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/all-in-one-seo-review/
 
 ## Alli AI (alliai.com)
 - **Verified pricing:** (prices re-verified 2026-09-19 on alliai.com/pricing) Billed in USD, no free tier, a 10-day free trial on every plan and cancellation from the dashboard at any time.
@@ -2558,6 +2565,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/optery-review/
 
+## OptinMonster (optinmonster.com)
+- **Verified pricing:** (read 2026-11-14 on optinmonster.com/pricing, US dollars) OptinMonster sells four plans, billed yearly by default.
+- **Honest take:** Popups and signup forms; Basic $108 first year, $210 on renewal.
+- **Best for:** small sites and shops that want popups, slide-ins and signup forms with ready templates, and who accept yearly billing
+- **Flags:** Usage-metered, Renewal jump
+- **Full review:** https://aibuildermarketplace.com/b2b/optinmonster-review/
+
 ## Optizen (optizenapp.com)
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell; re-read 2026-09-17 and 2026-10-05, every amount unchanged) Three tiers, billed in USD.
 - **Honest take:** AI video is the reason to install this, and it is the one thing the subscription does not cover.
@@ -3351,7 +3365,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The thing you are actually buying is data coverage, and that is the one thing you cannot verify: Serpstat's own published figures do not agree with each other.
 - **Best for:** solo SEOs and small in-house teams who want the whole workflow (keywords, rankings, audit, competitors) under one subscription at roughly a third of what the incumbents charge
 - **Flags:** Usage-metered, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/serpstat-review/
+- **Full review:** https://marketingandsalessoftware.com/serpstat-review.html
 
 ## ServiceM8 (servicem8.com)
 - **Verified pricing:** (re-verified 2026-09-19 on their own pricing page, USD) Priced by jobs per month, with unlimited users on every paid tier.
@@ -3378,7 +3392,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It is built around Central and Eastern European carriers such as Packeta, so a US or UK merchant should confirm their carrier is supported before the five-day trial starts.
 - **Best for:** Shopify merchants shipping in Central and Eastern Europe who want pickup points, multi-carrier label printing and cash-on-delivery tracking in one app rather than one integration per carrier, and who are on Shopify Plus
 - **Flags:** Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/shipdock-review/
+- **Full review:** https://marketingandsalessoftware.com/shipdock-review.html
 
 ## Shippo (goshippo.com)
 - **Verified pricing:** Read on their own pricing page, re-verified 25 September 2026.
@@ -4037,7 +4051,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-01 on ultahost.com/shared-hosting, all four term tabs rendered) The term ladder is Monthly, Yearly -30%, 2 Years -40% and 3 Years -50%, and the page opens on the two-ye…
 - **Honest take:** The sticker price is a term commitment: the page opens on the 2-year prices, and the 30/40/50% badges are measured from a crossed-out list price rather than from what monthly billing actually costs.
 - **Best for:** budget-conscious owners, developers and small businesses that want cheap, fast NVMe hosting (shared or VPS) with free migration and DDoS protection, and will prepay a multi-year term
-- **Full review:** https://aibuildermarketplace.com/b2b/ultahost-review/
+- **Full review:** https://officesoftwaremarketplace.com/ultahost-review.html
 
 ## Unbounce (unbounce.com)
 - **Verified pricing:** (re-verified 2026-10-03 on their own pricing page, USD) Five published levels, monthly against yearly at 25% off: Starter $29 / $22, Build $99 / $74, Experiment $149 / $112, Optimize $249 /…
@@ -4064,7 +4078,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The 100 sales orders a month included on both bundles is the number that decides your bill, not the $399.
 - **Best for:** manufacturers and wholesalers who have outgrown spreadsheets and need real-time stock across multiple warehouses, with batch and serial tracking, landed costs and purchase-to-sale visibility in one system
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/unleashed-software-review/
+- **Full review:** https://officesoftwaremarketplace.com/unleashed-software-review.html
 
 ## UPDF (updf.com)
 - **Verified pricing:** (read 2026-11-04 on updf.com/pricing-individuals, US dollars) On 4 November the pricing page ran a Black Friday sale, so these are sale prices with the list price struck through.

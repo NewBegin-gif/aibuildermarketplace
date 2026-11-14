@@ -13,17 +13,17 @@
  "pricing": {
   "status": "public",
   "entry_price": "$24",
-  "entry_price_terms": "Website · Website plan shown as $24 / month with 100 AI credits a month and up to 10 launched projects",
+  "entry_price_terms": "Website · Website plan $24 / month billed monthly, $20 / month billed yearly (structured price data on the pricing page and the AI credits help article), 100 AI credits a month, up to 10 launched projects",
   "from_price_usd_month": 24.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 2026-11-07 on b12.io/pricing) B12 sells an AI website, store and web-app builder in three do-it-yourself plans, plus a separate \"experts do it for you\" tab that we did not price. Free costs $0 a month, publishes on a b12sites.com subdomain and gives 5 daily AI credits with a maximum of 30 a month. Website is shown at $24 a month and adds a custom domain, 100 AI credits a month, up to 10 launched projects, commerce, backends, integrations and email and chat support. Website + Client Engagement is shown at $78 a month and adds 300 AI credits a month, up to 30 launched projects, a custom email address, client intake, email marketing, a contact manager, contracts with eSignature and file uploads. The page carries a limited-time offer of $1 for the first 7 days on the paid plans for new users. The custom domain is free for the first year only; the renewal price is not stated. The page has a monthly and a yearly billing toggle and we could not tell which one the shown prices belong to, so check the toggle at checkout. Prices are in dollars as shown; the page does not name a currency code.",
-  "verified_at": "2026-11-07",
+  "notes": "(read 2026-11-07 on b12.io/pricing) B12 sells an AI website, store and web-app builder in three do-it-yourself plans, plus a separate \"experts do it for you\" tab that we did not price. Free costs $0 a month, publishes on a b12sites.com subdomain and gives 5 daily AI credits with a maximum of 30 a month. Website is shown at $24 a month and adds a custom domain, 100 AI credits a month, up to 10 launched projects, commerce, backends, integrations and email and chat support. Website + Client Engagement is shown at $78 a month and adds 300 AI credits a month, up to 30 launched projects, a custom email address, client intake, email marketing, a contact manager, contracts with eSignature and file uploads. The page carries a limited-time offer of $1 for the first 7 days on the paid plans for new users. The custom domain is free for the first year only; the renewal price is not stated. The $24 and $78 are the monthly-billing prices; on yearly billing the structured price data on the same page gives $20 and $67 a month, and B12's help article on AI credits also states $20 a month billed annually for Website. The visible page shows only a dollar sign; its structured price data names USD. Re-read on 14 November 2026 with a plain fetch of the pricing page and the help center: Free $0, Website $24 a month ($20 billed yearly), Website + Client Engagement $78 ($67 billed yearly), $1 for the first 7 days still offered. Extra AI credits cost $25 a month per 100 ($20 on an annual plan). The expert plans, Professional and Advanced, are $199 and $399 a month ($169 and $339 billed yearly) plus a setup fee that the page does not price.",
+  "verified_at": "2026-11-14",
   "source_url": "https://www.b12.io/pricing/",
   "schema_offer": {
    "price": 24.0,
    "currency": "USD",
-   "description": "Website, Website plan shown as $24 / month with 100 AI credits a month and up to 10 launched projects; Website + Client Engagement $78 / month; Free plan $0; the page shows both a monthly and a yearly billing toggle and we could not tell which price each toggle state shows; $1 for the first 7 days is a limited-time offer for new users; dollar sign as shown, currency code not stated on the page. Read on the vendor's own pricing page on 2026-11-07.",
+   "description": "Website, Website plan $24 / month billed monthly, $20 / month billed yearly (structured price data on the pricing page and the AI credits help article), 100 AI credits a month, up to 10 launched projects; Website + Client Engagement $78 monthly or $67 yearly; Free plan $0; extra credits $25 per 100 a month ($20 annual); $1 for the first 7 days is a limited-time offer for new users; currency USD in the structured data. Read on the vendor's own pricing page on 2026-11-14.",
    "page": "https://aibuildermarketplace.com/b2b/b12-review/"
   },
   "source_quotes": null,
@@ -37,14 +37,14 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "Free costs $0 a month, publishes on a b12sites.com subdomain and gives 5 daily AI credits with a maximum of 30 a month.",
-   "verified_at": "2026-11-07",
+   "verified_at": "2026-11-14",
    "source_url": "https://www.b12.io/pricing/"
   },
   {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "The yearly versus monthly price is not clear from the page, and the expert-built packages are priced separately and not shown here.",
-   "verified_at": "2026-11-07",
+   "verified_at": "2026-11-14",
    "source_url": "https://www.b12.io/pricing/"
   }
  ],
@@ -73,16 +73,457 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "launched project",
+   "axis": "companies",
+   "plans": [
+    {
+     "id": "website",
+     "name": "Website",
+     "model": "flat",
+     "max_units": 10,
+     "monthly": 24,
+     "annual_month": 20,
+     "evidence": "Website $24 a month ($20 billed yearly)"
+    },
+    {
+     "id": "website-client-engagement",
+     "name": "Website + Client Engagement",
+     "model": "flat",
+     "max_units": 30,
+     "monthly": 78,
+     "annual_month": 67,
+     "evidence": "Website + Client Engagement $78 ($67 billed yearly)"
+    }
+   ],
+   "notes": [
+    "One account; Website allows up to 10 launched projects and Website + Client Engagement up to 30. The yearly prices come from the structured price data on the pricing page.",
+    "The Free plan ($0) publishes on a b12sites.com subdomain only; its limit on launched projects is not in our notes, so it is not modelled.",
+    "A limited-time offer of $1 for the first 7 days applies to new users on the paid plans."
+   ],
+   "not_computable": [
+    "Extra AI credits are a recurring add-on at $25 a month per 100 ($20 on an annual plan); usage per message varies, so the motor does not add them.",
+    "The expert plans Professional and Advanced ($199 and $399 a month) carry a setup fee that is not priced.",
+    "The free custom domain covers the first year only; the renewal price is not stated."
+   ],
+   "rules_verified_at": "2026-11-14"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "b12",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "launched project",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "website",
+      "cheapest_plan_name": "Website",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": 20.0,
+       "website-client-engagement": 67.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "website",
+      "cheapest_plan_name": "Website",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": 20.0,
+       "website-client-engagement": 67.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "website",
+      "cheapest_plan_name": "Website",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": 20.0,
+       "website-client-engagement": 67.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "website",
+      "cheapest_plan_name": "Website",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": 20.0,
+       "website-client-engagement": 67.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "website-client-engagement",
+      "cheapest_plan_name": "Website + Client Engagement",
+      "total_month": 67.0,
+      "billed": {
+       "amount": 804.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": "not_eligible",
+       "website-client-engagement": 67.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "website": "not_eligible",
+       "website-client-engagement": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "website": "not_eligible",
+       "website-client-engagement": "not_eligible"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "website": "not_eligible",
+       "website-client-engagement": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 10,
+      "to_units": 20,
+      "from_plan": "website",
+      "to_plan": "website-client-engagement",
+      "from_plan_name": "Website",
+      "to_plan_name": "Website + Client Engagement"
+     },
+     {
+      "from_units": 20,
+      "to_units": 50,
+      "from_plan": "website-client-engagement",
+      "to_plan": null,
+      "from_plan_name": "Website + Client Engagement",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Extra AI credits are a recurring add-on at $25 a month per 100 ($20 on an annual plan); usage per message varies, so the motor does not add them.",
+     "The expert plans Professional and Advanced ($199 and $399 a month) carry a setup fee that is not priced.",
+     "The free custom domain covers the first year only; the renewal price is not stated."
+    ],
+    "measured": [
+     {
+      "claim": "Save 16%",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-12",
+      "observed": "Website yearly checkout said Save 16%; Plans said Save 15%. The monthly-equivalent figures were $20 yearly and $24 monthly.",
+      "observed_on": "2026-11-12",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/b12-review/#claim-vs-measured"
+      },
+      "plan": "Free; Website checkout inspected",
+      "comparability": "B12: Displayed percentages for Website yearly versus monthly; no tax-inclusive price difference inferred.",
+      "status": "contradicted",
+      "buying_consequence": "Displayed saving percentages differ; confirm the actual billing term.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/b12-review/"
+     },
+     {
+      "claim": "Daily credits 1/5",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-12",
+      "observed": "Plans listed 30 credits / month, while the account counter also displayed a daily denominator of 5. Both actions were completed on Free.",
+      "observed_on": "2026-11-12",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/b12-review/#claim-vs-measured"
+      },
+      "plan": "Free; Website checkout inspected",
+      "comparability": "B12: Free Plans month allowance compared with that account’s post-task counter; no extrapolated usage rate.",
+      "status": "confirmed",
+      "buying_consequence": "A daily cap also applies in the observed Free account.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/b12-review/"
+     },
+     {
+      "claim": "auto-renewal of your subscription, which can be disabled at any time by contacting",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-12",
+      "observed": "Checkout stated that auto-renewal can be disabled by contacting the vendor email recorded in the raw note. That procedure was not performed.",
+      "observed_on": "2026-11-12",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/b12-review/#claim-vs-measured"
+      },
+      "plan": "Free; Website checkout inspected",
+      "comparability": "B12: Website checkout renewal wording only, without testing response time or cancellation completion.",
+      "status": "confirmed",
+      "buying_consequence": "Renewal is automatic; disabling it was described as an email request.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/b12-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "b12",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "launched project",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "website",
+      "cheapest_plan_name": "Website",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": 24.0,
+       "website-client-engagement": 78.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "website",
+      "cheapest_plan_name": "Website",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": 24.0,
+       "website-client-engagement": 78.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "website",
+      "cheapest_plan_name": "Website",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": 24.0,
+       "website-client-engagement": 78.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "website",
+      "cheapest_plan_name": "Website",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": 24.0,
+       "website-client-engagement": 78.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "website-client-engagement",
+      "cheapest_plan_name": "Website + Client Engagement",
+      "total_month": 78.0,
+      "billed": {
+       "amount": 78.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "website": "not_eligible",
+       "website-client-engagement": 78.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "website": "not_eligible",
+       "website-client-engagement": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "website": "not_eligible",
+       "website-client-engagement": "not_eligible"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "website": "not_eligible",
+       "website-client-engagement": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 10,
+      "to_units": 20,
+      "from_plan": "website",
+      "to_plan": "website-client-engagement",
+      "from_plan_name": "Website",
+      "to_plan_name": "Website + Client Engagement"
+     },
+     {
+      "from_units": 20,
+      "to_units": 50,
+      "from_plan": "website-client-engagement",
+      "to_plan": null,
+      "from_plan_name": "Website + Client Engagement",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Extra AI credits are a recurring add-on at $25 a month per 100 ($20 on an annual plan); usage per message varies, so the motor does not add them.",
+     "The expert plans Professional and Advanced ($199 and $399 a month) carry a setup fee that is not priced.",
+     "The free custom domain covers the first year only; the renewal price is not stated."
+    ],
+    "measured": [
+     {
+      "claim": "Save 16%",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-12",
+      "observed": "Website yearly checkout said Save 16%; Plans said Save 15%. The monthly-equivalent figures were $20 yearly and $24 monthly.",
+      "observed_on": "2026-11-12",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/b12-review/#claim-vs-measured"
+      },
+      "plan": "Free; Website checkout inspected",
+      "comparability": "B12: Displayed percentages for Website yearly versus monthly; no tax-inclusive price difference inferred.",
+      "status": "contradicted",
+      "buying_consequence": "Displayed saving percentages differ; confirm the actual billing term.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/b12-review/"
+     },
+     {
+      "claim": "Daily credits 1/5",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-12",
+      "observed": "Plans listed 30 credits / month, while the account counter also displayed a daily denominator of 5. Both actions were completed on Free.",
+      "observed_on": "2026-11-12",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/b12-review/#claim-vs-measured"
+      },
+      "plan": "Free; Website checkout inspected",
+      "comparability": "B12: Free Plans month allowance compared with that account’s post-task counter; no extrapolated usage rate.",
+      "status": "confirmed",
+      "buying_consequence": "A daily cap also applies in the observed Free account.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/b12-review/"
+     },
+     {
+      "claim": "auto-renewal of your subscription, which can be disabled at any time by contacting",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-12",
+      "observed": "Checkout stated that auto-renewal can be disabled by contacting the vendor email recorded in the raw note. That procedure was not performed.",
+      "observed_on": "2026-11-12",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/b12-review/#claim-vs-measured"
+      },
+      "plan": "Free; Website checkout inspected",
+      "comparability": "B12: Website checkout renewal wording only, without testing response time or cancellation completion.",
+      "status": "confirmed",
+      "buying_consequence": "Renewal is automatic; disabling it was described as an email request.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/b12-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-12; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -459,9 +900,21 @@
    "status": "open"
   },
   {
-   "question_id": "b12:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "b12:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Extra AI credits are a recurring add-on at $25 a month per 100 ($20 on an annual plan); usage per message varies, so the motor does not add them. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "b12:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The expert plans Professional and Advanced ($199 and $399 a month) carry a setup fee that is not priced. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "b12:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: The free custom domain covers the first year only; the renewal price is not stated. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

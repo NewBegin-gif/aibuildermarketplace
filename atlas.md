@@ -4236,7 +4236,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Ringless voicemail at volume; from $95 a month, 7-day trial.
 - **Best for:** US sales teams, lenders and local service businesses that want to send personalised voicemails at volume and pay per delivered message
 - **Flags:** Usage-metered, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/voicedrop-review/
+- **Full review:** https://marketingandsalessoftware.com/voicedrop-review.html
 
 ## Volza (volza.com)
 - **Verified pricing:** (price re-verified 2026-11-09 on volza.com/pricing in a browser, because the page returns HTTP 403 to plain fetches; earlier reads 2026-09-01 and 2026-09-23) Three paid plans, billed annual…
@@ -4399,7 +4399,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/wordperfect-office-review.html
 
 ## World Businesses for Sale (worldbusinessesforsale.com)
-- **Verified pricing:** (2026, re-verified 2026-10-15 on their own store and selling pages) Browsing is free for buyers.
+- **Verified pricing:** (2026, re-verified 2026-11-15 on their own store and selling pages) Browsing is free for buyers.
 - **Honest take:** On the broker plans you pay twice: a listing fee up front AND commission when it sells (3% on Basic, 2% on Standard, 1% on Premium) on contracts of 6, 9 and 12 months.
 - **Best for:** owners selling established, often brick-and-mortar businesses (restaurants, shops, services, small manufacturers) who want international buyer exposure with hands-on guidance
 - **Full review:** https://officesoftwaremarketplace.com/world-businesses-for-sale-review.html

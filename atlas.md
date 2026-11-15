@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 660 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-15.
+All 661 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-15.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -418,7 +418,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-15 on checkoutrules.com/pricing and the Shopify App Store listing, US dollars, billed through Shopify every 30 days) BeSure Checkout Rules has a Free plan that lets you test r…
 - **Honest take:** Shipping and payment rules at checkout; from $4.99 a month, 5-day trial.
 - **Best for:** Shopify store owners who want to hide, rename or reorder shipping and payment methods, or block invalid checkouts, with a few rules and a low monthly price
-- **Full review:** https://aibuildermarketplace.com/b2b/besure-checkout-rules-review/
+- **Full review:** https://marketingandsalessoftware.com/besure-checkout-rules-review.html
 
 ## BidX (bidx.io)
 - **Verified pricing:** (re-verified 2026-10-13 on their own pricing page, EUR view; every figure unchanged since 6 Aug 2026) Amazon PPC is sold in three tiers, and every one of them is a monthly fee plus an unspe…
@@ -4230,6 +4230,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** agencies and multi-brand teams that want scheduling, listening, reviews and reporting across many profiles at a notably lower price than legacy suites
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
 - **Full review:** https://aibuildermarketplace.com/b2b/vista-social-review/
+
+## VoiceDrop (voicedrop.ai)
+- **Verified pricing:** (read 2026-11-15 on voicedrop.ai/pricing and the home page FAQ, US dollars a month) VoiceDrop sells ringless voicemail by usage units.
+- **Honest take:** Ringless voicemail at volume; from $95 a month, 7-day trial.
+- **Best for:** US sales teams, lenders and local service businesses that want to send personalised voicemails at volume and pay per delivered message
+- **Flags:** Usage-metered, Annual commit
+- **Full review:** https://aibuildermarketplace.com/b2b/voicedrop-review/
 
 ## Volza (volza.com)
 - **Verified pricing:** (price re-verified 2026-11-09 on volza.com/pricing in a browser, because the page returns HTTP 403 to plain fetches; earlier reads 2026-09-01 and 2026-09-23) Three paid plans, billed annual…

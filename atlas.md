@@ -4471,7 +4471,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Pay-once invoice, payout and document tools; free to try, from $15.
 - **Best for:** Online sellers, freelancers and small teams that want a single finished job done, such as an invoice or an Etsy payout breakdown, and prefer to pay once instead of per month
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/zastech-review/
+- **Full review:** https://officesoftwaremarketplace.com/zastech-review.html
 
 ## Zedonk (zedonk.co.uk)
 - **Verified pricing:** (price re-verified 2026-09-09, re-read unchanged 2026-09-27 and again 2026-10-20 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building b…

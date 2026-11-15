@@ -1147,7 +1147,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/dondy-review.html
 
 ## doola (doola.com)
-- **Verified pricing:** (re-verified 1 October 2026 on doola.com/pricing) These are the list prices.
+- **Verified pricing:** (re-verified 15 November 2026 on doola.com/pricing; list prices unchanged since our July 2026 captures) These are the list prices.
 - **Honest take:** Formation is the cheap part; the recurring bookkeeping and tax tiers are where the real cost sits, and state fees are extra on top of doola's price.
 - **Best for:** founders (often non-US) who want US LLC/C-Corp formation, EIN and compliance handled in one place without the paperwork
 - **Full review:** https://officesoftwaremarketplace.com/doola-review.html
@@ -1428,7 +1428,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/fast-bundle-review.html
 
 ## Fastmail (fastmail.com)
-- **Verified pricing:** (read 2026-08-26 on fastmail.com/pricing over a US connection, with their country selector on United States and the 12-month term chosen; re-read 2026-09-29 from a Dutch connection, and aga…
+- **Verified pricing:** (read 2026-08-26 on fastmail.com/pricing over a US connection, with their country selector on United States and the 12-month term chosen; re-read 2026-09-29 from a Dutch connection, again o…
 - **Honest take:** You're paying for what the free giants monetize differently: no ads, no profiling, real support and standards-first email (JMAP/IMAP everywhere).
 - **Best for:** individuals and small businesses that want fast, private, ad-free email on their own domain with proper support and masked-email aliases
 - **Full review:** https://aibuildermarketplace.com/b2b/fastmail-review/
@@ -1726,7 +1726,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/harbor-compliance-review.html
 
 ## Healthie (gethealthie.com)
-- **Verified pricing:** (re-verified 2026-08-17 and re-read unchanged 2026-09-28 on their own pricing page; yearly billing saves 10%) The entry tier is far lower than most summaries suggest: Core is $19.99/mo bill…
+- **Verified pricing:** (re-verified 2026-11-15 by plain fetch of gethealthie.com/healthie-pricing; yearly billing saves 10%) The public ladder now starts at Essentials: $49.99 a month billed monthly or $45 billed…
 - **Honest take:** Two honest limits: it's pricier than alternatives with thin mid-tier options, and several users report slow customer service (sometimes a week or more to reply).
 - **Best for:** growing group practices (10+ clinicians) in health, wellness and nutrition that need multi-provider scheduling, telehealth and a real API to automate operations
 - **Flags:** Add-ons extra
@@ -4170,7 +4170,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/vanity-number-review.html
 
 ## VEA (vea.ai)
-- **Verified pricing:** (re-verified 2026-09-29 on the pricing section of VEA's own site, vea.ai; amounts unchanged since 2026-09-02) Four tiers, per user per month, monthly against annual: Business Class $30 / $2…
+- **Verified pricing:** (re-verified 2026-11-15 by plain fetch of the pricing section on vea.ai; amounts unchanged since 2026-09-02) Four tiers, per user per month, monthly against annual: Business Class $30 / $25…
 - **Honest take:** The pitch is unusually bold: an AI that learns your business the way a great employee would, finds the constraint keeping you stuck, and helps you solve it.
 - **Best for:** hands-on entrepreneurs and small-business owners buried in operational detail who want AI that learns their specific business and helps surface what's actually holding it back: explicitly not enterprise software
 - **Flags:** Per-seat pricing, Annual commit

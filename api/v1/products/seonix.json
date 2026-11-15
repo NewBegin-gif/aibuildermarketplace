@@ -58,16 +58,451 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "company",
+   "axis": "companies",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free costs $0 and covers a full website SEO audit"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "monthly": 49,
+     "annual_year": 470,
+     "evidence": "Starter costs $49 a month, shown against a $100 regular price, or $470 a year shown against $1,200"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is priced through sales"
+    }
+   ],
+   "notes": [
+    "Starter covers 1 website project and 30 AI articles a month; monthly article limits do not roll over."
+   ],
+   "not_computable": [
+    "A second website project needs Enterprise, which is priced through sales."
+   ],
+   "rules_verified_at": "2026-11-15"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "seonix",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "company",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 39.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 78.33,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 195.83,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 391.67,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 783.33,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 1958.33,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 3916.67,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 5875.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "A second website project needs Enterprise, which is priced through sales."
+    ],
+    "measured": [
+     {
+      "claim": "This usually takes 30-60 seconds.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "The screen says this while the article is written. The draft was ready at 08:16:52 after a start at about 08:09:50, about 7 minutes. The first two clicks on Generate Content failed silently with a 409 before that.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+      },
+      "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+      "comparability": "One article on one account in a session with pauses; not a benchmark of vendor speed.",
+      "status": "contradicted",
+      "buying_consequence": "Plan on about 7 minutes per article, not 30 to 60 seconds, and expect to retry a silent failure.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/seonix-review/"
+     },
+     {
+      "claim": "Excellent",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "The Apollo pricing draft scored SEO 90, Readability 87 and AI answers 86 with the label Excellent, while it contained no price at all and our own dossier lists the plan prices. The scores do not check that a pricing article answers the pricing question.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+      },
+      "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+      "comparability": "One article on one topic; the dossier prices were checked by hand.",
+      "status": "contradicted",
+      "buying_consequence": "Check every generated article for the facts a reader came for, such as prices, whatever the score says.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/seonix-review/"
+     },
+     {
+      "claim": "Seonix will fix this itself",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "The Title Too Long issue lists 7 review pages above 60 characters and says Seonix will fix this itself. No publishing channel was connected and nothing was fixed in this test; whether a connected channel fixes them was not tested.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+      },
+      "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+      "comparability": "Issue wording versus a site without a connected channel; no fix was attempted through a channel.",
+      "status": "not_testable",
+      "buying_consequence": "A static site needs its own REST endpoint before Seonix can publish fixes or articles; budget developer time for it.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/seonix-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "seonix",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "company",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 49.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 98.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 245.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 490.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 980.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 2450.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 4900.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 7350.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "A second website project needs Enterprise, which is priced through sales."
+    ],
+    "measured": [
+     {
+      "claim": "This usually takes 30-60 seconds.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "The screen says this while the article is written. The draft was ready at 08:16:52 after a start at about 08:09:50, about 7 minutes. The first two clicks on Generate Content failed silently with a 409 before that.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+      },
+      "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+      "comparability": "One article on one account in a session with pauses; not a benchmark of vendor speed.",
+      "status": "contradicted",
+      "buying_consequence": "Plan on about 7 minutes per article, not 30 to 60 seconds, and expect to retry a silent failure.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/seonix-review/"
+     },
+     {
+      "claim": "Excellent",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "The Apollo pricing draft scored SEO 90, Readability 87 and AI answers 86 with the label Excellent, while it contained no price at all and our own dossier lists the plan prices. The scores do not check that a pricing article answers the pricing question.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+      },
+      "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+      "comparability": "One article on one topic; the dossier prices were checked by hand.",
+      "status": "contradicted",
+      "buying_consequence": "Check every generated article for the facts a reader came for, such as prices, whatever the score says.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://aibuildermarketplace.com/b2b/seonix-review/"
+     },
+     {
+      "claim": "Seonix will fix this itself",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "The Title Too Long issue lists 7 review pages above 60 characters and says Seonix will fix this itself. No publishing channel was connected and nothing was fixed in this test; whether a connected channel fixes them was not tested.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/seonix-review/#claim-vs-measured"
+      },
+      "plan": "Starter set to free by the vendor until 12 January 2027; billing page viewed",
+      "comparability": "Issue wording versus a site without a connected channel; no fix was attempted through a channel.",
+      "status": "not_testable",
+      "buying_consequence": "A static site needs its own REST endpoint before Seonix can publish fixes or articles; budget developer time for it.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/seonix-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-14; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -459,9 +894,9 @@
    "status": "open"
   },
   {
-   "question_id": "seonix:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "seonix:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: A second website project needs Enterprise, which is priced through sales. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

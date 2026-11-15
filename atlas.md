@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 661 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-15.
+All 663 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-15.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2885,6 +2885,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/postscript-review.html
 
+## PressBridge (pressbridgesupport.github.io)
+- **Verified pricing:** (read 2026-11-15 on the PressBridge home page, US dollars) PressBridge is a self-hosted MCP server that lets Claude work on WordPress sites over SSH and WP-CLI.
+- **Honest take:** Self-hosted WordPress MCP for Claude; from $49 once, free edition.
+- **Best for:** WordPress agencies and freelancers who look after several client sites on their own servers and want Claude to edit and update them with backups, an audit log and limits on what it can touch
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/pressbridge-review/
+
 ## Prezi (prezi.com)
 - **Verified pricing:** Prezi has a free plan, Basic, and three paid individual plans: Standard €5 a month, Plus €15 and Premium €25, all billed annually.
 - **Honest take:** The pricing table puts PDF export and portable presentations at Plus, not Standard, and our free account's AI editor locked PDF, PowerPoint and SCORM downloads to Plus.
@@ -4458,6 +4465,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** UK and overseas founders who want to form a UK limited company online for a small fee, with the option of a London registered office and service address instead of their home address
 - **Flags:** Renewal jump
 - **Full review:** https://officesoftwaremarketplace.com/your-company-formations-review.html
+
+## zastech (zastech.dev)
+- **Verified pricing:** (read 2026-11-15 on zastech.dev/pricing, US dollars) zastech sells small browser tools and developer APIs.
+- **Honest take:** Pay-once invoice, payout and document tools; free to try, from $15.
+- **Best for:** Online sellers, freelancers and small teams that want a single finished job done, such as an invoice or an Etsy payout breakdown, and prefer to pay once instead of per month
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/zastech-review/
 
 ## Zedonk (zedonk.co.uk)
 - **Verified pricing:** (price re-verified 2026-09-09, re-read unchanged 2026-09-27 and again 2026-10-20 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building b…

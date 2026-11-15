@@ -922,7 +922,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-03 on their own pricing page, USD) The free tier is real and not a trial: the Small Business Plan is $0 for life, covers up to 10 users and includes all hubs and featur…
 - **Honest take:** The free-for-10 plan is one of the most generous in the category, but the three-hub structure means costs can stack if you need all of them: price the specific hubs you'll actually use, not the full bundle.
 - **Best for:** deskless and frontline teams (shift work, field crews) that need scheduling, a time clock and comms in one app, on the free-for-10 plan
-- **Flags:** Per-seat pricing, Free tier
+- **Flags:** Per-seat pricing, Annual commit, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/connecteam-review/
 
 ## Consensus (consensus.app)
@@ -2146,7 +2146,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-15 against Leadpages' own machine-readable pricing file at leadpages.com/pricing.md, dated 2026-10-10, and the pricing page in a live browser; USD) The Starter plan is …
 - **Honest take:** It's the value pick, not the optimisation pick, if you're spending big on ads, Unbounce's Smart Traffic and Instapage's 1:1 personalisation go deeper.
 - **Best for:** small businesses building landing pages and simple funnels who want unmetered traffic: no per-visitor anxiety, unlike metered rivals
-- **Flags:** Usage-metered, Add-ons extra, Annual commit
+- **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/leadpages-review.html
 
 ## LearnWorlds (learnworlds.com)
@@ -2421,7 +2421,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## MX AI (effectify.io)
 - **Verified pricing:** (read 2026-09-16 and 2026-10-03, re-read 2026-11-13 on apps.shopify.com/custom-background-music; the price rose between the October and November readings) Two plans, and the free one is not…
-- **Honest take:** A free app from RoarTheme does the core job with the same 4.8 rating, so the $4.99 buys player controls, extra sources and AI-generated seasonal tracks, not the background music itself.
+- **Honest take:** A free app from RoarTheme does the core job, so the $4.99 buys player controls, extra sources and AI-generated seasonal tracks, not the background music itself.
 - **Best for:** Shopify merchants who want seasonal or ambient audio on the storefront, want a say in how the player looks and behaves, and would rather use the app's royalty-free tracks than sort out the licensing for a song of their own
 - **Full review:** https://aibuildermarketplace.com/b2b/mx-ai-review/
 

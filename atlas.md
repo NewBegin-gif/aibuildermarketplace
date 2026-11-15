@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 659 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-14.
+All 660 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-15.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -413,6 +413,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** newsletter operators who want growth tools, automation, SEO control and ad/referral monetisation, and to keep 100% of subscription revenue
 - **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/beehiiv-review.html
+
+## BeSure Checkout Rules (checkoutrules.com)
+- **Verified pricing:** (read 2026-11-15 on checkoutrules.com/pricing and the Shopify App Store listing, US dollars, billed through Shopify every 30 days) BeSure Checkout Rules has a Free plan that lets you test r…
+- **Honest take:** Shipping and payment rules at checkout; from $4.99 a month, 5-day trial.
+- **Best for:** Shopify store owners who want to hide, rename or reorder shipping and payment methods, or block invalid checkouts, with a few rules and a low monthly price
+- **Full review:** https://aibuildermarketplace.com/b2b/besure-checkout-rules-review/
 
 ## BidX (bidx.io)
 - **Verified pricing:** (re-verified 2026-10-13 on their own pricing page, EUR view; every figure unchanged since 6 Aug 2026) Amazon PPC is sold in three tiers, and every one of them is a monthly fee plus an unspe…
@@ -3433,7 +3439,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-25 at dash.shorby.com/pricing) Three paid plans, no free plan on the table.
 - **Honest take:** In a category where the market leader has a generous free plan, Shorby charges from day one, so it has to earn the gap.
 - **Best for:** creators and businesses that sell via messenger conversations or retarget link-in-bio traffic with ad pixels
-- **Full review:** https://aibuildermarketplace.com/b2b/shorby-review/
+- **Full review:** https://marketingandsalessoftware.com/shorby-review.html
 
 ## Shore (shore.com)
 - **Verified pricing:** (2026-09-26, read on shore.com/en/pricing and its 'All features compared' page, in euros, excluding VAT, for businesses only) Five packages on two product lines, each with a yearly-billing …
@@ -3516,7 +3522,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The plan ladder is set by bookings per month and by how many custom features you may switch on, and those two ceilings move independently.
 - **Best for:** service businesses that take appointments and want a booking page, reminders and online payment without building one
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/simplybook-me-review/
+- **Full review:** https://officesoftwaremarketplace.com/simplybook-me-review.html
 
 ## Skip To Checkout (effectify.io)
 - **Verified pricing:** (re-verified 2026-10-19 on apps.shopify.com/cart-auto-update, where the listing now names the app PF: Skip To Checkout/Skip Cart; first read 2026-09-18) Free, and free is the only plan.
@@ -3610,7 +3616,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Spocket's pitch is faster-shipping US and EU suppliers, and that's real, but you still pay twice: the monthly subscription and the wholesale product cost.
 - **Best for:** dropshippers who want vetted US and EU suppliers with faster shipping and one-click store integration, prioritizing delivery speed over raw catalog size
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/spocket-review/
+- **Full review:** https://marketingandsalessoftware.com/spocket-review.html
 
 ## Stackable (stkbl.app)
 - **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/stackable-discounts, re-verified unchanged 2026-11-01) Two paid tiers, billed in USD every 30 days, and no free plan.
@@ -4168,7 +4174,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Velora is three acquired products (Keela, Aplos, Raisely) being unified into one platform, and that's the honest watch-out: integration between them is newer than the marketing suggests.
 - **Best for:** nonprofits that want donor CRM, fund accounting and online fundraising from one vendor, purpose-built for charities rather than adapted business tools
 - **Flags:** Hidden pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/velora-review/
+- **Full review:** https://officesoftwaremarketplace.com/velora-review.html
 
 ## Vendoo (vendoo.co)
 - **Verified pricing:** (read 2026-10-08 on vendoo.co/pricing from a US connection, USD, with both the monthly and the yearly toggle) Vendoo sells three self-serve plans for resellers.
@@ -4423,7 +4429,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The price on the button is a three-month promo at 80% off; from month four Early, Growing and Established cost $27, $59 and $97 a month.
 - **Best for:** small businesses whose bookkeeper or accountant already works in Xero: the connected apps and the bank feeds are the real product, and the monthly price is small against what the reconciliation time costs
 - **Flags:** Per-seat pricing, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/xero-review/
+- **Full review:** https://officesoftwaremarketplace.com/xero-review.html
 
 ## xTiles (xtiles.app)
 - **Verified pricing:** (read 2026-10-13 in a live browser on xtiles.app/en/pricing, prices in US dollars, with the comparison table and FAQ) Four plans, priced per user.

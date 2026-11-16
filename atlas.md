@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 665 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-16.
+All 667 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1337,6 +1337,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants who want a free, no-code top bar or rotating bar for shipping terms, offers and store notices, and who will pay $9.99 once they need scheduled flash-sale bars, cart-page bars or country targeting
 - **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/essential-announcement-bar-review.html
+
+## Essential Cart Drawer (essential-apps.com)
+- **Verified pricing:** (read 2026-11-16 on essential-apps.com/cart-drawer/pricing, US dollars a month billed through Shopify) Nine plans with the same features, metered on orders that go through the cart drawer i…
+- **Honest take:** Slide-out cart drawer with upsells; free for 30 orders, paid from $8.99.
+- **Best for:** Shopify stores that want a slide-out cart with upsells, a free-shipping goal and a sticky add-to-cart bar in one app, and prefer a bill that follows how many orders go through the drawer
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://marketingandsalessoftware.com/essential-cart-drawer-review.html
 
 ## Essential Countdown Timer Bar (essential-apps.com)
 - **Verified pricing:** (read 2026-09-28, re-read 2026-10-21 without changes, on apps.shopify.com/essential-countdown-timer, on essential-apps.com/countdown-timer and in the vendor's help article on timer views) F…
@@ -2906,7 +2913,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/prezi-review.html
 
 ## Pricefy (pricefy.io)
-- **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28) A genuinely free tier: $0 for up to 50 SKUs, 5 competitors, daily price updates and AI automatch.
+- **Verified pricing:** (re-verified 2026-08-17, 2026-09-28 and 2026-11-16) A genuinely free tier: $0 for up to 50 SKUs, 5 competitors, daily price updates and AI automatch.
 - **Honest take:** The paid ladder rises fast: Starter at $49 buys only 100 SKUs, repricing waits for Pro at $99, and price updates run at most twice a day even on Enterprise.
 - **Best for:** e-commerce sellers monitoring competitor prices and repricing catalogs up to ~25,000 SKUs on rules or autopilot
 - **Flags:** Annual commit, Free tier
@@ -3133,6 +3140,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** sales teams running structured multichannel outbound (email + LinkedIn + calls) who want sequences, warmup and a B2B database in one platform
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit
 - **Full review:** https://marketingandsalessoftware.com/reply-io-review.html
+
+## RepointQR (repointqr.com)
+- **Verified pricing:** (read 2026-11-16 on repointqr.com/en/pricing, US dollars a month) RepointQR makes editable dynamic QR codes.
+- **Honest take:** Dynamic QR codes you can edit after printing; free plan, paid from $9.99.
+- **Best for:** Small businesses and local campaigns that print QR codes on menus, flyers, posters or packaging and want to change the destination later without reprinting
+- **Flags:** Free tier
+- **Full review:** https://marketingandsalessoftware.com/repointqr-review.html
 
 ## respond.io (respond.io)
 - **Verified pricing:** (2026-08-13, read off respond.io/pricing) Four tiers, billed on monthly active contacts rather than seats: Starter $79/month, Growth $159, Advanced $279, and Enterprise on quote.
@@ -3557,7 +3571,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/smartli-review/
 
 ## SmartSuite (smartsuite.com)
-- **Verified pricing:** (re-verified 2026-10-02 on their own pricing page, USD; unchanged since our August reading) No free plan — a 14-day trial of Professional with no credit card, and the page states there is n…
+- **Verified pricing:** (re-verified 2026-11-16 on their own pricing page and FAQ, USD; seat prices unchanged since our August reading) No free plan: a 14-day trial of Professional with no credit card, and the pag…
 - **Honest take:** It's a broad, do-everything work-management platform.
 - **Best for:** teams consolidating projects, CRM and operations into one flexible, database-driven work-management platform
 - **Flags:** Per-seat pricing

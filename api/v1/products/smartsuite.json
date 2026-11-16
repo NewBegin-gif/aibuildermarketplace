@@ -15,36 +15,15 @@
   "entry_price": "$15",
   "entry_price_terms": "Team, per seat · per seat per month billed annually ($20 billed monthly), with a minimum of 3 billable users",
   "from_price_usd_month": 15.0,
-  "plans": [
-   {
-    "name": "Team",
-    "price": "$15 per seat a month billed annually, or $20 billed monthly",
-    "includes": "Min 3 billable users, 5,000 records per solution, 50GB storage, 30-day recycle bin"
-   },
-   {
-    "name": "Professional",
-    "price": "$32 per seat annually, or $36 monthly",
-    "includes": "Min 5 billable users, 100,000 records, 100GB, 45-day recycle bin"
-   },
-   {
-    "name": "Enterprise",
-    "price": "quote-only",
-    "includes": "400,000 records, 500GB, 60 days, SSO, SCIM, audit logs, IP restrictions, DLP, EU data residency, no seat minimum"
-   },
-   {
-    "name": "Signature",
-    "price": "no published price",
-    "includes": "Priced per solution rather than per seat"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-10-02 on their own pricing page, USD; unchanged since our August reading) No free plan — a 14-day trial of Professional with no credit card, and the page states there is no auto-charge when it ends. Team is $15 per seat a month billed annually, or $20 billed monthly, with a minimum of 3 billable users, 5,000 records per solution, 50GB of storage and a 30-day recycle bin. Professional is $32 per seat annually, or $36 monthly, with a minimum of 5 billable users, 100,000 records, 100GB and 45 days. Enterprise is quote-only and lifts those to 400,000 records, 500GB and 60 days, adding SSO, SCIM, audit logs, IP restrictions, data-loss prevention and European data residency; a further Signature plan sits above it, also on request and, per the FAQ, priced per solution rather than per seat. The minimums matter more than the rate: a three-person team on Team pays for three seats whether or not all three log in, and Professional cannot be bought for fewer than five, so the real entry price is $45 a month on Team and $160 on Professional rather than the per-seat figures on the cards. The FAQ adds that Enterprise has no seat minimum and that read-only users, commenters and form submitters are not billed.",
-  "verified_at": "2026-10-02",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-11-16 on their own pricing page and FAQ, USD; seat prices unchanged since our August reading) No free plan: a 14-day trial of Professional with no credit card, and the page states there is no automatic charge when it ends. Team is $15 per seat a month billed annually, or $20 billed monthly, with a minimum of 3 billable users, 5,000 records per solution, 50GB of storage and a 30-day recycle bin. Professional is $32 per seat annually, or $36 monthly, with a minimum of 5 billable users, 100,000 records, 100GB and 45 days. Enterprise is custom priced with a minimum of 25 billable users on an annual plan, and lifts the limits to 400,000 records, 500GB and 60 days, adding SSO, SCIM, audit logs, IP restrictions and data-loss prevention; a further Signature plan sits above it, on request. Storage over the plan limit is added automatically and billed in 100GB blocks at $10 a month. The minimums matter more than the rate: a three-person team on Team pays for three seats whether or not all three log in, and Professional cannot be bought for fewer than five, so the real entry price is $45 a month on Team and $160 on Professional rather than the per-seat figures on the cards. You pay for users with edit permissions; read-only users, commenters and form submitters are not billed, and charges are prorated.",
+  "verified_at": "2026-11-16",
   "source_url": null,
   "schema_offer": {
    "price": 15.0,
    "currency": "USD",
-   "description": "Team, per seat, per seat per month billed annually ($20 billed monthly), with a minimum of 3 billable users - so the first bill is $45 a month. Read on the vendor's own pricing page on 2026-10-02.",
+   "description": "Team, per seat, per seat per month billed annually ($20 billed monthly), with a minimum of 3 billable users - so the first bill is $45 a month. Read on the vendor's own pricing page on 2026-11-16.",
    "page": "https://officesoftwaremarketplace.com/smartsuite-review.html"
   },
   "source_quotes": null,
@@ -58,7 +37,7 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "Team is $15 per seat a month billed annually, or $20 billed monthly, with a minimum of 3 billable users, 5,000 records per solution, 50GB of storage and a 30-day recycle bin.",
-   "verified_at": "2026-10-02",
+   "verified_at": "2026-11-16",
    "source_url": null
   }
  ],
@@ -93,7 +72,6 @@
    "currency": "USD",
    "unit": "seat",
    "axis": "users",
-   "rules_verified_at": "2026-10-02",
    "plans": [
     {
      "id": "team",
@@ -117,18 +95,23 @@
      "id": "enterprise",
      "name": "Enterprise",
      "model": "quote",
-     "evidence": "Enterprise is quote-only"
+     "evidence": "Enterprise is custom priced with a minimum of 25 billable users on an annual plan"
     },
     {
      "id": "signature",
      "name": "Signature",
      "model": "quote",
-     "evidence": "a further Signature plan sits above it, also on request"
+     "evidence": "a further Signature plan sits above it, on request"
     }
    ],
    "notes": [
-    "Read-only users, commenters and form submitters are not billed (vendor FAQ)."
-   ]
+    "Read-only users, commenters and form submitters are not billed (vendor FAQ).",
+    "Enterprise is sold from 25 billable users on an annual plan, at a quoted price."
+   ],
+   "not_computable": [
+    "Storage over the plan limit is added automatically and billed in 100GB blocks at $10 a month."
+   ],
+   "rules_verified_at": "2026-11-16"
   },
   "growth": {
    "annual": {
@@ -311,7 +294,9 @@
     ],
     "switch_points": [],
     "conflicts": [],
-    "unknowns": []
+    "unknowns": [
+     "Storage over the plan limit is added automatically and billed in 100GB blocks at $10 a month."
+    ]
    },
    "monthly": {
     "product_id": "smartsuite",
@@ -493,11 +478,14 @@
     ],
     "switch_points": [],
     "conflicts": [],
-    "unknowns": []
+    "unknowns": [
+     "Storage over the plan limit is added automatically and billed in 100GB blocks at $10 a month."
+    ]
    }
   }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
@@ -700,6 +688,12 @@
    "question_id": "smartsuite:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  },
+  {
+   "question_id": "smartsuite:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Storage over the plan limit is added automatically and billed in 100GB blocks at $10 a month. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

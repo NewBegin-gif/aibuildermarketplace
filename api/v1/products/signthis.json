@@ -66,16 +66,659 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "SignThis has a free plan that sends 3 documents a month with no card and no end date"
+    },
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 8,
+     "annual_status": "not_offered",
+     "evidence": "Individual plans have no annual commitment: Basic is $8 a month for 6 envelopes a month"
+    },
+    {
+     "id": "standard-individual",
+     "name": "Standard (individual)",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 20,
+     "annual_status": "not_offered",
+     "evidence": "Standard is $20 a month for 120 envelopes a year and 25 saved templates"
+    },
+    {
+     "id": "professional-individual",
+     "name": "Professional (individual)",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 25,
+     "annual_status": "not_offered",
+     "evidence": "Professional is $25 a month for 200 envelopes a year and 100 templates with the REST API"
+    },
+    {
+     "id": "secure",
+     "name": "Secure",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 49,
+     "annual_status": "not_offered",
+     "evidence": "Secure is $49 a month for 400 envelopes a year"
+    },
+    {
+     "id": "business-starter",
+     "name": "Business Starter",
+     "model": "per_unit",
+     "annual_month": 30,
+     "monthly_status": "not_offered",
+     "evidence": "Business plans need a 12-month commitment billed monthly: Starter is $30 a seat with 100 envelopes a year per seat and single sign-on"
+    },
+    {
+     "id": "business-standard",
+     "name": "Business Standard",
+     "model": "per_unit",
+     "annual_month": 35,
+     "min_units": 3,
+     "monthly_status": "not_offered",
+     "evidence": "Standard is $35 a seat (3-seat minimum) with unlimited envelopes under fair use"
+    },
+    {
+     "id": "business-professional",
+     "name": "Business Professional",
+     "model": "per_unit",
+     "annual_month": 65,
+     "min_units": 3,
+     "monthly_status": "not_offered",
+     "evidence": "Professional is $65 a seat (3-seat minimum) with 500 templates"
+    }
+   ],
+   "notes": [
+    "Individual plans are treated as one person each; the first Basic month is $5 for a new subscriber.",
+    "Business plans are a 12-month commitment paid monthly, modelled as the annual rate per month."
+   ],
+   "not_computable": [
+    "VerySecure palm verification uses extra envelopes per signer; envelope caps per year are not modelled.",
+    "Tax is not known."
+   ],
+   "rules_verified_at": "2026-11-16"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "signthis",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": "not_offered_on_billing",
+       "standard-individual": "not_offered_on_billing",
+       "professional-individual": "not_offered_on_billing",
+       "secure": "not_offered_on_billing",
+       "business-starter": 30.0,
+       "business-standard": 105.0,
+       "business-professional": 195.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 720.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 60.0,
+       "business-standard": 105.0,
+       "business-professional": 195.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 1080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 90.0,
+       "business-standard": 105.0,
+       "business-professional": 195.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 1800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 150.0,
+       "business-standard": 175.0,
+       "business-professional": 325.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 3600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 300.0,
+       "business-standard": 350.0,
+       "business-professional": 650.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 450.0,
+      "billed": {
+       "amount": 5400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 450.0,
+       "business-standard": 525.0,
+       "business-professional": 975.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 7200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 600.0,
+       "business-standard": 700.0,
+       "business-professional": 1300.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 750.0,
+      "billed": {
+       "amount": 9000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 750.0,
+       "business-standard": 875.0,
+       "business-professional": 1625.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 1500.0,
+      "billed": {
+       "amount": 18000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 1500.0,
+       "business-standard": 1750.0,
+       "business-professional": 3250.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business-starter",
+      "cheapest_plan_name": "Business Starter",
+      "total_month": 3000.0,
+      "billed": {
+       "amount": 36000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": 3000.0,
+       "business-standard": 3500.0,
+       "business-professional": 6500.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "business-starter",
+      "from_plan_name": "Free",
+      "to_plan_name": "Business Starter"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "VerySecure palm verification uses extra envelopes per signer; envelope caps per year are not modelled.",
+     "Tax is not known."
+    ],
+    "measured": [
+     {
+      "claim": "Uses 1 of your 3 remaining free documents",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "One PDF sent to three signers used one free document: the counter went from 3 of 3 to 2 of 3 left.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Professional not activated",
+      "comparability": "One document with three signers on one account.",
+      "status": "confirmed",
+      "buying_consequence": "Several signers on one document cost one document on the free plan.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/signthis-review.html"
+     },
+     {
+      "claim": "Free workspaces can send each document to up to 10 recipients, and to 25 in any 24 hours.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "The limit is stated at Review and send, with 0 of 25 used for the 24 hours. It was not exceeded or tested.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Professional not activated",
+      "comparability": "Stated limit seen once; no attempt to exceed it.",
+      "status": "not_testable",
+      "buying_consequence": "Teams sending to more than 10 recipients per document need a paid plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/signthis-review.html"
+     },
+     {
+      "claim": "Uses 1 of your 2 remaining free documents",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "Correcting a sent document made a new draft that costs another free document, and both versions stayed Waiting until cancelled. After cancelling both, the counter stayed at 1 of 3 left.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Professional not activated",
+      "comparability": "One correction and two cancellations on one account.",
+      "status": "confirmed",
+      "buying_consequence": "A correction after sending costs a document and cancelling gives nothing back, so check a document before sending it.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/signthis-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "signthis",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "basic": 8.0,
+       "standard-individual": 20.0,
+       "professional-individual": 25.0,
+       "secure": 49.0,
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "basic": "not_eligible",
+       "standard-individual": "not_eligible",
+       "professional-individual": "not_eligible",
+       "secure": "not_eligible",
+       "business-starter": "not_offered_on_billing",
+       "business-standard": "not_offered_on_billing",
+       "business-professional": "not_offered_on_billing"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "VerySecure palm verification uses extra envelopes per signer; envelope caps per year are not modelled.",
+     "Tax is not known."
+    ],
+    "measured": [
+     {
+      "claim": "Uses 1 of your 3 remaining free documents",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "One PDF sent to three signers used one free document: the counter went from 3 of 3 to 2 of 3 left.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Professional not activated",
+      "comparability": "One document with three signers on one account.",
+      "status": "confirmed",
+      "buying_consequence": "Several signers on one document cost one document on the free plan.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/signthis-review.html"
+     },
+     {
+      "claim": "Free workspaces can send each document to up to 10 recipients, and to 25 in any 24 hours.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "The limit is stated at Review and send, with 0 of 25 used for the 24 hours. It was not exceeded or tested.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Professional not activated",
+      "comparability": "Stated limit seen once; no attempt to exceed it.",
+      "status": "not_testable",
+      "buying_consequence": "Teams sending to more than 10 recipients per document need a paid plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/signthis-review.html"
+     },
+     {
+      "claim": "Uses 1 of your 2 remaining free documents",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-14",
+      "observed": "Correcting a sent document made a new draft that costs another free document, and both versions stayed Waiting until cancelled. After cancelling both, the counter stayed at 1 of 3 left.",
+      "observed_on": "2026-11-14",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/signthis-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Professional not activated",
+      "comparability": "One correction and two cancellations on one account.",
+      "status": "confirmed",
+      "buying_consequence": "A correction after sending costs a document and cancelling gives nothing back, so check a document before sending it.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/signthis-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-14; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -540,9 +1183,15 @@
    "status": "open"
   },
   {
-   "question_id": "signthis:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "signthis:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: VerySecure palm verification uses extra envelopes per signer; envelope caps per year are not modelled. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "signthis:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Tax is not known. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

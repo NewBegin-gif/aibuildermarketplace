@@ -1036,7 +1036,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/datarails-review.html
 
 ## Deel (deel.com)
-- **Verified pricing:** (re-verified 2026-10-09; the figures are unchanged since 2026-08-17) Pricing is per worker and demo-led, and each product is priced separately.
+- **Verified pricing:** (re-verified 2026-10-09 and again 2026-11-16; the figures are unchanged since 2026-08-17) Pricing is per worker and demo-led, and each product is priced separately.
 - **Honest take:** Every price is a ‘starting at’ and every button says ‘book a demo’ — the real bill depends on countries, benefits and add-ons, and only firms up in a sales conversation.
 - **Best for:** companies hiring internationally without local entities: contractors paid compliantly in 150+ countries, or full EOR employment in 130+ countries where you need someone on the ground fast
 - **Flags:** Per-seat pricing, Add-ons extra
@@ -1057,7 +1057,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/deputy-review.html
 
 ## Descript (descript.com)
-- **Verified pricing:** (re-verified 2026-08-17 and again 2026-10-01) Free plan with 60 minutes a month and watermarked 720p exports.
+- **Verified pricing:** (re-verified 2026-08-17, 2026-10-01 and again 2026-11-16) Free plan with 60 minutes a month and watermarked 720p exports.
 - **Honest take:** It's per-editor pricing with two meters running underneath: media hours AND monthly AI credits.
 - **Best for:** podcasters and video creators who want to edit by editing the transcript, cutting
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -1496,7 +1496,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/finmo-review.html
 
 ## Fireflies.ai (fireflies.ai)
-- **Verified pricing:** (price re-verified 2026-10-23 against the vendor's own pricing page and help guide) Free $0 — free forever, unlimited transcription, limited AI summaries, 400 mins of storage per team, 20 A…
+- **Verified pricing:** (price re-verified 2026-10-23 and again 2026-11-16 against the vendor's own pricing page and help guide) Free $0 — free forever, unlimited transcription, limited AI summaries, 400 mins of s…
 - **Honest take:** The advertised $10 and $19 are annual-billing rates; month-to-month is $18 and $29.
 - **Best for:** teams that want every meeting transcribed and searchable automatically: the free unlimited-transcription tier is rare
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier

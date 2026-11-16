@@ -1374,9 +1374,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/essential-trust-badges-review.html
 
 ## Essential Upsell & Cross Sell (essential-apps.com)
-- **Verified pricing:** (read 2026-10-02 on apps.shopify.com/essential-post-purchase-upsell and on essential-apps.com/upsell) Four plans, priced not on orders or views but on the extra revenue the app generates in…
+- **Verified pricing:** (read 2 Oct 2026 on the Shopify listing and on the vendor's own page; the listing was read again on 16 Nov 2026 and the plan screen in the app was checked the same day) Plans are priced not…
 - **Honest take:** The plans are metered on revenue the app says it generated, and the free plan's $100 a month is a small allowance.
-- **Best for:** Shopify stores that want product-page, cart and post-purchase upsells, frequently-bought-together blocks and add-ons in one app, with a monthly bill that cannot go above $39.99 however much the offers sell
+- **Best for:** Shopify stores that want product-page, cart and post-purchase upsells, frequently-bought-together blocks and add-ons in one app, with a monthly plan that rises in steps as the offers sell
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html
 
@@ -2018,7 +2018,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/kedra-ai-index-review.html
 
 ## Kedra Checkout Rules & Upsells (kedra.io)
-- **Verified pricing:** (read 2026-10-15 on the Shopify App Store listing apps.shopify.com/kedra-checkout-rules-1, prices in USD) Four plans, billed through your Shopify invoice.
+- **Verified pricing:** (Shopify App Store listing, read 15 Oct 2026 and read again 16 Nov 2026, prices in USD) Four plans, billed through your Shopify invoice.
 - **Honest take:** Free runs one rule; rules skip draft orders.
 - **Best for:** Shopify merchants who want to hide, rename or reorder payment and shipping methods, validate the checkout and add post-purchase upsells with rules instead of a developer, for a few dollars a month
 - **Flags:** Free tier
@@ -2723,7 +2723,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-16 on payrewards.com/pricing, US dollars) No subscription; sign-up is free.
 - **Honest take:** Pay vendors by card, earn points; 1.75% fee, no subscription.
 - **Best for:** US small businesses that pay many vendor bills and want to put them on a credit card or earn travel points even when the vendor only takes ACH or a check
-- **Full review:** https://aibuildermarketplace.com/b2b/payrewards-review/
+- **Full review:** https://officesoftwaremarketplace.com/payrewards-review.html
 
 ## pCloud (pcloud.com)
 - **Verified pricing:** (read 2026-10-26 on pcloud.com, its family and business pages, from a Netherlands connection that showed euros; the page calls the prices final) pCloud is best known for lifetime plans paid…
@@ -2884,9 +2884,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/positive-user-review.html
 
 ## Post Purchase Upsell Hero (postpurchaseupsellhero.com)
-- **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/post-purchase-upsell-hero and the vendor's own site; amounts unchanged since 31 August, USD) One plan, Performance, free to install, at $0 a mont…
+- **Verified pricing:** (Shopify listing, read 16 Nov 2026, USD; our reads of 31 August and 19 September 2026 showed $0 a month, so the monthly fee differs from those reads) One plan, Pay on Extra Sales, at $19 a …
 - **Honest take:** The 2.5% comes off revenue, not margin.
-- **Best for:** shopify stores that want post-purchase upsells with no fixed monthly cost, where the bill only exists once the app has already added revenue, and that are comfortable being early on an app a few months old
+- **Best for:** shopify stores that want post purchase upsells for a $19 monthly fee plus a commission capped at $500, and that are comfortable being early on an app a few months old
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html
 
@@ -3065,7 +3065,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/rankslide-review.html
 
 ## Rapid Search (rapidsearch.app)
-- **Verified pricing:** (read 2026-09-26, re-read 2026-10-21 without changes, on apps.shopify.com/rapid-search and on the vendor's own pricing page at rapidsearch.app/pricing) Every plan carries every feature; the…
+- **Verified pricing:** (read 26 Sep 2026 and 21 Oct 2026; the Shopify listing was read again on 16 Nov 2026, the vendor's own pricing page was last read on 21 Oct 2026) Every plan carries every feature; the tiers…
 - **Honest take:** The meter is your traffic, not your searches.
 - **Best for:** Shopify stores whose shoppers arrive knowing what they want, with catalogues from a few hundred to 100,000 products, that want typo-tolerant instant search
 - **Flags:** Usage-metered, Annual commit, Free tier

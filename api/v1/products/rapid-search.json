@@ -23,7 +23,7 @@
   "schema_offer": {
    "price": 14.0,
    "currency": "USD",
-   "description": "Basic 1, per month for 5,000 monthly sessions and 100,000 products, unbranded, billed through Shopify every 30 days with a 14-day free trial. Read on the vendor's own pricing page on 2026-10-21.",
+   "description": "Basic 1, per month for 5,000 monthly sessions and 100,000 products, unbranded, billed through Shopify every 30 days with a 14-day free trial. Read on the vendor's own pricing page on 2026-11-16.",
    "page": "https://marketingandsalessoftware.com/rapid-search-review.html"
   },
   "source_quotes": null,
@@ -93,18 +93,343 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-16; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-16",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/rapid-search-review.html",
+  "method": [
+   "Installed the app on a Shopify development store (Basic test plan) and read the plan and approval screens; nothing was paid",
+   "On 16 November 2026 the session tested Rapid Search on a Shopify development store inside a free trial: the onboarding, a search with a typing error, the plan screens up to the Shopify approval screen and the uninstall dialog.",
+   "Checked the result in the app and in Shopify; no kit records were entered"
+  ],
+  "claims": [
+   {
+    "claim": "5,000 products",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "The dossier named 5,000 products on the Free plan. The Free plan in the app shows Up to 1.000 products; the 2K session limit matched.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+    "comparability": "Dossier figure versus the Free plan card on one store; the 2K session limit matched.",
+    "status": "contradicted",
+    "buying_consequence": "The Free plan covers up to 1.000 products, so a store with more products needs a paid plan sooner than the dossier suggested.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "installs in one click, no code, live within minutes",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "Installing took one click and no code. Before the search worked the app asked for 3 onboarding screens and a reachable email address; a made up example address was refused. Search results appeared about 4 minutes after Install, in about 12 steps.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+    "comparability": "An AI assistant session with pauses does not measure human speed; the steps and the minutes are reported as observations only.",
+    "status": "not_comparable",
+    "buying_consequence": "The one click install holds, but a reachable email address and 3 onboarding screens come first.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "14-day free trial on paid tiers",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "Shopify showed a 14-day free trial ending on 30 Nov for the 5K plan. The app also gives every store unlimited sessions and products until November 30, 2026 without choosing a plan, after which the Free limits apply.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+    "comparability": "Dossier wording versus the Shopify approval screen and the Subscription screen on one development store.",
+    "status": "confirmed",
+    "buying_consequence": "The trial exists on the paid plan and runs to 30 Nov; afterwards the Free limits apply if no plan is chosen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Unbranded",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "The 5K plan lists Unbranded and the Free plan lists Branded; the overlay on the trial showed powered by: Rapid Search. Whether the branding disappears on a paid plan was not tested.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+    "comparability": "Plan card wording versus the overlay seen on the trial; no paid plan was active.",
+    "status": "confirmed",
+    "buying_consequence": "Free search carries the Rapid Search branding; removing it needs a paid plan.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "First 3 months, then $14/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "The 5K plan card shows $10/month with $14 struck through, First 3 months, then $14/month. The Shopify Approve subscription screen for Rapid Search Basic 1 Plan showed Subtotal $14,00, Discount -$4,00 and Total $10,00 due 30 Nov after a 14-day free trial, plus any applicable taxes. Card and approval screen agree on 10 and 14 dollars; tax is unknown and nothing was approved.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+    "comparability": "Plan card versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+    "status": "confirmed",
+    "buying_consequence": "About $10 for each of the first 3 months after the trial and then $14, before any taxes.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-16",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Rapid Search on a Shopify development store inside a free trial: the onboarding, a search with a typing error, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. In the theme editor App embeds list, Rapid Search App was already switched on by the app (Save greyed out) and Rapid Search CSB was off; no theme change was saved. The search icon in the preview opens an overlay with popular searches and popular products. Typing snowbord (a typing error for snowboard) at about 14:34:30 showed, within about 2 seconds, PRODUCTS with The Complete Snowboard $699.95 In stock, The Videographer Snowboard $885.95, The Collection Snowboard: Liquid $749.95, The Collection Snowboard: Oxygen $1,025.00 and The Multi-managed Snowboard $629.95, the suggestions snowboard and collection snowboard, the button View all snowbord products and powered by: Rapid Search. View all opened a results page that the app had created, with 13 results for snowbord, filters Category (Automated Collection 6, Hydrogen 3) and Product Type (snowboard 12, giftcard 1), a price slider from $10 to $2630 and sorting by Relevance. Timing, approximate tester observations: Install at 14:30:26 and the right results at 14:34:30, about 4 minutes, mostly our own clicks and the refused first email; the store data synchronisation finished within about 20 seconds (Downloading data, Processing data, Synchronization finished) and the results appeared within about 2 seconds of typing; about 12 steps in all. Settings, Apps shows a menu for the app with Open app, View details, Get support and Uninstall; the Uninstall dialog was opened and cancelled. Not tested: a paid plan, the yearly plan after approval, the 75K to Unlimited prices, collection pages and filters, product merchandising, Statistics, real traffic counting sessions and what happens after 30 Nov. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The onboarding asks for a reachable email address before the app works, and a made up example address was refused.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A paid plan after approval, the yearly plan and the 75K to Unlimited prices.",
+    "Collection pages and filters, product merchandising, Statistics and real traffic counting sessions.",
+    "What happens after the trial ends on 30 Nov, support, invitations, export and reimport.",
+    "Uninstalling the app, which was only opened as a dialog and cancelled.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:30 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/rapid-search-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/rapid-search-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "Shopify showed a 14-day free trial ending on 30 Nov for the 5K plan. The app also gives every store unlimited sessions and products until November 30, 2026 without choosing a plan, after which the Free limits apply.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Rapid Search on a Shopify development store inside a free trial: the onboarding, a search with a typing error, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. In the theme editor App embeds list, Rapid Search App was already switched on by the app (Save greyed out) and Rapid Search CSB was off; no theme change was saved. The search icon in the preview opens an overlay with popular searches and popular products. Typing snowbord (a typing error for snowboard) at about 14:34:30 showed, within about 2 seconds, PRODUCTS with The Complete Snowboard $699.95 In stock, The Videographer Snowboard $885.95, The Collection Snowboard: Liquid $749.95, The Collection Snowboard: Oxygen $1,025.00 and The Multi-managed Snowboard $629.95, the suggestions snowboard and collection snowboard, the button View all snowbord products and powered by: Rapid Search. View all opened a results page that the app had created, with 13 results for snowbord, filters Category (Automated Collection 6, Hydrogen 3) and Product Type (snowboard 12, giftcard 1), a price slider from $10 to $2630 and sorting by Relevance. Timing, approximate tester observations: Install at 14:30:26 and the right results at 14:34:30, about 4 minutes, mostly our own clicks and the refused first email; the store data synchronisation finished within about 20 seconds (Downloading data, Processing data, Synchronization finished) and the results appeared within about 2 seconds of typing; about 12 steps in all. Settings, Apps shows a menu for the app with Open app, View details, Get support and Uninstall; the Uninstall dialog was opened and cancelled. Not tested: a paid plan, the yearly plan after approval, the 75K to Unlimited prices, collection pages and filters, product merchandising, Statistics, real traffic counting sessions and what happens after 30 Nov. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/rapid-search-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Rapid Search on a Shopify development store inside a free trial: the onboarding, a search with a typing error, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. In the theme editor App embeds list, Rapid Search App was already switched on by the app (Save greyed out) and Rapid Search CSB was off; no theme change was saved. The search icon in the preview opens an overlay with popular searches and popular products. Typing snowbord (a typing error for snowboard) at about 14:34:30 showed, within about 2 seconds, PRODUCTS with The Complete Snowboard $699.95 In stock, The Videographer Snowboard $885.95, The Collection Snowboard: Liquid $749.95, The Collection Snowboard: Oxygen $1,025.00 and The Multi-managed Snowboard $629.95, the suggestions snowboard and collection snowboard, the button View all snowbord products and powered by: Rapid Search. View all opened a results page that the app had created, with 13 results for snowbord, filters Category (Automated Collection 6, Hydrogen 3) and Product Type (snowboard 12, giftcard 1), a price slider from $10 to $2630 and sorting by Relevance. Timing, approximate tester observations: Install at 14:30:26 and the right results at 14:34:30, about 4 minutes, mostly our own clicks and the refused first email; the store data synchronisation finished within about 20 seconds (Downloading data, Processing data, Synchronization finished) and the results appeared within about 2 seconds of typing; about 12 steps in all. Settings, Apps shows a menu for the app with Open app, View details, Get support and Uninstall; the Uninstall dialog was opened and cancelled. Not tested: a paid plan, the yearly plan after approval, the 75K to Unlimited prices, collection pages and filters, product merchandising, Statistics, real traffic counting sessions and what happens after 30 Nov. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/rapid-search-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/rapid-search-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-16",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Rapid Search",
+    "product_id": "rapid-search",
+    "run_date": "2026-11-16",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Rapid Search on a Shopify development store inside a free trial: the onboarding, a search with a typing error, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. In the theme editor App embeds list, Rapid Search App was already switched on by the app (Save greyed out) and Rapid Search CSB was off; no theme change was saved. The search icon in the preview opens an overlay with popular searches and popular products. Typing snowbord (a typing error for snowboard) at about 14:34:30 showed, within about 2 seconds, PRODUCTS with The Complete Snowboard $699.95 In stock, The Videographer Snowboard $885.95, The Collection Snowboard: Liquid $749.95, The Collection Snowboard: Oxygen $1,025.00 and The Multi-managed Snowboard $629.95, the suggestions snowboard and collection snowboard, the button View all snowbord products and powered by: Rapid Search. View all opened a results page that the app had created, with 13 results for snowbord, filters Category (Automated Collection 6, Hydrogen 3) and Product Type (snowboard 12, giftcard 1), a price slider from $10 to $2630 and sorting by Relevance. Timing, approximate tester observations: Install at 14:30:26 and the right results at 14:34:30, about 4 minutes, mostly our own clicks and the refused first email; the store data synchronisation finished within about 20 seconds (Downloading data, Processing data, Synchronization finished) and the results appeared within about 2 seconds of typing; about 12 steps in all. Settings, Apps shows a menu for the app with Open app, View details, Get support and Uninstall; the Uninstall dialog was opened and cancelled. Not tested: a paid plan, the yearly plan after approval, the 75K to Unlimited prices, collection pages and filters, product merchandising, Statistics, real traffic counting sessions and what happens after 30 Nov. No kit records were entered.",
+    "findings": [
+     "Vendor claim \"5,000 products\". What we saw: The dossier named 5,000 products on the Free plan. The Free plan in the app shows Up to 1.000 products; the 2K session limit matched. The Free plan covers up to 1.000 products, so a store with more products needs a paid plan sooner than the dossier suggested.",
+     "Vendor claim \"installs in one click, no code, live within minutes\". What we saw: Installing took one click and no code. Before the search worked the app asked for 3 onboarding screens and a reachable email address; a made up example address was refused. Search results appeared about 4 minutes after Install, in about 12 steps. The one click install holds, but a reachable email address and 3 onboarding screens come first.",
+     "Vendor claim \"14-day free trial on paid tiers\". What we saw: Shopify showed a 14-day free trial ending on 30 Nov for the 5K plan. The app also gives every store unlimited sessions and products until November 30, 2026 without choosing a plan, after which the Free limits apply. The trial exists on the paid plan and runs to 30 Nov; afterwards the Free limits apply if no plan is chosen.",
+     "Vendor claim \"Unbranded\". What we saw: The 5K plan lists Unbranded and the Free plan lists Branded; the overlay on the trial showed powered by: Rapid Search. Whether the branding disappears on a paid plan was not tested. Free search carries the Rapid Search branding; removing it needs a paid plan.",
+     "Vendor claim \"First 3 months, then $14/month\". What we saw: The 5K plan card shows $10/month with $14 struck through, First 3 months, then $14/month. The Shopify Approve subscription screen for Rapid Search Basic 1 Plan showed Subtotal $14,00, Discount -$4,00 and Total $10,00 due 30 Nov after a 14-day free trial, plus any applicable taxes. Card and approval screen agree on 10 and 14 dollars; tax is unknown and nothing was approved. About $10 for each of the first 3 months after the trial and then $14, before any taxes."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A paid plan after approval, the yearly plan and the 75K to Unlimited prices.",
+     "Collection pages and filters, product merchandising, Statistics and real traffic counting sessions.",
+     "What happens after the trial ends on 30 Nov, support, invitations, export and reimport.",
+     "Uninstalling the app, which was only opened as a dialog and cancelled.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:30 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "5,000 products",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "The dossier named 5,000 products on the Free plan. The Free plan in the app shows Up to 1.000 products; the 2K session limit matched.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+      "comparability": "Dossier figure versus the Free plan card on one store; the 2K session limit matched.",
+      "status": "contradicted",
+      "buying_consequence": "The Free plan covers up to 1.000 products, so a store with more products needs a paid plan sooner than the dossier suggested.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "installs in one click, no code, live within minutes",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "Installing took one click and no code. Before the search worked the app asked for 3 onboarding screens and a reachable email address; a made up example address was refused. Search results appeared about 4 minutes after Install, in about 12 steps.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+      "comparability": "An AI assistant session with pauses does not measure human speed; the steps and the minutes are reported as observations only.",
+      "status": "not_comparable",
+      "buying_consequence": "The one click install holds, but a reachable email address and 3 onboarding screens come first.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "14-day free trial on paid tiers",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "Shopify showed a 14-day free trial ending on 30 Nov for the 5K plan. The app also gives every store unlimited sessions and products until November 30, 2026 without choosing a plan, after which the Free limits apply.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+      "comparability": "Dossier wording versus the Shopify approval screen and the Subscription screen on one development store.",
+      "status": "confirmed",
+      "buying_consequence": "The trial exists on the paid plan and runs to 30 Nov; afterwards the Free limits apply if no plan is chosen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Unbranded",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "The 5K plan lists Unbranded and the Free plan lists Branded; the overlay on the trial showed powered by: Rapid Search. Whether the branding disappears on a paid plan was not tested.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+      "comparability": "Plan card wording versus the overlay seen on the trial; no paid plan was active.",
+      "status": "confirmed",
+      "buying_consequence": "Free search carries the Rapid Search branding; removing it needs a paid plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "First 3 months, then $14/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "The 5K plan card shows $10/month with $14 struck through, First 3 months, then $14/month. The Shopify Approve subscription screen for Rapid Search Basic 1 Plan showed Subtotal $14,00, Discount -$4,00 and Total $10,00 due 30 Nov after a 14-day free trial, plus any applicable taxes. Card and approval screen agree on 10 and 14 dollars; tax is unknown and nothing was approved.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+      "comparability": "Plan card versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+      "status": "confirmed",
+      "buying_consequence": "About $10 for each of the first 3 months after the trial and then $14, before any taxes.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-16",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Rapid Search on a Shopify development store inside a free trial: the onboarding, a search with a typing error, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. In the theme editor App embeds list, Rapid Search App was already switched on by the app (Save greyed out) and Rapid Search CSB was off; no theme change was saved. The search icon in the preview opens an overlay with popular searches and popular products. Typing snowbord (a typing error for snowboard) at about 14:34:30 showed, within about 2 seconds, PRODUCTS with The Complete Snowboard $699.95 In stock, The Videographer Snowboard $885.95, The Collection Snowboard: Liquid $749.95, The Collection Snowboard: Oxygen $1,025.00 and The Multi-managed Snowboard $629.95, the suggestions snowboard and collection snowboard, the button View all snowbord products and powered by: Rapid Search. View all opened a results page that the app had created, with 13 results for snowbord, filters Category (Automated Collection 6, Hydrogen 3) and Product Type (snowboard 12, giftcard 1), a price slider from $10 to $2630 and sorting by Relevance. Timing, approximate tester observations: Install at 14:30:26 and the right results at 14:34:30, about 4 minutes, mostly our own clicks and the refused first email; the store data synchronisation finished within about 20 seconds (Downloading data, Processing data, Synchronization finished) and the results appeared within about 2 seconds of typing; about 12 steps in all. Settings, Apps shows a menu for the app with Open app, View details, Get support and Uninstall; the Uninstall dialog was opened and cancelled. Not tested: a paid plan, the yearly plan after approval, the 75K to Unlimited prices, collection pages and filters, product merchandising, Statistics, real traffic counting sessions and what happens after 30 Nov. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The onboarding asks for a reachable email address before the app works, and a made up example address was refused.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "A paid plan after approval, the yearly plan and the 75K to Unlimited prices.",
+      "Collection pages and filters, product merchandising, Statistics and real traffic counting sessions.",
+      "What happens after the trial ends on 30 Nov, support, invitations, export and reimport.",
+      "Uninstalling the app, which was only opened as a dialog and cancelled.",
+      "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:30 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "rapid-search:rapid-search-q1",

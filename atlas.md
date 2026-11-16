@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 667 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-16.
+All 668 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2718,6 +2718,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** freelancers and sellers getting paid by international clients and marketplaces (Amazon, Upwork, Fiverr) who need local receiving accounts
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/payoneer-review/
+
+## PayRewards (payrewards.com)
+- **Verified pricing:** (read 2026-11-16 on payrewards.com/pricing, US dollars) No subscription; sign-up is free.
+- **Honest take:** Pay vendors by card, earn points; 1.75% fee, no subscription.
+- **Best for:** US small businesses that pay many vendor bills and want to put them on a credit card or earn travel points even when the vendor only takes ACH or a check
+- **Full review:** https://aibuildermarketplace.com/b2b/payrewards-review/
 
 ## pCloud (pcloud.com)
 - **Verified pricing:** (read 2026-10-26 on pcloud.com, its family and business pages, from a Netherlands connection that showed euros; the page calls the prices final) pCloud is best known for lifetime plans paid…

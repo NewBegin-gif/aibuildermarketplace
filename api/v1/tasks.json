@@ -17968,21 +17968,27 @@
    "source": "session",
    "product_name": "QuickSigner",
    "product_id": "quicksigner",
-   "run_date": "2026-11-05",
+   "run_date": "2026-11-16",
    "session_type": "hands_on",
-   "what": "Tested by our team on 5 November 2026 on the free Personal plan: Daan created the account and our AI assistant ran the test in Daan's browser. We read the plan page, uploaded one fictional PDF into a new sign request and stopped there. We added no signer, sent nothing and signed nothing.",
+   "what": "Tested by our team on 5 and 16 November 2026 on one account: Daan created the account and our AI assistant ran the test in Daan's browser. On 5 November we used the free Personal plan up to the upload screen. By 16 November the same account showed Pro, provided by the vendor, so we did not buy it and saw no checkout. On Pro we sent one request to our own test address, signed it ourselves and downloaded the signed PDF and the certificate. Nothing went to a third party.",
    "findings": [
-    "After sign-up the app opens on an empty 'Sent documents' list with 'Personal Plan (free)' in the sidebar. No card, no sales call and no linked account.",
-    "My Account lists Business at 5.00 USD a month or 48.00 USD a year, and Pro at 15.00 USD a month or 144.00 USD a year, all marked with a 14-day trial period. The Business and Pro amounts match our own price rule from 20 October. Checkout, tax and seats are untested.",
-    "Templates are 'Available only with a Business plan'.",
-    "In a new sign request we uploaded our PDF 'attachment-AIBM-001.pdf'. The app shows it as 'attachment_AIBM_001.pdf', with underscores for hyphens. This is how the upload is displayed, not an export or a content comparison.",
-    "Without a signer the form says 'You must fill in at least one signer' and the Send button stays grey."
+    "Sending to signed took 37 seconds on Pro (sent 21:13:28 UTC, signed 21:14:04 UTC, completed 21:14:05 UTC), and about 1.5 minutes from upload. With 'I am also signing' switched on, Send went straight to the sign page. The signature type was Draw, Upload image or Text; we chose Text.",
+    "The field editor offers Signature, Text, Checkbox, Date, Initials, Paragraph, File and Stamp (the last ones after 'More...'). The signer was assigned automatically; Mandatory was on and Fixed was off.",
+    "The download is the signed PDF (attachment_AIBM_002_signed.pdf, 315 KB, 2 pages: the original plus an extra page) and a separate Certificate of Completion. The certificate lists the request ID, sender email, sent and completed times in UTC, 'sent via web', and per signer the email, sign date, IP address and user agent.",
+    "The signed PDF has a real digital signature field (two PAdES signatures, SubFilter ETSI.CAdES.detached) issued to Innovoris Labs Srl by DigitalSign CA G1. AATL is not mentioned anywhere in the app or the certificate, and we did not check whether the chain is on Adobe's approved trust list, so we make no claim about it.",
+    "Templates: on Personal the Templates page said 'Available only with a Business plan'. On Pro, New template worked (upload, a role 'Signer' instead of an email address, fields optional) and saved with Edit, Bulk send and Use. We did not test the Business plan itself.",
+    "An uploaded file name changes: attachment-AIBM-001.pdf (free, 5 Nov) and attachment-AIBM-002.pdf (Pro, 16 Nov) were shown with underscores instead of hyphens, and the signed download carries the underscore name. We compared display names only, not file contents.",
+    "The upload step offers 'Merge into a single document' and the sources 'Upload file' and 'Google Drive'. The file picker accepts PDF, Word and Excel types; we did not upload a .docx, so conversion is untested.",
+    "My Account on Pro shows only 'Compare plans', 2FA, API, Notifications, Consent screen and 'Delete Account'. We found no button to stop or downgrade Pro or to manage billing. Nothing was clicked; a route through support or a billing email may exist.",
+    "On 5 November the free plan page listed Business at $5 a month ($48 a year) and Pro at $15 a month ($144 a year), each with a 14-day trial. Without a signer the form said 'You must fill in at least one signer' and Send stayed grey."
    ],
    "not_tested": [
-    "Sending, signing, downloading a signed file and the audit trail: no signer was added",
-    "The second kit PDF; we uploaded one",
-    "Checkout, tax, seats and the final price",
-    "Support, roles, API access, invitations and downgrade; the plan is free, and the account page also offers account deletion, which we left to the account holder"
+    "Checkout, tax, seats and the final price of any paid plan: Pro was provided by the vendor on this account",
+    "The Business plan",
+    "Sending to a second signer or a third party, and 'Sign in order'",
+    "Uploading a Word or Excel file, Bulk send, the Extract button, the API and support",
+    "Whether the signing certificate chain is trusted by Adobe (AATL)",
+    "Cancelling or downgrading a paid plan; the account page offers only account deletion, which we left alone"
    ],
    "report": null,
    "disclosure": null,
@@ -17991,127 +17997,134 @@
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "claim_checks": [
     {
-     "claim": "Personal (free)",
-     "claim_source": "https://app.quicksigner.com/",
-     "claim_read_on": "2026-11-05",
-     "observed": "The account showed Personal free; no paid trial was started in the session.",
-     "observed_on": "2026-11-05",
-     "evidence": {
-      "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
-     },
-     "plan": "Personal (free)",
-     "comparability": "QuickSigner: Observed account plan only; original full signup and payment gates not measured.",
-     "status": "confirmed",
-     "buying_consequence": "Account access should not be confused with starting a paid-plan trial.",
-     "buyer_direction": "neutral",
-     "claim_changed_on": null
-    },
-    {
-     "claim": "5.00 USD/month*",
-     "claim_source": "https://app.quicksigner.com/",
-     "claim_read_on": "2026-11-05",
-     "observed": "Business offered 5.00 USD/month or 48.00 USD/year; Pro offered 15.00 USD/month or 144.00 USD/year, with 14-day trial labels.",
-     "observed_on": "2026-11-05",
-     "evidence": {
-      "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
-     },
-     "plan": "Personal (free)",
-     "comparability": "QuickSigner: In-account offer cards only; no tax-inclusive checkout, paid entitlement or trial activation tested.",
-     "status": "confirmed",
-     "buying_consequence": "Compare actual annual and monthly terms before choosing Upgrade.",
-     "buyer_direction": "neutral",
-     "claim_changed_on": null
-    },
-    {
      "claim": "Available only with a Business plan.",
-     "claim_source": "https://app.quicksigner.com/",
-     "claim_read_on": "2026-11-05",
-     "observed": "Templates page blocked reuse on Personal free and named Business.",
-     "observed_on": "2026-11-05",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "On the free plan the Templates page said templates are available only with a Business plan. On Pro, Templates, New template and Create template worked and the page said Successfully saved!. A Business plan was not tested.",
+     "observed_on": "2026-11-16",
      "evidence": {
       "label": "Our test observations",
       "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
      },
-     "plan": "Personal (free)",
-     "comparability": "QuickSigner: Template entitlement only, distinct from the tested PDF upload.",
+     "plan": "Personal (free) on 5 November, Pro (vendor provided) on 16 November",
+     "comparability": "Templates page on the free plan on 5 November versus Templates on the vendor provided Pro plan on 16 November.",
      "status": "confirmed",
-     "buying_consequence": "Template reuse needs the named paid plan in the route inspected.",
+     "buying_consequence": "Templates need a paid plan and work on Pro; the Business plan itself was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "attachment_AIBM_002.pdf",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The kit file attachment-AIBM-002.pdf was shown as attachment_AIBM_002.pdf on Pro, as on the free plan the file attachment-AIBM-001.pdf was shown as attachment_AIBM_001.pdf; the list shows attachment_AIBM_002 and the download is named attachment_AIBM_002_signed.pdf. Content was not compared.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
+     },
+     "plan": "Personal (free) on 5 November, Pro (vendor provided) on 16 November",
+     "comparability": "Upload on the free plan (5 November) and on Pro (16 November); only display and download names were seen, not file bytes.",
+     "status": "confirmed",
+     "buying_consequence": "Hyphens in an uploaded file name become underscores, also in the name of the signed download.",
      "buyer_direction": "unfavourable",
      "claim_changed_on": null
     },
     {
-     "claim": "attachment_AIBM_001.pdf",
-     "claim_source": "https://app.quicksigner.com/",
-     "claim_read_on": "2026-11-05",
-     "observed": "The uploaded attachment-AIBM-001.pdf was displayed as attachment_AIBM_001.pdf. No download to compare file bytes.",
-     "observed_on": "2026-11-05",
+     "claim": "Pro - renews on 11/05/2027",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "On 16 November My Account showed Pro with a renewal date. The Professional plan was provided by the vendor, so no upgrade, trial or payment screen was seen.",
+     "observed_on": "2026-11-16",
      "evidence": {
       "label": "Our test observations",
       "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
      },
-     "plan": "Personal (free)",
-     "comparability": "QuickSigner: Changed filename during upload; no claim of PDF content loss or export renaming.",
+     "plan": "Personal (free) on 5 November, Pro (vendor provided) on 16 November",
+     "comparability": "Account page on the vendor provided plan versus the price list seen on the free plan.",
      "status": "confirmed",
-     "buying_consequence": "The upload display name changes hyphens to underscores.",
+     "buying_consequence": "The tests ran on a plan that we did not buy; they say nothing about what the Pro checkout shows.",
      "buyer_direction": "neutral",
      "claim_changed_on": null
     },
     {
-     "claim": "Sign your first PDF free today",
-     "claim_source": "https://www.quicksigner.com/",
-     "claim_read_on": "2026-10-29",
-     "observed": "Personal (free). Account offers Business 5.00 USD/month or 48.00 USD/year; Pro 15.00 USD/month or 144.00 USD/year, each with 14 days trial period. Templates only Business. Roles/API not inspected.",
-     "observed_on": "2026-11-05",
+     "claim": "accept: application/pdf",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The hidden file picker accepts PDF, Word (doc and docx) and Excel (xls and xlsx). No .docx file was uploaded, so Word handling is not tested.",
+     "observed_on": "2026-11-16",
      "evidence": {
       "label": "Our test observations",
       "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
      },
-     "plan": "Personal (free)",
-     "comparability": "QuickSigner: Historical public claim, original read date retained; later observed plan or report is scoped separately.",
+     "plan": "Personal (free) on 5 November, Pro (vendor provided) on 16 November",
+     "comparability": "File picker types read from the page versus no Word upload in the test.",
      "status": "not_testable",
-     "buying_consequence": "Observed scope is narrower than a complete end-to-end signup, trial or signing test.",
+     "buying_consequence": "The interface accepts Word and Excel files; whether they are converted correctly was not tested.",
      "buyer_direction": "neutral",
-     "claim_changed_on": "2026-11-09"
+     "claim_changed_on": null
     },
     {
-     "claim": "5.00 USD/month*",
-     "claim_source": "https://www.quicksigner.com/",
-     "claim_read_on": "2026-11-05",
-     "observed": "Business 5.00 USD/month or 48.00 USD/year; Pro 15.00 USD/month or 144.00 USD/year and 14-day trial labels. Checkout not opened.",
-     "observed_on": "2026-11-05",
+     "claim": "Delete Account",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "My Account on Pro has only Compare plans and Delete Account; there is no button to stop or downgrade Pro or to manage billing. Nothing was clicked. A route through support or a billing email may exist and was not checked.",
+     "observed_on": "2026-11-16",
      "evidence": {
       "label": "Our test observations",
       "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
      },
-     "plan": "Personal (free)",
-     "comparability": "QuickSigner: QuickSigner in-account offers are not a checkout total. The pinned cost rule dated 2026-10-20 has the same Business/Pro amounts; tax, seat basis and checkout total remain unverified.",
+     "plan": "Personal (free) on 5 November, Pro (vendor provided) on 16 November",
+     "comparability": "My Account on the free plan (5 November) and on Pro (16 November); no cancellation was attempted.",
+     "status": "confirmed",
+     "buying_consequence": "The visible routes to end a paid plan are Compare plans and Delete Account, which removes the account.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "15.00 USD/month* Pro plan Monthly payment",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The free plan page listed Pro at 15.00 USD a month or 144.00 USD a year with a 14 days trial period. The account later showed Pro renewing on 11/05/2027, provided by the vendor, so no checkout, tax or final total was seen.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/quicksigner-review/#claim-vs-measured"
+     },
+     "plan": "Personal (free) on 5 November, Pro (vendor provided) on 16 November",
+     "comparability": "Price list on the free plan page versus no checkout screen on the vendor provided Pro plan.",
      "status": "not_testable",
-     "buying_consequence": "A final payable amount cannot be confirmed.",
+     "buying_consequence": "The Pro price of 15.00 USD a month could not be compared with a checkout amount.",
      "buyer_direction": "neutral",
-     "claim_changed_on": "2026-11-09"
+     "claim_changed_on": null
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
-    "run_date": "2026-11-05",
-    "what": "One unsigned kit PDF uploaded to an unsent request on Personal free.",
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 5 and 16 November 2026 the session tested QuickSigner twice on one account: on 5 November the Personal (free) plan up to the upload screen, and on 16 November the Pro plan, provided by the vendor, from upload to a signed document with download, certificate, template and the cancel route. Nothing was paid, cancelled or deleted. On 16 November the Pro plan was used end to end for one request, signed by our own test address; nothing went to a third party. Upload: the kit file attachment-AIBM-002.pdf was shown as attachment_AIBM_002.pdf, so the hyphen to underscore change seen on 5 November on the free plan also happens on Pro; the list shows attachment_AIBM_002 and the download is named attachment_AIBM_002_signed.pdf. The upload step also offers Merge into a single document, and the sources Upload file and Google Drive. Fields: Signatures and other fields, Edit, opens Add and edit fields with the types Signature, Text, Checkbox, Date, Initials, Paragraph, File and Stamp (after More...). A Signature field was dragged onto the page, the signer was assigned automatically, Mandatory was on and Fixed was off, and the form then said You have 1 signatures. There is also an Extract button, which was not used. Signing yourself: I am also signing was switched on with only our own test address (an empty second signer row was ignored). Send at 22:13:28 CET (21:13:28 UTC) went straight to the sign page, which said You have to sign in 1 place(s). Start, a click on the field and Select signature type offered Draw, Upload image and Text; we chose Text, typed a short test text, Save and Send. The message was You have successfully signed!. Signed at 21:14:04 UTC and completed at 21:14:05 UTC, so sending to signed took about 37 seconds, and from the upload to signed about 1.5 minutes. The list then showed the status Completed. Download and audit trail: the detail window (the three dots) shows Completed, a sent date of 11/16/2026 22:13, a completed date of 11/16/2026 22:14, the signer marked Signed, a separate Certificate Download link and a Download button. The two downloads were the signed PDF (attachment_AIBM_002_signed.pdf, 315 KB, 2 pages: the original plus an extra page) and the certificate (Certificate_attachment_AIBM_002.pdf). The Certificate Of Completion lists COMPLETED, the document name, the signature request ID, the number of signers, the sender email, SENT ON and COMPLETED ON in UTC, SENT VIA WEB and per signer an ID, email, SIGN DATE, IP ADDRESS and USER AGENT, the completed field (Signature) and Digitally signed by QuickSigner.com. Seal: the signed PDF has a real sign field named Signature1 with a ByteRange and a Reason that starts with QuickSigner.com ID, and the visible text Digitally sealed by QuickSigner.com. A closer check of the signed file by the coordinating session found two PAdES signatures with the SubFilter ETSI.CAdES.detached; the certificate is issued to Innovoris Labs Srl by DigitalSign CA G1 under DigitalSign Global Root RSA CA. AATL is not mentioned in the interface or in the certificate text, and we did not check whether the certificate chain is trusted by the Adobe approved trust list, so we make no claim about it. Templates: on Pro, Templates, New template and Create template work (upload, a role Signer in place of an email address, fields optional); the page said Successfully saved! and the row has the buttons Edit, Bulk send and Use. Bulk send was not used. The template attachment_AIBM_002 stays in the account. On 5 November the same page on the free plan said Available only with a Business plan. Word and Excel: the hidden file picker accepts application/pdf, application/msword, the docx type, application/vnd.ms-excel and the xlsx type, so PDF, Word (doc and docx) and Excel (xls and xlsx) are accepted by the interface; no .docx file was actually uploaded. Cancel route: My Account on Pro has only Compare plans (a link to the price section of the vendor site), 2FA Enable, API Enable, Notifications, Consent screen and Delete Account. There is no button to stop or downgrade Pro or to manage billing. Nothing was clicked. From 5 November on the free plan: the kit file attachment-AIBM-001.pdf was also shown as attachment_AIBM_001.pdf, and without a signer the page said You must fill in at least one signer and Send stayed greyed out; nothing was sent on that day. The test objects stay in the account: the signed request and the template. No API key was created and no support message was sent.",
     "first_import": null,
     "file_inspected": false,
     "reimport_tested": false,
-    "awkward": "Upload display name changed hyphens to underscores. Templates require Business. A signer is required to proceed, and none was added.",
+    "awkward": "There is no visible way to stop or downgrade Pro in My Account, only Compare plans and Delete Account, and uploaded file names change from hyphens to underscores.",
     "friction": {
-     "export_route": "No download exercised; request stopped before any signer or send.",
-     "format": "Input was PDF; no output file or output content inspected.",
-     "reimport": "No exported bytes or native-ID update performed.",
-     "cancellation": "Cancellation and downgrade were not performed."
+     "export_route": "No byte comparison was run: the signed PDF and the certificate were downloaded and inspected by hand, but they are not part of this delivery, and no kit records were exported or reimported.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
     },
     "not_tested": [
-     "Support and invitation sending.",
-     "Full original signup and measured duration.",
-     "Downloaded export bytes, native IDs and fixed-ID reimport.",
-     "Cancellation, deletion and passive follow-up."
+     "Original signup, which Daan did himself on 5 November.",
+     "API access and keys.",
+     "Uploading a real Word file.",
+     "Bulk send.",
+     "A second external signer, so no email to a signer and no signing by a third party.",
+     "Checkout, payment and the trial, because the Pro plan was provided by the vendor.",
+     "The cancellation itself, a downgrade and billing management.",
+     "Roles, invitations and support.",
+     "Whether the seal certificate chain is trusted by the Adobe approved trust list.",
+     "A byte comparison or reimport of the signed file against the kit.",
+     "Session and source-reading date: 5 and 16 November 2026. Times are CET. The session started at about 22:12 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

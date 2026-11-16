@@ -168,7 +168,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/aisq-review.html
 
 ## Algomo (algomo.com)
-- **Verified pricing:** (re-read 2026-10-22 on algomo.com/pricing and its markdown version, algomo.com/pricing.md) Algomo now publishes a complete self-serve price list, and it replaces the single '$200 a month' s…
+- **Verified pricing:** (re-read 2026-10-22 and again 2026-11-16 on algomo.com/pricing and its markdown version, algomo.com/pricing.md) Algomo now publishes a complete self-serve price list, and it replaces the si…
 - **Honest take:** The credit model is clear on paper with one opaque step: whether a conversation was 'useful', and so billed at five credits, is decided by a language model after it closes.
 - **Best for:** teams that want one AI agent on their own website for support and inbound sales, priced by the work it does rather than by seat, and who want to start self-serve on a free plan
 - **Flags:** Usage-metered, Free tier

@@ -81,16 +81,455 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "shipment a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 10,
+     "monthly": 4.99,
+     "annual_status": "not_offered",
+     "evidence": "Starter costs $4.99 a month, is sold monthly only and covers up to 10 shipments a month"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "flat",
+     "max_units": 100,
+     "monthly": 19.99,
+     "annual_month": 14,
+     "evidence": "Growth costs $19.99 a month, or $14 a month on the yearly toggle, and covers up to 100 shipments a month"
+    },
+    {
+     "id": "executive",
+     "name": "Executive",
+     "model": "flat",
+     "monthly": 29.99,
+     "annual_month": 22,
+     "evidence": "Executive costs $29.99 a month, or $22 a month on the yearly toggle, and covers unlimited shipments"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise has no listed price"
+    }
+   ],
+   "notes": [
+    "Shipments are used as the order axis; one order may need more than one shipment."
+   ],
+   "not_computable": [
+    "Postage is paid on top of every plan and is not in these amounts."
+   ],
+   "rules_verified_at": "2026-11-16"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "ship-com",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "shipment a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 14.0,
+      "billed": {
+       "amount": 168.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_offered_on_billing",
+       "growth": 14.0,
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 14.0,
+      "billed": {
+       "amount": 168.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 14.0,
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 264.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 22.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "growth",
+      "to_plan": "executive",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Executive"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Postage is paid on top of every plan and is not in these amounts."
+    ]
+   },
+   "monthly": {
+    "product_id": "ship-com",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "shipment a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 4.99,
+      "billed": {
+       "amount": 4.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 4.99,
+       "growth": 19.99,
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 19.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": 19.99,
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "executive",
+      "cheapest_plan_name": "Executive",
+      "total_month": 29.99,
+      "billed": {
+       "amount": 29.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "growth": "not_eligible",
+       "executive": 29.99,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 0,
+      "to_units": 50,
+      "from_plan": "starter",
+      "to_plan": "growth",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "growth",
+      "to_plan": "executive",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Executive"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Postage is paid on top of every plan and is not in these amounts."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -120,9 +559,9 @@
    "status": "open"
   },
   {
-   "question_id": "ship-com:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "ship-com:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Postage is paid on top of every plan and is not in these amounts. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

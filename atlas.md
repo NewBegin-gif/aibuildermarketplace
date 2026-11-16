@@ -1304,7 +1304,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/employment-hero-review.html
 
 ## EngageBay (engagebay.com)
-- **Verified pricing:** (price re-verified 2026-09-18 and again on 2026-10-05 on engagebay.com/pricing, which now redirects to /pricing/all-in-one) Genuinely free tier: $0 for 250 contacts with email marketing, CR…
+- **Verified pricing:** (price re-verified 2026-09-18, 2026-10-05 and again on 2026-11-16 on engagebay.com/pricing, which now redirects to /pricing/all-in-one) Genuinely free tier: $0 for 250 contacts with email m…
 - **Honest take:** The meter is contacts AND seats at once: prices are per user, and each tier caps contacts: Basic’s 500 contacts fills fast, and the Growth jump is steep ($15 → $65 per user).
 - **Best for:** small teams that want CRM, email marketing, helpdesk and live chat in one affordable suite: the free tier is a genuine trial-for-life, and it undercuts HubSpot hard at small scale
 - **Flags:** Per-seat pricing, Free tier
@@ -2564,7 +2564,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/omneky-review.html
 
 ## Omniseo (omniseo.com)
-- **Verified pricing:** (re-verified 2026-08-17, 2026-09-28 and again on 2026-10-20 against the vendor's own pricing page) Essentials $89/mo (4 AI channels, 50 prompts, 5 seats), Professional $349/mo (10 AI channe…
+- **Verified pricing:** (re-verified 2026-11-16 by plain fetch of omniseo.com/pricing/; earlier readings 2026-08-17, 2026-09-28 and 2026-10-20) Four plans now.
 - **Honest take:** Two honest cautions. AI search visibility (GEO) is a young, fast-moving category.
 - **Best for:** brands and SEO teams that want to measure and improve how they show up in AI-generated answers (ChatGPT, Google AI and more) as AI search grows
 - **Flags:** Annual commit
@@ -3210,7 +3210,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/runpod-review.html
 
 ## Salesflare (salesflare.com)
-- **Verified pricing:** (re-verified 2026-09-14, re-read unchanged 2026-09-27 and again on 2026-10-21 on salesflare.com/pricing, per user a month) Three plans, and the page carries both billing terms plus a $/€ sw…
+- **Verified pricing:** (re-verified 2026-09-14, re-read unchanged 2026-09-27 again on 2026-10-21 and on 2026-11-16 on salesflare.com/pricing, per user a month) Three plans, and the page carries both billing terms…
 - **Honest take:** It's deliberately lean: no built-in dialer, no quoting or invoicing, and reporting feels basic unless you export.
 - **Best for:** small B2B teams whose reps hate data entry: Salesflare auto-logs emails, meetings and contact details from your inbox and calendar
 - **Flags:** Per-seat pricing, Usage-metered
@@ -3638,8 +3638,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/stackable-review.html
 
 ## Stamped (stamped.io)
-- **Verified pricing:** (re-verified 12 September 2026, read in a browser on their own pricing page across every step of the order-volume selector and both the single-product and bundle tabs) There is no free plan…
-- **Honest take:** The $798/month figure that circulates for the full suite is real, but it is a floor rather than a ceiling.
+- **Verified pricing:** (re-read 16 November 2026 by plain fetch of stamped.io/pricing; the amount for each order step sits in the page's own HTML, in the data its order-volume selector reads) There is no free pla…
+- **Honest take:** The ladder climbs at every order step.
 - **Best for:** mid-market Shopify brands that want reviews and loyalty in one platform instead of juggling separate apps
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/stamped-review.html

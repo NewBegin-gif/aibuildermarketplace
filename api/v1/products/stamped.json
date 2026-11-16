@@ -9,7 +9,7 @@
  "summary": "Reviews, ratings and loyalty platform for e-commerce: collect product reviews and user-generated content, run rewards and loyalty programs, and show social proof to lift conversions on Shopify and other stores.",
  "best_for": "mid-market Shopify brands that want reviews and loyalty in one platform instead of juggling separate apps",
  "skip_if": "you're an early-stage store: the removed free plan and $199+/product pricing are steep before you have the volume to justify them",
- "honest_knock": "The $798/month figure that circulates for the full suite is real, but it is a floor rather than a ceiling: that is what multi-product access costs from the 5,000-order step, and below that step you cannot buy the bundle at all: the pricing page sells Reviews on its own, $23/month at 200 orders and $99 at 1,000, and does not show Repeat or Loyalty. So the ladder has a cliff in it rather than a slope. Crossing 5,000 orders doubles Reviews from $99 to $199, and wanting a second product moves you to $798. A second storefront is another $100 a month on top, and past 20,000 orders every card turns into \"Talk to Sales\". Start with one product and price the step above the volume you actually expect.",
+ "honest_knock": "The ladder climbs at every order step. Reviews runs from $23 a month at 200 orders to $799 on Unlimited, Repeat from $299 at 5,000 orders to $1,999, and crossing 5,000 orders doubles Reviews from $99 to $199. Loyalty is no longer priced on the page, while the FAQ still quotes $798 for multi-product access, so anyone buying more than one product depends on a sales quote. A further storefront is another $100 a month. Start with one product and price the step above the volume you actually expect.",
  "pricing": {
   "status": "public",
   "entry_price": "$23",
@@ -17,8 +17,8 @@
   "from_price_usd_month": 23.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 12 September 2026, read in a browser on their own pricing page across every step of the order-volume selector and both the single-product and bundle tabs) There is no free plan, and what you can actually buy depends on your monthly order volume. Below 5,000 orders a month the page sells only one product: Reviews, at $23/month at the 200-order step and $99/month at 1,000 orders. Repeat and Loyalty do not appear at those volumes at all. At the 5,000-order step the full line-up shows up — Repeat $499/month, Loyalty $299/month, Reviews $199/month — and the Multi-Product Bundle, which advertises 20% off, is a flat $798/month. The bundle tab locks the 200- and 1,000-order steps, so $798 is the entry price for taking more than one product, not a figure from the top of a ladder. From 20,000 orders upward, Unlimited included, every card turns into \"Custom plan — Talk to Sales\". Their FAQ says the same thing in words: plans start at $199/month for a single product and $798/month for multi-product access, and smaller brands are pointed at the self-serve plans in Stamped's Shopify App listings instead. Plans include up to two domains, each additional store gets its first month free, and additional domains are $100/month each. Sales tax is added as a separate line item. The redesigned page no longer says anything about overage charges.",
-  "verified_at": "2026-09-12",
+  "notes": "(re-read 16 November 2026 by plain fetch of stamped.io/pricing; the amount for each order step sits in the page's own HTML, in the data its order-volume selector reads) There is no free plan, and the bill follows monthly order volume per product. The page now shows two product cards, Repeat and Reviews. Reviews is $23 a month at 200 orders, $99 at 1,000, $199 at 5,000, $399 at 20,000, $599 at 50,000 and $799 on Unlimited. Repeat shows no price at 200 or 1,000 orders and costs $299 at 5,000, $499 at 20,000, $999 at 50,000 and $1,999 on Unlimited. On 12 September 2026 the 5,000 step listed Repeat at $499 and Loyalty at $299 with a Multi-Product Bundle at $798, and every step from 20,000 up read \"Custom plan — Talk to Sales\". On 16 November there is no Loyalty card and no bundle card, while the FAQ on the same page still says plans start at $199 a month for a single product and $798 a month for multi-product access, and that all plans include unlimited orders. A pop-up offers 50% off a Stamped plan until the end of 2026, for new customers only and only after a call with the sales team. Plans include up to two domains, each additional store gets its first month free, and additional domains are $100/month each. Stamped's terms say fees exclude taxes. The page says nothing about overage charges.",
+  "verified_at": "2026-11-16",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": [
@@ -54,7 +54,7 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "meter: unit · monthly orders",
-   "verified_at": "2026-09-12",
+   "verified_at": "2026-11-16",
    "source_url": null
   }
  ],
@@ -83,16 +83,339 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "reviews",
+     "name": "Reviews",
+     "model": "ladder",
+     "billing": "unspecified",
+     "rungs": [
+      {
+       "units": 200,
+       "monthly": 23
+      },
+      {
+       "units": 1000,
+       "monthly": 99
+      },
+      {
+       "units": 5000,
+       "monthly": 199
+      },
+      {
+       "units": 20000,
+       "monthly": 399
+      },
+      {
+       "units": 50000,
+       "monthly": 599
+      }
+     ],
+     "evidence": "Reviews is $23 a month at 200 orders, $99 at 1,000, $199 at 5,000, $399 at 20,000, $599 at 50,000 and $799 on Unlimited"
+    }
+   ],
+   "notes": [
+    "Only the Reviews product is modelled; Unlimited orders on Reviews is $799 a month."
+   ],
+   "not_computable": [
+    "Repeat is a separate product ($299 at 5,000 orders up to $1,999 on Unlimited) and is not sold below 5,000 orders; Loyalty and multi-product access ($798 in the FAQ) have no card on the page.",
+    "Additional domains beyond two are $100 a month each; taxes are added."
+   ],
+   "rules_verified_at": "2026-11-16"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "stamped",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "reviews": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Repeat is a separate product ($299 at 5,000 orders up to $1,999 on Unlimited) and is not sold below 5,000 orders; Loyalty and multi-product access ($798 in the FAQ) have no card on the page.",
+     "Additional domains beyond two are $100 a month each; taxes are added."
+    ]
+   },
+   "monthly": {
+    "product_id": "stamped",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 23.0,
+      "billed": {
+       "amount": 23.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 23.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 23.0,
+      "billed": {
+       "amount": 23.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 23.0
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 99.0
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 99.0
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 99.0,
+      "billed": {
+       "amount": 99.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 99.0
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 199.0
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 199.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 199.0
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 399.0
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 399.0,
+      "billed": {
+       "amount": 399.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 399.0
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "reviews",
+      "cheapest_plan_name": "Reviews",
+      "total_month": 599.0,
+      "billed": {
+       "amount": 599.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "reviews": 599.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Repeat is a separate product ($299 at 5,000 orders up to $1,999 on Unlimited) and is not sold below 5,000 orders; Loyalty and multi-product access ($798 in the FAQ) have no card on the page.",
+     "Additional domains beyond two are $100 a month each; taxes are added."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -130,9 +453,15 @@
    "status": "open"
   },
   {
-   "question_id": "stamped:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "stamped:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Repeat is a separate product ($299 at 5,000 orders up to $1,999 on Unlimited) and is not sold below 5,000 orders; Loyalty and multi-product access ($798 in the FAQ) have no card on the page. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "stamped:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Additional domains beyond two are $100 a month each; taxes are added. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

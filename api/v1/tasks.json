@@ -3712,7 +3712,7 @@
      "Support, invitations, checkout, export and reimport.",
      "Roles, API entitlement beyond the connect dialog, downgrade and passive follow up.",
      "The daily limits of Starter beyond one article.",
-     "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 08:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     "Session and source-reading date: 13 and 14 November 2026. Times are CET. The session started at about 08:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -8625,6 +8625,149 @@
   },
   {
    "source": "session",
+   "product_name": "EasyDMARC",
+   "product_id": "easydmarc",
+   "run_date": "2026-11-15",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 15 November 2026 the session tested EasyDMARC on the platform trial: adding our own domain, the first result, the verification route, the price of the plans and the checkout up to the card form. No DNS was changed and nothing was paid. Add Domain first offers Discovered Domains, which asks to connect providers such as Mailgun, Amazon SES, SendGrid, HubSpot, Klaviyo and HighLevel; we chose Add Manually. Our domain was added as type Sending (the other choice is Parked) at about 17:28. The step Verify Domain Manually followed: EasyDMARC recognised Hostinger as the DNS provider and says to delete the current DMARC record of type TXT at host _dmarc and then to add a new CNAME record with a value under easydmarc.pro. So verifying means removing your own DMARC record and letting EasyDMARC host DMARC through a CNAME (managed DMARC); stopping later means putting your own record back, which is derived from the steps and not tested. We chose Later: a DNS change needs a separate approval from the account owner, so no DNS was changed and the domain stays unverified. The domain list showed Policy None, Total Volume 0 and a warning triangle. A domain overview was available within a minute and was viewed at 17:29: Infrastructure Health Score, Total Score 32, with Domain Health 80/100, Authentication 40/100, Sender Insights 0/100 and Threat Intelligence 0/100. Authentication showed DMARC Policy None, DMARC Record Valid, SPF Valid (3/10 lookups) and DKIM No Record with Selectors N/A; DMARC Compliance Rate was 0%. Blocklist was Inactive with Monitoring off and Google Postmaster had No data. Our own dig check at 17:29 showed that the _dmarc TXT record is v=DMARC1; p=none, so the policy None is right, and that the SPF record includes the Hostinger mail servers, which is right. The DKIM selector hostingermail-a is a CNAME to the DKIM host of the mail provider with a valid RSA key. So our domain does have DKIM, and EasyDMARC reported No Record, presumably because it does not know the selector until reports arrive, which only happens after the CNAME verification. Pending Actions showed 1 Critical, Verify your domain to unlock full visibility; without verification no DMARC reports arrive. No kit records were entered.",
+   "findings": [
+    "Our own domain was added on the platform trial at about 17:28 and a domain overview was available within a minute: Infrastructure Health Score 32, with Domain Health 80/100, Authentication 40/100, Sender Insights 0/100 and Threat Intelligence 0/100.",
+    "EasyDMARC read our DMARC policy (none) and SPF (valid, 3 of 10 lookups) correctly, as our own dig check confirmed. It showed DKIM as No Record, although our domain publishes a valid DKIM key for the selector hostingermail-a. The tool does not know the selector until reports arrive.",
+    "Verifying the domain means deleting your own DMARC TXT record at _dmarc and adding a CNAME to an easydmarc.pro host, so EasyDMARC hosts DMARC for you. Putting the old record back after leaving is derived from the steps and not tested. We chose Later, so no DNS was changed and the domain stays unverified.",
+    "Without verification no DMARC reports arrive. Pending Actions showed 1 Critical, Verify your domain to unlock full visibility.",
+    "There is no free plan in the app: the trial is 14 days without a card, then you pick a paid plan. Yearly billing showed DMARC Plus at 35.99 euros a month (44.99 crossed out) for 2 domains and 3 months of history, and Premium at 71.99 euros. Monthly billing showed Plus at 44.99 euros.",
+    "Checkout asks for card number, expiry date and CVV before it shows a purchase summary. We stopped there and entered nothing."
+   ],
+   "not_tested": [
+    "We did not watch the original sign-up; the account was already open when our session began.",
+    "We did not finish the CNAME verification, so no real DMARC reports arrived. Email provider connections, AI Agents, DNS Manager, Sender Insights, Threat Intelligence, the API and MCP stayed closed.",
+    "We did not contact support, invite anyone, enter card details, or export and re-import data.",
+    "Account deletion, and putting an old DMARC record back after leaving, were not tried.",
+    "We did not examine roles, API entitlement or a downgrade.",
+    "Session date 15 November 2026, Europe/Amsterdam time. Our clock readings are approximate and not a benchmark."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "No Record",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "EasyDMARC reported DKIM as No Record with Selectors N/A, while our domain has a valid DKIM key published by CNAME (our own dig check). The DMARC policy None and SPF Valid were right, and the Infrastructure Health Score of 32 out of 100 appeared within a minute.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/easydmarc-review/#claim-vs-measured"
+     },
+     "plan": "Platform Trial; checkout viewed up to the card form",
+     "comparability": "One domain on one trial account, before verification and before any report arrived.",
+     "status": "contradicted",
+     "buying_consequence": "A DKIM No Record before verification does not mean the domain has no DKIM; check the DNS yourself before acting on it.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Delete the current DMARC record with the type TXT under the Host/Name: _dmarc",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "Verifying the domain means deleting your own DMARC TXT record and adding a CNAME so that EasyDMARC hosts DMARC (managed DMARC). This was not carried out, and putting your own record back when you stop was not tested.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/easydmarc-review/#claim-vs-measured"
+     },
+     "plan": "Platform Trial; checkout viewed up to the card form",
+     "comparability": "Verification steps read on screen for one DNS provider; not executed.",
+     "status": "confirmed",
+     "buying_consequence": "Verification changes your DNS and ties DMARC to the service; plan the DNS change and the way back before you start.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No credit card required",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "The trial is active with no payment method on file, and the app has no free plan: after the trial a paid plan must be chosen.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/easydmarc-review/#claim-vs-measured"
+     },
+     "plan": "Platform Trial; checkout viewed up to the card form",
+     "comparability": "Pricing page wording versus one trial account.",
+     "status": "confirmed",
+     "buying_consequence": "The trial needs no card, but there is nothing free afterwards.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Confirm payment method",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "The checkout for Plus monthly asks for the card number, expiry date and CVV and billing information in step 1; the Purchase Summary only comes in step 2, so no total was seen before the card details.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/easydmarc-review/#claim-vs-measured"
+     },
+     "plan": "Platform Trial; checkout viewed up to the card form",
+     "comparability": "Checkout step 1 for DMARC Plus monthly; nothing was entered.",
+     "status": "confirmed",
+     "buying_consequence": "You enter card details before you see the summary and the final total.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Save 20% + Bonus Features",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "The upgrade page shows DMARC Plus at 35.99 per month billed annually (44.99 monthly) for 2 domains and 3 months of history, in euro in the app. The checkout asks for the card before the summary, so the final total, tax and renewal terms were not seen.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/easydmarc-review/#claim-vs-measured"
+     },
+     "plan": "Platform Trial; checkout viewed up to the card form",
+     "comparability": "Upgrade page versus a checkout stopped at step 1; the stored cost rule was not compared because no total was shown.",
+     "status": "not_testable",
+     "buying_consequence": "Check tax, the currency and the renewal terms at the summary step before buying.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-15",
+    "what": "Cancelling: on the trial there is no card, so nothing is charged. No cancel button on the trial and no button to delete the account was found in Plans and Billings, and after the trial there is no free fallback in the app.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "DKIM was reported as No Record although the domain has a valid DKIM key, and verifying the domain means replacing your own DMARC record with a CNAME. There is no free plan, and the checkout asks for the card before it shows a summary.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and a screen count from registration.",
+     "The CNAME verification, real DMARC reports, connecting email providers, AI Agents, DNS Manager, Sender Insights, Threat Intelligence, API and MCP.",
+     "Support, invitations, card details, export and reimport.",
+     "Deleting the account and restoring a DMARC record after leaving.",
+     "Roles, API entitlement, downgrade and passive follow up.",
+     "Session and source-reading date: 15 November 2026. Times are CET. The session started at about 17:27 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Wistia",
    "product_id": "wistia",
    "run_date": "2026-10-30",
@@ -10141,6 +10284,166 @@
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "UptimeRobot",
+   "product_id": "uptimerobot",
+   "run_date": "2026-11-15",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 15 November 2026 the session tested UptimeRobot on the free plan: how fast a free monitor alerts on a failing page, the limits of the free plan, the price of the cheapest paid plan up to the card form, and the way to delete the account. Nothing was paid and nothing was deleted. A new HTTP monitor was created for a page on our own site that returns 404 (checked with curl). It was created at 17:16:38. At 17:17:36 the dashboard still said Preparing and showed 100% for the last 24 hours with 0 incidents. The DOWN email, Monitor is DOWN for that page, arrived at 17:17:45, about 67 seconds after the monitor was created, although the free interval is 5 minutes. At 17:23:30 the dashboard said Down, currently down for 0h 5m 56s, with 1 incident and 16.6% uptime over 24 hours. The test monitor was paused afterwards and not deleted. The monitor for our own site, created in the onboarding, keeps running. No kit records were entered.",
+   "findings": [
+    "A free HTTP monitor on a page of our own site that returns 404 was created at 17:16:38. The DOWN email, Monitor is DOWN, arrived at 17:17:45, about 67 seconds later, although the free check interval is 5 minutes. At 17:17:36 the dashboard still said Preparing with 100% and 0 incidents.",
+    "At 17:23:30 the dashboard said Down, currently down for 5 minutes and 56 seconds, with 1 incident and 16.6% uptime over 24 hours.",
+    "The free plan allows 50 monitors checked every 5 minutes, with email alerts and 1 status page. Keyword, heartbeat and API monitors, groups, 1-minute checks and several locations are paid. SSL certificate and domain checks are only in Solo, Team and Scale.",
+    "The cheapest paid plan has fewer monitors than the free plan. At checkout Solo 10 was 108 euros a year for 10 monitors, or 228 euros a year for 50 monitors. The summary said this is an auto-renewal payment. We stopped before the card details.",
+    "The pricing page lists 3 months of data and monthly email reports for the first 3 months only on Free. We read this and did not test it over time.",
+    "Deleting the account runs through Account details: UptimeRobot sends a verification email, after which all account information, monitors, logs and settings are lost and cannot be recovered."
+   ],
+   "not_tested": [
+    "We did not watch the original sign-up; the account was already open when our session began.",
+    "Paid monitor types, SMS and voice alerts, a published status page, integrations, the API and MCP, and the mobile app were out of scope.",
+    "We did not contact support, invite anyone, enter card details, or export and re-import data.",
+    "The irreversible account deletion is left to the account owner.",
+    "We did not examine roles, API entitlement or a downgrade.",
+    "Session date 15 November 2026, Europe/Amsterdam time. Our clock readings are approximate and not a benchmark."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Monitor is DOWN",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "A free HTTP monitor on a page that returns 404 sent its DOWN email at 17:17:45, about 67 seconds after it was created at 17:16:38, while the dashboard still said Preparing with 100% and 0 incidents. At 17:23:30 it showed Down for 5 minutes and 56 seconds with 1 incident.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/uptimerobot-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "One monitor on one failing URL, observed by an AI assisted session; the alert delay for later outages was not measured.",
+     "status": "confirmed",
+     "buying_consequence": "A free monitor alerts within about a minute of creation, even though the free check interval is 5 minutes.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "10 monitors, 10 extra credits incl.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "The checkout for Solo, the cheapest paid plan, offers 10 monitors at 108 euros a year or 50 monitors at 228 euros a year, while the free plan allows 50 monitors.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/uptimerobot-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "Checkout summary for Solo versus the free plan limit of 50 monitors; tax was not shown.",
+     "status": "confirmed",
+     "buying_consequence": "The cheapest paid plan has fewer monitors than the free plan; 50 monitors with 60 second checks cost 228 euros a year.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Available only in Solo, Team and Scale",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "The monitor form says SSL certificate and Domain checks are available only in Solo, Team and Scale. Keyword, heartbeat and API monitors, groups, 1 minute checks and several locations are also paid, and the last 365 days are behind Unlock with paid plans.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/uptimerobot-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "Observed on the monitor form and dashboard of one free account.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan covers plain uptime checks every 5 minutes; certificate expiry and domain checks need a paid plan.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Only first 3 months",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "The pricing page comparison lists monthly email reports for Free as only the first 3 months, and data kept for 3 months. This comes from the comparison and was not tested over time.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/uptimerobot-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "Pricing page wording only; no time passed to test retention.",
+     "status": "not_testable",
+     "buying_consequence": "Free history and email reports are short lived; check the retention before relying on them.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "can not be recovered",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "Account details has a Delete account section: UptimeRobot sends a verification email and then all account information, monitors, logs and settings are lost and can not be recovered. The button was not pressed.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/uptimerobot-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "Wording seen on the account page; the deletion itself was not run.",
+     "status": "confirmed",
+     "buying_consequence": "Deleting the account is self service and irreversible; there is no subscription to cancel on the free plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Save ~15% with annual billing",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "The pricing page shows Solo from 9 euros a month with yearly billing, and the checkout shows 108.00 euros a year for 10 monitors, which is 9 euros a month, as an auto-renewal payment. Tax was not shown and the test stopped before the card details.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/uptimerobot-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "Pricing page versus checkout for the same plan and term; the stored cost rule was not compared because tax was not shown.",
+     "status": "confirmed",
+     "buying_consequence": "Check tax and the renewal terms at the card step before buying.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-15",
+    "what": "Cancelling: Account details has a Delete account section; UptimeRobot sends a verification email, after which all account information, monitors, logs and settings are lost and can not be recovered. The button was not pressed, as that is a step for the account owner. The free plan has no subscription to cancel.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The cheapest paid plan has fewer monitors than the free plan. SSL and domain checks, keyword, heartbeat and API monitors, groups, 1 minute checks and several locations are paid.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and a screen count from registration.",
+     "Paid monitor types, SMS and voice alerts, publishing the status page, integrations, API and MCP and the mobile app.",
+     "Support, invitations, card details, export and reimport.",
+     "Deleting the account, which is irreversible and a step for the account owner.",
+     "Roles, API entitlement, downgrade and passive follow up.",
+     "Session and source-reading date: 15 November 2026. Times are CET. The session started at about 17:15 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -13192,6 +13495,132 @@
      "Export, reimport, cancellation and passive follow-up.",
      "Roles, API entitlement and downgrade.",
      "Session date 12 November 2026; raw source read on 12 November 2026. Midnight timestamps are date anchors required by the schema, not measured event times. Explicit event times in descriptions are UTC; elapsed results include only the scope stated."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "ElevenLabs",
+   "product_id": "elevenlabs",
+   "run_date": "2026-11-15",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 15 November 2026 the session tested ElevenLabs on the free plan: the onboarding, what 500 characters cost in credits, how fast the audio starts, the commercial license on the free plan, the checkout of the cheapest paid plan up to the card form and the way to delete the account. Nothing was paid or deleted. A test text of exactly 500 characters (English, with the numbers 2026, 15 and 67) was entered; the counter said 10,000 credits remaining and 500 / 10,000 characters. Generate speech was clicked at 17:53:13 with the default voice Roger and the model Eleven v4. After about 7 seconds, at 17:53:20, audio was already playing. Each click produced two versions, Generation 1 and Generation 2, and the player showed a length of 0:39. Afterwards the account menu showed Remaining 9,500: 500 characters cost exactly 500 credits, even though two versions came out. By the tester arithmetic, 10,000 credits a month is about 20 such paragraphs, roughly 13 minutes of speech (20 times 39 seconds). After generating, the panel Recommended for your text proposed other voices. The voice quality was not formally assessed and nothing is claimed about it. No kit records were entered.",
+   "findings": [
+    "A test text of exactly 500 characters was voiced on the free plan with the default voice Roger and the model Eleven v4. Generate speech was clicked at 17:53:13 and audio played at 17:53:20, about 7 seconds later. Each click produced two versions of 0:39.",
+    "The balance went from 10,000 to 9,500 credits, so 500 characters cost exactly 500 credits even though two versions came out. At that rate the 10,000 free credits a month cover about 20 such paragraphs, roughly 13 minutes of speech (our arithmetic).",
+    "On the free plan the Commercial license for Speech and Music is crossed out. Starter adds it, together with Instant Voice Cloning and the dubbing studio.",
+    "The Starter checkout in euros showed 1.14 euros due today including 0.20 euros VAT (promo for the first month), then 6.85 euros a month. Before that, a window offered annual billing with 2 months free. We stopped before the card details.",
+    "The onboarding has a required checkbox confirming you are 18 or older, which the account owner has to tick.",
+    "Settings, Profile, Delete Entire Account says you can no longer create an ElevenLabs account with this email, so deleting the account blocks that address for good. We did not press it. We did not judge voice quality."
+   ],
+   "not_tested": [
+    "We did not watch the original sign-up; the account was already open when our session began.",
+    "We skipped voice cloning on purpose, and did not try Studio, Dubbing, Music, the API, downloading or reusing the audio, or any paid plan.",
+    "We did not judge how good the voice sounds.",
+    "We did not contact support, invite anyone, enter card details, or export and re-import data.",
+    "The account deletion, which blocks the email address for good, is left to the account owner.",
+    "Session date 15 November 2026, Europe/Amsterdam time. Our clock readings are approximate and not a benchmark."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "500 / 10,000 characters",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "A text of 500 characters cost exactly 500 of the 10,000 free credits, even though each click produced two versions of 0:39. The audio started playing after about 7 seconds. By the tester arithmetic that is about 13 minutes of speech a month on the free plan.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/elevenlabs-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "One 500 character text with one voice and one model; the arithmetic is the tester and the voice quality was not assessed.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan gives about 13 minutes of speech a month, counted at one credit per character.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Commercial license for Speech and Music",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "On the Free plan the commercial license for Speech and Music is struck through, so it is not included; it is listed from Starter on.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/elevenlabs-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "Plan page wording on one free account.",
+     "status": "confirmed",
+     "buying_consequence": "Free speech cannot be assumed to be cleared for commercial use; the cheapest plan with the license is Starter.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You will no longer be able to create an ElevenLabs account with this email.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "Settings, Profile, Delete Entire Account says the email address can no longer be used to create an account, so deletion blocks that address for good. The button was not pressed.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/elevenlabs-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "Wording seen on the profile page; the deletion itself was not run.",
+     "status": "confirmed",
+     "buying_consequence": "Deleting the account is irreversible for that email address; use an address you can spare.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "First month for $1",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-15",
+     "observed": "Starter is shown at 1 dollar for the first month and 6 dollars after. The Stripe checkout in euro asked 1.14 euro today including 0.20 VAT, then 6.85 euro a month; the euro amounts are not the plain dollar prices converted. The test stopped before the card details.",
+     "observed_on": "2026-11-15",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/elevenlabs-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the card form",
+     "comparability": "Plan page versus the checkout summary for the same plan; no stored cost rule was compared, and the euro amounts are a conversion by the checkout.",
+     "status": "confirmed",
+     "buying_consequence": "The first month costs about 1.14 euro including VAT and then 6.85 euro a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-15",
+    "what": "Cancelling: Settings, Profile, Delete Entire Account says You will no longer be able to create an ElevenLabs account with this email, so deleting the account blocks that email address for good. The button was not pressed, since that is a step for the account owner. The free plan has no subscription to cancel; a paid plan is cancelled through Billing, which was not tested. Not tested: voice cloning (on purpose), Studio, Dubbing, Music, the API, downloading and reuse of the audio, a paid plan and the deletion itself.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The onboarding has a required 18 plus checkbox that the account owner has to tick. The free plan has no commercial license for speech and music, and deleting the account blocks the email address for good.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original account registration and a screen count from registration.",
+     "Voice cloning (on purpose), Studio, Dubbing, Music, the API, downloading and reuse of the audio, and any paid plan.",
+     "The quality of the voice, which was not formally assessed.",
+     "Support, invitations, card details, export and reimport.",
+     "Deleting the account, which blocks the email address for good and is a step for the account owner.",
+     "Session and source-reading date: 15 November 2026. Times are CET. The session started at about 17:50 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

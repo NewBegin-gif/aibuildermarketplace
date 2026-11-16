@@ -66,16 +66,616 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "cart drawer order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 30,
+     "evidence": "Free is $0 for up to 30 orders"
+    },
+    {
+     "id": "essential-1",
+     "name": "Essential 1",
+     "model": "flat",
+     "monthly": 8.99,
+     "annual_status": "not_offered",
+     "evidence": "Essential 1 is $8.99 for up to 99",
+     "max_units": 99
+    },
+    {
+     "id": "essential-2",
+     "name": "Essential 2",
+     "model": "flat",
+     "monthly": 13.99,
+     "annual_status": "not_offered",
+     "evidence": "Essential 2 $13.99 for up to 199",
+     "max_units": 199
+    },
+    {
+     "id": "essential-3",
+     "name": "Essential 3",
+     "model": "flat",
+     "monthly": 23.99,
+     "annual_status": "not_offered",
+     "evidence": "Essential 3 $23.99 for up to 499",
+     "max_units": 499
+    },
+    {
+     "id": "essential-4",
+     "name": "Essential 4",
+     "model": "flat",
+     "monthly": 38.99,
+     "annual_status": "not_offered",
+     "evidence": "Essential 4 $38.99 for up to 999",
+     "max_units": 999
+    },
+    {
+     "id": "essential-5",
+     "name": "Essential 5",
+     "model": "flat",
+     "monthly": 58.99,
+     "annual_status": "not_offered",
+     "evidence": "Essential 5 $58.99 for up to 1,999",
+     "max_units": 1999
+    },
+    {
+     "id": "essential-6",
+     "name": "Essential 6",
+     "model": "flat",
+     "monthly": 88.99,
+     "annual_status": "not_offered",
+     "evidence": "Essential 6 $88.99 for up to 4,999",
+     "max_units": 4999
+    },
+    {
+     "id": "essential-7",
+     "name": "Essential 7",
+     "model": "flat",
+     "monthly": 138.99,
+     "annual_status": "not_offered",
+     "evidence": "Essential 7 $138.99 for up to 9,999",
+     "max_units": 9999
+    },
+    {
+     "id": "unlimited",
+     "name": "Unlimited",
+     "model": "flat",
+     "monthly": 198.99,
+     "annual_status": "not_offered",
+     "evidence": "Unlimited $198.99 for 10,000 or more"
+    }
+   ],
+   "notes": [
+    "Only orders that go through the cart drawer count, over a rolling 30 days; every plan has the same features.",
+    "Passing a limit moves the store to the next plan automatically.",
+    "No yearly price is listed; the rules treat the plans as monthly only."
+   ],
+   "not_computable": [
+    "The 14-day free trial on the first paid plan, once per store."
+   ],
+   "rules_verified_at": "2026-11-16"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "essential-cart-drawer",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "cart drawer order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential-1": "not_offered_on_billing",
+       "essential-2": "not_offered_on_billing",
+       "essential-3": "not_offered_on_billing",
+       "essential-4": "not_offered_on_billing",
+       "essential-5": "not_offered_on_billing",
+       "essential-6": "not_offered_on_billing",
+       "essential-7": "not_offered_on_billing",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_offered_on_billing",
+       "essential-2": "not_offered_on_billing",
+       "essential-3": "not_offered_on_billing",
+       "essential-4": "not_offered_on_billing",
+       "essential-5": "not_offered_on_billing",
+       "essential-6": "not_offered_on_billing",
+       "essential-7": "not_offered_on_billing",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_offered_on_billing",
+       "essential-4": "not_offered_on_billing",
+       "essential-5": "not_offered_on_billing",
+       "essential-6": "not_offered_on_billing",
+       "essential-7": "not_offered_on_billing",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_offered_on_billing",
+       "essential-5": "not_offered_on_billing",
+       "essential-6": "not_offered_on_billing",
+       "essential-7": "not_offered_on_billing",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_offered_on_billing",
+       "essential-6": "not_offered_on_billing",
+       "essential-7": "not_offered_on_billing",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_offered_on_billing",
+       "essential-7": "not_offered_on_billing",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_eligible",
+       "essential-7": "not_offered_on_billing",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_eligible",
+       "essential-7": "not_eligible",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_eligible",
+       "essential-7": "not_eligible",
+       "unlimited": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_eligible",
+       "essential-7": "not_eligible",
+       "unlimited": "not_offered_on_billing"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 0,
+      "to_units": 50,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The 14-day free trial on the first paid plan, once per store."
+    ]
+   },
+   "monthly": {
+    "product_id": "essential-cart-drawer",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "cart drawer order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential-1": 8.99,
+       "essential-2": 13.99,
+       "essential-3": 23.99,
+       "essential-4": 38.99,
+       "essential-5": 58.99,
+       "essential-6": 88.99,
+       "essential-7": 138.99,
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essential-1",
+      "cheapest_plan_name": "Essential 1",
+      "total_month": 8.99,
+      "billed": {
+       "amount": 8.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": 8.99,
+       "essential-2": 13.99,
+       "essential-3": 23.99,
+       "essential-4": 38.99,
+       "essential-5": 58.99,
+       "essential-6": 88.99,
+       "essential-7": 138.99,
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "essential-3",
+      "cheapest_plan_name": "Essential 3",
+      "total_month": 23.99,
+      "billed": {
+       "amount": 23.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": 23.99,
+       "essential-4": 38.99,
+       "essential-5": 58.99,
+       "essential-6": 88.99,
+       "essential-7": 138.99,
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "essential-4",
+      "cheapest_plan_name": "Essential 4",
+      "total_month": 38.99,
+      "billed": {
+       "amount": 38.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": 38.99,
+       "essential-5": 58.99,
+       "essential-6": 88.99,
+       "essential-7": 138.99,
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "essential-5",
+      "cheapest_plan_name": "Essential 5",
+      "total_month": 58.99,
+      "billed": {
+       "amount": 58.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": 58.99,
+       "essential-6": 88.99,
+       "essential-7": 138.99,
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "essential-6",
+      "cheapest_plan_name": "Essential 6",
+      "total_month": 88.99,
+      "billed": {
+       "amount": 88.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": 88.99,
+       "essential-7": 138.99,
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "essential-7",
+      "cheapest_plan_name": "Essential 7",
+      "total_month": 138.99,
+      "billed": {
+       "amount": 138.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_eligible",
+       "essential-7": 138.99,
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 198.99,
+      "billed": {
+       "amount": 198.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_eligible",
+       "essential-7": "not_eligible",
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 198.99,
+      "billed": {
+       "amount": 198.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_eligible",
+       "essential-7": "not_eligible",
+       "unlimited": 198.99
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "unlimited",
+      "cheapest_plan_name": "Unlimited",
+      "total_month": 198.99,
+      "billed": {
+       "amount": 198.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "essential-1": "not_eligible",
+       "essential-2": "not_eligible",
+       "essential-3": "not_eligible",
+       "essential-4": "not_eligible",
+       "essential-5": "not_eligible",
+       "essential-6": "not_eligible",
+       "essential-7": "not_eligible",
+       "unlimited": 198.99
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 0,
+      "to_units": 50,
+      "from_plan": "free",
+      "to_plan": "essential-1",
+      "from_plan_name": "Free",
+      "to_plan_name": "Essential 1"
+     },
+     {
+      "from_units": 50,
+      "to_units": 300,
+      "from_plan": "essential-1",
+      "to_plan": "essential-3",
+      "from_plan_name": "Essential 1",
+      "to_plan_name": "Essential 3"
+     },
+     {
+      "from_units": 300,
+      "to_units": 700,
+      "from_plan": "essential-3",
+      "to_plan": "essential-4",
+      "from_plan_name": "Essential 3",
+      "to_plan_name": "Essential 4"
+     },
+     {
+      "from_units": 700,
+      "to_units": 1000,
+      "from_plan": "essential-4",
+      "to_plan": "essential-5",
+      "from_plan_name": "Essential 4",
+      "to_plan_name": "Essential 5"
+     },
+     {
+      "from_units": 1000,
+      "to_units": 2000,
+      "from_plan": "essential-5",
+      "to_plan": "essential-6",
+      "from_plan_name": "Essential 5",
+      "to_plan_name": "Essential 6"
+     },
+     {
+      "from_units": 2000,
+      "to_units": 5000,
+      "from_plan": "essential-6",
+      "to_plan": "essential-7",
+      "from_plan_name": "Essential 6",
+      "to_plan_name": "Essential 7"
+     },
+     {
+      "from_units": 5000,
+      "to_units": 10000,
+      "from_plan": "essential-7",
+      "to_plan": "unlimited",
+      "from_plan_name": "Essential 7",
+      "to_plan_name": "Unlimited"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The 14-day free trial on the first paid plan, once per store."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -105,9 +705,9 @@
    "status": "open"
   },
   {
-   "question_id": "essential-cart-drawer:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "essential-cart-drawer:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The 14-day free trial on the first paid plan, once per store. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

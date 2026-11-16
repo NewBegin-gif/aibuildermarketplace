@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 663 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-15.
+All 665 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-16.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1384,7 +1384,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's built for large organizations: the site claims 100+ enterprises deployed globally and 2.9M+ learners trained, with Danone among the named references, and the sales-led, quote-only motion reflects that.
 - **Best for:** enterprises and scale-ups that need structured, measurable training rolled out across hundreds of employees: branded academies, AI-generated courses, job-skill simulations and assessment in one platform
 - **Flags:** Hidden pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/evolve-review/
+- **Full review:** https://officesoftwaremarketplace.com/evolve-review.html
 
 ## Expandi (expandi.io)
 - **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) 7-day free trial, no free plan.
@@ -1513,7 +1513,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The real cost is the success fee, and it's a flat bracket rate on the whole sale price, not marginal: a mid-five-figure sale can hand over a four- to five-figure commission.
 - **Best for:** buyers and sellers of small-to-mid online businesses, SaaS, apps and domains who want the largest marketplace and are comfortable doing their own due diligence
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/flippa-review/
+- **Full review:** https://officesoftwaremarketplace.com/flippa-review.html
 
 ## Flocksy (flocksy.com)
 - **Verified pricing:** Flat monthly plans priced by dedicated creative hours per business day: $1,199/mo for 2h/day, $1,699 (3h/day), $2,199 (4h/day), $2,599 (5h/day), $2,999 (6h/day), $3,399 (7h/day) and $3,799/…
@@ -1711,6 +1711,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** US small businesses that want easy full-service payroll, benefits and tax compliance in one place
 - **Flags:** Per-seat pricing
 - **Full review:** https://officesoftwaremarketplace.com/gusto-review.html
+
+## Gymcatch (gymcatch.com)
+- **Verified pricing:** (read 2026-11-16 on gymcatch.com/pricing, British pounds a month) Gymcatch is booking and customer management software for fitness and wellness businesses.
+- **Honest take:** Booking and client software for fitness studios; from £10 + VAT, first month free.
+- **Best for:** Personal trainers, fitness studios and wellness businesses that want simple class booking and client management at one flat monthly price
+- **Full review:** https://officesoftwaremarketplace.com/gymcatch-review.html
 
 ## Hablaki (hablaki.com)
 - **Verified pricing:** (read 2026-11-02 on hablaki.com/en, its FAQ and the refund policy at hablaki.com/en/refunds; the Spanish homepage, read 2026-10-21, gives the same 9,99 USD) Hablaki sells one thing: a lifet…
@@ -2911,7 +2917,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Printify makes nothing until you sell: the Premium fee only pays off past a break-even order volume, and because it's a middleman marketplace, print quality and shipping vary by the provider you pick.
 - **Best for:** creators and stores testing print-on-demand with no upfront cost, upgrading to Premium once volume justifies it
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/printify-review/
+- **Full review:** https://marketingandsalessoftware.com/printify-review.html
 
 ## PrintSage (printsage.com)
 - **Verified pricing:** (read 2026-11-02 on printsage.com and on ShipSage's print-on-demand page, shipsage.com/print-on-demand; prices in US dollars) PrintSage has no subscription and no plan price.
@@ -3642,7 +3648,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-11-13 on stampezee.com/en/pricing, the plan cards plus the plan data behind them; same plans and prices as on 2026-10-19) The free tier is no longer on the page.
 - **Honest take:** The category is honest and proven (digital stamp cards beat lost paper cards), and the platform is young with limited public review coverage.
 - **Best for:** local businesses (cafés, salons, retail) that want a simple digital stamp-card loyalty program and can judge it inside a 14-day trial
-- **Full review:** https://aibuildermarketplace.com/b2b/stampezee-review/
+- **Full review:** https://marketingandsalessoftware.com/stampezee-review.html
 
 ## StoreFAQ (storefaq.io)
 - **Verified pricing:** (read 2026-08-21 and re-verified unchanged 2026-10-09 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversations rather than on the number of FAQs.
@@ -3662,7 +3668,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It fixes the mechanical layer, meta tags, alt text, images and sitemaps, but none of that creates demand, and on 25 products the free tier already does most of it.
 - **Best for:** Shopify stores with a few hundred products and no in-house SEO help, who want metadata, schema, alt text and indexing handled in bulk and reported against Search Console
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/storeseo-review/
+- **Full review:** https://marketingandsalessoftware.com/storeseo-review.html
 
 ## Storista (storista.io)
 - **Verified pricing:** (read 2026-10-10 on apps.shopify.com/storista-stories, listed as “Storista Shoppable Videos UGC”, and on storista.io/pricing) Four tiers.
@@ -4465,6 +4471,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** UK and overseas founders who want to form a UK limited company online for a small fee, with the option of a London registered office and service address instead of their home address
 - **Flags:** Renewal jump
 - **Full review:** https://officesoftwaremarketplace.com/your-company-formations-review.html
+
+## Zapier (zapier.com)
+- **Verified pricing:** (read 2026-11-16 on zapier.com/pricing, US dollars a month) Zapier connects apps with automations called Zaps.
+- **Honest take:** Connects thousands of apps without code; free plan, paid from $19.99.
+- **Best for:** Small teams and founders who want to connect the apps they already use so data moves on its own, and are happy to pay per task as volume grows
+- **Flags:** Free tier
+- **Full review:** https://officesoftwaremarketplace.com/zapier-review.html
 
 ## zastech (zastech.dev)
 - **Verified pricing:** (read 2026-11-15 on zastech.dev/pricing, US dollars) zastech sells small browser tools and developer APIs.

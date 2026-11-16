@@ -3421,6 +3421,130 @@
   },
   {
    "source": "session",
+   "product_name": "Kedra AI Index",
+   "product_id": "kedra-ai-index",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Kedra AI Index on the Free plan of a Shopify development store: the guide, publishing the AI files, the AI visibility audit, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was approved, paid or uninstalled. Step 3, Turn on AI discovery, has three switches: Remove your storefront password, Turn on AI crawler tracking and Publish your AI files, the last one described as putting agents.md and llms.txt on the live storefront. Publish now was clicked; after about 10 seconds the line read Done and the counter 1 of 3 activated. Step 4 then showed an AI visibility score of 39 / 100, labelled Not AI-ready and Partial, with 6 to fix and 3 to improve: Product data 44%, Crawler access 40% and Trust and policies 29%. AI shopping agents and Live crawler check read Not measured with Password on, and a note said 2 checks that need a public storefront were skipped. The AI Visibility page shows 3 of 3 free fixes, Audited 14 products, checked 1 minute ago, Live products only; the biggest win is Description, 14 of 14 products need a fuller description; the most common gaps are Barcode/GTIN 14 of 14, Description 13 of 14 and SEO description 13 of 14; the 14 products split into 0 Excellent, 0 Good, 4 Needs work and 10 Not AI-ready, with the lowest scores Bundle Product #1 at 31, The Compare at Price Snowboard at 36 and Gift Card at 41. Bulk fix and Autopilot (Off, Available on Grow) are visible. The app home showed AI tracking Inactive and Get started 1/3 completed. Timing, approximate tester observations: install at about 14:38, files published and the score visible at about 14:39, so about 1 to 2 minutes and about 7 clicks. Whether llms.txt and agents.md really stand on the storefront was not verified, because the store has a password that was not removed. Uninstall: Settings, Apps, the row for the app, then Uninstall opened a dialog saying that data managed by the app will be deleted and that a request goes to the developer within 48 hours to delete personal customer information, with a reason list and a feedback box; it was cancelled. Not tested: a real check of which AI assistants name the brand, removing the storefront password, AI crawler tracking in the theme editor, the 3 free fixes, Bulk fix, Autopilot, paid plans and yearly prices. No kit records were entered.",
+   "findings": [
+    "Vendor claim \"All 6 AI engines checked\". What we saw: The Free plan line says all 6 AI engines are checked. On the AI visibility page the checks AI shopping agents and Live crawler check read Not measured with Password on, because the store has a password, so the engine check itself was not seen. Whether the engines are really checked on the Free plan could not be seen on a store with a password.",
+    "Vendor claim \"Puts your agents.md and llms.txt on your live storefront\". What we saw: Publish now ended in Done within about 10 seconds and the counter read 1 of 3 activated, but the files were not opened on the storefront because the store has a password. The app reports the files as published; that they are readable by AI assistants was not seen.",
+    "Vendor claim \"Launch offer: 50% off your first month\". What we saw: The plan screen and the Shopify approval screen both showed 50% off for the first month: Grow at $25 became $12.50. The Shopify screen also showed a 10-day free trial ending on 26 Nov with $12.50 due on 26 Nov, before applicable taxes. The first paid month of Grow is $12.50 after a 10-day trial, then $25 a month, before taxes.",
+    "Vendor claim \"$25 $12.50 /mo first month, then $25/mo\". What we saw: The Grow plan card shows $25 now $12.50 per month for the first month, then $25 per month. The Shopify Approve subscription screen for Kedra AI Index Grow showed $25,00 and $12,50 USD every 30 days, Subtotal $25,00 plus any applicable taxes, 50% off -$12,50 and Total $12,50 due 26 Nov after a 10-day free trial. Card and approval screen agree; tax is unknown and nothing was approved. Grow costs $12.50 for the first month and $25 a month after that, before taxes."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A real check of which AI assistants name the brand, because the store has a password that was not removed.",
+    "Whether llms.txt and agents.md really stand on the storefront, the AI crawler tracking in the theme editor and the 3 free fixes.",
+    "Bulk fix, Autopilot, every paid plan and the yearly prices.",
+    "Support, invitations, export and reimport, and uninstalling the app.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:38 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "All 6 AI engines checked",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Free plan line says all 6 AI engines are checked. On the AI visibility page the checks AI shopping agents and Live crawler check read Not measured with Password on, because the store has a password, so the engine check itself was not seen.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-ai-index-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plan wording versus the visibility page on one password protected development store.",
+     "status": "not_testable",
+     "buying_consequence": "Whether the engines are really checked on the Free plan could not be seen on a store with a password.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Puts your agents.md and llms.txt on your live storefront",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Publish now ended in Done within about 10 seconds and the counter read 1 of 3 activated, but the files were not opened on the storefront because the store has a password.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-ai-index-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Wording of the switch versus the Done status in the app on one password protected store; the files themselves were not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The app reports the files as published; that they are readable by AI assistants was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Launch offer: 50% off your first month.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The plan screen and the Shopify approval screen both showed 50% off for the first month: Grow at $25 became $12.50. The Shopify screen also showed a 10-day free trial ending on 26 Nov with $12.50 due on 26 Nov, before applicable taxes.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-ai-index-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Launch offer banner versus the Shopify approval screen for the Grow plan on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "The first paid month of Grow is $12.50 after a 10-day trial, then $25 a month, before taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$25 $12.50 /mo first month, then $25/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Grow plan card shows $25 now $12.50 per month for the first month, then $25 per month. The Shopify Approve subscription screen for Kedra AI Index Grow showed $25,00 and $12,50 USD every 30 days, Subtotal $25,00 plus any applicable taxes, 50% off -$12,50 and Total $12,50 due 26 Nov after a 10-day free trial. Card and approval screen agree; tax is unknown and nothing was approved.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-ai-index-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plan card versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+     "status": "confirmed",
+     "buying_consequence": "Grow costs $12.50 for the first month and $25 a month after that, before taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Kedra AI Index on the Free plan of a Shopify development store: the guide, publishing the AI files, the AI visibility audit, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was approved, paid or uninstalled. Step 3, Turn on AI discovery, has three switches: Remove your storefront password, Turn on AI crawler tracking and Publish your AI files, the last one described as putting agents.md and llms.txt on the live storefront. Publish now was clicked; after about 10 seconds the line read Done and the counter 1 of 3 activated. Step 4 then showed an AI visibility score of 39 / 100, labelled Not AI-ready and Partial, with 6 to fix and 3 to improve: Product data 44%, Crawler access 40% and Trust and policies 29%. AI shopping agents and Live crawler check read Not measured with Password on, and a note said 2 checks that need a public storefront were skipped. The AI Visibility page shows 3 of 3 free fixes, Audited 14 products, checked 1 minute ago, Live products only; the biggest win is Description, 14 of 14 products need a fuller description; the most common gaps are Barcode/GTIN 14 of 14, Description 13 of 14 and SEO description 13 of 14; the 14 products split into 0 Excellent, 0 Good, 4 Needs work and 10 Not AI-ready, with the lowest scores Bundle Product #1 at 31, The Compare at Price Snowboard at 36 and Gift Card at 41. Bulk fix and Autopilot (Off, Available on Grow) are visible. The app home showed AI tracking Inactive and Get started 1/3 completed. Timing, approximate tester observations: install at about 14:38, files published and the score visible at about 14:39, so about 1 to 2 minutes and about 7 clicks. Whether llms.txt and agents.md really stand on the storefront was not verified, because the store has a password that was not removed. Uninstall: Settings, Apps, the row for the app, then Uninstall opened a dialog saying that data managed by the app will be deleted and that a request goes to the developer within 48 hours to delete personal customer information, with a reason list and a feedback box; it was cancelled. Not tested: a real check of which AI assistants name the brand, removing the storefront password, AI crawler tracking in the theme editor, the 3 free fixes, Bulk fix, Autopilot, paid plans and yearly prices. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The store password made the live crawler and AI shopping agent checks read Not measured, so the audit score of 39 / 100 covers only what could be read without a public storefront.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A real check of which AI assistants name the brand, because the store has a password that was not removed.",
+     "Whether llms.txt and agents.md really stand on the storefront, the AI crawler tracking in the theme editor and the 3 free fixes.",
+     "Bulk fix, Autopilot, every paid plan and the yearly prices.",
+     "Support, invitations, export and reimport, and uninstalling the app.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:38 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Cloze CRM",
    "product_id": "cloze-crm",
    "run_date": "2026-10-31",
@@ -5086,6 +5210,186 @@
      "Roles, API entitlement, downgrade, cancellation and passive follow up.",
      "Speech to speech, speech to text, voice cloning, several speakers and any paid plan.",
      "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Kedra Checkout Rules & Upsells",
+   "product_id": "kedra-checkout-rules-upsells",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Kedra Checkout Rules and Upsells on the Free plan of a Shopify development store: a payment rule that did not work on the test gateway, a validation rule that blocked a 600 dollar test checkout, the Free plan limit, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. First rule: Manual Setup, the template Hide COD over an amount, edited into Hide Bogus gateway over USD 100 (order total greater than USD100, then hide payment methods that contain the string Bogus), saved ACTIVE at about 14:44:40. The Hide settings say that Credit card (Shopify Payments) can only be customized on Shopify Plus plans. A test checkout through the theme editor preview used a snowboard of 600 dollars, a made up name, address and email, and no card; nothing was paid. A first check before the rule existed (ski wax at 24.95 dollars) showed the card block Pay with credit card with a Testing instruction. The payment rule did not work: at 600 dollars Pay with credit card and Test Payment Gateway stayed visible, also after changing the string to Test Payment Gateway and then to Credit card. The cause was not established; it may be that the test gateway counts as the card block that is Plus only, but that is a guess. The Free plan allows 1 active rule: creating a second rule while one is active shows ACTIVE Locked with Your Free plan includes 1 active rule and it is in use. The payment rule was set to INACTIVE and a validation rule Block orders over an amount (order total greater than USD500, message Order total exceeds the maximum allowed amount.) was made ACTIVE. At about 14:49 a checkout of 600 dollars showed a red banner at the top that this order cannot be completed with the current checkout details. That is Shopify default text and not the app message; Your own checkout wording is not included on Free. A cart of 24.95 dollars showed no message. Timing, approximate tester observations: Install at 14:43:00 and a visibly working rule in the test checkout at 14:49:20, about 6 minutes 20 seconds, of which about 3 minutes went on the first rule that did not work; one working rule straight away would have taken about 2 minutes; more than 25 clicks and typing actions including the detour. Uninstall: the app menu offers Manage app, Get support, Pin to your navigation and Uninstall; the Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: post-purchase upsells (a paid plan), hiding, renaming or reordering shipping and payment methods, draft orders, completing a real payment, Plus only features, own wording in the block, and a payment rule with a real second payment method. No kit records were entered.",
+   "findings": [
+    "Vendor claim \"7 dagen\". What we saw: The Dutch App Store listing named a 7 day trial. The app and the Shopify approval screen showed a 5-day free trial ending on 21 Nov. The trial is 5 days and not 7.",
+    "Vendor claim \"Your Free plan includes 1 active rule\". What we saw: Creating a second rule while one was active showed ACTIVE Locked with this text, so the Free plan really allows 1 active rule over all rule types. A store that needs a payment rule and a validation rule at the same time has to pay for a plan.",
+    "Vendor claim \"Credit card (Shopify Payments) can only be customized on Shopify Plus plans\". What we saw: The Hide settings say so. Our rule that hides the test payment method did not work on the test gateway; whether that gateway counts as this card block is unknown. Hiding or renaming the credit card method of Shopify Payments needs Shopify Plus, so a standard store cannot do that with this app.",
+    "Vendor claim \"Shopify stores with mixed payment and shipping options\". What we saw: The payment rule that should hide the test payment method did not work at 600 dollars, so this audience was not confirmed; shipping rules were not tested and the store only had the test gateway. Whether the app helps a store with mixed payment and shipping options was not shown by this test.",
+    "Vendor claim \"Shopify merchants with no upsell after checkout\". What we saw: Post-purchase upsells are not included on Free or Starter; they come with Starter Plus at $8.99 per month after the first 3 months at 1 dollar, or Unlimited. They were not tested. Post-purchase upsells need Starter Plus or higher.",
+    "Vendor claim \"Stores that create many draft orders by hand\". What we saw: Draft orders were not tested. No evidence for or against draft order help.",
+    "Vendor claim \"$1 $6.99 /month for your first 3 months then $6.99/month\". What we saw: The Starter plan card shows $1 now $6.99 per month for the first 3 months, then $6.99. The Shopify Approve subscription screen for Kedra Starter showed Subtotal $6,99, Discount -$5,99 and Total $1,00 due 21 Nov after a 5-day free trial, $1,00 USD every 30 days, plus any applicable taxes. Card and approval screen agree; tax is unknown and nothing was approved. The yearly price of $58.70 matched the dossier. Starter costs $1 for each of the first 3 months after a 5-day trial and then $6.99 a month, before taxes."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Post-purchase upsells, which need a paid plan.",
+    "Hiding, renaming or reordering shipping methods and renaming or reordering payment methods, and draft orders.",
+    "Completing a real payment or order, Plus only features and own wording in the block.",
+    "A payment rule with a real second payment method, because the store only had the test gateway.",
+    "Support, invitations, export and reimport, and uninstalling the app.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:43 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "7 dagen",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Dutch App Store listing named a 7 day trial. The app and the Shopify approval screen showed a 5-day free trial ending on 21 Nov.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-checkout-rules-upsells-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dutch listing text versus the plan screen and the Shopify approval screen for Starter on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "The trial is 5 days and not 7.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your Free plan includes 1 active rule",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Creating a second rule while one was active showed ACTIVE Locked with this text, so the Free plan really allows 1 active rule over all rule types.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-checkout-rules-upsells-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "In app wording versus the rule editor behaviour on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "A store that needs a payment rule and a validation rule at the same time has to pay for a plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Credit card (Shopify Payments) can only be customized on Shopify Plus plans.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Hide settings say so. Our rule that hides the test payment method did not work on the test gateway; whether that gateway counts as this card block is unknown.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-checkout-rules-upsells-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Wording in the Hide settings versus a rule that failed on the test gateway; the gateway link is a guess.",
+     "status": "confirmed",
+     "buying_consequence": "Hiding or renaming the credit card method of Shopify Payments needs Shopify Plus, so a standard store cannot do that with this app.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shopify stores with mixed payment and shipping options",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The payment rule that should hide the test payment method did not work at 600 dollars, so this audience was not confirmed; shipping rules were not tested and the store only had the test gateway.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-checkout-rules-upsells-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus one failed payment rule and no shipping rule on a store with a single test gateway.",
+     "status": "not_testable",
+     "buying_consequence": "Whether the app helps a store with mixed payment and shipping options was not shown by this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shopify merchants with no upsell after checkout",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Post-purchase upsells are not included on Free or Starter; they come with Starter Plus at $8.99 per month after the first 3 months at 1 dollar, or Unlimited. They were not tested.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-checkout-rules-upsells-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus the plan table; no paid plan was approved.",
+     "status": "not_testable",
+     "buying_consequence": "Post-purchase upsells need Starter Plus or higher.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores that create many draft orders by hand",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Draft orders were not tested.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-checkout-rules-upsells-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus a test that did not touch draft orders.",
+     "status": "not_testable",
+     "buying_consequence": "No evidence for or against draft order help.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$1 $6.99 /month for your first 3 months then $6.99/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Starter plan card shows $1 now $6.99 per month for the first 3 months, then $6.99. The Shopify Approve subscription screen for Kedra Starter showed Subtotal $6,99, Discount -$5,99 and Total $1,00 due 21 Nov after a 5-day free trial, $1,00 USD every 30 days, plus any applicable taxes. Card and approval screen agree; tax is unknown and nothing was approved. The yearly price of $58.70 matched the dossier.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kedra-checkout-rules-upsells-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plan card versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+     "status": "confirmed",
+     "buying_consequence": "Starter costs $1 for each of the first 3 months after a 5-day trial and then $6.99 a month, before taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Kedra Checkout Rules and Upsells on the Free plan of a Shopify development store: a payment rule that did not work on the test gateway, a validation rule that blocked a 600 dollar test checkout, the Free plan limit, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. First rule: Manual Setup, the template Hide COD over an amount, edited into Hide Bogus gateway over USD 100 (order total greater than USD100, then hide payment methods that contain the string Bogus), saved ACTIVE at about 14:44:40. The Hide settings say that Credit card (Shopify Payments) can only be customized on Shopify Plus plans. A test checkout through the theme editor preview used a snowboard of 600 dollars, a made up name, address and email, and no card; nothing was paid. A first check before the rule existed (ski wax at 24.95 dollars) showed the card block Pay with credit card with a Testing instruction. The payment rule did not work: at 600 dollars Pay with credit card and Test Payment Gateway stayed visible, also after changing the string to Test Payment Gateway and then to Credit card. The cause was not established; it may be that the test gateway counts as the card block that is Plus only, but that is a guess. The Free plan allows 1 active rule: creating a second rule while one is active shows ACTIVE Locked with Your Free plan includes 1 active rule and it is in use. The payment rule was set to INACTIVE and a validation rule Block orders over an amount (order total greater than USD500, message Order total exceeds the maximum allowed amount.) was made ACTIVE. At about 14:49 a checkout of 600 dollars showed a red banner at the top that this order cannot be completed with the current checkout details. That is Shopify default text and not the app message; Your own checkout wording is not included on Free. A cart of 24.95 dollars showed no message. Timing, approximate tester observations: Install at 14:43:00 and a visibly working rule in the test checkout at 14:49:20, about 6 minutes 20 seconds, of which about 3 minutes went on the first rule that did not work; one working rule straight away would have taken about 2 minutes; more than 25 clicks and typing actions including the detour. Uninstall: the app menu offers Manage app, Get support, Pin to your navigation and Uninstall; the Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: post-purchase upsells (a paid plan), hiding, renaming or reordering shipping and payment methods, draft orders, completing a real payment, Plus only features, own wording in the block, and a payment rule with a real second payment method. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The first rule, hiding the test payment method, did not work and cost about 3 minutes; the Free plan allows only 1 active rule, so the payment rule had to be made inactive before a validation rule could be active.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Post-purchase upsells, which need a paid plan.",
+     "Hiding, renaming or reordering shipping methods and renaming or reordering payment methods, and draft orders.",
+     "Completing a real payment or order, Plus only features and own wording in the block.",
+     "A payment rule with a real second payment method, because the store only had the test gateway.",
+     "Support, invitations, export and reimport, and uninstalling the app.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:43 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -19484,6 +19788,166 @@
   },
   {
    "source": "session",
+   "product_name": "Post Purchase Upsell Hero",
+   "product_id": "post-purchase-upsell-hero",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Post Purchase Upsell Hero on the test plan of a Shopify development store: a funnel from a template, publishing it, a test checkout with the test gateway, the offer and downsell after payment, and the uninstall dialog. No offer was accepted and nothing was paid or uninstalled. The checkout setting Use an app to add features at checkout after payment, in Shopify Settings, Checkout, was changed from None to Post Purchase Upsell Hero and saved; the setup guide then showed 1/2. In the app the template More of the same (Ideal for cosmetics, consumables and fashion) was used. A screen Building More of the same went through 4 steps (Reading your catalogue and store category, Picking products that pair well with your bestsellers, Creating the upsell and downsell steps, Applying recommended discounts) and in about 10 seconds gave a funnel Saved as Draft. Upsell 1 offered the most expensive product in the cart; we changed it to Choose manually with the product Selling Plans Ski Wax at $24.95; the discount was 25%. The funnel also has an Upsell 2 (AI Recommendation, 25%) after Accepted and a Downsell 1 (AI Recommendation, 30%) after Declined. Save, then Save changes? and Publish changes gave Changes successfully published and the status Active. A test order through Preview store (no store password was entered; Buy it now in the theme editor opens the Checkout Editor with sample data, so that route failed): a snowboard at $749.95, a made up name, address and email, and the test gateway with card number 1; the checkout itself says 1 simulates an approved transaction. No real payment details were used. After Pay now the post-purchase page showed Special offer today only, Add Selling Plans Ski Wax to your order and save 25%, $24.95 now $18.71, Pay now and Decline offer. Decline led to a downsell for The Complete Snowboard at $699.95 now $489.97 (Save 30%) and a second offer for The Collection Snowboard: Hydrogen at $600.00 now $420.00; both were declined and the thank you page showed only the original product. Nothing was accepted. Timing, approximate tester observations: Install at 14:53:10 and the offer in view at 14:59:34, so 6 minutes 24 seconds with about 14 main actions, including one failed route through the theme editor and one detour through Preview store. Post-purchase works through the checkout extension of Shopify; no gateway or Plus requirement was seen and the test gateway worked. Offers for PayPal orders need a separate step, requesting reference transactions at PayPal, which was not done. The Settings, Apps row for the app carries the label Free trial; its Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: offers by customer type, accepting an offer, A/B tests, analytics with real numbers (the dashboard still showed dashes), the PayPal step, the live price and a move to or comparison with AfterSell. The funnel stays Active and a test order exists in the store. No kit records were entered.",
+   "findings": [
+    "Vendor claim \"Shopify stores starting post-purchase upsells\". What we saw: A funnel was built from the More of the same template in about 10 seconds, one product was chosen by hand and the funnel was published. After a test payment the offer appeared on the post-purchase page with Pay now and Decline offer. Nothing was accepted. A store new to post-purchase upsells can get an offer live after payment in one session with a template.",
+    "Vendor claim \"Stores wanting offers matched to customer type\". What we saw: Only All orders was used as the trigger; offers matched to customer type or segments were not tested. No evidence for or against matching offers to customer type.",
+    "Vendor claim \"Busy stores wanting a proven upsell app\". What we saw: The listing shows a rating of 4.9 from 63 reviews. A comparison with AfterSell, or a move to it, was not tested. This test says nothing about busy stores or about AfterSell.",
+    "Vendor claim \"2.5% of the extra revenue we generate\". What we saw: The plan lists this with usage fees capped at $500 per cycle; the usage table shows the first 20.000 of upsell revenue at 2,5% (struck through to 0% on a development store) and 20.001 and above as Free. The percentage was not tried on real revenue. The fee is a share of the extra revenue, with a cap of $500 per cycle.",
+    "Vendor claim \"$0 a month\". What we saw: The dossier of 19 Sep named $0 a month. The plan card now shows $19 / 30 days struck through and $0 / 30 days with 14 trial days, the listing says $19/month with usage charges, and the Shopify Approve charge screen only says the plan is free. Whether $19 applies to live stores is not on any screen. A live store may pay a $19 base per 30 days plus 2.5% of extra revenue, where the dossier suggested $0; the live price is not confirmed.",
+    "Vendor claim \"$19 / 30 days\". What we saw: The plan card shows $19 / 30 days struck through on a development store and the listing says $19/month with usage charges. The only Shopify charge screen was for a free test plan at 0 dollars, so no live total, tax or renewal term was seen and the $19 could not be checked against a checkout. The regular base price is $19 per 30 days on the plan card; the amount at checkout on a live store is unknown."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Offers matched to customer type, because only All orders was used as the trigger.",
+    "Accepting an offer, A/B tests and analytics with real numbers.",
+    "The PayPal step and the live price outside a development store.",
+    "Moving to or comparing with AfterSell, support, invitations, export and reimport, and uninstalling the app.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Shopify stores starting post-purchase upsells",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "A funnel was built from the More of the same template in about 10 seconds, one product was chosen by hand and the funnel was published. After a test payment the offer appeared on the post-purchase page with Pay now and Decline offer. Nothing was accepted.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+     },
+     "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+     "comparability": "Audience wording versus one template run and one test checkout on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "A store new to post-purchase upsells can get an offer live after payment in one session with a template.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores wanting offers matched to customer type",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Only All orders was used as the trigger; offers matched to customer type or segments were not tested.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+     },
+     "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+     "comparability": "Audience wording versus a test that used only the All orders trigger.",
+     "status": "not_testable",
+     "buying_consequence": "No evidence for or against matching offers to customer type.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Busy stores wanting a proven upsell app",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The listing shows a rating of 4.9 from 63 reviews. A comparison with AfterSell, or a move to it, was not tested.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+     },
+     "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+     "comparability": "Audience wording versus a test on a development store without traffic.",
+     "status": "not_testable",
+     "buying_consequence": "This test says nothing about busy stores or about AfterSell.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "2.5% of the extra revenue we generate",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The plan lists this with usage fees capped at $500 per cycle; the usage table shows the first 20.000 of upsell revenue at 2,5% (struck through to 0% on a development store) and 20.001 and above as Free. The percentage was not tried on real revenue.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+     },
+     "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+     "comparability": "Plan wording versus the usage table on the Shopify approval screen; no real revenue exists on a development store.",
+     "status": "confirmed",
+     "buying_consequence": "The fee is a share of the extra revenue, with a cap of $500 per cycle.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$0 a month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The dossier of 19 Sep named $0 a month. The plan card now shows $19 / 30 days struck through and $0 / 30 days with 14 trial days, the listing says $19/month with usage charges, and the Shopify Approve charge screen only says the plan is free. Whether $19 applies to live stores is not on any screen.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+     },
+     "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+     "comparability": "Dossier figure from 19 Sep versus the plan card, the listing and a Shopify approval screen for a test plan; the $0 is a test price and no live checkout exists.",
+     "status": "contradicted",
+     "buying_consequence": "A live store may pay a $19 base per 30 days plus 2.5% of extra revenue, where the dossier suggested $0; the live price is not confirmed.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$19 / 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The plan card shows $19 / 30 days struck through on a development store and the listing says $19/month with usage charges. The only Shopify charge screen was for a free test plan at 0 dollars, so no live total, tax or renewal term was seen and the $19 could not be checked against a checkout.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+     },
+     "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+     "comparability": "Plan card versus an approval screen for a free test plan on a development store; no live checkout was reachable and no cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The regular base price is $19 per 30 days on the plan card; the amount at checkout on a live store is unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Post Purchase Upsell Hero on the test plan of a Shopify development store: a funnel from a template, publishing it, a test checkout with the test gateway, the offer and downsell after payment, and the uninstall dialog. No offer was accepted and nothing was paid or uninstalled. The checkout setting Use an app to add features at checkout after payment, in Shopify Settings, Checkout, was changed from None to Post Purchase Upsell Hero and saved; the setup guide then showed 1/2. In the app the template More of the same (Ideal for cosmetics, consumables and fashion) was used. A screen Building More of the same went through 4 steps (Reading your catalogue and store category, Picking products that pair well with your bestsellers, Creating the upsell and downsell steps, Applying recommended discounts) and in about 10 seconds gave a funnel Saved as Draft. Upsell 1 offered the most expensive product in the cart; we changed it to Choose manually with the product Selling Plans Ski Wax at $24.95; the discount was 25%. The funnel also has an Upsell 2 (AI Recommendation, 25%) after Accepted and a Downsell 1 (AI Recommendation, 30%) after Declined. Save, then Save changes? and Publish changes gave Changes successfully published and the status Active. A test order through Preview store (no store password was entered; Buy it now in the theme editor opens the Checkout Editor with sample data, so that route failed): a snowboard at $749.95, a made up name, address and email, and the test gateway with card number 1; the checkout itself says 1 simulates an approved transaction. No real payment details were used. After Pay now the post-purchase page showed Special offer today only, Add Selling Plans Ski Wax to your order and save 25%, $24.95 now $18.71, Pay now and Decline offer. Decline led to a downsell for The Complete Snowboard at $699.95 now $489.97 (Save 30%) and a second offer for The Collection Snowboard: Hydrogen at $600.00 now $420.00; both were declined and the thank you page showed only the original product. Nothing was accepted. Timing, approximate tester observations: Install at 14:53:10 and the offer in view at 14:59:34, so 6 minutes 24 seconds with about 14 main actions, including one failed route through the theme editor and one detour through Preview store. Post-purchase works through the checkout extension of Shopify; no gateway or Plus requirement was seen and the test gateway worked. Offers for PayPal orders need a separate step, requesting reference transactions at PayPal, which was not done. The Settings, Apps row for the app carries the label Free trial; its Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: offers by customer type, accepting an offer, A/B tests, analytics with real numbers (the dashboard still showed dashes), the PayPal step, the live price and a move to or comparison with AfterSell. The funnel stays Active and a test order exists in the store. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Buy it now in the theme editor opens the Checkout Editor with sample data and gives no real order, so the test needed Preview store and a cart that first had to be emptied.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Offers matched to customer type, because only All orders was used as the trigger.",
+     "Accepting an offer, A/B tests and analytics with real numbers.",
+     "The PayPal step and the live price outside a development store.",
+     "Moving to or comparing with AfterSell, support, invitations, export and reimport, and uninstalling the app.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BrowserAct",
    "product_id": "browseract",
    "run_date": "2026-09-04",
@@ -19505,6 +19969,270 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Code Bulk Discounts",
+   "product_id": "code-bulk-discounts",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Code Bulk Discounts on the Free plan of a Shopify development store: the plan screens, generating 20 unique codes for a 10 percent discount, the CSV download and the delete dialog. Nothing was paid or deleted. The app opens on Select a discount with the text Search and select an existing discount code, so it does not create a discount rule itself; the list showed only existing discounts. We made a 10 percent order discount in Shopify Discounts first; an Amount off products discount asked for products or collections, so an order discount was used. In the app we searched that discount and chose Generate codes (Automatically generate codes, with the counter 0 of 500 allowance). The form has Count (default 1, set to 20), Charset Alphanumeric, Length 8, empty Prefix and Suffix, Include Job ID (recommended) switched on and a Title, and says Free codes remaining: 500 of 500. After Generate the Previous jobs table showed Requested 20, Imported 0, Failed 0 with Importing 0%, and after about 10 seconds Requested 20, Imported 20, Failed 0 with status Complete. Shopify Discounts then showed 21 codes created by the Shopify web app (the 20 generated plus the main code), each customer entering a unique code, and 0 used. Codes have 8 characters plus the job number as a suffix. The Actions menu offers Download CSV, Connect Klaviyo to upload (greyed out), Email QR embed and Delete Set. Download CSV gave a file with the heading Coupon and 20 codes, all unique; that file is not part of the evidence. Delete Set opened the dialog Delete this set? with Cancel and Delete; Cancel was pressed and nothing was deleted. Timing, approximate tester observations: installation at about 14:22 and the first generated codes at about 14:27, mostly spent choosing the plan and making the parent discount by hand; the code generation itself took 3 steps and about 10 seconds of processing. Not tested: more than 20 codes, Pro, Upload codes, the QR code, Klaviyo, using a code in a real checkout, the app Settings screen and uninstalling. No kit records were entered.",
+   "findings": [
+    "Vendor claim \"Generate 500 lifetime codes\". What we saw: The Free plan card says so and the generator form said Free codes remaining: 500 of 500 before the run of 20 codes. The counter after the run was not read, so the use of the 500 was not seen going down. The Free plan covers 500 codes in total rather than 500 a month, so a larger campaign needs the Pro plan.",
+    "Vendor claim \"This plan is free. You will not be billed\". What we saw: Shopify showed this on the Approve charge screen for the Free plan and the plan was approved at 0 dollars; nothing was paid. Trying the Free plan costs nothing.",
+    "Vendor claim \"Search and select an existing discount code\". What we saw: The app starts by asking for an existing discount, so a parent discount has to be made in Shopify first; an Amount off products discount asked for products or collections and an order discount was used instead. The app then generated 20 codes that Shopify listed as 21 codes with the main code. Plan to create the parent discount in Shopify before generating codes.",
+    "Vendor claim \"$14,99 / 30 days\". What we saw: The Pro plan card shows $14,99 / 30 days with the button Not available because the store is in development. No Pro approval screen, tax, trial or yearly price was seen, so the price could not be checked against a checkout. Pro adds unlimited codes per month at $14,99 per 30 days on the plan card; the amount at checkout is unknown."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "More than 20 codes, the Pro plan, Upload codes, QR codes and the Klaviyo connection.",
+    "Using a code in a real checkout, the app Settings screen and uninstalling the app.",
+    "Support, invitations, a reimport of the downloaded CSV and any paid plan.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Generate 500 lifetime codes",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Free plan card says so and the generator form said Free codes remaining: 500 of 500 before the run of 20 codes. The counter after the run was not read, so the use of the 500 was not seen going down.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/code-bulk-discounts-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; Pro not selectable",
+     "comparability": "Plan card wording versus the form counter on one development store; the counter after the run was not read.",
+     "status": "confirmed",
+     "buying_consequence": "The Free plan covers 500 codes in total rather than 500 a month, so a larger campaign needs the Pro plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This plan is free. You will not be billed.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Shopify showed this on the Approve charge screen for the Free plan and the plan was approved at 0 dollars; nothing was paid.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/code-bulk-discounts-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; Pro not selectable",
+     "comparability": "Shopify approval screen for the Free plan on one development store; this is a screen for a free plan, not a paid checkout.",
+     "status": "confirmed",
+     "buying_consequence": "Trying the Free plan costs nothing.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Search and select an existing discount code",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The app starts by asking for an existing discount, so a parent discount has to be made in Shopify first; an Amount off products discount asked for products or collections and an order discount was used instead. The app then generated 20 codes that Shopify listed as 21 codes with the main code.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/code-bulk-discounts-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; Pro not selectable",
+     "comparability": "App start screen text versus the steps taken on one store; the parent discount was made by hand.",
+     "status": "confirmed",
+     "buying_consequence": "Plan to create the parent discount in Shopify before generating codes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$14,99 / 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Pro plan card shows $14,99 / 30 days with the button Not available because the store is in development. No Pro approval screen, tax, trial or yearly price was seen, so the price could not be checked against a checkout.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/code-bulk-discounts-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; Pro not selectable",
+     "comparability": "Plan card versus an unreachable Pro approval screen on a development store; no checkout was opened and no cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "Pro adds unlimited codes per month at $14,99 per 30 days on the plan card; the amount at checkout is unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Code Bulk Discounts on the Free plan of a Shopify development store: the plan screens, generating 20 unique codes for a 10 percent discount, the CSV download and the delete dialog. Nothing was paid or deleted. The app opens on Select a discount with the text Search and select an existing discount code, so it does not create a discount rule itself; the list showed only existing discounts. We made a 10 percent order discount in Shopify Discounts first; an Amount off products discount asked for products or collections, so an order discount was used. In the app we searched that discount and chose Generate codes (Automatically generate codes, with the counter 0 of 500 allowance). The form has Count (default 1, set to 20), Charset Alphanumeric, Length 8, empty Prefix and Suffix, Include Job ID (recommended) switched on and a Title, and says Free codes remaining: 500 of 500. After Generate the Previous jobs table showed Requested 20, Imported 0, Failed 0 with Importing 0%, and after about 10 seconds Requested 20, Imported 20, Failed 0 with status Complete. Shopify Discounts then showed 21 codes created by the Shopify web app (the 20 generated plus the main code), each customer entering a unique code, and 0 used. Codes have 8 characters plus the job number as a suffix. The Actions menu offers Download CSV, Connect Klaviyo to upload (greyed out), Email QR embed and Delete Set. Download CSV gave a file with the heading Coupon and 20 codes, all unique; that file is not part of the evidence. Delete Set opened the dialog Delete this set? with Cancel and Delete; Cancel was pressed and nothing was deleted. Timing, approximate tester observations: installation at about 14:22 and the first generated codes at about 14:27, mostly spent choosing the plan and making the parent discount by hand; the code generation itself took 3 steps and about 10 seconds of processing. Not tested: more than 20 codes, Pro, Upload codes, the QR code, Klaviyo, using a code in a real checkout, the app Settings screen and uninstalling. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app does not create a discount rule itself, so a parent discount has to exist in Shopify first; the first attempt, an Amount off products discount, asked for products or collections.",
+    "friction": {
+     "export_route": "The code list was downloaded once as a CSV and its 20 codes were checked for uniqueness, but no kit records were used and nothing was reimported, so no export or reimport check was run.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "More than 20 codes, the Pro plan, Upload codes, QR codes and the Klaviyo connection.",
+     "Using a code in a real checkout, the app Settings screen and uninstalling the app.",
+     "Support, invitations, a reimport of the downloaded CSV and any paid plan.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Rapid Search",
+   "product_id": "rapid-search",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Rapid Search on a Shopify development store inside a free trial: the onboarding, a search with a typing error, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. In the theme editor App embeds list, Rapid Search App was already switched on by the app (Save greyed out) and Rapid Search CSB was off; no theme change was saved. The search icon in the preview opens an overlay with popular searches and popular products. Typing snowbord (a typing error for snowboard) at about 14:34:30 showed, within about 2 seconds, PRODUCTS with The Complete Snowboard $699.95 In stock, The Videographer Snowboard $885.95, The Collection Snowboard: Liquid $749.95, The Collection Snowboard: Oxygen $1,025.00 and The Multi-managed Snowboard $629.95, the suggestions snowboard and collection snowboard, the button View all snowbord products and powered by: Rapid Search. View all opened a results page that the app had created, with 13 results for snowbord, filters Category (Automated Collection 6, Hydrogen 3) and Product Type (snowboard 12, giftcard 1), a price slider from $10 to $2630 and sorting by Relevance. Timing, approximate tester observations: Install at 14:30:26 and the right results at 14:34:30, about 4 minutes, mostly our own clicks and the refused first email; the store data synchronisation finished within about 20 seconds (Downloading data, Processing data, Synchronization finished) and the results appeared within about 2 seconds of typing; about 12 steps in all. Settings, Apps shows a menu for the app with Open app, View details, Get support and Uninstall; the Uninstall dialog was opened and cancelled. Not tested: a paid plan, the yearly plan after approval, the 75K to Unlimited prices, collection pages and filters, product merchandising, Statistics, real traffic counting sessions and what happens after 30 Nov. No kit records were entered.",
+   "findings": [
+    "Vendor claim \"5,000 products\". What we saw: The dossier named 5,000 products on the Free plan. The Free plan in the app shows Up to 1.000 products; the 2K session limit matched. The Free plan covers up to 1.000 products, so a store with more products needs a paid plan sooner than the dossier suggested.",
+    "Vendor claim \"installs in one click, no code, live within minutes\". What we saw: Installing took one click and no code. Before the search worked the app asked for 3 onboarding screens and a reachable email address; a made up example address was refused. Search results appeared about 4 minutes after Install, in about 12 steps. The one click install holds, but a reachable email address and 3 onboarding screens come first.",
+    "Vendor claim \"14-day free trial on paid tiers\". What we saw: Shopify showed a 14-day free trial ending on 30 Nov for the 5K plan. The app also gives every store unlimited sessions and products until November 30, 2026 without choosing a plan, after which the Free limits apply. The trial exists on the paid plan and runs to 30 Nov; afterwards the Free limits apply if no plan is chosen.",
+    "Vendor claim \"Unbranded\". What we saw: The 5K plan lists Unbranded and the Free plan lists Branded; the overlay on the trial showed powered by: Rapid Search. Whether the branding disappears on a paid plan was not tested. Free search carries the Rapid Search branding; removing it needs a paid plan.",
+    "Vendor claim \"First 3 months, then $14/month\". What we saw: The 5K plan card shows $10/month with $14 struck through, First 3 months, then $14/month. The Shopify Approve subscription screen for Rapid Search Basic 1 Plan showed Subtotal $14,00, Discount -$4,00 and Total $10,00 due 30 Nov after a 14-day free trial, plus any applicable taxes. Card and approval screen agree on 10 and 14 dollars; tax is unknown and nothing was approved. About $10 for each of the first 3 months after the trial and then $14, before any taxes."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A paid plan after approval, the yearly plan and the 75K to Unlimited prices.",
+    "Collection pages and filters, product merchandising, Statistics and real traffic counting sessions.",
+    "What happens after the trial ends on 30 Nov, support, invitations, export and reimport.",
+    "Uninstalling the app, which was only opened as a dialog and cancelled.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:30 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "5,000 products",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The dossier named 5,000 products on the Free plan. The Free plan in the app shows Up to 1.000 products; the 2K session limit matched.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier figure versus the Free plan card on one store; the 2K session limit matched.",
+     "status": "contradicted",
+     "buying_consequence": "The Free plan covers up to 1.000 products, so a store with more products needs a paid plan sooner than the dossier suggested.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "installs in one click, no code, live within minutes",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Installing took one click and no code. Before the search worked the app asked for 3 onboarding screens and a reachable email address; a made up example address was refused. Search results appeared about 4 minutes after Install, in about 12 steps.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+     "comparability": "An AI assistant session with pauses does not measure human speed; the steps and the minutes are reported as observations only.",
+     "status": "not_comparable",
+     "buying_consequence": "The one click install holds, but a reachable email address and 3 onboarding screens come first.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14-day free trial on paid tiers",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Shopify showed a 14-day free trial ending on 30 Nov for the 5K plan. The app also gives every store unlimited sessions and products until November 30, 2026 without choosing a plan, after which the Free limits apply.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier wording versus the Shopify approval screen and the Subscription screen on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "The trial exists on the paid plan and runs to 30 Nov; afterwards the Free limits apply if no plan is chosen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unbranded",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The 5K plan lists Unbranded and the Free plan lists Branded; the overlay on the trial showed powered by: Rapid Search. Whether the branding disappears on a paid plan was not tested.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plan card wording versus the overlay seen on the trial; no paid plan was active.",
+     "status": "confirmed",
+     "buying_consequence": "Free search carries the Rapid Search branding; removing it needs a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "First 3 months, then $14/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The 5K plan card shows $10/month with $14 struck through, First 3 months, then $14/month. The Shopify Approve subscription screen for Rapid Search Basic 1 Plan showed Subtotal $14,00, Discount -$4,00 and Total $10,00 due 30 Nov after a 14-day free trial, plus any applicable taxes. Card and approval screen agree on 10 and 14 dollars; tax is unknown and nothing was approved.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/rapid-search-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan inside a trial; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plan card versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+     "status": "confirmed",
+     "buying_consequence": "About $10 for each of the first 3 months after the trial and then $14, before any taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Rapid Search on a Shopify development store inside a free trial: the onboarding, a search with a typing error, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid or uninstalled. In the theme editor App embeds list, Rapid Search App was already switched on by the app (Save greyed out) and Rapid Search CSB was off; no theme change was saved. The search icon in the preview opens an overlay with popular searches and popular products. Typing snowbord (a typing error for snowboard) at about 14:34:30 showed, within about 2 seconds, PRODUCTS with The Complete Snowboard $699.95 In stock, The Videographer Snowboard $885.95, The Collection Snowboard: Liquid $749.95, The Collection Snowboard: Oxygen $1,025.00 and The Multi-managed Snowboard $629.95, the suggestions snowboard and collection snowboard, the button View all snowbord products and powered by: Rapid Search. View all opened a results page that the app had created, with 13 results for snowbord, filters Category (Automated Collection 6, Hydrogen 3) and Product Type (snowboard 12, giftcard 1), a price slider from $10 to $2630 and sorting by Relevance. Timing, approximate tester observations: Install at 14:30:26 and the right results at 14:34:30, about 4 minutes, mostly our own clicks and the refused first email; the store data synchronisation finished within about 20 seconds (Downloading data, Processing data, Synchronization finished) and the results appeared within about 2 seconds of typing; about 12 steps in all. Settings, Apps shows a menu for the app with Open app, View details, Get support and Uninstall; the Uninstall dialog was opened and cancelled. Not tested: a paid plan, the yearly plan after approval, the 75K to Unlimited prices, collection pages and filters, product merchandising, Statistics, real traffic counting sessions and what happens after 30 Nov. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The onboarding asks for a reachable email address before the app works, and a made up example address was refused.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A paid plan after approval, the yearly plan and the 75K to Unlimited prices.",
+     "Collection pages and filters, product merchandising, Statistics and real traffic counting sessions.",
+     "What happens after the trial ends on 30 Nov, support, invitations, export and reimport.",
+     "Uninstalling the app, which was only opened as a dialog and cancelled.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:30 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

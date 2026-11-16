@@ -13,14 +13,19 @@
  "pricing": {
   "status": "see_details",
   "entry_price": null,
-  "entry_price_terms": null,
+  "entry_price_terms": "Pay on Extra Sales · per month, plus 2.5% of the first $20,000 of monthly upsell revenue",
   "from_price_usd_month": null,
   "plans": null,
   "plans_source": null,
   "notes": "(re-verified 2026-09-19 on apps.shopify.com/post-purchase-upsell-hero and the vendor's own site; amounts unchanged since 31 August, USD) One plan, Performance, free to install, at $0 a month plus usage charges. The usage table, read from the listing's own pricing-estimator data, has two tiers: 2.5% on the first $20,000 of upsell revenue in a month, and $0 from $20,001 up. In practice that is a commission with a ceiling — the app cannot charge more than $500 in a month, and a month in which it sells nothing costs nothing. There is no paid tier above it: unlimited funnels and offers, one-click upsell and downsell, AI product recommendations, analytics and A/B testing and market translations all sit on that single plan. Charges are billed in USD every 30 days. The vendor's own site publishes no prices at all — its pricing link leads to the same single-plan listing — so the listing is the only place the meter is stated. Neither page defined how 'upsell revenue' is measured, so we asked, and the vendor answered in writing on 21 September 2026 with permission to quote it. The figure is net: the amount the customer is actually charged for the accepted upsell item, after any discount set on that offer, and nothing from the original cart is included. Refunds and cancellations of an accepted upsell are reversed automatically through Shopify — proportionally for partial refunds, with the 2.5% coming off alongside, and no support ticket needed — while refunds of original cart items never move the figure, because they were never billed. There is no multi-day attribution window either: the offer exists only on the Shopify post-purchase page between payment and the order confirmation, and the merchant sets how long that moment stays open, with a default of 20 minutes, any value from 1 to 59 minutes, or Shopify's own 60-minute default. The vendor says the full rule now sits in its help center under Pricing and billing. That is the vendor's account of its own meter, dated and on the record, but it is not something we have audited against a live bill.",
   "verified_at": "2026-09-19",
   "source_url": "https://apps.shopify.com/post-purchase-upsell-hero",
-  "schema_offer": null,
+  "schema_offer": {
+   "price": 19.0,
+   "currency": "USD",
+   "description": "Pay on Extra Sales, per month, plus 2.5% of the first $20,000 of monthly upsell revenue; free above $20,001; usage fees capped at $500 per cycle; 14 day free trial. Read on the vendor's own pricing page on 2026-11-16.",
+   "page": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html"
+  },
   "source_quotes": null,
   "recent_change": null,
   "price_history": null
@@ -69,10 +74,9 @@
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-16; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -80,7 +84,368 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-16",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html",
+  "method": [
+   "Test plan on a development store: built a funnel from the More of the same template, chose one product and published it",
+   "Ran a test checkout on the Bogus gateway and read the offer on the post-purchase page without accepting it",
+   "Read the plan card, the usage fee table and the Shopify Approve charge screen for the free test plan"
+  ],
+  "claims": [
+   {
+    "claim": "Shopify stores starting post-purchase upsells",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "A funnel was built from the More of the same template in about 10 seconds, one product was chosen by hand and the funnel was published. After a test payment the offer appeared on the post-purchase page with Pay now and Decline offer. Nothing was accepted.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+    },
+    "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+    "comparability": "Audience wording versus one template run and one test checkout on one development store.",
+    "status": "confirmed",
+    "buying_consequence": "A store new to post-purchase upsells can get an offer live after payment in one session with a template.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Stores wanting offers matched to customer type",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "Only All orders was used as the trigger; offers matched to customer type or segments were not tested.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+    },
+    "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+    "comparability": "Audience wording versus a test that used only the All orders trigger.",
+    "status": "not_testable",
+    "buying_consequence": "No evidence for or against matching offers to customer type.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Busy stores wanting a proven upsell app",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "The listing shows a rating of 4.9 from 63 reviews. A comparison with AfterSell, or a move to it, was not tested.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+    },
+    "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+    "comparability": "Audience wording versus a test on a development store without traffic.",
+    "status": "not_testable",
+    "buying_consequence": "This test says nothing about busy stores or about AfterSell.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "2.5% of the extra revenue we generate",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "The plan lists this with usage fees capped at $500 per cycle; the usage table shows the first 20.000 of upsell revenue at 2,5% (struck through to 0% on a development store) and 20.001 and above as Free. The percentage was not tried on real revenue.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+    },
+    "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+    "comparability": "Plan wording versus the usage table on the Shopify approval screen; no real revenue exists on a development store.",
+    "status": "confirmed",
+    "buying_consequence": "The fee is a share of the extra revenue, with a cap of $500 per cycle.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$0 a month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "The dossier of 19 Sep named $0 a month. The plan card now shows $19 / 30 days struck through and $0 / 30 days with 14 trial days, the listing says $19/month with usage charges, and the Shopify Approve charge screen only says the plan is free. Whether $19 applies to live stores is not on any screen.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+    },
+    "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+    "comparability": "Dossier figure from 19 Sep versus the plan card, the listing and a Shopify approval screen for a test plan; the $0 is a test price and no live checkout exists.",
+    "status": "contradicted",
+    "buying_consequence": "A live store may pay a $19 base per 30 days plus 2.5% of extra revenue, where the dossier suggested $0; the live price is not confirmed.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$19 / 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-16",
+    "observed": "The plan card shows $19 / 30 days struck through on a development store and the listing says $19/month with usage charges. The only Shopify charge screen was for a free test plan at 0 dollars, so no live total, tax or renewal term was seen and the $19 could not be checked against a checkout.",
+    "observed_on": "2026-11-16",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+    },
+    "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+    "comparability": "Plan card versus an approval screen for a free test plan on a development store; no live checkout was reachable and no cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The regular base price is $19 per 30 days on the plan card; the amount at checkout on a live store is unknown.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-16",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Post Purchase Upsell Hero on the test plan of a Shopify development store: a funnel from a template, publishing it, a test checkout with the test gateway, the offer and downsell after payment, and the uninstall dialog. No offer was accepted and nothing was paid or uninstalled. The checkout setting Use an app to add features at checkout after payment, in Shopify Settings, Checkout, was changed from None to Post Purchase Upsell Hero and saved; the setup guide then showed 1/2. In the app the template More of the same (Ideal for cosmetics, consumables and fashion) was used. A screen Building More of the same went through 4 steps (Reading your catalogue and store category, Picking products that pair well with your bestsellers, Creating the upsell and downsell steps, Applying recommended discounts) and in about 10 seconds gave a funnel Saved as Draft. Upsell 1 offered the most expensive product in the cart; we changed it to Choose manually with the product Selling Plans Ski Wax at $24.95; the discount was 25%. The funnel also has an Upsell 2 (AI Recommendation, 25%) after Accepted and a Downsell 1 (AI Recommendation, 30%) after Declined. Save, then Save changes? and Publish changes gave Changes successfully published and the status Active. A test order through Preview store (no store password was entered; Buy it now in the theme editor opens the Checkout Editor with sample data, so that route failed): a snowboard at $749.95, a made up name, address and email, and the test gateway with card number 1; the checkout itself says 1 simulates an approved transaction. No real payment details were used. After Pay now the post-purchase page showed Special offer today only, Add Selling Plans Ski Wax to your order and save 25%, $24.95 now $18.71, Pay now and Decline offer. Decline led to a downsell for The Complete Snowboard at $699.95 now $489.97 (Save 30%) and a second offer for The Collection Snowboard: Hydrogen at $600.00 now $420.00; both were declined and the thank you page showed only the original product. Nothing was accepted. Timing, approximate tester observations: Install at 14:53:10 and the offer in view at 14:59:34, so 6 minutes 24 seconds with about 14 main actions, including one failed route through the theme editor and one detour through Preview store. Post-purchase works through the checkout extension of Shopify; no gateway or Plus requirement was seen and the test gateway worked. Offers for PayPal orders need a separate step, requesting reference transactions at PayPal, which was not done. The Settings, Apps row for the app carries the label Free trial; its Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: offers by customer type, accepting an offer, A/B tests, analytics with real numbers (the dashboard still showed dashes), the PayPal step, the live price and a move to or comparison with AfterSell. The funnel stays Active and a test order exists in the store. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Buy it now in the theme editor opens the Checkout Editor with sample data and gives no real order, so the test needed Preview store and a cart that first had to be emptied.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Offers matched to customer type, because only All orders was used as the trigger.",
+    "Accepting an offer, A/B tests and analytics with real numbers.",
+    "The PayPal step and the live price outside a development store.",
+    "Moving to or comparing with AfterSell, support, invitations, export and reimport, and uninstalling the app.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Post Purchase Upsell Hero on the test plan of a Shopify development store: a funnel from a template, publishing it, a test checkout with the test gateway, the offer and downsell after payment, and the uninstall dialog. No offer was accepted and nothing was paid or uninstalled. The checkout setting Use an app to add features at checkout after payment, in Shopify Settings, Checkout, was changed from None to Post Purchase Upsell Hero and saved; the setup guide then showed 1/2. In the app the template More of the same (Ideal for cosmetics, consumables and fashion) was used. A screen Building More of the same went through 4 steps (Reading your catalogue and store category, Picking products that pair well with your bestsellers, Creating the upsell and downsell steps, Applying recommended discounts) and in about 10 seconds gave a funnel Saved as Draft. Upsell 1 offered the most expensive product in the cart; we changed it to Choose manually with the product Selling Plans Ski Wax at $24.95; the discount was 25%. The funnel also has an Upsell 2 (AI Recommendation, 25%) after Accepted and a Downsell 1 (AI Recommendation, 30%) after Declined. Save, then Save changes? and Publish changes gave Changes successfully published and the status Active. A test order through Preview store (no store password was entered; Buy it now in the theme editor opens the Checkout Editor with sample data, so that route failed): a snowboard at $749.95, a made up name, address and email, and the test gateway with card number 1; the checkout itself says 1 simulates an approved transaction. No real payment details were used. After Pay now the post-purchase page showed Special offer today only, Add Selling Plans Ski Wax to your order and save 25%, $24.95 now $18.71, Pay now and Decline offer. Decline led to a downsell for The Complete Snowboard at $699.95 now $489.97 (Save 30%) and a second offer for The Collection Snowboard: Hydrogen at $600.00 now $420.00; both were declined and the thank you page showed only the original product. Nothing was accepted. Timing, approximate tester observations: Install at 14:53:10 and the offer in view at 14:59:34, so 6 minutes 24 seconds with about 14 main actions, including one failed route through the theme editor and one detour through Preview store. Post-purchase works through the checkout extension of Shopify; no gateway or Plus requirement was seen and the test gateway worked. Offers for PayPal orders need a separate step, requesting reference transactions at PayPal, which was not done. The Settings, Apps row for the app carries the label Free trial; its Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: offers by customer type, accepting an offer, A/B tests, analytics with real numbers (the dashboard still showed dashes), the PayPal step, the live price and a move to or comparison with AfterSell. The funnel stays Active and a test order exists in the store. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Post Purchase Upsell Hero on the test plan of a Shopify development store: a funnel from a template, publishing it, a test checkout with the test gateway, the offer and downsell after payment, and the uninstall dialog. No offer was accepted and nothing was paid or uninstalled. The checkout setting Use an app to add features at checkout after payment, in Shopify Settings, Checkout, was changed from None to Post Purchase Upsell Hero and saved; the setup guide then showed 1/2. In the app the template More of the same (Ideal for cosmetics, consumables and fashion) was used. A screen Building More of the same went through 4 steps (Reading your catalogue and store category, Picking products that pair well with your bestsellers, Creating the upsell and downsell steps, Applying recommended discounts) and in about 10 seconds gave a funnel Saved as Draft. Upsell 1 offered the most expensive product in the cart; we changed it to Choose manually with the product Selling Plans Ski Wax at $24.95; the discount was 25%. The funnel also has an Upsell 2 (AI Recommendation, 25%) after Accepted and a Downsell 1 (AI Recommendation, 30%) after Declined. Save, then Save changes? and Publish changes gave Changes successfully published and the status Active. A test order through Preview store (no store password was entered; Buy it now in the theme editor opens the Checkout Editor with sample data, so that route failed): a snowboard at $749.95, a made up name, address and email, and the test gateway with card number 1; the checkout itself says 1 simulates an approved transaction. No real payment details were used. After Pay now the post-purchase page showed Special offer today only, Add Selling Plans Ski Wax to your order and save 25%, $24.95 now $18.71, Pay now and Decline offer. Decline led to a downsell for The Complete Snowboard at $699.95 now $489.97 (Save 30%) and a second offer for The Collection Snowboard: Hydrogen at $600.00 now $420.00; both were declined and the thank you page showed only the original product. Nothing was accepted. Timing, approximate tester observations: Install at 14:53:10 and the offer in view at 14:59:34, so 6 minutes 24 seconds with about 14 main actions, including one failed route through the theme editor and one detour through Preview store. Post-purchase works through the checkout extension of Shopify; no gateway or Plus requirement was seen and the test gateway worked. Offers for PayPal orders need a separate step, requesting reference transactions at PayPal, which was not done. The Settings, Apps row for the app carries the label Free trial; its Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: offers by customer type, accepting an offer, A/B tests, analytics with real numbers (the dashboard still showed dashes), the PayPal step, the live price and a move to or comparison with AfterSell. The funnel stays Active and a test order exists in the store. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-16",
+    "evidence_url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-16",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Post Purchase Upsell Hero",
+    "product_id": "post-purchase-upsell-hero",
+    "run_date": "2026-11-16",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Post Purchase Upsell Hero on the test plan of a Shopify development store: a funnel from a template, publishing it, a test checkout with the test gateway, the offer and downsell after payment, and the uninstall dialog. No offer was accepted and nothing was paid or uninstalled. The checkout setting Use an app to add features at checkout after payment, in Shopify Settings, Checkout, was changed from None to Post Purchase Upsell Hero and saved; the setup guide then showed 1/2. In the app the template More of the same (Ideal for cosmetics, consumables and fashion) was used. A screen Building More of the same went through 4 steps (Reading your catalogue and store category, Picking products that pair well with your bestsellers, Creating the upsell and downsell steps, Applying recommended discounts) and in about 10 seconds gave a funnel Saved as Draft. Upsell 1 offered the most expensive product in the cart; we changed it to Choose manually with the product Selling Plans Ski Wax at $24.95; the discount was 25%. The funnel also has an Upsell 2 (AI Recommendation, 25%) after Accepted and a Downsell 1 (AI Recommendation, 30%) after Declined. Save, then Save changes? and Publish changes gave Changes successfully published and the status Active. A test order through Preview store (no store password was entered; Buy it now in the theme editor opens the Checkout Editor with sample data, so that route failed): a snowboard at $749.95, a made up name, address and email, and the test gateway with card number 1; the checkout itself says 1 simulates an approved transaction. No real payment details were used. After Pay now the post-purchase page showed Special offer today only, Add Selling Plans Ski Wax to your order and save 25%, $24.95 now $18.71, Pay now and Decline offer. Decline led to a downsell for The Complete Snowboard at $699.95 now $489.97 (Save 30%) and a second offer for The Collection Snowboard: Hydrogen at $600.00 now $420.00; both were declined and the thank you page showed only the original product. Nothing was accepted. Timing, approximate tester observations: Install at 14:53:10 and the offer in view at 14:59:34, so 6 minutes 24 seconds with about 14 main actions, including one failed route through the theme editor and one detour through Preview store. Post-purchase works through the checkout extension of Shopify; no gateway or Plus requirement was seen and the test gateway worked. Offers for PayPal orders need a separate step, requesting reference transactions at PayPal, which was not done. The Settings, Apps row for the app carries the label Free trial; its Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: offers by customer type, accepting an offer, A/B tests, analytics with real numbers (the dashboard still showed dashes), the PayPal step, the live price and a move to or comparison with AfterSell. The funnel stays Active and a test order exists in the store. No kit records were entered.",
+    "findings": [
+     "Vendor claim \"Shopify stores starting post-purchase upsells\". What we saw: A funnel was built from the More of the same template in about 10 seconds, one product was chosen by hand and the funnel was published. After a test payment the offer appeared on the post-purchase page with Pay now and Decline offer. Nothing was accepted. A store new to post-purchase upsells can get an offer live after payment in one session with a template.",
+     "Vendor claim \"Stores wanting offers matched to customer type\". What we saw: Only All orders was used as the trigger; offers matched to customer type or segments were not tested. No evidence for or against matching offers to customer type.",
+     "Vendor claim \"Busy stores wanting a proven upsell app\". What we saw: The listing shows a rating of 4.9 from 63 reviews. A comparison with AfterSell, or a move to it, was not tested. This test says nothing about busy stores or about AfterSell.",
+     "Vendor claim \"2.5% of the extra revenue we generate\". What we saw: The plan lists this with usage fees capped at $500 per cycle; the usage table shows the first 20.000 of upsell revenue at 2,5% (struck through to 0% on a development store) and 20.001 and above as Free. The percentage was not tried on real revenue. The fee is a share of the extra revenue, with a cap of $500 per cycle.",
+     "Vendor claim \"$0 a month\". What we saw: The dossier of 19 Sep named $0 a month. The plan card now shows $19 / 30 days struck through and $0 / 30 days with 14 trial days, the listing says $19/month with usage charges, and the Shopify Approve charge screen only says the plan is free. Whether $19 applies to live stores is not on any screen. A live store may pay a $19 base per 30 days plus 2.5% of extra revenue, where the dossier suggested $0; the live price is not confirmed.",
+     "Vendor claim \"$19 / 30 days\". What we saw: The plan card shows $19 / 30 days struck through on a development store and the listing says $19/month with usage charges. The only Shopify charge screen was for a free test plan at 0 dollars, so no live total, tax or renewal term was seen and the $19 could not be checked against a checkout. The regular base price is $19 per 30 days on the plan card; the amount at checkout on a live store is unknown."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Offers matched to customer type, because only All orders was used as the trigger.",
+     "Accepting an offer, A/B tests and analytics with real numbers.",
+     "The PayPal step and the live price outside a development store.",
+     "Moving to or comparing with AfterSell, support, invitations, export and reimport, and uninstalling the app.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Shopify stores starting post-purchase upsells",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "A funnel was built from the More of the same template in about 10 seconds, one product was chosen by hand and the funnel was published. After a test payment the offer appeared on the post-purchase page with Pay now and Decline offer. Nothing was accepted.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+      },
+      "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+      "comparability": "Audience wording versus one template run and one test checkout on one development store.",
+      "status": "confirmed",
+      "buying_consequence": "A store new to post-purchase upsells can get an offer live after payment in one session with a template.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Stores wanting offers matched to customer type",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "Only All orders was used as the trigger; offers matched to customer type or segments were not tested.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+      },
+      "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+      "comparability": "Audience wording versus a test that used only the All orders trigger.",
+      "status": "not_testable",
+      "buying_consequence": "No evidence for or against matching offers to customer type.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Busy stores wanting a proven upsell app",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "The listing shows a rating of 4.9 from 63 reviews. A comparison with AfterSell, or a move to it, was not tested.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+      },
+      "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+      "comparability": "Audience wording versus a test on a development store without traffic.",
+      "status": "not_testable",
+      "buying_consequence": "This test says nothing about busy stores or about AfterSell.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "2.5% of the extra revenue we generate",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "The plan lists this with usage fees capped at $500 per cycle; the usage table shows the first 20.000 of upsell revenue at 2,5% (struck through to 0% on a development store) and 20.001 and above as Free. The percentage was not tried on real revenue.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+      },
+      "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+      "comparability": "Plan wording versus the usage table on the Shopify approval screen; no real revenue exists on a development store.",
+      "status": "confirmed",
+      "buying_consequence": "The fee is a share of the extra revenue, with a cap of $500 per cycle.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$0 a month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "The dossier of 19 Sep named $0 a month. The plan card now shows $19 / 30 days struck through and $0 / 30 days with 14 trial days, the listing says $19/month with usage charges, and the Shopify Approve charge screen only says the plan is free. Whether $19 applies to live stores is not on any screen.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+      },
+      "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+      "comparability": "Dossier figure from 19 Sep versus the plan card, the listing and a Shopify approval screen for a test plan; the $0 is a test price and no live checkout exists.",
+      "status": "contradicted",
+      "buying_consequence": "A live store may pay a $19 base per 30 days plus 2.5% of extra revenue, where the dossier suggested $0; the live price is not confirmed.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$19 / 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-16",
+      "observed": "The plan card shows $19 / 30 days struck through on a development store and the listing says $19/month with usage charges. The only Shopify charge screen was for a free test plan at 0 dollars, so no live total, tax or renewal term was seen and the $19 could not be checked against a checkout.",
+      "observed_on": "2026-11-16",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html#claim-vs-measured"
+      },
+      "plan": "Pay on Extra Sales at 0 dollars as a test plan",
+      "comparability": "Plan card versus an approval screen for a free test plan on a development store; no live checkout was reachable and no cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The regular base price is $19 per 30 days on the plan card; the amount at checkout on a live store is unknown.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-16",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Post Purchase Upsell Hero on the test plan of a Shopify development store: a funnel from a template, publishing it, a test checkout with the test gateway, the offer and downsell after payment, and the uninstall dialog. No offer was accepted and nothing was paid or uninstalled. The checkout setting Use an app to add features at checkout after payment, in Shopify Settings, Checkout, was changed from None to Post Purchase Upsell Hero and saved; the setup guide then showed 1/2. In the app the template More of the same (Ideal for cosmetics, consumables and fashion) was used. A screen Building More of the same went through 4 steps (Reading your catalogue and store category, Picking products that pair well with your bestsellers, Creating the upsell and downsell steps, Applying recommended discounts) and in about 10 seconds gave a funnel Saved as Draft. Upsell 1 offered the most expensive product in the cart; we changed it to Choose manually with the product Selling Plans Ski Wax at $24.95; the discount was 25%. The funnel also has an Upsell 2 (AI Recommendation, 25%) after Accepted and a Downsell 1 (AI Recommendation, 30%) after Declined. Save, then Save changes? and Publish changes gave Changes successfully published and the status Active. A test order through Preview store (no store password was entered; Buy it now in the theme editor opens the Checkout Editor with sample data, so that route failed): a snowboard at $749.95, a made up name, address and email, and the test gateway with card number 1; the checkout itself says 1 simulates an approved transaction. No real payment details were used. After Pay now the post-purchase page showed Special offer today only, Add Selling Plans Ski Wax to your order and save 25%, $24.95 now $18.71, Pay now and Decline offer. Decline led to a downsell for The Complete Snowboard at $699.95 now $489.97 (Save 30%) and a second offer for The Collection Snowboard: Hydrogen at $600.00 now $420.00; both were declined and the thank you page showed only the original product. Nothing was accepted. Timing, approximate tester observations: Install at 14:53:10 and the offer in view at 14:59:34, so 6 minutes 24 seconds with about 14 main actions, including one failed route through the theme editor and one detour through Preview store. Post-purchase works through the checkout extension of Shopify; no gateway or Plus requirement was seen and the test gateway worked. Offers for PayPal orders need a separate step, requesting reference transactions at PayPal, which was not done. The Settings, Apps row for the app carries the label Free trial; its Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: offers by customer type, accepting an offer, A/B tests, analytics with real numbers (the dashboard still showed dashes), the PayPal step, the live price and a move to or comparison with AfterSell. The funnel stays Active and a test order exists in the store. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Buy it now in the theme editor opens the Checkout Editor with sample data and gives no real order, so the test needed Preview store and a cart that first had to be emptied.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "Offers matched to customer type, because only All orders was used as the trigger.",
+      "Accepting an offer, A/B tests and analytics with real numbers.",
+      "The PayPal step and the live price outside a development store.",
+      "Moving to or comparing with AfterSell, support, invitations, export and reimport, and uninstalling the app.",
+      "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "post-purchase-upsell-hero:cancellation_terms",

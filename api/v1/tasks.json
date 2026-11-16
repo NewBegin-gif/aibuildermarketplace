@@ -7713,6 +7713,166 @@
   },
   {
    "source": "session",
+   "product_name": "Fast Bundle",
+   "product_id": "fast-bundle",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Fast Bundle on the Free plan of a Shopify development store: a fixed bundle of two snowboards at 10 percent off, the extra step of switching on the app embed, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid, approved or uninstalled. Select bundle type lists Fixed bundle (marked Best match), Volume discounts, Buy X Get Y | Free gift, Mix and match, Bundle builder, Product add-ons, Cross-sell (Beta) and Frequently bought together, all in the same app. In Create Fixed bundle the default discount is Percentage 10 and the status Active. We chose The Collection Snowboard: Liquid ($749.95) and The Compare at Price Snowboard ($785.95), quantity 1 each, and left the name; the app named it Bundle #1. The app preview showed $1,535.90 struck through and $1,382.31 for 10% off; the default presentation is separate line items. After Save the app said the bundle was created and showed a yellow message: the bundle is saved but only appears in the store once the app embed is switched on. That is a required extra step: the button opened the theme editor, where the Fast Bundle switch was already on, and after Save it said Fast Bundle activated and Changes saved. Shopify now holds a product Bundle Product #1, status Active, vendor Fast Bundle, type snowboard. The store is password protected and the password was not entered, so the bundle was only seen in the theme editor preview of /products/bundle-product-1: the title, Fast Bundle, $1,535.90 struck through, $1,382.31, the label Sale, the two snowboards with their prices and Add to cart. No order or checkout was made. The app home afterwards showed App embed status Active, App block status 0 active blocks, Bundle views 3, Bundle clicks 0 and Total sales value $0.00. Timing, approximate tester observations: install click at 13:57, app open at 13:57:45, bundle saved at 13:58:45 and visible in the preview at 14:00:07; about 2 minutes 20 seconds from the app opening to the preview, the bundle itself saved after about 1 minute, and about 10 clicks (Install, Create bundle, Select Fixed bundle, Select products, 2 ticks, Add, Save, switch on the app embed, Save in the theme editor). Buy X Get Y and volume discount exist as bundle types and in the plan table (Buy X Get Y is ticked on all plans; volume discount on specific products is ticked on Free, volume discount on all products and collections is not on Free but on Standard and Enterprise); they were not built. Uninstall: the More actions menu with Uninstall app opened a dialog with a reason list and a feedback box that was cancelled; what remains after removal, such as the bundle product and the embed, was not seen. The Plans page ends with a box Subscription cancellation, if you want to cancel your subscription just click here; it was not clicked because there was no subscription. Not tested: building a Buy X Get Y or volume discount bundle, a bundle on a public store page or in the cart and checkout, an approved subscription or trial, the yearly prices in the app, support and chat. No kit records were entered.",
+   "findings": [
+    "Vendor claim \"In dit plan kunnen uw bundels elke maand tot $500 aan verkopen genereren.\". What we saw: The Free plan page says bundles can generate up to $500 of sales a month; the Plans page shows Bundle sales in current cycle $0 of $500 for 16 Nov to 16 Dec 2026. The cap is on bundle sales and not on the number of bundles. Free covers bundles up to $500 of bundle sales per cycle; beyond that a paid plan is needed.",
+    "Vendor claim \"Development stores, Free to install\". What we saw: The App Store listing says so and the install was free. The listing shows Standard 1K, 3K and 10K at $19, $49 and $139 but no free plan of $500 and no Enterprise plan, while the app shows both. The listing does not show the Free plan with its $500 cap or the Enterprise plan; the plans in the app are the full list.",
+    "Vendor claim \"Ondersteuningsreactietijd: binnen 30 min\". What we saw: The Standard card says a response time of within 30 min and the Enterprise card within 5 min. No message was sent, so no response time was measured. The stated response times were not tested.",
+    "Vendor claim \"$160 KORTING voor 1 maand\". What we saw: A banner offers $160 off for 1 month for Enterprise in the first 7 days, and the Enterprise card shows $299 a month struck through and $139. Enterprise was not approved and the listing has no Enterprise plan. The Enterprise price of $139 comes from a limited Black Friday offer on one plan card; the checkout amount is unknown.",
+    "Vendor claim \"Bundle Product #1\". What we saw: A fixed bundle was saved, but it only appeared in the store after the app embed was switched on in the theme editor. In the theme preview the product showed $1,535.90 struck through, $1,382.31, the label Sale and Add to cart. The store has a password, so no public page, cart or checkout was seen. A first bundle works in the preview after one extra step, switching on the app embed.",
+    "Vendor claim \"$19/maand\". What we saw: The Standard 1K card shows $19 per month with a button for a 7-day free trial. The Shopify Approve subscription screen for Standard (1K) showed $19,00 USD every 30 days, a 7-day free trial ending on 23 Nov, Subtotal $19,00 plus any applicable taxes and Total $19,00 due 23 Nov; Approve was greyed out and no test charge label was shown. Card and approval screen agree; tax is unknown and nothing was approved. Standard at the 1K level is $19 per 30 days after a 7-day trial, before taxes."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Building a Buy X Get Y or volume discount bundle.",
+    "The bundle on a public store page, in the cart or in the checkout, because the store has a password.",
+    "An approved subscription or trial and the yearly prices in the app.",
+    "Support and chat, invitations, export and reimport, and uninstalling the app.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 13:57 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "In dit plan kunnen uw bundels elke maand tot $500 aan verkopen genereren.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Free plan page says bundles can generate up to $500 of sales a month; the Plans page shows Bundle sales in current cycle $0 of $500 for 16 Nov to 16 Dec 2026. The cap is on bundle sales and not on the number of bundles.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/fast-bundle-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Free plan page wording versus the cycle counter on one development store; no sales were made, so the cap itself was not reached.",
+     "status": "confirmed",
+     "buying_consequence": "Free covers bundles up to $500 of bundle sales per cycle; beyond that a paid plan is needed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Development stores, Free to install",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The App Store listing says so and the install was free. The listing shows Standard 1K, 3K and 10K at $19, $49 and $139 but no free plan of $500 and no Enterprise plan, while the app shows both.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/fast-bundle-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Listing wording versus the Plans page in the app on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "The listing does not show the Free plan with its $500 cap or the Enterprise plan; the plans in the app are the full list.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Ondersteuningsreactietijd: binnen 30 min",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Standard card says a response time of within 30 min and the Enterprise card within 5 min. No message was sent, so no response time was measured.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/fast-bundle-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "No literal claim covering this exact plan and trial; trial support can differ.",
+     "status": "not_comparable",
+     "buying_consequence": "The stated response times were not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$160 KORTING voor 1 maand",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "A banner offers $160 off for 1 month for Enterprise in the first 7 days, and the Enterprise card shows $299 a month struck through and $139. Enterprise was not approved and the listing has no Enterprise plan.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/fast-bundle-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Banner and plan card on the Plans page versus no Enterprise approval screen reached.",
+     "status": "not_testable",
+     "buying_consequence": "The Enterprise price of $139 comes from a limited Black Friday offer on one plan card; the checkout amount is unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Bundle Product #1",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "A fixed bundle was saved, but it only appeared in the store after the app embed was switched on in the theme editor. In the theme preview the product showed $1,535.90 struck through, $1,382.31, the label Sale and Add to cart. The store has a password, so no public page, cart or checkout was seen.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/fast-bundle-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "App message and theme preview on one development store behind a password; no public page or order was seen.",
+     "status": "confirmed",
+     "buying_consequence": "A first bundle works in the preview after one extra step, switching on the app embed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$19/maand",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Standard 1K card shows $19 per month with a button for a 7-day free trial. The Shopify Approve subscription screen for Standard (1K) showed $19,00 USD every 30 days, a 7-day free trial ending on 23 Nov, Subtotal $19,00 plus any applicable taxes and Total $19,00 due 23 Nov; Approve was greyed out and no test charge label was shown. Card and approval screen agree; tax is unknown and nothing was approved.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/fast-bundle-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plan card versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+     "status": "confirmed",
+     "buying_consequence": "Standard at the 1K level is $19 per 30 days after a 7-day trial, before taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Fast Bundle on the Free plan of a Shopify development store: a fixed bundle of two snowboards at 10 percent off, the extra step of switching on the app embed, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid, approved or uninstalled. Select bundle type lists Fixed bundle (marked Best match), Volume discounts, Buy X Get Y | Free gift, Mix and match, Bundle builder, Product add-ons, Cross-sell (Beta) and Frequently bought together, all in the same app. In Create Fixed bundle the default discount is Percentage 10 and the status Active. We chose The Collection Snowboard: Liquid ($749.95) and The Compare at Price Snowboard ($785.95), quantity 1 each, and left the name; the app named it Bundle #1. The app preview showed $1,535.90 struck through and $1,382.31 for 10% off; the default presentation is separate line items. After Save the app said the bundle was created and showed a yellow message: the bundle is saved but only appears in the store once the app embed is switched on. That is a required extra step: the button opened the theme editor, where the Fast Bundle switch was already on, and after Save it said Fast Bundle activated and Changes saved. Shopify now holds a product Bundle Product #1, status Active, vendor Fast Bundle, type snowboard. The store is password protected and the password was not entered, so the bundle was only seen in the theme editor preview of /products/bundle-product-1: the title, Fast Bundle, $1,535.90 struck through, $1,382.31, the label Sale, the two snowboards with their prices and Add to cart. No order or checkout was made. The app home afterwards showed App embed status Active, App block status 0 active blocks, Bundle views 3, Bundle clicks 0 and Total sales value $0.00. Timing, approximate tester observations: install click at 13:57, app open at 13:57:45, bundle saved at 13:58:45 and visible in the preview at 14:00:07; about 2 minutes 20 seconds from the app opening to the preview, the bundle itself saved after about 1 minute, and about 10 clicks (Install, Create bundle, Select Fixed bundle, Select products, 2 ticks, Add, Save, switch on the app embed, Save in the theme editor). Buy X Get Y and volume discount exist as bundle types and in the plan table (Buy X Get Y is ticked on all plans; volume discount on specific products is ticked on Free, volume discount on all products and collections is not on Free but on Standard and Enterprise); they were not built. Uninstall: the More actions menu with Uninstall app opened a dialog with a reason list and a feedback box that was cancelled; what remains after removal, such as the bundle product and the embed, was not seen. The Plans page ends with a box Subscription cancellation, if you want to cancel your subscription just click here; it was not clicked because there was no subscription. Not tested: building a Buy X Get Y or volume discount bundle, a bundle on a public store page or in the cart and checkout, an approved subscription or trial, the yearly prices in the app, support and chat. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "A saved bundle does not show in the store until the app embed is switched on, which is a second step in the theme editor, and the store password kept the bundle out of a public view.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Building a Buy X Get Y or volume discount bundle.",
+     "The bundle on a public store page, in the cart or in the checkout, because the store has a password.",
+     "An approved subscription or trial and the yearly prices in the app.",
+     "Support and chat, invitations, export and reimport, and uninstalling the app.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 13:57 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Tidio",
    "product_id": "tidio",
    "run_date": "2026-10-21",
@@ -7739,6 +7899,356 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Modelize",
+   "product_id": "modelize",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. We ran Modelize on 16 November 2026 on the Free plan of a Shopify development store. We picked one snowboard and the style On Model - Outdoor, set Images per product to 1, and generated. The screen showed the cost first: 1 image, 1 credit, 9 credits left after the run. The run took about 1 minute and the finished image was published on the product in Shopify without a separate confirmation. The plan page then read 9 of 10 credits left. From install to the first image took about 2 minutes. We read the plan screens up to the Shopify approval screen for Starter and opened the uninstall dialog; we paid, approved and uninstalled nothing. The full run, with clicks, timings and what we did not test, is in the exit test section below.",
+   "findings": [
+    "Credits: the screen quoted 1 credit for 1 image before the run, and the counter after it fell from 10 to 9. Auto mode with 3 images quoted 3 credits.",
+    "Publishing: the image went onto the product in Shopify the moment the run finished. We were not asked to confirm, and Remove from Shopify sat one click away in the library.",
+    "Free plan: the plan card lists one custom preset and one custom model a month, where our earlier notes said none. We did not try either.",
+    "Starter: $19 for 30 days on the card and on the Shopify approval screen, with no trial line. We did not see a tax line and approved nothing."
+   ],
+   "not_tested": [
+    "Output at scale: bulk runs, Auto mode and video were not run; one snowboard is the whole sample, and we measured no image size.",
+    "Money: no payment was made and no paid plan was cancelled, so Starter, Pro and Enterprise are read from screens only.",
+    "Fit for other products: a fashion or jewellery item, our own styles and models, and the published image in the live theme.",
+    "Everything else: support, the chat widget, invitations, export and reimport. Daan created the store and verified his identity himself."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "custom AI presets and models",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The dossier says the free tier does not give custom AI presets and models. The Free plan card shows 1 custom preset/month (AI) and 1 custom model/month (AI), and the plan page counts Custom styles created 0 of 1 and Custom models created 0 of 1. They were not used.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/modelize-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier wording versus the Free plan card and counters on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "The Free plan allows 1 custom preset and 1 custom model a month, more than the dossier said; they were not tried.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 image · 1 credit",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Before the run the screen said 1 image, 1 credit and 9 credits left after this run, and afterwards the plan page said 9 of 10 credits left; with Auto and 3 images it said 3 credits. An AI edit costs 0.5 credits.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/modelize-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Cost line before the run versus the credit counter after one run on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "The credit cost is shown before generating, one credit per image.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Remove from Shopify",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The generated image was published on the product in Shopify automatically after the run, without a separate confirmation. Replace on product and Remove from Shopify are offered in the library.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/modelize-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "App behaviour after one run on a development test product; the storefront view of the image was not checked.",
+     "status": "confirmed",
+     "buying_consequence": "A generated image goes live on the product without a confirmation step, and Remove from Shopify undoes it.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shopify fashion and jewellery sellers with big catalogues",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Only one snowboard was generated; bulk generation, Auto mode and a fashion or jewellery product were not tested.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/modelize-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus one image for one snowboard.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about big catalogues or fashion and jewellery.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Sellers whose product pages need zoomable detail",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The plan lists Standard resolution (2K) on Free and Starter and High resolution (up to 4K) on Pro; the resolution of the generated image was not measured.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/modelize-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus plan resolution labels without any measured image size.",
+     "status": "not_testable",
+     "buying_consequence": "Zoomable detail may need the Pro plan; the output resolution was not measured.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Brands with a distinctive look to match",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Custom presets and custom models were not tried, only a built-in style.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/modelize-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus a test that used one built-in style.",
+     "status": "not_testable",
+     "buying_consequence": "No evidence for or against matching a brand look.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$19/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Starter card shows $19/month for 100 AI credits a month. The Shopify Approve subscription screen for Modelize Starter showed a notice that the test charge is not billed, $19,00 USD every 30 days, Subtotal $19,00 plus applicable taxes and Total $19,00 due 16 Nov, with no trial. Card and approval screen agree; tax is unknown and nothing was approved.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/modelize-review/#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plan card versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+     "status": "confirmed",
+     "buying_consequence": "Starter costs $19 per 30 days from the day of approval, before taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Modelize on the Free plan of a Shopify development store: one AI model photo of a snowboard, its automatic publication on the product, the credit use, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid, approved or uninstalled. Create: Add products, the product The Complete Snowboard ticked and added, Images per product set to 1 (the default was 3), Choose styles, Browse styles, a search for model, the style On Model - Outdoor, Done and Generate 1 image; about 12 clicks. The source was the existing product photo of the snowboard; no person or face was uploaded. The cost was shown before the run: 1 image, 1 credit and 9 credits left after this run; with Auto and 3 images it read 3 images, 3 credits and 7 credits left. The run took about 1 minute (Generating 0 of 1. You can leave this page, the run keeps going.) and ended Completed with the image On Model - Outdoor marked Published. The output shows an AI generated woman in a winter coat holding the turquoise snowboard in front of a snowy mountain; by eye the board has a similar colour and pattern to the original, which is a tester impression and not measured. The image was published on the product in Shopify automatically, without a separate confirmation. The buttons are Replace on product, Remove from Shopify, Download and Open full size; editing with AI offers Background, Model, Pose and Custom at 0.5 credits per edit with 9 left. Afterwards the plan page said 9 of 10 credits left. The product search field in the picker did not filter, the list stayed complete, and scrolling by hand worked. The storefront preview was not viewed and the theme was not touched. Timing, approximate tester observations: Create at about 14:17, the run at 2:17 PM and the image published at 2:18 PM, so about 2 minutes from install to the first image, of which about 1 minute was the generation. Uninstall: Settings, Apps, the menu for Modelize offers Open app, View data and Uninstall; the Uninstall Modelize dialog (reason list, feedback box, Uninstall disabled until a reason is chosen) was opened and cancelled. There was no paid subscription to cancel. Not tested: bulk generation, Auto mode, video, own styles and models, 4K, Pro and Enterprise, a fashion or jewellery product (only a snowboard), the resolution of the image, the theme view of the published image, a real payment and cancelling a paid plan, and the chat widget. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The generated image was published on the product automatically, without a confirmation step, and the app showed a 404 right after installing until the page was reloaded.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Bulk generation, Auto mode, video, own styles and models, 4K, Pro and Enterprise.",
+     "A fashion or jewellery product, the resolution of the image and the theme view of the published image.",
+     "A real payment, cancelling a paid plan, support and the chat widget.",
+     "Invitations, export and reimport, and uninstalling the app.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:17 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Cloze",
+   "product_id": "cloze",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Cloze, the Shopify AI chat app (not Cloze CRM), on the Free plan of a Shopify development store: the install, syncing products, one shopper question in the editor preview, the three price lists, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid, approved or uninstalled. The app overview step 2 showed 0 / 18 products synced with a button Review sources, which opened AI Training, tab Knowledge, with the text No products have been synced from the connected store yet. Sync products now gave the toast products sync queued; after 15 seconds the list was still at 0 and after a reload it read Products (16) with Last synced Nov 16, 01:07 PM UTC. That is 16 products and not 18; the reason was not looked into. Policies, FAQs, pages, orders and collections were all (0). Step 1, Enable in theme, opened the theme editor (app embeds) with Cloze Chat Widget off. We switched it on and in the preview a bar appeared at the bottom with What products do you recommend?. The theme change was not saved, was undone and the editor tab was closed, so the widget is not live in the theme. In the editor preview we asked How much is the 3p Fulfilled Snowboard and is it in stock? and the answer was The 3p Fulfilled Snowboard is priced at 2,629.95 USD and it is currently in stock., with a product card showing $2,629.95. The response took about 5 seconds, by eye and not timed. The Cloze product list says $2629.95 and 20 in stock and Shopify says 20 in stock; the price field in Shopify itself (the variant price) was not checked separately. The settings screens under AI Training, General showed Assistant role: Store guide, Response length: Balanced and Inventory visibility: Show only In Stock / Out of Stock; they were not tried further. Timing, approximate tester observations: from clicking Install at 14:06 to the answer at about 14:08, roughly 2 minutes in 6 steps (Install in the App Store, Install in the dialog, Sync products now, Enable in theme, switch the widget on, type and send the question). No email address, account or password was needed. Uninstall: the app menu offers Manage app, Pin to your navigation and Uninstall; Manage app opens the Shopify app page with View in Shopify App Store, Write review, View activity and Uninstall app; the Uninstall Cloze dialog (reason list, feedback box) was opened and cancelled. The app says a paid plan is changed or cancelled through Shopify; a cancellation of a subscription was not tested because there was no subscription. Not tested: a real payment, the trial, a plan change, the chatbot on the real storefront (the store has a password and the widget was only seen in the unsaved editor preview), policy and shipping questions, order status, human takeover, other languages, discounts, upsell, analytics, a catalogue above 100 products, the behaviour at the limit of 25 conversations, and contact with the developer. One AI conversation was used (24 of 25 left). No kit records were entered.",
+   "findings": [
+    "Vendor claim \"50 conversations / month\". What we saw: The vendor site pricing page says Free $0 forever with 50 conversations / month, and Pro $29 and Business $79 with unlimited conversations. The App Store listing and the Billing screen show Free with 25 AI conversations per month and paid plans of $49, $99 and $199 with 250, 750 and 2,000 conversations plus 0.1$ per additional conversation. The Shopify approval screen charged the app price of $49. The vendor site promises twice the free conversations and unlimited conversations at lower prices than the plans sold through Shopify; the listing and app amounts are the ones Shopify showed.",
+    "Vendor claim \"Gratis proefperiode van 3 dagen\". What we saw: The Dutch App Store listing promises a free trial of 3 days on Starter, Pro and Scale. The Shopify Approve subscription screen for Cloze Starter showed no trial: Total $49,00 due 16 Nov, the day of the test. The 3 day trial of the listing did not show on the approval screen, so the first $49 would be due at once.",
+    "Vendor claim \"The 3p Fulfilled Snowboard is priced at 2,629.95 USD and it is currently in stock.\". What we saw: The assistant answered a price and stock question in the editor preview. The Cloze product list says $2629.95 and 20 in stock, and Shopify says 20 in stock; the variant price in Shopify was not checked separately. The answer took about 5 seconds by eye, not timed. For a plain price and stock question the answer matched the synced product list.",
+    "Vendor claim \"$49 /maand\". What we saw: The listing shows Starter at $49 per month for 250 AI conversations plus 0.1$ per extra conversation and the app shows $49 as well. The Shopify Approve subscription screen for Cloze Starter showed $49,00 USD every 30 days, an app spending limit of up to $100,00 per 30 days for usage, Subtotal and Total $49,00 due 16 Nov plus any applicable taxes and no trial; Approve was greyed out without a payment method. Listing, app and approval screen agree on $49; tax is unknown and nothing was approved. Starter costs $49 per 30 days from the day of approval, plus usage charges of up to $100 per 30 days, before taxes."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A real payment, the 3 day trial and a plan change.",
+    "The chatbot on the real storefront, because the store has a password and the widget was not saved in the theme.",
+    "Policy, shipping and order status questions, human takeover, other languages, discounts, upsell and analytics.",
+    "A catalogue above 100 products and the behaviour at the limit of 25 conversations.",
+    "Contact with the developer, support, export and reimport, and uninstalling the app.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:06 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "50 conversations / month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The vendor site pricing page says Free $0 forever with 50 conversations / month, and Pro $29 and Business $79 with unlimited conversations. The App Store listing and the Billing screen show Free with 25 AI conversations per month and paid plans of $49, $99 and $199 with 250, 750 and 2,000 conversations plus 0.1$ per additional conversation. The Shopify approval screen charged the app price of $49.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/cloze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Vendor site pricing page versus the App Store listing, the Billing screen and the Shopify approval screen on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "The vendor site promises twice the free conversations and unlimited conversations at lower prices than the plans sold through Shopify; the listing and app amounts are the ones Shopify showed.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Gratis proefperiode van 3 dagen",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Dutch App Store listing promises a free trial of 3 days on Starter, Pro and Scale. The Shopify Approve subscription screen for Cloze Starter showed no trial: Total $49,00 due 16 Nov, the day of the test.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/cloze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Listing wording versus the Shopify approval screen for Starter on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "The 3 day trial of the listing did not show on the approval screen, so the first $49 would be due at once.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The 3p Fulfilled Snowboard is priced at 2,629.95 USD and it is currently in stock.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The assistant answered a price and stock question in the editor preview. The Cloze product list says $2629.95 and 20 in stock, and Shopify says 20 in stock; the variant price in Shopify was not checked separately. The answer took about 5 seconds by eye, not timed.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/cloze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "One question in the unsaved editor preview of a store with 16 synced products; policies and FAQs were not synced.",
+     "status": "confirmed",
+     "buying_consequence": "For a plain price and stock question the answer matched the synced product list.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shopify stores with a large catalogue",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Only 16 products were synced and they came out as 16 of 18 without a reason. A catalogue above 100 products, the limit of the Free plan, was not tried.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/cloze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus a store of about 16 products with a sync that came 2 products short.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about a large catalogue.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores comparing two price lists for one app",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "Three price lists exist: the listing and the app ($49, $99, $199 and 25 free conversations) and the vendor site ($29, $79 and 50 free conversations). The Shopify approval screen followed the first.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/cloze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus the pricing sources compared in this test.",
+     "status": "confirmed",
+     "buying_consequence": "Check the plan in the app and the Shopify approval screen, not the vendor site.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Small stores with a few repeat questions",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "One price and stock question was answered correctly. Policy, FAQ and shipping answers were not tested, nor an alternative.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/cloze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus a single question on a store without synced policies or FAQs.",
+     "status": "not_testable",
+     "buying_consequence": "The test covers only one product question.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$49 /maand",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The listing shows Starter at $49 per month for 250 AI conversations plus 0.1$ per extra conversation and the app shows $49 as well. The Shopify Approve subscription screen for Cloze Starter showed $49,00 USD every 30 days, an app spending limit of up to $100,00 per 30 days for usage, Subtotal and Total $49,00 due 16 Nov plus any applicable taxes and no trial; Approve was greyed out without a payment method. Listing, app and approval screen agree on $49; tax is unknown and nothing was approved.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/cloze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; checkout viewed up to the Shopify approval screen",
+     "comparability": "Listing and Billing screen versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+     "status": "confirmed",
+     "buying_consequence": "Starter costs $49 per 30 days from the day of approval, plus usage charges of up to $100 per 30 days, before taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Cloze, the Shopify AI chat app (not Cloze CRM), on the Free plan of a Shopify development store: the install, syncing products, one shopper question in the editor preview, the three price lists, the plan screens up to the Shopify approval screen and the uninstall dialog. Nothing was paid, approved or uninstalled. The app overview step 2 showed 0 / 18 products synced with a button Review sources, which opened AI Training, tab Knowledge, with the text No products have been synced from the connected store yet. Sync products now gave the toast products sync queued; after 15 seconds the list was still at 0 and after a reload it read Products (16) with Last synced Nov 16, 01:07 PM UTC. That is 16 products and not 18; the reason was not looked into. Policies, FAQs, pages, orders and collections were all (0). Step 1, Enable in theme, opened the theme editor (app embeds) with Cloze Chat Widget off. We switched it on and in the preview a bar appeared at the bottom with What products do you recommend?. The theme change was not saved, was undone and the editor tab was closed, so the widget is not live in the theme. In the editor preview we asked How much is the 3p Fulfilled Snowboard and is it in stock? and the answer was The 3p Fulfilled Snowboard is priced at 2,629.95 USD and it is currently in stock., with a product card showing $2,629.95. The response took about 5 seconds, by eye and not timed. The Cloze product list says $2629.95 and 20 in stock and Shopify says 20 in stock; the price field in Shopify itself (the variant price) was not checked separately. The settings screens under AI Training, General showed Assistant role: Store guide, Response length: Balanced and Inventory visibility: Show only In Stock / Out of Stock; they were not tried further. Timing, approximate tester observations: from clicking Install at 14:06 to the answer at about 14:08, roughly 2 minutes in 6 steps (Install in the App Store, Install in the dialog, Sync products now, Enable in theme, switch the widget on, type and send the question). No email address, account or password was needed. Uninstall: the app menu offers Manage app, Pin to your navigation and Uninstall; Manage app opens the Shopify app page with View in Shopify App Store, Write review, View activity and Uninstall app; the Uninstall Cloze dialog (reason list, feedback box) was opened and cancelled. The app says a paid plan is changed or cancelled through Shopify; a cancellation of a subscription was not tested because there was no subscription. Not tested: a real payment, the trial, a plan change, the chatbot on the real storefront (the store has a password and the widget was only seen in the unsaved editor preview), policy and shipping questions, order status, human takeover, other languages, discounts, upsell, analytics, a catalogue above 100 products, the behaviour at the limit of 25 conversations, and contact with the developer. One AI conversation was used (24 of 25 left). No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The buttons on cloze.bot only lead to the general App Store, 16 of 18 products synced without a reason, and the vendor site shows other plans and prices than the listing and the app.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A real payment, the 3 day trial and a plan change.",
+     "The chatbot on the real storefront, because the store has a password and the widget was not saved in the theme.",
+     "Policy, shipping and order status questions, human takeover, other languages, discounts, upsell and analytics.",
+     "A catalogue above 100 products and the behaviour at the limit of 25 conversations.",
+     "Contact with the developer, support, export and reimport, and uninstalling the app.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:06 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -20255,6 +20765,166 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Essential Upsell & Cross Sell",
+   "product_id": "essential-upsell-cross-sell",
+   "run_date": "2026-11-16",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Essential Upsell and Cross Sell on the development store plan: a post-purchase offer, publishing it, a test checkout with the test gateway, the offer after payment, the pricing plans and the uninstall dialog. The offer was declined and nothing was paid or uninstalled. Create offer opens Choose placement type: Product page, Cart page, Pop-up, Post purchase page and Suggest new placement type; Post purchase page was chosen. A yellow bar said that the Essential Upsell app is not activated yet and to click Activate and choose Essential Upsell as the post-purchase app in Shopify, then click Save. An info block lists cases where the post-purchase funnel does not appear: payments requiring CVN, installment plans, missing shipping details and orders under $0.50. The tabs are Content, Offer and Design. Offer: trigger All products, First offer Specific products with The Compare at Price Snowboard ($785.95, compare at $885.95), Discount type No discount and Shipping type Free shipping. Save gave Offer created successfully. and Publish gave Updated successfully. Activate opened Shopify Settings, Checkout, Use an app to add features at checkout after payment, with the choices None, Essential Upsell and Post Purchase Upsell Hero; it stood on Post Purchase Upsell Hero from another test. We chose Essential Upsell and saved (Changes saved.); the funnel of the other app was not touched. A test order through the theme preview (no store password): The Complete Snowboard at $699.95, Buy it now, a made up address and the test gateway with card number 1. After Pay now the page showed an exclusive offer, a countdown Hurry! This exclusive deal expires in: 14:58, The Compare at Price Snowboard at $785.95 with $885.95 struck through, Pay Now and Decline offer. Although the offer was set to No discount, it showed a lower price, because $885.95 is the compare at price of the product. Decline led straight to the thank you page with the $699.95 order. The app dashboard afterwards showed Impressions 1, Conversions 0, Conversion Rate 0.00% and Added revenue $0.00, and the Setup Guide 1 / 3 completed. Timing, approximate tester observations: Install at 15:04:45 and the offer in view at about 15:08:10, about 3 minutes 25 seconds and about 17 steps (install 2, creating and publishing the offer 8, activating 3, ordering 4). The Settings, Apps row has a menu with Open app, View details, Get support and Uninstall; the Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: product page, cart page and pop-up offers, the app embed in the theme, paying for the offer, the paid plans and the 14-day trial, the cart drawer placement and real conversion. No kit records were entered.",
+   "findings": [
+    "Vendor claim \"Professional, $39.99 a month\". What we saw: In the app $39.99 a month is the Growth plan (up to $2,500). Professional is $99.99 (up to $10,000) and the plan without a limit is Unlimited at $149.99 (above $10,000). The listing shows only Free, Starter, Essential and Growth. A store expecting more than $2,500 of added revenue pays $99.99 or $149.99 and not $39.99.",
+    "Vendor claim \"Free plan available. Free trial available.\". What we saw: The Free plan exists (up to $100 at $0/month). The 14-day free trial that the listing names for the paid plans was not shown in the app, where development stores are free anyway. Whether a paid plan starts with a 14-day trial could not be checked, because no Select plan button worked.",
+    "Vendor claim \"Essential Upsell is free for development stores.\". What we saw: The app says so on the Pricing plans screen, and every Select plan button was greyed out, so no Shopify approval screen was reached and nothing was approved. The prices are said to apply once the store moves to a paid Shopify plan. Testing on a development store costs nothing; the real price only shows when the store goes live.",
+    "Vendor claim \"orders under $0.50\". What we saw: An info block on the offer screen lists payments requiring CVN, installment plans, missing shipping details and orders under $0.50 as cases where the post-purchase funnel does not appear. A normal test order of $699.95 with the test gateway did show the offer; the listed cases were not tried. The post-purchase funnel does not run for some payments; the normal case worked.",
+    "Vendor claim \"No discount\". What we saw: With Discount type No discount the offer still showed $785.95 with $885.95 struck through, because $885.95 is the compare at price of the product. An offer set to No discount can still show a visible price cut if the product has a compare at price.",
+    "Vendor claim \"Essential $19.99/month\". What we saw: The listing and the in app Pricing plans table both show Essential at $19.99 per month (up to $1000 on the listing, $1,000 in the app), and Starter $9.99 and Growth $39.99 match as well. Every Select plan button was greyed out on the development store, so no approval screen, tax or renewal term was seen. The listed prices agree with the app; the amount at checkout is unknown."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Product page, cart page and pop-up offers and the app embed in the theme.",
+    "Paying for the offer, the paid plans and the 14-day trial, because every Select plan button was greyed out.",
+    "The cart drawer placement and real conversion or revenue.",
+    "Support, invitations, export and reimport, and uninstalling the app.",
+    "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 15:04 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Professional, $39.99 a month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "In the app $39.99 a month is the Growth plan (up to $2,500). Professional is $99.99 (up to $10,000) and the plan without a limit is Unlimited at $149.99 (above $10,000). The listing shows only Free, Starter, Essential and Growth.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html#claim-vs-measured"
+     },
+     "plan": "Development store plan; no paid plan selectable",
+     "comparability": "Dossier wording versus the in app Pricing plans table on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "A store expecting more than $2,500 of added revenue pays $99.99 or $149.99 and not $39.99.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free plan available. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The Free plan exists (up to $100 at $0/month). The 14-day free trial that the listing names for the paid plans was not shown in the app, where development stores are free anyway.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html#claim-vs-measured"
+     },
+     "plan": "Development store plan; no paid plan selectable",
+     "comparability": "Listing wording versus the in app plans table on a development store where every plan button is greyed out.",
+     "status": "not_testable",
+     "buying_consequence": "Whether a paid plan starts with a 14-day trial could not be checked, because no Select plan button worked.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Essential Upsell is free for development stores.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The app says so on the Pricing plans screen, and every Select plan button was greyed out, so no Shopify approval screen was reached and nothing was approved. The prices are said to apply once the store moves to a paid Shopify plan.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html#claim-vs-measured"
+     },
+     "plan": "Development store plan; no paid plan selectable",
+     "comparability": "In app wording versus greyed out plan buttons on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "Testing on a development store costs nothing; the real price only shows when the store goes live.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "orders under $0.50",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "An info block on the offer screen lists payments requiring CVN, installment plans, missing shipping details and orders under $0.50 as cases where the post-purchase funnel does not appear. A normal test order of $699.95 with the test gateway did show the offer; the listed cases were not tried.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html#claim-vs-measured"
+     },
+     "plan": "Development store plan; no paid plan selectable",
+     "comparability": "Info block wording versus one normal test order; none of the listed cases were tried.",
+     "status": "not_testable",
+     "buying_consequence": "The post-purchase funnel does not run for some payments; the normal case worked.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No discount",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "With Discount type No discount the offer still showed $785.95 with $885.95 struck through, because $885.95 is the compare at price of the product.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html#claim-vs-measured"
+     },
+     "plan": "Development store plan; no paid plan selectable",
+     "comparability": "The offer setting versus the offer seen after a test payment on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "An offer set to No discount can still show a visible price cut if the product has a compare at price.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Essential $19.99/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-16",
+     "observed": "The listing and the in app Pricing plans table both show Essential at $19.99 per month (up to $1000 on the listing, $1,000 in the app), and Starter $9.99 and Growth $39.99 match as well. Every Select plan button was greyed out on the development store, so no approval screen, tax or renewal term was seen.",
+     "observed_on": "2026-11-16",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html#claim-vs-measured"
+     },
+     "plan": "Development store plan; no paid plan selectable",
+     "comparability": "Listing price versus the in app plans table, with no checkout reachable on a development store and no cost rule compared.",
+     "status": "not_testable",
+     "buying_consequence": "The listed prices agree with the app; the amount at checkout is unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-16",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 16 November 2026 the session tested Essential Upsell and Cross Sell on the development store plan: a post-purchase offer, publishing it, a test checkout with the test gateway, the offer after payment, the pricing plans and the uninstall dialog. The offer was declined and nothing was paid or uninstalled. Create offer opens Choose placement type: Product page, Cart page, Pop-up, Post purchase page and Suggest new placement type; Post purchase page was chosen. A yellow bar said that the Essential Upsell app is not activated yet and to click Activate and choose Essential Upsell as the post-purchase app in Shopify, then click Save. An info block lists cases where the post-purchase funnel does not appear: payments requiring CVN, installment plans, missing shipping details and orders under $0.50. The tabs are Content, Offer and Design. Offer: trigger All products, First offer Specific products with The Compare at Price Snowboard ($785.95, compare at $885.95), Discount type No discount and Shipping type Free shipping. Save gave Offer created successfully. and Publish gave Updated successfully. Activate opened Shopify Settings, Checkout, Use an app to add features at checkout after payment, with the choices None, Essential Upsell and Post Purchase Upsell Hero; it stood on Post Purchase Upsell Hero from another test. We chose Essential Upsell and saved (Changes saved.); the funnel of the other app was not touched. A test order through the theme preview (no store password): The Complete Snowboard at $699.95, Buy it now, a made up address and the test gateway with card number 1. After Pay now the page showed an exclusive offer, a countdown Hurry! This exclusive deal expires in: 14:58, The Compare at Price Snowboard at $785.95 with $885.95 struck through, Pay Now and Decline offer. Although the offer was set to No discount, it showed a lower price, because $885.95 is the compare at price of the product. Decline led straight to the thank you page with the $699.95 order. The app dashboard afterwards showed Impressions 1, Conversions 0, Conversion Rate 0.00% and Added revenue $0.00, and the Setup Guide 1 / 3 completed. Timing, approximate tester observations: Install at 15:04:45 and the offer in view at about 15:08:10, about 3 minutes 25 seconds and about 17 steps (install 2, creating and publishing the offer 8, activating 3, ordering 4). The Settings, Apps row has a menu with Open app, View details, Get support and Uninstall; the Uninstall dialog (reason list, feedback box) was opened and cancelled. Not tested: product page, cart page and pop-up offers, the app embed in the theme, paying for the offer, the paid plans and the 14-day trial, the cart drawer placement and real conversion. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "An offer set to No discount still showed a price cut, because the product compare at price was struck through, and the setting for the post-purchase app in Shopify had to be switched from another app first.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Product page, cart page and pop-up offers and the app embed in the theme.",
+     "Paying for the offer, the paid plans and the 14-day trial, because every Select plan button was greyed out.",
+     "The cart drawer placement and real conversion or revenue.",
+     "Support, invitations, export and reimport, and uninstalling the app.",
+     "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 15:04 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

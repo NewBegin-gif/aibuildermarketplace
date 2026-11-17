@@ -1194,7 +1194,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/dynasort-review/
 
 ## Easy Advanced Translations (northwest.dev)
-- **Verified pricing:** (re-verified 2026-10-16 on apps.shopify.com/advanced-translation) Four tiers, all monthly and billed in USD.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/advanced-translation and in our own test session on 17 November 2026) Four monthly tiers billed in USD: Free, Starter at $4.99, Basic at $19.99 and Pro …
 - **Honest take:** The 'free AI' is quota-limited (50 products on Free, up to 3,000 on Pro) and past the quota the paid plans bill pay-as-you-go (with a spend limit).
 - **Best for:** small-to-mid Shopify stores that want affordable, full-store AI translation (including images and third-party-app text) and are comfortable bringing their own OpenAI or DeepSeek key for unlimited volume
 - **Flags:** Usage-metered
@@ -2163,10 +2163,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/landingi-review.html
 
 ## LangShop (langshop.io)
-- **Verified pricing:** (read 2026-10-13 on apps.shopify.com/langshop and langshop.app/pricing) Seven published tiers, billed in USD.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/langshop and langshop.io/pricing, and in our own test session on 17 November 2026) Basic is $10 a month or $100 a year, Standard $40 or $400, Advanced $…
 - **Honest take:** The headline promise is 'unlimited words', but every tier caps how many products you may translate and how many languages you may run, so the meter you actually pay is catalogue size.
 - **Best for:** Shopify merchants selling into several language markets who want machine translation they can correct by hand (glossary rules, brand terms, bulk editing) plus a geolocated language and currency switcher
-- **Flags:** Usage-metered, Annual commit
+- **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/langshop-review.html
 
 ## Later (later.com)
@@ -2983,7 +2983,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## ProtectMyOrder (protectmyorder.com)
 - **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05) The App Store route has closed.
-- **Honest take:** Start with what is no longer there. Read on 18 September and again on 5 October 2026, the Shopify App Store listing for this app is gone: the page says it is not currently available and sends support questions to the vendor.
+- **Honest take:** Read on 18 September, on 5 October and again in our own test session on 17 November 2026, the Shopify App Store listing for this app is gone.
 - **Best for:** Shopify stores with a known parcel-loss rate that are willing to come in through the vendor rather than the App Store: keeping 80% of the upsell on Standard if they can settle claims in-house
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/protectmyorder-review.html
@@ -3312,7 +3312,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sanebox-review/
 
 ## Scarcity.AI (effectify.io)
-- **Verified pricing:** (read 2026-10-10 on apps.shopify.com, across all three listings) These are three separate apps from one developer, each installed and billed on its own.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com, across all three listings, and the low stock counter also in our own test session on 17 November 2026) The Low Stock Counter is $4.99 a month, the Coun…
 - **Honest take:** All three read real data, which is worth saying before anything else: the low stock counter shows inventory levels and the visitors counter reads unique visitors, live traffic and product views.
 - **Best for:** Shopify merchants who run low stock or timed promotions and want to surface that on the product page: the low stock counter is tied to real inventory, which makes it the honest one of the three when your stock actually is low
 - **Full review:** https://marketingandsalessoftware.com/scarcity-ai-review.html
@@ -3438,7 +3438,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** SEO suite with a free Basic account; Premium from 59.90 EUR a month.
 - **Best for:** small businesses, freelancers and agencies that want a website audit, rank tracking and backlink monitoring in one suite, with a free account to start
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/seobility-review/
+- **Full review:** https://marketingandsalessoftware.com/seobility-review.html
 
 ## SEOKart (seokart.com)
 - **Verified pricing:** (price read 2026-09-12, re-verified 2026-09-15 and again unchanged on 2026-10-14) Two publishers, and they do not publish the same ladder.
@@ -3489,10 +3489,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/ship-com-review.html
 
 ## Shipdock (happyapps.cz)
-- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/packeta) Three tiers, no free plan, every amount unchanged since 22 August 2026, and the entry tier still names its own limitation.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/packeta, where the app is titled ShipD Labels & Pickup points, and in our own test session on 17 November 2026) On the listing Lite is $9.99 a month ($1…
 - **Honest take:** It is built around Central and Eastern European carriers such as Packeta, so a US or UK merchant should confirm their carrier is supported before the five-day trial starts.
 - **Best for:** Shopify merchants shipping in Central and Eastern Europe who want pickup points, multi-carrier label printing and cash-on-delivery tracking in one app rather than one integration per carrier, and who are on Shopify Plus
-- **Flags:** Annual commit
+- **Flags:** Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/shipdock-review.html
 
 ## Shippo (goshippo.com)
@@ -4047,7 +4047,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tixel-review/
 
 ## TnC (effectify.io)
-- **Verified pricing:** (read 2026-08-25, re-verified 2026-09-09 and again on 2026-09-29 on apps.shopify.com/terms-and-conditions-checkbox, listed as “TnC: Terms and Conditions Box”, and in the vendor's own pricin…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/terms-and-conditions-checkbox and in our own test session on 17 November 2026) Basic is $4.99 a month ($47.90 a year), Advanced $9.99 ($83.92) and Pro $…
 - **Honest take:** 'Free plan available' means development and partner stores only, so a store that takes real orders has no free tier here.
 - **Best for:** Shopify merchants on a standard plan who need a recorded “I agree” gate before payment (for GDPR, an age gate
 - **Full review:** https://marketingandsalessoftware.com/tnc-review.html

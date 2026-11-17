@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 677 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
+All 678 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1777,7 +1777,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Helm (pactai.app)
 - **Verified pricing:** (re-read 2026-10-04 on apps.shopify.com/helm, served HTML) One plan, called Operator, at $129 a month or $1,299 a year — the listing puts the annual saving at 16% — billed in USD every 30 d…
 - **Honest take:** Four weeks old and still trading under more than one name.
-- **Best for:** Shopify stores already spending on Meta and Google Ads and keeping their books in QuickBooks Online, that want one place reading orders, ad spend
+- **Best for:** nobody for now: we do not recommend Helm while its app opens an AI video editor and not the analytics dashboard its listing describes (checked 17 November 2026)
 - **Full review:** https://aibuildermarketplace.com/b2b/helm-review/
 
 ## Help Scout (helpscout.com)
@@ -2637,7 +2637,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Optizen (optizenapp.com)
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell; re-read 2026-09-17 and 2026-10-05, every amount unchanged) Three tiers, billed in USD.
 - **Honest take:** AI video is the reason to install this, and it is the one thing the subscription does not cover.
-- **Best for:** shopify stores that already own product video and want it working as an upsell at the product page, cart and post-purchase moments, or that want to test a handful of AI-generated clips cheaply before committing
+- **Best for:** nobody for now: we do not recommend Optizen while its app does not open (checked 17 November 2026)
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/optizen-review.html
 
@@ -2687,6 +2687,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small businesses, consultants and creatives who want a brochure site with inquiry forms, built and edited by chatting with Pagecloud AI, with hosting and analytics in one bill
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/pagecloud-review/
+
+## PageFly (pagefly.io)
+- **Verified pricing:** (read 2026-11-17 on pagefly.io/pages/pricing and apps.shopify.com/pagefly, US dollars, billed monthly unless stated) Free: $0, 1 published page or section, 10 AI credits a month, 320+ templ…
+- **Honest take:** Shopify page builder with AI page generation and A/B testing: free plan, paid from $24 a month.
+- **Best for:** Shopify merchants who want drag-and-drop landing, product and home pages plus A/B testing and heatmaps in one app, with a free plan to try first
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://marketingandsalessoftware.com/pagefly-review.html
 
 ## Pagely (pagely.com)
 - **Verified pricing:** (read 2026-11-11 on pagely.com/pricing-signup, US dollars) Pagely sells managed WordPress hosting in six plans, all billed per month.
@@ -2985,7 +2992,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## ProtectMyOrder (protectmyorder.com)
 - **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05) The App Store route has closed.
 - **Honest take:** Read on 18 September, on 5 October and again in our own test session on 17 November 2026, the Shopify App Store listing for this app is gone.
-- **Best for:** Shopify stores with a known parcel-loss rate that are willing to come in through the vendor rather than the App Store: keeping 80% of the upsell on Standard if they can settle claims in-house
+- **Best for:** nobody for now: we do not recommend ProtectMyOrder while it is no longer listed in the Shopify App Store (checked 17 November 2026)
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/protectmyorder-review.html
 
@@ -3647,14 +3654,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/smarty-discounts-review.html
 
 ## SMTP.com (smtp.com)
-- **Verified pricing:** (price re-verified 24 September 2026, unchanged since 5 September) Fixed-volume plans, all billed monthly: Essential $25 (50,000 emails, shared IP), Starter $80 (100,000, dedicated IP begin…
+- **Verified pricing:** (price re-verified 17 November 2026, unchanged since 5 September) Fixed-volume plans, all billed monthly: Essential $25 (50,000 emails, shared IP), Starter $80 (100,000, dedicated IP begins…
 - **Honest take:** Pricing is volume-tiered, so a shared IP on the cheapest plan is fine for low volume while serious senders need the dedicated-IP tiers (and the IP warm-up discipline that comes with them).
 - **Best for:** businesses and developers needing dependable high-deliverability transactional or bulk email via SMTP relay and API, with dedicated IPs at scale
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/smtp-com-review.html
 
 ## SMTP2GO (smtp2go.com)
-- **Verified pricing:** (read 2026-09-26 on smtp2go.com/pricing with the volume slider walked through all nine stops; the plan cards carry the amounts in their data-rate-monthly and data-rate-annual attributes) Fr…
+- **Verified pricing:** (read 2026-09-26 on smtp2go.com/pricing with the volume slider walked through all nine stops; the plan cards carry the amounts in their data-rate-monthly and data-rate-annual attributes; re…
 - **Honest take:** It's the pragmatic middle of email infrastructure: simpler and better-supported than the hyperscale APIs, cheaper than most, with useful reporting, but sending reputation is still yours to earn.
 - **Best for:** businesses that want dependable transactional/bulk sending via SMTP or API with human support and clear per-volume pricing
 - **Flags:** Usage-metered, Free tier
@@ -3701,7 +3708,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/spiky-ai-review.html
 
 ## Spocket (spocket.co)
-- **Verified pricing:** (re-verified 2026-09-07 and again 2026-10-01) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products, 25 premium), Empire $99.99 (10,000 / 10…
+- **Verified pricing:** (re-verified 2026-09-07, 2026-10-01 and 2026-11-17) Four monthly plans, metered on unique products: Starter $39.99 (25 products), Pro $59.99 (250 products, 25 premium), Empire $99.99 (10,00…
 - **Honest take:** Spocket's pitch is faster-shipping US and EU suppliers, and that's real, but you still pay twice: the monthly subscription and the wholesale product cost.
 - **Best for:** dropshippers who want vetted US and EU suppliers with faster shipping and one-click store integration, prioritizing delivery speed over raw catalog size
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
@@ -3868,7 +3875,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/surviq-review.html
 
 ## Switcher Studio (switcherstudio.com)
-- **Verified pricing:** (read 2026-09-26 on switcherstudio.com/pricing) Studio is $65 a month month-to-month and $45 on annual billing ('Up to 30% Off').
+- **Verified pricing:** (read 2026-09-26 on switcherstudio.com/pricing; re-read 2026-11-17, base prices unchanged) Studio is $65 a month month-to-month and $45 on annual billing ('Up to 30% Off').
 - **Honest take:** The app runs on Mac and iOS only (Android phones can join as cameras, but there is no Windows version) so the machine doing the switching has to be an Apple one.
 - **Best for:** creators, churches, events and small businesses that want multi-camera live production and streaming using iPhones and iPads they already own: no broadcast hardware
 - **Flags:** Annual commit

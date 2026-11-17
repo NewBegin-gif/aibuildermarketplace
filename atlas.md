@@ -1140,7 +1140,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/docsend-review.html
 
 ## Dondy (dondy.net)
-- **Verified pricing:** (re-read 2026-09-18 on apps.shopify.com/dondy-marketing-ai, listed as “Dondy: WhatsApp Marketing+Chat”) Four tiers, each paid one with a 7-day free trial, and every amount unchanged since 2…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/dondy-marketing-ai, listed as “Dondy: WhatsApp Marketing+Chat”, and in our own test session on 17 November 2026) The listing shows four tiers, Free, Pro…
 - **Honest take:** The free plan is a chat button.
 - **Best for:** Shopify stores whose customers already live in WhatsApp (much of Europe, Latin America, the Middle East and Asia) that want cart recovery, order updates and campaigns on the official API without leaving the Shopify admin
 - **Flags:** Usage-metered, Free tier
@@ -3726,7 +3726,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/stampezee-review.html
 
 ## StoreFAQ (storefaq.io)
-- **Verified pricing:** (read 2026-08-21 and re-verified unchanged 2026-10-09 on apps.shopify.com/storefaq) Four tiers, metered on FAQ page views and AI chatbot conversations rather than on the number of FAQs.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/storefaq and on storefaq.io, and in our own test session on 17 November 2026; first read 2026-08-21) Four tiers at regular prices: Free, Professional at…
 - **Honest take:** The meter is FAQ page views, and that is the thing this app exists to increase.
 - **Best for:** small Shopify stores that want SEO-tagged FAQ pages with JSON-LD schema and a light AI chatbot for deflection, without standing up a full support stack
 - **Flags:** Usage-metered, Free tier
@@ -3909,7 +3909,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tapita-ai-seo-blog-builder-review/
 
 ## Tapita SEO Optimizer (tapita.io)
-- **Verified pricing:** (read 2026-10-09 and re-read 2026-10-12 on apps.shopify.com/google-seo-schema-meta-data, English listing) Three tiers.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/google-seo-schema-meta-data, English listing now titled “Tapita AI SEO Optimizer, Speed”, after reads on 2026-10-09 and 2026-10-12, and in our own test …
 - **Honest take:** The price on the listing is a Shopify-Basic price, and almost nobody reads the line underneath it.
 - **Best for:** Shopify merchants on the Basic or Grow plan who want SEO audits, bulk metadata, image alt text and speed fixes out of one app instead of hiring a specialist
 - **Flags:** Usage-metered, Free tier

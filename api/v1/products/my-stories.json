@@ -58,16 +58,233 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "beginner",
+     "name": "Beginner",
+     "model": "free",
+     "evidence": "Beginner: $0, up to 10 uploaded videos"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "per_unit",
+     "monthly": 14,
+     "annual_year": 140,
+     "evidence": "Advanced: $14 a month, up to 100 videos, up to 20 leads a month, analytics, no watermark. Pro: $45 a month, unlimited videos and leads. 7-day free trial on paid plans. The Shopify listing shows yearly prices of $140 and $450"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 45,
+     "annual_year": 450,
+     "evidence": "Advanced: $14 a month, up to 100 videos, up to 20 leads a month, analytics, no watermark. Pro: $45 a month, unlimited videos and leads. 7-day free trial on paid plans. The Shopify listing shows yearly prices of $140 and $450"
+    }
+   ],
+   "notes": [
+    "Billed through Shopify; plans differ by uploaded videos and leads a month, not by store size.",
+    "The Shopify listing names the plans Free, Pro and Advanced, with $14 and $45 in that order; the vendor's own page calls them Advanced and Pro."
+   ],
+   "rules_verified_at": "2026-11-17"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "my-stories",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 11.67,
+       "pro": 37.5
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 23.33,
+       "pro": 75.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 35.0,
+       "pro": 112.5
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 58.33,
+       "pro": 187.5
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 116.67,
+       "pro": 375.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "my-stories",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 14.0,
+       "pro": 45.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 28.0,
+       "pro": 90.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 42.0,
+       "pro": 135.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 70.0,
+       "pro": 225.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "beginner",
+      "cheapest_plan_name": "Beginner",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "beginner": 0.0,
+       "advanced": 140.0,
+       "pro": 450.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -78,6 +295,12 @@
  "status_page": null,
  "task_evidence": null,
  "open_questions": [
+  {
+   "question_id": "my-stories:my-stories-q1",
+   "key": "my-stories-q1",
+   "question": "What happens to our videos and collected leads if we uninstall the app?",
+   "status": "open"
+  },
   {
    "question_id": "my-stories:cancellation_terms",
    "key": "cancellation_terms",
@@ -94,12 +317,6 @@
    "question_id": "my-stories:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "my-stories:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

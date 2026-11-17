@@ -87,16 +87,376 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free costs nothing and allows up to 5 campaigns"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "monthly": 9,
+     "annual_year": 91,
+     "evidence": "Starter is $9 a month or $91 a year and adds unlimited campaigns"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 29,
+     "annual_year": 295,
+     "evidence": "Pro is $29 a month or $295 a year and adds 1,000 AI recommendations a month"
+    },
+    {
+     "id": "max",
+     "name": "Max",
+     "model": "per_unit",
+     "monthly": 59,
+     "annual_year": 601,
+     "evidence": "Max is $59 a month or $601 a year and adds 2,500 AI recommendations a month"
+    }
+   ],
+   "notes": [
+    "Billed through Shopify per store, every 30 days; every plan has unlimited orders.",
+    "Logbase's own pricing page still showed the older order-based ladder on 30 October 2026; the App Store listing, which Shopify bills from, shows only these flat plans."
+   ],
+   "not_computable": [
+    "Enterprise plan, quoted on request"
+   ],
+   "rules_verified_at": "2026-11-17"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "selleasy",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 7.58,
+       "pro": 24.58,
+       "max": 50.08
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 15.17,
+       "pro": 49.17,
+       "max": 100.17
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 22.75,
+       "pro": 73.75,
+       "max": 150.25
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 37.92,
+       "pro": 122.92,
+       "max": 250.42
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 75.83,
+       "pro": 245.83,
+       "max": 500.83
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Enterprise plan, quoted on request"
+    ],
+    "measured": [
+     {
+      "claim": "No plans are available for your store",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The listing names Free, Starter, Pro and Max with prices; the Select a plan page in the app on our development store showed no plans and no prices.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/selleasy-review.html#claim-vs-measured"
+      },
+      "plan": "No plan available on a development store",
+      "comparability": "Listing price list versus the Select a plan page on one development store.",
+      "status": "contradicted",
+      "buying_consequence": "On a development store the app does not show its plans, so the listed prices could not be checked in the app.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/selleasy-review.html"
+     },
+     {
+      "claim": "Frequently bought together",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "About 3 minutes after the install click the preview of the product page showed Frequently bought together with the trigger product, Selling Plans Ski Wax, a total of $2,654.90 and an Add bundle to cart button. It needed the app embed saved in the theme and the block FBT Classic added in the editor; the block was not saved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/selleasy-review.html#claim-vs-measured"
+      },
+      "plan": "No plan available on a development store",
+      "comparability": "Offer in the theme editor preview versus the campaign settings; the storefront was not seen.",
+      "status": "confirmed",
+      "buying_consequence": "A frequently bought together offer works in the theme preview within minutes, but it needs the embed and a block; the live storefront was not seen.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/selleasy-review.html"
+     },
+     {
+      "claim": "2 out of 4 checks passed",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The popup Test campaign in store said 2 out of 4 checks passed, with App embed is not enabled in the theme editor and The widget is not positioned in the theme editor as the two failures; both were fixed in the theme editor.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/selleasy-review.html#claim-vs-measured"
+      },
+      "plan": "No plan available on a development store",
+      "comparability": "The in app check list before and after the theme editor steps on one development store.",
+      "status": "confirmed",
+      "buying_consequence": "A saved campaign does not show anything until the app embed is on and the block is placed, and the app says so.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/selleasy-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "selleasy",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 9.0,
+       "pro": 29.0,
+       "max": 59.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 18.0,
+       "pro": 58.0,
+       "max": 118.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 27.0,
+       "pro": 87.0,
+       "max": 177.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 45.0,
+       "pro": 145.0,
+       "max": 295.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "starter": 90.0,
+       "pro": 290.0,
+       "max": 590.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Enterprise plan, quoted on request"
+    ],
+    "measured": [
+     {
+      "claim": "No plans are available for your store",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The listing names Free, Starter, Pro and Max with prices; the Select a plan page in the app on our development store showed no plans and no prices.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/selleasy-review.html#claim-vs-measured"
+      },
+      "plan": "No plan available on a development store",
+      "comparability": "Listing price list versus the Select a plan page on one development store.",
+      "status": "contradicted",
+      "buying_consequence": "On a development store the app does not show its plans, so the listed prices could not be checked in the app.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/selleasy-review.html"
+     },
+     {
+      "claim": "Frequently bought together",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "About 3 minutes after the install click the preview of the product page showed Frequently bought together with the trigger product, Selling Plans Ski Wax, a total of $2,654.90 and an Add bundle to cart button. It needed the app embed saved in the theme and the block FBT Classic added in the editor; the block was not saved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/selleasy-review.html#claim-vs-measured"
+      },
+      "plan": "No plan available on a development store",
+      "comparability": "Offer in the theme editor preview versus the campaign settings; the storefront was not seen.",
+      "status": "confirmed",
+      "buying_consequence": "A frequently bought together offer works in the theme preview within minutes, but it needs the embed and a block; the live storefront was not seen.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/selleasy-review.html"
+     },
+     {
+      "claim": "2 out of 4 checks passed",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The popup Test campaign in store said 2 out of 4 checks passed, with App embed is not enabled in the theme editor and The widget is not positioned in the theme editor as the two failures; both were fixed in the theme editor.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/selleasy-review.html#claim-vs-measured"
+      },
+      "plan": "No plan available on a development store",
+      "comparability": "The in app check list before and after the theme editor steps on one development store.",
+      "status": "confirmed",
+      "buying_consequence": "A saved campaign does not show anything until the app embed is on and the block is placed, and the app says so.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/selleasy-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -527,9 +887,9 @@
    "status": "open"
   },
   {
-   "question_id": "selleasy:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "selleasy:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Enterprise plan, quoted on request. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

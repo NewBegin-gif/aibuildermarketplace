@@ -60,10 +60,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -71,7 +70,471 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/smarty-discounts-review.html",
+  "method": [
+   "Installed on a Shopify development store and tested as far as the session allowed, reading the install, plan and approval screens",
+   "What was not run is listed under untested; the app was uninstalled afterwards, and no card was entered and nothing was paid"
+  ],
+  "claims": [
+   {
+    "claim": "Shopify merchants with promotions beyond basic codes",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "A volume discount with two quantity tiers (10 percent from 2 pieces, 20 percent from 4) was made as an automatic percentage discount on all products and showed Active; the dollar cap and tiers by weight were not tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "Dossier audience for promotions beyond basic codes versus one quantity tier discount; cap and weight tiers were not opened.",
+    "status": "not_testable",
+    "buying_consequence": "The kind of rule beyond a basic code can be made, but the capped and weight based rules of the dossier were not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "This discount is automatically applied at checkout.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The app and Shopify show the discount as Active, Automatic, Used 0. We did not run a cart through the store, because the store has a password, so the discount was never seen at work.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "App wording on automatic application at checkout versus a status Active with Used 0 and no cart.",
+    "status": "not_testable",
+    "buying_consequence": "Whether the tiers take the right amount off a real cart is not known from this test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Stores running dated campaigns or gift offers",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "Active with time periods is greyed out on the Free plan and Buy X Get Y is marked as needing test mode or Pro; neither was tried and no paid plan was started.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "Dossier audience for dated campaigns versus features that are greyed out on Free and were not opened.",
+    "status": "not_testable",
+    "buying_consequence": "Dated campaigns and gift offers could not be tested on the Free plan.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Owners wary of a young app touching checkout",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The app asked to view customer data and staff data and to view and edit store data, the listing shows 5.0 from 6 reviews, and one discount was made without any problem; no cart or checkout was run through it.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "Dossier audience for a young app versus one saved discount and an install screen; no checkout was tried.",
+    "status": "not_testable",
+    "buying_consequence": "How the app behaves in a live checkout during a sale was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Pro $9.99 /month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The app shows Free, Pro at $9.99 a month with unlimited discount rules, all discount types and a 7 day trial, and Custom at $99 a month. The dossier lists Lite at $9.99 and Pro at $25.99 and says Buy X Get Y and active time periods are only on the top tier; the app showed no Lite and no Pro at $25.99.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "Dossier plan names and prices versus the three plan columns of the Billing page on a Basic store.",
+    "status": "contradicted",
+    "buying_consequence": "On a Shopify Basic store the single paid plan costs $9.99 and lists all discount types, which is cheaper than the $25.99 top tier in the dossier.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Shopify Grow",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The listing gives the prices by Shopify plan: $9.99 for Basic, $15.99 for Grow, $19.99 for Advanced and $25.99 for Plus a month. Our store is on Basic, so only $9.99 was seen in the app and the other prices were read from the listing only.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "Dossier flat plan prices versus a listing with prices by Shopify plan that could not be seen in the app.",
+    "status": "not_testable",
+    "buying_consequence": "The monthly price may depend on the Shopify plan of the store, which the dossier does not say; larger stores may pay more.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "2 discount rules",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Free plan lists 2 discount rules and 1 bulk code generation; after one rule the app said that 1 Free-tier discount remains.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "Dossier free tier versus the Free column and the remaining count message in the app.",
+    "status": "confirmed",
+    "buying_consequence": "The free plan is limited to 2 discount rules, so a third rule needs the paid plan.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Custom $99 /month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Custom plan costs $99 a month and a custom rule build is $120 an hour with no estimate, typically 6 to 10 hours per rule; the Contact button was not pressed and the plan was not tested.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "Plan page wording on custom builds versus a plan that was not tried and a button that was not pressed.",
+    "status": "not_testable",
+    "buying_consequence": "A custom rule at that rate is roughly $720 to $1,200 on top of the monthly fee, which could not be checked.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$9,99 USD every 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Shopify approval screen for Pro shows $9,99 USD every 30 days with a 7-day free trial ending on 24 Nov and a total of $9,99 due 24 Nov plus any applicable taxes. The plan is called Pro Basic. We cancelled the screen and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+    },
+    "plan": "Pro approval screen, cancelled, development store",
+    "comparability": "Plan page Pro price versus the approval screen amount; no stored cost rule was compared.",
+    "status": "confirmed",
+    "buying_consequence": "The monthly price of $9.99 matches the plan page before taxes and the first bill comes after the 7-day trial.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Smarty Discounts on a Shopify development store: the install, one automatic volume discount made in the app (Active in the app and in Shopify, not tried in a cart), the plans in the listing and in the app, the Shopify approval screen for Pro (cancelled), and the uninstall dialog, after which the app was uninstalled. Nothing was paid and no theme change was made. Install: the App Store listing (English) is Smarty Discounts by Neezon, rated 5.0 from 6 reviews, with the line Free plan available. Free trial available. The install form was submitted at 15:33:34 and the Install app dialog asked for View customer data, View staff and contributor data and View and edit store data. Install was clicked. The app (version 2.7.1) opened straight on the Free plan without a plan or approval screen; a welcome dialog Welcome to Smarty Discounts with 4 steps was dismissed. No vendor account, call, demo or phone number was asked. Core action, a volume discount on products: Create discount, Amount off product, the method Automatic discount, the title Snowboard volume deal, Percentage, Add tier gave Volume-based on Quantity with Tier 1 (Quantity 2, Get 10.0 %) and Add another tier gave Tier 2 (Quantity 4, Get 20.0 %); both are default values and were not changed. Applies to All products. Save gave the message Snowboard volume deal was created successfully with This discount is automatically applied at checkout and the status Active; the summary card says 2 volume-based tiers up to 20% off and the app says You have 1 Free-tier discounts remaining on your plan. Shopify Discounts shows the discount as Active, Automatic, All customers, Amount off product, Used 0. The dashboard of the app counts 1 automatic product discount and 9 from other apps or Shopify itself. The discount was not seen in a cart or checkout, because the store has a password and we did not run a cart through it; only the status Active in the app and in Shopify was confirmed. Timing, approximate tester observations: about 2 minutes from the install at 15:33:34 to the saved discount (about 15:35), in about 9 clicks and steps. Plans in the listing: Free (2 discount rules); Shopify Basic $9.99 a month or $99.99 a year; Shopify Grow $15.99 a month or $159.99 a year (Advanced $19.99 or $199.99); Shopify Plus $25.99 a month or $259.99 a year; a 7-day free trial; all charges are billed in USD. Plans in the app (Billing): Free with 2 discount rules, 1 bulk code generation and email support (greyed out items: Single code/rule free shipping, Active with time periods, Early access to features); Pro at $9.99 a month, marked Most popular, with Includes 7 day trial, Unlimited discount rules, All discounts types and priority support; Custom at $99 a month, where a custom rule build costs $120 an hour with no estimate (typically 6 to 10 hours per rule, so roughly $720 to $1,200 per rule at that rate) plus $99 a month for maintenance of those rules. The buttons Monthly, Annually (save 2 months) and Apply coupon are on the page, and a banner says You are using a development store, you won't be charged. Differences from the dossier: the dossier lists a Lite plan at $9.99 and a Pro plan at $25.99; the app showed no Lite plan and no Pro at $25.99 (the listing shows $25.99 for Shopify Plus). The app shows one paid plan, Pro at $9.99 on our Shopify Basic development store, and a Custom plan. The dossier question whether Lite includes priority support does not apply: Free has email support and Pro has priority support. Checkout: Upgrade on Pro opened the Shopify Approve subscription screen: You will not be billed for this test charge, the plan Pro Basic, $9,99 USD every 30 days, a 7-day free trial ending on 24 Nov, subtotal $9,99 plus any applicable taxes, total $9,99 due 24 Nov, an Add payment method row and an Approve button. Because a payment method row was on the screen, we pressed Cancel and did not approve; no card was entered and the Free plan stayed active. Cancelling: no subscription was taken. Removing the app goes through Settings, Apps, Smarty Discounts, the menu with Open app, View details, Get support and Uninstall. The dialog Uninstall Smarty Discounts? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Reason for uninstalling) and Testing multiple apps was chosen. Not tested: the discount in a cart or checkout (the store has a password), the dollar cap, tiers by weight, Buy X Get Y (shown as Test mode required and Pro), time periods, the theme link with Activate for the app embed, approving the test subscription, email support and priority support and their speed. Clean up: the app was uninstalled in Settings, Apps at about 15:3x and the installed list no longer showed it. Other apps were not touched. All our own browser tabs were closed. No theme change was made and no test files were used. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The discount was not tried in a cart, the dossier plans Lite at $9.99 and Pro at $25.99 are not in the app (it shows Free, Pro at $9.99 and Custom at $99), the listing prices change with the Shopify plan of the store, the Custom plan charges $120 an hour for each custom rule, and the Pro approval screen carried an Add payment method row, so we cancelled it.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The discount in a cart or checkout, because the store has a password.",
+    "The dollar cap, tiers by weight, Buy X Get Y and time periods.",
+    "The theme link with the app embed.",
+    "Approving the test subscription.",
+    "Email support, priority support and their speed.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 15:33 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Smarty Discounts on a Shopify development store: the install, one automatic volume discount made in the app (Active in the app and in Shopify, not tried in a cart), the plans in the listing and in the app, the Shopify approval screen for Pro (cancelled), and the uninstall dialog, after which the app was uninstalled. Nothing was paid and no theme change was made. Install: the App Store listing (English) is Smarty Discounts by Neezon, rated 5.0 from 6 reviews, with the line Free plan available. Free trial available. The install form was submitted at 15:33:34 and the Install app dialog asked for View customer data, View staff and contributor data and View and edit store data. Install was clicked. The app (version 2.7.1) opened straight on the Free plan without a plan or approval screen; a welcome dialog Welcome to Smarty Discounts with 4 steps was dismissed. No vendor account, call, demo or phone number was asked. Core action, a volume discount on products: Create discount, Amount off product, the method Automatic discount, the title Snowboard volume deal, Percentage, Add tier gave Volume-based on Quantity with Tier 1 (Quantity 2, Get 10.0 %) and Add another tier gave Tier 2 (Quantity 4, Get 20.0 %); both are default values and were not changed. Applies to All products. Save gave the message Snowboard volume deal was created successfully with This discount is automatically applied at checkout and the status Active; the summary card says 2 volume-based tiers up to 20% off and the app says You have 1 Free-tier discounts remaining on your plan. Shopify Discounts shows the discount as Active, Automatic, All customers, Amount off product, Used 0. The dashboard of the app counts 1 automatic product discount and 9 from other apps or Shopify itself. The discount was not seen in a cart or checkout, because the store has a password and we did not run a cart through it; only the status Active in the app and in Shopify was confirmed. Timing, approximate tester observations: about 2 minutes from the install at 15:33:34 to the saved discount (about 15:35), in about 9 clicks and steps. Plans in the listing: Free (2 discount rules); Shopify Basic $9.99 a month or $99.99 a year; Shopify Grow $15.99 a month or $159.99 a year (Advanced $19.99 or $199.99); Shopify Plus $25.99 a month or $259.99 a year; a 7-day free trial; all charges are billed in USD. Plans in the app (Billing): Free with 2 discount rules, 1 bulk code generation and email support (greyed out items: Single code/rule free shipping, Active with time periods, Early access to features); Pro at $9.99 a month, marked Most popular, with Includes 7 day trial, Unlimited discount rules, All discounts types and priority support; Custom at $99 a month, where a custom rule build costs $120 an hour with no estimate (typically 6 to 10 hours per rule, so roughly $720 to $1,200 per rule at that rate) plus $99 a month for maintenance of those rules. The buttons Monthly, Annually (save 2 months) and Apply coupon are on the page, and a banner says You are using a development store, you won't be charged. Differences from the dossier: the dossier lists a Lite plan at $9.99 and a Pro plan at $25.99; the app showed no Lite plan and no Pro at $25.99 (the listing shows $25.99 for Shopify Plus). The app shows one paid plan, Pro at $9.99 on our Shopify Basic development store, and a Custom plan. The dossier question whether Lite includes priority support does not apply: Free has email support and Pro has priority support. Checkout: Upgrade on Pro opened the Shopify Approve subscription screen: You will not be billed for this test charge, the plan Pro Basic, $9,99 USD every 30 days, a 7-day free trial ending on 24 Nov, subtotal $9,99 plus any applicable taxes, total $9,99 due 24 Nov, an Add payment method row and an Approve button. Because a payment method row was on the screen, we pressed Cancel and did not approve; no card was entered and the Free plan stayed active. Cancelling: no subscription was taken. Removing the app goes through Settings, Apps, Smarty Discounts, the menu with Open app, View details, Get support and Uninstall. The dialog Uninstall Smarty Discounts? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Reason for uninstalling) and Testing multiple apps was chosen. Not tested: the discount in a cart or checkout (the store has a password), the dollar cap, tiers by weight, Buy X Get Y (shown as Test mode required and Pro), time periods, the theme link with Activate for the app embed, approving the test subscription, email support and priority support and their speed. Clean up: the app was uninstalled in Settings, Apps at about 15:3x and the installed list no longer showed it. Other apps were not touched. All our own browser tabs were closed. No theme change was made and no test files were used. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Smarty Discounts on a Shopify development store: the install, one automatic volume discount made in the app (Active in the app and in Shopify, not tried in a cart), the plans in the listing and in the app, the Shopify approval screen for Pro (cancelled), and the uninstall dialog, after which the app was uninstalled. Nothing was paid and no theme change was made. Install: the App Store listing (English) is Smarty Discounts by Neezon, rated 5.0 from 6 reviews, with the line Free plan available. Free trial available. The install form was submitted at 15:33:34 and the Install app dialog asked for View customer data, View staff and contributor data and View and edit store data. Install was clicked. The app (version 2.7.1) opened straight on the Free plan without a plan or approval screen; a welcome dialog Welcome to Smarty Discounts with 4 steps was dismissed. No vendor account, call, demo or phone number was asked. Core action, a volume discount on products: Create discount, Amount off product, the method Automatic discount, the title Snowboard volume deal, Percentage, Add tier gave Volume-based on Quantity with Tier 1 (Quantity 2, Get 10.0 %) and Add another tier gave Tier 2 (Quantity 4, Get 20.0 %); both are default values and were not changed. Applies to All products. Save gave the message Snowboard volume deal was created successfully with This discount is automatically applied at checkout and the status Active; the summary card says 2 volume-based tiers up to 20% off and the app says You have 1 Free-tier discounts remaining on your plan. Shopify Discounts shows the discount as Active, Automatic, All customers, Amount off product, Used 0. The dashboard of the app counts 1 automatic product discount and 9 from other apps or Shopify itself. The discount was not seen in a cart or checkout, because the store has a password and we did not run a cart through it; only the status Active in the app and in Shopify was confirmed. Timing, approximate tester observations: about 2 minutes from the install at 15:33:34 to the saved discount (about 15:35), in about 9 clicks and steps. Plans in the listing: Free (2 discount rules); Shopify Basic $9.99 a month or $99.99 a year; Shopify Grow $15.99 a month or $159.99 a year (Advanced $19.99 or $199.99); Shopify Plus $25.99 a month or $259.99 a year; a 7-day free trial; all charges are billed in USD. Plans in the app (Billing): Free with 2 discount rules, 1 bulk code generation and email support (greyed out items: Single code/rule free shipping, Active with time periods, Early access to features); Pro at $9.99 a month, marked Most popular, with Includes 7 day trial, Unlimited discount rules, All discounts types and priority support; Custom at $99 a month, where a custom rule build costs $120 an hour with no estimate (typically 6 to 10 hours per rule, so roughly $720 to $1,200 per rule at that rate) plus $99 a month for maintenance of those rules. The buttons Monthly, Annually (save 2 months) and Apply coupon are on the page, and a banner says You are using a development store, you won't be charged. Differences from the dossier: the dossier lists a Lite plan at $9.99 and a Pro plan at $25.99; the app showed no Lite plan and no Pro at $25.99 (the listing shows $25.99 for Shopify Plus). The app shows one paid plan, Pro at $9.99 on our Shopify Basic development store, and a Custom plan. The dossier question whether Lite includes priority support does not apply: Free has email support and Pro has priority support. Checkout: Upgrade on Pro opened the Shopify Approve subscription screen: You will not be billed for this test charge, the plan Pro Basic, $9,99 USD every 30 days, a 7-day free trial ending on 24 Nov, subtotal $9,99 plus any applicable taxes, total $9,99 due 24 Nov, an Add payment method row and an Approve button. Because a payment method row was on the screen, we pressed Cancel and did not approve; no card was entered and the Free plan stayed active. Cancelling: no subscription was taken. Removing the app goes through Settings, Apps, Smarty Discounts, the menu with Open app, View details, Get support and Uninstall. The dialog Uninstall Smarty Discounts? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Reason for uninstalling) and Testing multiple apps was chosen. Not tested: the discount in a cart or checkout (the store has a password), the dollar cap, tiers by weight, Buy X Get Y (shown as Test mode required and Pro), time periods, the theme link with Activate for the app embed, approving the test subscription, email support and priority support and their speed. Clean up: the app was uninstalled in Settings, Apps at about 15:3x and the installed list no longer showed it. Other apps were not touched. All our own browser tabs were closed. No theme change was made and no test files were used. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Smarty Discounts",
+    "product_id": "smarty-discounts",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Smarty Discounts on a Shopify development store: the install, one automatic volume discount made in the app (Active in the app and in Shopify, not tried in a cart), the plans in the listing and in the app, the Shopify approval screen for Pro (cancelled), and the uninstall dialog, after which the app was uninstalled. Nothing was paid and no theme change was made. Install: the App Store listing (English) is Smarty Discounts by Neezon, rated 5.0 from 6 reviews, with the line Free plan available. Free trial available. The install form was submitted at 15:33:34 and the Install app dialog asked for View customer data, View staff and contributor data and View and edit store data. Install was clicked. The app (version 2.7.1) opened straight on the Free plan without a plan or approval screen; a welcome dialog Welcome to Smarty Discounts with 4 steps was dismissed. No vendor account, call, demo or phone number was asked. Core action, a volume discount on products: Create discount, Amount off product, the method Automatic discount, the title Snowboard volume deal, Percentage, Add tier gave Volume-based on Quantity with Tier 1 (Quantity 2, Get 10.0 %) and Add another tier gave Tier 2 (Quantity 4, Get 20.0 %); both are default values and were not changed. Applies to All products. Save gave the message Snowboard volume deal was created successfully with This discount is automatically applied at checkout and the status Active; the summary card says 2 volume-based tiers up to 20% off and the app says You have 1 Free-tier discounts remaining on your plan. Shopify Discounts shows the discount as Active, Automatic, All customers, Amount off product, Used 0. The dashboard of the app counts 1 automatic product discount and 9 from other apps or Shopify itself. The discount was not seen in a cart or checkout, because the store has a password and we did not run a cart through it; only the status Active in the app and in Shopify was confirmed. Timing, approximate tester observations: about 2 minutes from the install at 15:33:34 to the saved discount (about 15:35), in about 9 clicks and steps. Plans in the listing: Free (2 discount rules); Shopify Basic $9.99 a month or $99.99 a year; Shopify Grow $15.99 a month or $159.99 a year (Advanced $19.99 or $199.99); Shopify Plus $25.99 a month or $259.99 a year; a 7-day free trial; all charges are billed in USD. Plans in the app (Billing): Free with 2 discount rules, 1 bulk code generation and email support (greyed out items: Single code/rule free shipping, Active with time periods, Early access to features); Pro at $9.99 a month, marked Most popular, with Includes 7 day trial, Unlimited discount rules, All discounts types and priority support; Custom at $99 a month, where a custom rule build costs $120 an hour with no estimate (typically 6 to 10 hours per rule, so roughly $720 to $1,200 per rule at that rate) plus $99 a month for maintenance of those rules. The buttons Monthly, Annually (save 2 months) and Apply coupon are on the page, and a banner says You are using a development store, you won't be charged. Differences from the dossier: the dossier lists a Lite plan at $9.99 and a Pro plan at $25.99; the app showed no Lite plan and no Pro at $25.99 (the listing shows $25.99 for Shopify Plus). The app shows one paid plan, Pro at $9.99 on our Shopify Basic development store, and a Custom plan. The dossier question whether Lite includes priority support does not apply: Free has email support and Pro has priority support. Checkout: Upgrade on Pro opened the Shopify Approve subscription screen: You will not be billed for this test charge, the plan Pro Basic, $9,99 USD every 30 days, a 7-day free trial ending on 24 Nov, subtotal $9,99 plus any applicable taxes, total $9,99 due 24 Nov, an Add payment method row and an Approve button. Because a payment method row was on the screen, we pressed Cancel and did not approve; no card was entered and the Free plan stayed active. Cancelling: no subscription was taken. Removing the app goes through Settings, Apps, Smarty Discounts, the menu with Open app, View details, Get support and Uninstall. The dialog Uninstall Smarty Discounts? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Reason for uninstalling) and Testing multiple apps was chosen. Not tested: the discount in a cart or checkout (the store has a password), the dollar cap, tiers by weight, Buy X Get Y (shown as Test mode required and Pro), time periods, the theme link with Activate for the app embed, approving the test subscription, email support and priority support and their speed. Clean up: the app was uninstalled in Settings, Apps at about 15:3x and the installed list no longer showed it. Other apps were not touched. All our own browser tabs were closed. No theme change was made and no test files were used. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"Pro $9.99 /month\". What we saw: The app shows Free, Pro at $9.99 a month with unlimited discount rules, all discount types and a 7 day trial, and Custom at $99 a month. The dossier lists Lite at $9.99 and Pro at $25.99 and says Buy X Get Y and active time periods are only on the top tier; the app showed no Lite and no Pro at $25.99.",
+     "Text we checked: \"2 discount rules\". What we saw: The Free plan lists 2 discount rules and 1 bulk code generation; after one rule the app said that 1 Free-tier discount remains."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The discount in a cart or checkout, because the store has a password.",
+     "The dollar cap, tiers by weight, Buy X Get Y and time periods.",
+     "The theme link with the app embed.",
+     "Approving the test subscription.",
+     "Email support, priority support and their speed.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 15:33 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Shopify merchants with promotions beyond basic codes",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "A volume discount with two quantity tiers (10 percent from 2 pieces, 20 percent from 4) was made as an automatic percentage discount on all products and showed Active; the dollar cap and tiers by weight were not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "Dossier audience for promotions beyond basic codes versus one quantity tier discount; cap and weight tiers were not opened.",
+      "status": "not_testable",
+      "buying_consequence": "The kind of rule beyond a basic code can be made, but the capped and weight based rules of the dossier were not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "This discount is automatically applied at checkout.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The app and Shopify show the discount as Active, Automatic, Used 0. We did not run a cart through the store, because the store has a password, so the discount was never seen at work.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "App wording on automatic application at checkout versus a status Active with Used 0 and no cart.",
+      "status": "not_testable",
+      "buying_consequence": "Whether the tiers take the right amount off a real cart is not known from this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Stores running dated campaigns or gift offers",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "Active with time periods is greyed out on the Free plan and Buy X Get Y is marked as needing test mode or Pro; neither was tried and no paid plan was started.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "Dossier audience for dated campaigns versus features that are greyed out on Free and were not opened.",
+      "status": "not_testable",
+      "buying_consequence": "Dated campaigns and gift offers could not be tested on the Free plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Owners wary of a young app touching checkout",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The app asked to view customer data and staff data and to view and edit store data, the listing shows 5.0 from 6 reviews, and one discount was made without any problem; no cart or checkout was run through it.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "Dossier audience for a young app versus one saved discount and an install screen; no checkout was tried.",
+      "status": "not_testable",
+      "buying_consequence": "How the app behaves in a live checkout during a sale was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Pro $9.99 /month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The app shows Free, Pro at $9.99 a month with unlimited discount rules, all discount types and a 7 day trial, and Custom at $99 a month. The dossier lists Lite at $9.99 and Pro at $25.99 and says Buy X Get Y and active time periods are only on the top tier; the app showed no Lite and no Pro at $25.99.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "Dossier plan names and prices versus the three plan columns of the Billing page on a Basic store.",
+      "status": "contradicted",
+      "buying_consequence": "On a Shopify Basic store the single paid plan costs $9.99 and lists all discount types, which is cheaper than the $25.99 top tier in the dossier.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Shopify Grow",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The listing gives the prices by Shopify plan: $9.99 for Basic, $15.99 for Grow, $19.99 for Advanced and $25.99 for Plus a month. Our store is on Basic, so only $9.99 was seen in the app and the other prices were read from the listing only.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "Dossier flat plan prices versus a listing with prices by Shopify plan that could not be seen in the app.",
+      "status": "not_testable",
+      "buying_consequence": "The monthly price may depend on the Shopify plan of the store, which the dossier does not say; larger stores may pay more.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "2 discount rules",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Free plan lists 2 discount rules and 1 bulk code generation; after one rule the app said that 1 Free-tier discount remains.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "Dossier free tier versus the Free column and the remaining count message in the app.",
+      "status": "confirmed",
+      "buying_consequence": "The free plan is limited to 2 discount rules, so a third rule needs the paid plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Custom $99 /month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Custom plan costs $99 a month and a custom rule build is $120 an hour with no estimate, typically 6 to 10 hours per rule; the Contact button was not pressed and the plan was not tested.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "Plan page wording on custom builds versus a plan that was not tried and a button that was not pressed.",
+      "status": "not_testable",
+      "buying_consequence": "A custom rule at that rate is roughly $720 to $1,200 on top of the monthly fee, which could not be checked.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$9,99 USD every 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify approval screen for Pro shows $9,99 USD every 30 days with a 7-day free trial ending on 24 Nov and a total of $9,99 due 24 Nov plus any applicable taxes. The plan is called Pro Basic. We cancelled the screen and nothing was approved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/smarty-discounts-review.html#claim-vs-measured"
+      },
+      "plan": "Pro approval screen, cancelled, development store",
+      "comparability": "Plan page Pro price versus the approval screen amount; no stored cost rule was compared.",
+      "status": "confirmed",
+      "buying_consequence": "The monthly price of $9.99 matches the plan page before taxes and the first bill comes after the 7-day trial.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Smarty Discounts on a Shopify development store: the install, one automatic volume discount made in the app (Active in the app and in Shopify, not tried in a cart), the plans in the listing and in the app, the Shopify approval screen for Pro (cancelled), and the uninstall dialog, after which the app was uninstalled. Nothing was paid and no theme change was made. Install: the App Store listing (English) is Smarty Discounts by Neezon, rated 5.0 from 6 reviews, with the line Free plan available. Free trial available. The install form was submitted at 15:33:34 and the Install app dialog asked for View customer data, View staff and contributor data and View and edit store data. Install was clicked. The app (version 2.7.1) opened straight on the Free plan without a plan or approval screen; a welcome dialog Welcome to Smarty Discounts with 4 steps was dismissed. No vendor account, call, demo or phone number was asked. Core action, a volume discount on products: Create discount, Amount off product, the method Automatic discount, the title Snowboard volume deal, Percentage, Add tier gave Volume-based on Quantity with Tier 1 (Quantity 2, Get 10.0 %) and Add another tier gave Tier 2 (Quantity 4, Get 20.0 %); both are default values and were not changed. Applies to All products. Save gave the message Snowboard volume deal was created successfully with This discount is automatically applied at checkout and the status Active; the summary card says 2 volume-based tiers up to 20% off and the app says You have 1 Free-tier discounts remaining on your plan. Shopify Discounts shows the discount as Active, Automatic, All customers, Amount off product, Used 0. The dashboard of the app counts 1 automatic product discount and 9 from other apps or Shopify itself. The discount was not seen in a cart or checkout, because the store has a password and we did not run a cart through it; only the status Active in the app and in Shopify was confirmed. Timing, approximate tester observations: about 2 minutes from the install at 15:33:34 to the saved discount (about 15:35), in about 9 clicks and steps. Plans in the listing: Free (2 discount rules); Shopify Basic $9.99 a month or $99.99 a year; Shopify Grow $15.99 a month or $159.99 a year (Advanced $19.99 or $199.99); Shopify Plus $25.99 a month or $259.99 a year; a 7-day free trial; all charges are billed in USD. Plans in the app (Billing): Free with 2 discount rules, 1 bulk code generation and email support (greyed out items: Single code/rule free shipping, Active with time periods, Early access to features); Pro at $9.99 a month, marked Most popular, with Includes 7 day trial, Unlimited discount rules, All discounts types and priority support; Custom at $99 a month, where a custom rule build costs $120 an hour with no estimate (typically 6 to 10 hours per rule, so roughly $720 to $1,200 per rule at that rate) plus $99 a month for maintenance of those rules. The buttons Monthly, Annually (save 2 months) and Apply coupon are on the page, and a banner says You are using a development store, you won't be charged. Differences from the dossier: the dossier lists a Lite plan at $9.99 and a Pro plan at $25.99; the app showed no Lite plan and no Pro at $25.99 (the listing shows $25.99 for Shopify Plus). The app shows one paid plan, Pro at $9.99 on our Shopify Basic development store, and a Custom plan. The dossier question whether Lite includes priority support does not apply: Free has email support and Pro has priority support. Checkout: Upgrade on Pro opened the Shopify Approve subscription screen: You will not be billed for this test charge, the plan Pro Basic, $9,99 USD every 30 days, a 7-day free trial ending on 24 Nov, subtotal $9,99 plus any applicable taxes, total $9,99 due 24 Nov, an Add payment method row and an Approve button. Because a payment method row was on the screen, we pressed Cancel and did not approve; no card was entered and the Free plan stayed active. Cancelling: no subscription was taken. Removing the app goes through Settings, Apps, Smarty Discounts, the menu with Open app, View details, Get support and Uninstall. The dialog Uninstall Smarty Discounts? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Reason for uninstalling) and Testing multiple apps was chosen. Not tested: the discount in a cart or checkout (the store has a password), the dollar cap, tiers by weight, Buy X Get Y (shown as Test mode required and Pro), time periods, the theme link with Activate for the app embed, approving the test subscription, email support and priority support and their speed. Clean up: the app was uninstalled in Settings, Apps at about 15:3x and the installed list no longer showed it. Other apps were not touched. All our own browser tabs were closed. No theme change was made and no test files were used. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The discount was not tried in a cart, the dossier plans Lite at $9.99 and Pro at $25.99 are not in the app (it shows Free, Pro at $9.99 and Custom at $99), the listing prices change with the Shopify plan of the store, the Custom plan charges $120 an hour for each custom rule, and the Pro approval screen carried an Add payment method row, so we cancelled it.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "The discount in a cart or checkout, because the store has a password.",
+      "The dollar cap, tiers by weight, Buy X Get Y and time periods.",
+      "The theme link with the app embed.",
+      "Approving the test subscription.",
+      "Email support, priority support and their speed.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 15:33 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "smarty-discounts:smarty-discounts-q1",

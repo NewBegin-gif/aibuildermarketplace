@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 674 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
+All 675 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1294,7 +1294,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Simple email marketing: free to 2,500 subscribers, Pro from $9 a month.
 - **Best for:** newsletter publishers and small businesses that want a cheap, simple sender with a free tier and no trial clock
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/emailoctopus-review/
+- **Full review:** https://marketingandsalessoftware.com/emailoctopus-review.html
 
 ## Emergent (emergent.sh)
 - **Verified pricing:** (re-verified 2026-10-17 on emergent.sh/pricing in the monthly view, with the annual rates from the same page read on 16 October 2026, and on Emergent's help pages on managing credit usage a…
@@ -2635,7 +2635,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Orateur (orateur.ai)
 - **Verified pricing:** (read 2026-11-03 on orateur.ai/pricing, shown in Swiss francs on the French-language site; on 10 November 2026 the English-language version of the same page showed the same plan figures in …
-- **Honest take:** Prices in Swiss francs or pounds; the AI speaks English and French only.
+- **Honest take:** Pricing FAQ names English and French; four more languages in the app, untested by us.
 - **Best for:** small businesses in Switzerland and French-speaking Europe, such as clinics, salons, fiduciaries and law offices, that miss calls and want an AI receptionist to answer, book appointments and take messages around the clock
 - **Full review:** https://zerotouchsupport.com/orateur-review.html
 
@@ -3207,7 +3207,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-17 on rewardful.com/pricing, US dollars, taxes extra) Starter $49 a month or $490 a year (up to $7,500 a month in affiliate revenue, 1 campaign, 2 team members); Growth $99 a …
 - **Honest take:** Affiliate tracking for Stripe SaaS: from $49 a month, 0% transaction fee.
 - **Best for:** SaaS and AI companies that bill through Stripe and want a dedicated affiliate and referral programme with a flat monthly fee
-- **Full review:** https://aibuildermarketplace.com/b2b/rewardful-review/
+- **Full review:** https://marketingandsalessoftware.com/rewardful-review.html
 
 ## Rewarx Studio AI (rewarx.com)
 - **Verified pricing:** (read 2026-10-23 on the Rewarx listing in the Shopify App Store; the listing says all charges are billed in USD) Rewarx's own pricing page shows no amounts, so the Shopify listing is the pu…
@@ -3352,7 +3352,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/seel-review.html
 
 ## Seele (seeles.ai)
-- **Verified pricing:** (read 2026-10-02 on seeles.ai/upgrade on the monthly, annual and Koin Pack tabs, on the workspace sign-up screen and in the help centre) Everything is paid for in Koins, the platform's cred…
+- **Verified pricing:** (read on seeles.ai/upgrade on 17 November 2026 in our own test session) Standard is $20 a month for 2,000 Koins, Pro $100 for 12,000 and Ultra $200 for 25,000; billed annually they show as …
 - **Honest take:** You cannot know in advance what a game will cost.
 - **Best for:** hobbyists, students and teachers who want to turn an idea, a drawing or a photo into a playable browser game without writing code, and indie developers who want to prototype a game idea quickly before building it properly
 - **Flags:** Usage-metered, Free tier
@@ -3364,6 +3364,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/selixer-review.html
+
+## Selleasy (logbase.io)
+- **Verified pricing:** (prices read 2026-10-30 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/selleasy/pricing; the order-based ladder read on 19 September and 20 October 2026 has been replaced) Bi…
+- **Honest take:** The pricing changed under this review in October 2026, and the vendor's own page has not caught up.
+- **Best for:** shopify stores that want bundles, add-ons, cart funnels and post-purchase offers out of one app on a flat fee that never takes a share of upsell revenue: small stores can test on the free plan
+- **Flags:** Free tier
+- **Full review:** https://marketingandsalessoftware.com/selleasy-review.html
 
 ## Seller Investigators (sellerinvestigators.com)
 - **Verified pricing:** (2026-08-15, read on their own site) One number, and it is the whole model: a 25% commission, charged only after Amazon has deposited recovered funds in your account.

@@ -9,7 +9,7 @@
  "summary": "SMS marketing for Shopify stores: campaigns, automations and opt-in tools.",
  "best_for": "Shopify stores with a list large enough that SMS beats email on response: the per-message economics only work once volume justifies the platform fee",
  "skip_if": "you are testing whether SMS works for you at all: the $49 minimum spend on the free tier means the experiment has a floor before you have sent a single message, and the listed rates cover the US and Canada only",
- "honest_knock": "The $0 a month is not free: it carries a $49 monthly minimum spend, which means $49 is your floor whether you send anything or not. Read the tiers as what they are: a platform fee plus a per-message rate plus carrier fees. That third line is easy to miss because it sits in a footnote rather than on the tier cards, and it is not small: the page puts the average US carrier fee at $0.00418 an SMS and $0.00841 an MMS, so against the $0.009 volume rate on Starter it adds close to half again. Before you compare this with anything, work out your monthly message volume and multiply it out on all three published tiers: Growth costs $100 more than Starter but saves a fifth of a cent per message, so it pays back somewhere around 50,000 messages a month.",
+ "honest_knock": "The $0 a month is not free: it carries a $49 monthly minimum spend, which means $49 is your floor whether you send anything or not. Read the tiers as what they are: a platform fee plus a per-message rate plus carrier fees. That third line is easy to miss because it sits in a footnote rather than on the tier cards, and it is not small: the page puts the average US carrier fee at $0.00435 an SMS and $0.00832 an MMS (read 17 November 2026), so against the $0.009 SMS rate on Starter it adds close to half again. Before you compare this with anything, work out your monthly message volume and multiply it out on all three published tiers: Growth costs $100 more than Starter but saves a tenth of a cent per SMS, so on text alone it pays back at about 100,000 messages a month, and on picture messages, a cent and a half cheaper, at about 6,700.",
  "pricing": {
   "status": "public",
   "entry_price": "$49",
@@ -18,28 +18,28 @@
   "plans": [
    {
     "name": "Starter",
-    "price": "$0 a month with a $49 monthly minimum spend, $0.015 then $0.009 per SMS and $0.045 per MMS",
-    "includes": "plus carrier fees"
+    "price": "$0 a month with a $49 monthly minimum spend",
+    "includes": "$0.009 per SMS and $0.045 per MMS, plus carrier fees"
    },
    {
     "name": "Growth",
-    "price": "$100 a month, $0.01 then $0.008 per SMS and $0.03 per MMS",
-    "includes": ""
+    "price": "$100 a month",
+    "includes": "$0.008 per SMS and $0.03 per MMS, plus carrier fees"
    },
    {
     "name": "Professional",
-    "price": "$500 a month, $0.007 per SMS and $0.024 per MMS",
-    "includes": ""
+    "price": "$500 a month",
+    "includes": "$0.007 per SMS and $0.024 per MMS, plus carrier fees"
    },
    {
     "name": "Enterprise",
-    "price": "contact-sales",
-    "includes": ""
+    "price": "contact sales",
+    "includes": "custom pricing, with an option to add RCS"
    }
   ],
   "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(Re-verified 19 September 2026 on their own pricing page; every figure below is unchanged from the 30 August reading.) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0.015 then $0.009 per SMS and $0.045 per MMS, plus carrier fees. Growth is $100 a month at $0.01 then $0.008 per SMS and $0.03 per MMS. Professional is $500 a month at $0.007 per SMS and $0.024 per MMS. Enterprise is contact-sales. Carrier fees are asterisked on every tier and are quantified in the footnote below the feature list: average US carrier fees of $0.00418 per SMS and $0.00841 per MMS, with the listed rates covering the US 50 states and Canada only. The free trial is a credit equal to $100 against message and carrier fees during your first 30 days; exhaust it and you are billed at the Free package rate unless you select another package. Phone numbers are priced outside the tiers: a dedicated toll-free number is assigned and verified free of charge at install, while a dedicated short code costs $750 a month levied by the carriers and passed on without markup. No contract is required.",
-  "verified_at": "2026-09-19",
+  "notes": "(read 2026-11-17 on postscript.io/pricing and on the App Store listing apps.shopify.com/postscript-sms-marketing, and in our own test session on 17 November 2026; first read 2026-08-30) Starter is $0 a month with a $49 monthly minimum spend at $0.009 per SMS and $0.045 per MMS. Growth is $100 a month at $0.008 per SMS and $0.03 per MMS, and Professional is $500 a month at $0.007 per SMS and $0.024 per MMS; all three add carrier fees. Enterprise is contact sales. The introductory SMS rates we read on 30 August and 19 September 2026, $0.015 on Starter and $0.01 on Growth before the volume rate, are gone from both pages: the pricing page and the listing now print one SMS rate per plan. Carrier fees are asterisked on every tier and quantified in a footnote: average US carrier fees of $0.00435 per SMS and $0.00832 per MMS, and $0.0047 per text RCS message and $0.0087 per media RCS message, with the listed rates covering the US 50 states and Canada only. The pricing page now heads the plans SMS and RCS, and Enterprise lists an option to add RCS. The free trial is a credit equal to $100 against message and carrier fees during your first 30 days, on every plan on the listing, and Growth and Professional also show a 30 day free trial there; exhaust the credit and you are billed at the Free package rate unless you select another package. Phone numbers are priced outside the tiers: a dedicated toll free number is assigned and verified free of charge at install, while a dedicated short code costs $750 a month levied by the carriers and passed on without markup. No contract is required. The same page sells a separate Postscript AI Plan at $699 a month with per message rates from $0.003 to $0.30 depending on the product and message type, through sales. In our own test session the onboarding asked for a billing address and then a phone number, an account email and acceptance of Postscript's terms before it would continue, so we did not reach a plan or payment screen.",
+  "verified_at": "2026-11-17",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": [
@@ -66,16 +66,53 @@
    }
   ],
   "recent_change": null,
-  "price_history": null
+  "price_history": {
+   "status": "changed",
+   "tracked_since": "2026-08-07",
+   "last_read": "2026-11-03",
+   "read_days": 14,
+   "stable": null,
+   "changes": [
+    {
+     "plan": "Starter (introductory SMS rate)",
+     "from": "0.015",
+     "to": "0.009",
+     "unit": "USD per SMS",
+     "between": [
+      "2026-09-19",
+      "2026-11-17"
+     ],
+     "direction": "down",
+     "quote": "Starter is $0 a month with a $49 monthly minimum spend at $0.009 per SMS and $0.045 per MMS",
+     "source_url": "https://postscript.io/pricing",
+     "read_at": "2026-11-17"
+    },
+    {
+     "plan": "Growth (introductory SMS rate)",
+     "from": "0.01",
+     "to": "0.008",
+     "unit": "USD per SMS",
+     "between": [
+      "2026-09-19",
+      "2026-11-17"
+     ],
+     "direction": "down",
+     "quote": "Growth is $100 a month at $0.008 per SMS and $0.03 per MMS",
+     "source_url": "https://postscript.io/pricing",
+     "read_at": "2026-11-17"
+    }
+   ],
+   "method": "Stable = every amount on the vendor's pricing page identical across >= 3 of our reads over >= 30 days. A change is listed only after we confirmed the new price on the page, with a verbatim quote. Differences in raw readings are never published on their own."
+  }
  },
  "free_plan": true,
- "free_plan_evidence": "(Re-verified 19 September 2026 on their own pricing page; every figure below is unchanged from the 30 August reading.) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0.015 then $0.009 per SMS and $0.045 per MMS, plus carrier fees.",
+ "free_plan_evidence": "(read 2026-11-17 on postscript.io/pricing and on the App Store listing apps.shopify.com/postscript-sms-marketing, and in our own test session on 17 November 2026; first read 2026-08-30) Starter is $0 a month with a $49 monthly minimum spend at $0.009 per SMS and $0.045 per MMS.",
  "cost_traps": [
   {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "Read the tiers as what they are: a platform fee plus a per-message rate plus carrier fees.",
-   "verified_at": "2026-09-19",
+   "evidence": "The same page sells a separate Postscript AI Plan at $699 a month with per message rates from $0.003 to $0.30 depending on the product and message type, through sales.",
+   "verified_at": "2026-11-17",
    "source_url": null
   }
  ],

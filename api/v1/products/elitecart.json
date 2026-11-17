@@ -87,18 +87,415 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
-  "free_trial": "quoted",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/elitecart-review.html",
+  "method": [
+   "Development store (Shopify plan Basic): installed the app, switched on the app embed and looked at the cart drawer in the theme preview",
+   "Read the plan screen and the Shopify approval screen for Essentials without approving it, then uninstalled the app"
+  ],
+  "claims": [
+   {
+    "claim": "Includes 200 orders / month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Essentials card says Includes 200 orders / month at $29.99 /month and the slider offered a ladder from 200 up to 5000 orders; the steps in between were not opened.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+    },
+    "plan": "Essentials approval screen, not approved, development store",
+    "comparability": "Dossier Essentials allowance versus the Essentials card and the slider at 200 orders.",
+    "status": "confirmed",
+    "buying_consequence": "The included order allowance of Essentials matches the dossier; the price for volumes between 200 and 5000 orders was not checked.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$29.99 /month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Essentials card shows $29.99 /month at 200 orders and $199.99 /month with the slider at 5000 orders, so the price rises with volume as the dossier says; the example of an extra $10 at 500 orders was not checked.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+    },
+    "plan": "Essentials approval screen, not approved, development store",
+    "comparability": "Dossier entry price versus the Essentials card at 200 orders and at 5000 orders.",
+    "status": "confirmed",
+    "buying_consequence": "The entry price of Essentials matches the dossier and the monthly price grows with volume.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$79.99 /month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Professional card shows $79.99 /month with Includes 500 orders / month and $399.99 /month with the slider at 5000 orders.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+    },
+    "plan": "Essentials approval screen, not approved, development store",
+    "comparability": "Dossier Professional price versus the Professional card at 500 orders and at 5000 orders.",
+    "status": "confirmed",
+    "buying_consequence": "The entry price of Professional matches the dossier; its extra features were not tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free access for development stores.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Plans screen gives free access to every feature on a development store and says a plan must be chosen once the store is on a paid Shopify plan or transferred; the dossier says there is no free plan for a normal store, which this test could not check.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+    },
+    "plan": "Essentials approval screen, not approved, development store",
+    "comparability": "Dossier no free plan wording versus free access on a development store, a different condition.",
+    "status": "not_comparable",
+    "buying_consequence": "A development store has free access, which a paying shop does not get, so the no free plan statement of the dossier could not be tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "You have a 15-day free trial ending on 2 Dec.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Shopify approval screen for Essentials says a 15-day free trial ending on 2 Dec., which matches the 15 days of the listing and not the 14 days of the dossier pricing page; Approve was greyed out and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+    },
+    "plan": "Essentials approval screen, not approved, development store",
+    "comparability": "Dossier trial length of 15 days on the listing and 14 on the pricing page versus the approval screen of 15 days.",
+    "status": "confirmed",
+    "buying_consequence": "The trial that Shopify shows is 15 days, and the card is asked before it can start.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Buy Two",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "A cart drawer with a Matching Items row appeared in the theme preview after the app embed was switched on, but the cart apps Cross Sell Auto and Essential Cart were also switched on, and the Buy Two discount came from another app, so none of this is proven to be EliteCart.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+    },
+    "plan": "Essentials approval screen, not approved, development store",
+    "comparability": "Dossier cart drawer wording versus a drawer in a store where other cart apps were also on; it could not be separated.",
+    "status": "not_testable",
+    "buying_consequence": "The one-click add-ons, the reward bar and the in-cart upsells of the dossier could not be credited to EliteCart in this store.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$29,99 USD every 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Shopify approval screen shows $29,99 USD every 30 days, a total of $29,99 due 2 Dec after the 15-day trial plus any applicable taxes, an app spending limit of $229,99 USD per 30 days and a note that usage charges come on top; Approve was greyed out and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+    },
+    "plan": "Essentials approval screen, not approved, development store",
+    "comparability": "Dossier Essentials price versus the approval screen amount; no stored cost rule was compared.",
+    "status": "confirmed",
+    "buying_consequence": "The list price of $29.99 a month matches the dossier, with usage charges possible on top and a spending limit of $229,99 per 30 days.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested EliteCart on a Shopify development store: the install, the app embed switched on and saved in the theme, a cart drawer in the theme preview (not proven to be EliteCart alone, because the cart apps Cross Sell Auto and Essential Cart were also switched on, and the Buy Two discount came from another app), the plan screen with the order slider, the Shopify approval screen for Essentials (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:13 in our own tab; Shopify showed the Install app dialog for EliteCart & Upsell by GEFA Technology with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on Welcome to EliteCart with a Get started list (1 of 4 complete). Step 3, Start your trial, said that as a Shopify Partner development store we have free access and need not subscribe. No separate account, demo or call was asked. Core action, turn on the cart drawer and look at it in the theme preview, about 2 minutes (14:14 to 14:15) and 13 steps: in the theme editor, in our own tab, the app embed EliteCart & Upsell was switched on and the theme was SAVED (Changes saved.), because that was needed to see a result. In the preview we went to The Complete Snowboard and pressed Add to cart. A cart drawer opened with The Complete Snowboard, Color: Ice, a label Buy Two, a price of $629.96 with $699.95 struck through, a row Matching Items with The Collection Snowboard: Liquid $749.95, The Multi-managed Snowboard $629.95 and The Multi-location Snowboard $729.95, and at the bottom Subtotal $1,399.90 USD, Discount -$139.98 USD, Total $1,259.92 USD and a CHECKOUT button. After Activate the Get started list showed 2 of 4 complete. IMPORTANT, this result is not proven to be EliteCart alone: our development store also had the cart apps Cross Sell Auto and Essential Cart switched on in the theme. With EliteCart off, the cart icon showed a different drawer (Cart - 1, You may also like); with EliteCart on, the cart icon still opened that other drawer, and the Matching Items drawer appeared only when Add to cart was pressed. We believe the Matching Items drawer comes from EliteCart because it appeared after the embed was switched on, but this was not confirmed separately in the Cart designer. The Buy Two discount (Discount -$139.98 USD) came from another app and cannot be credited to EliteCart. So we do not claim the drawer as a proven EliteCart result; what is proven here is the install, the plans, the approval screen and the uninstall. Plans: the Plans screen says Free access for development stores. You can access all features for free. Once you switch to a paid Shopify plan or transfer the store, you must select a plan below. A slider How many orders do you have per month? starts at 200: Essentials $29.99 /month, Includes 200 orders / month, Try for free; Professional $79.99 /month, Includes 500 orders / month, Most popular, Try for free; Enterprise Contact us, For an individual quote. With the slider at 5000 orders Essentials showed $199.99 /month and Professional $399.99 /month, both with 5000 orders a month. The ladder between 200 and 5000 orders was not opened step by step, and the dossier example of an extra $10 at 500 orders was not checked. Checkout: Try for free on Essentials opened the Shopify Approve subscription screen: You have a 15-day free trial ending on 2 Dec., Subtotal $29,99 plus any applicable taxes, Total $29,99 Due 2 Dec, $29,99 USD every 30 days, an app spending limit of a maximum of $229,99 USD per 30 days, and a note that usage charges come on top. The button Add payment method was shown and Approve was greyed out. The sentence You will not be billed for this test charge was NOT on this screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Nothing was approved. The listing says a 15-day trial and the dossier pricing page says 14 days; the Shopify screen said 15. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and the menu (Open app, View details, Get support, Uninstall). The dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before Uninstall becomes active; we first pressed Cancel and later uninstalled the app with the reason Testing multiple apps, and Shopify confirmed that the app was uninstalled. Not tested: the Cart designer, one-click add-ons, the reward bar, the Upsells flows, Language and translations (multilingual), AI translations, EliteAI Ultra, Analytics, the paid plans and a real charge, the Plus checkout add-ons and the vendor help. Clean up: the theme was saved with the EliteCart app embed switched on (needed for the result; a second save changed nothing); the other cart apps in the store were left as they were. Our own tabs were closed. The app was uninstalled after the files were written. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Other cart apps in the store were switched on, so the drawer in the preview could not be credited to EliteCart alone, the app embed had to be switched on and saved in the theme editor, the Essentials approval screen needs a payment method and has no test charge sentence, and usage charges come on top of the subscription.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Proof that the cart drawer in the preview comes from EliteCart alone, and the Buy Two discount, which came from another app.",
+    "The Cart designer, one-click add-ons, the reward bar and the Upsells flows.",
+    "Language and translations, AI translations and EliteAI Ultra.",
+    "Analytics, the Plus checkout add-ons and the vendor help.",
+    "The paid plans, a real charge and cancelling a paid plan.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:13 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/elitecart-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/elitecart-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "The Shopify approval screen for Essentials says a 15-day free trial ending on 2 Dec., which matches the 15 days of the listing and not the 14 days of the dossier pricing page; Approve was greyed out and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested EliteCart on a Shopify development store: the install, the app embed switched on and saved in the theme, a cart drawer in the theme preview (not proven to be EliteCart alone, because the cart apps Cross Sell Auto and Essential Cart were also switched on, and the Buy Two discount came from another app), the plan screen with the order slider, the Shopify approval screen for Essentials (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:13 in our own tab; Shopify showed the Install app dialog for EliteCart & Upsell by GEFA Technology with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on Welcome to EliteCart with a Get started list (1 of 4 complete). Step 3, Start your trial, said that as a Shopify Partner development store we have free access and need not subscribe. No separate account, demo or call was asked. Core action, turn on the cart drawer and look at it in the theme preview, about 2 minutes (14:14 to 14:15) and 13 steps: in the theme editor, in our own tab, the app embed EliteCart & Upsell was switched on and the theme was SAVED (Changes saved.), because that was needed to see a result. In the preview we went to The Complete Snowboard and pressed Add to cart. A cart drawer opened with The Complete Snowboard, Color: Ice, a label Buy Two, a price of $629.96 with $699.95 struck through, a row Matching Items with The Collection Snowboard: Liquid $749.95, The Multi-managed Snowboard $629.95 and The Multi-location Snowboard $729.95, and at the bottom Subtotal $1,399.90 USD, Discount -$139.98 USD, Total $1,259.92 USD and a CHECKOUT button. After Activate the Get started list showed 2 of 4 complete. IMPORTANT, this result is not proven to be EliteCart alone: our development store also had the cart apps Cross Sell Auto and Essential Cart switched on in the theme. With EliteCart off, the cart icon showed a different drawer (Cart - 1, You may also like); with EliteCart on, the cart icon still opened that other drawer, and the Matching Items drawer appeared only when Add to cart was pressed. We believe the Matching Items drawer comes from EliteCart because it appeared after the embed was switched on, but this was not confirmed separately in the Cart designer. The Buy Two discount (Discount -$139.98 USD) came from another app and cannot be credited to EliteCart. So we do not claim the drawer as a proven EliteCart result; what is proven here is the install, the plans, the approval screen and the uninstall. Plans: the Plans screen says Free access for development stores. You can access all features for free. Once you switch to a paid Shopify plan or transfer the store, you must select a plan below. A slider How many orders do you have per month? starts at 200: Essentials $29.99 /month, Includes 200 orders / month, Try for free; Professional $79.99 /month, Includes 500 orders / month, Most popular, Try for free; Enterprise Contact us, For an individual quote. With the slider at 5000 orders Essentials showed $199.99 /month and Professional $399.99 /month, both with 5000 orders a month. The ladder between 200 and 5000 orders was not opened step by step, and the dossier example of an extra $10 at 500 orders was not checked. Checkout: Try for free on Essentials opened the Shopify Approve subscription screen: You have a 15-day free trial ending on 2 Dec., Subtotal $29,99 plus any applicable taxes, Total $29,99 Due 2 Dec, $29,99 USD every 30 days, an app spending limit of a maximum of $229,99 USD per 30 days, and a note that usage charges come on top. The button Add payment method was shown and Approve was greyed out. The sentence You will not be billed for this test charge was NOT on this screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Nothing was approved. The listing says a 15-day trial and the dossier pricing page says 14 days; the Shopify screen said 15. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and the menu (Open app, View details, Get support, Uninstall). The dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before Uninstall becomes active; we first pressed Cancel and later uninstalled the app with the reason Testing multiple apps, and Shopify confirmed that the app was uninstalled. Not tested: the Cart designer, one-click add-ons, the reward bar, the Upsells flows, Language and translations (multilingual), AI translations, EliteAI Ultra, Analytics, the paid plans and a real charge, the Plus checkout add-ons and the vendor help. Clean up: the theme was saved with the EliteCart app embed switched on (needed for the result; a second save changed nothing); the other cart apps in the store were left as they were. Our own tabs were closed. The app was uninstalled after the files were written. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/elitecart-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested EliteCart on a Shopify development store: the install, the app embed switched on and saved in the theme, a cart drawer in the theme preview (not proven to be EliteCart alone, because the cart apps Cross Sell Auto and Essential Cart were also switched on, and the Buy Two discount came from another app), the plan screen with the order slider, the Shopify approval screen for Essentials (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:13 in our own tab; Shopify showed the Install app dialog for EliteCart & Upsell by GEFA Technology with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on Welcome to EliteCart with a Get started list (1 of 4 complete). Step 3, Start your trial, said that as a Shopify Partner development store we have free access and need not subscribe. No separate account, demo or call was asked. Core action, turn on the cart drawer and look at it in the theme preview, about 2 minutes (14:14 to 14:15) and 13 steps: in the theme editor, in our own tab, the app embed EliteCart & Upsell was switched on and the theme was SAVED (Changes saved.), because that was needed to see a result. In the preview we went to The Complete Snowboard and pressed Add to cart. A cart drawer opened with The Complete Snowboard, Color: Ice, a label Buy Two, a price of $629.96 with $699.95 struck through, a row Matching Items with The Collection Snowboard: Liquid $749.95, The Multi-managed Snowboard $629.95 and The Multi-location Snowboard $729.95, and at the bottom Subtotal $1,399.90 USD, Discount -$139.98 USD, Total $1,259.92 USD and a CHECKOUT button. After Activate the Get started list showed 2 of 4 complete. IMPORTANT, this result is not proven to be EliteCart alone: our development store also had the cart apps Cross Sell Auto and Essential Cart switched on in the theme. With EliteCart off, the cart icon showed a different drawer (Cart - 1, You may also like); with EliteCart on, the cart icon still opened that other drawer, and the Matching Items drawer appeared only when Add to cart was pressed. We believe the Matching Items drawer comes from EliteCart because it appeared after the embed was switched on, but this was not confirmed separately in the Cart designer. The Buy Two discount (Discount -$139.98 USD) came from another app and cannot be credited to EliteCart. So we do not claim the drawer as a proven EliteCart result; what is proven here is the install, the plans, the approval screen and the uninstall. Plans: the Plans screen says Free access for development stores. You can access all features for free. Once you switch to a paid Shopify plan or transfer the store, you must select a plan below. A slider How many orders do you have per month? starts at 200: Essentials $29.99 /month, Includes 200 orders / month, Try for free; Professional $79.99 /month, Includes 500 orders / month, Most popular, Try for free; Enterprise Contact us, For an individual quote. With the slider at 5000 orders Essentials showed $199.99 /month and Professional $399.99 /month, both with 5000 orders a month. The ladder between 200 and 5000 orders was not opened step by step, and the dossier example of an extra $10 at 500 orders was not checked. Checkout: Try for free on Essentials opened the Shopify Approve subscription screen: You have a 15-day free trial ending on 2 Dec., Subtotal $29,99 plus any applicable taxes, Total $29,99 Due 2 Dec, $29,99 USD every 30 days, an app spending limit of a maximum of $229,99 USD per 30 days, and a note that usage charges come on top. The button Add payment method was shown and Approve was greyed out. The sentence You will not be billed for this test charge was NOT on this screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Nothing was approved. The listing says a 15-day trial and the dossier pricing page says 14 days; the Shopify screen said 15. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and the menu (Open app, View details, Get support, Uninstall). The dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before Uninstall becomes active; we first pressed Cancel and later uninstalled the app with the reason Testing multiple apps, and Shopify confirmed that the app was uninstalled. Not tested: the Cart designer, one-click add-ons, the reward bar, the Upsells flows, Language and translations (multilingual), AI translations, EliteAI Ultra, Analytics, the paid plans and a real charge, the Plus checkout add-ons and the vendor help. Clean up: the theme was saved with the EliteCart app embed switched on (needed for the result; a second save changed nothing); the other cart apps in the store were left as they were. Our own tabs were closed. The app was uninstalled after the files were written. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/elitecart-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/elitecart-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "EliteCart",
+    "product_id": "elitecart",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested EliteCart on a Shopify development store: the install, the app embed switched on and saved in the theme, a cart drawer in the theme preview (not proven to be EliteCart alone, because the cart apps Cross Sell Auto and Essential Cart were also switched on, and the Buy Two discount came from another app), the plan screen with the order slider, the Shopify approval screen for Essentials (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:13 in our own tab; Shopify showed the Install app dialog for EliteCart & Upsell by GEFA Technology with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on Welcome to EliteCart with a Get started list (1 of 4 complete). Step 3, Start your trial, said that as a Shopify Partner development store we have free access and need not subscribe. No separate account, demo or call was asked. Core action, turn on the cart drawer and look at it in the theme preview, about 2 minutes (14:14 to 14:15) and 13 steps: in the theme editor, in our own tab, the app embed EliteCart & Upsell was switched on and the theme was SAVED (Changes saved.), because that was needed to see a result. In the preview we went to The Complete Snowboard and pressed Add to cart. A cart drawer opened with The Complete Snowboard, Color: Ice, a label Buy Two, a price of $629.96 with $699.95 struck through, a row Matching Items with The Collection Snowboard: Liquid $749.95, The Multi-managed Snowboard $629.95 and The Multi-location Snowboard $729.95, and at the bottom Subtotal $1,399.90 USD, Discount -$139.98 USD, Total $1,259.92 USD and a CHECKOUT button. After Activate the Get started list showed 2 of 4 complete. IMPORTANT, this result is not proven to be EliteCart alone: our development store also had the cart apps Cross Sell Auto and Essential Cart switched on in the theme. With EliteCart off, the cart icon showed a different drawer (Cart - 1, You may also like); with EliteCart on, the cart icon still opened that other drawer, and the Matching Items drawer appeared only when Add to cart was pressed. We believe the Matching Items drawer comes from EliteCart because it appeared after the embed was switched on, but this was not confirmed separately in the Cart designer. The Buy Two discount (Discount -$139.98 USD) came from another app and cannot be credited to EliteCart. So we do not claim the drawer as a proven EliteCart result; what is proven here is the install, the plans, the approval screen and the uninstall. Plans: the Plans screen says Free access for development stores. You can access all features for free. Once you switch to a paid Shopify plan or transfer the store, you must select a plan below. A slider How many orders do you have per month? starts at 200: Essentials $29.99 /month, Includes 200 orders / month, Try for free; Professional $79.99 /month, Includes 500 orders / month, Most popular, Try for free; Enterprise Contact us, For an individual quote. With the slider at 5000 orders Essentials showed $199.99 /month and Professional $399.99 /month, both with 5000 orders a month. The ladder between 200 and 5000 orders was not opened step by step, and the dossier example of an extra $10 at 500 orders was not checked. Checkout: Try for free on Essentials opened the Shopify Approve subscription screen: You have a 15-day free trial ending on 2 Dec., Subtotal $29,99 plus any applicable taxes, Total $29,99 Due 2 Dec, $29,99 USD every 30 days, an app spending limit of a maximum of $229,99 USD per 30 days, and a note that usage charges come on top. The button Add payment method was shown and Approve was greyed out. The sentence You will not be billed for this test charge was NOT on this screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Nothing was approved. The listing says a 15-day trial and the dossier pricing page says 14 days; the Shopify screen said 15. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and the menu (Open app, View details, Get support, Uninstall). The dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before Uninstall becomes active; we first pressed Cancel and later uninstalled the app with the reason Testing multiple apps, and Shopify confirmed that the app was uninstalled. Not tested: the Cart designer, one-click add-ons, the reward bar, the Upsells flows, Language and translations (multilingual), AI translations, EliteAI Ultra, Analytics, the paid plans and a real charge, the Plus checkout add-ons and the vendor help. Clean up: the theme was saved with the EliteCart app embed switched on (needed for the result; a second save changed nothing); the other cart apps in the store were left as they were. Our own tabs were closed. The app was uninstalled after the files were written. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"Includes 200 orders / month\". What we saw: The Essentials card says Includes 200 orders / month at $29.99 /month and the slider offered a ladder from 200 up to 5000 orders; the steps in between were not opened.",
+     "Text we checked: \"$29.99 /month\". What we saw: The Essentials card shows $29.99 /month at 200 orders and $199.99 /month with the slider at 5000 orders, so the price rises with volume as the dossier says; the example of an extra $10 at 500 orders was not checked.",
+     "Text we checked: \"$79.99 /month\". What we saw: The Professional card shows $79.99 /month with Includes 500 orders / month and $399.99 /month with the slider at 5000 orders.",
+     "Text we checked: \"You have a 15-day free trial ending on 2 Dec\". What we saw: The Shopify approval screen for Essentials says a 15-day free trial ending on 2 Dec., which matches the 15 days of the listing and not the 14 days of the dossier pricing page; Approve was greyed out and nothing was approved."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Proof that the cart drawer in the preview comes from EliteCart alone, and the Buy Two discount, which came from another app.",
+     "The Cart designer, one-click add-ons, the reward bar and the Upsells flows.",
+     "Language and translations, AI translations and EliteAI Ultra.",
+     "Analytics, the Plus checkout add-ons and the vendor help.",
+     "The paid plans, a real charge and cancelling a paid plan.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:13 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Includes 200 orders / month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Essentials card says Includes 200 orders / month at $29.99 /month and the slider offered a ladder from 200 up to 5000 orders; the steps in between were not opened.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+      },
+      "plan": "Essentials approval screen, not approved, development store",
+      "comparability": "Dossier Essentials allowance versus the Essentials card and the slider at 200 orders.",
+      "status": "confirmed",
+      "buying_consequence": "The included order allowance of Essentials matches the dossier; the price for volumes between 200 and 5000 orders was not checked.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$29.99 /month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Essentials card shows $29.99 /month at 200 orders and $199.99 /month with the slider at 5000 orders, so the price rises with volume as the dossier says; the example of an extra $10 at 500 orders was not checked.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+      },
+      "plan": "Essentials approval screen, not approved, development store",
+      "comparability": "Dossier entry price versus the Essentials card at 200 orders and at 5000 orders.",
+      "status": "confirmed",
+      "buying_consequence": "The entry price of Essentials matches the dossier and the monthly price grows with volume.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$79.99 /month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Professional card shows $79.99 /month with Includes 500 orders / month and $399.99 /month with the slider at 5000 orders.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+      },
+      "plan": "Essentials approval screen, not approved, development store",
+      "comparability": "Dossier Professional price versus the Professional card at 500 orders and at 5000 orders.",
+      "status": "confirmed",
+      "buying_consequence": "The entry price of Professional matches the dossier; its extra features were not tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free access for development stores.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Plans screen gives free access to every feature on a development store and says a plan must be chosen once the store is on a paid Shopify plan or transferred; the dossier says there is no free plan for a normal store, which this test could not check.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+      },
+      "plan": "Essentials approval screen, not approved, development store",
+      "comparability": "Dossier no free plan wording versus free access on a development store, a different condition.",
+      "status": "not_comparable",
+      "buying_consequence": "A development store has free access, which a paying shop does not get, so the no free plan statement of the dossier could not be tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "You have a 15-day free trial ending on 2 Dec.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify approval screen for Essentials says a 15-day free trial ending on 2 Dec., which matches the 15 days of the listing and not the 14 days of the dossier pricing page; Approve was greyed out and nothing was approved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+      },
+      "plan": "Essentials approval screen, not approved, development store",
+      "comparability": "Dossier trial length of 15 days on the listing and 14 on the pricing page versus the approval screen of 15 days.",
+      "status": "confirmed",
+      "buying_consequence": "The trial that Shopify shows is 15 days, and the card is asked before it can start.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Buy Two",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "A cart drawer with a Matching Items row appeared in the theme preview after the app embed was switched on, but the cart apps Cross Sell Auto and Essential Cart were also switched on, and the Buy Two discount came from another app, so none of this is proven to be EliteCart.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+      },
+      "plan": "Essentials approval screen, not approved, development store",
+      "comparability": "Dossier cart drawer wording versus a drawer in a store where other cart apps were also on; it could not be separated.",
+      "status": "not_testable",
+      "buying_consequence": "The one-click add-ons, the reward bar and the in-cart upsells of the dossier could not be credited to EliteCart in this store.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$29,99 USD every 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify approval screen shows $29,99 USD every 30 days, a total of $29,99 due 2 Dec after the 15-day trial plus any applicable taxes, an app spending limit of $229,99 USD per 30 days and a note that usage charges come on top; Approve was greyed out and nothing was approved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/elitecart-review.html#claim-vs-measured"
+      },
+      "plan": "Essentials approval screen, not approved, development store",
+      "comparability": "Dossier Essentials price versus the approval screen amount; no stored cost rule was compared.",
+      "status": "confirmed",
+      "buying_consequence": "The list price of $29.99 a month matches the dossier, with usage charges possible on top and a spending limit of $229,99 per 30 days.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested EliteCart on a Shopify development store: the install, the app embed switched on and saved in the theme, a cart drawer in the theme preview (not proven to be EliteCart alone, because the cart apps Cross Sell Auto and Essential Cart were also switched on, and the Buy Two discount came from another app), the plan screen with the order slider, the Shopify approval screen for Essentials (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:13 in our own tab; Shopify showed the Install app dialog for EliteCart & Upsell by GEFA Technology with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on Welcome to EliteCart with a Get started list (1 of 4 complete). Step 3, Start your trial, said that as a Shopify Partner development store we have free access and need not subscribe. No separate account, demo or call was asked. Core action, turn on the cart drawer and look at it in the theme preview, about 2 minutes (14:14 to 14:15) and 13 steps: in the theme editor, in our own tab, the app embed EliteCart & Upsell was switched on and the theme was SAVED (Changes saved.), because that was needed to see a result. In the preview we went to The Complete Snowboard and pressed Add to cart. A cart drawer opened with The Complete Snowboard, Color: Ice, a label Buy Two, a price of $629.96 with $699.95 struck through, a row Matching Items with The Collection Snowboard: Liquid $749.95, The Multi-managed Snowboard $629.95 and The Multi-location Snowboard $729.95, and at the bottom Subtotal $1,399.90 USD, Discount -$139.98 USD, Total $1,259.92 USD and a CHECKOUT button. After Activate the Get started list showed 2 of 4 complete. IMPORTANT, this result is not proven to be EliteCart alone: our development store also had the cart apps Cross Sell Auto and Essential Cart switched on in the theme. With EliteCart off, the cart icon showed a different drawer (Cart - 1, You may also like); with EliteCart on, the cart icon still opened that other drawer, and the Matching Items drawer appeared only when Add to cart was pressed. We believe the Matching Items drawer comes from EliteCart because it appeared after the embed was switched on, but this was not confirmed separately in the Cart designer. The Buy Two discount (Discount -$139.98 USD) came from another app and cannot be credited to EliteCart. So we do not claim the drawer as a proven EliteCart result; what is proven here is the install, the plans, the approval screen and the uninstall. Plans: the Plans screen says Free access for development stores. You can access all features for free. Once you switch to a paid Shopify plan or transfer the store, you must select a plan below. A slider How many orders do you have per month? starts at 200: Essentials $29.99 /month, Includes 200 orders / month, Try for free; Professional $79.99 /month, Includes 500 orders / month, Most popular, Try for free; Enterprise Contact us, For an individual quote. With the slider at 5000 orders Essentials showed $199.99 /month and Professional $399.99 /month, both with 5000 orders a month. The ladder between 200 and 5000 orders was not opened step by step, and the dossier example of an extra $10 at 500 orders was not checked. Checkout: Try for free on Essentials opened the Shopify Approve subscription screen: You have a 15-day free trial ending on 2 Dec., Subtotal $29,99 plus any applicable taxes, Total $29,99 Due 2 Dec, $29,99 USD every 30 days, an app spending limit of a maximum of $229,99 USD per 30 days, and a note that usage charges come on top. The button Add payment method was shown and Approve was greyed out. The sentence You will not be billed for this test charge was NOT on this screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Nothing was approved. The listing says a 15-day trial and the dossier pricing page says 14 days; the Shopify screen said 15. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and the menu (Open app, View details, Get support, Uninstall). The dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before Uninstall becomes active; we first pressed Cancel and later uninstalled the app with the reason Testing multiple apps, and Shopify confirmed that the app was uninstalled. Not tested: the Cart designer, one-click add-ons, the reward bar, the Upsells flows, Language and translations (multilingual), AI translations, EliteAI Ultra, Analytics, the paid plans and a real charge, the Plus checkout add-ons and the vendor help. Clean up: the theme was saved with the EliteCart app embed switched on (needed for the result; a second save changed nothing); the other cart apps in the store were left as they were. Our own tabs were closed. The app was uninstalled after the files were written. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Other cart apps in the store were switched on, so the drawer in the preview could not be credited to EliteCart alone, the app embed had to be switched on and saved in the theme editor, the Essentials approval screen needs a payment method and has no test charge sentence, and usage charges come on top of the subscription.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "Proof that the cart drawer in the preview comes from EliteCart alone, and the Buy Two discount, which came from another app.",
+      "The Cart designer, one-click add-ons, the reward bar and the Upsells flows.",
+      "Language and translations, AI translations and EliteAI Ultra.",
+      "Analytics, the Plus checkout add-ons and the vendor help.",
+      "The paid plans, a real charge and cancelling a paid plan.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:13 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "elitecart:cancellation_terms",

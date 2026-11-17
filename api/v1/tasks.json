@@ -3263,6 +3263,180 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "My Stories",
+   "product_id": "my-stories",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested My Stories on a Shopify development store. The core action, making a story from an uploaded video, did not succeed because our browser tool could not reach the upload button inside the iframe of the app; that is a limit of the test tool and not a finding about the app. Seen were the install permissions, the plan screen with Free, Pro and Advanced, the Shopify approval screen for Pro (not approved), the Lead Form page on the Free plan, the upload screen, the Link Video page and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the App Store listing (English, https://apps.shopify.com/videos-stories-on-products) opened the Install app dialog in the admin, which asked for View customer data (Sensitive data), View staff and contributor data (Store owner, blog contributors) and View and edit store data (Customers, products, Online Store, Shopify admin). The install was started at about 14:57 and approved at about 14:58, and about 1 minute after the start the app showed the screen Select a plan (/app/pricing); there was no other onboarding. Core action NOT DONE: the goal was to upload a video, link it to a test product and show it in the theme preview. This did not succeed. The reason was our browser tool and not the app: the app runs in a cross-origin iframe, and with our browser tools the file input of the upload button could not be reached, so the system file picker could not be used. A test video of 4 seconds (540x960, no faces) was ready but could not be offered to the app. The app was therefore not tried on its core action, and nothing here is a finding against the app. No story was made, no preview was seen, no theme change was made and nothing was saved in the theme. What was seen: the start screen Welcome to My Stories (You can upload vertical Story videos and display them on your product pages, collections, standalone pages, or homepage.) with 1 out of 6 steps completed (Upload your first video, Link your video to a product, Add Stories block to product page / collections page / Homepage / page template); the empty video library (No videos uploaded yet.); the Upload Video screen (Start uploading videos, with the button Upload Videos); and the Link Video page with four choices, Link to products, Link to collections, Link to homepage and Link to pages. Up to this point the steps were: install (2 clicks), choose a plan (1 click) and go to the upload screen (2 clicks). Plans: the in-app screen, the same as the App Store, has a switch Pay monthly or Pay yearly. Free: Up to 10 videos uploaded, Unlimited videos views, Link videos everywhere, Shoppables Videos, Watermark. Pro: $14.00 a month, 7 trial days, Everything in Free, Up to 100 videos uploaded, Lead Form, Up to 20 leads per month, Story performance analytics, NO watermark. Advanced: $45.00 a month, 7 trial days, Everything in Pro, Unlimited uploaded videos, Lead Form, Unlimited leads per month, Story performance analytics, NO watermark. The App Store lists $140 a year and $450 a year and a 7-day free trial. Deviation from the dossier: the dossier names the plans Beginner at $0, Advanced at $14 and Pro at $45, while the app and the App Store call them Free, Pro at $14 and Advanced at $45, so the names of the two paid plans are swapped. Checkout: the Free plan was chosen first (no approval screen; the button became Current plan). Then Pro was clicked to see the checkout: the Shopify Approve subscription screen shows My Stories by GetMyStories, plan Pro, $14,00 USD every 30 days, You have a 7-day free trial ending on 24 Nov., a subtotal of $14,00 plus any applicable taxes, a total of $14,00 due 24 Nov., an Add payment method row and a greyed out Approve button. The sentence about a test charge was NOT on this screen and a payment method was asked, so nothing was approved; no card was entered. The Cancel button gave a toast: The shop cannot accept the provided charge. Advanced was not opened. Lead Form: on the Free plan the page says Available on paid plans (The lead form and leads list are available on Advanced and Pro plans), and the switch Enable Lead Form is switched off and greyed out. Cancelling: no subscription ran, because the Free plan was used. Removing the app goes through Settings, Apps, the menu of the app (Open app, View details, Get support, Uninstall) and the dialog Uninstall My Stories?, which says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. A reason is required (Select all that apply); we gave Testing multiple apps at about 15:04 and the app left the installed list. Not tested: uploading a video, linking it to a product, the Stories block in the theme, the preview, the shoppable button, the Lead Form itself (it needs a paid plan), the analytics, the watermark, the loading speed and the paid plans. Clean up: nothing was created in the store and nothing was saved in the theme; the app was uninstalled; the test video stayed on our own side; all browser tabs were closed. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"$14.00 / month\". What we saw: The plan screen and the App Store list Free, Pro at $14.00 a month and Advanced at $45.00 a month. The dossier names the plans Beginner at $0, Advanced at $14 and Pro at $45, so the prices of the tiers match but the names of the two paid plans are swapped.",
+    "Text we checked: \"Available on paid plans\". What we saw: On the Free plan the Lead Form page says Available on paid plans and the switch Enable Lead Form is greyed out; the plan cards list Lead Form only under Pro and Advanced.",
+    "Text we checked: \"You have a 7-day free trial ending on 24 Nov\". What we saw: The Shopify approval screen for Pro says You have a 7-day free trial ending on 24 Nov., as the plan card says 7 trial days, but it asks for a payment method and Approve was greyed out."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The core action: uploading a video, linking it to a product and showing the story in the theme preview, which could not be done because our browser tool could not reach the upload in the iframe of the app.",
+    "The Stories block in the theme, the shoppable button, the Lead Form itself, the analytics, the watermark and the loading speed.",
+    "The paid plans, which need a payment method.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:57 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "$14.00 / month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen and the App Store list Free, Pro at $14.00 a month and Advanced at $45.00 a month. The dossier names the plans Beginner at $0, Advanced at $14 and Pro at $45, so the prices of the tiers match but the names of the two paid plans are swapped.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/my-stories-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier plan names versus the plan names on the in-app screen; the amounts per tier are the same.",
+     "status": "contradicted",
+     "buying_consequence": "Someone who looks for Pro at $45 as in the dossier finds Pro at $14 and Advanced at $45; the price steps are the same.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "NO watermark",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free card lists Watermark and the Pro and Advanced cards list NO watermark. No story was made, so the watermark was not seen on a storefront.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/my-stories-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Plan card wording versus a storefront that was never reached.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about how the watermark looks or whether it is removed on a paid plan, because no story was shown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Available on paid plans",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "On the Free plan the Lead Form page says Available on paid plans and the switch Enable Lead Form is greyed out; the plan cards list Lead Form only under Pro and Advanced.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/my-stories-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Plan card list versus the Lead Form page on the Free plan.",
+     "status": "confirmed",
+     "buying_consequence": "Lead capture on a story needs Pro at $14.00 a month or Advanced at $45.00 a month; the Free plan has none.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Up to 10 videos uploaded",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free card lists Up to 10 videos uploaded and Pro lists Up to 100 videos uploaded; no video was uploaded, so the limits were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/my-stories-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Plan card limits versus an upload that could not be done with our browser tool.",
+     "status": "not_testable",
+     "buying_consequence": "The video limits per plan could be read but not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You can upload vertical Story videos and display them on your product pages",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The start screen says videos can be shown on product pages, collections, standalone pages or the homepage. The upload was not done, because our browser tool could not reach the file input in the iframe of the app; this says nothing about the app.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/my-stories-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Start screen wording versus a core action that our test tool could not reach.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about whether a story can be made and shown; the core action was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have a 7-day free trial ending on 24 Nov.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Pro says You have a 7-day free trial ending on 24 Nov., as the plan card says 7 trial days, but it asks for a payment method and Approve was greyed out.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/my-stories-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Plan card trial wording versus the approval screen; the trial was not started.",
+     "status": "confirmed",
+     "buying_consequence": "A 7-day trial exists on both paid plans, but starting it needs a payment method on the development store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$14,00 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Pro shows $14,00 USD every 30 days, a subtotal of $14,00 plus any applicable taxes and a total of $14,00 due 24 Nov. Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/my-stories-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Plan card price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The price of $14.00 a month on the plan card matches the approval screen before taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested My Stories on a Shopify development store. The core action, making a story from an uploaded video, did not succeed because our browser tool could not reach the upload button inside the iframe of the app; that is a limit of the test tool and not a finding about the app. Seen were the install permissions, the plan screen with Free, Pro and Advanced, the Shopify approval screen for Pro (not approved), the Lead Form page on the Free plan, the upload screen, the Link Video page and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the App Store listing (English, https://apps.shopify.com/videos-stories-on-products) opened the Install app dialog in the admin, which asked for View customer data (Sensitive data), View staff and contributor data (Store owner, blog contributors) and View and edit store data (Customers, products, Online Store, Shopify admin). The install was started at about 14:57 and approved at about 14:58, and about 1 minute after the start the app showed the screen Select a plan (/app/pricing); there was no other onboarding. Core action NOT DONE: the goal was to upload a video, link it to a test product and show it in the theme preview. This did not succeed. The reason was our browser tool and not the app: the app runs in a cross-origin iframe, and with our browser tools the file input of the upload button could not be reached, so the system file picker could not be used. A test video of 4 seconds (540x960, no faces) was ready but could not be offered to the app. The app was therefore not tried on its core action, and nothing here is a finding against the app. No story was made, no preview was seen, no theme change was made and nothing was saved in the theme. What was seen: the start screen Welcome to My Stories (You can upload vertical Story videos and display them on your product pages, collections, standalone pages, or homepage.) with 1 out of 6 steps completed (Upload your first video, Link your video to a product, Add Stories block to product page / collections page / Homepage / page template); the empty video library (No videos uploaded yet.); the Upload Video screen (Start uploading videos, with the button Upload Videos); and the Link Video page with four choices, Link to products, Link to collections, Link to homepage and Link to pages. Up to this point the steps were: install (2 clicks), choose a plan (1 click) and go to the upload screen (2 clicks). Plans: the in-app screen, the same as the App Store, has a switch Pay monthly or Pay yearly. Free: Up to 10 videos uploaded, Unlimited videos views, Link videos everywhere, Shoppables Videos, Watermark. Pro: $14.00 a month, 7 trial days, Everything in Free, Up to 100 videos uploaded, Lead Form, Up to 20 leads per month, Story performance analytics, NO watermark. Advanced: $45.00 a month, 7 trial days, Everything in Pro, Unlimited uploaded videos, Lead Form, Unlimited leads per month, Story performance analytics, NO watermark. The App Store lists $140 a year and $450 a year and a 7-day free trial. Deviation from the dossier: the dossier names the plans Beginner at $0, Advanced at $14 and Pro at $45, while the app and the App Store call them Free, Pro at $14 and Advanced at $45, so the names of the two paid plans are swapped. Checkout: the Free plan was chosen first (no approval screen; the button became Current plan). Then Pro was clicked to see the checkout: the Shopify Approve subscription screen shows My Stories by GetMyStories, plan Pro, $14,00 USD every 30 days, You have a 7-day free trial ending on 24 Nov., a subtotal of $14,00 plus any applicable taxes, a total of $14,00 due 24 Nov., an Add payment method row and a greyed out Approve button. The sentence about a test charge was NOT on this screen and a payment method was asked, so nothing was approved; no card was entered. The Cancel button gave a toast: The shop cannot accept the provided charge. Advanced was not opened. Lead Form: on the Free plan the page says Available on paid plans (The lead form and leads list are available on Advanced and Pro plans), and the switch Enable Lead Form is switched off and greyed out. Cancelling: no subscription ran, because the Free plan was used. Removing the app goes through Settings, Apps, the menu of the app (Open app, View details, Get support, Uninstall) and the dialog Uninstall My Stories?, which says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. A reason is required (Select all that apply); we gave Testing multiple apps at about 15:04 and the app left the installed list. Not tested: uploading a video, linking it to a product, the Stories block in the theme, the preview, the shoppable button, the Lead Form itself (it needs a paid plan), the analytics, the watermark, the loading speed and the paid plans. Clean up: nothing was created in the store and nothing was saved in the theme; the app was uninstalled; the test video stayed on our own side; all browser tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The plan screen comes straight after the install, before any onboarding; the Pro approval screen asks for a payment method and has no test charge sentence; its Cancel button gave a toast, The shop cannot accept the provided charge.; and the Lead Form page shows the whole form on the Free plan with the switch greyed out. The plan names in the dossier are swapped against the app.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The core action: uploading a video, linking it to a product and showing the story in the theme preview, which could not be done because our browser tool could not reach the upload in the iframe of the app.",
+     "The Stories block in the theme, the shoppable button, the Lead Form itself, the analytics, the watermark and the loading speed.",
+     "The paid plans, which need a payment method.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:57 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Essential Cart Drawer",
    "product_id": "essential-cart-drawer",
    "run_date": "2026-11-17",
@@ -8806,6 +8980,187 @@
   },
   {
    "source": "session",
+   "product_name": "Vify Order Printer",
+   "product_id": "vify-order-printer",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Vify Order Printer on a Shopify development store: the install on the Free plan, an invoice for a test order in about 1 minute and 3 clicks (the tab stayed on the print dialog, so the evidence image is our own local rendering of the invoice HTML and not a screenshot of the PDF), the plan screen, the Shopify approval screen for Starter (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:28 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved at about 14:28:50. The app opened straight on the Free plan, with no plan choice, no separate account and no demo, on a screen Welcome to Vify Order Printer with a step guide at 0 of 4. Core action, an invoice for the test order #1001, a little over 1 minute after the start of the install (about 14:29:20) and 3 clicks from the order list: Orders, order #1001, the printer icon, Print invoice. The result was a page called invoice_1001.pdf on a Vify address (api-pdf.vify.ai), which is an HTML print view that calls window.print(); the browser tab stayed on the print dialog. About the evidence image of the invoice: image 03 is not a screenshot of the PDF. Because the tab hung on the print dialog, we rendered the HTML of that same invoice page ourselves, locally and headless, and took the image from that rendering. It shows what the page contains, but we did not open or check the real PDF file, so page size, fonts and the real print result were not seen. The invoice contains INVOICE, the store block, SHIPPING ADDRESS, Invoice Number: #1001, Order Date: 2026-11-16 08:59:20, the item The Collection Snowboard: Liquid 1 x $749.95, Grand total $749.95, PAYMENT INFORMATION, a QR code, Thank you for your purchase! and the branding Created by VIFY on the Free plan, with a grey LOGO placeholder. On the Free plan the app says You are using FREE plan. You can only view the latest 50 orders. and, for removing the Vify branding in the PDF invoice, Please contact support to verify your store in order to have this feature for free. The download menu per order has Download invoice, Download packing slip, Download refund and Download by language (greyed out). Plans: Plans (Monthly) shows FREE $0, STARTER $8.99 USD/Month, PREMIUM $29.99 and ULTIMATE $69.99, with 14-day free trial with any plan, This offer only applies to your first charge. and Cancel anytime on the paid plans. Starter lists Branding removal, Invoice Edit, Email Automation, Unlimited orders and Auto-detect language by customer locale; Premium adds Quotes, Send emails with store's email address, Commercial invoice, Invoice Generator and Online Storage; Ultimate adds 1 Custom template of your design and Free customization. Peppol, ZUGFeRD, Factur-X and VAT numbers are not in the plan lists. The listing and the dossier name Starter at $10.99, while the app shows $8.99. The Yearly view was not opened. Checkout: Start 14-day free trial on Starter opened the Shopify Approve subscription screen: STARTER PLAN, $8,99 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $8,99 plus any applicable taxes, Total $8,99 Due 1 Dec, and an Add payment method row. Approve was greyed out, the sentence about a test charge was NOT on the screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason is required (the button is greyed out until one is chosen). The app was uninstalled afterwards. Not tested: the automatic invoice email, bulk processing, the Invoice generator, quotes, the commercial invoice, e-invoice formats, removing the branding, editing templates, the Yearly plans, and opening the real PDF. Clean up: no theme changes; the app was uninstalled; our own tabs were closed. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Print invoice\". What we saw: An invoice for the test order #1001 opened about 1 minute after the start of the install and 3 clicks from the order list, as an HTML print view; the tab stayed on the print dialog and the real PDF was not opened, so the evidence image is our own local rendering.",
+    "Text we checked: \"Branding removal\". What we saw: The Free invoice carries Created by VIFY and a LOGO placeholder, and Starter lists Branding removal; the removal itself was not tried and the app also offers verification of the store to get it for free.",
+    "Text we checked: \"Starter $10.99\". What we saw: The Plans page shows STARTER at $8.99 USD/Month (monthly) and the Shopify screen shows $8,99 USD every 30 days; the listing and the dossier name $10.99. The Yearly view was not opened.",
+    "Text we checked: \"14-day free trial with any plan\". What we saw: The Plans page offers a 14-day free trial with any plan, first charge only, and the Shopify approval screen for Starter says a 14-day free trial ending on 1 Dec.; Approve was greyed out and nothing was approved."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Opening the real PDF file, its page size and its fonts; the evidence image is our own local rendering of the invoice HTML.",
+    "The automatic invoice email and bulk processing.",
+    "The Invoice generator, quotes and the commercial invoice.",
+    "E-invoice formats and VAT numbers, which are not in the plan lists.",
+    "Removing the branding, editing templates and the Yearly plans.",
+    "Cancelling a paid plan, because no paid plan was started.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:28 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Print invoice",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "An invoice for the test order #1001 opened about 1 minute after the start of the install and 3 clicks from the order list, as an HTML print view; the tab stayed on the print dialog and the real PDF was not opened, so the evidence image is our own local rendering.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+     },
+     "plan": "Starter approval screen, not approved, development store",
+     "comparability": "Dossier invoice wording versus the invoice print page of one test order; the PDF itself was not opened.",
+     "status": "confirmed",
+     "buying_consequence": "An invoice for an order is quick to get, but we did not see the real PDF file.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Branding removal",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free invoice carries Created by VIFY and a LOGO placeholder, and Starter lists Branding removal; the removal itself was not tried and the app also offers verification of the store to get it for free.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+     },
+     "plan": "Starter approval screen, not approved, development store",
+     "comparability": "Dossier branding wording versus the Free invoice and the Starter list; removal was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "Branding sits on the Free invoice and is listed as removed from Starter; removing it was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unlimited orders",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Starter list says Unlimited orders and the Free plan says You can only view the latest 50 orders.; only two test orders existed, so the limit itself was not reached.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+     },
+     "plan": "Starter approval screen, not approved, development store",
+     "comparability": "Dossier order limit wording versus plan lists; only two orders existed.",
+     "status": "not_testable",
+     "buying_consequence": "The order limit of the Free plan and the lack of one on Starter could not be tried with two orders.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Starter $10.99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Plans page shows STARTER at $8.99 USD/Month (monthly) and the Shopify screen shows $8,99 USD every 30 days; the listing and the dossier name $10.99. The Yearly view was not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+     },
+     "plan": "Starter approval screen, not approved, development store",
+     "comparability": "Dossier Starter price versus the Starter card and the approval screen.",
+     "status": "contradicted",
+     "buying_consequence": "The monthly price of Starter in the app is lower than the dossier price.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Peppol/ZUGFeRD/Factur-X",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan lists do not name Peppol, ZUGFeRD, Factur-X or VAT numbers and no e-invoice format was tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+     },
+     "plan": "Starter approval screen, not approved, development store",
+     "comparability": "Dossier e-invoice wording versus plan lists that do not name these formats; nothing was tried.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about e-invoice formats or VAT numbers.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "14-day free trial with any plan.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Plans page offers a 14-day free trial with any plan, first charge only, and the Shopify approval screen for Starter says a 14-day free trial ending on 1 Dec.; Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+     },
+     "plan": "Starter approval screen, not approved, development store",
+     "comparability": "Dossier trial wording versus the Plans page and the approval screen.",
+     "status": "confirmed",
+     "buying_consequence": "A 14-day trial is shown, but a payment method is asked before it can start.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$8,99 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen shows $8,99 USD every 30 days, a total of $8,99 due 1 Dec after the trial plus any applicable taxes; the Starter card shows $8.99 USD/Month; Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+     },
+     "plan": "Starter approval screen, not approved, development store",
+     "comparability": "Starter card price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The price on the Starter card matches the approval screen, with taxes on top.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Vify Order Printer on a Shopify development store: the install on the Free plan, an invoice for a test order in about 1 minute and 3 clicks (the tab stayed on the print dialog, so the evidence image is our own local rendering of the invoice HTML and not a screenshot of the PDF), the plan screen, the Shopify approval screen for Starter (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:28 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved at about 14:28:50. The app opened straight on the Free plan, with no plan choice, no separate account and no demo, on a screen Welcome to Vify Order Printer with a step guide at 0 of 4. Core action, an invoice for the test order #1001, a little over 1 minute after the start of the install (about 14:29:20) and 3 clicks from the order list: Orders, order #1001, the printer icon, Print invoice. The result was a page called invoice_1001.pdf on a Vify address (api-pdf.vify.ai), which is an HTML print view that calls window.print(); the browser tab stayed on the print dialog. IMPORTANT about the evidence image of the invoice: image 03 is NOT a screenshot of the PDF. Because the tab hung on the print dialog, we rendered the HTML of that same invoice page ourselves, locally and headless, and took the image from that rendering. It shows what the page contains, but we did not open or check the real PDF file, so page size, fonts and the real print result were not seen. The invoice contains INVOICE, the store block, SHIPPING ADDRESS, Invoice Number: #1001, Order Date: 2026-11-16 08:59:20, the item The Collection Snowboard: Liquid 1 x $749.95, Grand total $749.95, PAYMENT INFORMATION, a QR code, Thank you for your purchase! and the branding Created by VIFY on the Free plan, with a grey LOGO placeholder. On the Free plan the app says You are using FREE plan. You can only view the latest 50 orders. and, for removing the Vify branding in the PDF invoice, Please contact support to verify your store in order to have this feature for free. The download menu per order has Download invoice, Download packing slip, Download refund and Download by language (greyed out). Plans: Plans (Monthly) shows FREE $0, STARTER $8.99 USD/Month, PREMIUM $29.99 and ULTIMATE $69.99, with 14-day free trial with any plan, This offer only applies to your first charge. and Cancel anytime on the paid plans. Starter lists Branding removal, Invoice Edit, Email Automation, Unlimited orders and Auto-detect language by customer locale; Premium adds Quotes, Send emails with store's email address, Commercial invoice, Invoice Generator and Online Storage; Ultimate adds 1 Custom template of your design and Free customization. Peppol, ZUGFeRD, Factur-X and VAT numbers are not in the plan lists. The listing and the dossier name Starter at $10.99, while the app shows $8.99. The Yearly view was not opened. Checkout: Start 14-day free trial on Starter opened the Shopify Approve subscription screen: STARTER PLAN, $8,99 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $8,99 plus any applicable taxes, Total $8,99 Due 1 Dec, and an Add payment method row. Approve was greyed out, the sentence about a test charge was NOT on the screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason is required (the button is greyed out until one is chosen). The app was uninstalled afterwards. Not tested: the automatic invoice email, bulk processing, the Invoice generator, quotes, the commercial invoice, e-invoice formats, removing the branding, editing templates, the Yearly plans, and opening the real PDF. Clean up: no theme changes; the app was uninstalled; our own tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The invoice opened as an HTML print view that called the print dialog and left the tab hanging, the invoice carried Vify branding and a logo placeholder on the Free plan, the Free plan only shows the latest 50 orders, and the Starter approval screen needs a payment method and has no test charge sentence.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Opening the real PDF file, its page size and its fonts; the evidence image is our own local rendering of the invoice HTML.",
+     "The automatic invoice email and bulk processing.",
+     "The Invoice generator, quotes and the commercial invoice.",
+     "E-invoice formats and VAT numbers, which are not in the plan lists.",
+     "Removing the branding, editing templates and the Yearly plans.",
+     "Cancelling a paid plan, because no paid plan was started.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:28 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Pagecloud",
    "product_id": "pagecloud",
    "run_date": "2026-10-30",
@@ -9131,6 +9486,342 @@
    "evidence_status": "original_session_record_not_retained",
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Bold Upsell",
+   "product_id": "bold-upsell",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Upsell (in the admin Bold Product Upsell) on a Shopify development store: the install, the Basic test charge approved without a payment method, one Upsell offer made in about 8 minutes and seen only in the preview inside the app (the app embed stayed inactive and other upsell apps were also switched on in the store), the plan shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at 14:34 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on a login page and then a plan selection at about 14:35. In the admin the app is called Bold Product Upsell, while the App Store listing says Bold AI Upsell & Cross-Sell. Our development store also had other upsell apps switched on; everything below comes from the Bold app or the Bold install and approval screens. Approval: the plan selection showed one plan, Basic $4.99 /month (Boost your average order value from day one with Bold Upsell), with the button Get Started for Free. This led to a Shopify Approve subscription screen: You will not be billed for this test charge., plan Basic, $4,99 USD every 30 days, You have a 7-day free trial ending on 24 Nov., Subtotal $4,99, Total $4,99 Due 24 Nov. An Add payment method row was shown but not required. Because the screen said it was a test charge, we approved it at 14:36; no payment method was entered and nothing was billed. Core action, one upsell offer, about 8 minutes (14:34 to 14:42) after the install and about 12 clicks from Manual Offers: an onboarding Enable the Bold Upsell App Embed in three steps (Configure your theme, Choose your offer type, Configure your offer) was continued without opening the theme editor; then Setting up your Smart Offers and Smart Offers Queued (We're still learning about your store! To give you the best offers, we need a bit more order data.). Under Manual Offers, Create Your First Offer, Choose Offer Type (Cross-sell Buy X Get Y, Upsell, Post-Purchase Thank You Page, Post-Purchase Email, Free Gift, Funnel, Rewards Bar, Bundles and subscription offers), we picked Upsell, then Configure & Style: Offer Name Snowboard upgrade, Location Product Page (Only one location available), Trigger Products All products selected, Offer Products 1 product selected (The 3p Fulfilled Snowboard $2629.95). The preview inside the app, a pop-up, showed Want to upgrade?, Accepting this offer will replace the original item in your cart with the offer below., a button Replace item and a link No thanks, at about 14:41. Create Offer gave Offer created successfully. and the list showed Snowboard upgrade, Upsell, Product Page Pop-up, Views 0, Conversions 0, Revenue $0.00, Active, at about 14:42. The banner said App Embed Status: Inactive, Action required to display upsells on your storefront. Please enable the Bold Upsell App Embed in your theme. We did not switch the embed on, so the offer was NOT seen on the storefront; only the preview inside the app was seen, and no theme change was saved. Plans: the app showed only the Basic plan at $4.99 /month, which agrees with the App Store; the other plans of the listing (Grow, Advanced, Plus) were not shown in the app. Cancelling: no payment was ever due and the trial was not cancelled separately. The app was uninstalled via Settings, Apps, the row Bold Product Upsell and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and at about 14:48 the app was gone from the installed apps. No separate account, demo, call or phone number was asked. Not tested: the storefront display (the app embed was not switched on), offers in the cart or drawer, post-purchase offers, checkout offers for Plus, Smart Offers (no order data yet), the plans Grow, Advanced and Plus, and a real conversion. Clean up: no theme changes were saved; only the offer Snowboard upgrade existed in the app and went away with the uninstall; other apps were not touched; our own tabs were closed. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Busy stores on the Shopify Basic plan\". What we saw: About 8 minutes after the install and about 12 clicks from Manual Offers, one Upsell offer was made and shown in the preview inside the app; the app embed was inactive, so it was not seen on the storefront.",
+    "Text we checked: \"Basic $4.99 /month\". What we saw: The app shows one plan, Basic $4.99 /month, which agrees with the App Store; the other plans of the listing were not shown in the app."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The offer on the storefront, because the app embed was not switched on and no theme change was saved.",
+    "Offers in the cart or drawer, post-purchase offers and checkout offers for Plus.",
+    "Smart Offers, which needed more order data.",
+    "The plans Grow, Advanced and Plus, which the app did not show.",
+    "A real conversion.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:34 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Busy stores on the Shopify Basic plan",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "About 8 minutes after the install and about 12 clicks from Manual Offers, one Upsell offer was made and shown in the preview inside the app; the app embed was inactive, so it was not seen on the storefront.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-upsell-review.html#claim-vs-measured"
+     },
+     "plan": "Basic test charge approved, development store, nothing billed",
+     "comparability": "Dossier Basic plan audience wording versus one offer made in the app; the storefront was not seen.",
+     "status": "confirmed",
+     "buying_consequence": "A first offer can be made in minutes on the Basic plan of the app, but it was only seen in the app preview.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shopify Plus stores wanting offers inside checkout",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The offer types in the app include Post-Purchase pages and a Funnel, but no checkout offer was made and the store was not on Plus, so offers inside checkout could not be checked.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-upsell-review.html#claim-vs-measured"
+     },
+     "plan": "Basic test charge approved, development store, nothing billed",
+     "comparability": "Dossier Plus checkout wording versus a development store on a Basic test plan.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about offers inside checkout for Plus stores.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores on Shopify Advanced",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app showed only the Basic plan and the store was on a Basic test plan, so nothing about stores on Shopify Advanced could be tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-upsell-review.html#claim-vs-measured"
+     },
+     "plan": "Basic test charge approved, development store, nothing billed",
+     "comparability": "Dossier Advanced audience wording versus a development store with a Basic test plan.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about Shopify Advanced stores or the other app plans.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Basic $4.99 /month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app shows one plan, Basic $4.99 /month, which agrees with the App Store; the other plans of the listing were not shown in the app.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-upsell-review.html#claim-vs-measured"
+     },
+     "plan": "Basic test charge approved, development store, nothing billed",
+     "comparability": "Dossier Basic price versus the Basic card in the app; the other plans were not shown.",
+     "status": "confirmed",
+     "buying_consequence": "The entry price of the Basic plan matches the listing; the higher plans were not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have a 7-day free trial ending on 24 Nov.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Basic says a 7-day free trial ending on 24 Nov. and a test charge that is not billed; it was approved without a payment method and nothing was billed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-upsell-review.html#claim-vs-measured"
+     },
+     "plan": "Basic test charge approved, development store, nothing billed",
+     "comparability": "Trial wording on the approval screen versus a development store where the test charge is not billed.",
+     "status": "not_comparable",
+     "buying_consequence": "A trial of 7 days is shown, and a development store is not billed; what a normal store pays after the trial was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "App Embed Status: Inactive",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Manual Offers page says the app embed is inactive and asks for it to be enabled in the theme; we did not enable it, so the display of the offer on the storefront was not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-upsell-review.html#claim-vs-measured"
+     },
+     "plan": "Basic test charge approved, development store, nothing billed",
+     "comparability": "Dossier storefront wording versus an inactive app embed and other upsell apps also switched on in the store.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about how the offer looks or works on the storefront.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$4,99 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen shows $4,99 USD every 30 days and a total of $4,99 due 24 Nov plus any applicable taxes; the Basic card shows $4.99 /month; the screen said it was a test charge and nothing was billed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-upsell-review.html#claim-vs-measured"
+     },
+     "plan": "Basic test charge approved, development store, nothing billed",
+     "comparability": "Basic card price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The price on the Basic card matches the approval screen, with taxes on top.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Upsell (in the admin Bold Product Upsell) on a Shopify development store: the install, the Basic test charge approved without a payment method, one Upsell offer made in about 8 minutes and seen only in the preview inside the app (the app embed stayed inactive and other upsell apps were also switched on in the store), the plan shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at 14:34 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on a login page and then a plan selection at about 14:35. In the admin the app is called Bold Product Upsell, while the App Store listing says Bold AI Upsell & Cross-Sell. Our development store also had other upsell apps switched on; everything below comes from the Bold app or the Bold install and approval screens. Approval: the plan selection showed one plan, Basic $4.99 /month (Boost your average order value from day one with Bold Upsell), with the button Get Started for Free. This led to a Shopify Approve subscription screen: You will not be billed for this test charge., plan Basic, $4,99 USD every 30 days, You have a 7-day free trial ending on 24 Nov., Subtotal $4,99, Total $4,99 Due 24 Nov. An Add payment method row was shown but not required. Because the screen said it was a test charge, we approved it at 14:36; no payment method was entered and nothing was billed. Core action, one upsell offer, about 8 minutes (14:34 to 14:42) after the install and about 12 clicks from Manual Offers: an onboarding Enable the Bold Upsell App Embed in three steps (Configure your theme, Choose your offer type, Configure your offer) was continued without opening the theme editor; then Setting up your Smart Offers and Smart Offers Queued (We're still learning about your store! To give you the best offers, we need a bit more order data.). Under Manual Offers, Create Your First Offer, Choose Offer Type (Cross-sell Buy X Get Y, Upsell, Post-Purchase Thank You Page, Post-Purchase Email, Free Gift, Funnel, Rewards Bar, Bundles and subscription offers), we picked Upsell, then Configure & Style: Offer Name Snowboard upgrade, Location Product Page (Only one location available), Trigger Products All products selected, Offer Products 1 product selected (The 3p Fulfilled Snowboard $2629.95). The preview inside the app, a pop-up, showed Want to upgrade?, Accepting this offer will replace the original item in your cart with the offer below., a button Replace item and a link No thanks, at about 14:41. Create Offer gave Offer created successfully. and the list showed Snowboard upgrade, Upsell, Product Page Pop-up, Views 0, Conversions 0, Revenue $0.00, Active, at about 14:42. The banner said App Embed Status: Inactive, Action required to display upsells on your storefront. Please enable the Bold Upsell App Embed in your theme. We did not switch the embed on, so the offer was NOT seen on the storefront; only the preview inside the app was seen, and no theme change was saved. Plans: the app showed only the Basic plan at $4.99 /month, which agrees with the App Store; the other plans of the listing (Grow, Advanced, Plus) were not shown in the app. Cancelling: no payment was ever due and the trial was not cancelled separately. The app was uninstalled via Settings, Apps, the row Bold Product Upsell and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and at about 14:48 the app was gone from the installed apps. No separate account, demo, call or phone number was asked. Not tested: the storefront display (the app embed was not switched on), offers in the cart or drawer, post-purchase offers, checkout offers for Plus, Smart Offers (no order data yet), the plans Grow, Advanced and Plus, and a real conversion. Clean up: no theme changes were saved; only the offer Snowboard upgrade existed in the app and went away with the uninstall; other apps were not touched; our own tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The onboarding wants the app embed switched on in the theme before anything shows on the storefront, the Smart Offers need more order data, the app shows only the Basic plan, and other upsell apps were also switched on in the store.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The offer on the storefront, because the app embed was not switched on and no theme change was saved.",
+     "Offers in the cart or drawer, post-purchase offers and checkout offers for Plus.",
+     "Smart Offers, which needed more order data.",
+     "The plans Grow, Advanced and Plus, which the app did not show.",
+     "A real conversion.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:34 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Bold Custom Pricing",
+   "product_id": "bold-custom-pricing",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Custom Pricing (in the admin BOLD Custom Pricing: Wholesale) on a Shopify development store: the install, a forced plan choice, the Essential test charge approved without a payment method, one wholesale price rule of 20 percent for one product made in about 2 minutes after the plan approval (the sync stayed in the queue, so the price was not seen in the store), the three plans shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at about 14:40 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app first showed an onboarding screen with Book my onboarding (a free session with an expert) and Continue without help; we chose Continue without help and booked nothing. The app then forced a plan choice (Select Your Account Plan) before the dashboard opened. In the admin the app is called BOLD Custom Pricing: Wholesale, while the App Store title is Custom Pricing: Wholesale B2B. Plans and approval: the plan screen shows Essential - $29 billed monthly (14-day free trial, 1 Customer Tag, Manual Customer Tagging, Tax Controls, Unlimited Quantity Breaks), Standard - $65 billed monthly (Most popular; 1-10 Customer Tags, Auto-Emails, Auto-Tagging) and Complete - $129 billed monthly (Unlimited Customer Tags, Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support, SLA). The dossier names Standard at $69, while the app shows $65. We chose Essential, the cheapest; a dialog Update Plan said This change will update your plan to: Essential at $29 / month. Shopify then showed an Approve subscription screen: You will not be billed for this test charge., plan Essential, $29,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Total $29,00 Due 1 Dec, with an Add payment method row that was not filled in. Because the screen said it was a test charge, we approved it; no payment method was entered and nothing was billed, and the app opened without a further payment question. Core action, one price rule for wholesale customers, about 2 minutes after the plan was approved (saved at about 14:42) and about 12 screens or clicks: Manage Tags, Add Tag with the tag wholesale and Discount % 20 (the description is required and the form said Description cannot be empty. until we typed Trade customers); then Product Pricing Groups, Create Product Pricing Group with the Internal Name Wholesale 20 percent off, Calculation Type Percent Discount, Select Products and The 3p Fulfilled Snowboard ($2629.95); Setup Pricing showed a column wholesale with 20 %, and Save. A first try with an empty group had been thrown away because the first group screen said You must have at least one price level for your group. until the tag existed. Result: the group list shows Wholesale 20 percent off, switched on, with Sync queued, and a notice Syncing 0 items with Shopify, 1 items in queue with Product prices will not be updated until its process is synced: and the label In Queue. After 10 seconds it still said In Queue. We did NOT see the price in the store or in the theme preview for a tagged customer, because the sync was still queued; the effect of the rule on a store page was not tested. The onboarding checklist (Select a theme, completed 0 of 5, with a remark about a password protected store) was not followed, because that would ask for a theme change. Cancelling: no payment was ever due, so there was no paid subscription to cancel, and no cancel step was looked for inside the app. The app was uninstalled via Settings, Apps, the row BOLD Custom Pricing: Wholesale and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and Shopify confirmed that the app was uninstalled. No call or demo was booked. Not tested: the price on the storefront for a tagged customer, checkout, POS, quantity breaks, Auto-Tagging (Standard), CSV import (Complete), a second group or tag, the theme selection and preview, and the onboarding session. Clean up: no theme changes were saved; the app was uninstalled, which removes its tag and group; other apps were not touched; our own tabs were closed. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Essential - $29 billed monthly\". What we saw: The plan screen shows Essential at $29 billed monthly with a 14-day free trial, 1 Customer Tag and Unlimited Quantity Breaks, and the Shopify approval screen shows $29,00 USD every 30 days.",
+    "Text we checked: \"Standard $69\". What we saw: The plan screen shows Standard at $65 billed monthly, marked Most popular, with 1-10 Customer Tags, Auto-Emails and Auto-Tagging; the dossier names $69. Standard was not chosen and its features were not tried.",
+    "Text we checked: \"You have a 14-day free trial ending on 1 Dec\". What we saw: The Essential card says a 14-day free trial and the Shopify approval screen says a 14-day free trial ending on 1 Dec. and a test charge that is not billed; it was approved without a payment method and nothing was billed."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The price for a tagged customer on the storefront or in the theme preview, because the sync stayed queued.",
+    "Checkout, POS and quantity breaks.",
+    "Auto-Tagging (Standard) and CSV price imports (Complete).",
+    "A second group or tag, the theme selection and the onboarding session.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:40 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Essential - $29 billed monthly",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen shows Essential at $29 billed monthly with a 14-day free trial, 1 Customer Tag and Unlimited Quantity Breaks, and the Shopify approval screen shows $29,00 USD every 30 days.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+     },
+     "plan": "Essential test charge approved, development store, nothing billed",
+     "comparability": "Dossier Essential price versus the plan screen and the approval screen.",
+     "status": "confirmed",
+     "buying_consequence": "The entry price of Essential matches between the plan screen and the approval screen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Standard $69",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen shows Standard at $65 billed monthly, marked Most popular, with 1-10 Customer Tags, Auto-Emails and Auto-Tagging; the dossier names $69. Standard was not chosen and its features were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+     },
+     "plan": "Essential test charge approved, development store, nothing billed",
+     "comparability": "Dossier Standard price versus the Standard card in the app.",
+     "status": "contradicted",
+     "buying_consequence": "The monthly price of Standard in the app is lower than the dossier price.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Complete - $129 billed monthly",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen shows Complete at $129 billed monthly with Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support and SLA; none of these was tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+     },
+     "plan": "Essential test charge approved, development store, nothing billed",
+     "comparability": "Dossier Complete wording versus the Complete card; no feature of it was tried.",
+     "status": "not_testable",
+     "buying_consequence": "The features of the Complete plan could not be checked beyond the list.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have a 14-day free trial ending on 1 Dec.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Essential card says a 14-day free trial and the Shopify approval screen says a 14-day free trial ending on 1 Dec. and a test charge that is not billed; it was approved without a payment method and nothing was billed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+     },
+     "plan": "Essential test charge approved, development store, nothing billed",
+     "comparability": "Essential card trial wording versus the approval screen of a development store.",
+     "status": "confirmed",
+     "buying_consequence": "A trial of 14 days is shown on both screens; what a normal store pays after it was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Product prices will not be updated until its process is synced:",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "A wholesale rule of 20 percent for one product was saved in about 2 minutes after the plan approval, but the sync stayed In Queue and the price was not seen in the store or the theme preview for a tagged customer.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+     },
+     "plan": "Essential test charge approved, development store, nothing billed",
+     "comparability": "Dossier wholesale price wording versus a rule whose sync stayed queued; the storefront was not seen.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about whether the wholesale price shows up for a tagged customer and how long the sync takes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$29,00 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen shows $29,00 USD every 30 days and a total of $29,00 due 1 Dec plus any applicable taxes; the Essential card shows $29 billed monthly; the screen said it was a test charge and nothing was billed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+     },
+     "plan": "Essential test charge approved, development store, nothing billed",
+     "comparability": "Essential card price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The price on the Essential card matches the approval screen, with taxes on top.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Custom Pricing (in the admin BOLD Custom Pricing: Wholesale) on a Shopify development store: the install, a forced plan choice, the Essential test charge approved without a payment method, one wholesale price rule of 20 percent for one product made in about 2 minutes after the plan approval (the sync stayed in the queue, so the price was not seen in the store), the three plans shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at about 14:40 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app first showed an onboarding screen with Book my onboarding (a free session with an expert) and Continue without help; we chose Continue without help and booked nothing. The app then forced a plan choice (Select Your Account Plan) before the dashboard opened. In the admin the app is called BOLD Custom Pricing: Wholesale, while the App Store title is Custom Pricing: Wholesale B2B. Plans and approval: the plan screen shows Essential - $29 billed monthly (14-day free trial, 1 Customer Tag, Manual Customer Tagging, Tax Controls, Unlimited Quantity Breaks), Standard - $65 billed monthly (Most popular; 1-10 Customer Tags, Auto-Emails, Auto-Tagging) and Complete - $129 billed monthly (Unlimited Customer Tags, Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support, SLA). The dossier names Standard at $69, while the app shows $65. We chose Essential, the cheapest; a dialog Update Plan said This change will update your plan to: Essential at $29 / month. Shopify then showed an Approve subscription screen: You will not be billed for this test charge., plan Essential, $29,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Total $29,00 Due 1 Dec, with an Add payment method row that was not filled in. Because the screen said it was a test charge, we approved it; no payment method was entered and nothing was billed, and the app opened without a further payment question. Core action, one price rule for wholesale customers, about 2 minutes after the plan was approved (saved at about 14:42) and about 12 screens or clicks: Manage Tags, Add Tag with the tag wholesale and Discount % 20 (the description is required and the form said Description cannot be empty. until we typed Trade customers); then Product Pricing Groups, Create Product Pricing Group with the Internal Name Wholesale 20 percent off, Calculation Type Percent Discount, Select Products and The 3p Fulfilled Snowboard ($2629.95); Setup Pricing showed a column wholesale with 20 %, and Save. A first try with an empty group had been thrown away because the first group screen said You must have at least one price level for your group. until the tag existed. Result: the group list shows Wholesale 20 percent off, switched on, with Sync queued, and a notice Syncing 0 items with Shopify, 1 items in queue with Product prices will not be updated until its process is synced: and the label In Queue. After 10 seconds it still said In Queue. We did NOT see the price in the store or in the theme preview for a tagged customer, because the sync was still queued; the effect of the rule on a store page was not tested. The onboarding checklist (Select a theme, completed 0 of 5, with a remark about a password protected store) was not followed, because that would ask for a theme change. Cancelling: no payment was ever due, so there was no paid subscription to cancel, and no cancel step was looked for inside the app. The app was uninstalled via Settings, Apps, the row BOLD Custom Pricing: Wholesale and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and Shopify confirmed that the app was uninstalled. No call or demo was booked. Not tested: the price on the storefront for a tagged customer, checkout, POS, quantity breaks, Auto-Tagging (Standard), CSV import (Complete), a second group or tag, the theme selection and preview, and the onboarding session. Clean up: no theme changes were saved; the app was uninstalled, which removes its tag and group; other apps were not touched; our own tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app forces a plan choice before the dashboard, a tag with a description has to exist before a group can be saved, the price rule stayed in a sync queue so the result could not be seen, and the Standard plan costs $65 in the app against $69 in the dossier.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The price for a tagged customer on the storefront or in the theme preview, because the sync stayed queued.",
+     "Checkout, POS and quantity breaks.",
+     "Auto-Tagging (Standard) and CSV price imports (Complete).",
+     "A second group or tag, the theme selection and the onboarding session.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:40 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -11175,6 +11866,167 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "MigrationPro",
+   "product_id": "migrationpro",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested MigrationPro on a Shopify development store: the install, the external dashboard, the choice of source platforms, a free demo migration of 2 made-up products from a self-made CSV file with an invented source address (done in about 2 minutes 10 seconds, with the products left Active in the store), the paid options, the one-time checkout of $29 (not paid) and the All-In-One package (not entered), and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Listing and install: the App Store listing MigrationPro: Store Migration shows a rating of 5.0 (190) and Free to install. Additional charges may apply. The dossier said (5 October) that the listing had been withdrawn; it is now installable. The install button opened a pop-up to the Shopify grant screen for MP - Store Migration & Import with View customer data, View staff and contributor data and View and edit store data, and the install was approved at 14:51. After the install the app opened straight on an external dashboard, app.migrationpro.io, logged in through Shopify, with no separate account asked. A message Finish setting up your account (confirm a notification email and choose a company type) was not followed. A vendor live chat widget opened by itself and showed messages; we sent nothing. Core action, a demo migration, about 2 minutes 10 seconds from the install (14:51 to about 14:53:40) and more than 12 steps, partly because we had to make a file and invent a source address: Create New Migration offers 52 source platforms (among them WooCommerce, PrestaShop, Wix and CSV); for most platforms a real source URL and a connector file (mp_connector.zip, to upload by FTP) are needed, which was not possible without a source store. We chose the source CSV, which asks for a Source Store URL (required) and CSV files (Categories, Products, Product Variants, Customers, Orders, Order Items, Blog Posts, Blog Comments, CMS Pages, Discounts). There is no built-in demo or test source. We used a Products.csv that we made ourselves with 2 made-up products (Demo Mug and Demo Shirt) and the address https://example.com as source URL; no login details were entered. In the Configure step we ticked Products. Paid options: Migrate Only Active Products ($39), Migrate Content Images from Products, Categories, CMS pages and Blog Posts ($29), Implement 301 Redirects in Target Store Post-Migration ($29), Convert Categories to Shopify Automated Collections ($29), Set Out-of-Stock Product Quantity to 100 in Target Store ($19) and Calculate Product Price with Tax ($39); free options: Target Store Data Reset, Generate Product Variants from Option Combinations and Consolidate Short and Full Descriptions; none was switched on. The CSV Headers Mapping filled in name, description and price by itself. The button Next: Run Free Demo Migration was pressed at 14:53:31 and after about 10 seconds the page said Demo migration complete. Please review your data and proceed with full migration. with the table Products 2/2. In the Shopify admin, Demo Shirt and Demo Mug appeared as Active products, with our store name as vendor. This is a demo of two made-up products from a CSV with an invented source address; a real migration from a real source store was not tested. Plans and checkout: there is no Shopify subscription screen, no Approve subscription and no test charge; payment runs outside Shopify. The checkout page of the migration shows Entities $29, Enabled Additional Migration Options $0, Additional development $0, Order total $29, the note This is one-time payment only, a Discount code field, and the payment methods Credit card (Pay with credit card via Stripe) or PayPal (Pay with your PayPal account) with a Place order button, which we did not press because it is a real payment. The price depends on the number of records: 2 products gave $29; the pricing page has a calculator (products, customers, orders) that we did not use. The All-In-One Migration Package (A dedicated Personal Assistant will handle all aspects) is priced at $300 with Estimated time - 1 day and starts with a Consultation with the vendor experts; we did not go further because it means a conversation. Cancelling: there is no subscription to cancel, because the payment is one-time. The app was uninstalled via Settings, Apps and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and asks for a reason and optional feedback; we gave Testing multiple apps at 14:58 and the app left the installed list. Not tested: a real migration from a source store, 301 redirects, images, customers and orders, Smart Sync, the payment, the All-In-One package with its consultation, the live chat and confirming the notification email. Clean up: the two demo products Demo Shirt and Demo Mug are still Active in the store and were not deleted; the app was uninstalled; a helper file with the CSV was kept outside the project; one pop-up tab of the first install attempt could not be closed with our tools. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Free to install. Additional charges may apply\". What we saw: The listing says free to install with additional charges, the install needed no payment and the free demo migration of 2 products cost nothing; the checkout for a full migration of the same 2 products shows an order total of $29.",
+    "Text we checked: \"vermelding ingetrokken\". What we saw: The dossier said on 5 October that the listing was withdrawn; the listing MigrationPro: Store Migration showed a rating of 5.0 (190) and the app could be installed.",
+    "Text we checked: \"Demo migration complete. Please review your data and proceed with full migration\". What we saw: A free demo migration of 2 made-up products from a CSV file that we made, with the invented source address https://example.com, finished about 2 minutes 10 seconds after the install and created two Active products in the store; a real source store and a real migration were not tried."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A real migration from a real source store, 301 redirects, images, customers, orders and Smart Sync.",
+    "The payment, which is a real payment by Stripe or PayPal.",
+    "The All-In-One package and its consultation, and the vendor chat.",
+    "Confirming the notification email.",
+    "The price calculator of the pricing page.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:51 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free to install. Additional charges may apply.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing says free to install with additional charges, the install needed no payment and the free demo migration of 2 products cost nothing; the checkout for a full migration of the same 2 products shows an order total of $29.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+     },
+     "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+     "comparability": "Listing wording versus the free demo and the $29 checkout of the same 2 products.",
+     "status": "confirmed",
+     "buying_consequence": "Installing and trying the demo is free, and the real migration is paid per migration.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "vermelding ingetrokken",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The dossier said on 5 October that the listing was withdrawn; the listing MigrationPro: Store Migration showed a rating of 5.0 (190) and the app could be installed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+     },
+     "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+     "comparability": "Dossier withdrawn listing note versus a listing that could be installed on 17 November.",
+     "status": "out_of_date",
+     "buying_consequence": "The app can be installed now, so the dossier note about a withdrawn listing no longer holds.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Implement 301 Redirects in Target Store Post-Migration ($29)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Configure step lists 301 redirects at $29 and other options at $19 to $39, all switched off; none was tried and no real migration was run.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+     },
+     "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+     "comparability": "Dossier option wording versus a price list of switched off options; no real migration was run.",
+     "status": "not_testable",
+     "buying_consequence": "The paid options could be read but their result in a real migration was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Demo migration complete. Please review your data and proceed with full migration.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "A free demo migration of 2 made-up products from a CSV file that we made, with the invented source address https://example.com, finished about 2 minutes 10 seconds after the install and created two Active products in the store; a real source store and a real migration were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+     },
+     "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+     "comparability": "Dossier demo wording versus a demo with a self-made CSV; no real source store was used.",
+     "status": "confirmed",
+     "buying_consequence": "A free demo works in minutes, but only with a CSV source and made-up data here; most platforms need a real source and a connector file.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "All-In-One Migration Package",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The package is shown at $300 with Estimated time - 1 day and begins with a consultation with the vendor; we did not go on, so the package and its result were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+     },
+     "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+     "comparability": "Dossier package wording versus a price and a first step; the consultation was not held.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about the done for you package beyond its price and its first step.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Order total $29",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The checkout page shows Entities $29 for 2 products, Enabled Additional Migration Options $0 and an order total of $29, one-time, by Stripe or PayPal; the pricing page calculator was not used, so the $29 was not set against it, and nothing was paid.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+     },
+     "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+     "comparability": "Checkout amount for 2 products versus a pricing calculator that was not run; no stored cost rule was compared.",
+     "status": "not_comparable",
+     "buying_consequence": "The price depends on the number of records; $29 is what 2 products cost, not a price for a real store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested MigrationPro on a Shopify development store: the install, the external dashboard, the choice of source platforms, a free demo migration of 2 made-up products from a self-made CSV file with an invented source address (done in about 2 minutes 10 seconds, with the products left Active in the store), the paid options, the one-time checkout of $29 (not paid) and the All-In-One package (not entered), and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Listing and install: the App Store listing MigrationPro: Store Migration shows a rating of 5.0 (190) and Free to install. Additional charges may apply. The dossier said (5 October) that the listing had been withdrawn; it is now installable. The install button opened a pop-up to the Shopify grant screen for MP - Store Migration & Import with View customer data, View staff and contributor data and View and edit store data, and the install was approved at 14:51. After the install the app opened straight on an external dashboard, app.migrationpro.io, logged in through Shopify, with no separate account asked. A message Finish setting up your account (confirm a notification email and choose a company type) was not followed. A vendor live chat widget opened by itself and showed messages; we sent nothing. Core action, a demo migration, about 2 minutes 10 seconds from the install (14:51 to about 14:53:40) and more than 12 steps, partly because we had to make a file and invent a source address: Create New Migration offers 52 source platforms (among them WooCommerce, PrestaShop, Wix and CSV); for most platforms a real source URL and a connector file (mp_connector.zip, to upload by FTP) are needed, which was not possible without a source store. We chose the source CSV, which asks for a Source Store URL (required) and CSV files (Categories, Products, Product Variants, Customers, Orders, Order Items, Blog Posts, Blog Comments, CMS Pages, Discounts). There is no built-in demo or test source. We used a Products.csv that we made ourselves with 2 made-up products (Demo Mug and Demo Shirt) and the address https://example.com as source URL; no login details were entered. In the Configure step we ticked Products. Paid options: Migrate Only Active Products ($39), Migrate Content Images from Products, Categories, CMS pages and Blog Posts ($29), Implement 301 Redirects in Target Store Post-Migration ($29), Convert Categories to Shopify Automated Collections ($29), Set Out-of-Stock Product Quantity to 100 in Target Store ($19) and Calculate Product Price with Tax ($39); free options: Target Store Data Reset, Generate Product Variants from Option Combinations and Consolidate Short and Full Descriptions; none was switched on. The CSV Headers Mapping filled in name, description and price by itself. The button Next: Run Free Demo Migration was pressed at 14:53:31 and after about 10 seconds the page said Demo migration complete. Please review your data and proceed with full migration. with the table Products 2/2. In the Shopify admin, Demo Shirt and Demo Mug appeared as Active products, with our store name as vendor. This is a demo of two made-up products from a CSV with an invented source address; a real migration from a real source store was not tested. Plans and checkout: there is no Shopify subscription screen, no Approve subscription and no test charge; payment runs outside Shopify. The checkout page of the migration shows Entities $29, Enabled Additional Migration Options $0, Additional development $0, Order total $29, the note This is one-time payment only, a Discount code field, and the payment methods Credit card (Pay with credit card via Stripe) or PayPal (Pay with your PayPal account) with a Place order button, which we did not press because it is a real payment. The price depends on the number of records: 2 products gave $29; the pricing page has a calculator (products, customers, orders) that we did not use. The All-In-One Migration Package (A dedicated Personal Assistant will handle all aspects) is priced at $300 with Estimated time - 1 day and starts with a Consultation with the vendor experts; we did not go further because it means a conversation. Cancelling: there is no subscription to cancel, because the payment is one-time. The app was uninstalled via Settings, Apps and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and asks for a reason and optional feedback; we gave Testing multiple apps at 14:58 and the app left the installed list. Not tested: a real migration from a source store, 301 redirects, images, customers and orders, Smart Sync, the payment, the All-In-One package with its consultation, the live chat and confirming the notification email. Clean up: the two demo products Demo Shirt and Demo Mug are still Active in the store and were not deleted; the app was uninstalled; a helper file with the CSV was kept outside the project; one pop-up tab of the first install attempt could not be closed with our tools. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "There is no built-in test source, so a source address and a CSV file had to be made up for the demo; most platforms need a connector file uploaded by FTP; the price depends on the number of records; and a vendor chat opened by itself.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A real migration from a real source store, 301 redirects, images, customers, orders and Smart Sync.",
+     "The payment, which is a real payment by Stripe or PayPal.",
+     "The All-In-One package and its consultation, and the vendor chat.",
+     "Confirming the notification email.",
+     "The price calculator of the pricing page.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:51 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

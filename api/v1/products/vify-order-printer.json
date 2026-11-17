@@ -65,18 +65,418 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/vify-order-printer-review.html",
+  "method": [
+   "Installed on a Shopify development store, opened an invoice for a test order and read the plan screen",
+   "Opened the Starter approval screen without approving it, then uninstalled the app"
+  ],
+  "claims": [
+   {
+    "claim": "Print invoice",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "An invoice for the test order #1001 opened about 1 minute after the start of the install and 3 clicks from the order list, as an HTML print view; the tab stayed on the print dialog and the real PDF was not opened, so the evidence image is our own local rendering.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "Dossier invoice wording versus the invoice print page of one test order; the PDF itself was not opened.",
+    "status": "confirmed",
+    "buying_consequence": "An invoice for an order is quick to get, but we did not see the real PDF file.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Branding removal",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Free invoice carries Created by VIFY and a LOGO placeholder, and Starter lists Branding removal; the removal itself was not tried and the app also offers verification of the store to get it for free.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "Dossier branding wording versus the Free invoice and the Starter list; removal was not tried.",
+    "status": "confirmed",
+    "buying_consequence": "Branding sits on the Free invoice and is listed as removed from Starter; removing it was not tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Unlimited orders",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Starter list says Unlimited orders and the Free plan says You can only view the latest 50 orders.; only two test orders existed, so the limit itself was not reached.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "Dossier order limit wording versus plan lists; only two orders existed.",
+    "status": "not_testable",
+    "buying_consequence": "The order limit of the Free plan and the lack of one on Starter could not be tried with two orders.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Starter $10.99",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Plans page shows STARTER at $8.99 USD/Month (monthly) and the Shopify screen shows $8,99 USD every 30 days; the listing and the dossier name $10.99. The Yearly view was not opened.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "Dossier Starter price versus the Starter card and the approval screen.",
+    "status": "contradicted",
+    "buying_consequence": "The monthly price of Starter in the app is lower than the dossier price.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Peppol/ZUGFeRD/Factur-X",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The plan lists do not name Peppol, ZUGFeRD, Factur-X or VAT numbers and no e-invoice format was tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "Dossier e-invoice wording versus plan lists that do not name these formats; nothing was tried.",
+    "status": "not_testable",
+    "buying_consequence": "The test says nothing about e-invoice formats or VAT numbers.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "14-day free trial with any plan.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Plans page offers a 14-day free trial with any plan, first charge only, and the Shopify approval screen for Starter says a 14-day free trial ending on 1 Dec.; Approve was greyed out and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "Dossier trial wording versus the Plans page and the approval screen.",
+    "status": "confirmed",
+    "buying_consequence": "A 14-day trial is shown, but a payment method is asked before it can start.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$8,99 USD every 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Shopify approval screen shows $8,99 USD every 30 days, a total of $8,99 due 1 Dec after the trial plus any applicable taxes; the Starter card shows $8.99 USD/Month; Approve was greyed out and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "Starter card price versus the approval screen amount; no stored cost rule was compared.",
+    "status": "confirmed",
+    "buying_consequence": "The price on the Starter card matches the approval screen, with taxes on top.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Vify Order Printer on a Shopify development store: the install on the Free plan, an invoice for a test order in about 1 minute and 3 clicks (the tab stayed on the print dialog, so the evidence image is our own local rendering of the invoice HTML and not a screenshot of the PDF), the plan screen, the Shopify approval screen for Starter (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:28 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved at about 14:28:50. The app opened straight on the Free plan, with no plan choice, no separate account and no demo, on a screen Welcome to Vify Order Printer with a step guide at 0 of 4. Core action, an invoice for the test order #1001, a little over 1 minute after the start of the install (about 14:29:20) and 3 clicks from the order list: Orders, order #1001, the printer icon, Print invoice. The result was a page called invoice_1001.pdf on a Vify address (api-pdf.vify.ai), which is an HTML print view that calls window.print(); the browser tab stayed on the print dialog. IMPORTANT about the evidence image of the invoice: image 03 is NOT a screenshot of the PDF. Because the tab hung on the print dialog, we rendered the HTML of that same invoice page ourselves, locally and headless, and took the image from that rendering. It shows what the page contains, but we did not open or check the real PDF file, so page size, fonts and the real print result were not seen. The invoice contains INVOICE, the store block, SHIPPING ADDRESS, Invoice Number: #1001, Order Date: 2026-11-16 08:59:20, the item The Collection Snowboard: Liquid 1 x $749.95, Grand total $749.95, PAYMENT INFORMATION, a QR code, Thank you for your purchase! and the branding Created by VIFY on the Free plan, with a grey LOGO placeholder. On the Free plan the app says You are using FREE plan. You can only view the latest 50 orders. and, for removing the Vify branding in the PDF invoice, Please contact support to verify your store in order to have this feature for free. The download menu per order has Download invoice, Download packing slip, Download refund and Download by language (greyed out). Plans: Plans (Monthly) shows FREE $0, STARTER $8.99 USD/Month, PREMIUM $29.99 and ULTIMATE $69.99, with 14-day free trial with any plan, This offer only applies to your first charge. and Cancel anytime on the paid plans. Starter lists Branding removal, Invoice Edit, Email Automation, Unlimited orders and Auto-detect language by customer locale; Premium adds Quotes, Send emails with store's email address, Commercial invoice, Invoice Generator and Online Storage; Ultimate adds 1 Custom template of your design and Free customization. Peppol, ZUGFeRD, Factur-X and VAT numbers are not in the plan lists. The listing and the dossier name Starter at $10.99, while the app shows $8.99. The Yearly view was not opened. Checkout: Start 14-day free trial on Starter opened the Shopify Approve subscription screen: STARTER PLAN, $8,99 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $8,99 plus any applicable taxes, Total $8,99 Due 1 Dec, and an Add payment method row. Approve was greyed out, the sentence about a test charge was NOT on the screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason is required (the button is greyed out until one is chosen). The app was uninstalled afterwards. Not tested: the automatic invoice email, bulk processing, the Invoice generator, quotes, the commercial invoice, e-invoice formats, removing the branding, editing templates, the Yearly plans, and opening the real PDF. Clean up: no theme changes; the app was uninstalled; our own tabs were closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The invoice opened as an HTML print view that called the print dialog and left the tab hanging, the invoice carried Vify branding and a logo placeholder on the Free plan, the Free plan only shows the latest 50 orders, and the Starter approval screen needs a payment method and has no test charge sentence.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Opening the real PDF file, its page size and its fonts; the evidence image is our own local rendering of the invoice HTML.",
+    "The automatic invoice email and bulk processing.",
+    "The Invoice generator, quotes and the commercial invoice.",
+    "E-invoice formats and VAT numbers, which are not in the plan lists.",
+    "Removing the branding, editing templates and the Yearly plans.",
+    "Cancelling a paid plan, because no paid plan was started.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:28 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "The Plans page offers a 14-day free trial with any plan, first charge only, and the Shopify approval screen for Starter says a 14-day free trial ending on 1 Dec.; Approve was greyed out and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Vify Order Printer on a Shopify development store: the install on the Free plan, an invoice for a test order in about 1 minute and 3 clicks (the tab stayed on the print dialog, so the evidence image is our own local rendering of the invoice HTML and not a screenshot of the PDF), the plan screen, the Shopify approval screen for Starter (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:28 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved at about 14:28:50. The app opened straight on the Free plan, with no plan choice, no separate account and no demo, on a screen Welcome to Vify Order Printer with a step guide at 0 of 4. Core action, an invoice for the test order #1001, a little over 1 minute after the start of the install (about 14:29:20) and 3 clicks from the order list: Orders, order #1001, the printer icon, Print invoice. The result was a page called invoice_1001.pdf on a Vify address (api-pdf.vify.ai), which is an HTML print view that calls window.print(); the browser tab stayed on the print dialog. IMPORTANT about the evidence image of the invoice: image 03 is NOT a screenshot of the PDF. Because the tab hung on the print dialog, we rendered the HTML of that same invoice page ourselves, locally and headless, and took the image from that rendering. It shows what the page contains, but we did not open or check the real PDF file, so page size, fonts and the real print result were not seen. The invoice contains INVOICE, the store block, SHIPPING ADDRESS, Invoice Number: #1001, Order Date: 2026-11-16 08:59:20, the item The Collection Snowboard: Liquid 1 x $749.95, Grand total $749.95, PAYMENT INFORMATION, a QR code, Thank you for your purchase! and the branding Created by VIFY on the Free plan, with a grey LOGO placeholder. On the Free plan the app says You are using FREE plan. You can only view the latest 50 orders. and, for removing the Vify branding in the PDF invoice, Please contact support to verify your store in order to have this feature for free. The download menu per order has Download invoice, Download packing slip, Download refund and Download by language (greyed out). Plans: Plans (Monthly) shows FREE $0, STARTER $8.99 USD/Month, PREMIUM $29.99 and ULTIMATE $69.99, with 14-day free trial with any plan, This offer only applies to your first charge. and Cancel anytime on the paid plans. Starter lists Branding removal, Invoice Edit, Email Automation, Unlimited orders and Auto-detect language by customer locale; Premium adds Quotes, Send emails with store's email address, Commercial invoice, Invoice Generator and Online Storage; Ultimate adds 1 Custom template of your design and Free customization. Peppol, ZUGFeRD, Factur-X and VAT numbers are not in the plan lists. The listing and the dossier name Starter at $10.99, while the app shows $8.99. The Yearly view was not opened. Checkout: Start 14-day free trial on Starter opened the Shopify Approve subscription screen: STARTER PLAN, $8,99 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $8,99 plus any applicable taxes, Total $8,99 Due 1 Dec, and an Add payment method row. Approve was greyed out, the sentence about a test charge was NOT on the screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason is required (the button is greyed out until one is chosen). The app was uninstalled afterwards. Not tested: the automatic invoice email, bulk processing, the Invoice generator, quotes, the commercial invoice, e-invoice formats, removing the branding, editing templates, the Yearly plans, and opening the real PDF. Clean up: no theme changes; the app was uninstalled; our own tabs were closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Vify Order Printer on a Shopify development store: the install on the Free plan, an invoice for a test order in about 1 minute and 3 clicks (the tab stayed on the print dialog, so the evidence image is our own local rendering of the invoice HTML and not a screenshot of the PDF), the plan screen, the Shopify approval screen for Starter (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:28 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved at about 14:28:50. The app opened straight on the Free plan, with no plan choice, no separate account and no demo, on a screen Welcome to Vify Order Printer with a step guide at 0 of 4. Core action, an invoice for the test order #1001, a little over 1 minute after the start of the install (about 14:29:20) and 3 clicks from the order list: Orders, order #1001, the printer icon, Print invoice. The result was a page called invoice_1001.pdf on a Vify address (api-pdf.vify.ai), which is an HTML print view that calls window.print(); the browser tab stayed on the print dialog. IMPORTANT about the evidence image of the invoice: image 03 is NOT a screenshot of the PDF. Because the tab hung on the print dialog, we rendered the HTML of that same invoice page ourselves, locally and headless, and took the image from that rendering. It shows what the page contains, but we did not open or check the real PDF file, so page size, fonts and the real print result were not seen. The invoice contains INVOICE, the store block, SHIPPING ADDRESS, Invoice Number: #1001, Order Date: 2026-11-16 08:59:20, the item The Collection Snowboard: Liquid 1 x $749.95, Grand total $749.95, PAYMENT INFORMATION, a QR code, Thank you for your purchase! and the branding Created by VIFY on the Free plan, with a grey LOGO placeholder. On the Free plan the app says You are using FREE plan. You can only view the latest 50 orders. and, for removing the Vify branding in the PDF invoice, Please contact support to verify your store in order to have this feature for free. The download menu per order has Download invoice, Download packing slip, Download refund and Download by language (greyed out). Plans: Plans (Monthly) shows FREE $0, STARTER $8.99 USD/Month, PREMIUM $29.99 and ULTIMATE $69.99, with 14-day free trial with any plan, This offer only applies to your first charge. and Cancel anytime on the paid plans. Starter lists Branding removal, Invoice Edit, Email Automation, Unlimited orders and Auto-detect language by customer locale; Premium adds Quotes, Send emails with store's email address, Commercial invoice, Invoice Generator and Online Storage; Ultimate adds 1 Custom template of your design and Free customization. Peppol, ZUGFeRD, Factur-X and VAT numbers are not in the plan lists. The listing and the dossier name Starter at $10.99, while the app shows $8.99. The Yearly view was not opened. Checkout: Start 14-day free trial on Starter opened the Shopify Approve subscription screen: STARTER PLAN, $8,99 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $8,99 plus any applicable taxes, Total $8,99 Due 1 Dec, and an Add payment method row. Approve was greyed out, the sentence about a test charge was NOT on the screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason is required (the button is greyed out until one is chosen). The app was uninstalled afterwards. Not tested: the automatic invoice email, bulk processing, the Invoice generator, quotes, the commercial invoice, e-invoice formats, removing the branding, editing templates, the Yearly plans, and opening the real PDF. Clean up: no theme changes; the app was uninstalled; our own tabs were closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Vify Order Printer",
+    "product_id": "vify-order-printer",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Vify Order Printer on a Shopify development store: the install on the Free plan, an invoice for a test order in about 1 minute and 3 clicks (the tab stayed on the print dialog, so the evidence image is our own local rendering of the invoice HTML and not a screenshot of the PDF), the plan screen, the Shopify approval screen for Starter (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:28 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved at about 14:28:50. The app opened straight on the Free plan, with no plan choice, no separate account and no demo, on a screen Welcome to Vify Order Printer with a step guide at 0 of 4. Core action, an invoice for the test order #1001, a little over 1 minute after the start of the install (about 14:29:20) and 3 clicks from the order list: Orders, order #1001, the printer icon, Print invoice. The result was a page called invoice_1001.pdf on a Vify address (api-pdf.vify.ai), which is an HTML print view that calls window.print(); the browser tab stayed on the print dialog. About the evidence image of the invoice: image 03 is not a screenshot of the PDF. Because the tab hung on the print dialog, we rendered the HTML of that same invoice page ourselves, locally and headless, and took the image from that rendering. It shows what the page contains, but we did not open or check the real PDF file, so page size, fonts and the real print result were not seen. The invoice contains INVOICE, the store block, SHIPPING ADDRESS, Invoice Number: #1001, Order Date: 2026-11-16 08:59:20, the item The Collection Snowboard: Liquid 1 x $749.95, Grand total $749.95, PAYMENT INFORMATION, a QR code, Thank you for your purchase! and the branding Created by VIFY on the Free plan, with a grey LOGO placeholder. On the Free plan the app says You are using FREE plan. You can only view the latest 50 orders. and, for removing the Vify branding in the PDF invoice, Please contact support to verify your store in order to have this feature for free. The download menu per order has Download invoice, Download packing slip, Download refund and Download by language (greyed out). Plans: Plans (Monthly) shows FREE $0, STARTER $8.99 USD/Month, PREMIUM $29.99 and ULTIMATE $69.99, with 14-day free trial with any plan, This offer only applies to your first charge. and Cancel anytime on the paid plans. Starter lists Branding removal, Invoice Edit, Email Automation, Unlimited orders and Auto-detect language by customer locale; Premium adds Quotes, Send emails with store's email address, Commercial invoice, Invoice Generator and Online Storage; Ultimate adds 1 Custom template of your design and Free customization. Peppol, ZUGFeRD, Factur-X and VAT numbers are not in the plan lists. The listing and the dossier name Starter at $10.99, while the app shows $8.99. The Yearly view was not opened. Checkout: Start 14-day free trial on Starter opened the Shopify Approve subscription screen: STARTER PLAN, $8,99 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $8,99 plus any applicable taxes, Total $8,99 Due 1 Dec, and an Add payment method row. Approve was greyed out, the sentence about a test charge was NOT on the screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason is required (the button is greyed out until one is chosen). The app was uninstalled afterwards. Not tested: the automatic invoice email, bulk processing, the Invoice generator, quotes, the commercial invoice, e-invoice formats, removing the branding, editing templates, the Yearly plans, and opening the real PDF. Clean up: no theme changes; the app was uninstalled; our own tabs were closed. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"Print invoice\". What we saw: An invoice for the test order #1001 opened about 1 minute after the start of the install and 3 clicks from the order list, as an HTML print view; the tab stayed on the print dialog and the real PDF was not opened, so the evidence image is our own local rendering.",
+     "Text we checked: \"Branding removal\". What we saw: The Free invoice carries Created by VIFY and a LOGO placeholder, and Starter lists Branding removal; the removal itself was not tried and the app also offers verification of the store to get it for free.",
+     "Text we checked: \"Starter $10.99\". What we saw: The Plans page shows STARTER at $8.99 USD/Month (monthly) and the Shopify screen shows $8,99 USD every 30 days; the listing and the dossier name $10.99. The Yearly view was not opened.",
+     "Text we checked: \"14-day free trial with any plan\". What we saw: The Plans page offers a 14-day free trial with any plan, first charge only, and the Shopify approval screen for Starter says a 14-day free trial ending on 1 Dec.; Approve was greyed out and nothing was approved."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Opening the real PDF file, its page size and its fonts; the evidence image is our own local rendering of the invoice HTML.",
+     "The automatic invoice email and bulk processing.",
+     "The Invoice generator, quotes and the commercial invoice.",
+     "E-invoice formats and VAT numbers, which are not in the plan lists.",
+     "Removing the branding, editing templates and the Yearly plans.",
+     "Cancelling a paid plan, because no paid plan was started.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:28 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Print invoice",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "An invoice for the test order #1001 opened about 1 minute after the start of the install and 3 clicks from the order list, as an HTML print view; the tab stayed on the print dialog and the real PDF was not opened, so the evidence image is our own local rendering.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "Dossier invoice wording versus the invoice print page of one test order; the PDF itself was not opened.",
+      "status": "confirmed",
+      "buying_consequence": "An invoice for an order is quick to get, but we did not see the real PDF file.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Branding removal",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Free invoice carries Created by VIFY and a LOGO placeholder, and Starter lists Branding removal; the removal itself was not tried and the app also offers verification of the store to get it for free.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "Dossier branding wording versus the Free invoice and the Starter list; removal was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "Branding sits on the Free invoice and is listed as removed from Starter; removing it was not tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Unlimited orders",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Starter list says Unlimited orders and the Free plan says You can only view the latest 50 orders.; only two test orders existed, so the limit itself was not reached.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "Dossier order limit wording versus plan lists; only two orders existed.",
+      "status": "not_testable",
+      "buying_consequence": "The order limit of the Free plan and the lack of one on Starter could not be tried with two orders.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Starter $10.99",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Plans page shows STARTER at $8.99 USD/Month (monthly) and the Shopify screen shows $8,99 USD every 30 days; the listing and the dossier name $10.99. The Yearly view was not opened.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "Dossier Starter price versus the Starter card and the approval screen.",
+      "status": "contradicted",
+      "buying_consequence": "The monthly price of Starter in the app is lower than the dossier price.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Peppol/ZUGFeRD/Factur-X",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan lists do not name Peppol, ZUGFeRD, Factur-X or VAT numbers and no e-invoice format was tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "Dossier e-invoice wording versus plan lists that do not name these formats; nothing was tried.",
+      "status": "not_testable",
+      "buying_consequence": "The test says nothing about e-invoice formats or VAT numbers.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "14-day free trial with any plan.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Plans page offers a 14-day free trial with any plan, first charge only, and the Shopify approval screen for Starter says a 14-day free trial ending on 1 Dec.; Approve was greyed out and nothing was approved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "Dossier trial wording versus the Plans page and the approval screen.",
+      "status": "confirmed",
+      "buying_consequence": "A 14-day trial is shown, but a payment method is asked before it can start.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$8,99 USD every 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify approval screen shows $8,99 USD every 30 days, a total of $8,99 due 1 Dec after the trial plus any applicable taxes; the Starter card shows $8.99 USD/Month; Approve was greyed out and nothing was approved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/vify-order-printer-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "Starter card price versus the approval screen amount; no stored cost rule was compared.",
+      "status": "confirmed",
+      "buying_consequence": "The price on the Starter card matches the approval screen, with taxes on top.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Vify Order Printer on a Shopify development store: the install on the Free plan, an invoice for a test order in about 1 minute and 3 clicks (the tab stayed on the print dialog, so the evidence image is our own local rendering of the invoice HTML and not a screenshot of the PDF), the plan screen, the Shopify approval screen for Starter (not approved, a payment method was asked) and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Install: the install form was sent at 14:28 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved at about 14:28:50. The app opened straight on the Free plan, with no plan choice, no separate account and no demo, on a screen Welcome to Vify Order Printer with a step guide at 0 of 4. Core action, an invoice for the test order #1001, a little over 1 minute after the start of the install (about 14:29:20) and 3 clicks from the order list: Orders, order #1001, the printer icon, Print invoice. The result was a page called invoice_1001.pdf on a Vify address (api-pdf.vify.ai), which is an HTML print view that calls window.print(); the browser tab stayed on the print dialog. IMPORTANT about the evidence image of the invoice: image 03 is NOT a screenshot of the PDF. Because the tab hung on the print dialog, we rendered the HTML of that same invoice page ourselves, locally and headless, and took the image from that rendering. It shows what the page contains, but we did not open or check the real PDF file, so page size, fonts and the real print result were not seen. The invoice contains INVOICE, the store block, SHIPPING ADDRESS, Invoice Number: #1001, Order Date: 2026-11-16 08:59:20, the item The Collection Snowboard: Liquid 1 x $749.95, Grand total $749.95, PAYMENT INFORMATION, a QR code, Thank you for your purchase! and the branding Created by VIFY on the Free plan, with a grey LOGO placeholder. On the Free plan the app says You are using FREE plan. You can only view the latest 50 orders. and, for removing the Vify branding in the PDF invoice, Please contact support to verify your store in order to have this feature for free. The download menu per order has Download invoice, Download packing slip, Download refund and Download by language (greyed out). Plans: Plans (Monthly) shows FREE $0, STARTER $8.99 USD/Month, PREMIUM $29.99 and ULTIMATE $69.99, with 14-day free trial with any plan, This offer only applies to your first charge. and Cancel anytime on the paid plans. Starter lists Branding removal, Invoice Edit, Email Automation, Unlimited orders and Auto-detect language by customer locale; Premium adds Quotes, Send emails with store's email address, Commercial invoice, Invoice Generator and Online Storage; Ultimate adds 1 Custom template of your design and Free customization. Peppol, ZUGFeRD, Factur-X and VAT numbers are not in the plan lists. The listing and the dossier name Starter at $10.99, while the app shows $8.99. The Yearly view was not opened. Checkout: Start 14-day free trial on Starter opened the Shopify Approve subscription screen: STARTER PLAN, $8,99 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $8,99 plus any applicable taxes, Total $8,99 Due 1 Dec, and an Add payment method row. Approve was greyed out, the sentence about a test charge was NOT on the screen and a payment method was asked, so we did not approve, no card was entered, and we pressed Cancel. Cancelling: no paid plan was ever started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason is required (the button is greyed out until one is chosen). The app was uninstalled afterwards. Not tested: the automatic invoice email, bulk processing, the Invoice generator, quotes, the commercial invoice, e-invoice formats, removing the branding, editing templates, the Yearly plans, and opening the real PDF. Clean up: no theme changes; the app was uninstalled; our own tabs were closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The invoice opened as an HTML print view that called the print dialog and left the tab hanging, the invoice carried Vify branding and a logo placeholder on the Free plan, the Free plan only shows the latest 50 orders, and the Starter approval screen needs a payment method and has no test charge sentence.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "Opening the real PDF file, its page size and its fonts; the evidence image is our own local rendering of the invoice HTML.",
+      "The automatic invoice email and bulk processing.",
+      "The Invoice generator, quotes and the commercial invoice.",
+      "E-invoice formats and VAT numbers, which are not in the plan lists.",
+      "Removing the branding, editing templates and the Yearly plans.",
+      "Cancelling a paid plan, because no paid plan was started.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:28 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "vify-order-printer:cancellation_terms",

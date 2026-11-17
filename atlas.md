@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 675 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
+All 677 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1206,6 +1206,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants who want build-your-own-box, gift-box, mix-and-match, fixed-price or volume bundles live in days rather than sprints, with bundle inventory syncing across Shopify and 3PLs and bundles that also sell through POS
 - **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/easy-bundles-review.html
+
+## Easy-Peasy.AI (easy-peasy.ai)
+- **Verified pricing:** (read 2026-11-17 on easy-peasy.ai/pricing, US dollars) Free: $0, 1,000 words, 1 image credit, 1 transcription, 1,000 text-to-speech characters, 1 bot, 170+ templates, public images, no card.
+- **Honest take:** All-in-one AI writing, image and audio tool: free plan, paid from $8 a month.
+- **Best for:** solo creators, marketers and small teams that want writing, images, transcription and voice in one subscription with a free tier to try first
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/easy-peasy-ai-review/
 
 ## EasyBrise (easybrise.com)
 - **Verified pricing:** (read 2026-10-15 on easybrise.com/pricing, its terms of service and refund policy; the terms say all fees are in US dollars) EasyBrise sells US company formation to founders abroad.
@@ -3425,6 +3432,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Squarespace freelancers and studios billing for several client sites. Pricing by number of websites rather than per seat
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/seo-space-review/
+
+## Seobility (seobility.net)
+- **Verified pricing:** (read 2026-11-17 on seobility.net/pricing, euros, plus VAT) Basic: free, no time limit, 1 project, 10 keywords, 100 pages per crawl, limited website audit.
+- **Honest take:** SEO suite with a free Basic account; Premium from 59.90 EUR a month.
+- **Best for:** small businesses, freelancers and agencies that want a website audit, rank tracking and backlink monitoring in one suite, with a free account to start
+- **Flags:** Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/seobility-review/
 
 ## SEOKart (seokart.com)
 - **Verified pricing:** (price read 2026-09-12, re-verified 2026-09-15 and again unchanged on 2026-10-14) Two publishers, and they do not publish the same ladder.

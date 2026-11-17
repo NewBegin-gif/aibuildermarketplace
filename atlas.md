@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 672 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
+All 674 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1288,6 +1288,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams cleaning real sending lists before campaigns: bulk verification at volume rates, with credits that never expire
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/emaillistverify-review/
+
+## EmailOctopus (emailoctopus.com)
+- **Verified pricing:** (read 2026-11-17 on emailoctopus.com/pricing, US dollars) Starter: free, 2,500 subscribers, 10,000 emails a month, branded emails, reports for 30 days.
+- **Honest take:** Simple email marketing: free to 2,500 subscribers, Pro from $9 a month.
+- **Best for:** newsletter publishers and small businesses that want a cheap, simple sender with a free tier and no trial clock
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/emailoctopus-review/
 
 ## Emergent (emergent.sh)
 - **Verified pricing:** (re-verified 2026-10-17 on emergent.sh/pricing in the monthly view, with the annual rates from the same page read on 16 October 2026, and on Emergent's help pages on managing credit usage a…
@@ -3195,6 +3202,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** high-volume portrait, school and wedding photographers who already live in Photoshop and want repetitive retouching (skin, stray hairs, dust, teeth) automated: owning the plugins outright or renting the whole suite on credits
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/retouch4me-review/
+
+## Rewardful (rewardful.com)
+- **Verified pricing:** (read 2026-11-17 on rewardful.com/pricing, US dollars, taxes extra) Starter $49 a month or $490 a year (up to $7,500 a month in affiliate revenue, 1 campaign, 2 team members); Growth $99 a …
+- **Honest take:** Affiliate tracking for Stripe SaaS: from $49 a month, 0% transaction fee.
+- **Best for:** SaaS and AI companies that bill through Stripe and want a dedicated affiliate and referral programme with a flat monthly fee
+- **Full review:** https://aibuildermarketplace.com/b2b/rewardful-review/
 
 ## Rewarx Studio AI (rewarx.com)
 - **Verified pricing:** (read 2026-10-23 on the Rewarx listing in the Shopify App Store; the listing says all charges are billed in USD) Rewarx's own pricing page shows no amounts, so the Shopify listing is the pu…

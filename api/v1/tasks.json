@@ -3263,6 +3263,179 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "Essential Cart Drawer",
+   "product_id": "essential-cart-drawer",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Essential Cart Drawer on a Shopify development store, switched on the app embed, published the cart drawer and a free shipping reward bar, and read the plan screens up to the Shopify approval screen. The app opened without any payment and the drawer was live about 3.5 minutes after install, in about 9 clicks. We paid, approved and uninstalled nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Setup: no plan had to be chosen before the app opened. The setup guide stood at 0 of 4; the drawer showed Live after the embed was saved in the theme and the drawer was enabled.",
+    "Preview: the app preview showed a countdown timer, a rewards bar that said All Rewards unlocked, two discount codes and a Secure checkout button. Upsell was On by default, but we saw no upsell product in the preview.",
+    "Plans: Free is $0 for up to 30 orders a month; nine plans run from Essential 1 at $8.99 to Unlimited at $198.99. The Shopify approval screen for Essential 1 showed no price and no trial, only a spending limit of $198.99 per 30 days.",
+    "Cancelling: the FAQ says cancelling is done on the Plans page and takes effect immediately, which also unpublishes the drawer. With no subscription we saw no Cancel button."
+   ],
+   "not_tested": [
+    "Upsell products, Sticky Add to Cart, the announcement bar and spend tiers with a gift: not run.",
+    "The drawer on the live storefront (the store has a password), speed and theme compatibility.",
+    "A paid plan, the 30 order limit, the automatic plan switch, the uninstall dialog and support."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "All features included",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan card says All features included. On a development store every feature works without a subscription, so the plan limits could not be tested; the drawer and the free shipping bar worked, but no upsell product showed in the preview.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-cart-drawer-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Free plan card wording versus a development store where every feature is free.",
+     "status": "not_testable",
+     "buying_consequence": "The development store hides any difference between the plans, so it is unknown whether Free on a live store has all features.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "30 Day Money Back Guarantee - No questions asked!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The guarantee is shown on the Plans page. No paid subscription was started, so a refund was not tested. The FAQ in the app does not mention a refund of unused days as app credit.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-cart-drawer-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plans page wording versus a test without any paid subscription.",
+     "status": "not_testable",
+     "buying_consequence": "The refund promise could not be tested without a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The App Store listing says a free trial is available and the plan list has Start 14 day trial buttons. The Shopify approval screen for Essential 1 showed no trial and no amount, only a usage spending limit.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-cart-drawer-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Listing and plan list wording versus the approval screen for Essential 1 on one development store.",
+     "status": "not_testable",
+     "buying_consequence": "The trial length of 14 days could not be seen on the approval screen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "How do I cancel my subscription?",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The FAQ says cancelling is done right on the Plans page, takes effect immediately and unpublishes the cart drawer. There was no subscription, so no Cancel button was seen and nothing was cancelled.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-cart-drawer-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "FAQ wording on the Plans page versus an account with no subscription.",
+     "status": "not_testable",
+     "buying_consequence": "The FAQ says cancelling is immediate and also switches the drawer off; the cancel button itself was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Uninstalling cancels your subscription automatically",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The FAQ says uninstalling cancels the subscription and the drawer stops appearing immediately. The Uninstall dialog was not opened and nothing was removed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-cart-drawer-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "FAQ wording versus an app that was not uninstalled.",
+     "status": "not_testable",
+     "buying_consequence": "The FAQ promises that uninstalling ends the charges; this was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Cart Drawer was successfully published in your store.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app said so and showed the drawer as Live after the app embed was switched on and saved in the theme. In the app preview the drawer showed a rewards bar, a timer and discount codes; the shop itself was not viewed because of its password.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-cart-drawer-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "App message and app preview on one development store behind a password; no public page or order was seen.",
+     "status": "confirmed",
+     "buying_consequence": "The drawer goes live after switching on the app embed, saving the theme and enabling the drawer; it was seen only in the app preview.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Essential 1 up to 99 $8.99/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan list shows Essential 1 at $8.99 a month for up to 99 orders with a 14 day trial button. The Shopify approval screen for Essential 1 showed no amount and no trial, only an app spending limit of a maximum of $198,99 USD per 30 days; nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-cart-drawer-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plan list price versus an approval screen with a usage spending limit and no amount; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The monthly price of $8.99 could not be confirmed on the approval screen, which shows only the spending limit.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Essential Cart Drawer on a Shopify development store where all features are free: install, switching on the app embed and the cart drawer with a free shipping bar, the plan screens up to the Shopify approval screen and the cancel and uninstall FAQ. Nothing was paid, approved or uninstalled. Install: the App Store listing (English) said Free plan available. Free trial available. and Built for Shopify. The Install click opened the admin in a new tab; the first attempt broke because that tab was closed, and the second attempt worked. The install dialog (Install app) asked for access to customer data (device and activity data), staff data (store owner) and store data (customers, products, orders, discounts, Online Store, Shopify admin, other data). After Install the app opened without any payment at /apps/essential-cart-drawer/app with a Setup Guide at 0 / 4 completed and no plan choice first. Core action: step 1, Activate app embed in Shopify, opened the theme editor, where Essential Cart was switched on (the toast said Essential Cart activated) and the theme was saved, which is a real change to the theme of our development store. Step 2, Sticky Add to Cart, was skipped. Step 3, Enable at Cart Drawer, said Cart Drawer was successfully published in your store. and showed the status Live. Step 4: Customize, Spend tiers, template Free shipping bar, United States (Default) switched on and saved. The preview then showed a drawer with a timer (Checkout in 09:54), a rewards bar that said All Rewards unlocked!, two discount codes and a Secure checkout button. The Upsell menu item was On by default but no upsell product was visible in the preview. Timing, approximate tester observations: start at 10:43:30, saved at 10:47:00, so about 3.5 minutes and about 9 clicks (Install, Install confirmation, Activate, Save in the editor, Skip, Enable, Customize, Spend tiers, template, toggle, Save). The drawer was seen in the app preview only; it was not viewed on the shop itself because the store has a password page. Plans: the Plans page showed a Development store box (All features free: You are on a development store, every feature works without a subscription) and the Free plan, Up to 30 orders monthly, $0.00 per month, All features included, Automatically scales with your order volume, Cancel anytime, with a Choose this plan button that was not used because the app already worked. Show all plans lists Essential 1 up to 99 orders at $8.99 a month, Essential 2 up to 199 at $13.99, Essential 3 up to 499 at $23.99, Essential 4 up to 999 at $38.99, Essential 5 up to 1.999 at $58.99, Essential 6 up to 4.999 at $88.99, Essential 7 up to 9.999 at $138.99 and Unlimited 10,000+ at $198.99, each with a Start 14 day trial button. A 30 Day Money Back Guarantee - No questions asked! is shown. The App Store listing shows four plans (Free and Essential 1 to 3) and Above 499: 5 more plans, while the app shows all nine; the prices match. Checkout: Start 14 day trial at Essential 1 opened the Shopify Approve subscription screen with You will not be billed for this test charge., This app bills you for usage charges, an app spending limit of a maximum of $198,99 USD per 30 days and Add payment method (not filled in). The screen showed no price and no trial for Essential 1. Approve was not used, because the Free plan had already opened the app, and Cancel returned to Apps. Cancelling: the FAQ on the Plans page says that cancelling is done right on that page, takes effect immediately, drops the plan to Free-not-subscribed, unpublishes the cart drawer, stops further charges and keeps the settings. The FAQ on uninstalling says that uninstalling cancels the subscription automatically and that the drawer stops appearing immediately; reinstalling starts fresh on the current plans. There was no subscription, so no Cancel button was seen, the Uninstall dialog was not opened and nothing was removed. The FAQ does not mention a refund of unused days as app credit; it only mentions the 30 day money back guarantee. Not tested: upsell products (none visible in the preview), Sticky Add to Cart, the announcement bar, spend tiers with a gift or discount, the drawer on the real storefront, speed and theme compatibility, a paid plan, the limit of 30 orders, the automatic plan switch, the 80 percent email, the Founder plan and design changes by the user. Clean up: the app stays installed with the drawer live, the app embed on and saved in the theme, and the Free shipping bar spend tier on for the United States; no subscription was approved and all opened tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Saving the app embed in the theme is needed to go live, and no upsell product showed in the preview although Upsell is On by default.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Upsell products, Sticky Add to Cart, the announcement bar and spend tiers with a gift or discount.",
+     "The drawer on the real storefront, because the store has a password, and speed and theme compatibility.",
+     "A paid plan, the limit of 30 orders, the automatic plan switch, the 80 percent email and the Founder plan.",
+     "The cancel button itself and the uninstall dialog, because there was no subscription.",
+     "Design changes by the user, support and chat, export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 10:43 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "SignThis",
    "product_id": "signthis",
    "run_date": "2026-11-14",
@@ -4662,6 +4835,195 @@
      "Contact Note text absent"
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Froonze",
+   "product_id": "froonze",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Froonze Loyalty & Wishlist on a Shopify development store, switched on Wishlist and Loyalty on the Free plans, set a points rule, saved the app embed in the theme and read the plan screens up to the Shopify approval screen for Loyalty Advanced. The Free plans needed no payment screen. We paid, approved and uninstalled nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Free plans: the welcome screen said a shop with under 100 monthly orders is eligible for free Wishlist and Loyalty. The Place an order rule (4 points per $1, so 400 points per $100) was active about 3 minutes after install, in about 20 clicks.",
+    "Widget: we saw no widget or launcher in the theme editor preview, and we placed no order, so earning points was not tested.",
+    "Plans: Loyalty is $0 up to 100 orders, then $10, $30 and $60 a month; Wishlist is $0, $10, $20 and $40. Loyalty Advanced plus Wishlist Free showed $10 a month on the plan page.",
+    "Checkout: the Shopify approval screen for Loyalty Advanced showed $10.00 every 30 days with a 14 day trial, asked for a payment method, had Approve greyed out and carried no test charge notice, although the app says all features can be tested free on development stores."
+   ],
+   "not_tested": [
+    "A real order and points on the storefront, the wishlist heart on product pages and store credit.",
+    "Paying for a plan, the trial, a downgrade and behaviour above 100 orders.",
+    "Email templates, Loyalty Advanced features, support and chat."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "You can test all of our app features for free in development stores.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plans worked on the development store. Loyalty Advanced could not be tried: the Shopify approval screen asked for a payment method, its Approve button was greyed out and it carried no notice that the charge is a test charge that will not be billed, so the Advanced features (VIP program, Referral program, Shopify POS) were not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plans page wording versus the Shopify approval screen for Loyalty Advanced on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "The promise to test all features for free on a development store did not hold for the Advanced plan on this store.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free plan available. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing says a free plan is available. The welcome screen said the shop was eligible for the free Wishlist and Loyalty plugins, both plans stayed Free at $0 for up to 100 orders, and no payment screen appeared before use. The trial was seen only on the approval screen (14 days, ending on 1 Dec.).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Listing wording versus the welcome screen and the Free plan cards on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "The Free plans are usable at once for a shop below 100 monthly orders, without a payment screen.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Small Shopify stores with few orders",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan covers 100 orders and the points rule was switched on in about 3 minutes. No order was placed and no widget was seen in the theme preview, so earning points on the storefront was not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus an onboarding and a points rule in the admin, without any storefront view.",
+     "status": "confirmed",
+     "buying_consequence": "A small shop can start on the Free plans; the shopper side was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores with legacy customer accounts",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Legacy accounts were not tested. The plan page labels the customer account widget and the custom forms Legacy Accounts only, at $5 - 30/mo and $6 - 30/mo.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus plan labels without a legacy account test.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about legacy customer accounts.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores where few orders use loyalty",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The loyalty effect on orders was not tested: no order was placed and no alternative was tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Dossier audience wording versus a shop with no orders placed in the test.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about how many orders use loyalty.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "4 points per 1USD spent",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The rule Place an order shows 4 points per 1USD spent and is switched on; the text says 400 points for each $100 spent, which can be redeemed for a $4 discount. No order was placed, so earning and redeeming were not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Rule summary in the admin versus no order and no storefront view.",
+     "status": "not_testable",
+     "buying_consequence": "The 4 percent cashback rule is active but its effect on a real order was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "A request will be sent to the app developer within 48 hours to delete all personal customer information.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "There is no cancel button because both plans are Free. The routes seen are going back to the Free plan (not tried) and Uninstall in the app menu; the dialog says data managed by the app, such as discounts, is deleted. The dialog was cancelled and nothing was removed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Uninstall dialog wording versus an account with no paid plan.",
+     "status": "not_testable",
+     "buying_consequence": "Stopping the app means going back to Free or uninstalling it; cancelling a paid plan was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total: $10 / Month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plans page showed Total: $10 / Month for Wishlist Free plus Loyalty Advanced. The Shopify approval screen showed $10,00 USD every 30 days, a 14-day free trial ending on 1 Dec., Subtotal and Total $10,00 due 1 Dec plus any applicable taxes, asked for a payment method and had a greyed out Approve button. Page and approval screen agree; tax is unknown and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+     },
+     "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+     "comparability": "Plans page total versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+     "status": "confirmed",
+     "buying_consequence": "Loyalty Advanced costs $10 per 30 days after a 14-day trial, before taxes, and needs a payment method even on a development store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Froonze Loyalty & Wishlist on the Free plans of a Shopify development store: the install, the Loyalty onboarding with a points rule, saving the app embed in the theme, the plan screens up to the Shopify approval screen for Loyalty Advanced (not approved, a payment method was asked) and the uninstall dialog. Nothing was paid, approved or uninstalled. Install: the App Store listing (English) is called Froonze VIP Loyalty & Wishlist and says Free plan available. Free trial available.; in the admin the app is called Froonze Loyalty & Wishlist. The Install click at about 11:00 opened the dialog Install app with access to customer data, staff and contributor data and store data (view and edit), which was accepted. The welcome screen said Your shop has less than 100 monthly orders which makes it eligible for free Wishlist and Loyalty plugins.; Wishlist and Loyalty were switched on with Activate and no Shopify payment screen appeared. A chat window of the vendor opened at once and was closed. Core action: Loyalty onboarding, Next, the Points program was chosen (the alternative is a Store credit program), the cashback default of 4 percent was kept (the text says For each $100 spent, your customers will earn 400 points, which they can later redeem for a $4 discount), Create program rules, Activate now, and for the email notifications we chose I'll activate later, so no emails are active. Theme: Install for the app embed opened the theme editor, where the app embed Loyalty & Referrals was already on (toast Loyalty & Referrals activated) and the theme was saved (toast Changes saved.). That is a real change to the live theme of our development store and it is still on; the vendor needs it for the installation. Result in the app: Successfully installed. You can continue with the setup; the check list said Account page widget: No and Audit: No, finish onboarding. Program, Earning rules shows the rule Place an order, 4 points per 1USD spent, switched on (Active). In the theme editor preview we saw no widget or launcher on the home page. No order was placed, so no points could show; the Performance summary shows Activity 0, Points earned 0 and Emails sent 0. Timing, approximate tester observations: about 3 minutes from 11:00 to 11:03 and about 20 clicks, counting the onboarding and saving the theme. Plans: Manage plans starts with the note Plugin prices are flat monthly fees. You get 14-day free trial for your first subscription. You can test all of our app features for free in development stores. Wishlist: Free $0 (100 orders, All features), Advanced $10 (500 orders), Premium $20 (1000 orders) and Unlimited $40 (Unlimited orders, API). Loyalty program: Free $0 (100 orders, Points program, Store credit), Advanced $10 (500 orders, VIP program, Referral program, Shopify POS, Points expiration, integrations with Judge.me, PushOwl and Shopify Flow), Premium $30 (1000 orders, a customer tags blacklist and whitelist) and Unlimited $60 (Unlimited orders, Digital cards, API). The customer account widget shows $5 - 30/mo and the custom forms $6 - 30/mo with the label Legacy Accounts only. Under the plans there is a field Please consider adding a monthly tip (0) and Total: $10 / Month. Checkout: Loyalty Advanced was chosen and Update pressed; the app then said that after clicking Yes we would be prompted to accept a new Shopify recurring charge and that the old recurring charge would be cancelled automatically. The Shopify Approve subscription screen showed the plan Wishlist(Free) + Loyalty(Advanced), $10,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $10,00 plus any applicable taxes and Total $10,00 due 1 Dec. It did not say that the charge is a test charge that will not be billed; it showed Add payment method, and the Approve button was greyed out. Nothing was approved; Cancel gave the toast The shop cannot accept the provided charge. Cancelling: the plans stayed Free for both, so there was no paid plan to cancel. The routes seen are going back to the Free plan (not tried) and the Uninstall item in the app menu (the three dots, with Manage app, Get support, Pin to your navigation and Uninstall). The Uninstall dialog says that after uninstalling any data managed by the app, such as discounts, will be deleted, and that a request is sent to the developer within 48 hours to delete all personal customer information; it was cancelled and nothing was removed. The pricing FAQ of the vendor (read on 25 October, not read again) says cancelling is possible at any time and is prorated. Not tested: a real order and earning points on the storefront, the widget in the theme preview (not seen), the wishlist heart on product pages (only switched on, not shown), store credit and legacy accounts, the behaviour above 100 orders, paying for a plan, the trial, a plan downgrade and the email templates. Clean up: the app stays installed, both plans stay Free, the Place an order rule is active, the email notifications are off and the app embed is on and saved in the theme. All tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app embed has to be saved in the live theme, the Advanced plan could not be approved without a payment method although development stores are said to test all features free, and no widget showed in the theme preview.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A real order and earning points on the storefront, and the widget in the theme preview.",
+     "The wishlist heart on product pages, store credit and legacy accounts.",
+     "The behaviour above 100 orders, paying for a plan, the trial and a plan downgrade.",
+     "The email templates, the Loyalty Advanced features, support and chat, export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 11:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -6716,6 +7078,230 @@
   },
   {
    "source": "session",
+   "product_name": "Upsell & Cross Sell - AW",
+   "product_id": "upsell-cross-sell-aw",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Upsell & Cross Sell AW by Aheadworks on a Shopify development store, chose the Free plan, saved the app embed in the theme and handpicked one upsell, which showed in the theme editor preview of the product page about 3 minutes after install, in about 14 clicks. We opened the Shopify approval screen for Start-Up and cancelled it. We paid, started no paid plan and uninstalled nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Free plan: no Shopify approval screen appeared. The block carries a Powered by Cross Sell line, the plan allows 50 clicks a month, and the cart drawer, one-click upsell, homepage, collection and checkout locations were locked with Please upgrade.",
+    "Prices: the app lists Start-up at $29.99, Small store $49.99, Medium store $59.99 and Large store $79.99 a month, each with a price per extra click, plus top-up packs of 150 clicks for $4. The listing names no per-click price, no top-up packs and no Large store plan.",
+    "Checkout: the approval screen for Start-Up showed $29.99 every 30 days with a 14 day trial and asked for a payment method. The $29.99 matches the plan list.",
+    "Cancelling: the app menu has no way to cancel or downgrade a paid plan; the only route seen is uninstalling. The FAQ link on the listing opened a Not Found page."
+   ],
+   "not_tested": [
+    "Any paid plan, and offers on the cart drawer, checkout, thank you page and post purchase.",
+    "Clicking the offer, an order, analytics and the storefront outside the theme editor preview.",
+    "Cancelling a paid plan, uninstalling and support."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Visible on first 2 pages",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app says Visible on first 2 pages for Start-up and for the Free plan, while the listing names 3 locations for Start-up and 2 locations for Free.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Listing wording on locations versus the in-app plan cards on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "The number of places where the offers show is worded differently in the app than in the listing, and the Start-up plan has fewer than listed.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Extra recommendation clicks: $0.01/click",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app shows a price per extra recommendation click on every plan ($0.01, $0.012, $0.006 and $0.0016, and $0.026 on Free). The listing names no price per extra click.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Listing price list versus the in-app plan cards.",
+     "status": "contradicted",
+     "buying_consequence": "Running above the monthly click limit costs extra per click, which the listing does not mention.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Top-up packs $4.0 - 150 clicks",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plans screen offers Top-up packs $4.0 - 150 clicks. The listing names no top-up packs.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Listing price list versus the top-up line on the in-app plans screen.",
+     "status": "contradicted",
+     "buying_consequence": "Extra clicks can be bought in packs of 150 for 4 dollars, which is not in the listing.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Please upgrade",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "On the Free plan the Assign page shows Please upgrade on Cart drawer, One-click upsell, Homepage page, Collection page and Checkout page; only the product page and the upsell pop-up and cart pages have a switch.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Dossier remark on offers after the cart versus the locked Assign page on the Free plan.",
+     "status": "confirmed",
+     "buying_consequence": "Most locations, including the checkout page, are locked on Free; the offer was only seen on a product page.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Would you rather like these?",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "About 3 minutes after the start of the install the preview of the product page showed the offer The 3p Fulfilled Snowboard under the heading Would you rather like these? with the link Powered by Cross Sell. The app embed was saved in the theme; no app block was added by hand.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Offer in the theme editor preview versus the assigned product and the saved app embed; the storefront was not seen.",
+     "status": "confirmed",
+     "buying_consequence": "A handpicked upsell works on the Free plan in the theme preview within minutes, with a Powered by Cross Sell brand line; the live storefront was not seen.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Try any paid plan free for 14 days. Cancel anytime.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plans screen says Cancel anytime., but the app menu has only Open app, View details, Get support and Uninstall, and the app shows no cancel button; the FAQ link on the listing opens a help site that says Not Found. No paid plan was active, so cancelling could not be tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Plans screen wording versus the app menu and the FAQ link on a development store with only the Free plan.",
+     "status": "not_testable",
+     "buying_consequence": "No way to cancel or downgrade a paid plan was found except uninstalling the app, and the help site could not be opened; the promise was not tested on a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shopify stores wanting hand-picked recommendations",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "We handpicked one upsell for a product on the product page and saw it in the theme preview within about 3 minutes.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Dossier audience wording versus one handpicked upsell in the theme editor preview.",
+     "status": "confirmed",
+     "buying_consequence": "Handpicked recommendations on the product page work as claimed in the preview.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores wanting offers after the cart",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Cart drawer, checkout and one-click offers are locked on Free and the thank you and post purchase pages were not found or tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Dossier audience wording versus an Assign page locked on Free.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about offers after the cart because those locations need a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "New stores with very few sales",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan has 50 clicks monthly and a Powered by Cross Sell line; no real shop traffic was available to see how fast the limit is reached.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Dossier audience wording versus a Free plan counter at 0 of 50 without shop traffic.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about whether 50 clicks a month are enough for a new store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Start-up $29.99/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plans screen lists Start-up at $29.99 a month, and the Shopify approval screen for Start-Up showed $29,99 USD every 30 days with a 14-day free trial ending on 1 Dec. and a total of $29,99 due on 1 Dec. It was cancelled and nothing was billed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html#claim-vs-measured"
+     },
+     "plan": "Start-Up test charge screen, not approved, development store",
+     "comparability": "Plan list price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The list price of $29.99 a month matches the Shopify approval screen, before taxes and any per click costs.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Upsell & Cross Sell AW on a Shopify development store: the install, the Free plan, the setup wizard with the app embed saved in the theme, one handpicked upsell seen in the theme editor preview, the plan screens, the locked locations on Free, the Start-Up approval screen (not approved) and the app menu. Nothing was paid, no paid plan was started and nothing was uninstalled. Install: the App Store listing (English) is called Upsell & Cross Sell AW by Aheadworks and says Free plan available. Free trial available., with a rating of 4.8 from 485 reviews; the install screen calls the app Upsell, Cross sell & Bundles and asks for View customer data, View staff and contributor data and View and edit store data. Install was approved at about 11:15. Plans: straight after the install the app opened an in-app plans screen (Try any paid plan free for 14 days. Cancel anytime.). We chose the Free plan with Start plan. There was NO Shopify approval screen and no charge; the app went straight to a welcome wizard. Core action: the wizard has four steps: language (English), Enable app embed, Enable blocks on pages and Setup complete. Enable application embed opened the theme editor with the message Cross Sell Auto activated, and we SAVED the theme there (Changes saved.), so the app embed Cross Sell Auto is now on in the theme of our development store. In step three we switched on only the Product pages block. The Dashboard then said Your app embed status is: Enabled, You have 0 active app block(s) on your store and Clicks used in this cycle 0 / 50 (0%). Offer: in Assign > Product page > Upsells we pressed Assign products for The Inventory Not Tracked Snowboard and picked The 3p Fulfilled Snowboard, which showed 1 of 15 Cross-Sell(s) Selected. In the theme editor preview of the product page the heading Would you rather like these? appeared with the link Powered by Cross Sell (a brand line on the Free plan) and a card for The 3p Fulfilled Snowboard at $2,629.95 with a plus button. No app block had to be added by hand. Timing, approximate tester observations: about 3 minutes from the start of the install (11:15) to the first offer in the preview (about 11:18), in about 14 clicks. The click counter stayed at 0 / 50 because we did not click the offer, and no order was placed. Plans in the app (monthly): Start-up $29.99 (Visible on first 2 pages, 2,500 clicks monthly, Extra recommendation clicks: $0.01/click, No branding, Upsell pop-up, QuickView button), Small store $49.99 (All 8 types of pages, 5,000 clicks monthly, $0.012/click), Medium store $59.99 (All 8 types of pages, 10,000 clicks monthly, $0.006/click) and Large store $79.99 (50,000 clicks monthly, $0.0016/click). The Free plan row says Visible on first 2 pages, Extra recommendation clicks: $0.026/click and 50 clicks monthly. The screen also has a Yearly and Monthly switch, I have a coupon and Top-up packs $4.0 - 150 clicks. Differences with the listing and the dossier: the listing names 3 locations for Start-up and 2 locations for Free, while the app says Visible on first 2 pages for both; the listing shows no Large store plan, and the app does; the listing names no cost per extra click and no top-up packs, and the app shows both; the Upsell in 8 locations plus Custom Pages of the listing is not repeated in the app. Free plan limits: on the Assign page Cart drawer, One-click upsell, Homepage page, Collection page and Checkout page are blurred with Please upgrade; Upsell pop-up and Cart pages have a switch that was off. The Account page says the Free plan has a click limit of 50 and 50 clicks remaining before cross-sell recommendations are no longer visible; its renewal date is 17 December 2026. That page shows an admin email and was not kept as evidence. Checkout: via Please upgrade and Upgrade we reached the Shopify Approve subscription screen for the Start-Up plan: You will not be billed for this test charge., Cross Sell - Start-Up Plan (Dev Shop), $29,99 USD every 30 days, You have a 14-day free trial ending on 1 Dec., a subtotal and total of $29,99 due on 1 Dec, an Add payment method row and an Approve button. We did NOT approve: the Free plan was already active and the screen also asked for a payment method. We pressed Cancel and Shopify said Charge declined.; nothing was charged and no plan was started. Cancelling: the app menu in the list of installed apps has Open app, View details, Get support and Uninstall, and no way to cancel or downgrade a paid plan; the plans page says Cancel anytime. and shows no cancel button. The FAQ link on the App Store listing opens a help site that says Not Found. We did not click Uninstall. Not tested: any paid plan, offers on the cart drawer, checkout, thank you page or post purchase, clicking the offer in the preview, an order, the upsell pop-up, real analytics, the storefront outside the theme editor, and uninstalling. Clean up: the app stays installed on the Free plan, the app embed Cross Sell Auto is saved in the theme, and the upsell for The Inventory Not Tracked Snowboard still exists. Our own test tabs were closed except one admin tab on the apps list that could not be closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app shows a price per extra click and top-up packs that the listing does not name, five locations are locked on Free, and there is no way to cancel a paid plan except Uninstall.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Any paid plan: the Start-Up approval screen was opened and cancelled.",
+     "Offers on the cart drawer, checkout, thank you page and post purchase, which are locked on Free.",
+     "Clicking the offer, an order and real analytics.",
+     "The storefront outside the theme editor preview.",
+     "Cancelling a paid plan, uninstalling, support and chat, export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 11:15 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Pagecloud",
    "product_id": "pagecloud",
    "run_date": "2026-10-30",
@@ -7899,6 +8485,213 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Essential Loyalty",
+   "product_id": "essential-loyalty",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Essential Loyalty on a Shopify development store, set a 5% reward rate, activated the program and saw the rewards widget in the unsaved theme preview about 2 minutes after install, in 6 clicks. We approved the Starter test charge (billed $0, still active) and opened the Cancel subscription dialog, where we chose Keep my plan. We saved nothing in the theme and uninstalled nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Setup: the app opened straight on Set reward rate. The widget showed Place an order, 4 points for every $1.00 spent, and $1.00 off per 100 points, but the admin rule said 8 points per $1. We did not find out which one applies.",
+    "Live status: the app embed stayed unsaved, so the app home said App embed off and Loyalty paused. Customers see nothing until the embed is saved in the theme.",
+    "Plans: Free has 250 loyalty orders; Starter is $10 for 500, Essential $24 for 1,500, Growth $79 for 5,000, and a new Pro plan is $99 with unlimited orders. The dossier had Growth as unlimited. The Shopify approval screen for Starter showed no price, only a usage limit of $199.99 per 30 days.",
+    "Cancelling: the active plan has a Cancel subscription button that opens a reason list with seven options and Keep my plan. We did not continue, so no cancellation was completed."
+   ],
+   "not_tested": [
+    "The shopper side: signing up, points on a test order and redeeming at checkout.",
+    "Point of Sale, referrals, VIP tiers, emails, analytics and Klaviyo.",
+    "Completing a cancellation, the downgrade to Free, uninstalling and support."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Growth $79 /month (5,000)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The dossier price ladder ends at $79 unlimited. The app shows Growth at $79 a month for up to 5,000 loyalty orders; unlimited loyalty orders are in a new Pro plan at $99 a month (struck-through price $149, limited offer until Dec 31). Essential is $24 up to 1,500 orders.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Dossier price ladder versus the Billing page on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "Unlimited loyalty orders cost $99 a month in the Pro plan and not $79; Growth stops at 5,000 orders, and the $99 price is a limited offer until 31 December.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "8 points per $ 1",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The admin program page says 8 points per $ 1 for all products, while the widget in the theme preview says 4 points for every $1.00 spent. No order was placed, so it is not known which one applies.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Admin rule summary versus the widget text in the unsaved theme preview; no test order.",
+     "status": "contradicted",
+     "buying_consequence": "The points per dollar shown to the shop owner and to shoppers differ, so the real earning rate is unclear.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Place an order - 4 points for every $1.00 spent",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The widget showed up in the theme preview about 2 minutes after the install was approved, without saving the theme. Afterwards the app said App embed off and Loyalty paused, so customers see nothing until the app embed is saved in the theme.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Widget in the unsaved theme editor preview versus the app status after leaving the editor; the storefront was not seen.",
+     "status": "confirmed",
+     "buying_consequence": "The widget works in the preview, but going live needs the app embed saved in the theme; it was not saved.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Cancel subscription",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The active plan has a Cancel subscription button in Billing. It opens Why are you cancelling? with seven reasons, Keep my plan and a greyed out Continue. We chose Keep my plan, so the cancellation itself was not completed and the plan is still Starter.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Billing page and cancel dialog on a development store with an active test charge; the cancellation was not completed.",
+     "status": "confirmed",
+     "buying_consequence": "A plan can be cancelled inside the app; the last step and its result were not seen.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "250 free loyalty orders",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan shows 250 free loyalty orders and the dossier says the same, with Starter at 500. The listing says a single VIP tier on Free while the app says 2 VIP tiers.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Dossier and listing wording versus the Free plan card on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "The free limit of 250 loyalty orders matches; the app lists more on Free than the listing.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shopify stores with repeat customers",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The shopper side was not tested: no sign up, no order and no points earned or redeemed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Dossier audience wording versus a test without any shopper action.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about repeat customers.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shops that also sell in a physical store",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Point of Sale is listed under the Starter plan; POS was not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Dossier audience wording versus a plan feature list without a POS test.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about selling in a physical store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores needing loyalty data in their own systems",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Integrations are listed on Free and Shopify Flow triggers and actions under Starter, but no export or integration was tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Dossier audience wording versus plan feature lists without any export or integration test.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about getting loyalty data into other systems.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Starter $10 /month (500 loyalty orders)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing page lists Starter at $10 a month for 500 loyalty orders with a 14-day free trial. The Shopify approval screen for Starter showed no price, only that the app bills usage charges up to $199,99 USD per 30 days and a 14-day free trial ending on 1 Dec.; it was approved as a test charge without a card and billed nothing.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/essential-loyalty-review.html#claim-vs-measured"
+     },
+     "plan": "Starter test charge on a development store, billed 0 dollars",
+     "comparability": "Plan list price versus an approval screen with a usage spending limit and no amount; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The monthly price of $10 could not be confirmed on the approval screen, which shows only a usage spending limit.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Essential Loyalty on a Shopify development store: the install, the reward rate and program activation, the widget in the unsaved theme preview, the plan screens, a Starter test charge (approved, billed 0 dollars, still active) and the Cancel subscription dialog, in which Keep my plan was chosen. Nothing was paid, cancelled, uninstalled or saved in the theme. Install: the App Store listing (English) is called Essent Loyalty Program Rewards and says Free plan available. Free trial available., with a rating of 5.0 from 499 reviews and a launch date of 25 November 2024; in the admin the app is called Essential Loyalty by Essential Apps. Install was clicked at about 11:08 and the dialog Install app (customer data, staff and contributor data, view and edit store data) was approved. The app opened straight on Set reward rate. Core action: Set reward rate offers 3% Safe, 5% (Recommended - Common in stores like yours.) and 8% Aggressive; we kept 5% and pressed Setup program. The program page then showed 5% rate, Activate program and Enable placements, a Review pre-configured program marked Ready and the rule Points per spend: All products, base rate, 8 points per $ 1. We pressed Activate program, which later became Pause program. Placements: Enable app embed opened the theme editor, where the app embed Essential Loyalty was already on, with the text Click Save in top-right corner to enable Essential Loyalty App Embed. We did NOT save: the theme was left with Leave page and the unsaved change was discarded, so the theme was not changed. Afterwards the app home showed App embed off and Loyalty paused, so nothing is live for customers. Result in the preview (unsaved): a Rewards button at the bottom, the panel Welcome to Rewards program with Become a member and Join now, Ways to earn: Place an order - 4 points for every $1.00 spent, and Ways to redeem: Dynamic discount - $1.00 per 100 points. The admin says 8 points per $ 1 while the widget says 4 points for every $1.00 spent; we did not find out why, and no order was placed to see which one applies. Timing, approximate tester observations: the widget stood in the theme preview about 2 minutes after the install was approved, in 6 clicks (approve the install, Setup program, Activate program, Enable app embed, the Rewards button, Ways to earn). Plans: the Billing page (Simple pricing without surprises. Used by 5,846 stores) shows a banner Pro $149 struck through and $99 a month (Everything in Growth, plus unlimited loyalty orders and hands-on support. Limited offer until Dec 31), Starter $10 a month (500 loyalty orders), Essential $24 a month (1,500), Growth $79 a month (5,000) and a Free plan with 250 free loyalty orders; each paid plan has Start 14-day free trial, and there is a 30 Day Money Back Guarantee - No questions asked! Starter has Point of Sale, Landing page, SMS, Google review and visit streak points, Unlisted rewards and Shopify Flow triggers and actions. Essential adds Bonus points campaigns, Product card points, Orders and Profile placements, Store credits, Points and VIP expiry, Branded icons and email domain and Exclude Shipping and Taxes. Growth adds Analytics, Unlimited VIP Tiers, Earning rules and rewards per tier, Receipt and form submissions, Custom Collection and Product points, Auto-translate and a Thank you page and Checkout (Plus). Free has a Basic program, Referrals, 2 VIP tiers, 4 placements and Integrations. Differences with the dossier and the listing: Growth at $79 is limited to 5,000 loyalty orders and is not unlimited (unlimited is in the new Pro plan); Essential is $24 up to 1,500 orders; the listing says a single VIP tier on Free while the app says 2 VIP tiers; the free limit of 250 and the Starter limit of 500 match. Checkout: Starter opened the Shopify Approve subscription screen with You will not be billed for this test charge., the plan Starter, This app bills you for usage charges, a maximum of $199,99 USD per 30 days and You have a 14-day free trial ending on 1 Dec. The screen shows no price for Starter. An Add payment method row was visible but Approve could be pressed without a card, and we approved this test charge on the cheapest plan. The app then said Thank you for upgrading to Starter and showed Starter as Active, so a Starter test subscription is active now (no cost, trial until 1 Dec). Limits and cancelling: the FAQ says that above the free order limit a running program is paused and customers lose their points, rewards and VIP statuses, and that on a paid plan we auto upgrade you to a higher plan. The active plan has a button Cancel subscription in Billing. It opens Why are you cancelling? with seven reasons (It's too expensive, Something isn't working, A feature I need is missing, I'm not seeing results, I'm switching to another app, My store is closing or taking a break, Other), Keep my plan and a greyed out Continue. We chose Keep my plan, so nothing was cancelled and the plan is still Starter. The FAQ says you can downgrade to the free plan at any time, effective immediately, that paid features such as the Loyalty landing page are then disabled, that charging starts on the first day of the 30-day cycle after the trial, and that a refund can be requested within the first 30 days. Uninstall is in the app menu and was not clicked. Not tested: the shopper side (signing up, points on a test order, redeeming at checkout), POS, referrals, tiers, emails, analytics, Klaviyo and why the admin says 8 points while the widget says 4. Clean up: the app stays installed, the theme was not saved, the program is activated but the embed and placements are off (Loyalty paused) and the Starter test subscription is active. Our own tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The admin and the widget disagree on the points per dollar, the widget only goes live after the app embed is saved in the theme, and the app says Loyalty paused until then.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The shopper side: signing up, points on a test order and redeeming at checkout.",
+     "POS, referrals, VIP tiers, emails, analytics and Klaviyo.",
+     "Why the admin says 8 points per dollar while the widget says 4.",
+     "Completing the cancellation, uninstalling and the downgrade to the free plan.",
+     "Saving the app embed in the theme, support and chat, export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 11:08 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -20778,6 +21571,179 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Koala Bundles",
+   "product_id": "koala-bundles",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Koala Bundles (Upsell Koala Bundles in the admin) on a Shopify development store. The app showed only a plan screen with no free plan, so nothing could be built until we approved the Kickstart test charge, which billed $0 and needed no card. We then built one quantity break offer in 4 clicks and read the cancel route and the uninstall dialog. We paid and uninstalled nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Plan wall: the listing says Free to install, but every page of the app sent us back to Choose your plan, about 35 seconds after the first install click. Kickstart Koala is $12.99 every 30 days with a 14 day trial; Shopify showed the test charge and Approve worked without a payment method.",
+    "Offer: a Quantity Breaks and Free Gift offer for all products (Buy Two save 10%, Buy Three save 20%) took 4 clicks and about 2 minutes. It showed Not visible until the app embed is switched on in the theme, while a card on the same screen said Great job, your offer is live.",
+    "Cancelling: the plan has no cancel button in the app or in Shopify Billing. The FAQ points to support, and the other route is uninstalling, which deletes the data the app manages.",
+    "Scale: we saw the offer only in the app preview. We did not switch the embed on, so we did not see it on a product page."
+   ],
+   "not_tested": [
+    "Volume discount, product bundle and bundles as their own SKU: not built.",
+    "The widget on a product page, because we did not change the theme.",
+    "Post-purchase upsell, Analytics, what happens after the trial ends, support and chat."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free to install. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The App Store listing shows a plan Free to install, Perfect for development stores. The app shows no free plan: every page sent us back to Choose your plan until a paid plan was selected, and the free route for a development store ran through the Kickstart test charge ($12,99 with a 14-day trial, billed $0 and still active).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/koala-bundles-review.html#claim-vs-measured"
+     },
+     "plan": "Kickstart Koala test charge on a development store, billed 0 dollars",
+     "comparability": "App Store listing versus the Billing screen and the approval screen on one development store.",
+     "status": "contradicted",
+     "buying_consequence": "The free plan of the listing is not shown in the app; a development store has to select a paid plan and its test charge first.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "downgrades are prorated, but cancellations are not.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing screen has no cancel button and neither has Shopify Settings, Billing. The FAQ says to contact support, and the only other route seen is uninstalling the app, which deletes the data it manages. The Kickstart test charge plan stays active, billed $0 with the trial to 1 Dec.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/koala-bundles-review.html#claim-vs-measured"
+     },
+     "plan": "Kickstart Koala test charge on a development store, billed 0 dollars",
+     "comparability": "FAQ wording versus the Billing and Settings screens on a development store with an active test charge; no cancellation was attempted.",
+     "status": "confirmed",
+     "buying_consequence": "A paid plan cannot be stopped inside the app; cancelling needs support or removing the app.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Great job - your offer is live!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Right after saving, the same screen showed the status Not visible and a warning that the app is not activated in the theme settings, so product page offers will not be visible. The theme embed was not switched on, so the storefront was not seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/koala-bundles-review.html#claim-vs-measured"
+     },
+     "plan": "Kickstart Koala test charge on a development store, billed 0 dollars",
+     "comparability": "Card text versus the status badge and warning on the same app screen; no storefront view.",
+     "status": "contradicted",
+     "buying_consequence": "A new offer is not visible to shoppers until the theme embed is switched on, although the card says it is live.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shopify stores adding quantity breaks to best sellers",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "A quantity break offer (Quantity Breaks & Free Gift, All products, save 10% and 20%) was made in 4 clicks and seen in the app preview. The Scale Koala plan of the dossier shows $19.99 a month. Best seller targeting, the storefront and any sales were not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/koala-bundles-review.html#claim-vs-measured"
+     },
+     "plan": "Kickstart Koala test charge on a development store, billed 0 dollars",
+     "comparability": "Dossier audience wording versus one default offer in the app preview of a development store.",
+     "status": "confirmed",
+     "buying_consequence": "Quantity breaks can be set up quickly in the app; the effect on a product page was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores testing their first bundle offers",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Kickstart plan shows $12.99 a month with a 14-day trial and its test charge was approved; a first offer took about 5 minutes from the plan choice. A product bundle was not built, only a quantity break offer.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/koala-bundles-review.html#claim-vs-measured"
+     },
+     "plan": "Kickstart Koala test charge on a development store, billed 0 dollars",
+     "comparability": "Dossier audience wording versus the Kickstart test charge and one quantity break offer on a development store.",
+     "status": "confirmed",
+     "buying_consequence": "A first offer can be made within minutes after choosing a plan; product bundles were not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores that need every bundle as its own SKU",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Bundles as their own SKU were not tested and no alternative was tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/koala-bundles-review.html#claim-vs-measured"
+     },
+     "plan": "Kickstart Koala test charge on a development store, billed 0 dollars",
+     "comparability": "Dossier audience wording versus a test with one quantity break offer.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about SKU bundles.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$12,99 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing card shows Kickstart Koala at $12.99 per month with Start 14-day trial. The Shopify approval screen showed $12,99 USD every 30 days, a 14-day free trial ending on 1 Dec, Subtotal and Total $12,99 due 1 Dec plus any applicable taxes, and was approved in round 2 without a payment method; Billing then showed $0,00 USD billed on 17 Nov with no past bills. Card and approval screen agree; tax is unknown.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/koala-bundles-review.html#claim-vs-measured"
+     },
+     "plan": "Kickstart Koala test charge on a development store, billed 0 dollars",
+     "comparability": "Plan card versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+     "status": "confirmed",
+     "buying_consequence": "Kickstart costs $12.99 per 30 days after a 14-day trial, before taxes; the first charge is due 1 Dec.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Koala Bundles, called Upsell Koala Bundles in the admin, on a Shopify development store: the install, the plan wall before any use, the Kickstart test charge (approved in a second round, billed 0 dollars, still active), one quantity break offer, the Not visible status, the cancel route and the uninstall dialog. Nothing else was paid, cancelled, uninstalled or changed in the theme. Round 1, install and plan wall: the App Store listing (English) says Free to install. Free trial available., plan Free to install, Perfect for development stores, rating 4.9 from 830 reviews, developer ProfitKoala. Install was clicked at 10:39:30 and the install dialog (Install app, the app is called Upsell Koala Bundles in the admin) asked for access to customer data (device and activity data), staff data (store owner) and store data (products, orders, discounts, Online Store, Shopify admin); Install again at about 10:39:50. The Billing screen Choose your plan appeared at 10:40:05, about 35 seconds after the first click, with no onboarding or setup before the plan choice. The Offers page and every other page sent us back to Choose your plan, and there is no free plan on the screen, so nothing could be built. The FAQ Can I use the app for free? says the trial starts automatically when one of the paid plans is selected and that development stores can use the app at no cost, so the free route for a development store runs through choosing a paid plan and a test charge. The first Start 14-day trial at Kickstart Koala opened the Shopify Approve subscription screen with the test charge notice, $12,99 USD every 30 days and a 14-day free trial ending on 1 Dec; it was not approved and Cancel gave Charge declined., after which the app stayed installed without a plan. That round ended with the first core action not done. Round 2, test charge approved (a later decision on our side to continue; no payment method was added): Start 14-day trial at Kickstart Koala at about 10:51 opened the same screen (Subtotal $12,99 plus any applicable taxes, Total $12,99 due 1 Dec, an Approve button and an optional Add payment method row). Approve was active without a payment method, and we clicked Approve. The app said Plan activated successfully!, and in Shopify Settings, Billing the running total was $0,00 USD, billed on 17 Nov 2026, with no past bills. The app home shows Trial ends at Dec 1, 2026 and a Setup guide at 0 / 3: Activate the app embed, Create your first offer and Confirm the offer works. Core action: Create offer at 10:53:55 and Deal created successfully! at about 10:56, a bit over 2 minutes with page loads. Steps: Create offer, the offer type Quantity Breaks & Free Gift, Select, the first template (black), Select, Save, so 4 clicks and no field filled in; from the plan choice 6 clicks and about 5 minutes. The defaults were Applies to: All products, the title BUNDLE & SAVE and the tiers Buy One, Buy Two (save 10%) and Buy Three (save 20%), with an example price of $949.95. The Select offer screen lists Product page (7 types, among them Quantity Breaks & Free Gift, Product Bundle and Volume Discount), Post-purchase (1) and Boosters (2). Visibility: right after saving the offer had the status Not visible, with the warning Upsell Koala Bundles app isn't activated on your theme settings and the text that product page offers will not be visible until the app is activated in the theme settings, a modal Your offer won't be visible, and, on the same screen, a card saying Great job - your offer is live! with the buttons Looks awesome!, Something's off... and Preview offer. The app embed in the theme was not switched on, because that is a theme change, so the widget was not seen on a product page; the offer was only seen in the app preview (Buy One $949.95, Buy Two with You save 10%). The card and the status contradict each other. Cancelling: the Billing screen shows Kickstart Koala as Selected and the Current plan, billed every month at $12.99, trial ends at Dec 1, 2026, with no cancel button; Shopify Settings, Billing and the Current billing cycle show only $0,00 USD and Add payment method, and no cancel button for app plans. The FAQ What if I want to change or cancel my plan? says: cancel without any charges during the 14-day trial, downgrades are prorated but cancellations are not, and Contact support to explore refund options. A plan cannot be stopped inside the app; the only routes seen are contacting support or uninstalling the app. The Uninstall dialog (Settings, Apps, the menu next to the app with Open app, View details, Get support and Uninstall) says that after uninstalling any data managed by the app, such as discounts, will be deleted and that a request goes to the developer within 48 hours to delete personal customer information; it was cancelled and nothing was removed. The plan was therefore not cancelled: the Kickstart test charge stays active with the trial until 1 Dec and $0 billed, and one quantity break offer for All products stays in the app. Not tested: a volume discount or a product bundle, the widget on a product page and a theme preview, the Offers and Analytics pages beyond the list, what happens after the trial ends, support or live chat, post-purchase upsell, bundles as their own SKU and the best seller audience. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app does not open without a paid plan, there is no cancel button for the plan, and the offer said it was live while its status was Not visible.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A volume discount or a product bundle, and bundles as their own SKU.",
+     "The widget on a product page and a theme preview, because the app embed was not switched on.",
+     "The Offers and Analytics pages beyond the list, post-purchase upsell and what happens when the trial ends.",
+     "Cancelling the plan, because the app has no cancel button and the only other route is uninstalling.",
+     "Support and live chat, export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 10:39 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

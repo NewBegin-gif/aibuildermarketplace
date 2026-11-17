@@ -1932,7 +1932,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Helpdesk with the Fin AI agent; seats from $29, Fin $0.99 per outcome.
 - **Best for:** support teams that want a messenger, shared inbox and an AI agent in one platform, and are fine paying per seat plus per resolved conversation
 - **Flags:** Per-seat pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/intercom-review/
+- **Full review:** https://zerotouchsupport.com/intercom-review.html
 
 ## InVideo (invideo.io)
 - **Verified pricing:** Three plans priced per seat, re-verified on invideo.io/pricing on 24 September 2026; the page was rebuilt after 5 September, when it listed Plus, Max, Generative and Elite.
@@ -2727,8 +2727,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/partnerstack-review.html
 
 ## Passpack (passpack.com)
-- **Verified pricing:** (re-verified 30 September 2026 on passpack.com/plans/ and passpack.com/llms.txt, which agree; unchanged since our 25 August, 2, 3 and 6 September readings) Teams is $20 per user per year, p…
-- **Honest take:** The mobile side is very new: the iOS app arrived on 10 August 2026, and on 6 September 2026 there was still no Android app.
+- **Verified pricing:** (re-verified 30 September 2026 on passpack.com/plans/ and passpack.com/llms.txt, which agree, and again on 17 November 2026 on passpack.com/plans/, when llms.txt returned 404; unchanged sin…
+- **Honest take:** The mobile side is very new: the iOS app arrived on 10 August 2026, and on 6 September 2026 there was still no Android app. By 17 November 2026 an Android app was on Google Play, with 10+ downloads.
 - **Best for:** teams under twenty people who want zero-knowledge encryption and shared vaults at about $1.67 a seat a month, and can live with a first-generation mobile app and a plainer interface
 - **Flags:** Per-seat pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/passpack-review/
@@ -2809,7 +2809,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/pickeasy-review.html
 
 ## Piktochart (piktochart.com)
-- **Verified pricing:** (re-verified 6 September and again 19 September 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 2026 reading) Free is $0, Pro is $15 per me…
+- **Verified pricing:** (re-verified 6 September, 19 September and 17 November 2026 on piktochart.com/pricing/, US dollar view; the plan amounts are unchanged from our 6 August 2026 reading) Free is $0, Pro is $15…
 - **Honest take:** The ladder here is not about how much you make, it is about which file you are allowed to hand over.
 - **Best for:** individuals and small teams who need infographics, data-heavy reports and posters to look designed without hiring a designer, and above all students, teachers and nonprofits
 - **Flags:** Per-seat pricing, Usage-metered, Annual commit, Free tier
@@ -2985,7 +2985,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-08-26 over a US connection and re-read 2026-10-16 with USD selected, on proton.me/drive/pricing, Individuals view with yearly billing) Proton Free gives 5 GB.
 - **Honest take:** Because Proton can't read your files, there's no server-side search inside documents, previews and integrations are more limited, and lost credentials without recovery mean lost data.
 - **Best for:** privacy-conscious individuals and businesses that want end-to-end-encrypted storage from a Swiss provider, ideally as part of the wider Proton suite
-- **Flags:** Per-seat pricing, Free tier
+- **Flags:** Per-seat pricing, Renewal jump, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/proton-drive-review.html
 
 ## PulseMonitor (pulsemonitor.io)

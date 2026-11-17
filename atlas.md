@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 668 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-16.
+All 670 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2043,7 +2043,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** You pay a premium for managed speed and support: worth it if performance matters, wasteful on a low-traffic hobby site a $5 shared host would carry fine.
 - **Best for:** business-critical WordPress sites where speed, uptime and expert support directly affect revenue
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/kinsta-review/
+- **Full review:** https://officesoftwaremarketplace.com/kinsta-review.html
 
 ## Kit (kit.com)
 - **Verified pricing:** (re-verified 2026-09-02) The free plan is $0/mo and covers up to 10,000 email subscribers, with unlimited landing pages and forms, unlimited email broadcasts, audience tagging and segmentat…
@@ -2072,6 +2072,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** outbound sales teams living in their CRM that want a serious power dialer with local presence, SMS and automation
 - **Flags:** Hidden pricing, Per-seat pricing, Add-ons extra
 - **Full review:** https://zerotouchsupport.com/kixie-review.html
+
+## Klap (klap.app)
+- **Verified pricing:** (read 2026-11-17 on klap.app/pricing, US dollars) Three plans, each with AI clipping, captions, scheduling and analytics.
+- **Honest take:** Turns long videos into short clips; free on 1 video, paid from $14.50.
+- **Best for:** creators, podcasters and small teams with long videos who want vertical clips with captions and reframing made automatically, and who will post often enough to use a plan of 100 to 1,000 clips a month
+- **Flags:** Add-ons extra
+- **Full review:** https://marketingandsalessoftware.com/klap-review.html
 
 ## Koala Bundles (profitkoala.com)
 - **Verified pricing:** (read 2026-09-30 on apps.shopify.com/profitkoala-upsell-bundle and in the vendor's billing articles at koala-bundles.crisp.help) Priced on the revenue its offers bring in, not on features: …
@@ -2540,7 +2547,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The €3.49 is a two-year introductory rate: Basic renews at €139.08 a year, about €11.59 a month, roughly three times what you signed up at.
 - **Best for:** individuals and households who want an easy personal VPN and will set a reminder before the two-year plan renews
 - **Flags:** Per-seat pricing, Renewal jump, Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/nordvpn-review/
+- **Full review:** https://officesoftwaremarketplace.com/nordvpn-review.html
 
 ## Notify Me (notify-me.io)
 - **Verified pricing:** (price re-verified 2026-09-23 against the Shopify App Store listing and notify-me.io/pricing) Four tiers: Lite, a free plan with mostly lifetime allowances, then Kickstart $9.90/mo or $95/y…
@@ -3702,14 +3709,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The jump from Starter to Growth is $50 to $625 a month (twelve and a half times) and the free tier is capped at one live demo, so the moment you want a second demo published you are on the ladder.
 - **Best for:** sales and marketing teams who show a product before a call and want to know which prospects clicked what: the free tier is usable for one demo
 - **Flags:** Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/storylane-review/
+- **Full review:** https://marketingandsalessoftware.com/storylane-review.html
 
 ## Streak (streak.com)
 - **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page; every plan figure identical to the 31 Aug 2026 reading) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or…
 - **Honest take:** The pitch, CRM living inside Gmail, is also the ceiling: everything happens in the inbox, which power users love and growing teams outgrow (reporting, permissions, cross-team process).
 - **Best for:** solo founders and small Gmail-native teams whose pipeline lives in email threads and who want zero context-switching
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/streak-review/
+- **Full review:** https://marketingandsalessoftware.com/streak-review.html
 
 ## Success.co (success.co)
 - **Verified pricing:** (read 2026-08-21 in Success.co's structured data on success.co/pricing, re-read 2026-09-08 and 2026-09-26) There is a Free Forever plan at $0 with the V/TO, Accountability Chart and Organiz…
@@ -3831,6 +3838,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams making talking-head training, explainer and onboarding videos without cameras, actors or editing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/synthesia-review.html
+
+## Systeme.io (systeme.io)
+- **Verified pricing:** (read 2026-11-17 on systeme.io/pricing, US dollars a month) Free $0: 2,000 contacts, 3 sales funnels, 1 blog, 1 course, 1 affiliate program, 1 custom domain, 1 automation rule, 1 email camp…
+- **Honest take:** All-in-one funnels, email and courses; free to 2,000 contacts, paid from $17.
+- **Best for:** solo creators, coaches and small online businesses that want funnels, email, courses and an affiliate program under one login, and are happy to start free and move up as the contact list grows
+- **Flags:** Usage-metered, Annual commit, Free tier
+- **Full review:** https://marketingandsalessoftware.com/systeme-io-review.html
 
 ## Tapform (tapform.com)
 - **Verified pricing:** (read 2026-10-18 in a browser on tapform.com/pricing in the monthly and yearly view; the page shows $ without naming a currency) Two plans.

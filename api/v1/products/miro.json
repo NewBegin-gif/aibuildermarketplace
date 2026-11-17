@@ -15,31 +15,10 @@
   "entry_price": "$8",
   "entry_price_terms": "per member a month, billed annually ($10 billed monthly)",
   "from_price_usd_month": 8.0,
-  "plans": [
-   {
-    "name": "Free",
-    "price": "no published price",
-    "includes": "3 editable boards workspace-wide, unlimited members, AI limited trial, 100 MCP calls a day"
-   },
-   {
-    "name": "Starter",
-    "price": "$8/member/mo, billed yearly",
-    "includes": "25 AI credits per member per month, 500 MCP calls a day"
-   },
-   {
-    "name": "Business",
-    "price": "$20/member/mo, billed yearly",
-    "includes": "50 AI credits per member per month, 2,000 MCP calls a day, guests allowed"
-   },
-   {
-    "name": "Enterprise",
-    "price": "custom priced from 30 members",
-    "includes": "2,500 AI credits a month pooled org-wide, 10,000 MCP calls a day, guests allowed"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 credits a month. Starter $8/member/mo and Business $20/member/mo, both billed yearly; Enterprise custom priced from 30 members. The yearly toggle is marked save 20%, which puts the monthly rates at $10 and $25. AI credits are published per plan: 25 per member per month on Starter, 50 on Business. MCP calls are a separate published meter: 500 a day on Starter, 2,000 on Business. Currency note: the served page defaults to USD, but rendered from a Dutch connection the same numerals appear as €8 and €20, so the symbol follows the visitor region. Enterprise starts from 2,500 AI credits a month, scaling with seats and pooled org-wide, and 10,000 MCP calls a day; Free gets 100 MCP calls a day. Credits are pooled across the organisation, reset monthly without rollover, and extra credit packages can be bought. Guests (free accounts invited to specific boards, no paid seat) exist only on Business and Enterprise; on Free anyone invited becomes a member. 14-day Business trial. Startups under 30 employees can get $500 or $1,000 in Miro credits.",
-  "verified_at": "2026-09-23",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(price re-verified 2026-09-23 and again 2026-11-17 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 credits a month. Starter $8/member/mo and Business $20/member/mo, both billed yearly; Enterprise custom priced from 30 members. The yearly toggle is marked save 20%, which puts the monthly rates at $10 and $25. AI credits are published per plan: 25 per member per month on Starter, 50 on Business. MCP calls are a separate published meter: 500 a day on Starter, 2,000 on Business. Currency note: the served page defaults to USD, but rendered from a Dutch connection the same numerals appear as €8 and €20, so the symbol follows the visitor region. Enterprise starts from 2,500 AI credits a month, scaling with seats and pooled org-wide, and 10,000 MCP calls a day; Free gets 100 MCP calls a day. Credits are pooled across the organisation, reset monthly without rollover, and extra credit packages can be bought. Guests (free accounts invited to specific boards, no paid seat) exist only on Business and Enterprise; on Free anyone invited becomes a member. 14-day Business trial. Startups under 30 employees can get $500 or $1,000 in Miro credits.",
+  "verified_at": "2026-11-17",
   "source_url": null,
   "schema_offer": {
    "price": 8.0,
@@ -73,20 +52,20 @@
   }
  },
  "free_plan": true,
- "free_plan_evidence": "(price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 credits a month.",
+ "free_plan_evidence": "(price re-verified 2026-09-23 and again 2026-11-17 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 credits a month.",
  "cost_traps": [
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "Starter $8/member/mo and Business $20/member/mo, both billed yearly; Enterprise custom priced from 30 members.",
-   "verified_at": "2026-09-23",
+   "verified_at": "2026-11-17",
    "source_url": null
   },
   {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "(price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 credits a month.",
-   "verified_at": "2026-09-23",
+   "evidence": "(price re-verified 2026-09-23 and again 2026-11-17 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 credits a month.",
+   "verified_at": "2026-11-17",
    "source_url": null
   }
  ],
@@ -156,13 +135,13 @@
     "USD annual prices. Monthly prices are not derived from a percentage saving. Free: three editable boards shared across the workspace.",
     "Live pricing source: https://miro.com/pricing/ (read 2026-10-24)."
    ],
-   "rules_verified_at": "2026-10-24",
    "not_computable": [
     {
      "text": "Additional AI credit packs and usage above published quotas are not priced.",
      "affects_cost": true
     }
-   ]
+   ],
+   "rules_verified_at": "2026-11-17"
   },
   "growth": {
    "annual": {
@@ -578,6 +557,7 @@
   }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
@@ -609,7 +589,7 @@
    "window_days": 14,
    "time_basis": "signup_date_midnight_Europe_Amsterdam",
    "status": "complete",
-   "observed_at": "2026-11-16T02:18:03.142166Z",
+   "observed_at": "2026-11-17T02:18:05.048460Z",
    "counts": {
     "transactional": 0,
     "onboarding_tips": 1,
@@ -718,7 +698,7 @@
    "marketing_emails_14d": {
     "value": 1,
     "basis": "Header rules; marketing = onboarding/tips + sales/upsell + personal-looking sales. Retained INBOX/junk only; time_basis states whether the signup hour is known.",
-    "observed_on": "2026-11-16",
+    "observed_on": "2026-11-17",
     "evidence_url": "https://officesoftwaremarketplace.com/miro-review.html#inbox-timeline"
    }
   }

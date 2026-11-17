@@ -79,14 +79,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/adwave-review.html
 
 ## Adwisely (adwisely.com)
-- **Verified pricing:** (price re-verified 2026-09-10, re-read unchanged 2026-09-27) Read on adwisely.com/pricing; every figure below stood unchanged from our previous reading on 2 August 2026.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/adwisely and adwisely.com/pricing; earlier: price re-verified 2026-09-10, re-read unchanged 2026-09-27) Read on adwisely.com/pricing; every figure below…
 - **Honest take:** The honest math is 10% of the ad spend Adwisely manages, with the monthly minimum as a floor rather than a fee on top.
 - **Best for:** e-commerce stores (Shopify, WooCommerce, BigCommerce) that want automated, largely hands-off retargeting and prospecting ads on Meta and Google
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/adwisely-review/
 
 ## AfterSell (aftersell.com)
-- **Verified pricing:** Three plans, each metered by monthly order volume, read on aftersell.com/pricing and on the Shopify App Store listing on 22 September 2026 (re-verified 22 September 2026 and again 27 Septem…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/aftersell and in our own test that day) Three plans, each metered by monthly order volume, read on aftersell.com/pricing and on the Shopify App Store li…
 - **Honest take:** Post-purchase upsells only move the needle with steady order volume and a sensible complementary-offer strategy: bolt it onto a store with little traffic and there's nothing to upsell.
 - **Best for:** Shopify stores with steady order volume that want to lift average order value with one-click post-purchase and checkout upsells
 - **Flags:** Usage-metered
@@ -175,7 +175,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/algomo-review/
 
 ## Alidrop (alidrop.co)
-- **Verified pricing:** (re-verified 2026-10-02 on their own pricing page) Four monthly plans: Starter $39/mo (50 unique / 25 premium products), Professional $59/mo (500 unique / 250 premium), Empire $99/mo (5,000…
+- **Verified pricing:** (re-verified 2026-11-17 on their own pricing page at alidrop.co/pricing; earlier 2026-10-02) Four monthly plans: Starter $39/mo (50 unique / 25 premium products), Professional $59/mo (500 u…
 - **Honest take:** You pay the subscription plus wholesale product cost, and the low Starter product cap nudges serious stores up to Pro quickly.
 - **Best for:** dropshippers who want automated product sourcing, fulfillment and inventory sync with access to faster-shipping suppliers and one-click store integration
 - **Flags:** Annual commit
@@ -482,8 +482,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/blinq-review.html
 
 ## Blocky (effectify.io)
-- **Verified pricing:** (re-verified 2026-11-13 on apps.shopify.com/blocky-simple-country-blocker, where the app is now listed as Bloky Fraud Filter Bot Blocker) Four plans.
-- **Honest take:** Read the plan text before you pick a tier. The listing now has a real Free plan, but it stops at 4 country and IP rules, so treat it as a trial of the idea rather than a working fraud filter.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/blocky-simple-country-blocker and in our own test that day; earlier: re-verified 2026-11-13 on apps.shopify.com/blocky-simple-country-blocker, where the…
+- **Honest take:** Read the plan text before you pick a tier. The listing now has a real Free plan, but it stops at 2 country and IP rules (4 on 13 November 2026), so treat it as a trial of the idea rather than a working fraud filter.
 - **Best for:** Shopify stores below Plus that are losing time to bot traffic, repeat fraudsters or orders from regions they do not ship to, and want blocking rules they control rather than a full security suite
 - **Flags:** Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/blocky-review/
@@ -734,10 +734,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/castmagic-review/
 
 ## ChatGPT AI Product Description (profitoniumapps.com)
-- **Verified pricing:** (re-verified 2026-09-20 on apps.shopify.com/automated-description-writing) Four tiers, priced in credits per month, all amounts unchanged since 19 August 2026.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/automated-description-writing and in our own test that day; earlier: re-verified 2026-09-20 on apps.shopify.com/automated-description-writing) Four tier…
 - **Honest take:** Check the developer is Profitonium before you install.
 - **Best for:** Shopify stores with catalogues in the thousands that need descriptions, titles, meta tags and alt text written in bulk and in several languages, and have the discipline to check a sample before running the whole catalogue
-- **Flags:** Usage-metered, Add-ons extra
+- **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/
 
 ## Chatwith (chatwith.tools)
@@ -1188,9 +1188,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/dryground-ai-review.html
 
 ## Dynasort (dynasort.io)
-- **Verified pricing:** (re-read 3 October 2026 on apps.shopify.com/dynasort) Four tiers, all billed in USD and recurring every 30 days, and the cards have been rewritten since September.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/dynasort and in our own test the same day; earlier reads 14 and 15 September and 3 October 2026) Four tiers, all billed in USD and recurring every 30 da…
 - **Honest take:** The jump from free to paid is steep at $99 a month and buys capacity rather than capability: search, recommendations and post-purchase are already in the free tier.
 - **Best for:** Shopify stores with large or fast-changing catalogues where product order is a merchandising decision (seasonal ranges, frequent stock-outs, wide margin spreads) and nobody who wants to re-order collections by hand every week
+- **Flags:** Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/dynasort-review/
 
 ## Easy Advanced Translations (northwest.dev)
@@ -1339,7 +1340,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/ereleases-review.html
 
 ## Essent Preorder Back in Stock (essential-apps.com)
-- **Verified pricing:** (read 2026-10-04 on apps.shopify.com/essential-pre-order, pricing table and data-access section; the vendor's own pricing page at essential-apps.com/pricing lists the apps but no prices) Fo…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/essential-preorder and in our own test that day; earlier: read 2026-10-04 on apps.shopify.com/essential-pre-order, pricing table and data-access section…
 - **Honest take:** Each paid plan charges per pre-order past its allowance, so a launch that sells 300 on the $4.95 plan adds $50 in overage.
 - **Best for:** Shopify stores running pre-orders, presales or made-to-order drops that also want a Notify me waitlist with restock emails in the same app, at a few hundred pre-orders a month or fewer
 - **Flags:** Usage-metered, Free tier
@@ -1883,8 +1884,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/imagify-review.html
 
 ## Imgify (effectify.io)
-- **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/custom-falling-effect; re-verified 2026-10-20 on the same listing, unchanged) Billed in USD, with recurring charges billed every 30 days.
-- **Honest take:** The free plan is development and partner stores only, so a real storefront pays $2.99 from the first day after a 7-day trial, while a free app in the same category has a far deeper public record.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/custom-falling-effect and in our own test the same day; earlier reads 2026-09-20 and 2026-10-20 on the same listing, when the monthly plan was $2.99) Bi…
+- **Honest take:** The free plan is development and partner stores only, so a real storefront pays $4.99 from the first day after a 7-day trial, while a free app in the same category has a far deeper public record.
 - **Best for:** shopify stores that want their own logo falling down the page, or a marquee of partner, payment and press logos, rather than generic snow, and that have no artwork ready
 - **Full review:** https://aibuildermarketplace.com/b2b/imgify-review/
 
@@ -2110,7 +2111,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/koala-bundles-review.html
 
 ## Koala Gifts (profitkoala.com)
-- **Verified pricing:** (read 2026-10-03 on apps.shopify.com/upsell-koala-gift and in the vendor's billing articles at koala-gift.crisp.help) Priced on the store's Shopify plan, not on use: the four plans carry th…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/upsell-koala-gift and in our own test that day; earlier: read 2026-10-03 on apps.shopify.com/upsell-koala-gift and in the vendor's billing articles at k…
 - **Honest take:** The price follows your Shopify plan, not your use: the same feature list costs $9.99 a month on Shopify Basic and $49.99 on Advanced.
 - **Best for:** Shopify stores that want free gifts with purchase, BOGO and buy-X-get-Y offers, a gift picker, product add-ons and add-to-cart upsell pop-ups for a flat monthly price, with no cap on orders or revenue
 - **Flags:** Add-ons extra
@@ -2288,7 +2289,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/lucrovox-review.html
 
 ## LumenCart (lumencart.fleeta.co.uk)
-- **Verified pricing:** (read 22 September 2026 and re-read unchanged on 27 September and 11 November 2026 on the vendor's own pricing page, lumencart.fleeta.co.uk/pricing) Free $0 with 25 lifetime image generatio…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/lumencart and in our own test that day; earlier: read 22 September 2026 and re-read unchanged on 27 September and 11 November 2026 on the vendor's own p…
 - **Honest take:** You buy credits, not images: highest quality costs 2 credits against 1 for standard, so the better setting halves every allowance on the page: Starter's 75 credits is 37 images a month, not 75.
 - **Best for:** small Shopify merchants who want studio and lifestyle product shots out of the photos they already have, without hiring a photographer or a studio
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -2462,7 +2463,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/murf-review.html
 
 ## MX AI (effectify.io)
-- **Verified pricing:** (read 2026-09-16 and 2026-10-03, re-read 2026-11-13 on apps.shopify.com/custom-background-music; the price rose between the October and November readings) Two plans, and the free one is not…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/custom-background-music and in our own test that day; earlier: read 2026-09-16 and 2026-10-03, re-read 2026-11-13 on apps.shopify.com/custom-background-…
 - **Honest take:** A free app from RoarTheme does the core job, so the $4.99 buys player controls, extra sources and AI-generated seasonal tracks, not the background music itself.
 - **Best for:** Shopify merchants who want seasonal or ambient audio on the storefront, want a say in how the player looks and behaves, and would rather use the app's royalty-free tracks than sort out the licensing for a song of their own
 - **Full review:** https://aibuildermarketplace.com/b2b/mx-ai-review/
@@ -2523,7 +2524,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/nexgen-virtual-office-review.html
 
 ## Nexis CRO (nexiscro.com)
-- **Verified pricing:** (read 14 September 2026 and re-read unchanged on 3 October 2026 on apps.shopify.com/nexis-cro-ai-seo-aeo-audit) Free, then Pro $9 a month or $99 a year, Growth $21 or $121, and Agency $44 o…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/nexis-cro-ai-seo-aeo-audit and in our own test that day; earlier: read 14 September 2026 and re-read unchanged on 3 October 2026 on apps.shopify.com/nex…
 - **Honest take:** It has no track record at all.
 - **Best for:** Shopify merchants who already care about being cited in ChatGPT, Gemini and Perplexity, and who want the audit, the schema deployment, the llms.txt file and the citation tracking in one app instead of stitching them together
 - **Flags:** Usage-metered, Free tier
@@ -3025,8 +3026,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/pumper-bundles-review.html
 
 ## PushOwl (pushowl.com)
-- **Verified pricing:** (prices read 2026-08-17 in a browser and re-read unchanged on 2026-10-04 on pushowl.com/pricing, with both billing toggles) This is priced per channel and then added up, which is the part w…
-- **Honest take:** The bundles are push-first: every paid tier still caps included email at 500 a month.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/pushowl and in our own test that day; earlier: prices read 2026-08-17 in a browser and re-read unchanged on 2026-10-04 on pushowl.com/pricing, with both…
+- **Honest take:** The bundles are push-first: every paid tier still caps included email low (1,000 a month on Plus and 1,500 on Power in the app on 17 November 2026, against 500 on the free bundle).
 - **Best for:** Shopify stores that want to win back abandoned carts and browsing sessions with one-click web push, reaching shoppers who never handed over an email, and then layer in email and SMS, starting on a free tier that does something
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/pushowl-review/
@@ -3340,14 +3341,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seamless-ai-review/
 
 ## Section Library (sectionlibrary.com)
-- **Verified pricing:** (re-read 2026-09-17, 2026-10-05 and 2026-11-12 on apps.shopify.com/section-library; listed in October as “Section Library: AI Sections” and on 12 November 2026 as “Mason: AI Page Builder”; …
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/mason and in our own test that day; earlier: re-read 2026-09-17, 2026-10-05 and 2026-11-12 on apps.shopify.com/section-library; listed in October as “Se…
 - **Honest take:** Almost three years on the App Store and one review.
 - **Best for:** Shopify merchants who want ready-made theme sections and the occasional AI-generated layout inside the native theme editor, and who can live with an app that has almost no public track record
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/section-library-review/
 
 ## Securify (securification.ai)
-- **Verified pricing:** (re-verified 2026-10-25 on apps.shopify.com/easy-block-customer-ip-country) Free plan plus two paid tiers.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/easy-block-customer-ip-country and in our own test that day; earlier: re-verified 2026-10-25 on apps.shopify.com/easy-block-customer-ip-country) Free pl…
 - **Honest take:** Blocking by country and IP is a blunt instrument and it cuts both ways: every rule that keeps out a fraudster also keeps out a customer travelling, using a corporate VPN, or living behind a carrier NAT.
 - **Best for:** stores seeing real fraud or bot traffic that want country, IP, VPN and email-risk rules plus automatic holds on suspicious orders, and who will review the block log rather than set and forget
 - **Flags:** Free tier
@@ -3633,7 +3634,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/slasify-review.html
 
 ## Smartli (smartli.ai)
-- **Verified pricing:** (re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Yearly tabs both unchanged since 5 Aug 2026) Monthly: Starter $39, Pro $59, Empire $99, Unicorn $299, each …
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/smartli-ai-product-description and in our own test that day; earlier: re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Y…
 - **Honest take:** Smartli bundles nine AI tools (copy, SEO, images, logos) into one suite, and that breadth is also the honest catch: each individual tool is competent rather than the best at its job.
 - **Best for:** e-commerce sellers who want an affordable AI suite to draft product listings, ad copy, SEO text and basic brand assets in one place
 - **Flags:** Annual commit
@@ -3741,9 +3742,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/storefaq-review.html
 
 ## StoreLock (storelock.app)
-- **Verified pricing:** (re-read 2026-10-27 and re-verified unchanged 2026-11-12 on apps.shopify.com/storelock, storelock.app/pricing and the StoreLock FAQ) Two plans are on sale today.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/storelock and in our own test that day; earlier: re-read 2026-10-27 and re-verified unchanged 2026-11-12 on apps.shopify.com/storelock, storelock.app/pr…
 - **Honest take:** The copy protection cannot stop screenshots, developer tools or automated scrapers, which is how stores actually get cloned; the real work is detection and takedown.
 - **Best for:** Shopify merchants with their own product photography and a brand worth copying, especially those whose store has already been cloned, who want lookalike-domain and clone alerts plus DMCA notices pre-filled with the evidence
+- **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/storelock-review/
 
 ## StoreSEO (storeseo.com)
@@ -3794,7 +3796,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/sunsama-review.html
 
 ## SupaEasy (supaeasy.com)
-- **Verified pricing:** (verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-22 on both) A free plan plus four paid monthly tiers.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/supaeasy and in our own test that day; earlier: verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-22 on bot…
 - **Honest take:** The 'free' plan is development-stores only, so any live use is paid, and the AI generator that headlines the app is not in Premium ($49) but in Advanced ($99), plus AI credits bought separately ($25 per 50).
 - **Best for:** Shopify merchants, especially non-Plus stores, who want custom discount, checkout, payment and shipping logic without hiring a developer
 - **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/
@@ -3806,10 +3808,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/super-review.html
 
 ## Superfiliate (superfiliate.com)
-- **Verified pricing:** (read 25 August 2026, re-checked 5 and 24 September 2026) Superfiliate publishes no price on its own site.
-- **Honest take:** The price is the part you cannot check.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/superfiliate and superfiliate.com/pricing; earlier reads 25 August, 5 and 24 September 2026, when the listing published a single plan called Custom and …
+- **Honest take:** The price is no longer hidden, and it is high.
 - **Best for:** e-commerce brands turning customers and creators into affiliates with branded co-branded storefronts, if the volume justifies a demo-quoted platform fee
-- **Flags:** Hidden pricing
+- **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/superfiliate-review/
 
 ## Superlines (superlines.io)
@@ -3910,7 +3912,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/tapform-review.html
 
 ## Tapita AI SEO Blog Builder (tapita.io)
-- **Verified pricing:** (re-read 2026-09-19 on apps.shopify.com/tapita-ai-seo-blog-builder, and again on 2026-10-15 with the same result: no plan block, the header Price field reads Free, and the only dollar figur…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/tapita-ai-seo-blog-builder and in our own test that day; earlier: re-read 2026-09-19 on apps.shopify.com/tapita-ai-seo-blog-builder, and again on 2026-1…
 - **Honest take:** Publishing volume is the trap this tool makes cheap.
 - **Best for:** Shopify stores that want structured, product-linked blog drafts and a publishing schedule, and that will edit what comes out before it goes live
 - **Flags:** Usage-metered, Free tier
@@ -4218,14 +4220,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/upsell-cross-sell-aw-review.html
 
 ## Upsell.com (upsell.com)
-- **Verified pricing:** (prices re-verified 2026-11-09 on upsell.com/pricing in the Shopify view and on the Shopify App Store listing apps.shopify.com/reconvert-upsell-cross-sell the same day; this replaces the $1…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/reconvert-upsell-cross-sell and in our own test that day; earlier: prices re-verified 2026-11-09 on upsell.com/pricing in the Shopify view and on the Sh…
 - **Honest take:** Growth is banded and cheap up to 500 orders, but the step after Growth is steep.
 - **Best for:** Shopify merchants who want one funnel covering product page, cart, post-purchase and thank-you offers with AI recommendations and A/B testing, and who sit under 500 orders a month
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/upsell-com-review/
 
 ## UpsellPlus (upsellplus.com)
-- **Verified pricing:** (listing and vendor pricing page re-verified 2026-09-19 on apps.shopify.com/upsellpluscheckout, USD; the Scale ladder confirmed in writing by UpsellPlus support on 2026-09-21) Fixed monthly…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/upsellpluscheckout and in our own test that day; earlier: listing and vendor pricing page re-verified 2026-09-19 on apps.shopify.com/upsellpluscheckout,…
 - **Honest take:** The plans are capped by the revenue they are allowed to earn you, and the first paid step does not raise that cap: Free and the $49 Launch plan both stop at $500 of upsell revenue a month.
 - **Best for:** shopify merchants who want one app covering product page, cart, checkout, post-purchase, customer accounts and POS offers rather than three, especially Shopify Plus stores, where the checkout half of the product actually works
 - **Flags:** Usage-metered
@@ -4457,9 +4459,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/whispertranscribe-review/
 
 ## Wholesale Gorilla (wholesalegorilla.com)
-- **Verified pricing:** (read 2026-09-08 and re-read 2026-09-19 on apps.shopify.com/wholesale-gorilla and checked against the vendor's own plan-comparison page at wholesalegorilla.com/plan-comparison/, which lists…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/wholesale-gorilla and in our own test that day; earlier: read 2026-09-08 and re-read 2026-09-19 on apps.shopify.com/wholesale-gorilla and checked agains…
 - **Honest take:** It is a feature ladder, not a volume ladder, and the features most people picture when they say wholesale sit high on it.
 - **Best for:** Shopify merchants who already have wholesale buyers and want them ordering from the same store as retail customers: custom price groups, a signup and approval flow
+- **Flags:** Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/wholesale-gorilla-review/
 
 ## Wing Assistant (wingassistant.com)
@@ -4476,7 +4479,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wistia-review/
 
 ## Wiz Checkout Upsell (skailama.com)
-- **Verified pricing:** (prices re-verified 2026-09-19 on apps.shopify.com/checkout-pro; the ladder is unchanged since 2 September, one promotion is new) Three tiers, billed in USD every 30 days, each with a 14-da…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/checkout-pro; earlier: prices re-verified 2026-09-19 on apps.shopify.com/checkout-pro; the ladder is unchanged since 2 September, one promotion is new) …
 - **Honest take:** The name says checkout, but the $49 Essential plan does not include checkout upsells.
 - **Best for:** shopify merchants who want checkout-stage upsells, banners, trust badges and gift messages alongside post-purchase and thank-you page offers from a single app, and whose order volume already makes $99 a month a rounding error
 - **Full review:** https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/
@@ -4604,7 +4607,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/zendesk-review.html
 
 ## Zendrop (zendrop.com)
-- **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on apps.shopify.com/zendrop and on zendrop.com/pricing — the two do not carry the same ladder) On the Shopify listing: free to install, with thre…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/zendrop and in our own test that day; earlier: re-read 2026-09-18 and again on 2026-10-05 on apps.shopify.com/zendrop and on zendrop.com/pricing — the t…
 - **Honest take:** The free plan is a catalogue browser rather than a working tier: it allows no linked products, so nothing can actually be sold through it.
 - **Best for:** Shopify merchants starting or scaling a dropshipping or print-on-demand store who want sourcing, automated fulfilment, tracking and custom branding in one app
 - **Flags:** Usage-metered, Free tier

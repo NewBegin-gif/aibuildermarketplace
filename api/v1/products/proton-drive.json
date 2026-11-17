@@ -48,8 +48,8 @@
    }
   ],
   "plans_source": "hand-curated from the vendor's pricing page",
-  "notes": "(read 2026-08-26 over a US connection and re-read 2026-10-16 with USD selected, on proton.me/drive/pricing, Individuals view with yearly billing) Proton Free gives 5 GB. Drive Plus is $3.99 a month for 200 GB, marked 20% off $4.99 and billed at $47.88 every twelve months. Proton Unlimited is $9.99 for 500 GB and folds in the VPN, Mail and Calendar, billed at $119.88 a year. Proton Duo is $14.99 for 2 TB across two users at $179.88 a year, and Proton Family $23.99 for 3 TB and up to six. Teams get Drive Professional at $7.99 per user a month for 1 TB each. The page carries its own currency selector with CHF, EUR and USD, so these are the US default rather than a conversion. The thing worth seeing in that ladder: Drive Plus is the only tier that is storage on its own — every step above it bundles the rest of Proton, so you are buying a suite the moment you need more than 200 GB.",
-  "verified_at": "2026-10-16",
+  "notes": "(read 2026-08-26 over a US connection and re-read 2026-10-16 with USD selected, on proton.me/drive/pricing, Individuals view with yearly billing) Proton Free gives 5 GB. Drive Plus is $3.99 a month for 200 GB, marked 20% off $4.99 and billed at $47.88 every twelve months. Proton Unlimited is $9.99 for 500 GB and folds in the VPN, Mail and Calendar, billed at $119.88 a year. Proton Duo is $14.99 for 2 TB across two users at $179.88 a year, and Proton Family $23.99 for 3 TB and up to six. Teams get Drive Professional at $7.99 per user a month for 1 TB each. The page carries its own currency selector with CHF, EUR and USD, so these are the US default rather than a conversion. The thing worth seeing in that ladder: Drive Plus is the only tier that is storage on its own — every step above it bundles the rest of Proton, so you are buying a suite the moment you need more than 200 GB. Re-read 2026-11-17 in USD: the renewal prices are unchanged, but the first year is discounted. Drive Plus shows $2.49 a month, 'Billed at $29.88 for the first 12 months, then renews at $47.88 every 12 months'; Proton Unlimited shows $6.49, billed at $77.88 for the first 12 months, then $119.88. Duo ($14.99, $179.88 every 12 months), Family ($23.99) and Drive Professional ($7.99 per user) carry no first-year cut. The 'Save $30' on Drive Plus is measured against twelve months at the $4.99 monthly price; against the $47.88 renewal the first year saves $18. The page did not say when the offer ends.",
+  "verified_at": "2026-11-17",
   "source_url": "https://proton.me/drive/pricing",
   "schema_offer": null,
   "source_quotes": [
@@ -71,7 +71,14 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "Teams get Drive Professional at $7.99 per user a month for 1 TB each.",
-   "verified_at": "2026-10-16",
+   "verified_at": "2026-11-17",
+   "source_url": "https://proton.me/drive/pricing"
+  },
+  {
+   "id": "renewal_jump",
+   "label": "Renewal price jump",
+   "evidence": "Drive Plus shows $2.49 a month, 'Billed at $29.88 for the first 12 months, then renews at $47.88 every 12 months'; Proton Unlimited shows $6.49, billed at $77.88 for the first 12 months, then $119.88.",
+   "verified_at": "2026-11-17",
    "source_url": "https://proton.me/drive/pricing"
   }
  ],
@@ -168,9 +175,13 @@
     }
    ],
    "notes": [
-    "Read on the yearly-billing view; monthly-billing prices are not in our notes."
+    "Read on the yearly-billing view; monthly-billing prices are not in our notes.",
+    "The rule uses the renewal prices. On 2026-11-17 the first year was discounted on two plans: Drive Plus billed at $29.88 for the first 12 months, Proton Unlimited at $77.88, each then renewing at the yearly price in this rule."
    ],
-   "rules_verified_at": "2026-10-16"
+   "not_computable": [
+    "The first-year price on Drive Plus and Unlimited (no end date given on the page)."
+   ],
+   "rules_verified_at": "2026-11-17"
   },
   "growth": {
    "annual": {
@@ -373,7 +384,9 @@
     ],
     "switch_points": [],
     "conflicts": [],
-    "unknowns": []
+    "unknowns": [
+     "The first-year price on Drive Plus and Unlimited (no end date given on the page)."
+    ]
    },
    "monthly": {
     "product_id": "proton-drive",
@@ -545,7 +558,9 @@
     ],
     "switch_points": [],
     "conflicts": [],
-    "unknowns": []
+    "unknowns": [
+     "The first-year price on Drive Plus and Unlimited (no end date given on the page)."
+    ]
    }
   }
  },
@@ -941,6 +956,12 @@
    "question_id": "proton-drive:monthly_billing",
    "key": "monthly_billing",
    "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "proton-drive:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The first-year price on Drive Plus and Unlimited (no end date given on the page). Can you publish the price or the rule?",
    "status": "open"
   }
  ],

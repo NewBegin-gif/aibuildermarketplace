@@ -61,10 +61,9 @@
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -72,7 +71,431 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/froonze-review.html",
+  "method": [
+   "Free plans on a development store: switched on both apps and created a points rule",
+   "Saved the app embed in the theme and looked for the widget in the preview",
+   "Read the plan page and the Shopify approval screen for Loyalty Advanced without approving it"
+  ],
+  "claims": [
+   {
+    "claim": "You can test all of our app features for free in development stores.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Free plans worked on the development store. Loyalty Advanced could not be tried: the Shopify approval screen asked for a payment method, its Approve button was greyed out and it carried no notice that the charge is a test charge that will not be billed, so the Advanced features (VIP program, Referral program, Shopify POS) were not tested.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+    },
+    "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+    "comparability": "Plans page wording versus the Shopify approval screen for Loyalty Advanced on one development store.",
+    "status": "contradicted",
+    "buying_consequence": "The promise to test all features for free on a development store did not hold for the Advanced plan on this store.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free plan available. Free trial available.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The listing says a free plan is available. The welcome screen said the shop was eligible for the free Wishlist and Loyalty plugins, both plans stayed Free at $0 for up to 100 orders, and no payment screen appeared before use. The trial was seen only on the approval screen (14 days, ending on 1 Dec.).",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+    },
+    "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+    "comparability": "Listing wording versus the welcome screen and the Free plan cards on one development store.",
+    "status": "confirmed",
+    "buying_consequence": "The Free plans are usable at once for a shop below 100 monthly orders, without a payment screen.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Small Shopify stores with few orders",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Free plan covers 100 orders and the points rule was switched on in about 3 minutes. No order was placed and no widget was seen in the theme preview, so earning points on the storefront was not tested.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+    },
+    "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+    "comparability": "Dossier audience wording versus an onboarding and a points rule in the admin, without any storefront view.",
+    "status": "confirmed",
+    "buying_consequence": "A small shop can start on the Free plans; the shopper side was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Stores with legacy customer accounts",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "Legacy accounts were not tested. The plan page labels the customer account widget and the custom forms Legacy Accounts only, at $5 - 30/mo and $6 - 30/mo.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+    },
+    "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+    "comparability": "Dossier audience wording versus plan labels without a legacy account test.",
+    "status": "not_testable",
+    "buying_consequence": "The test says nothing about legacy customer accounts.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Stores where few orders use loyalty",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The loyalty effect on orders was not tested: no order was placed and no alternative was tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+    },
+    "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+    "comparability": "Dossier audience wording versus a shop with no orders placed in the test.",
+    "status": "not_testable",
+    "buying_consequence": "The test says nothing about how many orders use loyalty.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "4 points per 1USD spent",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The rule Place an order shows 4 points per 1USD spent and is switched on; the text says 400 points for each $100 spent, which can be redeemed for a $4 discount. No order was placed, so earning and redeeming were not tested.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+    },
+    "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+    "comparability": "Rule summary in the admin versus no order and no storefront view.",
+    "status": "not_testable",
+    "buying_consequence": "The 4 percent cashback rule is active but its effect on a real order was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "A request will be sent to the app developer within 48 hours to delete all personal customer information.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "There is no cancel button because both plans are Free. The routes seen are going back to the Free plan (not tried) and Uninstall in the app menu; the dialog says data managed by the app, such as discounts, is deleted. The dialog was cancelled and nothing was removed.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+    },
+    "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+    "comparability": "Uninstall dialog wording versus an account with no paid plan.",
+    "status": "not_testable",
+    "buying_consequence": "Stopping the app means going back to Free or uninstalling it; cancelling a paid plan was not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Total: $10 / Month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The plans page showed Total: $10 / Month for Wishlist Free plus Loyalty Advanced. The Shopify approval screen showed $10,00 USD every 30 days, a 14-day free trial ending on 1 Dec., Subtotal and Total $10,00 due 1 Dec plus any applicable taxes, asked for a payment method and had a greyed out Approve button. Page and approval screen agree; tax is unknown and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+    },
+    "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+    "comparability": "Plans page total versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+    "status": "confirmed",
+    "buying_consequence": "Loyalty Advanced costs $10 per 30 days after a 14-day trial, before taxes, and needs a payment method even on a development store.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Froonze Loyalty & Wishlist on the Free plans of a Shopify development store: the install, the Loyalty onboarding with a points rule, saving the app embed in the theme, the plan screens up to the Shopify approval screen for Loyalty Advanced (not approved, a payment method was asked) and the uninstall dialog. Nothing was paid, approved or uninstalled. Install: the App Store listing (English) is called Froonze VIP Loyalty & Wishlist and says Free plan available. Free trial available.; in the admin the app is called Froonze Loyalty & Wishlist. The Install click at about 11:00 opened the dialog Install app with access to customer data, staff and contributor data and store data (view and edit), which was accepted. The welcome screen said Your shop has less than 100 monthly orders which makes it eligible for free Wishlist and Loyalty plugins.; Wishlist and Loyalty were switched on with Activate and no Shopify payment screen appeared. A chat window of the vendor opened at once and was closed. Core action: Loyalty onboarding, Next, the Points program was chosen (the alternative is a Store credit program), the cashback default of 4 percent was kept (the text says For each $100 spent, your customers will earn 400 points, which they can later redeem for a $4 discount), Create program rules, Activate now, and for the email notifications we chose I'll activate later, so no emails are active. Theme: Install for the app embed opened the theme editor, where the app embed Loyalty & Referrals was already on (toast Loyalty & Referrals activated) and the theme was saved (toast Changes saved.). That is a real change to the live theme of our development store and it is still on; the vendor needs it for the installation. Result in the app: Successfully installed. You can continue with the setup; the check list said Account page widget: No and Audit: No, finish onboarding. Program, Earning rules shows the rule Place an order, 4 points per 1USD spent, switched on (Active). In the theme editor preview we saw no widget or launcher on the home page. No order was placed, so no points could show; the Performance summary shows Activity 0, Points earned 0 and Emails sent 0. Timing, approximate tester observations: about 3 minutes from 11:00 to 11:03 and about 20 clicks, counting the onboarding and saving the theme. Plans: Manage plans starts with the note Plugin prices are flat monthly fees. You get 14-day free trial for your first subscription. You can test all of our app features for free in development stores. Wishlist: Free $0 (100 orders, All features), Advanced $10 (500 orders), Premium $20 (1000 orders) and Unlimited $40 (Unlimited orders, API). Loyalty program: Free $0 (100 orders, Points program, Store credit), Advanced $10 (500 orders, VIP program, Referral program, Shopify POS, Points expiration, integrations with Judge.me, PushOwl and Shopify Flow), Premium $30 (1000 orders, a customer tags blacklist and whitelist) and Unlimited $60 (Unlimited orders, Digital cards, API). The customer account widget shows $5 - 30/mo and the custom forms $6 - 30/mo with the label Legacy Accounts only. Under the plans there is a field Please consider adding a monthly tip (0) and Total: $10 / Month. Checkout: Loyalty Advanced was chosen and Update pressed; the app then said that after clicking Yes we would be prompted to accept a new Shopify recurring charge and that the old recurring charge would be cancelled automatically. The Shopify Approve subscription screen showed the plan Wishlist(Free) + Loyalty(Advanced), $10,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $10,00 plus any applicable taxes and Total $10,00 due 1 Dec. It did not say that the charge is a test charge that will not be billed; it showed Add payment method, and the Approve button was greyed out. Nothing was approved; Cancel gave the toast The shop cannot accept the provided charge. Cancelling: the plans stayed Free for both, so there was no paid plan to cancel. The routes seen are going back to the Free plan (not tried) and the Uninstall item in the app menu (the three dots, with Manage app, Get support, Pin to your navigation and Uninstall). The Uninstall dialog says that after uninstalling any data managed by the app, such as discounts, will be deleted, and that a request is sent to the developer within 48 hours to delete all personal customer information; it was cancelled and nothing was removed. The pricing FAQ of the vendor (read on 25 October, not read again) says cancelling is possible at any time and is prorated. Not tested: a real order and earning points on the storefront, the widget in the theme preview (not seen), the wishlist heart on product pages (only switched on, not shown), store credit and legacy accounts, the behaviour above 100 orders, paying for a plan, the trial, a plan downgrade and the email templates. Clean up: the app stays installed, both plans stay Free, the Place an order rule is active, the email notifications are off and the app embed is on and saved in the theme. All tabs were closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The app embed has to be saved in the live theme, the Advanced plan could not be approved without a payment method although development stores are said to test all features free, and no widget showed in the theme preview.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A real order and earning points on the storefront, and the widget in the theme preview.",
+    "The wishlist heart on product pages, store credit and legacy accounts.",
+    "The behaviour above 100 orders, paying for a plan, the trial and a plan downgrade.",
+    "The email templates, the Loyalty Advanced features, support and chat, export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 11:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/froonze-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/froonze-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/froonze-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Froonze Loyalty & Wishlist on the Free plans of a Shopify development store: the install, the Loyalty onboarding with a points rule, saving the app embed in the theme, the plan screens up to the Shopify approval screen for Loyalty Advanced (not approved, a payment method was asked) and the uninstall dialog. Nothing was paid, approved or uninstalled. Install: the App Store listing (English) is called Froonze VIP Loyalty & Wishlist and says Free plan available. Free trial available.; in the admin the app is called Froonze Loyalty & Wishlist. The Install click at about 11:00 opened the dialog Install app with access to customer data, staff and contributor data and store data (view and edit), which was accepted. The welcome screen said Your shop has less than 100 monthly orders which makes it eligible for free Wishlist and Loyalty plugins.; Wishlist and Loyalty were switched on with Activate and no Shopify payment screen appeared. A chat window of the vendor opened at once and was closed. Core action: Loyalty onboarding, Next, the Points program was chosen (the alternative is a Store credit program), the cashback default of 4 percent was kept (the text says For each $100 spent, your customers will earn 400 points, which they can later redeem for a $4 discount), Create program rules, Activate now, and for the email notifications we chose I'll activate later, so no emails are active. Theme: Install for the app embed opened the theme editor, where the app embed Loyalty & Referrals was already on (toast Loyalty & Referrals activated) and the theme was saved (toast Changes saved.). That is a real change to the live theme of our development store and it is still on; the vendor needs it for the installation. Result in the app: Successfully installed. You can continue with the setup; the check list said Account page widget: No and Audit: No, finish onboarding. Program, Earning rules shows the rule Place an order, 4 points per 1USD spent, switched on (Active). In the theme editor preview we saw no widget or launcher on the home page. No order was placed, so no points could show; the Performance summary shows Activity 0, Points earned 0 and Emails sent 0. Timing, approximate tester observations: about 3 minutes from 11:00 to 11:03 and about 20 clicks, counting the onboarding and saving the theme. Plans: Manage plans starts with the note Plugin prices are flat monthly fees. You get 14-day free trial for your first subscription. You can test all of our app features for free in development stores. Wishlist: Free $0 (100 orders, All features), Advanced $10 (500 orders), Premium $20 (1000 orders) and Unlimited $40 (Unlimited orders, API). Loyalty program: Free $0 (100 orders, Points program, Store credit), Advanced $10 (500 orders, VIP program, Referral program, Shopify POS, Points expiration, integrations with Judge.me, PushOwl and Shopify Flow), Premium $30 (1000 orders, a customer tags blacklist and whitelist) and Unlimited $60 (Unlimited orders, Digital cards, API). The customer account widget shows $5 - 30/mo and the custom forms $6 - 30/mo with the label Legacy Accounts only. Under the plans there is a field Please consider adding a monthly tip (0) and Total: $10 / Month. Checkout: Loyalty Advanced was chosen and Update pressed; the app then said that after clicking Yes we would be prompted to accept a new Shopify recurring charge and that the old recurring charge would be cancelled automatically. The Shopify Approve subscription screen showed the plan Wishlist(Free) + Loyalty(Advanced), $10,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $10,00 plus any applicable taxes and Total $10,00 due 1 Dec. It did not say that the charge is a test charge that will not be billed; it showed Add payment method, and the Approve button was greyed out. Nothing was approved; Cancel gave the toast The shop cannot accept the provided charge. Cancelling: the plans stayed Free for both, so there was no paid plan to cancel. The routes seen are going back to the Free plan (not tried) and the Uninstall item in the app menu (the three dots, with Manage app, Get support, Pin to your navigation and Uninstall). The Uninstall dialog says that after uninstalling any data managed by the app, such as discounts, will be deleted, and that a request is sent to the developer within 48 hours to delete all personal customer information; it was cancelled and nothing was removed. The pricing FAQ of the vendor (read on 25 October, not read again) says cancelling is possible at any time and is prorated. Not tested: a real order and earning points on the storefront, the widget in the theme preview (not seen), the wishlist heart on product pages (only switched on, not shown), store credit and legacy accounts, the behaviour above 100 orders, paying for a plan, the trial, a plan downgrade and the email templates. Clean up: the app stays installed, both plans stay Free, the Place an order rule is active, the email notifications are off and the app embed is on and saved in the theme. All tabs were closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/froonze-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Froonze Loyalty & Wishlist on the Free plans of a Shopify development store: the install, the Loyalty onboarding with a points rule, saving the app embed in the theme, the plan screens up to the Shopify approval screen for Loyalty Advanced (not approved, a payment method was asked) and the uninstall dialog. Nothing was paid, approved or uninstalled. Install: the App Store listing (English) is called Froonze VIP Loyalty & Wishlist and says Free plan available. Free trial available.; in the admin the app is called Froonze Loyalty & Wishlist. The Install click at about 11:00 opened the dialog Install app with access to customer data, staff and contributor data and store data (view and edit), which was accepted. The welcome screen said Your shop has less than 100 monthly orders which makes it eligible for free Wishlist and Loyalty plugins.; Wishlist and Loyalty were switched on with Activate and no Shopify payment screen appeared. A chat window of the vendor opened at once and was closed. Core action: Loyalty onboarding, Next, the Points program was chosen (the alternative is a Store credit program), the cashback default of 4 percent was kept (the text says For each $100 spent, your customers will earn 400 points, which they can later redeem for a $4 discount), Create program rules, Activate now, and for the email notifications we chose I'll activate later, so no emails are active. Theme: Install for the app embed opened the theme editor, where the app embed Loyalty & Referrals was already on (toast Loyalty & Referrals activated) and the theme was saved (toast Changes saved.). That is a real change to the live theme of our development store and it is still on; the vendor needs it for the installation. Result in the app: Successfully installed. You can continue with the setup; the check list said Account page widget: No and Audit: No, finish onboarding. Program, Earning rules shows the rule Place an order, 4 points per 1USD spent, switched on (Active). In the theme editor preview we saw no widget or launcher on the home page. No order was placed, so no points could show; the Performance summary shows Activity 0, Points earned 0 and Emails sent 0. Timing, approximate tester observations: about 3 minutes from 11:00 to 11:03 and about 20 clicks, counting the onboarding and saving the theme. Plans: Manage plans starts with the note Plugin prices are flat monthly fees. You get 14-day free trial for your first subscription. You can test all of our app features for free in development stores. Wishlist: Free $0 (100 orders, All features), Advanced $10 (500 orders), Premium $20 (1000 orders) and Unlimited $40 (Unlimited orders, API). Loyalty program: Free $0 (100 orders, Points program, Store credit), Advanced $10 (500 orders, VIP program, Referral program, Shopify POS, Points expiration, integrations with Judge.me, PushOwl and Shopify Flow), Premium $30 (1000 orders, a customer tags blacklist and whitelist) and Unlimited $60 (Unlimited orders, Digital cards, API). The customer account widget shows $5 - 30/mo and the custom forms $6 - 30/mo with the label Legacy Accounts only. Under the plans there is a field Please consider adding a monthly tip (0) and Total: $10 / Month. Checkout: Loyalty Advanced was chosen and Update pressed; the app then said that after clicking Yes we would be prompted to accept a new Shopify recurring charge and that the old recurring charge would be cancelled automatically. The Shopify Approve subscription screen showed the plan Wishlist(Free) + Loyalty(Advanced), $10,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $10,00 plus any applicable taxes and Total $10,00 due 1 Dec. It did not say that the charge is a test charge that will not be billed; it showed Add payment method, and the Approve button was greyed out. Nothing was approved; Cancel gave the toast The shop cannot accept the provided charge. Cancelling: the plans stayed Free for both, so there was no paid plan to cancel. The routes seen are going back to the Free plan (not tried) and the Uninstall item in the app menu (the three dots, with Manage app, Get support, Pin to your navigation and Uninstall). The Uninstall dialog says that after uninstalling any data managed by the app, such as discounts, will be deleted, and that a request is sent to the developer within 48 hours to delete all personal customer information; it was cancelled and nothing was removed. The pricing FAQ of the vendor (read on 25 October, not read again) says cancelling is possible at any time and is prorated. Not tested: a real order and earning points on the storefront, the widget in the theme preview (not seen), the wishlist heart on product pages (only switched on, not shown), store credit and legacy accounts, the behaviour above 100 orders, paying for a plan, the trial, a plan downgrade and the email templates. Clean up: the app stays installed, both plans stay Free, the Place an order rule is active, the email notifications are off and the app embed is on and saved in the theme. All tabs were closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/froonze-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/froonze-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Froonze",
+    "product_id": "froonze",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Froonze Loyalty & Wishlist on a Shopify development store, switched on Wishlist and Loyalty on the Free plans, set a points rule, saved the app embed in the theme and read the plan screens up to the Shopify approval screen for Loyalty Advanced. The Free plans needed no payment screen. We paid, approved and uninstalled nothing. The full run is in the exit test section below.",
+    "findings": [
+     "Free plans: the welcome screen said a shop with under 100 monthly orders is eligible for free Wishlist and Loyalty. The Place an order rule (4 points per $1, so 400 points per $100) was active about 3 minutes after install, in about 20 clicks.",
+     "Widget: we saw no widget or launcher in the theme editor preview, and we placed no order, so earning points was not tested.",
+     "Plans: Loyalty is $0 up to 100 orders, then $10, $30 and $60 a month; Wishlist is $0, $10, $20 and $40. Loyalty Advanced plus Wishlist Free showed $10 a month on the plan page.",
+     "Checkout: the Shopify approval screen for Loyalty Advanced showed $10.00 every 30 days with a 14 day trial, asked for a payment method, had Approve greyed out and carried no test charge notice, although the app says all features can be tested free on development stores."
+    ],
+    "not_tested": [
+     "A real order and points on the storefront, the wishlist heart on product pages and store credit.",
+     "Paying for a plan, the trial, a downgrade and behaviour above 100 orders.",
+     "Email templates, Loyalty Advanced features, support and chat."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "You can test all of our app features for free in development stores.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Free plans worked on the development store. Loyalty Advanced could not be tried: the Shopify approval screen asked for a payment method, its Approve button was greyed out and it carried no notice that the charge is a test charge that will not be billed, so the Advanced features (VIP program, Referral program, Shopify POS) were not tested.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+      },
+      "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+      "comparability": "Plans page wording versus the Shopify approval screen for Loyalty Advanced on one development store.",
+      "status": "contradicted",
+      "buying_consequence": "The promise to test all features for free on a development store did not hold for the Advanced plan on this store.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free plan available. Free trial available.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The listing says a free plan is available. The welcome screen said the shop was eligible for the free Wishlist and Loyalty plugins, both plans stayed Free at $0 for up to 100 orders, and no payment screen appeared before use. The trial was seen only on the approval screen (14 days, ending on 1 Dec.).",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+      },
+      "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+      "comparability": "Listing wording versus the welcome screen and the Free plan cards on one development store.",
+      "status": "confirmed",
+      "buying_consequence": "The Free plans are usable at once for a shop below 100 monthly orders, without a payment screen.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Small Shopify stores with few orders",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Free plan covers 100 orders and the points rule was switched on in about 3 minutes. No order was placed and no widget was seen in the theme preview, so earning points on the storefront was not tested.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+      },
+      "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+      "comparability": "Dossier audience wording versus an onboarding and a points rule in the admin, without any storefront view.",
+      "status": "confirmed",
+      "buying_consequence": "A small shop can start on the Free plans; the shopper side was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Stores with legacy customer accounts",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "Legacy accounts were not tested. The plan page labels the customer account widget and the custom forms Legacy Accounts only, at $5 - 30/mo and $6 - 30/mo.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+      },
+      "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+      "comparability": "Dossier audience wording versus plan labels without a legacy account test.",
+      "status": "not_testable",
+      "buying_consequence": "The test says nothing about legacy customer accounts.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Stores where few orders use loyalty",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The loyalty effect on orders was not tested: no order was placed and no alternative was tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+      },
+      "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+      "comparability": "Dossier audience wording versus a shop with no orders placed in the test.",
+      "status": "not_testable",
+      "buying_consequence": "The test says nothing about how many orders use loyalty.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "4 points per 1USD spent",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The rule Place an order shows 4 points per 1USD spent and is switched on; the text says 400 points for each $100 spent, which can be redeemed for a $4 discount. No order was placed, so earning and redeeming were not tested.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+      },
+      "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+      "comparability": "Rule summary in the admin versus no order and no storefront view.",
+      "status": "not_testable",
+      "buying_consequence": "The 4 percent cashback rule is active but its effect on a real order was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "A request will be sent to the app developer within 48 hours to delete all personal customer information.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "There is no cancel button because both plans are Free. The routes seen are going back to the Free plan (not tried) and Uninstall in the app menu; the dialog says data managed by the app, such as discounts, is deleted. The dialog was cancelled and nothing was removed.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+      },
+      "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+      "comparability": "Uninstall dialog wording versus an account with no paid plan.",
+      "status": "not_testable",
+      "buying_consequence": "Stopping the app means going back to Free or uninstalling it; cancelling a paid plan was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Total: $10 / Month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plans page showed Total: $10 / Month for Wishlist Free plus Loyalty Advanced. The Shopify approval screen showed $10,00 USD every 30 days, a 14-day free trial ending on 1 Dec., Subtotal and Total $10,00 due 1 Dec plus any applicable taxes, asked for a payment method and had a greyed out Approve button. Page and approval screen agree; tax is unknown and nothing was approved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/froonze-review.html#claim-vs-measured"
+      },
+      "plan": "Free plans on a development store; checkout viewed up to the Shopify approval screen",
+      "comparability": "Plans page total versus the Shopify approval screen for the same plan on one development store; no stored cost rule was compared and no tax line was shown.",
+      "status": "confirmed",
+      "buying_consequence": "Loyalty Advanced costs $10 per 30 days after a 14-day trial, before taxes, and needs a payment method even on a development store.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Froonze Loyalty & Wishlist on the Free plans of a Shopify development store: the install, the Loyalty onboarding with a points rule, saving the app embed in the theme, the plan screens up to the Shopify approval screen for Loyalty Advanced (not approved, a payment method was asked) and the uninstall dialog. Nothing was paid, approved or uninstalled. Install: the App Store listing (English) is called Froonze VIP Loyalty & Wishlist and says Free plan available. Free trial available.; in the admin the app is called Froonze Loyalty & Wishlist. The Install click at about 11:00 opened the dialog Install app with access to customer data, staff and contributor data and store data (view and edit), which was accepted. The welcome screen said Your shop has less than 100 monthly orders which makes it eligible for free Wishlist and Loyalty plugins.; Wishlist and Loyalty were switched on with Activate and no Shopify payment screen appeared. A chat window of the vendor opened at once and was closed. Core action: Loyalty onboarding, Next, the Points program was chosen (the alternative is a Store credit program), the cashback default of 4 percent was kept (the text says For each $100 spent, your customers will earn 400 points, which they can later redeem for a $4 discount), Create program rules, Activate now, and for the email notifications we chose I'll activate later, so no emails are active. Theme: Install for the app embed opened the theme editor, where the app embed Loyalty & Referrals was already on (toast Loyalty & Referrals activated) and the theme was saved (toast Changes saved.). That is a real change to the live theme of our development store and it is still on; the vendor needs it for the installation. Result in the app: Successfully installed. You can continue with the setup; the check list said Account page widget: No and Audit: No, finish onboarding. Program, Earning rules shows the rule Place an order, 4 points per 1USD spent, switched on (Active). In the theme editor preview we saw no widget or launcher on the home page. No order was placed, so no points could show; the Performance summary shows Activity 0, Points earned 0 and Emails sent 0. Timing, approximate tester observations: about 3 minutes from 11:00 to 11:03 and about 20 clicks, counting the onboarding and saving the theme. Plans: Manage plans starts with the note Plugin prices are flat monthly fees. You get 14-day free trial for your first subscription. You can test all of our app features for free in development stores. Wishlist: Free $0 (100 orders, All features), Advanced $10 (500 orders), Premium $20 (1000 orders) and Unlimited $40 (Unlimited orders, API). Loyalty program: Free $0 (100 orders, Points program, Store credit), Advanced $10 (500 orders, VIP program, Referral program, Shopify POS, Points expiration, integrations with Judge.me, PushOwl and Shopify Flow), Premium $30 (1000 orders, a customer tags blacklist and whitelist) and Unlimited $60 (Unlimited orders, Digital cards, API). The customer account widget shows $5 - 30/mo and the custom forms $6 - 30/mo with the label Legacy Accounts only. Under the plans there is a field Please consider adding a monthly tip (0) and Total: $10 / Month. Checkout: Loyalty Advanced was chosen and Update pressed; the app then said that after clicking Yes we would be prompted to accept a new Shopify recurring charge and that the old recurring charge would be cancelled automatically. The Shopify Approve subscription screen showed the plan Wishlist(Free) + Loyalty(Advanced), $10,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Subtotal $10,00 plus any applicable taxes and Total $10,00 due 1 Dec. It did not say that the charge is a test charge that will not be billed; it showed Add payment method, and the Approve button was greyed out. Nothing was approved; Cancel gave the toast The shop cannot accept the provided charge. Cancelling: the plans stayed Free for both, so there was no paid plan to cancel. The routes seen are going back to the Free plan (not tried) and the Uninstall item in the app menu (the three dots, with Manage app, Get support, Pin to your navigation and Uninstall). The Uninstall dialog says that after uninstalling any data managed by the app, such as discounts, will be deleted, and that a request is sent to the developer within 48 hours to delete all personal customer information; it was cancelled and nothing was removed. The pricing FAQ of the vendor (read on 25 October, not read again) says cancelling is possible at any time and is prorated. Not tested: a real order and earning points on the storefront, the widget in the theme preview (not seen), the wishlist heart on product pages (only switched on, not shown), store credit and legacy accounts, the behaviour above 100 orders, paying for a plan, the trial, a plan downgrade and the email templates. Clean up: the app stays installed, both plans stay Free, the Place an order rule is active, the email notifications are off and the app embed is on and saved in the theme. All tabs were closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The app embed has to be saved in the live theme, the Advanced plan could not be approved without a payment method although development stores are said to test all features free, and no widget showed in the theme preview.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "A real order and earning points on the storefront, and the widget in the theme preview.",
+      "The wishlist heart on product pages, store credit and legacy accounts.",
+      "The behaviour above 100 orders, paying for a plan, the trial and a plan downgrade.",
+      "The email templates, the Loyalty Advanced features, support and chat, export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 11:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "froonze:cancellation_terms",

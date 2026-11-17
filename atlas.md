@@ -1942,7 +1942,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/intelis-review.html
 
 ## Intercom (intercom.com)
-- **Verified pricing:** (read 2026-11-17 on intercom.com/pricing, US dollars per seat per month, annual/monthly toggle not recorded) Essential $29 (new customers $19, 35% off), Advanced $85, Expert $132; every pla…
+- **Verified pricing:** (read 2026-11-17 on intercom.com/pricing, US dollars per seat per month, billed annually) Essential $29 (new customers $19, 35% off), Advanced $85, Expert $132; billed monthly $39, $99 and …
 - **Honest take:** Helpdesk with the Fin AI agent; seats from $29, Fin $0.99 per outcome.
 - **Best for:** support teams that want a messenger, shared inbox and an AI agent in one platform, and are fine paying per seat plus per resolved conversation
 - **Flags:** Per-seat pricing
@@ -3400,7 +3400,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/sellfy-review.html
 
 ## Sendcloud (sendcloud.com)
-- **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page, read from a Dutch exit; every subscription, label fee and cap identical to the 31 Aug 2026 reading) Free plan €0/mo: up …
+- **Verified pricing:** (price re-verified 2026-11-17 against the vendor's own pricing page, read from our EU server, after 2026-09-22 from a Dutch exit; subscriptions, label fees, caps, users and integrations ide…
 - **Honest take:** The pricing has layers: a per-label fee on top of the subscription, plus carrier surcharges that can land on invoices weeks later.
 - **Best for:** European e-commerce stores that want easy multi-carrier shipping (DHL, PostNL, Colissimo, GLS, DPD), branded tracking and a returns portal live in under 30 minutes
 - **Flags:** Usage-metered, Free tier

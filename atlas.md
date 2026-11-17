@@ -1565,7 +1565,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/freshbooks-review.html
 
 ## Freshchat (freshchat.com)
-- **Verified pricing:** Read 1 Sep 2026 and re-read 16 Oct 2026 on freshworks.com/live-chat-software/pricing/ (USD, both the Annually and Monthly views).
+- **Verified pricing:** Read 1 Sep 2026 and re-read 16 Oct 2026 and 17 Nov 2026 on freshworks.com/live-chat-software/pricing/ (USD, both the Annually and Monthly views).
 - **Honest take:** The free tier is useful for small teams, but AI features and higher-tier routing sit behind paid plans and add-ons, and being part of the wider Freshworks suite means you'll be nudged toward the full platform.
 - **Best for:** small-to-mid support teams that want live chat and messaging with a real free tier to start
 - **Flags:** Per-seat pricing, Add-ons extra, Free tier
@@ -2350,7 +2350,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/mindstudio-review.html
 
 ## Miro (miro.com)
-- **Verified pricing:** (price re-verified 2026-09-23 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which the FAQ puts at 10 c…
+- **Verified pricing:** (price re-verified 2026-09-23 and again 2026-11-17 on miro.com/pricing/) Free plan: 3 editable boards workspace-wide, unlimited members, AI shown as a limited trial in the plan table, which…
 - **Honest take:** Per-member pricing charges for every member added to the workspace, so an org-wide rollout multiplies at full headcount, and the free plan's cap of 3 editable boards is workspace-wide, not per person.
 - **Best for:** teams that think visually: brainstorms, flowcharts, retros, workshops and planning on an infinite shared canvas with strong templates and facilitation tools
 - **Flags:** Per-seat pricing, Usage-metered, Free tier

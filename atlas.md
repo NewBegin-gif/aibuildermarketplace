@@ -3844,7 +3844,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** All-in-one funnels, email and courses; free to 2,000 contacts, paid from $17.
 - **Best for:** solo creators, coaches and small online businesses that want funnels, email, courses and an affiliate program under one login, and are happy to start free and move up as the contact list grows
 - **Flags:** Usage-metered, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/systeme-io-review/
+- **Full review:** https://marketingandsalessoftware.com/systeme-io-review.html
 
 ## Tapform (tapform.com)
 - **Verified pricing:** (read 2026-10-18 in a browser on tapform.com/pricing in the monthly and yearly view; the page shows $ without naming a currency) Two plans.

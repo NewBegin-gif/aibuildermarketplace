@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 670 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
+All 671 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2444,6 +2444,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** A free app from RoarTheme does the core job, so the $4.99 buys player controls, extra sources and AI-generated seasonal tracks, not the background music itself.
 - **Best for:** Shopify merchants who want seasonal or ambient audio on the storefront, want a say in how the player looks and behaves, and would rather use the app's royalty-free tracks than sort out the licensing for a song of their own
 - **Full review:** https://aibuildermarketplace.com/b2b/mx-ai-review/
+
+## My Stories (getmystories.com)
+- **Verified pricing:** (read 2026-11-17 on getmystories.com/pricing, US dollars) Beginner: $0, up to 10 uploaded videos, unlimited views, shoppable videos, watermark.
+- **Honest take:** Video stories for Shopify stores; free for 10 videos, paid from $14.
+- **Best for:** small Shopify stores with product videos that want Instagram-style stories, shoppable clips and a lead form without custom code
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/my-stories-review/
 
 ## Mycroft (mycroft.io)
 - **Verified pricing:** (read 4 September 2026 on www.mycroft.io/pricing) Mycroft has no public pricing: three packages, and not one number between them.

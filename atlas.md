@@ -1167,7 +1167,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/dripify-review.html
 
 ## Dripshipper (dripshipper.io)
-- **Verified pricing:** (re-read 2026-10-19 on apps.shopify.com/dripshipper, listed as “Dripshipper: Coffee & Tea”, and on dripshipper.io/pricing) Starter $30 a month, Professional $99 and Elite $197, each listed …
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/dripshipper and in our own test the same day, read before on 2026-10-19 on apps.shopify.com/dripshipper, listed as “Dripshipper: Coffee & Tea”, and on d…
 - **Honest take:** Read the ladder before you climb it. Starter already carries unlimited orders, unlimited products and automatic fulfilment: the whole product, in other words.
 - **Best for:** someone who wants a turnkey private-label coffee or tea brand on Shopify (their roasting and packaging, your label on the bag) and is content to stay inside one product category
 - **Flags:** Add-ons extra
@@ -1360,14 +1360,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/essential-cart-drawer-review.html
 
 ## Essential Countdown Timer Bar (essential-apps.com)
-- **Verified pricing:** (read 2026-09-28, re-read 2026-10-21 without changes, on apps.shopify.com/essential-countdown-timer, on essential-apps.com/countdown-timer and in the vendor's help article on timer views) F…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/essential-countdown-timer and in our own test the same day; read 2026-09-28 and 2026-10-21 there, on essential-apps.com/countdown-timer and in the vendo…
 - **Honest take:** A view is every time a timer loads, so the free plan's thousand views a month is a few hundred browsing sessions, and running out switches the timers off.
 - **Best for:** Shopify merchants who run real, dated promotions, launches or shipping cut-offs and want a top-bar, product-page or cart countdown without code, starting on a free plan
 - **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/essential-countdown-timer-bar-review.html
 
 ## Essential Free Shipping Bar (essential-apps.com)
-- **Verified pricing:** (read 2026-09-29 on apps.shopify.com/essential-order-value-booster, on essential-apps.com/free-shipping-bar and in the vendor's help articles on views and on setup) Four plans priced on mon…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/essential-order-value-booster and in our own test the same day; read 2026-09-29 there, on essential-apps.com/free-shipping-bar and in the vendor's help …
 - **Honest take:** The cart page, where a free-shipping progress bar does most of its work, is not on the free plan and not on Starter either.
 - **Best for:** Shopify stores that already offer free shipping above a threshold and want a no-code progress bar on the top bar or product pages, and that will pay $14.99 once they want it in the cart with upsell products next to it
 - **Flags:** Free tier
@@ -1455,8 +1455,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/fastmail-review/
 
 ## FBtrack (optiapps.xyz)
-- **Verified pricing:** (read 2026-09-28 and re-verified unchanged 2026-11-12 on apps.shopify.com/facebook-pixel-conversion-api-fbtrack) Three paid plans and no free plan, each with a 14-day free trial.
-- **Honest take:** The critical reviews are about tracking that stopped without warning or events that never arrived, and with 22 reviews in eight years there is little else to weigh them against.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/facebook-pixel-conversion-api-fbtrack and in our own test the same day; first read 2026-09-28, amounts unchanged since) Three paid plans and no free pla…
+- **Honest take:** The critical reviews are about tracking that stopped without warning or events that never arrived, and with 23 reviews in eight years there is little else to weigh them against.
 - **Best for:** Shopify stores that advertise on Meta plus TikTok, Snapchat or Pinterest and want several pixels, for example one per collection or a backup pixel, with server-side events for all of them managed from one screen
 - **Full review:** https://marketingandsalessoftware.com/fbtrack-review.html
 
@@ -1632,7 +1632,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/gcheck-review.html
 
 ## Gelato (gelato.com)
-- **Verified pricing:** (re-read 2026-09-23 on gelato.com/subscription-plans in a browser session, every figure unchanged since 26 August; the site serves a bot challenge that our capture cannot pass, so there is …
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/gelato-print-on-demand for Gelato+ and its trial, and in our own test account the same day; plan table read again 2026-09-23 on gelato.com/subscription-…
 - **Honest take:** The free plan is usable, so the honest question is only whether Gelato+ earns its fee, and that depends entirely on volume: below ~10 orders a month the discounts won't cover the subscription.
 - **Best for:** creators and stores selling custom products internationally who want local production in many countries to cut shipping time and cost, with no inventory
 - **Flags:** Free tier
@@ -2075,7 +2075,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/kit-review.html
 
 ## Kite (kite.skailama.app)
-- **Verified pricing:** (prices read 2026-09-06 on apps.shopify.com/kite-free-gift, re-verified unchanged 2026-11-01) Four plans, billed in USD every 30 days.
+- **Verified pricing:** (prices read 2026-11-17 on apps.shopify.com/kite-free-gift and in our own test the same day; first read 2026-09-06, unchanged since) Four plans, billed in USD every 30 days.
 - **Honest take:** The free plan covers only the first 50 discount orders a month, then $29 a month is billed, and Free and Starter are not for Shopify Advanced and Plus, whose entry tier is $49.
 - **Best for:** shopify stores that want the discount mechanics themselves: gift with purchase, buy X get Y, tiered and volume pricing
 - **Flags:** Free tier
@@ -2220,7 +2220,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/lensmor-review.html
 
 ## LettrLabs (lettrlabs.com)
-- **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page; EVERY rate identical to the 31 Aug 2026 reading, to the cent) (2026) Postage is included in every per-piece rate.
+- **Verified pricing:** (price read 2026-11-17 on the vendor's own pricing page, with both Premium prices, the Starter rates and the free credit unchanged; full rate list verified 2026-09-22, identical to the 31 A…
 - **Honest take:** Direct mail only pays off with a tight list and a real offer: it's a leverage channel, not a cheap thing to test blindly.
 - **Best for:** local businesses and e-commerce brands using robotically handwritten mail (~$0.49/piece incl. postage) to stand out where email gets ignored
 - **Flags:** Add-ons extra
@@ -2358,8 +2358,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/mera-work-review.html
 
 ## MigrationPro (migrationpro.io)
-- **Verified pricing:** (re-read 2026-10-05 on apps.shopify.com/migrationpro-shopify-migration-app and migrationpro.io/pricing/) The App Store listing has gone.
-- **Honest take:** Start with what is no longer there. Read on 5 October 2026, the Shopify App Store listing says the app is not currently available and sends support questions to the vendor: no install button, no review page.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/migrationpro-shopify-migration-app and in our own test the same day; migrationpro.io/pricing/ read 2026-10-05) The self run migration starts at $29 and …
+- **Honest take:** On 5 October 2026 the Shopify App Store listing said the app was not currently available, with no install button and no review page.
 - **Best for:** merchants moving an existing store into Shopify who want products, customers, orders and, critically, URLs and 301 redirects preserved, who are willing to pay the $29 add-on that carries those redirects on the self-service route
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/migrationpro-review.html
@@ -2579,10 +2579,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/nordvpn-review.html
 
 ## Notify Me (notify-me.io)
-- **Verified pricing:** (price re-verified 2026-09-23 against the Shopify App Store listing and notify-me.io/pricing) Four tiers: Lite, a free plan with mostly lifetime allowances, then Kickstart $9.90/mo or $95/y…
+- **Verified pricing:** (read 2026-11-17 on the Shopify App Store listing at apps.shopify.com/preorder-back-in-stock, where the older address apps.shopify.com/back-in-stock-notifications now redirects, and in our …
 - **Honest take:** It does one job (turning out-of-stock moments into recovered sales via back-in-stock and pre-order alerts) and its value is entirely tied to how often you actually sell out.
 - **Best for:** Shopify stores that regularly sell out of popular products and want to recover that lost demand with back-in-stock notifications, pre-orders and wishlists
-- **Flags:** Usage-metered, Free tier
+- **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/notify-me-review.html
 
 ## Nouswise (nouswise.com)
@@ -2818,7 +2818,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/photogenerator-review/
 
 ## Pickeasy (logbase.io)
-- **Verified pricing:** (read 2026-09-27, re-read 2026-10-21 without changes, on apps.shopify.com/order-delivery-date-time and on the vendor's pricing page at logbase.io/pickeasy-pricing-plan) Five tiers, gated on…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/order-delivery-date-time and in our own test the same day; read 2026-09-27 and 2026-10-21 there and on the vendor's pricing page at logbase.io/pickeasy-…
 - **Honest take:** Charging your own delivery or shipping rates needs Shopify's Carrier Calculated Shipping API, and Shopify, not the app, decides whether your plan includes it.
 - **Best for:** Florists, bakeries, butchers, grocers and restaurants on Shopify that sell for local pickup or delivery and need customers to choose a date and time slot, with cut-off and preparation times, blackout dates
 - **Full review:** https://marketingandsalessoftware.com/pickeasy-review.html
@@ -3011,8 +3011,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pulsemonitor-review/
 
 ## Pumper Bundles (pumper.run)
-- **Verified pricing:** (re-verified 2026-09-19 on apps.shopify.com/pumper-quantity-breaks-product-bundles-discounts AND on the vendor's own site, USD; listed amounts unchanged since 2 September) Four tiers on the…
-- **Honest take:** Every tier ships the same four features, so what you are buying is a ceiling on the revenue the app is allowed to earn you.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/pumper-quantity-breaks-product-bundles-discounts and in our own test the same day; vendor site read 2026-09-19; listed amounts unchanged since 2 Septemb…
+- **Honest take:** The paid tiers ship the same features, so what you are buying is a ceiling on the revenue the app is allowed to earn you.
 - **Best for:** shopify stores that want bundles, quantity breaks, BOGO and free-gift offers without touching code, and that value a free tier which is the complete app rather than a feature-stripped demo
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/pumper-bundles-review.html
@@ -3319,7 +3319,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/scarcity-ai-review.html
 
 ## Scrolly (effectify.io)
-- **Verified pricing:** (read 2026-08-25 and re-read 2026-09-19 on apps.shopify.com/custom-scroll-to-top) Two plans now, where there was one.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/custom-scroll-to-top and in our own test the same day; earlier reads 2026-08-25, 2026-09-19 and 2026-11-02) Two plans now, where there was one.
 - **Honest take:** The two features carry very different risk, the app presents them as one install, and since August the money has been split across them in a way the name does not warn you about.
 - **Best for:** Shopify merchants who want a free, one-click back-to-top button on long collection and product pages without touching theme code
 - **Flags:** Free tier
@@ -3367,7 +3367,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seele-review/
 
 ## Selixer (selixer.com)
-- **Verified pricing:** (re-verified 2026-11-10 on apps.shopify.com/selixer; amounts unchanged since 10 September 2026) Three tiers, no free plan, each with a 14-day free trial.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/selixer and in our own trial account the same day; amounts unchanged since 10 September 2026) Three tiers on the listing, Essence $149, Catalyst $299 an…
 - **Honest take:** Read the feature lists rather than the prices and the entry tier stops looking like the product.
 - **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
 - **Flags:** Usage-metered
@@ -3714,10 +3714,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/stackable-review.html
 
 ## Stamped (stamped.io)
-- **Verified pricing:** (re-read 16 November 2026 by plain fetch of stamped.io/pricing; the amount for each order step sits in the page's own HTML, in the data its order-volume selector reads) There is no free pla…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/product-reviews-addon and in our own test on a development store the same day; stamped.io/pricing read 16 November 2026 by plain fetch, the amount for e…
 - **Honest take:** The ladder climbs at every order step.
 - **Best for:** mid-market Shopify brands that want reviews and loyalty in one platform instead of juggling separate apps
-- **Flags:** Usage-metered
+- **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://marketingandsalessoftware.com/stamped-review.html
 
 ## Stampezee (stampezee.com)
@@ -3793,7 +3793,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/
 
 ## Super (effectify.io)
-- **Verified pricing:** (re-verified 2026-11-13 on apps.shopify.com/super-gift-wraps; Basic, Advanced and Pro unchanged since 2026-11-02) Every tier on the listing was repriced since our October reading, and the v…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/super-gift-wraps and in our own test on a development store the same day; Basic, Advanced and Pro unchanged since 2026-11-02) Three paid tiers on the li…
 - **Honest take:** If you are on Shopify Plus, the price block on the listing is not the one you pay from.
 - **Best for:** Shopify stores with a real gifting season (jewellery, cosmetics, speciality food, anything bought for someone else) that want paid or free gift wrap
 - **Full review:** https://marketingandsalessoftware.com/super-review.html
@@ -3917,7 +3917,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/tapita-seo-optimizer-review.html
 
 ## Tapstitch (tapstitch.com)
-- **Verified pricing:** (re-verified 2026-10-12 on tapstitch.com/collections/all; the site publishes no /pricing page — that URL returns 404) No subscription, no monthly fee and no minimum order quantity — you pay…
+- **Verified pricing:** (read 2026-11-17 in our own Tapstitch account, prices shown in euros; US dollar figures verified 2026-10-12 on tapstitch.com/collections/all; the site publishes no pricing page, and tapstit…
 - **Honest take:** Printify is cheaper, higher-margin and has a far bigger catalogue, if you're optimising for profit per sale or product breadth, that's the real trade-off.
 - **Best for:** creators building a real apparel or streetwear brand who care about fabric, fit and how the product feels in hand
 - **Flags:** Usage-metered
@@ -4082,7 +4082,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/tossable-digits-review.html
 
 ## Track123 (track123.com)
-- **Verified pricing:** (read 2026-09-27, re-read 2026-10-21 without changes, on apps.shopify.com/track123 and in the vendor's pricing article on intercom.help/track123, dated 14 July 2026) Three published plans p…
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/track123 and in our own test the same day; read 2026-09-27 and 2026-10-21 there and in the vendor's pricing article on intercom.help/track123, dated 14 …
 - **Honest take:** The overage is the most expensive order on the ladder.
 - **Best for:** Shopify stores shipping from a few dozen to tens of thousands of orders a month, dropshippers included, that want a branded tracking page and order lookup on their own store, PayPal and Stripe tracking sync
 - **Flags:** Usage-metered, Annual commit, Free tier

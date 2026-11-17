@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 671 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
+All 672 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1927,6 +1927,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/intelis-review.html
 
+## Intercom (intercom.com)
+- **Verified pricing:** (read 2026-11-17 on intercom.com/pricing, US dollars per seat per month, annual/monthly toggle not recorded) Essential $29 (new customers $19, 35% off), Advanced $85, Expert $132; every pla…
+- **Honest take:** Helpdesk with the Fin AI agent; seats from $29, Fin $0.99 per outcome.
+- **Best for:** support teams that want a messenger, shared inbox and an AI agent in one platform, and are fine paying per seat plus per resolved conversation
+- **Flags:** Per-seat pricing
+- **Full review:** https://aibuildermarketplace.com/b2b/intercom-review/
+
 ## InVideo (invideo.io)
 - **Verified pricing:** Three plans priced per seat, re-verified on invideo.io/pricing on 24 September 2026; the page was rebuilt after 5 September, when it listed Plus, Max, Generative and Elite.
 - **Honest take:** The honest catch is the credit model: each plan is a fixed monthly credit allowance that different models consume at different rates, and unused credits do not roll over.
@@ -2450,7 +2457,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Video stories for Shopify stores; free for 10 videos, paid from $14.
 - **Best for:** small Shopify stores with product videos that want Instagram-style stories, shoppable clips and a lead form without custom code
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/my-stories-review/
+- **Full review:** https://marketingandsalessoftware.com/my-stories-review.html
 
 ## Mycroft (mycroft.io)
 - **Verified pricing:** (read 4 September 2026 on www.mycroft.io/pricing) Mycroft has no public pricing: three packages, and not one number between them.

@@ -13,17 +13,17 @@
  "pricing": {
   "status": "public",
   "entry_price": "$9.99",
-  "entry_price_terms": "Basic · per month",
+  "entry_price_terms": "Base Plan · per month after a 14 day free trial",
   "from_price_usd_month": 9.99,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-09-20 on apps.shopify.com/product-inventory-information) Two plans, no free tier. Base Plan $9.99 a month and Plus Plan $29.99 a month, both with a 14-day free trial, billed in USD every 30 days. Unchanged since the readings of 18 August and 13 September 2026. Rating 4.9 from 99 ratings (92 five-star, two four-star, no three-star, two two-star, three one-star). Developer sohkal llc, 6381 Almaden Rd, San Jose, CA, US; on the App Store since 28 March 2019.",
-  "verified_at": "2026-09-20",
-  "source_url": null,
+  "notes": "(read 2026-11-17 on apps.shopify.com/product-inventory-information, and in our own test session on 17 November 2026; first read 2026-08-18) Three plans: Free, Base Plan at $9.99 a month and Plus Plan at $29.99 a month, the paid two with a 14 day free trial, billed in USD every 30 days. Free costs $0 and shows stock for up to 2 locations, availability by location, an interactive store locator with search, directions and contact details, and business hours for each location; inside the app it reads “Free · 2 locations · Standard design”. It was not on the listing when we read it on 20 September 2026. Base Plan adds unlimited locations and variants, stock thresholds with custom colours, nearest store detection by IP, country filters, bin location and pickup, and the widget on product, cart and collection pages. Plus Plan adds no features, only onboarding, priority support with video calls, custom theme integration help, same day fixes and direct access to the dev team, and it is aimed at Shopify Plus merchants. The paid amounts are unchanged since 18 August 2026. Inside the app only Free and Base Plan were on offer; Plus appeared on the listing alone, and Shopify's approval screen for Base asked for a payment method, $9.99 every 30 days after the 14 day trial. On 17 November 2026 the listing showed 4.8 from 80 ratings, against 4.9 from 99 on 20 September. Developer sohkal llc, 6381 Almaden Rd, San Jose, CA, US; on the App Store since 28 March 2019.",
+  "verified_at": "2026-11-17",
+  "source_url": "https://apps.shopify.com/product-inventory-information",
   "schema_offer": {
    "price": 9.99,
    "currency": "USD",
-   "description": "Basic, per month; the $29.99 Plus plan adds support, not features. Read on the vendor's own pricing page on 2026-08-19.",
+   "description": "Base Plan, per month after a 14 day free trial; a free plan covers up to 2 locations, and the $29.99 Plus plan adds support, not features. Read on the vendor's own pricing page on 2026-11-17.",
    "page": "https://marketingandsalessoftware.com/geostock-review.html"
   },
   "source_quotes": null,
@@ -43,8 +43,8 @@
    "method": "Stable = every amount on the vendor's pricing page identical across >= 3 of our reads over >= 30 days. A change is listed only after we confirmed the new price on the page, with a verbatim quote. Differences in raw readings are never published on their own."
   }
  },
- "free_plan": false,
- "free_plan_evidence": null,
+ "free_plan": true,
+ "free_plan_evidence": "Free costs $0 and shows stock for up to 2 locations, availability by location, an interactive store locator with search, directions and contact details, and business hours for each location; inside the app it reads “Free · 2 locations · Standard design”.",
  "cost_traps": [],
  "compare_with": null,
  "links": {
@@ -76,12 +76,19 @@
    "axis": "stores",
    "plans": [
     {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free costs $0 and shows stock for up to 2 locations",
+     "max_units": 1
+    },
+    {
      "id": "base",
      "name": "Base Plan",
      "model": "flat",
      "monthly": 9.99,
      "annual_status": "unknown",
-     "evidence": "Base Plan $9.99 a month and Plus Plan $29.99 a month, both with a 14-day free trial, billed in USD every 30 days",
+     "evidence": "Base Plan at $9.99 a month",
      "max_units": 1
     },
     {
@@ -90,15 +97,13 @@
      "model": "flat",
      "monthly": 29.99,
      "annual_status": "unknown",
-     "evidence": "Base Plan $9.99 a month and Plus Plan $29.99 a month, both with a 14-day free trial, billed in USD every 30 days",
+     "evidence": "Plus Plan at $29.99 a month",
      "max_units": 1
     }
    ],
-   "notes": "Shopify app: a subscription covers the store it is installed on, billed every 30 days; our notes do not say what Plus adds over Base, so pick the plan from the listing feature table.",
-   "not_computable": [
-    "differences between Base and Plus are not in our pricing notes"
-   ],
-   "rules_verified_at": "2026-10-10"
+   "notes": "Shopify app: a subscription covers the store it is installed on, billed every 30 days. Free shows stock for up to 2 locations; Base adds unlimited locations, and Plus adds onboarding and priority support rather than features.",
+   "not_computable": [],
+   "rules_verified_at": "2026-11-17"
   },
   "growth": {
    "annual": {
@@ -110,12 +115,16 @@
     "rows": [
      {
       "units": 1,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
       "ranges": [],
       "per_plan": {
+       "free": 0.0,
        "base": "price_unknown_on_billing",
        "plus": "price_unknown_on_billing"
       }
@@ -128,6 +137,7 @@
       "billed": null,
       "ranges": [],
       "per_plan": {
+       "free": "not_eligible",
        "base": "not_eligible",
        "plus": "not_eligible"
       }
@@ -140,6 +150,7 @@
       "billed": null,
       "ranges": [],
       "per_plan": {
+       "free": "not_eligible",
        "base": "not_eligible",
        "plus": "not_eligible"
       }
@@ -152,6 +163,7 @@
       "billed": null,
       "ranges": [],
       "per_plan": {
+       "free": "not_eligible",
        "base": "not_eligible",
        "plus": "not_eligible"
       }
@@ -164,16 +176,24 @@
       "billed": null,
       "ranges": [],
       "per_plan": {
+       "free": "not_eligible",
        "base": "not_eligible",
        "plus": "not_eligible"
       }
      }
     ],
-    "switch_points": [],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": null,
+      "from_plan_name": "Free",
+      "to_plan_name": null
+     }
+    ],
     "conflicts": [],
-    "unknowns": [
-     "differences between Base and Plus are not in our pricing notes"
-    ]
+    "unknowns": []
    },
    "monthly": {
     "product_id": "geostock",
@@ -184,15 +204,16 @@
     "rows": [
      {
       "units": 1,
-      "cheapest_plan": "base",
-      "cheapest_plan_name": "Base Plan",
-      "total_month": 9.99,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
       "billed": {
-       "amount": 9.99,
+       "amount": 0.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
+       "free": 0.0,
        "base": 9.99,
        "plus": 29.99
       }
@@ -205,6 +226,7 @@
       "billed": null,
       "ranges": [],
       "per_plan": {
+       "free": "not_eligible",
        "base": "not_eligible",
        "plus": "not_eligible"
       }
@@ -217,6 +239,7 @@
       "billed": null,
       "ranges": [],
       "per_plan": {
+       "free": "not_eligible",
        "base": "not_eligible",
        "plus": "not_eligible"
       }
@@ -229,6 +252,7 @@
       "billed": null,
       "ranges": [],
       "per_plan": {
+       "free": "not_eligible",
        "base": "not_eligible",
        "plus": "not_eligible"
       }
@@ -241,6 +265,7 @@
       "billed": null,
       "ranges": [],
       "per_plan": {
+       "free": "not_eligible",
        "base": "not_eligible",
        "plus": "not_eligible"
       }
@@ -250,16 +275,14 @@
      {
       "from_units": 1,
       "to_units": 2,
-      "from_plan": "base",
+      "from_plan": "free",
       "to_plan": null,
-      "from_plan_name": "Base Plan",
+      "from_plan_name": "Free",
       "to_plan_name": null
      }
     ],
     "conflicts": [],
-    "unknowns": [
-     "differences between Base and Plus are not in our pricing notes"
-    ]
+    "unknowns": []
    }
   }
  },
@@ -293,12 +316,6 @@
    "question_id": "geostock:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "geostock:pricing_gap_1",
-   "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: differences between Base and Plus are not in our pricing notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

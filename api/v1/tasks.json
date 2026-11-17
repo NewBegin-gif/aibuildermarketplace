@@ -22403,6 +22403,709 @@
   },
   {
    "source": "session",
+   "product_name": "BookX",
+   "product_id": "bookx",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested BookX on a Shopify development store: the install, onboarding with generated time slots and an automatically created service, the plan screen with a 50 percent promotion, the Shopify approval screen for Starter (not approved), the Free plan and the uninstall dialog, after which the app was uninstalled. Nothing was paid and nothing was saved in the theme. Install: the App Store listing (English) is BookX, from Logbase. Install was clicked at about 12:11:32 in our own tab; the Install app dialog asked for customer data, staff and contributor data and store data, and was approved. A contact form Tell us about yourself was skipped with Skip for now. A banner says: This app is free for development stores. When you are ready to go live, all services will be hidden until you choose a plan and approve subscription. Core action: onboarding with Minute / Hour booking (the default), Generate time slots (10:00 AM to 6:00 PM, 30 minutes, Monday to Friday) and Generate; a booking product was created by the app because Dont have a booking product? We will create one automatically for this service was ticked; payment Full Payment (the default) and Create service. The app said Service created successfully. The Services list shows BookX First Service with the product Appointment and the status Active, and the slots of 30 minutes show on Monday and Friday in the Slot configuration. Timing, approximate tester observations: about 2 minutes from choosing the plan (12:12) to the created service (12:14), in about 8 clicks; about 3 minutes from the install click. The step Activate BookX in the Shopify Theme said BookX App Embed is not enabled in the selected theme; we chose Continue & Enable Later, so nothing was saved in the theme and the widget was not seen in the theme preview. The notification email was not filled in. Plans: the Pricing plans screen shows Free (Unlimited Bookings, 1 service and 1 team member), Starter at $4.99 a month with $9.99 struck through, 50% OFF, You save $60.00/yr and 14 day free trial, and Growth at $9.99 a month with $19.99 struck through and You save $120.00/yr. A banner says Get 50% off our regular price for lifetime and Ends 30 nov, 19:29 CET. Starter lists Upto 5 Team Members, Upto 5 Locations, Book now Pay later, Partial Payment, Bundle bookings and Full / Multi Day bookings; Growth adds 10 members and locations, Deposit, Shopify Flow, Shopify POS, Basic seasonal pricing and Multiple Payment options. So the regular prices are $9.99 for Starter and $19.99 for Growth; the dossier prices of $4.99 and $9.99 are the promotion prices until 30 November. Checkout: Get 50% off on Starter opened the Shopify Approve subscription screen: 50% off all charges, plan Starter plan, $9,99 struck through and $5,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., subtotal $9,99 plus any applicable taxes, discount 50% off -$5,00, total $5,00 due 1 Dec., and an Add payment method row. The sentence about a test charge was NOT on this screen and Approve was greyed out, so we did not approve. Cancel gave a red message, The shop cannot accept the provided charge., and we went back to the plan choice through the app address. We chose the Free plan with Continue; no charge was approved. Cancelling: no subscription ran, because the Free plan was used. Removing the app goes through Settings, Apps, Uninstall; the dialog Uninstall BookX? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the developer within 48 hours to delete personal customer information. A reason is required (Testing multiple apps). Not tested: the widget in the theme preview, a real booking and checkout, paid features (deposit, seasonal pricing, Google Calendar sync), several team members and locations, the Mandatory Checks (switching off dynamic checkout) and the contact form. Clean up: the app was uninstalled at about 12:15 and is gone from the installed apps; the service went with it. No theme change was saved. Our own tab was closed. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Get 50% off our regular price for lifetime\". What we saw: The app shows a promotion of 50 percent off until 30 November: Starter $4.99 a month with $9.99 struck through and Growth $9.99 with $19.99 struck through. The dossier prices of $4.99 and $9.99 are therefore the promotion prices.",
+    "Text we checked: \"Unlimited Bookings\". What we saw: The Free plan says Unlimited Bookings with 1 service and 1 team member and no BookX branding; Starter adds unlimited services and up to 5 team members and locations.",
+    "Text we checked: \"This app is free for development stores\". What we saw: The banner says the app is free for development stores and that all services are hidden after going live until a plan is chosen and the subscription approved.",
+    "Text we checked: \"Service created successfully\". What we saw: About 2 minutes after choosing the plan, in about 8 clicks, the app said Service created successfully and listed BookX First Service as Active with 30 minute slots on Monday and Friday and an automatically created booking product. The widget in the theme was not seen.",
+    "Text we checked: \"BookX App Embed is not enabled in the selected theme\". What we saw: The theme step says the app embed is not enabled; we chose Continue & Enable Later, so nothing was saved in the theme."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The booking widget in the theme preview, because the app embed was left for later.",
+    "A real booking and checkout.",
+    "Paid features such as deposit, seasonal pricing and Google Calendar sync, and several team members and locations.",
+    "The Mandatory Checks and the contact form.",
+    "Support, export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:11 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Get 50% off our regular price for lifetime",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app shows a promotion of 50 percent off until 30 November: Starter $4.99 a month with $9.99 struck through and Growth $9.99 with $19.99 struck through. The dossier prices of $4.99 and $9.99 are therefore the promotion prices.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "Dossier prices versus the plan screen with a promotion ending on 30 November.",
+     "status": "out_of_date",
+     "buying_consequence": "After 30 November the regular prices of $9.99 for Starter and $19.99 for Growth apply, twice the dossier prices.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unlimited Bookings",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan says Unlimited Bookings with 1 service and 1 team member and no BookX branding; Starter adds unlimited services and up to 5 team members and locations.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "Free plan card versus the service and team lists on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan has no booking limit but only one service and one team member.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This app is free for development stores.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The banner says the app is free for development stores and that all services are hidden after going live until a plan is chosen and the subscription approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "Banner wording versus the Free plan choice on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "Testing is free, but a live store needs a paid plan before the services show to buyers.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Service created successfully",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "About 2 minutes after choosing the plan, in about 8 clicks, the app said Service created successfully and listed BookX First Service as Active with 30 minute slots on Monday and Friday and an automatically created booking product. The widget in the theme was not seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "Services list and slot configuration versus the onboarding choices; the storefront was not seen.",
+     "status": "confirmed",
+     "buying_consequence": "A bookable service with time slots can be made in minutes, but the storefront widget was not tested.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "BookX App Embed is not enabled in the selected theme.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The theme step says the app embed is not enabled; we chose Continue & Enable Later, so nothing was saved in the theme.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "The theme step warning versus a skipped embed on one development store.",
+     "status": "confirmed",
+     "buying_consequence": "The service only shows in the store after the app embed is enabled in the theme.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Book now Pay later",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Starter lists Book now Pay later, Partial Payment, Bundle bookings and Full / Multi Day bookings and Growth lists Deposit, Shopify Flow and Shopify POS; none of these was tried because only the Free plan was used.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "Plan card feature lists versus a test limited to the Free plan.",
+     "status": "not_testable",
+     "buying_consequence": "The paid booking features were not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have a 14-day free trial ending on 1 Dec.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan card and the Shopify approval screen for Starter both show a 14 day trial, ending on 1 Dec., with a total of $5,00 due 1 Dec. The sentence about a test charge was not on the screen, a payment method was asked and Approve was greyed out, so nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "Plan card wording versus the Shopify approval screen; nothing was approved.",
+     "status": "confirmed",
+     "buying_consequence": "Starter starts with a 14 day trial, but a payment method is needed even on a development store.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The shop cannot accept the provided charge.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "After Cancel on the approval screen the shop showed a red message The shop cannot accept the provided charge.; we went back to the plan choice through the app address and chose Free.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "The message after Cancel versus the plan screen reopened through the app address.",
+     "status": "confirmed",
+     "buying_consequence": "Backing out of the approval screen leaves an error message and no plan chosen, so the plan screen has to be reopened.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Uninstall BookX?",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "No subscription ran on the Free plan. Removing the app goes through Settings, Apps, Uninstall; the dialog says the app data such as discounts will be deleted, a request goes to the developer within 48 hours to delete personal customer information, and a reason is required.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "The uninstall dialog on a development store with only the Free plan.",
+     "status": "confirmed",
+     "buying_consequence": "The only way out of the app is to uninstall it, which removes its data and needs a reason.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$ 4.99 / mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Starter card says $4.99 a month, with $9.99 struck through, and the Shopify approval screen says $9,99 minus 50% off, which is $5,00 USD every 30 days, due 1 Dec. plus any applicable taxes. It was not approved and nothing was billed.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/bookx-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen viewed, not approved",
+     "comparability": "Plan card price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "contradicted",
+     "buying_consequence": "The card price of $4.99 and the approval screen price of $5,00 differ by one cent, and taxes come on top.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested BookX on a Shopify development store: the install, onboarding with generated time slots and an automatically created service, the plan screen with a 50 percent promotion, the Shopify approval screen for Starter (not approved), the Free plan and the uninstall dialog, after which the app was uninstalled. Nothing was paid and nothing was saved in the theme. Install: the App Store listing (English) is BookX, from Logbase. Install was clicked at about 12:11:32 in our own tab; the Install app dialog asked for customer data, staff and contributor data and store data, and was approved. A contact form Tell us about yourself was skipped with Skip for now. A banner says: This app is free for development stores. When you are ready to go live, all services will be hidden until you choose a plan and approve subscription. Core action: onboarding with Minute / Hour booking (the default), Generate time slots (10:00 AM to 6:00 PM, 30 minutes, Monday to Friday) and Generate; a booking product was created by the app because Dont have a booking product? We will create one automatically for this service was ticked; payment Full Payment (the default) and Create service. The app said Service created successfully. The Services list shows BookX First Service with the product Appointment and the status Active, and the slots of 30 minutes show on Monday and Friday in the Slot configuration. Timing, approximate tester observations: about 2 minutes from choosing the plan (12:12) to the created service (12:14), in about 8 clicks; about 3 minutes from the install click. The step Activate BookX in the Shopify Theme said BookX App Embed is not enabled in the selected theme; we chose Continue & Enable Later, so nothing was saved in the theme and the widget was not seen in the theme preview. The notification email was not filled in. Plans: the Pricing plans screen shows Free (Unlimited Bookings, 1 service and 1 team member), Starter at $4.99 a month with $9.99 struck through, 50% OFF, You save $60.00/yr and 14 day free trial, and Growth at $9.99 a month with $19.99 struck through and You save $120.00/yr. A banner says Get 50% off our regular price for lifetime and Ends 30 nov, 19:29 CET. Starter lists Upto 5 Team Members, Upto 5 Locations, Book now Pay later, Partial Payment, Bundle bookings and Full / Multi Day bookings; Growth adds 10 members and locations, Deposit, Shopify Flow, Shopify POS, Basic seasonal pricing and Multiple Payment options. So the regular prices are $9.99 for Starter and $19.99 for Growth; the dossier prices of $4.99 and $9.99 are the promotion prices until 30 November. Checkout: Get 50% off on Starter opened the Shopify Approve subscription screen: 50% off all charges, plan Starter plan, $9,99 struck through and $5,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., subtotal $9,99 plus any applicable taxes, discount 50% off -$5,00, total $5,00 due 1 Dec., and an Add payment method row. The sentence about a test charge was NOT on this screen and Approve was greyed out, so we did not approve. Cancel gave a red message, The shop cannot accept the provided charge., and we went back to the plan choice through the app address. We chose the Free plan with Continue; no charge was approved. Cancelling: no subscription ran, because the Free plan was used. Removing the app goes through Settings, Apps, Uninstall; the dialog Uninstall BookX? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the developer within 48 hours to delete personal customer information. A reason is required (Testing multiple apps). Not tested: the widget in the theme preview, a real booking and checkout, paid features (deposit, seasonal pricing, Google Calendar sync), several team members and locations, the Mandatory Checks (switching off dynamic checkout) and the contact form. Clean up: the app was uninstalled at about 12:15 and is gone from the installed apps; the service went with it. No theme change was saved. Our own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The promotion prices of $4.99 and $9.99 end on 30 November and the regular prices are twice as high, the approval screen asks for a payment method and has no test charge sentence, and after Cancel the shop shows an error message.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The booking widget in the theme preview, because the app embed was left for later.",
+     "A real booking and checkout.",
+     "Paid features such as deposit, seasonal pricing and Google Calendar sync, and several team members and locations.",
+     "The Mandatory Checks and the contact form.",
+     "Support, export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:11 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Consentmo",
+   "product_id": "consentmo",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Consentmo GDPR on a Shopify development store: the install, the three-step onboarding with a banner preview, the plan screen with a Black Friday promotion, the Shopify approval screen for Standard (not approved), the Free plan, one click on Activate for the app embed, the banner in the theme editor preview and the uninstall dialog, after which the app was uninstalled. Nothing was paid and nothing was saved in the theme editor. Install: the App Store listing (English) is called Consentmo GDPR and says Free plan available. Free trial available. The first install try at about 12:21 ended with Installation canceled.; the second try opened a pop-up tab with only the list of apps; the third try opened the Install app dialog in the admin, which asked for View customer data, View staff and contributor data and View and edit store data. Install was approved at about 12:23 and the app opened on its dashboard. Onboarding: three steps, Choose your region (Europe, GDPR), Design your cookie banner and Set your consent options (Accept / Reject / Preferences, marked Popular), ending with the button Finish set up. In step 3 the app shows a preview as Europe with the text We use cookies to run this site, measure traffic, and personalize content. and the buttons Preferences, Reject and Accept. Core action: Finish set up led straight to the plan screen Pick your plan. Back on the dashboard it said Current plan: Free, Cookie banner: Setup needed and App embed is not enabled. One click on Activate gave the message Cookie bar enabled on your store., so the app embed was switched on by the app itself in one click, without a theme edit by us. The dashboard then showed Cookie Consent Health 71 / 100 with 6 issues, among them EU Withdrawal page not set up, Google Consent Mode v2 not configured and Cookie Policy page missing, Banner visible: Europe and Smart Geotargeting: Off. In the theme editor the banner showed on the home page preview with the same text and the buttons Preferences, Reject and Accept; nothing was saved in the theme editor and the storefront outside the editor was not opened. Timing, approximate tester observations: about 2 minutes from the install (12:23) to the banner in the theme editor preview (about 12:25), in about 7 steps (choose region, Next, Next, Finish set up, back to the dashboard, Activate, open the editor). The first try at 12:21 and the second try were wasted by install errors. Plans: the Pick your plan screen is monthly by default and carries the label BFCM Deal: 25% Off for 3 Months. Free $0 a month (Get started); Standard $7.5 a month, was $10.00; Plus $27.75, was $37.00, marked Most popular; Max $74.25, was $99.00; each paid plan has Start 7-day FREE trial, and Pay annually carries the label 2 months free. The comparison table lists Free $0, Standard $10, Plus $37 and Max $99 a month. Free: unlimited impressions, cookie banner and preferences, Privacy Center, Do Not Sell page and 1 scan a month. Standard: Integrations (Google Consent v2, Meta + more), Multi-region compliance, Unlimited cookie scans, Multilingual banner and No Consentmo branding. Plus: Web Accessibility, Smart Geotargeting, EU Withdrawal and Age gate. Max: Consent monitoring, Proof of consent and IAB TCF 2.4. Under the plans a box says Managing more than one store? We offer custom pricing for brands and agencies managing multiple Shopify stores. with a Chat with us button, which we did not press. Checkout: Start 7-day FREE trial on Standard opened the Shopify Approve subscription screen: Consentmo GDPR by Consentmo, $2,50 off 3 charges, plan Standard, $10,00 struck through and $7,50 USD every 30 days, You have a 7-day free trial ending on 24 Nov., subtotal $10,00 plus any applicable taxes, discount $2,50 off -$2,50, total $7,50 due 24 Nov., and an Add payment method row. The sentence about a test charge was NOT on this screen and Approve was greyed out, so we did not approve; no card was entered. The Cancel button did not react, so we went back to the dashboard by navigation. The Free plan stayed active without any approval screen. Cancelling: no subscription ran, because the Free plan was used. Removing the app goes through Settings, Apps, the menu of the app with Open app, View details, Get support and Uninstall; the dialog Uninstall Consentmo GDPR? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before the button works; we chose Testing multiple apps. Not tested: the Standard features (Google Consent Mode v2, the Meta, Microsoft and TikTok signals and script blocking, because the plan needed a payment method), Plus (accessibility, EU Withdrawal page, Smart Geotargeting) and Max, a price for a second store, the cookie scan, generating a privacy page and annual prices. Clean up: the app embed was switched on with the Activate button of the app (the only setting we changed); no theme was saved in the theme editor. The app was uninstalled after the test with the reason Testing multiple apps. Our own tabs were closed. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"custom pricing for brands and agencies managing multiple Shopify stores\". What we saw: The plan screen shows only the text about custom pricing for brands and agencies managing multiple stores and a chat button; no price for a second store was shown.",
+    "Text we checked: \"Max $99\". What we saw: The plan screen names the top plan Max at $99 a month list price ($74.25 with the promotion) with Consent monitoring, Proof of consent and IAB TCF 2.4. The dossier names the top plan Enterprise at $64 a month.",
+    "Text we checked: \"Standard $10, Plus $37\". What we saw: The comparison table and the struck through prices on the plan cards list Standard at $10 and Plus at $37 a month, as in the dossier.",
+    "Text we checked: \"1 scan a month\". What we saw: The Free plan lists unlimited impressions, the cookie banner and preferences, a Privacy Center, a Do Not Sell page and 1 scan a month; Standard lists Unlimited cookie scans.",
+    "Text we checked: \"Cookie bar enabled on your store\". What we saw: About 2 minutes after the install, in about 7 steps, one click on Activate gave the message Cookie bar enabled on your store. and the banner with Preferences, Reject and Accept showed in the theme editor preview. The storefront outside the editor was not opened."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The Standard features (Google Consent Mode v2, Meta, Microsoft and TikTok signals, script blocking), because the plan needed a payment method.",
+    "Plus (accessibility, EU Withdrawal page, Smart Geotargeting) and Max.",
+    "A price for a second store, annual prices, the cookie scan and generating a privacy page.",
+    "The storefront outside the theme editor preview.",
+    "The chat, export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:21 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Integrations (Google Consent v2, Meta + more)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Standard card lists Integrations (Google Consent v2, Meta + more) and the dashboard says Google Consent Mode v2 not configured. Standard could not be started because the approval screen asked for a payment method, so the integrations were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier wording for the Standard plan versus a plan card and a dashboard warning; the plan was not started.",
+     "status": "not_testable",
+     "buying_consequence": "The consent signals that the dossier names for Standard could not be checked on this development store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "custom pricing for brands and agencies managing multiple Shopify stores",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen shows only the text about custom pricing for brands and agencies managing multiple stores and a chat button; no price for a second store was shown.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier remark that no multi-store rate is published versus the box on the plan screen.",
+     "status": "confirmed",
+     "buying_consequence": "No rate for a second store can be read from the plan screen; asking costs a chat that we did not start.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Max $99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen names the top plan Max at $99 a month list price ($74.25 with the promotion) with Consent monitoring, Proof of consent and IAB TCF 2.4. The dossier names the top plan Enterprise at $64 a month.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier top plan name and price versus the plan cards and the comparison table.",
+     "status": "contradicted",
+     "buying_consequence": "The top plan costs $99 a month at list price on the plan screen against $64 in the dossier, and it has another name.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Standard $10, Plus $37",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The comparison table and the struck through prices on the plan cards list Standard at $10 and Plus at $37 a month, as in the dossier.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier list prices versus the comparison table on the plan screen.",
+     "status": "confirmed",
+     "buying_consequence": "The list prices of Standard and Plus match the dossier before any promotion.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "BFCM Deal: 25% Off for 3 Months",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen shows a Black Friday promotion of 25% off for 3 months: Standard $7.5, Plus $27.75 and Max $74.25 a month. The dossier prices are list prices and do not mention the promotion.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier list prices versus a promotion label with no end date; no stored cost rule exists for it.",
+     "status": "not_comparable",
+     "buying_consequence": "For the first 3 charges the paid plans cost a quarter less than the list prices; the offer is time bound and its end date was not shown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 scan a month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan lists unlimited impressions, the cookie banner and preferences, a Privacy Center, a Do Not Sell page and 1 scan a month; Standard lists Unlimited cookie scans.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier free tier wording versus the Free card and the comparison table.",
+     "status": "confirmed",
+     "buying_consequence": "The free tier covers the banner without a limit on impressions, but only one scan a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Web Accessibility",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Plus card lists Web Accessibility and the dashboard shows a Web accessibility card tagged Plus with the widget disabled; Plus was not started, so the widget and scanner were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier accessibility audience wording versus a plan card and a locked dashboard card.",
+     "status": "not_testable",
+     "buying_consequence": "The accessibility tools start on Plus as in the dossier, but whether they fix a theme was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pay annually",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen has a switch Pay annually with the label 2 months free, which fits $100 a year against $10 a month in the dossier; the annual prices themselves were not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier annual prices versus a switch label; the annual view was not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The annual saving could not be checked because the annual prices were not opened.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Cookie bar enabled on your store.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "About 2 minutes after the install, in about 7 steps, one click on Activate gave the message Cookie bar enabled on your store. and the banner with Preferences, Reject and Accept showed in the theme editor preview. The storefront outside the editor was not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dashboard message and theme editor preview versus the onboarding choices; the storefront was not seen.",
+     "status": "confirmed",
+     "buying_consequence": "A cookie banner can be switched on in minutes on the Free plan, but it was only seen in the theme editor preview.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have a 7-day free trial ending on 24 Nov.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Standard says You have a 7-day free trial ending on 24 Nov., as the dossier says for each paid plan, but it asks for a payment method and Approve was greyed out.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier trial wording versus the approval screen; the trial was not started.",
+     "status": "confirmed",
+     "buying_consequence": "A 7-day trial exists, but starting it needs a payment method on the development store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Subtotal $10,00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Standard shows a subtotal of $10,00, a discount of $2,50 for 3 charges and a total of $7,50 due 24 Nov. plus any applicable taxes. Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+     },
+     "plan": "Standard approval screen, not approved, development store",
+     "comparability": "Dossier price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The list price of $10 a month matches the dossier, and the first 3 charges are $7.50 before taxes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Consentmo GDPR on a Shopify development store: the install, the three-step onboarding with a banner preview, the plan screen with a Black Friday promotion, the Shopify approval screen for Standard (not approved), the Free plan, one click on Activate for the app embed, the banner in the theme editor preview and the uninstall dialog, after which the app was uninstalled. Nothing was paid and nothing was saved in the theme editor. Install: the App Store listing (English) is called Consentmo GDPR and says Free plan available. Free trial available. The first install try at about 12:21 ended with Installation canceled.; the second try opened a pop-up tab with only the list of apps; the third try opened the Install app dialog in the admin, which asked for View customer data, View staff and contributor data and View and edit store data. Install was approved at about 12:23 and the app opened on its dashboard. Onboarding: three steps, Choose your region (Europe, GDPR), Design your cookie banner and Set your consent options (Accept / Reject / Preferences, marked Popular), ending with the button Finish set up. In step 3 the app shows a preview as Europe with the text We use cookies to run this site, measure traffic, and personalize content. and the buttons Preferences, Reject and Accept. Core action: Finish set up led straight to the plan screen Pick your plan. Back on the dashboard it said Current plan: Free, Cookie banner: Setup needed and App embed is not enabled. One click on Activate gave the message Cookie bar enabled on your store., so the app embed was switched on by the app itself in one click, without a theme edit by us. The dashboard then showed Cookie Consent Health 71 / 100 with 6 issues, among them EU Withdrawal page not set up, Google Consent Mode v2 not configured and Cookie Policy page missing, Banner visible: Europe and Smart Geotargeting: Off. In the theme editor the banner showed on the home page preview with the same text and the buttons Preferences, Reject and Accept; nothing was saved in the theme editor and the storefront outside the editor was not opened. Timing, approximate tester observations: about 2 minutes from the install (12:23) to the banner in the theme editor preview (about 12:25), in about 7 steps (choose region, Next, Next, Finish set up, back to the dashboard, Activate, open the editor). The first try at 12:21 and the second try were wasted by install errors. Plans: the Pick your plan screen is monthly by default and carries the label BFCM Deal: 25% Off for 3 Months. Free $0 a month (Get started); Standard $7.5 a month, was $10.00; Plus $27.75, was $37.00, marked Most popular; Max $74.25, was $99.00; each paid plan has Start 7-day FREE trial, and Pay annually carries the label 2 months free. The comparison table lists Free $0, Standard $10, Plus $37 and Max $99 a month. Free: unlimited impressions, cookie banner and preferences, Privacy Center, Do Not Sell page and 1 scan a month. Standard: Integrations (Google Consent v2, Meta + more), Multi-region compliance, Unlimited cookie scans, Multilingual banner and No Consentmo branding. Plus: Web Accessibility, Smart Geotargeting, EU Withdrawal and Age gate. Max: Consent monitoring, Proof of consent and IAB TCF 2.4. Under the plans a box says Managing more than one store? We offer custom pricing for brands and agencies managing multiple Shopify stores. with a Chat with us button, which we did not press. Checkout: Start 7-day FREE trial on Standard opened the Shopify Approve subscription screen: Consentmo GDPR by Consentmo, $2,50 off 3 charges, plan Standard, $10,00 struck through and $7,50 USD every 30 days, You have a 7-day free trial ending on 24 Nov., subtotal $10,00 plus any applicable taxes, discount $2,50 off -$2,50, total $7,50 due 24 Nov., and an Add payment method row. The sentence about a test charge was NOT on this screen and Approve was greyed out, so we did not approve; no card was entered. The Cancel button did not react, so we went back to the dashboard by navigation. The Free plan stayed active without any approval screen. Cancelling: no subscription ran, because the Free plan was used. Removing the app goes through Settings, Apps, the menu of the app with Open app, View details, Get support and Uninstall; the dialog Uninstall Consentmo GDPR? says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before the button works; we chose Testing multiple apps. Not tested: the Standard features (Google Consent Mode v2, the Meta, Microsoft and TikTok signals and script blocking, because the plan needed a payment method), Plus (accessibility, EU Withdrawal page, Smart Geotargeting) and Max, a price for a second store, the cookie scan, generating a privacy page and annual prices. Clean up: the app embed was switched on with the Activate button of the app (the only setting we changed); no theme was saved in the theme editor. The app was uninstalled after the test with the reason Testing multiple apps. Our own tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The first two install tries failed, the plan screen shows promotion prices for 3 months that are lower than the list prices, the Standard approval screen asks for a payment method and has no test charge sentence, the Cancel button on that screen did not react, and the dashboard of the Free plan starts at a health score of 71 with 6 open issues.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The Standard features (Google Consent Mode v2, Meta, Microsoft and TikTok signals, script blocking), because the plan needed a payment method.",
+     "Plus (accessibility, EU Withdrawal page, Smart Geotargeting) and Max.",
+     "A price for a second store, annual prices, the cookie scan and generating a privacy page.",
+     "The storefront outside the theme editor preview.",
+     "The chat, export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:21 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "SEOKart",
+   "product_id": "seokart",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested SEOKart on a Shopify development store: the install, the automatic audit, one AI written meta description (discarded), the plan screen, the Shopify approval screen for Pro (not approved), the Free plan and the uninstall dialog, after which the app was uninstalled. Nothing was paid and nothing was saved. Install: the App Store listing (English) is SEOKart; the install screen asked for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, store analytics, Online Store). Install was clicked at about 12:27; no vendor account, phone number or call was asked. The app opened straight on the SEO Dashboard on the Free plan without any payment screen; a chat pop-up and a product tour came first and were both closed. Core action: the audit started by itself at install. After about 40 seconds (12:28) the dashboard said 28 / 28 pages audited with a score of 63% and We found 26 errors: Meta 24, Content 2, Image 0, Broken 0; it also showed Empty Meta Description 8 and Total Products 19. At 12:30 Fix Errors led to SEO Optimizer AI; for the product Appointment (60%) one click on Run AI Optimization filled a Target Keyword (Book Appointment Online) and a Meta Description of 107 characters that mentions our store name. The app then still said 4 Issues, and its own check asks for 120 to 160 characters. The bar Unsaved changes with Discard and Save appeared; we pressed Discard, so nothing was saved and the shop was not changed. The separate link Run AI Assist next to the description did nothing on two clicks. Timing, approximate tester observations: about 1 minute from the start of the install to the audit result, and about 3 minutes to the first AI text, in about 5 clicks (Fix Errors, skip the tour, Run AI Optimization). Plans: Change Plan opened SEO App & Managed Services Plans with tabs App and SEO Services and a Monthly or Yearly switch. Free $0 a month: up to 50 products, 10 keywords with a monthly check, 5 prompts in the Visibility Tracker, 50 pages and 50 AI credits. Pro $20 a month: 1,000 products, 100 keywords with a weekly check, 10 prompts weekly and 200 AI credits. Pro AI $45 a month, marked New: 25 prompts and Unlimited AI Credits. We saw no Plus or Max card with $30 or $40; the product dropdown was not opened. The Pro AI plan and the Visibility Tracker are not in the dossier. Checkout: Pro and Confirm Payment (US$20.00 / month) opened the Shopify Approve subscription screen: SEOKart, $20,00 USD every 30 days, subtotal $20,00 plus any applicable taxes, Total Due 17 Nov $20,00 and an Add payment method row. There was no trial line and no sentence about a test charge, and Approve was greyed out, so nothing was approved; no card was entered. The Free plan stayed active. Cancelling: no subscription ran, because the Free plan was used. Removing the app goes through Settings, Apps, SEOKart and Uninstall; the dialog says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Select all that apply); we chose Testing multiple apps. Not tested: saving a change, the Bulk Optimizer, the Image Optimizer, the 404 Fixer, Cruise Control, the rank tracker, Report and Restore, Pro and Pro AI (a payment method was needed), BigCommerce, the SEO Services tab and the Schedule a Call banner. Clean up: at about 12:32 the app was uninstalled in Settings, Apps with the reason Testing multiple apps and it is gone from the installed apps. No theme change was made and nothing was saved. Our own tabs were closed. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"28 / 28 pages audited\". What we saw: The audit started by itself at install and after about 40 seconds the dashboard said 28 / 28 pages audited with a score of 63% and 26 errors (Meta 24, Content 2). The store has 19 products.",
+    "Text we checked: \"Run AI Optimization\". What we saw: For one product a single click filled a keyword and a meta description of 107 characters; the app still showed 4 Issues and its own check wants 120 to 160 characters. We discarded it, so nothing was saved.",
+    "Text we checked: \"Pro AI $45\". What we saw: The plans screen shows a third column Pro AI at $45 a month marked New, with Unlimited AI Credits and 25 prompts, and Pro with 200 AI Credits. The dossier lists Free, Pro, Plus and Max and no Pro AI plan, and says Pro has unlimited image and bulk optimisation.",
+    "Text we checked: \"10 keywords\". What we saw: The Free column shows up to 50 products, 10 keywords with a monthly check, 5 prompts, 50 pages and 50 AI credits, as the dossier says for Free; it is labelled to try before upgrading to Pro and no time limit showed within the session."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Saving a change, the Bulk Optimizer, the Image Optimizer, the 404 Fixer and Cruise Control.",
+    "The rank tracker, Report and Restore, and BigCommerce.",
+    "Pro and Pro AI, because the approval screen needed a payment method.",
+    "The SEO Services tab, the Schedule a Call banner and the product dropdown on the plan screen.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:27 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "28 / 28 pages audited",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The audit started by itself at install and after about 40 seconds the dashboard said 28 / 28 pages audited with a score of 63% and 26 errors (Meta 24, Content 2). The store has 19 products.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dashboard result after the install versus the vendor wording on audits; the errors were not checked page by page.",
+     "status": "confirmed",
+     "buying_consequence": "An SEO audit of the whole store comes without any setup, and it finds many empty meta tags on a test store.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Run AI Optimization",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "For one product a single click filled a keyword and a meta description of 107 characters; the app still showed 4 Issues and its own check wants 120 to 160 characters. We discarded it, so nothing was saved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier one-click AI wording versus one generated text on one product; nothing was saved.",
+     "status": "confirmed",
+     "buying_consequence": "The one-click AI text exists, but on this product it was shorter than the app asks for and was not saved or checked in a shop.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Bulk Optimizer",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Bulk Optimizer was not opened, so writing meta tags, alt text and file names in bulk was not tried; the plan card says Unlimited Pages with 200 AI Credits on Pro.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier bulk wording versus a plan card line; the bulk tool was not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The bulk fix for hundreds of product pages could not be tested, and a credit limit sits on the Pro plan card.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro AI $45",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plans screen shows a third column Pro AI at $45 a month marked New, with Unlimited AI Credits and 25 prompts, and Pro with 200 AI Credits. The dossier lists Free, Pro, Plus and Max and no Pro AI plan, and says Pro has unlimited image and bulk optimisation.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier plan list versus the three plan columns and their credit lines.",
+     "status": "contradicted",
+     "buying_consequence": "A $45 plan exists that the dossier does not list, and on Pro the AI credits are limited to 200 where the dossier says unlimited.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$30, $40",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plans screen showed no Plus or Max card; the product dropdown with larger catalogues was not opened, so the $30 and $40 steps were not seen or ruled out.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier Plus and Max prices versus a plan screen whose product dropdown was not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The prices for bigger catalogues could not be checked in the app.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "10 keywords",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free column shows up to 50 products, 10 keywords with a monthly check, 5 prompts, 50 pages and 50 AI credits, as the dossier says for Free; it is labelled to try before upgrading to Pro and no time limit showed within the session.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier Free tier numbers versus the Free column on the plan screen.",
+     "status": "confirmed",
+     "buying_consequence": "The free tier limits match the dossier; whether it stays free over time could not be seen in one session.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "rank tracker",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen says 100 keywords with a weekly check on Pro and 10 keywords monthly on Free; the rank tracker itself was not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier tracker frequency versus plan card lines; the tracker was not used.",
+     "status": "not_testable",
+     "buying_consequence": "How often rankings update could only be read from the plan card.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "404 Fixer",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The 404 Fixer and Cruise Control are Pro features and were not tried, because the Pro approval screen needed a payment method.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier Pro feature list versus a plan we could not start.",
+     "status": "not_testable",
+     "buying_consequence": "The automatic fixes of the paid plan could not be tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "SEO Services",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plans screen has a tab SEO Services and the dashboard a banner with Schedule a Call; neither was opened, so the managed service prices were not seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier managed service prices versus a tab and a banner that were not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The optional managed service could not be priced from this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$20,00 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Pro shows $20,00 USD every 30 days, a total of $20,00 due 17 Nov plus any applicable taxes, no trial line and no sentence about a test charge. Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seokart-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier Pro price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The list price of $20 a month matches the dossier before taxes, and there is no trial on this screen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested SEOKart on a Shopify development store: the install, the automatic audit, one AI written meta description (discarded), the plan screen, the Shopify approval screen for Pro (not approved), the Free plan and the uninstall dialog, after which the app was uninstalled. Nothing was paid and nothing was saved. Install: the App Store listing (English) is SEOKart; the install screen asked for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, store analytics, Online Store). Install was clicked at about 12:27; no vendor account, phone number or call was asked. The app opened straight on the SEO Dashboard on the Free plan without any payment screen; a chat pop-up and a product tour came first and were both closed. Core action: the audit started by itself at install. After about 40 seconds (12:28) the dashboard said 28 / 28 pages audited with a score of 63% and We found 26 errors: Meta 24, Content 2, Image 0, Broken 0; it also showed Empty Meta Description 8 and Total Products 19. At 12:30 Fix Errors led to SEO Optimizer AI; for the product Appointment (60%) one click on Run AI Optimization filled a Target Keyword (Book Appointment Online) and a Meta Description of 107 characters that mentions our store name. The app then still said 4 Issues, and its own check asks for 120 to 160 characters. The bar Unsaved changes with Discard and Save appeared; we pressed Discard, so nothing was saved and the shop was not changed. The separate link Run AI Assist next to the description did nothing on two clicks. Timing, approximate tester observations: about 1 minute from the start of the install to the audit result, and about 3 minutes to the first AI text, in about 5 clicks (Fix Errors, skip the tour, Run AI Optimization). Plans: Change Plan opened SEO App & Managed Services Plans with tabs App and SEO Services and a Monthly or Yearly switch. Free $0 a month: up to 50 products, 10 keywords with a monthly check, 5 prompts in the Visibility Tracker, 50 pages and 50 AI credits. Pro $20 a month: 1,000 products, 100 keywords with a weekly check, 10 prompts weekly and 200 AI credits. Pro AI $45 a month, marked New: 25 prompts and Unlimited AI Credits. We saw no Plus or Max card with $30 or $40; the product dropdown was not opened. The Pro AI plan and the Visibility Tracker are not in the dossier. Checkout: Pro and Confirm Payment (US$20.00 / month) opened the Shopify Approve subscription screen: SEOKart, $20,00 USD every 30 days, subtotal $20,00 plus any applicable taxes, Total Due 17 Nov $20,00 and an Add payment method row. There was no trial line and no sentence about a test charge, and Approve was greyed out, so nothing was approved; no card was entered. The Free plan stayed active. Cancelling: no subscription ran, because the Free plan was used. Removing the app goes through Settings, Apps, SEOKart and Uninstall; the dialog says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Select all that apply); we chose Testing multiple apps. Not tested: saving a change, the Bulk Optimizer, the Image Optimizer, the 404 Fixer, Cruise Control, the rank tracker, Report and Restore, Pro and Pro AI (a payment method was needed), BigCommerce, the SEO Services tab and the Schedule a Call banner. Clean up: at about 12:32 the app was uninstalled in Settings, Apps with the reason Testing multiple apps and it is gone from the installed apps. No theme change was made and nothing was saved. Our own tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The AI written meta description was 107 characters and the app itself still showed 4 issues and wants 120 to 160 characters, the link Run AI Assist did nothing on two clicks, the Pro AI plan is not in the dossier and the Pro approval screen needs a payment method.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Saving a change, the Bulk Optimizer, the Image Optimizer, the 404 Fixer and Cruise Control.",
+     "The rank tracker, Report and Restore, and BigCommerce.",
+     "Pro and Pro AI, because the approval screen needed a payment method.",
+     "The SEO Services tab, the Schedule a Call banner and the product dropdown on the plan screen.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:27 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Rapid Search",
    "product_id": "rapid-search",
    "run_date": "2026-11-16",
@@ -22536,6 +23239,481 @@
      "What happens after the trial ends on 30 Nov, support, invitations, export and reimport.",
      "Uninstalling the app, which was only opened as a dialog and cancelled.",
      "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:30 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Bot It AI",
+   "product_id": "bot-it-ai",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bot It (Bot It AI in the dossier) on a Shopify development store: the install, the dashboard score, the free catalog scan with its six gaps and six store-level gates, the Billing page, the Shopify approval screen for Pro (not approved), the Free plan and the uninstall dialog, after which the app was uninstalled. Nothing was paid and nothing was saved in the theme. Install: in the Shopify App Store and in the admin the app is called Bot It (developer Immersive Ecommerce); the dossier calls it Bot It AI. The install form was sent at 12:37:35 in our own tab; the Install app dialog asked for View customer data, View staff and contributor data and View and edit store data (customers, products, orders, store analytics, Online Store, custom data) and was approved. The dashboard opened without a separate account, demo or phone number. The app is not a chatbot but an audit for AI shopping agents. First screen: AI Agent Visibility Score 23/100 with grade F, Get Started 0/7 complete and as quick win 1: Remove password protection to unlock AI agents. Core action: Discovery and Scan catalog (free plan), 2 clicks from the dashboard, with the result visible about 2 to 3 minutes after the install (about 12:40). Result: Catalog Readiness 32 with grade F, Average product score across 19 products, and the gaps 4 Images missing alt text, 28 Variants missing GTIN, 18 Uncategorized products, 0 Category attributes unset, 19 Thin descriptions and 19 Failing products (score under 50). A banner says 19 products awaiting AI enrichment. The buttons Generate fixes with AI (Pro) and Broadcast (Pro) were greyed out on Free, and the AI token budget box says: Upgrade to Pro to unlock AI-generated alt text, attribute extraction, SEO fields, and agent narratives. Store-level gates: Fail Storefront publicly reachable (Storefront is password-protected), Pass robots.txt allows AI crawlers, Fail /agents.md live (Blocked by storefront password page), Fail /llms.txt live, Warn UCP discovery profile (Valid UCP 2026-08-25, 13 capabilities, NO payment handlers) and Warn Agentic discovery sitemap (HTTP 404). The dossier says 13 checks per product; we did not count them: the app shows 6 gap tiles and 6 store gates. Plans: the Shopify pricing page route said No plans are available for your store; the plans are in the app itself on the Billing page. Free $0 a month, Free forever, Current plan: Native llms.txt, agents.md & robots.txt theme files, Daily AI regeneration (copy/paste or CLI install), UCP manifest, Brand voice configuration, Unlimited collection narratives and Unlimited product narratives. Pro $29 a month with a 30-day free trial: Everything in Free, 1-click push & auto-push of theme files, MCP Enrichment Proxy, WebMCP browser tools, Review integration, Full analytics dashboard and Knowledge Base sync. The Billing page does not name the automated AI fixes, the rank tracker or IndexNow under Pro, while Discovery marks the AI fixes and IndexNow as Pro. Checkout: Start free trial opened the Shopify Approve subscription screen: Bot It by Immersive Ecommerce, plan Bot It Pro, You have a 30-day free trial ending on 17 Dec., Subtotal $29,00 plus any applicable taxes, Total $29,00 due 17 Dec., $29,00 USD every 30 days and an Add payment method row. There was no sentence about a test charge and Approve was greyed out, so we did not approve; no card was entered; we pressed Cancel. Cancelling: Pro was not started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the app menu and Uninstall; the dialog says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Testing multiple apps); Shopify then confirmed that the app was uninstalled. Not tested: the Pro fixes (alt text, attributes, SEO fields), the Rank Tracker, IndexNow, the MCP proxy, WebMCP, the review integration, brand voice, switching on the theme extension (no theme change was saved), narratives, the Fix Queue and the Products tab. Our development store has 19 products and Pro was not started, so the group of stores with thousands of incomplete products could not be tested. Clean up: the app was uninstalled after the test and no Pro plan was started. No payment method was entered and no theme change was made. Other apps were not touched. Our own tabs were closed. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Average product score across 19 products\". What we saw: The catalog scan took 2 clicks and the result stood on screen about 2 to 3 minutes after the install: Catalog Readiness 32 (grade F) across 19 products, with 4 images missing alt text, 28 variants missing GTIN, 18 uncategorized products, 19 thin descriptions and 19 failing products.",
+    "Text we checked: \"Storefront is password-protected\". What we saw: The store-level gates show Fail for a reachable storefront (password protected), Pass for robots.txt, Fail for /agents.md and /llms.txt (blocked by the password page), Warn for the UCP profile and Warn for the sitemap (HTTP 404).",
+    "Text we checked: \"Native llms.txt, agents.md & robots.txt theme files\". What we saw: The Billing page lists Native llms.txt, agents.md & robots.txt theme files, a UCP manifest, brand voice configuration and unlimited product and collection narratives on Free, which is free forever. The theme files were not switched on.",
+    "Text we checked: \"AI token budget (this month)\". What we saw: On Free the box for the AI token budget shows only the text to upgrade to Pro for AI written alt text, attributes, SEO fields and narratives; it shows no number of tokens.",
+    "Text we checked: \"MCP Enrichment Proxy\". What we saw: The Pro card lists the MCP Enrichment Proxy, WebMCP browser tools, Review integration, Full analytics dashboard and Knowledge Base sync next to 1-click push and auto-push of theme files; none of them was tried."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The Pro fixes for alt text, attributes and SEO fields, the Fix Queue and the Products tab.",
+    "The Rank Tracker, IndexNow, the MCP proxy, WebMCP and the review integration.",
+    "Switching on the theme extension, brand voice and narratives.",
+    "Pro itself, because the approval screen needed a payment method, and a store with thousands of products.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:37 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Average product score across 19 products",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The catalog scan took 2 clicks and the result stood on screen about 2 to 3 minutes after the install: Catalog Readiness 32 (grade F) across 19 products, with 4 images missing alt text, 28 variants missing GTIN, 18 uncategorized products, 19 thin descriptions and 19 failing products.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier free audit wording versus the Discovery overview after one scan on 19 products; the product list was not opened.",
+     "status": "confirmed",
+     "buying_consequence": "The free audit lists which fields are missing within minutes, without setup; the individual product results were not opened.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Storefront is password-protected",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The store-level gates show Fail for a reachable storefront (password protected), Pass for robots.txt, Fail for /agents.md and /llms.txt (blocked by the password page), Warn for the UCP profile and Warn for the sitemap (HTTP 404).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier store gates versus the Store-level gates list on a password protected development store.",
+     "status": "confirmed",
+     "buying_consequence": "The gates the dossier names (password, robots.txt, UCP profile, sitemap) are checked, and a password protected shop fails most of them.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "13 checks per product",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app shows 6 gap tiles and 6 store-level gates and an average product score; the 13 checks per product were not counted and the product list was not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier check count versus tiles and gates on the overview; the per product view was not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The number of checks per product could not be confirmed from the screens that were seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Native llms.txt, agents.md & robots.txt theme files",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing page lists Native llms.txt, agents.md & robots.txt theme files, a UCP manifest, brand voice configuration and unlimited product and collection narratives on Free, which is free forever. The theme files were not switched on.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier free plan list versus the Free card on the Billing page; the files were not installed.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan lists the theme files and narratives the dossier names, but we did not install the files.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "AI token budget (this month)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "On Free the box for the AI token budget shows only the text to upgrade to Pro for AI written alt text, attributes, SEO fields and narratives; it shows no number of tokens.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier remark that the budget is not published versus the Free screen without a number.",
+     "status": "confirmed",
+     "buying_consequence": "No cap for the AI fixes is published on the screens we saw, so the limit of Pro stays unknown before paying.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Generate fixes with AI (Pro)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The button Generate fixes with AI (Pro) and the Broadcast (Pro) button for IndexNow were greyed out on Free; the Billing page does not name the AI fixes or IndexNow under Pro. Pro was not started, so no fix was written.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier Pro fixes versus greyed out buttons on Free; no fix was generated.",
+     "status": "not_testable",
+     "buying_consequence": "The automated fixes the dossier sells for $29 could not be tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Rank Tracker",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Discovery page has a tab Rank Tracker, which was not opened; the Billing page does not name a rank tracker under Pro.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier tracker wording versus a tab that was not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The nightly rank tracking against competitors could not be seen or tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "MCP Enrichment Proxy",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Pro card lists the MCP Enrichment Proxy, WebMCP browser tools, Review integration, Full analytics dashboard and Knowledge Base sync next to 1-click push and auto-push of theme files; none of them was tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier Pro feature list versus the Pro card; Pro was not started.",
+     "status": "confirmed",
+     "buying_consequence": "The Pro card names these tools as the dossier does, but they were not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores with thousands of incomplete products",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The development store has 19 products and Pro was not started, so how the fixes work on thousands of incomplete products could not be tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier audience wording versus a store with 19 products and no Pro plan.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about a store with thousands of products.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have a 30-day free trial ending on 17 Dec.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Pro says You have a 30-day free trial ending on 17 Dec., as the dossier says, but it asks for a payment method and Approve was greyed out.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier trial wording versus the approval screen; the trial was not started.",
+     "status": "confirmed",
+     "buying_consequence": "A 30-day trial exists, but starting it needs a payment method on the development store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Subtotal $29,00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Pro shows a subtotal of $29,00 and a total of $29,00 due 17 Dec. plus any applicable taxes, $29,00 USD every 30 days. Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/bot-it-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Pro approval screen, not approved, development store",
+     "comparability": "Dossier price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The list price of $29 a month matches the dossier before taxes, charged after the trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bot It (Bot It AI in the dossier) on a Shopify development store: the install, the dashboard score, the free catalog scan with its six gaps and six store-level gates, the Billing page, the Shopify approval screen for Pro (not approved), the Free plan and the uninstall dialog, after which the app was uninstalled. Nothing was paid and nothing was saved in the theme. Install: in the Shopify App Store and in the admin the app is called Bot It (developer Immersive Ecommerce); the dossier calls it Bot It AI. The install form was sent at 12:37:35 in our own tab; the Install app dialog asked for View customer data, View staff and contributor data and View and edit store data (customers, products, orders, store analytics, Online Store, custom data) and was approved. The dashboard opened without a separate account, demo or phone number. The app is not a chatbot but an audit for AI shopping agents. First screen: AI Agent Visibility Score 23/100 with grade F, Get Started 0/7 complete and as quick win 1: Remove password protection to unlock AI agents. Core action: Discovery and Scan catalog (free plan), 2 clicks from the dashboard, with the result visible about 2 to 3 minutes after the install (about 12:40). Result: Catalog Readiness 32 with grade F, Average product score across 19 products, and the gaps 4 Images missing alt text, 28 Variants missing GTIN, 18 Uncategorized products, 0 Category attributes unset, 19 Thin descriptions and 19 Failing products (score under 50). A banner says 19 products awaiting AI enrichment. The buttons Generate fixes with AI (Pro) and Broadcast (Pro) were greyed out on Free, and the AI token budget box says: Upgrade to Pro to unlock AI-generated alt text, attribute extraction, SEO fields, and agent narratives. Store-level gates: Fail Storefront publicly reachable (Storefront is password-protected), Pass robots.txt allows AI crawlers, Fail /agents.md live (Blocked by storefront password page), Fail /llms.txt live, Warn UCP discovery profile (Valid UCP 2026-08-25, 13 capabilities, NO payment handlers) and Warn Agentic discovery sitemap (HTTP 404). The dossier says 13 checks per product; we did not count them: the app shows 6 gap tiles and 6 store gates. Plans: the Shopify pricing page route said No plans are available for your store; the plans are in the app itself on the Billing page. Free $0 a month, Free forever, Current plan: Native llms.txt, agents.md & robots.txt theme files, Daily AI regeneration (copy/paste or CLI install), UCP manifest, Brand voice configuration, Unlimited collection narratives and Unlimited product narratives. Pro $29 a month with a 30-day free trial: Everything in Free, 1-click push & auto-push of theme files, MCP Enrichment Proxy, WebMCP browser tools, Review integration, Full analytics dashboard and Knowledge Base sync. The Billing page does not name the automated AI fixes, the rank tracker or IndexNow under Pro, while Discovery marks the AI fixes and IndexNow as Pro. Checkout: Start free trial opened the Shopify Approve subscription screen: Bot It by Immersive Ecommerce, plan Bot It Pro, You have a 30-day free trial ending on 17 Dec., Subtotal $29,00 plus any applicable taxes, Total $29,00 due 17 Dec., $29,00 USD every 30 days and an Add payment method row. There was no sentence about a test charge and Approve was greyed out, so we did not approve; no card was entered; we pressed Cancel. Cancelling: Pro was not started, so there was nothing to cancel. Removing the app goes through Settings, Apps, the app menu and Uninstall; the dialog says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Testing multiple apps); Shopify then confirmed that the app was uninstalled. Not tested: the Pro fixes (alt text, attributes, SEO fields), the Rank Tracker, IndexNow, the MCP proxy, WebMCP, the review integration, brand voice, switching on the theme extension (no theme change was saved), narratives, the Fix Queue and the Products tab. Our development store has 19 products and Pro was not started, so the group of stores with thousands of incomplete products could not be tested. Clean up: the app was uninstalled after the test and no Pro plan was started. No payment method was entered and no theme change was made. Other apps were not touched. Our own tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app has another name in the admin than in the dossier, the Shopify pricing route says that no plans are available while the plans sit inside the app, the Billing page does not name the AI fixes, the rank tracker or IndexNow under Pro, and the Pro approval screen needs a payment method.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The Pro fixes for alt text, attributes and SEO fields, the Fix Queue and the Products tab.",
+     "The Rank Tracker, IndexNow, the MCP proxy, WebMCP and the review integration.",
+     "Switching on the theme extension, brand voice and narratives.",
+     "Pro itself, because the approval screen needed a payment method, and a store with thousands of products.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:37 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Timesact Preorder",
+   "product_id": "timesact-preorder",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Timesact Pre-order on a Shopify development store: the install, the Free plan, one pre-order for one product set up with the Pre-order template, the app embed saved in the theme, the pre-order badge and button in the theme editor preview, the plan and version screens, the Shopify approval screen for Flexible (not approved) and the uninstall dialog, after which the app was uninstalled. Nothing was paid and no order was placed. Install: the install form was sent at 12:43:34 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on Timesact Pre-order on the plan FREE (Your plan: FREE, Price: FREE, 0 used out of 20, 20 are from free plan, Next order reset 1-12-2026). No separate account, demo or call was asked; the buttons Call me back and Chat with Us were optional. The setup guide said Enable Timesact in your theme. Core action, set up one pre-order for one test product, about 4 minutes (12:43 to about 12:47) and about 24 steps: (1) Products, Add Products and The 3p Fulfilled Snowboard; (2) the message You don't have any Customer Experiences yet., and the template Pre-order (label CORE plan), which gave Customer Experience duplicated and the name Pre-order (Copy); (3) the product was picked again, the experience assigned and saved; the status first read Pre-order - On standby because the default is Only when out of stock and the product had 20 in stock; (4) in the functionality settings we chose Always, whatever the stock level, which gave Customer Experience saved and the status Pre-order - Active, start 17/11/26 - unlimited; (5) Enable app embed opened the theme editor in a NEW tab, where we switched on Timesact V2 and SAVED the theme (Changes saved.), so the app embed is on in the theme of our development store; (6) in the theme editor preview of the product page a badge Pre-Order, the choice One-time Purchase $2,629.95 or Pre-order (Copy) $2,629.95, the button Pre-Order and the text Pre-order delivers as soon as available. appeared. Not tested in the core action: a real order, a deposit or split payment, Shop Pay or accelerated checkout. Plans: Billing & Account shows Plans & pricing for the CORE version. Free: $0.00 a month, 20 free orders per month, Starting at $0.02 per SMS (US), FREE and CORE Customer Experiences, email, chat and video help and a Guided setup call, with an optional add-on of $10.00/month. Flexible: $5.00 $0.50 / month, then $5.00/month (Black Friday 90% off first month), 10 orders per month and $0.20 per additional order. Fixed: $23.00 $2.30 / month, then $23.00/month (Black Friday 90% off first month), Unlimited orders and No additional cost, with a choice Monthly or yearly (SAVE $72 on yearly). The version choice has CORE (split payments, limits, discounts, custom domain emails, Klaviyo, CSV, POS, Wishlist, Flow, 30-day analytics) and PRO (markets and locations, storewide auto Low Stock and Back in Stock, unlimited analytics period, charge on fulfillment). We saw only the volume 10 orders per month on Flexible and did not open the other volumes. Checkout: Upgrade on Flexible opened a box Enhance your plan with the add-on (optional) at $10.00 / month and then Activate your subscription: Plan $5.00/month, First month: $0.50, then $5.00/month. This led to the Shopify Approve subscription screen: Timesact CORE FLEXIBLE, $0,50 USD every 30 days after discount, Total Due 17 Nov $0,50, a note that the app bills a recurring subscription and usage charges, and an Add payment method row. The sentence about a test charge was NOT on this screen and Approve was greyed out, so we did not approve; no card was entered; we pressed Cancel. Cancelling: no paid plan was ever active, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app, the menu and Uninstall; the dialog says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Testing multiple apps); the free feedback was left empty. The app is gone from the installed apps. Not tested: deposits and split payments, Shop Pay and accelerated checkout, a mixed cart, the balance payment, emails, SMS, the Merchandising add-on, PRO, the yearly plan, the other Flexible volumes, cancelling a paid plan and Wishlist. Clean up: the app was uninstalled at about 12:50 with the reason Testing multiple apps. The app embed Timesact V2 had been switched on and saved in the theme; it goes away with the app but may remain as a leftover theme setting. The product itself was not changed. One of our own tabs, the theme editor opened by the Enable app embed button, could not be closed with our tools. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Small Shopify stores with occasional pre-order drops\". What we saw: About 4 minutes and about 24 steps after the install, one pre-order for one product showed in the theme editor preview with a Pre-Order badge and button; the Free plan offers 20 free orders per month. The default setting kept it on standby until we chose Always, whatever the stock level. The storefront outside the editor and a real order were not tried.",
+    "Text we checked: \"Stores whose launch runs past a hundred orders\". What we saw: The Fixed card says Unlimited orders and No additional cost at $23.00 a month, with a first month of $2.30 in a Black Friday deal; the Flexible card charges $0.20 per additional order beyond 10 orders per month. A launch with real orders was not tried.",
+    "Text we checked: \"20 free orders per month\". What we saw: The Free card says 20 free orders per month and the app showed 0 used out of 20 with the next order reset on 1-12-2026; the card also names Starting at $0.02 per SMS (US).",
+    "Text we checked: \"$5.00 $0.50 / month, then $5.00/month\". What we saw: The Flexible card shows $5.00 a month with 10 orders per month and $0.20 per additional order, with a Black Friday first month of $0.50. The other volumes of the selector were not opened.",
+    "Text we checked: \"Pre-order delivers as soon as available\". What we saw: The preview of the product page shows the badge Pre-Order, a choice between One-time Purchase and Pre-order (Copy) at the same price, the button Pre-Order and the text Pre-order delivers as soon as available. The theme embed was switched on in a new tab and saved."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A real pre-order, a deposit or split payment, Shop Pay and accelerated checkout, a mixed cart and the balance payment.",
+    "Emails, SMS, the Merchandising add-on and Wishlist.",
+    "PRO, the yearly plan and the other Flexible volumes.",
+    "Cancelling a paid plan, because no paid plan was started.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:43 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Small Shopify stores with occasional pre-order drops",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "About 4 minutes and about 24 steps after the install, one pre-order for one product showed in the theme editor preview with a Pre-Order badge and button; the Free plan offers 20 free orders per month. The default setting kept it on standby until we chose Always, whatever the stock level. The storefront outside the editor and a real order were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier audience wording versus one pre-order set up and seen in the editor preview; no order was placed.",
+     "status": "confirmed",
+     "buying_consequence": "A small drop can be set up on the Free plan in minutes, but it was only seen in the theme editor preview.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores whose launch runs past a hundred orders",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Fixed card says Unlimited orders and No additional cost at $23.00 a month, with a first month of $2.30 in a Black Friday deal; the Flexible card charges $0.20 per additional order beyond 10 orders per month. A launch with real orders was not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier launch wording versus the Fixed and Flexible cards; no launch was run.",
+     "status": "confirmed",
+     "buying_consequence": "The plan cards match the dossier on unlimited orders for Fixed and a fee per extra order for Flexible; how a launch behaves was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Stores selling pre-orders as a deposit",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The CORE list names split payments, limits and discounts, but no deposit or split payment was set up, so the deposit pain could not be checked.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier deposit wording versus a CORE feature list; no deposit was set up.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about selling pre-orders as a deposit.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "20 free orders per month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free card says 20 free orders per month and the app showed 0 used out of 20 with the next order reset on 1-12-2026; the card also names Starting at $0.02 per SMS (US).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier free plan limit versus the Free card and the usage line in the app.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan limit of 20 orders a month matches the dossier, and SMS costs extra only when used.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$5.00 $0.50 / month, then $5.00/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Flexible card shows $5.00 a month with 10 orders per month and $0.20 per additional order, with a Black Friday first month of $0.50. The other volumes of the selector were not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier Flexible entry price versus the Flexible card at 10 orders per month; the selector was not opened further.",
+     "status": "confirmed",
+     "buying_consequence": "The entry price of Flexible and the fee per extra order match the dossier; the higher volumes were not checked.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "90% off first month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Flexible and Fixed cards carry a Black Friday label of 90% off first month ($0.50 and $2.30); the dossier prices are list prices and do not mention the deal, and its end date was not shown.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier list prices versus a time bound first month deal with no end date; no stored cost rule exists for it.",
+     "status": "not_comparable",
+     "buying_consequence": "The first month costs a tenth of the list price; after that the list price applies.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "SAVE $72 on yearly",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Fixed card has a choice Monthly or yearly with SAVE $72 on yearly; the yearly price itself was not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier yearly price versus a label on the Fixed card; the yearly view was not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The yearly price of Fixed could not be checked against the dossier.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "split payments",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The CORE version lists split payments, limits and discounts and the PRO version adds markets and locations, storewide auto Low Stock and Back in Stock, an unlimited analytics period and charge on fulfillment; none of these was tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier feature lists versus the version cards in the app; no feature beyond the basic pre-order was tried.",
+     "status": "not_testable",
+     "buying_consequence": "The CORE and PRO features the dossier sells could not be checked beyond the list.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pre-order delivers as soon as available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The preview of the product page shows the badge Pre-Order, a choice between One-time Purchase and Pre-order (Copy) at the same price, the button Pre-Order and the text Pre-order delivers as soon as available. The theme embed was switched on in a new tab and saved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Editor preview of the product page versus the assigned experience and the saved embed; checkout was not seen.",
+     "status": "confirmed",
+     "buying_consequence": "The buyer sees a pre-order badge, button and delivery text in the editor preview; the live storefront and checkout were not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total Due 17 Nov $0,50",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Flexible shows a subtotal of $5,00, a discount of 90% and a total of $0,50 due 17 Nov plus any applicable taxes, with a note that usage charges come on top. Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/timesact-preorder-review.html#claim-vs-measured"
+     },
+     "plan": "Flexible approval screen, not approved, development store",
+     "comparability": "Dossier Flexible price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The list price of $5 a month matches the dossier, with a first month of $0,50 now and usage charges on top.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Timesact Pre-order on a Shopify development store: the install, the Free plan, one pre-order for one product set up with the Pre-order template, the app embed saved in the theme, the pre-order badge and button in the theme editor preview, the plan and version screens, the Shopify approval screen for Flexible (not approved) and the uninstall dialog, after which the app was uninstalled. Nothing was paid and no order was placed. Install: the install form was sent at 12:43:34 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app opened on Timesact Pre-order on the plan FREE (Your plan: FREE, Price: FREE, 0 used out of 20, 20 are from free plan, Next order reset 1-12-2026). No separate account, demo or call was asked; the buttons Call me back and Chat with Us were optional. The setup guide said Enable Timesact in your theme. Core action, set up one pre-order for one test product, about 4 minutes (12:43 to about 12:47) and about 24 steps: (1) Products, Add Products and The 3p Fulfilled Snowboard; (2) the message You don't have any Customer Experiences yet., and the template Pre-order (label CORE plan), which gave Customer Experience duplicated and the name Pre-order (Copy); (3) the product was picked again, the experience assigned and saved; the status first read Pre-order - On standby because the default is Only when out of stock and the product had 20 in stock; (4) in the functionality settings we chose Always, whatever the stock level, which gave Customer Experience saved and the status Pre-order - Active, start 17/11/26 - unlimited; (5) Enable app embed opened the theme editor in a NEW tab, where we switched on Timesact V2 and SAVED the theme (Changes saved.), so the app embed is on in the theme of our development store; (6) in the theme editor preview of the product page a badge Pre-Order, the choice One-time Purchase $2,629.95 or Pre-order (Copy) $2,629.95, the button Pre-Order and the text Pre-order delivers as soon as available. appeared. Not tested in the core action: a real order, a deposit or split payment, Shop Pay or accelerated checkout. Plans: Billing & Account shows Plans & pricing for the CORE version. Free: $0.00 a month, 20 free orders per month, Starting at $0.02 per SMS (US), FREE and CORE Customer Experiences, email, chat and video help and a Guided setup call, with an optional add-on of $10.00/month. Flexible: $5.00 $0.50 / month, then $5.00/month (Black Friday 90% off first month), 10 orders per month and $0.20 per additional order. Fixed: $23.00 $2.30 / month, then $23.00/month (Black Friday 90% off first month), Unlimited orders and No additional cost, with a choice Monthly or yearly (SAVE $72 on yearly). The version choice has CORE (split payments, limits, discounts, custom domain emails, Klaviyo, CSV, POS, Wishlist, Flow, 30-day analytics) and PRO (markets and locations, storewide auto Low Stock and Back in Stock, unlimited analytics period, charge on fulfillment). We saw only the volume 10 orders per month on Flexible and did not open the other volumes. Checkout: Upgrade on Flexible opened a box Enhance your plan with the add-on (optional) at $10.00 / month and then Activate your subscription: Plan $5.00/month, First month: $0.50, then $5.00/month. This led to the Shopify Approve subscription screen: Timesact CORE FLEXIBLE, $0,50 USD every 30 days after discount, Total Due 17 Nov $0,50, a note that the app bills a recurring subscription and usage charges, and an Add payment method row. The sentence about a test charge was NOT on this screen and Approve was greyed out, so we did not approve; no card was entered; we pressed Cancel. Cancelling: no paid plan was ever active, so there was nothing to cancel. Removing the app goes through Settings, Apps, the row of the app, the menu and Uninstall; the dialog says you will no longer be able to use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required (Testing multiple apps); the free feedback was left empty. The app is gone from the installed apps. Not tested: deposits and split payments, Shop Pay and accelerated checkout, a mixed cart, the balance payment, emails, SMS, the Merchandising add-on, PRO, the yearly plan, the other Flexible volumes, cancelling a paid plan and Wishlist. Clean up: the app was uninstalled at about 12:50 with the reason Testing multiple apps. The app embed Timesact V2 had been switched on and saved in the theme; it goes away with the app but may remain as a leftover theme setting. The product itself was not changed. One of our own tabs, the theme editor opened by the Enable app embed button, could not be closed with our tools. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The default setting Only when out of stock left the pre-order on standby for a product with stock, the app embed had to be switched on in the theme editor in a new tab and saved, and the Flexible approval screen needs a payment method, has no test charge sentence and shows usage charges on top of the subscription.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A real pre-order, a deposit or split payment, Shop Pay and accelerated checkout, a mixed cart and the balance payment.",
+     "Emails, SMS, the Merchandising add-on and Wishlist.",
+     "PRO, the yearly plan and the other Flexible volumes.",
+     "Cancelling a paid plan, because no paid plan was started.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:43 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

@@ -100,10 +100,9 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -111,7 +110,370 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/migrationpro-review.html",
+  "method": [
+   "Installed on a Shopify development store and ran the free demo migration with 2 made-up products from a CSV file",
+   "Read the paid options and the checkout without paying, then uninstalled the app"
+  ],
+  "claims": [
+   {
+    "claim": "Free to install. Additional charges may apply.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The listing says free to install with additional charges, the install needed no payment and the free demo migration of 2 products cost nothing; the checkout for a full migration of the same 2 products shows an order total of $29.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+    },
+    "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+    "comparability": "Listing wording versus the free demo and the $29 checkout of the same 2 products.",
+    "status": "confirmed",
+    "buying_consequence": "Installing and trying the demo is free, and the real migration is paid per migration.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "vermelding ingetrokken",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The dossier said on 5 October that the listing was withdrawn; the listing MigrationPro: Store Migration showed a rating of 5.0 (190) and the app could be installed.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+    },
+    "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+    "comparability": "Dossier withdrawn listing note versus a listing that could be installed on 17 November.",
+    "status": "out_of_date",
+    "buying_consequence": "The app can be installed now, so the dossier note about a withdrawn listing no longer holds.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Implement 301 Redirects in Target Store Post-Migration ($29)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Configure step lists 301 redirects at $29 and other options at $19 to $39, all switched off; none was tried and no real migration was run.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+    },
+    "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+    "comparability": "Dossier option wording versus a price list of switched off options; no real migration was run.",
+    "status": "not_testable",
+    "buying_consequence": "The paid options could be read but their result in a real migration was not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Demo migration complete. Please review your data and proceed with full migration.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "A free demo migration of 2 made-up products from a CSV file that we made, with the invented source address https://example.com, finished about 2 minutes 10 seconds after the install and created two Active products in the store; a real source store and a real migration were not tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+    },
+    "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+    "comparability": "Dossier demo wording versus a demo with a self-made CSV; no real source store was used.",
+    "status": "confirmed",
+    "buying_consequence": "A free demo works in minutes, but only with a CSV source and made-up data here; most platforms need a real source and a connector file.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "All-In-One Migration Package",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The package is shown at $300 with Estimated time - 1 day and begins with a consultation with the vendor; we did not go on, so the package and its result were not tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+    },
+    "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+    "comparability": "Dossier package wording versus a price and a first step; the consultation was not held.",
+    "status": "not_testable",
+    "buying_consequence": "The test says nothing about the done for you package beyond its price and its first step.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Order total $29",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The checkout page shows Entities $29 for 2 products, Enabled Additional Migration Options $0 and an order total of $29, one-time, by Stripe or PayPal; the pricing page calculator was not used, so the $29 was not set against it, and nothing was paid.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+    },
+    "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+    "comparability": "Checkout amount for 2 products versus a pricing calculator that was not run; no stored cost rule was compared.",
+    "status": "not_comparable",
+    "buying_consequence": "The price depends on the number of records; $29 is what 2 products cost, not a price for a real store.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested MigrationPro on a Shopify development store: the install, the external dashboard, the choice of source platforms, a free demo migration of 2 made-up products from a self-made CSV file with an invented source address (done in about 2 minutes 10 seconds, with the products left Active in the store), the paid options, the one-time checkout of $29 (not paid) and the All-In-One package (not entered), and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Listing and install: the App Store listing MigrationPro: Store Migration shows a rating of 5.0 (190) and Free to install. Additional charges may apply. The dossier said (5 October) that the listing had been withdrawn; it is now installable. The install button opened a pop-up to the Shopify grant screen for MP - Store Migration & Import with View customer data, View staff and contributor data and View and edit store data, and the install was approved at 14:51. After the install the app opened straight on an external dashboard, app.migrationpro.io, logged in through Shopify, with no separate account asked. A message Finish setting up your account (confirm a notification email and choose a company type) was not followed. A vendor live chat widget opened by itself and showed messages; we sent nothing. Core action, a demo migration, about 2 minutes 10 seconds from the install (14:51 to about 14:53:40) and more than 12 steps, partly because we had to make a file and invent a source address: Create New Migration offers 52 source platforms (among them WooCommerce, PrestaShop, Wix and CSV); for most platforms a real source URL and a connector file (mp_connector.zip, to upload by FTP) are needed, which was not possible without a source store. We chose the source CSV, which asks for a Source Store URL (required) and CSV files (Categories, Products, Product Variants, Customers, Orders, Order Items, Blog Posts, Blog Comments, CMS Pages, Discounts). There is no built-in demo or test source. We used a Products.csv that we made ourselves with 2 made-up products (Demo Mug and Demo Shirt) and the address https://example.com as source URL; no login details were entered. In the Configure step we ticked Products. Paid options: Migrate Only Active Products ($39), Migrate Content Images from Products, Categories, CMS pages and Blog Posts ($29), Implement 301 Redirects in Target Store Post-Migration ($29), Convert Categories to Shopify Automated Collections ($29), Set Out-of-Stock Product Quantity to 100 in Target Store ($19) and Calculate Product Price with Tax ($39); free options: Target Store Data Reset, Generate Product Variants from Option Combinations and Consolidate Short and Full Descriptions; none was switched on. The CSV Headers Mapping filled in name, description and price by itself. The button Next: Run Free Demo Migration was pressed at 14:53:31 and after about 10 seconds the page said Demo migration complete. Please review your data and proceed with full migration. with the table Products 2/2. In the Shopify admin, Demo Shirt and Demo Mug appeared as Active products, with our store name as vendor. This is a demo of two made-up products from a CSV with an invented source address; a real migration from a real source store was not tested. Plans and checkout: there is no Shopify subscription screen, no Approve subscription and no test charge; payment runs outside Shopify. The checkout page of the migration shows Entities $29, Enabled Additional Migration Options $0, Additional development $0, Order total $29, the note This is one-time payment only, a Discount code field, and the payment methods Credit card (Pay with credit card via Stripe) or PayPal (Pay with your PayPal account) with a Place order button, which we did not press because it is a real payment. The price depends on the number of records: 2 products gave $29; the pricing page has a calculator (products, customers, orders) that we did not use. The All-In-One Migration Package (A dedicated Personal Assistant will handle all aspects) is priced at $300 with Estimated time - 1 day and starts with a Consultation with the vendor experts; we did not go further because it means a conversation. Cancelling: there is no subscription to cancel, because the payment is one-time. The app was uninstalled via Settings, Apps and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and asks for a reason and optional feedback; we gave Testing multiple apps at 14:58 and the app left the installed list. Not tested: a real migration from a source store, 301 redirects, images, customers and orders, Smart Sync, the payment, the All-In-One package with its consultation, the live chat and confirming the notification email. Clean up: the two demo products Demo Shirt and Demo Mug are still Active in the store and were not deleted; the app was uninstalled; a helper file with the CSV was kept outside the project; one pop-up tab of the first install attempt could not be closed with our tools. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "There is no built-in test source, so a source address and a CSV file had to be made up for the demo; most platforms need a connector file uploaded by FTP; the price depends on the number of records; and a vendor chat opened by itself.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A real migration from a real source store, 301 redirects, images, customers, orders and Smart Sync.",
+    "The payment, which is a real payment by Stripe or PayPal.",
+    "The All-In-One package and its consultation, and the vendor chat.",
+    "Confirming the notification email.",
+    "The price calculator of the pricing page.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:51 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/migrationpro-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://officesoftwaremarketplace.com/migrationpro-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://officesoftwaremarketplace.com/migrationpro-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested MigrationPro on a Shopify development store: the install, the external dashboard, the choice of source platforms, a free demo migration of 2 made-up products from a self-made CSV file with an invented source address (done in about 2 minutes 10 seconds, with the products left Active in the store), the paid options, the one-time checkout of $29 (not paid) and the All-In-One package (not entered), and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Listing and install: the App Store listing MigrationPro: Store Migration shows a rating of 5.0 (190) and Free to install. Additional charges may apply. The dossier said (5 October) that the listing had been withdrawn; it is now installable. The install button opened a pop-up to the Shopify grant screen for MP - Store Migration & Import with View customer data, View staff and contributor data and View and edit store data, and the install was approved at 14:51. After the install the app opened straight on an external dashboard, app.migrationpro.io, logged in through Shopify, with no separate account asked. A message Finish setting up your account (confirm a notification email and choose a company type) was not followed. A vendor live chat widget opened by itself and showed messages; we sent nothing. Core action, a demo migration, about 2 minutes 10 seconds from the install (14:51 to about 14:53:40) and more than 12 steps, partly because we had to make a file and invent a source address: Create New Migration offers 52 source platforms (among them WooCommerce, PrestaShop, Wix and CSV); for most platforms a real source URL and a connector file (mp_connector.zip, to upload by FTP) are needed, which was not possible without a source store. We chose the source CSV, which asks for a Source Store URL (required) and CSV files (Categories, Products, Product Variants, Customers, Orders, Order Items, Blog Posts, Blog Comments, CMS Pages, Discounts). There is no built-in demo or test source. We used a Products.csv that we made ourselves with 2 made-up products (Demo Mug and Demo Shirt) and the address https://example.com as source URL; no login details were entered. In the Configure step we ticked Products. Paid options: Migrate Only Active Products ($39), Migrate Content Images from Products, Categories, CMS pages and Blog Posts ($29), Implement 301 Redirects in Target Store Post-Migration ($29), Convert Categories to Shopify Automated Collections ($29), Set Out-of-Stock Product Quantity to 100 in Target Store ($19) and Calculate Product Price with Tax ($39); free options: Target Store Data Reset, Generate Product Variants from Option Combinations and Consolidate Short and Full Descriptions; none was switched on. The CSV Headers Mapping filled in name, description and price by itself. The button Next: Run Free Demo Migration was pressed at 14:53:31 and after about 10 seconds the page said Demo migration complete. Please review your data and proceed with full migration. with the table Products 2/2. In the Shopify admin, Demo Shirt and Demo Mug appeared as Active products, with our store name as vendor. This is a demo of two made-up products from a CSV with an invented source address; a real migration from a real source store was not tested. Plans and checkout: there is no Shopify subscription screen, no Approve subscription and no test charge; payment runs outside Shopify. The checkout page of the migration shows Entities $29, Enabled Additional Migration Options $0, Additional development $0, Order total $29, the note This is one-time payment only, a Discount code field, and the payment methods Credit card (Pay with credit card via Stripe) or PayPal (Pay with your PayPal account) with a Place order button, which we did not press because it is a real payment. The price depends on the number of records: 2 products gave $29; the pricing page has a calculator (products, customers, orders) that we did not use. The All-In-One Migration Package (A dedicated Personal Assistant will handle all aspects) is priced at $300 with Estimated time - 1 day and starts with a Consultation with the vendor experts; we did not go further because it means a conversation. Cancelling: there is no subscription to cancel, because the payment is one-time. The app was uninstalled via Settings, Apps and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and asks for a reason and optional feedback; we gave Testing multiple apps at 14:58 and the app left the installed list. Not tested: a real migration from a source store, 301 redirects, images, customers and orders, Smart Sync, the payment, the All-In-One package with its consultation, the live chat and confirming the notification email. Clean up: the two demo products Demo Shirt and Demo Mug are still Active in the store and were not deleted; the app was uninstalled; a helper file with the CSV was kept outside the project; one pop-up tab of the first install attempt could not be closed with our tools. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://officesoftwaremarketplace.com/migrationpro-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested MigrationPro on a Shopify development store: the install, the external dashboard, the choice of source platforms, a free demo migration of 2 made-up products from a self-made CSV file with an invented source address (done in about 2 minutes 10 seconds, with the products left Active in the store), the paid options, the one-time checkout of $29 (not paid) and the All-In-One package (not entered), and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Listing and install: the App Store listing MigrationPro: Store Migration shows a rating of 5.0 (190) and Free to install. Additional charges may apply. The dossier said (5 October) that the listing had been withdrawn; it is now installable. The install button opened a pop-up to the Shopify grant screen for MP - Store Migration & Import with View customer data, View staff and contributor data and View and edit store data, and the install was approved at 14:51. After the install the app opened straight on an external dashboard, app.migrationpro.io, logged in through Shopify, with no separate account asked. A message Finish setting up your account (confirm a notification email and choose a company type) was not followed. A vendor live chat widget opened by itself and showed messages; we sent nothing. Core action, a demo migration, about 2 minutes 10 seconds from the install (14:51 to about 14:53:40) and more than 12 steps, partly because we had to make a file and invent a source address: Create New Migration offers 52 source platforms (among them WooCommerce, PrestaShop, Wix and CSV); for most platforms a real source URL and a connector file (mp_connector.zip, to upload by FTP) are needed, which was not possible without a source store. We chose the source CSV, which asks for a Source Store URL (required) and CSV files (Categories, Products, Product Variants, Customers, Orders, Order Items, Blog Posts, Blog Comments, CMS Pages, Discounts). There is no built-in demo or test source. We used a Products.csv that we made ourselves with 2 made-up products (Demo Mug and Demo Shirt) and the address https://example.com as source URL; no login details were entered. In the Configure step we ticked Products. Paid options: Migrate Only Active Products ($39), Migrate Content Images from Products, Categories, CMS pages and Blog Posts ($29), Implement 301 Redirects in Target Store Post-Migration ($29), Convert Categories to Shopify Automated Collections ($29), Set Out-of-Stock Product Quantity to 100 in Target Store ($19) and Calculate Product Price with Tax ($39); free options: Target Store Data Reset, Generate Product Variants from Option Combinations and Consolidate Short and Full Descriptions; none was switched on. The CSV Headers Mapping filled in name, description and price by itself. The button Next: Run Free Demo Migration was pressed at 14:53:31 and after about 10 seconds the page said Demo migration complete. Please review your data and proceed with full migration. with the table Products 2/2. In the Shopify admin, Demo Shirt and Demo Mug appeared as Active products, with our store name as vendor. This is a demo of two made-up products from a CSV with an invented source address; a real migration from a real source store was not tested. Plans and checkout: there is no Shopify subscription screen, no Approve subscription and no test charge; payment runs outside Shopify. The checkout page of the migration shows Entities $29, Enabled Additional Migration Options $0, Additional development $0, Order total $29, the note This is one-time payment only, a Discount code field, and the payment methods Credit card (Pay with credit card via Stripe) or PayPal (Pay with your PayPal account) with a Place order button, which we did not press because it is a real payment. The price depends on the number of records: 2 products gave $29; the pricing page has a calculator (products, customers, orders) that we did not use. The All-In-One Migration Package (A dedicated Personal Assistant will handle all aspects) is priced at $300 with Estimated time - 1 day and starts with a Consultation with the vendor experts; we did not go further because it means a conversation. Cancelling: there is no subscription to cancel, because the payment is one-time. The app was uninstalled via Settings, Apps and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and asks for a reason and optional feedback; we gave Testing multiple apps at 14:58 and the app left the installed list. Not tested: a real migration from a source store, 301 redirects, images, customers and orders, Smart Sync, the payment, the All-In-One package with its consultation, the live chat and confirming the notification email. Clean up: the two demo products Demo Shirt and Demo Mug are still Active in the store and were not deleted; the app was uninstalled; a helper file with the CSV was kept outside the project; one pop-up tab of the first install attempt could not be closed with our tools. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://officesoftwaremarketplace.com/migrationpro-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://officesoftwaremarketplace.com/migrationpro-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "MigrationPro",
+    "product_id": "migrationpro",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested MigrationPro on a Shopify development store: the install, the external dashboard, the choice of source platforms, a free demo migration of 2 made-up products from a self-made CSV file with an invented source address (done in about 2 minutes 10 seconds, with the products left Active in the store), the paid options, the one-time checkout of $29 (not paid) and the All-In-One package (not entered), and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Listing and install: the App Store listing MigrationPro: Store Migration shows a rating of 5.0 (190) and Free to install. Additional charges may apply. The dossier said (5 October) that the listing had been withdrawn; it is now installable. The install button opened a pop-up to the Shopify grant screen for MP - Store Migration & Import with View customer data, View staff and contributor data and View and edit store data, and the install was approved at 14:51. After the install the app opened straight on an external dashboard, app.migrationpro.io, logged in through Shopify, with no separate account asked. A message Finish setting up your account (confirm a notification email and choose a company type) was not followed. A vendor live chat widget opened by itself and showed messages; we sent nothing. Core action, a demo migration, about 2 minutes 10 seconds from the install (14:51 to about 14:53:40) and more than 12 steps, partly because we had to make a file and invent a source address: Create New Migration offers 52 source platforms (among them WooCommerce, PrestaShop, Wix and CSV); for most platforms a real source URL and a connector file (mp_connector.zip, to upload by FTP) are needed, which was not possible without a source store. We chose the source CSV, which asks for a Source Store URL (required) and CSV files (Categories, Products, Product Variants, Customers, Orders, Order Items, Blog Posts, Blog Comments, CMS Pages, Discounts). There is no built-in demo or test source. We used a Products.csv that we made ourselves with 2 made-up products (Demo Mug and Demo Shirt) and the address https://example.com as source URL; no login details were entered. In the Configure step we ticked Products. Paid options: Migrate Only Active Products ($39), Migrate Content Images from Products, Categories, CMS pages and Blog Posts ($29), Implement 301 Redirects in Target Store Post-Migration ($29), Convert Categories to Shopify Automated Collections ($29), Set Out-of-Stock Product Quantity to 100 in Target Store ($19) and Calculate Product Price with Tax ($39); free options: Target Store Data Reset, Generate Product Variants from Option Combinations and Consolidate Short and Full Descriptions; none was switched on. The CSV Headers Mapping filled in name, description and price by itself. The button Next: Run Free Demo Migration was pressed at 14:53:31 and after about 10 seconds the page said Demo migration complete. Please review your data and proceed with full migration. with the table Products 2/2. In the Shopify admin, Demo Shirt and Demo Mug appeared as Active products, with our store name as vendor. This is a demo of two made-up products from a CSV with an invented source address; a real migration from a real source store was not tested. Plans and checkout: there is no Shopify subscription screen, no Approve subscription and no test charge; payment runs outside Shopify. The checkout page of the migration shows Entities $29, Enabled Additional Migration Options $0, Additional development $0, Order total $29, the note This is one-time payment only, a Discount code field, and the payment methods Credit card (Pay with credit card via Stripe) or PayPal (Pay with your PayPal account) with a Place order button, which we did not press because it is a real payment. The price depends on the number of records: 2 products gave $29; the pricing page has a calculator (products, customers, orders) that we did not use. The All-In-One Migration Package (A dedicated Personal Assistant will handle all aspects) is priced at $300 with Estimated time - 1 day and starts with a Consultation with the vendor experts; we did not go further because it means a conversation. Cancelling: there is no subscription to cancel, because the payment is one-time. The app was uninstalled via Settings, Apps and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and asks for a reason and optional feedback; we gave Testing multiple apps at 14:58 and the app left the installed list. Not tested: a real migration from a source store, 301 redirects, images, customers and orders, Smart Sync, the payment, the All-In-One package with its consultation, the live chat and confirming the notification email. Clean up: the two demo products Demo Shirt and Demo Mug are still Active in the store and were not deleted; the app was uninstalled; a helper file with the CSV was kept outside the project; one pop-up tab of the first install attempt could not be closed with our tools. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"Free to install. Additional charges may apply\". What we saw: The listing says free to install with additional charges, the install needed no payment and the free demo migration of 2 products cost nothing; the checkout for a full migration of the same 2 products shows an order total of $29.",
+     "Text we checked: \"vermelding ingetrokken\". What we saw: The dossier said on 5 October that the listing was withdrawn; the listing MigrationPro: Store Migration showed a rating of 5.0 (190) and the app could be installed.",
+     "Text we checked: \"Demo migration complete. Please review your data and proceed with full migration\". What we saw: A free demo migration of 2 made-up products from a CSV file that we made, with the invented source address https://example.com, finished about 2 minutes 10 seconds after the install and created two Active products in the store; a real source store and a real migration were not tried."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A real migration from a real source store, 301 redirects, images, customers, orders and Smart Sync.",
+     "The payment, which is a real payment by Stripe or PayPal.",
+     "The All-In-One package and its consultation, and the vendor chat.",
+     "Confirming the notification email.",
+     "The price calculator of the pricing page.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:51 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Free to install. Additional charges may apply.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The listing says free to install with additional charges, the install needed no payment and the free demo migration of 2 products cost nothing; the checkout for a full migration of the same 2 products shows an order total of $29.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+      },
+      "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+      "comparability": "Listing wording versus the free demo and the $29 checkout of the same 2 products.",
+      "status": "confirmed",
+      "buying_consequence": "Installing and trying the demo is free, and the real migration is paid per migration.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "vermelding ingetrokken",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The dossier said on 5 October that the listing was withdrawn; the listing MigrationPro: Store Migration showed a rating of 5.0 (190) and the app could be installed.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+      },
+      "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+      "comparability": "Dossier withdrawn listing note versus a listing that could be installed on 17 November.",
+      "status": "out_of_date",
+      "buying_consequence": "The app can be installed now, so the dossier note about a withdrawn listing no longer holds.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Implement 301 Redirects in Target Store Post-Migration ($29)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Configure step lists 301 redirects at $29 and other options at $19 to $39, all switched off; none was tried and no real migration was run.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+      },
+      "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+      "comparability": "Dossier option wording versus a price list of switched off options; no real migration was run.",
+      "status": "not_testable",
+      "buying_consequence": "The paid options could be read but their result in a real migration was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Demo migration complete. Please review your data and proceed with full migration.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "A free demo migration of 2 made-up products from a CSV file that we made, with the invented source address https://example.com, finished about 2 minutes 10 seconds after the install and created two Active products in the store; a real source store and a real migration were not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+      },
+      "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+      "comparability": "Dossier demo wording versus a demo with a self-made CSV; no real source store was used.",
+      "status": "confirmed",
+      "buying_consequence": "A free demo works in minutes, but only with a CSV source and made-up data here; most platforms need a real source and a connector file.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "All-In-One Migration Package",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The package is shown at $300 with Estimated time - 1 day and begins with a consultation with the vendor; we did not go on, so the package and its result were not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+      },
+      "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+      "comparability": "Dossier package wording versus a price and a first step; the consultation was not held.",
+      "status": "not_testable",
+      "buying_consequence": "The test says nothing about the done for you package beyond its price and its first step.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Order total $29",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The checkout page shows Entities $29 for 2 products, Enabled Additional Migration Options $0 and an order total of $29, one-time, by Stripe or PayPal; the pricing page calculator was not used, so the $29 was not set against it, and nothing was paid.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/migrationpro-review.html#claim-vs-measured"
+      },
+      "plan": "One-time checkout of $29 for 2 products, not paid, development store",
+      "comparability": "Checkout amount for 2 products versus a pricing calculator that was not run; no stored cost rule was compared.",
+      "status": "not_comparable",
+      "buying_consequence": "The price depends on the number of records; $29 is what 2 products cost, not a price for a real store.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested MigrationPro on a Shopify development store: the install, the external dashboard, the choice of source platforms, a free demo migration of 2 made-up products from a self-made CSV file with an invented source address (done in about 2 minutes 10 seconds, with the products left Active in the store), the paid options, the one-time checkout of $29 (not paid) and the All-In-One package (not entered), and the uninstall dialog, after which the app was uninstalled. Nothing was paid. Listing and install: the App Store listing MigrationPro: Store Migration shows a rating of 5.0 (190) and Free to install. Additional charges may apply. The dossier said (5 October) that the listing had been withdrawn; it is now installable. The install button opened a pop-up to the Shopify grant screen for MP - Store Migration & Import with View customer data, View staff and contributor data and View and edit store data, and the install was approved at 14:51. After the install the app opened straight on an external dashboard, app.migrationpro.io, logged in through Shopify, with no separate account asked. A message Finish setting up your account (confirm a notification email and choose a company type) was not followed. A vendor live chat widget opened by itself and showed messages; we sent nothing. Core action, a demo migration, about 2 minutes 10 seconds from the install (14:51 to about 14:53:40) and more than 12 steps, partly because we had to make a file and invent a source address: Create New Migration offers 52 source platforms (among them WooCommerce, PrestaShop, Wix and CSV); for most platforms a real source URL and a connector file (mp_connector.zip, to upload by FTP) are needed, which was not possible without a source store. We chose the source CSV, which asks for a Source Store URL (required) and CSV files (Categories, Products, Product Variants, Customers, Orders, Order Items, Blog Posts, Blog Comments, CMS Pages, Discounts). There is no built-in demo or test source. We used a Products.csv that we made ourselves with 2 made-up products (Demo Mug and Demo Shirt) and the address https://example.com as source URL; no login details were entered. In the Configure step we ticked Products. Paid options: Migrate Only Active Products ($39), Migrate Content Images from Products, Categories, CMS pages and Blog Posts ($29), Implement 301 Redirects in Target Store Post-Migration ($29), Convert Categories to Shopify Automated Collections ($29), Set Out-of-Stock Product Quantity to 100 in Target Store ($19) and Calculate Product Price with Tax ($39); free options: Target Store Data Reset, Generate Product Variants from Option Combinations and Consolidate Short and Full Descriptions; none was switched on. The CSV Headers Mapping filled in name, description and price by itself. The button Next: Run Free Demo Migration was pressed at 14:53:31 and after about 10 seconds the page said Demo migration complete. Please review your data and proceed with full migration. with the table Products 2/2. In the Shopify admin, Demo Shirt and Demo Mug appeared as Active products, with our store name as vendor. This is a demo of two made-up products from a CSV with an invented source address; a real migration from a real source store was not tested. Plans and checkout: there is no Shopify subscription screen, no Approve subscription and no test charge; payment runs outside Shopify. The checkout page of the migration shows Entities $29, Enabled Additional Migration Options $0, Additional development $0, Order total $29, the note This is one-time payment only, a Discount code field, and the payment methods Credit card (Pay with credit card via Stripe) or PayPal (Pay with your PayPal account) with a Place order button, which we did not press because it is a real payment. The price depends on the number of records: 2 products gave $29; the pricing page has a calculator (products, customers, orders) that we did not use. The All-In-One Migration Package (A dedicated Personal Assistant will handle all aspects) is priced at $300 with Estimated time - 1 day and starts with a Consultation with the vendor experts; we did not go further because it means a conversation. Cancelling: there is no subscription to cancel, because the payment is one-time. The app was uninstalled via Settings, Apps and Uninstall; the dialog says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and asks for a reason and optional feedback; we gave Testing multiple apps at 14:58 and the app left the installed list. Not tested: a real migration from a source store, 301 redirects, images, customers and orders, Smart Sync, the payment, the All-In-One package with its consultation, the live chat and confirming the notification email. Clean up: the two demo products Demo Shirt and Demo Mug are still Active in the store and were not deleted; the app was uninstalled; a helper file with the CSV was kept outside the project; one pop-up tab of the first install attempt could not be closed with our tools. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "There is no built-in test source, so a source address and a CSV file had to be made up for the demo; most platforms need a connector file uploaded by FTP; the price depends on the number of records; and a vendor chat opened by itself.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "A real migration from a real source store, 301 redirects, images, customers, orders and Smart Sync.",
+      "The payment, which is a real payment by Stripe or PayPal.",
+      "The All-In-One package and its consultation, and the vendor chat.",
+      "Confirming the notification email.",
+      "The price calculator of the pricing page.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:51 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "migrationpro:cancellation_terms",

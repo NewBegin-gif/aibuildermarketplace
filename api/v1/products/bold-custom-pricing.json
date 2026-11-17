@@ -80,18 +80,377 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html",
+  "method": [
+   "Installed on a Shopify development store, approved the Essential test charge and made one wholesale price rule",
+   "Read the three plans, then uninstalled the app"
+  ],
+  "claims": [
+   {
+    "claim": "Essential - $29 billed monthly",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The plan screen shows Essential at $29 billed monthly with a 14-day free trial, 1 Customer Tag and Unlimited Quantity Breaks, and the Shopify approval screen shows $29,00 USD every 30 days.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+    },
+    "plan": "Essential test charge approved, development store, nothing billed",
+    "comparability": "Dossier Essential price versus the plan screen and the approval screen.",
+    "status": "confirmed",
+    "buying_consequence": "The entry price of Essential matches between the plan screen and the approval screen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Standard $69",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The plan screen shows Standard at $65 billed monthly, marked Most popular, with 1-10 Customer Tags, Auto-Emails and Auto-Tagging; the dossier names $69. Standard was not chosen and its features were not tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+    },
+    "plan": "Essential test charge approved, development store, nothing billed",
+    "comparability": "Dossier Standard price versus the Standard card in the app.",
+    "status": "contradicted",
+    "buying_consequence": "The monthly price of Standard in the app is lower than the dossier price.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Complete - $129 billed monthly",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The plan screen shows Complete at $129 billed monthly with Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support and SLA; none of these was tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+    },
+    "plan": "Essential test charge approved, development store, nothing billed",
+    "comparability": "Dossier Complete wording versus the Complete card; no feature of it was tried.",
+    "status": "not_testable",
+    "buying_consequence": "The features of the Complete plan could not be checked beyond the list.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "You have a 14-day free trial ending on 1 Dec.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Essential card says a 14-day free trial and the Shopify approval screen says a 14-day free trial ending on 1 Dec. and a test charge that is not billed; it was approved without a payment method and nothing was billed.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+    },
+    "plan": "Essential test charge approved, development store, nothing billed",
+    "comparability": "Essential card trial wording versus the approval screen of a development store.",
+    "status": "confirmed",
+    "buying_consequence": "A trial of 14 days is shown on both screens; what a normal store pays after it was not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Product prices will not be updated until its process is synced:",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "A wholesale rule of 20 percent for one product was saved in about 2 minutes after the plan approval, but the sync stayed In Queue and the price was not seen in the store or the theme preview for a tagged customer.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+    },
+    "plan": "Essential test charge approved, development store, nothing billed",
+    "comparability": "Dossier wholesale price wording versus a rule whose sync stayed queued; the storefront was not seen.",
+    "status": "not_testable",
+    "buying_consequence": "The test says nothing about whether the wholesale price shows up for a tagged customer and how long the sync takes.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$29,00 USD every 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Shopify approval screen shows $29,00 USD every 30 days and a total of $29,00 due 1 Dec plus any applicable taxes; the Essential card shows $29 billed monthly; the screen said it was a test charge and nothing was billed.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+    },
+    "plan": "Essential test charge approved, development store, nothing billed",
+    "comparability": "Essential card price versus the approval screen amount; no stored cost rule was compared.",
+    "status": "confirmed",
+    "buying_consequence": "The price on the Essential card matches the approval screen, with taxes on top.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Custom Pricing (in the admin BOLD Custom Pricing: Wholesale) on a Shopify development store: the install, a forced plan choice, the Essential test charge approved without a payment method, one wholesale price rule of 20 percent for one product made in about 2 minutes after the plan approval (the sync stayed in the queue, so the price was not seen in the store), the three plans shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at about 14:40 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app first showed an onboarding screen with Book my onboarding (a free session with an expert) and Continue without help; we chose Continue without help and booked nothing. The app then forced a plan choice (Select Your Account Plan) before the dashboard opened. In the admin the app is called BOLD Custom Pricing: Wholesale, while the App Store title is Custom Pricing: Wholesale B2B. Plans and approval: the plan screen shows Essential - $29 billed monthly (14-day free trial, 1 Customer Tag, Manual Customer Tagging, Tax Controls, Unlimited Quantity Breaks), Standard - $65 billed monthly (Most popular; 1-10 Customer Tags, Auto-Emails, Auto-Tagging) and Complete - $129 billed monthly (Unlimited Customer Tags, Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support, SLA). The dossier names Standard at $69, while the app shows $65. We chose Essential, the cheapest; a dialog Update Plan said This change will update your plan to: Essential at $29 / month. Shopify then showed an Approve subscription screen: You will not be billed for this test charge., plan Essential, $29,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Total $29,00 Due 1 Dec, with an Add payment method row that was not filled in. Because the screen said it was a test charge, we approved it; no payment method was entered and nothing was billed, and the app opened without a further payment question. Core action, one price rule for wholesale customers, about 2 minutes after the plan was approved (saved at about 14:42) and about 12 screens or clicks: Manage Tags, Add Tag with the tag wholesale and Discount % 20 (the description is required and the form said Description cannot be empty. until we typed Trade customers); then Product Pricing Groups, Create Product Pricing Group with the Internal Name Wholesale 20 percent off, Calculation Type Percent Discount, Select Products and The 3p Fulfilled Snowboard ($2629.95); Setup Pricing showed a column wholesale with 20 %, and Save. A first try with an empty group had been thrown away because the first group screen said You must have at least one price level for your group. until the tag existed. Result: the group list shows Wholesale 20 percent off, switched on, with Sync queued, and a notice Syncing 0 items with Shopify, 1 items in queue with Product prices will not be updated until its process is synced: and the label In Queue. After 10 seconds it still said In Queue. We did NOT see the price in the store or in the theme preview for a tagged customer, because the sync was still queued; the effect of the rule on a store page was not tested. The onboarding checklist (Select a theme, completed 0 of 5, with a remark about a password protected store) was not followed, because that would ask for a theme change. Cancelling: no payment was ever due, so there was no paid subscription to cancel, and no cancel step was looked for inside the app. The app was uninstalled via Settings, Apps, the row BOLD Custom Pricing: Wholesale and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and Shopify confirmed that the app was uninstalled. No call or demo was booked. Not tested: the price on the storefront for a tagged customer, checkout, POS, quantity breaks, Auto-Tagging (Standard), CSV import (Complete), a second group or tag, the theme selection and preview, and the onboarding session. Clean up: no theme changes were saved; the app was uninstalled, which removes its tag and group; other apps were not touched; our own tabs were closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The app forces a plan choice before the dashboard, a tag with a description has to exist before a group can be saved, the price rule stayed in a sync queue so the result could not be seen, and the Standard plan costs $65 in the app against $69 in the dossier.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The price for a tagged customer on the storefront or in the theme preview, because the sync stayed queued.",
+    "Checkout, POS and quantity breaks.",
+    "Auto-Tagging (Standard) and CSV price imports (Complete).",
+    "A second group or tag, the theme selection and the onboarding session.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:40 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "The Essential card says a 14-day free trial and the Shopify approval screen says a 14-day free trial ending on 1 Dec. and a test charge that is not billed; it was approved without a payment method and nothing was billed.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Custom Pricing (in the admin BOLD Custom Pricing: Wholesale) on a Shopify development store: the install, a forced plan choice, the Essential test charge approved without a payment method, one wholesale price rule of 20 percent for one product made in about 2 minutes after the plan approval (the sync stayed in the queue, so the price was not seen in the store), the three plans shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at about 14:40 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app first showed an onboarding screen with Book my onboarding (a free session with an expert) and Continue without help; we chose Continue without help and booked nothing. The app then forced a plan choice (Select Your Account Plan) before the dashboard opened. In the admin the app is called BOLD Custom Pricing: Wholesale, while the App Store title is Custom Pricing: Wholesale B2B. Plans and approval: the plan screen shows Essential - $29 billed monthly (14-day free trial, 1 Customer Tag, Manual Customer Tagging, Tax Controls, Unlimited Quantity Breaks), Standard - $65 billed monthly (Most popular; 1-10 Customer Tags, Auto-Emails, Auto-Tagging) and Complete - $129 billed monthly (Unlimited Customer Tags, Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support, SLA). The dossier names Standard at $69, while the app shows $65. We chose Essential, the cheapest; a dialog Update Plan said This change will update your plan to: Essential at $29 / month. Shopify then showed an Approve subscription screen: You will not be billed for this test charge., plan Essential, $29,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Total $29,00 Due 1 Dec, with an Add payment method row that was not filled in. Because the screen said it was a test charge, we approved it; no payment method was entered and nothing was billed, and the app opened without a further payment question. Core action, one price rule for wholesale customers, about 2 minutes after the plan was approved (saved at about 14:42) and about 12 screens or clicks: Manage Tags, Add Tag with the tag wholesale and Discount % 20 (the description is required and the form said Description cannot be empty. until we typed Trade customers); then Product Pricing Groups, Create Product Pricing Group with the Internal Name Wholesale 20 percent off, Calculation Type Percent Discount, Select Products and The 3p Fulfilled Snowboard ($2629.95); Setup Pricing showed a column wholesale with 20 %, and Save. A first try with an empty group had been thrown away because the first group screen said You must have at least one price level for your group. until the tag existed. Result: the group list shows Wholesale 20 percent off, switched on, with Sync queued, and a notice Syncing 0 items with Shopify, 1 items in queue with Product prices will not be updated until its process is synced: and the label In Queue. After 10 seconds it still said In Queue. We did NOT see the price in the store or in the theme preview for a tagged customer, because the sync was still queued; the effect of the rule on a store page was not tested. The onboarding checklist (Select a theme, completed 0 of 5, with a remark about a password protected store) was not followed, because that would ask for a theme change. Cancelling: no payment was ever due, so there was no paid subscription to cancel, and no cancel step was looked for inside the app. The app was uninstalled via Settings, Apps, the row BOLD Custom Pricing: Wholesale and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and Shopify confirmed that the app was uninstalled. No call or demo was booked. Not tested: the price on the storefront for a tagged customer, checkout, POS, quantity breaks, Auto-Tagging (Standard), CSV import (Complete), a second group or tag, the theme selection and preview, and the onboarding session. Clean up: no theme changes were saved; the app was uninstalled, which removes its tag and group; other apps were not touched; our own tabs were closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Custom Pricing (in the admin BOLD Custom Pricing: Wholesale) on a Shopify development store: the install, a forced plan choice, the Essential test charge approved without a payment method, one wholesale price rule of 20 percent for one product made in about 2 minutes after the plan approval (the sync stayed in the queue, so the price was not seen in the store), the three plans shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at about 14:40 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app first showed an onboarding screen with Book my onboarding (a free session with an expert) and Continue without help; we chose Continue without help and booked nothing. The app then forced a plan choice (Select Your Account Plan) before the dashboard opened. In the admin the app is called BOLD Custom Pricing: Wholesale, while the App Store title is Custom Pricing: Wholesale B2B. Plans and approval: the plan screen shows Essential - $29 billed monthly (14-day free trial, 1 Customer Tag, Manual Customer Tagging, Tax Controls, Unlimited Quantity Breaks), Standard - $65 billed monthly (Most popular; 1-10 Customer Tags, Auto-Emails, Auto-Tagging) and Complete - $129 billed monthly (Unlimited Customer Tags, Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support, SLA). The dossier names Standard at $69, while the app shows $65. We chose Essential, the cheapest; a dialog Update Plan said This change will update your plan to: Essential at $29 / month. Shopify then showed an Approve subscription screen: You will not be billed for this test charge., plan Essential, $29,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Total $29,00 Due 1 Dec, with an Add payment method row that was not filled in. Because the screen said it was a test charge, we approved it; no payment method was entered and nothing was billed, and the app opened without a further payment question. Core action, one price rule for wholesale customers, about 2 minutes after the plan was approved (saved at about 14:42) and about 12 screens or clicks: Manage Tags, Add Tag with the tag wholesale and Discount % 20 (the description is required and the form said Description cannot be empty. until we typed Trade customers); then Product Pricing Groups, Create Product Pricing Group with the Internal Name Wholesale 20 percent off, Calculation Type Percent Discount, Select Products and The 3p Fulfilled Snowboard ($2629.95); Setup Pricing showed a column wholesale with 20 %, and Save. A first try with an empty group had been thrown away because the first group screen said You must have at least one price level for your group. until the tag existed. Result: the group list shows Wholesale 20 percent off, switched on, with Sync queued, and a notice Syncing 0 items with Shopify, 1 items in queue with Product prices will not be updated until its process is synced: and the label In Queue. After 10 seconds it still said In Queue. We did NOT see the price in the store or in the theme preview for a tagged customer, because the sync was still queued; the effect of the rule on a store page was not tested. The onboarding checklist (Select a theme, completed 0 of 5, with a remark about a password protected store) was not followed, because that would ask for a theme change. Cancelling: no payment was ever due, so there was no paid subscription to cancel, and no cancel step was looked for inside the app. The app was uninstalled via Settings, Apps, the row BOLD Custom Pricing: Wholesale and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and Shopify confirmed that the app was uninstalled. No call or demo was booked. Not tested: the price on the storefront for a tagged customer, checkout, POS, quantity breaks, Auto-Tagging (Standard), CSV import (Complete), a second group or tag, the theme selection and preview, and the onboarding session. Clean up: no theme changes were saved; the app was uninstalled, which removes its tag and group; other apps were not touched; our own tabs were closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Bold Custom Pricing",
+    "product_id": "bold-custom-pricing",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Custom Pricing (in the admin BOLD Custom Pricing: Wholesale) on a Shopify development store: the install, a forced plan choice, the Essential test charge approved without a payment method, one wholesale price rule of 20 percent for one product made in about 2 minutes after the plan approval (the sync stayed in the queue, so the price was not seen in the store), the three plans shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at about 14:40 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app first showed an onboarding screen with Book my onboarding (a free session with an expert) and Continue without help; we chose Continue without help and booked nothing. The app then forced a plan choice (Select Your Account Plan) before the dashboard opened. In the admin the app is called BOLD Custom Pricing: Wholesale, while the App Store title is Custom Pricing: Wholesale B2B. Plans and approval: the plan screen shows Essential - $29 billed monthly (14-day free trial, 1 Customer Tag, Manual Customer Tagging, Tax Controls, Unlimited Quantity Breaks), Standard - $65 billed monthly (Most popular; 1-10 Customer Tags, Auto-Emails, Auto-Tagging) and Complete - $129 billed monthly (Unlimited Customer Tags, Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support, SLA). The dossier names Standard at $69, while the app shows $65. We chose Essential, the cheapest; a dialog Update Plan said This change will update your plan to: Essential at $29 / month. Shopify then showed an Approve subscription screen: You will not be billed for this test charge., plan Essential, $29,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Total $29,00 Due 1 Dec, with an Add payment method row that was not filled in. Because the screen said it was a test charge, we approved it; no payment method was entered and nothing was billed, and the app opened without a further payment question. Core action, one price rule for wholesale customers, about 2 minutes after the plan was approved (saved at about 14:42) and about 12 screens or clicks: Manage Tags, Add Tag with the tag wholesale and Discount % 20 (the description is required and the form said Description cannot be empty. until we typed Trade customers); then Product Pricing Groups, Create Product Pricing Group with the Internal Name Wholesale 20 percent off, Calculation Type Percent Discount, Select Products and The 3p Fulfilled Snowboard ($2629.95); Setup Pricing showed a column wholesale with 20 %, and Save. A first try with an empty group had been thrown away because the first group screen said You must have at least one price level for your group. until the tag existed. Result: the group list shows Wholesale 20 percent off, switched on, with Sync queued, and a notice Syncing 0 items with Shopify, 1 items in queue with Product prices will not be updated until its process is synced: and the label In Queue. After 10 seconds it still said In Queue. We did NOT see the price in the store or in the theme preview for a tagged customer, because the sync was still queued; the effect of the rule on a store page was not tested. The onboarding checklist (Select a theme, completed 0 of 5, with a remark about a password protected store) was not followed, because that would ask for a theme change. Cancelling: no payment was ever due, so there was no paid subscription to cancel, and no cancel step was looked for inside the app. The app was uninstalled via Settings, Apps, the row BOLD Custom Pricing: Wholesale and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and Shopify confirmed that the app was uninstalled. No call or demo was booked. Not tested: the price on the storefront for a tagged customer, checkout, POS, quantity breaks, Auto-Tagging (Standard), CSV import (Complete), a second group or tag, the theme selection and preview, and the onboarding session. Clean up: no theme changes were saved; the app was uninstalled, which removes its tag and group; other apps were not touched; our own tabs were closed. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"Essential - $29 billed monthly\". What we saw: The plan screen shows Essential at $29 billed monthly with a 14-day free trial, 1 Customer Tag and Unlimited Quantity Breaks, and the Shopify approval screen shows $29,00 USD every 30 days.",
+     "Text we checked: \"Standard $69\". What we saw: The plan screen shows Standard at $65 billed monthly, marked Most popular, with 1-10 Customer Tags, Auto-Emails and Auto-Tagging; the dossier names $69. Standard was not chosen and its features were not tried.",
+     "Text we checked: \"You have a 14-day free trial ending on 1 Dec\". What we saw: The Essential card says a 14-day free trial and the Shopify approval screen says a 14-day free trial ending on 1 Dec. and a test charge that is not billed; it was approved without a payment method and nothing was billed."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The price for a tagged customer on the storefront or in the theme preview, because the sync stayed queued.",
+     "Checkout, POS and quantity breaks.",
+     "Auto-Tagging (Standard) and CSV price imports (Complete).",
+     "A second group or tag, the theme selection and the onboarding session.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:40 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Essential - $29 billed monthly",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan screen shows Essential at $29 billed monthly with a 14-day free trial, 1 Customer Tag and Unlimited Quantity Breaks, and the Shopify approval screen shows $29,00 USD every 30 days.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+      },
+      "plan": "Essential test charge approved, development store, nothing billed",
+      "comparability": "Dossier Essential price versus the plan screen and the approval screen.",
+      "status": "confirmed",
+      "buying_consequence": "The entry price of Essential matches between the plan screen and the approval screen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Standard $69",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan screen shows Standard at $65 billed monthly, marked Most popular, with 1-10 Customer Tags, Auto-Emails and Auto-Tagging; the dossier names $69. Standard was not chosen and its features were not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+      },
+      "plan": "Essential test charge approved, development store, nothing billed",
+      "comparability": "Dossier Standard price versus the Standard card in the app.",
+      "status": "contradicted",
+      "buying_consequence": "The monthly price of Standard in the app is lower than the dossier price.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Complete - $129 billed monthly",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan screen shows Complete at $129 billed monthly with Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support and SLA; none of these was tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+      },
+      "plan": "Essential test charge approved, development store, nothing billed",
+      "comparability": "Dossier Complete wording versus the Complete card; no feature of it was tried.",
+      "status": "not_testable",
+      "buying_consequence": "The features of the Complete plan could not be checked beyond the list.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "You have a 14-day free trial ending on 1 Dec.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Essential card says a 14-day free trial and the Shopify approval screen says a 14-day free trial ending on 1 Dec. and a test charge that is not billed; it was approved without a payment method and nothing was billed.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+      },
+      "plan": "Essential test charge approved, development store, nothing billed",
+      "comparability": "Essential card trial wording versus the approval screen of a development store.",
+      "status": "confirmed",
+      "buying_consequence": "A trial of 14 days is shown on both screens; what a normal store pays after it was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Product prices will not be updated until its process is synced:",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "A wholesale rule of 20 percent for one product was saved in about 2 minutes after the plan approval, but the sync stayed In Queue and the price was not seen in the store or the theme preview for a tagged customer.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+      },
+      "plan": "Essential test charge approved, development store, nothing billed",
+      "comparability": "Dossier wholesale price wording versus a rule whose sync stayed queued; the storefront was not seen.",
+      "status": "not_testable",
+      "buying_consequence": "The test says nothing about whether the wholesale price shows up for a tagged customer and how long the sync takes.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$29,00 USD every 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify approval screen shows $29,00 USD every 30 days and a total of $29,00 due 1 Dec plus any applicable taxes; the Essential card shows $29 billed monthly; the screen said it was a test charge and nothing was billed.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/bold-custom-pricing-review.html#claim-vs-measured"
+      },
+      "plan": "Essential test charge approved, development store, nothing billed",
+      "comparability": "Essential card price versus the approval screen amount; no stored cost rule was compared.",
+      "status": "confirmed",
+      "buying_consequence": "The price on the Essential card matches the approval screen, with taxes on top.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Bold Custom Pricing (in the admin BOLD Custom Pricing: Wholesale) on a Shopify development store: the install, a forced plan choice, the Essential test charge approved without a payment method, one wholesale price rule of 20 percent for one product made in about 2 minutes after the plan approval (the sync stayed in the queue, so the price was not seen in the store), the three plans shown in the app and the uninstall dialog, after which the app was uninstalled. Nothing was billed. Install: the install button of the App Store listing was pressed at about 14:40 in our own tab; Shopify showed the Install app dialog with View customer data, View staff and contributor data and View and edit store data, and the install was approved. The app first showed an onboarding screen with Book my onboarding (a free session with an expert) and Continue without help; we chose Continue without help and booked nothing. The app then forced a plan choice (Select Your Account Plan) before the dashboard opened. In the admin the app is called BOLD Custom Pricing: Wholesale, while the App Store title is Custom Pricing: Wholesale B2B. Plans and approval: the plan screen shows Essential - $29 billed monthly (14-day free trial, 1 Customer Tag, Manual Customer Tagging, Tax Controls, Unlimited Quantity Breaks), Standard - $65 billed monthly (Most popular; 1-10 Customer Tags, Auto-Emails, Auto-Tagging) and Complete - $129 billed monthly (Unlimited Customer Tags, Advanced Detailed Pricing, CSV Price Imports, Shopify POS Integration, Expert Setup, Premier Support, SLA). The dossier names Standard at $69, while the app shows $65. We chose Essential, the cheapest; a dialog Update Plan said This change will update your plan to: Essential at $29 / month. Shopify then showed an Approve subscription screen: You will not be billed for this test charge., plan Essential, $29,00 USD every 30 days, You have a 14-day free trial ending on 1 Dec., Total $29,00 Due 1 Dec, with an Add payment method row that was not filled in. Because the screen said it was a test charge, we approved it; no payment method was entered and nothing was billed, and the app opened without a further payment question. Core action, one price rule for wholesale customers, about 2 minutes after the plan was approved (saved at about 14:42) and about 12 screens or clicks: Manage Tags, Add Tag with the tag wholesale and Discount % 20 (the description is required and the form said Description cannot be empty. until we typed Trade customers); then Product Pricing Groups, Create Product Pricing Group with the Internal Name Wholesale 20 percent off, Calculation Type Percent Discount, Select Products and The 3p Fulfilled Snowboard ($2629.95); Setup Pricing showed a column wholesale with 20 %, and Save. A first try with an empty group had been thrown away because the first group screen said You must have at least one price level for your group. until the tag existed. Result: the group list shows Wholesale 20 percent off, switched on, with Sync queued, and a notice Syncing 0 items with Shopify, 1 items in queue with Product prices will not be updated until its process is synced: and the label In Queue. After 10 seconds it still said In Queue. We did NOT see the price in the store or in the theme preview for a tagged customer, because the sync was still queued; the effect of the rule on a store page was not tested. The onboarding checklist (Select a theme, completed 0 of 5, with a remark about a password protected store) was not followed, because that would ask for a theme change. Cancelling: no payment was ever due, so there was no paid subscription to cancel, and no cancel step was looked for inside the app. The app was uninstalled via Settings, Apps, the row BOLD Custom Pricing: Wholesale and Uninstall; the dialog says you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required, we gave Testing multiple apps, and Shopify confirmed that the app was uninstalled. No call or demo was booked. Not tested: the price on the storefront for a tagged customer, checkout, POS, quantity breaks, Auto-Tagging (Standard), CSV import (Complete), a second group or tag, the theme selection and preview, and the onboarding session. Clean up: no theme changes were saved; the app was uninstalled, which removes its tag and group; other apps were not touched; our own tabs were closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The app forces a plan choice before the dashboard, a tag with a description has to exist before a group can be saved, the price rule stayed in a sync queue so the result could not be seen, and the Standard plan costs $65 in the app against $69 in the dossier.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "The price for a tagged customer on the storefront or in the theme preview, because the sync stayed queued.",
+      "Checkout, POS and quantity breaks.",
+      "Auto-Tagging (Standard) and CSV price imports (Complete).",
+      "A second group or tag, the theme selection and the onboarding session.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:40 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "bold-custom-pricing:cancellation_terms",

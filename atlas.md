@@ -313,9 +313,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/atto-review.html
 
 ## Attribuly (attribuly.com)
-- **Verified pricing:** (re-read 2026-10-14 on apps.shopify.com/attribuly and attribuly.com/pricing-retention/; the plan ladder changed after 13 September 2026) A free plan that recovers the first $1,000 of email …
-- **Honest take:** The pricing has moved within two months.
-- **Best for:** stores already running Klaviyo or Omnisend at volume, with enough traffic for identity resolution to work and a recovery figure they can check against their own email platform before a 10% share of it becomes the bill
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/attribuly, attribuly.com/pricing and attribuly.com/pricing-retention/, and in our own test session on 17 November 2026; the plan ladder changed again af…
+- **Honest take:** The pricing has moved twice in three months.
+- **Best for:** stores already running Klaviyo or Omnisend at volume, with enough traffic for identity resolution to work and enough recovered revenue to cover a plan priced on their GMV
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://marketingandsalessoftware.com/attribuly-review.html
 
@@ -1639,9 +1639,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/gelato-review.html
 
 ## GeoStock (jtcinteractive.com)
-- **Verified pricing:** (re-verified 2026-09-20 on apps.shopify.com/product-inventory-information) Two plans, no free tier.
+- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/product-inventory-information, and in our own test session on 17 November 2026; first read 2026-08-18) Three plans: Free, Base Plan at $9.99 a month and…
 - **Honest take:** Know what this is before you buy it: despite the name it is a storefront widget, not an inventory system.
 - **Best for:** retailers with physical locations who want shoppers to see per-store stock and find the nearest branch on the product page itself
+- **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/geostock-review.html
 
 ## Geotargetly (geotargetly.com)
@@ -1687,10 +1688,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/goflow-review.html
 
 ## Gorgias (gorgias.com)
-- **Verified pricing:** (re-verified 7 October 2026 on their own pricing page; figures unchanged since 8 September) Not priced per agent -- their own line -- but the seats are capped: the comparison table gives St…
+- **Verified pricing:** (read 2026-11-17 on gorgias.com/pricing and on the App Store listing apps.shopify.com/helpdesk, and in our own test session on 17 November 2026; first read 2026-09-08) Four plans with the A…
 - **Honest take:** Never priced per agent is a real advantage, but it starts one tier up: the comparison table caps Starter at 3 user seats, and only Basic and above open the inbox to 500.
 - **Best for:** ecommerce support teams with seasonal or spiky volume, where per-agent pricing punishes you for having enough people on a busy week
-- **Flags:** Usage-metered
+- **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://zerotouchsupport.com/gorgias-review.html
 
 ## GrapeLeads (grapeleads.com)
@@ -2933,7 +2934,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/postonce-review.html
 
 ## Postscript (postscript.io)
-- **Verified pricing:** (Re-verified 19 September 2026 on their own pricing page; every figure below is unchanged from the 30 August reading.) Starter is shown as $0 a month with a $49 monthly minimum spend, at $0…
+- **Verified pricing:** (read 2026-11-17 on postscript.io/pricing and on the App Store listing apps.shopify.com/postscript-sms-marketing, and in our own test session on 17 November 2026; first read 2026-08-30) Sta…
 - **Honest take:** The $0 a month is not free: it carries a $49 monthly minimum spend, which means $49 is your floor whether you send anything or not.
 - **Best for:** Shopify stores with a list large enough that SMS beats email on response: the per-message economics only work once volume justifies the platform fee
 - **Flags:** Usage-metered, Free tier

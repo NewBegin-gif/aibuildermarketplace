@@ -14809,6 +14809,112 @@
   },
   {
    "source": "session",
+   "product_name": "MX AI",
+   "product_id": "mx-ai",
+   "run_date": "2026-11-17",
+   "session_type": "signup_attempt",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. We installed MX AI on our Shopify development store on 17 November 2026 to put a background music player on the store. The app opened on a plan choice and the Shopify approval screen asked for a payment method, so we could not use the product. We never enter a card in a test.",
+   "findings": [
+    "The app opens on a plan choice: a Yearly Plan at $2.50/month billed annually and a Monthly Plan shown as \"$0.00/month\". No dashboard opens without a plan.",
+    "Shopify asked $4,99 every 30 days for that Monthly Plan after a 7 day trial, and $29,94 a year for the yearly plan. Both screens had an Add payment method row and a disabled Approve button, with no test charge line.",
+    "The listing names a free Development Stores plan. In our test (17 Nov 2026) the app did not offer it on our development store.",
+    "The app was uninstalled after the test; nothing was paid."
+   ],
+   "not_tested": [
+    "Not tested: choosing a song and showing the background music player on the store. The app asks for a payment method before it does anything.",
+    "Changing the player design, autoplay and the app embed in the theme.",
+    "The Development Stores plan the listing names, which the app did not offer on our development store.",
+    "Any paid plan or trial; neither approval screen was approved."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free plan available. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing says Free plan available and shows a Development Stores plan, Free, for development and partner stores. In our test (17 Nov 2026) the app on our development store offered only the Yearly and the Monthly Plan, and both needed a payment method on the Shopify screen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/mx-ai-review/#claim-vs-measured"
+     },
+     "plan": "Monthly Plan approval screen, not approved, development store",
+     "comparability": "The free plan label on the listing against the plan screen in the app on a development store.",
+     "status": "contradicted",
+     "buying_consequence": "A development store cannot count on the free plan the listing names; in our test the app asked for a paid plan first.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$29,94 USD every year",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The yearly approval screen shows $29,94 USD every year with Add payment method; the app card shows $2.50/month billed annually and the listing $29.94/year.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/mx-ai-review/#claim-vs-measured"
+     },
+     "plan": "Monthly Plan approval screen, not approved, development store",
+     "comparability": "The yearly price on the listing and the app card against the yearly Shopify screen; it was not approved.",
+     "status": "confirmed",
+     "buying_consequence": "The yearly price of $29.94 matches the listing; the app shows it as $2.50 a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Monthly Plan $0.00/month (billed monthly)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Monthly card in the app says $0.00/month, but the Shopify approval screen for the Monthly Plan shows a 7-day free trial ending on 24 Nov, total $4,99 due 24 Nov and $4,99 USD every 30 days, with Add payment method and a disabled Approve.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/mx-ai-review/#claim-vs-measured"
+     },
+     "plan": "Monthly Plan approval screen, not approved, development store",
+     "comparability": "The Monthly card in the app against the amount on the Shopify approval screen; no tax line was shown and no stored cost rule was compared.",
+     "status": "contradicted",
+     "buying_consequence": "The app card reads as free, but the Monthly Plan costs $4.99 every 30 days after the trial.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session installed MX AI (MX Background Music in the admin) on a Shopify development store. The app opened on a plan choice where the Monthly Plan said $0.00/month, but the Shopify approval screen asked $4,99 every 30 days and a payment method, so no music player was tested. The app was uninstalled; nothing was paid. Install: the install form was sent at about 22:34; the dialog Install app for MX Background Music by Effective Apps asked for View staff and contributor data (Store owner) and View and edit store data (Online Store, Shopify admin); Install was clicked at about 22:36. The app opened on Welcome to MX AI: Background Music Player. Core action NOT DONE: the app shows only the plan screen and no dashboard without a plan. No song was chosen and no player was seen in the store. Plans in the app: Yearly Plan $2.50/month billed annually (SALE: Save 50%) and Monthly Plan $0.00/month billed monthly; each store gets at most 7 trial days altogether. No Development plan was offered. Checkout: Start free trial on the Monthly Plan opened the Shopify screen Approve subscription: a 7-day free trial ending on 24 Nov, subtotal and total $4,99, due 24 Nov, $4,99 USD every 30 days, the row Add payment method and a disabled Approve button. The line You will not be billed for this test charge was NOT on the screen. The annual plan screen showed $29,94 USD every year, total $29,94, also with Add payment method. After Cancel a red message said The shop cannot accept the provided charge. Nothing was approved and no card was entered. Difference: the app card says Monthly $0.00/month, while Shopify charges $4,99 every 30 days; Yearly $2.50/month equals $29,94 a year. Cancelling: no subscription existed. The uninstall dialog Uninstall MX Background Music? warns that data managed by the app will be deleted and needs a reason (Testing multiple apps). Clean up: the app was uninstalled (You've successfully uninstalled MX Background Music); no theme change. Our own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The Monthly card in the app says $0.00/month while Shopify asks $4,99 every 30 days; the app shows nothing before a plan is approved, the approval screen needed a payment method and had no test charge line, and Cancel showed an error.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Not tested: choosing a song and showing the background music player on the store. The app asks for a payment method before it does anything.",
+     "Changing the player design, autoplay and the app embed in the theme.",
+     "The Development Stores plan the listing names, which the app did not offer on our development store.",
+     "Any paid plan or trial; neither approval screen was approved.",
+     "Original store creation and identity check, which Daan did himself.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:34 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Kumo",
    "product_id": "kumo",
    "run_date": "2026-11-17",
@@ -18966,6 +19072,129 @@
      "Completing the cancellation, uninstalling and the downgrade to the free plan.",
      "Saving the app embed in the theme, support and chat, export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 11:08 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "TiXel",
+   "product_id": "tixel",
+   "run_date": "2026-11-17",
+   "session_type": "signup_attempt",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. We installed TiXel on our Shopify development store on 17 November 2026 to add a Meta or TikTok pixel. The app opened on a plan choice and the Shopify approval screens asked for a payment method, so we could not use the product. We never enter a card in a test.",
+   "findings": [
+    "The app opens on a plan choice: a Yearly Plan at $9.99/month billed annually and a Monthly Plan at $19.99/month. The trial is one day per store.",
+    "Shopify asked $119,94 a year for the yearly plan and $19,99 every 30 days for the monthly plan. Both screens had an Add payment method row and a greyed out Approve button, with no test charge line.",
+    "The listing names a free Development Stores plan. In our test (17 Nov 2026) the app did not offer it on our development store.",
+    "The app was uninstalled after the test; nothing was paid."
+   ],
+   "not_tested": [
+    "Not tested: adding a Meta or TikTok pixel and seeing the event overview. The app asks for a payment method before it does anything.",
+    "The pixel ID field, the test mode, the server side Conversion API and deduplication.",
+    "The Development Stores plan the listing names, which the app did not offer on our development store.",
+    "Any paid plan or trial; neither approval screen was approved."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free plan available. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing says Free plan available and shows a Development Stores plan, Free, for development and partner stores. In our test (17 Nov 2026) the app on our development store offered only the Yearly and the Monthly Plan, and both needed a payment method.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tixel-review/#claim-vs-measured"
+     },
+     "plan": "Annual Unlimited Plan approval screen, not approved, development store",
+     "comparability": "The free plan label on the listing against the plan screen in the app on a development store.",
+     "status": "contradicted",
+     "buying_consequence": "A development store cannot count on the free plan the listing names; in our test the app asked for a paid plan first.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "*Each store is entitled to a maximum of 1 trial days altogether.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen and both approval screens show a trial of one day, ending on 18 Nov.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tixel-review/#claim-vs-measured"
+     },
+     "plan": "Annual Unlimited Plan approval screen, not approved, development store",
+     "comparability": "The trial line in the app against the trial end date on the Shopify screens.",
+     "status": "confirmed",
+     "buying_consequence": "The trial lasts one day, so there is little time to check the tracking before the first charge.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$9.99/month (billed annually)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The yearly card in the app shows $9.99/month billed annually; Shopify charges $119,94 every year for it and the listing says $119.94/year, about $10 a month.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tixel-review/#claim-vs-measured"
+     },
+     "plan": "Annual Unlimited Plan approval screen, not approved, development store",
+     "comparability": "The yearly card in the app against the yearly price on the listing.",
+     "status": "confirmed",
+     "buying_consequence": "The yearly plan costs $119.94 at once; the app shows it as $9.99 a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$119,94 USD every year",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for the Annual Unlimited Plan shows a 1-day free trial ending on 18 Nov, total $119,94 due 18 Nov, $119,94 USD every year, Add payment method and a greyed out Approve; the monthly screen showed $19,99 USD every 30 days. There was no test charge line and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/tixel-review/#claim-vs-measured"
+     },
+     "plan": "Annual Unlimited Plan approval screen, not approved, development store",
+     "comparability": "The yearly and monthly prices on the listing against the Shopify approval screens; no tax line was shown and no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The yearly price of $119.94 and the monthly price of $19.99 match the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session installed TiXel (TiXel Multi Pixels in the admin) on a Shopify development store. The app opened on a plan choice with a Yearly and a Monthly plan and a trial of one day, and the Shopify approval screens asked for a payment method, so no pixel was added. The app was uninstalled; nothing was paid. Install: the install form was sent at about 22:38; the dialog Install app for TiXel Multi Pixels by Effective Apps asked for customer data, staff data and store data. The app opened at about 22:39 on Welcome to TiXel Multi Pixels. Core action NOT DONE: the app asks for a plan first and Shopify asks for a payment method for it. No pixel ID was entered, no Meta or TikTok connection was made and no event overview was seen. Plans in the app: Yearly Plan $9.99/month billed annually (Sale: Save 50%) and Monthly Plan $19.99/month billed monthly, both with Add Unlimited Pixels, 1-click automatic TikTok Pixel creation, 1-click automatic Meta Pixel connection, the Conversion API for server side tracking and automatic event triggers; each store gets at most 1 trial day altogether. No free Development plan was offered. Checkout: the yearly plan opened the Shopify screen Approve subscription: Annual Unlimited Plan, $119,94 USD every year, a 1-day free trial ending on 18 Nov, total $119,94 due 18 Nov, the row Add payment method and a greyed out Approve. The monthly plan showed Monthly Unlimited Plan, $19,99 USD every 30 days with the same trial and row. The line You will not be billed for this test charge was NOT on either screen, so nothing was approved and no card was entered. Cancelling: no subscription existed. Settings, Apps, Uninstall opened Uninstall TiXel Multi Pixels? which warns that data managed by the app will be deleted, says a request goes to the developer within 48 hours to delete personal customer information, and needs a reason (Testing multiple apps). Clean up: the app was uninstalled and is gone from Installed; no theme or product change. Our own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The trial lasts only one day per store, the app shows nothing before a plan is approved, and both approval screens needed a payment method with no test charge line.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Not tested: adding a Meta or TikTok pixel and seeing the event overview. The app asks for a payment method before it does anything.",
+     "The pixel ID field, the test mode, the server side Conversion API and deduplication.",
+     "The Development Stores plan the listing names, which the app did not offer on our development store.",
+     "Any paid plan or trial; neither approval screen was approved.",
+     "Original store creation and identity check, which Daan did himself.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:38 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -28533,6 +28762,113 @@
   },
   {
    "source": "session",
+   "product_name": "Zendrop",
+   "product_id": "zendrop",
+   "run_date": "2026-11-17",
+   "session_type": "signup_attempt",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. We installed Zendrop on our Shopify development store on 17 November 2026 to search its product catalogue. The onboarding offered only two ways in, both with a payment step, and the Shopify approval screen asked for a payment method, so we could not use the product. We never enter a card in a test.",
+   "findings": [
+    "The first screen after the install was a Black Friday offer: Zendrop Plus at $197 a year, \"Regularly priced at $549\". We skipped it.",
+    "The next screen, Finish your setup to start selling, offered only Plus (7 days free, then $79 a month) and Flex (pay as you go). There was no way to the catalogue without one of them.",
+    "The Shopify approval screen for Flex asked to approve usage charges up to $79,00 per 30 days, with an Add payment method row and a greyed out Approve button.",
+    "The listing shows a free level, Beginner at $29 and Pro at $49. In our test (17 Nov 2026) the onboarding did not offer them.",
+    "No Zendrop account was made. The app was uninstalled after the test; nothing was paid."
+   ],
+   "not_tested": [
+    "Not tested: searching the product catalogue (price, shipping time, supplier) and importing a product. The app asks for a payment method before it does anything.",
+    "A sample or an order, and the refund route.",
+    "The Beginner and Pro plans and the free level on the listing, which the onboarding did not offer.",
+    "The Plus trial and the Black Friday deal."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Beginner $29/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing of 18 Nov shows Free (no linked products), Beginner $29, Pro $49 and Plus $79 a month, as the dossier says. In our test (17 Nov 2026) the onboarding after the install offered only Plus (7 days free, then $79/mo) and Flex (pay as you go).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/zendrop-review/#claim-vs-measured"
+     },
+     "plan": "Flex usage approval screen, not approved, development store",
+     "comparability": "The plans on the listing and in the dossier against the two choices in the onboarding.",
+     "status": "contradicted",
+     "buying_consequence": "A new store cannot pick the cheaper plans or the free level in the onboarding; it starts from Plus at $79 a month or a usage plan.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Plus $197 /year",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The first screen after the install was a Black Friday offer: Plus at $197 a year, regularly priced at $549, with a 5-day money-back guarantee. It was skipped and not checked at a checkout.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/zendrop-review/#claim-vs-measured"
+     },
+     "plan": "Flex usage approval screen, not approved, development store",
+     "comparability": "The offer screen against a yearly price that was never seen on a checkout.",
+     "status": "not_testable",
+     "buying_consequence": "A yearly Plus deal is offered first; its terms were not checked.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "to a maximum of $79,00 USD per 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Flex says Free to start, but the Shopify approval screen for Flex shows usage charges with a spending limit of at most $79,00 USD per 30 days, You will be billed for this app when you begin to use it, Add payment method and a greyed out Approve; there was no test charge line.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/zendrop-review/#claim-vs-measured"
+     },
+     "plan": "Flex usage approval screen, not approved, development store",
+     "comparability": "The Flex card in the onboarding against the Shopify approval screen; no tax line was shown and no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "Flex has no fixed fee, but Shopify needs a payment method and allows usage charges up to $79 per 30 days.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session installed Zendrop on a Shopify development store. After a Black Friday offer the onboarding showed only Plus and Flex, both with a payment step and no route to the catalogue, and the Shopify approval screen for Flex asked for a payment method, so the catalogue was not tested. The app was uninstalled; nothing was paid and no Zendrop account was made. Install: the install started at about 23:26; the dialog Install app asked for View customer data, View staff and contributor data and View and edit store data, and Install was clicked. The app sent us straight to the Zendrop onboarding without a login screen or account question. The first screen was a Black Friday offer: 64% Off Zendrop Plus, Plus $197 /year, Regularly priced at $549, a 5-day money-back guarantee and No thanks, I'll skip this offer, which was clicked. Core action NOT DONE: the next screen, Finish your setup to start selling, offers only two ways to activate Zendrop, both with a payment step, and gives no route to the product catalogue without one of them. No product was searched or imported and no sample or order was placed. Plans in the onboarding: Plus (Unlimited Access), Start Free Trial, 7 days free, then $79/mo, Cancel anytime, with a list of extras such as order credits, coaching and print on demand; and Flex, Pay as you go, Add a payment method in Shopify and approve Zendrop, Continue to Shopify, Free to start, Cancel anytime. Checkout: Flex opened the Shopify screen Approve subscription for Zendrop - Dropshipping & POD: This app bills you for usage charges, plan Based usage, an app spending limit of at most $79,00 USD per 30 days, You will be billed for this app when you begin to use it, a greyed out Approve and the row Add payment method. The line You will not be billed for this test charge was NOT on the screen, so nothing was approved. The Plus trial was not clicked. Difference with the dossier: the dossier names Beginner $29/mo, Pro $49/mo and a free level without linked products; the listing still shows them, but the onboarding showed only Plus and Flex. Cancelling: never approved, so nothing to cancel. The uninstall dialog needs a reason and says a request goes to the developer within 48 hours to delete personal customer information; Zendrop was uninstalled. Clean up: no theme change, no products and no orders. Our own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The onboarding opens on a yearly Black Friday upsell, then offers only Plus or a usage plan, both with a payment step; the cheaper plans and the free level on the listing were not offered.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Not tested: searching the product catalogue (price, shipping time, supplier) and importing a product. The app asks for a payment method before it does anything.",
+     "A sample or an order, and the refund route.",
+     "The Beginner and Pro plans and the free level on the listing, which the onboarding did not offer.",
+     "The Plus trial and the Black Friday deal.",
+     "Original store creation and identity check, which Daan did himself.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:26 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Securify",
    "product_id": "securify",
    "run_date": "2026-11-17",
@@ -33388,6 +33724,130 @@
   },
   {
    "source": "session",
+   "product_name": "AfterSell",
+   "product_id": "aftersell",
+   "run_date": "2026-11-17",
+   "session_type": "signup_attempt",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. We installed AfterSell on our Shopify development store on 17 November 2026 to build a post-purchase upsell. Every page showed only the plan cards and the Shopify approval screen asked for a payment method, so we could not use the product. We never enter a card in a test.",
+   "findings": [
+    "Every page in the app, also Post-purchase funnels, showed only More revenue, less effort. with the plans Pre-purchase $59.99, Post-purchase $34.99, Complete $79.99 and Max Custom, each with a charge per order above 500 and a cap.",
+    "The listing names a free plan \"ONLY For Development & Partner Stores\". In our test (17 Nov 2026) the app did not offer it on our development store.",
+    "The Shopify approval screen for Post-purchase said \"You will not be billed for this test charge\" and showed a 30 day trial and a usage limit of $999,99 per 30 days, but it also showed an Add payment method row, so we did not approve it.",
+    "Checkout upsells are marked Shopify Plus only.",
+    "The app was uninstalled after the test; nothing was paid."
+   ],
+   "not_tested": [
+    "Not tested: building a post-purchase upsell funnel and previewing it. The app asks for a payment method before it does anything.",
+    "Checkout upsells and the checkout settings of the store, which were not changed.",
+    "The development store plan the listing names, which the app did not offer on our development store.",
+    "Any paid plan or trial; the Post-purchase approval screen was not approved."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "DEVELOPMENT STORES / Free / ONLY For Development & Partner Stores",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows a free plan for development and partner stores. In our test (17 Nov 2026) every page of the app on our development store showed only Pre-purchase, Post-purchase, Complete and Max Custom.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/aftersell-review/#claim-vs-measured"
+     },
+     "plan": "Post-purchase approval screen, not approved, development store",
+     "comparability": "The development store plan on the listing against the plan page in the app on a development store.",
+     "status": "contradicted",
+     "buying_consequence": "A development store cannot count on the free plan the listing names; in our test the app asked for a paid plan first.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Post-purchase $34.99 /month, 5¢ per order above 500 · caps at $999.99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Post-purchase card in the app shows $34.99 a month plus 5 cents per order above 500 with a cap of $999.99; the listing shows Post-Purchase at $34.99 a month.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/aftersell-review/#claim-vs-measured"
+     },
+     "plan": "Post-purchase approval screen, not approved, development store",
+     "comparability": "The Post-purchase card in the app against the listing price.",
+     "status": "confirmed",
+     "buying_consequence": "Post-purchase costs $34.99 a month plus a charge per order above 500, up to $999.99.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Checkout Shopify Plus only",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan cards mark checkout upsells as Shopify Plus only.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/aftersell-review/#claim-vs-measured"
+     },
+     "plan": "Post-purchase approval screen, not approved, development store",
+     "comparability": "The plan card note against the plan of our store, which is not Plus; no checkout upsell was tried.",
+     "status": "confirmed",
+     "buying_consequence": "Checkout upsells only work on Shopify Plus stores.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "maximum of $999,99 USD per 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen for Post-purchase shows You will not be billed for this test charge, a 30-day free trial ending on 17 Dec, usage charges with a spending limit of at most $999,99 USD per 30 days, and an Add payment method row; nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/aftersell-review/#claim-vs-measured"
+     },
+     "plan": "Post-purchase approval screen, not approved, development store",
+     "comparability": "The cap on the Post-purchase card against the spending limit on the Shopify approval screen; no tax line was shown and no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The cap on the approval screen matches the Post-purchase cap of $999.99 on the plan card.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session installed AfterSell on a Shopify development store. Every page in the app showed only paid plan cards and no free development store plan; the Shopify approval screen for Post-purchase said there would be no charge for this test but also showed an Add payment method row, so it was not approved and no funnel was built. The app was uninstalled; nothing was paid. Install: the install started at about 23:23; the dialog asked for View customer data, View staff and contributor data and View and edit store data. After Install the app opened at about 23:24 on a plan screen. Core action NOT DONE: the app opens no funnel editor. Every page, also Post-purchase funnels in the app menu, shows only More revenue, less effort. with the plan cards. No funnel was built or previewed and the checkout settings of the store were not changed. Plans in the app: Post-purchase $34.99 a month, 5 cents per order above 500, caps at $999.99; Pre-purchase $59.99 a month, 3 cents per order above 500, caps at $599.99; Complete $79.99 a month, 7 cents per order above 500, caps at $1,359.99 (most popular); Max Custom. A counter showed 2 monthly orders, and checkout upsells are for Shopify Plus only. The free development store plan from the listing was not on the page. Checkout: Choose plan on Post-purchase opened the Shopify screen Approve subscription with the line You will not be billed for this test charge, a 30-day free trial ending on 17 Dec, plan AfterSell Pricing, an app spending limit of at most $999,99 USD per 30 days and a row Add payment method. Our rule is to approve nothing on a screen with an Add payment method row, so nothing was approved and no card was entered. Cancelling: no subscription existed. The app was removed in Settings, Apps, Uninstall; the dialog warns that data managed by the app will be deleted and needs a reason (Testing multiple apps). Clean up: the app is gone from Installed; no theme or checkout change and no order. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Every page of the app shows the plan cards until a plan is approved; the listing names a free development store plan that the app did not show; the approval screen said there would be no charge for this test but still showed an Add payment method row.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Not tested: building a post-purchase upsell funnel and previewing it. The app asks for a payment method before it does anything.",
+     "Checkout upsells and the checkout settings of the store, which were not changed.",
+     "The development store plan the listing names, which the app did not offer on our development store.",
+     "Any paid plan or trial; the Post-purchase approval screen was not approved.",
+     "Original store creation and identity check, which Daan did himself.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:23 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Prezi",
    "product_id": "prezi",
    "run_date": "2026-11-06",
@@ -36888,6 +37348,112 @@
      "Approving any plan, so the admin of a paid plan was not seen.",
      "Export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 20:37 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Upsell.com",
+   "product_id": "upsell-com",
+   "run_date": "2026-11-17",
+   "session_type": "signup_attempt",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. We installed Upsell.com (ReConvert on the listing) on our Shopify development store on 17 November 2026 to set up an upsell offer. Before the app opened, Shopify showed an approval screen that asked for a payment method, so we could not use the product. We never enter a card in a test.",
+   "findings": [
+    "After the install the screen said \"Installing Upsell.com...\" and then went straight to the Shopify approval screen. The app itself did not open.",
+    "The approval screen asked to approve usage charges up to $2.000,00 per 30 days with a 14 day trial to 1 Dec. It said \"You will not be billed for this test charge\", but it also showed an Add payment method row, so we did not approve it.",
+    "The listing shows a Free plan up to 50 orders and Growth plans from $9.99 a month. No screen in our test offered a free plan or a plan list.",
+    "The app was uninstalled after the test; nothing was paid."
+   ],
+   "not_tested": [
+    "Not tested: setting up an upsell offer in the editor and seeing it in a preview. The app asks for a payment method before it does anything.",
+    "The editor, A/B tests and the settings of the app, which never opened.",
+    "The Free plan up to 50 orders the listing names, which no screen offered.",
+    "Any paid plan or trial; the approval screen was not approved."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free plan available. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows FREE up to 50 orders or $50 upsell revenue. In our test (17 Nov 2026) the install went straight to a Shopify approval screen for usage charges up to $2.000,00 per 30 days with an Add payment method row; no $0 plan and no plan list was shown.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsell-com-review/#claim-vs-measured"
+     },
+     "plan": "Usage approval screen, not approved, development store",
+     "comparability": "The free plan on the listing against the first screen after the install.",
+     "status": "contradicted",
+     "buying_consequence": "A store that installs for the free plan on the listing first gets an approval screen for usage charges that needs a payment method.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Upsell.com ex ReConvert",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing is titled ReConvert Post Purchase Upsell with developer Upsell.com ex ReConvert, and the approval screen names the app Upsell.com ex ReConvert; the dossier says Upsell.com.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsell-com-review/#claim-vs-measured"
+     },
+     "plan": "Usage approval screen, not approved, development store",
+     "comparability": "The dossier name against the listing title, the developer name and the approval screen.",
+     "status": "confirmed",
+     "buying_consequence": "Upsell.com is the new name of ReConvert; the listing still uses the ReConvert title.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "to a maximum of $2.000,00 USD per 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows tiered prices (Free up to 50 orders, Growth 51-100 at $9.99, 101-200 at $19.99, 201-500 at $39.99 a month). The Shopify approval screen shows plan Upsell.com, usage charges up to $2.000,00 USD per 30 days, a 14-day free trial ending on 1 Dec and the test charge line, with an Add payment method row; nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsell-com-review/#claim-vs-measured"
+     },
+     "plan": "Usage approval screen, not approved, development store",
+     "comparability": "The tiered prices on the listing against a usage limit on the approval screen; no amount per tier was shown and no stored cost rule was compared.",
+     "status": "not_comparable",
+     "buying_consequence": "The real monthly amount depends on the orders; the approval screen allows up to $2,000 per 30 days, far above the listed tiers.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session installed Upsell.com (ReConvert Post Purchase Upsell on the listing) on a Shopify development store. Straight after the install, before the app opened, Shopify showed an approval screen for usage charges up to $2.000,00 per 30 days that said there would be no charge for this test but also had an Add payment method row, so it was not approved and no upsell was set up. The app was uninstalled; nothing was paid. Install: the listing was read at about 22:57 and the app was installed at about 22:57 in our own tab; the dialog asked for View customer data, View staff and contributor data and View and edit store data. After installing the screen said Installing Upsell.com... with a button Take me to the app, and then at about 22:58 the Shopify screen Approve subscription came up. The app itself did not open. Core action NOT DONE: the app did not open, because the subscription had to be approved first and the approval screen had an Add payment method row. No upsell was set up and no editor, preview, A/B test or setting was seen. Checkout: the screen Approve subscription showed the line You will not be billed for this test charge, Upsell.com ex ReConvert, This app bills you for usage charges, plan Upsell.com, an app spending limit of at most $2.000,00 USD per 30 days that can be updated after approval, a 14-day free trial ending on 1 Dec, You will be billed for this app when you begin to use it, and a row Add payment method. Our rule is to approve nothing on a screen with an Add payment method row, so nothing was approved and no card was entered. The screen showed no $0 plan and no plan list with amounts. Difference with the listing: the listing names a Free plan up to 50 orders and Growth plans from $9.99, while Shopify asked to approve usage charges up to $2.000,00 per 30 days. Cancelling: nothing was approved. The app was uninstalled in Settings, Apps, Uninstall with the reason Testing multiple apps. Clean up: the app is gone from Installed; no theme change and no order. Our own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app does not open before a usage subscription is approved; the approval screen said there would be no charge for this test but still showed an Add payment method row, and it showed a spending limit of $2.000,00 per 30 days and no free plan.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Not tested: setting up an upsell offer in the editor and seeing it in a preview. The app asks for a payment method before it does anything.",
+     "The editor, A/B tests and the settings of the app, which never opened.",
+     "The Free plan up to 50 orders the listing names, which no screen offered.",
+     "Any paid plan or trial; the approval screen was not approved.",
+     "Original store creation and identity check, which Daan did himself.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:57 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

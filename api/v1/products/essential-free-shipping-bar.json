@@ -98,10 +98,9 @@
   "growth": null
  },
  "unknowns": [
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -109,7 +108,403 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html",
+  "method": [
+   "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Up to 1000 monthly views; Unlimited Top-bar boosters; Unlimited Product page boosters",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Pricing plans page shows the Free Plan with Up to 1000 monthly views, Unlimited Top-bar boosters and Unlimited Product page boosters, and the line You're currently on Free (0 / 1000 monthly views). The app opened on this plan without a card, and a top bar booster was made and published on it. The limit was not used up and unlimited was not tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "The free plan of the review against the Pricing plans page; the limit in use was not tried.",
+    "status": "confirmed",
+    "buying_consequence": "A small store can start on the free plan without a card, with a cap of 1,000 views a month.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Starter $9.99 /month: Up to 10000 monthly views",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Starter column shows $9.99 a month with up to 10000 monthly views, Everything in Free, Geolocation targeting and Exclude products, and the editor said Advanced product and country targeting available on Starter plan. The Starter features were not used.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "The Starter price and limit of the review against the plan column and the label in the editor; the Starter features were not used.",
+    "status": "confirmed",
+    "buying_consequence": "Starter costs $9.99 a month for 10,000 views and adds targeting by country and excluding products.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Essential (Popular) $14.99 /month: Up to 50000 monthly views",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Essential column shows $14.99 a month with up to 50000 monthly views, Unlimited cart page boosters, Add upsell products, Translations, Adding booster using product tags and Analytics, and the type Cart page said Available with Essential plan when choosing the booster. No Essential feature was used.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "The Essential price and limit of the review against the plan column and the label on the type chooser; no approval screen of Essential was opened.",
+    "status": "confirmed",
+    "buying_consequence": "Essential costs $14.99 a month for 50,000 views and adds cart page boosters, upsells and analytics.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Professional $29.99 /month: Unlimited booster views",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Professional column shows $29.99 a month with Unlimited booster views and All premium features. Its approval screen was not opened and the plan was not started.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "The Professional price of the review against the plan column; no approval screen of Professional was opened.",
+    "status": "confirmed",
+    "buying_consequence": "Professional costs $29.99 a month and has no view limit.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free shipping for orders over $75.00!",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "With the threshold set to 75 and Publish clicked, the app said Booster saved with the status Published and showed the preview Free shipping for orders over $75.00!. The default threshold was 50 USD. This took 4 clicks and 1 entry in the app.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "The claim that a free shipping goal can be set on the free plan against the booster editor and its preview in the app; the live store was not looked at.",
+    "status": "confirmed",
+    "buying_consequence": "A threshold bar can be set up in a few clicks on the free plan, without code.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Congratulations! You've got free shipping!",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "After the app embed was switched on by hand in the theme editor, the bar Congratulations! You've got free shipping! stood at the top of an unsaved store preview about 2.5 minutes and 9 to 10 clicks after the install. The cart in the test store already held 3 items above 75 USD, so only the reached text was seen and the text for the amount still to go was not. The embed was switched off again and the theme was not saved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "The claim that the bar shows in the store against the unsaved theme preview; the cart was above the threshold and the live store was not seen.",
+    "status": "confirmed",
+    "buying_consequence": "The bar shows the reached message above the threshold; the progress message below it was not seen in this test, and you must switch on the app embed yourself.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$9,99 USD every 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The plan page showed Starter at $9.99 a month and the Shopify approval screen said the plan starter, $9,99 USD every 30 days, with a 7-day free trial ending on 24 Nov., Subtotal $9,99 plus any applicable taxes and Total $9,99 Due 24 Nov. A row Add payment method was shown and the Approve button was greyed out; there was no sentence about a test charge. Nothing was approved and no card was entered.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+    },
+    "plan": "Starter approval screen, not approved, development store",
+    "comparability": "The monthly price on the plan page against the approval screen; the same amount, taxes were not shown and no stored cost rule was compared.",
+    "status": "confirmed",
+    "buying_consequence": "The first bill of $9.99 is due after the 7-day trial, plus any taxes.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Essential Free Shipping (listed as Essential Free Shipping Bar) on a Shopify development store: the install through the install form, the free plan without a card or plan screen, a free shipping booster with a threshold of $75 that was published in the app after 4 clicks and 1 entry, then the bar Congratulations! You've got free shipping! at the top of an unsaved theme preview after the app embed was switched on by hand (about 2.5 minutes and 9 to 10 clicks from the install; the cart already held more than $75, so the text for the amount still to go was not seen; the embed was switched off again), the Pricing plans page with the free plan and three paid plans, the Shopify approval screen for Starter (a 7-day trial; it asked for a payment method and had no test charge sentence; nothing approved) and the uninstall dialog, after which the app was uninstalled. The live store, a cart below the threshold and the paid features were not tested. Nothing was paid. Install: the app was installed from its own tab through the install form with the target set to the same tab, at about 21:27 (Mac clock; 21:26:42 was just before the form). In the Shopify admin the app is called Essential Free Shipping (the App Store handle is essential-order-value-booster, the review calls it Essential Free Shipping Bar). The screen Install app said that the app needs access to View staff and contributor data (Store owner) and View and edit store data (Products, discounts, Online Store); Install was clicked. There was no onboarding, no terms tick box and no payment step: the app opened at once on Your order value boosters with the plan Free. No account on the vendor site, password, card or phone number was asked. Core action, a free shipping bar with a threshold: at 21:28:26 the booster editor was reached through Create a new booster and Announcement (the top bar type). The default was Cart total 50 USD with the reward Free shipping, and the preview in the app said Free shipping for orders over $50.00!. The threshold was set to 75 and Publish was clicked: Booster saved, status Published, preview Free shipping for orders over $75.00!. That took 4 clicks and 1 entry in the app. A yellow note said Essential Free Shipping Bar app is not activated yet, with the buttons Activate and I have done it. In the theme editor (App embeds) the embed Free shipping bar / Essential Free Shipping was switched on and not saved. At 21:28:59 the bar stood at the top of the store preview with the text Congratulations! You've got free shipping!. The development store already had a cart with 3 items above 75 USD, so the bar showed the reached text and NOT the text for the amount still to go; that second text was not seen. From the install to the bar in the preview took about 2.5 minutes and 9 to 10 clicks. The embed was switched off again, the theme was not saved (Leave page was chosen at the unsaved changes question), and the published booster itself stayed in the app until the uninstall. No page of the live store was looked at, because the store has a password; the app does not change the free shipping rate in Shopify and whether that rate must be set up there was not tested. Plans in the app (Pricing plans): You're currently on Free (0 / 1000 monthly views). One visitor can have multiple views per session. Free Plan: Up to 1000 monthly views, Unlimited Top-bar boosters and Unlimited Product page boosters. Starter $9.99 a month: up to 10000 monthly views, Everything in Free, Geolocation targeting and Exclude products. Essential (Popular) $14.99 a month: up to 50000 monthly views, Everything in Starter, Unlimited cart page boosters, Add upsell products, Translations, Adding booster using product tags and Analytics. Professional $29.99 a month: Unlimited booster views, All premium features, unlimited product, top bar and cart page boosters, and Upsells & Analytics. Each paid plan has Start FREE 7-days trial. In the booster choice the Cart page type said Available with Essential plan, and in the editor Multiple goals are available from the Essential plan and Advanced product and country targeting available on Starter plan. No yearly view was noted. Checkout: Start FREE 7-days trial on Starter opened the Shopify screen Approve subscription with the plan starter, $9,99 USD every 30 days, You have a 7-day free trial ending on 24 Nov., Subtotal $9,99 plus any applicable taxes, Total $9,99 Due 24 Nov, a row Add payment method and the line By proceeding, you are agreeing to the Terms of Service. The Approve button was greyed out. The screen did NOT say that a test charge would not be billed, and a payment method was needed. No card was entered and nothing was approved; Cancel was clicked. Cancelling: no paid plan was started, so there was nothing to cancel in the app. Removing the app goes through Settings, Apps and Uninstall: the dialog says that you can no longer use the app and that data managed by the app, such as discounts, will be deleted, and it asks for a Reason for uninstalling (Select all that apply); the reason Testing multiple apps was chosen. Differences from the review: the prices and the limits match the review (Free 1,000 views, Starter $9.99 for 10,000, Essential $14.99 for 50,000, Professional $29.99 unlimited); the app is called Essential Free Shipping in the admin. The price fields are not changed here. Not tested: what the bar shows when the cart is below the threshold, the live store (it has a password), the cart page bar and the upsell in the bar (Essential), geolocation targeting and excluding products (Starter), whether the free shipping rate must be set up in Shopify, the view counting and what happens at the limit, the yearly prices, the paid plans and the payment. Clean up: the embed was switched off and the theme was not saved. The booster went with the uninstall. The app was uninstalled on 17 November through Settings, Apps and no longer showed in the list. No card was entered and nothing was approved. Our own tab was closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The published booster did not show on the store until the app embed was switched on by hand in the theme editor; the app says so in a note after publishing. The app is called Essential Free Shipping in the admin, Essential Order Value Booster in the App Store address and Essential Free Shipping Bar in the review. The app does not change the free shipping rate in Shopify, according to our notes it was not tested whether that must be set up there.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The bar with a cart below the threshold, so the text for the amount still to go.",
+    "The live store (it has a password), and whether the free shipping rate must be set up in Shopify.",
+    "Cart page bars, upsells, geolocation targeting and excluding products (paid plans).",
+    "The view limit and the yearly prices, approving any plan and the payment.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 21:27 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Essential Free Shipping (listed as Essential Free Shipping Bar) on a Shopify development store: the install through the install form, the free plan without a card or plan screen, a free shipping booster with a threshold of $75 that was published in the app after 4 clicks and 1 entry, then the bar Congratulations! You've got free shipping! at the top of an unsaved theme preview after the app embed was switched on by hand (about 2.5 minutes and 9 to 10 clicks from the install; the cart already held more than $75, so the text for the amount still to go was not seen; the embed was switched off again), the Pricing plans page with the free plan and three paid plans, the Shopify approval screen for Starter (a 7-day trial; it asked for a payment method and had no test charge sentence; nothing approved) and the uninstall dialog, after which the app was uninstalled. The live store, a cart below the threshold and the paid features were not tested. Nothing was paid. Install: the app was installed from its own tab through the install form with the target set to the same tab, at about 21:27 (Mac clock; 21:26:42 was just before the form). In the Shopify admin the app is called Essential Free Shipping (the App Store handle is essential-order-value-booster, the review calls it Essential Free Shipping Bar). The screen Install app said that the app needs access to View staff and contributor data (Store owner) and View and edit store data (Products, discounts, Online Store); Install was clicked. There was no onboarding, no terms tick box and no payment step: the app opened at once on Your order value boosters with the plan Free. No account on the vendor site, password, card or phone number was asked. Core action, a free shipping bar with a threshold: at 21:28:26 the booster editor was reached through Create a new booster and Announcement (the top bar type). The default was Cart total 50 USD with the reward Free shipping, and the preview in the app said Free shipping for orders over $50.00!. The threshold was set to 75 and Publish was clicked: Booster saved, status Published, preview Free shipping for orders over $75.00!. That took 4 clicks and 1 entry in the app. A yellow note said Essential Free Shipping Bar app is not activated yet, with the buttons Activate and I have done it. In the theme editor (App embeds) the embed Free shipping bar / Essential Free Shipping was switched on and not saved. At 21:28:59 the bar stood at the top of the store preview with the text Congratulations! You've got free shipping!. The development store already had a cart with 3 items above 75 USD, so the bar showed the reached text and NOT the text for the amount still to go; that second text was not seen. From the install to the bar in the preview took about 2.5 minutes and 9 to 10 clicks. The embed was switched off again, the theme was not saved (Leave page was chosen at the unsaved changes question), and the published booster itself stayed in the app until the uninstall. No page of the live store was looked at, because the store has a password; the app does not change the free shipping rate in Shopify and whether that rate must be set up there was not tested. Plans in the app (Pricing plans): You're currently on Free (0 / 1000 monthly views). One visitor can have multiple views per session. Free Plan: Up to 1000 monthly views, Unlimited Top-bar boosters and Unlimited Product page boosters. Starter $9.99 a month: up to 10000 monthly views, Everything in Free, Geolocation targeting and Exclude products. Essential (Popular) $14.99 a month: up to 50000 monthly views, Everything in Starter, Unlimited cart page boosters, Add upsell products, Translations, Adding booster using product tags and Analytics. Professional $29.99 a month: Unlimited booster views, All premium features, unlimited product, top bar and cart page boosters, and Upsells & Analytics. Each paid plan has Start FREE 7-days trial. In the booster choice the Cart page type said Available with Essential plan, and in the editor Multiple goals are available from the Essential plan and Advanced product and country targeting available on Starter plan. No yearly view was noted. Checkout: Start FREE 7-days trial on Starter opened the Shopify screen Approve subscription with the plan starter, $9,99 USD every 30 days, You have a 7-day free trial ending on 24 Nov., Subtotal $9,99 plus any applicable taxes, Total $9,99 Due 24 Nov, a row Add payment method and the line By proceeding, you are agreeing to the Terms of Service. The Approve button was greyed out. The screen did NOT say that a test charge would not be billed, and a payment method was needed. No card was entered and nothing was approved; Cancel was clicked. Cancelling: no paid plan was started, so there was nothing to cancel in the app. Removing the app goes through Settings, Apps and Uninstall: the dialog says that you can no longer use the app and that data managed by the app, such as discounts, will be deleted, and it asks for a Reason for uninstalling (Select all that apply); the reason Testing multiple apps was chosen. Differences from the review: the prices and the limits match the review (Free 1,000 views, Starter $9.99 for 10,000, Essential $14.99 for 50,000, Professional $29.99 unlimited); the app is called Essential Free Shipping in the admin. The price fields are not changed here. Not tested: what the bar shows when the cart is below the threshold, the live store (it has a password), the cart page bar and the upsell in the bar (Essential), geolocation targeting and excluding products (Starter), whether the free shipping rate must be set up in Shopify, the view counting and what happens at the limit, the yearly prices, the paid plans and the payment. Clean up: the embed was switched off and the theme was not saved. The booster went with the uninstall. The app was uninstalled on 17 November through Settings, Apps and no longer showed in the list. No card was entered and nothing was approved. Our own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Essential Free Shipping (listed as Essential Free Shipping Bar) on a Shopify development store: the install through the install form, the free plan without a card or plan screen, a free shipping booster with a threshold of $75 that was published in the app after 4 clicks and 1 entry, then the bar Congratulations! You've got free shipping! at the top of an unsaved theme preview after the app embed was switched on by hand (about 2.5 minutes and 9 to 10 clicks from the install; the cart already held more than $75, so the text for the amount still to go was not seen; the embed was switched off again), the Pricing plans page with the free plan and three paid plans, the Shopify approval screen for Starter (a 7-day trial; it asked for a payment method and had no test charge sentence; nothing approved) and the uninstall dialog, after which the app was uninstalled. The live store, a cart below the threshold and the paid features were not tested. Nothing was paid. Install: the app was installed from its own tab through the install form with the target set to the same tab, at about 21:27 (Mac clock; 21:26:42 was just before the form). In the Shopify admin the app is called Essential Free Shipping (the App Store handle is essential-order-value-booster, the review calls it Essential Free Shipping Bar). The screen Install app said that the app needs access to View staff and contributor data (Store owner) and View and edit store data (Products, discounts, Online Store); Install was clicked. There was no onboarding, no terms tick box and no payment step: the app opened at once on Your order value boosters with the plan Free. No account on the vendor site, password, card or phone number was asked. Core action, a free shipping bar with a threshold: at 21:28:26 the booster editor was reached through Create a new booster and Announcement (the top bar type). The default was Cart total 50 USD with the reward Free shipping, and the preview in the app said Free shipping for orders over $50.00!. The threshold was set to 75 and Publish was clicked: Booster saved, status Published, preview Free shipping for orders over $75.00!. That took 4 clicks and 1 entry in the app. A yellow note said Essential Free Shipping Bar app is not activated yet, with the buttons Activate and I have done it. In the theme editor (App embeds) the embed Free shipping bar / Essential Free Shipping was switched on and not saved. At 21:28:59 the bar stood at the top of the store preview with the text Congratulations! You've got free shipping!. The development store already had a cart with 3 items above 75 USD, so the bar showed the reached text and NOT the text for the amount still to go; that second text was not seen. From the install to the bar in the preview took about 2.5 minutes and 9 to 10 clicks. The embed was switched off again, the theme was not saved (Leave page was chosen at the unsaved changes question), and the published booster itself stayed in the app until the uninstall. No page of the live store was looked at, because the store has a password; the app does not change the free shipping rate in Shopify and whether that rate must be set up there was not tested. Plans in the app (Pricing plans): You're currently on Free (0 / 1000 monthly views). One visitor can have multiple views per session. Free Plan: Up to 1000 monthly views, Unlimited Top-bar boosters and Unlimited Product page boosters. Starter $9.99 a month: up to 10000 monthly views, Everything in Free, Geolocation targeting and Exclude products. Essential (Popular) $14.99 a month: up to 50000 monthly views, Everything in Starter, Unlimited cart page boosters, Add upsell products, Translations, Adding booster using product tags and Analytics. Professional $29.99 a month: Unlimited booster views, All premium features, unlimited product, top bar and cart page boosters, and Upsells & Analytics. Each paid plan has Start FREE 7-days trial. In the booster choice the Cart page type said Available with Essential plan, and in the editor Multiple goals are available from the Essential plan and Advanced product and country targeting available on Starter plan. No yearly view was noted. Checkout: Start FREE 7-days trial on Starter opened the Shopify screen Approve subscription with the plan starter, $9,99 USD every 30 days, You have a 7-day free trial ending on 24 Nov., Subtotal $9,99 plus any applicable taxes, Total $9,99 Due 24 Nov, a row Add payment method and the line By proceeding, you are agreeing to the Terms of Service. The Approve button was greyed out. The screen did NOT say that a test charge would not be billed, and a payment method was needed. No card was entered and nothing was approved; Cancel was clicked. Cancelling: no paid plan was started, so there was nothing to cancel in the app. Removing the app goes through Settings, Apps and Uninstall: the dialog says that you can no longer use the app and that data managed by the app, such as discounts, will be deleted, and it asks for a Reason for uninstalling (Select all that apply); the reason Testing multiple apps was chosen. Differences from the review: the prices and the limits match the review (Free 1,000 views, Starter $9.99 for 10,000, Essential $14.99 for 50,000, Professional $29.99 unlimited); the app is called Essential Free Shipping in the admin. The price fields are not changed here. Not tested: what the bar shows when the cart is below the threshold, the live store (it has a password), the cart page bar and the upsell in the bar (Essential), geolocation targeting and excluding products (Starter), whether the free shipping rate must be set up in Shopify, the view counting and what happens at the limit, the yearly prices, the paid plans and the payment. Clean up: the embed was switched off and the theme was not saved. The booster went with the uninstall. The app was uninstalled on 17 November through Settings, Apps and no longer showed in the list. No card was entered and nothing was approved. Our own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Essential Free Shipping Bar",
+    "product_id": "essential-free-shipping-bar",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Essential Free Shipping (listed as Essential Free Shipping Bar) on a Shopify development store: the install through the install form, the free plan without a card or plan screen, a free shipping booster with a threshold of $75 that was published in the app after 4 clicks and 1 entry, then the bar Congratulations! You've got free shipping! at the top of an unsaved theme preview after the app embed was switched on by hand (about 2.5 minutes and 9 to 10 clicks from the install; the cart already held more than $75, so the text for the amount still to go was not seen; the embed was switched off again), the Pricing plans page with the free plan and three paid plans, the Shopify approval screen for Starter (a 7-day trial; it asked for a payment method and had no test charge sentence; nothing approved) and the uninstall dialog, after which the app was uninstalled. The live store, a cart below the threshold and the paid features were not tested. Nothing was paid. Install: the app was installed from its own tab through the install form with the target set to the same tab, at about 21:27 (Mac clock; 21:26:42 was just before the form). In the Shopify admin the app is called Essential Free Shipping (the App Store handle is essential-order-value-booster, the review calls it Essential Free Shipping Bar). The screen Install app said that the app needs access to View staff and contributor data (Store owner) and View and edit store data (Products, discounts, Online Store); Install was clicked. There was no onboarding, no terms tick box and no payment step: the app opened at once on Your order value boosters with the plan Free. No account on the vendor site, password, card or phone number was asked. Core action, a free shipping bar with a threshold: at 21:28:26 the booster editor was reached through Create a new booster and Announcement (the top bar type). The default was Cart total 50 USD with the reward Free shipping, and the preview in the app said Free shipping for orders over $50.00!. The threshold was set to 75 and Publish was clicked: Booster saved, status Published, preview Free shipping for orders over $75.00!. That took 4 clicks and 1 entry in the app. A yellow note said Essential Free Shipping Bar app is not activated yet, with the buttons Activate and I have done it. In the theme editor (App embeds) the embed Free shipping bar / Essential Free Shipping was switched on and not saved. At 21:28:59 the bar stood at the top of the store preview with the text Congratulations! You've got free shipping!. The development store already had a cart with 3 items above 75 USD, so the bar showed the reached text and NOT the text for the amount still to go; that second text was not seen. From the install to the bar in the preview took about 2.5 minutes and 9 to 10 clicks. The embed was switched off again, the theme was not saved (Leave page was chosen at the unsaved changes question), and the published booster itself stayed in the app until the uninstall. No page of the live store was looked at, because the store has a password; the app does not change the free shipping rate in Shopify and whether that rate must be set up there was not tested. Plans in the app (Pricing plans): You're currently on Free (0 / 1000 monthly views). One visitor can have multiple views per session. Free Plan: Up to 1000 monthly views, Unlimited Top-bar boosters and Unlimited Product page boosters. Starter $9.99 a month: up to 10000 monthly views, Everything in Free, Geolocation targeting and Exclude products. Essential (Popular) $14.99 a month: up to 50000 monthly views, Everything in Starter, Unlimited cart page boosters, Add upsell products, Translations, Adding booster using product tags and Analytics. Professional $29.99 a month: Unlimited booster views, All premium features, unlimited product, top bar and cart page boosters, and Upsells & Analytics. Each paid plan has Start FREE 7-days trial. In the booster choice the Cart page type said Available with Essential plan, and in the editor Multiple goals are available from the Essential plan and Advanced product and country targeting available on Starter plan. No yearly view was noted. Checkout: Start FREE 7-days trial on Starter opened the Shopify screen Approve subscription with the plan starter, $9,99 USD every 30 days, You have a 7-day free trial ending on 24 Nov., Subtotal $9,99 plus any applicable taxes, Total $9,99 Due 24 Nov, a row Add payment method and the line By proceeding, you are agreeing to the Terms of Service. The Approve button was greyed out. The screen did NOT say that a test charge would not be billed, and a payment method was needed. No card was entered and nothing was approved; Cancel was clicked. Cancelling: no paid plan was started, so there was nothing to cancel in the app. Removing the app goes through Settings, Apps and Uninstall: the dialog says that you can no longer use the app and that data managed by the app, such as discounts, will be deleted, and it asks for a Reason for uninstalling (Select all that apply); the reason Testing multiple apps was chosen. Differences from the review: the prices and the limits match the review (Free 1,000 views, Starter $9.99 for 10,000, Essential $14.99 for 50,000, Professional $29.99 unlimited); the app is called Essential Free Shipping in the admin. The price fields are not changed here. Not tested: what the bar shows when the cart is below the threshold, the live store (it has a password), the cart page bar and the upsell in the bar (Essential), geolocation targeting and excluding products (Starter), whether the free shipping rate must be set up in Shopify, the view counting and what happens at the limit, the yearly prices, the paid plans and the payment. Clean up: the embed was switched off and the theme was not saved. The booster went with the uninstall. The app was uninstalled on 17 November through Settings, Apps and no longer showed in the list. No card was entered and nothing was approved. Our own tab was closed. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"Up to 1000 monthly views; Unlimited Top-bar boosters; Unlimited Product page boosters\". What we saw: The Pricing plans page shows the Free Plan with Up to 1000 monthly views, Unlimited Top-bar boosters and Unlimited Product page boosters, and the line You're currently on Free (0 / 1000 monthly views). The app opened on this plan without a card, and a top bar booster was made and published on it. The limit was not used up and unlimited was not tried.",
+     "Text we checked: \"Starter $9.99 /month: Up to 10000 monthly views\". What we saw: The Starter column shows $9.99 a month with up to 10000 monthly views, Everything in Free, Geolocation targeting and Exclude products, and the editor said Advanced product and country targeting available on Starter plan. The Starter features were not used.",
+     "Text we checked: \"Essential (Popular) $14.99 /month: Up to 50000 monthly views\". What we saw: The Essential column shows $14.99 a month with up to 50000 monthly views, Unlimited cart page boosters, Add upsell products, Translations, Adding booster using product tags and Analytics, and the type Cart page said Available with Essential plan when choosing the booster. No Essential feature was used.",
+     "Text we checked: \"Professional $29.99 /month: Unlimited booster views\". What we saw: The Professional column shows $29.99 a month with Unlimited booster views and All premium features. Its approval screen was not opened and the plan was not started.",
+     "Text we checked: \"Free shipping for orders over $75.00!\". What we saw: With the threshold set to 75 and Publish clicked, the app said Booster saved with the status Published and showed the preview Free shipping for orders over $75.00!. The default threshold was 50 USD. This took 4 clicks and 1 entry in the app."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The bar with a cart below the threshold, so the text for the amount still to go.",
+     "The live store (it has a password), and whether the free shipping rate must be set up in Shopify.",
+     "Cart page bars, upsells, geolocation targeting and excluding products (paid plans).",
+     "The view limit and the yearly prices, approving any plan and the payment.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 21:27 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Up to 1000 monthly views; Unlimited Top-bar boosters; Unlimited Product page boosters",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Pricing plans page shows the Free Plan with Up to 1000 monthly views, Unlimited Top-bar boosters and Unlimited Product page boosters, and the line You're currently on Free (0 / 1000 monthly views). The app opened on this plan without a card, and a top bar booster was made and published on it. The limit was not used up and unlimited was not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "The free plan of the review against the Pricing plans page; the limit in use was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "A small store can start on the free plan without a card, with a cap of 1,000 views a month.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Starter $9.99 /month: Up to 10000 monthly views",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Starter column shows $9.99 a month with up to 10000 monthly views, Everything in Free, Geolocation targeting and Exclude products, and the editor said Advanced product and country targeting available on Starter plan. The Starter features were not used.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "The Starter price and limit of the review against the plan column and the label in the editor; the Starter features were not used.",
+      "status": "confirmed",
+      "buying_consequence": "Starter costs $9.99 a month for 10,000 views and adds targeting by country and excluding products.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Essential (Popular) $14.99 /month: Up to 50000 monthly views",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Essential column shows $14.99 a month with up to 50000 monthly views, Unlimited cart page boosters, Add upsell products, Translations, Adding booster using product tags and Analytics, and the type Cart page said Available with Essential plan when choosing the booster. No Essential feature was used.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "The Essential price and limit of the review against the plan column and the label on the type chooser; no approval screen of Essential was opened.",
+      "status": "confirmed",
+      "buying_consequence": "Essential costs $14.99 a month for 50,000 views and adds cart page boosters, upsells and analytics.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Professional $29.99 /month: Unlimited booster views",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Professional column shows $29.99 a month with Unlimited booster views and All premium features. Its approval screen was not opened and the plan was not started.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "The Professional price of the review against the plan column; no approval screen of Professional was opened.",
+      "status": "confirmed",
+      "buying_consequence": "Professional costs $29.99 a month and has no view limit.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free shipping for orders over $75.00!",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "With the threshold set to 75 and Publish clicked, the app said Booster saved with the status Published and showed the preview Free shipping for orders over $75.00!. The default threshold was 50 USD. This took 4 clicks and 1 entry in the app.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "The claim that a free shipping goal can be set on the free plan against the booster editor and its preview in the app; the live store was not looked at.",
+      "status": "confirmed",
+      "buying_consequence": "A threshold bar can be set up in a few clicks on the free plan, without code.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Congratulations! You've got free shipping!",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "After the app embed was switched on by hand in the theme editor, the bar Congratulations! You've got free shipping! stood at the top of an unsaved store preview about 2.5 minutes and 9 to 10 clicks after the install. The cart in the test store already held 3 items above 75 USD, so only the reached text was seen and the text for the amount still to go was not. The embed was switched off again and the theme was not saved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "The claim that the bar shows in the store against the unsaved theme preview; the cart was above the threshold and the live store was not seen.",
+      "status": "confirmed",
+      "buying_consequence": "The bar shows the reached message above the threshold; the progress message below it was not seen in this test, and you must switch on the app embed yourself.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$9,99 USD every 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan page showed Starter at $9.99 a month and the Shopify approval screen said the plan starter, $9,99 USD every 30 days, with a 7-day free trial ending on 24 Nov., Subtotal $9,99 plus any applicable taxes and Total $9,99 Due 24 Nov. A row Add payment method was shown and the Approve button was greyed out; there was no sentence about a test charge. Nothing was approved and no card was entered.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/essential-free-shipping-bar-review.html#claim-vs-measured"
+      },
+      "plan": "Starter approval screen, not approved, development store",
+      "comparability": "The monthly price on the plan page against the approval screen; the same amount, taxes were not shown and no stored cost rule was compared.",
+      "status": "confirmed",
+      "buying_consequence": "The first bill of $9.99 is due after the 7-day trial, plus any taxes.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Essential Free Shipping (listed as Essential Free Shipping Bar) on a Shopify development store: the install through the install form, the free plan without a card or plan screen, a free shipping booster with a threshold of $75 that was published in the app after 4 clicks and 1 entry, then the bar Congratulations! You've got free shipping! at the top of an unsaved theme preview after the app embed was switched on by hand (about 2.5 minutes and 9 to 10 clicks from the install; the cart already held more than $75, so the text for the amount still to go was not seen; the embed was switched off again), the Pricing plans page with the free plan and three paid plans, the Shopify approval screen for Starter (a 7-day trial; it asked for a payment method and had no test charge sentence; nothing approved) and the uninstall dialog, after which the app was uninstalled. The live store, a cart below the threshold and the paid features were not tested. Nothing was paid. Install: the app was installed from its own tab through the install form with the target set to the same tab, at about 21:27 (Mac clock; 21:26:42 was just before the form). In the Shopify admin the app is called Essential Free Shipping (the App Store handle is essential-order-value-booster, the review calls it Essential Free Shipping Bar). The screen Install app said that the app needs access to View staff and contributor data (Store owner) and View and edit store data (Products, discounts, Online Store); Install was clicked. There was no onboarding, no terms tick box and no payment step: the app opened at once on Your order value boosters with the plan Free. No account on the vendor site, password, card or phone number was asked. Core action, a free shipping bar with a threshold: at 21:28:26 the booster editor was reached through Create a new booster and Announcement (the top bar type). The default was Cart total 50 USD with the reward Free shipping, and the preview in the app said Free shipping for orders over $50.00!. The threshold was set to 75 and Publish was clicked: Booster saved, status Published, preview Free shipping for orders over $75.00!. That took 4 clicks and 1 entry in the app. A yellow note said Essential Free Shipping Bar app is not activated yet, with the buttons Activate and I have done it. In the theme editor (App embeds) the embed Free shipping bar / Essential Free Shipping was switched on and not saved. At 21:28:59 the bar stood at the top of the store preview with the text Congratulations! You've got free shipping!. The development store already had a cart with 3 items above 75 USD, so the bar showed the reached text and NOT the text for the amount still to go; that second text was not seen. From the install to the bar in the preview took about 2.5 minutes and 9 to 10 clicks. The embed was switched off again, the theme was not saved (Leave page was chosen at the unsaved changes question), and the published booster itself stayed in the app until the uninstall. No page of the live store was looked at, because the store has a password; the app does not change the free shipping rate in Shopify and whether that rate must be set up there was not tested. Plans in the app (Pricing plans): You're currently on Free (0 / 1000 monthly views). One visitor can have multiple views per session. Free Plan: Up to 1000 monthly views, Unlimited Top-bar boosters and Unlimited Product page boosters. Starter $9.99 a month: up to 10000 monthly views, Everything in Free, Geolocation targeting and Exclude products. Essential (Popular) $14.99 a month: up to 50000 monthly views, Everything in Starter, Unlimited cart page boosters, Add upsell products, Translations, Adding booster using product tags and Analytics. Professional $29.99 a month: Unlimited booster views, All premium features, unlimited product, top bar and cart page boosters, and Upsells & Analytics. Each paid plan has Start FREE 7-days trial. In the booster choice the Cart page type said Available with Essential plan, and in the editor Multiple goals are available from the Essential plan and Advanced product and country targeting available on Starter plan. No yearly view was noted. Checkout: Start FREE 7-days trial on Starter opened the Shopify screen Approve subscription with the plan starter, $9,99 USD every 30 days, You have a 7-day free trial ending on 24 Nov., Subtotal $9,99 plus any applicable taxes, Total $9,99 Due 24 Nov, a row Add payment method and the line By proceeding, you are agreeing to the Terms of Service. The Approve button was greyed out. The screen did NOT say that a test charge would not be billed, and a payment method was needed. No card was entered and nothing was approved; Cancel was clicked. Cancelling: no paid plan was started, so there was nothing to cancel in the app. Removing the app goes through Settings, Apps and Uninstall: the dialog says that you can no longer use the app and that data managed by the app, such as discounts, will be deleted, and it asks for a Reason for uninstalling (Select all that apply); the reason Testing multiple apps was chosen. Differences from the review: the prices and the limits match the review (Free 1,000 views, Starter $9.99 for 10,000, Essential $14.99 for 50,000, Professional $29.99 unlimited); the app is called Essential Free Shipping in the admin. The price fields are not changed here. Not tested: what the bar shows when the cart is below the threshold, the live store (it has a password), the cart page bar and the upsell in the bar (Essential), geolocation targeting and excluding products (Starter), whether the free shipping rate must be set up in Shopify, the view counting and what happens at the limit, the yearly prices, the paid plans and the payment. Clean up: the embed was switched off and the theme was not saved. The booster went with the uninstall. The app was uninstalled on 17 November through Settings, Apps and no longer showed in the list. No card was entered and nothing was approved. Our own tab was closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The published booster did not show on the store until the app embed was switched on by hand in the theme editor; the app says so in a note after publishing. The app is called Essential Free Shipping in the admin, Essential Order Value Booster in the App Store address and Essential Free Shipping Bar in the review. The app does not change the free shipping rate in Shopify, according to our notes it was not tested whether that must be set up there.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "The bar with a cart below the threshold, so the text for the amount still to go.",
+      "The live store (it has a password), and whether the free shipping rate must be set up in Shopify.",
+      "Cart page bars, upsells, geolocation targeting and excluding products (paid plans).",
+      "The view limit and the yearly prices, approving any plan and the payment.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 21:27 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "essential-free-shipping-bar:cancellation_terms",

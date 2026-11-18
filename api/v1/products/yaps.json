@@ -102,10 +102,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
@@ -113,7 +112,571 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/yaps-review/",
+  "method": [
+   "Only the free browser tool Audio to text was run, without an account, with a synthetic 10 second clip; the desktop app was not installed; nothing was bought."
+  ],
+  "claims": [
+   {
+    "claim": "Free audio to text, without the upload.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The tool transcribed the file in the page after downloading a model to the browser; no sign-in was asked. The network traffic was not inspected, so it is not proven that the audio was never uploaded.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The headline of the tool page against what the page showed; no network log was read.",
+    "status": "not_testable",
+    "buying_consequence": "You can transcribe a short file for free without an account; that the audio stays on your machine is the claim of the site and was not checked by us.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "The model download is about 80MB. Your browser may cache it for later visits.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "With the Balanced model (80MB, the default) the file field was usable about 16 seconds after the start (13:18:07 to about 13:18:23, judged from two looks). A second visit with a cached model was not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The warning on the page against one load on one connection; the Fast model of 44MB was not tried.",
+    "status": "confirmed",
+    "buying_consequence": "The first run waits for a download of about 80MB, which took about 16 seconds here.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "23 WORDS 9S",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The file of 10 seconds was loaded at 13:18:31 and the transcript was on screen within 10 seconds, with the counter 23 WORDS 9S. It took 3 steps: leave the model, choose the file, read the result.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The counter on the result against our own clock for one 10 second clip; longer files were not tried.",
+    "status": "confirmed",
+    "buying_consequence": "A short clip is turned into text in seconds once the model is loaded.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "This is the short test recording for a transcription tool, where order 12 blue snowboards on Monday, and the invoice number is 4472.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Against the spoken text there were 2 word errors (a became the, We became where) and a full stop became a comma. The numbers were written as digits and were right: twelve became 12 and four four seven two became 4472.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "Our own spoken text against the transcript of one synthetic clip; the site states no accuracy figure to compare with.",
+    "status": "not_comparable",
+    "buying_consequence": "On a clear voice the numbers came out right, but a whole word changed meaning (We became where), so read the transcript before you use it.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Download .srt",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The buttons Copy, Download .txt, Download timestamped and Download .srt are on the result page, and the timestamped view showed segments at [00:00] and [00:06]. Nothing was downloaded, so the SRT file was not seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The export buttons against files that were not downloaded; no SRT file was opened.",
+    "status": "not_testable",
+    "buying_consequence": "The browser tool offers subtitle export, but whether the SRT file is correct is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "It can't tell you who was speaking.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The browser tool gives an unlabelled transcript and says that speaker labels are part of the Yaps desktop transcription. The test clip had one voice, so this limit did not change the result.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The text under the result against a transcript without speaker labels; the desktop app was not tried.",
+    "status": "confirmed",
+    "buying_consequence": "For meetings or interviews the free browser tool will not label speakers; that needs the paid desktop app.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Speaker identification on Windows and macOS",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Speaker identification is listed for Yaps Pro on the desktop. The desktop app was not downloaded or installed, so it was not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The Pro feature list against a desktop app that was out of scope.",
+    "status": "not_testable",
+    "buying_consequence": "Whether the desktop app tells speakers apart well is not confirmed by this test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Runs on-device, no account needed",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Free plan on the pricing page is mobile only, with no account needed. The browser tool also worked without an account, but the mobile apps themselves were not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The Free plan lines against a test of the browser tool; the mobile apps were out of scope.",
+    "status": "not_testable",
+    "buying_consequence": "The free mobile voice typing is not confirmed by this test, which used the browser tool only.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$12 /month, Billed annually ($144/year)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page on Annual (-20%) shows Yaps Pro at $12 /month, billed annually ($144/year), and the Free plan at $0 /forever; the amounts match the dossier.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The annual Pro card against the dossier; the yearly price was not seen on a payment screen.",
+    "status": "confirmed",
+    "buying_consequence": "Yaps Pro costs $144 a year paid at once, which works out at $12 a month.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Yaps Pro: $15/month, billed monthly.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "On Monthly the pricing page shows Yaps Pro at $15 /month, billed monthly, which matches the dossier; the annual plan is cheaper per month.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The monthly Pro card against the annual card and the dossier; no plan was started.",
+    "status": "confirmed",
+    "buying_consequence": "Paying monthly costs $15 a month instead of $12 a month on the annual plan.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "People who want a one-time purchase, not a subscription",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page offers only Free, Yaps Pro as a monthly or yearly subscription that renews until cancelled, and Enterprise Custom; no one-time purchase was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The dossier group against the plan list on the pricing page; no other product page was searched.",
+    "status": "not_comparable",
+    "buying_consequence": "If you want to pay once, Yaps Pro does not fit: it is a subscription.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "7-day free trial, then renews until cancelled.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "No payment or trial screen was opened and the desktop app was not downloaded, so no total with tax, no renewal date and no card step was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+    },
+    "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+    "comparability": "The pricing page against a checkout that was never opened; no tax line, renewal date or stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "No price you would pay at checkout was seen, so only the list prices are confirmed, and the trial renews by itself unless you cancel.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested only the free browser tool Audio to text of Yaps, without an account and not the desktop app. After a model download of about 80MB that took about 16 seconds, a 10 second synthetic clip was transcribed in the browser within 10 seconds. The text had 2 word errors (a became the, We became where) and the numbers were right (12 and 4472). The tool has a timestamped view and buttons for TXT and SRT, which were not used, and it says it cannot tell who was speaking: speaker labels are only in the paid desktop app. Nothing was bought. Scope: this test covers ONLY the free browser tool Audio to text on yaps.ai. The Yaps desktop app (dictation, file transcription, speaker labels) and the mobile apps were not downloaded, installed or tried. Account and start: NO account was made and none was used; the browser tool runs without signing in. Our AI assistant ran the test in our own tab of the browser of Daan, starting at 13:18:07, on yaps.ai/tools/audio-to-text. Nothing was installed and no e-mail address, phone number, password or card was typed in. The cookie banner was set to Decline. The dossier name is Yaps and the review is on AIBM (yaps-review). Core action: the page says Free audio to text, without the upload, and shows that it runs on your machine with no upload and no signup. The model choice is Fast, English only, 44MB or Balanced, multilingual, 80MB (Balanced was the default) and the language was English. The page warns that the model download is about 80MB, that the browser may cache it, and that startup still takes time. Loading the model took about 16 seconds (13:18:07 to about 13:18:23, judged from two looks, not a stopwatch); it is a download by the web page, not an install. The file test-spraak.m4a (41 KB, 10 seconds of a synthetic macOS voice reading a made up text with no personal data) was loaded at 13:18:31, and within 10 seconds the text was on screen. The counter said 23 WORDS 9S. It took 3 steps: leave the model as it is, choose the file, read the result. Result: This is the short test recording for a transcription tool, where order 12 blue snowboards on Monday, and the invoice number is 4472. The spoken text was: This is a short test recording for a transcription tool. We order twelve blue snowboards on Monday, and the invoice number is four four seven two. So there were 2 word errors (a became the, We became where) and the full stop after tool became a comma; the numbers were turned into digits and were right (12 and 4472). The view With timestamps showed two segments, at [00:00] and [00:06]. The buttons Copy, Download .txt, Download timestamped and Download .srt are there, but nothing was downloaded, so the content of the SRT file was not checked. Under the result the page says It can't tell you who was speaking: speaker labels are only in the desktop app. An e-mail field for product updates was not used. Plans: The pricing page yaps.ai/pricing was read by the tester on 18 Nov 2026 and read again just before this delivery the same day, with the same prices: Free $0 /forever (mobile only: voice typing in apps on Android, iPhone and iPad, voice notes with local search, read aloud with 4 mobile voices, runs on-device, no account needed); Yaps Pro $12 /month billed annually ($144/year) or $15 /month billed monthly, for Windows, macOS and Linux, with a 7-day free trial that then renews until cancelled (unlimited dictation, transcription of audio and video files, video captions exported as SRT, speaker identification on Windows and macOS, 18 voices); Enterprise Custom. The amounts match the dossier ($144 a year, $15 a month, 7-day trial). No payment screen was opened and the desktop app was not downloaded. Cancelling: there is no account and no subscription, so there was nothing to cancel. Not tested: the desktop app (dictation, files, speaker labels), the mobile apps, the SRT file itself, the multilingual mode and the Fast model (44MB), the payment screen and the conversion of the trial. Clean up: there is no account and no test data was left behind; our own tab was closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The browser tool first downloads a model of about 80MB, so the first run takes some seconds before you can pick a file. On a clear synthetic voice it still made 2 word errors in one sentence (We became where), so you should read a transcript before you use it. It cannot tell speakers apart; that is part of the desktop app, which is a subscription with a trial that renews until cancelled, not a one-time purchase.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "An account, which the browser tool does not need.",
+    "The Yaps desktop app (dictation, file transcription, speaker labels), which was not downloaded or installed.",
+    "The mobile apps.",
+    "The SRT, TXT and timestamped downloads, the multilingual mode and the Fast model (44MB).",
+    "The payment screen and the conversion of the 7-day trial.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:18 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/yaps-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/yaps-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/yaps-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested only the free browser tool Audio to text of Yaps, without an account and not the desktop app. After a model download of about 80MB that took about 16 seconds, a 10 second synthetic clip was transcribed in the browser within 10 seconds. The text had 2 word errors (a became the, We became where) and the numbers were right (12 and 4472). The tool has a timestamped view and buttons for TXT and SRT, which were not used, and it says it cannot tell who was speaking: speaker labels are only in the paid desktop app. Nothing was bought. Scope: this test covers ONLY the free browser tool Audio to text on yaps.ai. The Yaps desktop app (dictation, file transcription, speaker labels) and the mobile apps were not downloaded, installed or tried. Account and start: NO account was made and none was used; the browser tool runs without signing in. Our AI assistant ran the test in our own tab of the browser of Daan, starting at 13:18:07, on yaps.ai/tools/audio-to-text. Nothing was installed and no e-mail address, phone number, password or card was typed in. The cookie banner was set to Decline. The dossier name is Yaps and the review is on AIBM (yaps-review). Core action: the page says Free audio to text, without the upload, and shows that it runs on your machine with no upload and no signup. The model choice is Fast, English only, 44MB or Balanced, multilingual, 80MB (Balanced was the default) and the language was English. The page warns that the model download is about 80MB, that the browser may cache it, and that startup still takes time. Loading the model took about 16 seconds (13:18:07 to about 13:18:23, judged from two looks, not a stopwatch); it is a download by the web page, not an install. The file test-spraak.m4a (41 KB, 10 seconds of a synthetic macOS voice reading a made up text with no personal data) was loaded at 13:18:31, and within 10 seconds the text was on screen. The counter said 23 WORDS 9S. It took 3 steps: leave the model as it is, choose the file, read the result. Result: This is the short test recording for a transcription tool, where order 12 blue snowboards on Monday, and the invoice number is 4472. The spoken text was: This is a short test recording for a transcription tool. We order twelve blue snowboards on Monday, and the invoice number is four four seven two. So there were 2 word errors (a became the, We became where) and the full stop after tool became a comma; the numbers were turned into digits and were right (12 and 4472). The view With timestamps showed two segments, at [00:00] and [00:06]. The buttons Copy, Download .txt, Download timestamped and Download .srt are there, but nothing was downloaded, so the content of the SRT file was not checked. Under the result the page says It can't tell you who was speaking: speaker labels are only in the desktop app. An e-mail field for product updates was not used. Plans: The pricing page yaps.ai/pricing was read by the tester on 18 Nov 2026 and read again just before this delivery the same day, with the same prices: Free $0 /forever (mobile only: voice typing in apps on Android, iPhone and iPad, voice notes with local search, read aloud with 4 mobile voices, runs on-device, no account needed); Yaps Pro $12 /month billed annually ($144/year) or $15 /month billed monthly, for Windows, macOS and Linux, with a 7-day free trial that then renews until cancelled (unlimited dictation, transcription of audio and video files, video captions exported as SRT, speaker identification on Windows and macOS, 18 voices); Enterprise Custom. The amounts match the dossier ($144 a year, $15 a month, 7-day trial). No payment screen was opened and the desktop app was not downloaded. Cancelling: there is no account and no subscription, so there was nothing to cancel. Not tested: the desktop app (dictation, files, speaker labels), the mobile apps, the SRT file itself, the multilingual mode and the Fast model (44MB), the payment screen and the conversion of the trial. Clean up: there is no account and no test data was left behind; our own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/yaps-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested only the free browser tool Audio to text of Yaps, without an account and not the desktop app. After a model download of about 80MB that took about 16 seconds, a 10 second synthetic clip was transcribed in the browser within 10 seconds. The text had 2 word errors (a became the, We became where) and the numbers were right (12 and 4472). The tool has a timestamped view and buttons for TXT and SRT, which were not used, and it says it cannot tell who was speaking: speaker labels are only in the paid desktop app. Nothing was bought. Scope: this test covers ONLY the free browser tool Audio to text on yaps.ai. The Yaps desktop app (dictation, file transcription, speaker labels) and the mobile apps were not downloaded, installed or tried. Account and start: NO account was made and none was used; the browser tool runs without signing in. Our AI assistant ran the test in our own tab of the browser of Daan, starting at 13:18:07, on yaps.ai/tools/audio-to-text. Nothing was installed and no e-mail address, phone number, password or card was typed in. The cookie banner was set to Decline. The dossier name is Yaps and the review is on AIBM (yaps-review). Core action: the page says Free audio to text, without the upload, and shows that it runs on your machine with no upload and no signup. The model choice is Fast, English only, 44MB or Balanced, multilingual, 80MB (Balanced was the default) and the language was English. The page warns that the model download is about 80MB, that the browser may cache it, and that startup still takes time. Loading the model took about 16 seconds (13:18:07 to about 13:18:23, judged from two looks, not a stopwatch); it is a download by the web page, not an install. The file test-spraak.m4a (41 KB, 10 seconds of a synthetic macOS voice reading a made up text with no personal data) was loaded at 13:18:31, and within 10 seconds the text was on screen. The counter said 23 WORDS 9S. It took 3 steps: leave the model as it is, choose the file, read the result. Result: This is the short test recording for a transcription tool, where order 12 blue snowboards on Monday, and the invoice number is 4472. The spoken text was: This is a short test recording for a transcription tool. We order twelve blue snowboards on Monday, and the invoice number is four four seven two. So there were 2 word errors (a became the, We became where) and the full stop after tool became a comma; the numbers were turned into digits and were right (12 and 4472). The view With timestamps showed two segments, at [00:00] and [00:06]. The buttons Copy, Download .txt, Download timestamped and Download .srt are there, but nothing was downloaded, so the content of the SRT file was not checked. Under the result the page says It can't tell you who was speaking: speaker labels are only in the desktop app. An e-mail field for product updates was not used. Plans: The pricing page yaps.ai/pricing was read by the tester on 18 Nov 2026 and read again just before this delivery the same day, with the same prices: Free $0 /forever (mobile only: voice typing in apps on Android, iPhone and iPad, voice notes with local search, read aloud with 4 mobile voices, runs on-device, no account needed); Yaps Pro $12 /month billed annually ($144/year) or $15 /month billed monthly, for Windows, macOS and Linux, with a 7-day free trial that then renews until cancelled (unlimited dictation, transcription of audio and video files, video captions exported as SRT, speaker identification on Windows and macOS, 18 voices); Enterprise Custom. The amounts match the dossier ($144 a year, $15 a month, 7-day trial). No payment screen was opened and the desktop app was not downloaded. Cancelling: there is no account and no subscription, so there was nothing to cancel. Not tested: the desktop app (dictation, files, speaker labels), the mobile apps, the SRT file itself, the multilingual mode and the Fast model (44MB), the payment screen and the conversion of the trial. Clean up: there is no account and no test data was left behind; our own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/yaps-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/yaps-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Yaps",
+    "product_id": "yaps",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "No account was needed; the tool ran without signing in. We ran only the free browser tool Audio to text of Yaps on 18 November 2026, without the desktop app. The model loaded in about 16 seconds (an 80MB download). A 10 second synthetic clip then came out as text within 10 seconds, with 2 word errors and the numbers right. The tool offers TXT and SRT downloads, which we did not use, and says speaker labels exist only in the paid desktop app. Nothing was bought. The desktop app and the mobile apps were not tried.",
+    "findings": [
+     "Text we checked: \"The model download is about 80MB. Your browser may cache it for later visits\". What we saw: With the Balanced model (80MB, the default) the file field was usable about 16 seconds after the start (13:18:07 to about 13:18:23, judged from two looks). A second visit with a cached model was not tried.",
+     "Text we checked: \"23 WORDS 9S\". What we saw: The file of 10 seconds was loaded at 13:18:31 and the transcript was on screen within 10 seconds, with the counter 23 WORDS 9S.",
+     "Text we checked: \"It can't tell you who was speaking\". What we saw: The browser tool gives an unlabelled transcript and says that speaker labels are part of the Yaps desktop transcription. The test clip had one voice, so this limit did not change the result.",
+     "Text we checked: \"$12 /month, Billed annually ($144/year)\". What we saw: The pricing page on Annual (-20%) shows Yaps Pro at $12 /month, billed annually ($144/year), and the Free plan at $0 /forever; the amounts match the dossier.",
+     "Text we checked: \"Yaps Pro: $15/month, billed monthly\". What we saw: On Monthly the pricing page shows Yaps Pro at $15 /month, billed monthly, which matches the dossier; the annual plan is cheaper per month."
+    ],
+    "not_tested": [
+     "An account, which the browser tool does not need.",
+     "The Yaps desktop app (dictation, file transcription, speaker labels), which was not downloaded or installed.",
+     "The mobile apps.",
+     "The SRT, TXT and timestamped downloads, the multilingual mode and the Fast model (44MB).",
+     "The payment screen and the conversion of the 7-day trial.",
+     "Export and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Free audio to text, without the upload.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The tool transcribed the file in the page after downloading a model to the browser; no sign-in was asked. The network traffic was not inspected, so it is not proven that the audio was never uploaded.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The headline of the tool page against what the page showed; no network log was read.",
+      "status": "not_testable",
+      "buying_consequence": "You can transcribe a short file for free without an account; that the audio stays on your machine is the claim of the site and was not checked by us.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "The model download is about 80MB. Your browser may cache it for later visits.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "With the Balanced model (80MB, the default) the file field was usable about 16 seconds after the start (13:18:07 to about 13:18:23, judged from two looks). A second visit with a cached model was not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The warning on the page against one load on one connection; the Fast model of 44MB was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "The first run waits for a download of about 80MB, which took about 16 seconds here.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "23 WORDS 9S",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The file of 10 seconds was loaded at 13:18:31 and the transcript was on screen within 10 seconds, with the counter 23 WORDS 9S. It took 3 steps: leave the model, choose the file, read the result.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The counter on the result against our own clock for one 10 second clip; longer files were not tried.",
+      "status": "confirmed",
+      "buying_consequence": "A short clip is turned into text in seconds once the model is loaded.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "This is the short test recording for a transcription tool, where order 12 blue snowboards on Monday, and the invoice number is 4472.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Against the spoken text there were 2 word errors (a became the, We became where) and a full stop became a comma. The numbers were written as digits and were right: twelve became 12 and four four seven two became 4472.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "Our own spoken text against the transcript of one synthetic clip; the site states no accuracy figure to compare with.",
+      "status": "not_comparable",
+      "buying_consequence": "On a clear voice the numbers came out right, but a whole word changed meaning (We became where), so read the transcript before you use it.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Download .srt",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The buttons Copy, Download .txt, Download timestamped and Download .srt are on the result page, and the timestamped view showed segments at [00:00] and [00:06]. Nothing was downloaded, so the SRT file was not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The export buttons against files that were not downloaded; no SRT file was opened.",
+      "status": "not_testable",
+      "buying_consequence": "The browser tool offers subtitle export, but whether the SRT file is correct is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "It can't tell you who was speaking.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The browser tool gives an unlabelled transcript and says that speaker labels are part of the Yaps desktop transcription. The test clip had one voice, so this limit did not change the result.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The text under the result against a transcript without speaker labels; the desktop app was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "For meetings or interviews the free browser tool will not label speakers; that needs the paid desktop app.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Speaker identification on Windows and macOS",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Speaker identification is listed for Yaps Pro on the desktop. The desktop app was not downloaded or installed, so it was not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The Pro feature list against a desktop app that was out of scope.",
+      "status": "not_testable",
+      "buying_consequence": "Whether the desktop app tells speakers apart well is not confirmed by this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Runs on-device, no account needed",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Free plan on the pricing page is mobile only, with no account needed. The browser tool also worked without an account, but the mobile apps themselves were not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The Free plan lines against a test of the browser tool; the mobile apps were out of scope.",
+      "status": "not_testable",
+      "buying_consequence": "The free mobile voice typing is not confirmed by this test, which used the browser tool only.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$12 /month, Billed annually ($144/year)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page on Annual (-20%) shows Yaps Pro at $12 /month, billed annually ($144/year), and the Free plan at $0 /forever; the amounts match the dossier.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The annual Pro card against the dossier; the yearly price was not seen on a payment screen.",
+      "status": "confirmed",
+      "buying_consequence": "Yaps Pro costs $144 a year paid at once, which works out at $12 a month.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Yaps Pro: $15/month, billed monthly.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "On Monthly the pricing page shows Yaps Pro at $15 /month, billed monthly, which matches the dossier; the annual plan is cheaper per month.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The monthly Pro card against the annual card and the dossier; no plan was started.",
+      "status": "confirmed",
+      "buying_consequence": "Paying monthly costs $15 a month instead of $12 a month on the annual plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "People who want a one-time purchase, not a subscription",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page offers only Free, Yaps Pro as a monthly or yearly subscription that renews until cancelled, and Enterprise Custom; no one-time purchase was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The dossier group against the plan list on the pricing page; no other product page was searched.",
+      "status": "not_comparable",
+      "buying_consequence": "If you want to pay once, Yaps Pro does not fit: it is a subscription.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "7-day free trial, then renews until cancelled.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "No payment or trial screen was opened and the desktop app was not downloaded, so no total with tax, no renewal date and no card step was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+      },
+      "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+      "comparability": "The pricing page against a checkout that was never opened; no tax line, renewal date or stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "No price you would pay at checkout was seen, so only the list prices are confirmed, and the trial renews by itself unless you cancel.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested only the free browser tool Audio to text of Yaps, without an account and not the desktop app. After a model download of about 80MB that took about 16 seconds, a 10 second synthetic clip was transcribed in the browser within 10 seconds. The text had 2 word errors (a became the, We became where) and the numbers were right (12 and 4472). The tool has a timestamped view and buttons for TXT and SRT, which were not used, and it says it cannot tell who was speaking: speaker labels are only in the paid desktop app. Nothing was bought. Scope: this test covers ONLY the free browser tool Audio to text on yaps.ai. The Yaps desktop app (dictation, file transcription, speaker labels) and the mobile apps were not downloaded, installed or tried. Account and start: NO account was made and none was used; the browser tool runs without signing in. Our AI assistant ran the test in our own tab of the browser of Daan, starting at 13:18:07, on yaps.ai/tools/audio-to-text. Nothing was installed and no e-mail address, phone number, password or card was typed in. The cookie banner was set to Decline. The dossier name is Yaps and the review is on AIBM (yaps-review). Core action: the page says Free audio to text, without the upload, and shows that it runs on your machine with no upload and no signup. The model choice is Fast, English only, 44MB or Balanced, multilingual, 80MB (Balanced was the default) and the language was English. The page warns that the model download is about 80MB, that the browser may cache it, and that startup still takes time. Loading the model took about 16 seconds (13:18:07 to about 13:18:23, judged from two looks, not a stopwatch); it is a download by the web page, not an install. The file test-spraak.m4a (41 KB, 10 seconds of a synthetic macOS voice reading a made up text with no personal data) was loaded at 13:18:31, and within 10 seconds the text was on screen. The counter said 23 WORDS 9S. It took 3 steps: leave the model as it is, choose the file, read the result. Result: This is the short test recording for a transcription tool, where order 12 blue snowboards on Monday, and the invoice number is 4472. The spoken text was: This is a short test recording for a transcription tool. We order twelve blue snowboards on Monday, and the invoice number is four four seven two. So there were 2 word errors (a became the, We became where) and the full stop after tool became a comma; the numbers were turned into digits and were right (12 and 4472). The view With timestamps showed two segments, at [00:00] and [00:06]. The buttons Copy, Download .txt, Download timestamped and Download .srt are there, but nothing was downloaded, so the content of the SRT file was not checked. Under the result the page says It can't tell you who was speaking: speaker labels are only in the desktop app. An e-mail field for product updates was not used. Plans: The pricing page yaps.ai/pricing was read by the tester on 18 Nov 2026 and read again just before this delivery the same day, with the same prices: Free $0 /forever (mobile only: voice typing in apps on Android, iPhone and iPad, voice notes with local search, read aloud with 4 mobile voices, runs on-device, no account needed); Yaps Pro $12 /month billed annually ($144/year) or $15 /month billed monthly, for Windows, macOS and Linux, with a 7-day free trial that then renews until cancelled (unlimited dictation, transcription of audio and video files, video captions exported as SRT, speaker identification on Windows and macOS, 18 voices); Enterprise Custom. The amounts match the dossier ($144 a year, $15 a month, 7-day trial). No payment screen was opened and the desktop app was not downloaded. Cancelling: there is no account and no subscription, so there was nothing to cancel. Not tested: the desktop app (dictation, files, speaker labels), the mobile apps, the SRT file itself, the multilingual mode and the Fast model (44MB), the payment screen and the conversion of the trial. Clean up: there is no account and no test data was left behind; our own tab was closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The browser tool first downloads a model of about 80MB, so the first run takes some seconds before you can pick a file. On a clear synthetic voice it still made 2 word errors in one sentence (We became where), so you should read a transcript before you use it. It cannot tell speakers apart; that is part of the desktop app, which is a subscription with a trial that renews until cancelled, not a one-time purchase.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "An account, which the browser tool does not need.",
+      "The Yaps desktop app (dictation, file transcription, speaker labels), which was not downloaded or installed.",
+      "The mobile apps.",
+      "The SRT, TXT and timestamped downloads, the multilingual mode and the Fast model (44MB).",
+      "The payment screen and the conversion of the 7-day trial.",
+      "Export and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:18 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "yaps:cancellation_terms",

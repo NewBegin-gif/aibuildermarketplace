@@ -3292,6 +3292,287 @@
   },
   {
    "source": "session",
+   "product_name": "Make",
+   "product_id": "make",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Make on the Free plan: a scenario with a webhook, a data store and a router with two branches took about 6 minutes and about 25 clicks to the first result, ran 5 times at 3 credits each (15 of 1,000 credits) and the router cost nothing. The 15-minute minimum interval turned out to apply to scheduled scenarios only, not to webhooks, which ran at once. The plan prices on the page are higher than in our dossier: Core $16, Pro $28 and Teams $51 a month, and the Free plan lists 3,000+ standard apps. The checkout of Core was viewed without an address and nothing was paid.",
+   "findings": [
+    "Text we checked: \"Subscription: Free\". What we saw: The dashboard says Subscription: Free with 1,000 credits / month and usage resetting on Dec 16, 2026. Five runs of the test scenario used 15 of 1,000 credits (2% used).",
+    "Text we checked: \"3 credits\". What we saw: Each of the 5 runs showed 3 credits and 3 operations: the webhook, the data store and one branch module counted 1 each, and the Router counted nothing. The public pricing page says the same about router modules.",
+    "Text we checked: \"15-minute minimum scheduling interval\". What we saw: Schedule settings with At regular intervals says Must be higher than or equal to 15. The webhook scenario ran Immediately as data arrives, five runs between 13:50:23 and 13:50:32, so the 15 minutes apply to schedules, not to webhook triggers.",
+    "Text we checked: \"567.0 B / 1.0 MB\". What we saw: The data store Test Inbox has a fixed size of 1 MB on Free and held 5 records at 567.0 B / 1.0 MB.",
+    "Text we checked: \"3,000+ standard apps\". What we saw: The Free plan card says 3,000+ standard apps. Our dossier says 3,500+ apps. No external app was connected in this test."
+   ],
+   "not_tested": [
+    "Paying, and the Core and Pro features.",
+    "External apps (no connections were made on purpose).",
+    "The Maia AI builder, MCP toolboxes, teams and roles, and the replay of runs.",
+    "Make Grid and Make Code.",
+    "Cancelling, deleting the organization or the account, which were looked up but not confirmed.",
+    "Tax on the checkout, which showed no amount before an address was entered.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Subscription: Free",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The dashboard says Subscription: Free with 1,000 credits / month and usage resetting on Dec 16, 2026. Five runs of the test scenario used 15 of 1,000 credits (2% used).",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The dashboard figure against the credits counted for one test scenario of five runs.",
+     "status": "confirmed",
+     "buying_consequence": "The free allowance is easy to see, and a small test scenario uses only a small part of it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "3 credits",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Each of the 5 runs showed 3 credits and 3 operations: the webhook, the data store and one branch module counted 1 each, and the Router counted nothing. The public pricing page says the same about router modules.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The credit and operation columns of the history against our own count of the modules in the scenario.",
+     "status": "confirmed",
+     "buying_consequence": "Plan on about 3 credits for every record that goes through a webhook, a data store and one action; the router branching itself is free.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "2 active scenarios",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Only one scenario was switched on, so the limit of 2 active scenarios was not reached or tried; the scenario was switched on without a problem.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The plan line against a test with one active scenario.",
+     "status": "not_testable",
+     "buying_consequence": "The Free limit of 2 active scenarios is listed but was not hit, so we cannot say what the message looks like at the limit.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "15-minute minimum scheduling interval",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Schedule settings with At regular intervals says Must be higher than or equal to 15. The webhook scenario ran Immediately as data arrives, five runs between 13:50:23 and 13:50:32, so the 15 minutes apply to schedules, not to webhook triggers.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The 15 minutes in our dossier text against the interval seen on the schedule dialog and the instant webhook runs; no longer schedule was saved.",
+     "status": "contradicted",
+     "buying_consequence": "On Free a webhook scenario is not slowed down to 15 minutes; only scheduled scenarios wait at least 15 minutes.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Maximum runs to start per minute 100",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The scenario settings for the webhook trigger show a maximum of 100 runs to start per minute. Five runs were sent within a few seconds, far below this, so the limit was not tested.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The setting on screen against a burst of 5 requests.",
+     "status": "not_testable",
+     "buying_consequence": "The webhook rate limit is shown on screen but a busier burst was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "567.0 B / 1.0 MB",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The data store Test Inbox has a fixed size of 1 MB on Free and held 5 records at 567.0 B / 1.0 MB.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The storage figure on the data store page against the 1 MB of the plan; a fuller store was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "Free gives one small data store of 1 MB, small, so not meant for large data.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "7-day execution log storage",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The plan page lists 7-day execution log storage on Free. The test lasted minutes, so the log retention of 7 days was not observed.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The plan line against a session of a few minutes.",
+     "status": "not_testable",
+     "buying_consequence": "Logs on Free are kept only for a short time according to the plan page; this was not checked over days.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "3,000+ standard apps",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Free plan card says 3,000+ standard apps. Our dossier says 3,500+ apps. No external app was connected in this test.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The app count on the plan card against the dossier figure; the list of apps itself was not counted.",
+     "status": "contradicted",
+     "buying_consequence": "The page now lists fewer apps than the dossier; the number of apps matters little for a first test, but check the app you need.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Core $16.00 / month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The plan page shows Core at $16.00 a month with monthly billing at 10,000 credits, against $15 in the dossier. The live public pricing page at the default 10,000 credits showed $16 as well.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The monthly Core price on the plan page and the live pricing page against the dossier figure; the yearly price of $11 a month was confirmed.",
+     "status": "contradicted",
+     "buying_consequence": "Core costs more per month when paid monthly than we listed before.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro $28.00 / month; Teams $51.00 / month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The plan page shows Pro at $28.00 and Teams at $51.00 a month with monthly billing, against $26 and $47 in the dossier. The live pricing page showed the same amounts.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The monthly Pro and Teams prices on both pages against the dossier; the yearly prices of $20 and $36 were not in the dossier.",
+     "status": "contradicted",
+     "buying_consequence": "Pro and Teams cost more per month than we listed before when paid monthly.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Save up to 15%",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The yearly billing tab says Save up to 15%, while the Core checkout says Save 31% ($16.00 monthly against $11.00 a month yearly). The tab text is lower than the saving shown at checkout for Core.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The text on the billing tab against the saving shown in the Core checkout and the prices on both pages.",
+     "status": "contradicted",
+     "buying_consequence": "Paying yearly saves more than the tab says on Core: $11 instead of $16 a month.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unlimited active scenarios",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Core lists unlimited active scenarios, a 1-minute minimum scheduling interval and a 40-minute execution time. Core was not bought, so none of this was tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The Core feature list against a test on the Free plan only.",
+     "status": "not_testable",
+     "buying_consequence": "The extra Core features come from the plan page only and were not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total $16.00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Get Core dialog showed Monthly $16.00 / month, Subtotal $16.00 and Total $16.00 with Proceed to payment; no tax was shown before an address was entered, no card was entered and nothing was paid. The amount matches the plan page.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+     "comparability": "The plan page price against the checkout total before the address step; no tax line, fee or stored cost rule could be compared.",
+     "status": "confirmed",
+     "buying_consequence": "The monthly Core price at checkout equals the plan page, but tax may be added once your address is known.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Make on the Free plan: a scenario with a webhook, a data store and a router with two branches took about 6 minutes and about 25 clicks to the first result, ran 5 times at 3 credits each (15 of 1,000 credits) and the router cost nothing. The 15-minute minimum interval turned out to apply to scheduled scenarios only, not to webhooks, which ran at once. The plan prices on the page are higher than in our dossier: Core $16, Pro $28 and Teams $51 a month, and the Free plan lists 3,000+ standard apps. The checkout of Core was viewed without an address and nothing was paid. Account and start: the account on the Free plan was created by Daan, who was signed in; our AI assistant ran the test in its own Chrome tab of the browser of Daan, starting at 13:44. The interface was already in English; only the Locale in Profile settings (date and decimal format) said Dutch and was changed to English (United States), which showed Settings updated. The dashboard said Subscription: Free, 1,000 credits / month, usage resets on Dec 16, 2026. The dossier name is Make and the review is on OSM (make-review). Core action: a scenario with a Custom webhook, a Data store module (Add/replace a record) and a Router with two branches (Leads with the filter type = lead, Invoices with type = invoice), each ending in a Tools Set variable module. It took about 6 minutes and about 25 clicks to the first result. The data store Test Inbox was made with the structure Name, Email and Type, generated from a JSON example; the storage size is fixed at 1 MB on Free, and after 5 records it showed 567.0 B / 1.0 MB. The webhook needed one bare request to learn its structure (3 values detected and ready to map: name, email, type); the webhook window also warns that an inactive webhook is removed after too long. The scenario was switched on without a problem on Free, with Immediately as data arrives and a maximum of 100 runs to start per minute. Five curl requests were sent between 13:50:23 and 13:50:32: Test Lead 1 to 3 (type lead) and Test Invoice 4 and 5 (type invoice), each answered Accepted. The history showed 5 runs, each Instant, Success, less than 1 sec, 3 credits and 3 operations; in total 15 of 1,000 credits (2% used), and Scenario Usage showed 15 credits and 621 B data transfer. The Router did not count: the webhook (1), the data store (1) and one branch module (1) make 3 credits a run, and the public pricing page says router modules count no credits. The data store held 5 records. Schedule settings offer Immediately, At regular intervals, Once, Daily, Weekdays, Weekly, Monthly, Specified dates and On demand; At regular intervals says Must be higher than or equal to 15, so the 15 minutes only apply to scheduled scenarios and not to webhook triggers. The dialog was cancelled. Plans: The plans were read by the tester on 18 Nov 2026 on the Subscription page (Compare Plans, in USD) and read again just before this delivery the same day on the public pricing page make.com/pricing at the default 10,000 credits a month, with the same amounts. Monthly: Free $0 (1,000 credits a month), Core $16.00, Pro $28.00, Teams $51.00, Enterprise on request. Yearly: Core $11.00, Pro $20.00, Teams $36.00 a month (120,000 credits a year). Free includes 2 active scenarios, a 15-minute minimum scheduling interval, a 5-minute scenario execution time, a 5 MB file size, 7-day execution log storage and 3,000+ standard apps. Core adds unlimited active scenarios, a 1-minute minimum scheduling interval, a 40-minute execution time, a 100 MB file size and 30-day log storage. Differences against the dossier: Core $16 against $15, Pro $28 against $26 and Teams $51 against $47 a month (the yearly Core price of $11 a month matches the dossier); and 3,000+ standard apps on the Free plan against 3,500+ in the dossier. The prices on the live pricing page were checked again and confirm the new amounts. The Save up to 15% on the billing tab differs from Save 31% in the Core checkout. Checkout: Get Core was opened, with name and e-mail pre-filled and the address left empty: Monthly $16.00 / month, Yearly Save 31% $11.00 / month, Subtotal $16.00, Total $16.00 and a Proceed to payment button. No tax was shown before an address was entered, no card was entered and nothing was paid; the dialog was closed. Cancelling: there was no paid plan; going back to Free is Organization, Subscription, Change plan, and invoices are under Payments. Deleting the organization is Profile, Organizations, the three-dot menu, Delete; deleting the account is Profile, Settings, Danger zone, Delete my account (Permanently delete your account...). None of these were clicked or confirmed. Not tested: paying, Core and Pro features, external apps (no connections were made on purpose), the Maia AI builder, MCP toolboxes, teams and roles, replay of runs, and the sister products Grid and Code. Clean up: the scenario Test router scenario is switched OFF (Inactive) but not deleted; the data store Test Inbox with 5 test records and the webhook Test webhook are still there; the Locale of the profile stays on English (United States); the Chrome tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Credits are counted per module run, so even this small scenario used 3 credits per record; the 1,000 free credits cover only a few hundred such runs a month. A data store has a fixed size of 1 MB on Free. A webhook that stays unused is removed after a while. The page prices are higher than we listed before, so check the plan page before you plan a budget. Deleting the account or the organization is a separate step in the profile and was not tried.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Paying, and the Core and Pro features.",
+     "External apps (no connections were made on purpose).",
+     "The Maia AI builder, MCP toolboxes, teams and roles, and the replay of runs.",
+     "Make Grid and Make Code.",
+     "Cancelling, deleting the organization or the account, which were looked up but not confirmed.",
+     "Tax on the checkout, which showed no amount before an address was entered.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:44 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "My Stories",
    "product_id": "my-stories",
    "run_date": "2026-11-17",
@@ -3457,6 +3738,284 @@
      "The paid plans, which need a payment method.",
      "Export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 14:57 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "PageFly",
+   "product_id": "pagefly",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested PageFly (PageFly AI Page Builder) on a Shopify development store: the install without a separate account, a short setup, a Coming soon page from a template in the editor about 1.5 minutes after the install, saved and previewed on the store but not published, the yellow bar that the app embed is off in the theme, the plan page with Builder, Optimize and Accelerate, a pop-up offering Builder for $1 in the first month, and the uninstall dialog, which asks for a reason. Nothing was paid, approved or published.",
+   "findings": [
+    "Text we checked: \"1 published slot\". What we saw: The listing gives Free 1 published slot (1 page or 1 section) and 10 AI credits per month. In our test (18 Nov 2026) the app pop-up showed Free with 1 page or section and 10 AI credits a month, store sets Free sets only, dashboard analytics Demo and AI page checkup No.",
+    "Text we checked: \"$24 /month\". What we saw: The listing shows Builder at $24 / month from 5 published pages or sections and from 80 AI credits per month. In our test (18 Nov 2026) the plan page showed Builder (Recommended) at $24 /month with 5 pages or sections and 80 AI credits a month.",
+    "Text we checked: \"$99 /month\". What we saw: The listing shows Accelerate at $99 / month or $990/year with unlimited published pages and 400 AI credits per month. In our test (18 Nov 2026) the plan page showed Accelerate at $99 /month with unlimited pages and 400 AI credits; the yearly price was not seen in the app.",
+    "Text we checked: \"Once saved, the page will be ready for preview\". What we saw: Preview before saving gave Not found on the store. After Save the Preview showed the page inside the theme header and footer with heading, text and e-mail field, but the countdown was empty and the editor bar still said Untitled."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The paid plans (Builder, Optimize, Accelerate) and the $1 first month.",
+    "A/B testing, heatmaps, AI Page Checkup and building a page with AI credits.",
+    "Store sets, theme sections and the MCP connector.",
+    "Publishing to the live store, switching on the app embed and whether the countdown works then.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "1 published slot",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The listing gives Free 1 published slot (1 page or 1 section) and 10 AI credits per month. In our test (18 Nov 2026) the app pop-up showed Free with 1 page or section and 10 AI credits a month, store sets Free sets only, dashboard analytics Demo and AI page checkup No.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The Free line on the listing against the Free column of the pop-up in the app; the limit was not run into, because nothing was published.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan lets you put one page or section live with 10 AI credits a month; for more you need a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "0 / 50 slots used",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "In our test (18 Nov 2026) the editor bar said 0 / 50 slots used while the account was on the free plan that promises 1 page. Nothing was published, so it is not known whether the app stops at 1 or at 50.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The editor counter against the plan limit of 1 page; no second page was made and nothing was published.",
+     "status": "not_testable",
+     "buying_consequence": "The counter in the editor does not tell you the real limit of the free plan; count on 1 page.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$24 /month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The listing shows Builder at $24 / month from 5 published pages or sections and from 80 AI credits per month. In our test (18 Nov 2026) the plan page showed Builder (Recommended) at $24 /month with 5 pages or sections and 80 AI credits a month.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The Builder price on the listing against the plan page in the app; Builder was not started.",
+     "status": "confirmed",
+     "buying_consequence": "Builder costs $24 a month for 5 pages or sections, on the listing and in the app.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Try Builder: $1 for your first month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "In our test (18 Nov 2026) the button to continue on Free opened a pop-up offering Builder at $1 for the first month, then $24/month on the Shopify bill. The listing does not mention this offer. The offer was not accepted.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The pop-up in the app against a listing that names no first month offer; no approval screen was opened for it.",
+     "status": "not_testable",
+     "buying_consequence": "You may be offered Builder for $1 in the first month, but this offer is not on the listing and was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$39 /month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "In our test (18 Nov 2026) the plan page showed Optimize at $39 /month with 20 pages or sections and 140 AI credits, A/B testing, heatmaps for 10 pages and an AEO optimizer. The listing of 18 Nov 2026 names no Optimize plan.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The Optimize column in the app against a listing without that plan; there is no listing price to compare it with.",
+     "status": "not_comparable",
+     "buying_consequence": "There is a middle plan at $39 in the app that the listing does not show, so the listing is not the full price list.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$99 /month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The listing shows Accelerate at $99 / month or $990/year with unlimited published pages and 400 AI credits per month. In our test (18 Nov 2026) the plan page showed Accelerate at $99 /month with unlimited pages and 400 AI credits; the yearly price was not seen in the app.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The Accelerate price on the listing against the plan page in the app; the yearly option was not seen in the app.",
+     "status": "confirmed",
+     "buying_consequence": "Accelerate costs $99 a month for unlimited pages; a yearly price of $990 is on the listing only.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Enterprise $299",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The listing shows Enterprise at $299 / month with 1,600 AI credits per month. The app showed no Enterprise plan in our test (18 Nov 2026).",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The Enterprise line on the listing against a plan page in the app that does not show it.",
+     "status": "not_testable",
+     "buying_consequence": "Enterprise is on the listing only; how to get it from inside the app was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "AI Page Checkup",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The listing names AI Page Checkup under Accelerate. In our test (18 Nov 2026) the app listed AI page checkup for Builder, Optimize and Accelerate and the pop-up said Yes for Builder and No for Free. The feature was not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The feature lists on the listing and in the app against each other; neither plan was started.",
+     "status": "not_testable",
+     "buying_consequence": "Whether AI Page Checkup comes with Builder or only with Accelerate depends on whether you read the app or the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "A short setup first. About 3 minutes.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The onboarding promised about 3 minutes. The template page was open in the editor at 13:10:41, about 1.5 minutes after Install was confirmed and 2 minutes after the start, after 8 to 9 clicks.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "AI-assisted browser test includes pauses and waiting for Daan; record screens and prerequisites, not human time-to-value.",
+     "status": "not_comparable",
+     "buying_consequence": "You can have a first page from a template in the editor within a few minutes of installing.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No AI credits needed",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The template route said No AI credits needed and the Coming soon template opened without any credit prompt. The credit balance was not read before and after, so the use of credits was not measured.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The label on the template route against a credit balance that was not read.",
+     "status": "not_testable",
+     "buying_consequence": "Building from a template looks free of credits, which matters on a free plan with 10 credits.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Once saved, the page will be ready for preview.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Preview before saving gave Not found on the store. After Save the Preview showed the page inside the theme header and footer with heading, text and e-mail field, but the countdown was empty and the editor bar still said Untitled.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The text of the save dialog against the Preview before and after saving; the page was not published.",
+     "status": "confirmed",
+     "buying_consequence": "You have to save before you can preview, and the preview may not show every element of the template.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The PageFly app embed is switched off in your current theme, so your pages will not show on your storefront.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The editor showed this bar after the template was opened. The app embed was not switched on and the page was not published, so the page was never seen on the live storefront.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The warning in the editor against a theme that was left unchanged; publishing was left out on purpose.",
+     "status": "not_testable",
+     "buying_consequence": "Before a PageFly page is visible to shoppers you have to switch on the app embed in your theme, which changes the theme and was not done here.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$1 for your first month, then $24/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "No Shopify approval screen was reached: Continue on Free was chosen in the pop-up, so no total, tax, term or payment step was seen for any plan.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/pagefly-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; the plan page and the $1 pop-up were read, no plan was started",
+     "comparability": "The prices on the plan page and the pop-up against a Shopify approval screen that never appeared; no tax line, term or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "No price you would pay was seen on a Shopify approval screen, so only the plan page and the pop-up are confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested PageFly (PageFly AI Page Builder) on a Shopify development store: the install without a separate account, a short setup, a Coming soon page from a template in the editor about 1.5 minutes after the install, saved and previewed on the store but not published, the yellow bar that the app embed is off in the theme, the plan page with Builder, Optimize and Accelerate, a pop-up offering Builder for $1 in the first month, and the uninstall dialog, which asks for a reason. Nothing was paid, approved or published. Install: the App Store listing was opened at 13:08 and the install form was sent in our own tab. Shopify showed its Install app screen with three data blocks (customer data, staff data and store data) and Install was confirmed at about 13:09. No separate PageFly account, e-mail address or password was asked. The onboarding said A short setup first. About 3 minutes. It had a box to accept all cookies, which was left off, and it said that the app embed has to be switched on in the theme before pages can show on the storefront. After Next the app asked how to build the first page: Build with AI in PageFly (Free plan: 10 AI credits, 1 page or section) or Browse templates (No AI credits needed), plus rebuilding pages from the current site and importing PageFly pages. Core action: Browse templates, the Templates tab (135 templates) and the Pixel Coming soon template, without AI credits. The page was open in the PageFly editor at 13:10:41, about 1.5 minutes after Install was confirmed and 2 minutes after the start, after 8 to 9 clicks. The editor showed Page content, a Flex section, 0 / 50 slots used and a yellow bar Enable PageFly in your theme, which said the app embed is switched off in the current theme, so the pages will not show on the storefront. The template has the heading WE ARE COMING SOON, a countdown (Days, Hours, Mins, Secs) and an e-mail field with Submit. Preview before saving opened the store address of the PageFly preview and gave Not found. After Save (a dialog with a Page title field that says the page will be ready for preview once saved and must be published to go live) the Preview showed the page on the store inside the theme header and footer: heading, text and e-mail field were there, but the countdown was empty. The title stayed Untitled in the editor bar although the title Coming soon test was typed. The page was saved but NOT published; the theme was not changed and the app embed was not switched on. Plans in our test (18 Nov 2026): after the template the app showed a plan page that says Free gets your first page live and Builder lets you launch 5 with 80 AI credits, dashboard analytics and AI page checkup. Builder (Recommended) $24 /month, 5 pages or sections, 80 AI credits a month; Optimize $39 /month, 20 pages or sections and 140 AI credits, with A/B testing, heatmaps for 10 pages and an AEO optimizer; Accelerate $99 /month, unlimited pages and 400 AI credits, heatmaps for 50 pages. The button to continue on Free opened a pop-up Try Builder: $1 for your first month (Free 1 page and 10 AI credits against Builder 5 and 80), then $24/month on the Shopify bill. Continue on Free was chosen; no Shopify approval screen came up, nothing was approved and no card or payment method was seen. Listing: The live App Store listing apps.shopify.com/pagefly, read again on 18 Nov 2026 just before this delivery, is titled PageFly AI Page Builder (with a star sign between the words), has the label Free plan available and a rating of 4.9 from 5,924 reviews. It lists Free (1 published slot, 1 page or 1 section, 10 AI credits per month), Builder at $24 / month (from 5 published pages or sections, from 80 AI credits per month, with $5 per 5 extra pages or sections as an option), Accelerate at $99 / month or $990/year (unlimited published pages and sections, 400 AI credits per month, with AI Page Checkup) and Enterprise at $299 / month (1,600 AI credits per month). The listing names no Optimize plan and no $1 first month. So the listing confirms Free, Builder at $24 and Accelerate at $99. Optimize at $39 and the $1 first month were seen only in the app, in our test (18 Nov 2026). Enterprise, the yearly price and the extra slots were seen only on the listing. The listing names AI Page Checkup under Accelerate, while the app lists it for Builder. The editor counter 0 / 50 slots used on the free plan does not match the 1 page that Free promises. Cancelling: no paid plan was started, so there was nothing to cancel. Plan and app both end through Settings, Apps, the PageFly row, the menu and Uninstall. The dialog says the app can no longer be used, that data managed by the app will be deleted and that a request goes to the developer within 48 hours to delete personal customer information. A reason is required before Uninstall becomes active; feedback is optional. Not tested: the paid plans (Builder, Optimize, Accelerate), the $1 first month, A/B testing, heatmaps, AI Page Checkup, building a page with AI credits (FlyMate), store sets, theme sections, the MCP connector, publishing to the live store, switching on the app embed and whether the countdown works once the embed is on. Clean up: our preview tab and the admin tab were closed. The app was uninstalled through Settings, Apps with the reason Testing multiple apps and Shopify confirmed the uninstall. The saved, unpublished page goes with the app data. No theme change was saved, no product was made and other apps were not touched. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "A page made in PageFly does not show on the storefront until you switch on the app embed in your theme, and the Preview only works after Save. The countdown of the template was empty in the preview. The title we typed did not show in the editor bar, which kept saying Untitled. The editor said 0 / 50 slots used on a free plan that promises 1 page. The plans in the app and on the listing differ: the app shows Optimize at $39 and a $1 first month for Builder, the listing shows neither but names Enterprise at $299 and a yearly price for Accelerate.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The paid plans (Builder, Optimize, Accelerate) and the $1 first month.",
+     "A/B testing, heatmaps, AI Page Checkup and building a page with AI credits.",
+     "Store sets, theme sections and the MCP connector.",
+     "Publishing to the live store, switching on the app embed and whether the countdown works then.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:08 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -7917,6 +8476,268 @@
      "The product prices in the store after the undo.",
      "Export and reimport of kit files.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 13:24 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Yaps",
+   "product_id": "yaps",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "No account was needed; the tool ran without signing in. We ran only the free browser tool Audio to text of Yaps on 18 November 2026, without the desktop app. The model loaded in about 16 seconds (an 80MB download). A 10 second synthetic clip then came out as text within 10 seconds, with 2 word errors and the numbers right. The tool offers TXT and SRT downloads, which we did not use, and says speaker labels exist only in the paid desktop app. Nothing was bought. The desktop app and the mobile apps were not tried.",
+   "findings": [
+    "Text we checked: \"The model download is about 80MB. Your browser may cache it for later visits\". What we saw: With the Balanced model (80MB, the default) the file field was usable about 16 seconds after the start (13:18:07 to about 13:18:23, judged from two looks). A second visit with a cached model was not tried.",
+    "Text we checked: \"23 WORDS 9S\". What we saw: The file of 10 seconds was loaded at 13:18:31 and the transcript was on screen within 10 seconds, with the counter 23 WORDS 9S.",
+    "Text we checked: \"It can't tell you who was speaking\". What we saw: The browser tool gives an unlabelled transcript and says that speaker labels are part of the Yaps desktop transcription. The test clip had one voice, so this limit did not change the result.",
+    "Text we checked: \"$12 /month, Billed annually ($144/year)\". What we saw: The pricing page on Annual (-20%) shows Yaps Pro at $12 /month, billed annually ($144/year), and the Free plan at $0 /forever; the amounts match the dossier.",
+    "Text we checked: \"Yaps Pro: $15/month, billed monthly\". What we saw: On Monthly the pricing page shows Yaps Pro at $15 /month, billed monthly, which matches the dossier; the annual plan is cheaper per month."
+   ],
+   "not_tested": [
+    "An account, which the browser tool does not need.",
+    "The Yaps desktop app (dictation, file transcription, speaker labels), which was not downloaded or installed.",
+    "The mobile apps.",
+    "The SRT, TXT and timestamped downloads, the multilingual mode and the Fast model (44MB).",
+    "The payment screen and the conversion of the 7-day trial.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free audio to text, without the upload.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The tool transcribed the file in the page after downloading a model to the browser; no sign-in was asked. The network traffic was not inspected, so it is not proven that the audio was never uploaded.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The headline of the tool page against what the page showed; no network log was read.",
+     "status": "not_testable",
+     "buying_consequence": "You can transcribe a short file for free without an account; that the audio stays on your machine is the claim of the site and was not checked by us.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The model download is about 80MB. Your browser may cache it for later visits.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "With the Balanced model (80MB, the default) the file field was usable about 16 seconds after the start (13:18:07 to about 13:18:23, judged from two looks). A second visit with a cached model was not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The warning on the page against one load on one connection; the Fast model of 44MB was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "The first run waits for a download of about 80MB, which took about 16 seconds here.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "23 WORDS 9S",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The file of 10 seconds was loaded at 13:18:31 and the transcript was on screen within 10 seconds, with the counter 23 WORDS 9S. It took 3 steps: leave the model, choose the file, read the result.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The counter on the result against our own clock for one 10 second clip; longer files were not tried.",
+     "status": "confirmed",
+     "buying_consequence": "A short clip is turned into text in seconds once the model is loaded.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This is the short test recording for a transcription tool, where order 12 blue snowboards on Monday, and the invoice number is 4472.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Against the spoken text there were 2 word errors (a became the, We became where) and a full stop became a comma. The numbers were written as digits and were right: twelve became 12 and four four seven two became 4472.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "Our own spoken text against the transcript of one synthetic clip; the site states no accuracy figure to compare with.",
+     "status": "not_comparable",
+     "buying_consequence": "On a clear voice the numbers came out right, but a whole word changed meaning (We became where), so read the transcript before you use it.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Download .srt",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The buttons Copy, Download .txt, Download timestamped and Download .srt are on the result page, and the timestamped view showed segments at [00:00] and [00:06]. Nothing was downloaded, so the SRT file was not seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The export buttons against files that were not downloaded; no SRT file was opened.",
+     "status": "not_testable",
+     "buying_consequence": "The browser tool offers subtitle export, but whether the SRT file is correct is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "It can't tell you who was speaking.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The browser tool gives an unlabelled transcript and says that speaker labels are part of the Yaps desktop transcription. The test clip had one voice, so this limit did not change the result.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The text under the result against a transcript without speaker labels; the desktop app was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "For meetings or interviews the free browser tool will not label speakers; that needs the paid desktop app.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Speaker identification on Windows and macOS",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Speaker identification is listed for Yaps Pro on the desktop. The desktop app was not downloaded or installed, so it was not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The Pro feature list against a desktop app that was out of scope.",
+     "status": "not_testable",
+     "buying_consequence": "Whether the desktop app tells speakers apart well is not confirmed by this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Runs on-device, no account needed",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Free plan on the pricing page is mobile only, with no account needed. The browser tool also worked without an account, but the mobile apps themselves were not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The Free plan lines against a test of the browser tool; the mobile apps were out of scope.",
+     "status": "not_testable",
+     "buying_consequence": "The free mobile voice typing is not confirmed by this test, which used the browser tool only.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$12 /month, Billed annually ($144/year)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page on Annual (-20%) shows Yaps Pro at $12 /month, billed annually ($144/year), and the Free plan at $0 /forever; the amounts match the dossier.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The annual Pro card against the dossier; the yearly price was not seen on a payment screen.",
+     "status": "confirmed",
+     "buying_consequence": "Yaps Pro costs $144 a year paid at once, which works out at $12 a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Yaps Pro: $15/month, billed monthly.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "On Monthly the pricing page shows Yaps Pro at $15 /month, billed monthly, which matches the dossier; the annual plan is cheaper per month.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The monthly Pro card against the annual card and the dossier; no plan was started.",
+     "status": "confirmed",
+     "buying_consequence": "Paying monthly costs $15 a month instead of $12 a month on the annual plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "People who want a one-time purchase, not a subscription",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page offers only Free, Yaps Pro as a monthly or yearly subscription that renews until cancelled, and Enterprise Custom; no one-time purchase was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The dossier group against the plan list on the pricing page; no other product page was searched.",
+     "status": "not_comparable",
+     "buying_consequence": "If you want to pay once, Yaps Pro does not fit: it is a subscription.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "7-day free trial, then renews until cancelled.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "No payment or trial screen was opened and the desktop app was not downloaded, so no total with tax, no renewal date and no card step was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/yaps-review/#claim-vs-measured"
+     },
+     "plan": "No plan or trial was started; the pricing page was read on Annual and Monthly without clicking",
+     "comparability": "The pricing page against a checkout that was never opened; no tax line, renewal date or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "No price you would pay at checkout was seen, so only the list prices are confirmed, and the trial renews by itself unless you cancel.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested only the free browser tool Audio to text of Yaps, without an account and not the desktop app. After a model download of about 80MB that took about 16 seconds, a 10 second synthetic clip was transcribed in the browser within 10 seconds. The text had 2 word errors (a became the, We became where) and the numbers were right (12 and 4472). The tool has a timestamped view and buttons for TXT and SRT, which were not used, and it says it cannot tell who was speaking: speaker labels are only in the paid desktop app. Nothing was bought. Scope: this test covers ONLY the free browser tool Audio to text on yaps.ai. The Yaps desktop app (dictation, file transcription, speaker labels) and the mobile apps were not downloaded, installed or tried. Account and start: NO account was made and none was used; the browser tool runs without signing in. Our AI assistant ran the test in our own tab of the browser of Daan, starting at 13:18:07, on yaps.ai/tools/audio-to-text. Nothing was installed and no e-mail address, phone number, password or card was typed in. The cookie banner was set to Decline. The dossier name is Yaps and the review is on AIBM (yaps-review). Core action: the page says Free audio to text, without the upload, and shows that it runs on your machine with no upload and no signup. The model choice is Fast, English only, 44MB or Balanced, multilingual, 80MB (Balanced was the default) and the language was English. The page warns that the model download is about 80MB, that the browser may cache it, and that startup still takes time. Loading the model took about 16 seconds (13:18:07 to about 13:18:23, judged from two looks, not a stopwatch); it is a download by the web page, not an install. The file test-spraak.m4a (41 KB, 10 seconds of a synthetic macOS voice reading a made up text with no personal data) was loaded at 13:18:31, and within 10 seconds the text was on screen. The counter said 23 WORDS 9S. It took 3 steps: leave the model as it is, choose the file, read the result. Result: This is the short test recording for a transcription tool, where order 12 blue snowboards on Monday, and the invoice number is 4472. The spoken text was: This is a short test recording for a transcription tool. We order twelve blue snowboards on Monday, and the invoice number is four four seven two. So there were 2 word errors (a became the, We became where) and the full stop after tool became a comma; the numbers were turned into digits and were right (12 and 4472). The view With timestamps showed two segments, at [00:00] and [00:06]. The buttons Copy, Download .txt, Download timestamped and Download .srt are there, but nothing was downloaded, so the content of the SRT file was not checked. Under the result the page says It can't tell you who was speaking: speaker labels are only in the desktop app. An e-mail field for product updates was not used. Plans: The pricing page yaps.ai/pricing was read by the tester on 18 Nov 2026 and read again just before this delivery the same day, with the same prices: Free $0 /forever (mobile only: voice typing in apps on Android, iPhone and iPad, voice notes with local search, read aloud with 4 mobile voices, runs on-device, no account needed); Yaps Pro $12 /month billed annually ($144/year) or $15 /month billed monthly, for Windows, macOS and Linux, with a 7-day free trial that then renews until cancelled (unlimited dictation, transcription of audio and video files, video captions exported as SRT, speaker identification on Windows and macOS, 18 voices); Enterprise Custom. The amounts match the dossier ($144 a year, $15 a month, 7-day trial). No payment screen was opened and the desktop app was not downloaded. Cancelling: there is no account and no subscription, so there was nothing to cancel. Not tested: the desktop app (dictation, files, speaker labels), the mobile apps, the SRT file itself, the multilingual mode and the Fast model (44MB), the payment screen and the conversion of the trial. Clean up: there is no account and no test data was left behind; our own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The browser tool first downloads a model of about 80MB, so the first run takes some seconds before you can pick a file. On a clear synthetic voice it still made 2 word errors in one sentence (We became where), so you should read a transcript before you use it. It cannot tell speakers apart; that is part of the desktop app, which is a subscription with a trial that renews until cancelled, not a one-time purchase.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "An account, which the browser tool does not need.",
+     "The Yaps desktop app (dictation, file transcription, speaker labels), which was not downloaded or installed.",
+     "The mobile apps.",
+     "The SRT, TXT and timestamped downloads, the multilingual mode and the Fast model (44MB).",
+     "The payment screen and the conversion of the 7-day trial.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:18 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -30503,6 +31324,129 @@
   },
   {
    "source": "session",
+   "product_name": "Smartli",
+   "product_id": "smartli",
+   "run_date": "2026-11-17",
+   "session_type": "signup_attempt",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. We installed Smartli on our Shopify development store on 17 November 2026. The app opened its own checkout, whether we chose Skip setup or the side menu: four paid plans at $1, an add-on ticked by default and a card form with $0 due now. No free plan was offered, so no description was generated. We uninstalled the app; nothing was entered or paid.",
+   "findings": [
+    "Text we checked: \"Free plan available. Free trial available\". What we saw: The listing shows a Free plan. In our test (17 Nov 2026) Skip setup led to the Smartli checkout, the side menu sent us back to the plan page, and the checkout showed only Starter, Pro, Empire and Unicorn with a card form; no free plan was offered.",
+    "Text we checked: \"Get access to AI-generated keywords for $19 after a 7-day trial\". What we saw: This box was ticked by default on the checkout, next to the plan choice; it was not changed and nothing was entered."
+   ],
+   "not_tested": [
+    "Not tested: generating an AI product description. The app asks for a payment method before it does anything.",
+    "Bulk descriptions, the blog writer and the ads writer.",
+    "The Free plan on the listing, which the app did not offer, and how many free descriptions it gives.",
+    "Cancelling with Smartli and any trial or paid plan.",
+    "Original store creation and identity check, which Daan did himself.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free plan available. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows a Free plan. In our test (17 Nov 2026) Skip setup led to the Smartli checkout, the side menu sent us back to the plan page, and the checkout showed only Starter, Pro, Empire and Unicorn with a card form; no free plan was offered.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/smartli-review/#claim-vs-measured"
+     },
+     "plan": "Smartli checkout, Empire preselected, nothing entered, development store",
+     "comparability": "The free plan on the listing against every route in the app after the install.",
+     "status": "contradicted",
+     "buying_consequence": "A store that installs for the free plan on the listing gets a checkout with a card form instead.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Get access to AI-generated keywords for $19 after a 7-day trial",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "This box was ticked by default on the checkout, next to the plan choice; it was not changed and nothing was entered.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/smartli-review/#claim-vs-measured"
+     },
+     "plan": "Smartli checkout, Empire preselected, nothing entered, development store",
+     "comparability": "The default state of the add-on box on the checkout; the charge itself was never seen.",
+     "status": "confirmed",
+     "buying_consequence": "An add-on of $19 after the trial is ticked by default; untick it if you do not want it.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Limited Spots Available: Only 26 trial spots left this month due to high demand",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The checkout showed this banner with a countdown clock; we had no way to check the number of spots.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/smartli-review/#claim-vs-measured"
+     },
+     "plan": "Smartli checkout, Empire preselected, nothing entered, development store",
+     "comparability": "A scarcity banner with a countdown against nothing we could check.",
+     "status": "not_testable",
+     "buying_consequence": "Treat the countdown as sales pressure; nothing in the test showed a real limit.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Starter $39",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows Starter at $39 a month with a 7-day free trial. The Smartli checkout shows Starter $39 struck through and $1, Empire $99 struck through and $1 (preselected), Total amount now $0 and a card form; what is charged after the trial was not shown on the part we saw.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/smartli-review/#claim-vs-measured"
+     },
+     "plan": "Smartli checkout, Empire preselected, nothing entered, development store",
+     "comparability": "The Starter price on the listing against the struck through price and the $1 on the Smartli checkout; no stored cost rule was compared.",
+     "status": "not_comparable",
+     "buying_consequence": "The price after the trial is not clear from the checkout; the $1 and the $0 due now do not say what the second month costs.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session installed Smartli on a Shopify development store. Skip setup and the side menu both led to the Smartli checkout, which showed four paid plans at $1, a default ticked add-on and a card form with $0 due now, and no free plan, so no description was generated. The app was uninstalled; nothing was entered or paid. Install: the install form was sent at about 23:29; the Shopify screen Install app named the app ChatGPT: 6 AI Tools in 1 (Innovation Labs.) and asked for View customer data, View staff and contributor data and View and edit store data. The app opened on its own site, logged in through Shopify, on Step 1 of 3: What do you want Smartli to create for you? with a Skip setup button. Core action NOT DONE: Skip setup led to the Smartli checkout, and the AI Descriptions item in the side menu sent us back to the onboarding and plan page. The description generator was not reached. Checkout: the own checkout of Smartli, Pay Securely, Cancel anytime, not a Shopify approval screen, so there is no Shopify test charge. Monthly: Starter $39, Pro $59, Empire $99 (Most Popular, preselected) and Unicorn $299, each struck through to $1; Yearly says up to 5 months off. No free plan was offered. On the right: Select payment method with a card form (card number, expiry date, security code) and Google Pay, Total amount now $0 and the button Claim Your Trial. A box was ticked by default: Get access to AI-generated keywords for $19 after a 7-day trial. A banner said Limited Spots Available: Only 26 trial spots left this month due to high demand, with a countdown. Nothing was entered. Dossier question: the Free plan on the listing gave no free route after the install; the app requires a paid plan with a card, so the number of free descriptions is unknown. Cancelling: no subscription existed. Only the Shopify uninstall dialog was seen, with a required reason (Testing multiple apps). Clean up: the app was uninstalled and is gone from Installed; no products, collections or themes were changed. Our own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app sends every route to its own checkout; the Free plan on the listing was not offered, a $19 add-on is ticked by default, and a countdown says only 26 trial spots are left.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Not tested: generating an AI product description. The app asks for a payment method before it does anything.",
+     "Bulk descriptions, the blog writer and the ads writer.",
+     "The Free plan on the listing, which the app did not offer, and how many free descriptions it gives.",
+     "Cancelling with Smartli and any trial or paid plan.",
+     "Original store creation and identity check, which Daan did himself.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:29 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Pangram",
    "product_id": "pangram",
    "run_date": "2026-10-01",
@@ -31111,6 +32055,251 @@
     ],
     "lost": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Barcodes Talk",
+   "product_id": "barcodes-talk",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested two free tools of Barcodes Talk without an account. The Barcode Quantity Calculator counted 6 codes for a product with 3 sizes and 2 colours in about a minute and recommended the package of 10 Barcodes, which costs $15.00 on the price list, though no price was shown next to the advice. The FNSKU label generator made an on-screen Amazon label for a made up code on an Avery 5160 sheet layout; it was not printed or scanned. The price list matches the dossier, but the page now says PNG & EPS images and gives a different GS1 US starting price than the dossier. Nothing was bought.",
+   "findings": [
+    "Text we checked: \"No account required\". What we saw: The quantity calculator and the FNSKU label generator both worked without signing in; no e-mail address, phone number, password or card was asked.",
+    "Text we checked: \"Total Barcodes Needed 6 UPC/EAN codes\". What we saw: One product with Size = 3 and Color = 2 gave Total Barcodes Needed 6 UPC/EAN codes and a breakdown of Blue Snowboard 6, which is the right count; it took about 1 minute and 4 steps.",
+    "Text we checked: \"Recommended Package: Based on your needs, we recommend: 10 Barcodes\". What we saw: For 6 codes the calculator recommended 10 Barcodes, marked Best Match, with no price next to it; the price list gives 10 Barcodes at $15.00 ($1.50 ea). The Buy Barcodes button was not clicked.",
+    "Text we checked: \"Label generated successfully!\". What we saw: The made up FNSKU code X00TEST001 with Blue Snowboard, New and the Avery 5160 format gave this message and a preview of a barcode label with the code, the name and the condition. Nothing was saved, printed or scanned.",
+    "Text we checked: \"10 Barcodes $15.00 ($1.50 ea)\". What we saw: The price list on the buy page runs from 1 Barcode $5.00 to 100,000 at $3,500.00 ($0.035 ea), with 10 Barcodes at $15.00; the tester and our own reading just before delivery on 18 Nov 2026 found the same prices as the dossier."
+   ],
+   "not_tested": [
+    "An account, which the free tools do not need.",
+    "A purchase, the checkout, the Certificate of GTIN Assignment and the GEPIR registration.",
+    "Whether Amazon, Brand Registry or a retailer accepts the codes.",
+    "Saving, printing or scanning the FNSKU label, and the sample package.",
+    "The other free tools (bulk, SKU, QR, country of origin).",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "No account required.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The quantity calculator and the FNSKU label generator both worked without signing in; no e-mail address, phone number, password or card was asked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The line on the buy page against a test of two free tools without a sign-up screen.",
+     "status": "confirmed",
+     "buying_consequence": "You can count your codes and make an FNSKU label without giving Barcodes Talk any personal details.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total Barcodes Needed 6 UPC/EAN codes",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "One product with Size = 3 and Color = 2 gave Total Barcodes Needed 6 UPC/EAN codes and a breakdown of Blue Snowboard 6, which is the right count; it took about 1 minute and 4 steps.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "Our own count of sizes times colours against the calculator result for one product; several products at once were not tried.",
+     "status": "confirmed",
+     "buying_consequence": "The calculator gives the right number of codes for a product with variations, quickly and for free.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Recommended Package: Based on your needs, we recommend: 10 Barcodes",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "For 6 codes the calculator recommended 10 Barcodes, marked Best Match, with no price next to it; the price list gives 10 Barcodes at $15.00 ($1.50 ea). The Buy Barcodes button was not clicked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The recommendation in the calculator against the packages on the price list; no package was bought.",
+     "status": "confirmed",
+     "buying_consequence": "The advice points to the next package up, so you buy a few spare codes; you have to look up the price yourself.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Label generated successfully!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The made up FNSKU code X00TEST001 with Blue Snowboard, New and the Avery 5160 format gave this message and a preview of a barcode label with the code, the name and the condition. Nothing was saved, printed or scanned.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The message and the on-screen preview against a label that was not printed or scanned.",
+     "status": "confirmed",
+     "buying_consequence": "You can make an FNSKU label for free in a few steps, but check a printed label with a scanner before you ship.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Works for Amazon Guaranteed",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The buy page shows Works for Amazon Guaranteed with a link to the guarantee. No codes were bought or entered at Amazon, so the guarantee was not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The guarantee line on the buy page against a test without a purchase or an Amazon listing.",
+     "status": "not_testable",
+     "buying_consequence": "Whether Amazon accepts the codes is a promise of the seller that this test could not check.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Accepted by 99% of retailers",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The buy page says Accepted by 99% of retailers and also asks you to check whether your retailer accepts reseller barcodes. No retailer was asked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The acceptance figure against a test that contacted no retailer.",
+     "status": "not_testable",
+     "buying_consequence": "Ask your own retailer before you buy, as the page itself advises.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "10 Barcodes $15.00 ($1.50 ea)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The price list on the buy page runs from 1 Barcode $5.00 to 100,000 at $3,500.00 ($0.035 ea), with 10 Barcodes at $15.00; the tester and our own reading just before delivery on 18 Nov 2026 found the same prices as the dossier.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The full price list on the buy page against the dossier ladder; no package was put in a cart.",
+     "status": "confirmed",
+     "buying_consequence": "Small packages cost little in total but more per code; 10 codes cost $15.00.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No Renewal Fees or Hidden Charges",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The buy page lists No Renewal Fees or Hidden Charges, and the comparison table gives Barcodes Talk a renewal of $0 forever; this matches the dossier (a one-off purchase with no renewal).",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The buy page text against the dossier; no purchase was made, so no later charge could be seen.",
+     "status": "confirmed",
+     "buying_consequence": "You pay once for the codes, with no yearly fee, according to the buy page.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "PNG & EPS Images Included",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The buy page says PNG & EPS Images Included, high-resolution images. The dossier says EPS and JPEG images. The files themselves were not seen, because nothing was bought; the free sample package was not downloaded.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The included items on the buy page against the image formats in the dossier; no image file was opened.",
+     "status": "out_of_date",
+     "buying_consequence": "You get PNG and EPS files according to the page today; the dossier mention of JPEG is out of date.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "US$30 for one GTIN",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The comparison table on the buy page gives GS1 US Direct a starting price of US$30 for one GTIN and $0 renewal for individual GTINs, with annual fees for Company Prefixes. The dossier says $250 for 10 plus $50 a year. The site of GS1 US itself was not checked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The GS1 US figures in the table of the seller against the dossier; the GS1 US site was not read, so neither figure was confirmed.",
+     "status": "not_testable",
+     "buying_consequence": "The GS1 US price differs between this page and our dossier; check GS1 US yourself before you compare.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 Barcode $5.00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "No Buy Now button was clicked, so no cart, checkout, total with tax or payment screen was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/barcodes-talk-review.html#claim-vs-measured"
+     },
+     "plan": "No package was bought; the price list was read without clicking a buy button",
+     "comparability": "The price list against a checkout that was never opened; no tax line, fee or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "No price you would pay at checkout was seen, so only the list prices are confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested two free tools of Barcodes Talk without an account. The Barcode Quantity Calculator counted 6 codes for a product with 3 sizes and 2 colours in about a minute and recommended the package of 10 Barcodes, which costs $15.00 on the price list, though no price was shown next to the advice. The FNSKU label generator made an on-screen Amazon label for a made up code on an Avery 5160 sheet layout; it was not printed or scanned. The price list matches the dossier, but the page now says PNG & EPS images and gives a different GS1 US starting price than the dossier. Nothing was bought. Account and start: NO account was made and none was used; the free tools of Barcodes Talk run without signing in. Our AI assistant ran the test in our own tab of the browser of Daan, starting at 13:20. No cookie banner got in the way (there was a Your Privacy Choices link, not clicked). No e-mail address, phone number, password or card was typed in. The dossier name is Barcodes Talk and the review is on OSM (barcodes-talk-review). Core action 1, Barcode Quantity Calculator (barcodestalk.com/barcode-quantity-calculator), about 13:20 to 13:21, 1 minute, 4 steps: product Blue Snowboard, variation Size = 3 and Color = 2 (through + Add another variation type), Add Product. Result: Total Barcodes Needed 6 UPC/EAN codes, Breakdown Blue Snowboard 6, which is the right count (3 sizes times 2 colours). The tool recommended a package of 10 Barcodes, marked Best Match, with no price next to it, only a green Buy Barcodes button that was not clicked. On the price list 10 Barcodes cost $15.00. The page also shows the example T-Shirt (3 sizes, 4 colors), 12 barcodes needed. Core action 2, Amazon FNSKU label generator (barcodestalk.com/amazon-fnsku-barcode-label-generator), 13:21, 4 steps: the made up FNSKU code X00TEST001, product name Blue Snowboard, condition New, quantity 30 (the default) and the label format Avery 5160, 1\" x 2.625\" (30 labels/sheet), Amazon Recommended. Generate Label said Label generated successfully! and the preview showed a barcode with X00TEST001, Blue Snowboard and New. Nothing was saved or printed (Save Label, Save JPG and Print / PDF were not used), so the label was only seen on screen and was not scanned. Plans: The Buy Barcodes page (barcodestalk.com/buy-barcodes) was read by the tester on 18 Nov 2026 and read again just before this delivery the same day, with the same prices: 1 Barcode $5.00, 5 Barcodes $10.00 ($2.00 ea), 10 Barcodes $15.00 ($1.50 ea), 25 Barcodes $25.00, 50 Barcodes $35.00, 100 Barcodes $45.00, 200 Barcodes $80.00, 500 Barcodes $125.00, 1,000 Barcodes $180.00, 1,500 $225.00, 2,000 $260.00, 2,500 $300.00, 5,000 $500.00, 10,000 $650.00, 25,000 $1,200.00, 50,000 $2,300.00, 75,000 $3,225.00 and 100,000 $3,500.00 ($0.035 ea). Included: UPC & EAN barcodes, PNG & EPS images, a Certificate of GTIN Assignment, Excel & PDF spreadsheets, Works for Amazon Guaranteed and No Renewal Fees or Hidden Charges. The prices match the dossier. No Buy Now button was clicked. Differences on the page against the dossier: the page lists PNG & EPS Images Included, while the dossier says EPS and JPEG. The comparison table on the page gives GS1 US Direct a starting price of US$30 for one GTIN and annual renewal fees of $0 for individual GTINs, with annual fees for Company Prefixes, while the dossier says $250 for 10 plus $50 a year. The site of GS1 US itself was not checked, so which figure is current is not known here. The page also says Accepted by 99% of retailers and asks you to check whether your retailer accepts reseller barcodes. Cancelling: there is no account and no subscription, so there was nothing to cancel. Not tested: a purchase and the checkout, the certificate, the GEPIR registration, the sample package (which may ask for an e-mail address), whether Amazon or Brand Registry accept the codes, a printed or scanned label, and the other free tools (bulk, SKU, QR, country of origin). Clean up: there is no account and no test data was saved; nothing was downloaded and the only tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The calculator recommends a package without showing its price, so you have to look up the price list yourself. The FNSKU label looked right on screen, but we did not print or scan it. The page says the images are PNG & EPS, not EPS and JPEG as in our dossier, and its comparison table gives GS1 US Direct a much lower starting price than our dossier; we did not check the GS1 US site, so treat both comparisons with care. Whether a reseller barcode works for your retailer is something the page itself asks you to check.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "An account, which the free tools do not need.",
+     "A purchase, the checkout, the Certificate of GTIN Assignment and the GEPIR registration.",
+     "Whether Amazon, Brand Registry or a retailer accepts the codes.",
+     "Saving, printing or scanning the FNSKU label, and the sample package.",
+     "The other free tools (bulk, SKU, QR, country of origin).",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:20 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },

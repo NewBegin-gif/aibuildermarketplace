@@ -81,10 +81,9 @@
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -92,7 +91,469 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/seobility-review.html",
+  "method": [
+   "Ran the free SEO Checker on two sites of our own and the Ranking Checker without an account",
+   "Compared the findings with the pages themselves using curl",
+   "Used the daily limit of 3 checks until the tool said no checks were left"
+  ],
+  "claims": [
+   {
+    "claim": "No additional page markup was found.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The checker shows Additional markup as passed with the line No additional page markup was found, while a curl of the page shows 3 application/ld+json blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker did not see the structured data.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "The checker line against the live page source on the same day; one page of one site.",
+    "status": "contradicted",
+    "buying_consequence": "A site owner could think there is no structured data, or add a second copy, because the checker does not see what is already there.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "6 images have no alt attribute",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The checker flags 6 images without an alt attribute, but curl shows 6 favicon images with an empty alt text, which is valid for decorative images, so this is noise and not a real fault.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "The checker warning against the image tags in the live page source; the images are decorative favicons.",
+    "status": "contradicted",
+    "buying_consequence": "Part of the to-do list is a false alarm that costs time to check.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "The page title should be shorter than 580 pixels. It is 671 pixels long.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The checker says the title of the second site is 671 pixels long against a limit of 580; curl shows a title of 68 characters, which fits; the meta description (849 of 1000 pixels), the status 200, the canonical and the robots tag also matched curl.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "The checker values against the live page head and links from curl; pixel widths were not measured separately.",
+    "status": "confirmed",
+    "buying_consequence": "The basic on-page checks on title, description, canonical and links with parameters can be trusted for one page.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Page status Follow Index",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The only indexing line is the robots tag as Page status Follow Index; nothing says whether Google has the page in its index, and the Ranking Checker showed a dash for the position of the keyword ai tool reviews (not in the top 100).",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "A robots tag read against an index question; no stored claim about index checks exists and the Index Checker was not used.",
+    "status": "not_comparable",
+    "buying_consequence": "The checker does not tell you whether the page is in Google, which is the first question for a site that is hardly indexed.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "You have 0 of 3 checks left today. No checks left!",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker; after the third check it said No checks left and the Backlink Checker, Keyword Checker and TF*IDF tool could not be tried. The table on the result page gives Basic 5 a day.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "The limit seen on one day from one browser against a dossier that does not state a daily tool limit.",
+    "status": "not_comparable",
+    "buying_consequence": "The free trial of the tools without an account is three checks, so you cannot test the whole suite before signing up.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Automatically renews to our monthly Premium plan for $69.90/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The checker page shows Premium at $69.90 a month in US dollars and says the trial button automatically renews to the monthly Premium plan, while the pricing page is in euro (59.90) and the dossier names the 14-day free trial and cancel any time without this renewal line.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "The checker page text against the dossier wording and the pricing page; the trial was not started and no currency rate was compared.",
+    "status": "contradicted",
+    "buying_consequence": "Starting the trial on the checker page leads to a paid monthly plan unless you cancel in time, and the dollar amount differs from the euro price.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Track 3 AI prompts",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page also lists AI Visibility Tracking (Beta) with 15, 50 and 250 prompts for the paid plans and add-ons of 25 and 100 prompts, standalone tool requests per day, Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "The dossier plan list against the pricing page of 18 November; the AI Visibility feature itself was not opened.",
+    "status": "contradicted",
+    "buying_consequence": "The plan comparison in the dossier is incomplete: AI visibility tracking and the daily tool limit are missing.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "59.90 € monthly afterwards",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page shows Premium at 59.90 €, Professional at 99.90 € and Agency at 209.90 € a month after a 14-day free trial, and 575.04, 959.04 and 2,015.04 € a year, all plus VAT; the projects, pages and keywords per plan match the dossier word for word.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "The dossier prices against the pricing page in euro on the monthly and annual toggles; the dollar prices on the checker page were not compared.",
+    "status": "confirmed",
+    "buying_consequence": "The euro prices and plan limits in the dossier are right; paying yearly saves 20 percent.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "The contract is automatically renewed for another month at the end of each month.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page shows the plan prices and the monthly renewal, but no Try for free or Sign up now button was clicked, so no tax, total or payment screen was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+    "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The final amount with VAT for the plan is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "No account was needed; the free tools ran without signing in. On 18 November 2026 the session tested the free SEO Checker and Ranking Checker of Seobility without an account, on two sites of our own. Each check took under 10 seconds, but without an account only 3 checks a day are allowed, shared between the tools, so the Backlink, Keyword and TF*IDF tools could not be tried. The checker was right about the title, meta description, H1, canonical, links with parameters and a title of 671 pixels. It said No additional page markup was found on a page with 3 JSON-LD blocks, flagged 6 decorative favicons with an empty alt text as missing alt attributes, and said nothing about Google indexing; the Ranking Checker showed a dash for the position. The euro prices match the dossier; the checker page shows dollars and says the trial renews automatically to the monthly Premium plan, and the dossier misses AI Visibility Tracking (Beta) and the daily tool limit. No plan was bought and no account was made. Account and start: NO account was made and none was used. The test ran without an account in our own tab of the browser of Daan, with the cookie banner set to Essential only; the interface was in English. No email, password, card or phone number was typed in anywhere. The test started at 10:23. The dossier name is Seobility and the review is on MSS (seobility-review); the handson folder and the review slug are the same. The two checked sites are sites of our own; their domain names are not named in this delivery. Core action: the free SEO Checker needs 2 steps (type the address, click Analyze Website). The first scan was started at 10:23:58 and the result was there at the next look 5 seconds later, so a scan, including the screenshot of the page, took under 10 seconds. The Ranking Checker (keyword, domain, Google.com desktop) also took under 10 seconds. The start screen first said You have 0 of max checks left today (a placeholder; the check did work). Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker: after two checks it said 1 of 3 left, and after the third (the Ranking Checker) it said 0 of 3 and No checks left. The result page shows a table of daily checks per plan: Basic 5 (Free forever), Premium 50, Professional 100 and Agency 200, with the prices in US dollars ($69.90, $109.90 and $239.90 a month) while the pricing page is in euro. The page says the SEO Checker only looks at the checked URL, and a PDF report needs Premium. First site of our own (3 JSON-LD blocks by curl): On-page score 80 % (Meta data 98 %, Page quality 78 %, Page structure 68 %, Links 53 %, Server 100 %, External factors 15 %), the badge 2 Critical. To do: use good alt attributes (Warning), reduce the number of external links (Tip), run a full website audit (Tip). Read: status 200, Follow and Index, English, load time 0.28 s, 186.90 kB, 4,193 words; the title, meta description, canonical and H1 are the same as in curl. Correct by curl: some internal links have dynamic parameters (4 links with a question mark, such as a utm_source parameter and an event parameter). Wrong or noise: Additional markup says No additional page markup was found and is shown as passed, while curl shows 3 JSON-LD blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker does not see the structured data; 6 images have no alt attribute, while curl shows 6 favicon images with alt set to an empty string, which is valid for decorative images; the domain name is very long (a Warning, true but unimportant); there are 40 headings (curl 41) and 4 text duplicates. External factors says the page has backlinks from only 5 referring domains and 44 backlinks, which fits our view of low authority. Missed: nothing says whether Google has the page; the check shows only the robots tag as Page status Follow Index. Second site of our own (2 JSON-LD blocks by curl): Review and improve the page title (Warning): the title should be shorter than 580 pixels and is 671 pixels long (the title is 68 characters, which fits); the meta description of 849 of 1000 pixels is perfect; status 200, canonical and the robots tag index, follow are the same as in curl; Page quality 95 %; other tips are alt attributes, duplicate heading texts and external links. The Additional markup check of this site was not read separately. Ranking Checker: keyword ai tool reviews, domain of the first site of our own, Google.com desktop: Position and Visibility are a dash (not in the top 100, which fits the small Google index of the site), Search volume 90, Competition 9 % and CPC $1.29. Then the limit was reached. Plans, read up to the trial buttons on the pricing page (euro, plus VAT, nothing clicked, nothing filled in): monthly Premium 59.90 €, Professional 99.90 € and Agency 209.90 € a month after a 14-day free trial; with Pay annually (Save 20 %) 575.04 € (was 718.80), 959.04 € (was 1,198.80) and 2,015.04 € (was 2,518.80) a year. Basic is Free forever, 1 website project, 10 keywords tracked, 5 daily tool credits, a limited Website Audit, 100 pages per crawl and Track 3 AI prompts. The pricing page says the contract is automatically renewed for another month at the end of each month and can be cancelled anytime without a cancelation period. Deviations from the dossier: the amounts in euro and the numbers of projects, pages and keywords (3 / 25,000 / 300; 7 / 50,000 / 700; 20 / 100,000 / 2,000), the extra project price (4.90 to 14.90) and the 100 extra keywords (6.90 to 10.90) match the dossier word for word. The pricing page also lists AI Visibility Tracking (Beta) (Premium 15 prompts on 1 platform, Professional 50, Agency 250; add-ons of 25 prompts for 19.90 and 100 prompts for 39.90), standalone tool requests per day (50, 100, 200), Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these and does not mention the daily tool limit (3 without an account, 5 on Basic). The checker page shows the same plans in US dollars and says on the trial button that it automatically renews to the monthly Premium plan for $69.90 a month; the dossier names the 14-day free trial and cancel any time but not this automatic renewal on the checker page. The price fields of our pages are not touched. Checkout: NOT reached. No Try for free or Sign up now button was clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no account and no subscription. Not tested: an account, the Website Audit, the Basic audit, Rank Monitoring, backlink monitoring, uptime monitoring, AI Visibility Tracking, the PDF report, the MCP access, the trial and cancelling; the Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit was used up; and the groups Small and mid-size businesses with a few sites and Teams that need many keywords tracked daily. Clean up: there is no account and there is no test data. The own tab was closed; only essential cookies were accepted.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Without an account you get only 3 checks a day, shared between the tools, and the start screen first says 0 checks left although the check works. The checker did not see 3 JSON-LD blocks and said No additional page markup was found, it counted decorative favicons with an empty alt text as missing alt attributes, and it said nothing about whether Google has the page. The checker page shows dollar prices while the pricing page is in euro, and the trial button says it renews automatically to the monthly Premium plan.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "An account, the Website Audit, Rank Monitoring, backlink and uptime monitoring, AI Visibility Tracking, the PDF report and MCP.",
+    "The Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit of 3 checks without an account was used up.",
+    "The groups small and mid-size businesses with a few sites and teams that need many keywords tracked daily.",
+    "Checkout, the free trial and cancelling.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 10:23 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/seobility-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/seobility-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/seobility-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "No account was needed; the free tools ran without signing in. On 18 November 2026 the session tested the free SEO Checker and Ranking Checker of Seobility without an account, on two sites of our own. Each check took under 10 seconds, but without an account only 3 checks a day are allowed, shared between the tools, so the Backlink, Keyword and TF*IDF tools could not be tried. The checker was right about the title, meta description, H1, canonical, links with parameters and a title of 671 pixels. It said No additional page markup was found on a page with 3 JSON-LD blocks, flagged 6 decorative favicons with an empty alt text as missing alt attributes, and said nothing about Google indexing; the Ranking Checker showed a dash for the position. The euro prices match the dossier; the checker page shows dollars and says the trial renews automatically to the monthly Premium plan, and the dossier misses AI Visibility Tracking (Beta) and the daily tool limit. No plan was bought and no account was made. Account and start: NO account was made and none was used. The test ran without an account in our own tab of the browser of Daan, with the cookie banner set to Essential only; the interface was in English. No email, password, card or phone number was typed in anywhere. The test started at 10:23. The dossier name is Seobility and the review is on MSS (seobility-review); the handson folder and the review slug are the same. The two checked sites are sites of our own; their domain names are not named in this delivery. Core action: the free SEO Checker needs 2 steps (type the address, click Analyze Website). The first scan was started at 10:23:58 and the result was there at the next look 5 seconds later, so a scan, including the screenshot of the page, took under 10 seconds. The Ranking Checker (keyword, domain, Google.com desktop) also took under 10 seconds. The start screen first said You have 0 of max checks left today (a placeholder; the check did work). Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker: after two checks it said 1 of 3 left, and after the third (the Ranking Checker) it said 0 of 3 and No checks left. The result page shows a table of daily checks per plan: Basic 5 (Free forever), Premium 50, Professional 100 and Agency 200, with the prices in US dollars ($69.90, $109.90 and $239.90 a month) while the pricing page is in euro. The page says the SEO Checker only looks at the checked URL, and a PDF report needs Premium. First site of our own (3 JSON-LD blocks by curl): On-page score 80 % (Meta data 98 %, Page quality 78 %, Page structure 68 %, Links 53 %, Server 100 %, External factors 15 %), the badge 2 Critical. To do: use good alt attributes (Warning), reduce the number of external links (Tip), run a full website audit (Tip). Read: status 200, Follow and Index, English, load time 0.28 s, 186.90 kB, 4,193 words; the title, meta description, canonical and H1 are the same as in curl. Correct by curl: some internal links have dynamic parameters (4 links with a question mark, such as a utm_source parameter and an event parameter). Wrong or noise: Additional markup says No additional page markup was found and is shown as passed, while curl shows 3 JSON-LD blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker does not see the structured data; 6 images have no alt attribute, while curl shows 6 favicon images with alt set to an empty string, which is valid for decorative images; the domain name is very long (a Warning, true but unimportant); there are 40 headings (curl 41) and 4 text duplicates. External factors says the page has backlinks from only 5 referring domains and 44 backlinks, which fits our view of low authority. Missed: nothing says whether Google has the page; the check shows only the robots tag as Page status Follow Index. Second site of our own (2 JSON-LD blocks by curl): Review and improve the page title (Warning): the title should be shorter than 580 pixels and is 671 pixels long (the title is 68 characters, which fits); the meta description of 849 of 1000 pixels is perfect; status 200, canonical and the robots tag index, follow are the same as in curl; Page quality 95 %; other tips are alt attributes, duplicate heading texts and external links. The Additional markup check of this site was not read separately. Ranking Checker: keyword ai tool reviews, domain of the first site of our own, Google.com desktop: Position and Visibility are a dash (not in the top 100, which fits the small Google index of the site), Search volume 90, Competition 9 % and CPC $1.29. Then the limit was reached. Plans, read up to the trial buttons on the pricing page (euro, plus VAT, nothing clicked, nothing filled in): monthly Premium 59.90 €, Professional 99.90 € and Agency 209.90 € a month after a 14-day free trial; with Pay annually (Save 20 %) 575.04 € (was 718.80), 959.04 € (was 1,198.80) and 2,015.04 € (was 2,518.80) a year. Basic is Free forever, 1 website project, 10 keywords tracked, 5 daily tool credits, a limited Website Audit, 100 pages per crawl and Track 3 AI prompts. The pricing page says the contract is automatically renewed for another month at the end of each month and can be cancelled anytime without a cancelation period. Deviations from the dossier: the amounts in euro and the numbers of projects, pages and keywords (3 / 25,000 / 300; 7 / 50,000 / 700; 20 / 100,000 / 2,000), the extra project price (4.90 to 14.90) and the 100 extra keywords (6.90 to 10.90) match the dossier word for word. The pricing page also lists AI Visibility Tracking (Beta) (Premium 15 prompts on 1 platform, Professional 50, Agency 250; add-ons of 25 prompts for 19.90 and 100 prompts for 39.90), standalone tool requests per day (50, 100, 200), Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these and does not mention the daily tool limit (3 without an account, 5 on Basic). The checker page shows the same plans in US dollars and says on the trial button that it automatically renews to the monthly Premium plan for $69.90 a month; the dossier names the 14-day free trial and cancel any time but not this automatic renewal on the checker page. The price fields of our pages are not touched. Checkout: NOT reached. No Try for free or Sign up now button was clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no account and no subscription. Not tested: an account, the Website Audit, the Basic audit, Rank Monitoring, backlink monitoring, uptime monitoring, AI Visibility Tracking, the PDF report, the MCP access, the trial and cancelling; the Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit was used up; and the groups Small and mid-size businesses with a few sites and Teams that need many keywords tracked daily. Clean up: there is no account and there is no test data. The own tab was closed; only essential cookies were accepted. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/seobility-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "No account was needed; the free tools ran without signing in. On 18 November 2026 the session tested the free SEO Checker and Ranking Checker of Seobility without an account, on two sites of our own. Each check took under 10 seconds, but without an account only 3 checks a day are allowed, shared between the tools, so the Backlink, Keyword and TF*IDF tools could not be tried. The checker was right about the title, meta description, H1, canonical, links with parameters and a title of 671 pixels. It said No additional page markup was found on a page with 3 JSON-LD blocks, flagged 6 decorative favicons with an empty alt text as missing alt attributes, and said nothing about Google indexing; the Ranking Checker showed a dash for the position. The euro prices match the dossier; the checker page shows dollars and says the trial renews automatically to the monthly Premium plan, and the dossier misses AI Visibility Tracking (Beta) and the daily tool limit. No plan was bought and no account was made. Account and start: NO account was made and none was used. The test ran without an account in our own tab of the browser of Daan, with the cookie banner set to Essential only; the interface was in English. No email, password, card or phone number was typed in anywhere. The test started at 10:23. The dossier name is Seobility and the review is on MSS (seobility-review); the handson folder and the review slug are the same. The two checked sites are sites of our own; their domain names are not named in this delivery. Core action: the free SEO Checker needs 2 steps (type the address, click Analyze Website). The first scan was started at 10:23:58 and the result was there at the next look 5 seconds later, so a scan, including the screenshot of the page, took under 10 seconds. The Ranking Checker (keyword, domain, Google.com desktop) also took under 10 seconds. The start screen first said You have 0 of max checks left today (a placeholder; the check did work). Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker: after two checks it said 1 of 3 left, and after the third (the Ranking Checker) it said 0 of 3 and No checks left. The result page shows a table of daily checks per plan: Basic 5 (Free forever), Premium 50, Professional 100 and Agency 200, with the prices in US dollars ($69.90, $109.90 and $239.90 a month) while the pricing page is in euro. The page says the SEO Checker only looks at the checked URL, and a PDF report needs Premium. First site of our own (3 JSON-LD blocks by curl): On-page score 80 % (Meta data 98 %, Page quality 78 %, Page structure 68 %, Links 53 %, Server 100 %, External factors 15 %), the badge 2 Critical. To do: use good alt attributes (Warning), reduce the number of external links (Tip), run a full website audit (Tip). Read: status 200, Follow and Index, English, load time 0.28 s, 186.90 kB, 4,193 words; the title, meta description, canonical and H1 are the same as in curl. Correct by curl: some internal links have dynamic parameters (4 links with a question mark, such as a utm_source parameter and an event parameter). Wrong or noise: Additional markup says No additional page markup was found and is shown as passed, while curl shows 3 JSON-LD blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker does not see the structured data; 6 images have no alt attribute, while curl shows 6 favicon images with alt set to an empty string, which is valid for decorative images; the domain name is very long (a Warning, true but unimportant); there are 40 headings (curl 41) and 4 text duplicates. External factors says the page has backlinks from only 5 referring domains and 44 backlinks, which fits our view of low authority. Missed: nothing says whether Google has the page; the check shows only the robots tag as Page status Follow Index. Second site of our own (2 JSON-LD blocks by curl): Review and improve the page title (Warning): the title should be shorter than 580 pixels and is 671 pixels long (the title is 68 characters, which fits); the meta description of 849 of 1000 pixels is perfect; status 200, canonical and the robots tag index, follow are the same as in curl; Page quality 95 %; other tips are alt attributes, duplicate heading texts and external links. The Additional markup check of this site was not read separately. Ranking Checker: keyword ai tool reviews, domain of the first site of our own, Google.com desktop: Position and Visibility are a dash (not in the top 100, which fits the small Google index of the site), Search volume 90, Competition 9 % and CPC $1.29. Then the limit was reached. Plans, read up to the trial buttons on the pricing page (euro, plus VAT, nothing clicked, nothing filled in): monthly Premium 59.90 €, Professional 99.90 € and Agency 209.90 € a month after a 14-day free trial; with Pay annually (Save 20 %) 575.04 € (was 718.80), 959.04 € (was 1,198.80) and 2,015.04 € (was 2,518.80) a year. Basic is Free forever, 1 website project, 10 keywords tracked, 5 daily tool credits, a limited Website Audit, 100 pages per crawl and Track 3 AI prompts. The pricing page says the contract is automatically renewed for another month at the end of each month and can be cancelled anytime without a cancelation period. Deviations from the dossier: the amounts in euro and the numbers of projects, pages and keywords (3 / 25,000 / 300; 7 / 50,000 / 700; 20 / 100,000 / 2,000), the extra project price (4.90 to 14.90) and the 100 extra keywords (6.90 to 10.90) match the dossier word for word. The pricing page also lists AI Visibility Tracking (Beta) (Premium 15 prompts on 1 platform, Professional 50, Agency 250; add-ons of 25 prompts for 19.90 and 100 prompts for 39.90), standalone tool requests per day (50, 100, 200), Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these and does not mention the daily tool limit (3 without an account, 5 on Basic). The checker page shows the same plans in US dollars and says on the trial button that it automatically renews to the monthly Premium plan for $69.90 a month; the dossier names the 14-day free trial and cancel any time but not this automatic renewal on the checker page. The price fields of our pages are not touched. Checkout: NOT reached. No Try for free or Sign up now button was clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no account and no subscription. Not tested: an account, the Website Audit, the Basic audit, Rank Monitoring, backlink monitoring, uptime monitoring, AI Visibility Tracking, the PDF report, the MCP access, the trial and cancelling; the Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit was used up; and the groups Small and mid-size businesses with a few sites and Teams that need many keywords tracked daily. Clean up: there is no account and there is no test data. The own tab was closed; only essential cookies were accepted. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/seobility-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/seobility-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Seobility",
+    "product_id": "seobility",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "No account was needed; the free tools ran without signing in. On 18 November 2026 the session tested the free SEO Checker and Ranking Checker of Seobility without an account, on two sites of our own. Each check took under 10 seconds, but without an account only 3 checks a day are allowed, shared between the tools, so the Backlink, Keyword and TF*IDF tools could not be tried. The checker was right about the title, meta description, H1, canonical, links with parameters and a title of 671 pixels. It said No additional page markup was found on a page with 3 JSON-LD blocks, flagged 6 decorative favicons with an empty alt text as missing alt attributes, and said nothing about Google indexing; the Ranking Checker showed a dash for the position. The euro prices match the dossier; the checker page shows dollars and says the trial renews automatically to the monthly Premium plan, and the dossier misses AI Visibility Tracking (Beta) and the daily tool limit. No plan was bought and no account was made. Account and start: NO account was made and none was used. The test ran without an account in our own tab of the browser of Daan, with the cookie banner set to Essential only; the interface was in English. No email, password, card or phone number was typed in anywhere. The test started at 10:23. The two checked sites are sites of our own; their domain names are not named in this delivery. Core action: the free SEO Checker needs 2 steps (type the address, click Analyze Website). The first scan was started at 10:23:58 and the result was there at the next look 5 seconds later, so a scan, including the screenshot of the page, took under 10 seconds. The Ranking Checker (keyword, domain, Google.com desktop) also took under 10 seconds. The start screen first said You have 0 of max checks left today (a placeholder; the check did work). Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker: after two checks it said 1 of 3 left, and after the third (the Ranking Checker) it said 0 of 3 and No checks left. The result page shows a table of daily checks per plan: Basic 5 (Free forever), Premium 50, Professional 100 and Agency 200, with the prices in US dollars ($69.90, $109.90 and $239.90 a month) while the pricing page is in euro. The page says the SEO Checker only looks at the checked URL, and a PDF report needs Premium. First site of our own (3 JSON-LD blocks by curl): On-page score 80 % (Meta data 98 %, Page quality 78 %, Page structure 68 %, Links 53 %, Server 100 %, External factors 15 %), the badge 2 Critical. To do: use good alt attributes (Warning), reduce the number of external links (Tip), run a full website audit (Tip). Read: status 200, Follow and Index, English, load time 0.28 s, 186.90 kB, 4,193 words; the title, meta description, canonical and H1 are the same as in curl. Correct by curl: some internal links have dynamic parameters (4 links with a question mark, such as a utm_source parameter and an event parameter). Wrong or noise: Additional markup says No additional page markup was found and is shown as passed, while curl shows 3 JSON-LD blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker does not see the structured data; 6 images have no alt attribute, while curl shows 6 favicon images with alt set to an empty string, which is valid for decorative images; the domain name is very long (a Warning, true but unimportant); there are 40 headings (curl 41) and 4 text duplicates. External factors says the page has backlinks from only 5 referring domains and 44 backlinks, which fits our view of low authority. Missed: nothing says whether Google has the page; the check shows only the robots tag as Page status Follow Index. Second site of our own (2 JSON-LD blocks by curl): Review and improve the page title (Warning): the title should be shorter than 580 pixels and is 671 pixels long (the title is 68 characters, which fits); the meta description of 849 of 1000 pixels is perfect; status 200, canonical and the robots tag index, follow are the same as in curl; Page quality 95 %; other tips are alt attributes, duplicate heading texts and external links. The Additional markup check of this site was not read separately. Ranking Checker: keyword ai tool reviews, domain of the first site of our own, Google.com desktop: Position and Visibility are a dash (not in the top 100, which fits the small Google index of the site), Search volume 90, Competition 9 % and CPC $1.29. Then the limit was reached. Plans, read up to the trial buttons on the pricing page (euro, plus VAT, nothing clicked, nothing filled in): monthly Premium 59.90 €, Professional 99.90 € and Agency 209.90 € a month after a 14-day free trial; with Pay annually (Save 20 %) 575.04 € (was 718.80), 959.04 € (was 1,198.80) and 2,015.04 € (was 2,518.80) a year. Basic is Free forever, 1 website project, 10 keywords tracked, 5 daily tool credits, a limited Website Audit, 100 pages per crawl and Track 3 AI prompts. The pricing page says the contract is automatically renewed for another month at the end of each month and can be cancelled anytime without a cancelation period. Deviations from the dossier: the amounts in euro and the numbers of projects, pages and keywords (3 / 25,000 / 300; 7 / 50,000 / 700; 20 / 100,000 / 2,000), the extra project price (4.90 to 14.90) and the 100 extra keywords (6.90 to 10.90) match the dossier word for word. The pricing page also lists AI Visibility Tracking (Beta) (Premium 15 prompts on 1 platform, Professional 50, Agency 250; add-ons of 25 prompts for 19.90 and 100 prompts for 39.90), standalone tool requests per day (50, 100, 200), Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these and does not mention the daily tool limit (3 without an account, 5 on Basic). The checker page shows the same plans in US dollars and says on the trial button that it automatically renews to the monthly Premium plan for $69.90 a month; the dossier names the 14-day free trial and cancel any time but not this automatic renewal on the checker page. The price fields of our pages are not touched. Checkout: NOT reached. No Try for free or Sign up now button was clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no account and no subscription. Not tested: an account, the Website Audit, the Basic audit, Rank Monitoring, backlink monitoring, uptime monitoring, AI Visibility Tracking, the PDF report, the MCP access, the trial and cancelling; the Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit was used up; and the groups Small and mid-size businesses with a few sites and Teams that need many keywords tracked daily. Clean up: there is no account and there is no test data. The own tab was closed; only essential cookies were accepted.",
+    "findings": [
+     "Text we checked: \"No additional page markup was found\". What we saw: The checker shows Additional markup as passed with the line No additional page markup was found, while a curl of the page shows 3 application/ld+json blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker did not see the structured data.",
+     "Text we checked: \"6 images have no alt attribute\". What we saw: The checker flags 6 images without an alt attribute, but curl shows 6 favicon images with an empty alt text, which is valid for decorative images, so this is noise and not a real fault.",
+     "Text we checked: \"The page title should be shorter than 580 pixels. It is 671 pixels long\". What we saw: The checker says the title of the second site is 671 pixels long against a limit of 580; curl shows a title of 68 characters, which fits; the meta description (849 of 1000 pixels), the status 200, the canonical and the robots tag also matched curl.",
+     "Text we checked: \"Automatically renews to our monthly Premium plan for $69.90/month\". What we saw: The checker page shows Premium at $69.90 a month in US dollars and says the trial button automatically renews to the monthly Premium plan, while the pricing page is in euro (59.90) and the dossier names the 14-day free trial and cancel any time without this renewal line.",
+     "Text we checked: \"Track 3 AI prompts\". What we saw: The pricing page also lists AI Visibility Tracking (Beta) with 15, 50 and 250 prompts for the paid plans and add-ons of 25 and 100 prompts, standalone tool requests per day, Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these."
+    ],
+    "not_tested": [
+     "An account, the Website Audit, Rank Monitoring, backlink and uptime monitoring, AI Visibility Tracking, the PDF report and MCP.",
+     "The Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit of 3 checks without an account was used up.",
+     "The groups small and mid-size businesses with a few sites and teams that need many keywords tracked daily.",
+     "Checkout, the free trial and cancelling.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 10:23 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "No additional page markup was found.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The checker shows Additional markup as passed with the line No additional page markup was found, while a curl of the page shows 3 application/ld+json blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker did not see the structured data.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "The checker line against the live page source on the same day; one page of one site.",
+      "status": "contradicted",
+      "buying_consequence": "A site owner could think there is no structured data, or add a second copy, because the checker does not see what is already there.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "6 images have no alt attribute",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The checker flags 6 images without an alt attribute, but curl shows 6 favicon images with an empty alt text, which is valid for decorative images, so this is noise and not a real fault.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "The checker warning against the image tags in the live page source; the images are decorative favicons.",
+      "status": "contradicted",
+      "buying_consequence": "Part of the to-do list is a false alarm that costs time to check.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "The page title should be shorter than 580 pixels. It is 671 pixels long.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The checker says the title of the second site is 671 pixels long against a limit of 580; curl shows a title of 68 characters, which fits; the meta description (849 of 1000 pixels), the status 200, the canonical and the robots tag also matched curl.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "The checker values against the live page head and links from curl; pixel widths were not measured separately.",
+      "status": "confirmed",
+      "buying_consequence": "The basic on-page checks on title, description, canonical and links with parameters can be trusted for one page.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Page status Follow Index",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The only indexing line is the robots tag as Page status Follow Index; nothing says whether Google has the page in its index, and the Ranking Checker showed a dash for the position of the keyword ai tool reviews (not in the top 100).",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "A robots tag read against an index question; no stored claim about index checks exists and the Index Checker was not used.",
+      "status": "not_comparable",
+      "buying_consequence": "The checker does not tell you whether the page is in Google, which is the first question for a site that is hardly indexed.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "You have 0 of 3 checks left today. No checks left!",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker; after the third check it said No checks left and the Backlink Checker, Keyword Checker and TF*IDF tool could not be tried. The table on the result page gives Basic 5 a day.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "The limit seen on one day from one browser against a dossier that does not state a daily tool limit.",
+      "status": "not_comparable",
+      "buying_consequence": "The free trial of the tools without an account is three checks, so you cannot test the whole suite before signing up.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Automatically renews to our monthly Premium plan for $69.90/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The checker page shows Premium at $69.90 a month in US dollars and says the trial button automatically renews to the monthly Premium plan, while the pricing page is in euro (59.90) and the dossier names the 14-day free trial and cancel any time without this renewal line.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "The checker page text against the dossier wording and the pricing page; the trial was not started and no currency rate was compared.",
+      "status": "contradicted",
+      "buying_consequence": "Starting the trial on the checker page leads to a paid monthly plan unless you cancel in time, and the dollar amount differs from the euro price.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Track 3 AI prompts",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page also lists AI Visibility Tracking (Beta) with 15, 50 and 250 prompts for the paid plans and add-ons of 25 and 100 prompts, standalone tool requests per day, Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "The dossier plan list against the pricing page of 18 November; the AI Visibility feature itself was not opened.",
+      "status": "contradicted",
+      "buying_consequence": "The plan comparison in the dossier is incomplete: AI visibility tracking and the daily tool limit are missing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "59.90 € monthly afterwards",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page shows Premium at 59.90 €, Professional at 99.90 € and Agency at 209.90 € a month after a 14-day free trial, and 575.04, 959.04 and 2,015.04 € a year, all plus VAT; the projects, pages and keywords per plan match the dossier word for word.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "The dossier prices against the pricing page in euro on the monthly and annual toggles; the dollar prices on the checker page were not compared.",
+      "status": "confirmed",
+      "buying_consequence": "The euro prices and plan limits in the dossier are right; paying yearly saves 20 percent.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "The contract is automatically renewed for another month at the end of each month.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page shows the plan prices and the monthly renewal, but no Try for free or Sign up now button was clicked, so no tax, total or payment screen was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+      "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The final amount with VAT for the plan is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "No account was needed; the free tools ran without signing in. On 18 November 2026 the session tested the free SEO Checker and Ranking Checker of Seobility without an account, on two sites of our own. Each check took under 10 seconds, but without an account only 3 checks a day are allowed, shared between the tools, so the Backlink, Keyword and TF*IDF tools could not be tried. The checker was right about the title, meta description, H1, canonical, links with parameters and a title of 671 pixels. It said No additional page markup was found on a page with 3 JSON-LD blocks, flagged 6 decorative favicons with an empty alt text as missing alt attributes, and said nothing about Google indexing; the Ranking Checker showed a dash for the position. The euro prices match the dossier; the checker page shows dollars and says the trial renews automatically to the monthly Premium plan, and the dossier misses AI Visibility Tracking (Beta) and the daily tool limit. No plan was bought and no account was made. Account and start: NO account was made and none was used. The test ran without an account in our own tab of the browser of Daan, with the cookie banner set to Essential only; the interface was in English. No email, password, card or phone number was typed in anywhere. The test started at 10:23. The dossier name is Seobility and the review is on MSS (seobility-review); the handson folder and the review slug are the same. The two checked sites are sites of our own; their domain names are not named in this delivery. Core action: the free SEO Checker needs 2 steps (type the address, click Analyze Website). The first scan was started at 10:23:58 and the result was there at the next look 5 seconds later, so a scan, including the screenshot of the page, took under 10 seconds. The Ranking Checker (keyword, domain, Google.com desktop) also took under 10 seconds. The start screen first said You have 0 of max checks left today (a placeholder; the check did work). Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker: after two checks it said 1 of 3 left, and after the third (the Ranking Checker) it said 0 of 3 and No checks left. The result page shows a table of daily checks per plan: Basic 5 (Free forever), Premium 50, Professional 100 and Agency 200, with the prices in US dollars ($69.90, $109.90 and $239.90 a month) while the pricing page is in euro. The page says the SEO Checker only looks at the checked URL, and a PDF report needs Premium. First site of our own (3 JSON-LD blocks by curl): On-page score 80 % (Meta data 98 %, Page quality 78 %, Page structure 68 %, Links 53 %, Server 100 %, External factors 15 %), the badge 2 Critical. To do: use good alt attributes (Warning), reduce the number of external links (Tip), run a full website audit (Tip). Read: status 200, Follow and Index, English, load time 0.28 s, 186.90 kB, 4,193 words; the title, meta description, canonical and H1 are the same as in curl. Correct by curl: some internal links have dynamic parameters (4 links with a question mark, such as a utm_source parameter and an event parameter). Wrong or noise: Additional markup says No additional page markup was found and is shown as passed, while curl shows 3 JSON-LD blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker does not see the structured data; 6 images have no alt attribute, while curl shows 6 favicon images with alt set to an empty string, which is valid for decorative images; the domain name is very long (a Warning, true but unimportant); there are 40 headings (curl 41) and 4 text duplicates. External factors says the page has backlinks from only 5 referring domains and 44 backlinks, which fits our view of low authority. Missed: nothing says whether Google has the page; the check shows only the robots tag as Page status Follow Index. Second site of our own (2 JSON-LD blocks by curl): Review and improve the page title (Warning): the title should be shorter than 580 pixels and is 671 pixels long (the title is 68 characters, which fits); the meta description of 849 of 1000 pixels is perfect; status 200, canonical and the robots tag index, follow are the same as in curl; Page quality 95 %; other tips are alt attributes, duplicate heading texts and external links. The Additional markup check of this site was not read separately. Ranking Checker: keyword ai tool reviews, domain of the first site of our own, Google.com desktop: Position and Visibility are a dash (not in the top 100, which fits the small Google index of the site), Search volume 90, Competition 9 % and CPC $1.29. Then the limit was reached. Plans, read up to the trial buttons on the pricing page (euro, plus VAT, nothing clicked, nothing filled in): monthly Premium 59.90 €, Professional 99.90 € and Agency 209.90 € a month after a 14-day free trial; with Pay annually (Save 20 %) 575.04 € (was 718.80), 959.04 € (was 1,198.80) and 2,015.04 € (was 2,518.80) a year. Basic is Free forever, 1 website project, 10 keywords tracked, 5 daily tool credits, a limited Website Audit, 100 pages per crawl and Track 3 AI prompts. The pricing page says the contract is automatically renewed for another month at the end of each month and can be cancelled anytime without a cancelation period. Deviations from the dossier: the amounts in euro and the numbers of projects, pages and keywords (3 / 25,000 / 300; 7 / 50,000 / 700; 20 / 100,000 / 2,000), the extra project price (4.90 to 14.90) and the 100 extra keywords (6.90 to 10.90) match the dossier word for word. The pricing page also lists AI Visibility Tracking (Beta) (Premium 15 prompts on 1 platform, Professional 50, Agency 250; add-ons of 25 prompts for 19.90 and 100 prompts for 39.90), standalone tool requests per day (50, 100, 200), Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these and does not mention the daily tool limit (3 without an account, 5 on Basic). The checker page shows the same plans in US dollars and says on the trial button that it automatically renews to the monthly Premium plan for $69.90 a month; the dossier names the 14-day free trial and cancel any time but not this automatic renewal on the checker page. The price fields of our pages are not touched. Checkout: NOT reached. No Try for free or Sign up now button was clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no account and no subscription. Not tested: an account, the Website Audit, the Basic audit, Rank Monitoring, backlink monitoring, uptime monitoring, AI Visibility Tracking, the PDF report, the MCP access, the trial and cancelling; the Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit was used up; and the groups Small and mid-size businesses with a few sites and Teams that need many keywords tracked daily. Clean up: there is no account and there is no test data. The own tab was closed; only essential cookies were accepted.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Without an account you get only 3 checks a day, shared between the tools, and the start screen first says 0 checks left although the check works. The checker did not see 3 JSON-LD blocks and said No additional page markup was found, it counted decorative favicons with an empty alt text as missing alt attributes, and it said nothing about whether Google has the page. The checker page shows dollar prices while the pricing page is in euro, and the trial button says it renews automatically to the monthly Premium plan.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "An account, the Website Audit, Rank Monitoring, backlink and uptime monitoring, AI Visibility Tracking, the PDF report and MCP.",
+      "The Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit of 3 checks without an account was used up.",
+      "The groups small and mid-size businesses with a few sites and teams that need many keywords tracked daily.",
+      "Checkout, the free trial and cancelling.",
+      "Export and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 10:23 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "seobility:cancellation_terms",

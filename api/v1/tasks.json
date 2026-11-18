@@ -3593,6 +3593,216 @@
   },
   {
    "source": "session",
+   "product_name": "Seobility",
+   "product_id": "seobility",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "No account was needed; the free tools ran without signing in. On 18 November 2026 the session tested the free SEO Checker and Ranking Checker of Seobility without an account, on two sites of our own. Each check took under 10 seconds, but without an account only 3 checks a day are allowed, shared between the tools, so the Backlink, Keyword and TF*IDF tools could not be tried. The checker was right about the title, meta description, H1, canonical, links with parameters and a title of 671 pixels. It said No additional page markup was found on a page with 3 JSON-LD blocks, flagged 6 decorative favicons with an empty alt text as missing alt attributes, and said nothing about Google indexing; the Ranking Checker showed a dash for the position. The euro prices match the dossier; the checker page shows dollars and says the trial renews automatically to the monthly Premium plan, and the dossier misses AI Visibility Tracking (Beta) and the daily tool limit. No plan was bought and no account was made. Account and start: NO account was made and none was used. The test ran without an account in our own tab of the browser of Daan, with the cookie banner set to Essential only; the interface was in English. No email, password, card or phone number was typed in anywhere. The test started at 10:23. The two checked sites are sites of our own; their domain names are not named in this delivery. Core action: the free SEO Checker needs 2 steps (type the address, click Analyze Website). The first scan was started at 10:23:58 and the result was there at the next look 5 seconds later, so a scan, including the screenshot of the page, took under 10 seconds. The Ranking Checker (keyword, domain, Google.com desktop) also took under 10 seconds. The start screen first said You have 0 of max checks left today (a placeholder; the check did work). Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker: after two checks it said 1 of 3 left, and after the third (the Ranking Checker) it said 0 of 3 and No checks left. The result page shows a table of daily checks per plan: Basic 5 (Free forever), Premium 50, Professional 100 and Agency 200, with the prices in US dollars ($69.90, $109.90 and $239.90 a month) while the pricing page is in euro. The page says the SEO Checker only looks at the checked URL, and a PDF report needs Premium. First site of our own (3 JSON-LD blocks by curl): On-page score 80 % (Meta data 98 %, Page quality 78 %, Page structure 68 %, Links 53 %, Server 100 %, External factors 15 %), the badge 2 Critical. To do: use good alt attributes (Warning), reduce the number of external links (Tip), run a full website audit (Tip). Read: status 200, Follow and Index, English, load time 0.28 s, 186.90 kB, 4,193 words; the title, meta description, canonical and H1 are the same as in curl. Correct by curl: some internal links have dynamic parameters (4 links with a question mark, such as a utm_source parameter and an event parameter). Wrong or noise: Additional markup says No additional page markup was found and is shown as passed, while curl shows 3 JSON-LD blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker does not see the structured data; 6 images have no alt attribute, while curl shows 6 favicon images with alt set to an empty string, which is valid for decorative images; the domain name is very long (a Warning, true but unimportant); there are 40 headings (curl 41) and 4 text duplicates. External factors says the page has backlinks from only 5 referring domains and 44 backlinks, which fits our view of low authority. Missed: nothing says whether Google has the page; the check shows only the robots tag as Page status Follow Index. Second site of our own (2 JSON-LD blocks by curl): Review and improve the page title (Warning): the title should be shorter than 580 pixels and is 671 pixels long (the title is 68 characters, which fits); the meta description of 849 of 1000 pixels is perfect; status 200, canonical and the robots tag index, follow are the same as in curl; Page quality 95 %; other tips are alt attributes, duplicate heading texts and external links. The Additional markup check of this site was not read separately. Ranking Checker: keyword ai tool reviews, domain of the first site of our own, Google.com desktop: Position and Visibility are a dash (not in the top 100, which fits the small Google index of the site), Search volume 90, Competition 9 % and CPC $1.29. Then the limit was reached. Plans, read up to the trial buttons on the pricing page (euro, plus VAT, nothing clicked, nothing filled in): monthly Premium 59.90 €, Professional 99.90 € and Agency 209.90 € a month after a 14-day free trial; with Pay annually (Save 20 %) 575.04 € (was 718.80), 959.04 € (was 1,198.80) and 2,015.04 € (was 2,518.80) a year. Basic is Free forever, 1 website project, 10 keywords tracked, 5 daily tool credits, a limited Website Audit, 100 pages per crawl and Track 3 AI prompts. The pricing page says the contract is automatically renewed for another month at the end of each month and can be cancelled anytime without a cancelation period. Deviations from the dossier: the amounts in euro and the numbers of projects, pages and keywords (3 / 25,000 / 300; 7 / 50,000 / 700; 20 / 100,000 / 2,000), the extra project price (4.90 to 14.90) and the 100 extra keywords (6.90 to 10.90) match the dossier word for word. The pricing page also lists AI Visibility Tracking (Beta) (Premium 15 prompts on 1 platform, Professional 50, Agency 250; add-ons of 25 prompts for 19.90 and 100 prompts for 39.90), standalone tool requests per day (50, 100, 200), Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these and does not mention the daily tool limit (3 without an account, 5 on Basic). The checker page shows the same plans in US dollars and says on the trial button that it automatically renews to the monthly Premium plan for $69.90 a month; the dossier names the 14-day free trial and cancel any time but not this automatic renewal on the checker page. The price fields of our pages are not touched. Checkout: NOT reached. No Try for free or Sign up now button was clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no account and no subscription. Not tested: an account, the Website Audit, the Basic audit, Rank Monitoring, backlink monitoring, uptime monitoring, AI Visibility Tracking, the PDF report, the MCP access, the trial and cancelling; the Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit was used up; and the groups Small and mid-size businesses with a few sites and Teams that need many keywords tracked daily. Clean up: there is no account and there is no test data. The own tab was closed; only essential cookies were accepted.",
+   "findings": [
+    "Text we checked: \"No additional page markup was found\". What we saw: The checker shows Additional markup as passed with the line No additional page markup was found, while a curl of the page shows 3 application/ld+json blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker did not see the structured data.",
+    "Text we checked: \"6 images have no alt attribute\". What we saw: The checker flags 6 images without an alt attribute, but curl shows 6 favicon images with an empty alt text, which is valid for decorative images, so this is noise and not a real fault.",
+    "Text we checked: \"The page title should be shorter than 580 pixels. It is 671 pixels long\". What we saw: The checker says the title of the second site is 671 pixels long against a limit of 580; curl shows a title of 68 characters, which fits; the meta description (849 of 1000 pixels), the status 200, the canonical and the robots tag also matched curl.",
+    "Text we checked: \"Automatically renews to our monthly Premium plan for $69.90/month\". What we saw: The checker page shows Premium at $69.90 a month in US dollars and says the trial button automatically renews to the monthly Premium plan, while the pricing page is in euro (59.90) and the dossier names the 14-day free trial and cancel any time without this renewal line.",
+    "Text we checked: \"Track 3 AI prompts\". What we saw: The pricing page also lists AI Visibility Tracking (Beta) with 15, 50 and 250 prompts for the paid plans and add-ons of 25 and 100 prompts, standalone tool requests per day, Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these."
+   ],
+   "not_tested": [
+    "An account, the Website Audit, Rank Monitoring, backlink and uptime monitoring, AI Visibility Tracking, the PDF report and MCP.",
+    "The Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit of 3 checks without an account was used up.",
+    "The groups small and mid-size businesses with a few sites and teams that need many keywords tracked daily.",
+    "Checkout, the free trial and cancelling.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 10:23 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "No additional page markup was found.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The checker shows Additional markup as passed with the line No additional page markup was found, while a curl of the page shows 3 application/ld+json blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker did not see the structured data.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "The checker line against the live page source on the same day; one page of one site.",
+     "status": "contradicted",
+     "buying_consequence": "A site owner could think there is no structured data, or add a second copy, because the checker does not see what is already there.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "6 images have no alt attribute",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The checker flags 6 images without an alt attribute, but curl shows 6 favicon images with an empty alt text, which is valid for decorative images, so this is noise and not a real fault.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "The checker warning against the image tags in the live page source; the images are decorative favicons.",
+     "status": "contradicted",
+     "buying_consequence": "Part of the to-do list is a false alarm that costs time to check.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The page title should be shorter than 580 pixels. It is 671 pixels long.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The checker says the title of the second site is 671 pixels long against a limit of 580; curl shows a title of 68 characters, which fits; the meta description (849 of 1000 pixels), the status 200, the canonical and the robots tag also matched curl.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "The checker values against the live page head and links from curl; pixel widths were not measured separately.",
+     "status": "confirmed",
+     "buying_consequence": "The basic on-page checks on title, description, canonical and links with parameters can be trusted for one page.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Page status Follow Index",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The only indexing line is the robots tag as Page status Follow Index; nothing says whether Google has the page in its index, and the Ranking Checker showed a dash for the position of the keyword ai tool reviews (not in the top 100).",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "A robots tag read against an index question; no stored claim about index checks exists and the Index Checker was not used.",
+     "status": "not_comparable",
+     "buying_consequence": "The checker does not tell you whether the page is in Google, which is the first question for a site that is hardly indexed.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have 0 of 3 checks left today. No checks left!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker; after the third check it said No checks left and the Backlink Checker, Keyword Checker and TF*IDF tool could not be tried. The table on the result page gives Basic 5 a day.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "The limit seen on one day from one browser against a dossier that does not state a daily tool limit.",
+     "status": "not_comparable",
+     "buying_consequence": "The free trial of the tools without an account is three checks, so you cannot test the whole suite before signing up.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Automatically renews to our monthly Premium plan for $69.90/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The checker page shows Premium at $69.90 a month in US dollars and says the trial button automatically renews to the monthly Premium plan, while the pricing page is in euro (59.90) and the dossier names the 14-day free trial and cancel any time without this renewal line.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "The checker page text against the dossier wording and the pricing page; the trial was not started and no currency rate was compared.",
+     "status": "contradicted",
+     "buying_consequence": "Starting the trial on the checker page leads to a paid monthly plan unless you cancel in time, and the dollar amount differs from the euro price.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Track 3 AI prompts",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page also lists AI Visibility Tracking (Beta) with 15, 50 and 250 prompts for the paid plans and add-ons of 25 and 100 prompts, standalone tool requests per day, Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "The dossier plan list against the pricing page of 18 November; the AI Visibility feature itself was not opened.",
+     "status": "contradicted",
+     "buying_consequence": "The plan comparison in the dossier is incomplete: AI visibility tracking and the daily tool limit are missing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "59.90 € monthly afterwards",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page shows Premium at 59.90 €, Professional at 99.90 € and Agency at 209.90 € a month after a 14-day free trial, and 575.04, 959.04 and 2,015.04 € a year, all plus VAT; the projects, pages and keywords per plan match the dossier word for word.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "The dossier prices against the pricing page in euro on the monthly and annual toggles; the dollar prices on the checker page were not compared.",
+     "status": "confirmed",
+     "buying_consequence": "The euro prices and plan limits in the dossier are right; paying yearly saves 20 percent.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The contract is automatically renewed for another month at the end of each month.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page shows the plan prices and the monthly renewal, but no Try for free or Sign up now button was clicked, so no tax, total or payment screen was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/seobility-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial or sign-up button",
+     "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The final amount with VAT for the plan is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "No account was needed; the free tools ran without signing in. On 18 November 2026 the session tested the free SEO Checker and Ranking Checker of Seobility without an account, on two sites of our own. Each check took under 10 seconds, but without an account only 3 checks a day are allowed, shared between the tools, so the Backlink, Keyword and TF*IDF tools could not be tried. The checker was right about the title, meta description, H1, canonical, links with parameters and a title of 671 pixels. It said No additional page markup was found on a page with 3 JSON-LD blocks, flagged 6 decorative favicons with an empty alt text as missing alt attributes, and said nothing about Google indexing; the Ranking Checker showed a dash for the position. The euro prices match the dossier; the checker page shows dollars and says the trial renews automatically to the monthly Premium plan, and the dossier misses AI Visibility Tracking (Beta) and the daily tool limit. No plan was bought and no account was made. Account and start: NO account was made and none was used. The test ran without an account in our own tab of the browser of Daan, with the cookie banner set to Essential only; the interface was in English. No email, password, card or phone number was typed in anywhere. The test started at 10:23. The dossier name is Seobility and the review is on MSS (seobility-review); the handson folder and the review slug are the same. The two checked sites are sites of our own; their domain names are not named in this delivery. Core action: the free SEO Checker needs 2 steps (type the address, click Analyze Website). The first scan was started at 10:23:58 and the result was there at the next look 5 seconds later, so a scan, including the screenshot of the page, took under 10 seconds. The Ranking Checker (keyword, domain, Google.com desktop) also took under 10 seconds. The start screen first said You have 0 of max checks left today (a placeholder; the check did work). Without an account the limit is 3 checks a day, shared between the SEO Checker and the Ranking Checker: after two checks it said 1 of 3 left, and after the third (the Ranking Checker) it said 0 of 3 and No checks left. The result page shows a table of daily checks per plan: Basic 5 (Free forever), Premium 50, Professional 100 and Agency 200, with the prices in US dollars ($69.90, $109.90 and $239.90 a month) while the pricing page is in euro. The page says the SEO Checker only looks at the checked URL, and a PDF report needs Premium. First site of our own (3 JSON-LD blocks by curl): On-page score 80 % (Meta data 98 %, Page quality 78 %, Page structure 68 %, Links 53 %, Server 100 %, External factors 15 %), the badge 2 Critical. To do: use good alt attributes (Warning), reduce the number of external links (Tip), run a full website audit (Tip). Read: status 200, Follow and Index, English, load time 0.28 s, 186.90 kB, 4,193 words; the title, meta description, canonical and H1 are the same as in curl. Correct by curl: some internal links have dynamic parameters (4 links with a question mark, such as a utm_source parameter and an event parameter). Wrong or noise: Additional markup says No additional page markup was found and is shown as passed, while curl shows 3 JSON-LD blocks (WebSite with a SearchAction, Organization with a Person, and an ItemList), so the checker does not see the structured data; 6 images have no alt attribute, while curl shows 6 favicon images with alt set to an empty string, which is valid for decorative images; the domain name is very long (a Warning, true but unimportant); there are 40 headings (curl 41) and 4 text duplicates. External factors says the page has backlinks from only 5 referring domains and 44 backlinks, which fits our view of low authority. Missed: nothing says whether Google has the page; the check shows only the robots tag as Page status Follow Index. Second site of our own (2 JSON-LD blocks by curl): Review and improve the page title (Warning): the title should be shorter than 580 pixels and is 671 pixels long (the title is 68 characters, which fits); the meta description of 849 of 1000 pixels is perfect; status 200, canonical and the robots tag index, follow are the same as in curl; Page quality 95 %; other tips are alt attributes, duplicate heading texts and external links. The Additional markup check of this site was not read separately. Ranking Checker: keyword ai tool reviews, domain of the first site of our own, Google.com desktop: Position and Visibility are a dash (not in the top 100, which fits the small Google index of the site), Search volume 90, Competition 9 % and CPC $1.29. Then the limit was reached. Plans, read up to the trial buttons on the pricing page (euro, plus VAT, nothing clicked, nothing filled in): monthly Premium 59.90 €, Professional 99.90 € and Agency 209.90 € a month after a 14-day free trial; with Pay annually (Save 20 %) 575.04 € (was 718.80), 959.04 € (was 1,198.80) and 2,015.04 € (was 2,518.80) a year. Basic is Free forever, 1 website project, 10 keywords tracked, 5 daily tool credits, a limited Website Audit, 100 pages per crawl and Track 3 AI prompts. The pricing page says the contract is automatically renewed for another month at the end of each month and can be cancelled anytime without a cancelation period. Deviations from the dossier: the amounts in euro and the numbers of projects, pages and keywords (3 / 25,000 / 300; 7 / 50,000 / 700; 20 / 100,000 / 2,000), the extra project price (4.90 to 14.90) and the 100 extra keywords (6.90 to 10.90) match the dossier word for word. The pricing page also lists AI Visibility Tracking (Beta) (Premium 15 prompts on 1 platform, Professional 50, Agency 250; add-ons of 25 prompts for 19.90 and 100 prompts for 39.90), standalone tool requests per day (50, 100, 200), Member Accounts up to 3 for Premium and Track 3 AI prompts in Basic; the dossier has none of these and does not mention the daily tool limit (3 without an account, 5 on Basic). The checker page shows the same plans in US dollars and says on the trial button that it automatically renews to the monthly Premium plan for $69.90 a month; the dossier names the 14-day free trial and cancel any time but not this automatic renewal on the checker page. The price fields of our pages are not touched. Checkout: NOT reached. No Try for free or Sign up now button was clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no account and no subscription. Not tested: an account, the Website Audit, the Basic audit, Rank Monitoring, backlink monitoring, uptime monitoring, AI Visibility Tracking, the PDF report, the MCP access, the trial and cancelling; the Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit was used up; and the groups Small and mid-size businesses with a few sites and Teams that need many keywords tracked daily. Clean up: there is no account and there is no test data. The own tab was closed; only essential cookies were accepted.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Without an account you get only 3 checks a day, shared between the tools, and the start screen first says 0 checks left although the check works. The checker did not see 3 JSON-LD blocks and said No additional page markup was found, it counted decorative favicons with an empty alt text as missing alt attributes, and it said nothing about whether Google has the page. The checker page shows dollar prices while the pricing page is in euro, and the trial button says it renews automatically to the monthly Premium plan.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "An account, the Website Audit, Rank Monitoring, backlink and uptime monitoring, AI Visibility Tracking, the PDF report and MCP.",
+     "The Backlink Checker, Keyword Checker, Keyword Research and the TF*IDF tool, because the daily limit of 3 checks without an account was used up.",
+     "The groups small and mid-size businesses with a few sites and teams that need many keywords tracked daily.",
+     "Checkout, the free trial and cancelling.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 10:23 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Klap",
    "product_id": "klap",
    "run_date": "2026-10-29",
@@ -3694,6 +3904,233 @@
      "No separate SRT, transcript or editable project export was offered in the download routes inspected."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Systeme.io",
+   "product_id": "systeme-io",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the Free plan of Systeme.io in a new workspace of Daan (an earlier attempt had stopped on a 403 page). A funnel from a template with a changed headline was ready in about 6 minutes, and an automation rule (form subscribed, add a tag) and a course with a module and a lecture were made quickly. The 18 templates are generic website templates with lorem ipsum, none for an e-book or opt-in; a new funnel is Active and public at once on the default subdomain, and the Free plan shows Powered by systeme.io. The opt-in with a made-up address was refused because its domain has no MX or A record, so no contact was tested, and a campaign cannot be made without a sender address, so no email was tested. The prices match the dossier; the dossier does not list several Free limits (1 tag, 1 pipeline, 1 workflow, 1 website, 1 blog, 15 funnel steps, 0 evergreen webinars, 1 custom domain, a sales revenue limit of 10000 USD), and the rule and tag counters were used up after one opt-in flow. The test funnel, course and tag were deleted. No plan was bought. Account and start: an account existed (created by Daan) and the test ran in a new workspace of Daan on the Free plan, in our own tab of his browser. An earlier attempt the same morning had stopped: the dashboard then gave 403 Forbidden because the account had only an affiliate profile and no business workspace; nothing was created in that attempt and the affiliate dashboard was not touched. The test described here started at 11:09 and ended at about 11:45 on the dashboard of the new workspace (menus Dashboard, CRM, Sites, Emails, SMS, Automations, Assets, Sales). The interface was first in Dutch and was switched to English through the language button at the top right; at the end it was set back to Dutch (the last click was not checked on screen). The dashboard showed 1 new lead in total, which was not touched. Core action: the funnel. Sites, Funnels, Create opens one dialog (name, funnel domain on the default subdomain, four cards Build an audience, Sell, Custom and Run an evergreen webinar, currency). The card Build an audience was chosen with the name Test Co E-book Opt-in and the result was a funnel with two steps, Opt-in page and Thank You / Download Page. The funnel was at once Active, so it was public on the default subdomain with no publish step. The template step shows 9 templates a page on 2 pages: generic website templates for a non-profit, a law firm, a museum and a pet clinic, full of lorem ipsum, and none for an e-book, an opt-in magnet or a sales page; the first one was used because it has an email field and a button. The editor opens in the same tab in about 3 seconds; the headline was changed to Get the free Test Co e-book (triple click, type, Save) and that worked at once. The public page shows the fixed badge Powered by systeme.io at the bottom right and Built with systeme.io in the footer on the Free plan; whether a paid plan removes them was not tested. The button View funnel step opens a new tab and was not clicked; the page was opened by address in our own tab. Opt-in: a placeholder address on the example.com domain was typed in and the field turned red with This email address is invalid and can't receive emails because its domain lacks a valid MX or A DNS record. So the form checks the email domain for real, which is good, but it also means a made-up address cannot be used for a test. The opt-in was skipped and no contact was added. Automation: Automation Rules, Add rule, trigger Funnel step form subscribed (funnel and step filled in), action Add a tag, with the new tag ebook-optin, Save rule; the rule then shows as Active. Other actions are Subscribe to campaign, Send email, Send email to a specific email address, Send SMS, Add tag, Remove tag and Add to a pipeline stage; the triggers are Funnel step form subscribed and Page visited. Email: Emails, Campaigns, Create asks for a Name, a Sender email address (required) and a Description. The sender list said nothing here yet and No options, with a link to add and verify a new email address. That was a blocker: adding a sender means typing a real address and verifying it, which was not done. No campaign and no newsletter was made or sent. Course: Assets, Courses, Create (Add a new course: Name, Domain, URL Path, Color theme). The course Test Co Mini Course was made with Module 1 and the lecture Lesson 1: Welcome (2 lecture templates, Delay before unlock 0). It stayed Inactive. Time to the first result (a funnel from a template with a changed headline): about 6 minutes and more than 7 steps. Screens loaded in 2 to 4 seconds. Plans, read on Settings, Billing, My plan (nothing was clicked on Upgrade plan): Free $0 a month (current plan), Startup $17, Webinar $47 and Unlimited $97 a month, with a Monthly and Yearly switch that says 2 months free. Limits per plan (Free, Startup, Webinar, Unlimited): contacts 2000, 5000, 10000, Unlimited; tags 1, 10, 100, Unlimited; calendar events 1, 5, 20, Unlimited; pipelines 1, 5, 20, Unlimited; automation rules 1, 10, 100, Unlimited; workflows 1, 5, 20, Unlimited; sales funnels 3, 10, 50, Unlimited; funnel steps 15, 50, 300, Unlimited; evergreen webinars 0, 0, 10, Unlimited; A/B tests 1, 10, 50, Unlimited; one-click upsells 1, 10, 100, Unlimited; order bumps 1, 10, 100, Unlimited; websites 1, 5, 20, Unlimited; languages per website 2, Unlimited, Unlimited, Unlimited; blogs 1, 5, 20, Unlimited; custom domains 1, 3, 10, Unlimited; campaigns 1, 10, 100, Unlimited; link in bio 1, 3, 10, Unlimited; link in bio products 3, 15, 50, Unlimited; physical product variants 50, 100, 250, Unlimited; coupon codes 1, 10, 50, Unlimited; sales revenue limit 10000 USD, then Unlimited; courses 1, 5, 20, Unlimited; students 500, Unlimited, Unlimited, Unlimited; communities 1, 5, 20, Unlimited. After one simple opt-in flow the Free counters for automation rules (1/1) and tags (1/1) were already used up. Deviations from the dossier: the prices ($0, $17, $47, $97), the contacts, funnels and courses per plan, the 2 months free on yearly payment and the Free allowance of 1 automation rule, 1 email campaign and 500 students match. The dossier does not list the other Free limits: 1 tag, 1 pipeline, 1 workflow, 1 A/B test, 1 website, 1 blog, 1 custom domain, a sales revenue limit of 10000 USD, 15 funnel steps and 0 evergreen webinars. The claim of unlimited email sends could not be tested because no sender could be added. The price fields of our pages are not touched. Checkout: NOT reached. No Upgrade plan button was clicked, so no tax, total, card or payment screen was seen. Cancelling: the account is on the Free plan with no subscription, and the account was not deleted. Not tested: an opt-in with a real address, a contact in the list, writing or sending an email or a campaign (a sender is needed), Newsletters, evergreen webinars, paid functions, an own domain, Stripe and PayPal, integrations, the affiliate dashboard (not touched), and the group Growing lists between 5,000 and 10,000 contacts. Clean up: the funnel Test Co E-book Opt-in (with its rule) was deleted and confirmed, and its public address then gave 404; the course Test Co Mini Course (with module and lecture) and the tag ebook-optin were deleted. No test contact, no campaign and no email exist. The tab was closed; the account and the existing contact of Daan (1 of 2000) were not touched.",
+   "findings": [
+    "Text we checked: \"1 automation rule, 1 email campaign and 500 students\". What we saw: The My plan page shows 1 automation rule, 1 campaign and 500 students on Free, as the dossier says; after one simple opt-in flow the counters for automation rules (1/1) and tags (1/1) were already used up, so a second rule or a second tag needs a paid plan.",
+    "Text we checked: \"Sales revenue limit 10000 USD\". What we saw: The Free plan also has 1 tag, 1 pipeline, 1 workflow, 1 A/B test, 1 website, 1 blog, 1 custom domain, 15 funnel steps, 0 evergreen webinars and a sales revenue limit of 10000 USD; the dossier lists none of these.",
+    "Text we checked: \"Startup $17/month\". What we saw: The My plan page shows Free $0, Startup $17, Webinar $47 and Unlimited $97 a month, with contacts of 2000, 5000, 10000 and Unlimited and funnels of 3, 10, 50 and Unlimited; these match the dossier."
+   ],
+   "not_tested": [
+    "An opt-in with a real address, a contact in the list, writing or sending an email, a campaign or a newsletter (a sender address is needed).",
+    "Evergreen webinars, paid functions, an own domain, Stripe and PayPal and integrations.",
+    "The affiliate dashboard, which was not touched.",
+    "The group growing lists between 5,000 and 10,000 contacts.",
+    "Checkout, a paid plan and cancelling.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:09 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Funnel \"Test Co E-book Opt-in\" created",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "A funnel from the Build an audience card was created in one dialog with two steps (Opt-in page and Thank You / Download Page) and was Active at once, so it was public on the default subdomain with no publish step; the test funnel was deleted afterwards and its address then gave 404.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "A behaviour seen once on one funnel against no stored claim about publishing; the public address was opened in our own tab.",
+     "status": "not_comparable",
+     "buying_consequence": "A test funnel is live to anyone with the address from the moment it is made, so a half finished page can be seen.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Volunteer in your Community",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The template step shows 9 templates a page on 2 pages, all generic website templates for a non-profit, a law firm, a museum or a pet clinic with lorem ipsum; none is made for an e-book, an opt-in magnet or a sales page, so the first one with an email field was rebuilt by hand.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "The template list seen on one day against no stored claim about templates; the headline change in the editor took one Save.",
+     "status": "not_comparable",
+     "buying_consequence": "A creator who wants a fast opt-in page has to rebuild a website template, which takes longer than the dialog suggests.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This email address is invalid and can't receive emails because its domain lacks a valid MX or A DNS record.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The opt-in form refused a placeholder address on the example.com domain with this message, so the form checks the domain of an email address; no contact was added and no opt-in flow could be run with a made-up address.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "One refused address seen in the public form; no stored claim about email validation exists.",
+     "status": "not_comparable",
+     "buying_consequence": "Real validation keeps bad addresses out of the list, but a test needs a real address.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Sender email address *",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Create campaign dialog has a required Sender email address with no options and a link to add and verify a new address, so no campaign could be made without typing and verifying a real address, which was not done.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "The form seen once on the Free plan against no stored claim about the first email; no sender was added.",
+     "status": "not_comparable",
+     "buying_consequence": "Before the first email a verified sender address is needed, so the first newsletter takes extra time.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 automation rule, 1 email campaign and 500 students",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The My plan page shows 1 automation rule, 1 campaign and 500 students on Free, as the dossier says; after one simple opt-in flow the counters for automation rules (1/1) and tags (1/1) were already used up, so a second rule or a second tag needs a paid plan.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "The dossier allowance against the counters on the My plan page; the behaviour at the limit was not tested.",
+     "status": "confirmed",
+     "buying_consequence": "The Free allowance fits one simple flow only: one rule, one tag and one campaign.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Sales revenue limit 10000 USD",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Free plan also has 1 tag, 1 pipeline, 1 workflow, 1 A/B test, 1 website, 1 blog, 1 custom domain, 15 funnel steps, 0 evergreen webinars and a sales revenue limit of 10000 USD; the dossier lists none of these.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "The dossier Free limits against the My plan table of 18 November; no limit was tested beyond reading the counters.",
+     "status": "contradicted",
+     "buying_consequence": "The Free limits in the dossier are incomplete: a sales revenue cap and a single website, blog, tag and rule shape what a beginner can build.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Add a new course",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "A course with a module and a lecture was made in a few clicks (Name, Domain, URL Path, Color theme), with Delay before unlock 0 and the course Inactive until published.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "One course made in our own tab against no stored claim about course setup time; the course was deleted afterwards.",
+     "status": "not_comparable",
+     "buying_consequence": "Setting up a first course is quick and clear, with a lecture template ready.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "unlimited email sends",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The claim of unlimited email sends could not be tested: a campaign needs a verified sender address and none was added, so no email was composed or sent.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "A dossier claim against a campaign that could not be created; nothing was sent.",
+     "status": "not_testable",
+     "buying_consequence": "It is not confirmed how many emails the Free plan can send.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Startup $17/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The My plan page shows Free $0, Startup $17, Webinar $47 and Unlimited $97 a month, with contacts of 2000, 5000, 10000 and Unlimited and funnels of 3, 10, 50 and Unlimited; these match the dossier.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "The dossier prices and limits against the My plan page in dollars on the monthly view.",
+     "status": "confirmed",
+     "buying_consequence": "The plan prices and the main limits in the dossier are right.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Monthly / Yearly 2 months free",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The My plan page has a Monthly and Yearly switch that says 2 months free, but no Upgrade plan button was clicked, so no yearly amount, tax, total or payment screen was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/systeme-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the My plan page was read without clicking an upgrade button",
+     "comparability": "The plan page price against a checkout that was not reached; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The final amount with tax and the yearly price are not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the Free plan of Systeme.io in a new workspace of Daan (an earlier attempt had stopped on a 403 page). A funnel from a template with a changed headline was ready in about 6 minutes, and an automation rule (form subscribed, add a tag) and a course with a module and a lecture were made quickly. The 18 templates are generic website templates with lorem ipsum, none for an e-book or opt-in; a new funnel is Active and public at once on the default subdomain, and the Free plan shows Powered by systeme.io. The opt-in with a made-up address was refused because its domain has no MX or A record, so no contact was tested, and a campaign cannot be made without a sender address, so no email was tested. The prices match the dossier; the dossier does not list several Free limits (1 tag, 1 pipeline, 1 workflow, 1 website, 1 blog, 15 funnel steps, 0 evergreen webinars, 1 custom domain, a sales revenue limit of 10000 USD), and the rule and tag counters were used up after one opt-in flow. The test funnel, course and tag were deleted. No plan was bought. Account and start: an account existed (created by Daan) and the test ran in a new workspace of Daan on the Free plan, in our own tab of his browser. An earlier attempt the same morning had stopped: the dashboard then gave 403 Forbidden because the account had only an affiliate profile and no business workspace; nothing was created in that attempt and the affiliate dashboard was not touched. The test described here started at 11:09 and ended at about 11:45 on the dashboard of the new workspace (menus Dashboard, CRM, Sites, Emails, SMS, Automations, Assets, Sales). The interface was first in Dutch and was switched to English through the language button at the top right; at the end it was set back to Dutch (the last click was not checked on screen). The dashboard showed 1 new lead in total, which was not touched. The dossier name is Systeme.io and the review is on MSS (systeme-io-review); the handson folder and the review slug are the same. Core action: the funnel. Sites, Funnels, Create opens one dialog (name, funnel domain on the default subdomain, four cards Build an audience, Sell, Custom and Run an evergreen webinar, currency). The card Build an audience was chosen with the name Test Co E-book Opt-in and the result was a funnel with two steps, Opt-in page and Thank You / Download Page. The funnel was at once Active, so it was public on the default subdomain with no publish step. The template step shows 9 templates a page on 2 pages: generic website templates for a non-profit, a law firm, a museum and a pet clinic, full of lorem ipsum, and none for an e-book, an opt-in magnet or a sales page; the first one was used because it has an email field and a button. The editor opens in the same tab in about 3 seconds; the headline was changed to Get the free Test Co e-book (triple click, type, Save) and that worked at once. The public page shows the fixed badge Powered by systeme.io at the bottom right and Built with systeme.io in the footer on the Free plan; whether a paid plan removes them was not tested. The button View funnel step opens a new tab and was not clicked; the page was opened by address in our own tab. Opt-in: a placeholder address on the example.com domain was typed in and the field turned red with This email address is invalid and can't receive emails because its domain lacks a valid MX or A DNS record. So the form checks the email domain for real, which is good, but it also means a made-up address cannot be used for a test. The opt-in was skipped and no contact was added. Automation: Automation Rules, Add rule, trigger Funnel step form subscribed (funnel and step filled in), action Add a tag, with the new tag ebook-optin, Save rule; the rule then shows as Active. Other actions are Subscribe to campaign, Send email, Send email to a specific email address, Send SMS, Add tag, Remove tag and Add to a pipeline stage; the triggers are Funnel step form subscribed and Page visited. Email: Emails, Campaigns, Create asks for a Name, a Sender email address (required) and a Description. The sender list said nothing here yet and No options, with a link to add and verify a new email address. That was a blocker: adding a sender means typing a real address and verifying it, which was not done. No campaign and no newsletter was made or sent. Course: Assets, Courses, Create (Add a new course: Name, Domain, URL Path, Color theme). The course Test Co Mini Course was made with Module 1 and the lecture Lesson 1: Welcome (2 lecture templates, Delay before unlock 0). It stayed Inactive. Time to the first result (a funnel from a template with a changed headline): about 6 minutes and more than 7 steps. Screens loaded in 2 to 4 seconds. Plans, read on Settings, Billing, My plan (nothing was clicked on Upgrade plan): Free $0 a month (current plan), Startup $17, Webinar $47 and Unlimited $97 a month, with a Monthly and Yearly switch that says 2 months free. Limits per plan (Free, Startup, Webinar, Unlimited): contacts 2000, 5000, 10000, Unlimited; tags 1, 10, 100, Unlimited; calendar events 1, 5, 20, Unlimited; pipelines 1, 5, 20, Unlimited; automation rules 1, 10, 100, Unlimited; workflows 1, 5, 20, Unlimited; sales funnels 3, 10, 50, Unlimited; funnel steps 15, 50, 300, Unlimited; evergreen webinars 0, 0, 10, Unlimited; A/B tests 1, 10, 50, Unlimited; one-click upsells 1, 10, 100, Unlimited; order bumps 1, 10, 100, Unlimited; websites 1, 5, 20, Unlimited; languages per website 2, Unlimited, Unlimited, Unlimited; blogs 1, 5, 20, Unlimited; custom domains 1, 3, 10, Unlimited; campaigns 1, 10, 100, Unlimited; link in bio 1, 3, 10, Unlimited; link in bio products 3, 15, 50, Unlimited; physical product variants 50, 100, 250, Unlimited; coupon codes 1, 10, 50, Unlimited; sales revenue limit 10000 USD, then Unlimited; courses 1, 5, 20, Unlimited; students 500, Unlimited, Unlimited, Unlimited; communities 1, 5, 20, Unlimited. After one simple opt-in flow the Free counters for automation rules (1/1) and tags (1/1) were already used up. Deviations from the dossier: the prices ($0, $17, $47, $97), the contacts, funnels and courses per plan, the 2 months free on yearly payment and the Free allowance of 1 automation rule, 1 email campaign and 500 students match. The dossier does not list the other Free limits: 1 tag, 1 pipeline, 1 workflow, 1 A/B test, 1 website, 1 blog, 1 custom domain, a sales revenue limit of 10000 USD, 15 funnel steps and 0 evergreen webinars. The claim of unlimited email sends could not be tested because no sender could be added. The price fields of our pages are not touched. Checkout: NOT reached. No Upgrade plan button was clicked, so no tax, total, card or payment screen was seen. Cancelling: the account is on the Free plan with no subscription, and the account was not deleted. Not tested: an opt-in with a real address, a contact in the list, writing or sending an email or a campaign (a sender is needed), Newsletters, evergreen webinars, paid functions, an own domain, Stripe and PayPal, integrations, the affiliate dashboard (not touched), and the group Growing lists between 5,000 and 10,000 contacts. Clean up: the funnel Test Co E-book Opt-in (with its rule) was deleted and confirmed, and its public address then gave 404; the course Test Co Mini Course (with module and lecture) and the tag ebook-optin were deleted. No test contact, no campaign and no email exist. The tab was closed; the account and the existing contact of Daan (1 of 2000) were not touched.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The templates are generic website templates with lorem ipsum, none for an e-book or opt-in, so you have to rebuild one yourself. A new funnel is Active at once and public on the default subdomain with no publish step. The Free plan shows Powered by systeme.io. The rule and tag counters (1 of 1) were used up after one simple opt-in flow, so a welcome series and a second segment do not fit, and a campaign needs a verified sender address before it can be made. The opt-in refuses a made-up address.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "An opt-in with a real address, a contact in the list, writing or sending an email, a campaign or a newsletter (a sender address is needed).",
+     "Evergreen webinars, paid functions, an own domain, Stripe and PayPal and integrations.",
+     "The affiliate dashboard, which was not touched.",
+     "The group growing lists between 5,000 and 10,000 contacts.",
+     "Checkout, a paid plan and cancelling.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:09 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },
@@ -5505,6 +5942,250 @@
      "Emails, the enterprise demo and the extra Klaviyo option.",
      "Export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 13:11 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "LinkShortener.io",
+   "product_id": "linkshortener-io",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested LinkShortener.io in the existing free account of Daan: two short links to our own sites were made in about a minute and 4 steps; curl showed a direct 302 with the right target in 0.12 to 0.23 seconds, with no interstitial page and no advertisement; a browser click showed in the statistics after about 10 seconds while curl requests were not counted; UTM fields and a QR code per link work on Free. On Free there is no own slug, editing an existing link is behind Upgrade and custom domain, password and social preview are paid; changing the destination of a short link needs Pro. The prices match the dossier, and the app also lists two plans of $6. Deleting the test links gave a server error, so they are still active. No plan was bought. Account and start: the test used the existing LinkShortener.io account of Daan on the Free plan, with the interface in English (no language setting was found). The test started at 09:48:53. The onboarding (Set up your links the correct way) asked 3 questions, each with a Pro option and a free option (a branded domain, an email when a link breaks, a branded QR code); the free options were chosen (the short domain of the service, You check your links yourself, Plain QR codes, with our name under them), and the page ended with the line Pro adds all three, for $34 a month. Start Pro, which was not clicked. The business name field was filled with the name of Daan and was changed to Test Co. Core action: two short links were made, to two of our own sites. The first link was made in about 1 minute and 4 steps (name, destination, UTM fields, Create) and got a short link on the shared short domain of the service. The UTM fields (Source, Medium, Campaign, Term, Content) work on Free, with the text To make use of Google Analytics, the Source, Medium, and Campaign parameters are required.; the UTM table on the link page stayed empty, but the redirect did add the parameter. Redirect check with curl -I: HTTP/2 302 with the right Location (including the UTM parameter on the first link), cache-control no-store, in 0.12 to 0.23 seconds; there is no interstitial page and no advertisement (a direct 302 through Cloudflare). Click statistics: 3 curl requests were NOT counted (filtered as bots); the first browser visit at 09:50:02 showed as 1 click (This Week 1, All Clicks 1) about 10 seconds later, a second visit made it 2, and the second link also showed 1. The country map said No country data available at first and then showed a map; per country and device reports were not checked because the visits came from one browser. Limits on Free: the Random path switch cannot be turned off on Free, so there is no own slug (URL Customisation is Pro); custom domain, country and device redirects are marked Paid feature, and the form shows expiry, password, social preview, time-based redirects and open in app as paid options; the Edit button on an existing link carries the label Upgrade. Every link has a black and white QR code with Download PNG and Download SVG, no logo; the separate QR list was empty (No records found) and no separate QR was made, because it uses the same allowance. The account page says Links and QR Codes remaining: 20/20 (Refreshing in 4 weeks from now) and You have reached your custom domain limit. Plans, read up to the payment step on the Plans page (US dollars, nothing filled in): Free $0 (20 links or QR codes per month, UTM Builder, Basic Analytics); Basic $13 a month ($10.83 a month yearly, Billed annually: $130 a year; 350 links or QR codes, 1 custom domain, edit the destination of a QR code); Pro $34 ($340 a year; 2,000, 3 custom domains, URL Customisation, edit the destination of a short link, broken link checker); Elite $260 ($2,600 a year; 5,000, 10 custom domains); QR code only $6 (20 QR codes per month); Link in bio only $6; Enterprise on request (10,000). The banner says 12 months for the price of 10. Deviations from the dossier: the prices and allowances of Free, Basic, Pro and Elite match. The dossier text says a Free plan and three paid plans; the app also lists two plans of $6 (QR code only and Link in bio only) and Enterprise on request. Basic may change only the destination of a QR code, and changing the destination of a short link needs Pro. The price fields of our pages are not touched. Checkout: NOT reached. No Upgrade or Start Pro button was clicked, so no tax, total or payment screen was seen. Cancelling: Free, no subscription, so nothing to cancel. Not tested: an own domain (not allowed), the paid plans, what happens at 20 of 20, reports per country and device (the map was empty for visits from one browser), the broken link checker, Link in bio, Bulk CSV import and the migration tool. Clean up: the bulk action Delete selected Links gave 500 SERVER ERROR and a second try did nothing visible; the Active switch on the link page could not be operated. So both test links are still active (they redirect to our own sites and were shared nowhere). The business name is now Test Co. All tabs were closed.",
+   "findings": [
+    "Text we checked: \"Links and QR Codes remaining: 20/20\". What we saw: The account page shows 20 links or QR codes a month on Free, as the dossier says; the counter read 20/20 after two links were made, so whether it counts down was not checked, and the behaviour at the limit was not tested.",
+    "Text we checked: \"You have reached your custom domain limit\". What we saw: The Free plan has no custom domain: the account says the custom domain limit is reached, the menu item Custom Domains carries an Upgrade label and the form marks custom domain as a paid feature.",
+    "Text we checked: \"UTM Builder\". What we saw: The UTM fields (Source, Medium, Campaign, Term, Content) work on Free and the redirect adds the parameter, although the UTM table on the link page stayed empty.",
+    "Text we checked: \"QR code only $6\". What we saw: Besides Free, Basic, Pro and Elite the Plans page lists QR code only at $6 (20 QR codes a month), Link in bio only at $6 and Enterprise on request (10,000); the dossier mentions a Free plan and three paid plans.",
+    "Text we checked: \"Billed annually: $130 a year\". What we saw: Basic is $13 a month or $130 a year, Pro $34 or $340, and Elite $260 or $2,600, with 350, 2,000 and 5,000 links or QR codes and 1, 3 and 10 custom domains; this matches the dossier prices and allowances. The banner says 12 months for the price of 10."
+   ],
+   "not_tested": [
+    "An own domain (not allowed), the paid plans and what happens at 20 of 20.",
+    "Reports per country and device, the broken link checker, Link in bio, Bulk CSV import and the migration tool.",
+    "Sign-up, which was done earlier by Daan.",
+    "Checkout and a paid plan.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:48 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Links and QR Codes remaining: 20/20",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The account page shows 20 links or QR codes a month on Free, as the dossier says; the counter read 20/20 after two links were made, so whether it counts down was not checked, and the behaviour at the limit was not tested.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "The dossier allowance against the counter text and the Free plan card; the limit itself was not reached.",
+     "status": "confirmed",
+     "buying_consequence": "The Free allowance is small: 20 links or QR codes a month, shared.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You have reached your custom domain limit.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Free plan has no custom domain: the account says the custom domain limit is reached, the menu item Custom Domains carries an Upgrade label and the form marks custom domain as a paid feature.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "The dossier knock about a custom domain against the account text and the menu; a custom domain was not set up.",
+     "status": "confirmed",
+     "buying_consequence": "Branded short links on your own domain need a paid plan, so Free links use the shared short domain of the service.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "HTTP/2 302",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "curl -I on both short links gave HTTP/2 302 with the right Location (with the UTM parameter on the first), no-store caching, in 0.12 to 0.23 seconds, with no interstitial page and no advertisement.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "A measured redirect against no stored claim about speed or interstitials; three requests from one location on one day.",
+     "status": "not_comparable",
+     "buying_consequence": "The redirect is fast and clean on Free, with no page in between.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This Week 1, All Clicks 1",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The first browser visit showed as 1 click about 10 seconds later and the second made it 2; three curl requests were not counted, so bots seem filtered. Country and device reports were not checked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "Two browser visits and three curl requests on two links; no stored claim about click counting exists and the dossier says only click reports.",
+     "status": "not_comparable",
+     "buying_consequence": "Click counts follow real browser visits quickly, but the reports by country and device were not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "UTM Builder",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The UTM fields (Source, Medium, Campaign, Term, Content) work on Free and the redirect adds the parameter, although the UTM table on the link page stayed empty.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "The Free plan line UTM Builder against a redirect checked with curl on one link; the empty table was not explained.",
+     "status": "confirmed",
+     "buying_consequence": "Campaign tagging is included in the free plan.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Random path",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "On Free the Random path switch cannot be turned off, so no own slug can be chosen; URL Customisation is a Pro feature.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "A form setting seen on one Free account; no stored claim about own slugs exists.",
+     "status": "not_comparable",
+     "buying_consequence": "Short links on Free cannot carry a readable name.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Paid feature",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Custom domain, country and device redirects, expiry, password, social preview, time-based redirects and open in app are paid; the Edit button on an existing link carries the label Upgrade. Basic can change only the destination of a QR code, and changing the destination of a short link needs Pro.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "Labels in the app and on the Plans page against no stored claim; no paid plan was used.",
+     "status": "not_comparable",
+     "buying_consequence": "A wrong destination on a short link cannot be corrected on Free or Basic.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "QR code only $6",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Besides Free, Basic, Pro and Elite the Plans page lists QR code only at $6 (20 QR codes a month), Link in bio only at $6 and Enterprise on request (10,000); the dossier mentions a Free plan and three paid plans.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "The dossier plan count against the Plans page of 18 November; the $6 plans were not opened.",
+     "status": "contradicted",
+     "buying_consequence": "There are cheaper single purpose plans that the dossier does not show.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Billed annually: $130 a year",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Basic is $13 a month or $130 a year, Pro $34 or $340, and Elite $260 or $2,600, with 350, 2,000 and 5,000 links or QR codes and 1, 3 and 10 custom domains; this matches the dossier prices and allowances. The banner says 12 months for the price of 10.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "The dossier prices against the Plans page in US dollars on the monthly and yearly toggles; currencies GBP and EUR were not read.",
+     "status": "confirmed",
+     "buying_consequence": "Paying yearly saves two months on each paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "500 SERVER ERROR",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The bulk action Delete selected Links gave a 500 server error, a second try did nothing visible and the Active switch could not be operated, so both test links are still active.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "An error seen once in one session; no stored claim about deleting exists and the cause is not known.",
+     "status": "not_comparable",
+     "buying_consequence": "Removing a link may fail, so a wrong or test link may stay live.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro adds all three, for $34 a month. Start Pro",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Plans page and the onboarding show the paid prices, but no Upgrade or Start Pro button was clicked, so no tax, total or payment screen was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/linkshortener-io-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Plans page was read without clicking an upgrade button",
+     "comparability": "The Plans page price against a checkout that was not reached; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The final amount with tax is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested LinkShortener.io in the existing free account of Daan: two short links to our own sites were made in about a minute and 4 steps; curl showed a direct 302 with the right target in 0.12 to 0.23 seconds, with no interstitial page and no advertisement; a browser click showed in the statistics after about 10 seconds while curl requests were not counted; UTM fields and a QR code per link work on Free. On Free there is no own slug, editing an existing link is behind Upgrade and custom domain, password and social preview are paid; changing the destination of a short link needs Pro. The prices match the dossier, and the app also lists two plans of $6. Deleting the test links gave a server error, so they are still active. No plan was bought. Account and start: the test used the existing LinkShortener.io account of Daan on the Free plan, with the interface in English (no language setting was found). The test started at 09:48:53. The onboarding (Set up your links the correct way) asked 3 questions, each with a Pro option and a free option (a branded domain, an email when a link breaks, a branded QR code); the free options were chosen (the short domain of the service, You check your links yourself, Plain QR codes, with our name under them), and the page ended with the line Pro adds all three, for $34 a month. Start Pro, which was not clicked. The business name field was filled with the name of Daan and was changed to Test Co. The dossier name is LinkShortener.io and the review is on MSS (linkshortener-io-review); the handson folder is linkshortener. Core action: two short links were made, to two of our own sites. The first link was made in about 1 minute and 4 steps (name, destination, UTM fields, Create) and got a short link on the shared short domain of the service. The UTM fields (Source, Medium, Campaign, Term, Content) work on Free, with the text To make use of Google Analytics, the Source, Medium, and Campaign parameters are required.; the UTM table on the link page stayed empty, but the redirect did add the parameter. Redirect check with curl -I: HTTP/2 302 with the right Location (including the UTM parameter on the first link), cache-control no-store, in 0.12 to 0.23 seconds; there is no interstitial page and no advertisement (a direct 302 through Cloudflare). Click statistics: 3 curl requests were NOT counted (filtered as bots); the first browser visit at 09:50:02 showed as 1 click (This Week 1, All Clicks 1) about 10 seconds later, a second visit made it 2, and the second link also showed 1. The country map said No country data available at first and then showed a map; per country and device reports were not checked because the visits came from one browser. Limits on Free: the Random path switch cannot be turned off on Free, so there is no own slug (URL Customisation is Pro); custom domain, country and device redirects are marked Paid feature, and the form shows expiry, password, social preview, time-based redirects and open in app as paid options; the Edit button on an existing link carries the label Upgrade. Every link has a black and white QR code with Download PNG and Download SVG, no logo; the separate QR list was empty (No records found) and no separate QR was made, because it uses the same allowance. The account page says Links and QR Codes remaining: 20/20 (Refreshing in 4 weeks from now) and You have reached your custom domain limit. Plans, read up to the payment step on the Plans page (US dollars, nothing filled in): Free $0 (20 links or QR codes per month, UTM Builder, Basic Analytics); Basic $13 a month ($10.83 a month yearly, Billed annually: $130 a year; 350 links or QR codes, 1 custom domain, edit the destination of a QR code); Pro $34 ($340 a year; 2,000, 3 custom domains, URL Customisation, edit the destination of a short link, broken link checker); Elite $260 ($2,600 a year; 5,000, 10 custom domains); QR code only $6 (20 QR codes per month); Link in bio only $6; Enterprise on request (10,000). The banner says 12 months for the price of 10. Deviations from the dossier: the prices and allowances of Free, Basic, Pro and Elite match. The dossier text says a Free plan and three paid plans; the app also lists two plans of $6 (QR code only and Link in bio only) and Enterprise on request. Basic may change only the destination of a QR code, and changing the destination of a short link needs Pro. The price fields of our pages are not touched. Checkout: NOT reached. No Upgrade or Start Pro button was clicked, so no tax, total or payment screen was seen. Cancelling: Free, no subscription, so nothing to cancel. Not tested: an own domain (not allowed), the paid plans, what happens at 20 of 20, reports per country and device (the map was empty for visits from one browser), the broken link checker, Link in bio, Bulk CSV import and the migration tool. Clean up: the bulk action Delete selected Links gave 500 SERVER ERROR and a second try did nothing visible; the Active switch on the link page could not be operated. So both test links are still active (they redirect to our own sites and were shared nowhere). The business name is now Test Co. All tabs were closed.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "On Free the Random path switch cannot be turned off, so you cannot choose your own slug, and the Edit button on an existing link is behind Upgrade. Changing where a short link points needs Pro; Basic can change only the QR destination, so a mistake in the destination cannot be fixed on the cheaper plans. Deleting links gave a 500 server error, and the links stayed active. The app lists two plans of $6 that the dossier does not mention.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "An own domain (not allowed), the paid plans and what happens at 20 of 20.",
+     "Reports per country and device, the broken link checker, Link in bio, Bulk CSV import and the migration tool.",
+     "Sign-up, which was done earlier by Daan.",
+     "Checkout and a paid plan.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:48 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -10482,6 +11163,201 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "CiteRoute",
+   "product_id": "citeroute",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free GEO scan and the citation probe of CiteRoute on a site of our own, in the existing free account of Daan. The scan took about 3.5 minutes in 3 steps and gave 81/100 Strong technical readiness, although Google shows the site hardly at all. It reported 0 JSON-LD detected while the homepage has 3 JSON-LD blocks, and some tips are made up (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe gave Verified Citation three times on a question that contains the domain name, with n=1 per engine; Claude said it had no verified information and still got 92/100. The prices match the dossier; the dossier says CiteRoute does not measure citations while the app has a probe, and the scan page says rescans every 7 days while Free has daily re-scans struck through. The tracking tag and the AI bot log were not tested, because they need verification by meta tag or DNS. No plan was bought. Account and start: the test used the existing CiteRoute account of Daan, on the Free plan, with the interface in English (no language setting was found). The test started at 09:22 in our own tab. The My sites page showed FREE PLAN and No sites yet. Adding a site needs the CiteRoute Tag and a check of ownership with a meta tag or a DNS TXT record, and the page says that CiteRoute verifies that you control the domain before adding it. That was NOT done, so the tracking tag and the AI bot log were not tested. The scanned site is a site of our own; its domain is not named in this delivery. Core action: the GEO Scanner (the audit page) works without verification. The domain of our own site was typed in at 09:23, the scan was started, and the result came after about 3.5 minutes (the progress bar stayed at 98% for a long time). It took 3 steps: type the domain, start the scan, start the probe. Result: Technical Readiness Score 81 / 100, labelled Strong technical readiness, with sub scores Tabular and FAQ 77, Content depth 86, Schema 73 and Section hierarchy 88. The scan reported JSON-LD Schemas: 0 detected, 1 H1 and 31 H2, 4,703 words, 0 tables and 0 of 15 points for JSON-LD Schema.org declarations. Check of the scan with curl: the homepage has 3 application/ld+json blocks (Organization, WebSite with a SearchAction and an ItemList with 12 items), so 0 detected is wrong. The 0 tables is right; the llms.txt file exists (HTTP 200) and /.well-known/agent.json gives 404, as the scan says. The Schema sub score of 73/100 stands next to 0 of 15 points for JSON-LD, so the scores contradict each other. Google shows our own site hardly at all, so a label of Strong technical readiness is suspiciously optimistic; readiness is not visibility. The recommendations: add Organization, FAQPage and Dataset JSON-LD and a price table. The Organization example uses sameAs links to our own pages; the second patch example has a placeholder wikidata address ending in Q... and a made-up Crunchbase address; the agent.json example has a made-up endpoint /api/agent/catalog. One tip names the Dataset schema as the fix for HTML data tables and says Embed this JSON-LD on a table tip. These tips must not be copied blindly. The live citation probe (via OpenRouter, preset Brand Authority, no verification needed) asked What are the core capabilities and verified offerings of the domain of our own site; the question itself contains the domain name, so a mention is almost certain. Perplexity Sonar: 92/100, Verified Citation, 100% (n=1), 20 source URLs; the answer mostly fits our site. OpenAI GPT-4o Search: 92/100, Verified Citation, 1 source URL; the answer is a generic invention (pre-built AI applications). Anthropic Claude 3.5: 92/100, Verified Citation, while the answer says I don't have verified information about this site in my training data; it still counts as a citation because it named the URL. Google Gemini: 68/100, Brand Mention Only; the description is wrong (a no-code AI app marketplace). A citation on a question that contains the domain name proves nothing, and n=1 per engine is not a measurement. Deviation from the dossier: the dossier says CiteRoute does not promise or measure specific citations, while the app has a citation probe, with n=1 per engine; no guarantee was seen. Second, the scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan has Daily automated re-scans struck through and Pro has them. Plans, read up to the payment step: Free $0 forever (10 GEO scans per month, GEO Radar 1 monitored buyer prompt, 1-on-1 competitor comparison of 2 domains, 3 watchlist domains, community leaderboard, agent.json Studio, basic score report; struck through: Tracking tag and AI bot traffic detection, API key access, Daily automated re-scans, Weekly email performance digest); Pro $79 a month (unlimited GEO scans, GEO Radar 10 prompts 24/7, 5-way competitor benchmark, 1 verified site with tracking tag, 20 watchlist domains, an AI bot and crawler analytics dashboard, API key with 500 requests a day, history and trend charts, Start 14-day Trial, 14 days free, cancel anytime); Agency $249 a month, Most popular (10 verified client sites, white-label PDF, API 10,000 requests a day, 14 days free); Enterprise Custom. API pricing per call: geo-score $0.02, verify $0.01 and ai-traffic $0.05, and requests beyond the daily plan limits are billed at standard usage rates. The prices and the 14-day trial match the dossier. The Free limit of 10 scans a month was not tested (the counter is not visible on the scan page). No price field is changed here. Checkout: NOT reached. The Pro trial was not started and no payment screen was seen. Cancelling: Free has no subscription. The account menu has API Keys, Third-Party AI Keys and Sign Out, and no button for deleting the account or cancelling a plan; the FAQ says you can upgrade, downgrade or cancel (text cut off). No site was added, so nothing had to be removed. Not tested: the tracking tag and the AI bot log (Pro, 1 verified site; they need verification by meta tag or DNS and a script on the site, which was not allowed), so the dossier group of founders running a single content site is not tested; also API keys, the watchlist, the white-label PDF, share, export, GEO Radar, competitor comparison and Third-Party AI Keys (links external accounts). Clean up: all own tabs were closed; no test site, no script, no DNS or meta change and no external link were made. The scan stays in the Score History of the account of Daan; the watchlist was not touched.",
+   "findings": [
+    "Text we checked: \"does not promise or measure specific citations\". What we saw: The dossier says CiteRoute does not promise or measure specific citations, but the app has a live citation probe through OpenRouter with an observed citation rate of 100% (n=1) per engine. No guarantee of citations was seen.",
+    "Text we checked: \"JSON-LD Schemas: 0 detected\". What we saw: The scan says 0 JSON-LD detected, but a curl of the homepage shows 3 application/ld+json blocks (Organization, WebSite with a SearchAction, ItemList with 12 items). The Schema score of 73/100 stands next to 0 of 15 points for JSON-LD.",
+    "Text we checked: \"Verified Citation\". What we saw: Three engines (Perplexity, GPT-4o Search and Claude) got 92/100 Verified Citation with n=1 on a question that contains the domain name; Claude answered I don't have verified information and the GPT-4o answer was an invention.",
+    "Text we checked: \"Daily automated re-scans\". What we saw: The scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan lists Daily automated re-scans as struck through and Pro includes them.",
+    "Text we checked: \"Tracking tag & AI bot traffic detection\". What we saw: The Free plan shows the tracking tag and AI bot traffic detection as struck through, as the dossier says for scoring only; adding a site needs a tag and DNS or meta verification, which was not done, so the feature itself was not tried."
+   ],
+   "not_tested": [
+    "The tracking tag and the AI bot log (verification by meta tag or DNS was not allowed), so the single content site group is not tested.",
+    "API keys, the watchlist, white-label PDF, share, export, GEO Radar and competitor comparison.",
+    "The Free limit of 10 scans a month.",
+    "Sign-up, which was done earlier by Daan.",
+    "Checkout and the Pro or Agency trial.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "does not promise or measure specific citations",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The dossier says CiteRoute does not promise or measure specific citations, but the app has a live citation probe through OpenRouter with an observed citation rate of 100% (n=1) per engine. No guarantee of citations was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+     "comparability": "The dossier wording against the probe section of the scan result; the probe was run once on one site.",
+     "status": "contradicted",
+     "buying_consequence": "The app does show citation labels, but n=1 per engine and a question with the domain name in it is not a measurement of real visibility.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "JSON-LD Schemas: 0 detected",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The scan says 0 JSON-LD detected, but a curl of the homepage shows 3 application/ld+json blocks (Organization, WebSite with a SearchAction, ItemList with 12 items). The Schema score of 73/100 stands next to 0 of 15 points for JSON-LD.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+     "comparability": "The scan output against the live homepage source on the same day; one page of one site.",
+     "status": "contradicted",
+     "buying_consequence": "A buyer would add structured data that is already there, and the scores contradict each other.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "STRONG TECHNICAL READINESS",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The scan gives 81/100 Strong technical readiness for a site that Google shows hardly at all; readiness is a different thing from visibility, and the same scan has a wrong JSON-LD count.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+     "comparability": "A technical readiness score against search visibility, which are different measures and not on one scale.",
+     "status": "not_comparable",
+     "buying_consequence": "A high readiness label can look like good AI visibility without being that.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Verified Citation",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Three engines (Perplexity, GPT-4o Search and Claude) got 92/100 Verified Citation with n=1 on a question that contains the domain name; Claude answered I don't have verified information and the GPT-4o answer was an invention.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+     "comparability": "The probe labels against the answer texts on the same screen; one question per engine.",
+     "status": "contradicted",
+     "buying_consequence": "The label Verified Citation does not mean that the engine knows or cites the site; it follows from the domain name in the question.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Daily automated re-scans",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan lists Daily automated re-scans as struck through and Pro includes them.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+     "comparability": "The scan page sentence against the pricing page list; no second scan was run to see a re-scan.",
+     "status": "contradicted",
+     "buying_consequence": "It is unclear how often a Free site is re-scanned: weekly or not at all.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Tracking tag & AI bot traffic detection",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Free plan shows the tracking tag and AI bot traffic detection as struck through, as the dossier says for scoring only; adding a site needs a tag and DNS or meta verification, which was not done, so the feature itself was not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+     "comparability": "The dossier Free wording against the struck-through line on the pricing page; the Pro dashboard was not opened.",
+     "status": "confirmed",
+     "buying_consequence": "Seeing AI bot visits needs Pro and a script on your own site.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Real AI bot & crawler analytics dashboard",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Pro lists a real AI bot and crawler analytics dashboard; it needs a verified site with the tracking tag, which was not set up, so the dashboard was not seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+     "comparability": "A Pro feature line against a feature that needs verification by meta tag or DNS and was not tried.",
+     "status": "not_testable",
+     "buying_consequence": "Whether the bot log shows useful data for one content site is not known from this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro $79 /month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Pro plan is $79 a month on the pricing page with a 14-day trial, which matches the dossier; the trial button was not clicked, so no tax, total or payment screen was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+     "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The final amount with tax or VAT for the plan is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free GEO scan and the citation probe of CiteRoute on a site of our own, in the existing free account of Daan. The scan took about 3.5 minutes in 3 steps and gave 81/100 Strong technical readiness, although Google shows the site hardly at all. It reported 0 JSON-LD detected while the homepage has 3 JSON-LD blocks, and some tips are made up (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe gave Verified Citation three times on a question that contains the domain name, with n=1 per engine; Claude said it had no verified information and still got 92/100. The prices match the dossier; the dossier says CiteRoute does not measure citations while the app has a probe, and the scan page says rescans every 7 days while Free has daily re-scans struck through. The tracking tag and the AI bot log were not tested, because they need verification by meta tag or DNS. No plan was bought. Account and start: the test used the existing CiteRoute account of Daan, on the Free plan, with the interface in English (no language setting was found). The test started at 09:22 in our own tab. The My sites page showed FREE PLAN and No sites yet. Adding a site needs the CiteRoute Tag and a check of ownership with a meta tag or a DNS TXT record, and the page says that CiteRoute verifies that you control the domain before adding it. That was NOT done, so the tracking tag and the AI bot log were not tested. The dossier name is CiteRoute and the review is on MSS (citeroute-review); the handson folder name and the review slug are the same. The scanned site is a site of our own; its domain is not named in this delivery. Core action: the GEO Scanner (the audit page) works without verification. The domain of our own site was typed in at 09:23, the scan was started, and the result came after about 3.5 minutes (the progress bar stayed at 98% for a long time). It took 3 steps: type the domain, start the scan, start the probe. Result: Technical Readiness Score 81 / 100, labelled Strong technical readiness, with sub scores Tabular and FAQ 77, Content depth 86, Schema 73 and Section hierarchy 88. The scan reported JSON-LD Schemas: 0 detected, 1 H1 and 31 H2, 4,703 words, 0 tables and 0 of 15 points for JSON-LD Schema.org declarations. Check of the scan with curl: the homepage has 3 application/ld+json blocks (Organization, WebSite with a SearchAction and an ItemList with 12 items), so 0 detected is wrong. The 0 tables is right; the llms.txt file exists (HTTP 200) and /.well-known/agent.json gives 404, as the scan says. The Schema sub score of 73/100 stands next to 0 of 15 points for JSON-LD, so the scores contradict each other. Google shows our own site hardly at all, so a label of Strong technical readiness is suspiciously optimistic; readiness is not visibility. The recommendations: add Organization, FAQPage and Dataset JSON-LD and a price table. The Organization example uses sameAs links to our own pages; the second patch example has a placeholder wikidata address ending in Q... and a made-up Crunchbase address; the agent.json example has a made-up endpoint /api/agent/catalog. One tip names the Dataset schema as the fix for HTML data tables and says Embed this JSON-LD on a table tip. These tips must not be copied blindly. The live citation probe (via OpenRouter, preset Brand Authority, no verification needed) asked What are the core capabilities and verified offerings of the domain of our own site; the question itself contains the domain name, so a mention is almost certain. Perplexity Sonar: 92/100, Verified Citation, 100% (n=1), 20 source URLs; the answer mostly fits our site. OpenAI GPT-4o Search: 92/100, Verified Citation, 1 source URL; the answer is a generic invention (pre-built AI applications). Anthropic Claude 3.5: 92/100, Verified Citation, while the answer says I don't have verified information about this site in my training data; it still counts as a citation because it named the URL. Google Gemini: 68/100, Brand Mention Only; the description is wrong (a no-code AI app marketplace). A citation on a question that contains the domain name proves nothing, and n=1 per engine is not a measurement. Deviation from the dossier: the dossier says CiteRoute does not promise or measure specific citations, while the app has a citation probe, with n=1 per engine; no guarantee was seen. Second, the scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan has Daily automated re-scans struck through and Pro has them. Plans, read up to the payment step: Free $0 forever (10 GEO scans per month, GEO Radar 1 monitored buyer prompt, 1-on-1 competitor comparison of 2 domains, 3 watchlist domains, community leaderboard, agent.json Studio, basic score report; struck through: Tracking tag and AI bot traffic detection, API key access, Daily automated re-scans, Weekly email performance digest); Pro $79 a month (unlimited GEO scans, GEO Radar 10 prompts 24/7, 5-way competitor benchmark, 1 verified site with tracking tag, 20 watchlist domains, an AI bot and crawler analytics dashboard, API key with 500 requests a day, history and trend charts, Start 14-day Trial, 14 days free, cancel anytime); Agency $249 a month, Most popular (10 verified client sites, white-label PDF, API 10,000 requests a day, 14 days free); Enterprise Custom. API pricing per call: geo-score $0.02, verify $0.01 and ai-traffic $0.05, and requests beyond the daily plan limits are billed at standard usage rates. The prices and the 14-day trial match the dossier. The Free limit of 10 scans a month was not tested (the counter is not visible on the scan page). No price field is changed here. Checkout: NOT reached. The Pro trial was not started and no payment screen was seen. Cancelling: Free has no subscription. The account menu has API Keys, Third-Party AI Keys and Sign Out, and no button for deleting the account or cancelling a plan; the FAQ says you can upgrade, downgrade or cancel (text cut off). No site was added, so nothing had to be removed. Not tested: the tracking tag and the AI bot log (Pro, 1 verified site; they need verification by meta tag or DNS and a script on the site, which was not allowed), so the dossier group of founders running a single content site is not tested; also API keys, the watchlist, the white-label PDF, share, export, GEO Radar, competitor comparison and Third-Party AI Keys (links external accounts). Clean up: all own tabs were closed; no test site, no script, no DNS or meta change and no external link were made. The scan stays in the Score History of the account of Daan; the watchlist was not touched.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The scan said 0 JSON-LD detected on a page that has 3 JSON-LD blocks, and a Schema score of 73/100 stands next to 0 of 15 points for JSON-LD. Some tips contain made-up values (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe uses a question that contains your own domain name, so a mention is almost certain, and it uses one try per engine; Claude said it had no verified information and was still labelled Verified Citation. Free has daily re-scans struck through while the scan page says rescans every 7 days.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "The tracking tag and the AI bot log (verification by meta tag or DNS was not allowed), so the single content site group is not tested.",
+     "API keys, the watchlist, white-label PDF, share, export, GEO Radar and competitor comparison.",
+     "The Free limit of 10 scans a month.",
+     "Sign-up, which was done earlier by Daan.",
+     "Checkout and the Pro or Agency trial.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -28426,6 +29302,267 @@
     "not_offered": [
      "An export of contacts: the Contacts screen had no export or download button (only Bulk Delete, Bulk Import and Add Contact)"
     ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Reclaim.ai",
+   "product_id": "reclaim-ai",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. We read the Reclaim plans and tested the planner in the existing Lite account of Daan on 18 November 2026, with a test calendar linked through calendar scopes only. A custom habit showed up in the calendar within about 2 seconds and moved to a free slot about 3 seconds after we added a clashing event, then moved back when we removed it. The habit defaults to Free, so others can book over it. Two tasks with a duration and a deadline got no calendar block of their own: Tasks is marked Beta and only suggests them inside a habit. We bought no plan.",
+   "findings": [
+    "Text we checked: \"Unlimited Calendar Syncs\". What we saw: The in-app plan card of Starter lists Unlimited Calendar Syncs, while the public pricing page says 3 Calendar Syncs for Starter. Neither number was exercised.",
+    "Text we checked: \"1 Calendar Sync\". What we saw: Lite promises 1 Calendar Sync on both pricing pages, but in Settings, Calendars the Add a sync and New sync buttons carry a STARTER label, and the Calendar Syncs box says No syncs are set up. Whether a Lite user can make the one sync was not tried.",
+    "Text we checked: \"Task created. You'll find it in your Reclaim Tasks\". What we saw: Two tasks with a duration and a deadline were made and found in the task list, but neither got a block in the calendar, also not after a reload and about 3 minutes. Priority Critical and an earlier deadline changed only the list order. Tasks is marked Beta and shows tasks only as a suggestion inside a habit. The dossier says Reclaim auto-schedules tasks.",
+    "Text we checked: \"Skip when busy\". What we saw: The habit block appeared in the calendar within seconds, moved from 10 to 11am to 11am to 12pm within about 3 seconds when a busy test appointment was put in the same hour, and jumped back within a few seconds when the appointment was deleted.",
+    "Text we checked: \"code MEETINGS\". What we saw: The dossier mentions Attendee Unit packs and the 20% off code MEETINGS. The public page no longer shows them and the app showed no packs. New offers are Student 50% (12 months), Nonprofit 20% (3 years), Startup 20% (3 years) and Switching Providers 20% (6 months), and a 30 days free banner."
+   ],
+   "not_tested": [
+    "Focus Time agent, Buffers, Smart Meetings, Scheduling Links, Calendar Sync, Outlook calendars and the integrations.",
+    "Reclaim Chat and the Lite limit of 1 week scheduling range.",
+    "Sign-up, which was done earlier by Daan.",
+    "Checkout, the paid plans and the 30 days trial, and Delete account.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:33 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Unlimited Calendar Syncs",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The in-app plan card of Starter lists Unlimited Calendar Syncs, while the public pricing page says 3 Calendar Syncs for Starter. Neither number was exercised.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "The in-app plan card against the public pricing page on the same day; no Calendar Sync was made, so the limit itself was not tried.",
+     "status": "contradicted",
+     "buying_consequence": "A buyer who needs many syncs may get more on Starter than the public page says, or the page is out of date.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 Calendar Sync",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Lite promises 1 Calendar Sync on both pricing pages, but in Settings, Calendars the Add a sync and New sync buttons carry a STARTER label, and the Calendar Syncs box says No syncs are set up. Whether a Lite user can make the one sync was not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "The pricing page line against the label on the buttons in Settings; no sync was started.",
+     "status": "contradicted",
+     "buying_consequence": "A free user may be unable to use the one sync that the plan lists.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Task created. You'll find it in your Reclaim Tasks.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Two tasks with a duration and a deadline were made and found in the task list, but neither got a block in the calendar, also not after a reload and about 3 minutes. Priority Critical and an earlier deadline changed only the list order. Tasks is marked Beta and shows tasks only as a suggestion inside a habit. The dossier says Reclaim auto-schedules tasks.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "The dossier wording on tasks against two tasks on one Lite account, in one session of about 15 minutes; the Starter and Business plans were not used.",
+     "status": "contradicted",
+     "buying_consequence": "A buyer who expects tasks to get time in the calendar by themselves has to attach them to a habit first.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Skip when busy",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The habit block appeared in the calendar within seconds, moved from 10 to 11am to 11am to 12pm within about 3 seconds when a busy test appointment was put in the same hour, and jumped back within a few seconds when the appointment was deleted.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "The dossier wording on habits against one habit and one conflicting appointment; larger calendars and many habits were not tried.",
+     "status": "confirmed",
+     "buying_consequence": "Habit blocks do defend their time and move around busy slots by themselves, as promised.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Shallow Work, Free, Default visibility, Default reminders",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The new habit is set to Free by default, so other people can book over the block, and the block stays visible as a normal event.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "A default setting of one habit; no stored claim about the default exists in the dossier or on the public page.",
+     "status": "not_comparable",
+     "buying_consequence": "Someone who wants the time to be really protected has to change this setting for each habit.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Also remove future events for: Test focus block",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Removing a habit has a tick box to also remove future events, which is OFF by default. Without it the blocks stay in the calendar, and the block of the day stayed as an ordinary repeating appointment until it was deleted by hand.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "A removal dialog default seen once; no stored claim about the removal exists.",
+     "status": "not_comparable",
+     "buying_consequence": "Leaving a habit behind leaves appointments in your calendar unless you tick the box.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Primary calendar on main account cannot be disconnected",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The switch of the primary calendar of the main account is locked with this message, and the account has only the menu item Delete account. The calendar could not be unlinked again, so Reclaim keeps its read and write access until it is withdrawn in the permissions of the Google account.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "An app message against a dossier remark that Reclaim needs a calendar it can write to; no earlier claim about unlinking exists. Delete account was not clicked.",
+     "status": "not_comparable",
+     "buying_consequence": "A buyer who tries Reclaim cannot go back to an unlinked calendar without deleting the account or withdrawing access at Google.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 week scheduling range",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Lite lists a 1 week scheduling range on both pricing pages. In the planner the habit blocks stood two weeks ahead, though dashed (provisional), so the limit was not seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "A plan limit line against dashed blocks in a planner that may be showing a preview; the blocks were not checked in the calendar itself.",
+     "status": "not_testable",
+     "buying_consequence": "It is unclear how far ahead a Lite user can really plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€ 8 per seat/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "In the app on the yearly toggle with EUR the plans are Starter 8, Business 15 and Enterprise 22 per seat a month; the public page shows $10, $15 and $22 yearly, $12 and $18 monthly, and Enterprise Unavailable on monthly plans. No conversion rate is shown, so the euro and dollar figures are not compared.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "Euro prices in the app against dollar prices on the public page, which are two currencies on two pages; no exchange rate or tax was applied.",
+     "status": "not_comparable",
+     "buying_consequence": "The price depends on currency, toggle and page; the amount to compare is only clear at the checkout.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "code MEETINGS",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The dossier mentions Attendee Unit packs and the 20% off code MEETINGS. The public page no longer shows them and the app showed no packs. New offers are Student 50% (12 months), Nonprofit 20% (3 years), Startup 20% (3 years) and Switching Providers 20% (6 months), and a 30 days free banner.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "The dossier text against the public pricing page of 18 November and the app; the discounts were not applied.",
+     "status": "out_of_date",
+     "buying_consequence": "The old code and the packs cannot be counted on; the new discounts may lower the price for some buyers.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Dropbox Reclaim",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The brand is now Dropbox Reclaim (reclaim.ai from Dropbox in the app), where the dossier calls it Reclaim.ai.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "The dossier brand against the public page header and the app logo; no terms were read.",
+     "status": "out_of_date",
+     "buying_consequence": "The vendor is part of Dropbox now; terms, data handling and prices may follow Dropbox.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Get your first 30 days free. Cancel at any time.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The billing page offers the first 30 days free and says to cancel at any time; no plan, trial or Upgrade now button was clicked, so no tax, total or payment screen was seen. The price of Starter is EUR 8 per seat a month on this page.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/reclaim-ai-review/#claim-vs-measured"
+     },
+     "plan": "No plan was bought and no trial was started; the billing page and the public pricing page were read without clicking a plan button",
+     "comparability": "The billing page offer against a checkout that was not reached; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The final amount with tax and the way to cancel a trial are not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Reclaim (now Dropbox Reclaim) in the existing Lite account of Daan after a calendar was linked with only the calendar scopes: a habit appeared in the calendar within seconds and moved by itself within about 3 seconds when a busy appointment came in, and back when it was removed, but it is set to Free by default so others can book over it. Two tasks with a deadline and a duration got no block of their own; Tasks is marked Beta and shows them only as a suggestion inside a habit, and priority or an earlier deadline only changed the order of the list. The primary calendar cannot be unlinked, only by deleting the account. The app lists Unlimited Calendar Syncs for Starter where the public page says 3, Lite promises 1 Calendar Sync while Add a sync has a STARTER label, and the in-app yearly prices are in euro. No plan was bought. Account and start: the test used the existing Reclaim account of Daan (social login, no sign-up during the test), on the Lite plan, with the interface in English. Three earlier attempts (08:51 to about 09:30) stopped before a calendar was linked: the onboarding needs a calendar, the Continue button stays grey without one, and a Google consent has to come from Daan himself. The scope list in the Google link was read from the link: only calendar events and calendar list (read and write), plus name and mail address, no Gmail, Drive, Contacts or Tasks. The calendar of a test mailbox of Daan was then linked at about 09:33 on Daan's approval, and the real test ran from 09:33 to 09:47. The brand is now Dropbox Reclaim (reclaim.ai from Dropbox), the dossier name is Reclaim.ai and the review is on AIBM (b2b/reclaim-ai-review); the handson folder is reclaim. Onboarding: Continue, then Turn on my assistant or Maybe later (Maybe later chosen), then the About you page (Finish worked without any choice), then the planner at about 09:35, about 2 minutes and 3 clicks after the start. A banner offered premium features free for 30 days plus 30% off the first year, with a countdown; it was not clicked. Settings and the billing page show Lite as the current plan, and no trial was active. The planner of the week and the next week held no appointment before the test, only two onboarding tasks of Reclaim in the task list. Core action, tasks: two tasks were made with Create, Task (Draft test report, 2 hrs, due 20 November; Review test notes, 1 hr, due 20 November) with the message Task created. You'll find it in your Reclaim Tasks. Neither task got a block in the calendar, also not after a reload and about 3 minutes of waiting. They appear only in the Tasks side panel (marked Beta) under Now: Free time, with Mark Done and Start Task; the task menu has Edit, Priority, Start timer, Log work and Delete, and no option to schedule. Setting the priority of one task to Critical moved it to the top of the list within about 3 seconds and moving the deadline of the other to an earlier day changed only the order of the list; the calendar did not change. Tasks only show as a suggestion inside a habit block (Task Suggestions, Assign Tasks, a saved search); in Preview Mode that could not be set (Cannot change the saved search while previewing). Core action, habit: Create, Habit opens the Agent library; Custom Work Habit was chosen and in Preview Mode three blocks of 10 to 11am (Wednesday to Friday) were shown within about 2 seconds. It was renamed Test focus block (Every weekday, 10 to 11:00am, Shallow Work, Free, Default visibility, Default reminders, 30 mins minimum, Working Hours, Skip when busy, Reclaim Smart Time Defense enabled). After Apply changes at about 09:38 (Your changes have been applied and will sync shortly.) the block was in the calendar of the day within seconds, and the next weeks showed blocks Monday to Friday 10 to 11 as dashed, provisional blocks. A busy test appointment (Test conflict block, 10 to 11am; the date field did not take 19 November, so it landed on 18 November) pushed the habit block to 11am to 12pm within about 3 seconds at 09:39, and when the appointment was deleted the block jumped back to 10 to 11 within a few seconds. The habit does what Reclaim promises, quickly and by itself, but it is set to Free by default, so other people can still book over it. Plans, read up to the payment step: the billing page (Select a plan, Based on your usage the Starter plan looks just right for you, Get your first 30 days free. Cancel at any time.) was only looked at, nothing was clicked. Yearly toggle, currency EUR, 1 user: Lite Free (Current plan; 1 user team, 5 Agents/seat, Limited LLM usage, 1 Scheduling Link, Essentials integrations, 1 week scheduling range, 1 Calendar Sync, Limited MCP access); Starter EUR 8 per seat/month (up to 10 seats, 10 Agents/seat, 3 Scheduling Links, Unlimited integrations, 8 week scheduling range, Unlimited Calendar Syncs, Full MCP access, Proactive Assistant); Business EUR 15 (up to 100 seats, 100 Agents/seat, 12 week scheduling range, Team OOO Calendars, Delegated Access); Enterprise EUR 22 with Contact us (SSO and SCIM user provisioning). The public pricing page (images 02 and 03) shows dollars: yearly $10, $15 and $22 per seat/month, monthly $12 and $18, and Enterprise Unavailable on monthly plans. Deviations from the dossier and the public page: (a) the app lists Unlimited Calendar Syncs for Starter, the public page says 3. (b) Lite promises 1 Calendar Sync on both pages, but in Settings the Add a sync and New sync buttons carry a STARTER label. (c) The in-app yearly prices are in euro (8, 15 and 22) against $10, $15 and $22 on the public page, with no conversion rate shown; the euro and dollar prices are not compared. (d) The Attendee Unit packs and the 20% off code MEETINGS of the dossier are gone from the public page and the app; new offers are Student 50% (12 months), Nonprofit 20% (3 years), Startup 20% (3 years) and Switching Providers 20% (6 months), plus the 30 days free offer in the banner. (e) The brand is now Dropbox Reclaim. (f) The Lite limit of 1 week scheduling range was not seen: habit blocks stood two weeks ahead, though dashed. (g) Enterprise is not available on monthly plans. The price fields of our pages are not touched. Checkout: NOT reached. No plan, trial or Upgrade now button was clicked, so no tax, total or payment screen was seen. Cancelling: Settings, Calendars shows for the main account only the menu item Delete account, and the switch of the primary calendar says Primary calendar on main account cannot be disconnected, so the calendar cannot be unlinked without deleting the account; Delete account was NOT clicked. Calendar access reads 5 scopes granted, 2 partially granted and 2 missing (granted: Identity and sign-in, Read calendar events, Create and edit events, Calendar access, Settings; partial: Availability and Out of office sync; not granted: People suggestions and Tasks); Grant access to all was not clicked. Reclaim keeps read and write access to the calendar until the access is withdrawn in the permissions of the Google account, which the tester did not do. There is no paid plan to cancel. Not tested: the Focus Time agent, Buffers, Smart Meetings, Scheduling Links (the page was only looked at), Calendar Sync, Outlook calendars, integrations (Asana, ClickUp, Jira, Linear, Todoist, Zoom, Slack), Reclaim Chat, the paid plans and the 30 days trial, and the groups of managers with shared time off and teams on Microsoft 365 calendars. Clean up: both test tasks and the two onboarding tasks were deleted (the task list is empty). Removing the habit (Remove Agent) has a tick box Also remove future events that is OFF by default; without the tick the blocks stay in the calendar, and the block of the day stayed as an ordinary repeating appointment (Every weekday, until Nov 18, 2026), which was then deleted with All events; the test appointment was deleted too. At 09:44 the planner of three weeks held no test, habit or focus entry. The five default Essentials agents were switched off. The calendar link could not be removed. The account stays on Lite. The tab was closed.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The onboarding cannot be finished without a linked calendar, and the primary calendar cannot be unlinked again; the only way out in the app is Delete account. Tasks get no calendar block of their own and are only a suggestion inside a habit (Tasks is marked Beta). A new habit is set to Free, so others can book over it. Removing a habit leaves the future blocks in the calendar unless you tick Also remove future events, which is off by default. Starter shows Unlimited Calendar Syncs in the app but 3 on the public page, and Add a sync has a STARTER label although Lite promises 1 Calendar Sync.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Focus Time agent, Buffers, Smart Meetings, Scheduling Links, Calendar Sync, Outlook calendars and the integrations.",
+     "Reclaim Chat and the Lite limit of 1 week scheduling range.",
+     "Sign-up, which was done earlier by Daan.",
+     "Checkout, the paid plans and the 30 days trial, and Delete account.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:33 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true

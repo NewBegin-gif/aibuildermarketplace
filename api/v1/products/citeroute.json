@@ -86,10 +86,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -97,7 +96,438 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/citeroute-review.html",
+  "method": [
+   "Used the existing free CiteRoute account and ran the GEO scan on a site of our own",
+   "Started the citation probe and checked the scan's JSON-LD claim against the homepage with curl",
+   "Read the Free, Pro and Agency plan cards without starting a trial"
+  ],
+  "claims": [
+   {
+    "claim": "does not promise or measure specific citations",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The dossier says CiteRoute does not promise or measure specific citations, but the app has a live citation probe through OpenRouter with an observed citation rate of 100% (n=1) per engine. No guarantee of citations was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+    "comparability": "The dossier wording against the probe section of the scan result; the probe was run once on one site.",
+    "status": "contradicted",
+    "buying_consequence": "The app does show citation labels, but n=1 per engine and a question with the domain name in it is not a measurement of real visibility.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "JSON-LD Schemas: 0 detected",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The scan says 0 JSON-LD detected, but a curl of the homepage shows 3 application/ld+json blocks (Organization, WebSite with a SearchAction, ItemList with 12 items). The Schema score of 73/100 stands next to 0 of 15 points for JSON-LD.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+    "comparability": "The scan output against the live homepage source on the same day; one page of one site.",
+    "status": "contradicted",
+    "buying_consequence": "A buyer would add structured data that is already there, and the scores contradict each other.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "STRONG TECHNICAL READINESS",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The scan gives 81/100 Strong technical readiness for a site that Google shows hardly at all; readiness is a different thing from visibility, and the same scan has a wrong JSON-LD count.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+    "comparability": "A technical readiness score against search visibility, which are different measures and not on one scale.",
+    "status": "not_comparable",
+    "buying_consequence": "A high readiness label can look like good AI visibility without being that.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Verified Citation",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Three engines (Perplexity, GPT-4o Search and Claude) got 92/100 Verified Citation with n=1 on a question that contains the domain name; Claude answered I don't have verified information and the GPT-4o answer was an invention.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+    "comparability": "The probe labels against the answer texts on the same screen; one question per engine.",
+    "status": "contradicted",
+    "buying_consequence": "The label Verified Citation does not mean that the engine knows or cites the site; it follows from the domain name in the question.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Daily automated re-scans",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan lists Daily automated re-scans as struck through and Pro includes them.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+    "comparability": "The scan page sentence against the pricing page list; no second scan was run to see a re-scan.",
+    "status": "contradicted",
+    "buying_consequence": "It is unclear how often a Free site is re-scanned: weekly or not at all.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Tracking tag & AI bot traffic detection",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Free plan shows the tracking tag and AI bot traffic detection as struck through, as the dossier says for scoring only; adding a site needs a tag and DNS or meta verification, which was not done, so the feature itself was not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+    "comparability": "The dossier Free wording against the struck-through line on the pricing page; the Pro dashboard was not opened.",
+    "status": "confirmed",
+    "buying_consequence": "Seeing AI bot visits needs Pro and a script on your own site.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Real AI bot & crawler analytics dashboard",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Pro lists a real AI bot and crawler analytics dashboard; it needs a verified site with the tracking tag, which was not set up, so the dashboard was not seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+    "comparability": "A Pro feature line against a feature that needs verification by meta tag or DNS and was not tried.",
+    "status": "not_testable",
+    "buying_consequence": "Whether the bot log shows useful data for one content site is not known from this test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Pro $79 /month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Pro plan is $79 a month on the pricing page with a 14-day trial, which matches the dossier; the trial button was not clicked, so no tax, total or payment screen was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+    "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The final amount with tax or VAT for the plan is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free GEO scan and the citation probe of CiteRoute on a site of our own, in the existing free account of Daan. The scan took about 3.5 minutes in 3 steps and gave 81/100 Strong technical readiness, although Google shows the site hardly at all. It reported 0 JSON-LD detected while the homepage has 3 JSON-LD blocks, and some tips are made up (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe gave Verified Citation three times on a question that contains the domain name, with n=1 per engine; Claude said it had no verified information and still got 92/100. The prices match the dossier; the dossier says CiteRoute does not measure citations while the app has a probe, and the scan page says rescans every 7 days while Free has daily re-scans struck through. The tracking tag and the AI bot log were not tested, because they need verification by meta tag or DNS. No plan was bought. Account and start: the test used the existing CiteRoute account of Daan, on the Free plan, with the interface in English (no language setting was found). The test started at 09:22 in our own tab. The My sites page showed FREE PLAN and No sites yet. Adding a site needs the CiteRoute Tag and a check of ownership with a meta tag or a DNS TXT record, and the page says that CiteRoute verifies that you control the domain before adding it. That was NOT done, so the tracking tag and the AI bot log were not tested. The dossier name is CiteRoute and the review is on MSS (citeroute-review); the handson folder name and the review slug are the same. The scanned site is a site of our own; its domain is not named in this delivery. Core action: the GEO Scanner (the audit page) works without verification. The domain of our own site was typed in at 09:23, the scan was started, and the result came after about 3.5 minutes (the progress bar stayed at 98% for a long time). It took 3 steps: type the domain, start the scan, start the probe. Result: Technical Readiness Score 81 / 100, labelled Strong technical readiness, with sub scores Tabular and FAQ 77, Content depth 86, Schema 73 and Section hierarchy 88. The scan reported JSON-LD Schemas: 0 detected, 1 H1 and 31 H2, 4,703 words, 0 tables and 0 of 15 points for JSON-LD Schema.org declarations. Check of the scan with curl: the homepage has 3 application/ld+json blocks (Organization, WebSite with a SearchAction and an ItemList with 12 items), so 0 detected is wrong. The 0 tables is right; the llms.txt file exists (HTTP 200) and /.well-known/agent.json gives 404, as the scan says. The Schema sub score of 73/100 stands next to 0 of 15 points for JSON-LD, so the scores contradict each other. Google shows our own site hardly at all, so a label of Strong technical readiness is suspiciously optimistic; readiness is not visibility. The recommendations: add Organization, FAQPage and Dataset JSON-LD and a price table. The Organization example uses sameAs links to our own pages; the second patch example has a placeholder wikidata address ending in Q... and a made-up Crunchbase address; the agent.json example has a made-up endpoint /api/agent/catalog. One tip names the Dataset schema as the fix for HTML data tables and says Embed this JSON-LD on a table tip. These tips must not be copied blindly. The live citation probe (via OpenRouter, preset Brand Authority, no verification needed) asked What are the core capabilities and verified offerings of the domain of our own site; the question itself contains the domain name, so a mention is almost certain. Perplexity Sonar: 92/100, Verified Citation, 100% (n=1), 20 source URLs; the answer mostly fits our site. OpenAI GPT-4o Search: 92/100, Verified Citation, 1 source URL; the answer is a generic invention (pre-built AI applications). Anthropic Claude 3.5: 92/100, Verified Citation, while the answer says I don't have verified information about this site in my training data; it still counts as a citation because it named the URL. Google Gemini: 68/100, Brand Mention Only; the description is wrong (a no-code AI app marketplace). A citation on a question that contains the domain name proves nothing, and n=1 per engine is not a measurement. Deviation from the dossier: the dossier says CiteRoute does not promise or measure specific citations, while the app has a citation probe, with n=1 per engine; no guarantee was seen. Second, the scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan has Daily automated re-scans struck through and Pro has them. Plans, read up to the payment step: Free $0 forever (10 GEO scans per month, GEO Radar 1 monitored buyer prompt, 1-on-1 competitor comparison of 2 domains, 3 watchlist domains, community leaderboard, agent.json Studio, basic score report; struck through: Tracking tag and AI bot traffic detection, API key access, Daily automated re-scans, Weekly email performance digest); Pro $79 a month (unlimited GEO scans, GEO Radar 10 prompts 24/7, 5-way competitor benchmark, 1 verified site with tracking tag, 20 watchlist domains, an AI bot and crawler analytics dashboard, API key with 500 requests a day, history and trend charts, Start 14-day Trial, 14 days free, cancel anytime); Agency $249 a month, Most popular (10 verified client sites, white-label PDF, API 10,000 requests a day, 14 days free); Enterprise Custom. API pricing per call: geo-score $0.02, verify $0.01 and ai-traffic $0.05, and requests beyond the daily plan limits are billed at standard usage rates. The prices and the 14-day trial match the dossier. The Free limit of 10 scans a month was not tested (the counter is not visible on the scan page). No price field is changed here. Checkout: NOT reached. The Pro trial was not started and no payment screen was seen. Cancelling: Free has no subscription. The account menu has API Keys, Third-Party AI Keys and Sign Out, and no button for deleting the account or cancelling a plan; the FAQ says you can upgrade, downgrade or cancel (text cut off). No site was added, so nothing had to be removed. Not tested: the tracking tag and the AI bot log (Pro, 1 verified site; they need verification by meta tag or DNS and a script on the site, which was not allowed), so the dossier group of founders running a single content site is not tested; also API keys, the watchlist, the white-label PDF, share, export, GEO Radar, competitor comparison and Third-Party AI Keys (links external accounts). Clean up: all own tabs were closed; no test site, no script, no DNS or meta change and no external link were made. The scan stays in the Score History of the account of Daan; the watchlist was not touched.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The scan said 0 JSON-LD detected on a page that has 3 JSON-LD blocks, and a Schema score of 73/100 stands next to 0 of 15 points for JSON-LD. Some tips contain made-up values (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe uses a question that contains your own domain name, so a mention is almost certain, and it uses one try per engine; Claude said it had no verified information and was still labelled Verified Citation. Free has daily re-scans struck through while the scan page says rescans every 7 days.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "The tracking tag and the AI bot log (verification by meta tag or DNS was not allowed), so the single content site group is not tested.",
+    "API keys, the watchlist, white-label PDF, share, export, GEO Radar and competitor comparison.",
+    "The Free limit of 10 scans a month.",
+    "Sign-up, which was done earlier by Daan.",
+    "Checkout and the Pro or Agency trial.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/citeroute-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/citeroute-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/citeroute-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free GEO scan and the citation probe of CiteRoute on a site of our own, in the existing free account of Daan. The scan took about 3.5 minutes in 3 steps and gave 81/100 Strong technical readiness, although Google shows the site hardly at all. It reported 0 JSON-LD detected while the homepage has 3 JSON-LD blocks, and some tips are made up (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe gave Verified Citation three times on a question that contains the domain name, with n=1 per engine; Claude said it had no verified information and still got 92/100. The prices match the dossier; the dossier says CiteRoute does not measure citations while the app has a probe, and the scan page says rescans every 7 days while Free has daily re-scans struck through. The tracking tag and the AI bot log were not tested, because they need verification by meta tag or DNS. No plan was bought. Account and start: the test used the existing CiteRoute account of Daan, on the Free plan, with the interface in English (no language setting was found). The test started at 09:22 in our own tab. The My sites page showed FREE PLAN and No sites yet. Adding a site needs the CiteRoute Tag and a check of ownership with a meta tag or a DNS TXT record, and the page says that CiteRoute verifies that you control the domain before adding it. That was NOT done, so the tracking tag and the AI bot log were not tested. The dossier name is CiteRoute and the review is on MSS (citeroute-review); the handson folder name and the review slug are the same. The scanned site is a site of our own; its domain is not named in this delivery. Core action: the GEO Scanner (the audit page) works without verification. The domain of our own site was typed in at 09:23, the scan was started, and the result came after about 3.5 minutes (the progress bar stayed at 98% for a long time). It took 3 steps: type the domain, start the scan, start the probe. Result: Technical Readiness Score 81 / 100, labelled Strong technical readiness, with sub scores Tabular and FAQ 77, Content depth 86, Schema 73 and Section hierarchy 88. The scan reported JSON-LD Schemas: 0 detected, 1 H1 and 31 H2, 4,703 words, 0 tables and 0 of 15 points for JSON-LD Schema.org declarations. Check of the scan with curl: the homepage has 3 application/ld+json blocks (Organization, WebSite with a SearchAction and an ItemList with 12 items), so 0 detected is wrong. The 0 tables is right; the llms.txt file exists (HTTP 200) and /.well-known/agent.json gives 404, as the scan says. The Schema sub score of 73/100 stands next to 0 of 15 points for JSON-LD, so the scores contradict each other. Google shows our own site hardly at all, so a label of Strong technical readiness is suspiciously optimistic; readiness is not visibility. The recommendations: add Organization, FAQPage and Dataset JSON-LD and a price table. The Organization example uses sameAs links to our own pages; the second patch example has a placeholder wikidata address ending in Q... and a made-up Crunchbase address; the agent.json example has a made-up endpoint /api/agent/catalog. One tip names the Dataset schema as the fix for HTML data tables and says Embed this JSON-LD on a table tip. These tips must not be copied blindly. The live citation probe (via OpenRouter, preset Brand Authority, no verification needed) asked What are the core capabilities and verified offerings of the domain of our own site; the question itself contains the domain name, so a mention is almost certain. Perplexity Sonar: 92/100, Verified Citation, 100% (n=1), 20 source URLs; the answer mostly fits our site. OpenAI GPT-4o Search: 92/100, Verified Citation, 1 source URL; the answer is a generic invention (pre-built AI applications). Anthropic Claude 3.5: 92/100, Verified Citation, while the answer says I don't have verified information about this site in my training data; it still counts as a citation because it named the URL. Google Gemini: 68/100, Brand Mention Only; the description is wrong (a no-code AI app marketplace). A citation on a question that contains the domain name proves nothing, and n=1 per engine is not a measurement. Deviation from the dossier: the dossier says CiteRoute does not promise or measure specific citations, while the app has a citation probe, with n=1 per engine; no guarantee was seen. Second, the scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan has Daily automated re-scans struck through and Pro has them. Plans, read up to the payment step: Free $0 forever (10 GEO scans per month, GEO Radar 1 monitored buyer prompt, 1-on-1 competitor comparison of 2 domains, 3 watchlist domains, community leaderboard, agent.json Studio, basic score report; struck through: Tracking tag and AI bot traffic detection, API key access, Daily automated re-scans, Weekly email performance digest); Pro $79 a month (unlimited GEO scans, GEO Radar 10 prompts 24/7, 5-way competitor benchmark, 1 verified site with tracking tag, 20 watchlist domains, an AI bot and crawler analytics dashboard, API key with 500 requests a day, history and trend charts, Start 14-day Trial, 14 days free, cancel anytime); Agency $249 a month, Most popular (10 verified client sites, white-label PDF, API 10,000 requests a day, 14 days free); Enterprise Custom. API pricing per call: geo-score $0.02, verify $0.01 and ai-traffic $0.05, and requests beyond the daily plan limits are billed at standard usage rates. The prices and the 14-day trial match the dossier. The Free limit of 10 scans a month was not tested (the counter is not visible on the scan page). No price field is changed here. Checkout: NOT reached. The Pro trial was not started and no payment screen was seen. Cancelling: Free has no subscription. The account menu has API Keys, Third-Party AI Keys and Sign Out, and no button for deleting the account or cancelling a plan; the FAQ says you can upgrade, downgrade or cancel (text cut off). No site was added, so nothing had to be removed. Not tested: the tracking tag and the AI bot log (Pro, 1 verified site; they need verification by meta tag or DNS and a script on the site, which was not allowed), so the dossier group of founders running a single content site is not tested; also API keys, the watchlist, the white-label PDF, share, export, GEO Radar, competitor comparison and Third-Party AI Keys (links external accounts). Clean up: all own tabs were closed; no test site, no script, no DNS or meta change and no external link were made. The scan stays in the Score History of the account of Daan; the watchlist was not touched. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/citeroute-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free GEO scan and the citation probe of CiteRoute on a site of our own, in the existing free account of Daan. The scan took about 3.5 minutes in 3 steps and gave 81/100 Strong technical readiness, although Google shows the site hardly at all. It reported 0 JSON-LD detected while the homepage has 3 JSON-LD blocks, and some tips are made up (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe gave Verified Citation three times on a question that contains the domain name, with n=1 per engine; Claude said it had no verified information and still got 92/100. The prices match the dossier; the dossier says CiteRoute does not measure citations while the app has a probe, and the scan page says rescans every 7 days while Free has daily re-scans struck through. The tracking tag and the AI bot log were not tested, because they need verification by meta tag or DNS. No plan was bought. Account and start: the test used the existing CiteRoute account of Daan, on the Free plan, with the interface in English (no language setting was found). The test started at 09:22 in our own tab. The My sites page showed FREE PLAN and No sites yet. Adding a site needs the CiteRoute Tag and a check of ownership with a meta tag or a DNS TXT record, and the page says that CiteRoute verifies that you control the domain before adding it. That was NOT done, so the tracking tag and the AI bot log were not tested. The dossier name is CiteRoute and the review is on MSS (citeroute-review); the handson folder name and the review slug are the same. The scanned site is a site of our own; its domain is not named in this delivery. Core action: the GEO Scanner (the audit page) works without verification. The domain of our own site was typed in at 09:23, the scan was started, and the result came after about 3.5 minutes (the progress bar stayed at 98% for a long time). It took 3 steps: type the domain, start the scan, start the probe. Result: Technical Readiness Score 81 / 100, labelled Strong technical readiness, with sub scores Tabular and FAQ 77, Content depth 86, Schema 73 and Section hierarchy 88. The scan reported JSON-LD Schemas: 0 detected, 1 H1 and 31 H2, 4,703 words, 0 tables and 0 of 15 points for JSON-LD Schema.org declarations. Check of the scan with curl: the homepage has 3 application/ld+json blocks (Organization, WebSite with a SearchAction and an ItemList with 12 items), so 0 detected is wrong. The 0 tables is right; the llms.txt file exists (HTTP 200) and /.well-known/agent.json gives 404, as the scan says. The Schema sub score of 73/100 stands next to 0 of 15 points for JSON-LD, so the scores contradict each other. Google shows our own site hardly at all, so a label of Strong technical readiness is suspiciously optimistic; readiness is not visibility. The recommendations: add Organization, FAQPage and Dataset JSON-LD and a price table. The Organization example uses sameAs links to our own pages; the second patch example has a placeholder wikidata address ending in Q... and a made-up Crunchbase address; the agent.json example has a made-up endpoint /api/agent/catalog. One tip names the Dataset schema as the fix for HTML data tables and says Embed this JSON-LD on a table tip. These tips must not be copied blindly. The live citation probe (via OpenRouter, preset Brand Authority, no verification needed) asked What are the core capabilities and verified offerings of the domain of our own site; the question itself contains the domain name, so a mention is almost certain. Perplexity Sonar: 92/100, Verified Citation, 100% (n=1), 20 source URLs; the answer mostly fits our site. OpenAI GPT-4o Search: 92/100, Verified Citation, 1 source URL; the answer is a generic invention (pre-built AI applications). Anthropic Claude 3.5: 92/100, Verified Citation, while the answer says I don't have verified information about this site in my training data; it still counts as a citation because it named the URL. Google Gemini: 68/100, Brand Mention Only; the description is wrong (a no-code AI app marketplace). A citation on a question that contains the domain name proves nothing, and n=1 per engine is not a measurement. Deviation from the dossier: the dossier says CiteRoute does not promise or measure specific citations, while the app has a citation probe, with n=1 per engine; no guarantee was seen. Second, the scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan has Daily automated re-scans struck through and Pro has them. Plans, read up to the payment step: Free $0 forever (10 GEO scans per month, GEO Radar 1 monitored buyer prompt, 1-on-1 competitor comparison of 2 domains, 3 watchlist domains, community leaderboard, agent.json Studio, basic score report; struck through: Tracking tag and AI bot traffic detection, API key access, Daily automated re-scans, Weekly email performance digest); Pro $79 a month (unlimited GEO scans, GEO Radar 10 prompts 24/7, 5-way competitor benchmark, 1 verified site with tracking tag, 20 watchlist domains, an AI bot and crawler analytics dashboard, API key with 500 requests a day, history and trend charts, Start 14-day Trial, 14 days free, cancel anytime); Agency $249 a month, Most popular (10 verified client sites, white-label PDF, API 10,000 requests a day, 14 days free); Enterprise Custom. API pricing per call: geo-score $0.02, verify $0.01 and ai-traffic $0.05, and requests beyond the daily plan limits are billed at standard usage rates. The prices and the 14-day trial match the dossier. The Free limit of 10 scans a month was not tested (the counter is not visible on the scan page). No price field is changed here. Checkout: NOT reached. The Pro trial was not started and no payment screen was seen. Cancelling: Free has no subscription. The account menu has API Keys, Third-Party AI Keys and Sign Out, and no button for deleting the account or cancelling a plan; the FAQ says you can upgrade, downgrade or cancel (text cut off). No site was added, so nothing had to be removed. Not tested: the tracking tag and the AI bot log (Pro, 1 verified site; they need verification by meta tag or DNS and a script on the site, which was not allowed), so the dossier group of founders running a single content site is not tested; also API keys, the watchlist, the white-label PDF, share, export, GEO Radar, competitor comparison and Third-Party AI Keys (links external accounts). Clean up: all own tabs were closed; no test site, no script, no DNS or meta change and no external link were made. The scan stays in the Score History of the account of Daan; the watchlist was not touched. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/citeroute-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/citeroute-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "CiteRoute",
+    "product_id": "citeroute",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free GEO scan and the citation probe of CiteRoute on a site of our own, in the existing free account of Daan. The scan took about 3.5 minutes in 3 steps and gave 81/100 Strong technical readiness, although Google shows the site hardly at all. It reported 0 JSON-LD detected while the homepage has 3 JSON-LD blocks, and some tips are made up (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe gave Verified Citation three times on a question that contains the domain name, with n=1 per engine; Claude said it had no verified information and still got 92/100. The prices match the dossier; the dossier says CiteRoute does not measure citations while the app has a probe, and the scan page says rescans every 7 days while Free has daily re-scans struck through. The tracking tag and the AI bot log were not tested, because they need verification by meta tag or DNS. No plan was bought. Account and start: the test used the existing CiteRoute account of Daan, on the Free plan, with the interface in English (no language setting was found). The test started at 09:22 in our own tab. The My sites page showed FREE PLAN and No sites yet. Adding a site needs the CiteRoute Tag and a check of ownership with a meta tag or a DNS TXT record, and the page says that CiteRoute verifies that you control the domain before adding it. That was NOT done, so the tracking tag and the AI bot log were not tested. The scanned site is a site of our own; its domain is not named in this delivery. Core action: the GEO Scanner (the audit page) works without verification. The domain of our own site was typed in at 09:23, the scan was started, and the result came after about 3.5 minutes (the progress bar stayed at 98% for a long time). It took 3 steps: type the domain, start the scan, start the probe. Result: Technical Readiness Score 81 / 100, labelled Strong technical readiness, with sub scores Tabular and FAQ 77, Content depth 86, Schema 73 and Section hierarchy 88. The scan reported JSON-LD Schemas: 0 detected, 1 H1 and 31 H2, 4,703 words, 0 tables and 0 of 15 points for JSON-LD Schema.org declarations. Check of the scan with curl: the homepage has 3 application/ld+json blocks (Organization, WebSite with a SearchAction and an ItemList with 12 items), so 0 detected is wrong. The 0 tables is right; the llms.txt file exists (HTTP 200) and /.well-known/agent.json gives 404, as the scan says. The Schema sub score of 73/100 stands next to 0 of 15 points for JSON-LD, so the scores contradict each other. Google shows our own site hardly at all, so a label of Strong technical readiness is suspiciously optimistic; readiness is not visibility. The recommendations: add Organization, FAQPage and Dataset JSON-LD and a price table. The Organization example uses sameAs links to our own pages; the second patch example has a placeholder wikidata address ending in Q... and a made-up Crunchbase address; the agent.json example has a made-up endpoint /api/agent/catalog. One tip names the Dataset schema as the fix for HTML data tables and says Embed this JSON-LD on a table tip. These tips must not be copied blindly. The live citation probe (via OpenRouter, preset Brand Authority, no verification needed) asked What are the core capabilities and verified offerings of the domain of our own site; the question itself contains the domain name, so a mention is almost certain. Perplexity Sonar: 92/100, Verified Citation, 100% (n=1), 20 source URLs; the answer mostly fits our site. OpenAI GPT-4o Search: 92/100, Verified Citation, 1 source URL; the answer is a generic invention (pre-built AI applications). Anthropic Claude 3.5: 92/100, Verified Citation, while the answer says I don't have verified information about this site in my training data; it still counts as a citation because it named the URL. Google Gemini: 68/100, Brand Mention Only; the description is wrong (a no-code AI app marketplace). A citation on a question that contains the domain name proves nothing, and n=1 per engine is not a measurement. Deviation from the dossier: the dossier says CiteRoute does not promise or measure specific citations, while the app has a citation probe, with n=1 per engine; no guarantee was seen. Second, the scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan has Daily automated re-scans struck through and Pro has them. Plans, read up to the payment step: Free $0 forever (10 GEO scans per month, GEO Radar 1 monitored buyer prompt, 1-on-1 competitor comparison of 2 domains, 3 watchlist domains, community leaderboard, agent.json Studio, basic score report; struck through: Tracking tag and AI bot traffic detection, API key access, Daily automated re-scans, Weekly email performance digest); Pro $79 a month (unlimited GEO scans, GEO Radar 10 prompts 24/7, 5-way competitor benchmark, 1 verified site with tracking tag, 20 watchlist domains, an AI bot and crawler analytics dashboard, API key with 500 requests a day, history and trend charts, Start 14-day Trial, 14 days free, cancel anytime); Agency $249 a month, Most popular (10 verified client sites, white-label PDF, API 10,000 requests a day, 14 days free); Enterprise Custom. API pricing per call: geo-score $0.02, verify $0.01 and ai-traffic $0.05, and requests beyond the daily plan limits are billed at standard usage rates. The prices and the 14-day trial match the dossier. The Free limit of 10 scans a month was not tested (the counter is not visible on the scan page). No price field is changed here. Checkout: NOT reached. The Pro trial was not started and no payment screen was seen. Cancelling: Free has no subscription. The account menu has API Keys, Third-Party AI Keys and Sign Out, and no button for deleting the account or cancelling a plan; the FAQ says you can upgrade, downgrade or cancel (text cut off). No site was added, so nothing had to be removed. Not tested: the tracking tag and the AI bot log (Pro, 1 verified site; they need verification by meta tag or DNS and a script on the site, which was not allowed), so the dossier group of founders running a single content site is not tested; also API keys, the watchlist, the white-label PDF, share, export, GEO Radar, competitor comparison and Third-Party AI Keys (links external accounts). Clean up: all own tabs were closed; no test site, no script, no DNS or meta change and no external link were made. The scan stays in the Score History of the account of Daan; the watchlist was not touched.",
+    "findings": [
+     "Text we checked: \"does not promise or measure specific citations\". What we saw: The dossier says CiteRoute does not promise or measure specific citations, but the app has a live citation probe through OpenRouter with an observed citation rate of 100% (n=1) per engine. No guarantee of citations was seen.",
+     "Text we checked: \"JSON-LD Schemas: 0 detected\". What we saw: The scan says 0 JSON-LD detected, but a curl of the homepage shows 3 application/ld+json blocks (Organization, WebSite with a SearchAction, ItemList with 12 items). The Schema score of 73/100 stands next to 0 of 15 points for JSON-LD.",
+     "Text we checked: \"Verified Citation\". What we saw: Three engines (Perplexity, GPT-4o Search and Claude) got 92/100 Verified Citation with n=1 on a question that contains the domain name; Claude answered I don't have verified information and the GPT-4o answer was an invention.",
+     "Text we checked: \"Daily automated re-scans\". What we saw: The scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan lists Daily automated re-scans as struck through and Pro includes them.",
+     "Text we checked: \"Tracking tag & AI bot traffic detection\". What we saw: The Free plan shows the tracking tag and AI bot traffic detection as struck through, as the dossier says for scoring only; adding a site needs a tag and DNS or meta verification, which was not done, so the feature itself was not tried."
+    ],
+    "not_tested": [
+     "The tracking tag and the AI bot log (verification by meta tag or DNS was not allowed), so the single content site group is not tested.",
+     "API keys, the watchlist, white-label PDF, share, export, GEO Radar and competitor comparison.",
+     "The Free limit of 10 scans a month.",
+     "Sign-up, which was done earlier by Daan.",
+     "Checkout and the Pro or Agency trial.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "does not promise or measure specific citations",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The dossier says CiteRoute does not promise or measure specific citations, but the app has a live citation probe through OpenRouter with an observed citation rate of 100% (n=1) per engine. No guarantee of citations was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+      "comparability": "The dossier wording against the probe section of the scan result; the probe was run once on one site.",
+      "status": "contradicted",
+      "buying_consequence": "The app does show citation labels, but n=1 per engine and a question with the domain name in it is not a measurement of real visibility.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "JSON-LD Schemas: 0 detected",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The scan says 0 JSON-LD detected, but a curl of the homepage shows 3 application/ld+json blocks (Organization, WebSite with a SearchAction, ItemList with 12 items). The Schema score of 73/100 stands next to 0 of 15 points for JSON-LD.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+      "comparability": "The scan output against the live homepage source on the same day; one page of one site.",
+      "status": "contradicted",
+      "buying_consequence": "A buyer would add structured data that is already there, and the scores contradict each other.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "STRONG TECHNICAL READINESS",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The scan gives 81/100 Strong technical readiness for a site that Google shows hardly at all; readiness is a different thing from visibility, and the same scan has a wrong JSON-LD count.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+      "comparability": "A technical readiness score against search visibility, which are different measures and not on one scale.",
+      "status": "not_comparable",
+      "buying_consequence": "A high readiness label can look like good AI visibility without being that.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Verified Citation",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Three engines (Perplexity, GPT-4o Search and Claude) got 92/100 Verified Citation with n=1 on a question that contains the domain name; Claude answered I don't have verified information and the GPT-4o answer was an invention.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+      "comparability": "The probe labels against the answer texts on the same screen; one question per engine.",
+      "status": "contradicted",
+      "buying_consequence": "The label Verified Citation does not mean that the engine knows or cites the site; it follows from the domain name in the question.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Daily automated re-scans",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan lists Daily automated re-scans as struck through and Pro includes them.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+      "comparability": "The scan page sentence against the pricing page list; no second scan was run to see a re-scan.",
+      "status": "contradicted",
+      "buying_consequence": "It is unclear how often a Free site is re-scanned: weekly or not at all.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Tracking tag & AI bot traffic detection",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Free plan shows the tracking tag and AI bot traffic detection as struck through, as the dossier says for scoring only; adding a site needs a tag and DNS or meta verification, which was not done, so the feature itself was not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+      "comparability": "The dossier Free wording against the struck-through line on the pricing page; the Pro dashboard was not opened.",
+      "status": "confirmed",
+      "buying_consequence": "Seeing AI bot visits needs Pro and a script on your own site.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Real AI bot & crawler analytics dashboard",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Pro lists a real AI bot and crawler analytics dashboard; it needs a verified site with the tracking tag, which was not set up, so the dashboard was not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+      "comparability": "A Pro feature line against a feature that needs verification by meta tag or DNS and was not tried.",
+      "status": "not_testable",
+      "buying_consequence": "Whether the bot log shows useful data for one content site is not known from this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Pro $79 /month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Pro plan is $79 a month on the pricing page with a 14-day trial, which matches the dossier; the trial button was not clicked, so no tax, total or payment screen was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/citeroute-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought and no trial was started; the pricing page was read without clicking a trial button",
+      "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The final amount with tax or VAT for the plan is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free GEO scan and the citation probe of CiteRoute on a site of our own, in the existing free account of Daan. The scan took about 3.5 minutes in 3 steps and gave 81/100 Strong technical readiness, although Google shows the site hardly at all. It reported 0 JSON-LD detected while the homepage has 3 JSON-LD blocks, and some tips are made up (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe gave Verified Citation three times on a question that contains the domain name, with n=1 per engine; Claude said it had no verified information and still got 92/100. The prices match the dossier; the dossier says CiteRoute does not measure citations while the app has a probe, and the scan page says rescans every 7 days while Free has daily re-scans struck through. The tracking tag and the AI bot log were not tested, because they need verification by meta tag or DNS. No plan was bought. Account and start: the test used the existing CiteRoute account of Daan, on the Free plan, with the interface in English (no language setting was found). The test started at 09:22 in our own tab. The My sites page showed FREE PLAN and No sites yet. Adding a site needs the CiteRoute Tag and a check of ownership with a meta tag or a DNS TXT record, and the page says that CiteRoute verifies that you control the domain before adding it. That was NOT done, so the tracking tag and the AI bot log were not tested. The dossier name is CiteRoute and the review is on MSS (citeroute-review); the handson folder name and the review slug are the same. The scanned site is a site of our own; its domain is not named in this delivery. Core action: the GEO Scanner (the audit page) works without verification. The domain of our own site was typed in at 09:23, the scan was started, and the result came after about 3.5 minutes (the progress bar stayed at 98% for a long time). It took 3 steps: type the domain, start the scan, start the probe. Result: Technical Readiness Score 81 / 100, labelled Strong technical readiness, with sub scores Tabular and FAQ 77, Content depth 86, Schema 73 and Section hierarchy 88. The scan reported JSON-LD Schemas: 0 detected, 1 H1 and 31 H2, 4,703 words, 0 tables and 0 of 15 points for JSON-LD Schema.org declarations. Check of the scan with curl: the homepage has 3 application/ld+json blocks (Organization, WebSite with a SearchAction and an ItemList with 12 items), so 0 detected is wrong. The 0 tables is right; the llms.txt file exists (HTTP 200) and /.well-known/agent.json gives 404, as the scan says. The Schema sub score of 73/100 stands next to 0 of 15 points for JSON-LD, so the scores contradict each other. Google shows our own site hardly at all, so a label of Strong technical readiness is suspiciously optimistic; readiness is not visibility. The recommendations: add Organization, FAQPage and Dataset JSON-LD and a price table. The Organization example uses sameAs links to our own pages; the second patch example has a placeholder wikidata address ending in Q... and a made-up Crunchbase address; the agent.json example has a made-up endpoint /api/agent/catalog. One tip names the Dataset schema as the fix for HTML data tables and says Embed this JSON-LD on a table tip. These tips must not be copied blindly. The live citation probe (via OpenRouter, preset Brand Authority, no verification needed) asked What are the core capabilities and verified offerings of the domain of our own site; the question itself contains the domain name, so a mention is almost certain. Perplexity Sonar: 92/100, Verified Citation, 100% (n=1), 20 source URLs; the answer mostly fits our site. OpenAI GPT-4o Search: 92/100, Verified Citation, 1 source URL; the answer is a generic invention (pre-built AI applications). Anthropic Claude 3.5: 92/100, Verified Citation, while the answer says I don't have verified information about this site in my training data; it still counts as a citation because it named the URL. Google Gemini: 68/100, Brand Mention Only; the description is wrong (a no-code AI app marketplace). A citation on a question that contains the domain name proves nothing, and n=1 per engine is not a measurement. Deviation from the dossier: the dossier says CiteRoute does not promise or measure specific citations, while the app has a citation probe, with n=1 per engine; no guarantee was seen. Second, the scan page says CiteRoute rescans domains every 7 days automatically, while the Free plan has Daily automated re-scans struck through and Pro has them. Plans, read up to the payment step: Free $0 forever (10 GEO scans per month, GEO Radar 1 monitored buyer prompt, 1-on-1 competitor comparison of 2 domains, 3 watchlist domains, community leaderboard, agent.json Studio, basic score report; struck through: Tracking tag and AI bot traffic detection, API key access, Daily automated re-scans, Weekly email performance digest); Pro $79 a month (unlimited GEO scans, GEO Radar 10 prompts 24/7, 5-way competitor benchmark, 1 verified site with tracking tag, 20 watchlist domains, an AI bot and crawler analytics dashboard, API key with 500 requests a day, history and trend charts, Start 14-day Trial, 14 days free, cancel anytime); Agency $249 a month, Most popular (10 verified client sites, white-label PDF, API 10,000 requests a day, 14 days free); Enterprise Custom. API pricing per call: geo-score $0.02, verify $0.01 and ai-traffic $0.05, and requests beyond the daily plan limits are billed at standard usage rates. The prices and the 14-day trial match the dossier. The Free limit of 10 scans a month was not tested (the counter is not visible on the scan page). No price field is changed here. Checkout: NOT reached. The Pro trial was not started and no payment screen was seen. Cancelling: Free has no subscription. The account menu has API Keys, Third-Party AI Keys and Sign Out, and no button for deleting the account or cancelling a plan; the FAQ says you can upgrade, downgrade or cancel (text cut off). No site was added, so nothing had to be removed. Not tested: the tracking tag and the AI bot log (Pro, 1 verified site; they need verification by meta tag or DNS and a script on the site, which was not allowed), so the dossier group of founders running a single content site is not tested; also API keys, the watchlist, the white-label PDF, share, export, GEO Radar, competitor comparison and Third-Party AI Keys (links external accounts). Clean up: all own tabs were closed; no test site, no script, no DNS or meta change and no external link were made. The scan stays in the Score History of the account of Daan; the watchlist was not touched.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The scan said 0 JSON-LD detected on a page that has 3 JSON-LD blocks, and a Schema score of 73/100 stands next to 0 of 15 points for JSON-LD. Some tips contain made-up values (a placeholder wikidata address and an endpoint /api/agent/catalog). The citation probe uses a question that contains your own domain name, so a mention is almost certain, and it uses one try per engine; Claude said it had no verified information and was still labelled Verified Citation. Free has daily re-scans struck through while the scan page says rescans every 7 days.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "The tracking tag and the AI bot log (verification by meta tag or DNS was not allowed), so the single content site group is not tested.",
+      "API keys, the watchlist, white-label PDF, share, export, GEO Radar and competitor comparison.",
+      "The Free limit of 10 scans a month.",
+      "Sign-up, which was done earlier by Daan.",
+      "Checkout and the Pro or Agency trial.",
+      "Export and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "citeroute:cancellation_terms",

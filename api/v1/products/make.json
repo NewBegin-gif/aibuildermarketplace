@@ -73,10 +73,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -84,7 +83,608 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/make-review.html",
+  "method": [
+   "Free plan; a webhook, data store and router scenario was built and run 5 times with curl requests; no external apps were connected; the checkout of Core was viewed without an address and nothing was paid."
+  ],
+  "claims": [
+   {
+    "claim": "Subscription: Free",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The dashboard says Subscription: Free with 1,000 credits / month and usage resetting on Dec 16, 2026. Five runs of the test scenario used 15 of 1,000 credits (2% used).",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The dashboard figure against the credits counted for one test scenario of five runs.",
+    "status": "confirmed",
+    "buying_consequence": "The free allowance is easy to see, and a small test scenario uses only a small part of it.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "3 credits",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Each of the 5 runs showed 3 credits and 3 operations: the webhook, the data store and one branch module counted 1 each, and the Router counted nothing. The public pricing page says the same about router modules.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The credit and operation columns of the history against our own count of the modules in the scenario.",
+    "status": "confirmed",
+    "buying_consequence": "Plan on about 3 credits for every record that goes through a webhook, a data store and one action; the router branching itself is free.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "2 active scenarios",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Only one scenario was switched on, so the limit of 2 active scenarios was not reached or tried; the scenario was switched on without a problem.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The plan line against a test with one active scenario.",
+    "status": "not_testable",
+    "buying_consequence": "The Free limit of 2 active scenarios is listed but was not hit, so we cannot say what the message looks like at the limit.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "15-minute minimum scheduling interval",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Schedule settings with At regular intervals says Must be higher than or equal to 15. The webhook scenario ran Immediately as data arrives, five runs between 13:50:23 and 13:50:32, so the 15 minutes apply to schedules, not to webhook triggers.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The 15 minutes in our dossier text against the interval seen on the schedule dialog and the instant webhook runs; no longer schedule was saved.",
+    "status": "contradicted",
+    "buying_consequence": "On Free a webhook scenario is not slowed down to 15 minutes; only scheduled scenarios wait at least 15 minutes.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Maximum runs to start per minute 100",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The scenario settings for the webhook trigger show a maximum of 100 runs to start per minute. Five runs were sent within a few seconds, far below this, so the limit was not tested.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The setting on screen against a burst of 5 requests.",
+    "status": "not_testable",
+    "buying_consequence": "The webhook rate limit is shown on screen but a busier burst was not tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "567.0 B / 1.0 MB",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The data store Test Inbox has a fixed size of 1 MB on Free and held 5 records at 567.0 B / 1.0 MB.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The storage figure on the data store page against the 1 MB of the plan; a fuller store was not tried.",
+    "status": "confirmed",
+    "buying_consequence": "Free gives one small data store of 1 MB, small, so not meant for large data.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "7-day execution log storage",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plan page lists 7-day execution log storage on Free. The test lasted minutes, so the log retention of 7 days was not observed.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The plan line against a session of a few minutes.",
+    "status": "not_testable",
+    "buying_consequence": "Logs on Free are kept only for a short time according to the plan page; this was not checked over days.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "3,000+ standard apps",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Free plan card says 3,000+ standard apps. Our dossier says 3,500+ apps. No external app was connected in this test.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The app count on the plan card against the dossier figure; the list of apps itself was not counted.",
+    "status": "contradicted",
+    "buying_consequence": "The page now lists fewer apps than the dossier; the number of apps matters little for a first test, but check the app you need.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Core $16.00 / month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plan page shows Core at $16.00 a month with monthly billing at 10,000 credits, against $15 in the dossier. The live public pricing page at the default 10,000 credits showed $16 as well.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The monthly Core price on the plan page and the live pricing page against the dossier figure; the yearly price of $11 a month was confirmed.",
+    "status": "contradicted",
+    "buying_consequence": "Core costs more per month when paid monthly than we listed before.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Pro $28.00 / month; Teams $51.00 / month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plan page shows Pro at $28.00 and Teams at $51.00 a month with monthly billing, against $26 and $47 in the dossier. The live pricing page showed the same amounts.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The monthly Pro and Teams prices on both pages against the dossier; the yearly prices of $20 and $36 were not in the dossier.",
+    "status": "contradicted",
+    "buying_consequence": "Pro and Teams cost more per month than we listed before when paid monthly.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Save up to 15%",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The yearly billing tab says Save up to 15%, while the Core checkout says Save 31% ($16.00 monthly against $11.00 a month yearly). The tab text is lower than the saving shown at checkout for Core.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The text on the billing tab against the saving shown in the Core checkout and the prices on both pages.",
+    "status": "contradicted",
+    "buying_consequence": "Paying yearly saves more than the tab says on Core: $11 instead of $16 a month.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Unlimited active scenarios",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Core lists unlimited active scenarios, a 1-minute minimum scheduling interval and a 40-minute execution time. Core was not bought, so none of this was tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The Core feature list against a test on the Free plan only.",
+    "status": "not_testable",
+    "buying_consequence": "The extra Core features come from the plan page only and were not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Total $16.00",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Get Core dialog showed Monthly $16.00 / month, Subtotal $16.00 and Total $16.00 with Proceed to payment; no tax was shown before an address was entered, no card was entered and nothing was paid. The amount matches the plan page.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+    "comparability": "The plan page price against the checkout total before the address step; no tax line, fee or stored cost rule could be compared.",
+    "status": "confirmed",
+    "buying_consequence": "The monthly Core price at checkout equals the plan page, but tax may be added once your address is known.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Make on the Free plan: a scenario with a webhook, a data store and a router with two branches took about 6 minutes and about 25 clicks to the first result, ran 5 times at 3 credits each (15 of 1,000 credits) and the router cost nothing. The 15-minute minimum interval turned out to apply to scheduled scenarios only, not to webhooks, which ran at once. The plan prices on the page are higher than in our dossier: Core $16, Pro $28 and Teams $51 a month, and the Free plan lists 3,000+ standard apps. The checkout of Core was viewed without an address and nothing was paid. Account and start: the account on the Free plan was created by Daan, who was signed in; our AI assistant ran the test in its own Chrome tab of the browser of Daan, starting at 13:44. The interface was already in English; only the Locale in Profile settings (date and decimal format) said Dutch and was changed to English (United States), which showed Settings updated. The dashboard said Subscription: Free, 1,000 credits / month, usage resets on Dec 16, 2026. The dossier name is Make and the review is on OSM (make-review). Core action: a scenario with a Custom webhook, a Data store module (Add/replace a record) and a Router with two branches (Leads with the filter type = lead, Invoices with type = invoice), each ending in a Tools Set variable module. It took about 6 minutes and about 25 clicks to the first result. The data store Test Inbox was made with the structure Name, Email and Type, generated from a JSON example; the storage size is fixed at 1 MB on Free, and after 5 records it showed 567.0 B / 1.0 MB. The webhook needed one bare request to learn its structure (3 values detected and ready to map: name, email, type); the webhook window also warns that an inactive webhook is removed after too long. The scenario was switched on without a problem on Free, with Immediately as data arrives and a maximum of 100 runs to start per minute. Five curl requests were sent between 13:50:23 and 13:50:32: Test Lead 1 to 3 (type lead) and Test Invoice 4 and 5 (type invoice), each answered Accepted. The history showed 5 runs, each Instant, Success, less than 1 sec, 3 credits and 3 operations; in total 15 of 1,000 credits (2% used), and Scenario Usage showed 15 credits and 621 B data transfer. The Router did not count: the webhook (1), the data store (1) and one branch module (1) make 3 credits a run, and the public pricing page says router modules count no credits. The data store held 5 records. Schedule settings offer Immediately, At regular intervals, Once, Daily, Weekdays, Weekly, Monthly, Specified dates and On demand; At regular intervals says Must be higher than or equal to 15, so the 15 minutes only apply to scheduled scenarios and not to webhook triggers. The dialog was cancelled. Plans: The plans were read by the tester on 18 Nov 2026 on the Subscription page (Compare Plans, in USD) and read again just before this delivery the same day on the public pricing page make.com/pricing at the default 10,000 credits a month, with the same amounts. Monthly: Free $0 (1,000 credits a month), Core $16.00, Pro $28.00, Teams $51.00, Enterprise on request. Yearly: Core $11.00, Pro $20.00, Teams $36.00 a month (120,000 credits a year). Free includes 2 active scenarios, a 15-minute minimum scheduling interval, a 5-minute scenario execution time, a 5 MB file size, 7-day execution log storage and 3,000+ standard apps. Core adds unlimited active scenarios, a 1-minute minimum scheduling interval, a 40-minute execution time, a 100 MB file size and 30-day log storage. Differences against the dossier: Core $16 against $15, Pro $28 against $26 and Teams $51 against $47 a month (the yearly Core price of $11 a month matches the dossier); and 3,000+ standard apps on the Free plan against 3,500+ in the dossier. The prices on the live pricing page were checked again and confirm the new amounts. The Save up to 15% on the billing tab differs from Save 31% in the Core checkout. Checkout: Get Core was opened, with name and e-mail pre-filled and the address left empty: Monthly $16.00 / month, Yearly Save 31% $11.00 / month, Subtotal $16.00, Total $16.00 and a Proceed to payment button. No tax was shown before an address was entered, no card was entered and nothing was paid; the dialog was closed. Cancelling: there was no paid plan; going back to Free is Organization, Subscription, Change plan, and invoices are under Payments. Deleting the organization is Profile, Organizations, the three-dot menu, Delete; deleting the account is Profile, Settings, Danger zone, Delete my account (Permanently delete your account...). None of these were clicked or confirmed. Not tested: paying, Core and Pro features, external apps (no connections were made on purpose), the Maia AI builder, MCP toolboxes, teams and roles, replay of runs, and the sister products Grid and Code. Clean up: the scenario Test router scenario is switched OFF (Inactive) but not deleted; the data store Test Inbox with 5 test records and the webhook Test webhook are still there; the Locale of the profile stays on English (United States); the Chrome tab was closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Credits are counted per module run, so even this small scenario used 3 credits per record; the 1,000 free credits cover only a few hundred such runs a month. A data store has a fixed size of 1 MB on Free. A webhook that stays unused is removed after a while. The page prices are higher than we listed before, so check the plan page before you plan a budget. Deleting the account or the organization is a separate step in the profile and was not tried.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Paying, and the Core and Pro features.",
+    "External apps (no connections were made on purpose).",
+    "The Maia AI builder, MCP toolboxes, teams and roles, and the replay of runs.",
+    "Make Grid and Make Code.",
+    "Cancelling, deleting the organization or the account, which were looked up but not confirmed.",
+    "Tax on the checkout, which showed no amount before an address was entered.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:44 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/make-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/make-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/make-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Make on the Free plan: a scenario with a webhook, a data store and a router with two branches took about 6 minutes and about 25 clicks to the first result, ran 5 times at 3 credits each (15 of 1,000 credits) and the router cost nothing. The 15-minute minimum interval turned out to apply to scheduled scenarios only, not to webhooks, which ran at once. The plan prices on the page are higher than in our dossier: Core $16, Pro $28 and Teams $51 a month, and the Free plan lists 3,000+ standard apps. The checkout of Core was viewed without an address and nothing was paid. Account and start: the account on the Free plan was created by Daan, who was signed in; our AI assistant ran the test in its own Chrome tab of the browser of Daan, starting at 13:44. The interface was already in English; only the Locale in Profile settings (date and decimal format) said Dutch and was changed to English (United States), which showed Settings updated. The dashboard said Subscription: Free, 1,000 credits / month, usage resets on Dec 16, 2026. The dossier name is Make and the review is on OSM (make-review). Core action: a scenario with a Custom webhook, a Data store module (Add/replace a record) and a Router with two branches (Leads with the filter type = lead, Invoices with type = invoice), each ending in a Tools Set variable module. It took about 6 minutes and about 25 clicks to the first result. The data store Test Inbox was made with the structure Name, Email and Type, generated from a JSON example; the storage size is fixed at 1 MB on Free, and after 5 records it showed 567.0 B / 1.0 MB. The webhook needed one bare request to learn its structure (3 values detected and ready to map: name, email, type); the webhook window also warns that an inactive webhook is removed after too long. The scenario was switched on without a problem on Free, with Immediately as data arrives and a maximum of 100 runs to start per minute. Five curl requests were sent between 13:50:23 and 13:50:32: Test Lead 1 to 3 (type lead) and Test Invoice 4 and 5 (type invoice), each answered Accepted. The history showed 5 runs, each Instant, Success, less than 1 sec, 3 credits and 3 operations; in total 15 of 1,000 credits (2% used), and Scenario Usage showed 15 credits and 621 B data transfer. The Router did not count: the webhook (1), the data store (1) and one branch module (1) make 3 credits a run, and the public pricing page says router modules count no credits. The data store held 5 records. Schedule settings offer Immediately, At regular intervals, Once, Daily, Weekdays, Weekly, Monthly, Specified dates and On demand; At regular intervals says Must be higher than or equal to 15, so the 15 minutes only apply to scheduled scenarios and not to webhook triggers. The dialog was cancelled. Plans: The plans were read by the tester on 18 Nov 2026 on the Subscription page (Compare Plans, in USD) and read again just before this delivery the same day on the public pricing page make.com/pricing at the default 10,000 credits a month, with the same amounts. Monthly: Free $0 (1,000 credits a month), Core $16.00, Pro $28.00, Teams $51.00, Enterprise on request. Yearly: Core $11.00, Pro $20.00, Teams $36.00 a month (120,000 credits a year). Free includes 2 active scenarios, a 15-minute minimum scheduling interval, a 5-minute scenario execution time, a 5 MB file size, 7-day execution log storage and 3,000+ standard apps. Core adds unlimited active scenarios, a 1-minute minimum scheduling interval, a 40-minute execution time, a 100 MB file size and 30-day log storage. Differences against the dossier: Core $16 against $15, Pro $28 against $26 and Teams $51 against $47 a month (the yearly Core price of $11 a month matches the dossier); and 3,000+ standard apps on the Free plan against 3,500+ in the dossier. The prices on the live pricing page were checked again and confirm the new amounts. The Save up to 15% on the billing tab differs from Save 31% in the Core checkout. Checkout: Get Core was opened, with name and e-mail pre-filled and the address left empty: Monthly $16.00 / month, Yearly Save 31% $11.00 / month, Subtotal $16.00, Total $16.00 and a Proceed to payment button. No tax was shown before an address was entered, no card was entered and nothing was paid; the dialog was closed. Cancelling: there was no paid plan; going back to Free is Organization, Subscription, Change plan, and invoices are under Payments. Deleting the organization is Profile, Organizations, the three-dot menu, Delete; deleting the account is Profile, Settings, Danger zone, Delete my account (Permanently delete your account...). None of these were clicked or confirmed. Not tested: paying, Core and Pro features, external apps (no connections were made on purpose), the Maia AI builder, MCP toolboxes, teams and roles, replay of runs, and the sister products Grid and Code. Clean up: the scenario Test router scenario is switched OFF (Inactive) but not deleted; the data store Test Inbox with 5 test records and the webhook Test webhook are still there; the Locale of the profile stays on English (United States); the Chrome tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/make-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Make on the Free plan: a scenario with a webhook, a data store and a router with two branches took about 6 minutes and about 25 clicks to the first result, ran 5 times at 3 credits each (15 of 1,000 credits) and the router cost nothing. The 15-minute minimum interval turned out to apply to scheduled scenarios only, not to webhooks, which ran at once. The plan prices on the page are higher than in our dossier: Core $16, Pro $28 and Teams $51 a month, and the Free plan lists 3,000+ standard apps. The checkout of Core was viewed without an address and nothing was paid. Account and start: the account on the Free plan was created by Daan, who was signed in; our AI assistant ran the test in its own Chrome tab of the browser of Daan, starting at 13:44. The interface was already in English; only the Locale in Profile settings (date and decimal format) said Dutch and was changed to English (United States), which showed Settings updated. The dashboard said Subscription: Free, 1,000 credits / month, usage resets on Dec 16, 2026. The dossier name is Make and the review is on OSM (make-review). Core action: a scenario with a Custom webhook, a Data store module (Add/replace a record) and a Router with two branches (Leads with the filter type = lead, Invoices with type = invoice), each ending in a Tools Set variable module. It took about 6 minutes and about 25 clicks to the first result. The data store Test Inbox was made with the structure Name, Email and Type, generated from a JSON example; the storage size is fixed at 1 MB on Free, and after 5 records it showed 567.0 B / 1.0 MB. The webhook needed one bare request to learn its structure (3 values detected and ready to map: name, email, type); the webhook window also warns that an inactive webhook is removed after too long. The scenario was switched on without a problem on Free, with Immediately as data arrives and a maximum of 100 runs to start per minute. Five curl requests were sent between 13:50:23 and 13:50:32: Test Lead 1 to 3 (type lead) and Test Invoice 4 and 5 (type invoice), each answered Accepted. The history showed 5 runs, each Instant, Success, less than 1 sec, 3 credits and 3 operations; in total 15 of 1,000 credits (2% used), and Scenario Usage showed 15 credits and 621 B data transfer. The Router did not count: the webhook (1), the data store (1) and one branch module (1) make 3 credits a run, and the public pricing page says router modules count no credits. The data store held 5 records. Schedule settings offer Immediately, At regular intervals, Once, Daily, Weekdays, Weekly, Monthly, Specified dates and On demand; At regular intervals says Must be higher than or equal to 15, so the 15 minutes only apply to scheduled scenarios and not to webhook triggers. The dialog was cancelled. Plans: The plans were read by the tester on 18 Nov 2026 on the Subscription page (Compare Plans, in USD) and read again just before this delivery the same day on the public pricing page make.com/pricing at the default 10,000 credits a month, with the same amounts. Monthly: Free $0 (1,000 credits a month), Core $16.00, Pro $28.00, Teams $51.00, Enterprise on request. Yearly: Core $11.00, Pro $20.00, Teams $36.00 a month (120,000 credits a year). Free includes 2 active scenarios, a 15-minute minimum scheduling interval, a 5-minute scenario execution time, a 5 MB file size, 7-day execution log storage and 3,000+ standard apps. Core adds unlimited active scenarios, a 1-minute minimum scheduling interval, a 40-minute execution time, a 100 MB file size and 30-day log storage. Differences against the dossier: Core $16 against $15, Pro $28 against $26 and Teams $51 against $47 a month (the yearly Core price of $11 a month matches the dossier); and 3,000+ standard apps on the Free plan against 3,500+ in the dossier. The prices on the live pricing page were checked again and confirm the new amounts. The Save up to 15% on the billing tab differs from Save 31% in the Core checkout. Checkout: Get Core was opened, with name and e-mail pre-filled and the address left empty: Monthly $16.00 / month, Yearly Save 31% $11.00 / month, Subtotal $16.00, Total $16.00 and a Proceed to payment button. No tax was shown before an address was entered, no card was entered and nothing was paid; the dialog was closed. Cancelling: there was no paid plan; going back to Free is Organization, Subscription, Change plan, and invoices are under Payments. Deleting the organization is Profile, Organizations, the three-dot menu, Delete; deleting the account is Profile, Settings, Danger zone, Delete my account (Permanently delete your account...). None of these were clicked or confirmed. Not tested: paying, Core and Pro features, external apps (no connections were made on purpose), the Maia AI builder, MCP toolboxes, teams and roles, replay of runs, and the sister products Grid and Code. Clean up: the scenario Test router scenario is switched OFF (Inactive) but not deleted; the data store Test Inbox with 5 test records and the webhook Test webhook are still there; the Locale of the profile stays on English (United States); the Chrome tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/make-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/make-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Make",
+    "product_id": "make",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Make on the Free plan: a scenario with a webhook, a data store and a router with two branches took about 6 minutes and about 25 clicks to the first result, ran 5 times at 3 credits each (15 of 1,000 credits) and the router cost nothing. The 15-minute minimum interval turned out to apply to scheduled scenarios only, not to webhooks, which ran at once. The plan prices on the page are higher than in our dossier: Core $16, Pro $28 and Teams $51 a month, and the Free plan lists 3,000+ standard apps. The checkout of Core was viewed without an address and nothing was paid.",
+    "findings": [
+     "Text we checked: \"Subscription: Free\". What we saw: The dashboard says Subscription: Free with 1,000 credits / month and usage resetting on Dec 16, 2026. Five runs of the test scenario used 15 of 1,000 credits (2% used).",
+     "Text we checked: \"3 credits\". What we saw: Each of the 5 runs showed 3 credits and 3 operations: the webhook, the data store and one branch module counted 1 each, and the Router counted nothing. The public pricing page says the same about router modules.",
+     "Text we checked: \"15-minute minimum scheduling interval\". What we saw: Schedule settings with At regular intervals says Must be higher than or equal to 15. The webhook scenario ran Immediately as data arrives, five runs between 13:50:23 and 13:50:32, so the 15 minutes apply to schedules, not to webhook triggers.",
+     "Text we checked: \"567.0 B / 1.0 MB\". What we saw: The data store Test Inbox has a fixed size of 1 MB on Free and held 5 records at 567.0 B / 1.0 MB.",
+     "Text we checked: \"3,000+ standard apps\". What we saw: The Free plan card says 3,000+ standard apps. Our dossier says 3,500+ apps. No external app was connected in this test."
+    ],
+    "not_tested": [
+     "Paying, and the Core and Pro features.",
+     "External apps (no connections were made on purpose).",
+     "The Maia AI builder, MCP toolboxes, teams and roles, and the replay of runs.",
+     "Make Grid and Make Code.",
+     "Cancelling, deleting the organization or the account, which were looked up but not confirmed.",
+     "Tax on the checkout, which showed no amount before an address was entered.",
+     "Export and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Subscription: Free",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The dashboard says Subscription: Free with 1,000 credits / month and usage resetting on Dec 16, 2026. Five runs of the test scenario used 15 of 1,000 credits (2% used).",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The dashboard figure against the credits counted for one test scenario of five runs.",
+      "status": "confirmed",
+      "buying_consequence": "The free allowance is easy to see, and a small test scenario uses only a small part of it.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "3 credits",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Each of the 5 runs showed 3 credits and 3 operations: the webhook, the data store and one branch module counted 1 each, and the Router counted nothing. The public pricing page says the same about router modules.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The credit and operation columns of the history against our own count of the modules in the scenario.",
+      "status": "confirmed",
+      "buying_consequence": "Plan on about 3 credits for every record that goes through a webhook, a data store and one action; the router branching itself is free.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "2 active scenarios",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Only one scenario was switched on, so the limit of 2 active scenarios was not reached or tried; the scenario was switched on without a problem.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The plan line against a test with one active scenario.",
+      "status": "not_testable",
+      "buying_consequence": "The Free limit of 2 active scenarios is listed but was not hit, so we cannot say what the message looks like at the limit.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "15-minute minimum scheduling interval",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Schedule settings with At regular intervals says Must be higher than or equal to 15. The webhook scenario ran Immediately as data arrives, five runs between 13:50:23 and 13:50:32, so the 15 minutes apply to schedules, not to webhook triggers.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The 15 minutes in our dossier text against the interval seen on the schedule dialog and the instant webhook runs; no longer schedule was saved.",
+      "status": "contradicted",
+      "buying_consequence": "On Free a webhook scenario is not slowed down to 15 minutes; only scheduled scenarios wait at least 15 minutes.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Maximum runs to start per minute 100",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The scenario settings for the webhook trigger show a maximum of 100 runs to start per minute. Five runs were sent within a few seconds, far below this, so the limit was not tested.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The setting on screen against a burst of 5 requests.",
+      "status": "not_testable",
+      "buying_consequence": "The webhook rate limit is shown on screen but a busier burst was not tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "567.0 B / 1.0 MB",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The data store Test Inbox has a fixed size of 1 MB on Free and held 5 records at 567.0 B / 1.0 MB.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The storage figure on the data store page against the 1 MB of the plan; a fuller store was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "Free gives one small data store of 1 MB, small, so not meant for large data.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "7-day execution log storage",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plan page lists 7-day execution log storage on Free. The test lasted minutes, so the log retention of 7 days was not observed.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The plan line against a session of a few minutes.",
+      "status": "not_testable",
+      "buying_consequence": "Logs on Free are kept only for a short time according to the plan page; this was not checked over days.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "3,000+ standard apps",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Free plan card says 3,000+ standard apps. Our dossier says 3,500+ apps. No external app was connected in this test.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The app count on the plan card against the dossier figure; the list of apps itself was not counted.",
+      "status": "contradicted",
+      "buying_consequence": "The page now lists fewer apps than the dossier; the number of apps matters little for a first test, but check the app you need.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Core $16.00 / month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plan page shows Core at $16.00 a month with monthly billing at 10,000 credits, against $15 in the dossier. The live public pricing page at the default 10,000 credits showed $16 as well.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The monthly Core price on the plan page and the live pricing page against the dossier figure; the yearly price of $11 a month was confirmed.",
+      "status": "contradicted",
+      "buying_consequence": "Core costs more per month when paid monthly than we listed before.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Pro $28.00 / month; Teams $51.00 / month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plan page shows Pro at $28.00 and Teams at $51.00 a month with monthly billing, against $26 and $47 in the dossier. The live pricing page showed the same amounts.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The monthly Pro and Teams prices on both pages against the dossier; the yearly prices of $20 and $36 were not in the dossier.",
+      "status": "contradicted",
+      "buying_consequence": "Pro and Teams cost more per month than we listed before when paid monthly.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Save up to 15%",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The yearly billing tab says Save up to 15%, while the Core checkout says Save 31% ($16.00 monthly against $11.00 a month yearly). The tab text is lower than the saving shown at checkout for Core.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The text on the billing tab against the saving shown in the Core checkout and the prices on both pages.",
+      "status": "contradicted",
+      "buying_consequence": "Paying yearly saves more than the tab says on Core: $11 instead of $16 a month.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Unlimited active scenarios",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Core lists unlimited active scenarios, a 1-minute minimum scheduling interval and a 40-minute execution time. Core was not bought, so none of this was tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The Core feature list against a test on the Free plan only.",
+      "status": "not_testable",
+      "buying_consequence": "The extra Core features come from the plan page only and were not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Total $16.00",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Get Core dialog showed Monthly $16.00 / month, Subtotal $16.00 and Total $16.00 with Proceed to payment; no tax was shown before an address was entered, no card was entered and nothing was paid. The amount matches the plan page.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/make-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Core checkout viewed up to the payment button, nothing was paid",
+      "comparability": "The plan page price against the checkout total before the address step; no tax line, fee or stored cost rule could be compared.",
+      "status": "confirmed",
+      "buying_consequence": "The monthly Core price at checkout equals the plan page, but tax may be added once your address is known.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Make on the Free plan: a scenario with a webhook, a data store and a router with two branches took about 6 minutes and about 25 clicks to the first result, ran 5 times at 3 credits each (15 of 1,000 credits) and the router cost nothing. The 15-minute minimum interval turned out to apply to scheduled scenarios only, not to webhooks, which ran at once. The plan prices on the page are higher than in our dossier: Core $16, Pro $28 and Teams $51 a month, and the Free plan lists 3,000+ standard apps. The checkout of Core was viewed without an address and nothing was paid. Account and start: the account on the Free plan was created by Daan, who was signed in; our AI assistant ran the test in its own Chrome tab of the browser of Daan, starting at 13:44. The interface was already in English; only the Locale in Profile settings (date and decimal format) said Dutch and was changed to English (United States), which showed Settings updated. The dashboard said Subscription: Free, 1,000 credits / month, usage resets on Dec 16, 2026. The dossier name is Make and the review is on OSM (make-review). Core action: a scenario with a Custom webhook, a Data store module (Add/replace a record) and a Router with two branches (Leads with the filter type = lead, Invoices with type = invoice), each ending in a Tools Set variable module. It took about 6 minutes and about 25 clicks to the first result. The data store Test Inbox was made with the structure Name, Email and Type, generated from a JSON example; the storage size is fixed at 1 MB on Free, and after 5 records it showed 567.0 B / 1.0 MB. The webhook needed one bare request to learn its structure (3 values detected and ready to map: name, email, type); the webhook window also warns that an inactive webhook is removed after too long. The scenario was switched on without a problem on Free, with Immediately as data arrives and a maximum of 100 runs to start per minute. Five curl requests were sent between 13:50:23 and 13:50:32: Test Lead 1 to 3 (type lead) and Test Invoice 4 and 5 (type invoice), each answered Accepted. The history showed 5 runs, each Instant, Success, less than 1 sec, 3 credits and 3 operations; in total 15 of 1,000 credits (2% used), and Scenario Usage showed 15 credits and 621 B data transfer. The Router did not count: the webhook (1), the data store (1) and one branch module (1) make 3 credits a run, and the public pricing page says router modules count no credits. The data store held 5 records. Schedule settings offer Immediately, At regular intervals, Once, Daily, Weekdays, Weekly, Monthly, Specified dates and On demand; At regular intervals says Must be higher than or equal to 15, so the 15 minutes only apply to scheduled scenarios and not to webhook triggers. The dialog was cancelled. Plans: The plans were read by the tester on 18 Nov 2026 on the Subscription page (Compare Plans, in USD) and read again just before this delivery the same day on the public pricing page make.com/pricing at the default 10,000 credits a month, with the same amounts. Monthly: Free $0 (1,000 credits a month), Core $16.00, Pro $28.00, Teams $51.00, Enterprise on request. Yearly: Core $11.00, Pro $20.00, Teams $36.00 a month (120,000 credits a year). Free includes 2 active scenarios, a 15-minute minimum scheduling interval, a 5-minute scenario execution time, a 5 MB file size, 7-day execution log storage and 3,000+ standard apps. Core adds unlimited active scenarios, a 1-minute minimum scheduling interval, a 40-minute execution time, a 100 MB file size and 30-day log storage. Differences against the dossier: Core $16 against $15, Pro $28 against $26 and Teams $51 against $47 a month (the yearly Core price of $11 a month matches the dossier); and 3,000+ standard apps on the Free plan against 3,500+ in the dossier. The prices on the live pricing page were checked again and confirm the new amounts. The Save up to 15% on the billing tab differs from Save 31% in the Core checkout. Checkout: Get Core was opened, with name and e-mail pre-filled and the address left empty: Monthly $16.00 / month, Yearly Save 31% $11.00 / month, Subtotal $16.00, Total $16.00 and a Proceed to payment button. No tax was shown before an address was entered, no card was entered and nothing was paid; the dialog was closed. Cancelling: there was no paid plan; going back to Free is Organization, Subscription, Change plan, and invoices are under Payments. Deleting the organization is Profile, Organizations, the three-dot menu, Delete; deleting the account is Profile, Settings, Danger zone, Delete my account (Permanently delete your account...). None of these were clicked or confirmed. Not tested: paying, Core and Pro features, external apps (no connections were made on purpose), the Maia AI builder, MCP toolboxes, teams and roles, replay of runs, and the sister products Grid and Code. Clean up: the scenario Test router scenario is switched OFF (Inactive) but not deleted; the data store Test Inbox with 5 test records and the webhook Test webhook are still there; the Locale of the profile stays on English (United States); the Chrome tab was closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Credits are counted per module run, so even this small scenario used 3 credits per record; the 1,000 free credits cover only a few hundred such runs a month. A data store has a fixed size of 1 MB on Free. A webhook that stays unused is removed after a while. The page prices are higher than we listed before, so check the plan page before you plan a budget. Deleting the account or the organization is a separate step in the profile and was not tried.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Paying, and the Core and Pro features.",
+      "External apps (no connections were made on purpose).",
+      "The Maia AI builder, MCP toolboxes, teams and roles, and the replay of runs.",
+      "Make Grid and Make Code.",
+      "Cancelling, deleting the organization or the account, which were looked up but not confirmed.",
+      "Tax on the checkout, which showed no amount before an address was entered.",
+      "Export and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:44 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "make:cancellation_terms",

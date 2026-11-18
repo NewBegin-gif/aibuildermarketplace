@@ -73,10 +73,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -84,7 +83,473 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/mailveri-review.html",
+  "method": [
+   "The test used an account Daan made, and our AI assistant ran it in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "file upload of up to 1 million rows",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Upload Files page says Maximum emails per list: 100,000 and Maximum file size is 10 MB, not 1 million rows. The limit itself was not run: only a file of 20 rows was uploaded.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The dossier figure against the limit text on the Upload Files page; no big file was uploaded to test the limit.",
+    "status": "contradicted",
+    "buying_consequence": "A one-off list over 100,000 addresses has to be split into several lists, which the dossier wording of 1 million rows does not say.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "CSV/XLSX/TXT",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Upload Files page names CSV and TXT text files and the first sheet of Excel files in the formats XLS and XLSX, or pasted emails. Only a CSV file was uploaded.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The dossier file types against the page text; only one CSV file was run, so the other types were not tried.",
+    "status": "confirmed",
+    "buying_consequence": "The three file types of the dossier are accepted, and the app adds the old XLS format and pasting.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "7-status report",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The detail window of the list shows seven statuses: VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX, INVALID, DISPOSABLE and UNKNOWN. In this test only INVALID (13) and DISPOSABLE (3) had addresses.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The dossier list of statuses against the detail window; five of the seven stayed at 0, so their meaning in practice was not tested.",
+    "status": "confirmed",
+    "buying_consequence": "The seven statuses exist as the dossier says, but only two of them were seen with real counts.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "16 unique emails, 4 rows without a valid email were skipped",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Of 20 rows, 16 were counted as unique emails and the 4 rows with a syntax error were skipped in the browser; the list in Mail Lists showed Total 16 and 16 credits were used.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The page message against our own file of 20 rows; the dossier has no claim about skipped rows.",
+    "status": "not_comparable",
+    "buying_consequence": "Rows with a bad syntax are dropped before the count and are not charged, so they do not show in the result file.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Temporary burner address",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The three addresses on the burner domains mailinator, guerrillamail and 10minutemail came back DISPOSABLE (3, 19%), with the text Temporary burner address.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The disposable count against our own file of made-up addresses; no outside list of burner domains was compared.",
+    "status": "not_comparable",
+    "buying_consequence": "Burner domains were flagged as bad in this test, but only three domains were tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "ROLE_ACCOUNT",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The role addresses on example domains (info, sales, contact, admin, noreply and a help address) came back INVALID and none came back ROLE_ACCOUNT, because the example domains have no mail server. The role detection was therefore not exercised.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The status list against role addresses on domains without a mail server; no role address on a working domain was sent.",
+    "status": "not_testable",
+    "buying_consequence": "Whether role addresses on real domains are labelled as role accounts is not known from this test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Teams that want proof of accuracy",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "All 16 counted addresses were made up and bad on purpose, and all 16 came back undeliverable. No known good mailbox was sent, so the share of good addresses that the tool wrongly marks bad was not measured, and the accuracy claim was not tested.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The audience wording against a sample with no good address; a sample of known good and known bad addresses would be needed.",
+    "status": "not_testable",
+    "buying_consequence": "Whether the tool keeps good addresses, which matters most for a one-off big list, is not shown by this test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$9 10,000",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Buy Credits page shows nine one-off packs from $9 for 10,000 credits to $999 for 5,000,000 credits, with 1 credit = 1 email verification and Credits never expire. The $39 pack shows 60,000 credits with 50,000 struck through.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The dossier prices against the Buy Credits page; the prices were not seen on a payment screen.",
+    "status": "confirmed",
+    "buying_consequence": "The pack prices are as the dossier says, and a pack does not run out by date; there is no monthly subscription.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$39",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Summary on the Buy Credits page shows the $39 pack with a Total of $39.00 and an empty promo code field. Checkout was not clicked and no tax line, card form or payment screen was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+    },
+    "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+    "comparability": "The Summary total against a checkout that was not reached; no tax, term or stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The amount you pay at the end, with any tax, is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested MailVeri in the account that Daan made: a CSV of 20 made-up addresses showed 16 unique emails and 4 skipped rows, was verified in 19 seconds in 3 clicks for 16 credits (1,000 to 984, taken at once and not given back after the list was deleted) and came back as 13 invalid and 3 disposable, with a CSV export that worked. Every test address was bad on purpose, so missed good addresses, role detection and the accuracy claim were not measured. The app limit is 100,000 emails per list against 1 million rows in the dossier. The pack prices match the dossier and no pack was bought. Account and start: Daan made the MailVeri account before the test. The test started at 07:44 in our own browser tab on the dashboard of the app (interface already in English, no language setting found). The dashboard showed CREDITS: 1,000, 1,000 lifetime, the Free Plan, TOTAL VERIFIED 0 and no mail lists. The dossier names three audiences (marketers cleaning a one-off big list, developers checking sign-ups in code and teams that want proof of accuracy) and no alternatives. Core action, list verification: a test file adressen.csv with 20 made-up addresses was prepared on purpose: four with a syntax error, two on a domain that does not exist, three on burner domains (mailinator, guerrillamail and 10minutemail), role addresses (info, sales, contact, admin, noreply and a help address) on example domains and six made-up personal names at four large free mail providers. It was uploaded on Upload Files, which says Maximum emails per list: 100,000 and Maximum file size is 10 MB. After the upload the page said 16 unique emails and 4 rows without a valid email were skipped, so the four syntax errors were filtered in the browser and were not processed or charged. Verify was clicked at 07:44: the credit counter went from 1,000 to 984 at once (PENDING: 16), the page showed 1 mails/s and the list was Completed after 00:19s, about 07:45. That is 3 clicks from the file to the result. The result was 0% Deliverable: Deliverable 0, Risky 0, Undeliverable 16 (100%) and Unknown 0. The detail window split it into INVALID 13 (Non-existent address) and DISPOSABLE 3 (Temporary burner address); VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX and UNKNOWN were 0. Per address (the All Results export with the column MailVeri Status): the two made-up domains were INVALID, the three burner domains DISPOSABLE, the role addresses on example domains INVALID and not ROLE_ACCOUNT, and all made-up names at the big free mail providers INVALID. Honest reading: every test address was bad on purpose, so the test did not measure whether the tool misses good addresses, and no address came back valid, role account, catch-all, full inbox or unknown, so those five categories were not exercised. The role addresses are INVALID because example domains have no mail server, so the role detection itself is not proven. Export: Download Results offers the presets Deliverable Only (Recommended), Deliverable + Risky, All Results and Custom Selection, the category boxes and the output columns Original File + Status Column, Email + Status and Email Only; there is also a Download ZIP with one file per category. The All Results export to a CSV file (553 bytes) worked and was kept as a result file. Credits after the test: 984 (16 used, one per verified address). The credits were taken when Verify was clicked, and after the list was deleted they were not given back. Plans, read up to the checkout button: the Buy Credits page has nine one-off packs, $9 for 10,000 credits, $19 for 25,000, $39 for 60,000 (50,000 shown struck through, plus 20%, Best Seller), $59 for 100,000, $119 for 250,000, $199 for 500,000, $299 for 1,000,000, $599 for 2,500,000 and $999 for 5,000,000, with 1 credit = 1 email verification and Credits never expire. There is no monthly subscription. The Summary showed the $39 pack with a Total of $39.00 and a promo code field that was left empty; Checkout was not clicked. An offer of +1,000 free credits per honest post on LinkedIn, X or Quora was not used. All prices match the dossier. Differences with the dossier: the dossier says file upload of up to 1 million rows, while the app says Maximum emails per list: 100,000, so the dossier figure is ten times too high. The 7-status report matches the app (VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX, INVALID, DISPOSABLE and UNKNOWN). The upload types CSV, XLSX and TXT of the dossier match the app, which also names XLS. No price field is changed here. Checkout: NOT reached, Checkout was not clicked, no promo code was entered and no card, total with tax or payment screen was seen. Cancelling: there is no subscription, so nothing to cancel; the test list was deleted through Delete List in the row menu after the confirmation Are you sure you want to delete this list? and the page then said No email lists found. Lists are Automatically deleted after 30 days. An account deletion was not looked for and the account stays. Not tested: the REST API, MCP, webhooks and API keys (the audience of developers), Single Mail, big lists, real good mailboxes, catch-all, role and full-inbox detection, the accuracy claim of 99% or more, and payment or refund. Clean up: the test list was deleted, the account stays on the Free Plan with 984 credits, the downloaded result file was moved to the notes folder and our own tab was closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The dossier says up to 1 million rows, but the app limit is 100,000 emails per list. The credits are taken when Verify is clicked and are not given back after the list is deleted. Rows with a syntax error are dropped in the browser before the count, so they are not shown in the result. Role addresses on a domain without a mail server come back as invalid, so the role status was not seen.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original account creation, which Daan did himself.",
+    "The REST API, MCP, webhooks and API keys.",
+    "Single Mail.",
+    "Big lists and real good mailboxes, so missed good addresses and the accuracy claim are untested.",
+    "Catch-all, role account and full-inbox detection (no address came back in those categories).",
+    "Checkout, a paid pack, refund and cancelling.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 07:44 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/mailveri-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/mailveri-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/mailveri-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested MailVeri in the account that Daan made: a CSV of 20 made-up addresses showed 16 unique emails and 4 skipped rows, was verified in 19 seconds in 3 clicks for 16 credits (1,000 to 984, taken at once and not given back after the list was deleted) and came back as 13 invalid and 3 disposable, with a CSV export that worked. Every test address was bad on purpose, so missed good addresses, role detection and the accuracy claim were not measured. The app limit is 100,000 emails per list against 1 million rows in the dossier. The pack prices match the dossier and no pack was bought. Account and start: Daan made the MailVeri account before the test. The test started at 07:44 in our own browser tab on the dashboard of the app (interface already in English, no language setting found). The dashboard showed CREDITS: 1,000, 1,000 lifetime, the Free Plan, TOTAL VERIFIED 0 and no mail lists. The dossier names three audiences (marketers cleaning a one-off big list, developers checking sign-ups in code and teams that want proof of accuracy) and no alternatives. Core action, list verification: a test file adressen.csv with 20 made-up addresses was prepared on purpose: four with a syntax error, two on a domain that does not exist, three on burner domains (mailinator, guerrillamail and 10minutemail), role addresses (info, sales, contact, admin, noreply and a help address) on example domains and six made-up personal names at four large free mail providers. It was uploaded on Upload Files, which says Maximum emails per list: 100,000 and Maximum file size is 10 MB. After the upload the page said 16 unique emails and 4 rows without a valid email were skipped, so the four syntax errors were filtered in the browser and were not processed or charged. Verify was clicked at 07:44: the credit counter went from 1,000 to 984 at once (PENDING: 16), the page showed 1 mails/s and the list was Completed after 00:19s, about 07:45. That is 3 clicks from the file to the result. The result was 0% Deliverable: Deliverable 0, Risky 0, Undeliverable 16 (100%) and Unknown 0. The detail window split it into INVALID 13 (Non-existent address) and DISPOSABLE 3 (Temporary burner address); VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX and UNKNOWN were 0. Per address (the All Results export with the column MailVeri Status): the two made-up domains were INVALID, the three burner domains DISPOSABLE, the role addresses on example domains INVALID and not ROLE_ACCOUNT, and all made-up names at the big free mail providers INVALID. Honest reading: every test address was bad on purpose, so the test did not measure whether the tool misses good addresses, and no address came back valid, role account, catch-all, full inbox or unknown, so those five categories were not exercised. The role addresses are INVALID because example domains have no mail server, so the role detection itself is not proven. Export: Download Results offers the presets Deliverable Only (Recommended), Deliverable + Risky, All Results and Custom Selection, the category boxes and the output columns Original File + Status Column, Email + Status and Email Only; there is also a Download ZIP with one file per category. The All Results export to a CSV file (553 bytes) worked and was kept as a result file. Credits after the test: 984 (16 used, one per verified address). The credits were taken when Verify was clicked, and after the list was deleted they were not given back. Plans, read up to the checkout button: the Buy Credits page has nine one-off packs, $9 for 10,000 credits, $19 for 25,000, $39 for 60,000 (50,000 shown struck through, plus 20%, Best Seller), $59 for 100,000, $119 for 250,000, $199 for 500,000, $299 for 1,000,000, $599 for 2,500,000 and $999 for 5,000,000, with 1 credit = 1 email verification and Credits never expire. There is no monthly subscription. The Summary showed the $39 pack with a Total of $39.00 and a promo code field that was left empty; Checkout was not clicked. An offer of +1,000 free credits per honest post on LinkedIn, X or Quora was not used. All prices match the dossier. Differences with the dossier: the dossier says file upload of up to 1 million rows, while the app says Maximum emails per list: 100,000, so the dossier figure is ten times too high. The 7-status report matches the app (VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX, INVALID, DISPOSABLE and UNKNOWN). The upload types CSV, XLSX and TXT of the dossier match the app, which also names XLS. No price field is changed here. Checkout: NOT reached, Checkout was not clicked, no promo code was entered and no card, total with tax or payment screen was seen. Cancelling: there is no subscription, so nothing to cancel; the test list was deleted through Delete List in the row menu after the confirmation Are you sure you want to delete this list? and the page then said No email lists found. Lists are Automatically deleted after 30 days. An account deletion was not looked for and the account stays. Not tested: the REST API, MCP, webhooks and API keys (the audience of developers), Single Mail, big lists, real good mailboxes, catch-all, role and full-inbox detection, the accuracy claim of 99% or more, and payment or refund. Clean up: the test list was deleted, the account stays on the Free Plan with 984 credits, the downloaded result file was moved to the notes folder and our own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/mailveri-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested MailVeri in the account that Daan made: a CSV of 20 made-up addresses showed 16 unique emails and 4 skipped rows, was verified in 19 seconds in 3 clicks for 16 credits (1,000 to 984, taken at once and not given back after the list was deleted) and came back as 13 invalid and 3 disposable, with a CSV export that worked. Every test address was bad on purpose, so missed good addresses, role detection and the accuracy claim were not measured. The app limit is 100,000 emails per list against 1 million rows in the dossier. The pack prices match the dossier and no pack was bought. Account and start: Daan made the MailVeri account before the test. The test started at 07:44 in our own browser tab on the dashboard of the app (interface already in English, no language setting found). The dashboard showed CREDITS: 1,000, 1,000 lifetime, the Free Plan, TOTAL VERIFIED 0 and no mail lists. The dossier names three audiences (marketers cleaning a one-off big list, developers checking sign-ups in code and teams that want proof of accuracy) and no alternatives. Core action, list verification: a test file adressen.csv with 20 made-up addresses was prepared on purpose: four with a syntax error, two on a domain that does not exist, three on burner domains (mailinator, guerrillamail and 10minutemail), role addresses (info, sales, contact, admin, noreply and a help address) on example domains and six made-up personal names at four large free mail providers. It was uploaded on Upload Files, which says Maximum emails per list: 100,000 and Maximum file size is 10 MB. After the upload the page said 16 unique emails and 4 rows without a valid email were skipped, so the four syntax errors were filtered in the browser and were not processed or charged. Verify was clicked at 07:44: the credit counter went from 1,000 to 984 at once (PENDING: 16), the page showed 1 mails/s and the list was Completed after 00:19s, about 07:45. That is 3 clicks from the file to the result. The result was 0% Deliverable: Deliverable 0, Risky 0, Undeliverable 16 (100%) and Unknown 0. The detail window split it into INVALID 13 (Non-existent address) and DISPOSABLE 3 (Temporary burner address); VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX and UNKNOWN were 0. Per address (the All Results export with the column MailVeri Status): the two made-up domains were INVALID, the three burner domains DISPOSABLE, the role addresses on example domains INVALID and not ROLE_ACCOUNT, and all made-up names at the big free mail providers INVALID. Honest reading: every test address was bad on purpose, so the test did not measure whether the tool misses good addresses, and no address came back valid, role account, catch-all, full inbox or unknown, so those five categories were not exercised. The role addresses are INVALID because example domains have no mail server, so the role detection itself is not proven. Export: Download Results offers the presets Deliverable Only (Recommended), Deliverable + Risky, All Results and Custom Selection, the category boxes and the output columns Original File + Status Column, Email + Status and Email Only; there is also a Download ZIP with one file per category. The All Results export to a CSV file (553 bytes) worked and was kept as a result file. Credits after the test: 984 (16 used, one per verified address). The credits were taken when Verify was clicked, and after the list was deleted they were not given back. Plans, read up to the checkout button: the Buy Credits page has nine one-off packs, $9 for 10,000 credits, $19 for 25,000, $39 for 60,000 (50,000 shown struck through, plus 20%, Best Seller), $59 for 100,000, $119 for 250,000, $199 for 500,000, $299 for 1,000,000, $599 for 2,500,000 and $999 for 5,000,000, with 1 credit = 1 email verification and Credits never expire. There is no monthly subscription. The Summary showed the $39 pack with a Total of $39.00 and a promo code field that was left empty; Checkout was not clicked. An offer of +1,000 free credits per honest post on LinkedIn, X or Quora was not used. All prices match the dossier. Differences with the dossier: the dossier says file upload of up to 1 million rows, while the app says Maximum emails per list: 100,000, so the dossier figure is ten times too high. The 7-status report matches the app (VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX, INVALID, DISPOSABLE and UNKNOWN). The upload types CSV, XLSX and TXT of the dossier match the app, which also names XLS. No price field is changed here. Checkout: NOT reached, Checkout was not clicked, no promo code was entered and no card, total with tax or payment screen was seen. Cancelling: there is no subscription, so nothing to cancel; the test list was deleted through Delete List in the row menu after the confirmation Are you sure you want to delete this list? and the page then said No email lists found. Lists are Automatically deleted after 30 days. An account deletion was not looked for and the account stays. Not tested: the REST API, MCP, webhooks and API keys (the audience of developers), Single Mail, big lists, real good mailboxes, catch-all, role and full-inbox detection, the accuracy claim of 99% or more, and payment or refund. Clean up: the test list was deleted, the account stays on the Free Plan with 984 credits, the downloaded result file was moved to the notes folder and our own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/mailveri-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/mailveri-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "MailVeri",
+    "product_id": "mailveri",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested MailVeri in the account that Daan made: a CSV of 20 made-up addresses showed 16 unique emails and 4 skipped rows, was verified in 19 seconds in 3 clicks for 16 credits (1,000 to 984, taken at once and not given back after the list was deleted) and came back as 13 invalid and 3 disposable, with a CSV export that worked. Every test address was bad on purpose, so missed good addresses, role detection and the accuracy claim were not measured. The app limit is 100,000 emails per list against 1 million rows in the dossier. The pack prices match the dossier and no pack was bought. Account and start: Daan made the MailVeri account before the test. The test started at 07:44 in our own browser tab on the dashboard of the app (interface already in English, no language setting found). The dashboard showed CREDITS: 1,000, 1,000 lifetime, the Free Plan, TOTAL VERIFIED 0 and no mail lists. The dossier names three audiences (marketers cleaning a one-off big list, developers checking sign-ups in code and teams that want proof of accuracy) and no alternatives. Core action, list verification: a test file adressen.csv with 20 made-up addresses was prepared on purpose: four with a syntax error, two on a domain that does not exist, three on burner domains (mailinator, guerrillamail and 10minutemail), role addresses (info, sales, contact, admin, noreply and a help address) on example domains and six made-up personal names at four large free mail providers. It was uploaded on Upload Files, which says Maximum emails per list: 100,000 and Maximum file size is 10 MB. After the upload the page said 16 unique emails and 4 rows without a valid email were skipped, so the four syntax errors were filtered in the browser and were not processed or charged. Verify was clicked at 07:44: the credit counter went from 1,000 to 984 at once (PENDING: 16), the page showed 1 mails/s and the list was Completed after 00:19s, about 07:45. That is 3 clicks from the file to the result. The result was 0% Deliverable: Deliverable 0, Risky 0, Undeliverable 16 (100%) and Unknown 0. The detail window split it into INVALID 13 (Non-existent address) and DISPOSABLE 3 (Temporary burner address); VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX and UNKNOWN were 0. Per address (the All Results export with the column MailVeri Status): the two made-up domains were INVALID, the three burner domains DISPOSABLE, the role addresses on example domains INVALID and not ROLE_ACCOUNT, and all made-up names at the big free mail providers INVALID. Honest reading: every test address was bad on purpose, so the test did not measure whether the tool misses good addresses, and no address came back valid, role account, catch-all, full inbox or unknown, so those five categories were not exercised. The role addresses are INVALID because example domains have no mail server, so the role detection itself is not proven. Export: Download Results offers the presets Deliverable Only (Recommended), Deliverable + Risky, All Results and Custom Selection, the category boxes and the output columns Original File + Status Column, Email + Status and Email Only; there is also a Download ZIP with one file per category. The All Results export to a CSV file (553 bytes) worked and was kept as a result file. Credits after the test: 984 (16 used, one per verified address). The credits were taken when Verify was clicked, and after the list was deleted they were not given back. Plans, read up to the checkout button: the Buy Credits page has nine one-off packs, $9 for 10,000 credits, $19 for 25,000, $39 for 60,000 (50,000 shown struck through, plus 20%, Best Seller), $59 for 100,000, $119 for 250,000, $199 for 500,000, $299 for 1,000,000, $599 for 2,500,000 and $999 for 5,000,000, with 1 credit = 1 email verification and Credits never expire. There is no monthly subscription. The Summary showed the $39 pack with a Total of $39.00 and a promo code field that was left empty; Checkout was not clicked. An offer of +1,000 free credits per honest post on LinkedIn, X or Quora was not used. All prices match the dossier. Differences with the dossier: the dossier says file upload of up to 1 million rows, while the app says Maximum emails per list: 100,000, so the dossier figure is ten times too high. The 7-status report matches the app (VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX, INVALID, DISPOSABLE and UNKNOWN). The upload types CSV, XLSX and TXT of the dossier match the app, which also names XLS. No price field is changed here. Checkout: NOT reached, Checkout was not clicked, no promo code was entered and no card, total with tax or payment screen was seen. Cancelling: there is no subscription, so nothing to cancel; the test list was deleted through Delete List in the row menu after the confirmation Are you sure you want to delete this list? and the page then said No email lists found. Lists are Automatically deleted after 30 days. An account deletion was not looked for and the account stays. Not tested: the REST API, MCP, webhooks and API keys (the audience of developers), Single Mail, big lists, real good mailboxes, catch-all, role and full-inbox detection, the accuracy claim of 99% or more, and payment or refund. Clean up: the test list was deleted, the account stays on the Free Plan with 984 credits, the downloaded result file was moved to the notes folder and our own tab was closed. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"file upload of up to 1 million rows\". What we saw: The Upload Files page says Maximum emails per list: 100,000 and Maximum file size is 10 MB, not 1 million rows. The limit itself was not run: only a file of 20 rows was uploaded.",
+     "Text we checked: \"CSV/XLSX/TXT\". What we saw: The Upload Files page names CSV and TXT text files and the first sheet of Excel files in the formats XLS and XLSX, or pasted emails. Only a CSV file was uploaded.",
+     "Text we checked: \"7-status report\". What we saw: The detail window of the list shows seven statuses: VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX, INVALID, DISPOSABLE and UNKNOWN. In this test only INVALID (13) and DISPOSABLE (3) had addresses.",
+     "Text we checked: \"$9 10,000\". What we saw: The Buy Credits page shows nine one-off packs from $9 for 10,000 credits to $999 for 5,000,000 credits, with 1 credit = 1 email verification and Credits never expire. The $39 pack shows 60,000 credits with 50,000 struck through."
+    ],
+    "not_tested": [
+     "Original account creation, which Daan did himself.",
+     "The REST API, MCP, webhooks and API keys.",
+     "Single Mail.",
+     "Big lists and real good mailboxes, so missed good addresses and the accuracy claim are untested.",
+     "Catch-all, role account and full-inbox detection (no address came back in those categories).",
+     "Checkout, a paid pack, refund and cancelling.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 07:44 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "file upload of up to 1 million rows",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Upload Files page says Maximum emails per list: 100,000 and Maximum file size is 10 MB, not 1 million rows. The limit itself was not run: only a file of 20 rows was uploaded.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The dossier figure against the limit text on the Upload Files page; no big file was uploaded to test the limit.",
+      "status": "contradicted",
+      "buying_consequence": "A one-off list over 100,000 addresses has to be split into several lists, which the dossier wording of 1 million rows does not say.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "CSV/XLSX/TXT",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Upload Files page names CSV and TXT text files and the first sheet of Excel files in the formats XLS and XLSX, or pasted emails. Only a CSV file was uploaded.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The dossier file types against the page text; only one CSV file was run, so the other types were not tried.",
+      "status": "confirmed",
+      "buying_consequence": "The three file types of the dossier are accepted, and the app adds the old XLS format and pasting.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "7-status report",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The detail window of the list shows seven statuses: VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX, INVALID, DISPOSABLE and UNKNOWN. In this test only INVALID (13) and DISPOSABLE (3) had addresses.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The dossier list of statuses against the detail window; five of the seven stayed at 0, so their meaning in practice was not tested.",
+      "status": "confirmed",
+      "buying_consequence": "The seven statuses exist as the dossier says, but only two of them were seen with real counts.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "16 unique emails, 4 rows without a valid email were skipped",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Of 20 rows, 16 were counted as unique emails and the 4 rows with a syntax error were skipped in the browser; the list in Mail Lists showed Total 16 and 16 credits were used.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The page message against our own file of 20 rows; the dossier has no claim about skipped rows.",
+      "status": "not_comparable",
+      "buying_consequence": "Rows with a bad syntax are dropped before the count and are not charged, so they do not show in the result file.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Temporary burner address",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The three addresses on the burner domains mailinator, guerrillamail and 10minutemail came back DISPOSABLE (3, 19%), with the text Temporary burner address.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The disposable count against our own file of made-up addresses; no outside list of burner domains was compared.",
+      "status": "not_comparable",
+      "buying_consequence": "Burner domains were flagged as bad in this test, but only three domains were tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "ROLE_ACCOUNT",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The role addresses on example domains (info, sales, contact, admin, noreply and a help address) came back INVALID and none came back ROLE_ACCOUNT, because the example domains have no mail server. The role detection was therefore not exercised.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The status list against role addresses on domains without a mail server; no role address on a working domain was sent.",
+      "status": "not_testable",
+      "buying_consequence": "Whether role addresses on real domains are labelled as role accounts is not known from this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Teams that want proof of accuracy",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "All 16 counted addresses were made up and bad on purpose, and all 16 came back undeliverable. No known good mailbox was sent, so the share of good addresses that the tool wrongly marks bad was not measured, and the accuracy claim was not tested.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The audience wording against a sample with no good address; a sample of known good and known bad addresses would be needed.",
+      "status": "not_testable",
+      "buying_consequence": "Whether the tool keeps good addresses, which matters most for a one-off big list, is not shown by this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$9 10,000",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Buy Credits page shows nine one-off packs from $9 for 10,000 credits to $999 for 5,000,000 credits, with 1 credit = 1 email verification and Credits never expire. The $39 pack shows 60,000 credits with 50,000 struck through.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The dossier prices against the Buy Credits page; the prices were not seen on a payment screen.",
+      "status": "confirmed",
+      "buying_consequence": "The pack prices are as the dossier says, and a pack does not run out by date; there is no monthly subscription.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$39",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Summary on the Buy Credits page shows the $39 pack with a Total of $39.00 and an empty promo code field. Checkout was not clicked and no tax line, card form or payment screen was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/mailveri-review.html#claim-vs-measured"
+      },
+      "plan": "No pack was bought; the Buy Credits page was read up to the Checkout button",
+      "comparability": "The Summary total against a checkout that was not reached; no tax, term or stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The amount you pay at the end, with any tax, is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested MailVeri in the account that Daan made: a CSV of 20 made-up addresses showed 16 unique emails and 4 skipped rows, was verified in 19 seconds in 3 clicks for 16 credits (1,000 to 984, taken at once and not given back after the list was deleted) and came back as 13 invalid and 3 disposable, with a CSV export that worked. Every test address was bad on purpose, so missed good addresses, role detection and the accuracy claim were not measured. The app limit is 100,000 emails per list against 1 million rows in the dossier. The pack prices match the dossier and no pack was bought. Account and start: Daan made the MailVeri account before the test. The test started at 07:44 in our own browser tab on the dashboard of the app (interface already in English, no language setting found). The dashboard showed CREDITS: 1,000, 1,000 lifetime, the Free Plan, TOTAL VERIFIED 0 and no mail lists. The dossier names three audiences (marketers cleaning a one-off big list, developers checking sign-ups in code and teams that want proof of accuracy) and no alternatives. Core action, list verification: a test file adressen.csv with 20 made-up addresses was prepared on purpose: four with a syntax error, two on a domain that does not exist, three on burner domains (mailinator, guerrillamail and 10minutemail), role addresses (info, sales, contact, admin, noreply and a help address) on example domains and six made-up personal names at four large free mail providers. It was uploaded on Upload Files, which says Maximum emails per list: 100,000 and Maximum file size is 10 MB. After the upload the page said 16 unique emails and 4 rows without a valid email were skipped, so the four syntax errors were filtered in the browser and were not processed or charged. Verify was clicked at 07:44: the credit counter went from 1,000 to 984 at once (PENDING: 16), the page showed 1 mails/s and the list was Completed after 00:19s, about 07:45. That is 3 clicks from the file to the result. The result was 0% Deliverable: Deliverable 0, Risky 0, Undeliverable 16 (100%) and Unknown 0. The detail window split it into INVALID 13 (Non-existent address) and DISPOSABLE 3 (Temporary burner address); VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX and UNKNOWN were 0. Per address (the All Results export with the column MailVeri Status): the two made-up domains were INVALID, the three burner domains DISPOSABLE, the role addresses on example domains INVALID and not ROLE_ACCOUNT, and all made-up names at the big free mail providers INVALID. Honest reading: every test address was bad on purpose, so the test did not measure whether the tool misses good addresses, and no address came back valid, role account, catch-all, full inbox or unknown, so those five categories were not exercised. The role addresses are INVALID because example domains have no mail server, so the role detection itself is not proven. Export: Download Results offers the presets Deliverable Only (Recommended), Deliverable + Risky, All Results and Custom Selection, the category boxes and the output columns Original File + Status Column, Email + Status and Email Only; there is also a Download ZIP with one file per category. The All Results export to a CSV file (553 bytes) worked and was kept as a result file. Credits after the test: 984 (16 used, one per verified address). The credits were taken when Verify was clicked, and after the list was deleted they were not given back. Plans, read up to the checkout button: the Buy Credits page has nine one-off packs, $9 for 10,000 credits, $19 for 25,000, $39 for 60,000 (50,000 shown struck through, plus 20%, Best Seller), $59 for 100,000, $119 for 250,000, $199 for 500,000, $299 for 1,000,000, $599 for 2,500,000 and $999 for 5,000,000, with 1 credit = 1 email verification and Credits never expire. There is no monthly subscription. The Summary showed the $39 pack with a Total of $39.00 and a promo code field that was left empty; Checkout was not clicked. An offer of +1,000 free credits per honest post on LinkedIn, X or Quora was not used. All prices match the dossier. Differences with the dossier: the dossier says file upload of up to 1 million rows, while the app says Maximum emails per list: 100,000, so the dossier figure is ten times too high. The 7-status report matches the app (VALID, ROLE_ACCOUNT, CATCH_ALL, FULL_INBOX, INVALID, DISPOSABLE and UNKNOWN). The upload types CSV, XLSX and TXT of the dossier match the app, which also names XLS. No price field is changed here. Checkout: NOT reached, Checkout was not clicked, no promo code was entered and no card, total with tax or payment screen was seen. Cancelling: there is no subscription, so nothing to cancel; the test list was deleted through Delete List in the row menu after the confirmation Are you sure you want to delete this list? and the page then said No email lists found. Lists are Automatically deleted after 30 days. An account deletion was not looked for and the account stays. Not tested: the REST API, MCP, webhooks and API keys (the audience of developers), Single Mail, big lists, real good mailboxes, catch-all, role and full-inbox detection, the accuracy claim of 99% or more, and payment or refund. Clean up: the test list was deleted, the account stays on the Free Plan with 984 credits, the downloaded result file was moved to the notes folder and our own tab was closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The dossier says up to 1 million rows, but the app limit is 100,000 emails per list. The credits are taken when Verify is clicked and are not given back after the list is deleted. Rows with a syntax error are dropped in the browser before the count, so they are not shown in the result. Role addresses on a domain without a mail server come back as invalid, so the role status was not seen.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original account creation, which Daan did himself.",
+      "The REST API, MCP, webhooks and API keys.",
+      "Single Mail.",
+      "Big lists and real good mailboxes, so missed good addresses and the accuracy claim are untested.",
+      "Catch-all, role account and full-inbox detection (no address came back in those categories).",
+      "Checkout, a paid pack, refund and cancelling.",
+      "Export and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 07:44 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "mailveri:cancellation_terms",
